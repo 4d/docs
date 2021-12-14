@@ -118,36 +118,36 @@
 <p>This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the <a href="#send"><code>.send()</code></a> function is executed.</p>
 <p>The SMTP connection is automatically closed: * when the transporter object is destroyed if the <a href="#keepalive"><code>keepAlive</code></a> property is true (default), * after each  <a href="#send"><code>.send( )</code></a> function execution if the <a href="#keepalive"><code>keepAlive</code></a> property is set to false.</p>
 </blockquote>
-<p>In the <em>server</em> parameter, pass an object containing the following properties:</p>
+<p>En el parámetro <em>server</em>, pase un objeto que contenga las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th><em>server</em></th><th>Valor por defecto (si se omite)</th></tr>
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"><strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    <strong>True</strong> si se permite a 4D establecer una conexión no cifrada</td><td>False</td></tr>
-<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in <em><a href="#smtp-transporter-object">SMTP transporter</a></em> object.</td><td>ninguno</td></tr>
-<tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    el modo de autenticación utilizado para abrir la sesión en el servidor de correo</td><td>the most secure authentication mode supported by the server is used</td></tr>
+<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>Cadena de texto que representa las credenciales de autorización OAuth 2. Sólo se utiliza con OAUTH2 <code>authenticationMode</code>. Si se utiliza <code>accessTokenOAuth2</code> pero se omite <code>authenticationMode</code>, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto <em><a href="#smtp-transporter-object">SMTP transporter</a></em>.</td><td>ninguno</td></tr>
+<tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    el modo de autenticación utilizado para abrir la sesión en el servidor de correo</td><td>se utiliza el modo de autenticación más seguro soportado por el servidor</td></tr>
 <tr><td><a href="#bodycharset"><strong>.bodyCharset</strong> : Text</a><p>      el conjunto de caracteres y la codificación utilizados para la parte del cuerpo del correo electrónico</td><td><code>mail mode UTF8</code> (US-ASCII_UTF8_QP)</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    el tiempo máximo de espera (en segundos) permitido para establecer una conexión con el servidor</td><td>30</td></tr>
 <tr><td><a href="#headercharset"><strong>.headerCharset</strong> : Text</a><p>     el conjunto de caracteres y la codificación utilizados para el encabezado del correo electrónico</td><td><code>mail mode UTF8</code> (US-ASCII_UTF8_QP)</td></tr>
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    el nombre o la dirección IP del servidor local</td><td><em>obligatorio</em></td></tr>
 <tr><td><a href="#keepalive"><strong>.keepAlive</strong> : Boolean</a><p>    <strong>True</strong> if the SMTP connection must be kept alive until the <code>transporter</code> object is destroyed</td><td>True</td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    la ruta del archivo de registro extendido definido (si existe) para la conexión de correo</td><td>ninguno</td></tr>
-<tr><td><strong>password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#smtp-transporter-object">SMTP transporter</a></em> object.</td><td>ninguno</td></tr>
+<tr><td><strong>password</strong> : Text<p>Contraseña del usuario para la autenticación en el servidor. No se devuelve en el objeto <em><a href="#smtp-transporter-object">SMTP transporter</a></em>.</td><td>ninguno</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     el número de puerto utilizado para las transacciones de correo</td><td>587</td></tr>
 <tr><td><a href="#sendtimeout"><strong>.sendTimeOut</strong> : Integer</a><p>     el tiempo máximo de espera (en segundos) de una llamada a <code>.send( )</code> antes de que se produzca un timeout</td><td>100</td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     el nombre de usuario utilizado para la autenticación en el servidor de correo</td><td>ninguno</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="resultado"></a><a href="#resultado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resultado</h4>
-<p>The function returns a <a href="#smtp-transporter-object"><strong>SMTP transporter object</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
+<p>La función devuelve un <a href="#smtp-transporter-object"><strong>SMTP transporter</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"smtp.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"smtp.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">465</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4D@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXX"</span>
- <span class="hljs-variable">$server</span>.logFile:=<span class="hljs-string">"LogTest.txt"</span> <span class="hljs-comment">//Extended log to save in the Logs folder</span><span class="hljs-keyword">
+ <span class="hljs-variable">$server</span>.logFile:=<span class="hljs-string">"LogTest.txt"</span> <span class="hljs-comment">//Log extendido a guardar en la carpeta Logs</span><span class="hljs-keyword">
 
  var</span> <span class="hljs-variable">$transporter </span>: 4D.SMTPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">SMTP New transporter</span>(<span class="hljs-variable">$server</span>)

@@ -75,7 +75,7 @@
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"><strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    <strong>True</strong> si se permite a 4D establecer una conexión no cifrada</td></tr>
-<tr><td><a href="#addflags"><strong>.addFlags</strong>( <em>msgIDs</em> : Collection ; <em>keywords</em> :  Object ) : Object<br><strong>.addFlags</strong>( <em>msgIDs</em> : Text ; <em>keywords</em> :  Object ) : Object<br><strong>.addFlags</strong>( <em>msgIDs</em> : Longint  ; <em>keywords</em> :  Object ) : Object</a><p>    adds flags to the <code>msgIDs</code> for the specified <code>keywords</code></td></tr>
+<tr><td><a href="#addflags"><strong>.addFlags</strong>( <em>msgIDs</em> : Collection ; <em>keywords</em> :  Object ) : Object<br><strong>.addFlags</strong>( <em>msgIDs</em> : Text ; <em>keywords</em> :  Object ) : Object<br><strong>.addFlags</strong>( <em>msgIDs</em> : Longint  ; <em>keywords</em> :  Object ) : Object</a><p>    añade banderas a los <code>msgIDs</code> para las <code>keywords</code></td></tr>
 <tr><td><a href="#append"><strong>.append</strong>( <em>mailObj</em> : Object ; <em>destinationBox</em> : Text ; <em>options</em> : Object ) : Object</a><p>    appends a <code>mailObj</code> to the <code>destinationBox</code></td></tr>
 <tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    el modo de autenticación utilizado para abrir la sesión en el servidor de correo</td></tr>
 <tr><td><a href="#checkconnection"><strong>.checkConnection()</strong> : Object</a><p>     comprueba la conexión utilizando la información almacenada en el objeto transporter</td></tr>
@@ -129,15 +129,15 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>IMAP New transporter</code> command configures a new IMAP connection according to the <em>server</em> parameter and returns a new <em>transporter</em> object. The returned transporter object will then usually be used to receive emails.</p>
-<p>In the <em>server</em> parameter, pass an object containing the following properties:</p>
+<p>El comando <code>IMAP New transporter</code> configura una nueva conexión IMAP según el parámetro <em>server</em> y devuelve un nuevo objeto <em>transporter</em>. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.</p>
+<p>En el parámetro <em>server</em>, pase un objeto que contenga las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th><em>server</em></th><th>Valor por defecto (si se omite)</th></tr>
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"><strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    <strong>True</strong> si se permite a 4D establecer una conexión no cifrada</td><td>False</td></tr>
-<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in <em><a href="#imap-transporter-object">IMAP transporter</a></em> object.</td><td>ninguno</td></tr>
+<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>Cadena de texto que representa las credenciales de autorización OAuth 2. Sólo se utiliza con OAUTH2 <code>authenticationMode</code>. Si se utiliza <code>accessTokenOAuth2</code> pero se omite <code>authenticationMode</code>, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto <em><a href="#imap-transporter-object">IMAP transporter</a></em>.</td><td>ninguno</td></tr>
 <tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    el modo de autenticación utilizado para abrir la sesión en el servidor de correo</td><td>se utiliza el modo de autenticación más seguro soportado por el servidor</td></tr>
 <tr><td><a href="#checkconnectiondelay"><strong>.checkConnectionDelay</strong> : Integer</a><p>    the maximum time (in seconds) allowed prior to checking the connection to the server</td><td>300</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    el tiempo máximo de espera (en segundos) permitido para establecer una conexión con el servidor</td><td>30</td></tr>
@@ -152,17 +152,17 @@
 <p><strong>Atención</strong>: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="resultado"></a><a href="#resultado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resultado</h4>
-<p>The function returns an <a href="#imap-transporter-object"><strong>IMAP transporter object</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
+<p>La función devuelve un <a href="#imap-transporter-object"><strong>IMAP transporter</strong></a>. Todas las propiedades devueltas son <strong>de sólo lectura</strong>.</p>
 <blockquote>
-<p>The IMAP connection is automatically closed when the transporter object is destroyed.</p>
+<p>La conexión IMAP se cierra automáticamente cuando se destruye el objeto transportador.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$server</span>:=New object
-<span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+<span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
 <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
 <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
-<span class="hljs-variable">$server</span>.logFile:=<span class="hljs-string">"LogTest.txt"</span> <span class="hljs-comment">//log to save in the Logs folder</span><span class="hljs-keyword">
+<span class="hljs-variable">$server</span>.logFile:=<span class="hljs-string">"LogTest.txt"</span> <span class="hljs-comment">//log a guardar en la carpeta Logs</span><span class="hljs-keyword">
 
 var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
@@ -184,7 +184,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>4D.IMAPTransporter.new()</code> function creates and returns a new object of the <code>4D.IMAPTransporter</code> type. It is identical to the <a href="#imap-new-transporter"><code>IMAP New transporter</code></a> command (shortcut).</p>
+<p>La función <code>4D.IMAPTransporter.new()</code> crea y devuelve un nuevo objeto del tipo <code>4D.IMAPTransporter</code>. Es idéntico al comando <a href="#imap-new-transporter"><code>IMAP New transporter</code></a> (acceso directo).</p>
 <h2><a class="anchor" aria-hidden="true" id="acceptunsecureconnection"></a><a href="#acceptunsecureconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.acceptUnsecureConnection</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -235,14 +235,14 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of strings: Message unique IDs (text)<br>Text: Unique ID of a message<br>Longint (IMAP all): All messages in the selected mailbox</td></tr>
+<tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Colección de cadenas: identificadores únicos de mensajes (texto)<br>Texto: ID único de un mensaje<br>Longint (IMAP all): todos los mensajes del buzón seleccionado</td></tr>
 <tr><td>keywords</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Banderas de palabras claves a añadir</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the addFlags operation</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación addFlags</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.addFlags()</code> function adds flags to the <code>msgIDs</code> for the specified <code>keywords</code>.</p>
-<p>In the <code>msgIDs</code> parameter, you can pass either:</p>
+<p>La función <code>.addFlags()</code> añade banderas a los <code>msgIDs</code> para las <code>keywords</code>.</p>
+<p>En el parámetro <code>msgIDs</code>, puede pasar:</p>
 <ul>
 <li><p>a <em>collection</em> containing the unique IDs of specific messages or</p></li>
 <li><p>the unique ID (<em>text</em>) of a single message or</p></li>
@@ -263,32 +263,32 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>$draft</td><td>Booleano</td><td>True to add the &quot;draft&quot; flag to the message</td></tr>
-<tr><td>$seen</td><td>Booleano</td><td>True to add the &quot;seen&quot; flag to the message</td></tr>
-<tr><td>$flagged</td><td>Booleano</td><td>True to add the &quot;flagged&quot; flag to the message</td></tr>
-<tr><td>$answered</td><td>Booleano</td><td>True to add the &quot;answered&quot; flag to the message</td></tr>
-<tr><td>$deleted</td><td>Booleano</td><td>True to add the &quot;deleted&quot; flag to the message</td></tr>
+<tr><td>$draft</td><td>Booleano</td><td>True para añadir el marcador &quot;draft&quot; al mensaje</td></tr>
+<tr><td>$seen</td><td>Booleano</td><td>True para añadir el marcador &quot;seen&quot; al mensaje</td></tr>
+<tr><td>$flagged</td><td>Booleano</td><td>True para añadir el marcador &quot;flagged&quot; al mensaje</td></tr>
+<tr><td>$answered</td><td>Booleano</td><td>True para añadir el marcador &quot;answered&quot; al mensaje</td></tr>
+<tr><td>$deleted</td><td>Booleano</td><td>True para añadir el marcador &quot;deleted&quot; al mensaje</td></tr>
 </tbody>
 </table>
 <blockquote>
 <ul>
 <li>Los valores falsos se ignoran.</li>
-<li>The interpretation of keyword flags may vary per mail client.</li>
+<li>La interpretación de los indicadores de palabras claves puede variar según el cliente de correo.</li>
 </ul>
 </blockquote>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -300,13 +300,13 @@ End if</span>
 <span class="hljs-variable">$options</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$options</span>.password:=<span class="hljs-string">"xxxxx"</span>
 
-<span class="hljs-comment">// Create transporter</span>
+<span class="hljs-comment">// Crear transportador</span>
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
 
-<span class="hljs-comment">// Select mailbox</span>
+<span class="hljs-comment">// Seleccionar buzón de correo</span>
 <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)
 
-<span class="hljs-comment">// Mark all messages from INBOX as read/seen</span>
+<span class="hljs-comment">// Marcar todos los mensajes de INBOX como leídos/vistos</span>
 <span class="hljs-variable">$flags</span>:=New object
 <span class="hljs-variable">$flags</span>[<span class="hljs-string">"$seen"</span>]:=<span class="hljs-literal">True</span>
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">addFlags</span>(IMAP all;<span class="hljs-variable">$flags</span>)
@@ -329,14 +329,14 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>mailObj</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Objeto Email</td></tr>
-<tr><td>destinationBox</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Mailbox to receive Email object</td></tr>
+<tr><td>destinationBox</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Buzón para recibir el objeto Email</td></tr>
 <tr><td>options</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Object containing charset info</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the append operation</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.append()</code> function appends a <code>mailObj</code> to the <code>destinationBox</code>.</p>
-<p>In the <code>mailObj</code> parameter, pass an Email object. For a comprehensive description of mail properties, see <a href="emails.html#email-object">Email object</a>.  The <code>.append()</code> function supports keyword tags in the Email object's <code>keywords</code> attribute.</p>
+<p>In the <code>mailObj</code> parameter, pass an Email object. For a comprehensive description of mail properties, see <a href="/docs/19/es/API/EmailObjectClass.html#email-object">Email object</a>. The <code>.append()</code> function supports keyword tags in the Email object's <code>keywords</code> attribute.</p>
 <p>The optional <code>destinationBox</code> parameter lets you pass the name of a mailbox where the <code>mailObj</code> will be appended. If omitted, the current mailbox is used.</p>
 <p>In the optional <code>options</code> parameter, you can pass an object to define the charset and encoding for specific parts of the email. Propiedades disponibles:</p>
 <table>
@@ -361,18 +361,18 @@ End if</span>
 </tbody>
 </table>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
 <tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -473,7 +473,7 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.checkConnectionDelay</code> property contains the maximum time (in seconds) allowed prior to checking the connection to the server.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the <em>server</em> object, the value is 300.</p>
 <blockquote>
-<p><strong>Warning</strong>: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.</p>
+<p><strong>Atención</strong>: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="connectiontimeout"></a><a href="#connectiontimeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.connectionTimeOut</h2>
 <p><details><summary>Histórico</summary></p>
@@ -521,18 +521,18 @@ End if</span>
 </ul>
 <p>The <em>destinationBox</em> parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-1"></a><a href="#ejemplo-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
@@ -542,40 +542,40 @@ End if</span>
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
 
-  <span class="hljs-comment">//get collection of message unique IDs</span>
+  <span class="hljs-comment">//obtener la colección de IDs únicos de los mensajes</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"subject \"4D new feature:\""</span>)
 
-  <span class="hljs-comment">// copy found messages to the "documents" mailbox</span>
+  <span class="hljs-comment">// copiar los mensajes encontrados en el buzón "documents"</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">copy</span>(<span class="hljs-variable">$mailIds</span>;<span class="hljs-string">"documents"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-1"></a><a href="#ejemplo-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>To copy all messages in the current mailbox:</p>
+<p>Para copiar todos los mensajes del buzón actual:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
 
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
 
-  <span class="hljs-comment">// copy all messages to the "documents" mailbox</span>
+  <span class="hljs-comment">// copiar los mensajes encontrados en el buzón "documents"</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">copy</span>(IMAP all;<span class="hljs-string">"documents"</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="createbox"></a><a href="#createbox" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.createBox()</h2>
@@ -596,7 +596,7 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del nuevo buzón</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the mailbox creation operation</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación de creación del buzón</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -609,22 +609,22 @@ End if</span>
 </ul>
 <p>In the <code>name</code> parameter, pass the name of the new mailbox.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>To create a new “Invoices” mailbox:</p>
+<p>Para crear un nuevo buzón &quot;Invoices&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 
@@ -678,18 +678,18 @@ End if</span>
 </ul>
 <p>Executing this function does not actually remove messages. Messages with the &quot;delete&quot; flag can still be found by the <a href="#searchmails">.searchMails()</a> function. Flagged messages are deleted from the IMAP server with the <a href="#expunge"><code>.expunge()</code></a> function or by selecting another mailbox or when the <a href="#imap-transporter-object">transporter object</a> (created with <a href="#imap-new-transporter">IMAP New transporter</a>) is destroyed.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-2"></a><a href="#ejemplo-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
@@ -699,39 +699,39 @@ End if</span>
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Inbox"</span>)
 
-  <span class="hljs-comment">//get collection of message unique IDs</span>
+  <span class="hljs-comment">//obtener la colección de IDs únicos de los mensajes</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"subject \"Reports\""</span>)
 
-  <span class="hljs-comment">// Delete selected messages</span>
+  <span class="hljs-comment">// Borrar los mensajes seleccionados</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(<span class="hljs-variable">$mailIds</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-2"></a><a href="#ejemplo-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>To delete all messages in the current mailbox:</p>
+<p>Para eliminar todos los mensajes del buzón actual:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Junk Email"</span>)
 
-  <span class="hljs-comment">// delete all messages in the current mailbox</span>
+  <span class="hljs-comment">// Borrar los mensajes seleccionados en el buzón actual</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(IMAP all)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="deletebox"></a><a href="#deletebox" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.deleteBox()</h2>
@@ -751,8 +751,8 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Name of the mailbox to delete</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the mailbox deletion operation</td></tr>
+<tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del buzón a eliminar</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación de eliminación del buzón</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-12"></a><a href="#descripción-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -766,18 +766,18 @@ End if</span>
 </ul>
 </blockquote>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -795,7 +795,7 @@ If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-variable">$op
 
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
 
-<span class="hljs-comment">// delete mailbox</span>
+<span class="hljs-comment">// eliminar buzón</span>
 <span class="hljs-variable">$name</span>:=<span class="hljs-string">"Bills"</span>+<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getDelimiter</span>()+<span class="hljs-string">"Nova Orion Industries"</span>
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">deleteBox</span>(<span class="hljs-variable">$name</span>)<span class="hljs-keyword">
 
@@ -823,24 +823,24 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the expunge operation</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación expunge</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-13"></a><a href="#descripción-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.expunge()</code> function removes all messages with the &quot;deleted&quot; flag from the IMAP mail server. The &quot;deleted&quot; flag can be set with the <a href="#delete"><code>.delete()</code></a> or <a href="#addflags"><code>.addFlags()</code></a> methods.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-5"></a><a href="#ejemplo-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -853,17 +853,17 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <span class="hljs-variable">$options</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$options</span>.password:=<span class="hljs-string">"xxxxx"</span>
 
-<span class="hljs-comment">// Create transporter</span>
+<span class="hljs-comment">// Crear transportador</span>
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
 
-<span class="hljs-comment">// Select mailbox</span>
+<span class="hljs-comment">// Seleccionar buzón</span>
 <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)
 
-<span class="hljs-comment">// Find and delete all seen messages in INBOX</span>
+<span class="hljs-comment">// Buscar y eliminar todos los mensajes vistos en INBOX</span>
 <span class="hljs-variable">$ids</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"SEEN"</span>)
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(<span class="hljs-variable">$ids</span>)
 
-<span class="hljs-comment">// Purge all messages flagged as deleted</span>
+<span class="hljs-comment">// Purgar todos los mensajes marcados como borrados</span>
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">expunge</span>()
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getboxinfo"></a><a href="#getboxinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getBoxInfo()</h2>
@@ -885,7 +885,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del buzón</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>boxInfo object</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>objeto boxInfo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-14"></a><a href="#descripción-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -893,14 +893,14 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p>In the optional <em>name</em> parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the <a href="#getdelimiter"><code>.getDelimiter()</code></a> function.</p>
 <p>If the mailbox <em>name</em> is not selectable or does not exist, the function generates an error and returns <strong>null</strong>.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The <code>boxInfo</code> object returned contains the following properties:</p>
+<p>El objeto <code>boxInfo</code> devuelto contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr><td>name</td><td>texto</td><td>Nombre del buzón</td></tr>
-<tr><td>mailCount</td><td>number</td><td>Number of messages in the mailbox</td></tr>
+<tr><td>mailCount</td><td>number</td><td>Número de mensajes en el buzón</td></tr>
 <tr><td>mailRecent</td><td>number</td><td>Number of messages with the &quot;recent&quot; flag (indicating new messages)</td></tr>
 </tbody>
 </table>
@@ -930,7 +930,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>parameters</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Parameter object</td></tr>
-<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of mailbox objects</td></tr>
+<tr><td>Resultado</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Colección de objetos mailbox</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-15"></a><a href="#descripción-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1043,7 +1043,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Sequence number of the message</td></tr>
-<tr><td>msgID</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Unique ID of the message</td></tr>
+<tr><td>msgID</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>ID único del mensaje</td></tr>
 <tr><td>options</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Message handling instructions</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td><a href="/docs/19/es/API/EmailObjectClass.html#email-object">Objeto Email</a></td></tr>
 </tbody>
@@ -1081,18 +1081,18 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
-  <span class="hljs-comment">//create transporter</span>
+  <span class="hljs-comment">//crear transportador</span>
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Inbox"</span>)
 
-  <span class="hljs-comment">//get Email object with ID 1</span>
+  <span class="hljs-comment">//obtener el objeto Email con ID 1</span>
  <span class="hljs-variable">$mail</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMail</span>(<span class="hljs-number">1</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getmails"></a><a href="#getmails" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getMails()</h2>
@@ -1165,19 +1165,19 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
-  <span class="hljs-comment">//create transporter</span>
+  <span class="hljs-comment">//crear transportador</span>
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)<span class="hljs-keyword">
 
   If</span>(<span class="hljs-variable">$boxInfo</span>.mailCount&gt;<span class="hljs-number">0</span>)
-        <span class="hljs-comment">// retrieve the headers of the last 20 messages without marking them as read</span>
+        <span class="hljs-comment">// recuperar los encabezados de los últimos 20 mensajes sin marcarlos como leídos</span>
     <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMails</span>(<span class="hljs-variable">$boxInfo</span>.mailCount<span class="hljs-number">-20</span>;<span class="hljs-variable">$boxInfo</span>.mailCount;\
 <span class="hljs-function">        New object</span>(<span class="hljs-string">"withBody"</span>;<span class="hljs-literal">False</span>;<span class="hljs-string">"updateSeen"</span>;<span class="hljs-literal">False</span>))<span class="hljs-keyword">
     For each</span>(<span class="hljs-variable">$mail</span>;<span class="hljs-variable">$result</span>.list)
@@ -1203,14 +1203,14 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Sequence number of the message</td></tr>
-<tr><td>msgID</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Unique ID of the message</td></tr>
+<tr><td>msgID</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>ID único del mensaje</td></tr>
 <tr><td>updateSeen</td><td>Booleano</td><td style="text-align:center">-&gt;</td><td>If True, the message is marked &quot;seen&quot; in the mailbox. If False the message is left untouched.</td></tr>
 <tr><td>Resultado</td><td>BLOB</td><td style="text-align:center">&lt;-</td><td>Blob of the MIME string returned from the mail server</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-19"></a><a href="#descripción-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.getMIMEAsBlob()</code> function returns a BLOB containing the MIME contents for the message corresponding to the <em>msgNumber</em> or <em>msgID</em> in the mailbox designated by the <code>IMAP_transporter</code>.</p>
-<p>In the first parameter, you can pass either:</p>
+<p>En el primer parámetro, puede pasar:</p>
 <ul>
 <li><em>msgNumber</em>, an <em>integer</em> value indicating the sequence number of the message to retrieve or</li>
 <li><em>msgID</em>, a <em>text</em> value indicating the unique ID of the message to retrieve.</li>
@@ -1241,13 +1241,13 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
-  <span class="hljs-comment">//create transporter</span>
+  <span class="hljs-comment">//crear transportador</span>
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"Inbox"</span>)
 
-  <span class="hljs-comment">//get BLOB</span>
+  <span class="hljs-comment">//obtener BLOB</span>
  <span class="hljs-variable">$blob</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMIMEAsBlob</span>(<span class="hljs-number">1</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="host"></a><a href="#host" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.host</h2>
@@ -1316,21 +1316,21 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </ul>
 <p>The <em>destinationBox</em> parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.</p>
 <blockquote>
-<p>This function is only supported by IMAP servers compliant with RFC <a href="https://tools.ietf.org/html/rfc8474">8474</a>.</p>
+<p>Esta función sólo la soportan los servidores IMAP que cumplen con el RFC <a href="https://tools.ietf.org/html/rfc8474">8474</a>.</p>
 </blockquote>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-3"></a><a href="#ejemplo-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
@@ -1340,20 +1340,20 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
 
-  <span class="hljs-comment">//get collection of message unique IDs</span>
+  <span class="hljs-comment">//obtener la colección de IDs únicos de los mensajes</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">searchMails</span>(<span class="hljs-string">"subject \"4D new feature:\""</span>)
 
-  <span class="hljs-comment">// Move found messages from the current mailbox to the "documents" mailbox</span>
+  <span class="hljs-comment">// Mover los mensajes encontrados del buzón actual al buzón "documents"</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">move</span>(<span class="hljs-variable">$mailIds</span>;<span class="hljs-string">"documents"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-3"></a><a href="#ejemplo-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
@@ -1362,17 +1362,17 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
 
-  <span class="hljs-comment">// move all messages in the current mailbox to the "documents" mailbox</span>
+  <span class="hljs-comment">// mover todos los mensajes del buzón actual al buzón "documents"</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">move</span>(IMAP all;<span class="hljs-string">"documents"</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="numtoid"></a><a href="#numtoid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.numToID()</h2>
@@ -1409,20 +1409,20 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
  var</span> <span class="hljs-variable">$mailIds </span>: Collection
 
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatorio</span>
  <span class="hljs-variable">$server</span>.port:=<span class="hljs-number">993</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span>
 
  <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$server</span>)
 
-  <span class="hljs-comment">//select mailbox</span>
+  <span class="hljs-comment">//seleccionar buzón</span>
  <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"inbox"</span>)
 
-  <span class="hljs-comment">//get IDs for 5 last messages received</span>
+  <span class="hljs-comment">//obtener los ID de los 5 últimos mensajes recibidos</span>
  <span class="hljs-variable">$mailIds</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">numToID</span>((<span class="hljs-variable">$boxInfo</span>.mailCount<span class="hljs-number">-5</span>);<span class="hljs-variable">$boxInfo</span>.mailCount)
 
-  <span class="hljs-comment">//delete the messages from the current mailbox</span>
+  <span class="hljs-comment">//eliminar los mensajes del buzón actual</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">delete</span>(<span class="hljs-variable">$mailIds</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="removeflags"></a><a href="#removeflags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.removeFlags()</h2>
@@ -1442,14 +1442,14 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection of strings: Message unique IDs (text)<br>Text: Unique ID of a message<br>Longint (IMAP all): All messages in the selected mailbox</td></tr>
-<tr><td>keywords</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Keyword flags to remove</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the removeFlags operation</td></tr>
+<tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Colección de cadenas: identificadores únicos de mensajes (texto)<br>Texto: ID único de un mensaje<br>Longint (IMAP all): todos los mensajes del buzón seleccionado</td></tr>
+<tr><td>keywords</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Banderas de palabras claves a eliminar</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación removeFlags</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-24"></a><a href="#descripción-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.removeFlags()</code> function removes flags from the <code>msgIDs</code> for the specified <code>keywords</code>.</p>
-<p>In the <code>msgIDs</code> parameter, you can pass either:</p>
+<p>En el parámetro <code>msgIDs</code>, puede pasar:</p>
 <ul>
 <li><p>a <em>collection</em> containing the unique IDs of specific messages or</p></li>
 <li><p>the unique ID (<em>text</em>) of a single message or</p></li>
@@ -1459,12 +1459,12 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td>IMAP all</td><td>1</td><td>Select all messages in the selected mailbox</td></tr>
+<tr><td>IMAP all</td><td>1</td><td>Seleccionar todos los mensajes del buzón seleccionado</td></tr>
 </tbody>
 </table>
 </li>
 </ul>
-<p>The <code>keywords</code> parameter lets you pass an object with keyword values for specific flags to remove from <code>msgIDs</code>. You can pass any of the following keywords:</p>
+<p>The <code>keywords</code> parameter lets you pass an object with keyword values for specific flags to remove from <code>msgIDs</code>. Puede pasar cualquiera de las siguientes palabras claves:</p>
 <table>
 <thead>
 <tr><th>Parámetros</th><th>Tipo</th><th>Descripción</th></tr>
@@ -1479,18 +1479,18 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </table>
 <p>Note que los valores falsos se ignoran.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-13"></a><a href="#ejemplo-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1502,13 +1502,13 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <span class="hljs-variable">$options</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
 <span class="hljs-variable">$options</span>.password:=<span class="hljs-string">"xxxxx"</span>
 
-<span class="hljs-comment">// Create transporter</span>
+<span class="hljs-comment">// Crear transportador</span>
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
 
-<span class="hljs-comment">// Select mailbox</span>
+<span class="hljs-comment">// Seleccionar buzón</span>
 <span class="hljs-variable">$boxInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">selectBox</span>(<span class="hljs-string">"INBOX"</span>)
 
-<span class="hljs-comment">// Mark all messages from INBOX as unseen</span>
+<span class="hljs-comment">// Marcar todos los mensajes de INBOX como no vistos</span>
 <span class="hljs-variable">$flags</span>:=New object
 <span class="hljs-variable">$flags</span>[<span class="hljs-string">"$seen"</span>]:=<span class="hljs-literal">True</span>
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">removeFlags</span>(IMAP all;<span class="hljs-variable">$flags</span>)
@@ -1530,9 +1530,9 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>currentName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Name of the current mailbox</td></tr>
+<tr><td>currentName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del nuevo actual</td></tr>
 <tr><td>newName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nuevo nombre del buzón</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the renaming operation</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación renombrar</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-25"></a><a href="#descripción-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1540,22 +1540,22 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p>In the <code>currentName</code> parameter, pass the name of the mailbox to be renamed.</p>
 <p>Pass the new name for the mailbox in the <code>newName</code> parameter.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-14"></a><a href="#ejemplo-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>To to rename your “Invoices” mailbox to “Bills”:</p>
+<p>Para cambiar el nombre de su buzón de &quot;Invoices&quot; a &quot;Bills&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 
@@ -1569,7 +1569,7 @@ If</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-variable">$op
 
 <span class="hljs-variable">$transporter</span>:=<span class="hljs-function">IMAP New transporter</span>(<span class="hljs-variable">$options</span>)
 
-<span class="hljs-comment">// rename mailbox</span>
+<span class="hljs-comment">// renombrar buzón</span>
 <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">renameBox</span>(<span class="hljs-string">"Invoices"</span>; <span class="hljs-string">"Bills"</span>)<span class="hljs-keyword">
 
 If</span> (<span class="hljs-variable">$status</span>.success)
@@ -1621,7 +1621,7 @@ End if</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-27"></a><a href="#descripción-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <blockquote>
-<p>This function is based upon the specification for the <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">IMAP protocol</a>.</p>
+<p>Esta función se basa en la especificación del <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">protocolo IMAP</a>.</p>
 </blockquote>
 <p>The <code>.searchMails()</code> function searches for messages that match the given <em>searchCriteria</em> in the current mailbox. <em>searchCriteria</em> consists of one or more search keys.</p>
 <p><em>searchCriteria</em> is a text parameter listing one or more search keys (see <a href="#authorized-search-keys">Authorized search-keys</a> below) associated or not with values to look for. A search key may be a single or multiple items. Por ejemplo:</p>
@@ -1630,7 +1630,7 @@ End if</span>
 <span class="hljs-attr">SearchKey3</span> = FLAGGED DRAFT
 </code></pre>
 <blockquote>
-<p>Matching is usually not case-sensitive</p>
+<p>Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas</p>
 </blockquote>
 <ul>
 <li>If the <em>searchCriteria</em> is a null string, the search will be equivalent to a “select all”.</li>
@@ -1725,7 +1725,7 @@ End if</span>
 <tbody>
 <tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del buzón</td></tr>
 <tr><td>state</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Estado de acceso al buzón</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>boxInfo object</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>objeto boxInfo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-28"></a><a href="#descripción-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1734,7 +1734,7 @@ End if</span>
 <p>To get the information from a mailbox without changing the current mailbox, use <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.</p>
 </blockquote>
 <p>In the <em>name</em> parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the <a href="#getdelimiter"><code>.getDelimiter()</code></a> function.</p>
-<p>The optional <em>state</em> parameter defines the type of access to the mailbox. The possible values are:</p>
+<p>The optional <em>state</em> parameter defines the type of access to the mailbox. Los valores posibles son:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
@@ -1752,15 +1752,15 @@ End if</span>
 </ul>
 </blockquote>
 <p><strong>Objeto devuelto</strong></p>
-<p>The <code>boxInfo</code> object returned contains the following properties:</p>
+<p>El objeto <code>boxInfo</code> devuelto contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texto</td><td>Nombre del buzón</td></tr>
-<tr><td>mailCount</td><td>number</td><td>Number of messages in the mailbox</td></tr>
-<tr><td>mailRecent</td><td>number</td><td>Number of messages with the &quot;recent&quot; flag</td></tr>
+<tr><td>mailCount</td><td>number</td><td>Número de mensajes en el buzón</td></tr>
+<tr><td>mailRecent</td><td>number</td><td>Número de mensajes con la bandera &quot;recent&quot;</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-15"></a><a href="#ejemplo-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1792,29 +1792,29 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del buzón</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the subscribe operation</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación subscribe</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-29"></a><a href="#descripción-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.subscribe()</code> function allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.</p>
 <p>In the <code>name</code> parameter, pass the name of the mailbox to add (subscribe) to your &quot;subscribed&quot; mailboxes.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
 <tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
 <tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
 <tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-16"></a><a href="#ejemplo-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>To subscribe to the &quot;Atlas Corp” mailbox in the &quot;Bills&quot; hierarchy:</p>
+<p>Para suscribirse al buzón &quot;Atlas Corp&quot; en la jerarquía &quot;Bills&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw</span>; <span class="hljs-variable">$name </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 
@@ -1856,29 +1856,29 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nombre del buzón</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Status of the unsubscribe operation</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td style="text-align:center">&lt;-</td><td>Estado de la operación unsubscribe</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-30"></a><a href="#descripción-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.unsubscribe()</code> function removes a mailbox from a set of subscribed mailboxes. This allows you reduce the number of mailboxes you usually see.</p>
 <p>In the <code>name</code> parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>The function returns an object describing the IMAP status:</p>
+<p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Booleano</td><td>True if the operation is successful, False otherwise</td></tr>
-<tr><td>statusText</td><td></td><td>Texto</td><td>Status message returned by the IMAP server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack (not returned if a IMAP server response is received)</td></tr>
-<tr><td></td><td>[].errcode</td><td>Número</td><td>4D error code</td></tr>
-<tr><td></td><td>[].message</td><td>Texto</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>Booleano</td><td>True si la operación tiene éxito, False en caso contrario</td></tr>
+<tr><td>statusText</td><td></td><td>Texto</td><td>Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)</td></tr>
+<tr><td></td><td>[].errcode</td><td>Número</td><td>Código de error 4D</td></tr>
+<tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
+<tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-17"></a><a href="#ejemplo-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>To unsubscribe from the &quot;Atlas Corp” mailbox in the &quot;Bills&quot; hierarchy:</p>
+<p>Para desuscribirse del buzón &quot;Atlas Corp&quot; en la jerarquía &quot;Bills&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw</span>; <span class="hljs-variable">$name </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 

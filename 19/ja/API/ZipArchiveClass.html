@@ -127,72 +127,21 @@ End if</span>
 <ul>
 <li><p><em>fileToZip</em>: 圧縮する <code>4D.File</code> オブジェクトを引数として渡します。</p></li>
 <li><p><em>folderToZip</em>: 圧縮する <code>4D.Folder</code> を渡します。 この場合、任意の <em>options</em> 引数を渡して、フォルダーのコンテンツのみを圧縮 (つまり、外側のフォルダを除外) することができます。 <code>ZIP Create archive</code> はデフォルトで、フォルダーとその中身を圧縮するので、展開処理をしたときにはフォルダーを再作成します。 フォルダーの中身のみを解凍処理で復元するには、<em>options</em> 引数に <code>ZIP Without enclosing folder</code> 定数を渡します。</p></li>
-<li><p><em>zipStructure</em>: ZIPArchive オブジェクトを表すオブジェクトを引数として渡します。 以下のプロパティを利用して、このオブジェクトを定義することが可能です:<li><code>4D.File</code> または <code>4D.Folder</code> オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table></p>
-  <tr>
-    <td>
-      プロパティ
-    </td>
-<p><td>
-タイプ
-</td></p>
-<p><td>
-説明
-</td></p>
-  </tr>
-  <tr>
-    <td>
-      source
-    </td>
-<p><td>
-4D.File または 4D.Folder</p>
-<pre><code class="hljs">&lt;td&gt;
-  File または Folder
-&lt;/td&gt;&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;
-    destination
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    テキスト
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    (任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス
-  &lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-  &lt;td&gt;
-    option
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    number
-  &lt;/td&gt;
-  
-  &lt;td&gt;
-    (任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮
-  &lt;/td&gt;
-&lt;/tr&gt;&lt;/table&gt;&lt;/html&gt;
-</code></pre>
-<p></td></p>
-  </tr>
-  <tr>
-    <td>
-      callback
-    </td>
-<p><td>
-4D.Function
-</td></p>
-<p><td>
-$1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ
-</td></p>
-  </tr></tbody> 
-</table>
-</li>
+<li><p><em>zipStructure</em>: ZIPArchive オブジェクトを表すオブジェクトを引数として渡します。 以下のプロパティを利用して、このオブジェクトを定義することが可能です:</p></li>
 </ul>
+<table>
+<thead>
+<tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>compression</td><td>Text</td><td><p><li><code>ZIP Compression standard</code>: Deflate圧縮 (デフォルト)</li></p><p><li><code>ZIP Compression LZMA</code>: LZMA圧縮</li></p><p><li><code>ZIP Compression XZ</code>: XZ圧縮</li></p><p><li><code>ZIP Compression none</code>: 圧縮なし</li></p></td></tr>
+<tr><td>level</td><td>整数</td><td>圧縮レベル。 とりうる値: 1 - 10。 低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。 ただし、圧縮レベルはパフォーマンスに影響します。 デフォルト値 (省略時): <p><li><code>ZIP Compression standard</code>: 6</li></p><p><li><code>ZIP Compression LZMA</code>: 4</li></p><p><li><code>ZIP Compression XZ</code>: 4</li></p></td></tr>
+<tr><td>encryption</td><td>Text</td><td>パスワードが設定されていた場合に使用する暗号化方法:<p><li><code>ZIP Encryption AES128</code>: 128-bit キーを使った AES による暗号化</li></p><p><li><code>ZIP Encryption AES192</code>: 192-bit キーを使った AES による暗号化</li></p><p><li><code>ZIP Encryption AES256</code>: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li></p><p><li><code>ZIP Encryption none</code>: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li></p></td></tr>
+<tr><td>password</td><td>テキスト</td><td>暗号化が必要な場合に使用するパスワード</td></tr>
+<tr><td>files</td><td>コレクション</td><td><p><li><code>4D.File</code> または <code>4D.Folder</code> オブジェクトのコレクション</li></p><p><li>以下のプロパティを持ったオブジェクトのコレクション:</li></p><table><tr><td>プロパティ</td><td>タイプ</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder<td>File または Folder</td></tr><tr><td>destination</td><td>テキスト</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - <code>ZIP Ignore invisible files</code> で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table></td></tr>
+<tr><td>callback</td><td>4D.Function</td><td>$1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ</td></tr>
+</tbody>
+</table>
 <p><em>destinationFile</em> には、作成する ZIPアーカイブ (名前や位置など) を記述する <code>4D.File</code> オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、&quot;.zip&quot; 拡張子の使用が推奨されます。</p>
 <p>アーカイブが作成されると、<a href="#zip-read-archive">ZIP Read archive</a> を使用してアクセスすることができます。</p>
 <p><strong>ステータスオブジェクト</strong></p>
