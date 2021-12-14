@@ -55,7 +55,7 @@ Exemplo:
 Pode criar dois tipos de coleções:
 
 - coleções padrão (não compartilhadas), utilizando o comando `New collection`. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- coleções compartidas, utilizando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a estas coleções é controlada mediante estruturas `Use...End use`. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
+- coleções compartidas, utilizando o comando `New shared collection`. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a estas coleções é controlada mediante estruturas `Use... End use`. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 ## Métodos de coleção
 

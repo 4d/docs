@@ -146,7 +146,7 @@ Retorna os dados para a entidade específica definida pela chave primária da cl
 
 ### Descrição
 
-Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. A chave é o valor no atributo definida como Chave Primária para sua classe de dados. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
+Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
 Para saber mais sobre os dados retornados, veja [{datastoreClass}](#datastoreclass).
 
@@ -265,8 +265,7 @@ Chamada de um método `getAverage`:
 
 
 ```4d
-    //getAverage  
-ALL RECORDS([Employee])
+    //getAverage ALL RECORDS([Employee])
 $0:=New object("ageAverage";Average([Employee]age))
 ```
 
@@ -314,18 +313,15 @@ Chamada de um método `updateSalary`:
 - com o alcance de **Current selection**
 
 ```4d
-    //updateSalary  
-C_REAL($1;$vCount)
+    //updateSalary C_REAL($1;$vCount)
 READ WRITE([Employee])
-$vCount:=0
-FIRST RECORD([Employee])
+$vCount:=0 FIRST RECORD([Employee])
 While (Not(End selection([Employee]))  
     [Employee]salary:=[Employee]salary * $1
     SAVE RECORD([Employee])
     $vCount:=$vCount+1
     NEXT RECORD([Employee])
-End while 
-UNLOAD RECORD([Employee])
+End while UNLOAD RECORD([Employee])
 $0:=New object("updates";$vCount)
 ```
 

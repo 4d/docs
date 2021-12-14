@@ -13,7 +13,7 @@ You can combine both features and use menus created in structure as templates to
 
 ## Default menu bar
 
-A custom application must contain at least one menu bar with one menu. Como padrão, quando criar um novo banco de dados, 4D cria automaticamente uma barra de menu padrão (Barra de n°1) para que possa acessar ao modo Aplicação. The default menu bar includes standard menus and a command for returning to the Design mode.
+A custom application must contain at least one menu bar with one menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
 
 Isso permite ao usuário acessar o modo Aplicação logo que se crie o banco de dados. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
 

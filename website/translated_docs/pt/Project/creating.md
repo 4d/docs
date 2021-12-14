@@ -17,8 +17,7 @@ Os novos projetos 4D só podem ser criados desde **4D Developer** (ver [Desenvol
 Para criar um novo projeto de banco de dados:
 
 1. Lance uma aplicação 4D Developer.
-2. Selecione **Novo > Banco de dados projeto...** no menu **Arquivo**: ![](assets/en/Project/project-create1.png) O Selecione **Banco de dados projeto...** desde o botão **Novo** da barra de ferramentas: ![](assets/en/Project/projectCreate2.png)   
-   Aparecerá uma caixa de diálogo padrão **Guardar** para que possa escolher o nome e o local da pasta principal do banco projeto 4D.
+2. Selecione **Novo > Banco de dados projeto...** no menu **Arquivo**: ![](assets/en/Project/project-create1.png) O Selecione **Banco de dados projeto...** desde o botão **Novo** da barra de ferramentas: ![](assets/en/Project/projectCreate2.png) Aparecerá uma caixa de diálogo padrão **Guardar** para que possa escolher o nome e o local da pasta principal do banco projeto 4D.
 1. Enter the name of your project folder and click **Save**. This name will be used:
     - como o nome da pasta principal de projeto (chamada "MyFirstProject" no exemplo da seção [Arquitetura de um Projeto 4D](Project/architecture.md)),
     - as the name of the .4DProject file at the first level of the "Project" folder. You can choose any name allowed by your operating system. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.

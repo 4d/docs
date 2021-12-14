@@ -12,7 +12,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") e colchetes ("[ ]") não estão permitidos nos nomes de tabelas, campos, métodos ou variáveis.
+- Pontos (".") Pontos (".") e colchetes ("[ ]") não estão permitidos nos nomes de tabelas, campos, métodos ou variáveis.
 - Não são permitidos vírgulas, barras inclinadas, aspas nem dois pontos.
 - Os caracteres reservados para seu uso como oepradores como * e + não estão permitidos.
 - Não use nomes reservados, ou seja, nomes de comando 4D (`Date`, `Time`, etc), palavras chaves (If, For, etc.), e constantes.
@@ -20,7 +20,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 
 ### Regras adicionais para as propriedades dos objetos e os nomes ORDA
 - Os caracteres de espaço não estão permitidos.
-- Pontos (".") e os colchetes ("[ ]") não estão permitidos.
+- Pontos (".") Pontos (".") e os colchetes ("[ ]") não estão permitidos.
 - Os nomes são sensíveis às maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL
@@ -132,46 +132,40 @@ A referência a um elemento de um array local, processo ou interprocesso se real
 
 Examples:
 ```4d  
-    //O elemento ao que se faz referência se indica com uma expressão numérica.
-If(<>asKeywords{1}="Stop")
+    If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
-    //Direcionar um elemento de um array processo
-If(asKeywords{1}="Stop")
+    //Direcionar um elemento de um array processo If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
-    //Direcionar um elemento de um array local
-If($asKeywords{1}="Stop")
+    //Direcionar um elemento de um array local If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
 ### Elementos de arrays de duas dimensões
-A referência a um elemento de um array de duas dimensões se realiza utilizando as chaves ({…}) duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
+A referência a um elemento de um array de duas dimensões se realiza utilizando as chaves ({…}) duas vezes. duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
 
 Examples:
 ```4d
-    //Direcionamento de um elemento de um array interprocesso de duas dimensões 
-If(<>asKeywords{$vlNextRow}{1}="Stop")
+    //Direcionamento de um elemento de um array interprocesso de duas dimensões If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
-    //Direcionar um elemento de uma array processo de duas dimensões
-If(asKeywords{$vlNextRow}{1}="Stop")
+    //Direcionar um elemento de uma array processo de duas dimensões If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
-    //Direcionar um elemento de um array local de duas dimensões
-If($asKeywords{$vlNextRow}{1}="Stop")
+    //Direcionar um elemento de um array local de duas dimensões If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
 ## Atributos de objetos
 
-Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".") entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
+Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".") entre o nome do objeto (ou do atributo) e o nome do atributo. entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
 
 Examples:
 ```4d
@@ -212,8 +206,7 @@ Um método projeto (procedimento ou função) se designa utilizando seu nome. Um
 Examples:
 ```4d
 If(New client)
-DELETE DUPLICATED VALUES
-APPLY TO SELECTION([Employees];INCREASE SALARIES)
+DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
 **Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use maiúsculas para nomear seus métodos, entretanto, se um método for uma função, coloque em maiúsculas o primeiro caractere de seu nome. Dessa maneira, quando reabrir um banco de dados para manutenção depois de alguns meses, já saberá se um método retorna um resultado, simplesmente olhando seu nome na janela do Explorer.
@@ -222,22 +215,18 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 Examples:
 ```4d
-    //Este comando espera um método (função) ou uma fórmula
-QUERY BY FORMULA([aTable];Special query)
-    //Este comando espera um método (procedimento) ou uma instrução
-APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //Mas este comando espera um nome de método
-ON EVENT CALL("HANDLE EVENTS")
+    //Este comando espera um método (função) ou uma fórmula QUERY BY FORMULA([aTable];Special query)
+    //Este comando espera um método (procedimento) ou uma instrução APPLY TO SELECTION([Employees];INCREASE SALARIES)
+    //Mas este comando espera um nome de método ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Os métodos projeto podem aceitar parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
+Os métodos projeto podem aceitar parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 
 Examples:
 ```4d
-    //Dentro de DROP SPACES $1 é um ponteiro ao campo [People]Name
-DROP SPACES(->[People]Name)
+    //Dentro de DROP SPACES $1 é um ponteiro ao campo [People]Name DROP SPACES(->[People]Name)
 
     //Dentro de Calc creator:
     //- $1 é numérico e igual a 1
@@ -289,16 +278,13 @@ O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). Um nome
 
 Examples:
 ```4d
-    //Conjuntos interprocessos
-USE SET("<>Deleted Records")
+    //Conjuntos interprocessos USE SET("<>Deleted Records")
 CREATE SET([Customers];"<>Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
-    //Conjuntos processos
-USE SET("Deleted Records")
+    //Conjuntos processos USE SET("Deleted Records")
 CREATE SET([Customers];"Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
-    //Conjuntos clientes
-USE SET("$Deleted Records")
+    //Conjuntos clientes USE SET("$Deleted Records")
 CREATE SET([Customers];"$Customer Orders")
 If(Records in set("$Selection"+String($i))>0)
 ```
@@ -320,10 +306,8 @@ Uma seleção temporária processo é determinada mediante uma expressão de str
 
 Examples:
 ```4d
-    //Seleção interprocesso temporária
-USE NAMED SELECTION([Customers];"<>ByZipcode")
-    //Seleção processo temporária
-USE NAMED SELECTION([Customers];"<>ByZipcode")
+    USE NAMED SELECTION([Customers];"<>ByZipcode")
+    //Seleção processo temporária USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
 ## Processos

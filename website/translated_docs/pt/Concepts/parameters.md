@@ -21,7 +21,7 @@ DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
 Os parâmetros estão separados por ponto e vírgula (;). Seu valor é avaliado no momento da chamada.
 
-Na subrotina (o método chamado), o valor de cada parâmetro se copia automaticamente em variáveis locais numeradas sequencialmente: $1, $2, $3, etc. A numeração das variáveis locais representam a ordem dos parâmetros.
+Na subrotina (o método chamado), o valor de cada parâmetro se copia automaticamente em variáveis locais numeradas sequencialmente: $1, $2, $3, etc. A numeração das variáveis locais representam a ordem dos parâmetros. A numeração das variáveis locais representam a ordem dos parâmetros.
 
 ```4d
   //Código do método DO SOMETHING
@@ -39,6 +39,7 @@ Os mesmos princípios são usados quando métodos forem executados através de c
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
+//passe a data !05/05/10!  
 //passe a data !05/05/10! como parâmetro del SetCalendarDate  
 // no contexto de um subformulário
 ```
@@ -127,8 +128,7 @@ $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 Este código pode ser executado em modo compilado só se "foo_method" declarar seus parâmetros:
 
 ```4d
-//foo_method
-C_TEXT($1)
+//foo_method C_TEXT($1)
 C_LONGINT($2)
 C_OBJECT($3)
 ...
@@ -145,8 +145,7 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
 - Métodos de banco de dados Por exemplo, o método banco `On Web Connection` recebe seis parâmetros, de $1 a $6, del tipo Texto. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
 
 ```4d
-// On Web Connection
-C_TEXT($1;$2;$3;$4;$5;$6)
+// On Web Connection C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
 - Triggers O parâmetro $0 (Inteiro longo), que é o resultado de um trigger, será digitado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
@@ -169,9 +168,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 Quando passar um parâmetro, 4D sempre avalia a expressão do parâmetro no contexto do método que chama e define o **valor resultante** nas variáveis locais $1, $2... da subrotina (ver [Utilização dos parâmetros](#using-parameters)). As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Como seu alcance é local, se o valor de um parâmetro for modificado na subrotina, não muda o valor no método chamada. Por exemplo:
 
 ```4d
-    //Esta é uma parte do código do método MY_METHOD
-DO_SOMETHING([People]Name) //Suponha que o valor [People]Name seja "williams"
-ALERT([People]Name)
+    //Esta é uma parte do código do método MY_METHOD DO_SOMETHING([People]Name) //Suponha que o valor [People]Name seja "williams" ALERT([People]Name)
 
     //Este é o código do método DO_SOMETHING
  $1:=Uppercase($1)
@@ -208,7 +205,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions).
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). É descrita no parágrafo [Funções](#functions).
 
 
 ### Casos particulares: objetos e coleções
@@ -224,7 +221,7 @@ Por exemplo, considere o método `CreatePerson` que cria um objeto e o envia com
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
- ALERT(String($person.Age))  
+ ALERT(String($person.  
 ```
 
 O método `ChangeAge` adiciona 10 ao atributo Age do objeto recebido
@@ -252,7 +249,7 @@ Por exemplo, utilizando o método `CreatePerson`:
  C_OBJECT($person)
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
- ALERT(String($person.Age))  
+ ALERT(String($person.  
 ```
 No método `ChangeAge` pode escrever:
 
@@ -260,8 +257,8 @@ No método `ChangeAge` pode escrever:
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
- $para.Age:=$para.Age+10
- ALERT($para.Name+" is "+String($para.Age)+" years old.")
+ $para. Age:=$para. Age+10
+ ALERT($para. Name+" is "+String($para.
 ```
 
 Isso oferece uma poderosa maneira de definir [parâmetros opcionais](#optional-parameters) (ver também abaixo). Para manejar os parâmetros que faltam, pode:
@@ -275,8 +272,8 @@ No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e
   //ChangeAge
  C_OBJECT($1;$para)
  $para:=$1  
- $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ $para. Age:=Num($para. Age)+10
+ ALERT(String($para. Name)+" is "+String($para.
 ```
 Ambos parâmetros são opcionais: se não forem preenchidos, o resultado será "é 10 anos de idade", mas nenhum erro será gerado.
 
@@ -286,14 +283,10 @@ Finalmente, com parâmetros com nome, a manutenção ou a reprodução das aplic
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
-//ChangeAge
-C_OBJECT($1;$para)
-$para:=$1  
-If ($para.toAdd=Null)
-    $para.toAdd:=10
-End if
-$para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+//ChangeAge C_OBJECT($1;$para)
+$para:=$1 If ($para.toAdd=Null)
+    $para.toAdd:=10 End if
+$para. Age:=Num($para. Age)+$para.toAdd ALERT(String($para. Name)+" is "+String($para.
 ```
 Não precisará mudar seu código existente. Sempre funcionará como na versão anterior, mas se for necessário, é possível usar outro valor diferente de 10 anos.
 
@@ -304,8 +297,7 @@ Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima
 
 No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opcionais. Por exemplo, `ALERT (message{; okButtonTitle})` significa que o parâmetro *okButtonTitle* pode omitir o chamado ao comando. Pode fazer a chamada de duas maneiras:
 ```4d
-ALERT("Are you sure?";"Yes I am") //2 parâmetros
-ALERT("Time is over") //1 parâmetro
+ALERT("Are you sure?";"Yes I am") //2 parâmetros ALERT("Time is over") //1 parâmetro
 ```
 
 Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. O problema com os parâmetros opcionais é como manejar o caso em que alguns deles estejam faltando no método chamado, nunca deveria produzir um erro. Uma boa prática é atribuir valores padrão aos parâmetros não utilizados.
@@ -336,15 +328,13 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
 Depois de adicionar este método projeto a sua aplicação, pode escrever:
 
 ```4d  
-APPEND TEXT(vtSomeText) //Só mostrará a mensagem
-APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $path
-APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
+APPEND TEXT(vtSomeText) //Só mostrará a mensagem APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $path APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 ```
 
 
 ## Indireção dos parâmetros
 
-Os métodos projeto 4D aceitam um número variável de parametros do mesmo tipo, começando pela direita. Este princípio se chama **la indireção de parâmetros**. Ao utilizar o comando `Count parameters` pode endereçar esses parâmetros com um loop `For...End for` e a sintaxe de indireção de parâmetros.
+Os métodos projeto 4D aceitam um número variável de parametros do mesmo tipo, começando pela direita. Este princípio se chama **la indireção de parâmetros**. Ao utilizar o comando `Count parameters` pode endereçar esses parâmetros com um loop `For... End for` e a sintaxe de indireção de parâmetros.
 
 No exemplo abaixo, o método projeto `SEND PACKETS` aceita um parâmetro de tempo seguido de um número variável de parâmetros de texto:
 

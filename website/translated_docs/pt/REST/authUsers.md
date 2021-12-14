@@ -31,19 +31,12 @@ Nas seguintes petições REST, tenha certeza de que esta cookie se inclua no **c
 A gestão de cookies de sessão depende de seu cliente HTTP. Este exemplo mostra como extrair e reenviar a cookie de sessão no contexto das petições gestionadas através do comando 4D `HTTP Request`.
 
 ```4d
-// Criar os cabeçalhos
 ARRAY TEXT(headerNames;0)
-ARRAY TEXT(headerValues;0)
-
-APPEND TO ARRAY(headerNames;"username-4D")
+ARRAY TEXT(headerValues;0) APPEND TO ARRAY(headerNames;"username-4D")
 APPEND TO ARRAY(headerNames;"session-4D-length")
-APPEND TO ARRAY(headerNames;"hashed-password-4D")
-
-APPEND TO ARRAY(headerValues;"kind user")
+APPEND TO ARRAY(headerNames;"hashed-password-4D") APPEND TO ARRAY(headerValues;"kind user")
 APPEND TO ARRAY(headerValues;"60")
-APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
-
-C_OBJECT($response)
+APPEND TO ARRAY(headerValues;Generate digest("test";4D digest)) C_OBJECT($response)
 $response:=New object
 
 //Esta petição abre uma sessão para o usuário "kind user"
@@ -60,28 +53,20 @@ $result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\
 ```
 
 ```4d
-// método projeto buildHeader  
-
-C_POINTER($pointerNames;$1;$pointerValues;$2)
+// método projeto buildHeader C_POINTER($pointerNames;$1;$pointerValues;$2)
 ARRAY TEXT($headerNames;0)
-ARRAY TEXT($headerValues;0)
-
-COPY ARRAY($1->;$headerNames)
+ARRAY TEXT($headerValues;0) COPY ARRAY($1->;$headerNames)
 COPY ARRAY($2->;$headerValues)
 
 $indexCookie:=Find in array($headerValues;"WASID4D@")
 $cookie:=$headerValues{$indexCookie}
 $start:=Position("WASID4D";$cookie)
 $end:=Position(";";$cookie)
-$uuid:= Substring($cookie;$start;$end-$start)
-
-ARRAY TEXT($headerNames;1)
+$uuid:= Substring($cookie;$start;$end-$start) ARRAY TEXT($headerNames;1)
 ARRAY TEXT($headerValues;1)
 
 $headerNames{1}:="Cookie"
-$headerValues{1}:=$uuid
-
-COPY ARRAY($headerNames;$1->)
+$headerValues{1}:=$uuid COPY ARRAY($headerNames;$1->)
 COPY ARRAY($headerValues;$2->)
 ```
 

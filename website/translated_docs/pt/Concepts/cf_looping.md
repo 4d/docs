@@ -4,15 +4,15 @@ title: Looping structures
 ---
 
 ## While...End while
-A sintaxe da estrutura condicional `While...End while` é:
+A sintaxe da estrutura condicional `While... End while` é:
 ```4d
  While(Boolean_Expression)
     statement(s)
  End while
 ```
-Um loop `While...End while` executa as instruções dentro do loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+Um loop `While... End while` executa as instruções dentro do loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
 
-É comum inicializar o valor provado na expressão booleana imediatamente antes de entrar no loop `While...End while`. Inicializar o valor significa atribuir o valor para algo apropriado, geralmente para que a expressão booleana seja TRUE e `While...End while` execute o loop.
+É comum inicializar o valor provado na expressão booleana imediatamente antes de entrar no loop `While... End while`. Inicializar o valor significa atribuir o valor para algo apropriado, geralmente para que a expressão booleana seja TRUE e `While... End while` execute o loop.
 
 O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O próximo loop continua para sempre porque _NeverStop_ sempre será TRUE:
 ```4d
@@ -36,18 +36,18 @@ Nesse exemplo, o valor da variável sistema `OK` é estabelecida pelo comando `C
 
 ## Repeat...Until
 
-A sintaxe da estrutura condicional `Repeat...Until` é:
+A sintaxe da estrutura condicional `Repeat... Until` é:
 ```4d
  Repeat
     statement(s)
  Until(Boolean_Expression)
 ```
-Um loop `Repeat...Until` é similar a um loop [While...End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes. Assim, um loop `Repeat...Until` sempre executa o loop uma vez, enquanto que se a expressão booleana for inicialmente False, um loop `While...End while` não executa o loop em absoluto.
+A outra diferença com um loop `Repeat... Until` é que o loop continua até que a expressão seja TRUE.
 
-A outra diferença com um loop `Repeat...Until` é que o loop continua até que a expressão seja TRUE.
+Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
 
 ### Exemplo
-Compare o exemplo abaixo com o exemplo para o lopp `While...End while`. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
+Compare o exemplo abaixo com o exemplo para o lopp `While... End while`. Lembre que a expressão booleana não precisa ser iniciada - não há um comando `CONFIRM` para inicializar a variável `OK`.
 
 ```4d
  Repeat
@@ -56,7 +56,7 @@ Compare o exemplo abaixo com o exemplo para o lopp `While...End while`. Lembre q
 ```
 
 ## For...End for
-A sintaxe da estrutura condicional `For...End for` é:
+A sintaxe da estrutura condicional `For... End for` é:
 
 ```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
@@ -64,7 +64,7 @@ A sintaxe da estrutura condicional `For...End for` é:
  End for
 ```
 
-O loop `For...End for` é um loop controlado por um contador:
+O loop `For... End for` é um loop controlado por um contador:
 
 - The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
 - Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
@@ -120,7 +120,7 @@ O loop `For...End for` é um loop controlado por um contador:
  End for
 ```
 
-A maioria dos loops `For...End for` que escreverá em seus bancos de dados vão parecer com aqueles listados nesses exemplos.
+A maioria dos loops `For... End for` que escreverá em seus bancos de dados vão parecer com aqueles listados nesses exemplos.
 
 ### Decrementing variable counter
 
@@ -183,14 +183,14 @@ Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo va
 
 ### Comparing looping structures
 
-Voltamos ao primeiro exemplo de `For...End for`. The following example executes 100 iterations:
+Voltamos ao primeiro exemplo de `For... End for`. The following example executes 100 iterations:
 ```4d
  For(vCounter;1;100)
   //Do something
  End for
 ```
 
-É interessante ver como  o loop `While...End while` e o loop `Repeat...Until` realizariam a mesma ação. Aqui está o loop equivalente `While...End while`:
+Aquí está o loop equivalente `Repeat... Until`:
 ```4d
  $i:=1 //Initialize the counter
  While($i<=100) //Loop 100 times
@@ -199,7 +199,7 @@ Voltamos ao primeiro exemplo de `For...End for`. The following example executes 
  End while
 ```
 
-Aquí está o loop equivalente `Repeat...Until`:
+Aqui está o loop equivalente `While... End while`:
 ```4d
  $i:=1 //Initialize the counter
  Repeat
@@ -207,7 +207,7 @@ Aquí está o loop equivalente `Repeat...Until`:
     $i:=$i+1 //Need to increment the counter
  Until($i=100) //Loop 100 times
 ```
-**Dica:** o loop `For...End for` é geralmente mais rápido que os loops `While...End while` ou `Repeat...Until`, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Portanto, utilize o loop `For...End for` sempre que for possível.
+**Dica:** o loop `For... End for` é geralmente mais rápido que os loops `While... End while` ou `Repeat... Until`, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Portanto, utilize o loop `For... End for` sempre que for possível.
 
 ### Optimizing the execution of the For...End for loops
 
@@ -224,7 +224,7 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
 
 ### Nested For...End for looping structures
 
-Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For...End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
+Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
@@ -242,7 +242,7 @@ Aqui são dois exemplos:
  End for
 ```
 
-12. The following example builds an array of pointers to all the date fields present in the database:
+12. O seguinte exemplo constrói um array de ponteiros a todos os campos de data presentes no banco:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -264,7 +264,7 @@ Aqui são dois exemplos:
 ```
 
 ## For each...End for each
-A sintaxe da estrutura condicional `For each...End for each` é:
+A sintaxe da estrutura condicional `For each... End for each` é:
 
 ```4d
  For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}
@@ -272,37 +272,37 @@ A sintaxe da estrutura condicional `For each...End for each` é:
  End for each
 ```
 
-A estrutura `For each...End for each` faz uma iteração sobre um *Elemento_atual* especificado sobre todos os valores de *Expressão*. O tipo *elemento_atual* depende do tipo *Expression*. O loop `For each...End for each` pode iterar através de três tipos de *Expressão*:
+A estrutura `For each... End for each` faz uma iteração sobre um *Elemento_atual* especificado sobre todos os valores de *Expressão*. O tipo *elemento_atual* depende do tipo *Expression*. O loop `For each... End for each` pode iterar através de três tipos de *Expressão*:
 
-- collections: loop through each element of the collection,
-- entity selections: loop through each entity,
-- objects: loop through each object property.
+- collections: loop por cada elemento da coleção,
+- seleções de entidades: loop em cada entidade,
+- objetos: loop em cada propriedade do objeto.
 
-A tabela abaixo compara os três tipos de `For each...End for each`:
+A tabela abaixo compara os três tipos de `For each... End for each`:
 
-|                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
-| --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
-| Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Objeto                      |
-| Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | Sim                                              | Sim                                 | No                          |
+|                                           | Loop através da coleção                            | Loop nas seleções de entidades | Loop nos objetos                 |
+| ----------------------------------------- | -------------------------------------------------- | ------------------------------ | -------------------------------- |
+| Tipo Current_Item                         | Variável do mesmo tipo que os elementos da coleção | Entity                         | Variável texto                   |
+| Tipos de expressões                       | Coleção (com elementos do mesmo tipo)              | Seleção de entidades           | Objeto                           |
+| Número de loops (por padrão)              | Número de elementos da coleção                     | Número de entidades na seleção | Número de propriedades de objeto |
+| Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | No                               |
 
-- The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
-    - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required.
+- O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
+- Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
+- Os parâmetros opcionais *begin* e *end* podem ser usados com coleç~eos e seleções de entidades para definir os limites do loop.
+- O loop `For each...End for each` pode ser usado em uma **coleção compartida** ou um **objeto compartilhado**. Se seu código necessitar modificar um ou  mais elementos da coleção ou das propriedades de objeto, deve utilizar as palavras chave `Use...End use`. Dependendo de sus necessidades, pode chamar às palavras clave `Use...End use`:
+    - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
+    - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-### Loop through collections
+### Loop através da coleção
 
-Quando `For each...End for each` for usado com uma _Expressão_ do tipo _Collection_ , o parâmetro _Elemento_atual_ é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
+Quando `For each... End for each` for utilizado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
 
 A coleção deve conter só elementos do mesmo tipo, do contrário se devolverá um erro assim que a variável _Current_Item_ tenha sido atribuída o primeiro tipo de valor estranho.
 
 Em cada iteração do loop, a variável _Current_Item_ é preenchida automaticamente com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
+- Se a variável _Current_Item_ é de tipo objeto ou de tipo coleção (ou seja, se _Expresión_ for uma coleção de objetos ou de coleções), ao modificar esta variável se modificará automaticamente o elemento coincidente da coleção (porque os objetos e as coleções compartem as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
@@ -330,7 +330,7 @@ Se quiser computar algumas estatísticas para uma coleção de números:
   //$vUnder=4,$vOver=2
 ```
 
-### Loop through entity selections
+### Loop nas seleções de entidades
 
 Quando `For each...End for each` for utilizado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção.
 
@@ -353,7 +353,7 @@ Se quiser aumentar o salário de todos os empregados britânicos em uma seleçã
 
 ### Loop through object properties
 
-Quando se utiliza `For each...End for each` com uma *Expression* de tipo Object, o parâmetro *Current_Item* é uma variável texto que é preenchida automaticamente com o nome da propriedade atualmente processada.
+Quando se utiliza `For each... End for each` com uma *Expression* de tipo Object, o parâmetro *Current_Item* é uma variável texto que é preenchida automaticamente com o nome da propriedade atualmente processada.
 
 As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.
 
@@ -415,7 +415,7 @@ For example:
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 ### Until and While conditions
-Pode controlar a execução de `For each...End for each` adicionando uma condição `Until` ou uma condição `While` ao loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
+Pode controlar a execução de `For each... End for each` adicionando uma condição `Until` ou uma condição `While` ao loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 

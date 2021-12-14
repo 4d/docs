@@ -22,7 +22,7 @@ The Administrator can:
 
 The Administrator cannot:
 - edit the Designer user
-- by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Both the Designer and Administrator are available by default in all databases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 

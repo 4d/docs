@@ -79,12 +79,11 @@ Pode chamar métodos de projeto 4D que são [expostos como serviços REST](%7Bda
 O exemplo abaixo é um método de classe de dados que recebe parâmetros e retorna um objeto:
 
 ```4d
-// método 4D findPerson
-C_TEXT($1;$firstname;$2;$lastname)
+// método 4D findPerson C_TEXT($1;$firstname;$2;$lastname)
 $firstname:=$1
 $lastname:=$2
 
-$0:=ds.Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
+$0:=ds. Employee.query("firstname = :1 and lastname = :2";$firstname;$lastname).first().toObject()
 ```
 
 As propriedades de método são configuradas de acordo com o lado do projeto 4D:
