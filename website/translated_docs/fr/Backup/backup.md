@@ -52,7 +52,7 @@ Le compte-rendu de la dernière sauvegarde (succès ou échec) est stocké dans 
 
 ### Accès à la base durant la sauvegarde
 
-Pendant la sauvegarde, les accès à la base sont restreints par 4D en fonction du contexte. 4D verrouille les process liés aux types de fichiers inclus dans la sauvegarde : si seul le fichier de structure est sauvegardé, l’accès à la structure est impossible mais l’accès aux données est autorisé.
+Pendant la sauvegarde, les accès à la base sont restreints par 4D en fonction du contexte. Pendant la sauvegarde, les accès à l'application sont restreints par 4D en fonction du contexte.
 
 A l’inverse, si seul le fichier de données est sauvegardé, l’accès à la structure reste autorisé. Dans ce cas, les possibilités d’accès aux données sont les suivantes :
 
