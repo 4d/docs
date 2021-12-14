@@ -155,8 +155,7 @@ End if
 En caso contrario, si los símbolos de referencia de caracteres aparecen dentro de una expresión, devuelven el caracter (al que se refieren) como una cadena de 1 caracter. Por ejemplo:
 
 ```4d
-//El siguiente ejemplo comprueba si el último caracter de vtText es una arroba "@".
- If(vtText#"")
+//El siguiente ejemplo comprueba si el último caracter de vtText es una arroba "@". If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
@@ -180,6 +179,7 @@ Al utilizar los símbolos de indice de cadena, debe dirigirse a los caracteres e
 
 ```
 //Muy malo y desagradable, ¡Boo!
+ //Muy malo y desagradable, ¡Boo!
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
