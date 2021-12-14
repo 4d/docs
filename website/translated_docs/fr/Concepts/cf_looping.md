@@ -291,7 +291,7 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 |                                           | Boucle sur collections                                  | Boucle sur entity selections       | Boucle sur objets             |
 | ----------------------------------------- | ------------------------------------------------------- | ---------------------------------- | ----------------------------- |
 | Type Elément_courant                      | Variable du même type que les éléments de la collection | Entity                             | Variable texte                |
-| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Objet                         |
+| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Object                        |
 | Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
 | Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
 

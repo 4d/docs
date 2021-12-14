@@ -364,9 +364,9 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Paramètres | Type  |    | Description                                 |
-| ---------- | ----- |:--:| ------------------------------------------- |
-| Résultat   | Objet | <- | Status of the transporter object connection |
+| Paramètres | Type   |    | Description                                 |
+| ---------- | ------ |:--:| ------------------------------------------- |
+| Résultat   | Object | <- | Status of the transporter object connection |
 <!-- END REF -->
 
 

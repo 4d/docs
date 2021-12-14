@@ -118,7 +118,7 @@ Utilisation du datastore principal de la base 4D :
 <!-- REF #_command_.Open datastore.Params -->
 | Paramètres     | Type         |    | Description                                                                       |
 | -------------- | ------------ | -- | --------------------------------------------------------------------------------- |
-| connectionInfo | Objet        | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
+| connectionInfo | Object       | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
 | localID        | Texte        | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
 | Résultat       | cs.DataStore | <- | Objet datastore                                                                   |
 <!-- END REF -->
@@ -297,9 +297,9 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Paramètres | Type  |    | Description                                                             |
-| ---------- | ----- |:--:| ----------------------------------------------------------------------- |
-| Résultat   | Objet | <- | Informations sur le chiffrement du datastore courant et de chaque table |
+| Paramètres | Type   |    | Description                                                             |
+| ---------- | ------ |:--:| ----------------------------------------------------------------------- |
+| Résultat   | Object | <- | Informations sur le chiffrement du datastore courant et de chaque table |
 <!-- END REF -->
 
 
@@ -317,8 +317,8 @@ L'objet retourné contient les propriétés suivantes :
 | ----------- | ----------- | ------------- | ------- | ----------------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Booléen | Vrai si le fichier de données est chiffré                                                 |
 | keyProvided |             |               | Booléen | Vrai si la clé de chiffrement correspondant au fichier de données chiffré est fournie(*). |
-| tables      |             |               | Objet   | Objet contenant autant de propriétés que de tables chiffrables ou chiffrées.              |
-|             | *tableName* |               | Objet   | Table chiffrable ou chiffrée                                                              |
+| tables      |             |               | Object  | Objet contenant autant de propriétés que de tables chiffrables ou chiffrées.              |
+|             | *tableName* |               | Object  | Table chiffrable ou chiffrée                                                              |
 |             |             | name          | Texte   | Nom de la table                                                                           |
 |             |             | num           | Nombre  | Numéro de la table                                                                        |
 |             |             | isEncryptable | Booléen | Vrai si la table est déclarée chiffrable dans le fichier de structure                     |
@@ -371,9 +371,9 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 **.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Paramètres | Type  |    | Description             |
-| ---------- | ----- |:--:| ----------------------- |
-| Résultat   | Objet | <- | Propriétés du datastore |
+| Paramètres | Type   |    | Description             |
+| ---------- | ------ |:--:| ----------------------- |
+| Résultat   | Object | <- | Propriétés du datastore |
 <!-- END REF -->
 
 #### Description
@@ -549,11 +549,11 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Paramètres    | Type  |    | Description                                                    |
-| ------------- | ----- | -- | -------------------------------------------------------------- |
-| curPassPhrase | Texte | -> | Phrase secrète courante                                        |
-| curDataKey    | Objet | -> | Clé de chiffrement des données courante                        |
-| Résultat      | Objet | <- | Résultat de la mise en correspondance de la clé de chiffrement |
+| Paramètres    | Type   |    | Description                                                    |
+| ------------- | ------ | -- | -------------------------------------------------------------- |
+| curPassPhrase | Texte  | -> | Phrase secrète courante                                        |
+| curDataKey    | Object | -> | Clé de chiffrement des données courante                        |
+| Résultat      | Object | <- | Résultat de la mise en correspondance de la clé de chiffrement |
 <!-- END REF -->
 
 

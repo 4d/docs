@@ -312,7 +312,6 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 
 
-
 ## 4DEVAL
 
 #### シンタックス: `<!--#4DEVAL expression-->`
@@ -322,7 +321,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 たとえば、以下の様なコードを実行することができます:
 
-```
+```4d
  $input:="<!--#4DEVAL a:=42-->" // 代入
  $input:=$input+"<!--#4DEVAL a+1-->" // 計算
  PROCESS 4D TAGS($input;$output)
@@ -390,7 +389,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 同じ内容を `4DELSEIF` タグを使用して記述した場合:
 
-```
+```html
 <!--#4DIF Condition1-->
      /* Condition1 が true の場合*/
 <!--#4DELSEIF Condition2-->
@@ -643,11 +642,13 @@ No name has been found.
 
 > `4DSCRIPT` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。
 
-4Dはメソッドを見つけた順に実行するため、ドキュメントの後の方で参照される変数の値を設定するメソッドを呼び出すことも可能です。モードは関係ありません。 テンプレートには必要なだけ`<<!--#4DSCRIPT...--></code> コメントを記述できます。</p>
+4Dはメソッドを見つけた順に実行するため、ドキュメントの後の方で参照される変数の値を設定するメソッドを呼び出すことも可能です。モードは関係ありません。 テンプレートには必要なだけ`<!--#4DSCRIPT...-->` コメントを記述できます。
 
-<h2 spaces-before="0">4DTEXT</h2>
 
-<h4 spaces-before="0">シンタックス: <code><!--#4DTEXT expression-->`</h4>
+
+## 4DTEXT
+
+#### シンタックス: `<!--#4DTEXT expression-->`
 #### 代替シンタックス: `$4DTEXT(expression)`
 
 

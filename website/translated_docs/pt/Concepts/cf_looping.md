@@ -249,7 +249,7 @@ Aqui são dois exemplos:
  End for
 ```
 
-12. The following example builds an array of pointers to all the date fields present in the database:
+12. O seguinte exemplo constrói um array de ponteiros a todos os campos de data presentes no banco:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -282,27 +282,27 @@ A sintaxe da estrutura condicional `For each...End for each` é:
 
 A estrutura `For each...End for each` faz uma iteração sobre um *Elemento_atual* especificado sobre todos os valores de *Expressão*. O tipo *elemento_atual* depende do tipo *Expression*. O loop `For each...End for each` pode iterar através de três tipos de *Expressão*:
 
-- collections: loop through each element of the collection,
-- entity selections: loop through each entity,
-- objects: loop through each object property.
+- collections: loop por cada elemento da coleção,
+- seleções de entidades: loop em cada entidade,
+- objetos: loop em cada propriedade do objeto.
 
 A tabela abaixo compara os três tipos de `For each...End for each`:
 
-|                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
-| --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
-| Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Objeto                      |
-| Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | Sim                                              | Sim                                 | No                          |
+|                                           | Loop através da coleção                            | Loop nas seleções de entidades | Loop nos objetos                 |
+| ----------------------------------------- | -------------------------------------------------- | ------------------------------ | -------------------------------- |
+| Tipo Current_Item                         | Variável do mesmo tipo que os elementos da coleção | Entity                         | Variável texto                   |
+| Tipos de expressões                       | Coleção (com elementos do mesmo tipo)              | Seleção de entidades           | Objeto                           |
+| Número de loops (por padrão)              | Número de elementos da coleção                     | Número de entidades na seleção | Número de propriedades de objeto |
+| Compatibilidade de parâmetros begin / end | Sim                                                | Sim                            | No                               |
 
-- The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
-    - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required.
+- O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
+- Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
+- Os parâmetros opcionais *begin* e *end* podem ser usados com coleç~eos e seleções de entidades para definir os limites do loop.
+- O loop `For each...End for each` pode ser usado em uma **coleção compartida** ou um **objeto compartilhado**. Se seu código necessitar modificar um ou  mais elementos da coleção ou das propriedades de objeto, deve utilizar as palavras chave `Use...End use`. Dependendo de sus necessidades, pode chamar às palavras clave `Use...End use`:
+    - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
+    - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
-### Loop through collections
+### Loop através da coleção
 
 Quando `For each...End for each` for usado com uma _Expressão_ do tipo _Collection_ , o parâmetro _Elemento_atual_ é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
 
@@ -310,7 +310,7 @@ A coleção deve conter só elementos do mesmo tipo, do contrário se devolverá
 
 Em cada iteração do loop, a variável _Current_Item_ é preenchida automaticamente com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
+- Se a variável _Current_Item_ é de tipo objeto ou de tipo coleção (ou seja, se _Expresión_ for uma coleção de objetos ou de coleções), ao modificar esta variável se modificará automaticamente o elemento coincidente da coleção (porque os objetos e as coleções compartem as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
 
@@ -338,7 +338,7 @@ Se quiser computar algumas estatísticas para uma coleção de números:
   //$vUnder=4,$vOver=2
 ```
 
-### Loop through entity selections
+### Loop nas seleções de entidades
 
 Quando `For each...End for each` for utilizado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção.
 

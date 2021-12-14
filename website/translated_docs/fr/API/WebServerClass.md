@@ -782,10 +782,10 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Paramètres | Type  |    | Description                            |
-| ---------- | ----- | -- | -------------------------------------- |
-| settings   | Objet | -> | Paramètres du serveur web au démarrage |
-| Résultat   | Objet | <- | État du démarrage du serveur web       |
+| Paramètres | Type   |    | Description                            |
+| ---------- | ------ | -- | -------------------------------------- |
+| settings   | Object | -> | Paramètres du serveur web au démarrage |
+| Résultat   | Object | <- | État du démarrage du serveur web       |
 
 <!-- END REF -->
 

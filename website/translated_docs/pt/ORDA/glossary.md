@@ -87,7 +87,7 @@ An entity can be seen as an instance of the dataclass, like a record of the tabl
 
 For more information, see Entities.
 
-## Entity selection
+## Seleção de entidades
 
 An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
 

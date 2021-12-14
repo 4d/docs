@@ -1947,7 +1947,7 @@ Vous souhaitez trier la collection résultante :
 | ------------- | ---------- |:--:| ------------------------------------------------------------------------- |
 | queryString   | Texte      | -> | Critère(s) de recherche                                                   |
 | value         | Mixed      | -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
-| querySettings | Objet      | -> | Options de requête : paramètres, attributs                                |
+| querySettings | Object     | -> | Options de requête : paramètres, attributs                                |
 | Résultat      | Collection | <- | Élément(s) correspondant à queryString dans la collection                 |<!-- END REF -->#### Description
 
 La fonction `.query()`<!-- REF #collection.query().Summary -->retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche<!-- END REF -->définis par *queryString* et (éventuellement) *value* ou *querySettings*. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.

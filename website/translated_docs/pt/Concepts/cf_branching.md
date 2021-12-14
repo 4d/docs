@@ -1,9 +1,9 @@
 ---
 id: branching
-title: Branching structures
+title: Estruturas condicionais
 ---
 
-A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+Uma estrutura de ramificação permite que os métodos testem uma condição e tomem caminhos alternativos, em função do resultado.
 
 
 ## If...Else...End if
@@ -50,12 +50,12 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 ### Exemplo
 
 ```4d
-  // Ask the user to enter a name
+  // Pedir ao usuário que introduza um nome
  $Find:=Request(Type a name)
- If(OK=1)
+ Si(OK=1)
     QUERY([People];[People]LastName=$Find)
  Else
-    ALERT("You did not enter a name.")
+    ALERT("Não introduciu um nome.")
  End if 
 ```
 
@@ -67,7 +67,7 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
     statement(s)
  End if
 ```
-or:
+ou :
 
 ```4d
  If(Boolean_Expression)
@@ -129,13 +129,13 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 
 ```4d
  Case of
-    :(vResult=1) //Test if the number is 1
-       ALERT("One.") //If it is 1, display an alert
-    :(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
-    :(vResult=3) //Test if the number is 3
-       ALERT("Three.") //If it is 3, display an alert
-    Else //If it is not 1, 2, or 3, display an alert
+    :(vResult=1) //Testa se o número é 1
+       ALERT("One.") //Se for 1, mostrar um alerta
+    :(vResult=2) //Testar se o número é 2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    :(vResult=3) //Testa se o número é 3
+       ALERT("Three.") //Se for 3, exibe um alerta
+    Else //Se não for 1, 2, ou 3, exibe um alerta
        ALERT("It was not one, two, or three.")
  End case
 ```
@@ -143,15 +143,15 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 Por comparação, aqui está a versão `If...Else...End if` do mesmo método:
 
 ```4d
- If(vResult=1) //Test if the number is 1
+ If(vResult=1) //Teste se o número é 1
     ALERT("One.") //If it is 1, display an alert
  Else
-    If(vResult=2) //Test if the number is 2
-       ALERT("Two.") //If it is 2, display an alert
+    If(vResult=2) //Teste se o número é  2
+       ALERT("Two.") //Se for 2, exibe um alerta
     Else
-       If(vResult=3) //Test if the number is 3
-          ALERT("Three.") //If it is 3, display an alert
-       Else //If it is not 1, 2, or 3, display an alert
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
           ALERT("It was not one, two, or three.")
        End if
     End if
@@ -165,9 +165,9 @@ Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que
 ```4d
  Case of
     :(vResult=1)
-       ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
+       ... //declarações
+    :((vResult=1) & (vCondition#2)) //Esse caso nunca será detectado
+       ... //declarações
  End case
 ```
 
@@ -175,10 +175,10 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 ```4d
  Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //esse caso será detectado primeiro
+       ... //declarações
     :(vResult=1)
-       ... //statement(s)
+       ... //declarações
  End case
 ```
 
@@ -198,10 +198,11 @@ Além disso, se quiser implementar teste hierárquico, pode considerar usar um c
  End case
 ```
 
-or:
+ou :
 ```4d
  Case of
     :(Boolean_Expression)
+       statement(s)
     :(Boolean_Expression)
        statement(s)
        ...
@@ -212,7 +213,7 @@ or:
  End case
 ```
 
-or:
+ou :
 ```4d
  Case of
     Else

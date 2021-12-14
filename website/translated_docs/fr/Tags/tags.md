@@ -312,7 +312,6 @@ The properties of the object are processed according to their creation order. Pe
 
 
 
-
 ## 4DEVAL
 
 #### Syntax: `<!--#4DEVAL expression-->`
@@ -322,7 +321,7 @@ The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4D
 
 For example, you can execute:
 
-```
+```4d
  $input:="<!--#4DEVAL a:=42-->" //assignment
  $input:=$input+"<!--#4DEVAL a+1-->" //calculation
  PROCESS 4D TAGS($input;$output)
@@ -390,7 +389,7 @@ Code using 4DELSE only:
 
 Similar code using the `4DELSEIF` tag:
 
-```
+```html
 <!--#4DIF Condition1-->
      /* Condition1 is true*/
 <!--#4DELSEIF Condition2-->

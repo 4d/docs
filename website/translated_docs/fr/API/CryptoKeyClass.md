@@ -61,7 +61,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Params -->
 | Paramètres | Type         |    | Description                                                                 |
 | ---------- | ------------ | -- | --------------------------------------------------------------------------- |
-| settings   | Objet        | -> | Paramètres pour générer ou charger une paire de clés                        |
+| settings   | Object       | -> | Paramètres pour générer ou charger une paire de clés                        |
 | result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF -->
 
 
@@ -100,7 +100,7 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 
 
 
-Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
+Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -->nom de la courbe normalisée de la clé<!-- END REF -->. Généralement "prime256v1" pour ES256 (défaut), "secp384r1" pour ES384, "secp521r1" pour ES512.
 <!-- END REF -->
 
 
@@ -117,11 +117,11 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 <!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| Paramètres | Type  |    | Description                                                                       |
-| ---------- | ----- | -- | --------------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
-| options    | Objet | -> | Options de décodage                                                               |
-| Résultat   | Objet | <- | Statut                                                                            |
+| Paramètres | Type   |    | Description                                                                       |
+| ---------- | ------ | -- | --------------------------------------------------------------------------------- |
+| message    | Texte  | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
+| options    | Object | -> | Options de décodage                                                               |
+| Résultat   | Object | <- | Statut                                                                            |
 <!-- END REF -->
 
 
@@ -166,11 +166,11 @@ Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec 
 <!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Paramètres | Type  |    | Description                                                                     |
-| ---------- | ----- | -- | ------------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
-| options    | Objet | -> | Options de chiffrement                                                          |
-| Résultat   | Texte | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
+| Paramètres | Type   |    | Description                                                                     |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
+| message    | Texte  | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
+| options    | Object | -> | Options de chiffrement                                                          |
+| Résultat   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
 <!-- END REF -->
 
 La fonction `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->crypte le paramètre *message* à l'aide de la clé **publique**<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
@@ -279,11 +279,11 @@ La valeur retournée est la clé publique.
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
-| Paramètres | Type  |    | Description                                                                |
-| ---------- | ----- | -- | -------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaîne message à signer                                                    |
-| options    | Objet | -> | Options de signature                                                       |
-| Résultat   | Texte | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
+| Paramètres | Type   |    | Description                                                                |
+| ---------- | ------ | -- | -------------------------------------------------------------------------- |
+| message    | Texte  | -> | Chaîne message à signer                                                    |
+| options    | Object | -> | Options de signature                                                       |
+| Résultat   | Texte  | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 <!-- END REF -->
 
 La fonction `.sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
@@ -351,12 +351,12 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
-| Paramètres | Type  |    | Description                                                                                     |
-| ---------- | ----- | -- | ----------------------------------------------------------------------------------------------- |
-| message    | Texte | -> | Chaîne message utilisée pour générer la signature                                               |
-| signature  | Texte | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
-| options    | Objet | -> | Options de signature                                                                            |
-| Résultat   | Objet | <- | Statut de la vérification                                                                       |
+| Paramètres | Type   |    | Description                                                                                     |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------- |
+| message    | Texte  | -> | Chaîne message utilisée pour générer la signature                                               |
+| signature  | Texte  | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
+| options    | Object | -> | Options de signature                                                                            |
+| Résultat   | Object | <- | Statut de la vérification                                                                       |
 <!-- END REF -->
 
 La fonction `.verify()` <!-- REF #CryptoKey.verify().Summary -->vérifie la signature base64 par rapport à la représentation utf8 du *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies.

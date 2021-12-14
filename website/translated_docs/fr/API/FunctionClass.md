@@ -312,7 +312,7 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 <!-- REF #FunctionClass.apply().Params -->
 | Paramètres    | Type       |    | Description                                                                       |
 | ------------- | ---------- |:--:| --------------------------------------------------------------------------------- |
-| thisObj       | Objet      | -> | Objet à retourner par la commande This dans la formule                            |
+| thisObj       | Object     | -> | Objet à retourner par la commande This dans la formule                            |
 | formulaParams | Collection | -> | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
 | Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule                              |
 <!-- END REF -->
@@ -371,11 +371,11 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| Paramètres | Type  |    | Description                                                        |
-| ---------- | ----- | -- | ------------------------------------------------------------------ |
-| thisObj    | Objet | -> | Objet à retourner par la commande This dans la formule             |
-| params     | any   | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté |
-| Résultat   | any   | <- | Valeur obtenue à partir de l'exécution de la formule               |
+| Paramètres | Type   |    | Description                                                        |
+| ---------- | ------ | -- | ------------------------------------------------------------------ |
+| thisObj    | Object | -> | Objet à retourner par la commande This dans la formule             |
+| params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté |
+| Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule               |
 <!-- END REF -->
 
 

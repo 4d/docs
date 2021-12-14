@@ -70,77 +70,16 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
 
 - *folderToZip*: You pass a `4D.Folder` to compress. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
-- *zipStructure*: You pass an object describing the ZIP archive object. The following properties are available to define the structure:<li>a collection of `4D.File` or `4D.Folder` objects or</li><li>a collection of objects with the following properties:</li><table>
-  <tr>
-    <td>
-      Property
-    </td>
-    
-    <td>
-      Typ
-    </td>
-    
-    <td>
-      Beschreibung
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      source
-    </td>
-    
-    <td>
-      4D.File or 4D.Folder
-      
-      <td>
-        File or Folder
-      </td></tr>
-      
-      <tr>
-        <td>
-          destination
-        </td>
-        
-        <td>
-          Text
-        </td>
-        
-        <td>
-          (optional) - Specify a relative filepath to change the organization of the contents of the archive
-        </td>
-      </tr>
-      
-      <tr>
-        <td>
-          option
-        </td>
-        
-        <td>
-          number
-        </td>
-        
-        <td>
-          (optional) - `ZIP Ignore invisible files` or 0 to compress all of the file
-        </td>
-      </tr></table></html>
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      callback
-    </td>
-    
-    <td>
-      4D.Function
-    </td>
-    
-    <td>
-      A callback formula that will receive the compression progress (0 - 100) in $1.
-    </td>
-  </tr></tbody> 
-</table>
+- *zipStructure*: You pass an object describing the ZIP archive object. The following properties are available to define the structure:
+
+| Property    | Typ         | Beschreibung                                                                                                                                                                                                                                                                                           |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| compression | Text        | <p><li>`ZIP Compression standard`: Deflate compression (default)</li></p><p><li>`ZIP Compression LZMA`: LZMA compression</li></p><p><li>`ZIP Compression XZ`: XZ compression</li></p><p><li>`ZIP Compression none`: No compression</li></p>                                                                                                                                                                                                   |
+| level       | Ganzzahl    | Compression level. Possible values: 1 to 10. A lower value will produce a larger file, while a higher value will produce a smaller file. Compression level has however an impact on performance. Default values if omitted: <p><li>`ZIP Compression standard`: 6</li></p><p><li>`ZIP Compression LZMA`: 4</li></p><p><li>`ZIP Compression XZ`: 4</li></p> |
+| encryption  | Text        | The encryption to use if a password is set:<p><li>`ZIP Encryption AES128`: AES encryption using 128-bit key.</li></p><p><li>`ZIP Encryption AES192`: AES encryption using 192-bit key.</li></p><p><li>`ZIP Encryption AES256`: AES encryption using 256-bit key (default if password is set).</li></p><p><li>`ZIP Encryption none`: Data is not encrypted (default if no password is set)</li></p>                                                                                                                                                      |
+| password    | Text        | A password to use if encryption is required.                                                                                                                                                                                                                                                           |
+| files       | Collection  | <p><li>a collection of `4D.File` or `4D.Folder` objects or</li></p><p><li>a collection of objects with the following properties:</li></p><table><tr><td>Property</td><td>Typ</td><td>Beschreibung</td></tr><tr><td>source</td><td>4D.File or 4D.Folder<td>File or Folder</td></tr><tr><td>destination</td><td>Text</td><td>(optional) - Specify a relative filepath to change the organization of the contents of the archive</td></tr><tr><td>option</td><td>number</td><td>(optional) - `ZIP Ignore invisible files` or 0 to compress all of the file</td></tr></table>                                                                                                                                                                                                                         |
+| callback    | 4D.Function | A callback formula that will receive the compression progress (0 - 100) in $1.                                                                                                                                                                                                                         |
 
 In the *destinationFile* parameter, pass a `4D.File` object describing the ZIP archive to create (name, location, etc.). It is advised to use the ".zip" extension if you want the ZIP archive to be processed automatically by any software.
 
@@ -157,14 +96,9 @@ The returned status object contains the following properties:
 | success    | Boolean  | True if archive created successfully, else false                                                                                         |
 
 
-
-
-
 #### Beispiel 1
 
 To compress a `4D.File`:
-
-
 
 ```4d
  var $file; $destination : 4D.File
@@ -177,14 +111,9 @@ To compress a `4D.File`:
 ```
 
 
-
-
-
 #### Beispiel 2
 
 To compress a `4D.Folder` without the folder itself:
-
-
 
 ```4D
  var $folder : 4D.Folder
@@ -197,14 +126,9 @@ To compress a `4D.Folder` without the folder itself:
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
-
-
-
 #### Example 3
 
 To compress a ZIP archive structure with a password and progress bar:
-
-
 
 ```4d
  var $destination : 4D.File
@@ -225,10 +149,7 @@ To compress a ZIP archive structure with a password and progress bar:
  Progress QUIT(progID)
 ```
 
-
 `myFormulaCompressingMethod`:
-
-
 
 ```4d
  var $1 : Integer
@@ -236,14 +157,9 @@ To compress a ZIP archive structure with a password and progress bar:
 ```
 
 
-
-
-
 #### Example 4
 
 You want to pass a collection of folders and files to compress to the *zipStructure* object:
-
-
 
 ```4d
  var $destination : 4D.File
@@ -257,9 +173,6 @@ You want to pass a collection of folders and files to compress to the *zipStruct
  $destination:=Folder(fk desktop folder).file("file.zip")
  $err:=ZIP Create archive($zip;$destination)
 ```
-
-
-
 
 
 
@@ -288,13 +201,12 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
 
-
-
 > This command does not uncompress the ZIP archive, it only provides a view of its contents. To extract the contents of an archive, you need to use methods such as [file.copyTo()](Document.md#copyto) or [folder.copyTo()](Directory.md#copyto).
 
 Pass a `4D.File` object referencing the compressed ZIP archive in the *zipFile* parameter. The target archive file will be opened until the `ZIP Read archive` has finished executing and all contents/references have been extracted/released, then it will be closed automatically.
 
 If the *zipFile* is password protected, you need to use the optional *password* parameter to provide a password. If a password is required but not passed when trying to read the contents of the archive, an error is generated.
+
 
 **Archive object**
 
@@ -302,13 +214,9 @@ The returned `4D.ZipArchive` object contains a single [`root`](#root) property w
 
 
 
-
-
 #### Beispiel
 
 To retrieve and view the contents of a ZIP file object:
-
-
 
 ```4d
  var $archive : 4D.ZipArchive
@@ -318,20 +226,14 @@ To retrieve and view the contents of a ZIP file object:
  $archive:=ZIP Read archive($path)
 ```
 
-
 To retrieve the list of the files and folders in the archive:
-
-
 
 ```4d
  $folders:=$archive.root.folders()
  $files:=$archive.root.files()
 ```
 
-
 To read the contents of a file without extracting it from the root folder:
-
-
 
 ```4d
 
@@ -342,10 +244,7 @@ To read the contents of a file without extracting it from the root folder:
  End if
 ```
 
-
 To extract from the root folder:
-
-
 
 ```4d
   //extract a file
@@ -354,9 +253,6 @@ To extract from the root folder:
   //extract all files
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```
-
-
-
 
 
 

@@ -160,9 +160,9 @@ Chaque classe de macro peut contenir un `Class constructor` (constructeur de cla
 
 #### Class constructor($macro : Object)
 
-| Paramètres | Type  | Description                                                       |
-| ---------- | ----- | ----------------------------------------------------------------- |
-| $macro     | Objet | Objet de déclaration de macro (dans le fichier `formMacros.json`) |
+| Paramètres | Type   | Description                                                       |
+| ---------- | ------ | ----------------------------------------------------------------- |
+| $macro     | Object | Objet de déclaration de macro (dans le fichier `formMacros.json`) |
 
 Les macros sont instanciées à l'aide d'une fonction [class constructor](Concepts/classes.md#class-constructor), le cas échéant.
 
@@ -201,10 +201,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Paramètres | Type  | Description                                                                                 |
-| ---------- | ----- | ------------------------------------------------------------------------------------------- |
-| $editor    | Objet | Objet Form Editor Macro Proxy contenant les propriétés du formulaire                        |
-| $result    | Objet | Objet Form Editor Macro Proxy retournant des propriétés modifiées par la macro (facultatif) |
+| Paramètres | Type   | Description                                                                                 |
+| ---------- | ------ | ------------------------------------------------------------------------------------------- |
+| $editor    | Object | Objet Form Editor Macro Proxy contenant les propriétés du formulaire                        |
+| $result    | Object | Objet Form Editor Macro Proxy retournant des propriétés modifiées par la macro (facultatif) |
 
 La fonction `onInvoke` est automatiquement exécutée à chaque fois que la macro est appelée.
 
@@ -216,25 +216,25 @@ Voici les propriétés retournées dans le paramètre *$editor* :
 
 | Propriété                        | Type       | Description                                                                       |
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Objet      | The entire form                                                                   |
+| $editor.editor.form              | Object     | The entire form                                                                   |
 | $editor.editor.file              | File       | File object of the form file                                                      |
 | $editor.editor.name              | Chaine     | Name of the form                                                                  |
 | $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
 | $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
-| $editor.editor.currentPage       | Objet      | The current page, containing all the form objects and the entry order of the page |
+| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
 | $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
-| $editor.editor.formProperties    | Objet      | Properties of the current form                                                    |
+| $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
 | Propriété         | Type       | Description                                                 |
 | ----------------- | ---------- | ----------------------------------------------------------- |
-| currentPage       | Objet      | currentPage including objects modified by the macro, if any |
+| currentPage       | Object     | currentPage including objects modified by the macro, if any |
 | currentSelection  | Collection | currentSelection if modified by the macro                   |
-| formProperties    | Objet      | formProperties if modified by the macro                     |
-| editor.groups     | Objet      | group info, if groups are modified by the macro             |
-| editor.views      | Objet      | view info, if views are modified by the macro               |
+| formProperties    | Object     | formProperties if modified by the macro                     |
+| editor.groups     | Object     | group info, if groups are modified by the macro             |
+| editor.views      | Object     | view info, if views are modified by the macro               |
 | editor.activeView | Chaine     | Active view name                                            |
 
 
@@ -302,8 +302,8 @@ Function onInvoke($editor : Object)->$result : Object
 
 | Paramètres   |                       | Type       | Description                              |
 | ------------ | --------------------- | ---------- | ---------------------------------------- |
-| $editor      |                       | Objet      | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | Objet      | Object returned by [onInvoke](#oninvoke) |
+| $editor      |                       | Object     | Object send to [onInvoke](#oninvoke)     |
+| $resultMacro |                       | Object     | Object returned by [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Error stack                              |
 |              | [].errCode            | Nombre     | Code d'erreur                            |
 |              | [].message            | Texte      | Description of the error                 |

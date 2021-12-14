@@ -3,12 +3,12 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment objects allow referencing files within a [`Email`](EmailObjectClass.md) object. Attachment objects are created using the [`MAIL New attachment`](#mail-new-attachment) command.
+Los objetos adjuntos permiten referenciar archivos en un objeto [`Email`](EmailObjectClass.md). Los objetos Attachment (adjuntos) son creados utilizando el comando [`MAIL New attachment`](#mail-new-attachment).
 
 
 ### Objeto anexos
 
-Attachment objects provide the following read-only properties and functions:
+Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo lectura:
 
 
 |                                                                                                                                                                                                            |
@@ -31,7 +31,7 @@ Attachment objects provide the following read-only properties and functions:
 
 | Parámetros  | Tipo              |    | Descripción                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| path        | Text              | -> | Path of the attachment file                                          |
+| path        | Text              | -> | Ruta del archivo adjunto                                             |
 | blob        | Blob              | -> | BLOB containing the attachment                                       |
 | name        | Text              | -> | Name + extension used by the mail client to designate the attachment |
 | cid         | Text              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
@@ -99,8 +99,7 @@ You want to send an email with a user-selected file as an attachment and an imag
 
 ```4d
 $doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
-
+If (OK=1) //Si se ha seleccionado un documento
 C_OBJECT($email;$server;$transporter)
 
 $server:=New object
@@ -114,9 +113,9 @@ $email.from:="test_user@mail.com"
 $email.to:="test_user@mail.com"
 $email.subject:="This is a test message with attachments"
 
-//add a link to download file
+//añadir un enlace para descargar el archivo
 $email.attachments:=New collection(MAIL New attachment(Document))
-//insert an inline picture (use a cid)
+//insertar una imagen en línea (utilice un cid)
 $email.attachments[1]:=MAIL New attachment("c:\\Pictures\\4D.jpg";"";"4D")
 
 $email.htmlBody:="<html>"+\
@@ -168,7 +167,7 @@ $transporter.send($email)
 
 | Parámetros  | Tipo              |    | Descripción                                                          |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| path        | Text              | -> | Path of the attachment file                                          |
+| path        | Text              | -> | Ruta del archivo adjunto                                             |
 | blob        | Blob              | -> | BLOB containing the attachment                                       |
 | name        | Text              | -> | Name + extension used by the mail client to designate the attachment |
 | cid         | Text              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |

@@ -332,9 +332,9 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Paramètres | Type  |    | Description                                           |
-| ---------- | ----- | -- | ----------------------------------------------------- |
-| Résultat   | Objet | <- | Contents of .exe/.dll version resource or .plist file |
+| Paramètres | Type   |    | Description                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| Résultat   | Object | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -454,7 +454,7 @@ ALERT($info.Copyright)
 <!--REF #FileClass.moveTo().Params -->
 | Paramètres        | Type      |    | Description                  |
 | ----------------- | --------- | -- | ---------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder           |
+| destinationFolder | 4D.Folder | -> | Dossier de destination       |
 | newName           | Texte     | -> | Full name for the moved file |
 | Résultat          | 4D.File   | <- | Moved file                   |
 <!-- END REF -->
@@ -464,9 +464,9 @@ ALERT($info.Copyright)
 
 The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 
 **Objet retourné**
@@ -563,9 +563,9 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Paramètres | Type  |    | Description                                                      |
-| ---------- | ----- | -- | ---------------------------------------------------------------- |
-| info       | Objet | -> | Properties to write in .exe/.dll version resource or .plist file |
+| Paramètres | Type   |    | Description                                                      |
+| ---------- | ------ | -- | ---------------------------------------------------------------- |
+| info       | Object | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
@@ -656,7 +656,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Description
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Pour plus d'informations sur les BLOB, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 
 #### Exemple
@@ -690,8 +690,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | Paramètres  | Type        |    | Description                                                |
 | ----------- | ----------- | -- | ---------------------------------------------------------- |
 | Texte       | Texte       | -> | Text to store in the file                                  |
-| charSetName | Texte       | -> | Name of character set                                      |
-| charSetNum  | Entier long | -> | Number of character set                                    |
+| charSetName | Texte       | -> | Nom du jeu de caractères                                   |
+| charSetNum  | Entier long | -> | Numéro du jeu de caractères                                |
 | breakMode   | Entier long | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
@@ -704,7 +704,7 @@ If the file referenced in the `File` object does not exist on the disk, it is cr
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Optionally, you can designate the character set to be used for writing the contents. You can pass either:
+Optionally, you can designate the character set to be used for writing the contents. Vous pouvez passer soit :
 
 - dans *charSetName*, une chaîne contenant le nom de jeu standard (par exemple "ISO-8859-1" ou ""UTF-8"),
 - ou dans *charSetNum*, l'ID MIBEnum (numéro) du nom du jeu standard.
@@ -717,13 +717,13 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 | Constante                     | Valeur | Commentaire                                                                                                                                                    |
 | ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0      | No processing                                                                                                                                                  |
+| `Document unchanged`          | 0      | Aucun traitement                                                                                                                                               |
 | `Document with native format` | 1      | (Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows |
-| `Document with CRLF`          | 2      | Line breaks are converted to Windows format: CRLF (carriage return + line feed)                                                                                |
-| `Document with CR`            | 3      | Line breaks are converted to OS X format: CR (carriage return)                                                                                                 |
-| `Document with LF`            | 4      | Line breaks are converted to Unix format: LF (line feed)                                                                                                       |
+| `Document with CRLF`          | 2      | Les fins de ligne sont convertis au format Windows : CRLF (carriage return + line feed)                                                                        |
+| `Document with CR`            | 3      | Les fins de ligne sont convertis au format OS X : CR (carriage return)                                                                                         |
+| `Document with LF`            | 4      | Les fins de ligne sont convertis au format Unix : LF (line feed)                                                                                               |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
 
 
