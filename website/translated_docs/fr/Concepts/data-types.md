@@ -23,7 +23,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Pointeur](Concepts/dt_pointer.md)           | -                             | Oui                           | `Pointeur`                                              | `C_POINTER`, `ARRAY POINTER`                                     |
 | [Image](Concepts/dt_picture.md)              | Oui                           | Oui                           | `Image`                                                 | `C_PICTURE`, `ARRAY PICTURE`                                     |
 | [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                           |
-| [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `Objet`                                                 | `C_OBJECT`, `ARRAY OBJECT`                                       |
+| [Object](Concepts/dt_object.md)              | Oui                           | Oui                           | `Object`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
 | [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `Collection`                                            | `C_COLLECTION`                                                   |
 | [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `Variant`                                               | `C_VARIANT`                                                      |
 
@@ -48,7 +48,7 @@ La valeur par défaut dépend du type de variable :
 | Pointeur    | Nil=true          |
 | Texte       | ""                |
 | Blob        | Blob size=0       |
-| Objet       | null              |
+| Object      | null              |
 | Collection  | null              |
 | Variant     | indéfini          |
 

@@ -1,6 +1,6 @@
 ---
 id: object
-title: Objet
+title: Object
 ---
 
 Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. La structure des objets "natifs" 4D est basée sur le principe classique des paires "propriété/valeur" (aussi appelées "attribut/valeur). La syntaxe de ces objets s’inspire du JSON :

@@ -71,8 +71,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | path         | Texto   | -> | File path                                          |
 | fileConstant | Integer | -> | Constante del archivo 4D                           |
 | pathType     | Integer | -> | `fk posix path` (por defecto) o `fk platform path` |
-| *            |         | -> | * to return file of host database                  |
-| Resultado    | 4D.File | <- | New file object                                    |
+| *            |         | -> | * para devolver el archivo de la base local        |
+| Resultado    | 4D.File | <- | Nuevo objeto de archivo                            |
 <!-- END REF -->
 
 

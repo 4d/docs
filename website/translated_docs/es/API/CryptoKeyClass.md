@@ -100,7 +100,9 @@ El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un obje
 
 
 
-Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre de la curva normalizada de la llave. <!-- END REF --> Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
+Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->.
+
+Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 
 <!-- END REF -->
 

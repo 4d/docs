@@ -47,7 +47,7 @@ Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transpor
 <!-- REF #_command_.SMTP New transporter.Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objet              | -> | Mail server information                             |
+| server     | Object             | -> | Informations sur le serveur IMAP                    |
 | Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
@@ -63,7 +63,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 
 
 
-In the *server* parameter, pass an object containing the following properties:
+Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
 
 | *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Valeur par défaut (si omise)                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ In the *server* parameter, pass an object containing the following properties:
 
 #### Résultat
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). All returned properties are **read-only**.
+The function returns a [**SMTP transporter object**](#smtp-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 
 
 #### Exemple
@@ -127,7 +127,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | Paramètres | Type               |    | Description                                         |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Objet              | -> | Mail server information                             |
+| server     | Object             | -> | Informations sur le serveur IMAP                    |
 | Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
 <!-- END REF -->
 
@@ -248,10 +248,10 @@ The SMTP connection is automatically closed:
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Paramètres | Type  |    | Description                                       |
-| ---------- | ----- |:--:| ------------------------------------------------- |
-| mail       | Objet | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Résultat   | Objet | <- | SMTP status                                       |
+| Paramètres | Type   |    | Description                                       |
+| ---------- | ------ |:--:| ------------------------------------------------- |
+| mail       | Object | -> | [Email](EmailObjectClass.md#email-object) to send |
+| Résultat   | Object | <- | SMTP status                                       |
 <!-- END REF -->
 
 

@@ -386,7 +386,7 @@ Lorsque la commande `Delete with contents` est passée :
 <!--REF #FolderClass.moveTo().Params -->
 | Paramètres        | Type      |    | Description                    |
 | ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | Destination folder             |
+| destinationFolder | 4D.Folder | -> | Dossier de destination         |
 | newName           | Texte     | -> | Full name for the moved folder |
 | Résultat          | 4D.Folder | <- | Moved folder                   |
 <!-- END REF -->
@@ -396,9 +396,9 @@ Lorsque la commande `Delete with contents` est passée :
 
 The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
 **Objet retourné**
 

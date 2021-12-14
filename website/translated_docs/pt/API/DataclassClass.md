@@ -40,7 +40,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 #### Description
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+Os atributos das classes de dados são<!-- REF ClaseDeDatos.attributeName.Summary -->objetos que estão disponíveis diretamente como propriedades<!-- END REF --> destas classes.
 
 The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
@@ -111,26 +111,26 @@ Considering the following table properties:
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
-| Parameter | Type               |    | Description                                         |
-| --------- | ------------------ |:--:| --------------------------------------------------- |
-| settings  | Objeto             | -> | Build option: context                               |
-| Result    | 4D.EntitySelection | <- | References on all entities related to the Dataclass |
+| Parameter | Type               |    | Description                                                             |
+| --------- | ------------------ |:--:| ----------------------------------------------------------------------- |
+| settings  | Objeto             | -> | Build option: context                                                   |
+| Result    | 4D.EntitySelection | <- | Referencias sobre todas as entidades relacionadas com a classe de dados |
 <!-- END REF -->
 
 
 #### Description
 
-The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+A função `.all( )` <!-- REF #DataClassClass.all().Summary -->consulta a datastore para encontrar todas as entidades relacionadas com a dataclass e as devolve como uma seleção de entidades<!-- END REF -->.
 
-The entities are returned in the default order, which is initially the order in which they were created. Note however that, if entities have been deleted and new ones added, the default order does not reflect the creation order anymore.
+As entidades são devolvidas na ordem padrão, que é inicialmente a ordem na qual foram criadas. Note no entanto que, se as entidades foram apagas e outras adicionadas, a ordem padrão não reflete mais sua ordem de criação.
 
-If no corresponding entity is found, an empty entity selection is returned.
+Se nenhuma entidade correspondente for encontrada, uma seleção de entidade vazia é retornada.
 
-Lazy loading is applied.
+Se aplica carregamento diferido/lazy loading.
 
 **settings**
 
-In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
+No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
 | Property | Type  | Description                                                                                                                                                                                                                                                                                          |
 | -------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,25 +183,25 @@ The `.exposed` property is <!-- REF DataClassClass.exposed.Summary -->true if th
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parameter | Type               |    | Description                                      |
-| --------- | ------------------ |:--:| ------------------------------------------------ |
-| objectCol | Collection         | -> | Collection of objects to be mapped with entities |
-| settings  | Objeto             | -> | Build option: context                            |
-| Result    | 4D.EntitySelection | <- | Entity selection filled from the collection      |
+| Parameter | Type               |    | Description                                 |
+| --------- | ------------------ |:--:| ------------------------------------------- |
+| objectCol | Collection         | -> | Coleção de objetos a mapear com entidades   |
+| settings  | Objeto             | -> | Build option: context                       |
+| Result    | 4D.EntitySelection | <- | Seleção de entidades preenchidas da coleção |
 <!-- END REF -->
 
 
 #### Description
 
-The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+A função `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->atualiza ou cria entidades na classe de dados segundo a coleção de objetos *objectCol*, e devolve a seleção de entidades correspondente<!-- END REF -->.
 
-In the *objectCol* parameter, pass a collection of objects to create new or update existing entities of the dataclass. The property names must be the same as attribute names in the dataclass. If a property name does not exist in the dataclass, it is ignored. If an attribute value is not defined in the collection, its value is null.
+No parâmetro *objectCol*, passa uma coleção de objetos para criar novas entidades ou atualizar as existentes da classe de dados. Os nomes das propriedades devem ser os mesmos que os dos atributos da classe de dados. Se um nome de propriedade não existir na dataclass, é ignorado. Se um valor de atributo não for definido na coleção, seu valor será null.
 
-The mapping between the objects of the collection and the entities is done on the **attribute names** and **matching types**. If an object's property has the same name as an entity's attribute but their types do not match, the entity's attribute is not filled.
+O mapeamento entre os objetos da coleção e as entidades se realiza sobre os **nomes de atributos** e **tipos coincidentes**. Se uma propriedade de um objeto tiver o mesmo nome que um atributo de entidade mas seus tipos não corresponderem, o atributo da entidade não é preenchido.
 
-**Create or update mode**
+**Criar ou atualizar modos**
 
-For each object of *objectCol*:
+Para cada objeto de *objectCol*:
 
 *   If the object contains a boolean property "\_\_NEW" set to false (or does not contain a boolean "\_\_NEW" property), the entity is updated or created with the corresponding values of the properties from the object. No check is performed in regards to the primary key:
     *   If the primary key is given and exists, the entity is updated. In this case, the primary key can be given as is or with a "\_\_KEY" property (filled with the primary key value).
@@ -215,18 +215,18 @@ For each object of *objectCol*:
 
 **Related entities**
 
-The objects of *objectCol* may contain one or more nested object(s) featuring one or more related entities, which can be useful to create or update links between entities.
+Os objetos de *objectCol* podem conter um ou mais objetos aninhados que apresentam uma ou mais entidades relacionadas, o que pode ser útil para criar ou atualizar links entre entidades.
 
-The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
+Os objetos aninhados que apresentam entidades relacionadas devem conter uma propriedade "\_\_KEY" (preenchido com o valor da chave primária da entidade relacionada) ou o atributo de chave primária da própria entidade relacionada. O uso de uma propriedade \_\_KEY permite a independência do nome do atributo da chave primària.
 > The content of the related entities cannot be created / updated through this mechanism.
 
 **Stamp**
 
-If a \_\_STAMP attribute is given, a check is performed with the stamp in the datastore and an error can be returned ("Given stamp does not match current one for record# XX of table XXXX"). For more information, see [Entity locking](ORDA/entities.md#entity-locking).
+Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no armazén de dados e se pode devolver um erro ("O selo dado não coincide com o atual para o registro# XX da tabela XXXX"). Para saber mais, consulte [Entity locking](ORDA/entities.md#entity-locking).
 
 **settings**
 
-In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
+No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
 | Property | Type  | Description                                                                                                                                                                                                                                                                                          |
 | -------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -235,7 +235,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 #### Example 1
 
-We want to update an existing entity. The \_\_NEW property is not given, the employee primary key is given and exists:
+Queremos atualizar uma entidade existente. A propriedade \_\_NEW não for dada, a chave primária do empregado é dada e existe:
 
 ```4d
  var $empsCollection : Collection
@@ -255,7 +255,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
 
 #### Example 2
 
-We want to update an existing entity. The \_\_NEW property is not given, the employee primary key is with the \_\_KEY attribute and exists:
+Queremos atualizar uma entidade existente. A propriedade \_\_NEW não é dada, a chave primária do empregado com o atributo \_\_KEY e existir:
 
 ```4d
  var $empsCollection : Collection
@@ -275,7 +275,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
 
 #### Exemplo 3
 
-We want to simply create a new entity from a collection:
+Se quiser simplesmente criar uma nova entidade da coleção::
 
 ```4d
  var $empsCollection : Collection
@@ -292,7 +292,7 @@ We want to simply create a new entity from a collection:
 
 #### Exemplo 4
 
-We want to create an entity. The \_\_NEW property is True, the employee primary key is not given:
+Queremos criar uma entidade. A propriedade \_\_NEW é True, a chave primária de empregado não é dada:
 
 ```4d
  var $empsCollection : Collection
@@ -317,7 +317,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
 
 #### Exemplo 5
 
-We want to create an entity. The \_\_NEW property is omitted, the employee primary key is given and does not exist:
+Queremos criar uma entidade. Se a propriedade \_\_NEW é omitida, a chave primária do empregado é dada e não existir:
 
 ```4d
  var $empsCollection : Collection
@@ -335,7 +335,7 @@ We want to create an entity. The \_\_NEW property is omitted, the employee prima
 
 #### Exemplo 6
 
-In this example, the first entity will be created and saved but the second will fail since they both use the same primary key:
+Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará já que ambas utilizam a mesma chave primaria:
 
 ```4d
  var $empsCollection : Collection
@@ -383,11 +383,11 @@ In this example, the first entity will be created and saved but the second will 
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parameter  | Type            |    | Description                                 |
-| ---------- | --------------- |:--:| ------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Primary key value of the entity to retrieve |
-| settings   | Objeto          | -> | Build option: context                       |
-| Result     | 4D.Entity       | <- | Entity matching the designated primary key  |
+| Parameter  | Type            |    | Description                                          |
+| ---------- | --------------- |:--:| ---------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valor da chave primária da entidade a recuperar      |
+| settings   | Objeto          | -> | Build option: context                                |
+| Result     | 4D.Entity       | <- | Entidade que coincide com a chave primária designada |
 <!-- END REF -->
 
 #### Description
@@ -402,7 +402,7 @@ Lazy loading is applied, which means that related data is loaded from disk only 
 
 **settings**
 
-In the optional *settings* parameter, you can pass an object containing additional options. The following property is supported:
+No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
 | Property | Type  | Description                                                                                                                                                                                                                                                                                         |
 | -------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -694,7 +694,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 #### Description
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 

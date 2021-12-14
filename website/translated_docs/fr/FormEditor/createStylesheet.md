@@ -12,6 +12,24 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 *   Facilité de maintenance : les feuilles de styles ont la propriété de modifier l’apparence de tous les objets qui les utilisent. Changer, par exemple, la taille de la police dans une feuille de style changera la taille de la police pour tous les objets qui utilisent cette feuille de style.
 *   Contrôle du développement multi-plate-forme : les feuilles de style peuvent s'appliquer aux deux plate-formes macOS et Windows, ou bien à l'une d'elles uniquement. Lorsqu'une feuille de style est appliquée, 4D utilise automatiquement la feuille de style appropriée.
 
+
+
+## Création ou modification d'une feuille de style
+
+Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
+
+La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plateforme.
+
+1.  Ouvrez la page **Styles** en choisissant la **Boîte à outils > Styles ** dans le menu Développement ou en cliquant sur l'icône **Boîte à outils** dans la barre d'outils de l'éditeur de formulaire.
+
+    ![](assets/en/FormEditor/stylesheets.png)
+
+2.  Choisissez le type de feuille de style que vous souhaitez créer et cliquez sur le bouton **Créer** ou **Editer** : ![](assets/en/FormEditor/createButton.png)
+
+3. La feuille de style s'ouvrira dans votre éditeur de texte par défaut.
+
+
+
 ## Fichiers feuilles de style
 
 4D accepte trois fichiers feuilles de style spécifiques :
@@ -341,16 +359,6 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 > Les chemins de fichiers peuvent être relatifs ou absolus. * Les chemins relatifs sont résolus par rapport au fichier de description de formulaire JSON. * Pour des raisons de sécurité, seuls les chemins de système de fichiers (filesystem) sont acceptés pour les chemins absolus. (*ex :*, "/RESOURCES", "/DATA")
 
 
-## Création ou modification d'une feuille de style
+## Voir aussi
 
-Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
-
-La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plateforme.
-
-1.  Ouvrez la page **Styles** en choisissant la **Boîte à outils > Styles ** dans le menu Développement ou en cliquant sur l'icône **Boîte à outils** dans la barre d'outils de l'éditeur de formulaire.
-
-    ![](assets/en/FormEditor/stylesheets.png)
-
-2.  Choisissez le type de feuille de style que vous souhaitez créer et cliquez sur le bouton **Créer** ou **Editer** : ![](assets/en/FormEditor/createButton.png)
-
-3. La feuille de style s'ouvrira dans votre éditeur de texte par défaut.  
+See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.

@@ -12,6 +12,24 @@ In addition to harmonizing an application's interface, style sheets provide thre
 *   Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 *   Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
+
+
+## Criação ou modificação de folhas de estilo
+
+You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+
+The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+
+1.  Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+
+    ![](assets/en/FormEditor/stylesheets.png)
+
+2.  Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+
+3. The style sheet will open in your default text editor.
+
+
+
 ## Arquivos folhas de estilo
 
 4D accepts three, specific style sheet files:
@@ -341,16 +359,6 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 > Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
 
 
-## Criação ou modificação de folhas de estilo
+## See also
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
-
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
-
-1.  Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
-
-    ![](assets/en/FormEditor/stylesheets.png)
-
-2.  Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
-
-3. The style sheet will open in your default text editor.  
+See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.

@@ -12,6 +12,24 @@ Además de armonizar la interfaz de sus aplicaciones, las hojas de estilo ofrece
 *   Facilita el mantenimiento: las hojas de estilo modifican la apariencia de todos los objetos que las utilicen, por lo que cambiar el tamaño de la fuente en una hoja de estilo cambiará el tamaño de la fuente para todos los objetos que utilicen esta misma hoja de estilo.
 *   Control del desarrollo multiplataforma: las hojas de estilo se pueden aplicar a las plataformas macOS y Windows, sólo a macOS o sólo a Windows. Cuando se aplica una hoja de estilo, 4D utiliza automáticamente la hoja de estilo apropiada.
 
+
+
+## Creación o modificación de hojas de estilo
+
+Puede crear hojas de estilo utilizando su editor de texto preferido y guardando el archivo con extensión ".css" en la carpeta "/SOURCES" del proyecto.
+
+La caja de herramientas de 4D ofrece una página **Hojas de estilo** como opción de acceso directo para crear y editar una de las tres hojas de estilo con nombre específicas de la plataforma.
+
+1.  Abra la página **Estilos** eligiendo la **Caja de herramientas > Styles** del menú Diseño o haga clic en el icono **Caja de herramientas** de la barra de herramientas del editor de formularios.
+
+    ![](assets/en/FormEditor/stylesheets.png)
+
+2.  Seleccione el tipo de hoja de estilo que desea crear y haga clic en el botón **Crear** o **Editar**: ![](assets/en/FormEditor/createButton.png)
+
+3. La hoja de estilo se abrirá en su editor de texto predeterminado.
+
+
+
 ## Archivos hojas de estilo
 
 4D acepta tres archivos específicos de hojas de estilo:
@@ -341,16 +359,6 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 > Las rutas de los archivos pueden ser relativas o absolutas. * Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON. * Por razones de seguridad, sólo se aceptan las rutas del sistema de archivos para las rutas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
 
 
-## Creación o modificación de hojas de estilo
+## Ver también
 
-Puede crear hojas de estilo utilizando su editor de texto preferido y guardando el archivo con extensión ".css" en la carpeta "/SOURCES" del proyecto.
-
-La caja de herramientas de 4D ofrece una página **Hojas de estilo** como opción de acceso directo para crear y editar una de las tres hojas de estilo con nombre específicas de la plataforma.
-
-1.  Abra la página **Estilos** eligiendo la **Caja de herramientas > Styles** del menú Diseño o haga clic en el icono **Caja de herramientas** de la barra de herramientas del editor de formularios.
-
-    ![](assets/en/FormEditor/stylesheets.png)
-
-2.  Seleccione el tipo de hoja de estilo que desea crear y haga clic en el botón **Crear** o **Editar**: ![](assets/en/FormEditor/createButton.png)
-
-3. La hoja de estilo se abrirá en su editor de texto predeterminado.  
+See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.

@@ -184,7 +184,7 @@ The `<!--#4DEACH-->` comment can iterate through three expression types:
 - [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
 - [objects](#--4deach-property-in-object--): loop through each object property.
 
-The number of iterations is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
+The number of iterations is evaluated at startup and will not change during the processing. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 
 
 ### `<!--#4DEACH item in collection-->`
@@ -197,7 +197,7 @@ The collection must contain only **elements of the same type**, otherwise an err
 
 The number of loops is based on the number of elements of the collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. Os pontos abaixo devem ser considerados:
 
-- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
+- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Se a variável for de tipo escalar, só se modificará a variável.
 - The *item* variable gets the same type as the first collection element. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
 

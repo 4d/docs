@@ -310,8 +310,7 @@ $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 Este código pode ser executado em modo compilado só se "foo_method" declarar seus parâmetros:
 
 ```4d
-//foo_method
-C_TEXT($1)
+//foo_method C_TEXT($1)
 C_LONGINT($2)
 C_OBJECT($3)
 ...
@@ -329,8 +328,7 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
 - Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
 
 ```4d
-// On Web Connection
-C_TEXT($1;$2;$3;$4;$5;$6)
+// On Web Connection C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
 > You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
@@ -451,8 +449,7 @@ Com variáveis com nome, qualquer parâmetro pode ser opcional. No exemplo acima
 No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opcionais. Por exemplo, `ALERT (message{; okButtonTitle})` significa que o parâmetro *okButtonTitle* pode omitir o chamado ao comando. Pode fazer a chamada de duas maneiras:
 
 ```4d
-ALERT("Are you sure?";"Yes I am") //2 parâmetros
-ALERT("Time is over") //1 parâmetro
+ALERT("Are you sure?";"Yes I am") //2 parâmetros ALERT("Time is over") //1 parâmetro
 ```
 
 4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). For example:
@@ -494,9 +491,7 @@ O exemplo abaixo mostra uma mensagem de texto e pode inserir o texto em um docum
 Depois de adicionar este método projeto a sua aplicação, pode escrever:
 
 ```4d  
-APPEND TEXT(vtSomeText) //Só mostrará a mensagem
-APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $path
-APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
+APPEND TEXT(vtSomeText) //Só mostrará a mensagem APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $path APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 ```
 
 > When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
@@ -508,9 +503,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. For example:
 
 ```4d
-    //Esta é uma parte do código do método MY_METHOD
-DO_SOMETHING([People]Name) //Suponha que o valor [People]Name seja "williams"
-ALERT([People]Name)
+    //Esta é uma parte do código do método MY_METHOD DO_SOMETHING([People]Name) //Suponha que o valor [People]Name seja "williams" ALERT([People]Name)
 
     //Este é o código do método DO_SOMETHING
  $1:=Uppercase($1)
@@ -547,7 +540,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" This is described in the [Returning values](#returning-values) paragraph.
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). This is described in the [Returning values](#returning-values) paragraph.
 
 
 ### Casos particulares: objetos e coleções

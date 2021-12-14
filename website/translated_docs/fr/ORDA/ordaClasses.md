@@ -324,7 +324,7 @@ La fonction *getter* est obligatoire pour déclarer le champ calculé *attribute
 La fonction *getter* définit le type de données du champ calculé grâce au paramètre *$result*. Les types de résultats suivants sont autorisés :
 
 - Scalar (text, boolean, date, time, number)
-- Objet
+- Object
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)

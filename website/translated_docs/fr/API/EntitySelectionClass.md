@@ -1424,9 +1424,9 @@ Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critè
 | Paramètres    | Type               |    | Description                                   |
 | ------------- | ------------------ |:--:| --------------------------------------------- |
 | formulaString | Texte              | -> | Chaîne formule                                |
-| formulaObj    | Objet              | -> | Objet formule                                 |
+| formulaObj    | Object             | -> | Objet formule                                 |
 | sortOrder     | Entier long        | -> | `dk ascending` (par défaut) ou`dk descending` |
-| settings      | Objet              | -> | Paramètre(s) de la formule                    |
+| settings      | Object             | -> | Paramètre(s) de la formule                    |
 | Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection triée               |
 <!-- END REF -->
 
@@ -1547,9 +1547,9 @@ Dans cet exemple, le champ objet "marks" de la dataclass **Students** contient l
 | Paramètres    | Type               |    | Description                                                                                                                                                                        |
 | ------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | queryString   | Texte              | -> | Critères de recherche en texte                                                                                                                                                     |
-| formula       | Objet              | -> | Critères de recherche en objet formule                                                                                                                                             |
+| formula       | Object             | -> | Critères de recherche en objet formule                                                                                                                                             |
 | value         | any                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                                                          |
-| querySettings | Objet              | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                  |
+| querySettings | Object             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                  |
 | Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection composée d'entités issues de l'entity selection répondant aux critères de recherche spécifiés dans *queryString* ou *formula*|<!-- END REF -->
 
 |
@@ -1729,7 +1729,7 @@ Une list box affiche l'entity selection Form.students, sur laquelle plusieurs cl
 | Paramètres       | Type               |    | Description                                                                              |
 | ---------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
 | selectedEntities | 4D.EntitySelection | -> | Entity selection avec des entités dont il faut connaître le rang dans l'entity selection |
-| Résultat         | Objet              | <- | Plage(s) d'entités sélectionnées dans l'entity selection                                 |
+| Résultat         | Object             | <- | Plage(s) d'entités sélectionnées dans l'entity selection                                 |
 <!-- END REF -->
 
 #### Description

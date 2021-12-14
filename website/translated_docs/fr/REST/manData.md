@@ -87,7 +87,7 @@ Vous pouvez toujours définir les attributs à retourner dans la réponse REST a
 
 Vous pouvez appliquer ce filtre comme suit :
 
-| Objet                | Syntaxe                                             | Exemple                                                       |
+| Object               | Syntaxe                                             | Exemple                                                       |
 | -------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass            | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection d'entités | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |

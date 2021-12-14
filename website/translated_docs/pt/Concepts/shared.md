@@ -66,7 +66,7 @@ Note that, unlike standard shared objects, the `storage` object does not create 
 
 For more information, refer to the `Storage` command description.
 
-## Use...End use
+## Use... End use
 
 The formal syntax of the `Use...End use` structure is:
 

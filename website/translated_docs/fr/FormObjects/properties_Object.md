@@ -55,7 +55,7 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objet                                        | Saved value                                                                            |
+| Object                                       | Saved value                                                                            |
 | -------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Case à cocher](checkbox_overview.md)        | Value of associated variable (0, 1, 2)                                                 |
 | [Liste déroulante](dropdownList_Overview.md) | Number of selected row                                                                 |

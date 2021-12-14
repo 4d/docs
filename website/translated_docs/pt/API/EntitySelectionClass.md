@@ -778,7 +778,7 @@ If several *attributePath* are given, a *targetPath* must be given for each. Onl
 
 #### Exemplo
 
-Given the following table and relation:
+Dada a seguinte tabela e relação:
 
 ![](assets/en/API/entityselection.PNG)
 
@@ -1556,7 +1556,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 #### Description
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
+The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 > This function does not modify the original entity selection.
 
 If no matching entities are found, an empty `EntitySelection` is returned.

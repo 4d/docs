@@ -166,7 +166,7 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Date            | (1+nombre d'éléments) * 6                                               |
 | Entier long     | (1+nombre d'éléments) * 2                                               |
 | Entier long     | (1+nombre d'éléments) * 4                                               |
-| Objet           | (1+nombre d'éléments) * 8 + somme de la taille de chaque objet          |
+| Object          | (1+nombre d'éléments) * 8 + somme de la taille de chaque objet          |
 | Image           | (1+nombre d'éléments) * 8 + somme de la taille de chaque image          |
 | Pointeur        | (1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur       |
 | Réel            | (1+nombre d'éléments) * 8                                               |
