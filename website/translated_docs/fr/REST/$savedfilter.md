@@ -15,13 +15,9 @@ Si l'ensemble d'entités n'est plus dans le cache de 4D Server, il sera recréé
 
 Si vous avez utilisé à la fois `$savedfilter` et
 
-[`$savedorderby`]($savedorderby.md) dans votre appel lors de la création d'un ensemble d'entités et que vous en omettez un, le nouvel ensemble d'entités, qui aura le même numéro de référence, le reflétera.</p> 
-
-
-
 ## Exemple
 
-Dans notre exemple, nous appelons d'abord ``$savedfilter` avec l'appel initial pour créer un ensemble d'entités comme indiqué ci-dessous :
+[`$savedorderby`]($savedorderby.md) dans votre appel lors de la création d'un ensemble d'entités et que vous en omettez un, le nouvel ensemble d'entités, qui aura le même numéro de référence, le reflétera.
 
 `GET  /rest/People/?$filter="employer.name=Apple"&$savedfilter="employer.name=Apple"&$method=entityset`
 

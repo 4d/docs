@@ -11,7 +11,7 @@ Las copias de seguridad pueden iniciarse de forma manual o automática a interva
 
 Las bases de datos pueden restaurarse automáticamente cuando se abre una base de datos dañada.
 
-Además, el módulo de copia de seguridad integrado puede aprovechar el archivo .journal ([de historial](log.md)). Este archivo mantiene un registro de todas las operaciones realizadas en los datos y también garantiza una seguridad total entre dos copias de seguridad. En caso de problemas con una base de datos en uso, las operaciones que falten en el archivo de datos se reintegran automáticamente la próxima vez que se abra la base. Puede ver el contenido del archivo de historial en cualquier momento.
+Además, el módulo de copia de seguridad integrado puede aprovechar el archivo .journal ([de historial](log.md)). Este archivo mantiene un registro de todas las operaciones realizadas en los datos y también garantiza una seguridad total entre dos copias de seguridad. En caso de problemas con una base de datos en uso, las operaciones que falten en el archivo de datos se reintegran automáticamente la próxima vez que se abra la base. En caso de problemas con una aplicación en uso, las operaciones que falten en el archivo de datos se reintegran automáticamente la próxima vez que se abra la aplicación.
 
 > También puede implementar soluciones alternativas para replicar y sincronizar los datos con el fin de mantener versiones idénticas de las bases con fines de copia de seguridad. Estas soluciones pueden basarse en los siguientes mecanismos y tecnologías:  
 > - Configuración de una réplica lógica con 4D Server (utilizando los mecanismos del módulo de copia de seguridad integrado)  
