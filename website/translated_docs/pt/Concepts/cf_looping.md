@@ -167,21 +167,21 @@ Em alguns casos, pode querer ter um loop cuja variável de contador seja decresc
  End for
 ```
 
-### Incrementing the counter variable by more than one
+### Incrementar a variável do contador em mais de um
 
 Se precisar, pode usar uma *Increment_Expression* (positiva ou negativa) cujo valor absoluto seja maior que um.
 
-9. The following loop addresses only the even elements of the array anArray:
+9. O loop a seguir aborda só os elementos pares do array anArray:
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
-  //Do something with the element #2,#4...#2n
+  //Faz algo com o elemento #2,#4...#2n
     anArray{$vlElem}:=...
  End for
 ```
 
 
-### Comparing looping structures
+### Comparação de estruturas de loop
 
 Voltamos ao primeiro exemplo de `For... End for`. O seguinte exemplo executa 100 iterações:
 ```4d
@@ -192,51 +192,51 @@ Voltamos ao primeiro exemplo de `For... End for`. O seguinte exemplo executa 100
 
 Aquí está o loop equivalente `Repeat... Until`:
 ```4d
- $i:=1 //Initialize the counter
- While($i<=100) //Loop 100 times
-  //Do something
-    $i:=$i+1 //Need to increment the counter
+ $i:=1 //Initializa o contador
+ While($i<=100) //Loop 100 vezes
+  //Faz algo
+    $i:=$i+1 //Precisa incrementar o contador
  End while
 ```
 
 Aqui está o loop equivalente `While... End while`:
 ```4d
- $i:=1 //Initialize the counter
+ $i:=1 //Initializa o contador
  Repeat
-  //Do something
-    $i:=$i+1 //Need to increment the counter
- Until($i=100) //Loop 100 times
+  //Faz algo
+    $i:=$i+1 //Precisa incrementar o contador
+ Until($i=100) //Loop 100 vezes
 ```
 **Dica:** o loop `For... End for` é geralmente mais rápido que os loops `While... End while` ou `Repeat... Until`, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Portanto, utilize o loop `For... End for` sempre que for possível.
 
-### Optimizing the execution of the For...End for loops
+### Otimizar a execução dos loops For... End for
 
 Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.
 
-10. Here is an example:
+10. Aqui um exemplo simples:
 
 ```4d
- C_LONGINT($vlCounter) //use local Long Integer variables
+ C_LONGINT($vlCounter) //usa variáveis locais Long Integer
  For($vlCounter;1;10000)
-  //Do something
+  //Faz algo
  End for
 ```
 
-### Nested For...End for looping structures
+### Estruturas For...End aninhadas
 
 Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
 Aqui são dois exemplos:
 
-11. The following example goes through all the elements of a two-dimensional array:
+11. O exemplo abaixo percorre todos os elementos em um array de duas dimensões:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
   //...
-  //Do something with the row
+  //Faz algo com a linha
   //...
     For($vlSubElem;1;Size of array(anArray{$vlElem}))
-  //Do something with the element
+  //Faz algo com o elemento
        anArray{$vlElem}{$vlSubElem}:=...
     End for
  End for
