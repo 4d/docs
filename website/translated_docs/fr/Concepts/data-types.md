@@ -14,7 +14,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | `C_DATE`, `ARRAY DATE`       |
 | [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | `C_TIME`, `ARRAY TIME`       |
 | [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
+| [Integer](Concepts/dt_number.md)             | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
 | [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | `C_LONGINT`, `ARRAY LONGINT` |
 | [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                            |
 | [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REAL`, `ARRAY REAL`       |
