@@ -1,24 +1,24 @@
 ---
 id: dropdownListOverview
-title: Drop-down List
+title: Lista suspensa ou drop down
 ---
 
 ## Visão Geral
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
+Listas drop-down são objetos que permitem que os usuários selecionem de uma lista. Gerenciar os itens exibidos na lista drop down usando um array, uma lista de escolha ou uma ação padrão.
 
-On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:
+Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes referem aos mesmos objetos. Como no exemplo abaixo, a aparência desses objetos podem diferenciar levemente de acordo com a plataforma:
 
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
 
 
 ## Usar um array
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
+Um [array](Concepts/arrays.md) é uma lista de valores na memória que são referenciados pelo nome do array. Uma lista drop down exibe um array como lista de valores quando clicar nela.
 
-Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
+Objetos lista drop down são iniciados ao carregar uma lista de valores em um array. Pode fazer isso de várias maneiras:
 
-* Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Digite uma lista de valores padrão nas propriedades objeto ao selecionar "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
 
 * Before the object is displayed, execute code that assigns values to the array elements. For example:
 
