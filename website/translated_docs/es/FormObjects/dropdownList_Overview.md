@@ -5,22 +5,22 @@ title: Lista desplegable
 
 ## Generalidades
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
+Las listas desplegables son objetos que permiten al usuario seleccionar de una lista. Los elementos mostrados en la lista desplegable se gestionan mediante un array, una lista de selección o una acción estándar.
 
-On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:
+En macOS, las listas desplegables también se denominan a veces "menú emergente". Ambos nombres se refieren a los mismos objetos. Como muestra el siguiente ejemplo, el aspecto de estos objetos puede variar ligeramente según la plataforma:
 
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
 
 
 ## Utilizar un array
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. Una lista desplegable muestra un array como una lista de valores cuando se hace clic en ella.
+Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se hace referencia por el nombre del array. Una lista desplegable muestra un array como una lista de valores cuando se hace clic en ella.
 
-Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
+Los objetos de lista desplegable se inicializan cargando una lista de valores en un array. Puede hacerlo de varias maneras:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
-* Before the object is displayed, execute code that assigns values to the array elements. Por ejemplo:
+* Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 
 ```4d
   ARRAY TEXT($aCities;6)
@@ -31,7 +31,7 @@ Drop-down list objects are initialized by loading a list of values into an array
   $aCities{5}:="Frostbite Falls"
   $aCities{6}:="Green Bay"
 ```
-En este caso, el nombre de la variable asociada al objeto del formulario debe ser *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
+En este caso, el nombre de la variable asociada al objeto del formulario debe ser *$aCities*. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
 
 *  Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html). Por ejemplo:
 
