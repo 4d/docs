@@ -3,35 +3,35 @@ id: creating
 title: Creación de menús y barras de menús
 ---
 
-You can create menus and menu bars:
+Puede crear menús y barras de menús:
 
-- using the Menus editor of the 4D Toolbox window. In this case, menus and menu bars are stored in the application's structure.
-- dynamically, using the language commands from the "Menus" theme. In this case, menus and menu bars are not stored, they only exist in memory.
+- utilizando el editor de menús de la ventana de la caja de herramientas 4D. En este caso, los menús y las barras de menú se almacenan en la estructura de la aplicación.
+- dinámicamente, utilizando los comandos del lenguaje del tema "Menús". En este caso, los menús y las barras de menús no se almacenan, sólo existen en la memoria.
 
-You can combine both features and use menus created in structure as templates to define menus in memory.
+Puede combinar ambas funcionalidades y utilizar los menús creados en la estructura como plantillas para definir los menús en la memoria.
 
 
 ## Barra de menús por defecto
 
-A custom application must contain at least one menu bar with one menu. A custom application must contain at least one menu bar with one menu. The default menu bar includes standard menus and a command for returning to the Design mode.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. Por defecto, cuando se crea una nueva base, 4D crea automáticamente una barra de menú por defecto (Barra de nº 1) para que pueda acceder al modo Aplicación. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
-Esto permite al usuario acceder al modo Aplicación tan pronto como se crea la base. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
+Esto permite al usuario acceder al modo Aplicación tan pronto como se crea la base. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
-The default menu bar includes three menus:
+La barra de menús por defecto incluye tres menús:
 
-- **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
-- **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
-- **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
-> Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
+- **Archivo**: sólo incluye el comando **Salir**. La acción estándar *Salir* está asociada al comando, que hace que la aplicación salga.
+- **Editar**: menú estándar y totalmente editable. Las funciones de edición, como copiar, pegar, etc., se definen mediante acciones estándar.
+- **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
+> Los elementos del menú aparecen *en itálica * porque consisten de referencias y no de texto codificado. Consulte [Propiedad Título](properties.md#title).
 
-You can modify this menu bar as desired or create additional ones.
+Puede modificar esta barra de menú como desee o crear otras adicionales.
 
 
 ## Crear menús
 
 ### Utilizando el editor de menús
 
-1. Select the item you want to create and click the add ![](assets/en/Menus/PlussNew.png) button below the menu bar area. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
+1. Seleccione el elemento que desea crear y haga clic en el botón añadir <img src="assets/en/Menus/PlussNew.png" alt=" /> debajo de la zona de la barra de menús. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Menu bar names must be unique. They may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### Utilizando el lenguaje 4D
