@@ -370,36 +370,36 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 #### Descrição
 
-The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+A função `.get()` <!-- REF #DataClassClass.get().Summary -->pesquisa a dataclass para recuperar a entidade correspondente ao parâmetro *primaryKey*<!-- END REF -->.
 
-In *primaryKey*, pass the primary key value of the entity to retrieve. The value type must match the primary key type set in the datastore (Integer or Text). You can also make sure that the primary key value is always returned as Text by using the [`.getKey()`](EntityClass.md#getkey) function with the `dk key as string` parameter.
+Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
 
-If no entity is found with *primaryKey*, a **Null** entity is returned.
+Se nenhuma entidade for encontrada com  *primaryKey*, uma entidade**Null** é retornada.
 
-Lazy loading is applied, which means that related data is loaded from disk only when it is required.
+É aplicado o lazy loading/carregamento diferido, ou seja os dados relacionados são carregados do disco só quando pedidos.
 
 **settings**
 
 No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                         |
-| -------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the automatic optimization context applied to the entity. This context will be used by the subsequent code that loads the entity so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Tipo  | Descrição                                                                                                                                                                                                                                                                                                               |
+| ----------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Texto | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
 
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $entity : cs.EmployeeEntity  
  var $entity2 : cs.InvoiceEntity
- $entity:=ds.Employee.get(167) // return the entity whose primary key value is 167
- $entity2:=ds.Invoice.get("DGGX20030") // return the entity whose primary key value is "DGGX20030"
+ $entity:=ds.Employee.get(167) // retorna a entidade cujo valor de chave primária é 167
+ $entity2:=ds.Invoice.get("DGGX20030") // retorna a entidade cujo valor de chave primária é  "DGGX20030"
 ```
 
-#### Example 2
+#### Exemplo 2
 
-This example illustrates the use of the *context* property:
+Este exemplo ilustra o uso da propriedade *context* :
 
 ```4d
  var $e1; $e2; $e3; $e4 : cs.EmployeeEntity

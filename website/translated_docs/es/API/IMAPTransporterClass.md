@@ -653,10 +653,12 @@ Para eliminar todos los mensajes del buzón actual:
 **.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parámetros | Tipo   |    | Descripción                                     |
-| ---------- | ------ |:--:| ----------------------------------------------- |
-| name       | Texto  | -> | Nombre del buzón a eliminar                     |
-| Resultado  | Objeto | <- | Estado de la operación de eliminación del buzón |
+| Parámetros | Tipo  |    | Descripción                 |
+| ---------- | ----- |:--:| --------------------------- |
+| name       | Texto | -> | Nombre del buzón a eliminar |
+
+
+|Result|Object|<-|Status of the mailbox deletion operation|
 <!-- END REF -->
 
 
@@ -796,8 +798,8 @@ $status:=$transporter.expunge()
 | Versión | Modificaciones     |
 | ------- | ------------------ |
 | v18 R5  | *name* is optional |
-| v18 R4  | Añadidos           |
-</details>
+
+|v18 R4|Added| </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
 **.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
@@ -820,7 +822,7 @@ If the mailbox *name* is not selectable or does not exist, the function generate
 
 **Objeto devuelto**
 
-El objeto `boxInfo` devuelto contiene las siguientes propiedades:
+The `boxInfo` object returned contains the following properties:
 
 | Propiedad  | Tipo   | Descripción                                                         |
 | ---------- | ------ | ------------------------------------------------------------------- |
@@ -1184,7 +1186,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
 
-En el primer parámetro, puede pasar:
+In the first parameter, you can pass either:
 
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
@@ -1447,7 +1449,7 @@ En el parámetro `msgIDs`, puede pasar:
     | --------- | ----- | ----------------------------------------------------- |
     | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
+The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
 
 | Parámetros | Tipo     | Descripción                                         |
 | ---------- | -------- | --------------------------------------------------- |
@@ -1689,28 +1691,28 @@ Search-keys may request the value to search for:
 **OLD**: Messages that do not have the \Recent flag set.  
 **SEEN**: Messages that have the \Seen flag set.  
 **UNSEEN**: Messages that do not have the \Seen flag set.  
-**NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
-**KEYWORD** <flag>: Messages with the specified keyword set.  
-**UNKEYWORD** <flag>: Messages that do not have the specified keyword set.  
-**BEFORE** <date>: Messages whose internal date is earlier than the specified date.  
-**ON** <date>: Messages whose internal date is within the specified date.  
-**SINCE** <date>: Messages whose internal date is within or later than the specified date.  
-**SENTBEFORE** <date>: Messages whose Date header is earlier than the specified date.  
-**SENTON** <date>: Messages whose Date header is within the specified date.  
-**SENTSINCE** <date>: Messages whose Date header is within or later than the specified date.  
-**TO** <string>: Messages that contain the specified string in the TO header.  
-**FROM** <string>: Messages that contain the specified string in the FROM header.  
-**CC** <string>: Messages that contain the specified string in the CC header.  
-**BCC** <string>: Messages that contain the specified string in the BCC header.  
-**SUBJECT** <string>: Messages that contain the specified string in the Subject header.  
-**BODY** <string>: Messages that contain the specified string in the message body.  
-**TEXT** <string>: Messages that contain the specified string in the header or in the message body.  
-**HEADER** <field-name> <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-**UID** <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.  
-**LARGER** <n>: Messages with a size larger than the specified number of bytes.  
-**SMALLER** <n>: Messages with a size smaller than the specified number of bytes.  
-**NOT** <search-key>: Messages that do not match the specified search key.  
-**O** <search-key1> <search-key2>: Messages that match either search key.  
+**NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to "(RECENT UNSEEN)".  
+***KEYWORD ***flag******: Messages with the specified keyword set.  
+***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.  
+***BEFORE ***date******: Messages whose internal date is earlier than the specified date.  
+***ON ***date******: Messages whose internal date is within the specified date.  
+***SINCE ***date******: Messages whose internal date is within or later than the specified date.  
+***SENTBEFORE ***date******: Messages whose Date header is earlier than the specified date.  
+***SENTON ***date******: Messages whose Date header is within the specified date.  
+***SENTSINCE ***date******: Messages whose Date header is within or later than the specified date.  
+***TO ***string******: Messages that contain the specified string in the TO header.  
+***FROM ***string******: Messages that contain the specified string in the FROM header.  
+***CC ***string******: Messages that contain the specified string in the CC header.  
+***BCC ***string******: Messages that contain the specified string in the BCC header.  
+***SUBJECT ***string******: Messages that contain the specified string in the Subject header.  
+***BODY ***string******: Messages that contain the specified string in the message body.  
+***TEXT ***string******: Messages that contain the specified string in the header or in the message body.  
+***HEADER *field-name* ***string******: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
+***UID ***message-UID******: Messages with unique identifiers corresponding to the specified unique identifier set.  
+***LARGER ***n******: Messages with a size larger than the specified number of bytes.  
+***SMALLER ***n******: Messages with a size smaller than the specified number of bytes.  
+***NOT ***search-key******: Messages that do not match the specified search key.  
+***OR *search-key1* ***search-key2******: Messages that match either search key.  
 
 
 <!-- END REF -->
@@ -1756,7 +1758,7 @@ The optional *state* parameter defines the type of access to the mailbox. Los va
 
 **Objeto devuelto**
 
-El objeto `boxInfo` devuelto contiene las siguientes propiedades:
+The `boxInfo` object returned contains the following properties:
 
 | Propiedad  | Tipo   | Descripción                                |
 | ---------- | ------ | ------------------------------------------ |
@@ -1814,14 +1816,14 @@ In the `name` parameter, pass the name of the mailbox to add (subscribe) to your
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Tipo       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Booleano   | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Texto      | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Número     | 4D error code                                                                            |
-|            | \[].message            | Texto      | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Texto      | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                          |
+| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------------------- |
+| success    |                         | Booleano   | True si la operación tiene éxito, False en caso contrario                                            |
+| statusText |                         | Texto      | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                     |
+|            | \[].errcode            | Número     | Código de error 4D                                                                                   |
+|            | \[].message            | Texto      | Description of the 4D error                                                                          |
+|            | \[].componentSignature | Texto      | Firma del componente interno que ha devuelto el error                                                |
 
 
 
@@ -1893,7 +1895,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | statusText |                         | Texto      | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                     |
 |            | \[].errcode            | Número     | Código de error 4D                                                                                   |
-|            | \[].message            | Texto      | Descripción del error 4D                                                                             |
+|            | \[].message            | Texto      | Description of the 4D error                                                                          |
 |            | \[].componentSignature | Texto      | Firma del componente interno que ha devuelto el error                                                |
 
 

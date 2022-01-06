@@ -11,7 +11,7 @@ Apesar do modo de representação de datas de C_DATE permitir trabalhar com data
 
 ## Date literals
 
-Uma constante literal de tipo data está cercada de sinais de exclamação (!...!). Uma data deve ser estruturada usando o formato ISO (!YYYY-MM-DD!) Estes são alguns exemplos de constantes de datas:
+Uma constante literal de tipo data está cercada de sinais de exclamação (!...!). Uma data deve ser estruturada usando o formato ISO (!YYYY-MM-DD!) Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas:
 
 ```4d
 !1976-01-01!

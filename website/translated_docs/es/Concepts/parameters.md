@@ -33,6 +33,8 @@ Los mismos principios se aplican cuando los métodos se ejecutan a través de co
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
 //pase la fecha !05/05/20! como parámetro de SetCalendarDate  
+//en el contexto de un subformulario  
+//pase la fecha !05/05/20! como parámetro de SetCalendarDate  
 //en el contexto de un subformulario
 ```
 

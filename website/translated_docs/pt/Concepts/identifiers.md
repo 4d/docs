@@ -80,8 +80,7 @@ Examples:
 
 ```4d
 If(New client)
-DELETE DUPLICATED VALUES
-APPLY TO SELECTION([Employees];INCREASE SALARIES)
+DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
 **Dica:** é uma boa técnica de programação adotar a mesma convenção de nomenclatura que a utilizada por 4D para os métodos integrados. Use uppercase characters for naming your methods; however if a method returns a value, capitalize the first character of its name. By doing so, when you reopen a project for maintenance after a few months, you will already know if a method returns a result by simply looking at its name in the Explorer window.
@@ -91,12 +90,9 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 Examples:
 
 ```4d
-    //Este comando espera um método (função) ou uma fórmula
-QUERY BY FORMULA([aTable];Special query)
-    //Este comando espera um método (procedimento) ou uma instrução
-APPLY TO SELECTION([Employees];INCREASE SALARIES)
-    //Mas este comando espera um nome de método
-ON EVENT CALL("HANDLE EVENTS")
+    //Este comando espera um método (função) ou uma fórmula QUERY BY FORMULA([aTable];Special query)
+    //Este comando espera um método (procedimento) ou uma instrução APPLY TO SELECTION([Employees];INCREASE SALARIES)
+    //Mas este comando espera um nome de método ON EVENT CALL("HANDLE EVENTS")
 ```
 
 

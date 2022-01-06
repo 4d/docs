@@ -34,27 +34,27 @@ Les objets SMTP Transporter sont instanciés avec la commande [SMTP New transpor
 ## SMTP New transporter
 
 <details><summary>Historique</summary>
-| Version | Modifications                                |
-| ------- | -------------------------------------------- |
-| v18     | New logFile property                         |
-| v17 R5  | New bodyCharset and headerCharset properties |
-| v17 R4  | Ajout                                        |
+| Version | Modifications                                     |
+| ------- | ------------------------------------------------- |
+| v18     | Nouvelle propriété logFile                        |
+| v17 R5  | Nouvelles propriétés bodyCharset et headerCharset |
+| v17 R4  | Ajout                                             |
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Paramètres | Type               |    | Description                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Object             | -> | Informations sur le serveur IMAP                    |
-| Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Paramètres | Type               |    | Description                                        |
+| ---------- | ------------------ |:--:| -------------------------------------------------- |
+| server     | Object             | -> | Informations sur le serveur IMAP                   |
+| Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#smtp-transporter-object) |
 <!-- END REF -->
 
 
 #### Description
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
+La commande `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configure une nouvelle connexion SMTP<!-- END REF --> en fonction du paramètre *server* et retourne un nouvel objet *[SMTP transporter](#smtp-transporter-object)*. L'objet transporteur retourné sera alors utilisé pour l'envoi d'emails.
 
 > Cette commande n'ouvre pas de connexion au serveur SMTP. La connexion SMTP est réellement ouverte lorsque la fonction [`.send()`](#send) est exécutée.  
 > 
@@ -85,7 +85,7 @@ Dans le paramètre *server*, passez un objet contenant les propriétés suivante
 
 #### Résultat
 
-The function returns a [**SMTP transporter object**](#smtp-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
+La fonction retourne un [**objet SMTP transporter**](#smtp-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 
 
 #### Exemple
@@ -125,15 +125,15 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 **4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Paramètres | Type               |    | Description                                         |
-| ---------- | ------------------ |:--:| --------------------------------------------------- |
-| server     | Object             | -> | Informations sur le serveur IMAP                    |
-| Résultat   | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Paramètres | Type               |    | Description                                        |
+| ---------- | ------------------ |:--:| -------------------------------------------------- |
+| server     | Object             | -> | Informations sur le serveur IMAP                   |
+| Résultat   | 4D.SMTPTransporter | <- | [Objet SMTP Transporter](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Description
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+La fonction `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crée et retourne un nouvel objet de type `4D.SMTPTransporter`<!-- END REF -->. Elle est identique à la commande [`SMTP New transporter`](#smtp-new-transporter) (raccourci).
 
 
 
@@ -153,7 +153,7 @@ The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summa
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+Pour une description des codes de statut SMTP, veuillez vous reporter à [cette page](https://www.usps.org/info/smtp_status.html).
 
 #### Exemple
 
@@ -213,12 +213,12 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 #### Description
 
-The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+La propriété `.keepAlive` contient <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** si la connexion SMTP doit rester active jusqu'à la destruction de l'objet `transporter`<!-- END REF -->, et **False** sinon. Par défaut, si la propriété `keepAlive` n'a pas été définie dans l'objet `server` qui permet de créer l'objet `transporter` via la commande `SMTP New transporter`), elle est mise à **True**.
 
-The SMTP connection is automatically closed:
+La connexion SMTP est automatiquement fermée :
 
-*   when the `transporter` object is destroyed if the `.keepAlive` property is true,
-*   after each `.send( )` function execution if the `.keepAlive` property is set to false.
+*   lorsque l'objet `transporter` est détruit si la propriété `.keepAlive` est mise à vrai,
+*   après chaque fonction `.send( )` exécutée si la propriété `.keepAlive` est mise à faux.
 
 
 
@@ -238,46 +238,46 @@ The SMTP connection is automatically closed:
 ## .send()
 
 <details><summary>Historique</summary>
-| Version | Modifications            |
-| ------- | ------------------------ |
-| v17 R5  | Support of mime contents |
-| v17 R4  | Ajout                    |
+| Version | Modifications                     |
+| ------- | --------------------------------- |
+| v17 R5  | Prise en charge des contenus Mime |
+| v17 R4  | Ajout                             |
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| Paramètres | Type   |    | Description                                       |
-| ---------- | ------ |:--:| ------------------------------------------------- |
-| mail       | Object | -> | [Email](EmailObjectClass.md#email-object) to send |
-| Résultat   | Object | <- | SMTP status                                       |
+| Paramètres | Type   |    | Description                                         |
+| ---------- | ------ |:--:| --------------------------------------------------- |
+| mail       | Object | -> | [Email](EmailObjectClass.md#email-object) à envoyer |
+| Résultat   | Object | <- | Statut SMTP                                         |
 <!-- END REF -->
 
 
 #### Description
 
-The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+La fonction `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envoie l'objet [*mail* object](EmailObjectClass.md#email-object) au serveur SMTP défini dans l'objet `transporter` et retourne un objet statut<!-- END REF -->.
 > L'objet `transporter` doit avoir déjà été créé à l'aide de la commande `SMTP New transporter`.
 
-The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](#smtp-new-transporter) command description.
+La fonction établit la connexion SMTP si cette dernière n'est pas déjà active. Si la propriété `.keepAlive` de l'objet `transporter` est à **false**, la connexion SMTP est automatiquement fermée après l'exécution de la commande `.send()`. Sinon, elle reste active jusqu'à la suppression de l'objet `transporter`. Pour plus d'informations, voir la description de la commande [`SMTP New transporter`](#smtp-new-transporter).
 
-In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
+Dans *mail*, passez un objet [`Email`](EmailObjectClass.md#email-object) valide à envoyer. Les propriétés origine (la provenance de l'Email) et destination (un ou plusieurs destinataires) de l'Email doivent être incluses, les autres propriétés sont optionnelles.
 
 
 #### Objet retourné
 
-The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
+La fonction retourne un objet décrivant le statut SMTP de l"opération. Cet objet peut avoir les propriétés suivantes :
 
-| Propriété  | Type    | Description                                                                                      |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------ |
-| success    | boolean | True if the send is successful, False otherwise                                                  |
-| status     | number  | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
-| statusText | Texte   | Status message returned by the SMTP server                                                       |
+| Propriété  | Type    | Description                                                                                  |
+| ---------- | ------- | -------------------------------------------------------------------------------------------- |
+| success    | boolean | Vrai si l'envoi a été effectué avec succès, sinon Faux                                       |
+| status     | number  | Code du statut retourné par le serveur SMTP (0 si problème non lié au traitement de l'email) |
+| statusText | Texte   | Message de statut retourné par le serveur SMTP                                               |
 
-In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
+En cas de problème non lié au traitement SMTP (par exemple une propriété obligatoire qui est manquante dans l'objet mail), 4D génère une erreur que vous pouvez intercepter à l'aide d'une méthode installée via la commande `ON ERR CALL`. Utilisez la commande `GET LAST ERROR STACK` pour obtenir des informations sur l'erreur.
 
-In this case, the resulting status object contains the following values:
+Dans ce cas, l'objet erreur qui en résulte contient les valeurs suivantes :
 
 | Propriété  | Valeur                 |
 | ---------- | ---------------------- |

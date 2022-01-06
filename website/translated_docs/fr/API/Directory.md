@@ -530,10 +530,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Paramètres | Type        |    | Description                        |
-| ---------- | ----------- | -- | ---------------------------------- |
-| options    | Entier long | -> | Options de liste de fichiers       |
-| Résultat   | Collection  | <- | Collection d'objets dossier enfant |
+| Paramètres | Type       |    | Description                        |
+| ---------- | ---------- | -- | ---------------------------------- |
+| options    | Integer    | -> | Options de liste de fichiers       |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant |
 <!-- END REF -->
 
 #### Description
@@ -631,10 +631,10 @@ Un objet `Folder` object ou null si *path* est invalide.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Paramètres | Type        |    | Description                        |
-| ---------- | ----------- | -- | ---------------------------------- |
-| options    | Entier long | -> | Options de liste des dossiers      |
-| Résultat   | Collection  | <- | Collection d'objets dossier enfant |
+| Paramètres | Type       |    | Description                        |
+| ---------- | ---------- | -- | ---------------------------------- |
+| options    | Integer    | -> | Options de liste des dossiers      |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant |
 <!-- END REF -->
 
 #### Description
@@ -678,10 +678,10 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Paramètres | Type        |    | Description                                    |
-| ---------- | ----------- | -- | ---------------------------------------------- |
-| size       | Entier long | -> | Longueur du côté de l'image retournée (pixels) |
-| Résultat   | Image       | <- | Icône                                          |
+| Paramètres | Type    |    | Description                                    |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
+| Résultat   | Image   | <- | Icône                                          |
 <!-- END REF -->
 
 

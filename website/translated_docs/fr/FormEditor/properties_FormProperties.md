@@ -119,9 +119,9 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 ## Publié en tant que sous-formulaire
 
-Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. When this property is selected, the form will be published in the host application.
+Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. Lorsque cette propriété est sélectionnée, le formulaire sera publié dans le projet hôte.
 
-Only project forms can be specified as published subforms.
+Seuls les projets formulaire peuvent être indiqués comme étant des sous-formulaires publiés.
 
 
 

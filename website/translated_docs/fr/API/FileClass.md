@@ -66,13 +66,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Paramètres   | Type        |    | Description                                     |
-| ------------ | ----------- |:--:| ----------------------------------------------- |
-| path         | Texte       | -> | Chemin de fichier                               |
-| fileConstant | Entier long | -> | 4D file constant                                |
-| pathType     | Entier long | -> | `fk posix path` (default) or `fk platform path` |
-| *            |             | -> | * to return file of host database               |
-| Résultat     | 4D.File     | <- | New file object                                 |
+| Paramètres   | Type    |    | Description                                     |
+| ------------ | ------- |:--:| ----------------------------------------------- |
+| path         | Texte   | -> | Chemin de fichier                               |
+| fileConstant | Integer | -> | 4D file constant                                |
+| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
+| *            |         | -> | * to return file of host database               |
+| Résultat     | 4D.File | <- | New file object                                 |
 <!-- END REF -->
 
 
@@ -209,12 +209,12 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Paramètres        | Type        |    | Description                                  |
-| ----------------- | ----------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texte       | -> | Name of the alias or shortcut                |
-| aliasType         | Entier long | -> | Type of the alias link                       |
-| Résultat          | 4D.File     | <- | Alias or shortcut file reference             |
+| Paramètres        | Type      |    | Description                                  |
+| ----------------- | --------- | -- | -------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
+| aliasName         | Texte     | -> | Name of the alias or shortcut                |
+| aliasType         | Integer   | -> | Type of the alias link                       |
+| Résultat          | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
 
@@ -687,12 +687,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Paramètres  | Type        |    | Description                                                |
-| ----------- | ----------- | -- | ---------------------------------------------------------- |
-| Texte       | Texte       | -> | Text to store in the file                                  |
-| charSetName | Texte       | -> | Nom du jeu de caractères                                   |
-| charSetNum  | Entier long | -> | Numéro du jeu de caractères                                |
-| breakMode   | Entier long | -> | Processing mode for line breaks|<!-- END REF -->
+| Paramètres  | Type    |    | Description                                                |
+| ----------- | ------- | -- | ---------------------------------------------------------- |
+| Texte       | Texte   | -> | Text to store in the file                                  |
+| charSetName | Texte   | -> | Nom du jeu de caractères                                   |
+| charSetNum  | Integer | -> | Numéro du jeu de caractères                                |
+| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 
 |
 

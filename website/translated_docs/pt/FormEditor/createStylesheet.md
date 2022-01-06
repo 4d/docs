@@ -232,7 +232,7 @@ This CSS defines a color combination for text and text background in the light s
 
 ### Object Attributes
 
-The majority of form object attributes can be defined within a style sheet, except the following attributes:
+A maioria dos atributos do objeto formulário podem ser definidos dentro de uma folha de estilo, exceto os seguintes atributos:
     - `method`
     - `type`
     - `class`
@@ -243,7 +243,7 @@ Form object attributes can be declared with their [JSON name](FormObjets/propert
 
 #### Mapa de atributos
 
-The attributes listed below are able to accept either the 4D name or the CSS name.
+Os atributos listados a continuação podem aceitar o nome 4D ou o nome CSS.
 
 | 4D               | CSS                |
 | ---------------- | ------------------ |
@@ -262,65 +262,65 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 
 #### Valores de atributos específicos
 
-- For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
+- Para os atributos `icon`, `picture` e `customBackgroundPicture` que são compatíveis com uma rota a uma imagem, a sintaxe é:
 
 ```
-icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
-icon: url("edit.png"); /* relative path to the form file */
+icon: url("/RESOURCES/Images/Buttons/edit.png"); /* rota absoluta */
+icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 ```
 
-- For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
+- Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` e `verticalLineStroke`, três sintaxes são compatíveis:
 
     - CSS color name: `fill: red;`
     - Hexa value: `fill: #FF0000;`
-    - the `rgb()` function: `fill:rgb(255,0,0)`
+    - función `rgb()`: `fill:rgb(255,0,0)`
 
-- If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
-    - a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
-    - a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
+- Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. For example:
+    - uma referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+    - um datasource com a expressão de campo: `dataSource: "[Table_1:1]ID:1";`
 
 
 ## Ordem de prioridade
 
-4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
+Os proetos 4D priorizam as definições de estilo em conflito, primeiro pela definição do formulário e depois pelas folhas de estilo.
 
 
 ### JSON vs Folha de estilo
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
+Se um atributo estiver definido na descrição do formulário JSON e em uma folha de estilo, 4D utilizará o valor do arquivo JSON.
 
-To override this behavior, the style value must be followed with an `!important` declaration.
+Para anular este comportamento, o valor do estilo deve ir seguido de uma declaração `!important`.
 
-**Example 1:**
+**Exemplo 1:**
 
-| JSON form description | Style Sheet   | 4D displays |
-| --------------------- | ------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;` | `"Button"`  |
+| Descripción do formulário JSON | Style Sheet   | 4D exibe   |
+| ------------------------------ | ------------- | ---------- |
+| `"text": "Button",`            | `text: Edit;` | `"Button"` |
 
-**Example 2:**
+**Exemplo 2:**
 
-| JSON form description | Style Sheet              | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| Descripción do formulário JSON | Style Sheet              | 4D exibe |
+| ------------------------------ | ------------------------ | -------- |
+| `"text": "Button",`            | `text: Edit !important;` | `"Edit"` |
 
 
 
 
 ### Folhas de estilo múltiplas
 
-At runtime, 4D automatically prioritizes style sheets in the following order:
+Durante a execução, 4D prioriza automaticamente as folhas de estilo na seguinte ordem:
 
-1.  The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
-2.  It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3.  If it exists, it will then load a specific CSS file defined in the JSON form:
+1.  O formulário 4D carregará primeiro o arquivo CSS por padrão `/SOURCES/styleSheets.css`.
+2.  Depois carregará o arquivo CSS para a plataforma atual `/SOURCES/styleSheets_mac.css` o `/SOURCES/styleSheets_windows.css`.
+3.  Se existir, então carregará um arquivo CSS específico definido no formulário  JSON:
 
-    *   a file for both platforms:
+    *   um arquivo para ambas plataformas:
 
     ```
     "css": "<path>" 
     ```
 
-    *   or a list of files for both platforms:
+    *   ou uma lista de arquivos para ambas plataformas:
 
     ```
     "css": [
@@ -329,7 +329,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
           ],
     ```
 
-    *   or a list of files per platform:
+    *   ou uma lista de arquivos por plataforma:
 
     ```
      "css": [
@@ -338,19 +338,19 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
         ],
     ```
 
-> Filepaths can be relative or absolute. *  Relative paths are resolved relative to the JSON form description file. *  For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> As rotas dos arquivos pedem ser relativas ou absolutas. * As rotas relativas se resolvem em relação com o arquivo de descrição do formulário JSON. * Por razões de segurança, só se aceitam as rotas do sistema de arquivos para as rotas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
 
 
 ## Criação ou modificação de folhas de estilo
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+Pode criar folhas de estilo utilizando seu editor de texto preferido e salvando o arquivo com extensão ".css" na pasta "/SOURCES" do projeto.
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+A caixa de ferramentas de 4D oferece uma página **Hojas de estilo** como opção de acesso direto para criar e editar uma das três folhas de estilo com nomes específicas da plataforma.
 
-1.  Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1.  Abra a página **Estilos** escolhendo a **Caixa de ferramentas > Styles** do menu Design ou clique no ícone **Caixa de ferramentas** da barra de ferramentas do editor de formulários.
 
     ![](assets/en/FormEditor/stylesheets.png)
 
-2.  Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+2.  Selecione o tipo de folha de estilo que deseja criar E cliquer no botão **Criar** ou **Editar**: ![](assets/en/FormEditor/createButton.png)
 
-3. The style sheet will open in your default text editor.  
+3. A folha de estilo se abrirá em seu editor de texto predeterminado.  

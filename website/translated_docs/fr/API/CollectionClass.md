@@ -1670,12 +1670,12 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
-</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Paramètres  | Type        |    | Description                                                   |
-| ----------- | ----------- |:--:| ------------------------------------------------------------- |
-| pathStrings | Texte       | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
-| pathObjects | Collection  | -> | Collection d'objets critère                                   |
-| ascOrDesc   | Entier long | -> | `ck ascending` ou `ck descending` (valeurs scalaires)         |
-| Résultat    | Collection  | <- | Copie triée de la collection (shallow copy)                   |<!-- END REF -->#### Description
+</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Paramètres  | Type       |    | Description                                                   |
+| ----------- | ---------- |:--:| ------------------------------------------------------------- |
+| pathStrings | Texte      | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
+| pathObjects | Collection | -> | Collection d'objets critère                                   |
+| ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valeurs scalaires)         |
+| Résultat    | Collection | <- | Copie triée de la collection (shallow copy)                   |<!-- END REF -->#### Description
 
 La fonction `.orderBy()`<!-- REF #collection.orderBy().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis<!-- END REF -->.
 
@@ -2106,11 +2106,11 @@ Avec la méthode ***Flatten*** suivante :
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
-</details><!-- REF #collection.remove().Syntax -->**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.remove().Params -->| Paramètres | Type        |    | Description                                           |
-| ---------- | ----------- |:--:| ----------------------------------------------------- |
-| index      | Entier long | -> | Élément à partir duquel la suppression peut commencer |
-| howMany    | Entier long | -> | Nombre d'éléments à supprimer, ou 1 élément si omis   |
-| Résultat   | Collection  | <- | Collection d'origine sans élément(s) supprimé(s)      |<!-- END REF -->#### Description
+</details><!-- REF #collection.remove().Syntax -->**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.remove().Params -->| Paramètres | Type       |    | Description                                           |
+| ---------- | ---------- |:--:| ----------------------------------------------------- |
+| index      | Integer    | -> | Élément à partir duquel la suppression peut commencer |
+| howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis   |
+| Résultat   | Collection | <- | Collection d'origine sans élément(s) supprimé(s)      |<!-- END REF -->#### Description
 
 La fonction `.remove()`<!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
 > Cette fonction modifie la collection d'origine.
@@ -2148,7 +2148,7 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.resize().Syntax -->**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection<!-- END REF --><!-- REF #collection.resize().Params -->| Paramètres   | Type                                            |    | Description                                         |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------- |
-| size         | Entier long                                     | -> | Nouvelle taille de la collection                    |
+| size         | Integer                                         | -> | Nouvelle taille de la collection                    |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Valeur par défaut pour remplir de nouveaux éléments |
 | Résultat     | Collection                                      | <- | Collection d'origine redimensionnée                 |<!-- END REF -->#### Description
 
@@ -2228,11 +2228,11 @@ Si la collection est vide, cette méthode ne fait rien.
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
-</details><!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.slice().Params -->| Paramètres | Type        |    | Description                                                               |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Entier long | -> | Index pour démarrer la recherche (inclus)                                 |
-| end        | Entier long | -> | Position de fin (non incluse)                                             |
-| Résultat   | Collection  | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |<!-- END REF -->#### Description
+</details><!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.slice().Params -->| Paramètres | Type       |    | Description                                                               |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
+| startFrom  | Integer    | -> | Index pour démarrer la recherche (inclus)                                 |
+| end        | Integer    | -> | Position de fin (non incluse)                                             |
+| Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |<!-- END REF -->#### Description
 
 La fonction `.slice()`<!-- REF #collection.slice().Summary -->retourne une partie d'une collection dans une nouvelle collection<!-- END REF -->, sélectionnée de l'index *startFrom* à l'index de *fin* (fin non incluse). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
@@ -2260,12 +2260,12 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
-</details><!-- REF #collection.some().Syntax -->**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF --><!-- REF #collection.some().Params -->| Paramètres | Type        |    | Description                                   |
-| ---------- | ----------- |:--:| --------------------------------------------- |
-| startFrom  | Entier long | -> | Elément à partir duquel débuter l'évaluation  |
-| methodName | Texte       | -> | Nom de la méthode à appeler pour l'évaluation |
-| param      | Mixed       | -> | Paramètre(s) à passer à *methodName*          |
-| Résultat   | Booléen     | <- | Vrai si au moins un élément a réussi le test  |<!-- END REF -->#### Description
+</details><!-- REF #collection.some().Syntax -->**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF --><!-- REF #collection.some().Params -->| Paramètres | Type    |    | Description                                   |
+| ---------- | ------- |:--:| --------------------------------------------- |
+| startFrom  | Integer | -> | Elément à partir duquel débuter l'évaluation  |
+| methodName | Texte   | -> | Nom de la méthode à appeler pour l'évaluation |
+| param      | Mixed   | -> | Paramètre(s) à passer à *methodName*          |
+| Résultat   | Booléen | <- | Vrai si au moins un élément a réussi le test  |<!-- END REF -->#### Description
 
 La fonction `.some()`<!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF -->implémenté dans la méthode *methodName* fournie.
 

@@ -670,10 +670,10 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Paramètres | Type        |    | Description                               |
-| ---------- | ----------- | -- | ----------------------------------------- |
-| file       | 4D.File     | -> | Objet File                                |
-| reqNum     | Entier long | -> | Nombre de requêtes à conserver en mémoire |
+| Paramètres | Type    |    | Description                               |
+| ---------- | ------- | -- | ----------------------------------------- |
+| file       | 4D.File | -> | Objet File                                |
+| reqNum     | Integer | -> | Nombre de requêtes à conserver en mémoire |
 <!-- END REF -->
 
 

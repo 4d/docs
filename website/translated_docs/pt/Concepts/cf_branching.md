@@ -8,7 +8,7 @@ Uma estrutura de ramificação permite que os métodos testem uma condição e t
 
 ## If...Else...End if
 
-A sintaxe formal da estrutura condicional `If...Else...End if` é:
+A sintaxe formal da estrutura condicional `If... Else... End if` é:
 
 ```4d
  If(Boolean_Expression)
@@ -25,7 +25,7 @@ Note que a parte `Else` é opcional; pode escrever:
  End if
 ```
 
-A estrutura  `If...Else...End if` permite a seu método escolher entre duas ações, dependendo de se um teste (uma expressão Booleana) for TRUE ou FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
+A estrutura  `If... Else... End if` permite a seu método escolher entre duas ações, dependendo de se um teste (uma expressão Booleana) for TRUE ou FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
 
 Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
@@ -78,7 +78,7 @@ ou :
 
 ## Case of...Else...End case
 
-A sintaxe da estrutura condicional  `Case of...Else...End case` é:
+A sintaxe da estrutura condicional  `Case of... Else... End case` é:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -111,7 +111,7 @@ Note que a parte `Else` é opcional; pode escrever:
        statement(s)
  End case
 ```
-Da mesma forma que a estrutura `If...Else...End if`, a estrutura `Case of...Else...End case` também deixa seu método escolher entre ações alternativas. Diferente da estrutura `If...Else...End` a estrutura  `Case of...Else...End case` pode testar um número razoavelmente ilimitado de expressões Booleanas e realizar ações dependendo de qual delas for TRUE.
+Da mesma forma que a estrutura `If... End if`, a estrutura `Case of... End case` também deixa seu método escolher entre ações alternativas. Diferente da estrutura `If... End` a estrutura  `Case of... End case` pode testar um número razoavelmente ilimitado de expressões Booleanas e realizar ações dependendo de qual delas for TRUE.
 
 Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
@@ -140,7 +140,7 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
  End case
 ```
 
-Por comparação, aqui está a versão `If...Else...End if` do mesmo método:
+Por comparação, aqui está a versão `If... Else... End if` do mesmo método:
 
 ```4d
  If(vResult=1) //Teste se o número é 1
@@ -158,7 +158,7 @@ Por comparação, aqui está a versão `If...Else...End if` do mesmo método:
  End if
 ```
 
-Lembre que com uma estrutura `Case of...Else...End case`, só é executado o primeiro caso TRUE. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+Lembre que com uma estrutura `Case of... Else... End case`, só é executado o primeiro caso TRUE. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
 
 Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a preença de condition1&condition2 e portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
@@ -184,7 +184,7 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)

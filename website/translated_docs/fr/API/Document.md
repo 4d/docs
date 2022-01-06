@@ -465,12 +465,12 @@ Cette propriété est en **lecture seule**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Paramètres        | Type        |    | Description                                        |
-| ----------------- | ----------- |:--:| -------------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Dossier de destination                             |
-| newName           | Texte       | -> | Nom de la copie                                    |
-| overwrite         | Entier long | -> | `fk overwrite` pour écraser les éléments existants |
-| Résultat          | 4D.File     | <- | Fichier copié                                      |
+| Paramètres        | Type      |    | Description                                        |
+| ----------------- | --------- |:--:| -------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Dossier de destination                             |
+| newName           | Texte     | -> | Nom de la copie                                    |
+| overwrite         | Integer   | -> | `fk overwrite` pour écraser les éléments existants |
+| Résultat          | 4D.File   | <- | Fichier copié                                      |
 <!-- END REF -->
 
 
@@ -563,10 +563,10 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Paramètres | Type        |    | Description                                    |
-| ---------- | ----------- | -- | ---------------------------------------------- |
-| size       | Entier long | -> | Longueur du côté de l'image retournée (pixels) |
-| Résultat   | Image       | <- | Icône                                          |
+| Paramètres | Type    |    | Description                                    |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
+| Résultat   | Image   | <- | Icône                                          |
 <!-- END REF -->
 
 
@@ -602,12 +602,12 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 
 
 <!-- REF #document.getText().Params -->
-| Paramètres  | Type        |    | Description                               |
-| ----------- | ----------- | -- | ----------------------------------------- |
-| charSetName | Texte       | -> | Nom du jeu de caractères                  |
-| charSetNum  | Entier long | -> | Numéro du jeu de caractères               |
-| breakMode   | Entier long | -> | Mode de traitement des retours à la ligne |
-| Résultat    | Texte       | <- | Texte du document                         |
+| Paramètres  | Type    |    | Description                               |
+| ----------- | ------- | -- | ----------------------------------------- |
+| charSetName | Texte   | -> | Nom du jeu de caractères                  |
+| charSetNum  | Integer | -> | Numéro du jeu de caractères               |
+| breakMode   | Integer | -> | Mode de traitement des retours à la ligne |
+| Résultat    | Texte   | <- | Texte du document                         |
 <!-- END REF -->
 
 

@@ -33,5 +33,6 @@ Este ejemplo muestra cómo responder a un evento de cierre de ventana con un for
           CANCEL
        End if
   //...
+ //statement(s)
  End case
 ```

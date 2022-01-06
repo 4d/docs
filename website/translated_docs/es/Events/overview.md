@@ -24,9 +24,7 @@ Cada evento es devuelto como un objeto por el comando `FORM Event`. Por defecto,
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
- objectName|text|Nombre del objeto que desencadena el evento - No se incluye si el evento es desencadenado por el formulario| |code|longint|Valor numérico del evento formulario. También es devuelto por el comando 
-
-`Form event code`| |description|text|Nombre del evento de formulario (por ejemplo, "On After Edit")|
+ objectName|text|Nombre del objeto que desencadena el evento - No se incluye si el evento es desencadenado por el formulario| |code|longint|Valor numérico del evento formulario. También es devuelto por el comando
 
 Se devuelven propiedades adicionales cuando el evento se produce en objetos específicos. En particular:
 
@@ -49,7 +47,7 @@ El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
 ## Tabla de llamadas
 
-La tabla siguiente resume la forma en que se llaman los métodos objeto y formulario para cada tipo de evento:
+El número de objetos asociados a un evento depende de la naturaleza del mismo.
 
 | Evento                   | Método objeto                    | Método formulario | Objetos                         |
 | ------------------------ | -------------------------------- | ----------------- | ------------------------------- |

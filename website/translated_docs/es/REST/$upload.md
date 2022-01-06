@@ -44,7 +44,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 
 **Respuesta**:
 
-The modified entity is returned:
+Se devuelve la entidad modificada:
 
 ```
 {

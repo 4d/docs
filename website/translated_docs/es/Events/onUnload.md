@@ -20,7 +20,7 @@ Todos los objetos del formulario (de cualquier página) cuya propiedad de evento
 
 ### Subformulario
 
-El evento `On Unload` se genera al cerrar el subformulario (este evento debe haberse activado también a nivel del formulario padre para que se tenga en cuenta). El evento se genera antes que los del formulario padre. Tenga en cuenta también que, de acuerdo con los principios de funcionamiento de los eventos de formulario, si el subformulario se coloca en una página distinta de la página 0 o 1, este evento sólo se generará cuando se cierre esa página (y no cuando se cierre el formulario).
+El evento `On Unload` se genera al cerrar el subformulario (este evento debe haberse activado también a nivel del formulario padre para que se tenga en cuenta). El evento se genera antes que los del formulario padre. El evento se genera antes que los del formulario padre.
 
 
 ### Ver también

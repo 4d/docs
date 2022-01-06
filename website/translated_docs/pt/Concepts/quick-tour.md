@@ -116,7 +116,7 @@ CONFIRM("Do you really want to close this account?";"Yes";"No")
 
 A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
 
-The following example goes through all the characters of the text vtSomeText:
+O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))

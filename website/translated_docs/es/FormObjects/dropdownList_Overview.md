@@ -72,13 +72,13 @@ Form.myDrop.index //3
 
 ### Utilizar un array
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. Una lista desplegable puede mostrar un array como una lista de valores cuando se hace clic en ella.
+Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se hace referencia por el nombre del array. Una lista desplegable puede mostrar un array como una lista de valores cuando se hace clic en ella.
 
 To initialize the array associated to the drop-down list, you can:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
-* Before the object is displayed, execute code that assigns values to the array elements. Por ejemplo:
+* Antes de mostrar el objeto, ejecute el código que asigna valores a los elementos del array. Por ejemplo:
 
 ```4d
   ARRAY TEXT(aCities;6) 
@@ -90,7 +90,7 @@ To initialize the array associated to the drop-down list, you can:
   aCities{6}:="Green Bay" 
 ```
 
-In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
+In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
 
 *  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. Por ejemplo:
 

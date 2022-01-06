@@ -7,7 +7,7 @@ A check box is a type of button used to enter or display binary (true-false) dat
 
 ![](assets/en/FormObjects/checkbox.png)
 
-Check boxes are controlled by methods or [standard actions](#using-a-standard-action). The method associated with it executes when the check box is selected. Like all buttons, a check box variable is set to 0 when the form is first opened.
+Check boxes are controlled by methods or [standard actions](#using-a-standard-action). O método associado com ela é executado quando selecionar a caixa de seleção. Como todos os botões, uma variável da caixa de seleção é estabelecida em 0 quando o formulário é aberto pela primeira vez.
 
 A check box displays text next to a small square. This text is set in the [Title](properties_Object.md#title) property of the check box. You can enter a title in the form of an XLIFF reference in this area (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 

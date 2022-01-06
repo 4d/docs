@@ -49,14 +49,14 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Paramètres      | Type        |    | Description                                          |
-| --------------- | ----------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D.File     | -> | File or Folder object to compress                    |
-| folderToZip     | 4D.Folder   | -> | File or Folder object to compress                    |
-| zipStructure    | Object      | -> | File or Folder object to compress                    |
-| destinationFile | 4D.File     | -> | Destination file for the archive                     |
-| options         | Entier long | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Résultat        | Object      | <- | Objet statut                                         |
+| Paramètres      | Type      |    | Description                                          |
+| --------------- | --------- |:--:| ---------------------------------------------------- |
+| fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
+| folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
+| zipStructure    | Object    | -> | File or Folder object to compress                    |
+| destinationFile | 4D.File   | -> | Destination file for the archive                     |
+| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| Résultat        | Object    | <- | Objet statut                                         |
 <!-- END REF -->
 
 
@@ -75,7 +75,7 @@ You can pass a 4D.File, a 4D.Folder, or a zip structure object as first paramete
 | Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                  |
 | ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | compression | Texte       | <p><li>`ZIP Compression standard`: Réduire la compression (par défaut)</li></p><p><li>`ZIP Compression LZMA`: compression LZMA</li></p><p><li>`ZIP Compression XZ`: compression XZ</li></p><p><li>`ZIP Compression none`: Pas de compression</li></p>                                                                                                                                                                                                         |
-| level       | Entier long | Niveau de compression. Valeurs possibles : 1 à 10. A lower value will produce a larger file, while a higher value will produce a smaller file. Compression level has however an impact on performance. Default values if omitted: <p><li>`ZIP Compression standard`: 6</li></p><p><li>`ZIP Compression LZMA`: 4</li></p><p><li>`ZIP Compression XZ`: 4</li></p> |
+| level       | Integer     | Niveau de compression. Valeurs possibles : 1 à 10. A lower value will produce a larger file, while a higher value will produce a smaller file. Compression level has however an impact on performance. Default values if omitted: <p><li>`ZIP Compression standard`: 6</li></p><p><li>`ZIP Compression LZMA`: 4</li></p><p><li>`ZIP Compression XZ`: 4</li></p> |
 | encryption  | Texte       | Le chiffrement à utiliser si un mot de passe est défini :<p><li>`ZIP Encryption AES128`: chiffrement AES à l'aide d'une clé 128 octets.</li></p><p><li>`ZIP Encryption AES192`: chiffrement AES à l'aide d'une clé 192 octets.</li></p><p><li>`ZIP Encryption AES256`: chiffrement AES à l'aide d'une clé 256 octets (par défaut si un mot de passe est défini).</li></p><p><li>`ZIP Encryption none`: les données ne sont pas chiffrées (par défaut si aucun mot de passe n'est défini)</li></p>                                                                                                                                              |
 | password    | Texte       | Un mot de passe à définir si le chiffrement est requis.                                                                                                                                                                                                                                                      |
 | Historique  | Collection  | <p><li>une collection d'objets `4D.File` ou `4D.Folder` ou</li></p><p><li>une collection d'objets dont les propriétés sont les suivantes :</li></p><table><tr><td>Propriété</td><td>Type</td><td>Description</td></tr><tr><td>source</td><td>4D.File ou 4D.Folder<td>File ou Folder</td></tr><tr><td>destination</td><td>Texte</td><td>(facultatif) - Indiquer un chemin de fichier relatif pour modifier l'organisation du contenu de l'archive</td></tr><tr><td>option</td><td>number</td><td>(facultatif) - `ZIP Ignore invisible files` ou 0 pour compresser tout le fichier</td></tr></table>                                                                                                                                                                                                                               |
@@ -89,11 +89,11 @@ Once an archive is created, you can use the [ZIP Read archive](#zip-read-archive
 
 The returned status object contains the following properties:
 
-| Propriété  | Type        | Description                                                                                                                                                     |
-| ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| statusText | Texte       | Message d'erreur (le cas échéant) :<li>Impossible d'ouvrir l'archive ZIP</li><li>Impossible de créer une archive ZIP</li><li>Le mot de passe est requis pour le chiffrement |
-| status     | Entier long | Code d'état                                                                                                                                                     |
-| success    | Booléen     | Vrai si l'archive a été créée avec succès, sinon faux                                                                                                           |
+| Propriété  | Type    | Description                                                                                                                                                     |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| statusText | Texte   | Message d'erreur (le cas échéant) :<li>Impossible d'ouvrir l'archive ZIP</li><li>Impossible de créer une archive ZIP</li><li>Le mot de passe est requis pour le chiffrement |
+| status     | Integer | Code d'état                                                                                                                                                     |
+| success    | Booléen | Vrai si l'archive a été créée avec succès, sinon faux                                                                                                           |
 
 
 #### Exemple 1

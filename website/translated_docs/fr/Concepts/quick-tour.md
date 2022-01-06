@@ -36,7 +36,7 @@ Vous devez impérativement distinguer l'opérateur d'affectation := des autres o
 
 ## Variables
 
-Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. You create a typed variable using the `var` keyword. Par exemple, pour créer une variable du type date, vous pouvez écrire :
+Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
 ```4d
 var MyDate : Date 

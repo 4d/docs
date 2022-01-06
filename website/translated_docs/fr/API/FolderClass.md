@@ -60,13 +60,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Paramètres     | Type        |    | Description                                     |
-| -------------- | ----------- |:--:| ----------------------------------------------- |
-| path           | Texte       | -> | Folder path                                     |
-| folderConstant | Entier long | -> | 4D folder constant                              |
-| pathType       | Entier long | -> | `fk posix path` (default) or `fk platform path` |
-| *              |             | -> | * to return folder of host database             |
-| Résultat       | 4D.Folder   | <- | New folder object                               |
+| Paramètres     | Type      |    | Description                                     |
+| -------------- | --------- |:--:| ----------------------------------------------- |
+| path           | Texte     | -> | Folder path                                     |
+| folderConstant | Integer   | -> | 4D folder constant                              |
+| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
+| *              |           | -> | * to return folder of host database             |
+| Résultat       | 4D.Folder | <- | New folder object                               |
 <!-- END REF -->
 
 
@@ -208,12 +208,12 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Paramètres        | Type        |    | Description                                  |
-| ----------------- | ----------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texte       | -> | Name of the alias or shortcut                |
-| aliasType         | Entier long | -> | Type of the alias link                       |
-| Résultat          | 4D.File     | <- | Alias or shortcut reference                  |
+| Paramètres        | Type      |    | Description                                  |
+| ----------------- | --------- | -- | -------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
+| aliasName         | Texte     | -> | Name of the alias or shortcut                |
+| aliasType         | Integer   | -> | Type of the alias link                       |
+| Résultat          | 4D.File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Paramètres | Type        |    | Description            |
-| ---------- | ----------- | -- | ---------------------- |
-| option     | Entier long | -> | Folder deletion option |
+| Paramètres | Type    |    | Description            |
+| ---------- | ------- | -- | ---------------------- |
+| option     | Integer | -> | Folder deletion option |
 <!-- END REF -->
 
 

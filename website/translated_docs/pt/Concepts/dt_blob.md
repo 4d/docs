@@ -11,7 +11,7 @@ Um BLOB é carregado totalmente na memória. Uma variável BLOB é mantida e exi
 
 Como os outros tipos de campo que podem reter uma grande quantidade de dados (tais como tipo de campo Imagem), os campos BLOB não são duplicados na memória quando um registro for modificado. Consequentemente o resultado devolvido pelos comandos `Old` e `Modified` não é significativo quando for aplicado a um campo BLOB.
 
-## Parameter passing, Pointers and function results
+## Passando parâmetros, ponteiros e resultados de funções
 
 Os BLOBs em 4D podem ser passados como parâmetros aos comandos 4D ou às rotinas dos plugins que esperam parâmetros BLOB. Os BLOBS também podem ser passados como parâmetros para um método usuário ou serem retornados como resultado de uma função
 
@@ -33,31 +33,31 @@ Para passar um BLOB a seus próprios métodos, pode também definir um ponteiro 
 ```
 **Nota para  desenvolvedores de plugins:** um parâmetro BLOB se declara como "&O" (a letra "O", não o número "0").
 
-## Assignment operator
+## Operador de atribuição
 
 Pode atribuir BLOBS um para o outro.
 
 **Exemplo:**
 ```4d
-  ` Declare two variables of type BLOB
+  ` Declara duas variáveis de tipo BLOB
  C_BLOB(vBlobA;vBlobB)
-  ` Set the size of the first BLOB to 10K
+  ` Estabelece o tamanho do primeiro  BLOB a 10K
  SET BLOB SIZE(vBlobA;10*1024)
-  ` Assign the first BLOB to the second one
+  ` Atribui o primeiro BLOB ao segundo
  vBlobB:=vBlobA
 ```
 
 Entretanto, nenhum operador pode ser aplicado aos BLOBs.
 
-## Addressing BLOB contents
+## Direcionar os conteúdos de um BLOB
 
 Cada byte de um BLOB pode ser dirigido individualmente utilizando os símbolos de colchetes {...}. Dentro de um BLOB, os bytes são numerados de 0 a N-1, onde N é o tamanho do BLOB. Exemplo:
 ```4d
-  ` Declare a variable of type BLOB
+  ` Declarar uma variável de tipo BLOB
  C_BLOB(vBlob)
-  ` Set the size of the BLOB to 256 bytes
+  ` Estabelece o tamanho do BLOB para 256 bytes
  SET BLOB SIZE(vBlob;256)
-  ` The loop below initializes the 256 bytes of the BLOB to zero
+  ` O loop abaixo inicia os 256 bytes do BLOB para zero
  For(vByte;0;BLOB size(vBlob)-1)
     vBlob{vByte}:=0
  End for

@@ -377,7 +377,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 #### Objet retourné
 
-The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
+The function sends a request to the mail server and returns an object describing the mail status. Cet objet peut avoir les propriétés suivantes :
 
 | Propriété  |                          | Type       | Description                                                                                                                 |
 | ---------- | ------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
