@@ -14,7 +14,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | `C_DATE`, `ARRAY DATE`       |
 | [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | `C_TIME`, `ARRAY TIME`       |
 | [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
+| [Integer](Concepts/dt_number.md)             | Oui                           | Converti en entier long       | `ARRAY INTEGER`              |
 | [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | `C_LONGINT`, `ARRAY LONGINT` |
 | [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                            |
 | [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | `C_REAL`, `ARRAY REAL`       |
@@ -23,7 +23,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Pointeur](Concepts/dt_pointer.md)           | -                             | Oui                           | `C_POINTER`, `ARRAY POINTER` |
 | [Image](Concepts/dt_picture.md)              | Oui                           | Oui                           | `C_PICTURE`, `ARRAY PICTURE` |
 | [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `ARRAY BLOB`       |
-| [Objet](Concepts/dt_object.md)               | Oui                           | Oui                           | `C_OBJECT`, `ARRAY OBJECT`   |
+| [Object](Concepts/dt_object.md)              | Oui                           | Oui                           | `C_OBJECT`, `ARRAY OBJECT`   |
 | [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `C_VARIANT`                  |
 
@@ -58,7 +58,7 @@ Le tableau suivant illustre ces valeurs par défaut :
 | Pointeur    | Nil=true                                                                       | Nil=true                 | Nil=true                    |
 | Texte       | ""                                                                             | ""                       | ""                          |
 | Blob        | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
-| Objet       | null                                                                           | null                     | null                        |
+| Object      | null                                                                           | null                     | null                        |
 | Collection  | null                                                                           | null                     | null                        |
 | Variant     | indéfini                                                                       | indéfini                 | indéfini                    |
 

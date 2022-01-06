@@ -17,7 +17,7 @@ A new folder is created each time you perform an encryption/decryption operation
 Encrypting your data for the first time using the MSC requires the following steps:
 
 1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. See the "Table properties" section.
-2. Open the Encrypt page of the MSC. Se abrir a página sem configurar as tabelas como **Criptografáveis**, se mostra a mensagem abaixo na página: ![](assets/en/MSC/MSC_encrypt1.png) Caso contrário, se mostra a mensagem abaixo: ![](assets/en/MSC/MSC_encrypt2.png) Isso significa que o estado **Criptografável** de ao menos uma tabela foi modificado e o arquivo de dados ainda não tenha sido criptografado. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
+2. Open the Encrypt page of the MSC. Open the Encrypt page of the MSC. **Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
 3. Click on the Encrypt picture button.  
    ![](assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file: ![](assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)

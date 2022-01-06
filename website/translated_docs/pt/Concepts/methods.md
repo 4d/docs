@@ -13,7 +13,7 @@ A method is basically a piece of code that executes one or several actions. Na l
 
     Os métodos integrados são detalhados non manual *Linguagem 4D* ou nos manuais dedicados aos plug-ins ou componentes.
 
-- Os **métodos projeto**, onde pode escrever seu próprio código para executar toda ação personalizada. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). O tamanho máximo de um método projeto está limitado a 2 GB de texto ou 32.000 linhas de instruções.
+- Os **métodos projeto**, onde pode escrever seu próprio código para executar toda ação personalizada. Quando um método projeto for criado, se torna parte  parte da linguagem do banco de dados na qual foi criado. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). A statement performs an action, and may be simple or complex.
 
 **Nota:** 4D também oferece métodos específicos que se executam automaticamente em função dos eventos do banco de dados ou dos eventos formulário. Ver [Métodos especializados](#specialized-methods).
 
@@ -51,7 +51,7 @@ Por exemplo, suponha que tenha um banco de dados de clientes. Ao personalizar o 
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. Se houver dez lugares no seu banco de dados personalizado em que precisa fazer isso, teria que escrever o código dez vezes. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
 
 Se o código descrito anteriormente fosse um método chamado `MODIFICAR CLIENTE`,  executaria simplesmente utilizando o nome do método em outro método. For example, to modify a customer’s record and then print the record, you would write this method:
 
@@ -60,7 +60,7 @@ Se o código descrito anteriormente fosse um método chamado `MODIFICAR CLIENTE`
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. No exemplo, não precisa saber como funciona o método `MODIFICAR CLIENTE`, só o que ele faz. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+This capability simplifies your methods dramatically. This capability simplifies your methods dramatically. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
 
 Se precisar mudar seu método de pesquisa de clientes nesse banco de dados de exemplo, terá que mudar apenas um método, não dez. This is the next reason to use subroutines—to facilitate changes to your methods.
 

@@ -78,7 +78,7 @@ This feature creates a *.4dz* file within a *Compiled Database* folder. If you h
 
 *\<destination\>/Compiled Database/\<database name>/\MyProject.4dz*
 
-> A .4dz file is essentially a zipped (packed) version of the project folder. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D Developer. The compact and optimized size of .4dz files makes project packages easy to deploy.
+> A .4dz file is essentially a zipped (packed) version of the project folder. A .4dz file is essentially a zipped (packed) version of the project folder. The compact and optimized size of .4dz files makes project packages easy to deploy.
 
 
 #### Include related folders
@@ -170,8 +170,7 @@ When building a stand-alone application, 4D copies the contents of the 4D Volume
 
 *   Install a 4D Volume Desktop version corresponding to a specific language;
 *   Add a custom *PlugIns* folder;
-*   Customize the contents of the *Resources* folder.
-> In macOS, 4D Volume Desktop is provided in the form of a software package. In order to modify it, you must first display its contents (**Control+click** on the icon).
+*   Customize the contents of the *Resources* folder. > In macOS, 4D Volume Desktop is provided in the form of a software package. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
 
 #### Location of Web files
@@ -513,7 +512,7 @@ You can select the data linking mode during the build application process. You c
 
 ### Defining a default data folder
 
-4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
 
 More specifically, the following cases are covered:
 
@@ -523,7 +522,7 @@ More specifically, the following cases are covered:
 
 To define and use a default data file:
 
-- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
+- You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 - When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
 
 The following graphic illustrates this feature:

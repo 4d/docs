@@ -324,15 +324,12 @@ No método de projeto *Color*, entre o código abaixo:
 
 ```4d
 //Método Cor
-//Define a cor da fonte para certas linhas e a cor de fundo para uma coluna específica :
-C_OBJECT($0)
-Form.meta:=New object
-If(This.ID>5) //ID é um atributo de objetos/entidades de uma coleção
+//Define a cor da fonte para certas linhas e a cor de fundo para uma coluna específica : C_OBJECT($0)
+Form.meta:=New object If(This.ID>5) //ID é um atributo de objetos/entidades de uma coleção
   Form.meta.stroke:="purple"
   Form.meta.cell:=New object("Column2";New object("fill";"black"))
 Else
-  Form.meta.stroke:="orange"
-End if
+  Form.meta.stroke:="orange" End if
 $0:=Form.meta
 ```
 

@@ -163,9 +163,9 @@ Cependant, dans certaines circonstances, vous pouvez avoir besoin de tableaux co
 | Blob            | (1+nombre d'éléments) * 12 + somme de la taille de chaque blob          |
 | Booléen         | (31+nombre d'éléments)/8                                                |
 | Date            | (1+nombre d'éléments) * 6                                               |
-| Entier long     | (1+nombre d'éléments) * 2                                               |
+| Integer         | (1+nombre d'éléments) * 2                                               |
 | Entier long     | (1+nombre d'éléments) * 4                                               |
-| Objet           | (1+nombre d'éléments) * 8 + somme de la taille de chaque objet          |
+| Object          | (1+nombre d'éléments) * 8 + somme de la taille de chaque objet          |
 | Image           | (1+nombre d'éléments) * 8 + somme de la taille de chaque image          |
 | Pointeur        | (1+nombre d'éléments) * 8 + somme de la taille de chaque pointeur       |
 | Réel            | (1+nombre d'éléments) * 8                                               |

@@ -19,7 +19,7 @@ When you select a backup in this list, the right part of the window displays the
 - **Path**: Complete pathname of the selected backup file. Clicking the Show button opens the backup file in a system window.
 - **Date and Time**: Date and time of backup.
 - **Content**: Contents of the backup file. Each item in the list has a check box next to it which can be used to indicate whether or not you want to restore it. You can also use the **Check All** or **Uncheck All** buttons to set the list of items to be restored.
-- **Destination folder of the restored files**: Folder where the restored files will be placed. Como padrão, 4D restaura os arquivos em uma pasta chamada "Archivename" (sem extensão) que é está do lado do arquivo de estrutura do banco de dados. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
+- **Destination folder of the restored files**: Folder where the restored files will be placed. **Destination folder of the restored files**: Folder where the restored files will be placed. To change this location, click on **[...]** and specify the folder where you want the restored files to be placed.
 
 The **Restore** button launches the manual restoration of the selected element(s).
 
