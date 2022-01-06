@@ -25,7 +25,7 @@ Le protocole TLS a pour but d'authentifier l'émetteur et le récepteur et de ga
 *   **Confidentialité**: les données envoyées sont cryptées afin de les rendre inintelligibles pour les tiers non autorisés.
 *   **Intégrité**: les données reçues n'ont pas été altérées, frauduleusement ou accidentellement.
 
-Les principes de sécurisation utilisés par TLS sont basés sur l’emploi d’un algorithme de cryptage utilisant une paire de clés : une clé privée et une clé publique. La clé privée est utilisée pour crypter les données. Elle est conservée par l’émetteur (le site Web). La clé publique est utilisée pour décrypter les données. Elle est diffusée auprès des récepteurs (les navigateurs web) via le certificat.  L’emploi du TLS dans le cadre d’Internet requiert en effet l’entremise d’une Autorité de Certification telle que Verisign®. Moyennant une participation financière du site Web demandeur, cet organisme délivre un certificat, garantissant l’identité du serveur et contenant la clé publique permettant la communication en mode sécurisé.
+Les principes de sécurisation utilisés par TLS sont basés sur l’emploi d’un algorithme de cryptage utilisant une paire de clés : une clé privée et une clé publique. La clé privée est utilisée pour crypter les données. Elle est conservée par l’émetteur (le site Web). La clé publique est utilisée pour décrypter les données. Elle est diffusée auprès des récepteurs (les navigateurs web) via le certificat. L’emploi du TLS dans le cadre d’Internet requiert en effet l’entremise d’une Autorité de Certification telle que Verisign®. Moyennant une participation financière du site Web demandeur, cet organisme délivre un certificat, garantissant l’identité du serveur et contenant la clé publique permettant la communication en mode sécurisé.
 > Pour plus d'informations sur les principes généraux de cryptage et d'emploi de clés publiques/clés privées, voir la description de la commande `CRYPTER BLOB`.
 
 ## Version minimale
@@ -36,8 +36,8 @@ Vous pouvez définir le niveau de sécurité de votre serveur web en définissan
 
 ## Obtenir un certificat
 
-La mise en place d’un serveur fonctionnant en TLS nécessite un certificat numérique délivré par un opérateur de certification. Ce certificat renferme diverses informations dont la carte d’identité du site ainsi que la clé publique utilisée pour communiquer avec lui.  Il est transmis aux clients (navigateurs Web) se connectant au site. Une fois qu’il est accepté, la communication en mode sécurisé s’établit.
-> Pour qu’un navigateur accepte les certificats d’une autorité de certification, celle-ci doit être répertoriée dans ses Propriétés.
+La mise en place d’un serveur fonctionnant en TLS nécessite un certificat numérique délivré par un opérateur de certification. Ce certificat renferme diverses informations dont la carte d’identité du site ainsi que la clé publique utilisée pour communiquer avec lui. Il est transmis aux clients (navigateurs Web) se connectant au site. Une fois qu’il est accepté, la communication en mode sécurisé s’établit.
+> Les navigateurs Web autorisent uniquement les certificats émis par une autorité de certification référencée dans leurs propriétés.
 
 ![](assets/en/WebServer/tls2.png)
 
@@ -46,7 +46,7 @@ Le choix de l’autorité de certification dépend de plusieurs facteurs. Plus l
 Pour obtenir un certificat numérique :
 
 1. Générez une “clé privée” à l’aide de la commande `GENERER CLES CRYPTAGE`.
-> **Attention** : Pour des raisons de sécurité, la clé privée ne doit jamais être diffusée sur un réseau.  En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
+> **Attention** : Pour des raisons de sécurité, la clé privée ne doit jamais être diffusée sur un réseau. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
 
 2. Etablissez une demande de certificat à l’aide de la commande `GENERER DEMANDE CERTIFICAT.`
 
@@ -61,15 +61,31 @@ Le serveur Web peut dès lors fonctionner en mode sécurisé. La durée de valid
 
 ## Installation et activation
 
-### fichiers `key.pem` et `cert.pem`
+### Installer des fichiers `key.pem` et `cert.pem`
 
-Pour pouvoir utiliser le protocole TLS avec le serveur, vous devez installer le **key.pem**(document contenant la clé de cryptage privée) et **cert.pem**
+Pour pouvoir utiliser le protocole TLS avec le serveur, vous devez installer **key.pem** (document contenant la clé de chiffrement privée) et **cert.pem** (document contenant le certificat) au(x) emplacement(s) approprié(s). Différents emplacements sont nécessaires en fonction du serveur sur lequel vous souhaitez utiliser TLS.
+> Des fichiers *key.pem* et *cert.pem* par défaut sont fournis avec 4D. Pour un niveau de sécurité plus élevé, nous vous recommandons fortement de remplacer ces fichiers avec vos propres certificats.
+
+#### Avec le serveur Web
+
+Pour être utilisés par le serveur web de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés :
 
 - avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder)
-- avec 4D en mode distant, dans le dossier de la base de données cliente sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande `Dossier 4D`).
+- avec 4D en mode distant, dans le dossier de la base de données cliente sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
 
-Vous devez copier ces filles manuellement sur la machine distante.
-> Des fichiers *key.pem* et *cert.pem* par défaut sont fournis avec 4D. Pour un niveau de sécurité plus élevé, nous vous recommandons fortement de remplacer ces fichiers avec vos propres certificats.
+Vous devez copier ces fichiers manuellement sur la machine distante.
+
+#### Avec le serveur d'applications (applications de bureau client-serveur)
+
+Pour être utilisés par le serveur d'applications de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés :
+
+- dans le dossier [**Resources**](Project/architecture.md#resources) de l'application 4D Server
+- et dans le dossier **Resources** de chaque application 4D distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
+
+#### Avec le serveur SQL
+
+Pour être utilisés par le serveur SQL de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés à côté du [dossier du projet](Project/architecture.md#project-folder).
+
 
 ### Activation du TLS
 
@@ -79,7 +95,7 @@ L'installation de fichiers **key.pem** et **cert.pem** permet d'utiliser TLS ave
 - Avec le serveur d'applications, vous devez sélectionner l'option **Crypter les communications Client-Serveur** dans la page Client-Serveur des Propriétés.
 - Avec le serveur SQL, vous devez sélectionner l'option **Activer TLS** dans la page "SQL" des Propriétés.
 
-> Le serveur web 4D accepte l'option HSTS
+> Le serveur web 4D prend également en charge l'[option HSTS](WebServer/webServerConfig.md#enable-hsts) pour déclarer que les navigateurs doivent interagir avec lui uniquement via des connexions HTTPS. sécurisées.
 
 ## Perfect Forward Secrecy (PFS)
 

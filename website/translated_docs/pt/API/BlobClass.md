@@ -5,7 +5,7 @@ title: Blob
 
 The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob.md#blob-types) (`4D.Blob`).
 
-### Summary
+### Resumo
 
 |                                                                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,10 +15,10 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 ## 4D.Blob.new()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R2 | Adicionado |
 </details>
 
 <!-- REF #4D.Blob.new().Syntax -->
@@ -48,10 +48,10 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 ## .slice()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19 R2  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R2 | Adicionado |
 </details>
 
 <!-- REF #Blob.slice().Syntax -->
@@ -74,7 +74,7 @@ The `start` parameter is an index into the blob indicating the first byte to inc
 
 The `end` parameter is an index into the blob indicating the first byte that will not be included in the new `4D.Blob` (i.e. the byte exactly at this index is not included). If you specify a negative value, 4D treats it as an offset from the end of the blob toward the beginning. For example, -10 would be the 10th from last byte in the blob. The default value is the size of the blob.
 
-#### Example
+#### Exemplo
 
 ```4d
 var $myBlob : 4D.Blob

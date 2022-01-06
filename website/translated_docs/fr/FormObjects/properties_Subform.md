@@ -26,7 +26,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 - un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. Dans ce cas, [le sous-formulaire de liste](#list-form) et les propriétés [Source](#source) doivent être vides ou non présents.   
   Vous pouvez sélectionner un nom de formulaire de composant lorsqu'il est publié dans le composant.
-> Vous pouvez générer des [composants](Concepts/components.md) fournissant des fonctionnalités supplémentaires via des sous-formulaires.
+> Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
 
 - le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). Le formulaire détaillé peut être utilisé pour saisir ou afficher des sous-enregistrements. Il contient généralement plus d'informations que le sous-formulaire liste. Naturellement, le formulaire détaillé doit appartenir à la même table que le sous-formulaire. Vous utilisez normalement un formulaire de sortie comme formulaire liste et un formulaire d'entrée comme formulaire détaillé. Si vous n'indiquez pas le formulaire à utiliser pour la saisie pleine page, 4D utilise automatiquement le format d'entrée par défaut de la table.
 

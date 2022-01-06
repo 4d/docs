@@ -9,10 +9,10 @@ title: Transporter Class
 <!-- REF transporter.acceptUnsecureConnection.Desc -->
 ## .acceptUnsecureConnection
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->
@@ -45,10 +45,10 @@ Available secured ports are:
  <!-- REF transporter.authenticationModeIMAP.Desc -->
 ## .authenticationMode
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
@@ -76,10 +76,10 @@ Possible values are:
  <!-- REF transporter.authenticationModePOP3.Desc -->
 ## .authenticationMode
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 
@@ -108,10 +108,10 @@ Possible values are:
  <!-- REF transporter.authenticationModeSMTP.Desc -->
 ## .authenticationMode
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 
@@ -139,11 +139,11 @@ Possible values are:
 <!-- REF transporter.bodyCharset.Desc -->
 ## .bodyCharset
 
-<details><summary>History</summary>
-| Version | Changes                 |
-| ------- | ----------------------- |
-| v18     | Support for UTF8 base64 |
-| v17 R5  | Added                   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças                |
+| ------ | ----------------------- |
+| v18    | Support for UTF8 base64 |
+| v17 R5 | Adicionado              |
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
@@ -175,10 +175,10 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 <!-- REF transporter.connectionTimeOut.Desc -->
 ## .connectionTimeOut
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
@@ -198,10 +198,10 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 <!-- REF transporter.headerCharset.Desc -->
 ## .headerCharset
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
@@ -233,10 +233,10 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 <!-- REF transporter.host.Desc -->
 ## .host
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.host.Syntax -->
@@ -254,10 +254,10 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 <!-- REF transporter.logFile.Desc -->
 ## .logFile
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
@@ -285,10 +285,10 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 <!-- REF transporter.port.Desc -->
 ## .port
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.port.Syntax -->
@@ -313,10 +313,10 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 <!-- REF transporter.sendTimeOut.Desc -->
 ## .sendTimeOut
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->
@@ -334,10 +334,10 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 <!-- REF transporter.user.Desc -->
 ## .user
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.user.Syntax -->
@@ -354,10 +354,10 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 <!-- REF transporter.checkConnection().Desc -->
 ## .checkConnection()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R4  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R4 | Adicionado |
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->
@@ -366,7 +366,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 <!-- REF #transporter.checkConnection().Params -->
 | Parameter | Type   |    | Description                                 |
 | --------- | ------ |:--:| ------------------------------------------- |
-| Result    | Object | <- | Status of the transporter object connection |
+| Result    | Objeto | <- | Status of the transporter object connection |
 <!-- END REF -->
 
 
@@ -381,7 +381,7 @@ The function sends a request to the mail server and returns an object describing
 
 | Property   |                          | Type       | Description                                                                                                  |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| success    |                          | boolean    | True if the check is successful, False otherwise                                                             |
+| success    |                          | booleano   | True if the check is successful, False otherwise                                                             |
 | status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
 | statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
 | errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |

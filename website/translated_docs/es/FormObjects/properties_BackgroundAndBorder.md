@@ -10,9 +10,9 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                         |
-| ------------- | -------------- | ---------------------------------------- |
-| alternateFill | cadena         | un valor css; "transparent"; "automatic" |
+| Nombre        | Tipos de datos | Valores posibles                                                |
+| ------------- | -------------- | --------------------------------------------------------------- |
+| alternateFill | cadena         | any css value; "transparent"; "automatic"; "automaticAlternate" |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
@@ -110,6 +110,7 @@ Controls the display of extra blank rows added at the bottom of a list box objec
 You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
+
 
 #### Gramática JSON
 

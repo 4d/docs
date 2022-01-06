@@ -9,10 +9,10 @@ title: Directory Class
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->
@@ -23,7 +23,7 @@ title: Directory Class
 
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
  
@@ -32,10 +32,10 @@ This property is **read-only**.
  <!-- REF directory.creationTime.Desc -->
 ## .creationTime
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->
@@ -47,7 +47,7 @@ This property is **read-only**.
 
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -57,10 +57,10 @@ This property is **read-only**.
 <!-- REF directory.exists.Desc -->
 ## .exists
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.exists.Syntax -->
@@ -71,7 +71,7 @@ This property is **read-only**.
 
 The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -82,10 +82,10 @@ This property is **read-only**.
 <!-- REF directory.extension.Desc -->
 ## .extension
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.extension.Syntax -->
@@ -96,7 +96,7 @@ This property is **read-only**.
 
 The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -106,10 +106,10 @@ This property is **read-only**.
 <!-- REF directory.fullName.Desc -->
 ## .fullName
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.fullName.Syntax -->
@@ -120,7 +120,7 @@ This property is **read-only**.
 
 The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -130,10 +130,10 @@ This property is **read-only**.
 <!-- REF directory.hidden.Desc -->
 ## .hidden
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.hidden.Syntax -->
@@ -144,7 +144,7 @@ This property is **read-only**.
 
 The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -154,10 +154,10 @@ This property is **read-only**.
 <!-- REF directory.isAlias.Desc -->
 ## .isAlias
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->
@@ -169,7 +169,7 @@ This property is **read-only**.
 
 The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -178,10 +178,10 @@ This property is **read-only**.
 <!-- REF directory.isFile.Desc -->
 ## .isFile
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.isFile.Syntax -->
@@ -192,7 +192,7 @@ This property is **read-only**.
 
 The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -201,10 +201,10 @@ This property is **read-only**.
 <!-- REF directory.isFolder.Desc -->
 ## .isFolder
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->
@@ -215,7 +215,7 @@ This property is **read-only**.
 
 The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -224,10 +224,10 @@ This property is **read-only**.
 <!-- REF directory.isPackage.Desc -->
 ## .isPackage
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->
@@ -240,7 +240,7 @@ The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true 
 
 On Windows, `.isPackage` always returns **false**.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -250,10 +250,10 @@ This property is **read-only**.
 <!-- REF directory.modificationDate.Desc -->
 ## .modificationDate
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->
@@ -264,7 +264,7 @@ This property is **read-only**.
 
 The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -274,10 +274,10 @@ This property is **read-only**.
 <!-- REF directory.modificationTime.Desc -->
 ## .modificationTime
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->
@@ -288,7 +288,7 @@ This property is **read-only**.
 
 The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -297,10 +297,10 @@ This property is **read-only**.
 <!-- REF directory.name.Desc -->
 ## .name
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 
@@ -313,7 +313,7 @@ This property is **read-only**.
 
 The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -322,10 +322,10 @@ This property is **read-only**.
 <!-- REF directory.original.Desc -->
 ## .original
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.original.Syntax -->
@@ -336,7 +336,7 @@ This property is **read-only**.
 
 The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 > This property is available on folders to allow generic code to process folders or files.
 
 <!-- END REF -->
@@ -347,10 +347,10 @@ This property is **read-only**.
 <!-- REF directory.parent.Desc -->
 ## .parent
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.parent.Syntax -->
@@ -363,7 +363,7 @@ The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent 
 
 If the folder does not have a parent (root), the null value is returned.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -373,10 +373,10 @@ This property is **read-only**.
 <!-- REF directory.path.Desc -->
 ## .path
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.path.Syntax -->
@@ -387,7 +387,7 @@ This property is **read-only**.
 
 The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -396,10 +396,10 @@ This property is **read-only**.
 <!-- REF directory.platformPath.Desc -->
 ## .platformPath
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->
@@ -410,7 +410,7 @@ This property is **read-only**.
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
-This property is **read-only**. 
+Essa propriedade é**apenas leitura**. 
 
 <!-- END REF -->
 
@@ -424,10 +424,10 @@ This property is **read-only**.
 <!-- REF directory.copyTo().Desc -->
 ## .copyTo()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->
@@ -462,7 +462,7 @@ If a folder with the same name already exists in the *destinationFolder*, by def
 
 The copied `Folder` object.
 
-#### Example
+#### Exemplo
 
 You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
 
@@ -480,10 +480,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF directory.file().Desc -->
 ## .file()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.file().Syntax -->
@@ -506,7 +506,7 @@ In *path*, pass a relative POSIX path to designate the file to return. The path 
 
 A `File` object or null if *path* is invalid.
 
-#### Example
+#### Exemplo
 
 ```4d
 var $myPDF : 4D.File
@@ -520,10 +520,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <!-- REF directory.files().Desc -->
 ## .files()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.files().Syntax -->
@@ -581,10 +581,10 @@ You want to get all files that are not invisible in the Documents folder:
 <!-- REF directory.folder().Desc -->
 ## .folder()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.folder().Syntax -->
@@ -607,7 +607,7 @@ In *path*, pass a relative POSIX path to designate the folder to return. The pat
 
 A `Folder` object or null if *path* is invalid.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $mypicts : 4D.Folder
@@ -621,10 +621,10 @@ A `Folder` object or null if *path* is invalid.
 <!-- REF directory.folders().Desc -->
 ## .folders()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.folders().Syntax -->
@@ -652,7 +652,7 @@ By default, if you omit the *options* parameter, only the folders at the first l
 
 Collection of `Folder` objects.
 
-#### Example
+#### Exemplo
 
 You want the collection of all folders and subfolders of the database folder:
 
@@ -668,10 +668,10 @@ You want the collection of all folders and subfolders of the database folder:
 <!-- REF directory.getIcon().Desc -->
 ## .getIcon()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->
@@ -681,7 +681,7 @@ You want the collection of all folders and subfolders of the database folder:
 | Parameter | Type    |    | Description                                   |
 | --------- | ------- | -- | --------------------------------------------- |
 | size      | Integer | -> | Side length for the returned picture (pixels) |
-| Result    | Picture | <- | Icon                                          |
+| Result    | Imagem  | <- | Icon                                          |
 <!-- END REF -->
 
 

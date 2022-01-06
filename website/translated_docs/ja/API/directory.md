@@ -1,5 +1,5 @@
 ---
-id: directory
+id: Directory
 title: Directory クラス
 ---
 
@@ -438,7 +438,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 | ----------------- | --------- |:--:| --------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
-| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
 | 戻り値               | 4D.Folder | <- | コピーされたフォルダー                       |
 <!-- END REF -->
 
@@ -530,10 +530,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| 引数      | タイプ     |    | 説明                 |
-| ------- | ------- | -- | ------------------ |
-| options | Integer | -> | ファイルリストのオプション      |
-| 戻り値     | コレクション  | <- | 子ファイルオブジェクトのコレクション |
+| 引数      | タイプ    |    | 説明                 |
+| ------- | ------ | -- | ------------------ |
+| options | 整数     | -> | ファイルリストのオプション      |
+| 戻り値     | コレクション | <- | 子ファイルオブジェクトのコレクション |
 <!-- END REF -->
 
 #### 説明
@@ -631,10 +631,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| 引数      | タイプ     |    | 説明                  |
-| ------- | ------- | -- | ------------------- |
-| options | Integer | -> | フォルダーリストのオプション      |
-| 戻り値     | コレクション  | <- | 子フォルダーオブジェクトのコレクション |
+| 引数      | タイプ    |    | 説明                  |
+| ------- | ------ | -- | ------------------- |
+| options | 整数     | -> | フォルダーリストのオプション      |
+| 戻り値     | コレクション | <- | 子フォルダーオブジェクトのコレクション |
 <!-- END REF -->
 
 #### 説明
@@ -678,10 +678,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| 引数   | タイプ     |    | 説明                       |
-| ---- | ------- | -- | ------------------------ |
-| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
-| 戻り値  | ピクチャー   | <- | アイコン                     |
+| 引数   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | アイコン                     |
 <!-- END REF -->
 
 

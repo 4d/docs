@@ -14,7 +14,7 @@ title: Webサーバーオブジェクト
 
 1つの 4Dアプリケーションプロジェクトに接続できるコンポーネントの数、つまり Webサーバーの数には、メモリ以外の制限はありません。
 
-メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/webServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
+メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
 
 > 4Dランゲージの従来の [WEBコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) はサポートされていますが、その対象となる Webサーバーを選択することはできません (後述参照)。
 
@@ -35,7 +35,7 @@ $nbSrv:=WEB Server list.length
 //$nbSrv の値は 1
 ```
 
-Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](API/webServerClass.md#web-server) コマンドを呼び出します。
+Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](API/WebServerClass.md#web-server) コマンドを呼び出します。
 
 ```4d
     // 4D.WebServer クラスのオブジェクト変数を作成します。
@@ -68,10 +68,10 @@ webServer:=WEB Server(Web server receiving request)
 
 | 関数                                       | 引数                | 戻り値             | 説明            |
 | ---------------------------------------- | ----------------- | --------------- | ------------- |
-| [`start()`](API/webServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
-| [`stop()`](API/webServerClass.md#start)  | -                 | -               | Webサーバーを停止します |
+| [`start()`](API/WebServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
+| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Webサーバーを停止します |
 
-Webサーバーを起動・停止するには、Webサーバーオブジェクトの [`start()`](API/webServerClass.md#start) および [`stop()`](API/webServerClass.md#stop) 関数を呼び出すだけです。
+Webサーバーを起動・停止するには、Webサーバーオブジェクトの [`start()`](API/WebServerClass.md#start) および [`stop()`](API/WebServerClass.md#stop) 関数を呼び出すだけです。
 
 ```4d
 var $status : Object
@@ -88,18 +88,18 @@ $status:=webServer.stop()
 
 ## Webサーバープロパティ
 
-Webサーバーオブジェクトには、Webサーバーを構成する [さまざまなプロパティ](API/webServerClass.md#webサーバーオブジェクト) が含まれています。
+Webサーバーオブジェクトには、Webサーバーを構成する [さまざまなプロパティ](API/WebServerClass.md#webサーバーオブジェクト) が含まれています。
 
 これらのプロパティは以下のように定義します:
 
-1. [`.start()`](API/webServerClass.md#start) 関数の `settings` パラメーターを使用して定義します (読み取り専用のプロパティを除く、後述参照)。
+1. [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターを使用して定義します (読み取り専用のプロパティを除く、後述参照)。
 2. 上を使用しない場合は、`WEB SET OPTION` コマンドを使用して定義します (ホストアプリケーションのみ)。
 3. 上を使用しない場合は、ホストアプリケーションまたはコンポーネントの設定で定義します。
 
 - Webサーバーを起動していない場合、プロパティには Webサーバーの次回起動時に使用される値が含まれています。
-- Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/webServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
+- Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
 
-> *isRunning*、*name*、*openSSLVersion*、*perfectForwardSecrecy* は読み取り専用のプロパティで、[`start()`](API/webServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
+> *isRunning*、*name*、*openSSLVersion*、*perfectForwardSecrecy* は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
 
 
 ## 4D Webコマンドのスコープ

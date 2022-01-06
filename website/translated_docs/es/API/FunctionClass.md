@@ -8,7 +8,7 @@ title: Formula
 The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
 
-### Formula Objects
+### Objetos Formula
 
 Formula objects can be encapsulated in object properties:
 
@@ -27,7 +27,7 @@ This property is an "object function", i.e. a function which is bound to its par
 También se admite la sintaxis con paréntesis:
 
 ```4d
- $f["message"]() //displays "Hello world"
+ $f["message"]() //muestra "Hello world"
 ```
 
 Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. Llamar sólo a la propiedad del objeto devolverá una nueva referencia a la fórmula (y no la ejecutará):
@@ -39,10 +39,10 @@ Note that, even if it does not have parameters (see below), an object function t
 You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
 
 ```4d
- $f.message.apply() //displays "Hello world"
+ $f.message.apply() //muestra "Hello world"
 ```
 
-#### Passing parameters
+#### Paso de parámetros
 
 You can pass parameters to your formulas using the [sequential parameter syntax](Concepts/parameters.md#sequential-parameters) based upon $1, $2...$n. For example, you can write:
 
@@ -50,7 +50,7 @@ You can pass parameters to your formulas using the [sequential parameter syntax]
  var $f : Object
  $f:=New object
  $f.message:=Formula(ALERT("Hello "+$1))
- $f.message("John") //displays "Hello John"
+ $f.message("John") //muestra "Hello John"
 ```
 
 Or using the [.call()](#call) function:
@@ -169,7 +169,7 @@ A simple formula:
  var $o : Object
  $o:=New object("f";$f)
 
- $result:=$o.f() // returns 3
+ $result:=$o.f() // devuelve 3
 ```
 
 #### Ejemplo 2
@@ -183,7 +183,7 @@ A formula using local variables:
  $o:=New object("f";Formula($value))
  $value:=20
 
- $result:=$o.f() // returns 10
+ $result:=$o.f() // devuelve 10
 ```
 
 
@@ -193,7 +193,7 @@ A simple formula using parameters:
 
 ```4d
  $o:=New object("f";Formula($1+$2))
- $result:=$o.f(10;20) //returns 30
+ $result:=$o.f(10;20) //devuelve 30
 ```
 
 
@@ -337,7 +337,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // returns 60
+ $result:=$f.apply(Null;$c) // devuelve 60
 ```
 
 
@@ -402,7 +402,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ```4d
  $o:=New object("value";50)
  $f:=Formula(This.value*2)
- $result:=$f.call($o) // returns 100
+ $result:=$f.call($o) // devuelve 100
 ``` 
 
 <!-- END REF -->
@@ -426,7 +426,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-This property is **read-only**.
+Esta propiedad es **de sólo lectura**.
 
 #### Ejemplo
 

@@ -14,7 +14,7 @@ The use of preemptive mode for web processes is only available in the following 
 
 *   use of 4D Server or 4D local mode (4D in remote mode does not support preemptive mode)
 
-*   use of a compiled database
+*   utilisation d'une base de données compilée (sauf [sur 4D Server lorsque les sessions sont activées](sessions.md#preemptive-mode))
 
 *   **Use preemptive processes** database setting checked (see below)
 

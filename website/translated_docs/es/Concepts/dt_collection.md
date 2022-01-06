@@ -55,14 +55,14 @@ Ejemplo:
 
 Puede crear dos tipos de colecciones:
 
-- colecciones estándar (no compartidas), utilizando el comando [`New collection`](API/collectionClass.md#new-collection). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
-- colecciones compartidas, utilizando el comando [`New shared collection`](API/collectionClass.md#new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
+- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
+- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](Concepts/shared.md).
 
 ## Funciones de colección
 
-Las referencias a colecciones 4D se benefician de funciones de clase específicas (a veces llamados *funciones métodos*). Las funciones de colección se listan en la sección [Class API Reference](API/collectionClass.md).
+Las referencias a colecciones 4D se benefician de funciones de clase específicas (a veces llamados *funciones métodos*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
 
 Por ejemplo:
 

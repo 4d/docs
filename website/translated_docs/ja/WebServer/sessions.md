@@ -10,9 +10,9 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 - 同一のWebクライアントからの複数のリクエストを、無制限のプリエンプティブプロセスで同時に処理 (Webサーバーセッションは **スケーラブル**です)。
 - Webクライアントのプロセス間でデータを共有。
 - ユーザーセッションに権限を関連付ける。
-- `Session` オブジェクトと [Session API](API/sessionClass.md) を介したアクセスの処理。
+- `Session` オブジェクトと [Session API](API/SessionClass.md) を介したアクセスの処理。
 
-> **注:** 現在の実装 (v18R6) は、Webアプリケーション全体においてセッションを介して階層的なユーザー権限を開発者が管理できるようにする、今後予定されている包括的な機能の最初のステップに過ぎません。
+> **注:** 現在の実装は、Webアプリケーション全体においてセッションを介して階層的なユーザー権限を開発者が管理できるようにする、今後予定されている包括的な機能の最初のステップに過ぎません。
 
 
 ## セッションの有効化
@@ -23,7 +23,7 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、**セッションなし** オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (`Session` オブジェクトは使用できません)。
 
-- Webサーバーオブジェクトの [`.scalableSession`](API/webServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/webServerClass.md#start) 関数に *settings* 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
+- Webサーバーオブジェクトの [`.scalableSession`](API/WebServerClass.md#scalablesession) プロパティを使用する ([`.start()`](API/WebServerClass.md#start) 関数に *settings* 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。
 
 > メインの Webサーバーのセッションモードは、`WEB SET OPTION` コマンドを使って設定することもできます。
 
@@ -36,7 +36,7 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 [セッションを有効にする](#セッションの有効化) と、4D自身が設定したプライベート cookie ("4DSID_*AppName*"、*AppName* はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。 この cookie は、アプリケーションのカレントWebセッションを参照します。
 
-> この cookie の名前は、[`.sessionCookieName`](API/webServerClass.md#sessioncookiename) プロパティを使用して取得できます。
+> この cookie の名前は、[`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) プロパティを使用して取得できます。
 
 1. Webサーバーは、各Webクライアントリクエストにおいて、プライベートな "4DSID_*AppName*" cookie の存在と値をチェックします。
 
@@ -47,16 +47,23 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 - プライベートな "4DSID_*AppName*" cookie を持つ新しいセッションが Webサーバー上に作成されます。
 - 新しいゲスト `Session` オブジェクトが作成され、このスケーラブルWebセッション専用に使用されます。
 
-カレントの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](API/sessionClass.md#session) コマンドを介してアクセスできます。
+カレントの `Session` オブジェクトは、あらゆる Webプロセスのコードにおいて [`Session`](API/SessionClass.md#session) コマンドを介してアクセスできます。
 
 ![alt-text](assets/en/WebServer/schemaSession.png)
 
-> Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には ([`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/ja/page89.html) などを使用し) コードによって [プロセス変数](Concepts/variables.md#プロセス変数) をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/sessionClass.md) オブジェクトを使用することが **推奨** される理由です。
+Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には ([`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/ja/page89.html) などを使用し) コードによって [プロセス変数](Concepts/variables.md#プロセス変数) をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
 
+### プリエンプティブモード
+
+4D Server上では、**インタプリタモードであっても**、Webサーバーセッションは自動的にプリエンプティブプロセスで処理されます。 そのため、Webのコードは [プリエンプティブ実行に準拠](preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
+
+> Web のコードを 4D Server (インタープリターモード) でデバッグするには、[4D Server と同じマシン上で 4D](Desktop/clientServer.md#4d-と-4d-server-の同じマシン上での使用) を起動後、サーバーに接続し、4D アプリケーション上で開発環境 (エクスプローラー等) を開きます。 これにより、すべてのプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+
+シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
 
 ## 情報の共有
 
-各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/sessionClass.md#storage) プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
+各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
 
 ## セッションの有効期限
 
@@ -67,12 +74,12 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。
 
-このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/sessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。
+このタイムアウトは、`Session` オブジェクトの [`.idleTimeout`](API/SessionClass.md#idletimeout) プロパティで設定できます (タイムアウトは 60分未満にはできません)。
 
-スケーラブルWebセッションが閉じられた後に [`Session`](API/sessionClass.md#session) コマンドが呼び出されると:
+スケーラブルWebセッションが閉じられた後に [`Session`](API/SessionClass.md#session) コマンドが呼び出されると:
 
 - `Session` オブジェクトには権限が含まれていません (ゲストセッション)。
-- [`.storage`](API/sessionClass.md#storage) プロパティは空です。
+- [`.storage`](API/SessionClass.md#storage) プロパティは空です。
 - 新しいセッションcookie がセッションに関連付けられています。
 
 
@@ -80,7 +87,7 @@ Webサーバーのユーザーセッションでは、以下のことが可能�
 
 セッションには、権限を関連付けることができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。
 
-権限を割り当てるには、[`.setPrivileges()`](API/sessionClass.md#setprivileges) 関数を使用します。 コード内では、[`.hasPrivilege()`](API/sessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/sessionClass.md#isguest) 関数は true を返します)。
+権限を割り当てるには、[`.setPrivileges()`](API/SessionClass.md#setprivileges) 関数を使用します。 コード内では、[`.hasPrivilege()`](API/SessionClass.md#hasprivilege) 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、**ゲスト** セッションとなります ([`.isGuest()`](API/SessionClass.md#isguest) 関数は true を返します)。
 
 > 現在の実装では (v18 R6)、"WebAdmin" アクセス権のみ利用可能です。
 
@@ -110,7 +117,7 @@ CRMアプリケーションを使って、各営業担当者が自分の顧客�
 http://localhost:8044/authenticate.shtml
 ```
 
-> 本番環境では、暗号化されていない情報がネットワーク上を流れるのを防ぐために、[HTTPS接続](API/webServerClass.md#httpsenabled) を使用する必要があります。
+> 本番環境では、暗号化されていない情報がネットワーク上を流れるのを防ぐために、[HTTPS接続](API/WebServerClass.md#httpsenabled) を使用する必要があります。
 
 
 2. `authenticate.shtml` ページは、*userId* と *password* の入力フィールドを含むフォームで、4DACTION の POSTアクションを送信します:

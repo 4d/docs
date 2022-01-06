@@ -859,10 +859,10 @@ The `boxInfo` object returned contains the following properties:
 **.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| Parámetros | Tipo       |    | Descripción                   |
-| ---------- | ---------- |:--:| ----------------------------- |
-| parameters | Objeto     | -> | Parameter object              |
-| Resultado  | Collection | <- | Collection of mailbox objects |
+| Parámetros | Tipo       |    | Descripción                  |
+| ---------- | ---------- |:--:| ---------------------------- |
+| parameters | Objeto     | -> | Parameter object             |
+| Resultado  | Collection | <- | Colección de objetos mailbox |
 <!-- END REF -->
 
 

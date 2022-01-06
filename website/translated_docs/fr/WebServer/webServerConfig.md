@@ -37,7 +37,7 @@ Vous pouvez modifier la taille du cache dans la zone **Taille du cache des pages
 
 | Peut être configuré via | Nom                 | Commentaires                                                                                                                                                     |
 | ----------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objet webServer         | `certificateFolder` | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/folderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()`. |
+| objet webServer         | `certificateFolder` | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()`. |
 
 Dossier qui contient les fichiers de certificat TLS pour le serveur web.
 
@@ -64,17 +64,17 @@ Définit le jeu de caractères à utiliser par le serveur web 4D. La valeur par 
 
 | Peut être configuré via | Nom                                                | Commentaires |
 | ----------------------- | -------------------------------------------------- | ------------ |
-| objet webServer         | [`cipherSuite`](API/webServerClass.md#ciphersuite) | Texte        |
+| objet webServer         | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Texte        |
 
 Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité des algorithmes de chiffrement implémentés par le serveur web. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la [page des chiffrements](https://www.openssl.org/docs/manmaster/man1/ciphers.html) sur le site OpenSSL.
 
-> La liste de chiffrement par défaut utilisée par 4D peut être modifiée pour la session à l'aide de la commande `FIXER PARAMETRE BASE `, auquel cas la modification s'applique à l'ensemble de l'application 4D, y compris le serveur web, le serveur SQL, les connexions client/serveur, ainsi que le client HTTP et toutes les commandes 4D qui font appel au protocole sécurisé.
+> La liste de chiffrement par défaut utilisée par 4D peut être modifiée pour la session à l'aide de la commande `FIXER PARAMETRE BASE`, auquel cas la modification s'applique à l'ensemble de l'application 4D, y compris le serveur web, le serveur SQL, les connexions client/serveur, ainsi que le client HTTP et toutes les commandes 4D qui font appel au protocole sécurisé.
 
 ## Paramètres CORS
 
 | Peut être configuré via  | Nom                                                                           | Commentaires                                                                            |
 | ------------------------ | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| objet webServer          | [`CORSSettings`](API/webServerClass.md#corssettings)                          | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| objet webServer          | [`CORSSettings`](API/WebServerClass.md#corssettings)                          | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
 | `WEB SET OPTION`         | `Web CORS settings`                                                           | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
 | Fenêtre de configuration | Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
@@ -130,6 +130,9 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | ------ | ----------- | --------------------------------------- |
 | 0      | wdl disable | Les debug logs Web HTTP sont désactivés |
 
+
+
+
 |1|wdl enable without body|Le journal de débogage de Web HTTP est activé sans le body (la taille du body est fournie dans ce cas). |3|wdl enable with response body|Le journal de débogage de Web HTTP est activé, le body est inclus uniquement dans la réponse |5|wdl enable with request body| Le journal de débogage de Web HTTP est activé, le body est inclus uniquement dans la requête |7|wdl enable with all body parts|Web HTTP debug log est activé, le body est inclus dans la réponse et la requête|
 
 
@@ -137,7 +140,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 
 | Peut être configuré via  | Nom                                                        | Commentaires                                 |
 | ------------------------ | ---------------------------------------------------------- | -------------------------------------------- |
-| objet webServer          | [`defaultHomepage`](API/webServerClass.md#defaulthomepage) | Texte                                        |
+| objet webServer          | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Texte                                        |
 | `WEB SET HOME PAGE`      |                                                            | Peut être différente pour chaque web process |
 | Fenêtre de configuration | Configuration > Page d'accueil par défaut                  |                                              |
 
@@ -159,11 +162,11 @@ Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base `On We
 
 ## Activer CORS
 
-| Peut être configuré via  | Nom                                                | Commentaires                                        |
-| ------------------------ | -------------------------------------------------- | --------------------------------------------------- |
-| objet webServer          | [`CORSEnabled`](API/webServerClass.md#corsenabled) | Booléen. True pour activer CORS (False par défaut). |
-| `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)             |
-| Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                                  |
+| Peut être configuré via  | Nom                                                | Commentaires                               |
+| ------------------------ | -------------------------------------------------- | ------------------------------------------ |
+| objet webServer          | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | True pour activer CORS (False par défaut). |
+| `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
+| Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                         |
 
 Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisée envoie une demande cross-site, celle-ci est rejetée et une erreur "403 - forbidden" est renvoyée.
 
@@ -178,7 +181,7 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 
 | Peut être configuré via  | Nom                                                | Commentaires |
 | ------------------------ | -------------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPEnabled`](API/webServerClass.md#httpenabled) | booléen      |
+| objet webServer          | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | booléen      |
 | `WEB SET OPTION`         | `Web HTTP enabled`                                 |              |
 | Fenêtre de configuration | Configuration > Activer HTTP                       |              |
 
@@ -189,7 +192,7 @@ Indique si le web server accepte des connexions non sécurisées.
 
 | Peut être configuré via  | Nom                                                  | Commentaires |
 | ------------------------ | ---------------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPSEnabled`](API/webServerClass.md#httpsenabled) | booléen      |
+| objet webServer          | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | booléen      |
 | `WEB SET OPTION`         | `Web HTTPS enabled`                                  |              |
 | Fenêtre de configuration | Configuration > Activer HTTPS                        |              |
 
@@ -200,7 +203,7 @@ Statut de la communication via HTTPS. Cette option est décrite dans [cette sect
 
 | Peut être configuré via | Nom                                                | Commentaires                                          |
 | ----------------------- | -------------------------------------------------- | ----------------------------------------------------- |
-| objet webServer         | [`HSTSEnabled`](API/webServerClass.md#hstsenabled) | Booléen, True pour activer le HSTS (False par défaut) |
+| objet webServer         | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Booléen, True pour activer le HSTS (False par défaut) |
 | `WEB SET OPTION`        | `Web HSTS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)               |
 
 État de HTTP Strict Transport Security (HSTS).
@@ -218,7 +221,7 @@ HSTS permet au serveur web 4D de déclarer que les navigateurs ne doivent intera
 
 | Peut être configuré via | Nom                                              | Commentaires       |
 | ----------------------- | ------------------------------------------------ | ------------------ |
-| objet webServer         | [`HSTSMaxAge`](API/webServerClass.md#hstsmaxage) | nombre en secondes |
+| objet webServer         | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | nombre en secondes |
 | `WEB SET OPTION`        | `Web HSTS max age`                               | nombre en secondes |
 
 Spécifie la durée maximale (en secondes) d'activation de HSTS pour chaque nouvelle connexion client. Ces informations sont stockées côté client pendant la durée spécifiée. Valeur par défaut : 63072000 (2 ans)
@@ -233,7 +236,7 @@ Spécifie la durée maximale (en secondes) d'activation de HSTS pour chaque nouv
 
 | Peut être configuré via | Nom                                                                  | Commentaires                        |
 | ----------------------- | -------------------------------------------------------------------- | ----------------------------------- |
-| objet webServer         | [`HTTPCompressionLevel`](API/webServerClass.md#httpcompressionlevel) |                                     |
+| objet webServer         | [`HTTPCompressionLevel`](API/WebServerClass.md#httpcompressionlevel) |                                     |
 | `WEB SET OPTION`        | `Web HTTP compression level`                                         | S'applique au Web et au service Web |
 
 Niveau de compression pour tous les échanges HTTP compressés pour le serveur web 4D (requêtes clients ou réponses serveur). Cette option vous permet d'optimiser les échanges en privilégiant soit la vitesse d'exécution (moins de compression), soit la quantité de compression (moins de vitesse). Le choix d'une valeur dépend de la taille et du type de données échangées.
@@ -244,7 +247,7 @@ Passez une valeur de 1 à 9 où 1 est la compression la plus rapide et 9 la plus
 
 | Peut être configuré via | Nom                                                                          | Commentaires |
 | ----------------------- | ---------------------------------------------------------------------------- | ------------ |
-| objet webServer         | [`HTTPCompressionThreshold`](API/webServerClass.md#httpcompressionthreshold) |              |
+| objet webServer         | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |              |
 | `WEB SET OPTION`        | `Web HTTP compression threshold`                                             |              |
 
 Dans le cadre des échanges HTTP optimisés, seuil de taille des requêtes en dessous duquel les échanges ne doivent pas être compressés. Ce paramètre est utile pour éviter de perdre du temps machine en compressant les petits échanges.
@@ -256,7 +259,7 @@ Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de com
 
 | Peut être configuré via  | Nom                                          | Commentaires |
 | ------------------------ | -------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPPort`](API/webServerClass.md#httpport) | entier long  |
+| objet webServer          | [`HTTPPort`](API/WebServerClass.md#httpport) | entier long  |
 | `WEB SET OPTION`         | `Web port ID`                                |              |
 | Fenêtre de configuration | Configuration > Port HTTP                    |              |
 
@@ -274,7 +277,7 @@ Si vous spécifiez 0, 4D utilisera le numéro de port HTTP 80 par défaut.
 
 | Peut être configuré via | Nom                                            | Commentaires                          |
 | ----------------------- | ---------------------------------------------- | ------------------------------------- |
-| objet webServer         | [`HTTPTrace`](API/webServerClass.md#httptrace) | Booléen, false par défaut             |
+| objet webServer         | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Booléen, false par défaut             |
 | `WEB SET OPTION`        | `Web HTTP TRACE`                               | Entier long, 0 par défaut (désactivé) |
 
 Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de sécurité, le serveur web 4D rejette par défaut les demandes HTTP TRACE avec une erreur 405. Si nécessaire, vous pouvez activer la méthode HTTP TRACE, auquel cas le serveur Web 4D répond aux demandes HTTP TRACE avec la request line, l'en-tête et le body.
@@ -286,7 +289,7 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 
 | Peut être configuré via  | Nom                                            | Commentaires |
 | ------------------------ | ---------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPSPort`](API/webServerClass.md#httpsport) | nombre       |
+| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport) | nombre       |
 | `WEB SET OPTION`         | `Web HTTPS port ID`                            |              |
 | Fenêtre de configuration | Configuration > Port HTTP                      |              |
 
@@ -297,7 +300,7 @@ Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par d�
 
 | Peut être configuré via  | Nom                                                                      | Commentaires |
 | ------------------------ | ------------------------------------------------------------------------ | ------------ |
-| objet webServer          | [`inactiveProcessTimeout`](API/webServerClass.md#inactiveprocesstimeout) |              |
+| objet webServer          | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |              |
 | `WEB SET OPTION`         | `Web inactive process timeout`                                           |              |
 | Fenêtre de configuration | Options (I) > Conservation des Process inactifs                          | Curseur      |
 
@@ -310,7 +313,7 @@ Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)
 
 | Peut être configuré via | Nom                                                                      | Commentaires |
 | ----------------------- | ------------------------------------------------------------------------ | ------------ |
-| objet webServer         | [`inactiveSessionTimeout`](API/webServerClass.md#inactivesessiontimeout) |              |
+| objet webServer         | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |              |
 | `WEB SET OPTION`        | `Web inactive session timeout`                                           |              |
 
 Durée de vie (en minutes) des sessions inactives (durée définie dans le cookie). À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
@@ -322,7 +325,7 @@ Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)
 
 | Peut être configuré via  | Nom                                                            | Commentaires |
 | ------------------------ | -------------------------------------------------------------- | ------------ |
-| objet webServer          | [`IPAddressToListen`](API/webServerClass.md#ipaddresstolisten) |              |
+| objet webServer          | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |              |
 | `WEB SET OPTION`         | `Web IP address to listen`                                     |              |
 | Fenêtre de configuration | Configuration > Adresse IP                                     | Menu popup   |
 
@@ -355,7 +358,7 @@ Pour éviter cette confusion, nous recommandons d'utiliser la notation [ ] lorsq
 
 | Peut être configuré via  | Nom                                                | Commentaires |
 | ------------------------ | -------------------------------------------------- | ------------ |
-| objet webServer          | [`keepSession`](API/webServerClass.md#keepsession) |              |
+| objet webServer          | [`keepSession`](API/WebServerClass.md#keepsession) |              |
 | `WEB SET OPTION`         | `Web keep session`                                 |              |
 | Fenêtre de configuration | Options (I) page/Automatic Session Management      |              |
 
@@ -370,7 +373,7 @@ True par défaut (activé).
 
 | Peut être configuré via  | Nom                                                  | Commentaires |
 | ------------------------ | ---------------------------------------------------- | ------------ |
-| objet webServer          | [`logRecording`](API/webServerClass.md#logrecording) |              |
+| objet webServer          | [`logRecording`](API/WebServerClass.md#logrecording) |              |
 | `WEB SET OPTION`         | `Web log recording`                                  |              |
 | Fenêtre de configuration | Journal (format)/Format du journal                   | Menu popup   |
 
@@ -393,11 +396,11 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 
 | Peut être configuré via  | Nom                                                                      | Commentaires |
 | ------------------------ | ------------------------------------------------------------------------ | ------------ |
-| objet webServer          | [`maxConcurrentProcesses`](API/webServerClass.md#maxconcurrentprocesses) |              |
+| objet webServer          | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |              |
 | `WEB SET OPTION`         | `Web max concurrent processes`                                           |              |
 | Fenêtre de configuration | Options (I) > Process Web simultanés maxi                                |              |
 
-Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -406,7 +409,7 @@ La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
 | Peut être configuré via | Nom                                                      | Commentaires |
 | ----------------------- | -------------------------------------------------------- | ------------ |
-| objet webServer         | [`maxRequestSize`](API/webServerClass.md#maxrequestsize) |              |
+| objet webServer         | [`maxRequestSize`](API/WebServerClass.md#maxrequestsize) |              |
 | `WEB SET OPTION`        | `Web maximum requests size`                              |              |
 
 Taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter. Par défaut, la valeur est de 2 000 000, c'est-à-dire un peu moins de 2 Mo. Le dépassement de la valeur maximale (2 147 483 648) indique, en pratique, qu'aucune limite n'est fixée.
@@ -420,7 +423,7 @@ Valeurs possibles: 500 000 - 2147483648.
 
 | Peut être configuré via | Nom                                                | Commentaires |
 | ----------------------- | -------------------------------------------------- | ------------ |
-| objet webServer         | [`maxSessions`](API/webServerClass.md#maxsessions) |              |
+| objet webServer         | [`maxSessions`](API/WebServerClass.md#maxsessions) |              |
 | `WEB SET OPTION`        | `Web max sessions`                                 |              |
 
 Nombre maximum de sessions simultanées. Lorsque vous atteignez la limite, la session la plus ancienne est fermée (et la méthode base `On Web Close Process` est appelée) si le serveur Web doit en créer une nouvelle. Le nombre de sessions simultanées ne peut pas dépasser le [nombre maximal de process Web](#maximum-concurrent-web-processes) (100 par défaut).
@@ -432,7 +435,7 @@ Valeur par défaut : 100 (passez 0 pour restaurer la valeur par défaut).
 
 | Peut être configuré via | Nom                                                    | Commentaires |
 | ----------------------- | ------------------------------------------------------ | ------------ |
-| objet webServer         | [`minTLSVersion`](API/webServerClass.md#mintlsversion) | nombre       |
+| objet webServer         | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | nombre       |
 
 Version TLS minimale acceptée pour les connexions. Les tentatives de connexion de clients prenant en charge uniquement les versions inférieures au minimum seront rejetées.
 
@@ -452,7 +455,7 @@ En cas de modification, le serveur doit être redémarré pour utiliser la nouve
 
 | Peut être configuré via | Nom                                  | Commentaires |
 | ----------------------- | ------------------------------------ | ------------ |
-| objet webServer         | [`name`](API/webServerClass.md#name) |              |
+| objet webServer         | [`name`](API/WebServerClass.md#name) |              |
 
 
 Nom de l'application de serveur Web. Pratique lors du démarrage des serveurs Web.
@@ -461,7 +464,7 @@ Nom de l'application de serveur Web. Pratique lors du démarrage des serveurs We
 
 | Peut être configuré via | Nom                                                      | Commentaires  |
 | ----------------------- | -------------------------------------------------------- | ------------- |
-| objet webServer         | [`openSSLVersion`](API/webServerClass.md#opensslversion) | Lecture seule |
+| objet webServer         | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Lecture seule |
 
 Version de la bibliothèque OpenSSL utilisée.
 
@@ -470,7 +473,7 @@ Version de la bibliothèque OpenSSL utilisée.
 
 | Peut être configuré via | Nom                                                                    | Commentaires           |
 | ----------------------- | ---------------------------------------------------------------------- | ---------------------- |
-| objet webServer         | [`perfectForwardSecrecy`](API/webServerClass.md#perfectforwardsecrecy) | Booléen, lecture seule |
+| objet webServer         | [`perfectForwardSecrecy`](API/WebServerClass.md#perfectforwardsecrecy) | Booléen, lecture seule |
 
 Vrai si le PFS est disponible sur le serveur web (voir la section [TLS](Admin/tls.md#perfect-forward-secrecy-pfs)).
 
@@ -512,11 +515,11 @@ Dans ce cas, les robots n'auront accès à aucune partie du site.
 
 ## Dossier racine
 
-| Peut être configuré via  | Nom                                              | Commentaires                                                                                                                                                 |
-| ------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objet webServer          | [`rootFolder`](API/webServerClass.md#rootfolder) | Propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/folderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
-| `WEB SET ROOT FOLDER`    |                                                  |                                                                                                                                                              |
-| Fenêtre de configuration | Configuration > Racine HTML par défaut           |                                                                                                                                                              |
+| Peut être configuré via  | Nom                                              | Commentaires                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objet webServer          | [`rootFolder`](API/WebServerClass.md#rootfolder) | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
+| `WEB SET ROOT FOLDER`    |                                                  |                                                                                                                                                                 |
+| Fenêtre de configuration | Configuration > Racine HTML par défaut           |                                                                                                                                                                 |
 
 Chemin du dossier racine du serveur web, i.e le dossier dans lequel 4D va chercher les pages HTML statiques et semi-dynamiques, les images, etc. à envoyer aux navigateurs. Le chemin d'accès est au format POSIX (chemin entier). Le serveur web doit être redémarré pour que le nouveau dossier racine soit pris en compte.
 
@@ -543,17 +546,17 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 
 | Peut être configuré via | Nom                                                                | Commentaires |
 | ----------------------- | ------------------------------------------------------------------ | ------------ |
-| objet webServer         | [`sessionCookieDomain`](API/webServerClass.md#sessioncookiedomain) |              |
+| objet webServer         | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |              |
 | `WEB SET OPTION`        | `Web session cookie domain`                                        |              |
 
-Valeur du champ "domaine" du cookie de session. Utile pour contrôler le scope des cookies de session Par exemple, si vous définissez la valeur "/*.4d.fr" pour ce sélecteur, le client enverra un cookie uniquement lorsque la requête est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
+Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
 
 
 ## Nom du cookie de session
 
 | Peut être configuré via | Nom                                                            | Commentaires |
 | ----------------------- | -------------------------------------------------------------- | ------------ |
-| objet webServer         | [`sessionCookieName`](API/webServerClass.md#sessioncookiename) |              |
+| objet webServer         | [`sessionCookieName`](API/WebServerClass.md#sessioncookiename) |              |
 | `WEB SET OPTION`        | `Web session cookie name`                                      |              |
 
 Nom du cookie utilisé pour stocker l'ID de session. Par défaut = "4DSID".
@@ -563,21 +566,32 @@ Nom du cookie utilisé pour stocker l'ID de session. Par défaut = "4DSID".
 
 | Peut être configuré via | Nom                                                            | Commentaires |
 | ----------------------- | -------------------------------------------------------------- | ------------ |
-| objet webServer         | [`sessionCookiePath`](API/webServerClass.md#sessioncookiepath) |              |
+| objet webServer         | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |              |
 | `WEB SET OPTION`        | `Web session cookie path`                                      |              |
 
-Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+Valeur du champ "domaine" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+
+## Session Cookie SameSite
+
+| Peut être configuré via | Nom                                                                    | Commentaires |
+| ----------------------- | ---------------------------------------------------------------------- | ------------ |
+| objet webServer         | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |              |
+
+Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet de déclarer si votre cookie doit être limité à un contexte de première partie ou de même site, comme une protection contre certaines attaques CSRF ([cross-site request forgery](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)).
+
+> Pour une description détaillée de l'attribut `SameSite`, veuillez vous reporter à la [documentation de Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) ou à [cette page de développement web](https://web.dev/samesite-cookies-explained/).
+
+Trois valeurs sont disponibles :
+
+- "Strict" (valeur par défaut de l'attribut` SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
+- "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
+- "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
+
+La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`).
+
+> Il n'est pas recommandé de définir `SameSite=None` sur un serveur HTTP car l'attribut `Secure` sera absent (utilisé uniquement en HTTPS) et les cookies seront bloqués.
 
 
-## Validation de l'adresse IP de la session
-
-Peut être défini avec|Nom|Commentaires| |---|---|---| |objet webServer|[`sessionIPAddressValidation`](API/webServerClass.md#sessionipaddressvalidation)|| |`WEB SET OPTION`|`La session Web active la validation d'adresse IP`||
-
-Statut de validation d'adresse IP pour les cookies de session. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. Par exemple, lorsque les appareils mobiles basculent entre les réseaux Wifi et 4G/5G, leur adresse IP change. Dans ce cas, vous devez passer 0 à cette option pour permettre aux clients de continuer à utiliser leurs sessions Web même lorsque les adresses IP changent. Note : ce paramètre réduit le niveau de sécurité de votre application.
-
-Une fois modifiée, cette option prend effet immédiatement (il n'est pas nécessaire de redémarrer le serveur HTTP).
-
-Valeurs possibles: 0 (désactivé) ou 1 (activé, par défaut).
 
 
 
@@ -589,6 +603,12 @@ Les paramètres suivants sont toujours pris en charge mais reposent sur des fonc
 #### Autoriser l'accès à la base de données via les URL "4DSYNC"
 
 Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées */4DSYNC*.
+
+#### Validation de l'adresse IP de la session
+
+> Cette option n'est pas disponible en [mode sessions évolutives](WebServer/sessions.md) (il n'y a pas de validation).
+
+Statut de validation d'adresse IP pour les cookies de session. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. Par exemple, lorsque les appareils mobiles basculent entre les réseaux Wifi et 4G/5G, leur adresse IP change. Dans ce cas, vous devez passer 0 à cette option pour permettre aux clients de continuer à utiliser leurs sessions Web même lorsque les adresses IP changent. Note : ce paramètre réduit le niveau de sécurité de votre application. Une fois modifiée, cette option prend effet immédiatement (il n'est pas nécessaire de redémarrer le serveur HTTP).
 
 
 #### Réutiliser les contextes temporaires (en mode distant)

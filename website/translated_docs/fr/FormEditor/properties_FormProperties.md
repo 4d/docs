@@ -5,6 +5,23 @@ title: Propriétés des formulaires
 
 ---
 
+## Color Scheme
+> Color scheme property is only applied on macOS.
+
+This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
+
+*   dark - light text on a dark background
+*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
+> Le nombre de caractères pour un nom de fenêtre est limité à 31.
+
+#### Grammaire JSON
+
+| Nom         | Type de données | Valeurs possibles |
+| ----------- | --------------- | ----------------- |
+| colorScheme | string          | "dark", "light"   |
+
+---
+
 ## Pages
 
 Chaque formulaire est composé d'au moins deux pages :
@@ -102,9 +119,9 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 ## Publié en tant que sous-formulaire
 
-Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. When this property is selected, the form will be published in the host application.
+Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. Lorsque cette propriété est sélectionnée, le formulaire sera publié dans le projet hôte.
 
-Only project forms can be specified as published subforms.
+Seuls les projets formulaire peuvent être indiqués comme étant des sous-formulaires publiés.
 
 
 

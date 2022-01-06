@@ -12,12 +12,8 @@ Démarre l'entité définie par ce numéro dans la collection (par exemple, `$sk
 
 `$skip` est généralement utilisé avec
 
- [`$top/$limit`]($top_$limit.md) pour naviguer dans une entity collection.</p> 
-
-
-
 ## Exemple
 
-Dans l'exemple suivant, nous allons à la 20e entité de notre ensemble d'entités :
+[`$top/$limit`]($top_$limit.md) pour naviguer dans une entity collection.
 
-`GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`
+ `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`

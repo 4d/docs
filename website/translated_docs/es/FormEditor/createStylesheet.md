@@ -190,35 +190,77 @@ text[text|=Hello]
 
 ## Declaraciones de hojas de estilo
 
+### Media Queries
+
+Media queries are used to apply color schemes to an application.
+
+A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+
+
+Available media features:
+
+*   `prefers-color-scheme`
+
+
+Available media feature expressions:
+
+*   **light**<br>For using a light scheme
+*   **dark**<br>For using a dark scheme
+
+> Color schemes are only supported on macOS.
+
+##### Ejemplo
+
+This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+
+```
+@media (prefers-color-scheme: light) {
+ .textScheme {
+   fill: LightGrey;
+   stroke: Black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .textScheme {
+    fill: DarkSlateGray;
+    stroke: LightGrey;
+  }
+}
+```
+
+
+### Object Attributes
+
 La mayoría de los atributos del objeto formulario pueden ser definidos dentro de una hoja de estilo, excepto los siguientes atributos:
-    - "method"
-    - "type"
-    - "class"
-    - "event"
-    - choiceList, excludedList, labels, list, requiredList (list type)
+    - `method`
+    - `type`
+    - `class`
+    - `evento`
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-Los atributos del objeto formulario pueden declararse con su nombre JSON como atributos CSS (sin incluir los tipos de objetos, métodos, eventos y listas). Para más información, consulte la página **Formularios dinámicos** en el Manual de Diseño.
+Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
-### Mapa de atributos
+#### Mapa de atributos
 
 Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre CSS.
 
-| 4D             | CSS              |
-| -------------- | ---------------- |
-| borderStyle    | border-style     |
-| fill           | background-color |
-| fontFamily     | font-family      |
-| fontSize       | font-size        |
-| fontStyle      | font-style       |
-| fontWeight     | font-weight      |
-| stroke         | color            |
-| textAlign      | text-align       |
-| textDecoration | text-decoration  |
-| verticalAlign  | vertical-align   |
-> Los valores específicos 4D (*por ejemplo, *, "hundido") no se soportan cuando se utilizan nombres de atributos CSS.
+| 4D               | CSS                |
+| ---------------- | ------------------ |
+| `borderStyle`    | `border-style`     |
+| `fill`           | `background-color` |
+| `fontFamily`     | `font-family`      |
+| `fontSize`       | `font-size`        |
+| `fontStyle`      | `font-style`       |
+| `fontWeight`     | `font-weight`      |
+| `stroke`         | `color`            |
+| `textAlign`      | `text-align`       |
+| `textDecoration` | `text-decoration`  |
+| `verticalAlign`  | `vertical-align`   |
+> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
 
-### Valores de atributos específicos
+#### Valores de atributos específicos
 
 - Para los atributos `icon`, `picture` y `customBackgroundPicture` que soportan una ruta a una imagen, la sintaxis es:
 

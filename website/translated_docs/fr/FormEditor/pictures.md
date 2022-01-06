@@ -75,6 +75,18 @@ Si 4D donne automatiquement la priorité à la résolution la plus élevée, il 
 *(\*) Généralement, macOS = 72 dpi, Windows = 96 dpi*
 
 
+## Images en mode sombre (macOS uniquement)
+
+Vous pouvez définir des images et des icônes spécifiques qui seront utilisées à la place des images standard lorsque [les formulaires utilisent le mode sombre](properties_FormProperties.md#color-scheme).
+
+Une image en mode sombre est définie comme suit :
+
+- l'image du mode sombre porte le même nom que la version standard (mode clair) avec le suffixe "`_sombre`"
+- l'image en mode sombre est stockée à côté de la version standard.
+
+Au moment de l'exécution, 4D charge automatiquement l'image en mode clair ou sombre, en fonction du [mode de couleurs du formulaire courant](https://doc.4d.com/4dv19/help/command/en/1761.html).
+
+![](assets/en/FormEditor/darkicon.png)
 
 
 

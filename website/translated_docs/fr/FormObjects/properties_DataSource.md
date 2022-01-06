@@ -6,19 +6,22 @@ title: Source de données
 ---
 ## Insertion automatique
 
-Lorsque cette option est sélectionnée, si un utilisateur saisit une valeur introuvable dans la liste déroulante associée à l'objet, cette valeur est automatiquement ajoutée à la liste stockée en mémoire. Vous pouvez associer des listes de choix à des objets, à l'aide :
-- de la propriété JSON [Choice List](properties_DataSource.md#choice-list)
-- des commandes [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) ou [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html).
-- de la liste des propriétés de l'éditeur de formulaires.
+Lorsque cette option est sélectionnée, si un utilisateur saisit une valeur introuvable dans la liste associée à l'objet, cette valeur est automatiquement ajoutée à la liste stockée en mémoire.
+
+Lorsque l'option d'**insertion automatique** n'est pas définie (par défaut), la valeur saisie est stockée dans l'objet formulaire mais pas dans la liste en mémoire.
+
+Cette propriété est prise en charge par :
+
+- [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) form objects associated to a choice list.
+- [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
 
 Par exemple, pour une liste de choix contenant "France, Allemagne, Italie" associée à une combo box "Pays" : si la propriété d'**insertion automatique** est définie et qu'un utilisateur saisit "Espagne", la valeur "Espagne" est alors automatiquement ajoutée à la liste en mémoire :
 
 ![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-Naturellement, la valeur saisie ne doit pas appartenir à la liste des [valeurs exclues](properties_RangeOfValues.md#excluded-list) associée à l'objet, si elle a été définie.
-> Si la liste a été créée à partir d'une liste définie en mode Développement, la liste d'origine n'est pas modifiée.
+> Si la liste déroulante a été créée à partir d'une liste définie en mode Développement, la liste d'origine n'est pas modifiée.
 
-Lorsque l'option d'**insertion automatique** n'est pas sélectionnée (par défaut), la valeur saisie est stockée dans l'objet mais pas dans la liste en mémoire.
+
 
 #### Grammaire JSON
 
@@ -37,6 +40,9 @@ Lorsque l'option d'**insertion automatique** n'est pas sélectionnée (par défa
 ## Choice List
 
 Associe une liste de choix à un objet. Il peut s'agir d'un nom de liste de choix (une référence de liste) ou d'une collection de valeurs par défaut.
+
+You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
+
 
 #### Grammaire JSON
 
@@ -113,17 +119,61 @@ Indique une variable ou une expression qui se verra attribuer un entier long ind
 
 
 ---
-## Type de données
+## Data Type (expression type)
 
-Please refer to [Expression Type](properties_Object.md#expression-type) section.
+Defines the data type for the displayed expression. This property is used with:
+
+- [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
+- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
+
+See also [**Expression Type**](properties_Object.md#expression-type) section.
+
+#### Grammaire JSON
+
+| Nom                | Type de données | Valeurs possibles                                  |
+| ------------------ | --------------- | -------------------------------------------------- |
+| dataSourceTypeHint | string          | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+
 
 #### Objets pris en charge
 
-[Colonne de list box](listbox_overview.md#list-box-columns)
+[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox_overview.md#list-box-columns)
 
 
 
+---
+## Data Type (list)
 
+Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). This property is used with:
+
+- Drop-down lists [associated to a choice list](dropdownList_Overview.md#using-a-choice-list).
+- Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
+
+Trois options sont disponibles :
+
+- **List reference**: declares that the drop-down list is hierarchical. It means that the drop-down list can display up to two hierarchical levels and its contents can be managed by the 4D language commands of the **Hierarchical Lists** theme.
+- **Selected item value** (default): the drop-down list is not hierarchical and the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
+- **Selected item reference**: the drop-down list is not hierarchical and the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor. This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+
+Using the **Selected item reference** option requires compliance with the following principles:
+- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
+- Valid and unique references must be associated with list items.
+- The drop-down list must be associated with a field or a variable.
+
+
+#### Grammaire JSON
+
+| Nom    | Type de données | Valeurs possibles    |
+| ------ | --------------- | -------------------- |
+| saveAs | string          | "value", "reference" |
+
+
+> Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
+
+
+#### Objets pris en charge
+
+[Listes déroulantes](dropdownList_Overview.md) associées aux listes
 
 
 ---
@@ -225,7 +275,6 @@ All database tables can be used, regardless of whether the form is related to a 
 
 ## Enregistrer comme
 
-
 This property is available in the following conditions:
 
 - a [choice list](#choice-list) is associated with the object
@@ -234,15 +283,14 @@ This property is available in the following conditions:
 This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
 
 - **Save as Value** (default option): the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
-- **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the `APPEND TO LIST` or `SET LIST ITEM` commands, or in the lists editor.
+- **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor.
 
 This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
 
 Using this property requires compliance with the following principles:
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
+- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
 - Valid and unique references must be associated with list items.
-- If you use this property for a [drop-down list](dropdownList_Overview.md), it must be associated with a field.
 
 
 #### Grammaire JSON
@@ -252,7 +300,7 @@ Using this property requires compliance with the following principles:
 | saveAs | string          | "value", "reference" |
 
 #### Objets pris en charge
-[Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Zone de saisie](input_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
 
 
 

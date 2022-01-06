@@ -19,58 +19,44 @@ Le serveur web 4D crée automatiquement un dossier racine et une page d'accueil 
 
 La sécurité des données est présente à tous les stades d'implémentation du serveur web 4D. Les niveaux de sécurité sont évolutifs, et les options les plus sécurisées sont généralement sélectionées par défaut. La sécurité du serveur web 4D est basée sur les éléments suivants :
 
-* Prise en charge étendue du
+* **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-protocole TLS (HTTPS)</strong>,</p></li> 
-  
-  *   **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
+*   **Contrôle de l'usage des ressources du serveur** (par exemple, via l'option qui détermine [le nombre maximum de process web simultanés](webServerConfig.html#maximum-concurrent-web-processes)).
 
 *   **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
-  
-      -   [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
+    -   [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
     -   [Les fonctions ORDA](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposées via requêtes REST
     -   [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
+
 *   **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-* **Contrôle de l'usage des ressources du serveur** (par exemple, via l'option qui détermine [le nombre maximum de process web simultanés](webServerConfig.html#maximum-concurrent-web-processes)).</ul> 
-
-
+* **Contrôle de l'usage des ressources du serveur** (par exemple, via l'option qui détermine [le nombre maximum de process web simultanés](webServerConfig.html#maximum-concurrent-web-processes)).
 > Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
-
-
 
 
 ## Sessions Utilisateur
 
-Le serveur web 4D inclut des fonctionnalités complètes et automatiques pour faciliter la gestion de [sessions web](sessions.md) (sessions utilisateur), basées sur les cookies.
-
-
+protocole TLS (HTTPS)</strong>,
 
 
 ## Point d'accès pour requêtes REST
 
-Le serveur web 4D permet d'accéder aux données stockées dans vos applications 4D via des requêtes REST. Les requêtes REST offrent un accès direct à toutes les opérations de bases de données telles que l'ajout, la lecture, la modification, l'organisation ou la recherche. 
+Le serveur web 4D permet d'accéder aux données stockées dans vos applications 4D via des requêtes REST. Les requêtes REST offrent un accès direct à toutes les opérations de bases de données telles que l'ajout, la lecture, la modification, l'organisation ou la recherche.
 
-Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md). 
-
-
+Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
 
 ## Extension des paramètres
 
-La configuration du serveur web 4D se fait via un set de paramètres au niveau de l'application. Elles peuvent aussi être personnalisées pour la session en utilisant les propriétés de l'objet `webServer`, ou la commande `WEB FIXER OPTION`. 
-
-
+Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
 
 ## Templates et URLs
 
-Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques. 
+Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.
 
-- Les pages de template contiennent des [tags spéciaux](templates.md) qui initient le traitement de données sur le serveur web au moment où elles sont envoyées aux navigateurs.
+- **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
 - [Les URLs spécifiques](httpRequests) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des formulaires HTML.
 
-
-
 ## Méthodes base dédiées
 
-Les méthodes base `Sur authentification Web`,`Sur connexion Web` ainsi que `Sur authentication REST` sont les points d'entrée des requêtes du serveur web. Elles peuvent être utilisées pour évaluer et diriger tout type de requête.
+Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.

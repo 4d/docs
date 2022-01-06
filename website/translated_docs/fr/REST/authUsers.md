@@ -14,7 +14,7 @@ You log in a user to your application by calling [`$directory/login`]($directory
 
 ## Ouverture des sessions
 
-Lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-sessions) (recommandé), si la méthode base `On REST Authentication` retourne `true`, une session utilisateur est alors automatiquement ouverte et vous pouvez la gérer via l'objet `Session` et [l'API Session](API/sessionClass.md). Subsequent REST requests will reuse the same session cookie.
+Lorsque les [sessions évolutives sont activées](WebServer/sessions.md#enabling-sessions) (recommandé), si la méthode base `On REST Authentication` retourne `true`, une session utilisateur est alors automatiquement ouverte et vous pouvez la gérer via l'objet `Session` et [l'API Session](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 

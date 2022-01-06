@@ -5,6 +5,23 @@ title: Propiedades de los formularios
 
 ---
 
+## Color Scheme
+> Color scheme property is only applied on macOS.
+
+This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
+
+*   dark - light text on a dark background
+*   light - dark text on a light background
+> A defined color scheme can not be overridden by a CSS.
+
+#### Gramática JSON
+
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| colorScheme | cadena         | "dark", "light"  |
+
+---
+
 ## Pages
 
 Cada formulario consta de al menos dos páginas:

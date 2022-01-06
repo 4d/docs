@@ -1,5 +1,5 @@
 ---
-id: folderClass
+id: FolderClass
 title: Folder
 ---
 
@@ -21,11 +21,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 |                                                                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #directory.copyTo().Syntax -->](#copyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.copyTo().Summary -->|
-| [<!-- INCLUDE #folderClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.create().Summary -->|
-| [<!-- INCLUDE #folderClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.createAlias().Summary --> |
+| [<!-- INCLUDE #FolderClass.create().Syntax -->](#create)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.create().Summary -->|
+| [<!-- INCLUDE #FolderClass.createAlias().Syntax -->](#createalias)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.createAlias().Summary --> |
 | [<!-- INCLUDE #directory.creationDate.Syntax -->](#creationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationDate.Summary -->|
 | [<!-- INCLUDE #directory.creationTime.Syntax -->](#creationtime)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.creationTime.Summary -->|
-| [<!-- INCLUDE #folderClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.delete().Summary -->|
+| [<!-- INCLUDE #FolderClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.delete().Summary -->|
 | [<!-- INCLUDE #directory.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
 | [<!-- INCLUDE #directory.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
 | [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
@@ -42,8 +42,8 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | [<!-- INCLUDE #directory.parent.Syntax -->](#parent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.parent.Summary -->|
 | [<!-- INCLUDE #directory.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.path.Summary -->|
 | [<!-- INCLUDE #directory.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.platformPath.Summary -->|
-| [<!-- INCLUDE #folderClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.moveTo().Summary -->|
-| [<!-- INCLUDE #folderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #folderClass.rename().Summary -->|
+| [<!-- INCLUDE #FolderClass.moveTo().Syntax -->](#moveto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.moveTo().Summary -->|
+| [<!-- INCLUDE #FolderClass.rename().Syntax -->](#rename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.rename().Summary -->|
 
 
 
@@ -59,14 +59,14 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 **Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 
-<!-- REF folderClass.Folder.Params -->
-| Parámetros     | Tipo      |    | Descripción                                     |
-| -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Texto     | -> | Folder path                                     |
-| folderConstant | Integer   | -> | 4D folder constant                              |
-| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | * to return folder of host database             |
-| Resultado      | 4D.Folder | <- | New folder object                               |
+<!-- REF FolderClass.Folder.Params -->
+| Parámetros     | Tipo      |    | Descripción                                        |
+| -------------- | --------- |:--:| -------------------------------------------------- |
+| path           | Texto     | -> | Ruta de la carpeta                                 |
+| folderConstant | Integer   | -> | Constante de la carpeta 4D                         |
+| pathType       | Integer   | -> | `fk posix path` (por defecto) o `fk platform path` |
+| *              |           | -> | * para devolver la carpeta de la base local        |
+| Resultado      | 4D.Folder | <- | Nuevo objeto de carpeta                            |
 <!-- END REF -->
 
 
@@ -143,24 +143,24 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 
 
-<!--REF #folderClass.create().Syntax -->
+<!--REF #FolderClass.create().Syntax -->
 **.create()** : Boolean<!-- END REF -->
 
-<!--REF #folderClass.create().Params -->
-| Parámetros | Tipo     |    | Descripción                                                  |
-| ---------- | -------- | -- | ------------------------------------------------------------ |
-| Resultado  | Booleano | <- | True if the folder was created successfully, false otherwise |
+<!--REF #FolderClass.create().Params -->
+| Parámetros | Tipo     |    | Descripción                                                        |
+| ---------- | -------- | -- | ------------------------------------------------------------------ |
+| Resultado  | Booleano | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
 <!-- END REF -->
 
 
 
 #### Descripción
 
-The `.create()` function <!-- REF #folderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
-**Returned value**
+**Valor devuelto**
 
 *   **True** if the folder is created successfully;
 *   **False** if a folder with the same name already exists or if an error occured.
@@ -181,7 +181,7 @@ Creation of the "/Archives2019/January/" folder in the database folder:
 ```4d
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
-    ALERT("The "+$newFolder.name+" folder was created.")
+    ALERT("La"+$newFolder.name+" carpeta fue creada.")
 Else
     ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
@@ -203,11 +203,11 @@ End if
 
 
 
-<!--REF #folderClass.createAlias().Syntax -->
+<!--REF #FolderClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
-<!--REF #folderClass.createAlias().Params -->
+<!--REF #FolderClass.createAlias().Params -->
 | Parámetros        | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
@@ -219,20 +219,20 @@ End if
 
 #### Descripción
 
-The `.createAlias()` function <!-- REF #folderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constante          | Valor | Comentario                 |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| Constante          | Valor | Comentario                    |
+| ------------------ | ----- | ----------------------------- |
+| `fk alias link`    | 0     | Enlace de alias (por defecto) |
+| `fk symbolic link` | 1     | Symbolic link (macOS only)    |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-**Returned object**
+**Objeto devuelto**
 
 A `4D.File` object with the `isAlias` property set to **true**.
 
@@ -265,21 +265,21 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 
-<!--REF #folderClass.delete().Syntax -->
+<!--REF #FolderClass.delete().Syntax -->
 **.delete**( { *option* : Integer } )<!-- END REF -->
 
 
-<!-- REF #folderClass.delete().Params -->
-| Parámetros | Tipo    |    | Descripción            |
-| ---------- | ------- | -- | ---------------------- |
-| option     | Integer | -> | Folder deletion option |
+<!-- REF #FolderClass.delete().Params -->
+| Parámetros | Tipo    |    | Descripción                      |
+| ---------- | ------- | -- | -------------------------------- |
+| option     | Integer | -> | Opción de eliminación de carpeta |
 <!-- END REF -->
 
 
 
 #### Descripción
 
-The `.delete()` function <!-- REF #folderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
@@ -380,33 +380,33 @@ When `Delete with contents` is passed:
 </details>
 
 
-<!--REF #folderClass.moveTo().Syntax -->
+<!--REF #FolderClass.moveTo().Syntax -->
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
-<!--REF #folderClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                    |
-| ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | Destination folder             |
-| newName           | Texto     | -> | Full name for the moved folder |
-| Resultado         | 4D.Folder | <- | Moved folder                   |
+<!--REF #FolderClass.moveTo().Params -->
+| Parámetros        | Tipo      |    | Descripción                              |
+| ----------------- | --------- | -- | ---------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                       |
+| newName           | Texto     | -> | Nombre completo de la carpeta trasladada |
+| Resultado         | 4D.Folder | <- | Carpeta movida                           |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.moveTo( )` function <!-- REF #folderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
-**Returned object**
+**Objeto devuelto**
 
-The moved `Folder` object.
+El objeto `Folder` movido.
 
 #### Ejemplo
 
-You want to move and rename a folder:
+Quiere mover y renombrar una carpeta:
 
 ```4d
  var $tomove; $moved : Object
@@ -449,29 +449,29 @@ You want to move and rename a folder:
 | v17 R5  | Añadidos       |
 </details>
 
-<!--REF #folderClass.rename().Syntax -->
+<!--REF #FolderClass.rename().Syntax -->
 **.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 
-<!--REF #folderClass.rename().Params -->
-| Parámetros | Tipo      |    | Descripción                  |
-| ---------- | --------- | -- | ---------------------------- |
-| newName    | Texto     | -> | New full name for the folder |
-| Resultado  | 4D.Folder | <- | Renamed folder               |
+<!--REF #FolderClass.rename().Params -->
+| Parámetros | Tipo      |    | Descripción                           |
+| ---------- | --------- | -- | ------------------------------------- |
+| newName    | Texto     | -> | Nuevo nombre completo para la carpeta |
+| Resultado  | 4D.Folder | <- | Carpeta renombrada                    |
 <!-- END REF -->
 
 
 
 #### Descripción
 
-The `.rename()` function <!-- REF #folderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 
-**Returned object**
+**Objeto devuelto**
 
-The renamed `Folder` object.
+El objeto `Folder` renombrado.
 
 #### Ejemplo
 

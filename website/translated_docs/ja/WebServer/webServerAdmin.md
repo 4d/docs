@@ -21,9 +21,9 @@ title: 管理
 
 *   4Dアプリケーション開始時に Webサーバーを自動起動。 これには、ストラクチャー設定の **Web/設定**ページを表示し、**開始時にWebサーバーを起動** オプションを有効にします:<br>![](assets/en/WebServer/config.png)
 
-*   [`webServer.start()`](API/webServerClass.md#start) 関数または `WEB START SERVER` コマンドを呼び出してプログラムで開始。
+*   [`webServer.start()`](API/WebServerClass.md#start) 関数または `WEB START SERVER` コマンドを呼び出してプログラムで開始。
 
-コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して [`webServer.start()`](API/webServerClass.md#start) 関数を呼び出すことで開始できます。
+コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して [`webServer.start()`](API/WebServerClass.md#start) 関数を呼び出すことで開始できます。
 > Webサーバーを開始したり停止したりするために、4Dアプリケーションを再起動する必要はありません。
 
 ## 4D Webサーバーの停止
@@ -32,7 +32,7 @@ title: 管理
 
 *   4D の **実行 ＞ Webサーバー停止** メニューを使用するか、 4D Server にて HTTPサーバーページの **HTTPサーバー停止** ボタンを使用する (いずれも、サーバー開始前は **…開始** と表示されています)。
 
-*   [`webServer.stop()`](API/webServerClass.md#stop) 関数または `WEB STOP SERVER` コマンドを呼び出してプログラムで停止。
+*   [`webServer.stop()`](API/WebServerClass.md#stop) 関数または `WEB STOP SERVER` コマンドを呼び出してプログラムで停止。
 
 コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して `webServer.stop()` 関数を呼び出すことで停止できます。
 

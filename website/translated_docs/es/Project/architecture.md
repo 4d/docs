@@ -6,20 +6,20 @@ title: Arquitectura de un proyecto
 A 4D project is made of several folders and files, stored within a single parent application folder (package folder). Por ejemplo:
 
 - MyProject
-    - Componentes
-    - Datos
-        - Logs
-        - Settings
-    - Documentation
-    - Plugins
-    - Project
-        - DerivedData
-        - Sources
-        - Trash
-    - Resources
-    - Settings
-    - userPreferences.username
-    - WebFolder
+    - `Componentes`
+    - `Datos`
+        - `Logs`
+        - `Settings`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
+    - `Settings`
+    - `userPreferences.jSmith`
+    - `WebFolder`
 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
 
@@ -28,19 +28,19 @@ A 4D project is made of several folders and files, stored within a single parent
 
 The Project folder typically contains the following hierarchy:
 
-- *applicationName*.4DProject file
-- Sources
-    + Clases
-    + DatabaseMethods
-    + Métodos
-    + Formularios
-    + TableForms
-    + Triggers
-- DerivedData
-- Trash (si procede)
+- `<applicationName>.4DProject` file
+- `Sources`
+    + `Clases`
+    + `DatabaseMethods`
+    + `Métodos`
+    + `Formularios`
+    + `TableForms`
+    + `Triggers`
+- `DerivedData`
+- `Trash` (if any)
 
 
-### *applicationName*.4DProject file
+### `<applicationName>.4DProject` file
 
 Project development file, used to designate and launch the project. This file can be opened by:
 
@@ -50,42 +50,42 @@ Project development file, used to designate and launch the project. This file ca
 > In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
 
 
-### Carpeta Sources
+### `Sources`
 
-| Contenido               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                         | Formato |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                                         | XML     |
-| folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                                         | JSON    |
-| menus.json              | Definiciones de los menús                                                                                                                                                                                                                                                                                                                                                                                           | JSON    |
+| Contenido               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                          | Formato |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                                          | XML     |
+| folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                                          | JSON    |
+| menus.json              | Definiciones de los menús                                                                                                                                                                                                                                                                                                                                                                                            | JSON    |
 | settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
-| tips.json               | Mensajes de ayuda definidos                                                                                                                                                                                                                                                                                                                                                                                         | JSON    |
-| lists.json              | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                                    | JSON    |
-| filters.json            | Filtros definidos                                                                                                                                                                                                                                                                                                                                                                                                   | JSON    |
-| styleSheets.css         | Hojas de estilo CSS                                                                                                                                                                                                                                                                                                                                                                                                 | CSS     |
-| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                               | CSS     |
-| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                           | CSS     |
+| tips.json               | Mensajes de ayuda definidos                                                                                                                                                                                                                                                                                                                                                                                          | JSON    |
+| lists.json              | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                                     | JSON    |
+| filters.json            | Filtros definidos                                                                                                                                                                                                                                                                                                                                                                                                    | JSON    |
+| styleSheets.css         | Hojas de estilo CSS                                                                                                                                                                                                                                                                                                                                                                                                  | CSS     |
+| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                                | CSS     |
+| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                                            | CSS     |
 
 
-#### Carpeta DatabaseMethods
+#### `DatabaseMethods`
 
 | Contenido                | Descripción                                                         | Formato |
 | ------------------------ | ------------------------------------------------------------------- | ------- |
 | *databaseMethodName*.4dm | Database methods defined in the project. Un archivo por método base | texto   |
 
-#### Carpeta Methods
+#### `Métodos`
 
 | Contenido        | Descripción                                                   | Formato |
 | ---------------- | ------------------------------------------------------------- | ------- |
 | *methodName*.4dm | Project methods defined in the project. Un archivo por método | texto   |
 
-#### Carpeta Classes
+#### `Clases`
 
 | Contenido       | Descripción                                                                                                                        | Formato |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | texto   |
 
 
-#### Carpeta Forms
+#### `Formularios`
 
 | Contenido                                 | Descripción                                  | Formato |
 | ----------------------------------------- | -------------------------------------------- | ------- |
@@ -94,7 +94,7 @@ Project development file, used to designate and launch the project. This file ca
 | *formName*/Images/*pictureName*           | Project form static picture                  | imagen  |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objeto. Un archivo por método objeto | texto   |
 
-#### Carpeta TableForms
+#### `TableForms`
 
 | Contenido                                            | Descripción                                              | Formato |
 | ---------------------------------------------------- | -------------------------------------------------------- | ------- |
@@ -107,7 +107,7 @@ Project development file, used to designate and launch the project. This file ca
 | *n*/Output/*formName*/method.4dm                     | Output table form method                                 | texto   |
 | *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. Un archivo por método objeto | texto   |
 
-#### Carpeta Triggers
+#### `Triggers`
 
 | Contenido     | Descripción                                                                                          | Formato |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ------- |
@@ -116,37 +116,42 @@ Project development file, used to designate and launch the project. This file ca
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
 
-### Carpeta Trash
+### `Trash`
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
-- Métodos
-- Formularios
-- TableForms
+- `Métodos`
+- `Formularios`
+- `TableForms`
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
 
 
-### Carpeta DerivedData
+### `DerivedData`
 
 The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
 
+## `Libraries`
 
-## Carpeta Resources
+> This folder is used on macOS only.
 
-The Resources folder contains any custom project resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
+The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+
+## `Resources`
+
+The Resources folder contains any custom project resource files and folders. En esta carpeta puede colocar todos los archivos necesarios para la traducción o personalización de la interfaz de la aplicación (archivos imagen, archivos texto, archivos XLIFF, etc.). 4D utiliza mecanismos automáticos para trabajar con el contenido de esta carpeta, en particular para el manejo de archivos XLIFF e imágenes estáticas. Para su uso en modo remoto, la carpeta Resources permite compartir archivos entre el equipo servidor y todos los equipos cliente. Ver el *manual 4D Server*.
 
 | Contenido             | Descripción                                                                                                                                           | Formato |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *item*                | Project resource files and folders                                                                                                                    | varios  |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | imagen  |
 
-(*) only if the project was exported from a .4db binary database.
+(*) sólo si el proyecto fue exportado desde una base binaria .4db.
 
 
-## Carpeta Data
+## `Datos`
 
-The data folder contains the data file and all files and folders relating to the data.
+La carpeta Data contiene el archivo de datos y todos los archivos y carpetas relacionados con los datos.
 
 | Contenido    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Formato |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -154,9 +159,9 @@ The data folder contains the data file and all files and folders relating to the
 | data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. | binario |
 | data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML     |
 
-(*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
+(*) Cuando el proyecto se crea a partir de una base de datos binaria .4db, el archivo de datos se deja intacto. Por lo tanto, se puede nombrar de otra manera y colocar en otro lugar.
 
-### Carpeta Settings
+### `Settings`
 
 This folder contains **user settings files for data** used for application administration.
 
@@ -169,9 +174,9 @@ This folder contains **user settings files for data** used for application admin
 | settings.4DSettings | Custom database settings for this data file.                                                                                                                                                                        | XML     |
 
 
-### Carpeta Logs
+### `Logs`
 
-The Logs folder contains all log files used by the project. Log files include, in particular:
+La carpeta Logs contiene todos los archivos de registro utilizados por el proyecto. Los archivos de registro incluyen, en particular:
 
 - database conversion,
 - peticiones del servidor web,
@@ -181,7 +186,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 > An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) command) for maintenance log files and in cases where data folder is read-only.
 
-## Carpeta Settings
+## `Settings`
 
 This folder contains **user settings files** used for application administration.
 
@@ -194,39 +199,44 @@ This folder contains **user settings files** used for application administration
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML     |
 
 
-## userPreferences.*userName* folder
+## `userPreferences.<userName>`
 
-Esta carpeta contiene archivos que memorizan las configuraciones del usuario, por ejemplo, el punto de ruptura o las posiciones de las ventanas. You can just ignore this folder. It contains for example:
+Esta carpeta contiene archivos que memorizan las configuraciones del usuario, por ejemplo, el punto de ruptura o las posiciones de las ventanas. Puede simplemente ignorar esta carpeta. Contiene, por ejemplo:
 
-| Contenido                  | Descripción                                               | Formato |
-| -------------------------- | --------------------------------------------------------- | ------- |
-| methodPreferences.json     | Current user method editor preferences                    | JSON    |
-| methodWindowPositions.json | Current user window positions for methods                 | JSON    |
-| formWindowPositions.json   | Current user window positions for forms                   | JSON    |
-| workspace.json             | List of opened windows; on macOS, order of tab windows    | JSON    |
-| debuggerCatches.json       | Caught calls to commands                                  | JSON    |
-| recentTables.json          | Lista ordenada de tablas                                  | JSON    |
-| preferences.4DPreferences  | Ruta de datos actual y posiciones de la ventana principal | XML     |
+| Contenido                  | Descripción                                                 | Formato |
+| -------------------------- | ----------------------------------------------------------- | ------- |
+| methodPreferences.json     | Current user method editor preferences                      | JSON    |
+| methodWindowPositions.json | Current user window positions for methods                   | JSON    |
+| formWindowPositions.json   | Current user window positions for forms                     | JSON    |
+| workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
+| debuggerCatches.json       | Caught calls to commands                                    | JSON    |
+| recentTables.json          | Lista ordenada de tablas                                    | JSON    |
+| preferences.4DPreferences  | Ruta de datos actual y posiciones de la ventana principal   | XML     |
+| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder  |
 
 
-## Carpeta Components
+## `Componentes`
 
 This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 
 > An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
-## Carpeta Plugins
+## `Plugins`
 
 This folder contains the plug-ins to be available in the application project. It must be stored at the same level as the Project folder.
 
 
-## Documentation folder
+## `Documentation`
 
 This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
 
 For more information, refer to [Documenting a project](Project/documentation.md).
 
-## WebFolder
+## `WebFolder`
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+
+## `.gitignore` file (optional)
+
+File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).

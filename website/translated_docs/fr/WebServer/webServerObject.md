@@ -14,7 +14,7 @@ Par exemple, si vous avez installé deux composants dans votre application princ
 
 En dehors de la mémoire, il n'y a pas de limite au nombre de composants et donc, de serveurs Web, pouvant être rattachés à un seul projet d'application 4D.
 
-Chaque serveur web 4D, y compris le serveur web de l'application principale, est exposé comme un **objet** spécifique de la classe `4D.WebServer`. Une fois instancié, un objet serveur Web peut être géré depuis l'application courante ou depuis n'importe quel composant à l'aide d'un [grand nombre de propriétés et de fonctions](API/webServerClass.md).
+Chaque serveur web 4D, y compris le serveur web de l'application principale, est exposé comme un **objet** spécifique de la classe `4D.WebServer`. Une fois instancié, un objet serveur Web peut être géré depuis l'application courante ou depuis n'importe quel composant à l'aide d'un [grand nombre de propriétés et de fonctions](API/WebServerClass.md).
 
 > Les [commandes WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) héritées du langage 4D sont prises en charge mais ne peuvent pas sélectionner le serveur Web auquel elles s'appliquent (voir ci-dessous).
 
@@ -35,7 +35,7 @@ $nbSrv:=WEB Server list.length
 //la valeur de $nbSrv est 1
 ```
 
-Pour instancier un objet serveur web, appelez la commande [`WEB Server`](API/webServerClass.md#web-server) :
+Pour instancier un objet serveur web, appelez la commande [`WEB Server`](API/WebServerClass.md#web-server) :
 
 ```4d
     //créer une variable objet de la classe 4D.WebServer
@@ -64,14 +64,14 @@ webServer:=WEB Server(Web server receiving request)
 
 ## Fonctions du serveur web
 
-Un [objet de classe Web server](API/webServerClass.md#web-server-object) contient les fonctions suivantes :
+Un [objet de classe Web server](API/WebServerClass.md#web-server-object) contient les fonctions suivantes :
 
 | Fonctions                                | Paramètres       | Valeur retournée | Description            |
 | ---------------------------------------- | ---------------- | ---------------- | ---------------------- |
-| [`start()`](API/webServerClass.md#start) | settings (objet) | status (object)  | Démarre le serveur web |
-| [`stop()`](API/webServerClass.md#start)  | -                | -                | Stoppe le serveur web  |
+| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (object)  | Démarre le serveur web |
+| [`stop()`](API/WebServerClass.md#start)  | -                | -                | Stoppe le serveur web  |
 
-Pour démarrer et arrêter un serveur Web, il suffit d'appeler les fonctions [`start()`](API/webServerClass.md#start) et [`stop()`](API/webServerClass.md#stop) de l'objet serveur Web :
+Pour démarrer et arrêter un serveur Web, il suffit d'appeler les fonctions [`start()`](API/WebServerClass.md#start) et [`stop()`](API/WebServerClass.md#stop) de l'objet serveur Web :
 
 ```4d
 var $status : Object
@@ -88,18 +88,18 @@ $status:=webServer.stop()
 
 ## Propriétés du serveur web
 
-Un objet serveur Web contient [diverses propriétés](API/webServerClass.md#web-server-object) qui configurent le serveur Web.
+Un objet serveur Web contient [diverses propriétés](API/WebServerClass.md#web-server-object) qui configurent le serveur Web.
 
 Ces propriétés sont définies :
 
-1. à l'aide du paramètre `settings` de la fonction [`.start()`](API/webServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
+1. à l'aide du `paramètre` <0>settings</0> de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
 
 - Si le serveur Web n'est pas démarré, les propriétés contiennent les valeurs qui seront utilisées au prochain démarrage du serveur Web.
-- Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/webServerClass.md#start).
+- Si le serveur Web est démarré, les propriétés contiennent les valeurs réelles utilisées par le serveur Web (les paramètres par défaut peuvent avoir été remplacés par le paramètre `settings` de la fonction [`.start()`](API/WebServerClass.md#start).
 
-> *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/webServerClass.md#start).
+> *isRunning*, *name*, *openSSLVersion* et *perfectForwardSecrecy* sont des propriétés en lecture seule qui ne peuvent pas être prédéfinies dans le paramètre objet `settings` pour la fonction [`start()`](API/WebServerClass.md#start).
 
 
 ## Portée des commandes 4D Web

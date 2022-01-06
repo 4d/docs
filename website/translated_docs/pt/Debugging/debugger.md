@@ -3,9 +3,9 @@ id: debugger
 title: Debugger
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".
+The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
-![debugger-window-local](assets/en/Debugging/debugger-Window-local.png)
+![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
 
 
 ## Calling the Debugger
@@ -99,7 +99,7 @@ This action is not available in remote debugging mode (see [Debugging from Remot
 
 ## Watch Pane
 
-The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Here is an example:
+The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Aqui um exemplo simples:
 
 ![watch-pane](assets/en/Debugging/watchPane.png)
 
@@ -160,10 +160,10 @@ This theme is composed of the following subthemes:
 
 | Subtheme     | Description                                                  | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Yes                         |
-| Process      | List of process variables used by the current process        | Yes                         |
-| Local        | List of local variables used by the method being traced      | Yes                         |
-| Parameters   | List of parameters received by the method                    | Yes                         |
+| Interprocess | List of interprocess variables being used at this point      | Sim                         |
+| Processo     | List of process variables used by the current process        | Sim                         |
+| Local        | List of local variables used by the method being traced      | Sim                         |
+| Parameters   | List of parameters received by the method                    | Sim                         |
 | Self         | Pointer to the current object, when tracing an Object Method | No                          |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.

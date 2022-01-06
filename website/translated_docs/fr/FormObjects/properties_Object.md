@@ -78,7 +78,7 @@ Here is the list of objects whose value can be saved:
 ---
 ## Variable ou expression
 
-> See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
+> Voir également **[Expression](properties_DataSource.md#expression)** pour les colonnes de list box de type sélection et collection.
 
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
@@ -88,9 +88,18 @@ The form object variables allow you to control and monitor the objects. For exam
 
 Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
 
+
+#### Grammaire JSON
+
+| Nom        | Type de données         | Valeurs possibles                                                                                                                                                                                                                                                                                                  |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataSource | string, or string array | <li>Variable, nom de champ, ou toute expression 4D. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
+
+
+
 ### Expressions
 
-You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
+Vous pouvez utiliser une [expression](Concepts/quick-tour.md#expressions) comme source de données pour un objet. Toute expression 4D valide est autorisée : expression simple, propriété d'objet, formule, fonction 4D, nom de méthode projet ou champ utilisant la syntaxe standard `[Table]Field`. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
 
@@ -133,12 +142,6 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
-#### Grammaire JSON
-
-| Nom        | Type de données         | Valeurs possibles                                                                                                                                                                                                                                                                                                                     |
-| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
-
 
 #### Objets pris en charge
 
@@ -148,13 +151,19 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 
 
+
+
+
+
+
+
 ---
 ## Expression Type
 
-> This property is called **Data Type** in the Property List for Selection and collection type list box columns.
+> Cette propriété est intitulée [**Data Type**](properties_DataSource.md#data-type-expression-type) dans la Liste de Propriétés pour les colonnes de listbox de type [selection](listbox_overview.md#selection-list-boxes) et [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) et pour les [Listes déroulantes](dropdownList_Overview.md) associées à un [objet](FormObjects/dropdownList_Overview.md#using-an-object) ou à un [tableau](FormObjects/dropdownList_Overview.md#using-an-array).
 
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of project compilation, you must use the 4D language commands of the `Compiler` theme.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vue d'une compilation de projet, vous devez [déclarer la variable](Concepts/variables.md#declaring-variables).
 
 However, this property has a typing function in the following specific cases:
 
@@ -165,9 +174,9 @@ However, this property has a typing function in the following specific cases:
 
 #### Grammaire JSON
 
-| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string          | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object" |
+| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string          | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**colonnes de list box :** "boolean", "number", "picture", "text", date", "time". *Listbox tableau/selection uniquement* : "integer", "object" |
 
 #### Objets pris en charge
 
@@ -204,7 +213,7 @@ The collection or the entity selection must be available to the form when it is 
 
 *   if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example **This.\<propertyPath>**.
 *   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
-> If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+> > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### Grammaire JSON
 
@@ -327,9 +336,9 @@ There are several types of calculations available. The following table shows whi
 
 | Calculation           | Num | Texte | Date | Heure | Bool | Pict | footer var type     |
 | --------------------- | --- | ----- | ---- | ----- | ---- | ---- | ------------------- |
-| Minimum               | X   |       | X    | X     | X    |      | Same as column type |
-| Maximum               | X   |       | X    | X     | X    |      | Same as column type |
-| Sum                   | X   |       | X    |       | X    |      | Same as column type |
+| Minimum               | X   | X     | X    | X     | X    |      | Same as column type |
+| Maximum               | X   | X     | X    | X     | X    |      | Same as column type |
+| Sum                   | X   |       |      | X     | X    |      | Same as column type |
 | Count                 | X   | X     | X    | X     | X    | X    | Entier long         |
 | Average               | X   |       |      | X     |      |      | Réel                |
 | Standard deviation(*) | X   |       |      | X     |      |      | Réel                |
@@ -339,12 +348,25 @@ There are several types of calculations available. The following table shows whi
 
 (*) Only for array type list boxes.
 
-When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+> Seules les [variables](Concepts/variables.md) déclarées ou dynamiques peuvent être utilisées pour afficher les calculs des pieds de listbox. Les autres types d'[expressions](Concepts/quick-tour.md#expressions) telles que `Form.sortValue` ne sont pas pris en charge.
+
+Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+
+*Null* values are not taken into account for any calculations.
+
+If the column contains different types of values (collection-based column for example):
+
+- Average and Sum only take numerical elements into account (other element types are ignored).
+- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/CollectionClass.md#sort) function.
+
+Using automatic calculations in footers of columns based upon expressions has the following limitations:
+
+- it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
+- it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
+- it is **not supported** with current selection/named selection list boxes when the expression is "complex". You need to use custom calculations.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
 
-> You can only use [variables](Concepts/variables.md) as custom calculations. Other [expressions](Concepts/quick-tour.md#expressions) are not supported.
-> Automatic calculations are not supported with: *  footers of columns based on formulas, *  footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. You need to use custom calculations.
 
 #### Grammaire JSON
 

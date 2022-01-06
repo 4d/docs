@@ -37,7 +37,7 @@ Webページキャッシュの有効化と設定をおこないます。
 
 | 設定できる場所          | 名称                  | コメント                                                                                              |
 | ---------------- | ------------------- | ------------------------------------------------------------------------------------------------- |
-| webServer オブジェクト | `certificateFolder` | テキストプロパティ (`start()` 関数の *settings* パラメーターと使用する場合は、[`4D.Folder`](API/folderClass.md) オブジェクトも使用可能) |
+| webServer オブジェクト | `certificateFolder` | テキストプロパティ (`start()` 関数の *settings* パラメーターと使用する場合は、[`4D.Folder`](API/FolderClass.md) オブジェクトも使用可能) |
 
 Webサーバー用の TLS証明書ファイルが置かれているフォルダーです。
 
@@ -64,7 +64,7 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 
 | 設定できる場所          | 名称                                                 | コメント |
 | ---------------- | -------------------------------------------------- | ---- |
-| webServer オブジェクト | [`cipherSuite`](API/webServerClass.md#ciphersuite) | テキスト |
+| webServer オブジェクト | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | テキスト |
 
 セキュアプロトコルに使用される暗号リストです。Webサーバーが実装する暗号アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
 
@@ -74,7 +74,7 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 
 | 設定できる場所          | 名称                                                   | コメント                                      |
 | ---------------- | ---------------------------------------------------- | ----------------------------------------- |
-| webServer オブジェクト | [`CORSSettings`](API/webServerClass.md#corssettings) | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
+| webServer オブジェクト | [`CORSSettings`](API/WebServerClass.md#corssettings) | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
 | `WEB SET OPTION` | `Web CORS settings`                                  | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
 | 設定ダイアログボックス      | オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド             | 新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。  |
 
@@ -130,6 +130,9 @@ Webサーバーの HTTPリクエストログファイル (アプリケーショ�
 | - | ----------- | ----------------------------- |
 | 0 | wdl disable | Web HTTP debug log は無効化されています |
 
+
+
+
 |1|wdl enable without body|Web HTTP debug log はボディ部なしで有効化されています (この場合ボディ部のサイズは提供されます)| |3|wdl enable with response body|Web HTTP debug log はレスポンスのボディ部のみを含めた状態で有効化されています。| |5|wdl enable with request body|Web HTTP debug log はリクエストのボディ部のみ含めた状態で有効化されます| |7|wdl enable with all body parts|Web HTTP debug log はレスポンスとリクエスト両方をボディ部に含めた状態で有効化されます|
 
 
@@ -137,7 +140,7 @@ Webサーバーの HTTPリクエストログファイル (アプリケーショ�
 
 | 設定できる場所             | 名称                                                         | コメント              |
 | ------------------- | ---------------------------------------------------------- | ----------------- |
-| webServer オブジェクト    | [`defaultHomepage`](API/webServerClass.md#defaulthomepage) | テキスト              |
+| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | テキスト              |
 | `WEB SET HOME PAGE` |                                                            | Webプロセス毎に異なる設定が可能 |
 | 設定ダイアログボックス         | 設定ページ / デフォルトホームページ                                        |                   |
 
@@ -161,7 +164,7 @@ Webサーバーの初回起動時には、4D はデフォルトで "index.html" 
 
 | 設定できる場所          | 名称                                                 | コメント                                   |
 | ---------------- | -------------------------------------------------- | -------------------------------------- |
-| webServer オブジェクト | [`CORSEnabled`](API/webServerClass.md#corsenabled) | ブール; CORSを有効化するには true (デフォルト値は false) |
+| webServer オブジェクト | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | ブール; CORSを有効化するには true (デフォルト値は false) |
 | `WEB SET OPTION` | `Web CORS enabled`                                 | 0 (デフォルト値; 無効) または 1 (有効)              |
 | 設定ダイアログボックス      | オプション (II) ページ / CORSを有効化                          | デフォルトではチェックなし                          |
 
@@ -178,7 +181,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 | 設定できる場所          | 名称                                                 | コメント    |
 | ---------------- | -------------------------------------------------- | ------- |
-| webServer オブジェクト | [`HTTPEnabled`](API/webServerClass.md#httpenabled) | boolean |
+| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
 | `WEB SET OPTION` | `Web HTTP enabled`                                 |         |
 | 設定ダイアログボックス      | 設定ページ / HTTPを有効化                                   |         |
 
@@ -189,7 +192,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 | 設定できる場所          | 名称                                                   | コメント    |
 | ---------------- | ---------------------------------------------------- | ------- |
-| webServer オブジェクト | [`HTTPSEnabled`](API/webServerClass.md#httpsenabled) | boolean |
+| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean |
 | `WEB SET OPTION` | `Web HTTPS enabled`                                  |         |
 | 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |         |
 
@@ -200,7 +203,7 @@ Webサーバーがセキュアな接続を受け入れるか受け入れない�
 
 | 設定できる場所          | 名称                                                 | コメント                                   |
 | ---------------- | -------------------------------------------------- | -------------------------------------- |
-| webServer オブジェクト | [`HSTSEnabled`](API/webServerClass.md#hstsenabled) | ブール; HSTSを有効化するには true (デフォルト値は false) |
+| webServer オブジェクト | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | ブール; HSTSを有効化するには true (デフォルト値は false) |
 | `WEB SET OPTION` | `Web HSTS enabled`                                 | 0 (デフォルト値; 無効) または 1 (有効)              |
 
 HTTP Strict Transport Security (HSTS) の状態です。
@@ -218,7 +221,7 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 
 | 設定できる場所          | 名称                                               | コメント     |
 | ---------------- | ------------------------------------------------ | -------- |
-| webServer オブジェクト | [`HSTSMaxAge`](API/webServerClass.md#hstsmaxage) | 数値 (秒単位) |
+| webServer オブジェクト | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | 数値 (秒単位) |
 | `WEB SET OPTION` | `Web HSTS max age`                               | 数値 (秒単位) |
 
 新規クライアント接続ごとに HSTS がアクティブな最長時間 (秒単位) を指定します。 この情報はクライアント側で指定された時間のあいだ保存されます。 デフォルト値は 63072000 (2年)。
@@ -233,7 +236,7 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 
 | 設定できる場所          | 名称                                                                   | コメント                   |
 | ---------------- | -------------------------------------------------------------------- | ---------------------- |
-| webServer オブジェクト | [`HTTPCompressionLevel`](API/webServerClass.md#httpcompressionlevel) |                        |
+| webServer オブジェクト | [`HTTPCompressionLevel`](API/WebServerClass.md#httpcompressionlevel) |                        |
 | `WEB SET OPTION` | `Web HTTP compression level`                                         | Web および Webサービスに適用されます |
 
 4D Webサーバーの HTTP圧縮通信 (クライアントリクエストまたはサーバーレスポンス) における圧縮レベル。 この設定を使って、実行速度を優先するか (圧縮少)、それとも圧縮レベルを優先するか (速度減) を指定し、通信を最適化することができます。 適切な値は、通信データのサイズとタイプによって異なります。
@@ -244,7 +247,7 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 
 | 設定できる場所          | 名称                                                                           | コメント |
 | ---------------- | ---------------------------------------------------------------------------- | ---- |
-| webServer オブジェクト | [`HTTPCompressionThreshold`](API/webServerClass.md#httpcompressionthreshold) |      |
+| webServer オブジェクト | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |      |
 | `WEB SET OPTION` | `Web HTTP compression threshold`                                             |      |
 
 最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
@@ -256,7 +259,7 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 
 | 設定できる場所          | 名称                                           | コメント   |
 | ---------------- | -------------------------------------------- | ------ |
-| webServer オブジェクト | [`HTTPPort`](API/webServerClass.md#httpport) | number |
+| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport) | number |
 | `WEB SET OPTION` | `Web port ID`                                |        |
 | 設定ダイアログボックス      | 設定ページ / HTTPポート                              |        |
 
@@ -274,7 +277,7 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D
 
 | 設定できる場所          | 名称                                             | コメント              |
 | ---------------- | ---------------------------------------------- | ----------------- |
-| webServer オブジェクト | [`HTTPTrace`](API/webServerClass.md#httptrace) | ブール; デフォルトは false |
+| webServer オブジェクト | [`HTTPTrace`](API/WebServerClass.md#httptrace) | ブール; デフォルトは false |
 | `WEB SET OPTION` | `Web HTTP TRACE`                               | 数値; デフォルトは 0 (無効) |
 
 4D Webサーバーの HTTP TRACE メソッドを有効化します。 セキュリティ上の理由により、4D Webサーバーはデフォルトで HTTP TRACE リクエストをエラー405 で拒否します。 必要に応じて有効化された場合、HTTP TRACE リクエストに対して Webサーバーは、リクエスト行、ヘッダー、および本文を返します。
@@ -286,7 +289,7 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D
 
 | 設定できる場所          | 名称                                             | コメント   |
 | ---------------- | ---------------------------------------------- | ------ |
-| webServer オブジェクト | [`HTTPSPort`](API/webServerClass.md#httpsport) | number |
+| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number |
 | `WEB SET OPTION` | `Web HTTPS port ID`                            |        |
 | 設定ダイアログボックス      | 設定ページ / HTTPSポート                               |        |
 
@@ -297,7 +300,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                                       | コメント  |
 | ---------------- | ------------------------------------------------------------------------ | ----- |
-| webServer オブジェクト | [`inactiveProcessTimeout`](API/webServerClass.md#inactiveprocesstimeout) |       |
+| webServer オブジェクト | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |       |
 | `WEB SET OPTION` | `Web inactive process timeout`                                           |       |
 | 設定ダイアログボックス      | オプション (I) ページ / 非動作プロセスのタイムアウト                                           | スライダー |
 
@@ -310,7 +313,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                                       | コメント |
 | ---------------- | ------------------------------------------------------------------------ | ---- |
-| webServer オブジェクト | [`inactiveSessionTimeout`](API/webServerClass.md#inactivesessiontimeout) |      |
+| webServer オブジェクト | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |      |
 | `WEB SET OPTION` | `Web inactive session timeout`                                           |      |
 
 非アクティブセッションのタイムアウト時間 (分単位) を cookie に設定します。 タイムアウト時間が経過するとセッションcookie が無効になり、HTTPクライアントによって送信されなくなります。
@@ -322,7 +325,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                             | コメント       |
 | ---------------- | -------------------------------------------------------------- | ---------- |
-| webServer オブジェクト | [`IPAddressToListen`](API/webServerClass.md#ipaddresstolisten) |            |
+| webServer オブジェクト | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |            |
 | `WEB SET OPTION` | `Web IP address to listen`                                     |            |
 | 設定ダイアログボックス      | 設定ページ / IPアドレス                                                 | ポップアップメニュー |
 
@@ -355,7 +358,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                 | コメント |
 | ---------------- | -------------------------------------------------- | ---- |
-| webServer オブジェクト | [`keepSession`](API/webServerClass.md#keepsession) |      |
+| webServer オブジェクト | [`keepSession`](API/WebServerClass.md#keepsession) |      |
 | `WEB SET OPTION` | `Web keep session`                                 |      |
 | 設定ダイアログボックス      | オプション (I) ページ / 旧式セッション (シングルプロセスセッション)            |      |
 
@@ -370,7 +373,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                   | コメント       |
 | ---------------- | ---------------------------------------------------- | ---------- |
-| webServer オブジェクト | [`logRecording`](API/webServerClass.md#logrecording) |            |
+| webServer オブジェクト | [`logRecording`](API/WebServerClass.md#logrecording) |            |
 | `WEB SET OPTION` | `Web log recording`                                  |            |
 | 設定ダイアログボックス      | ログ (タイプ) ページ / ログフォーマット                              | ポップアップメニュー |
 
@@ -393,7 +396,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                                       | コメント |
 | ---------------- | ------------------------------------------------------------------------ | ---- |
-| webServer オブジェクト | [`maxConcurrentProcesses`](API/webServerClass.md#maxconcurrentprocesses) |      |
+| webServer オブジェクト | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |      |
 | `WEB SET OPTION` | `Web max concurrent processes`                                           |      |
 | 設定ダイアログボックス      | オプション (I) ページ / 最大同時Webプロセス                                              |      |
 
@@ -406,7 +409,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 | 設定できる場所          | 名称                                                       | コメント |
 | ---------------- | -------------------------------------------------------- | ---- |
-| webServer オブジェクト | [`maxRequestSize`](API/webServerClass.md#maxrequestsize) |      |
+| webServer オブジェクト | [`maxRequestSize`](API/WebServerClass.md#maxrequestsize) |      |
 | `WEB SET OPTION` | `Web maximum requests size`                              |      |
 
 Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サイズ (バイト単位)。 デフォルト値は 2,000,000 (2MBより、すこし少ない値) です。 最大値 (2,147,483,648) に設定した場合、実際には制限無しということになります。
@@ -420,7 +423,7 @@ Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サ�
 
 | 設定できる場所          | 名称                                                 | コメント |
 | ---------------- | -------------------------------------------------- | ---- |
-| webServer オブジェクト | [`maxSessions`](API/webServerClass.md#maxsessions) |      |
+| webServer オブジェクト | [`maxSessions`](API/WebServerClass.md#maxsessions) |      |
 | `WEB SET OPTION` | `Web max sessions`                                 |      |
 
 同時セッション上限数。 上限に達すると、Webサーバーが新規セッションを作成するときに、一番古いセッションが閉じられます (`On Web Close Process` データベースメソッドが呼び出されます)。 同時セッション数は、[Webプロセスの最大値](#最大同時webプロセス)を超えることはできません (デフォルトは 100)。
@@ -432,7 +435,7 @@ Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サ�
 
 | 設定できる場所          | 名称                                                     | コメント   |
 | ---------------- | ------------------------------------------------------ | ------ |
-| webServer オブジェクト | [`minTLSVersion`](API/webServerClass.md#mintlsversion) | number |
+| webServer オブジェクト | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number |
 
 接続に必要な最低TLSバージョン。 これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
 
@@ -452,7 +455,7 @@ Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サ�
 
 | 設定できる場所          | 名称                                   | コメント |
 | ---------------- | ------------------------------------ | ---- |
-| webServer オブジェクト | [`name`](API/webServerClass.md#name) |      |
+| webServer オブジェクト | [`name`](API/WebServerClass.md#name) |      |
 
 
 Webサーバーアプリケーションの名称。 コンポーネントの Webサーバーが起動されているときに便利です。
@@ -461,7 +464,7 @@ Webサーバーアプリケーションの名称。 コンポーネントの Web
 
 | 設定できる場所          | 名称                                                       | コメント   |
 | ---------------- | -------------------------------------------------------- | ------ |
-| webServer オブジェクト | [`openSSLVersion`](API/webServerClass.md#opensslversion) | 読み取り専用 |
+| webServer オブジェクト | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | 読み取り専用 |
 
 使用されている OpenSSLライブラリのバージョン。
 
@@ -470,7 +473,7 @@ Webサーバーアプリケーションの名称。 コンポーネントの Web
 
 | 設定できる場所          | 名称                                                                     | コメント        |
 | ---------------- | ---------------------------------------------------------------------- | ----------- |
-| webServer オブジェクト | [`perfectForwardSecrecy`](API/webServerClass.md#perfectforwardsecrecy) | ブール; 読み取り専用 |
+| webServer オブジェクト | [`perfectForwardSecrecy`](API/WebServerClass.md#perfectforwardsecrecy) | ブール; 読み取り専用 |
 
 Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-secrecy-pfs) 参照)。
 
@@ -514,7 +517,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 | 設定できる場所               | 名称                                               | コメント                                                                                              |
 | --------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| webServer オブジェクト      | [`rootFolder`](API/webServerClass.md#rootfolder) | テキストプロパティ (`start()` 関数の *settings* パラメーターと使用する場合は、[`4D.Folder`](API/folderClass.md) オブジェクトも使用可能) |
+| webServer オブジェクト      | [`rootFolder`](API/WebServerClass.md#rootfolder) | テキストプロパティ (`start()` 関数の *settings* パラメーターと使用する場合は、[`4D.Folder`](API/FolderClass.md) オブジェクトも使用可能) |
 | `WEB SET ROOT FOLDER` |                                                  |                                                                                                   |
 | 設定ダイアログボックス           | 設定ページ / デフォルトHTMLルート                             |                                                                                                   |
 
@@ -543,7 +546,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 | 設定できる場所          | 名称                                                                 | コメント |
 | ---------------- | ------------------------------------------------------------------ | ---- |
-| webServer オブジェクト | [`sessionCookieDomain`](API/webServerClass.md#sessioncookiedomain) |      |
+| webServer オブジェクト | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |      |
 | `WEB SET OPTION` | `Web session cookie domain`                                        |      |
 
 セッションcookie の "domain" フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
@@ -553,7 +556,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 | 設定できる場所          | 名称                                                             | コメント |
 | ---------------- | -------------------------------------------------------------- | ---- |
-| webServer オブジェクト | [`sessionCookieName`](API/webServerClass.md#sessioncookiename) |      |
+| webServer オブジェクト | [`sessionCookieName`](API/WebServerClass.md#sessioncookiename) |      |
 | `WEB SET OPTION` | `Web session cookie name`                                      |      |
 
 セッションID の保存に使用されるセッションcookie の名称。 デフォルト = "4DSID"。
@@ -563,21 +566,32 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 | 設定できる場所          | 名称                                                             | コメント |
 | ---------------- | -------------------------------------------------------------- | ---- |
-| webServer オブジェクト | [`sessionCookiePath`](API/webServerClass.md#sessioncookiepath) |      |
+| webServer オブジェクト | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |      |
 | `WEB SET OPTION` | `Web session cookie path`                                      |      |
 
 セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
+## セッションcookie SameSite
 
-## セッション IPアドレス検証
+| 設定できる場所          | 名称                                                                     | コメント |
+| ---------------- | ---------------------------------------------------------------------- | ---- |
+| webServer オブジェクト | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |      |
 
-設定できる場所|名称|コメント| |---|---|---| |webServer object|[`sessionIPAddressValidation`](API/webServerClass.md#sessionipaddressvalidation)|| |`WEB SET OPTION`|`Web session enable IP address validation`||
+セッションcookie の `SameSite` 属性の値。 この属性は、一部のクロスサイトリクエストフォージェリ ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) 攻撃からの保護として、ファーストパーティーコンテキストまたは同一サイトコンテキストのどちらかに cookie を限定するかを宣言することができます。
 
-セッションcookie の IP アドレス検証のステータス。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して 4D Webサーバーはデフォルトで IPアドレスを検証します。このアドレスが、cookie作成時の IPアドレスと合致しない場合、リクエストは拒否されます。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 4G/5G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可するには、このオプションに 0 を渡します。 この設定はアプリケーションのセキュリティレベルを下げることに留意が必要です。
+> `SameSite` 属性に関する詳細な説明は [Mozilla のドキュメンテーション](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) または [こちらの Web開発ページ (英語)](https://web.dev/samesite-cookies-explained/) を参照ください。
 
-この設定が変更された際には、その設定は直ちに反映されます (HTTPサーバーを再起動する必要はありません)。
+次の値が提供されています:
 
-とり得る値: 0 (無効化) または 1 (有効化)。
+- "Strict" (4Dセッションcookie の `SameSite` 属性のデフォルト値): ファーストパーティーのコンテキスト、すなわち現在のサイトのドメインに一致するコンテキストでのみ cookie は送信され、サードパーティーの Webサイトには決して送信されません。
+- "Lax": クロスサイトのサブリクエストでは cookie は送信されませんが (たとえば、画像やフレームをサードパーティーのサイトにロードする場合など)、ユーザーがオリジンのサイトに移動するとき (つまり、リンクを辿っているとき) には送信されます。
+- "None": ファーストパーティーやオリジン間リクエストにかかわらず、すべてのコンテキストにおいて cookie が送信されます。 "None" を使用する場合は、cookie の `Secure` 属性も設定する必要があります (設定しないと、cookie がブロックされます)。
+
+セッションcookie の `Secure` 属性値は、HTTPS接続の場合には (`SameSite` 属性値が何であれ)、自動的に "True" に設定されます。
+
+> HTTPサーバーで `SameSite=None` を設定することは、(HTTPS でのみ使用される) `Secure` 属性が欠落し、cookie がブロックされるため、推奨されません。
+
+
 
 
 
@@ -589,6 +603,12 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 #### "4DSYNC" URLを使用したデータベースアクセスを許可
 
 このオプションを使用して、廃止予定の */4DSYNC* URL による HTTP同期サポートを制御します。
+
+#### セッション IPアドレス検証
+
+> [スケーラブルセッションモード](WebServer/sessions.md) の場合には、このオプションは利用できません (検証はおこなわれません)。
+
+セッションcookie の IP アドレス検証のステータス。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して 4D Webサーバーはデフォルトで IPアドレスを検証します。このアドレスが、cookie作成時の IPアドレスと合致しない場合、リクエストは拒否されます。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 4G/5G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可するには、このオプションに 0 を渡します。 この設定はアプリケーションのセキュリティレベルを下げることに留意が必要です。 この設定が変更された際には、その設定は直ちに反映されます (HTTPサーバーを再起動する必要はありません)。
 
 
 #### 一時的なコンテキストを再利用する (リモートモード)

@@ -1,5 +1,5 @@
 ---
-id: document
+id: Document
 title: Document クラス
 ---
 
@@ -469,7 +469,7 @@ title: Document クラス
 | ----------------- | --------- |:--:| --------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                      |
-| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します |
 | 戻り値               | 4D.File   | <- | コピーされたファイル                        |
 <!-- END REF -->
 
@@ -511,28 +511,29 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>履歴</summary>
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| バージョン  | 内容            |
+| ------ | ------------- |
+| v19 R2 | 4D.Blob を返します |
+| v17 R5 | 追加            |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : Blob<!-- END REF -->
+**.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| 引数  | タイプ  |    | 説明         |
-| --- | ---- | -- | ---------- |
-| 戻り値 | BLOB | <- | ファイルのコンテンツ |
+| 引数  | タイプ     |    | 説明         |
+| --- | ------- | -- | ---------- |
+| 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
 <!-- END REF -->
 
 
 #### 説明
 
-`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した BLOB を返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
+`.getContent()` 関数は、  <!-- REF #document.getContent().Summary -->ファイルの全コンテンツを格納した `4D.Blob` オブジェクトを返します<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 **戻り値**
 
-`Blob`。
+`4D.Blob` オブジェクト。
 
 #### 例題
 
@@ -563,10 +564,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| 引数   | タイプ     |    | 説明                       |
-| ---- | ------- | -- | ------------------------ |
-| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
-| 戻り値  | ピクチャー   | <- | アイコン                     |
+| 引数   | タイプ   |    | 説明                       |
+| ---- | ----- | -- | ------------------------ |
+| size | 整数    | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | ピクチャー | <- | アイコン                     |
 <!-- END REF -->
 
 
@@ -602,12 +603,12 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getText().Params -->
-| 引数          | タイプ     |    | 説明               |
-| ----------- | ------- | -- | ---------------- |
-| charSetName | テキスト    | -> | 文字セットの名前         |
-| charSetNum  | Integer | -> | 文字セットの番号         |
-| breakMode   | Integer | -> | 改行の処理モード         |
-| 戻り値         | テキスト    | <- | ドキュメントから取得したテキスト |
+| 引数          | タイプ  |    | 説明               |
+| ----------- | ---- | -- | ---------------- |
+| charSetName | テキスト | -> | 文字セットの名前         |
+| charSetNum  | 整数   | -> | 文字セットの番号         |
+| breakMode   | 整数   | -> | 改行の処理モード         |
+| 戻り値         | テキスト | <- | ドキュメントから取得したテキスト |
 <!-- END REF -->
 
 

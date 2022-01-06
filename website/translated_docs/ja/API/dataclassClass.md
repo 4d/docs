@@ -1,6 +1,6 @@
 ---
-id: dataclassClass
-title: DataClass
+id: DataClassClass
+title: データクラス
 ---
 
 
@@ -12,19 +12,19 @@ title: DataClass
 
 |                                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE dataclassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE dataclassClass.attributeName.Summary --> |
-| [<!-- INCLUDE #dataclassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.all().Summary -->|
-| [<!-- INCLUDE #dataclassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.fromCollection().Summary --> |
-| [<!-- INCLUDE #dataclassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.get().Summary --> |
-| [<!-- INCLUDE #dataclassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.getDataStore().Summary --> |
-| [<!-- INCLUDE #dataclassClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.getInfo().Summary --> |
-| [<!-- INCLUDE #dataclassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.new().Summary --> |
-| [<!-- INCLUDE #dataclassClass.newSelection().Syntax -->](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.newSelection().Summary --> |
-| [<!-- INCLUDE #dataclassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #dataclassClass.query().Summary --> |
+| [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary --> |
+| [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->|
+| [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary --> |
+| [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.get().Summary --> |
+| [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
+| [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getInfo().Summary --> |
+| [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.new().Summary --> |
+| [<!-- INCLUDE #DataClassClass.newSelection().Syntax -->](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.newSelection().Summary --> |
+| [<!-- INCLUDE #DataClassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.query().Summary --> |
 
 
 
-<!-- REF dataclassClass.attributeName.Desc -->
+<!-- REF DataClassClass.attributeName.Desc -->
 ## .*attributeName*
 
 <details><summary>履歴</summary>
@@ -33,15 +33,15 @@ title: DataClass
 | v17   | 追加 |
 </details>
 
-<!-- REF dataclassClass.attributeName.Syntax -->
+<!-- REF DataClassClass.attributeName.Syntax -->
 ***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 
 #### 説明
 
-データクラスの属性は、データクラスの <!-- REF dataclassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクト<!-- END REF --> です。
+データクラスの属性は、データクラスの <!-- REF DataClassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクト<!-- END REF --> です。
 
-戻り値は [`DataClassAttribute`](dataclassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
+戻り値は [`DataClassAttribute`](DataClassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
 #### 例題 1
@@ -95,7 +95,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
-<!-- REF dataclassClass.all().Desc -->
+<!-- REF DataClassClass.all().Desc -->
 ## .all()
 
 <details><summary>履歴</summary>
@@ -106,10 +106,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 </details>
 
 
-<!-- REF #dataclassClass.all().Syntax -->
+<!-- REF #DataClassClass.all().Syntax -->
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-<!-- REF #dataclassClass.all().Params -->
+<!-- REF #DataClassClass.all().Params -->
 | 引数       | タイプ                |    | 説明                |
 | -------- | ------------------ |:--:| ----------------- |
 | settings | オブジェクト             | -> | ビルドオプション: context |
@@ -119,7 +119,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.all( )` 関数はデータストアをクエリして、 <!-- REF #dataclassClass.all().Summary -->データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
+`.all( )` 関数はデータストアをクエリして、 <!-- REF #DataClassClass.all().Summary -->データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
 
 エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
@@ -148,7 +148,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
-<!-- REF dataclassClass.fromCollection().Desc -->
+<!-- REF DataClassClass.fromCollection().Desc -->
 ## .fromCollection()
 
 <details><summary>履歴</summary>
@@ -158,11 +158,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | v17    | 追加                     |
 </details>
 
-<!-- REF #dataclassClass.fromCollection().Syntax -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->
 **.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 
-<!-- REF #dataclassClass.fromCollection().Params -->
+<!-- REF #DataClassClass.fromCollection().Params -->
 | 引数        | タイプ                |    | 説明                        |
 | --------- | ------------------ |:--:| ------------------------- |
 | objectCol | コレクション             | -> | エンティティにマップするオブジェクトのコレクション |
@@ -173,7 +173,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.fromCollection()` 関数は、 <!-- REF #dataclassClass.fromCollection().Summary -->*objectCol* 引数のオブジェクトのコレクションに基づいてデータクラスのエンティティを更新あるいは作成し、対応するエンティティセレクションを返します<!-- END REF -->。
+`.fromCollection()` 関数は、 <!-- REF #DataClassClass.fromCollection().Summary -->*objectCol* 引数のオブジェクトのコレクションに基づいてデータクラスのエンティティを更新あるいは作成し、対応するエンティティセレクションを返します<!-- END REF -->。
 
 *objectCol* パラメーターには、データクラスの既存エンティティを更新、または新規エンティティを作成するためのオブジェクトのコレクションを渡します。 プロパティ名は、データクラスの属性名と同一である必要があります。 プロパティ名がデータクラスに存在しない場合、それは無視されます。 コレクション内で属性値が定義されていない場合、その値は null になります。
 
@@ -291,6 +291,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
+
 ```
 
 #### 例題 5
@@ -341,12 +342,12 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 参照
 
-[**.toCollection()**](entitySelectionClass.md#tocollection)
+[**.toCollection()**](EntitySelectionClass.md#tocollection)
 
 <!-- END REF -->
 
 
-<!-- REF dataclassClass.get().Desc -->
+<!-- REF DataClassClass.get().Desc -->
 ## .get()
 
 <details><summary>履歴</summary>
@@ -356,11 +357,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 </details>
 
-<!-- REF #dataclassClass.get().Syntax -->
+<!-- REF #DataClassClass.get().Syntax -->
 **.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 
-<!-- REF #dataclassClass.get().Params -->
+<!-- REF #DataClassClass.get().Params -->
 | 引数         | タイプ       |    | 説明                      |
 | ---------- | --------- |:--:| ----------------------- |
 | primaryKey | 整数または文字列  | -> | 取得するエンティティのプライマリーキー値    |
@@ -370,9 +371,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.get()` 関数はデータクラスをクエリして、 <!-- REF #dataclassClass.get().Summary -->*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->。
+`.get()` 関数はデータクラスをクエリして、 <!-- REF #DataClassClass.get().Summary -->*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->。
 
-*primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](entityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
+*primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](EntityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
 
 *primaryKey* 引数のプライマリーキーを持つエンティティが見つからない場合、**Null** エンティティが返されます。
 
@@ -425,7 +426,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 <!-- END REF -->
 
 
-<!-- REF dataclassClass.getDataStore().Desc -->
+<!-- REF DataClassClass.getDataStore().Desc -->
 ## .getDataStore()
 
 <details><summary>履歴</summary>
@@ -434,10 +435,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #dataclassClass.getDataStore().Syntax -->
+<!-- REF #DataClassClass.getDataStore().Syntax -->
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
-<!-- REF #dataclassClass.getDataStore().Params -->
+<!-- REF #DataClassClass.getDataStore().Params -->
 | 引数  | タイプ          |    | 説明                 |
 | --- | ------------ |:--:| ------------------ |
 | 戻り値 | cs.DataStore | <- | データクラスが属しているデータストア |
@@ -446,7 +447,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.getDataStore( )` 関数は、 <!-- REF #dataclassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
+`.getDataStore( )` 関数は、 <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
 
 返されるデータストアは次のいずれかです:
 
@@ -479,7 +480,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
-<!-- REF dataclassClass.getInfo().Desc -->
+<!-- REF DataClassClass.getInfo().Desc -->
 ## .getInfo()
 
 <details><summary>履歴</summary>
@@ -488,10 +489,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #dataclassClass.getInfo().Syntax -->
+<!-- REF #DataClassClass.getInfo().Syntax -->
 **.getInfo()** : Object <!-- END REF -->
 
-<!-- REF #dataclassClass.getInfo().Params -->
+<!-- REF #DataClassClass.getInfo().Params -->
 | 引数  | タイプ    |    | 説明        |
 | --- | ------ | -- | --------- |
 | 戻り値 | オブジェクト | <- | データクラスの情報 |
@@ -500,15 +501,15 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.getInfo( )` 関数は、 <!-- REF #dataclassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
+`.getInfo( )` 関数は、 <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
-| プロパティ       | タイプ     | 説明                   |
-| ----------- | ------- | -------------------- |
-| name        | テキスト    | データクラスの名称            |
-| primaryKey  | テキスト    | データクラスのプライマリーキー属性の名称 |
-| tableNumber | Integer | 内部的な 4Dテーブル番号        |
+| プロパティ       | タイプ  | 説明                   |
+| ----------- | ---- | -------------------- |
+| name        | テキスト | データクラスの名称            |
+| primaryKey  | テキスト | データクラスのプライマリーキー属性の名称 |
+| tableNumber | 整数   | 内部的な 4Dテーブル番号        |
 
 
 
@@ -552,7 +553,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
-<!-- REF dataclassClass.new().Desc -->
+<!-- REF DataClassClass.new().Desc -->
 ## .new()
 
 <details><summary>履歴</summary>
@@ -561,10 +562,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | v17   | 追加 |
 </details>
 
-<!-- REF #dataclassClass.new().Syntax -->
+<!-- REF #DataClassClass.new().Syntax -->
 **.new()** : 4D.Entity <!-- END REF -->
 
-<!-- REF #dataclassClass.new().Params -->
+<!-- REF #DataClassClass.new().Params -->
 | 引数  | タイプ       |    | 説明              |
 | --- | --------- | -- | --------------- |
 | 戻り値 | 4D.Entity | <- | データクラスの新規エンティティ |
@@ -573,11 +574,15 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.new( )` 関数は、 <!-- REF #dataclassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
+`.new( )` 関数は、 <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
 
-エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](entityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
+エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
 **4D Server**: クライアント/サーバーにおいては、対応するテーブルのプライマリーキーが自動インクリメントであった場合、エンティティがサーバー側に保存されたときに計算されます。
+
+エンティティの全属性は **null** 値で初期化されます。
+
+> 4Dデータベースのストラクチャーレベルで **ヌル値を空値にマップ** オプションが選択されていれば、属性はデフォルト値で初期化されます。
 
 #### 例題
 
@@ -595,7 +600,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
-<!-- REF dataclassClass.newSelection().Desc -->
+<!-- REF DataClassClass.newSelection().Desc -->
 ## .newSelection()
 
 <details><summary>履歴</summary>
@@ -604,27 +609,27 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | v17   | 追加 |
 </details>
 
-<!-- REF #dataclassClass.newSelection().Syntax -->
+<!-- REF #DataClassClass.newSelection().Syntax -->
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
-<!-- REF #dataclassClass.newSelection().Params -->
+<!-- REF #DataClassClass.newSelection().Params -->
 | 引数        | タイプ                |    | 説明                                                                                                      |
 | --------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------- |
-| keepOrder | Integer            | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
+| keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
 | 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション                                                                                 |
 <!-- END REF -->
 
 
 #### 説明
 
-`.newSelection( )` 関数は、データクラスに紐づいた <!-- REF #dataclassClass.newSelection().Summary -->追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
+`.newSelection( )` 関数は、データクラスに紐づいた <!-- REF #DataClassClass.newSelection().Summary -->追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
 
 > 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 
 順列ありのエンティティセレクションを作成するには、*keepOrder* に `dk keep ordered` セレクターを渡します。 この引数を省略した場合のデフォルト、あるいは `dk non ordered` セレクターを渡した場合には、関数は順列なしのエンティティセレクションを返します。 順列なしのエンティティセレクションの方が速いですが、エンティティの位置に頼ることはできません。 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-作成された時点では、エンティティセレクションにエンティティは含まれていません(`mySelection.length` は0を返します)。 あとから [`add()`](entitySelectionClass.md#add) 関数を呼び出すことで、エンティティセレクションを徐々にビルドしていくことができます。
+作成された時点では、エンティティセレクションにエンティティは含まれていません(`mySelection.length` は0を返します)。 あとから [`add()`](EntitySelectionClass.md#add) 関数を呼び出すことで、エンティティセレクションを徐々にビルドしていくことができます。
 
 
 #### 例題
@@ -641,7 +646,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 
-<!-- REF dataclassClass.query().Desc -->
+<!-- REF DataClassClass.query().Desc -->
 ## .query()
 
 <details><summary>履歴</summary>
@@ -652,10 +657,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | v17    | 追加                  |
 </details>
 
-<!-- REF #dataclassClass.query().Syntax -->
+<!-- REF #DataClassClass.query().Syntax -->
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
-<!-- REF #dataclassClass.query().Params -->
+<!-- REF #DataClassClass.query().Params -->
 | 引数            | タイプ                |    | 説明                                                                                   |
 | ------------- | ------------------ | -- | ------------------------------------------------------------------------------------ |
 | queryString   | テキスト               | -> | 検索条件 (文字列)                                                                           |
@@ -668,7 +673,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-`.query( )` 関数は、データクラスの全エンティティから、 <!-- REF #dataclassClass.query().Summary -->*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
+`.query( )` 関数は、データクラスの全エンティティから、 <!-- REF #DataClassClass.query().Summary -->*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
@@ -690,7 +695,7 @@ attributePath|formula 比較演算子 値
 *   **formula**: テキストまたはオブジェクト形式で渡された有効なフォーミュラ。 フォーミュラは処理されるエンティティごとに評価され、ブール値を返さなくてはなりません。 処理中のエンティティはフォーミュラ内において `This` で参照されます。
 
     *   **テキスト**: フォーミュラ文字列の前に `eval( )` ステートメントが必要です。これにより、クエリが式を正しく解釈します。 例: *"eval(length(This.lastname) >=30)"*
-    *   **オブジェクト**: [フォーミュラオブジェクト](formulaClass.md) は **プレースホルダー** (後述参照) を使って受け渡します。 このフォーミュラは、[`Formula`](formulaClass.md#formula) または [`Formula from string`](formulaClass.md#formula-from-string) コマンドによって作成されたものでなくてはなりません。
+    *   **オブジェクト**: [フォーミュラオブジェクト](FunctionClass.md) は **プレースホルダー** (後述参照) を使って受け渡します。 このフォーミュラは、[`Formula`](FunctionClass.md#formula) または [`Formula from string`](FunctionClass.md#formula-from-string) コマンドによって作成されたものでなくてはなりません。
 > * 4Dフォーミュラは、`&` および `|` 記号のみを論理演算子としてサポートすることに留意が必要です。
 > * フォーミュラ以外にも検索条件がある場合、クエリエンジンの最適化によってほかの検索条件 (たとえばインデックス属性) の処理が優先される場合があり、その場合はエンティティのサブセットのみがフォーミュラの評価対象となります。
 
@@ -1213,7 +1218,7 @@ softwares:{
 
 #### 参照
 
-エンティティセレクションの [`.query()`](entitySelectionClass.md#query)
+エンティティセレクションの [`.query()`](EntitySelectionClass.md#query)
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

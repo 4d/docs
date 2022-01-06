@@ -13,14 +13,14 @@ Poder referirse a algo sin conocer su identidad exacta es muy útil. De hecho, s
 
 Puede utilizar punteros para referenciar tablas, campos, variables, arrays, elementos de arrays y objetos. La siguiente tabla ofrece un ejemplo de cada tipo de datos:
 
-| Tipo        | Referenciación          | Uso                      | Asignación               |
-| ----------- | ----------------------- | ------------------------ | ------------------------ |
-| Tabla       | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
-| Campo       | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
-| Variable    | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
-| Array       | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
-| Elem. array | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Objeto      | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Tipo     | Referenciación          | Uso                      | Asignación               |
+| -------- | ----------------------- | ------------------------ | ------------------------ |
+| Tabla    | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Campo    | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
+| Variable | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
+| Array    | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
+| array    | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
+| Objeto   | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## Utilizar punteros: ejemplo básico
@@ -198,7 +198,7 @@ A continuación se explica cada línea del ejemplo:
 - $PointerOne:=->$MyVar --> $PointerOne ahora contiene un puntero a $MyVar.
 - $PointerTwo:=->$PointerOne --> $PointerTwo (una nueva variable) contiene un puntero a $PointerOne, que a su vez apunta a $MyVar.
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Así que en este caso, a $MyVar se le asigna "Goodbye".
-- ALERT (($PointerTwo->)->) --> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. En este caso, la caja de alerta muestra el contenido de $MyVar.
+- ALERT (($PointerTwo->)->) --> Lo mismo que: $PointerTwo-> referencia el contenido de $PointerOne, que a su vez referencia $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar. Por lo tanto, ($PointerTwo->)-> referencia el contenido de $MyVar.
 
 La siguiente línea pone "Hello" en $MyVar:
 ```4d

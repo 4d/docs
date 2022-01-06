@@ -12,7 +12,7 @@ title: Classe Directory
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->
@@ -35,7 +35,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->
@@ -60,7 +60,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.exists.Syntax -->
@@ -85,7 +85,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.extension.Syntax -->
@@ -109,7 +109,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.fullName.Syntax -->
@@ -133,7 +133,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.hidden.Syntax -->
@@ -157,7 +157,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->
@@ -181,7 +181,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.isFile.Syntax -->
@@ -204,7 +204,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->
@@ -227,7 +227,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->
@@ -253,7 +253,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->
@@ -262,7 +262,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+La propriété `.modificationDate` retourne <!-- REF #directory.modificationDate.Summary --> la date de la dernière modification du dossier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -277,7 +277,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->
@@ -286,7 +286,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propriété `.modificationTime` retourne <!-- REF #directory.modificationTime.Summary -->l'heure de la dernière modification du dossier<!-- END REF --> (exprimée en nombre de secondes à partir de 00:00).
 
 Cette propriété est en **lecture seule**. 
 
@@ -300,7 +300,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 
@@ -311,7 +311,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+La propriété `.name` retourne <!-- REF #directory.name.Summary --> le nom du dossier, sans extension (le cas échéant)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -325,7 +325,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.original.Syntax -->
@@ -334,10 +334,10 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+La propriété `.original` retourne <!-- REF #directory.original.Summary -->le même objet dossier que le dossier original<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
-> This property is available on folders to allow generic code to process folders or files.
+> Cette propriété est disponible sur les dossiers pour permettre au code générique de traiter les dossiers ou les fichiers.
 
 <!-- END REF -->
 
@@ -350,7 +350,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.parent.Syntax -->
@@ -359,9 +359,9 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+La propriété `.parent` retourne <!-- REF #directory.parent.Summary -->l'objet dossier parent du dossier<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
-If the folder does not have a parent (root), the null value is returned.
+Si le dossier n'a pas de parent (racine), la valeur nulle est retournée.
 
 Cette propriété est en **lecture seule**. 
 
@@ -376,7 +376,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.path.Syntax -->
@@ -385,7 +385,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+La propriété `.path` retourne <!-- REF #directory.path.Summary -->le chemin POSIX du dossier<!-- END REF -->. Si le chemin représente un filesystem (ex : "/DATA/"), le filesystem est retourné.
 
 Cette propriété est en **lecture seule**. 
 
@@ -399,7 +399,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->
@@ -408,7 +408,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+La propriété `.platformPath` retourne <!-- REF #directory.platformPath.Summary -->le chemin du dossier exprimé dans la syntaxe de la plate-forme courante<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
@@ -427,44 +427,44 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
-| Paramètres        | Type        |    | Description                                 |
-| ----------------- | ----------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder   | -> | Destination folder                          |
-| newName           | Texte       | -> | Name for the copy                           |
-| overwrite         | Entier long | -> | `fk overwrite` to replace existing elements |
-| Résultat          | 4D.Folder   | <- | Copied file or folder                       |
+| Paramètres        | Type      |    | Description                                        |
+| ----------------- | --------- |:--:| -------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Dossier de destination                             |
+| newName           | Texte     | -> | Nom de la copie                                    |
+| overwrite         | Integer   | -> | `fk overwrite` pour écraser les éléments existants |
+| Résultat          | 4D.Folder | <- | Dossier copié                                      |
 <!-- END REF -->
 
 
 #### Description
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+La fonction `.copyTo()` <!-- REF #directory.copyTo().Summary -->copie l'objet `Folder` (dossier source) vers le *destinationFolder* spécifié<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
-By default, the folder is copied with the name of the original folder. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+Par défaut, le dossier est copié avec le nom du dossier original. Si vous souhaitez renommer la copie, passez le nouveau nom dans le paramètre *newName*. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que ":", "/", etc.), sinon une erreur est retournée.
 
-If a folder with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+S'il existe déjà un dossier portant le même nom dans *destinationFolder*, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre *overwrite* pour ignorer et écraser le dossier existant :
 
-| Constant       | Valeur | Commentaire                         |
-| -------------- | ------ | ----------------------------------- |
-| `fk overwrite` | 4      | Overwrite existing elements, if any |
+| Constante      | Valeur | Commentaire                                   |
+| -------------- | ------ | --------------------------------------------- |
+| `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
 
 **Valeur retournée**
 
-The copied `Folder` object.
+L'objet `Folder` copié.
 
 #### Exemple
 
-You want to copy a Pictures *folder* from the user's Document folder to the Database folder:
+Vous souhaitez copier un dossier Images, à partir du dossier Document de l'utilisateur vers le dossier de la base :
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
@@ -483,28 +483,28 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.file().Syntax -->
 **.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
-| Paramètres | Type    |    | Description                          |
-| ---------- | ------- | -- | ------------------------------------ |
-| path       | Texte   | -> | Relative POSIX file pathname         |
-| Résultat   | 4D.File | <- | `File` object (null if invalid path) |
+| Paramètres | Type    |    | Description                            |
+| ---------- | ------- | -- | -------------------------------------- |
+| path       | Texte   | -> | Chemin POSIX relatif                   |
+| Résultat   | 4D.File | <- | Objet `File` (null si chemin invalide) |
 <!-- END REF -->
 
 #### Description
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+La fonction `.file()` <!-- REF #directory.file().Summary -->crée crée un objet `File` dans l'objet `Folder` et retourne sa référence<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the file to return. The path will be evaluated from the parent folder as root.
+Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le fichier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
 **Valeur retournée**
 
-A `File` object or null if *path* is invalid.
+Un objet `File` ou null si *path* n'est pas valide.
 
 #### Exemple
 
@@ -523,51 +523,51 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.files().Syntax -->
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Paramètres | Type        |    | Description                         |
-| ---------- | ----------- | -- | ----------------------------------- |
-| options    | Entier long | -> | File list options                   |
-| Résultat   | Collection  | <- | Collection of children file objects |
+| Paramètres | Type       |    | Description                        |
+| ---------- | ---------- | -- | ---------------------------------- |
+| options    | Integer    | -> | Options de liste de fichiers       |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant |
 <!-- END REF -->
 
 #### Description
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
-> Aliases or symbolic links are not resolved.
+La fonction `.files()` retourne <!-- REF #directory.files().Summary -->une collection d'objets `File` contenus dans le dossier<!-- END REF -->.
+> Les alias ou les liens symboliques ne sont pas résolus.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+Par défaut, si vous omettez le paramètre *options*, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
-| Constant              | Valeur | Commentaire                                                                         |
-| --------------------- | ------ | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1      | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8      | Invisible files or folders are not listed                                           |
+| Constante             | Valeur | Commentaire                                                                                 |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
+| `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
 
 **Valeur retournée**
 
-Collection of `File` objects.
+Collection d'objets `File`.
 
 #### Exemple 1
 
-You want to know if there are invisible files in the Database folder:
+Vous souhaitez savoir s'il y a des fichiers invisibles dans le dossier de la base :
 
 ```4d
  var $all; $noInvisible : Collection
  $all:=Folder(fk database folder).files()
  $noInvisible:=Folder(fk database folder).files(fk ignore invisible)
  If($all.length#$noInvisible.length)
-    ALERT("Database folder contains hidden files.")
+    ALERT("Il y a des fichiers invisibles dans le dossier de la base.")
  End if
 ```
 
 #### Exemple 2
 
-You want to get all files that are not invisible in the Documents folder:
+Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier Documents :
 
 ```4d
  var $recursive : Collection
@@ -584,28 +584,28 @@ You want to get all files that are not invisible in the Documents folder:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.folder().Syntax -->
 **.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
-| Paramètres | Type      |    | Description                                    |
-| ---------- | --------- | -- | ---------------------------------------------- |
-| path       | Texte     | -> | Relative POSIX file pathname                   |
-| Résultat   | 4D.Folder | <- | Created folder object (null if invalid *path*) |
+| Paramètres | Type      |    | Description                             |
+| ---------- | --------- | -- | --------------------------------------- |
+| path       | Texte     | -> | Chemin POSIX relatif                    |
+| Résultat   | 4D.Folder | <- | Objet dossier (null si *path* invalide) |
 <!-- END REF -->
 
 #### Description
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+La fonction `.folder()` <!-- REF #directory.folder().Summary -->crée un nouvel objet `Folder` dans l'objet `Folder` parent et retourne sa référence<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.
+Dans le paramètre *path*, passez un chemin relatif POSIX pour désigner le dossier à retourner. Le chemin sera évalué à partir du dossier parent en tant que racine.
 
 **Valeur retournée**
 
-A `Folder` object or null if *path* is invalid.
+Un objet `Folder` object ou null si *path* est invalide.
 
 #### Exemple
 
@@ -624,37 +624,37 @@ A `Folder` object or null if *path* is invalid.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.folders().Syntax -->
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Paramètres | Type        |    | Description                           |
-| ---------- | ----------- | -- | ------------------------------------- |
-| options    | Entier long | -> | Folder list options                   |
-| Résultat   | Collection  | <- | Collection of children folder objects |
+| Paramètres | Type       |    | Description                        |
+| ---------- | ---------- | -- | ---------------------------------- |
+| options    | Integer    | -> | Options de liste des dossiers      |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant |
 <!-- END REF -->
 
 #### Description
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+La fonction `.folders()` <!-- REF #directory.folders().Summary -->retourne une collection d'objets `Folder` contenus dans le dossier parent<!-- END REF -->.
 
-By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+Par défaut, si vous omettez le paramète *options* , seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
-| Constant              | Valeur | Commentaire                                                                         |
-| --------------------- | ------ | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1      | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8      | Invisible files or folders are not listed                                           |
+| Constante             | Valeur | Commentaire                                                                                 |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
+| `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
 
 **Valeur retournée**
 
-Collection of `Folder` objects.
+Collection d'objets `Folder`.
 
 #### Exemple
 
-You want the collection of all folders and subfolders of the database folder:
+Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du dossier de la base :
 
 ```4d
  var $allFolders : Collection
@@ -671,31 +671,31 @@ You want the collection of all folders and subfolders of the database folder:
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Paramètres | Type        |    | Description                                   |
-| ---------- | ----------- | -- | --------------------------------------------- |
-| size       | Entier long | -> | Side length for the returned picture (pixels) |
-| Résultat   | Image       | <- | Icône                                         |
+| Paramètres | Type    |    | Description                                    |
+| ---------- | ------- | -- | ---------------------------------------------- |
+| size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
+| Résultat   | Image   | <- | Icône                                          |
 <!-- END REF -->
 
 
 #### Description
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+La fonction `.getIcon()` <!-- REF #directory.getIcon().Summary -->retourne l'icône du dossier<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels ("large icons") or 16x16 pixels ("small icons"). If you pass 0 or omit this parameter, the "large icon" version is returned.
+Le paramètre optionnel *size* spécifie les dimensions en pixels de l'icône retournée. Cette valeur représente la longueur latérale du côté du carré contenant l'icône. La taille des icônes est généralement de 32x32 pixels (“grandes icônes”) ou de 16x16 pixels (“petites icônes”). Si vous passez 0 ou si vous omettez ce paramètre, la version "grandes icônes" est retournée.
 
-If the folder does not exist on disk, a default blank icon is returned.
+Si le dossier n'existe pas sur disque, une icône vide est retournée par défaut.
 
 **Valeur retournée**
 
-Folder icon [picture](Concepts/dt_picture.md).
+[Image](Concepts/dt_picture.md) de l'icône du dossier.
 
 <!-- END REF -->
 

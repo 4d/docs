@@ -3,10 +3,10 @@ id: dataExplorer
 title: Explorateur de données Web
 ---
 
-> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in a production purpose is not recommended; final implementation could be slightly different.
+> **Preview**: The Web Data Explorer is provided as a preview feature. L'utilisation de cette fonctionnalité en production n'est pas recommandée. L'implémentation finale pourrait être légèrement différente.
 
 
-The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any steps of the development process.
+The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. Il vous aide à contrôler les données et à identifier rapidement les problèmes à chaque étape du développement.
 
 ![alt-text](assets/en/Admin/dataExplorer1.png)
 
@@ -18,7 +18,7 @@ The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component f
 - **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
 - **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
 
-> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/datastoreClass.md#setadminprotection) function.
+> L'accès à l'Explorateur de données peut être désactivé à l'aide de la fonction [`.setAdminProtection().`](API/DataStoreClass.md#setadminprotection).
 
 
 ## Opening the Data Explorer
@@ -169,7 +169,7 @@ You can enter advanced queries that are not available as attribute queries. For 
 firstname=="Jim"
 ```
 
-You can use any ORDA query expression as [documented with the `query()` function](API/dataclassClass.md#query), with the following limitations or differences:
+Vous pouvez utiliser n'importe quelle expression de requête ORDA, comme [documenté avec la fonction `query()`](API/DataClassClass.md#query), avec les limitations ou différences suivantes :
 
 - For security, you cannot execute formulas using `eval()`.
 - Placeholders cannot be used; you have to write a *queryString* with values.
@@ -181,7 +181,7 @@ For example, with the Employee dataclass, you can write:
 firstname = "Marie Sophie" AND manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/dataclassClass.md#queryplan) and [`queryPath`](API/dataclassClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
+Vous pouvez cliquer sur l'icône `v` pour afficher à la fois [`queryPlan`](API/DataClassClass.md#queryplan) et [`queryPath`](API/DataClassClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
 
 ![alt-text](assets/en/Admin/dataExplorer12.png)
 

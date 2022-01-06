@@ -1,5 +1,5 @@
 ---
-id: signalClass
+id: SignalClass
 title: Signal
 ---
 
@@ -85,15 +85,15 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #signalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.description.Summary -->|
-| [<!-- INCLUDE #signalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.signaled.Summary --> |
-| [<!-- INCLUDE #signalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.trigger().Summary --> |
-| [<!-- INCLUDE #signalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #signalClass.wait().Summary --> |
+| [<!-- INCLUDE #SignalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.description.Summary -->|
+| [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.signaled.Summary --> |
+| [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.trigger().Summary --> |
+| [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.wait().Summary --> |
 
 
 
 
-<!-- REF signalClass.New signal.Desc -->
+<!-- REF SignalClass.New signal.Desc -->
 ## New signal
 
 
@@ -106,7 +106,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 <!-- REF #_command_.New signal.Syntax -->
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
-<!-- REF signalClass.New signal.Params -->
+<!-- REF SignalClass.New signal.Params -->
 | 引数          | タイプ       |    | 説明                   |
 | ----------- | --------- |:--:| -------------------- |
 | description | テキスト      | -> | シグナルの詳細              |
@@ -166,7 +166,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 <!-- END REF -->
 
 
-<!-- REF signalClass.description.Desc -->
+<!-- REF SignalClass.description.Desc -->
 ## .description
 
 <details><summary>履歴</summary>
@@ -175,12 +175,12 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.description.Syntax -->
+<!-- REF #SignalClass.description.Syntax -->
 **.description** : Text<!-- END REF -->
 
 #### 説明
 
-`.description` プロパティは、 <!-- REF #signalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
+`.description` プロパティは、 <!-- REF #SignalClass.description.Summary -->`Signal` オブジェクトのカスタムな詳細<!-- END REF -->を格納します。
 
 `.description` は、Signal オブジェクトの作成時、あるいはその他のタイミングでも設定することができます。 ただし、`Signal` オブジェクトは共有オブジェクトであるため、`.description` プロパティに書き込む際には必ず `Use...End use` 構文を使わなくてはならない点に留意が必要です。
 
@@ -190,7 +190,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 
 
-<!-- REF signalClass.signaled.Desc -->
+<!-- REF SignalClass.signaled.Desc -->
 ## .signaled
 
 <details><summary>履歴</summary>
@@ -200,12 +200,12 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 </details>
 
-<!-- REF #signalClass.signaled.Syntax -->
+<!-- REF #SignalClass.signaled.Syntax -->
 **.signaled** : Boolean<!-- END REF -->
 
 #### 説明
 
-`.signaled` プロパティは、 <!-- REF #signalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
+`.signaled` プロパティは、 <!-- REF #SignalClass.signaled.Summary -->`Signal` オブジェクトの現在の状態<!-- END REF -->を格納します。 Signal オブジェクトが作成された時点では、`.signaled` は **false** です。 Signal オブジェクトに対して `.trigger()` が呼び出された時に **true** となります。
 
 このプロパティは **読み取り専用** です。 
 
@@ -213,7 +213,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 
 
-<!-- REF signalClass.trigger().Desc -->
+<!-- REF SignalClass.trigger().Desc -->
 ## .trigger()
 
 <details><summary>履歴</summary>
@@ -222,10 +222,10 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.trigger().Syntax -->
+<!-- REF #SignalClass.trigger().Syntax -->
 **.trigger( )**<!-- END REF -->
 
-<!-- REF #signalClass.trigger().Params -->
+<!-- REF #SignalClass.trigger().Params -->
 | 引数 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |
@@ -234,7 +234,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 #### 説明
 
-`.trigger( )` 関数は、 <!-- REF #signalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
+`.trigger( )` 関数は、 <!-- REF #SignalClass.trigger().Summary -->シグナルオブジェクトの `signaled` プロパティを **true** に設定します<!-- END REF --> 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。
 
 Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は何もしません。
 
@@ -242,7 +242,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 
 
-<!-- REF signalClass.wait().Desc -->
+<!-- REF SignalClass.wait().Desc -->
 ## .wait()
 
 <details><summary>履歴</summary>
@@ -251,10 +251,10 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #signalClass.wait().Syntax -->
+<!-- REF #SignalClass.wait().Syntax -->
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-<!-- REF #signalClass.wait().Params -->
+<!-- REF #SignalClass.wait().Params -->
 | 引数      | タイプ |    | 説明                   |
 | ------- | --- | -- | -------------------- |
 | timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)    |
@@ -264,7 +264,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 #### 説明
 
-`.wait( )` 関数は、 <!-- REF #signalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
+`.wait( )` 関数は、 <!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
 
 コード実行のブロックを防ぐため、*timeout* 引数を使用して最長待機時間を秒単位で指定することもできます(小数を使用できます)。
 > **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。

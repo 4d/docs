@@ -10,9 +10,9 @@ title: 背景色と境界線
 
 #### JSON 文法
 
-| 名称            | データタイプ | とりうる値                                |
-| ------------- | ------ | ------------------------------------ |
-| alternateFill | string | 任意の css値; "transparent"; "automatic" |
+| 名称            | データタイプ | とりうる値                                                      |
+| ------------- | ------ | ---------------------------------------------------------- |
+| alternateFill | string | 任意の CSS値; "transparent"; "automatic"; "automaticAlternate" |
 
 #### 対象オブジェクト
 [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
@@ -110,6 +110,7 @@ title: 背景色と境界線
 このオプションをチェックすると、これらの空白行を除去することができます。 リストボックスオブジェクトの下部は空のままになります:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
+
 
 #### JSON 文法
 

@@ -61,22 +61,22 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType        | Conteúdos                             |
-| -------------- | ------------------------------------- |
-| Texto          | Text value                            |
-| Date           | Date value                            |
-| Hora           | Time value                            |
-| Booleano       | Boolean value                         |
-| Integer        | Long integer value                    |
-| Real           | Real value                            |
-| Ponteiro       | Pointer value                         |
-| Imagem         | Picture value                         |
-| Blob           | BLOB value                            |
-| Collection     | Collection value                      |
-| Variant        | Variant value                         |
-| Objeto         | Object with default class (4D.Object) |
-| 4D.*className* | Object of the 4D class name           |
-| cs.*className* | Object of the user class name         |
+| varType                | Conteúdos                             |
+| ---------------------- | ------------------------------------- |
+| `Texto`                | Text value                            |
+| `Date`                 | Date value                            |
+| `Hora`                 | Time value                            |
+| `Booleano`             | Boolean value                         |
+| `Integer`              | Long integer value                    |
+| `Real`                 | Real value                            |
+| `Ponteiro`             | Pointer value                         |
+| `Imagem`               | Picture value                         |
+| `Blob`                 | BLOB value                            |
+| `Collection`           | Collection value                      |
+| `Variant`              | Variant value                         |
+| `Objeto`               | Object with default class (4D.Object) |
+| `4D.<className>` | Object of the 4D class name           |
+| `cs.<className>` | Object of the user class name         |
 
 #### Exemplos
 
@@ -179,7 +179,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Aqui um exemplo simples:
 
 ```4d
  $vsID:=Request("Please enter your ID:")

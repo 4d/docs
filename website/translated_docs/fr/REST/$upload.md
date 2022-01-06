@@ -7,45 +7,46 @@ title: '$upload'
 Retourne un ID du fichier téléchargé sur le serveur
 
 ## Description
+
 Publiez cette requête lorsque vous vous souhaitez télécharger un fichier sur le serveur. S'il s'agit d'une image, passez `$rawPict=true`. Pour tous les autres fichiers, passez `$binary=true`.
 
 Vous pouvez modifier le timeout, qui est par défaut de 120 secondes, en passant une valeur au paramètre `$timeout`.
 
-## Exemple de téléchargement d'image
-Pour télécharger une image, vous devez d'abord sélectionner l'objet fichier sur le client à l'aide de l'API intégré HTML 5 pour utiliser le fichier à partir d'une application Web. 4D utilise l'attribut de type MIME de l'objet fichier afin de le gérer correctement.
+## Scénario de téléchargement
 
-Téléchargez ensuite l'image sélectionnée sur 4D Server :
+Supposons que vous souhaitiez télécharger une image pour mettre à jour l'attribut image d'une entité.
+
+Pour télécharger une image (ou tout autre fichier binaire), sélectionnez d'abord le fichier dans l'application cliente. Le fichier lui-même doit être transmis dans le **corps** de la requête.
+
+Téléchargez ensuite l'image sélectionnée vers le serveur 4D à l'aide d'une requête telle que :
 
  `POST  /rest/$upload?$rawPict=true`
 
-**Résultat** :
+Par conséquent, le serveur retourne un ID qui identifie le fichier :
+
+**Réponse** :
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
- Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant[`$method=update`]($method.md#methodupdate) pour ajouter l'image à une entité :</p> 
+Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant [`$method=update`]($method.md#methodupdate) pour ajouter l'image à une entité. La requête est la suivante :
 
-`POST  /rest/Employee/?$method=update`
+ `POST  /rest/Employee/?$method=update`
 
 **Données POST** :
 
-
-
-````
+```
 {
     __KEY: "12",
     __STAMP: 4,
     photo: { "ID": "D507BC03E613487E9B4C2F6A0512FE50" } 
 }
-````
-
+```
 
 **Réponse** :
 
 L'entité modifiée est retournée :
 
-
-
-````
+```
 {
     "__KEY": "12", 
     "__STAMP": 5, 
@@ -61,5 +62,46 @@ L'entité modifiée est retournée :
             "image": true
         }
     },}
-````
- 
+```
+
+## Exemple avec un client 4D HTTP
+
+L'exemple suivant montre comment télécharger un fichier *.pdf* vers le serveur à l'aide du client 4D HTTP.
+
+```4d
+var $params : Text
+var $response : Object
+var $result : Integer
+var $blob : Blob
+
+
+ARRAY TEXT($headerNames; 1)
+ARRAY TEXT($headerValues; 1)
+
+$url:="localhost:80/rest/$upload?$binary=true" //préparer une requête the REST
+
+$headerNames{1}:="Content-Type"
+$headerValues{1}:="application/octet-stream"
+
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Charger le binaire 
+
+ //Execute the first POST request to upload the file
+$result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
+
+If ($result=200) 
+    var $data : Object
+    $data:=New object
+    $data.__KEY:="3"
+    $data.__STAMP:="3"
+    $data.pdf:=New object("ID"; String($response.ID)) 
+
+    $url:="localhost:80/rest/Invoices?$method=update" //seconde requête pour mettre à jour l'entité
+
+    $headerNames{1}:="Content-Type"
+    $headerValues{1}:="application/json"
+
+    $result:=HTTP Request(HTTP POST method; $url; $data; $response; $headerNames; $headerValues)
+Else
+    ALERT(String($result)+" Error")
+End if
+```

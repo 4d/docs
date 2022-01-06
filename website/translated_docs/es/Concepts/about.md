@@ -13,7 +13,7 @@ El lenguaje integrado de 4D, que consta de más de 1300 comandos, convierte a 4D
 - Importación y exportación de datos entre las aplicaciones 4D y otras aplicaciones,
 - Incorporar al lenguaje de programación 4D procedimientos escritos en otros lenguajes.
 
-La flexibilidad y el poder del lenguaje de programación 4D lo convierten en la herramienta ideal para todos los niveles de usuarios y desarrolladores para realizar una completa gama de tareas de gestión de la información. Los usuarios principiantes pueden realizar rápidamente los cálculos. Los usuarios experimentados sin experiencia en programación pueden personalizar sus aplicaciones. Los desarrolladores experimentados pueden utilizar este poderoso lenguaje de programación para añadir sofisticadas funciones y capacidades a sus aplicaciones, como la transferencia de archivos, las comunicaciones y la supervisión. Los desarrolladores con experiencia en programación en otros lenguajes pueden añadir sus propios comandos al lenguaje 4D.
+La flexibilidad y el poder del lenguaje de programación 4D lo convierten en la herramienta ideal para todos los niveles de usuarios y desarrolladores para realizar una completa gama de tareas de gestión de la información. Los usuarios principiantes pueden realizar rápidamente los cálculos. Los desarrolladores experimentados pueden utilizar este poderoso lenguaje de programación para añadir sofisticadas funciones y capacidades a sus aplicaciones, como la transferencia de archivos, las comunicaciones y la supervisión. Los desarrolladores con experiencia en programación en otros lenguajes pueden añadir sus propios comandos al lenguaje 4D. Los usuarios experimentados sin experiencia en programación pueden personalizar sus aplicaciones.
 
 
 ## ¿Qué es un lenguaje?
@@ -26,7 +26,7 @@ No es necesario conocer todo el lenguaje para trabajar eficazmente con 4D. Para 
 
 Al principio puede parecer que no es necesario un lenguaje de programación en 4D. En el entorno Diseño, 4D ofrece herramientas flexibles que no requieren programación para realizar una gran variedad de tareas de gestión de datos. Las operaciones fundamentales, como la entrada de datos, las búsquedas, la clasificación y los informes, se realizan con facilidad. De hecho, hay muchas funciones adicionales disponibles, como la validación de datos, las ayudas para la introducción de datos, los gráficos y la generación de etiquetas.
 
-Entonces, ¿por qué necesitamos un lenguaje 4D? Estos son algunos de sus usos:
+Entonces, ¿por qué necesitamos un lenguaje 4D? Estos son algunos de sus usos: Estos son algunos de sus usos:
 
 - Automatizar las tareas repetitivas: por ejemplo, la modificación de datos, la generación de informes complejos y la realización desatendida de largas series de operaciones.
 - Controla la interfaz de usuario: puede gestionar las ventanas y los menús, y controlar los formularios y los objetos de la interfaz.
@@ -41,7 +41,7 @@ El lenguaje le permite tener un control total sobre el diseño y el funcionamien
 
 El lenguaje 4D le permite tomar el control total de sus datos de una manera poderosa y elegante. El lenguaje es lo suficientemente fácil para un principiante y lo suficientemente sofisticado para un desarrollador de aplicaciones experimentado. Ofrece transiciones suaves desde las funciones de la base de datos integrada hasta una aplicación completamente personalizada.
 
-Los comandos del lenguaje 4D permiten acceder a los editores estándar de gestión de registros. Por ejemplo, cuando se utiliza el comando `QUERY`, se presenta el Editor de búsquedas (al que se puede acceder en el modo Diseño utilizando el comando Query del menú Registros. Puede indicar al comando que busque los datos descritos explícitamente. Por ejemplo, `QUERY([People];[People]Last Name="Smith")` encontrará todas las personas de apellido Smith en su base.
+Los comandos del lenguaje 4D permiten acceder a los editores estándar de gestión de registros. Puede indicar al comando que busque los datos descritos explícitamente. Por ejemplo, cuando se utiliza el comando `QUERY`, se presenta el Editor de búsquedas (al que se puede acceder en el modo Diseño utilizando el comando Query del menú Registros. Por ejemplo, `QUERY([People];[People]Last Name="Smith")` encontrará todas las personas de apellido Smith en su base.
 
 El lenguaje 4D es muy poderoso: un solo comando sustituye a menudo cientos o incluso miles de líneas de código escritas en los lenguajes informáticos tradicionales. Sorprendentemente, este poder viene acompañado de la simplicidad: los comandos tienen nombres en inglés. Por ejemplo, para realizar una búsqueda, se utiliza el comando `QUERY`; para añadir un nuevo registro, se utiliza el comando `ADD RECORD`.
 

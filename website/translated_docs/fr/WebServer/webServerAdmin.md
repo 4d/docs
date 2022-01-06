@@ -19,11 +19,11 @@ Il y a plusieurs manières de démarrer le serveur Web principal :
     *   4D: **Exécution > démarrer le serveur Web**<br>![](assets/en/WebServer/start1.png)
     *   4D Server : depuis la page du serveur HTTP, cliquez sur **Démarrer le serveur HTTP**<br>![](assets/en/WebServer/start2.png)
 
-*   automatiquement à l'ouverture de l'application 4D. en cochant l'option **Lancer le serveur Web au démarrage** dans **Propriétés** &#062 **Web** &#062 **Configuration** <br>![](assets/en/WebServer/config.png)
+*   automatiquement à l'ouverture de l'application 4D. en cochant l'option **Lancer le serveur Web au démarrage** dans **Propriétés** &#062 **Web** &#062 **Configuration**<br>![](assets/en/WebServer/config.png)
 
-*   Par programmation, en appelant la fonction [`webServer.start()`](API/webServerClass.md#start) ou la commande `WEB START SERVER`.
+*   Par programmation, en appelant la fonction [`webServer.start()`](API/WebServerClass.md#start) ou la commande `WEB START SERVER`.
 
-Le serveur Web de n'importe quel composant peut être lancé en appelant la fonction [`webServer.start()`](API/webServerClass.md#start) sur l'objet serveur Web du composant.
+Le serveur Web de n'importe quel composant peut être lancé en appelant la fonction [`webServer.start()`](API/WebServerClass.md#start) sur l'objet serveur Web du composant.
 > Il n'est pas nécessaire de relancer l'application 4D pour démarrer ou arrêter le serveur Web.
 
 ## Arrêter le Serveur Web 4D
@@ -32,7 +32,7 @@ Il y a plusieurs manières d'arrêter le serveur Web principal :
 
 *   Via le menu 4D, **Exécution > Arrêter le serveur Web**, ou via le bouton **Arrêter le serveur HTTP** de 4D Server (les deux items affichent **Démarrer...** quand le serveur n'est pas encore démarré).
 
-*   Par programmation, en appelant la fonction [`webServer.stop()`](API/webServerClass.md#stop) ou la commande `WEB STOP SERVER`.
+*   Par programmation, en appelant la fonction [`webServer.stop()`](API/WebServerClass.md#stop) ou la commande `WEB STOP SERVER`.
 
 Le serveur Web de n'importe quel composant peut être arrêté en appelant la fonction ``webServer.stop() sur l'objet serveur Web du composant.
 
@@ -95,7 +95,7 @@ L'URL **/4DSTATS** renvoie plusieurs éléments d'information dans un tableau HT
 | Cached Objects         | Nombre d'objects trouvés dans le cache, **images incluses** |
 
 Ces informations peuvent vous permettre de vérifier le fonctionnement de votre serveur et éventuellement d'adapter les paramètres correspondants.
-> La commande `WEB LIRE STATISTIQUES ` permet également d'obtenir des informations sur la façon dont le cache est utilisé pour les pages statiques.
+> La commande `WEB LIRE STATISTIQUES` permet également d'obtenir des informations sur la façon dont le cache est utilisé pour les pages statiques.
 
 ### /4DHTMLSTATS
 
@@ -202,7 +202,7 @@ Comme la taille d'un *logweb.txt* fichier évoluer considérablement, il est pos
 
 Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d'historique est archivé dans un dossier nommé "Archives Logweb", qui est créé au même niveau que le fichier *logweb.txt*.
 
-Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un dossier archivé le 4 septembre 2020 à 15 h 50 et 7 secondes : “D2020_09_04_T15_50_07.txt.”
+Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un dossier archivé le 4 septembre 2020 à 15 h 50 et 7 secondes : “D2020_09_04_T15_50_07.txt.” et 7 secondes : “D2020_09_04_T15_50_07.txt.”
 
 #### Paramètres de backup
 

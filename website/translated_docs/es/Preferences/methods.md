@@ -11,12 +11,12 @@ This page allows selecting, creating, or configuring Method editor themes. A the
 
 ![](assets/en/Preferences/themes.png)
 
-### Theme list
+### Lista de temas
 
 In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
 
-*   **Default Light Theme**
-*   **Default Dark Theme**
+*   **Tema Light por defecto**
+*   **Tema oscuro por defecto**
 
 > Default themes cannot be modified or deleted.
 
@@ -26,7 +26,7 @@ A **myTheme** theme is automatically added if you already customized method edit
 
 You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
 
-### Custom theme files
+### Archivos de temas personalizados
 
 Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
 
@@ -34,7 +34,7 @@ If key values are not defined in a custom theme, they default to the values from
 
 > When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
 
-## Theme definition
+## Definir el tema
 
 Defining a theme means:
 
@@ -43,7 +43,7 @@ Defining a theme means:
 
 Combining different colors and styles is particularly useful for code maintenance purposes.
 
-### Font and Font size
+### Fuentes y tamaños de fuente
 
 The **font** and **font size** menus allows you to select the font name and size used in the Method editor entry area for all categories.
 
@@ -61,7 +61,7 @@ These options configure the various colors used in the Method editor and debugge
 
 |                                                   | Descripción                                                                                                                                                              |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Background color**                              | Background color of Method editor window.                                                                                                                                |
+| **Color de fondo**                                | Background color of Method editor window.                                                                                                                                |
 | **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
 | **Cursor line background color**                  | Background color of line containing the cursor.                                                                                                                          |
 | **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
@@ -70,7 +70,7 @@ These options configure the various colors used in the Method editor and debugge
 | **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Selection back color**                          | Background color of selection.                                                                                                                                           |
+| **Color de fondo de la selección**                | Background color of selection.                                                                                                                                           |
 | **Suggested text**                                | Color of autocomplete text suggested by the Method editor.                                                                                                               |
 
 
@@ -95,7 +95,7 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 > If you modify this option, you need to restart the 4D application so that the change is taken into account.
 
-#### Indentation
+#### Indentación
 
 Changes the indentation value for the 4D code in the Method editor. The width must be specified in points (10 by default).
 
@@ -173,13 +173,13 @@ Highlights the line that is currenty running in the debugger in addition to the 
 
 If you deselect this option, only the yellow arrow is shown.
 
-### Suggestions
+### Sugerencias
 
 This area lets you configure autocomplete mechanisms in the Method editor to adapt it to your own work habits.
 
 |                                 | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Automatic opening of window for | Triggers the automatic display of the suggestion window for:<p> <ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tablas</li><li>Prototypes (*i.e.*, class functions)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validation of a suggestion for  | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
+| Validation of a suggestion for  | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. Esto se puede utilizar más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de los elementos, como ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
 	
 

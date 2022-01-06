@@ -26,10 +26,10 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Parámetros | Tipo            |    | Descripción  |
-| ---------- | --------------- |:--:| ------------ |
-| blob       | Blob or 4D.Blob | -> | Blob to copy |
-| Resultado  | 4D.Blob         | <- | New 4D.Blob  |
+| Parámetros | Tipo           |    | Descripción   |
+| ---------- | -------------- |:--:| ------------- |
+| blob       | Blob o 4D.Blob | -> | Blob a copiar |
+| Resultado  | 4D.Blob        | <- | Nuevo 4D.Blob |
 <!-- END REF -->
 
 #### Descripción
@@ -85,12 +85,6 @@ $is4DBlob:=OB Instance of($myBlob; 4D.Blob);   //True
 
 $myString:=Convert to text($myBlob; "UTF-8")
 // $myString contains "Hello, World!"
-
-// Create a new 4D.Blob from $myBlob
-$myNewBlob:=$myBlob.slice(0; 5)
-
-$myString:=Convert to text($myNewBlob; "UTF-8")
-// $myString contains "Hello"
 
 // Create a new 4D.Blob from $myBlob
 $myNewBlob:=$myBlob.slice(0; 5)

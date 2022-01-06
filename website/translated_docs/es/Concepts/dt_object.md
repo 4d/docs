@@ -95,7 +95,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
 
 
 ```4d
-     $measures:=Get database measures.DB.tables
+     $measures:=Get database measures. DB.tables
 ```
 
 - **Métodos proyecto** que devuelven objetos. Ejemplo:
@@ -198,7 +198,7 @@ La evaluación de una propiedad de un objeto puede producir a veces un valor ind
  - Booleano: False
  - Cadena: ""
  - Número: 0
- - Fecha: !00-00-00! si la opción "Utilizar el tipo fecha en lugar del formato fecha ISO en los objetos" está activada, de lo contrario ""
+ - Fecha: !00-00-00! Fecha: !00-00-00! si la opción "Utilizar el tipo fecha en lugar del formato fecha ISO en los objetos" está activada, de lo contrario ""
  - Hora: 0 (número de ms)
  - Indefinido, Null: sin cambios
 

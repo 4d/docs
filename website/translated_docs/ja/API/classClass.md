@@ -1,6 +1,6 @@
 ---
-id: classClass
-title: Class
+id: ClassClass
+title: クラス
 ---
 
 
@@ -13,13 +13,13 @@ title: Class
 
 |                                                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #classClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.name.Summary -->|
-| [<!-- INCLUDE #classClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.new().Summary --> |
-| [<!-- INCLUDE #classClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #classClass.superclass.Summary --> |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
 
 
 
-<!-- REF classClass.name.Desc -->
+<!-- REF ClassClass.name.Desc -->
 ## .name
 
 <details><summary>履歴</summary>
@@ -29,12 +29,12 @@ title: Class
 
 </details>
 
-<!-- REF #classClass.name.Syntax -->
+<!-- REF #ClassClass.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
 #### 説明
 
-`.name` プロパティは、 <!-- REF #classClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。
+`.name` プロパティは、 <!-- REF #ClassClass.name.Summary -->`4D.Class` オブジェクトの名称を格納します<!-- END REF -->。 クラス名の大文字・小文字は区別されます。
 
 このプロパティは **読み取り専用** です。 
 
@@ -42,7 +42,7 @@ title: Class
 
 
 
-<!-- REF classClass.new().Desc -->
+<!-- REF ClassClass.new().Desc -->
 ## .new()
 
 <details><summary>履歴</summary>
@@ -51,10 +51,10 @@ title: Class
 | v18 R3 | 追加 |
 </details>
 
-<!-- REF #classClass.new().Syntax -->
+<!-- REF #ClassClass.new().Syntax -->
 **.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
-<!-- REF #classClass.new().Params -->
+<!-- REF #ClassClass.new().Params -->
 | 引数    | タイプ      |    | 説明              |
 | ----- | -------- |:--:| --------------- |
 | param | any      | -> | コンストラクター関数に渡す引数 |
@@ -64,7 +64,7 @@ title: Class
 
 #### 説明
 
-`.new()` 関数は、 <!-- REF #classClass.new().Summary -->対象クラスの新規インスタンスである `cs.className` オブジェクトを作成して返します<!-- END REF -->。 この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。
+`.new()` 関数は、 <!-- REF #ClassClass.new().Summary -->対象クラスの新規インスタンスである `cs.className` オブジェクトを作成して返します<!-- END REF -->。 この関数は、[`cs` クラスストア](Concepts/classes.md#cs) に属する全クラスで自動的に利用可能です。
 
 任意の *param* パラメーターに渡した引数は、当該クラス定義内の [Class Constructor](Concepts/classes.md#class-constructor) 関数 (あれば) が受け取ります。 コンストラクター関数においては、[`This`](Concepts/classes.md#this) は新規に作成されるオブジェクトを指します。
 
@@ -104,7 +104,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 
 
-<!-- REF classClass.superclass.Desc -->
+<!-- REF ClassClass.superclass.Desc -->
 ## .superclass
 
 <details><summary>履歴</summary>
@@ -114,12 +114,12 @@ $person:=cs.Person.new("John";"Doe";40)
 
 </details>
 
-<!-- REF #classClass.superclass.Syntax -->
+<!-- REF #ClassClass.superclass.Syntax -->
 **.superclass** : 4D.Class<!-- END REF -->
 
 #### 説明
 
-`.superclass` プロパティは、 <!-- REF #classClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
+`.superclass` プロパティは、 <!-- REF #ClassClass.superclass.Summary -->対象クラスの親クラスを返します<!-- END REF -->。 スーパークラスは、`4D.Class` オブジェクト、あるいは `cs.className` オブジェクトのいずれかです。 親クラスが存在しない場合は、このプロパティは **null** を返します。
 
 ユーザークラスのスーパークラスは、[`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) キーワードを使ってクラス内で定義されます。
 

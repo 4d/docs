@@ -1,24 +1,24 @@
 ---
 id: basics
-title: Basics
+title: Básicos
 ---
 
-Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+Los errores son comunes. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
 
 The 4D development environment provides several debugging tools for all types of errors.
 
-## Error types
+## Tipos de error
 
-### Typing errors
+### Errores de digitación
 
-Typing errors are detected by the Method editor. They are displayed in red and additional information is provided at the bottom of the window. Here's a typing error:
+Typing errors are detected by the Method editor. They are displayed in red and additional information is provided at the bottom of the window. He aquí un error de escritura:
 
-![break-point](assets/en/Debugging/typing-error.png)
+![punto de ruptura](assets/en/Debugging/typing-error.png)
 
 
 Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
 
-### Syntax Errors
+### Errores de sintaxis
 
 Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. Por ejemplo:
 
@@ -26,11 +26,11 @@ Some errors can be caught only when you execute the method. The [Syntax Error Wi
 
 Expand the **Details** area to display the last error and its number.
 
-### Environmental Errors
+### Errores del entorno
 
 Occasionally, there may not be enough memory to create a BLOB. Or, when you access a document on disk, the document may not exist or may already be opened by another application. These environmental errors do not directly occur because of your code or the way you wrote it. Most of the time, these errors are easy to treat with an [error catching method](Concepts/error-handling.md) installed using the `ON ERR CALL` command.
 
-### Design or Logic Errors
+### Errores de diseño o de lógica
 
 These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. Por ejemplo:
 
@@ -46,15 +46,15 @@ Sometimes the piece of code that displays the error may be different than the co
 
 ### Runtime Errors
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
+In Application mode, you might obtain errors that you don't see in interpreted mode. Aquí un ejemplo:
 
 ![runtime-error](assets/en/Debugging/runtimeError.png)
 
 To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
 
-## Syntax Error Window
+## Ventana de error de sintaxis
 
-The Syntax error window automatically appears when the execution of a method is interrupted. This can happen when:
+The Syntax error window automatically appears when the execution of a method is interrupted. Esto puede ocurrir cuando:
 
 - an error prevents further code execution
 - the method produces a false assertion (see the `ASSERT` command)
@@ -84,13 +84,13 @@ The syntax error window proposes several options:
 
 ## Depurador
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Method Editor, and try to figure out what's going by looking at the code. Do not do that! You will save plenty of time and energy by always using the **Debugger**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Method Editor, and try to figure out what's going by looking at the code. ¡No lo haga! You will save plenty of time and energy by always using the **Debugger**.
 
 The Debugger allows you to step through methods slowly. It displays all the information you need in order to understand why an error occurred. Once you have this information, you know how to fix the error.
 
 Another reason to use the Debugger is for developing code. Sometimes you may write an algorithm that is more complex than usual. Despite all feelings of accomplishment, you can't be totally sure that your coding is 100% correct. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
 
-## Breaks
+## Rupturas
 
 In the debugging process, you may need to skip the tracing of some parts of the code until a certain line. Or, you may want to trace the code when a given expression has a certain value (e.g. "$myVar > 1000"), or every time a specific 4D command is called.
 

@@ -25,7 +25,7 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 
@@ -48,7 +48,7 @@ Cette propriété est en **lecture seule**.
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 </details>
 
 <!-- REF #ClassClass.new().Syntax -->
@@ -57,7 +57,7 @@ Cette propriété est en **lecture seule**.
 <!-- REF #ClassClass.new().Params -->
 | Paramètres | Type     |    | Description                                      |
 | ---------- | -------- |:--:| ------------------------------------------------ |
-| param      | any      | -> | Parameter(s) to pass to the constructor function |
+| param      | any      | -> | Paramètre(s) à passer à la fonction constructeur |
 | Résultat   | 4D.Class | <- | Nouvel objet de la classe                        |
 <!-- END REF -->
 
@@ -66,9 +66,9 @@ Cette propriété est en **lecture seule**.
 
 La fonction `.new()` <!-- REF #ClassClass.new().Summary -->crée et retourne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé<!-- END REF -->. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
 
-You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
+Vous pouvez passer un ou plusieurs paramètre(s) optionnel(s) *param*, qui seront passés à la fonction [class constructor](Concepts/classes.md#class-constructor) (le cas échéant) dans la définition de la classe className. A l'intérieur de la fonction constructor, [`This`](Concepts/classes.md#this) est lié au nouvel objet en cours de construction.
 
-If `.new()` is called on a non-existing class, an error is returned.
+Si `.new()` si appelé sur une classe qui n'existe pas, une erreur est retournée.
 
 #### Exemples
 
@@ -76,11 +76,11 @@ Pour créer une nouvelle instance de la classe Person :
 
 ```4d
 var $person : cs.Person  
-$person:=cs.Person.new() //create the new instance  
-//$person contains functions of the class
+$person:=cs.Person.new() //créer la nouvelle instance  
+//$person contient les fonctions de la classe
 ```
 
-To create a new instance of the Person class with parameters:
+Pour créer une nouvelle instance de la classe Person avec des paramètres :
 
 ```4d
 //Class: Person.4dm
@@ -91,7 +91,7 @@ Class constructor($firstname : Text; $lastname : Text; $age : Integer)
 ```
 
 ```4d
-//In a method
+//Dans une méthode
 var $person : cs.Person  
 $person:=cs.Person.new("John";"Doe";40)  
 //$person.firstName = "John"
@@ -110,7 +110,7 @@ $person:=cs.Person.new("John";"Doe";40)
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajoutées      |
+| v18 R3  | Ajout         |
 
 </details>
 

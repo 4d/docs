@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Class API Overview
+title: Generalidades - API de clases
 ---
 
 This section describes the built-in 4D class API as well as the associated constructor commands. 4D class functions and properties are available through class instance objects.
@@ -17,7 +17,7 @@ The following conventions are used in the function syntax:
 - the `{ ; ...param }` notation indicates an unlimited number of parameters. For example, `.concat( value : any { ;...valueN } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
 - the `any` keyword is used for parameters that can be of any type that can be stored within attributes (number, text, boolean, date, time, object, collection...).
 
-## Other resources
+## Otros recursos
 
 For an overall presentation of the 4D Language basics and concepts, please go to the [4D Language Concepts](Concepts/about.md) section.
 

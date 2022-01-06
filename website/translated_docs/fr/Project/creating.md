@@ -18,7 +18,7 @@ Pour créer un nouveau projet :
 2. Sélectionnez **Nouveau> Projet...** depuis le menu **Fichier** : <p>![](assets/en/getStart/projectCreate1.png)<p>OU<p>(4D uniquement) Sélectionnez **Projet...** depuis le bouton de la barre d'outils **Nouveau** :<p>![](assets/en/getStart/projectCreate2.png)<p>Un dialogue standard **Sauvegarde** apparaît, de façon à ce que vous choisissiez le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**.<p> Ce nom sera utilisé :
-    - comme le nom du dossier du projet,
+    - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
     - comme nom du fichier .4DProject au premier niveau du dossier "Project".
 
     Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. Toutefois, si votre projet est destiné à fonctionner sur d'autres systèmes ou à être enregistré via un outil de gestion de version, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
@@ -26,7 +26,6 @@ Pour créer un nouveau projet :
 Lorsque vous validez la boîte de dialogue **Enregistrer**, 4D ferme le projet en cours (le cas échéant), crée un dossier de projet à l'emplacement indiqué et y place tous les fichiers nécessaires au projet. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
 
 Vous pouvez alors commencer à développer votre projet.
-
 
 ## Opening a project
 
@@ -36,33 +35,65 @@ To open an existing project from 4D:
 
 2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
-    - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
     - *Fichiers de raccourcis* : extension `.4dlink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
+    - *Fichiers de raccourcis* : extension `.4DLink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
     - *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D hérités
 
 ### Options
 
 En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D propose deux menus avec des options spécifiques disponibles à l'aide du bouton **Ouvrir** et du menu **Fichier de données**.
 
-- **Ouvrir** - mode d'ouverture du projet :
-    - **Interprété** ou **compilé** : ces options sont disponibles lorsque le projet sélectionné contient à la fois du [code interprété et compilé](Concepts/interpreted.md).
-    - **[Centre de Maintenance et de Sécurité](MSC/overview.md)** : Ouverture en mode sécurisé permettant d'accéder aux projets endommagés afin d'effectuer les réparations nécessaires.
+- via les options du menu :
+    - *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
+    - *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
 
 - **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
 
-
-
-
 ## Raccourcis d’ouverture des projets
 
-4D propose deux façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
-
-- via les options du menu :
-    -   *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
-    -   *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
+4D propose plusieurs façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
 
 - via les préférences :
+    -   **Ouvrir** - mode d'ouverture du projet :
     -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
+
+- via les préférences :
+    -   **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
+
+- via un fichier `.4DLink`.
+
+### Ouvrir un projet avec un fichier 4DLink
+
+Vous pouvez utiliser un [fichier `.4DLink`](#about-4DLink-files) pour lancer l'application 4D et ouvrir le projet 4D cible. There are two ways to do this:
+
+- double-cliquez ou faites glisser et déposez le fichier `.4DLink` sur l'application 4D
+- allez dans **Fichier** > **Ouvrir des projets récents** et sélectionnez un projet
+
+![open-recent-projects](assets/en/Project/4Dlinkfiles.png)
+
+Un fichier .4DLink de type "projet distant" peut être copié et utilisé sur plusieurs machines.
+> Il est également possible de sélectionner un fichier 4DLink dans la boîte de dialogue d'ouverture de 4D et 4D Server (ouverture de projet local uniquement).
+
+## À propos des fichiers 4DLink
+
+Les fichiers portant l'extension `.4DLink` sont des fichiers XML qui contiennent des paramètres destinés à automatiser et à simplifier l'ouverture de projets 4D locaux ou distants.
+
+Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que ses identifiants de connexion et son mode d'ouverture, afin de vous faire gagner du temps lors de l'ouverture des projets.
+
+4D génère automatiquement un fichier `.4DLink` lorsqu'un projet local est ouvert pour la première fois ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
+
+- Windows 7 et versions plus récentes : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- OS X : Users/UserName/Library/Application Support/4D/Favorites vXX/
+
+XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
+
+Ce dossier est composé de deux sous-dossiers :
+- le dossier **Local** contient les fichiers `.4DLink` qui peuvent être utilisés pour ouvrir des projets locaux
+- le dossier **Remote** contient les fichiers `.4DLink` des projets distants récents
+
+Les fichiers `.4DLink` peuvent également être créés avec un éditeur XML.
+
+4D fournit un DTD décrivant les clés XML qui peuvent être utilisées pour créer un fichier `.4DLink`. Ce DTD est nommé database_link.dtd et se trouve dans le sous-dossier \Resources\DTD\ de l'application 4D.
 
 
 ## Enregistrement des fichiers
@@ -74,7 +105,9 @@ Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuven
 Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:![](assets/en/Project/projectReload.png)
+- si un fichier ouvert est édité simultanément à partir de différents emplacements, 4D affichera une boîte de dialogue d'alerte lorsque vous tenterez d'enregistrer les modifications :
+
+![](assets/en/Project/projectReload.png)
     - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
     - **Non** : enregistrer les modifications et écraser l'autre version
     - **Annuler** : ne pas enregistrer

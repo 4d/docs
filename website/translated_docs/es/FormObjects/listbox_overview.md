@@ -56,7 +56,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
 ### Managing list boxes
@@ -309,7 +309,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ## Encabezados de list box
 
-> Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
+> Para poder acceder a las propiedades de los pies de un list box, debe activar la opción [Mostrar pies](properties_Footers.md#display-footers).
 
 Cuando se muestran los encabezados, puede seleccionar un encabezado en el editor de formularios haciendo clic en él cuando el objeto List box esté seleccionado:
 
@@ -335,7 +335,7 @@ When the `OBJECT SET VISIBLE` command is used with a header, it is applied to al
 
 
 ## Pies de list box
-> Para poder acceder a las propiedades de los pies de un list box, debe activar la opción [Mostrar pies](properties_Footers.md#display-footers).
+> Para poder acceder a las propiedades de los encabezados de un list box, debe activar la opción [Mostrar encabezados](properties_Headers.md#display-headers) del list box.
 
 Los List box pueden contener "pies de página" no editables, que muestren información adicional. En el caso de los datos mostrados en forma de tabla, los pies de página suelen utilizarse para mostrar cálculos como los totales o los promedios.
 
@@ -527,24 +527,24 @@ By default, a list box automatically handles standard column sorts when the head
 
 You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
 
-The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
+The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command) and relevant 4D commands.
 
-> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
+> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command does not take this property into account.
 
 The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
 
-- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
+- If the variable is set to 0, the column is not sorted and the sort arrow is not displayed.  
   ![](assets/en/FormObjects/sorticon0.png)
 
-- If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
-  ![](assets/en/FormObjects/sorticon1.png)
+- Si la variable está definida como 1, la columna se organiza en orden ascendente y se muestra la flecha de ordenación. ![](assets/en/FormObjects/sorticon1.png)
 
-- If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
-  ![](assets/en/FormObjects/sorticon2.png)
+- Si la variable está definida en 2, la columna se organiza en orden descendente y se muestra la flecha de clasificación. ![](assets/en/FormObjects/sorticon2.png)
 
-You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
 
-> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+
+> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 
 ## Managing row colors, styles, and display
@@ -713,14 +713,14 @@ Cuando se incluyen valores del tipo fecha u hora en un list box jerárquico, se 
 
 #### Ordenación en list box jerárquicos
 
-En un list box en modo jerárquico, una ordenación estándar (realizada haciendo clic en el encabezado de una columna del list box) se construye siempre así:
+Cuando se incluyen valores del tipo fecha u hora en un list box jerárquico, se muestran en el formato del sistema corto.
 
 - En primer lugar, todos los niveles de la columna jerárquica (primera columna) se clasifican automáticamente por orden ascendente.
 - La ordenación se realiza por orden ascendente o descendente (según la acción del usuario) sobre los valores de la columna en la que se ha hecho clic.
 - Todas las columnas son sincronizadas.
 - En las siguientes ordenaciones realizadas en columnas no jerárquicas del list box, sólo se ordena el último nivel de la primera columna. Es posible modificar la ordenación de esta columna haciendo clic en su encabezado.
 
-Dado, por ejemplo, el siguiente list box, en el que no se especifica ninguna ordenación concreta:
+En un list box en modo jerárquico, una ordenación estándar (realizada haciendo clic en el encabezado de una columna del list box) se construye siempre así:
 
 ![](assets/en/FormObjects/hierarch3.png)
 
@@ -753,13 +753,13 @@ Este principio se aplica a los arrays internos que se pueden utilizar para gesti
 - líneas ocultas
 - selecciones
 
-Por ejemplo, si quiere seleccionar la línea que contiene Rennes, debe pasar:
+Este principio se aplica a los arrays internos que se pueden utilizar para gestionar:
 
 ```4d
  ->MyListbox{3}:=True
 ```
 
-Representación no jerárquica: <img src="assets/es/FormObjects/hierarch7.png" alt=" /> Representación jerárquica: ![](assets/en/FormObjects/hierarch8.png)
+Por ejemplo, si quiere seleccionar la línea que contiene Rennes, debe pasar: ![](assets/en/FormObjects/hierarch8.png)
 
 > Si una o más líneas están ocultas porque sus padres están contraídos, ya no se seleccionan. Sólo se pueden seleccionar las líneas visibles (directamente o por desplazamiento). En otras palabras, las líneas no pueden estar ocultas y seleccionadas a la vez.
 
@@ -844,6 +844,7 @@ ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob) //first element
  OB SET($ob;"valueType";"text") //defines the value type (mandatory)
  OB SET($ob;"value";"Hello World!") //define el valor
+ APPEND TO ARRAY(obColumn;$ob) //define el valor
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -921,6 +922,9 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 Cell values are stored in the "value" attribute. This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
+ ARRAY OBJECT(obColumn;0) //array columna 
+ C_OBJECT($ob1)
+ $entry:="Hello world!"
  ARRAY OBJECT(obColumn;0) //array columna 
  C_OBJECT($ob1)
  $entry:="Hello world!"
@@ -1070,7 +1074,7 @@ Utilice "choiceListName" o "choiceListReference" en función del origen de la li
 
 Ejemplo:
 
-Desea mostrar un combo box basado en una lista "colors" definida en la caja de herramientas (que contiene los valores "azul", "amarillo" y "verde") y mostrar "verde" por defecto:
+Ejemplo:
 
 ![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
@@ -1096,7 +1100,7 @@ Independientemente de la forma en que se defina la lista de unidades, puede asoc
 
 *   "unitReference": un único valor que contiene el índice (de 1 a x) del elemento seleccionado en la lista de valores "unitList", "unitsListReference" o "unitsListName".
 
-La unidad actual se muestra como un botón que recorre los valores "unitList", "unitsListReference" o "unitsListName" cada vez que se presiona (por ejemplo, "pixels" -> "líneas" -> "cm" -> "pixels" -> etc.)
+Independientemente de la forma en que se defina la lista de unidades, puede asociarse con el siguiente atributo:
 
 Ejemplo:
 
@@ -1124,6 +1128,8 @@ Cuando este botón es presionado por un usuario, se generará un evento `On Alte
 Ejemplo:
 
 ```4d
+C_OBJECT($ob1)
+$entry:="Hello world!"
 C_OBJECT($ob1)
 $entry:="Hello world!"
 OB SET($ob;"valueType";"text")

@@ -3,12 +3,12 @@ id: depurador
 title: Depurador
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".
+The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
-![debugger-window-local](assets/en/Debugging/debugger-Window-local.png)
+![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
 
 
-## Calling the Debugger
+## Llamada al depurador
 
 There are multiple ways to get the Debugger to display:
 
@@ -37,7 +37,7 @@ The Debugger window is usually displayed on the machine where the code is execut
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
 
-## Tool bar Buttons
+## Botones barra de herramientas
 
 The debugger's tool bar includes several buttons, associated with default shortcuts:
 
@@ -45,7 +45,7 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 > Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
 
-#### No Trace
+#### Fin del rastreo
 
 Tracing stops and normal method execution resumes.
 
@@ -67,7 +67,7 @@ The new method becomes the current (top) method in the [Call Chain Pane](#call-c
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### Abort
+#### Abortar
 
 Stops method execution, and returns to the state before the method started executing:
 * When tracing a form or object method executing in response to an event: Stops and returns to the form.
@@ -87,7 +87,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 > **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
 
-#### Save Settings
+#### Parámetros Guardar
 
 Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
 * the size and position of the window
@@ -135,7 +135,7 @@ $c:=a+b
     | -- | ---------- |
     |    |            |
 
-    The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
 
@@ -143,7 +143,7 @@ $c:=a+b
     | -- | ---------- |
     | $b | Indefinido |
 
-    The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
 
@@ -152,16 +152,16 @@ $c:=a+b
     | $a | 1          |
     | $b | 2          |
 
-    The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 #### Variables
 
 This theme is composed of the following subthemes:
 
-| Subtheme     | Descripción                                                  | ¿Se pueden modificar los valores? |
+| Subtema      | Descripción                                                  | ¿Se pueden modificar los valores? |
 | ------------ | ------------------------------------------------------------ | --------------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Sí                                |
-| Process      | List of process variables used by the current process        | Sí                                |
+| Interproceso | List of interprocess variables being used at this point      | Sí                                |
+| Proceso      | List of process variables used by the current process        | Sí                                |
 | Local        | List of local variables used by the method being traced      | Sí                                |
 | Parámetros   | List of parameters received by the method                    | Sí                                |
 | Self         | Pointer to the current object, when tracing an Object Method | No                                |
@@ -172,11 +172,11 @@ To display the variable types and their internal names, right click and check th
 
 ![show-types-menu-item](assets/en/Debugging/showTypes.png)
 
-Here's the result:
+Aquí está el resultado:
 
 ![dynamic-variable-names](assets/en/Debugging/dynamicVariableNames.png)
 
-#### Current Form Values
+#### Valores actuales del formulario
 
 This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
 
@@ -188,15 +188,15 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 
-#### Semaphores
+#### Semáforos
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. Global semaphores are not displayed.
 
 #### Procesos
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
-#### Tables and Fields
+#### Tablas y campos
 
 This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
@@ -249,14 +249,14 @@ A method may call other methods or class functions, which may call other methods
 
 Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
 
-In the image above:
+En la imagen de arriba:
 
 * `thirdMethod` has not received any parameter
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
     * $1 is a pointer to the `[Employee]` table
     * $2 is a pointer to the `ID` field in the  `[Employee]` table
-    * $3 is an alphanumeric parameter whose value is "Z"
+    * $3 es un parámetro alfanumérico cuyo valor es "Z"
 
 You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
@@ -270,15 +270,15 @@ After you deploy the list of parameters, you can drag and drop parameters and fu
 
 You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
 
-## Custom Watch Pane
+## Panel de vigilancia personalizado
 
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
-* field
+* campo
 * variable
 * puntero
-* calculation
-* 4D command
+* cálculo
+* Comando 4D
 * method
 * and anything else that returns a value
 
@@ -286,7 +286,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
-### Handling expressions
+### Gestión de expresiones
 
 There are several ways to add expressions to the list:
 
@@ -324,13 +324,13 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 * **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
 
-## Source Code Pane
+## Panel de código fuente
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
 
-### Tool tip
+### Tips
 
 Hover your pointer over any expression to display a tool tip that indicates:
 
@@ -408,7 +408,7 @@ Specific shortcuts allow you to find strings identical to the one selected:
 
 The search is carried out only if you select at least one character in the Source code pane.
 
-## Shortcuts
+## Atajos
 
 This section lists all the shortcuts available in the debugger window.
 
@@ -419,7 +419,7 @@ This section lists all the shortcuts available in the debugger window.
 * **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
 * **Double-Click** in the Custom Watch Pane to create a new expression
 
-#### Source Code Pane
+#### Panel de código fuente
 
 * Click in the left margin to set or remove break points.
 * **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.

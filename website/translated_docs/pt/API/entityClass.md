@@ -6,7 +6,7 @@ title: Entity
 An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
 
 
-### Summary
+### Resumo
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -41,10 +41,10 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 <!-- REF EntityClass.attributeName.Desc -->
 ## .*attributeName*
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF EntityClass.attributeName.Syntax -->
@@ -63,7 +63,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 *   If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. Duplications are removed (an unordered entity selection is returned).
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $myEntity : cs.EmployeeEntity
@@ -81,10 +81,10 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 <!-- REF EntityClass.clone().Desc -->
 ## .clone()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 
@@ -106,7 +106,7 @@ The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memo
 This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity
@@ -126,10 +126,10 @@ This function can only be used with entities already saved in the database. It c
 <!-- REF EntityClass.diff().Desc -->
 ## .diff()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
@@ -330,10 +330,10 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 <!-- REF EntityClass.drop().Desc -->
 ## .drop()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -344,7 +344,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 | Parameter | Type    |    | Description                                                                     |
 | --------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Result    | Object  | <- | Result of drop operation                                                        |
+| Result    | Objeto  | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
 #### Description
@@ -363,7 +363,7 @@ The object returned by `.drop( )` contains the following properties:
 
 | Property      |                     | Type                  | Description                                                                                                           |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| success       |                     | boolean               | true if the drop action is successful, false otherwise.                                                               |
+| success       |                     | booleano              | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
 | status(*)     |                     | number                | Error code, see below                                                                                                 |
 | statusText(*) |                     | text                  | Description of the error, see below                                                                                   |
@@ -438,10 +438,10 @@ Example with `dk force drop if stamp changed` option:
 <!-- REF EntityClass.first().Desc -->
 ## .first()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -460,7 +460,7 @@ The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a refer
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
-#### Example
+#### Exemplo
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -477,10 +477,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF EntityClass.fromObject().Desc -->
 ## .fromObject()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -490,7 +490,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF #EntityClass.fromObject().Params -->
 | Parameter | Type   |    | Description                          |
 | --------- | ------ |:--:| ------------------------------------ |
-| filler    | Object | -> | Object from which to fill the entity |
+| filler    | Objeto | -> | Object from which to fill the entity |
 <!-- END REF -->
 
 #### Description
@@ -510,7 +510,7 @@ The mapping between the object and the entity is done on the attribute names:
 *   *filler* contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
 *   if the related entity does not exist, it is ignored.
 
-#### Example
+#### Exemplo
 
 With the following $o object:
 
@@ -567,10 +567,10 @@ You could also use a related entity given as an object:
 <!-- REF EntityClass.getDataClass().Desc -->
 ## .getDataClass()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17 R5 | Adicionado |
 
 </details>
 
@@ -588,7 +588,7 @@ You could also use a related entity given as an object:
 The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
 
 
-#### Example
+#### Exemplo
 
 The following generic code duplicates any entity:
 
@@ -614,10 +614,10 @@ The following generic code duplicates any entity:
 <!-- REF EntityClass.getKey().Desc -->
 ## .getKey()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -639,7 +639,7 @@ The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the p
 
 Primary keys can be numbers (Integer) or strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -658,10 +658,10 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -680,7 +680,7 @@ The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->r
 
 If the entity does not belong to an entity selection, the function returns Null.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -702,10 +702,10 @@ If the entity does not belong to an entity selection, the function returns Null.
 <!-- REF EntityClass.getStamp().Desc -->
 ## .getStamp()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -726,7 +726,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 > For a new entity (never saved), the function returns 0. To know if an entity has just been created, it is recommended to use [.isNew()](#isnew).
 
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -751,10 +751,10 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 <!-- REF EntityClass.indexOf().Desc -->
 ## .indexOf()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -779,7 +779,7 @@ The resulting value is included between 0 and the length of the entity selection
 *   If the entity does not have an entity selection or does not belong to *entitySelection*, the function returns -1.
 *   If *entitySelection* is Null or does not belong to the same dataclass as the entity, an error is raised.
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -801,10 +801,10 @@ The resulting value is included between 0 and the length of the entity selection
 <!-- REF EntityClass.isNew().Desc -->
 ## .isNew()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -812,9 +812,9 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parameter | Type    |    | Description                                                               |
-| --------- | ------- |:--:| ------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if entity has just been created and not yet saved. Otherwise, False. |
+| Parameter | Type     |    | Description                                                               |
+| --------- | -------- |:--:| ------------------------------------------------------------------------- |
+| Result    | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
 #### Description
@@ -822,7 +822,7 @@ The resulting value is included between 0 and the length of the entity selection
 The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
 
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -842,10 +842,10 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 <!-- REF EntityClass.last().Desc -->
 ## .last()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -865,7 +865,7 @@ The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a referen
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
 
-#### Example
+#### Exemplo
 
 
 ```4d
@@ -883,10 +883,10 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF EntityClass.lock().Desc -->
 ## .lock()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -897,7 +897,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 | Parameter | Type    |    | Description                                                          |
 | --------- | ------- |:--:| -------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Result    | Object  | <- | Result of lock operation                                             |
+| Result    | Objeto  | <- | Result of lock operation                                             |
 <!-- END REF -->
 
 #### Description
@@ -921,9 +921,9 @@ The object returned by `.lock( )` contains the following properties:
 
 | Property         |                     | Type                  | Description                                                                                                         |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean               | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
+| success          |                     | booleano              | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
-| **wasReloaded**  |                     | boolean               | true if the entity was reloaded with success, false otherwise.                                                      |
+| **wasReloaded**  |                     | booleano              | true if the entity was reloaded with success, false otherwise.                                                      |
 |                  |                     |                       | ***Available only in case of error:***                                                                              |
 | status(\*)     |                     | number                | Error code, see below                                                                                               |
 | statusText(\*) |                     | text                  | Description of the error, see below                                                                                 |
@@ -996,10 +996,10 @@ Example with `dk reload if stamp changed` option:
 <!-- REF EntityClass.next().Desc -->
 ## .next()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1021,7 +1021,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 If there is no valid next entity in the entity selection (i.e. you are on the last entity of the selection), the function returns Null. If the next entity has been dropped, the function returns the next valid entity (and eventually Null).
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -1038,10 +1038,10 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 <!-- REF EntityClass.previous().Desc -->
 ## .previous()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1063,7 +1063,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 If there is no valid previous entity in the entity selection (i.e. you are on the first entity of the selection), the function returns Null. If the previous entity has been dropped, the function returns the previous valid entity (and eventually Null).
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -1080,10 +1080,10 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- REF EntityClass.reload().Desc -->
 ## .reload( )
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1093,7 +1093,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- REF #EntityClass.reload().Params -->
 | Parameter | Type   |    | Description   |
 | --------- | ------ |:--:| ------------- |
-| Result    | Object | <- | Status object |
+| Result    | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1104,11 +1104,11 @@ The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the c
 
 The object returned by `.reload( )` contains the following properties:
 
-| Property         | Type    | Description                                                                                                                                           |
-| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          | boolean | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
-| status(\*)     | number  | Error code, see below                                                                                                                                 |
-| statusText(\*) | text    | Description of the error, see below                                                                                                                   |
+| Property         | Type     | Description                                                                                                                                           |
+| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
+| status(\*)     | number   | Error code, see below                                                                                                                                 |
+| statusText(\*) | text     | Description of the error, see below                                                                                                                   |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
@@ -1118,7 +1118,7 @@ The object returned by `.reload( )` contains the following properties:
 | `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br>***Associated statusText***: "Other error"                                                                           |
 
 
-#### Example
+#### Exemplo
 
 ```4d
  var $employee : cs.EmployeeEntity
@@ -1143,10 +1143,10 @@ The object returned by `.reload( )` contains the following properties:
 <!-- REF EntityClass.save().Desc -->
 ## .save()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1157,7 +1157,7 @@ The object returned by `.reload( )` contains the following properties:
 | Parameter | Type    |    | Description                                       |
 | --------- | ------- |:--:| ------------------------------------------------- |
 | mode      | Integer | -> | `dk auto merge`: Enables the automatic merge mode |
-| Result    | Object  | <- | Result of save operation                          |
+| Result    | Objeto  | <- | Result of save operation                          |
 <!-- END REF -->
 
 #### Description
@@ -1179,9 +1179,9 @@ The object returned by `.save()` contains the following properties:
 
 | Property     |                    | Type                  | Description                                                                                                             |
 | ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| success      |                    | boolean               | True if the save action is successful, False otherwise.                                                                 |
+| success      |                    | booleano              | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
-| autoMerged   |                    | boolean               | True if an auto merge was done, False otherwise.                                                                        |
+| autoMerged   |                    | booleano              | True if an auto merge was done, False otherwise.                                                                        |
 |              |                    |                       | ***Available only in case of error***:                                                                                  |
 | status       |                    | number                | Error code, [see below](#status-and-statustext)                                                                         |
 | statusText   |                    | text                  | Description of the error, [see below](#status-and-statustext)                                                           |
@@ -1249,7 +1249,7 @@ Updating an entity without `dk auto merge` option:
  End case
 ```
 
-#### Example 3
+#### Exemplo 3
 
 Updating an entity with `dk auto merge` option:
 
@@ -1278,10 +1278,10 @@ Updating an entity with `dk auto merge` option:
 <!-- REF EntityClass.toObject().Desc -->
 ## .toObject()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1294,7 +1294,7 @@ Updating an entity with `dk auto merge` option:
 | filterString | Texto      | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                   |
 | options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| Result       | Object     | <- | Object built from the entity                                                                            |
+| Result       | Objeto     | <- | Object built from the entity                                                                            |
 <!-- END REF -->
 
 #### Description
@@ -1308,7 +1308,7 @@ If no filter is specified, or if the *filterString* parameter contains an empty 
 *   attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
 
 
-In the first parameter, you pass the entity attribute(s) to extract. You can pass:
+In the first parameter, you pass the entity attribute(s) to extract. Pode passar:
 
 *   *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 *   *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
@@ -1398,7 +1398,7 @@ Returns:
 }
 ```
 
-#### Example 3
+#### Exemplo 3
 
 Expanding all the properties of `relatedEntities`:
 
@@ -1467,7 +1467,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 }
 ```
 
-#### Example 4
+#### Exemplo 4
 
 Extracting some properties of `relatedEntities`:
 
@@ -1494,7 +1494,7 @@ Returns:
 }
 ```
 
-#### Example 5
+#### Exemplo 5
 
 Extracting a `relatedEntity` with simple form:
 
@@ -1514,7 +1514,7 @@ Returns:
 }
 ```
 
-#### Example 6
+#### Exemplo 6
 
 Extracting all the properties of a `relatedEntity`:
 
@@ -1565,10 +1565,10 @@ Returns:
 <!-- REF EntityClass.touched().Desc -->
 ## .touched( )
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1576,9 +1576,9 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| Parameter | Type    |    | Description                                                                           |
-| --------- | ------- |:--:| ------------------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| Parameter | Type     |    | Description                                                                           |
+| --------- | -------- |:--:| ------------------------------------------------------------------------------------- |
+| Result    | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
 #### Description
@@ -1589,7 +1589,7 @@ If an attribute has been modified or calculated, the function returns True, else
 
 This function returns False for a new entity that has just been created (with [`.new( )`](DataClassClass.md#new)). Note however that if you use a function which calculates an attribute of the entity, the `.touched()` function will then return True. For example, if you call [`.getKey()`](#getkey) to calculate the primary key, `.touched()` returns True.
 
-#### Example
+#### Exemplo
 
 In this example, we check to see if it is necessary to save the entity:
 
@@ -1609,10 +1609,10 @@ In this example, we check to see if it is necessary to save the entity:
 <!-- REF EntityClass.touchedAttributes().Desc -->
 ## .touchedAttributes( )
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1685,10 +1685,10 @@ In this case:
 <!-- REF EntityClass.unlock().Desc -->
 ## .unlock()
 
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v17    | Adicionado |
 
 </details>
 
@@ -1698,7 +1698,7 @@ In this case:
 <!-- REF #EntityClass.unlock().Params -->
 | Parameter | Type   |    | Description   |
 | --------- | ------ |:--:| ------------- |
-| Result    | Object | <- | Status object |
+| Result    | Objeto | <- | Status object |
 <!-- END REF -->
 
 #### Description
@@ -1722,11 +1722,11 @@ A record is automatically unlocked when it is no longer referenced by any entiti
 
 The object returned by `.unlock()` contains the following property:
 
-| Property | Type    | Description                                                                                                                                                                                        |
-| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success  | Boolean | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
+| Property | Type     | Description                                                                                                                                                                                        |
+| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success  | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
-#### Example
+#### Exemplo
 
 ```4d
  var $employee : cs.EmployeeEntity

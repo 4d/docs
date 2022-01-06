@@ -42,7 +42,7 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 
 ## Altura
 
-Altura del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-based-on) está definido en **Fijar tamaño **.  
+**los campos **Margen [hor.](#hor-margin) y Margen [**ver.** Margin</strong>](#vert-margin) fields.  
 
 
 
@@ -62,9 +62,9 @@ Altura del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-b
 
 ## Margen hor.
 
-Valor a añadir (en píxeles) al margen derecho del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>**
+**Tamaño automático**: el tamaño del formulario será el necesario para mostrar todos los objetos, al que se añadirán los valores de margen (en píxeles) introducidos en
 
-Este valor también determina los márgenes derechos de los formularios utilizados en el editor de etiquetas.
+Altura del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-based-on) está definido en **Fijar tamaño **.
 
 
 
@@ -84,9 +84,9 @@ Este valor también determina los márgenes derechos de los formularios utilizad
 
 ## Margen hor.
 
-Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>**. 
+Valor a añadir (en píxeles) al margen derecho del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>** 
 
-Este valor también determina los márgenes superiores de los formularios utilizados en el editor de etiquetas.
+Este valor también determina los márgenes derechos de los formularios utilizados en el editor de etiquetas.
 
 
 
@@ -105,7 +105,7 @@ Este valor también determina los márgenes superiores de los formularios utiliz
 
 ## Ancho
 
-Ancho del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-based-on) está definido en **Fijar tamaño **.  
+Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>**.  
 
 
 

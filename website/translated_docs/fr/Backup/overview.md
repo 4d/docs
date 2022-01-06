@@ -11,7 +11,7 @@ Les sauvegardes peuvent être déclenchées manuellement ou automatiquement, à 
 
 La restitution d’une application après incident peut s’effectuer automatiquement lors de l’ouverture d’une application endommagée.
 
-En outre, le module de sauvegarde intégré tire parti du fichier .journal ([ d’historique](log.md)). Ce fichier conserve une trace de chaque opération effectuée sur les données et assure ainsi une sécurité totale entre deux sauvegardes. En cas d’incident sur une application en cours d’exploitation, les opérations éventuellement manquantes dans le fichier de données sont automatiquement réintégrées lors de l’ouverture suivante de l'application. Vous pouvez visualiser à tout moment le contenu du fichier d’historique.
+En outre, le module de sauvegarde intégré tire parti du fichier .journal ([ d’historique](log.md)). Ce fichier conserve une trace de chaque opération effectuée sur les données et assure ainsi une sécurité totale entre deux sauvegardes. Vous pouvez visualiser à tout moment le contenu du fichier d’historique. Vous pouvez visualiser à tout moment le contenu du fichier d’historique.
 
 > Vous pouvez également mettre en place des solutions alternatives de réplication et de synchronisation des données permettant de maintenir des versions identiques des applications à des fins de sauvegarde. Ces solutions peuvent être basées sur les technologies et mécanismes suivants :  
 > - Mise en place d'un miroir logique avec 4D Server (utilise les mécanismes du module de sauvegarde intégré)  

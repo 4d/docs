@@ -1,6 +1,6 @@
 ---
 id: forms
-title: Forms Page
+title: Página formulario
 ---
 
  
@@ -10,7 +10,7 @@ This page lets you set the default operation and display of the 4D Form editor.
 
 This group of options sets parameters for moving objects using the keyboard or the mouse in the Form editor.
 
-### Step using keyboard
+### Paso a paso con el teclado
 
 This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
 
