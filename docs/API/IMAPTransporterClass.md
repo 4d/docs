@@ -661,6 +661,7 @@ To delete all messages in the current mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|->|Name of the mailbox to delete|
+
 |Result|Object|<-|Status of the mailbox deletion operation|
 <!-- END REF -->
 
@@ -802,6 +803,7 @@ $status:=$transporter.expunge()
 |Version|Changes|
 |---|---|
 |v18 R5|*name* is optional|
+
 |v18 R4|Added|
 </details>
 
@@ -1714,27 +1716,27 @@ Examples:
 **SEEN**: Messages that have the \Seen flag set.  
 **UNSEEN**: Messages that do not have the \Seen flag set.  
 **NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
-**KEYWORD** <flag>: Messages with the specified keyword set.  
-**UNKEYWORD** <flag>: Messages that do not have the specified keyword set.  
-**BEFORE** <date>: Messages whose internal date is earlier than the specified date.  
-**ON** <date>: Messages whose internal date is within the specified date.  
-**SINCE** <date>: Messages whose internal date is within or later than the specified date.  
-**SENTBEFORE** <date>: Messages whose Date header is earlier than the specified date.  
-**SENTON** <date>: Messages whose Date header is within the specified date.  
-**SENTSINCE** <date>: Messages whose Date header is within or later than the specified date.  
-**TO** <string>: Messages that contain the specified string in the TO header.  
-**FROM** <string>: Messages that contain the specified string in the FROM header.  
-**CC** <string>: Messages that contain the specified string in the CC header.  
-**BCC** <string>: Messages that contain the specified string in the BCC header.  
-**SUBJECT** <string>: Messages that contain the specified string in the Subject header.  
-**BODY** <string>: Messages that contain the specified string in the message body.  
-**TEXT** <string>: Messages that contain the specified string in the header or in the message body.  
-**HEADER** <field-name> <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-**UID** <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.  
-**LARGER** <n>: Messages with a size larger than the specified number of bytes.  
-**SMALLER** <n>: Messages with a size smaller than the specified number of bytes.  
-**NOT** <search-key>: Messages that do not match the specified search key.  
-**OR** <search-key1> <search-key2>: Messages that match either search key.  
+**KEYWORD *flag***: Messages with the specified keyword set.  
+**UNKEYWORD *flag***: Messages that do not have the specified keyword set.  
+**BEFORE *date***: Messages whose internal date is earlier than the specified date.  
+**ON *date***: Messages whose internal date is within the specified date.  
+**SINCE *date***: Messages whose internal date is within or later than the specified date.  
+**SENTBEFORE *date***: Messages whose Date header is earlier than the specified date.  
+**SENTON *date***: Messages whose Date header is within the specified date.  
+**SENTSINCE *date***: Messages whose Date header is within or later than the specified date.  
+**TO *string***: Messages that contain the specified string in the TO header.  
+**FROM *string***: Messages that contain the specified string in the FROM header.  
+**CC *string***: Messages that contain the specified string in the CC header.  
+**BCC *string***: Messages that contain the specified string in the BCC header.  
+**SUBJECT *string***: Messages that contain the specified string in the Subject header.  
+**BODY *string***: Messages that contain the specified string in the message body.  
+**TEXT *string***: Messages that contain the specified string in the header or in the message body.  
+**HEADER *field-name* *string***: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
+**UID *message-UID***: Messages with unique identifiers corresponding to the specified unique identifier set.  
+**LARGER *n***: Messages with a size larger than the specified number of bytes.  
+**SMALLER *n***: Messages with a size smaller than the specified number of bytes.  
+**NOT *search-key***: Messages that do not match the specified search key.  
+**OR *search-key1* *search-key2***: Messages that match either search key.  
 
 
 <!-- END REF -->

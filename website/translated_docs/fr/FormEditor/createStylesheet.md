@@ -257,7 +257,7 @@ La majorité des attributs d'objet formulaire peuvent être définis dans une fe
     - `event`
     - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
-Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](FormObjects/properties_Reference.md) en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes).
 
 #### Mappage d'attributs
 
@@ -361,4 +361,4 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 
 ## Voir aussi
 
-See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.
+Voir la présentation vidéo [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).

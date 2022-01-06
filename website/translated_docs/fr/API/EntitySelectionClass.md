@@ -548,7 +548,7 @@ Nous voulons trouver le nombre total d'employés d'une entreprise sans compter c
 <!-- REF #EntitySelectionClass.copy().Params -->
 | Paramètres | Type               |    | Description                                             |
 | ---------- | ------------------ |:--:| ------------------------------------------------------- |
-| option     | Entier long        | -> | `ck shared` : retourne une entity selection partageable |
+| option     | Integer            | -> | `ck shared` : retourne une entity selection partageable |
 | Résultat   | 4D.EntitySelection | <- | Copie de l'entity selection                             |
 <!-- END REF -->
 
@@ -609,11 +609,11 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 **.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Paramètres    | Type        |    | Description                                                             |
-| ------------- | ----------- |:--:| ----------------------------------------------------------------------- |
-| attributePath | Texte       | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
-| option        | Entier long | -> | `dk diacritical` : évaluation diacritique ("A" # "a" par exemple)       |
-| Résultat      | Collection  | <- | Collection avec seulement les valeurs distinctes                        |
+| Paramètres    | Type       |    | Description                                                             |
+| ------------- | ---------- |:--:| ----------------------------------------------------------------------- |
+| attributePath | Texte      | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
+| option        | Integer    | -> | `dk diacritical` : évaluation diacritique ("A" # "a" par exemple)       |
+| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes                        |
 <!-- END REF -->
 
 #### Description
@@ -673,7 +673,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 <!-- REF #EntitySelectionClass.drop().Params -->
 | Paramètres | Type               |    | Description                                                                                                           |
 | ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| mode       | Entier long        | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable |
+| mode       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable |
 | Résultat   | 4D.EntitySelection | <- | Entity selection vide si exécutée avec succès, sinon entity selection contenant la ou les entité(s) non supprimée(s)  |
 <!-- END REF -->
 
@@ -732,12 +732,12 @@ Exemple avec l'option `dk stop dropping on first error` :
 
 
 <!-- REF #EntitySelectionClass.extract().Params -->
-| Paramètres    | Type        |    | Description                                                                                                                             |
-| ------------- | ----------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------- |
-| attributePath | Texte       | -> | Chemin d'attribut dont les valeurs doivent être extraites dans la nouvelle collection                                                   |
-| targetPath    | Texte       | -> | Chemin ou nom d'attribut cible                                                                                                          |
-| option        | Entier long | -> | `ck keep null` : inclure les attributs null dans la collection retournée (ignorés par défaut). Paramètre ignoré si targetPath est passé |
-| Résultat      | Collection  | <- | Collection contenant les valeurs extraites                                                                                              |
+| Paramètres    | Type       |    | Description                                                                                                                             |
+| ------------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------- |
+| attributePath | Texte      | -> | Chemin d'attribut dont les valeurs doivent être extraites dans la nouvelle collection                                                   |
+| targetPath    | Texte      | -> | Chemin ou nom d'attribut cible                                                                                                          |
+| option        | Integer    | -> | `ck keep null` : inclure les attributs null dans la collection retournée (ignorés par défaut). Paramètre ignoré si targetPath est passé |
+| Résultat      | Collection | <- | Collection contenant les valeurs extraites                                                                                              |
 <!-- END REF -->
 
 #### Description
@@ -1425,7 +1425,7 @@ Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critè
 | ------------- | ------------------ |:--:| --------------------------------------------- |
 | formulaString | Texte              | -> | Chaîne formule                                |
 | formulaObj    | Object             | -> | Objet formule                                 |
-| sortOrder     | Entier long        | -> | `dk ascending` (par défaut) ou`dk descending` |
+| sortOrder     | Integer            | -> | `dk ascending` (par défaut) ou`dk descending` |
 | settings      | Object             | -> | Paramètre(s) de la formule                    |
 | Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection triée               |
 <!-- END REF -->
@@ -1743,11 +1743,11 @@ Passez, dans le paramètre *selectedEntities* une entity selection contenant des
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété      | Type        | Description                              |
-| -------------- | ----------- | ---------------------------------------- |
-| ranges         | Collection  | Collection d'objets plage                |
-| ranges[].start | Entier long | Indice de la première entité de la plage |
-| ranges[].end   | Entier long | Indice de la dernière entité de la plage |
+| Propriété      | Type       | Description                              |
+| -------------- | ---------- | ---------------------------------------- |
+| ranges         | Collection | Collection d'objets plage                |
+| ranges[].start | Integer    | Indice de la première entité de la plage |
+| ranges[].end   | Integer    | Indice de la dernière entité de la plage |
 
 Si une propriété `ranges` contient une seule entité, `start` = `end`. L'indice démarre à 0.
 
@@ -1796,8 +1796,8 @@ $result2:=$invoices.selected($creditSel)
 <!-- REF #EntitySelectionClass.slice().Params -->
 | Paramètres | Type               |    | Description                                                            |
 | ---------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| startFrom  | Entier long        | -> | Position à laquelle démarrer l'opération (incluse)                     |
-| end        | Entier long        | -> | Position de fin (non incluse)                                          |
+| startFrom  | Integer            | -> | Position à laquelle démarrer l'opération (incluse)                     |
+| end        | Integer            | -> | Position de fin (non incluse)                                          |
 | Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection contenant les entités copiées (shallow copy) |
 <!-- END REF -->
 
@@ -1904,14 +1904,14 @@ $sum:=$sel.sum("salary")
 **.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
-| Paramètres   | Type        |    | Description                                                                                  |
-| ------------ | ----------- |:--:| -------------------------------------------------------------------------------------------- |
-| filterString | Texte       | -> | Chemin(s) d'attribut(s) à extraire                                                           |
-| filterCol    | Collection  | -> | Collection d'attribut(s) à extraire                                                          |
-| options      | Entier long | -> | `dk with primary key` : ajoute la clé primaire<br>`dk with stamp` : ajoute le marqueur |
-| begin        | Entier long | -> | Désigne la position de début                                                                 |
-| howMany      | Entier long | -> | Nombre d'entités à extraire                                                                  |
-| Résultat     | Collection  | <- | Collection d'objets contenant les attributs et valeurs de l'entity selection                 |
+| Paramètres   | Type       |    | Description                                                                                  |
+| ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------- |
+| filterString | Texte      | -> | Chemin(s) d'attribut(s) à extraire                                                           |
+| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                          |
+| options      | Integer    | -> | `dk with primary key` : ajoute la clé primaire<br>`dk with stamp` : ajoute le marqueur |
+| begin        | Integer    | -> | Désigne la position de début                                                                 |
+| howMany      | Integer    | -> | Nombre d'entités à extraire                                                                  |
+| Résultat     | Collection | <- | Collection d'objets contenant les attributs et valeurs de l'entity selection                 |
 <!-- END REF -->
 
 #### Description

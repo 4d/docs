@@ -167,7 +167,7 @@ En outre, les attributs relationnels suivant seront également disponibles autom
 
 *   dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 *   dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
-> La propriété "Manuel" ou "Automatique" d'une relation dans la base de données n'a aucun effet dans ORDA.
+> Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
 
 Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 
@@ -177,7 +177,7 @@ Gardez à l'esprit que ces objets décrivent des attributs, mais ne donnent pas 
 
 #### Champs calculés
 
-Les [champs calculés](ordaClasses.md#computed-attributes) sont déclarés à l'aide d'une fonction `get<attributeName>` <attributeName> dans la [définition de la classe Entity](ordaClasses.md#entity-class). Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
+dans la [définition de la classe Entity](ordaClasses.md#entity-class). Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
 
 
 ### Entity
@@ -214,7 +214,7 @@ $e:=ds.Employee.all() //assigne la référence de la sélection d'entité résul
 
 Les entity selections peuvent être "triées" ou "non triées" ([voir ci-dessous](#ordered-or-unordered-entity-selection)).
 
-> Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
+> > Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
 
 L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 

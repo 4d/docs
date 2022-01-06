@@ -125,11 +125,11 @@ Une clé d'accès est similaire à un mot de passe, mais sans login associé.
 
 ## Configuration de WebAdmin sans interface
 
-Tous les [settings WebAdmin](#webadmin-settings) sont stockés dans le fichier `WebAdmin.4DSettings`. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server. Ainsi, il est possible de déployer plusieurs applications sur la même machine hôte.
+Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Le fichier par défaut `WebAdmin.4DSettings` est alors utilisé.
 
 Dans le cas d'une application 4D ou 4D Server sans interface, vous pouvez configurer et utiliser le fichier `WebAdmin.4DSettings` par défaut, ou désigner un fichier `.4DSettings` personnalisé.
 
-Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Le fichier par défaut `WebAdmin.4DSettings` est alors utilisé.
+Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
 
 Vous pouvez aussi définir un fichier `.4DSettings`. (format XML) et l'utiliser à la place du fichier par défaut. Plusieurs arguments dédiés sont disponibles dans [l'interface de ligne de commande](cli.md) pour prendre en charge cette fonctionnalité.
 
@@ -149,7 +149,7 @@ Exemple :
 
 - Lorsqu'on accède à une page de gestion web en entrant une URL et sans identification préalable, une authentification est nécessaire. L'utilisateur doit entrer la [clé d'accès](#access-key) dans une fenêtre d'authentification. Si aucune clé d'accès n'a été définie dans les propriétés `WebAdmin`, aucun accès via URL n'est possible.
 
-- Qand une page d'administration web est ouverte directement depuis un menu 4D ou 4D Server, tel que **Enregistrements> Data Explorer**ou**Fenêtre> Explorateur de données**(4D Server), l'accès est autorisé sans authentification. L'utilisateur est authentifié automatiquement.
+- Qand une page d'administration web est ouverte directement depuis un menu 4D ou 4D Server, tel que **Enregistrements> Data Explorer**ou**Fenêtre> Explorateur de données**(4D Server), l'accès est autorisé sans authentification.
 
 Une fois l'accès autorisé, une [session web](WebServer/sessions.md) est créée avec les privilèges "WebAdmin" sur l'application 4D. Tant que la session courante a le privilège "WebAdmin", le composant `WebAdmin` sert les pages demandées dans les requêtes.
 

@@ -67,7 +67,7 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | `Date`                 | Valeur date                              |
 | `Heure`                | Valeur Heure                             |
 | `Booléen`              | Valeur booléen                           |
-| `Entier long`          | Valeur entier long                       |
+| `Integer`              | Valeur entier long                       |
 | `Réel`                 | Valeur réel                              |
 | `Pointeur`             | Valeur pointeur                          |
 | `Image`                | Valeur image                             |

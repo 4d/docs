@@ -124,7 +124,7 @@ Pour supprimer un utilisateur ou un groupe d’un autre groupe, il suffit de dé
 
 ### Affecter un groupe à un plug-in ou à un serveur
 
-Vous pouvez affecter un groupe d’accès à tout plug-in 4D installé dans votre projet. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.
+Pour affecter un groupe à un plug-in, il suffit de cocher l’option correspondante. Les plug-ins comprennent tous les plug-ins de 4D ainsi que tout plug-in développés par une société tierce.
 
 Répartir les accès aux plug-ins vous permet de contrôler l’utilisation des licences dont vous disposez pour ces plug-ins. Tout utilisateur n’appartenant pas au groupe d’accès à un plug-in ne pourra pas charger ce plug-in.
 

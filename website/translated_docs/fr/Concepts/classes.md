@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Chaque objet est une instance de sa classe. Une classe peut s'étendre à une autre classe avec le mot-clé [`extend`](#class-extends-classname), puis hériter de ses [fonctions](#function) et de ses propriétés ([statiques](#class-constructor) and [calculés](#function-get-and-function-set)).
+Chaque objet est une instance de sa classe. Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Une classe peut s'étendre à une autre classe avec le mot-clé [`extend`](#class-extends-classname), puis hériter de ses [fonctions](#function) et de ses propriétés ([statiques](#class-constructor) and [calculés](#function-get-and-function-set)).
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -150,7 +150,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## L'objet classe
 
-Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet de la [classe "Class"](API/ClassClass.md). Un objet class possède les propriétés et fonctions suivantes :
+Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est chargée dans l'environnement de langage 4D. Une classe est un objet de la [classe "Class"](API/ClassClass.md). Une classe est un objet lui-même de la [classe "Class"](API/classClass.md).
 
 - chaîne [`name`](API/ClassClass.md#name)
 - objet [`superclass`](API/ClassClass.md#superclass) (nul si aucun)
@@ -225,7 +225,7 @@ Dans le code de l'application, les fonctions de classe sont appelées en tant qu
 
 #### Paramètres
 
-Les paramètres de fonction sont déclarés à l'aide du nom du paramètre et du type de paramètre, séparés par deux points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Les paramètres de fonction sont déclarés à l'aide du nom du paramètre et du type de paramètre, séparés par deux points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -302,15 +302,17 @@ Function set <name>($parameterName : type)
 
 Si on n'accède pas à la propriété, le code ne s'exécute jamais.
 
-Les propriétés calculées sont conçues pour gérer les données qui n'ont pas nécessairement besoin d'être conservées en mémoire. Traduit avec www. DeepL. com/Translator (version gratuite). Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
+Les propriétés calculées sont conçues pour gérer les données qui n'ont pas nécessairement besoin d'être conservées en mémoire. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
 
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété. Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
+Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
+
+Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété. Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
 `Function get` retourne une valeur du type de la propriété et `Function set` prend un paramètre du type de la propriété. Les deux arguments doivent être conformes aux [paramètres standard des fonctions](#parameters).
 
-Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
+Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
 
-Le type de la propriété calculée est défini par la déclaration du type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
+Le type de la propriété calculée est défini par la déclaration du type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md). Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
 
 > Assigner *undefined* à une propriété d'objet efface sa valeur tout en préservant son type. Pour ce faire, on appelle d'abord la fonction `get` pour récupérer le type de valeur, puis la fonction `set` avec une valeur vide de ce type.
 
@@ -515,6 +517,29 @@ Function getArea()
 
 #### Example 2
 
+Cet exemple illustre l'utilisation de `Super` dans une méthode membre de classe. // Définition de la fonction Function getArea() var $0 : Integer $0:=(This.height)*(This.width) </code></pre>
+
+```4d
+//Class: Square
+
+Class extends Rectangle
+
+Class constructor ($side : Integer)
+
+     // Il appelle le constructor de la classe parente avec des longueurs
+     // fourni pour la largeur et la hauteur du rectangle
+    Super($side;$side)
+     // Dans les classes dérivées, Super doit être appelé avant 
+     // de pouvoir utiliser 'This'
+     This.name:="Square "
+
+Function getArea()
+     C_LONGINT($0)
+    $0:=This.height*This.width
+```
+
+#### Example 2
+
 Cet exemple illustre l'utilisation de `Super` dans une méthode membre de classe. Vous avez créé la classe `Rectangle` avec une fonction :
 
 ```4d
@@ -557,7 +582,7 @@ $message:=$square.description() //Je possède 4 côtés égaux
 
 Le mot-clé `This` retourne une référence à l'objet qui est cours de traitement. Dans 4D, il peut être utilisé dans [différents contextes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
+Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
 
 Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` est défini à l'objet sur lequel la méthode est appelée. For example:
 
@@ -624,14 +649,21 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.</p>
+`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
 
 
 ### `OB Instance of`
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.</p>
+`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+
+
+### `OB Instance of`
+
+#### OB Instance of ( object ; class ) -> Boolean
+
+`OB Instance of` retourne `true` si `object` appartient à `class` ou à l'une de ses classes héritées, sinon retourne `false`.</p>
 
 
 ### `OB Instance of`

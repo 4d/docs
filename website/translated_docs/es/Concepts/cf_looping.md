@@ -30,7 +30,7 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 ### Ejemplo
 
 ```4d
- CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro?
+ CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro? //¿El usuario quiere añadir un registro?
  While(OK=1) //Bucle mientras el usuario quiera
     ADD RECORD([aTable]) /Añadir un nuevo registro
  End while //El bucle siempre termina con End while
@@ -216,7 +216,7 @@ Aquí está el bucle equivalente `Repeat...Until`:
 ```
 **Consejo:** el bucle `For...End for` suele ser más rápido que los bucles `While...End while` y `Repeat...Until`, porque 4D comprueba la condición internamente en cada ciclo del bucle e incrementa el contador. Por lo tanto, utilice el bucle `For...End for` siempre que sea posible.
 
-### Optimizar la ejecución de los bucles For...End for
+### Optimizar la ejecución de los bucles For... End for
 
 Puede utilizar variables reales y enteras, así como contadores interproceso, de proceso y de variables locales. Para bucles repetitivos largos, especialmente en modo compilado, utilice variables locales de tipo Entero largo.
 
@@ -270,7 +270,7 @@ He aquí dos ejemplos:
  End for
 ```
 
-## For each...End for each
+## For each... End for each
 
 La sintaxis de la estructura condicional `For each... End for each` es:
 
@@ -298,7 +298,7 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 - El número de bucles se evalúa al inicio y no cambiará durante el proceso. La adición o eliminación de elementos durante el bucle no suele ser recomendable, ya que puede resultar en redundancia o perdidas de iteraciones.
 - Por defecto, la(s) _instrucciónes_ adjuntas se ejecutan para cada valor de *Expresión*. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
 - Los parámetros opcionales *begin* y *end* pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
-- El bucle `For each...End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
+- El bucle `For each... End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
     - antes de entrar en el bucle, si los elementos deben modificarse juntos por razones de integridad, o
     - dentro del bucle cuando sólo hay que modificar algunos elementos/propiedades y no es necesario gestionar la integridad.
 

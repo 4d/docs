@@ -110,7 +110,7 @@ var $entity : cs.EmployeeEntity
 
 ### Utilizando un C_ directive
 
-> **Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
+> **Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
@@ -190,7 +190,7 @@ Con frecuencia, en una aplicación, se necesitan pequeñas piezas de informació
 
 Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Para más información, consulte [Parámetros](Concepts/parameters.md).
+**Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
 ### Variables proceso
 

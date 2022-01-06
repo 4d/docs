@@ -43,7 +43,7 @@ Dossier qui contient les fichiers de certificat TLS pour le serveur web.
 
 Par défaut, avec 4D ou 4D Server, ces fichiers doivent être placés à côté du [dossier du projet](Project/architecture.md#project-folder).
 
-Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ressources locales de la base de données sur la machine distante (voir le paragraphe `Dossier base 4D Client` de la commande `Dossier 4D`). Vous devez copier ces filles manuellement sur la machine distante.
+Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ressources locales de la base de données sur la machine distante (voir le paragraphe `Dossier base 4D Client` de la commande `Dossier 4D`). Vous devez copier ces fichiers manuellement sur la machine distante.
 
 > Les fichiers de certificat TLS sont *key.pem* (document contenant la clé de chiffrement privée) et *cert.pem* (document contenant le certificat).
 
@@ -68,7 +68,7 @@ Définit le jeu de caractères à utiliser par le serveur web 4D. La valeur par 
 
 Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité des algorithmes de chiffrement implémentés par le serveur web. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la [page des chiffrements](https://www.openssl.org/docs/manmaster/man1/ciphers.html) sur le site OpenSSL.
 
-> La liste de chiffrement par défaut utilisée par 4D peut être modifiée pour la session à l'aide de la commande `FIXER PARAMETRE BASE `, auquel cas la modification s'applique à l'ensemble de l'application 4D, y compris le serveur web, le serveur SQL, les connexions client/serveur, ainsi que le client HTTP et toutes les commandes 4D qui font appel au protocole sécurisé.
+> La liste de chiffrement par défaut utilisée par 4D peut être modifiée pour la session à l'aide de la commande `FIXER PARAMETRE BASE`, auquel cas la modification s'applique à l'ensemble de l'application 4D, y compris le serveur web, le serveur SQL, les connexions client/serveur, ainsi que le client HTTP et toutes les commandes 4D qui font appel au protocole sécurisé.
 
 ## Paramètres CORS
 
@@ -162,11 +162,11 @@ Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base `On We
 
 ## Activer CORS
 
-| Peut être configuré via  | Nom                                                | Commentaires                                        |
-| ------------------------ | -------------------------------------------------- | --------------------------------------------------- |
-| objet webServer          | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Booléen. True pour activer CORS (False par défaut). |
-| `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)             |
-| Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                                  |
+| Peut être configuré via  | Nom                                                | Commentaires                               |
+| ------------------------ | -------------------------------------------------- | ------------------------------------------ |
+| objet webServer          | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | True pour activer CORS (False par défaut). |
+| `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
+| Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                         |
 
 Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisée envoie une demande cross-site, celle-ci est rejetée et une erreur "403 - forbidden" est renvoyée.
 
@@ -400,7 +400,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | `WEB SET OPTION`         | `Web max concurrent processes`                                           |              |
 | Fenêtre de configuration | Options (I) > Process Web simultanés maxi                                |              |
 
-Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -549,7 +549,7 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 | objet webServer         | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |              |
 | `WEB SET OPTION`        | `Web session cookie domain`                                        |              |
 
-Valeur du champ "domaine" du cookie de session. Utile pour contrôler le scope des cookies de session Par exemple, si vous définissez la valeur "/*.4d.fr" pour ce sélecteur, le client enverra un cookie uniquement lorsque la requête est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
+Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
 
 
 ## Nom du cookie de session
@@ -569,7 +569,7 @@ Nom du cookie utilisé pour stocker l'ID de session. Par défaut = "4DSID".
 | objet webServer         | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |              |
 | `WEB SET OPTION`        | `Web session cookie path`                                      |              |
 
-Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+Valeur du champ "domaine" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
 
 ## Session Cookie SameSite
 

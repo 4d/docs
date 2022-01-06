@@ -33,11 +33,13 @@ A noter que :
 * Le code exécuté dans la méthode base `On Server Startup Database` ne peut pas être débogué à distance. Il ne peut être débogué que du côté serveur
 * Si aucun débogueur n'est associé, le code en cours d'exécution n'est pas arrêté par les commandes de débogage
 
-## Association du débogueur à un client 4D distant
 
-Par défaut, le débogueur n'est pas associé à un client 4D distant :
-* Si 4D Server ne fonctionne pas en mode "headless", le débogueur est associé au serveur
-* Si 4D Server fonctionne en mode "headless", aucun débogueur n'est associé
+## Attaching the debugger
+
+By default when you start an application:
+
+* if 4D Server is not running headless, the debugger is attached to the server,
+* if 4D Server is running headless, no debugger is attached.
 
 Vous pouvez associer le débogueur à tout client 4D distant autorisé à se connecter à l'application 4D Server.
 
@@ -45,10 +47,8 @@ Vous pouvez associer le débogueur à tout client 4D distant autorisé à se con
 
 Pour associer le débogueur à un client 4D distant :
 
-* Dans la barre de menu de 4D Server, sélectionnez **Edition** > **Détacher le débogueur** afin que le débogueur devienne disponible pour les machines distantes.
-    - Cette étape est inutile si le 4D Server fonctionne en mode headless.
-    - Vous pouvez rattacher le débogueur au serveur en sélectionnant **Edit** > **Attach debugger** (s'il n'est pas associé à un client 4D distant, voir [Rejected attachment requests](#rejected-attachment-requests)).
-* Dans un client 4D distant connecté au serveur, sélectionnez **Exécuter** > **Attacher le débogueur distatn**
+1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
+2. Dans un client 4D distant connecté au serveur, sélectionnez **Exécuter** > **Attacher le débogueur distatn**
 
 Si le rattachement est accepté (voir [Rejected attachment requests](#rejected-attachment-requests)), la commande de menu devient **Detach Remote Debugger**.
 
@@ -56,7 +56,13 @@ Le débogueur est alors attaché au client 4D distant :
 * jusqu'à la fin de la session utilisateur
 * jusqu'à ce que vous sélectionniez `Detach Remote Debugger`
 
-## Attacher le débogueur ou le débogueur distant au démarrage
+To attach the debugger back to the server:
+
+1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
+2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
+
+
+## Attaching debugger at startup
 
 4D vous permet d'associer automatiquement le débogueur à un client 4D distant ou au serveur au démarrage :
 
@@ -70,7 +76,7 @@ Le débogueur est alors attaché au client 4D distant :
 
 ## Demandes d'association rejetées
 
-Si le débogueur est déjà attaché à un client 4D distant ou à 4D Server (par défaut), aucune autre machine ne peut s'associer au débogueur.
+While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
 
 Si une machine tente d'attacher le débogueur alors qu'il est déjà attaché, l'attachement est rejeté et une boîte de dialogue apparaît :
 
@@ -80,5 +86,5 @@ Si une machine tente d'attacher le débogueur alors qu'il est déjà attaché, l
 
 L'attachement du débogueur dans ce cas nécessite que :
 
-* le débogueur attaché soit détaché du client 4D distant à l'aide de la commande de menu **Detach remote debugger** ou du serveur à l'aide de la commande **Detach debugger**
-* la session du client distant 4D associée soit fermée
+* the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
+* the attached remote 4D client session is closed.

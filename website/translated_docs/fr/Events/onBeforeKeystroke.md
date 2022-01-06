@@ -34,7 +34,7 @@ L'événement `On Before Keystroke` peut être généré dans des objets non sai
 
 ### Séquence de frappe
 
-Lorsqu'une entrée nécessite une séquence de frappes clavier, les événements ``On Before Keystroke[` et [`On After Keystroke](onAfterKeystroke.md)] sont générés uniquement lorsque la saisie est entièrement validée par l'utilisateur. La commande `Keystroke` retourne le caractère validé. Ce cas se produit principalement :
+Lorsqu'une entrée nécessite une séquence de frappes clavier, les événements ``On Before Keystroke[`et [`On After Keystroke](onAfterKeystroke.md)] sont générés uniquement lorsque la saisie est entièrement validée par l'utilisateur. La commande `Keystroke` retourne le caractère validé. Ce cas se produit principalement :
 
 - lors de l'utilisation de touches "mortes" telles que ^ ou ~: les événements ne sont générés que lorsque le caractère étendu est éventuellement saisi (par exemple "ê" ou ñ),
 - lorsqu'un IME (Input method editor) affiche une boîte de dialogue intermédiaire où l'utilisateur peut saisir une combinaison de caractères : les événements sont générés uniquement lorsque la boîte de dialogue IME est validée.

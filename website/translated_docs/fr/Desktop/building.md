@@ -23,12 +23,12 @@ Générer un package de projet peut être réalisée à l'aide de :
 
 - soit la commande
 `BUILD APPLICATION<code></a>,</li>
-<li>soit la<a href="#application-builder">boîte de dialogue du Générateur d'application</a>.</li>
+<li>Utiliser la <a href="#application">Page Application</a> ou la <a href="#client-server">Page Client/Serveur</a> de boîte de dialogue du Générateur d'applications.</li>
 </ul>
 
-<h3 spaces-before="0">Générateur d'application</h3>
+<h3 spaces-before="0">Construire application cliente</h3>
 
-<p spaces-before="0">Pour afficher la boîte de dialogue du générateur d'application, sélectionnez <strong x-id="1">Développement</strong> > <strong x-id="1">Générer l'application...</strong> dans la barre de menus.</p>
+<p spaces-before="0">Cochez l'option <strong x-id="1">Créer une application autonome</strong> et cliquez sur <strong x-id="1">Générer</strong> pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.</p>
 
 <p spaces-before="0"><img src="assets/en/Project/buildappProj.png" alt="" /></p>
 

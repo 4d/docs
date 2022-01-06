@@ -33,11 +33,13 @@ title: リモートマシンからのデバッグ
 * `On Server Startup` データベースメソッドで実行されたコードはリモートでデバッグすることができません。 これはサーバー側でしかデバッグすることができません。
 * デバッガーが有効化されていない場合、実行中のコードがデバッグコマンドによって中断されることはありません。
 
-## リモート4Dクライアントでのデバッガーの有効化
 
-デフォルトでは、サーバーのデバッガーはリモート4Dクライアント上で有効化されていません:
-* 4D Server がヘッドレス実行中でない場合、デバッガーはサーバー側で有効化されています。
-* 4D Server がヘッドレス実行中の場合には、サーバーのデバッガーは有効化されていない状態です。
+## Attaching the debugger
+
+By default when you start an application:
+
+* if 4D Server is not running headless, the debugger is attached to the server,
+* if 4D Server is running headless, no debugger is attached.
 
 4D Serverアプリケーションに接続できるリモート4Dクライアントであれば、サーバーのデバッガーを有効化することができます。
 
@@ -45,10 +47,8 @@ title: リモートマシンからのデバッグ
 
 サーバーのデバッガーをリモート4Dクライアントで有効化するには:
 
-* 4D Server のメニューバーから、**編集** ＞ **デバッガを無効化する** を選択し、リモートマシンからデバッガーを利用できるようにします。
-    - 4D Server がヘッドレス実行中の場合には、このステップは無意味です。
-    - **編集** ＞ **デバッガを有効化する** を選択することで、再びサーバー側でデバッガーを有効化することができます (リモート4Dクライアントで有効化されていない場合のみ。詳細は [有効化リクエストの拒否](#有効化リクエストの拒否) 参照)。
-* サーバーに接続されたリモート4Dクライアントから、**実行** ＞ **リモートデバッガを有効化する** を選択します。
+1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
+2. サーバーに接続されたリモート4Dクライアントから、**実行** ＞ **リモートデバッガを有効化する** を選択します。
 
 有効化に成功した場合 ([有効化リクエストの拒否](#有効化リクエストの拒否) 参照)、メニューコマンドは **リモートデバッガを無効化する** へと変わります。
 
@@ -56,7 +56,13 @@ title: リモートマシンからのデバッグ
 * ユーザーセッションが終了するまで
 * ユーザーが `リモートデバッガを無効化する` を選択するまで
 
-## デバッガーまたはリモートデバッガーを開始時に有効化する
+To attach the debugger back to the server:
+
+1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
+2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
+
+
+## Attaching debugger at startup
 
 デバッガーは、リモート4Dクライアントまたはサーバーの開始時に自動的に有効化することができます:
 
@@ -70,7 +76,7 @@ title: リモートマシンからのデバッグ
 
 ## 有効化リクエストの拒否
 
-ほかのリモート4Dクライアントまたは 4D Server (デフォルト) にてすでに有効化されていた場合、他のマシンでサーバーのデバッガーを有効化することはできません。
+While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
 
 別マシンにて有効化済のデバッガーを有効化しようとした場合、その有効化リクエストは拒否され、以下のようなダイアログが表示されます:
 
@@ -80,5 +86,5 @@ title: リモートマシンからのデバッグ
 
 このような場合に、デバッガーを有効化するには、以下のどちらかの条件が必要です:
 
-* 有効化済デバッガーを、**リモートデバッガを無効化する** メニューコマンドでリモート4Dクライアントから外す、あるいは **デバッガを無効化する** コマンドを使用してサーバーから外す。
-* 有効化済デバッガーを使用しているリモート4Dクライアントセッションが閉じられる。
+* the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
+* the attached remote 4D client session is closed.

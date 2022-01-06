@@ -89,18 +89,18 @@ To be used by the 4D SQL server, the **key.pem** and **cert.pem** files must be 
 
 ### Activar TLS
 
-The installation of **key.pem** and **cert.pem** files makes it possible to use TLS with the 4D server. However, in order for TLS connections to be accepted by the server, you must enable them:
+La instalación de los archivos **key.pem** y **cert.pem** permite utilizar TLS con el servidor 4D. Sin embargo, para que las conexiones TLS sean aceptadas por el servidor, debe habilitarlas:
 
-- With the 4D web server, you must [enable HTTPS](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](WebServer/webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode.
-- With the application server, you must select the **Encrypt Client-Server Communications** option in the "Client-server/Network options" page of the Settings dialog box.
-- With the SQL server, you must select the **Enable TLS** option in the "SQL" page of the Settings dialog box.
+- Con el servidor web 4D, debe [activar HTTPS](WebServer/webServerConfig.md#enable-https). Puede definir la opción [HSTS](WebServer/webServerConfig.md#enable-hsts) para redirigir a los navegadores que intenten conectarse en modo http.
+- Con el servidor de aplicaciones, debe seleccionar la opción **Encriptar las comunicaciones cliente-servidor** en la página "Opciones cliente-servidor/red" del cuadro de diálogo Parámetros.
+- Con el servidor SQL, debe seleccionar la opción **Habilitar TLS** en la página "SQL" del cuadro de diálogo Parámetros.
 
 > The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
 
 ## Perfect Forward Secrecy (PFS)
 
-[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adds an additional layer of security to your communications. Rather than using pre-established exchange keys, PFS creates session keys cooperatively between the communicating parties using Diffie-Hellman (DH) algorithms. The joint manner in which the keys are constructed creates a "shared secret" which impedes outside parties from being able to compromise them.
+[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) añade una capa adicional de seguridad a sus comunicaciones. En lugar de utilizar llaves de intercambio predefinidas, PFS crea llaves de sesión de forma cooperativa entre las partes que se comunican utilizando algoritmos Diffie-Hellman (DH). La forma conjunta en que se construyen las llaves crea un "secreto compartido" que impide que partes externas puedan comprometerlas.
 
-When TLS is enabled on the server, PFS is automatically enabled. If the *dhparams.pem* file (document containing the server's DH private key) does not already exist, 4D will automatically generate it with a key size of 2048. The initial generation of this file could take several minutes. The file is placed with the [*key.pem* and *cert.pem* files](#key-pem-and-cert-pem-files).
+Cuando se habilita TLS en el servidor, PFS se habilita automáticamente. Si el archivo *dhparams.pem* (documento que contiene la llave privada DH del servidor) no existe todavía, 4D lo generará automáticamente con un tamaño de llave de 2048. La generación inicial de este archivo puede llevar varios minutos. El archivo se coloca con los archivos [*key.pem* y *cert.pem*](#key-pem-and-cert-pem-files).
 
-If you use a [custom cipher list](WebServer/webServerConfig.md##cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+Si utiliza una [lista de cifrado personalizada](WebServer/webServerConfig.md##cipher-list) y desea habilitar el PFS, debe comprobar que contiene entradas con algoritmos DH o ECDH (Elliptic-curve Diffie-Hellman).

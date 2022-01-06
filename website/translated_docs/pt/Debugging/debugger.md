@@ -3,9 +3,9 @@ id: debugger
 title: Debugger
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".
+The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
-![debugger-window-local](assets/en/Debugging/debugger-Window-local.png)
+![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
 
 
 ## Calling the Debugger
@@ -99,7 +99,7 @@ This action is not available in remote debugging mode (see [Debugging from Remot
 
 ## Watch Pane
 
-The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Here is an example:
+The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Aqui um exemplo simples:
 
 ![watch-pane](assets/en/Debugging/watchPane.png)
 

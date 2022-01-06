@@ -368,7 +368,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 | status(*)     |                     | number              | エラーコード、以下参照                                                              |
 | statusText(*) |                     | text                | エラーの詳細、以下参照                                                              |
 |               |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                         |
-| LockKindText  |                     | text                | "Locked by record"                                                       |
+| lockKindText  |                     | text                | "Locked by record"                                                       |
 | lockInfo      |                     | object              | ロック元についての情報                                                              |
 |               | task_id             | number              | プロセスID                                                                   |
 |               | user_name           | text                | マシン上でのセッションユーザー名                                                         |

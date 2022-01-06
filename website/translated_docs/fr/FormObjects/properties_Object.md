@@ -160,10 +160,10 @@ For an array list box, the **Variable or Expression** property usually holds the
 ---
 ## Expression Type
 
-> This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
+> Cette propriété est intitulée [**Data Type**](properties_DataSource.md#data-type-expression-type) dans la Liste de Propriétés pour les colonnes de listbox de type [selection](listbox_overview.md#selection-list-boxes) et [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) et pour les [Listes déroulantes](dropdownList_Overview.md) associées à un [objet](FormObjects/dropdownList_Overview.md#using-an-object) ou à un [tableau](FormObjects/dropdownList_Overview.md#using-an-array).
 
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of project compilation, you must [declare the variable](Concepts/variables.md#declaring-variables).
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vue d'une compilation de projet, vous devez [déclarer la variable](Concepts/variables.md#declaring-variables).
 
 However, this property has a typing function in the following specific cases:
 
@@ -174,9 +174,9 @@ However, this property has a typing function in the following specific cases:
 
 #### Grammaire JSON
 
-| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string          | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
+| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------ | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSourceTypeHint | string          | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**colonnes de list box :** "boolean", "number", "picture", "text", date", "time". *Listbox tableau/selection uniquement* : "integer", "object" |
 
 #### Objets pris en charge
 
@@ -213,7 +213,7 @@ The collection or the entity selection must be available to the form when it is 
 
 *   if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example **This.\<propertyPath>**.
 *   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
-> If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+> > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### Grammaire JSON
 

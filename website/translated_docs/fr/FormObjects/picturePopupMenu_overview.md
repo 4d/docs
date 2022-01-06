@@ -14,7 +14,7 @@ Pour créer un pop-up menu image, vous devez [faire référence à une image](pr
 
 ### Programmation
 
-Vous pouvez gérer les pop-up menus image par l’intermédiaire de méthodes. A l’instar des [grilles de boutons](buttonGrid_overview.md), les variables associées au pop-up menu image prennent pour valeur le numéro de l’élément sélectionné et zéro (0) si aucun élément n’est sélectionné. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
+Vous pouvez gérer les pop-up menus image par l’intermédiaire de méthodes. A l’instar des [grilles de boutons](buttonGrid_overview.md), les variables associées au pop-up menu image prennent pour valeur le numéro de l’élément sélectionné et zéro (0) si aucun élément n’est sélectionné. et zéro (0) si aucun élément n’est sélectionné. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
 
 
 ### Aller à page

@@ -19,7 +19,7 @@ Il y a plusieurs manières de démarrer le serveur Web principal :
     *   4D: **Exécution > démarrer le serveur Web**<br>![](assets/en/WebServer/start1.png)
     *   4D Server : depuis la page du serveur HTTP, cliquez sur **Démarrer le serveur HTTP**<br>![](assets/en/WebServer/start2.png)
 
-*   automatiquement à l'ouverture de l'application 4D. en cochant l'option **Lancer le serveur Web au démarrage** dans **Propriétés** &#062 **Web** &#062 **Configuration** <br>![](assets/en/WebServer/config.png)
+*   automatiquement à l'ouverture de l'application 4D. en cochant l'option **Lancer le serveur Web au démarrage** dans **Propriétés** &#062 **Web** &#062 **Configuration**<br>![](assets/en/WebServer/config.png)
 
 *   Par programmation, en appelant la fonction [`webServer.start()`](API/WebServerClass.md#start) ou la commande `WEB START SERVER`.
 
@@ -100,7 +100,7 @@ L'URL **/4DSTATS** renvoie plusieurs éléments d'information dans un tableau HT
 | Cached Objects         | Nombre d'objects trouvés dans le cache, **images incluses** |
 
 Ces informations peuvent vous permettre de vérifier le fonctionnement de votre serveur et éventuellement d'adapter les paramètres correspondants.
-> La commande `WEB LIRE STATISTIQUES ` permet également d'obtenir des informations sur la façon dont le cache est utilisé pour les pages statiques.
+> La commande `WEB LIRE STATISTIQUES` permet également d'obtenir des informations sur la façon dont le cache est utilisé pour les pages statiques.
 
 ### /4DHTMLSTATS
 
@@ -207,7 +207,7 @@ Comme la taille d'un *logweb.txt* fichier évoluer considérablement, il est pos
 
 Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d'historique est archivé dans un dossier nommé "Archives Logweb", qui est créé au même niveau que le fichier *logweb.txt*.
 
-Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un dossier archivé le 4 septembre 2020 à 15 h 50 et 7 secondes : “D2020_09_04_T15_50_07.txt.”
+Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un dossier archivé le 4 septembre 2020 à 15 h 50 et 7 secondes : “D2020_09_04_T15_50_07.txt.” et 7 secondes : “D2020_09_04_T15_50_07.txt.”
 
 #### Paramètres de backup
 

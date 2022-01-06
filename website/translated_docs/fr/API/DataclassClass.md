@@ -526,11 +526,11 @@ La fonction `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->retourne
 
 **Objet retourné**
 
-| Propriété   | Type        | Description                            |
-| ----------- | ----------- | -------------------------------------- |
-| name        | Texte       | Nom de la dataclass                    |
-| primaryKey  | Texte       | Nom de la clé primaire de la dataclass |
-| tableNumber | Entier long | Numéro interne de la table 4D          |
+| Propriété   | Type    | Description                            |
+| ----------- | ------- | -------------------------------------- |
+| name        | Texte   | Nom de la dataclass                    |
+| primaryKey  | Texte   | Nom de la clé primaire de la dataclass |
+| tableNumber | Integer | Numéro interne de la table 4D          |
 
 
 
@@ -636,7 +636,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 <!-- REF #DataClassClass.newSelection().Params -->
 | Paramètres | Type               |    | Description                                                                                                                           |
 | ---------- | ------------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder  | Entier long        | -> | `dk keep ordered` : crée une entity selection triée,<br>`dk non ordered` : crée une entity selection non triée (défaut si omis) |
+| keepOrder  | Integer            | -> | `dk keep ordered` : crée une entity selection triée,<br>`dk non ordered` : crée une entity selection non triée (défaut si omis) |
 | Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection vide liée à la dataclass                                                                                    |
 <!-- END REF -->
 

@@ -8,7 +8,7 @@ title: Clases
 
 El lenguaje 4D soporta el concepto de **clases**. En un lenguaje de programación, el uso de una clase permite definir el comportamiento de un objeto con propiedades y funciones asociadas.
 
-Una vez definida una clase usuario, puede **instanciar** los objetos de esta clase en cualquier parte de su código. Cada objeto es una instancia de su clase. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
+Cada objeto es una instancia de su clase. Una vez definida una clase usuario, puede **instanciar** los objetos de esta clase en cualquier parte de su código. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
 
 > El modelo de clases en 4D es similar al de las clases en JavaScript, y se basa en una cadena de prototipos.
 
@@ -150,7 +150,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## El objeto clase
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). Un objeto class tiene las propiedades y funciones siguientes:
+Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). Una clase es un objeto en sí mismo, de ["Class" class](API/classClass.md).
 
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)
@@ -361,10 +361,26 @@ Function get fullAddress()->$result : Object
 ```4d
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
+MyClass
+Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-Una función class constructor, que puede aceptar los [parámetros](#parameters), puede utilizarse para definir una clase usuario.  MyClass Class Constructor({$parameterName : type; ...}) // code </code></pre>
+Una función class constructor, que puede aceptar los [parámetros](#parameters), puede utilizarse para definir una clase usuario.
+
+En ese caso, cuando se llama a la función [`new()`](API/classClass.md#new), se llama al constructor de la clase con los parámetros que se pasan opcionalmente a la función `new()`.
+
+Para una función clase constructor, el comando `Current method name` devuelve: "*\<ClassName>:constructor*", por ejemplo "MiClase:constructor".
+
+
+
+#### Ejemplo:
+
+```4d
+// Class:  MyClass
+Class Constructor({$parameterName : type; ...})
+// code
+```
 
 Una función class constructor, que puede aceptar los [parámetros](#parameters), puede utilizarse para definir una clase usuario.
 
@@ -490,6 +506,16 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
 
+Rectangle
+Class constructor($width : Integer; $height : Integer)
+    This.name:="Rectangle"
+    This.height:=$height
+    This.width:=$width
+
+
+Function sayName()
+    ALERT("Hi, I am a "+This.name+".")
+
 // Definición de la función
 Function getArea()
     var $0 : Integer
@@ -559,7 +585,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 The `This` keyword returns a reference to the currently processed object. En 4D, se puede utilizar en [diferentes contextos](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-En la mayoría de los casos, el valor de `This` viene determinado por cómo se llama a una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
+En la mayoría de los casos, el valor de `This` viene determinado por cómo se llama a una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
 Cuando se llama a una fórmula como método miembro de un objeto, su `This` se define en el objeto al que se llama el método. Por ejemplo:
 
@@ -626,7 +652,7 @@ Several commands of the 4D language allows you to handle class features.
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.</p>
 
 
 ### `OB Instance of`

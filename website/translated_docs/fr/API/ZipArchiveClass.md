@@ -50,14 +50,14 @@ End if
 **ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Paramètres      | Type        |    | Description                                          |
-| --------------- | ----------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D.File     | -> | File or Folder object to compress                    |
-| folderToZip     | 4D.Folder   | -> | File or Folder object to compress                    |
-| zipStructure    | Object      | -> | File or Folder object to compress                    |
-| destinationFile | 4D.File     | -> | Destination file for the archive                     |
-| options         | Entier long | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Résultat        | Object      | <- | Objet statut                                         |
+| Paramètres      | Type      |    | Description                                          |
+| --------------- | --------- |:--:| ---------------------------------------------------- |
+| fileToZip       | 4D.File   | -> | File or Folder object to compress                    |
+| folderToZip     | 4D.Folder | -> | File or Folder object to compress                    |
+| zipStructure    | Object    | -> | File or Folder object to compress                    |
+| destinationFile | 4D.File   | -> | Destination file for the archive                     |
+| options         | Integer   | -> | *folderToZip* option: `ZIP Without enclosing folder` |
+| Résultat        | Object    | <- | Objet statut                                         |
 <!-- END REF -->
 
 

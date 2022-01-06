@@ -18,7 +18,7 @@ Pour créer un nouveau projet :
 2. Sélectionnez **Nouveau> Projet...** depuis le menu **Fichier** : <p>![](assets/en/getStart/projectCreate1.png)<p>OU<p>(4D uniquement) Sélectionnez **Projet...** depuis le bouton de la barre d'outils **Nouveau** :<p>![](assets/en/getStart/projectCreate2.png)<p>Un dialogue standard **Sauvegarde** apparaît, de façon à ce que vous choisissiez le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**.<p> Ce nom sera utilisé :
-    - comme le nom du dossier du projet,
+    - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
     - comme nom du fichier .4DProject au premier niveau du dossier "Project".
 
     Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. Toutefois, si votre projet est destiné à fonctionner sur d'autres systèmes ou à être enregistré via un outil de gestion de version, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
@@ -35,7 +35,7 @@ To open an existing project from 4D:
 
 2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
-    - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
+    - *Fichiers de raccourcis* : extension `.4dlink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
     - *Fichiers de raccourcis* : extension `.4DLink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
     - *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D hérités
 
@@ -43,9 +43,9 @@ To open an existing project from 4D:
 
 En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D propose deux menus avec des options spécifiques disponibles à l'aide du bouton **Ouvrir** et du menu **Fichier de données**.
 
-- **Ouvrir** - mode d'ouverture du projet :
-    - **Interprété** ou **compilé** : ces options sont disponibles lorsque le projet sélectionné contient à la fois du [code interprété et compilé](Concepts/interpreted.md).
-    - **[Centre de Maintenance et de Sécurité](MSC/overview.md)** : Ouverture en mode sécurisé permettant d'accéder aux projets endommagés afin d'effectuer les réparations nécessaires.
+- via les options du menu :
+    - *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
+    - *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
 
 - **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
 
@@ -53,12 +53,12 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 
 4D propose plusieurs façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
 
-- via les options du menu :
-    -   *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
-    -   *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
+- via les préférences :
+    -   **Ouvrir** - mode d'ouverture du projet :
+    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
 
 - via les préférences :
-    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
+    -   **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
 
 - via un fichier `.4DLink`.
 

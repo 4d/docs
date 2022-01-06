@@ -3,9 +3,9 @@ id: depurador
 title: Depurador
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through methods slowly and examine the information. This process is called "tracing".
+The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
-![debugger-window-local](assets/en/Debugging/debugger-Window-local.png)
+![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
 
 
 ## Llamada al depurador

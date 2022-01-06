@@ -36,7 +36,7 @@ Todos los objetos propuestos en la librería de objetos estándar se describen e
 
 ## Crear y utilizar librerías de objetos personalizadas
 
-Puede crear y utilizar librerías de objetos personalizadas en 4D. Una librería de objetos personalizada es un proyecto 4D donde puede almacenar sus objetos favoritos (botones, textos, imágenes, etc.) A continuación, puede reutilizar estos objetos en diferentes formularios y proyectos.
+Puede crear y utilizar librerías de objetos personalizadas en 4D. Una librería de objetos personalizada es un proyecto 4D donde puede almacenar sus objetos favoritos (botones, textos, imágenes, etc.) A continuación, puede reutilizar estos objetos en diferentes formularios y proyectos. A continuación, puede reutilizar estos objetos en diferentes formularios y proyectos.
 
 Los objetos se almacenan con todas sus propiedades, incluidos sus métodos. Las librerías se arman y utilizan mediante simples operaciones de arrastrar y soltar o copiar y pegar.
 
