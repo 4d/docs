@@ -31,75 +31,75 @@ Puede modificar esta barra de menú como desee o crear otras adicionales.
 
 ### Utilizando el editor de menús
 
-1. Seleccione el elemento que desea crear y haga clic en el botón añadir <img src="assets/en/Menus/PlussNew.png" alt=" /> debajo de la zona de la barra de menús. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
-2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Menu bar names must be unique. They may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
+1. Seleccione el elemento que desea crear y haga clic en el botón añadir <img src="assets/en/Menus/PlussNew.png" alt=" /> debajo de la zona de la barra de menús. O Elija **Crear una nueva barra de menús** o **Crear un nuevo menú** en el menú contextual de la lista o en el menú de opciones situado debajo de la lista. Si ha creado una barra de menús, aparece una nueva barra en la lista que contiene los menús por defecto (Archivo y Edición).
+2. (opcional) Haga doble clic en el nombre de la barra de menú/menú para pasar al modo de edición e introducir un nombre personalizado. O Introduzca el nombre personalizado en el área "Título". Los nombres de las barras de menú deben ser únicos. Pueden contener hasta 31 caracteres. Puede introducir el nombre como "hard coded" o introducir una referencia (ver [información sobre la propiedad Title](properties.md#title)).
 
 ### Utilizando el lenguaje 4D
-Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
+Utilice el comando `Create menu` para crear una nueva barra de menú o referencia de menú (*MenuRef*) en la memoria.
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. In both cases, it consists of a list of items. Sólo difiere su uso. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+Cuando los menús se manejan mediante referencias *MenuRef*, no hay diferencia per se entre un menú y una barra de menús. En ambos casos, consiste en una lista de elementos. Sólo difiere su uso. En el caso de una barra de menús, cada elemento corresponde a un menú que a su vez está compuesto por elementos.
 
-`Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
+`Create menu` puede crear menús vacíos (para llenar utilizando `APPEND MENU ITEM` o `INSERT MENU ITEM`) o por menús construidos sobre menús diseñados en el editor de menús.
 
 ## Añadir líneas
-For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
+Para cada uno de los menús, debe añadir los comandos que aparecen cuando el menú se despliega. Puede insertar elementos que se asociarán a los métodos o a las acciones estándar, o adjuntar otros menús (submenús).
 
 ### Utilizando el editor de menús
-To add a menu item:
+Para añadir un elemento de menú:
 
-1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
-2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
-3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. It may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see below).
+1. En la lista de menús fuente, seleccione el menú al que desea añadir un comando. Si el menú ya tiene comandos, se mostrarán en la lista central. Si desea insertar el nuevo comando, seleccione el comando que desea que aparezca sobre él. Todavía es posible reorganizar el menú posteriormente utilizando la función de arrastrar y soltar.
+2. Elija **Añadir un elemento al menú "NombreDelMenú"** en el menú de opciones del editor o desde el menú contextual (clic derecho en la lista central). O Haga clic en el botón añadir <img src="assets/en/Menus/PlussNew.png" alt=" /> situado debajo de la lista central. 4D añade un nuevo elemento con el nombre por defecto "Elemento X" donde X es el número de elementos ya creados.
+3. Haga doble clic en el nombre del comando para pasar al modo edición e introducir un nombre personalizado. O Introduzca el nombre personalizado en el área "Título". Puede contener hasta 31 caracteres. Puede introducir el nombre como "codificado" o introducir una referencia (ver más abajo).
 
 
 ### Utilizando el lenguaje 4D
 
-Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
+Utilice `INSERT MENU ITEM` o `APPEND MENU ITEM` para insertar o añadir elementos de menú en referencias de menú existentes.
 
 
-## Deleting menus and items
+## Eliminar menús y elementos de menús
 
 ### Utilizando el editor de menús
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
+Puede eliminar una barra de menús, un menú o un elemento de menú en el editor de menús en cualquier momento. Tenga en cuenta que cada menú o barra de menús sólo tiene una referencia. Cuando un menú está unido a diferentes barras o a diferentes menús, cualquier modificación o supresión realizada en el menú se lleva a cabo inmediatamente en todas las demás apariciones de este menú. La eliminación de un menú sólo borrará una referencia. Cuando se borra la última referencia de un menú, 4D muestra una alerta.
 
-To delete a menu bar, menu or menu item:
+Para eliminar una barra de menús, un menú o un elemento de menú:
 
-- Select the item to be deleted and click on the delete ![](assets/en/Menus/MinussNew.png) button located beneath the list.
-- or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
+- Seleccione el elemento que desea eliminar y haga clic en el botón <img src="assets/en/Menus/MinussNew.png" alt=" /> situado debajo de la lista.
+- o bien, utilice el comando apropiado **Eliminar...** del menú contextual o del menú de opciones del editor.
 
-> It is not possible to delete Menu Bar #1.
+> No es posible eliminar Menu Bar #1.
 
 
 ### Utilizando el lenguaje 4D
 
-Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
+Utilice `DELETE MENU ITEM` para eliminar un elemento de una referencia de menú. Utilice `RELEASE MENU` para descargar la referencia del menú de la memoria.
 
 
 ## Adjuntar los menús
 
-Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
+Una vez creado un menú, puede adjuntarlo a uno o a varios otros menús (submenús) o barras de menús.
 
-Sub-menus can be used to group together functions organized according to subject within the same menu. Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
+Los submenús pueden utilizarse para agrupar funciones organizadas por temas dentro del mismo menú. Los submenús y sus elementos pueden tener los mismos atributos que los propios menús (acciones, métodos, accesos directos, iconos, etc.). Los elementos del submenú conservan sus características y propiedades originales y el funcionamiento del submenú es idéntico al de un menú estándar.
 
-You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
+Puede crear submenús de submenús hasta una profundidad prácticamente ilimitada. Sin embargo, tenga en cuenta que, por razones de ergonomía de la interfaz, en general no se recomienda superar los dos niveles de submenús.
 
-At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
+En tiempo de ejecución, si un menú adjunto se modifica por programación, todas las demás instancias del menú reflejarán estos cambios.
 
 
 ### Utilizando el editor de menús
 
-A menu can be attached to a menu bar or to another menu.
+Un menú puede estar unido a una barra de menús o a otro menú.
 
-- To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
-- To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-  ![](assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
+- Para adjuntar un menú a una barra de menús: haga clic con el botón derecho del ratón en la barra de menús y seleccione **Adjuntar un menú a la barra de menús "nombre de la barra" >**, luego elija el menú que desea adjuntar a la barra de menús: <img src="assets/es/Menus/attach.png" alt=" /> También puede seleccionar una barra de menú y luego hacer clic en el botón de opciones que se encuentra debajo de la lista.
+- Para adjuntar un menú a otro menú: seleccione el menú en el área de la izquierda, luego haga clic con el botón derecho del ratón en el elemento del menú y seleccione **Agregar un submenú al elemento "nombre del elemento">**, luego elija el menú que desea utilizar como submenú:  
+  <img src="assets/es/Menus/attach2.png" alt=" /> También puede seleccionar un elemento del menú y luego hacer clic en el botón de opciones que se encuentra debajo de la lista. El menú que se adjunta se convierte así en un submenú. El título del elemento se mantiene (el nombre original del submenú se ignora), pero este título puede modificarse.
 
 #### Quitar los menús
 
-You can detach a menu from a menu bar or a sub-menu from a menu at any time. The detached menu is then no longer available in the menu bar or sub-menu as the case may be, but it is still present in the list of menus.
+Puede separar un menú de una barra de menús o un submenú de un menú en cualquier momento. El menú separado ya no está disponible en la barra de menús o en el submenú, según el caso, pero sigue estando presente en la lista de menús.
 
-To detach a menu, right-click with the right button on the menu or sub-menu that you want to detach in the central list, then choose the **Detach the menu(...)** or **Detach the sub-menu(...)**
+Para desvincular un menú, haga clic con el botón derecho en el menú o submenú que desee desvincular en la lista central y, a continuación, elija la opción **Desvincular el menú(...)** o **Desvincular el submenú(...)**
 
 ### Utilizando el lenguaje 4D
 
-Since there is no difference between menus and menu bars in the 4D language, attaching menus or sub-menus is done in the same manner: use the *subMenu* parameter of the `APPEND MENU ITEM` command to attach a menu to a menu bar or an menu.  
+Como no hay diferencia entre los menús y las barras de menús en el lenguaje de 4D, adjuntar menús o submenús se hace de la misma manera: utilice el parámetro *submenú* del comando `APPEND MENU ITEM` para adjuntar un menú a una barra de menús o a un menú.  
