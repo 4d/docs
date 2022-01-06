@@ -494,7 +494,7 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>option</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>ck shared</code> : retourne une entity selection partageable</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck shared</code> : retourne une entity selection partageable</td></tr>
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Copie de l'entity selection</td></tr>
 </tbody>
 </table>
@@ -548,7 +548,7 @@
 </thead>
 <tbody>
 <tr><td>attributePath</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes</td></tr>
-<tr><td>option</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>dk diacritical</code> : évaluation diacritique (&quot;A&quot; # &quot;a&quot; par exemple)</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk diacritical</code> : évaluation diacritique (&quot;A&quot; # &quot;a&quot; par exemple)</td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection avec seulement les valeurs distinctes</td></tr>
 </tbody>
 </table>
@@ -594,7 +594,7 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>dk stop dropping on first error</code> : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable</td></tr>
+<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk stop dropping on first error</code> : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable</td></tr>
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Entity selection vide si exécutée avec succès, sinon entity selection contenant la ou les entité(s) non supprimée(s)</td></tr>
 </tbody>
 </table>
@@ -644,7 +644,7 @@
 <tbody>
 <tr><td>attributePath</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Chemin d'attribut dont les valeurs doivent être extraites dans la nouvelle collection</td></tr>
 <tr><td>targetPath</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Chemin ou nom d'attribut cible</td></tr>
-<tr><td>option</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code> : inclure les attributs null dans la collection retournée (ignorés par défaut). Paramètre ignoré si targetPath est passé</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code> : inclure les attributs null dans la collection retournée (ignorés par défaut). Paramètre ignoré si targetPath est passé</td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection contenant les valeurs extraites</td></tr>
 </tbody>
 </table>
@@ -1184,7 +1184,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tbody>
 <tr><td>formulaString</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Chaîne formule</td></tr>
 <tr><td>formulaObj</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>sortOrder</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>dk ascending</code> (par défaut) ou<code>dk descending</code></td></tr>
+<tr><td>sortOrder</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk ascending</code> (par défaut) ou<code>dk descending</code></td></tr>
 <tr><td>settings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) de la formule</td></tr>
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Nouvelle entity selection triée</td></tr>
 </tbody>
@@ -1442,8 +1442,8 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </thead>
 <tbody>
 <tr><td>ranges</td><td>Collection</td><td>Collection d'objets plage</td></tr>
-<tr><td>ranges[].start</td><td>Entier long</td><td>Indice de la première entité de la plage</td></tr>
-<tr><td>ranges[].end</td><td>Entier long</td><td>Indice de la dernière entité de la plage</td></tr>
+<tr><td>ranges[].start</td><td>Integer</td><td>Indice de la première entité de la plage</td></tr>
+<tr><td>ranges[].end</td><td>Integer</td><td>Indice de la dernière entité de la plage</td></tr>
 </tbody>
 </table>
 <p>Si une propriété <code>ranges</code> contient une seule entité, <code>start</code> = <code>end</code>. L'indice démarre à 0.</p>
@@ -1481,8 +1481,8 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>startFrom</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Position à laquelle démarrer l'opération (incluse)</td></tr>
-<tr><td>end</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Position de fin (non incluse)</td></tr>
+<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Position à laquelle démarrer l'opération (incluse)</td></tr>
+<tr><td>end</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Position de fin (non incluse)</td></tr>
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Nouvelle entity selection contenant les entités copiées (shallow copy)</td></tr>
 </tbody>
 </table>
@@ -1568,9 +1568,9 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 <tbody>
 <tr><td>filterString</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Chemin(s) d'attribut(s) à extraire</td></tr>
 <tr><td>filterCol</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection d'attribut(s) à extraire</td></tr>
-<tr><td>options</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code> : ajoute la clé primaire<br><code>dk with stamp</code> : ajoute le marqueur</td></tr>
-<tr><td>begin</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Désigne la position de début</td></tr>
-<tr><td>howMany</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Nombre d'entités à extraire</td></tr>
+<tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code> : ajoute la clé primaire<br><code>dk with stamp</code> : ajoute le marqueur</td></tr>
+<tr><td>begin</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Désigne la position de début</td></tr>
+<tr><td>howMany</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Nombre d'entités à extraire</td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'objets contenant les attributs et valeurs de l'entity selection</td></tr>
 </tbody>
 </table>
@@ -2005,7 +2005,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 ]
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/EntityClass.html"><span class="arrow-prev">← </span><span>Entity</span></a><a class="docs-next button" href="/docs/fr/API/FileClass.html"><span>File</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#créer-une-entity-selection">Créer une entity selection</a></li><li><a href="#use-entity-selection">USE ENTITY SELECTION</a></li><li><a href="#91index93">[<em>index</em>]</a></li><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#add">.add()</a></li><li><a href="#and">.and()</a></li><li><a href="#average">.average()</a></li><li><a href="#contains">.contains()</a></li><li><a href="#count">.count()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#first">.first()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#isalterable">.isAlterable()</a></li><li><a href="#isordered">.isOrdered()</a></li><li><a href="#last">.last()</a></li><li><a href="#length">.length</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#minus">.minus()</a></li><li><a href="#or">.or()</a></li><li><a href="#orderby">.orderBy()</a></li><li><a href="#orderbyformula-">.orderByFormula( )</a></li><li><a href="#query">.query()</a></li><li><a href="#querypath">.queryPath</a></li><li><a href="#queryplan">.queryPlan</a></li><li><a href="#refresh">.refresh()</a></li><li><a href="#selected">.selected()</a></li><li><a href="#slice">.slice()</a></li><li><a href="#sum-">.sum( )</a></li><li><a href="#tocollection-">.toCollection( )</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/EntityClass.html"><span class="arrow-prev">← </span><span>Entity</span></a><a class="docs-next button" href="/docs/fr/API/FileClass.html"><span>File</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#créer-une-entity-selection">Créer une entity selection</a></li><li><a href="#use-entity-selection">USE ENTITY SELECTION</a></li><li><a href="#91index93">[<em>index</em>]</a></li><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#add">.add()</a></li><li><a href="#and">.and()</a></li><li><a href="#average">.average()</a></li><li><a href="#contains">.contains()</a></li><li><a href="#count">.count()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#first">.first()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#isalterable">.isAlterable()</a></li><li><a href="#isordered">.isOrdered()</a></li><li><a href="#last">.last()</a></li><li><a href="#length">.length</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#minus">.minus()</a></li><li><a href="#or">.or()</a></li><li><a href="#orderby">.orderBy()</a></li><li><a href="#orderbyformula-">.orderByFormula( )</a></li><li><a href="#query">.query()</a></li><li><a href="#querypath">.queryPath</a></li><li><a href="#queryplan">.queryPlan</a></li><li><a href="#refresh">.refresh()</a></li><li><a href="#selected">.selected()</a></li><li><a href="#slice">.slice()</a></li><li><a href="#sum-">.sum( )</a></li><li><a href="#tocollection-">.toCollection( )</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

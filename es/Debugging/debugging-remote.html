@@ -90,32 +90,33 @@
 <li>The code executed in the <code>On Server Startup Database</code> Method cannot be debugged remotely. It can only be debugged on the server side</li>
 <li>If no debugger is attached, the running code is not stopped by debugging commands</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="attaching-the-debugger-to-a-remote-4d-client"></a><a href="#attaching-the-debugger-to-a-remote-4d-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attaching the debugger to a remote 4D client</h2>
-<p>By default, the debugger is not attached to a remote 4D client:</p>
+<h2><a class="anchor" aria-hidden="true" id="attaching-the-debugger"></a><a href="#attaching-the-debugger" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attaching the debugger</h2>
+<p>By default when you start an application:</p>
 <ul>
-<li>If 4D Server is not running headless, the debugger is attached to the server</li>
-<li>If 4D Server is running headless, no debugger is attached</li>
+<li>if 4D Server is not running headless, the debugger is attached to the server,</li>
+<li>if 4D Server is running headless, no debugger is attached.</li>
 </ul>
 <p>You can attach the debugger to any remote 4D client allowed to connect to the 4D Server application.</p>
 <blockquote>
 <p>The remote 4D client's user session must have access to the Design environment of the database.</p>
 </blockquote>
 <p>To attach the debugger to a remote 4D client:</p>
-<ul>
-<li>In the 4D Server menu bar, select <strong>Edit</strong> &gt; <strong>Detach Debugger</strong> so that the debugger becomes available to remote machines.
-<ul>
-<li>This step is useless if the 4D Server is running headless.</li>
-<li>You can attach the debugger back to the server by selecting <strong>Edit</strong> &gt; <strong>Attach debugger</strong> (if not attached to a remote 4D client, see <a href="#rejected-attachment-requests">Rejected attachment requests</a>).</li>
-</ul></li>
+<ol>
+<li>In the 4D Server menu bar, select <strong>Edit</strong> &gt; <strong>Detach Debugger</strong> so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).</li>
 <li>In a remote 4D client connected to the server, select <strong>Run</strong> &gt; <strong>Attach Remote Debugger</strong></li>
-</ul>
+</ol>
 <p>If the attachment is accepted (see <a href="#rejected-attachment-requests">Rejected attachment requests</a>), the menu command becomes <strong>Detach Remote Debugger</strong>.</p>
 <p>The debugger is then attached to the remote 4D client:</p>
 <ul>
 <li>until the end of the user session</li>
 <li>until you select <code>Detach Remote Debugger</code></li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="attach-debugger-or-remote-debugger-at-startup"></a><a href="#attach-debugger-or-remote-debugger-at-startup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attach Debugger or Remote Debugger at Startup</h2>
+<p>To attach the debugger back to the server:</p>
+<ol>
+<li>On the remote 4D client that has the debugger attached, select <strong>Run</strong> &gt; <strong>Detach Remote Debugger</strong>.</li>
+<li>In the 4D Server menu bar, select <strong>Edit</strong> &gt; <strong>Attach debugger</strong>.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="attaching-debugger-at-startup"></a><a href="#attaching-debugger-at-startup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attaching debugger at startup</h2>
 <p>4D allows you to automatically attach the debugger to a remote 4D client or the server at startup:</p>
 <ul>
 <li>On the server (if not headless), this option is named <strong>Attach Debugger At Startup</strong>. When the server is started, it automatically attaches the debugger (default).</li>
@@ -130,16 +131,16 @@
 <p>This setting is applied per project and is stored locally in the <a href="/docs/es/Project/architecture.html#userpreferencesusername"><code>.4DPreferences</code></a> file.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="rejected-attachment-requests"></a><a href="#rejected-attachment-requests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rejected attachment requests</h2>
-<p>While the debugger is already attached to a remote 4D client, or to 4D Server (default), no other machine can attach the debugger.</p>
+<p>While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.</p>
 <p>If a machine tries to attach the debugger while it is already attached, the attachment is rejected and a dialog box appears:</p>
 <p><img src="/docs/assets/en/Debugging/attach-debugger-dialog.png" alt="attach-debugger-dialog"></p>
 <p><img src="/docs/assets/en/Debugging/attach-debugger-dialog-2.png" alt="attach-debugger-dialog-2"></p>
 <p>Attaching the debugger in this case requires that:</p>
 <ul>
-<li>the attached debugger is detached from the remote 4D client using the <strong>Detach remote debugger</strong> menu command or from the server using the <strong>Detach debugger</strong> command</li>
-<li>the attached remote 4D client session is closed</li>
+<li>the attached debugger is detached from the server or from the remote 4D client using respectively the <strong>Detach debugger</strong> or <strong>Detach remote debugger</strong> menu command,</li>
+<li>the attached remote 4D client session is closed.</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/Debugging/breakpoints.html"><span class="arrow-prev">← </span><span>Breakpoints and Command Catching</span></a><a class="docs-next button" href="/docs/es/Preferences/overview.html"><span>Generalidades</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#generalidades">Generalidades</a></li><li><a href="#depuradores-adjuntos">Depuradores adjuntos</a></li><li><a href="#attaching-the-debugger-to-a-remote-4d-client">Attaching the debugger to a remote 4D client</a></li><li><a href="#attach-debugger-or-remote-debugger-at-startup">Attach Debugger or Remote Debugger at Startup</a></li><li><a href="#rejected-attachment-requests">Rejected attachment requests</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/Debugging/breakpoints.html"><span class="arrow-prev">← </span><span>Breakpoints and Command Catching</span></a><a class="docs-next button" href="/docs/es/Preferences/overview.html"><span>Generalidades</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#generalidades">Generalidades</a></li><li><a href="#depuradores-adjuntos">Depuradores adjuntos</a></li><li><a href="#attaching-the-debugger">Attaching the debugger</a></li><li><a href="#attaching-debugger-at-startup">Attaching debugger at startup</a></li><li><a href="#rejected-attachment-requests">Rejected attachment requests</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

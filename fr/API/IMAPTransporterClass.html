@@ -94,15 +94,15 @@
 <tr><td><a href="#getmimeasblob"><strong>.getMIMEAsBlob</strong>( <em>msgNumber</em> : Integer { ; <em>updateSeen</em> : Boolean } ) : Blob<br><strong>.getMIMEAsBlob</strong>( <em>msgID</em> : Text { ; <em>updateSeen</em> : Boolean } ) : Blob</a><p>    retourne un BLOB avec le contenu MIME du message correspondant au <em>msgNumber</em> ou <em>msgID</em> dans la boîte de réception désignée par le <code>IMAP_transporter</code></td></tr>
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    the name or the IP address of the host server</td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td></tr>
-<tr><td><a href="#move"><strong>.move</strong>( <em>msgsIDs</em> : Collection ; <em>destinationBox</em> : Text ) : Object<br><strong>.move</strong>( <em>allMsgs</em> : Integer ; <em>destinationBox</em> : Text ) : Object</a><p>    moves the messages defined by <em>msgsIDs</em> or <em>allMsgs</em> to the <em>destinationBox</em> on the IMAP server</td></tr>
-<tr><td><a href="#numtoid"><strong>.numToID</strong>( <em>startMsg</em> : Integer ; <em>endMsg</em> : Integer ) : Collection</a><p>    converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by <em>startMsg</em> and <em>endMsg</em></td></tr>
-<tr><td><a href="#removeflags"><strong>.removeFlags</strong>( <em>msgIDs</em> : Collection ; <em>keywords</em> :  Object ) : Object<br><strong>.removeFlags</strong>( <em>msgIDs</em> : Text ; <em>keywords</em> :  Object ) : Object<br><strong>.removeFlags</strong>( <em>msgIDs</em> : Longint ; <em>keywords</em> :  Object ) : Object</a><p>    removes flags from the <code>msgIDs</code> for the specified <code>keywords</code></td></tr>
-<tr><td><a href="#renamebox"><strong>.renameBox</strong>( <em>currentName</em> : Text ; <em>newName</em> : Text ) : Object</a><p>    changes the name of a mailbox on the IMAP server</td></tr>
+<tr><td><a href="#move"><strong>.move</strong>( <em>msgsIDs</em> : Collection ; <em>destinationBox</em> : Text ) : Object<br><strong>.move</strong>( <em>allMsgs</em> : Integer ; <em>destinationBox</em> : Text ) : Object</a><p>    déplace les messages définis dans <em>msgsIDs</em> ou <em>allMsgs</em> vers la <em>destinationBox</em> sur le serveur IMAP</td></tr>
+<tr><td><a href="#numtoid"><strong>.numToID</strong>( <em>startMsg</em> : Integer ; <em>endMsg</em> : Integer ) : Collection</a><p>    convertit les numéros de séquence en IDs uniques IMAP pour les messages de la plage séquentielle désignée par <em>startMsg</em> et <em>endMsg</em></td></tr>
+<tr><td><a href="#removeflags"><strong>.removeFlags</strong>( <em>msgIDs</em> : Collection ; <em>keywords</em> :  Object ) : Object<br><strong>.removeFlags</strong>( <em>msgIDs</em> : Text ; <em>keywords</em> :  Object ) : Object<br><strong>.removeFlags</strong>( <em>msgIDs</em> : Longint ; <em>keywords</em> :  Object ) : Object</a><p>    supprime des flags (drapeaux) des <code>msgIDs</code> pour les <code>keywords</code> définis</td></tr>
+<tr><td><a href="#renamebox"><strong>.renameBox</strong>( <em>currentName</em> : Text ; <em>newName</em> : Text ) : Object</a><p>    renomme une mailbox sur le serveur IMAP</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     the port number used for mail transactions</td></tr>
-<tr><td><a href="#searchmails"><strong>.searchMails</strong>( <em>searchCriteria</em> : Text ) : Collection</a><p>    searches for messages that match the given <em>searchCriteria</em> in the current mailbox</td></tr>
-<tr><td><a href="#selectbox"><strong>.selectBox</strong>( <em>name</em> : Text { ; <em>state</em> : Integer } ) : Object</a><p>    selects the <em>name</em> mailbox as the current mailbox</td></tr>
-<tr><td><a href="#subscribe"><strong>.subscribe</strong>( <em>name</em> : Text ) : Object</a><p>    allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes</td></tr>
-<tr><td><a href="#unsubscribe"><strong>.unsubscribe</strong>( <em>name</em> : Text ) : Object</a><p>    removes a mailbox from a set of subscribed mailboxes</td></tr>
+<tr><td><a href="#searchmails"><strong>.searchMails</strong>( <em>searchCriteria</em> : Text ) : Collection</a><p>    recherche les messages qui correspondent aux critères de recherche <em>searchCriteria</em> dans la boîte de réception courante</td></tr>
+<tr><td><a href="#selectbox"><strong>.selectBox</strong>( <em>name</em> : Text { ; <em>state</em> : Integer } ) : Object</a><p>    sélectionne la mailbox <em>name</em> comme étant la mailbox courante</td></tr>
+<tr><td><a href="#subscribe"><strong>.subscribe</strong>( <em>name</em> : Text ) : Object</a><p>    permet d'ajouter la mailbox spécifiée à l'ensemble des mailboxes auxquelles vous avez &quot;souscrit&quot; sur le serveur IMAP</td></tr>
+<tr><td><a href="#unsubscribe"><strong>.unsubscribe</strong>( <em>name</em> : Text ) : Object</a><p>    supprime la mailbox spécifiée de l'ensemble des mailboxes auxquelles vous avez &quot;souscrit&quot; sur le serveur IMAP</td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     the user name used for authentication on the mail server</td></tr>
 </tbody>
 </table>
@@ -235,7 +235,7 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection de chaînes : IDs uniques des messages (texte)<br>Texte : ID unique d'un message<br>Numérique (IMAP all) : Tous les messages de la boîte sélectionnée</td></tr>
-<tr><td>keywords</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Flags de mots-clés à ajouter</td></tr>
+<tr><td>keywords</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Mots-clés de flags à ajouter</td></tr>
 <tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération addFlags</td></tr>
 </tbody>
 </table>
@@ -335,7 +335,7 @@ End if</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.append()</code> ajoute l'objet <code>mailObj</code> à la boîte <code>destinationBox</code>.</p>
-<p>Dans le paramètre <code>mailObj</code>, passez un objet email. Pour une description détaillée des propriétés de mail, reportez-vous à la section <a href="/docs/fr/API/EmailObjectClass.html#object-email">Objet Email</a>. La fonction <code>.append()</code> prend en charge les marqueurs de mots-clés dans l'attribut <code>keywords</code> des objets email.</p>
+<p>Dans le paramètre <code>mailObj</code>, passez un objet email. Dans le paramètre <code>mailObj</code>, passez un objet email. La fonction <code>.append()</code> prend en charge les marqueurs de mots-clés dans l'attribut <code>keywords</code> des objets email.</p>
 <p>Le paramètre optionnel <code>destinationBox</code> vous permet de passer le nom de la boîte de réception dans laquelle l'objet <code>mailObj</code> sera ajouté. S'il est omis, la mailbox courante sera utilisée.</p>
 <p>Dans le paramètre optionnel <code>options</code>, vous pouvez passer un objet permettant de définir le charset et l'encodage des différentes parties de l'email. Propriétés disponibles :</p>
 <table>
@@ -442,7 +442,7 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.checkConnection()</code> function  checks the connection using information stored in the transporter object, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.</p>
 <h4><a class="anchor" aria-hidden="true" id="objet-retourné"></a><a href="#objet-retourné" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objet retourné</h4>
-<p>The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:</p>
+<p>The function sends a request to the mail server and returns an object describing the mail status. Cet objet peut avoir les propriétés suivantes :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th></th><th>Type</th><th>Description</th></tr>
@@ -506,7 +506,7 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>msgsIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection d'IDs uniques de messages (texte)</td></tr>
-<tr><td>allMsgs</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code> : tous les messages de la boîte de réception sélectionnée</td></tr>
+<tr><td>allMsgs</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code> : tous les messages de la boîte de réception sélectionnée</td></tr>
 <tr><td>destinationBox</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Boîte de réception recevant les messages copiés</td></tr>
 <tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération de copie</td></tr>
 </tbody>
@@ -662,7 +662,7 @@ End for each</span><span class="hljs-keyword">
 </thead>
 <tbody>
 <tr><td>msgsIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection d'IDs uniques de messages (texte)</td></tr>
-<tr><td>allMsgs</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code> : tous les messages de la boîte de réception sélectionnée</td></tr>
+<tr><td>allMsgs</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code> : tous les messages de la boîte de réception sélectionnée</td></tr>
 <tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération de suppression</td></tr>
 </tbody>
 </table>
@@ -749,9 +749,9 @@ End for each</span><span class="hljs-keyword">
 </thead>
 <tbody>
 <tr><td>name</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Nom de la boîte de réception à supprimer</td></tr>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération de suppression de boîte</td></tr>
 </tbody>
 </table>
+<p>|Result|Object|&lt;-|Statut de l'opération de suppression|</p>
 <h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.deleteBox()</code> supprime définitivement la boîte de réception nommée <code>name</code> sur le serveur IMAP. Si vous tentez de supprimer la boîte INBOX ou une boîte de réception qui n'existe pas, une erreur sera générée.</p>
 <p>Dans le paramètre <code>name</code>, passez le nom de la mailbox à supprimer.</p>
@@ -874,11 +874,10 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R5</td><td><em>name</em> is optional</td></tr>
-<tr><td>v18 R4</td><td>Ajout</td></tr>
+<tr><td>v18 R5</td><td><em>name</em> est optionnel</td></tr>
 </tbody>
 </table>
-<p></details></p>
+<p>|v18 R4|Added| </details></p>
 <p><strong>.getBoxInfo</strong>( { <em>name</em> : Text }) : Object</p>
 <table>
 <thead>
@@ -1048,7 +1047,7 @@ End for each
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du message</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du message</td></tr>
 <tr><td>msgID</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>ID unique du message</td></tr>
 <tr><td>options</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Instructions sur la gestion du message</td></tr>
 <tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td><a href="/docs/fr/API/EmailObjectClass.html#email-object">Objet email</a></td></tr>
@@ -1119,8 +1118,8 @@ End for each
 </thead>
 <tbody>
 <tr><td>ids</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection d'identifiants de messages</td></tr>
-<tr><td>startMsg</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du premier message</td></tr>
-<tr><td>endMsg</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du dernier message</td></tr>
+<tr><td>startMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du premier message</td></tr>
+<tr><td>endMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du dernier message</td></tr>
 <tr><td>options</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Instructions sur la gestion du message</td></tr>
 <tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Objet contenant :<br><ul><li>une collection d'<a href="/docs/fr/API/EmailObjectClass.html#objet-email">objets Email</a> et</li><li>une collection d'identifiants ou de numéros des messages manquants, le cas échéant</li></ul></td></tr>
 </tbody>
@@ -1135,7 +1134,7 @@ End for each
 <p><strong>Deuxième syntaxe :</strong></p>
 <p><strong><em>.getMails( startMsg ; endMsg { ; options } ) -&gt; result</em></strong></p>
 <p>La deuxième syntaxe vous permet de récupérer des messages en fonction d'une plage séquentielle. Les valeurs passées représentent la position des messages dans la boite de réception.</p>
-<p>Dans le paramètre <em>startMsg</em> passez une valeur <em>entier</em> correspondant au numéro du premier message dans une plage séquentielle. Si vous passez un nombre négatif (<em>startMsg</em> &lt;= 0), le premier message de la boîte de réception sera utilisé comme début de séquence.</p>
+<p>Dans le paramètre <em>startMsg</em> passez une valeur <em>entier</em> correspondant au numéro du premier message dans une plage séquentielle. Si vous passez un nombre négatif (<em>startMsg</em> &lt;= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.</p>
 <p>Dans le paramètre <em>endMsg</em> passez une valeur <em>entier long</em> correspondant au numéro du dernier message à inclure dans une plage séquentielle. Si vous passez un nombre négatif (<em>endMsg</em> &lt;= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.</p>
 <p>Le paramètre optionnel <em>options</em> vous permet de définir les parties de messages à retourner.</p>
 <p><strong>Options</strong></p>
@@ -1162,7 +1161,7 @@ End for each
 </thead>
 <tbody>
 <tr><td>liste</td><td>Collection</td><td>Collection d'objets <a href="/docs/fr/API/EmailObjectClass.html#email-object"><code>Email</code></a>. Si aucun objet Email n'est trouvé, une collection vide est retournée.</td></tr>
-<tr><td>notFound</td><td>Collection</td><td>Collection of:<br><ul><li>première syntaxe - IDs de messages passés antérieurement qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas</li></ul>An empty collection is returned if all messages are found.</td></tr>
+<tr><td>notFound</td><td>Collection</td><td>Collection de :<br><ul><li>première syntaxe - IDs de messages passés antérieurement qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas</li></ul>Une collection vide est retournée si tous les messages sont trouvés.</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-9"></a><a href="#exemple-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
@@ -1208,7 +1207,7 @@ End for each
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du message</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du message</td></tr>
 <tr><td>msgID</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>ID unique du message</td></tr>
 <tr><td>updateSeen</td><td>Booléen</td><td style="text-align:center">-&gt;</td><td>Si Vrai, le message est marqué comme &quot;seen&quot; (lu) dans la boite de réception. Si Faux, le message demeure inchangé.</td></tr>
 <tr><td>Résultat</td><td>BLOB</td><td style="text-align:center">&lt;-</td><td>Blob de la chaine MIME retournée par le serveur mail</td></tr>
@@ -1234,7 +1233,7 @@ End for each
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="résultat-5"></a><a href="#résultat-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
-<p><code>.getMIMEAsBlob()</code> retourne un <code>BLOB</code> retourne un BLOB qui peut être archivé dans une base de données ou converti en un objet <a href="/docs/fr/API/EmailObjectClass.html#objet-email"><code>Email</code></a> avec la commande <code>MAIL Convert from MIME</code>.</p>
+<p><code>.getMIMEAsBlob()</code> retourne un <code>BLOB</code> qui peut être archivé dans une base de données ou converti en un objet <a href="/docs/fr/API/EmailObjectClass.html#objet-email"><code>Email</code></a> avec la commande <code>MAIL Convert from MIME</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-10"></a><a href="#exemple-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$boxInfo </span>: Variant<span class="hljs-keyword">
@@ -1308,19 +1307,19 @@ End for each
 </thead>
 <tbody>
 <tr><td>msgsIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection d'IDs uniques de messages (texte)</td></tr>
-<tr><td>allMsgs</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code> : tous les messages de la boîte de réception sélectionnée</td></tr>
-<tr><td>destinationBox</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Mailbox to receive moved messages</td></tr>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the move operation</td></tr>
+<tr><td>allMsgs</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>IMAP all</code> : tous les messages de la boîte de réception sélectionnée</td></tr>
+<tr><td>destinationBox</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Boîte de réception recevant les messages déplacés</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération de déplacement</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-22"></a><a href="#description-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.move()</code> function moves the messages defined by <em>msgsIDs</em> or <em>allMsgs</em> to the <em>destinationBox</em> on the IMAP server.</p>
+<p>La fonction <code>.move()</code> déplace les messages définis dans <em>msgsIDs</em> ou <em>allMsgs</em> vers la <em>destinationBox</em> sur le serveur IMAP.</p>
 <p>Vous pouvez passer :</p>
 <ul>
-<li>in the <em>msgsIDs</em> parameter, a collection containing the unique IDs of the specific messages to move, or</li>
-<li>in the <em>allMsgs</em> parameter, the <code>IMAP all</code> constant (integer) to move all messages in the selected mailbox.</li>
+<li>dans le paramètre <em>msgsIDs</em>, une collection contenant les ID uniques des messages spécifiques à déplacer, ou</li>
+<li>dans le paramètre <em>allMsgs</em>, la constante <code>IMAP all</code> (integer) pour déplacer tous les messages de la boîte de réception sélectionnée.</li>
 </ul>
-<p>The <em>destinationBox</em> parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.</p>
+<p>Le paramètre <em>destinationBox</em> vous permet de passer une valeur texte avec le nom de la boîte de réception dans laquelle seront placés les messages déplacés.</p>
 <blockquote>
 <p>Cette fonction est uniquement prise en charge par les serveurs IMAP compatibles avec RFC <a href="https://tools.ietf.org/html/rfc8474">8474</a>.</p>
 </blockquote>
@@ -1340,7 +1339,7 @@ End for each
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>To move a selection of messages:</p>
+<p>Pour déplacer une sélection de messages :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailIds </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
@@ -1363,7 +1362,7 @@ End for each
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">move</span>(<span class="hljs-variable">$mailIds</span>;<span class="hljs-string">"documents"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2-3"></a><a href="#exemple-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
-<p>To move all messages in the current mailbox:</p>
+<p>Pour déplacer tous les messages de la boîte de réception courante :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter
 
@@ -1398,17 +1397,17 @@ End for each
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>startMsg</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du premier message</td></tr>
-<tr><td>endMsg</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du dernier message</td></tr>
-<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of unique IDs</td></tr>
+<tr><td>startMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du premier message</td></tr>
+<tr><td>endMsg</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de séquence du dernier message</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'identifiants de messages uniques</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-23"></a><a href="#description-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.numToID()</code> function converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by <em>startMsg</em> and <em>endMsg</em> in the currently selected mailbox.</p>
-<p>In the <em>startMsg</em> parameter, pass an integer value corresponding to the number of the first message in a sequential range. Si vous passez un nombre négatif (<em>startMsg</em> &lt;= 0), le premier message de la boîte de réception sera utilisé comme début de séquence.</p>
-<p>In the <em>endMsg</em> parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. Si vous passez un nombre négatif (<em>endMsg</em> &lt;= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.</p>
+<p>La fonction <code>.numToID()</code> convertit les numéros de séquence en IDs uniques IMAP pour les messages de la plage séquentielle désignée par <em>startMsg</em> et <em>endMsg</em> dans la boîte de réception courante.</p>
+<p>Dans le paramètre <em>startMsg</em>, passez une valeur integer correspondant au numéro du premier message dans la plage séquentielle. Si vous passez un nombre négatif (<em>startMsg</em> &lt;= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.</p>
+<p>Dans le paramètre <em>endMsg</em>, passez une valeur integer correspondant au numéro du dernier message dans la plage séquentielle. Si vous passez un nombre négatif (<em>endMsg</em> &lt;= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.</p>
 <h4><a class="anchor" aria-hidden="true" id="résultat-6"></a><a href="#résultat-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
-<p>The function returns a collection of strings (unique IDs).</p>
+<p>La fonction retourne une collection de chaînes (IDs uniques).</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-11"></a><a href="#exemple-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$transporter </span>: 4D.IMAPTransporter<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$server</span>;<span class="hljs-variable">$boxInfo</span>;<span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
@@ -1449,12 +1448,12 @@ End for each
 </thead>
 <tbody>
 <tr><td>msgIDs</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection de chaînes : IDs uniques des messages (texte)<br>Texte : ID unique d'un message<br>Numérique (IMAP all) : Tous les messages de la boîte sélectionnée</td></tr>
-<tr><td>keywords</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Keyword flags to remove</td></tr>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the removeFlags operation</td></tr>
+<tr><td>keywords</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Mots-clés de flags à supprimer</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération removeFlags</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-24"></a><a href="#description-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.removeFlags()</code> function removes flags from the <code>msgIDs</code> for the specified <code>keywords</code>.</p>
+<p>La fonction <code>.removeFlags()</code> supprime des flags (drapeaux) des <code>msgIDs</code> pour les <code>keywords</code> définis.</p>
 <p>Dans le paramètre <code>msgIDs</code>, vous pouvez passer soit :</p>
 <ul>
 <li><p>une <em>collection</em> contenant les IDs uniques de messages spécifiques, ou</p></li>
@@ -1470,20 +1469,20 @@ End for each
 </table>
 </li>
 </ul>
-<p>The <code>keywords</code> parameter lets you pass an object with keyword values for specific flags to remove from <code>msgIDs</code>. Vous pouvez utiliser les mots-clés suivants :</p>
+<p>Le paramètre <code>keywords</code> vous permet de passer un objet avec des valeurs de mots-clés pour les flags spécifiques à supprimer des <code>msgIDs</code>. Vous pouvez utiliser les mots-clés suivants :</p>
 <table>
 <thead>
 <tr><th>Paramètres</th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>$draft</td><td>Booléen</td><td>True to remove the &quot;draft&quot; flag from the message</td></tr>
-<tr><td>$seen</td><td>Booléen</td><td>True to remove the &quot;seen&quot; flag from the message</td></tr>
-<tr><td>$flagged</td><td>Booléen</td><td>True to remove the &quot;flagged&quot; flag from the message</td></tr>
-<tr><td>$answered</td><td>Booléen</td><td>True to remove the &quot;answered&quot; flag from the message</td></tr>
-<tr><td>$deleted</td><td>Booléen</td><td>True to remove the &quot;deleted&quot; flag from the message</td></tr>
+<tr><td>$draft</td><td>Booléen</td><td>True pour supprimer le marqueur &quot;draft&quot; du message</td></tr>
+<tr><td>$seen</td><td>Booléen</td><td>True pour supprimer le marqueur &quot;seen&quot; du message</td></tr>
+<tr><td>$flagged</td><td>Booléen</td><td>True pour supprimer le marqueur &quot;flagged&quot; du message</td></tr>
+<tr><td>$answered</td><td>Booléen</td><td>True pour supprimer le marqueur &quot;answered&quot; du message</td></tr>
+<tr><td>$deleted</td><td>Booléen</td><td>True pour supprimer le marqueur &quot;deleted&quot; du message</td></tr>
 </tbody>
 </table>
-<p>Note that False values are ignored.</p>
+<p>Les valeurs à faux sont ignorées.</p>
 <p><strong>Objet retourné</strong></p>
 <p>La fonction retourne un objet décrivant le statut IMAP :</p>
 <table>
@@ -1536,15 +1535,15 @@ End for each
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>currentName</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Name of the current mailbox</td></tr>
-<tr><td>newName</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>New mailbox name</td></tr>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the renaming operation</td></tr>
+<tr><td>currentName</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Nom actuel de la boîte de réception</td></tr>
+<tr><td>newName</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Nouveau nom de la boîte de réception</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération renaming</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-25"></a><a href="#description-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.renameBox()</code> function changes the name of a mailbox on the IMAP server. Attempting to rename a mailbox from a mailbox name that does not exist or to a mailbox name that already exists will generate an error.</p>
-<p>In the <code>currentName</code> parameter, pass the name of the mailbox to be renamed.</p>
-<p>Pass the new name for the mailbox in the <code>newName</code> parameter.</p>
+<p>La fonction <code>.renameBox()</code> renomme une mailbox sur le serveur IMAP. Essayer de renommer une mailbox qui n'existe pas ou de renommer une mailbox avec un nom qui est déjà utilisé génère une erreur.</p>
+<p>Dans le paramètre <code>currentName</code>, passez le nom de la mailbox à renommer.</p>
+<p>Passez le nouveau nom de la mailbox dans e paramètre <code>newName</code>.</p>
 <p><strong>Objet retourné</strong></p>
 <p>La fonction retourne un objet décrivant le statut IMAP :</p>
 <table>
@@ -1561,7 +1560,7 @@ End for each
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-13"></a><a href="#exemple-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>To to rename your “Invoices” mailbox to “Bills”:</p>
+<p>Pour renommer la mailbox “Invoices” en “Bills”:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 
@@ -1622,15 +1621,15 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>searchCriteria</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Critère(s) de recherche</td></tr>
-<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of message numbers</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection de numéros de messages</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-27"></a><a href="#description-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <blockquote>
 <p>Cette fonction est basée sur la spécification du <a href="https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol">protocole IMAP</a>.</p>
 </blockquote>
-<p>The <code>.searchMails()</code> function searches for messages that match the given <em>searchCriteria</em> in the current mailbox. <em>searchCriteria</em> consists of one or more search keys.</p>
-<p><em>searchCriteria</em> is a text parameter listing one or more search keys (see <a href="#authorized-search-keys">Authorized search-keys</a> below) associated or not with values to look for. A search key may be a single or multiple items. Par exemple :</p>
+<p>La fonction <code>.searchMails()</code> recherche les messages qui correspondent aux critères de recherche <em>searchCriteria</em> dans la boîte de réception courante. Le paramètre <em>searchCriteria</em> contient un ou plusieurs mots-clés de recherche.</p>
+<p><em>searchCriteria</em> est un paramètre texte listant un ou plusieurs critères de recherche (voir <a href="#mots-cles-de-recherche-autorises">Mots-clés de recherche autorisés</a> ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :</p>
 <pre><code class="hljs"><span class="hljs-attr">SearchKey1</span> = FLAGGED
 <span class="hljs-attr">SearchKey2</span> = NOT FLAGGED
 <span class="hljs-attr">SearchKey3</span> = FLAGGED DRAFT
@@ -1639,79 +1638,79 @@ End if</span>
 <p>La correspondance n'est généralement pas sensible à la casse</p>
 </blockquote>
 <ul>
-<li>If the <em>searchCriteria</em> is a null string, the search will be equivalent to a “select all”.</li>
-<li>If the <em>searchCriteria</em> includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.</li>
+<li>Si <em>searchCriteria</em> est une chaîne vide, la recherche sera équivalente à un &quot;tout sélectionner&quot;.</li>
+<li>Si <em>searchCriteria</em> contient plusieurs mots-clés de recherche, le résultat est l'intersection (fonction ET) de tous les messages qui correspondent à ces critères.</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = FLAGGED FROM <span class="hljs-string">"SMITH"</span>
 </code></pre>
-<p>... returns all messages with \Flagged flag set AND sent by Smith.</p>
+<p>... retourne tous les messages comportant le marqueur \Flagged ET envoyés par Smith.</p>
 <ul>
-<li>You can use the <strong>OR</strong> or <strong>NOT</strong> operators as follows:</li>
+<li>Vous pouvez utiliser les opérateurs <strong>OR</strong> ou <strong>NOT</strong> comme suit :</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = OR SEEN FLAGGED
 </code></pre>
-<p>... returns all messages with \Seen flag set OR \Flagged flag set</p>
+<p>... retourne tous les messages comportant le marqueur \Seen OU \Flagged</p>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = NOT SEEN
 </code></pre>
-<p>... returns all messages with \Seen flag not set.</p>
+<p>... retourne tous les messages ne comportant pas le marqueur \Seen.</p>
 <pre><code class="hljs">searchCriteria = <span class="hljs-keyword">HEADER</span> CONTENT<span class="hljs-params">-TYPE</span> <span class="hljs-string">"MIXED"</span> <span class="hljs-literal">NOT</span> <span class="hljs-keyword">HEADER</span> CONTENT<span class="hljs-params">-TYPE</span> <span class="hljs-string">"TEXT"</span><span class="hljs-params">...</span>
 </code></pre>
-<p>... returns message whose content-type header contains “Mixed” and does not contain “Text”.</p>
+<p>... retourne les messages dont l'en-tête content-type contient “Mixed” et ne contient pas “Text”.</p>
 <pre><code class="hljs">searchCriteria = <span class="hljs-keyword">HEADER</span> CONTENT-<span class="hljs-keyword">TYPE</span> "E" <span class="hljs-keyword">NOT</span> SUBJECT "o" <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">HEADER</span> CONTENT-<span class="hljs-keyword">TYPE</span> "MIXED"
 </code></pre>
-<p>... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.</p>
-<p>As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.</p>
+<p>... retourne les messages dont l'en-tête content-type contient “ e ” et dont l'en-tête Subject ne contient pas “ o ” et dont l'en-tête content-type n'est pas “ Mixed ”.</p>
+<p>A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.</p>
 <ul>
-<li>The <em>searchCriteria</em> may include the optional [CHARSET] specification. This consists of the &quot;CHARSET&quot; word followed by a registered [CHARSET] (US ASCII, ISO-8859). It indicates the charset of the <em>searchCriteria</em> string. Therefore, you must convert the <em>searchCriteria</em> string into the specified charset if you use the [CHARSET] specification (see the <code>CONVERT FROM TEXT</code> or <code>Convert to text</code> commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.</li>
+<li>Le paramètre <em>searchCriteria</em> peut inclure optionnellement l'instruction [CHARSET]. Cette instruction est composée du mot &quot;CHARSET&quot; suivi d'un jeu de caractères défini [CHARSET] (US ASCII, ISO-8859). Elle indique le codage de caractères utilisé dans la chaine <em>searchCriteria</em>. Par conséquent, vous devez convertir la chaîne <em>searchCriteria</em> dans le jeu de caractères spécifié si vous utilisez l'instruction [CHARSET] (voir les commandes <code>CONVERT FROM TEXT</code> ou <code>Convert to text</code>). Par défaut, 4D encode la chaîne de critères searchCriteria en &quot;Quotable Printable&quot; si elle contient des caractères étendus.</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = CHARSET <span class="hljs-string">"ISO-8859"</span> BODY <span class="hljs-string">"Help"</span>
 </code></pre>
-<p>... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.</p>
-<h4><a class="anchor" aria-hidden="true" id="search-value-types"></a><a href="#search-value-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Search value types</h4>
-<p>Search-keys may request the value to search for:</p>
+<p>signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.</p>
+<h4><a class="anchor" aria-hidden="true" id="types-de-valeurs-de-recherche"></a><a href="#types-de-valeurs-de-recherche" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Types de valeurs de recherche</h4>
+<p>Les mots-clés de recherche peuvent traiter des valeurs des types suivants :</p>
 <ul>
-<li><p><strong>Search-keys with a field-name value</strong>: the field-name is the name of a header field. Example: <code>searchCriteria = HEADER CONTENT-TYPE &quot;MIXED&quot;</code></p></li>
-<li><p><strong>Search-keys with a string value</strong>: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Example: <code>searchCriteria = FROM &quot;SMITH&quot;</code> For all search keys that use strings, a message matches the key if the string is a substring of the field. Matching is not case-sensitive.</p></li>
-<li><p><strong>Search-keys with a flag value</strong>: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: <code>searchCriteria = KEYWORD \Flagged \Draft</code></p></li>
-<li><p><strong>Search-keys with a flag value</strong>: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: <code>searchCriteria = KEYWORD \Flagged \Draft</code></p></li>
-<li><p><strong>Search-keys with a message set value</strong>: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Examples: <code>2,4:7,9,12:*</code> is <code>2,4,5,6,7,9,12,13,14,15</code> for a mailbox with 15 messages. <code>searchCriteria = 1:5 ANSWERED</code> search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. <code>searchCriteria= 2,4 ANSWERED</code> search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.</p></li>
+<li><p><strong>Valeurs de type date</strong> : Les valeurs de type date sont placées dans des chaînes formatées de la manière suivante : <em>date-day+&quot;-&quot;+date-month+&quot;-&quot;+date-year</em> où date-day indique la date du jour dans le mois (2 caractères maxi), date-month indique le mois (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) et date-year indique l’année sur 4 chiffres. Exemple : <code>searchCriteria = SENTBEFORE 1-Feb-2020</code>(il n’est généralement pas nécessaire de mettre une date entre guillemets puisqu’elle ne contient pas de caractères spéciaux)</p></li>
+<li><p>**Valeurs de type chaîne ** : Les valeurs de type chaîne peuvent contenir tout type de caractère et doivent être placées entre des guillemets. Toutefois, si la chaîne ne contient pas de caractères spéciaux (des espaces par exemple), les guillemets ne sont pas obligatoires. Dans tous les cas, les guillemets vous permettent de vous assurer que la chaîne sera correctement interprétée. Exemple : <code>searchCriteria = FROM &quot;SMITH&quot;</code> Les recherches basées sur des chaînes de caractères sont du type “contient” : si le champ d’un message contient au moins la chaîne recherchée, le message est trouvé. La recherche ne tient pas compte de la casse des caractères.</p></li>
+<li><p><strong>Noms de champs</strong> : Les valeurs de type nom de champ contiennent le nom d’un champ d’en-tête. Exemple : <code>searchCriteria = HEADER CONTENT-TYPE &quot;MIXED&quot;</code></p></li>
+<li><p><strong>Marqueurs</strong> : Les valeurs de type marqueur (flags) acceptent un ou plusieurs mots-clés (y compris des marqueurs standard) séparés par des espaces. Exemple : <code>searchCriteria = KEYWORD \Flagged \Draft</code></p></li>
+<li><p><strong>Ensemble de messages</strong> : Les valeurs de ce type désignent un ensemble de messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros. Exemples : <code>2,4:7,9,12:*</code> représente les messages <code>2,4,5,6,7,9,12,13,14,15</code> pour une mailbox contenant 15 messages. <code>searchCriteria = 1:5 ANSWERED</code> recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered. <code>searchCriteria= 2,4 ANSWERED</code> recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.</p></li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="authorized-search-keys"></a><a href="#authorized-search-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authorized search-keys</h4>
-<p><strong>ALL</strong>: All messages in the mailbox.<br>
-<strong>ANSWERED</strong>: Messages with the \Answered flag set.<br>
-<strong>UNANSWERED</strong>: Messages that do not have the \Answered flag set.<br>
-<strong>DELETED</strong>: Messages with the \Deleted flag set.<br>
-<strong>UNDELETED</strong>: Messages that do not have the \Deleted flag set.<br>
-<strong>DRAFT</strong>: Messages with the \Draft flag set.<br>
-<strong>UNDRAFT</strong>: Messages that do not have the \Draft flag set.<br>
-<strong>FLAGGED</strong>: Messages with the \Flagged flag set.<br>
-<strong>UNFLAGGED</strong>: Messages that do not have the \Flagged flag set.<br>
-<strong>RECENT</strong>: Messages that have the \Recent flag set.<br>
-<strong>OLD</strong>: Messages that do not have the \Recent flag set.<br>
-<strong>SEEN</strong>: Messages that have the \Seen flag set.<br>
-<strong>UNSEEN</strong>: Messages that do not have the \Seen flag set.<br>
-<strong>NEW</strong>: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.<br>
-<strong>KEYWORD</strong> <flag>: Messages with the specified keyword set.<br>
-<strong>UNKEYWORD</strong> <flag>: Messages that do not have the specified keyword set.<br>
-<strong>BEFORE</strong> <date>: Messages whose internal date is earlier than the specified date.<br>
-<strong>ON</strong> <date>: Messages whose internal date is within the specified date.<br>
-<strong>SINCE</strong> <date>: Messages whose internal date is within or later than the specified date.<br>
-<strong>SENTBEFORE</strong> <date>: Messages whose Date header is earlier than the specified date.<br>
-<strong>SENTON</strong> <date>: Messages whose Date header is within the specified date.<br>
-<strong>SENTSINCE</strong> <date>: Messages whose Date header is within or later than the specified date.<br>
-<strong>TO</strong> <string>: Messages that contain the specified string in the TO header.<br>
-<strong>FROM</strong> <string>: Messages that contain the specified string in the FROM header.<br>
-<strong>CC</strong> <string>: Messages that contain the specified string in the CC header.<br>
-<strong>BCC</strong> <string>: Messages that contain the specified string in the BCC header.<br>
-<strong>SUBJECT</strong> <string>: Messages that contain the specified string in the Subject header.<br>
-<strong>BODY</strong> <string>: Messages that contain the specified string in the message body.<br>
-<strong>TEXT</strong> <string>: Messages that contain the specified string in the header or in the message body.<br>
-<strong>HEADER</strong> &lt;field-name&gt; <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.<br>
-<strong>UID</strong> <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.<br>
-<strong>LARGER</strong> <n>: Messages with a size larger than the specified number of bytes.<br>
-<strong>SMALLER</strong> <n>: Messages with a size smaller than the specified number of bytes.<br>
-<strong>NOT</strong> &lt;search-key&gt;: Messages that do not match the specified search key.<br>
-<strong>OU</strong> &lt;search-key1&gt; &lt;search-key2&gt;: Messages that match either search key.</p>
+<h4><a class="anchor" aria-hidden="true" id="mots-clés-de-recherche-autorisés"></a><a href="#mots-clés-de-recherche-autorisés" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mots-clés de recherche autorisés</h4>
+<p><strong>ALL</strong>: Tous les messages de la boîte de réception.<br>
+<strong>ANSWERED</strong>: Messages comportant le marqueur \Answered.<br>
+<strong>UNANSWERED</strong>: Messages ne comportant pas le marqueur \Answered.<br>
+<strong>DELETED</strong>: Messages comportant le marqueur \Deleted.<br>
+<strong>UNDELETED</strong>: Messages ne comportant pas le marqueur \Deleted.<br>
+<strong>DRAFT</strong>: Messages comportant le marqueur \Draft.<br>
+<strong>UNDRAFT</strong>: Messages ne comportant pas le marqueur \Draft.<br>
+<strong>FLAGGED</strong>: Messages comportant le marqueur \Flagged.<br>
+<strong>UNFLAGGED</strong>: Messages ne comportant pas le marqueur \Flagged.<br>
+<strong>RECENT</strong>: Messages comportant le marqueur \Recent.<br>
+<strong>OLD</strong>: Messages ne comportant pas le marqueur \Recent.<br>
+<strong>SEEN</strong>: Messages comportant le marqueur \Seen.<br>
+<strong>UNSEEN</strong>: Messages ne comportant pas le marqueur \Seen.<br>
+<strong>NEW</strong>: Messages comportant le marqueur \Recent et pas le marqueur \Seen. Equivaut à “(RECENT UNSEEN)”.<br>
+***KEYWORD ***flag******: Messages comportant le marqueur spécifié.<br>
+***UNKEYWORD ***flag******: Messages ne comportant pas le marqueur spécifié.<br>
+***BEFORE ***date******: Messages dont la date interne est antérieure à la date spécifiée.<br>
+***ON ***date******: Messages dont la date interne est égale à la date spécifiée.<br>
+***SINCE ***date******: Messages dont la date interne est égale ou postérieure à la date spécifiée.<br>
+***SENTBEFORE ***date******: Messages dont l’en-tête Date est antérieur à la date spécifiée.<br>
+***SENTON ***date******: Messages dont l’en-tête Date est égal à la date spécifiée.<br>
+***SENTSINCE ***date******: Messages dont l’en-tête Date est égal ou postérieur à la date spécifiée.<br>
+***TO ***string******: Messages contenant la chaîne spécifiée dans l’en-tête Destinataire.<br>
+***FROM ***string******: Messages contenant la chaîne spécifiée dans l’en-tête Emetteur.<br>
+***CC ***string******: Messages contenant la chaîne spécifiée dans l’en-tête CC.<br>
+***BCC ***string******: Messages contenant la chaîne spécifiée dans l’en-tête BCC.<br>
+***SUBJECT ***string******: Messages contenant la chaîne spécifiée dans l’en-tête Objet.<br>
+***BODY ***string******: Messages dont le corps contient la chaîne spécifiée.<br>
+***TEXT ***string******: Messages contenant la chaîne spécifiée dans l’en-tête ou le corps.<br>
+***HEADER <em>field-name</em> ***string******: Messages dont l’en-tête contient le champ défini et dont ce champ contient la chaîne définie.<br>
+***UID ***message-UID******: Messages dont le numéro unique correspond à la valeur spécifiée.<br>
+***LARGER ***n******: Messages dont la taille en octets est supérieure à la taille spécifiée.<br>
+***SMALLER ***n******: Messages dont la taille en octets est inférieure à la taille spécifiée.<br>
+***NOT ***search-key******: Messages ne correspondant pas au critère spécifié.<br>
+***OR <em>search-key1</em> ***search-key2******: Messages correspondant au premier ou au deuxième critère spécifié.</p>
 <h2><a class="anchor" aria-hidden="true" id="selectbox"></a><a href="#selectbox" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.selectBox()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -1730,31 +1729,31 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Nom de la boîte de réception</td></tr>
-<tr><td>state</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Mailbox access status</td></tr>
+<tr><td>state</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Statut de l'accès à la boite de réception</td></tr>
 <tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Objet boxInfo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-28"></a><a href="#description-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.selectBox()</code> function selects the <em>name</em> mailbox as the current mailbox. This function allows you to retrieve information about the mailbox.</p>
+<p>La fonction <code>.selectBox()</code> sélectionne la mailbox <em>name</em> comme étant la mailbox courante. Cette fonction vous permet de récupérer des informations sur la boite de réception.</p>
 <blockquote>
-<p>To get the information from a mailbox without changing the current mailbox, use <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.</p>
+<p>Pour lire les informations à partir d'une mailbox sans changer la mailbox courante, utilisez <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.</p>
 </blockquote>
-<p>In the <em>name</em> parameter, pass the name of the mailbox to access. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction <a href="#getdelimiter"><code>.getDelimiter()</code></a>.</p>
-<p>The optional <em>state</em> parameter defines the type of access to the mailbox. The possible values are:</p>
+<p>Dans le paramètre <em>name</em> passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction <a href="#getdelimiter"><code>.getDelimiter()</code></a>.</p>
+<p>Le paramètre optionnel <em>state</em> définit le type d'accès à la mailbox. Les valeurs possibles sont les suivantes :</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
-<tr><td>IMAP read only state</td><td>1</td><td>The selected mailbox is accessed with read only privileges. Messages with a &quot;recent&quot; flag (indicating new messages) remain unchanged.</td></tr>
-<tr><td>IMAP read write state</td><td>0</td><td>The selected mailbox is accessed with read and write privileges. Messages are considered &quot;seen&quot; and lose the &quot;recent&quot; flag (indicating new messages). (Default value)</td></tr>
+<tr><td>IMAP read only state</td><td>1</td><td>La mailbox sélectionnée est accessible avec les privilèges de lecture seule. Les messages contenant un marqueur &quot;recent&quot; (indication de nouveaux messages) restent inchangés.</td></tr>
+<tr><td>IMAP read write state</td><td>0</td><td>La mailbox sélectionnée est accessible avec des privilèges de lecture et d'écriture. Les messages sont considérés &quot;seen&quot; et perdent le marqueur &quot;recent&quot; (indication des nouveaux messages). (Valeur par défaut)</td></tr>
 </tbody>
 </table>
 <blockquote>
 <ul>
-<li>The function generates an error and returns <strong>Null</strong> if <em>name</em> designates a non-existing mailbox.</li>
-<li>If there is no open connection, <code>.selectBox()</code> will open a connection.</li>
-<li>If the connection has not been used since the designated connection delay (see <code>IMAP New transporter</code>), the <a href="#checkconnection"><code>.checkConnection()</code></a> function is automatically called.</li>
+<li>La fonction génère une erreur et retourne <strong>Null</strong> si <em>name</em> désigne une mailbox inexistante.</li>
+<li>Si aucune connexion n'est ouverte, <code>.selectBox()</code> ouvrira une connexion.</li>
+<li>Si la connexion n'a pas été utilisée depuis le délai de connexion (voir <code>IMAP New transporter</code>), la fonction <a href="#checkconnection"><code>.checkConnection( )</code></a> est automatiquement appelée.</li>
 </ul>
 </blockquote>
 <p><strong>Objet retourné</strong></p>
@@ -1766,13 +1765,13 @@ End if</span>
 <tbody>
 <tr><td>name</td><td>Texte</td><td>Nom de la boîte de réception</td></tr>
 <tr><td>mailCount</td><td>number</td><td>Nombre de messages contenus dans la boîte de réception</td></tr>
-<tr><td>mailRecent</td><td>number</td><td>Number of messages with the &quot;recent&quot; flag</td></tr>
+<tr><td>mailRecent</td><td>number</td><td>Nombre de messages avec le marqueur &quot;recent&quot;</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-14"></a><a href="#exemple-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>; <span class="hljs-variable">$boxinfo </span>: Object
  <span class="hljs-variable">$server</span>:=New object
- <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Mandatory</span>
+ <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"imap.gmail.com"</span> <span class="hljs-comment">//Obligatoire</span>
  <span class="hljs-variable">$server</span>.user:=<span class="hljs-string">"4d@gmail.com"</span>
  <span class="hljs-variable">$server</span>.password:=<span class="hljs-string">"XXXXXXXX"</span><span class="hljs-keyword">
 
@@ -1798,12 +1797,12 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Nom de la boîte de réception</td></tr>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the subscribe operation</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération subscribe</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-29"></a><a href="#description-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.subscribe()</code> function allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.</p>
-<p>In the <code>name</code> parameter, pass the name of the mailbox to add (subscribe) to your &quot;subscribed&quot; mailboxes.</p>
+<p>La fonction <code>.subscribe()</code> permet d'ajouter la mailbox spécifiée à l'ensemble des mailboxes auxquelles vous avez &quot;souscrit&quot; sur le serveur IMAP. Ainsi, vous pouvez contrôler la taille de la liste des boîtes de réception disponibles en souscrivant uniquement à celles que vous souhaitez généralement consulter.</p>
+<p>Dans le paramètre <code>name</code>, passez le nom de la mailbox à ajouter (subscribe) à la liste de mailboxes auxquelles vous avez &quot;souscrit&quot;.</p>
 <p><strong>Objet retourné</strong></p>
 <p>La fonction retourne un objet décrivant le statut IMAP :</p>
 <table>
@@ -1820,7 +1819,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-15"></a><a href="#exemple-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>To subscribe to the &quot;Atlas Corp” mailbox in the &quot;Bills&quot; hierarchy:</p>
+<p>Pour souscrire à la mailbox &quot;Atlas Corp” dans la hiérarchie &quot;Bills&quot; :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw</span>; <span class="hljs-variable">$name </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 
@@ -1866,12 +1865,12 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>name</td><td>Texte</td><td style="text-align:center">-&gt;</td><td>Nom de la boîte de réception</td></tr>
-<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the unsubscribe operation</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Statut de l'opération unsubscribe</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-30"></a><a href="#description-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.unsubscribe()</code> function removes a mailbox from a set of subscribed mailboxes. This allows you reduce the number of mailboxes you usually see.</p>
-<p>In the <code>name</code> parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.</p>
+<p>La fonction <code>.unsubscribe()</code> supprime la mailbox spécifiée de l'ensemble des mailboxes auxquelles vous avez &quot;souscrit&quot; sur le serveur IMAP. Elle vous permet de réduire le nombre de mailboxes que vous consultez régulièrement.</p>
+<p>Dans le paramètre <code>name</code>, passez le nom de la mailbox à supprimer (unsubscribe) de la liste de mailboxes auxquelles vous avez &quot;souscrit&quot;.</p>
 <p><strong>Objet retourné</strong></p>
 <p>La fonction retourne un objet décrivant le statut IMAP :</p>
 <table>
@@ -1888,7 +1887,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-16"></a><a href="#exemple-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>To unsubscribe from the &quot;Atlas Corp” mailbox in the &quot;Bills&quot; hierarchy:</p>
+<p>Pour ne plus souscrire à la mailbox &quot;Atlas Corp” dans la hiérarchie &quot;Bills&quot; :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$pw</span>; <span class="hljs-variable">$name </span>: text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$status </span>: object
 
@@ -1931,7 +1930,7 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="description-31"></a><a href="#description-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.user</code> property contains  the user name used for authentication on the mail server.</p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/FunctionClass.html"><span class="arrow-prev">← </span><span>Formula</span></a><a class="docs-next button" href="/docs/fr/API/MailAttachmentClass.html"><span class="function-name-prevnext">MailAttachment</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#imap-new-transporter">IMAP New transporter</a></li><li><a href="#4dimaptransporternew">4D.IMAPTransporter.new()</a></li><li><a href="#acceptunsecureconnection">.acceptUnsecureConnection</a></li><li><a href="#addflags">.addFlags()</a></li><li><a href="#append">.append()</a></li><li><a href="#authenticationmode">.authenticationMode</a></li><li><a href="#checkconnection">.checkConnection()</a></li><li><a href="#checkconnectiondelay">.checkConnectionDelay</a></li><li><a href="#connectiontimeout">.connectionTimeOut</a></li><li><a href="#copy">.copy()</a></li><li><a href="#createbox">.createBox()</a></li><li><a href="#delete">.delete()</a></li><li><a href="#deletebox">.deleteBox()</a></li><li><a href="#expunge">.expunge()</a></li><li><a href="#getboxinfo">.getBoxInfo()</a></li><li><a href="#getboxlist">.getBoxList()</a></li><li><a href="#getdelimiter">.getDelimiter()</a></li><li><a href="#getmails">.getMails()</a></li><li><a href="#getmimeasblob">.getMIMEAsBlob()</a></li><li><a href="#host">.host</a></li><li><a href="#logfile">.logFile</a></li><li><a href="#move">.move()</a></li><li><a href="#numtoid">.numToID()</a></li><li><a href="#removeflags">.removeFlags()</a></li><li><a href="#renamebox">.renameBox()</a></li><li><a href="#port">.port</a></li><li><a href="#searchmails">.searchMails()</a></li><li><a href="#selectbox">.selectBox()</a></li><li><a href="#subscribe">.subscribe()</a></li><li><a href="#unsubscribe">.unsubscribe()</a></li><li><a href="#user">.user</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/FunctionClass.html"><span class="arrow-prev">← </span><span>Formula</span></a><a class="docs-next button" href="/docs/fr/API/MailAttachmentClass.html"><span class="function-name-prevnext">MailAttachment</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#imap-new-transporter">IMAP New transporter</a></li><li><a href="#4dimaptransporternew">4D.IMAPTransporter.new()</a></li><li><a href="#acceptunsecureconnection">.acceptUnsecureConnection</a></li><li><a href="#addflags">.addFlags()</a></li><li><a href="#append">.append()</a></li><li><a href="#authenticationmode">.authenticationMode</a></li><li><a href="#checkconnection">.checkConnection()</a></li><li><a href="#checkconnectiondelay">.checkConnectionDelay</a></li><li><a href="#connectiontimeout">.connectionTimeOut</a></li><li><a href="#copy">.copy()</a></li><li><a href="#createbox">.createBox()</a></li><li><a href="#delete">.delete()</a></li><li><a href="#deletebox">.deleteBox()</a></li><li><a href="#expunge">.expunge()</a></li><li><a href="#getboxinfo">.getBoxInfo()</a></li><li><a href="#getboxlist">.getBoxList()</a></li><li><a href="#getdelimiter">.getDelimiter()</a></li><li><a href="#getmails">.getMails()</a></li><li><a href="#getmimeasblob">.getMIMEAsBlob()</a></li><li><a href="#host">.host</a></li><li><a href="#logfile">.logFile</a></li><li><a href="#move">.move()</a></li><li><a href="#numtoid">.numToID()</a></li><li><a href="#removeflags">.removeFlags()</a></li><li><a href="#renamebox">.renameBox()</a></li><li><a href="#port">.port</a></li><li><a href="#searchmails">.searchMails()</a></li><li><a href="#selectbox">.selectBox()</a></li><li><a href="#subscribe">.subscribe()</a></li><li><a href="#unsubscribe">.unsubscribe()</a></li><li><a href="#user">.user</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
