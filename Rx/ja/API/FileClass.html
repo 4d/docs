@@ -87,14 +87,15 @@
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    ディスク上にファイルが存在する場合は true を返します</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    ファイル名の拡張子</td></tr>
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    拡張子 (あれば) を含めたファイルの完全な名称</td></tr>
-<tr><td><a href="#getcontent"><strong>.getContent( )</strong> : Blob</a><p>ファイルの全コンテンツを格納した BLOB を返します</td></tr>
+<tr><td><a href="#getappinfo"><strong>.getAppInfo</strong>() : Object</a><p>    <strong>.exe</strong> や <strong>.dll</strong>、<strong>.plist</strong> ファイルの情報をオブジェクトとして返します</td></tr>
+<tr><td><a href="#getcontent"><strong>.getContent( )</strong> : 4D.Blob</a><p>ファイルの全コンテンツを格納した <code>4D.Blob</code> オブジェクトを返します</td></tr>
 <tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    ファイルのアイコンを返します</td></tr>
 <tr><td><a href="#gettext"><strong>.getText</strong>( { <em>charSetName</em> : Text } { ; } { <em>breakMode</em> : integer} ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : integer } { ; } { <em>breakMode</em> : integer} ) : Text</a><p>    ファイルのコンテンツをテキストとして返します</td></tr>
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>    ファイルがシステムレベルで &quot;非表示&quot; に設定されていれば true</td></tr>
 <tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    ファイルがエイリアス、ショートカット、シンボリックリンクのいずれかである場合には true</td></tr>
 <tr><td></td></tr>
 <tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    ファイルに対しては常に true</td></tr>
-<tr><td><a href="#isFolder"><strong>.isFolder</strong> : Boolean</a><p>    ファイルに対しては常に false</td></tr>
+<tr><td><a href="#isfolder"><strong>.isFolder</strong> : Boolean</a><p>    ファイルに対しては常に false</td></tr>
 <tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    ファイルがディスク上に存在し、書き込み可能な場合に true</td></tr>
 <tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    ファイルの最終変更日</td></tr>
 <tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    ファイルの最終変更時刻</td></tr>
@@ -105,6 +106,7 @@
 <tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    ファイルの POSIXパス</td></tr>
 <tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    カレントプラットフォームのシンタックスで表現されたファイルのパス</td></tr>
 <tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    ファイル名を <em>newName</em> に指定した名称に変更し、名称変更後の <code>File</code> オブジェクトを返します</td></tr>
+<tr><td><a href="#setappinfo"><strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    <em>info</em> に渡したプロパティを <strong>.exe</strong> や <strong>.dll</strong>、<strong>.plist</strong> ファイルの情報として書き込みます</td></tr>
 <tr><td><a href="#setcontent"><strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>    <em>content</em> 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします</td></tr>
 <tr><td><a href="#settext"><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>    <em>text</em> に渡されたテキストをファイルの新しいコンテンツとして書き込みます</td></tr>
 <tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    ファイルのサイズ (バイト単位)</td></tr>
@@ -128,8 +130,8 @@
 </thead>
 <tbody>
 <tr><td>path</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>ファイルパス</td></tr>
-<tr><td>fileConstant</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>4Dファイル定数</td></tr>
-<tr><td>pathType</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk posix path</code> (デフォルト) または <code>fk platform path</code></td></tr>
+<tr><td>fileConstant</td><td>整数</td><td style="text-align:center">-&gt;</td><td>4Dファイル定数</td></tr>
+<tr><td>pathType</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>fk posix path</code> (デフォルト) または <code>fk platform path</code></td></tr>
 <tr><td>*</td><td></td><td style="text-align:center">-&gt;</td><td>ホストデータベースのファイルを返すには * を渡します</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>新規ファイルオブジェクト</td></tr>
 </tbody>
@@ -171,6 +173,7 @@
 <tr><td>Directory file</td><td>16</td><td>プロジェクトアプリケーションにおいて、ユーザーとグループ (あれば) の定義が格納された directory.json ファイル。 このファイルは、データベースの user settings フォルダー (デフォルト、プロジェクトに対してグローバル)、または data settings フォルダー (データファイル専用) に保管されます。</td></tr>
 <tr><td>HTTP debug log file</td><td>9</td><td><code>WEB SET OPTION(Web debug log)</code> コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。</td></tr>
 <tr><td>HTTP log file</td><td>8</td><td><code>WEB SET OPTION(Web log recording)</code> コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。</td></tr>
+<tr><td>IMAP Log file</td><td>23</td><td><code>SET DATABASE PARAMETER(IMAP Log)</code> コマンドによって作成されたログファイル。 Logs フォルダーに保存されています。</td></tr>
 <tr><td>Last backup file</td><td>2</td><td>任意の場所に格納されている、最終バックアップファイル (名称は: &lt;applicationName&gt;[bkpNum].4BK)</td></tr>
 <tr><td>Last journal integration log file</td><td>22</td><td>最後のログ統合ログファイル (あれば) の完全なパス名 (復元されたアプリケーションの Logs フォルダー内に保存されます)。 このファイルは、自動修復モードにおいてログファイル統合が発生した時点で作成されます。</td></tr>
 <tr><td>Repair log file</td><td>7</td><td>メンテナンス&amp;セキュリティセンター (MSC) 内からデータベースに対しておこなわれたデータベース修復のログファイル。 Logs フォルダーに保存されています。</td></tr>
@@ -219,7 +222,7 @@
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td style="text-align:center">-&gt;</td><td>宛先フォルダー</td></tr>
 <tr><td>newName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>コピー先フォルダーの名前</td></tr>
-<tr><td>overwrite</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>既存要素を上書きするには <code>fk overwrite</code> を渡します</td></tr>
+<tr><td>overwrite</td><td>整数</td><td style="text-align:center">-&gt;</td><td>既存要素を上書きするには <code>fk overwrite</code> を渡します</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>コピーされたファイル</td></tr>
 </tbody>
 </table>
@@ -297,7 +300,7 @@
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>エイリアスまたはショートカットの作成先フォルダー</td></tr>
 <tr><td>aliasName</td><td>テキスト</td><td>-&gt;</td><td>エイリアスまたはショートカットの名称</td></tr>
-<tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>エイリアスリンクのタイプ</td></tr>
+<tr><td>aliasType</td><td>整数</td><td>-&gt;</td><td>エイリアスリンクのタイプ</td></tr>
 <tr><td>戻り値</td><td>4D.File</td><td>&lt;-</td><td>エイリアスまたはショートカットのファイル参照</td></tr>
 </tbody>
 </table>
@@ -427,6 +430,71 @@
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.fullName</code> プロパティは、 拡張子 (あれば) を含めたファイルの完全な名称を返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
+<h2><a class="anchor" aria-hidden="true" id="getappinfo"></a><a href="#getappinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getAppInfo()</h2>
+<p><details><summary>履歴</summary></p>
+<table>
+<thead>
+<tr><th>バージョン</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>v19</td><td>追加</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getAppInfo</strong>() : Object</p>
+<table>
+<thead>
+<tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>.exe/.dll のバージョンリソースや .plist ファイルの中身</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.getAppInfo()</code> 関数は、 <strong>.exe</strong> や <strong>.dll</strong>、<strong>.plist</strong> ファイルの情報をオブジェクトとして返します。</p>
+<p>この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は空のオブジェクトを返します (エラーは生成されません)。</p>
+<blockquote>
+<p>この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。</p>
+</blockquote>
+<p><strong>.exe または .dll ファイルの場合に返されるオブジェクト</strong></p>
+<blockquote>
+<p>.exe および .dll ファイルの読み取りは Windows上でのみ可能です。</p>
+</blockquote>
+<p>プロパティはすべてテキストです。</p>
+<table>
+<thead>
+<tr><th>プロパティ</th><th>タイプ</th></tr>
+</thead>
+<tbody>
+<tr><td>InternalName</td><td>テキスト</td></tr>
+<tr><td>ProductName</td><td>テキスト</td></tr>
+<tr><td>CompanyName</td><td>テキスト</td></tr>
+<tr><td>LegalCopyright</td><td>テキスト</td></tr>
+<tr><td>ProductVersion</td><td>テキスト</td></tr>
+<tr><td>FileDescription</td><td>テキスト</td></tr>
+<tr><td>FileVersion</td><td>テキスト</td></tr>
+<tr><td>OriginalFilename</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<p><strong>.plist ファイルの場合に返されるオブジェクト</strong></p>
+<p>xml ファイルの中身は解析され、オブジェクトのプロパティとしてキーが返されます。キーの型 (テキスト、ブール、数値) は維持されます。 <code>.plist dict</code> は JSON オブジェクトとして返されます。また、<code>.plist array</code> は JSON 配列として返されます。</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">// アプリケーションの .exe ファイルの著作権情報を表示します (Windows)</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$exeFile </span>: 4D.File<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Object
+<span class="hljs-variable">$exeFile</span>:=<span class="hljs-function">File</span>(Application file; fk platform path)
+<span class="hljs-variable">$info</span>:=<span class="hljs-variable">$exeFile</span>.<span class="hljs-function">getAppInfo</span>()
+<span class="hljs-function">ALERT</span>(<span class="hljs-variable">$info</span>.LegalCopyright)
+
+  <span class="hljs-comment">// info.plistの著作権情報を表示します (Windows および macOS)</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$infoPlistFile </span>: 4D.File<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Object
+<span class="hljs-variable">$infoPlistFile</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/RESOURCES/info.plist"</span>)
+<span class="hljs-variable">$info</span>:=<span class="hljs-variable">$infoPlistFile</span>.<span class="hljs-function">getAppInfo</span>()
+<span class="hljs-function">ALERT</span>(<span class="hljs-variable">$info</span>.Copyright)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="参照"></a><a href="#参照" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<p><a href="#setappinfo">.setAppInfo()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="getcontent"></a><a href="#getcontent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getContent()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -434,24 +502,25 @@
 <tr><th>バージョン</th><th>内容</th></tr>
 </thead>
 <tbody>
+<tr><td>v19 R2</td><td>4D.Blob を返します</td></tr>
 <tr><td>v17 R5</td><td>追加</td></tr>
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.getContent( )</strong> : Blob</p>
+<p><strong>.getContent( )</strong> : 4D.Blob</p>
 <table>
 <thead>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>BLOB</td><td>&lt;-</td><td>ファイルのコンテンツ</td></tr>
+<tr><td>戻り値</td><td>4D.Blob</td><td>&lt;-</td><td>ファイルのコンテンツ</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.getContent()</code> 関数は、  ファイルの全コンテンツを格納した BLOB を返します。 BLOB についての詳細は、<a href="/docs/Rx/ja/Concepts/blob.html">BLOB</a> の章を参照してください。</p>
+<h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.getContent()</code> 関数は、  ファイルの全コンテンツを格納した <code>4D.Blob</code> オブジェクトを返します。 BLOB についての詳細は、<a href="/docs/Rx/ja/Concepts/blob.html">BLOB</a> の章を参照してください。</p>
 <p><strong>戻り値</strong></p>
-<p><code>Blob</code>。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<p><code>4D.Blob</code> オブジェクト。</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-6"></a><a href="#例題-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>ドキュメントの中身を <code>BLOB</code> フィールドに保存します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$vPath </span>: Text
  <span class="hljs-variable">$vPath</span>:=<span class="hljs-function">Select document</span>(<span class="hljs-string">""</span>;<span class="hljs-string">"*"</span>;<span class="hljs-string">"Select a document"</span>;<span class="hljs-number">0</span>)<span class="hljs-keyword">
@@ -476,11 +545,11 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>size</td><td>Integer</td><td>-&gt;</td><td>取得するピクチャーの一辺の長さ (ピクセル単位)</td></tr>
+<tr><td>size</td><td>整数</td><td>-&gt;</td><td>取得するピクチャーの一辺の長さ (ピクセル単位)</td></tr>
 <tr><td>戻り値</td><td>ピクチャー</td><td>&lt;-</td><td>アイコン</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.getIcon()</code> 関数は、 ファイルのアイコンを返します。</p>
 <p>任意の <em>size</em> 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル (&quot;大きいアイコン&quot;) または 16x16ピクセル (&quot;小さいアイコン&quot;) で定義されています。 この引数に 0 を渡すか省略した場合、&quot;大きいアイコン&quot; が返されます。</p>
 <p>ファイルがディスク上に存在しない場合、デフォルトの空のアイコンが返されます。</p>
@@ -504,12 +573,12 @@
 </thead>
 <tbody>
 <tr><td>charSetName</td><td>テキスト</td><td>-&gt;</td><td>文字セットの名前</td></tr>
-<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>文字セットの番号</td></tr>
-<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>改行の処理モード</td></tr>
+<tr><td>charSetNum</td><td>整数</td><td>-&gt;</td><td>文字セットの番号</td></tr>
+<tr><td>breakMode</td><td>整数</td><td>-&gt;</td><td>改行の処理モード</td></tr>
 <tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>ドキュメントから取得したテキスト</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.getText()</code> 関数は、 ファイルのコンテンツをテキストとして返します 。</p>
 <p>任意で、コンテンツの読み取りに使用する文字セットを渡します。 これには、次の二つの方法があります:</p>
 <ul>
@@ -536,7 +605,7 @@
 <p><em>breakMode</em> 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。</p>
 <p><strong>戻り値</strong></p>
 <p>ファイルのテキスト。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-6"></a><a href="#例題-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-7"></a><a href="#例題-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>以下のテキストを持つドキュメントがある場合を考えます (フィールドはタブ区切りです):</p>
 <pre><code class="hljs css language-4d">id name price vat
 <span class="hljs-number">3</span> thé <span class="hljs-number">1.06</span>€ <span class="hljs-number">19.6</span>
@@ -563,7 +632,7 @@
 </table>
 <p></details></p>
 <p><strong>.hidden</strong> : Boolean</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.hidden</code> プロパティは、 ファイルがシステムレベルで &quot;非表示&quot; に設定されていれば trueを返します (それ以外の場合は false)。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="isalias"></a><a href="#isalias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isAlias</h2>
@@ -578,7 +647,7 @@
 </table>
 <p></details></p>
 <p><strong>.isAlias</strong> : Boolean</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-16"></a><a href="#説明-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.isAlias</code> プロパティは、 ファイルがエイリアス、ショートカット、シンボリックリンクのいずれかである場合には trueを返し、それ以外の場合には false を返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="isfile"></a><a href="#isfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isFile</h2>
@@ -593,7 +662,7 @@
 </table>
 <p></details></p>
 <p><strong>.isFile</strong> : Boolean</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-16"></a><a href="#説明-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.isFile</code> プロパティは、 ファイルに対しては常に trueを返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="isfolder"></a><a href="#isfolder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isFolder</h2>
@@ -608,7 +677,7 @@
 </table>
 <p></details></p>
 <p><strong>.isFolder</strong> : Boolean</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.isFolder</code> プロパティは、 ファイルに対しては常に falseを返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="iswritable"></a><a href="#iswritable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isWritable</h2>
@@ -623,7 +692,7 @@
 </table>
 <p></details></p>
 <p><strong>.isWritable</strong> : Boolean</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.isWritable</code> プロパティは、 ファイルがディスク上に存在し、書き込み可能な場合に trueを返します。</p>
 <blockquote>
 <p>このプロパティは 4Dアプリケーションがディスクに書き込めるかどうか (アクセス権限) をチェックし、ファイルの <em>writable</em> (書き込み可能) 属性のみ依存するわけではありません。</p>
@@ -647,7 +716,7 @@
 </table>
 <p></details></p>
 <p><strong>.modificationDate</strong> : Date</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.modificationDate</code> プロパティは、 ファイルの最終変更日を返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="modificationtime"></a><a href="#modificationtime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.modificationTime</h2>
@@ -662,7 +731,7 @@
 </table>
 <p></details></p>
 <p><strong>.modificationTime</strong> : Time</p>
-<h5><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h5>
+<h5><a class="anchor" aria-hidden="true" id="説明-21"></a><a href="#説明-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h5>
 <p><code>.modificationTime</code> プロパティは、 ファイルの最終変更時刻 を返します (00:00 からの経過秒数の形式)。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="moveto"></a><a href="#moveto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.moveTo()</h2>
@@ -687,13 +756,13 @@
 <tr><td>戻り値</td><td>4D.File</td><td>&lt;-</td><td>移動したファイル</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-21"></a><a href="#説明-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.moveTo()</code> 関数は、 <code>File</code> オブジェクトを <em>destinationFolder</em> が指定する移行先へと移動すると同時に、<em>newName</em> を指定した場合は名称も変更します。</p>
 <p><em>destinationFolder</em> 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。</p>
 <p>デフォルトで、移動したファイルは元の名前を維持します。 移動の際にファイル名を変更したい場合、新しい完全な名前を <em>newName</em> に渡します。 新しい名前は命名規則に則っている必要があります (例: &quot;:&quot;, &quot;/&quot;, 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。</p>
 <p><strong>返されるオブジェクト</strong></p>
 <p>移動後の <code>File</code> オブジェクト。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-7"></a><a href="#例題-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-8"></a><a href="#例題-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$DocFolder</span>:=<span class="hljs-function">Folder</span>(fk documents folder)
 <span class="hljs-variable">$myFile</span>:=<span class="hljs-variable">$DocFolder</span>.<span class="hljs-function">file</span>(<span class="hljs-string">"Current/Infos.txt"</span>)
 <span class="hljs-variable">$myFile</span>.<span class="hljs-function">moveTo</span>(<span class="hljs-variable">$DocFolder</span>.<span class="hljs-function">folder</span>(<span class="hljs-string">"Archives"</span>);<span class="hljs-string">"Infos_old.txt"</span>)
@@ -710,7 +779,7 @@
 </table>
 <p></details></p>
 <p><strong>.name</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-23"></a><a href="#説明-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.name</code> プロパティは、 拡張子 (あれば) を含まないファイル名を返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="original"></a><a href="#original" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.original</h2>
@@ -725,7 +794,7 @@
 </table>
 <p></details></p>
 <p><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-23"></a><a href="#説明-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-24"></a><a href="#説明-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.original</code> プロパティは、 エイリアス、ショートカット、シンボリックリンクファイルのターゲット要素を返します。 ターゲット要素は以下のいずれかです:</p>
 <ul>
 <li>File オブジェクト</li>
@@ -745,7 +814,7 @@
 </table>
 <p></details></p>
 <p><strong>.parent</strong> : 4D.Folder</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-24"></a><a href="#説明-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.parent</code> プロパティは、 対象ファイルの親フォルダーオブジェクトを返します。 パスがシステムパスを表す場合 (例: &quot;/DATA/&quot;)、システムパスが返されます。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="path"></a><a href="#path" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.path</h2>
@@ -760,7 +829,7 @@
 </table>
 <p></details></p>
 <p><strong>.path</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.path</code> プロパティは、 ファイルの POSIXパスを返します。 パスがファイルシステムを表す場合 (例: &quot;/DATA/&quot;)、ファイルシステムが返されます。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="platformpath"></a><a href="#platformpath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.platformPath</h2>
@@ -775,7 +844,7 @@
 </table>
 <p></details></p>
 <p><strong>.platformPath</strong> : Text</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-27"></a><a href="#説明-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.platformPath</code> プロパティは、 カレントプラットフォームのシンタックスで表現されたファイルのパスを返します。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <h2><a class="anchor" aria-hidden="true" id="rename"></a><a href="#rename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.rename()</h2>
@@ -799,17 +868,92 @@
 <tr><td>戻り値</td><td>4D.File</td><td>&lt;-</td><td>名称変更されたファイル</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-27"></a><a href="#説明-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.rename()</code> 関数は、 ファイル名を <em>newName</em> に指定した名称に変更し、名称変更後の <code>File</code> オブジェクトを返します。</p>
 <p><em>newName</em> 引数は命名規則に則っている必要があります (例: &quot;:&quot;, &quot;/&quot;, 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。</p>
 <p>この関数はファイルの完全な名前を編集することに留意が必要です。つまり、<em>newName</em> に拡張子を渡さなかった場合、新しいファイル名には拡張子がありません。</p>
 <p><strong>返されるオブジェクト</strong></p>
 <p>名称変更された <code>File</code> オブジェクト。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-8"></a><a href="#例題-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-9"></a><a href="#例題-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>&quot;ReadMe.txt&quot; ファイルを &quot;ReadMe_new.txt&quot; というファイルに名称変更します:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$toRename</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"C:\\Documents\\Archives\\ReadMe.txt"</span>;fk platform path)
  <span class="hljs-variable">$newName</span>:=<span class="hljs-variable">$toRename</span>.<span class="hljs-function">rename</span>(<span class="hljs-variable">$toRename</span>.name+<span class="hljs-string">"_new"</span>+<span class="hljs-variable">$toRename</span>.extension)
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="setappinfo"></a><a href="#setappinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.setAppInfo()</h2>
+<p><details><summary>履歴</summary></p>
+<table>
+<thead>
+<tr><th>バージョン</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>v19</td><td>追加</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.setAppInfo</strong>( <em>info</em> : Object )</p>
+<table>
+<thead>
+<tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>info</td><td>オブジェクト</td><td>-&gt;</td><td>.exe/.dll のバージョンリソースや .plist ファイルに書き込むプロパティ</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.setAppInfo()</code> 関数は、 <em>info</em> に渡したプロパティを <strong>.exe</strong> や <strong>.dll</strong>、<strong>.plist</strong> ファイルの情報として書き込みます。</p>
+<p>この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は何もしません (エラーは生成されません)。</p>
+<blockquote>
+<p>この関数は xml形式の .plist ファイル (テキスト) のみをサポートしています。 バイナリ形式の .plist ファイルを対象に使用した場合、エラーが返されます。</p>
+</blockquote>
+<p><strong>.exe または .dll ファイル用の <em>info</em> オブジェクト</strong></p>
+<blockquote>
+<p>.exe および .dll ファイル情報の書き込みは Windows上でのみ可能です。</p>
+</blockquote>
+<p><em>info</em> オブジェクトに設定された各プロパティは .exe または .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):</p>
+<table>
+<thead>
+<tr><th>プロパティ</th><th>タイプ</th></tr>
+</thead>
+<tbody>
+<tr><td>InternalName</td><td>テキスト</td></tr>
+<tr><td>ProductName</td><td>テキスト</td></tr>
+<tr><td>CompanyName</td><td>テキスト</td></tr>
+<tr><td>LegalCopyright</td><td>テキスト</td></tr>
+<tr><td>ProductVersion</td><td>テキスト</td></tr>
+<tr><td>FileDescription</td><td>テキスト</td></tr>
+<tr><td>FileVersion</td><td>テキスト</td></tr>
+<tr><td>OriginalFilename</td><td>テキスト</td></tr>
+</tbody>
+</table>
+<p>値として null または空テキストを渡すと、空の文字列がプロパティに書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。</p>
+<p><strong>.plist ファイル用の <em>info</em> オブジェクト</strong></p>
+<p><em>info</em> オブジェクトに設定された各プロパティは .plist ファイルにキーとして書き込まれます。 あらゆるキーの名称が受け入れられます。 値の型は可能な限り維持されます。</p>
+<p><em>info</em> に設定されたキーが .plist ファイル内ですでに定義されている場合は、その値が更新され、元の型が維持されます。 .plist ファイルに既存のそのほかのキーはそのまま維持されます。</p>
+<blockquote>
+<p>日付型の値を定義するには、Xcode plist エディターのようにミリ秒を除いた ISO UTC 形式の JSONタイムスタンプ文字列 (例: &quot;2003-02-01T01:02:03Z&quot;) を使用します。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="例題-10"></a><a href="#例題-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// .exe ファイルの著作権およびバージョン情報を設定します (Windows)</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$exeFile </span>: 4D.File<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Object
+<span class="hljs-variable">$exeFile</span>:=<span class="hljs-function">File</span>(Application file; fk platform path)
+<span class="hljs-variable">$info</span>:=New object
+<span class="hljs-variable">$info</span>.LegalCopyright:=<span class="hljs-string">"Copyright 4D 2021"</span>
+<span class="hljs-variable">$info</span>.ProductVersion:=<span class="hljs-string">"1.0.0"</span>
+<span class="hljs-variable">$exeFile</span>.<span class="hljs-function">setAppInfo</span>(<span class="hljs-variable">$info</span>)
+</code></pre>
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// info.plist ファイルのキーをいくつか設定します (Windows および macOS)</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$infoPlistFile </span>: 4D.File<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Object
+<span class="hljs-variable">$infoPlistFile</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/RESOURCES/info.plist"</span>)
+<span class="hljs-variable">$info</span>:=New object
+<span class="hljs-variable">$info</span>.Copyright:=<span class="hljs-string">"Copyright 4D 2021"</span> <span class="hljs-comment">// テキスト</span>
+<span class="hljs-variable">$info</span>.ProductVersion:=<span class="hljs-number">12</span> <span class="hljs-comment">// 整数</span>
+<span class="hljs-variable">$info</span>.ShipmentDate:=<span class="hljs-string">"2021-04-22T06:00:00Z"</span> <span class="hljs-comment">// タイムスタンプ</span>
+<span class="hljs-variable">$infoPlistFile</span>.<span class="hljs-function">setAppInfo</span>(<span class="hljs-variable">$info</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="参照-1"></a><a href="#参照-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<p><a href="#getappinfo">.getAppInfo()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="setcontent"></a><a href="#setcontent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.setContent()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -830,9 +974,9 @@
 <tr><td>content</td><td>BLOB</td><td>-&gt;</td><td>ファイルの新しいコンテンツ</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.setContent( )</code> 関数は、 <em>content</em> 引数の BLOB に保存されているデータを使用して、ファイルの全コンテンツを上書きします。 BLOB についての詳細は、<a href="/docs/Rx/ja/Concepts/blob.html">BLOB</a> の章を参照してください。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-9"></a><a href="#例題-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-11"></a><a href="#例題-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Archives/data.txt"</span>)
  <span class="hljs-variable">$myFile</span>.<span class="hljs-function">setContent</span>([aTable]aBlobField)
 </code></pre>
@@ -855,12 +999,12 @@
 <tbody>
 <tr><td>text</td><td>テキスト</td><td>-&gt;</td><td>ファイルに保存するテキスト</td></tr>
 <tr><td>charSetName</td><td>テキスト</td><td>-&gt;</td><td>文字セットの名前</td></tr>
-<tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>文字セットの番号</td></tr>
-<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>改行の処理モード</td></tr>
+<tr><td>charSetNum</td><td>整数</td><td>-&gt;</td><td>文字セットの番号</td></tr>
+<tr><td>breakMode</td><td>整数</td><td>-&gt;</td><td>改行の処理モード</td></tr>
 <tr><td></td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-31"></a><a href="#説明-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.setText()</code> 関数は、 <em>text</em> に渡されたテキストをファイルの新しいコンテンツとして書き込みます。</p>
 <p><code>File</code> オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。</p>
 <p><em>text</em> には、ファイルに書き込むテキストを渡します。 テキストリテラル (&quot;my text&quot; など) のほか、4Dテキストフィールドや変数も渡せます。</p>
@@ -872,7 +1016,7 @@
 <blockquote>
 <p>4D によってサポートされている文字セットの一覧については、<code>CONVERT FROM TEXT</code> コマンドを参照ください。</p>
 </blockquote>
-<p>文字セットのバイトオーダーマーク (BOM) が存在する場合、4D はそれもファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで &quot;UTF-8&quot; の文字セットと BOM を使用します。</p>
+<p>文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに &quot;-no-bom&quot; 接尾辞 (例: &quot;UTF-8-no-bom&quot;) が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで &quot;UTF-8&quot; の文字セットを使用します。</p>
 <p><em>breakMode</em> には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 <strong>System Documents</strong> テーマ内にある、以下の定数を使用することができます:</p>
 <table>
 <thead>
@@ -880,14 +1024,17 @@
 </thead>
 <tbody>
 <tr><td><code>Document unchanged</code></td><td>0</td><td>何も処理をしません。</td></tr>
-<tr><td><code>Document with native format</code></td><td>1</td><td>(デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では CR (キャリッジリターン) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。</td></tr>
-<tr><td><code>Document with CRLF</code></td><td>2</td><td>改行は Windowsフォーマット (CRLF、キャリッジリターン＋ラインフィード) へと変換されます。</td></tr>
-<tr><td><code>Document with CR</code></td><td>3</td><td>改行は macOSフォーマット (CR、キャリッジリターン) へと変換されます。</td></tr>
-<tr><td><code>Document with LF</code></td><td>4</td><td>改行は Unixフォーマット (LF、ラインフィード) へと変換されます。</td></tr>
+<tr><td><code>Document with native format</code></td><td>1</td><td>(デフォルト) 改行は OS のネイティブフォーマットに変換されます。macOS では LF (ラインフィード) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。</td></tr>
+<tr><td><code>Document with CRLF</code></td><td>2</td><td>改行は Windows のデフォルトフォーマットである CRLF (キャリッジリターン＋ラインフィード) へと変換されます。</td></tr>
+<tr><td><code>Document with CR</code></td><td>3</td><td>改行はクラシック Mac OS のデフォルトフォーマットである CR (キャリッジリターン) へと変換されます。</td></tr>
+<tr><td><code>Document with LF</code></td><td>4</td><td>改行は Unix および macOS のデフォルトフォーマットである LF (ラインフィード) へと変換されます。</td></tr>
 </tbody>
 </table>
 <p><em>breakMode</em> 引数を渡さなかった場合はデフォルトで、改行はネイティブモード (1) で処理されます。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-10"></a><a href="#例題-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<blockquote>
+<p><strong>互換性に関する注記:</strong> EOL (改行コード) および BOM の管理については、互換性オプションが利用可能です。 doc.4d.com の<a href="https://doc.4d.com/4dv19R/help/title/ja/page3239.html">互換性ページ</a> を参照ください。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="例題-12"></a><a href="#例題-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$myFile</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"C:\\Documents\\Hello.txt"</span>;fk platform path)
 <span class="hljs-variable">$myFile</span>.<span class="hljs-function">setText</span>(<span class="hljs-string">"Hello world"</span>)
 </code></pre>
@@ -903,11 +1050,11 @@
 </table>
 <p></details></p>
 <p><strong>.size</strong> : Real</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-32"></a><a href="#説明-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.size</code> プロパティは、 ファイルのサイズ (バイト単位)を返します。 ファイルがディスク上に存在しない場合、サイズは 0 になります。</p>
 <p>このプロパティは <strong>読み取り専用</strong> です。</p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/API/EntitySelectionClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">EntitySelection</span></a><a class="docs-next button" href="/docs/Rx/ja/API/FolderClass.html"><span>Folder</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#file">File</a></li><li><a href="#4dfilenew">4D.File.new()</a></li><li><a href="#copyto">.copyTo()</a></li><li><a href="#create">.create()</a></li><li><a href="#createalias">.createAlias()</a></li><li><a href="#creationdate">.creationDate</a></li><li><a href="#creationtime">.creationTime</a></li><li><a href="#delete">.delete()</a></li><li><a href="#exists">.exists</a></li><li><a href="#extension">.extension</a></li><li><a href="#fullname">.fullName</a></li><li><a href="#getcontent">.getContent()</a></li><li><a href="#geticon">.getIcon()</a></li><li><a href="#gettext">.getText()</a></li><li><a href="#hidden">.hidden</a></li><li><a href="#isalias">.isAlias</a></li><li><a href="#isfile">.isFile</a></li><li><a href="#isfolder">.isFolder</a></li><li><a href="#iswritable">.isWritable</a></li><li><a href="#modificationdate">.modificationDate</a></li><li><a href="#modificationtime">.modificationTime</a></li><li><a href="#moveto">.moveTo()</a></li><li><a href="#name">.name</a></li><li><a href="#original">.original</a></li><li><a href="#parent">.parent</a></li><li><a href="#path">.path</a></li><li><a href="#platformpath">.platformPath</a></li><li><a href="#rename">.rename()</a></li><li><a href="#setcontent">.setContent()</a></li><li><a href="#settext">.setText()</a></li><li><a href="#size">.size</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/API/EntitySelectionClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">EntitySelection</span></a><a class="docs-next button" href="/docs/Rx/ja/API/FolderClass.html"><span>Folder</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#file">File</a></li><li><a href="#4dfilenew">4D.File.new()</a></li><li><a href="#copyto">.copyTo()</a></li><li><a href="#create">.create()</a></li><li><a href="#createalias">.createAlias()</a></li><li><a href="#creationdate">.creationDate</a></li><li><a href="#creationtime">.creationTime</a></li><li><a href="#delete">.delete()</a></li><li><a href="#exists">.exists</a></li><li><a href="#extension">.extension</a></li><li><a href="#fullname">.fullName</a></li><li><a href="#getappinfo">.getAppInfo()</a></li><li><a href="#getcontent">.getContent()</a></li><li><a href="#geticon">.getIcon()</a></li><li><a href="#gettext">.getText()</a></li><li><a href="#hidden">.hidden</a></li><li><a href="#isalias">.isAlias</a></li><li><a href="#isfile">.isFile</a></li><li><a href="#isfolder">.isFolder</a></li><li><a href="#iswritable">.isWritable</a></li><li><a href="#modificationdate">.modificationDate</a></li><li><a href="#modificationtime">.modificationTime</a></li><li><a href="#moveto">.moveTo()</a></li><li><a href="#name">.name</a></li><li><a href="#original">.original</a></li><li><a href="#parent">.parent</a></li><li><a href="#path">.path</a></li><li><a href="#platformpath">.platformPath</a></li><li><a href="#rename">.rename()</a></li><li><a href="#setappinfo">.setAppInfo()</a></li><li><a href="#setcontent">.setContent()</a></li><li><a href="#settext">.setText()</a></li><li><a href="#size">.size</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

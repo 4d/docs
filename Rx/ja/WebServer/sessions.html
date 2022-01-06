@@ -72,10 +72,10 @@
 <li>同一のWebクライアントからの複数のリクエストを、無制限のプリエンプティブプロセスで同時に処理 (Webサーバーセッションは <strong>スケーラブル</strong>です)。</li>
 <li>Webクライアントのプロセス間でデータを共有。</li>
 <li>ユーザーセッションに権限を関連付ける。</li>
-<li><code>Session</code> オブジェクトと <a href="API/sessionClass.md">Session API</a> を介したアクセスの処理。</li>
+<li><code>Session</code> オブジェクトと <a href="/docs/Rx/ja/API/SessionClass.html">Session API</a> を介したアクセスの処理。</li>
 </ul>
 <blockquote>
-<p><strong>注:</strong> 現在の実装 (v18R6) は、Webアプリケーション全体においてセッションを介して階層的なユーザー権限を開発者が管理できるようにする、今後予定されている包括的な機能の最初のステップに過ぎません。</p>
+<p><strong>注:</strong> 現在の実装は、Webアプリケーション全体においてセッションを介して階層的なユーザー権限を開発者が管理できるようにする、今後予定されている包括的な機能の最初のステップに過ぎません。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="セッションの有効化"></a><a href="#セッションの有効化" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>セッションの有効化</h2>
 <p>セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。 セッション管理を有効化する方法は複数あります:</p>
@@ -84,7 +84,7 @@
 </ul>
 <p>このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、<strong>セッションなし</strong> オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (<code>Session</code> オブジェクトは使用できません)。</p>
 <ul>
-<li>Webサーバーオブジェクトの <a href="API/webServerClass.md#scalablesession"><code>.scalableSession</code></a> プロパティを使用する (<a href="API/webServerClass.md#start"><code>.start()</code></a> 関数に <em>settings</em> 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。</li>
+<li>Webサーバーオブジェクトの <a href="/docs/Rx/ja/API/WebServerClass.html#scalablesession"><code>.scalableSession</code></a> プロパティを使用する (<a href="/docs/Rx/ja/API/WebServerClass.html#start"><code>.start()</code></a> 関数に <em>settings</em> 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。</li>
 </ul>
 <blockquote>
 <p>メインの Webサーバーのセッションモードは、<code>WEB SET OPTION</code> コマンドを使って設定することもできます。</p>
@@ -96,7 +96,7 @@
 <h2><a class="anchor" aria-hidden="true" id="セッションの実装"></a><a href="#セッションの実装" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>セッションの実装</h2>
 <p><a href="#セッションの有効化">セッションを有効にする</a> と、4D自身が設定したプライベート cookie (&quot;4DSID_<em>AppName</em>&quot;、<em>AppName</em> はアプリケーションプロジェクトの名称) に基づいて、自動メカニズムが実装されます。 この cookie は、アプリケーションのカレントWebセッションを参照します。</p>
 <blockquote>
-<p>この cookie の名前は、<a href="API/webServerClass.md#sessioncookiename"><code>.sessionCookieName</code></a> プロパティを使用して取得できます。</p>
+<p>この cookie の名前は、<a href="/docs/Rx/ja/API/WebServerClass.html#sessioncookiename"><code>.sessionCookieName</code></a> プロパティを使用して取得できます。</p>
 </blockquote>
 <ol>
 <li><p>Webサーバーは、各Webクライアントリクエストにおいて、プライベートな &quot;4DSID_<em>AppName</em>&quot; cookie の存在と値をチェックします。</p></li>
@@ -107,13 +107,17 @@
 <li>プライベートな &quot;4DSID_<em>AppName</em>&quot; cookie を持つ新しいセッションが Webサーバー上に作成されます。</li>
 <li>新しいゲスト <code>Session</code> オブジェクトが作成され、このスケーラブルWebセッション専用に使用されます。</li>
 </ul>
-<p>カレントの <code>Session</code> オブジェクトは、あらゆる Webプロセスのコードにおいて <a href="API/sessionClass.md#session"><code>Session</code></a> コマンドを介してアクセスできます。</p>
+<p>カレントの <code>Session</code> オブジェクトは、あらゆる Webプロセスのコードにおいて <a href="/docs/Rx/ja/API/SessionClass.html#session"><code>Session</code></a> コマンドを介してアクセスできます。</p>
 <p><img src="/docs/Rx/assets/en/WebServer/schemaSession.png" alt="alt-text"></p>
+<p>Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には (<a href="https://doc.4d.com/4dv18/help/command/ja/page89.html"><code>CLEAR VARIABLE</code></a> などを使用し) コードによって <a href="/docs/Rx/ja/Concepts/variables.html#プロセス変数">プロセス変数</a> をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、<a href="/docs/Rx/ja/API/SessionClass.html">Session</a> オブジェクトを使用することが <strong>推奨</strong> される理由です。</p>
+<h3><a class="anchor" aria-hidden="true" id="プリエンプティブモード"></a><a href="#プリエンプティブモード" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プリエンプティブモード</h3>
+<p>4D Server上では、<strong>インタプリタモードであっても</strong>、Webサーバーセッションは自動的にプリエンプティブプロセスで処理されます。 そのため、Webのコードは <a href="/docs/Rx/ja/WebServer/preemptiveWeb.html#スレッドセーフなWebサーバーコードの書き方">プリエンプティブ実行に準拠</a> している必要があります。</p>
 <blockquote>
-<p>Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Webプロセスはどのセッションでも再利用できるため、実行終了時には (<a href="https://doc.4d.com/4dv18/help/command/ja/page89.html"><code>CLEAR VARIABLE</code></a> などを使用し) コードによって <a href="/docs/Rx/ja/Concepts/variables.html#プロセス変数">プロセス変数</a> をクリアする必要があります 。 このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、<a href="API/sessionClass.md">Session</a> オブジェクトを使用することが <strong>推奨</strong> される理由です。</p>
+<p>Web のコードを 4D Server (インタープリターモード) でデバッグするには、<a href="/docs/Rx/ja/Desktop/clientServer.html#4d-と-4d-server-の同じマシン上での使用">4D Server と同じマシン上で 4D</a> を起動後、サーバーに接続し、4D アプリケーション上で開発環境 (エクスプローラー等) を開きます。 これにより、すべてのプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。</p>
 </blockquote>
+<p>シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。</p>
 <h2><a class="anchor" aria-hidden="true" id="情報の共有"></a><a href="#情報の共有" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>情報の共有</h2>
-<p>各 <code>Session</code> オブジェクトには、共有オブジェクトである <a href="API/sessionClass.md#storage"><code>.storage</code></a> プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。</p>
+<p>各 <code>Session</code> オブジェクトには、共有オブジェクトである <a href="/docs/Rx/ja/API/SessionClass.html#storage"><code>.storage</code></a> プロパティが用意されています。 このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。</p>
 <h2><a class="anchor" aria-hidden="true" id="セッションの有効期限"></a><a href="#セッションの有効期限" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>セッションの有効期限</h2>
 <p>スケーラブルWebセッションは、以下の場合に閉じられます:</p>
 <ul>
@@ -121,16 +125,16 @@
 <li>セッションcookie がタイムアウトしたとき。</li>
 </ul>
 <p>非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。</p>
-<p>このタイムアウトは、<code>Session</code> オブジェクトの <a href="API/sessionClass.md#idletimeout"><code>.idleTimeout</code></a> プロパティで設定できます (タイムアウトは 60分未満にはできません)。</p>
-<p>スケーラブルWebセッションが閉じられた後に <a href="API/sessionClass.md#session"><code>Session</code></a> コマンドが呼び出されると:</p>
+<p>このタイムアウトは、<code>Session</code> オブジェクトの <a href="/docs/Rx/ja/API/SessionClass.html#idletimeout"><code>.idleTimeout</code></a> プロパティで設定できます (タイムアウトは 60分未満にはできません)。</p>
+<p>スケーラブルWebセッションが閉じられた後に <a href="/docs/Rx/ja/API/SessionClass.html#session"><code>Session</code></a> コマンドが呼び出されると:</p>
 <ul>
 <li><code>Session</code> オブジェクトには権限が含まれていません (ゲストセッション)。</li>
-<li><a href="API/sessionClass.md#storage"><code>.storage</code></a> プロパティは空です。</li>
+<li><a href="/docs/Rx/ja/API/SessionClass.html#storage"><code>.storage</code></a> プロパティは空です。</li>
 <li>新しいセッションcookie がセッションに関連付けられています。</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="権限"></a><a href="#権限" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>権限</h2>
 <p>セッションには、権限を関連付けることができます。 セッションの権限に応じて、特定のアクセスや機能を Webサーバー上で提供することができます。</p>
-<p>権限を割り当てるには、<a href="API/sessionClass.md#setprivileges"><code>.setPrivileges()</code></a> 関数を使用します。 コード内では、<a href="API/sessionClass.md#hasprivilege"><code>.hasPrivilege()</code></a> 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、<strong>ゲスト</strong> セッションとなります (<a href="API/sessionClass.md#isguest"><code>.isGuest()</code></a> 関数は true を返します)。</p>
+<p>権限を割り当てるには、<a href="/docs/Rx/ja/API/SessionClass.html#setprivileges"><code>.setPrivileges()</code></a> 関数を使用します。 コード内では、<a href="/docs/Rx/ja/API/SessionClass.html#hasprivilege"><code>.hasPrivilege()</code></a> 関数を使ってセッションの権限をチェックし、アクセスを許可または拒否することができます。 デフォルトでは、新しいセッションは権限を持たず、<strong>ゲスト</strong> セッションとなります (<a href="/docs/Rx/ja/API/SessionClass.html#isguest"><code>.isGuest()</code></a> 関数は true を返します)。</p>
 <blockquote>
 <p>現在の実装では (v18 R6)、&quot;WebAdmin&quot; アクセス権のみ利用可能です。</p>
 </blockquote>
@@ -151,7 +155,7 @@ End if</span>
 <pre><code class="hljs"><span class="hljs-symbol">http:</span><span class="hljs-comment">//localhost:8044/authenticate.shtml</span>
 </code></pre>
 <blockquote>
-<p>本番環境では、暗号化されていない情報がネットワーク上を流れるのを防ぐために、<a href="API/webServerClass.md#httpsenabled">HTTPS接続</a> を使用する必要があります。</p>
+<p>本番環境では、暗号化されていない情報がネットワーク上を流れるのを防ぐために、<a href="/docs/Rx/ja/API/WebServerClass.html#httpsenabled">HTTPS接続</a> を使用する必要があります。</p>
 </blockquote>
 <ol start="2">
 <li><code>authenticate.shtml</code> ページは、<em>userId</em> と <em>password</em> の入力フィールドを含むフォームで、4DACTION の POSTアクションを送信します:</li>
@@ -208,7 +212,7 @@ Else</span>
 <span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"This userId is unknown"</span>)<span class="hljs-keyword">
 End if</span> 
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/WebServer/authentication.html"><span class="arrow-prev">← </span><span>認証</span></a><a class="docs-next button" href="/docs/Rx/ja/WebServer/preemptiveWeb.html"><span>プリエンプティブWebプロセスの使用</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#セッションの有効化">セッションの有効化</a></li><li><a href="#セッションの実装">セッションの実装</a></li><li><a href="#情報の共有">情報の共有</a></li><li><a href="#セッションの有効期限">セッションの有効期限</a></li><li><a href="#権限">権限</a></li><li><a href="#例題">例題</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/WebServer/authentication.html"><span class="arrow-prev">← </span><span>認証</span></a><a class="docs-next button" href="/docs/Rx/ja/WebServer/preemptiveWeb.html"><span>プリエンプティブWebプロセスの使用</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#セッションの有効化">セッションの有効化</a></li><li><a href="#セッションの実装">セッションの実装</a><ul class="toc-headings"><li><a href="#プリエンプティブモード">プリエンプティブモード</a></li></ul></li><li><a href="#情報の共有">情報の共有</a></li><li><a href="#セッションの有効期限">セッションの有効期限</a></li><li><a href="#権限">権限</a></li><li><a href="#例題">例題</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

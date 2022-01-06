@@ -102,10 +102,10 @@
 <tr><td><code>--user-param</code></td><td>Chaîne utilisateur personnalisée</td><td>Une chaîne qui sera disponible dans l'application 4D via la commande Get database parameter (la chaîne ne doit pas commencer par un caractère &quot;-&quot;, qui est réservé).</td></tr>
 <tr><td><code>--headless</code></td><td></td><td>Lance 4D, 4D Server ou l'application fusionnée sans interface (mode headless). In this mode:<li> Le mode Développement n'est pas disponible, la base de données démarre en mode Application</li><li> Aucune barre d'outils, barre de menus, fenêtre MDI ou écran de démarrage ne s'affiche</li><li>Aucune icône n'est affichée dans le dock ou la barre des tâches</li><li>La base de données ouverte n'est pas enregistrée dans le menu &quot;Bases de données récentes&quot;</li><li>Le journal de diagnostic est automatiquement lancé (voir [SET DATABASE PARAMETER] (<a href="https://doc.4d.com/4dv19/help/command/en/page642.html">https://doc.4d.com/4dv19/help/command/en/page642.html</a>), sélecteur 79)</li><li>Chaque appel à une boîte de dialogue est intercepté et une réponse automatique est fournie (par exemple OK pour la commande [ALERT] (<a href="https://doc.4d.com/4dv19/help/command/en/page41.html">https://doc.4d.com/4dv19/help/command/en/page41.html</a>), Abort pour un boîte de dialogue d'erreur, etc.). Toutes les commandes interceptées (*) sont enregistrées dans le journal de diagnostic.</li><br/>Pour les besoins de maintenance, vous pouvez envoyer n'importe quel texte aux flux de sortie standard à l'aide de la commande <a href="https://doc.4d.com/4dv19/help/command/en/page667.html">LOG EVENT</a>. A noter que les applications 4D headless ne peuvent être fermées qu'en appelant <a href="https://doc.4d.com/4dv19/help/command/en/page291.html">QUIT 4D</a> ou en utilisant le gestionnaire de tâches du système d'exploitation.</td></tr>
 <tr><td><code>--dataless</code></td><td></td><td>Lance 4D, 4D Server ou une application fusionnée en mode headless. Le mode Dataless est utile lorsque 4D exécute des tâches sans données (compilation de projet par exemple). In this mode: <li>Aucun fichier contenant des données n'est ouvert, même s'il est spécifié dans la ligne de commande ou le fichier <code>.4DLink</code>, ou lors de l'utilisation des commandes<code>CREATE DATA FILE</code> et <code>OPEN DATA FILE</code>.</li><li>Les commandes qui manipulent les données généreront une erreur. Par exemple : «CREATE RECORD» lance «aucune table à laquelle appliquer la commande».</li><br/><strong>Note</strong> :<li>S'il est passé en ligne de commande, le mode dataless s'applique à toutes les bases de données ouvertes dans 4D, tant que l'application n'est pas fermée.</li><li>S'il est passé à l'aide du fichier <code>.4DLink</code>, le mode dataless ne s'applique qu'à la base de données spécifiée dans le fichier<code>.4DLink</code>. Pour plus d'informations sur les fichiers <code>.4DLink</code>, voir [Raccourcis d'ouverture de projet] (../Project/creation.md#project-opening-shortcuts).</li></td></tr>
-<tr><td><code>--webadmin-settings-file</code></td><td>File path</td><td>Chemin du fichier WebAdmin <code>.4DSettings</code> personnalisé pour le <a href="/docs/Rx/fr/Admin/webAdmin.html">serveur Web WebAdmin</a></td></tr>
+<tr><td><code>--webadmin-settings-file</code></td><td>Chemin de fichier</td><td>Chemin du fichier WebAdmin <code>.4DSettings</code> personnalisé pour le <a href="/docs/Rx/fr/Admin/webAdmin.html">serveur Web WebAdmin</a></td></tr>
 <tr><td><code>--webadmin-access-key</code></td><td>Chaine</td><td>Clé d'accès au <a href="/docs/Rx/fr/Admin/webAdmin.html">serveur Web WebAdmin</a></td></tr>
 <tr><td><code>--webadmin-auto-start</code></td><td>Booléen</td><td>Statut du démarrage automatique du <a href="/docs/Rx/fr/Admin/webAdmin.html">serveur Web WebAdmin</a></td></tr>
-<tr><td><code>--webadmin-store-settings</code></td><td></td><td>Stocke la clé d'accès et les paramètres de démarrage automatique dans le fichier de paramètres courant (c'est-à-dire le fichier <a href="/docs/Rx/fr/Admin/webAdmin.html#webadmin-settings"><code>WebAdmin.4DSettings</code></a> par défaut ou un fichier personnalisé désigné par le paramètre <code>--webadmin-settings-path</code>). Use the <code>--webadmin-store-settings</code> argument to save these settings if necessary</td></tr>
+<tr><td><code>--webadmin-store-settings</code></td><td></td><td>Stocke la clé d'accès et les paramètres de démarrage automatique dans le fichier de paramètres courant (c'est-à-dire le fichier <a href="/docs/Rx/fr/Admin/webAdmin.html#webadmin-settings"><code>WebAdmin.4DSettings</code></a> par défaut ou un fichier personnalisé désigné par le paramètre <code>--webadmin-settings-path</code>). Utilisez l'argument <code>--webadmin-store-settings</code> pour sauvegarder ces paramètres si nécessaire</td></tr>
 </tbody>
 </table>
 <p><a href="/docs/Rx/fr/Admin/debugLogFiles.html#4ddiagnosticlogtxt">fichier journal de diagnostic</a> (alerte de licence, boîte de dialogue de conversion, sélection de base de données, sélection du fichier de données). Dans ce cas, un message d'erreur est envoyé à la fois dans le flux stderr et dans le journal d'événements système, puis l'application se ferme.</p>
@@ -125,10 +125,10 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe
 </code></pre>
-<p>Ces exemples supposent que votre application 4D est stockée sur le bureau et que la base de données à ouvrir se trouve dans le dossier &quot;Documents&quot;.</p>
+<p>Lancer l'application :</p>
 <pre><code class="hljs css language-bash">yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 </code></pre>
-<p>Lancer l'application :</p>
+<p>Lancer l'application avec un fichier de package sur macOS :</p>
 <ul>
 <li>Sous macOS :</li>
 </ul>
@@ -139,7 +139,7 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 </code></pre>
-<p>Lancer l'application avec un fichier de package sur macOS :</p>
+<p>Lancer l'application avec un fichier projet :</p>
 <ul>
 <li>Sous macOS :</li>
 </ul>
@@ -152,7 +152,7 @@
 ou :
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 </code></pre>
-<p>Lancer l'application avec un fichier projet :</p>
+<p>Lancer l'application avec un fichier projet et un fichier de données :</p>
 <ul>
 <li>Sous macOS :</li>
 </ul>
@@ -167,7 +167,7 @@ ou :
 </code></pre>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D Server.exe<span class="hljs-string">" MyDatabase.4DLink
 </span></code></pre>
-<p>Lancer l'application avec un fichier projet et un fichier de données :</p>
+<p>Lancer l'application avec un fichier .4DLink :</p>
 <ul>
 <li>Sous macOS :</li>
 </ul>
@@ -178,7 +178,7 @@ ou :
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data <span class="hljs-literal">true</span>
 </code></pre>
-<p>Lancer l'application avec un fichier .4DLink :</p>
+<p>Lancez l'application en mode compilé et créer un fichier de données s'il n'est pas disponible :</p>
 <ul>
 <li>Sous macOS :</li>
 </ul>
@@ -189,7 +189,7 @@ ou :
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param <span class="hljs-string">"Hello world"</span>
 </code></pre>
-<p>Lancez l'application en mode compilé et créer un fichier de données s'il n'est pas disponible :</p>
+<p>Lancer l'application avec un fichier projet et un fichier de données et passer une chaîne comme paramètre utilisateur :</p>
 <ul>
 <li>Sous macOS :</li>
 </ul>
@@ -203,7 +203,7 @@ ou :
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --headless
 %HOMEPATH%\Desktop\4D\MyBuiltRemoteApp.exe --headless
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/Admin/tls.html"><span class="arrow-prev">← </span><span>Protocole TLS (HTTPS)</span></a><a class="docs-next button" href="/docs/Rx/fr/Admin/debugLogFiles.html"><span>Description des fichiers historiques</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#informations-de-base">Informations de base</a></li><li><a href="#lancer-une-application-4d">Lancer une application 4D</a><ul class="toc-headings"><li><a href="#exemples">Exemples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/Admin/tls.html"><span class="arrow-prev">← </span><span>Protocole TLS (HTTPS)</span></a><a class="docs-next button" href="/docs/Rx/fr/Admin/debugLogFiles.html"><span>Description des fichiers historiques</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#informations-de-base">Informations de base</a></li><li><a href="#lancer-une-application-4d">Lancer une application 4D</a><ul class="toc-headings"><li><a href="#exemples">Exemples</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

@@ -114,7 +114,7 @@
 <blockquote>
 <p>データクラス属性は [ ] を使用したシンタックスを使用することでもアクセス可能です。</p>
 </blockquote>
-<p>この属性値タイプは属性の種類 (<a href="dataclassAttributeClass.md#kind"></a>.kind; リレーションまたはストレージ) によります。</p>
+<p>この属性値タイプは属性の種類 (<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind"></a>.kind; リレーションまたはストレージ) によります。</p>
 <ul>
 <li><em>attributeName</em> で指定した属性がストレージ型の場合: <code>.attributeName</code>は <em>attributeName</em> と同じ型の値を返します。</li>
 <li><em>attributeName</em> で指定した属性がリレートエンティティ型の場合: <code>.attributeName</code> はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: &quot;myEntity.employer.employees[0].lastname&quot;</li>
@@ -199,7 +199,7 @@
 </tbody>
 </table>
 <p>コレクションに含まれるのは異なる値を持っていた属性のみです。 差異が見つからない場合、<code>diff()</code> は空のコレクションを返します。</p>
-<p>この関数は、種類 (<a href="dataclassAttributeClass.md#kind">kind</a>) が <strong>storage</strong> あるいは <strong>relatedEntity</strong> であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が <em>attributeName</em> プロパティに返されます (リレーション名についての <em>value</em> および <em>otherValue</em> は空になります)。</p>
+<p>この関数は、種類 (<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">kind</a>) が <strong>storage</strong> あるいは <strong>relatedEntity</strong> であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が <em>attributeName</em> プロパティに返されます (リレーション名についての <em>value</em> および <em>otherValue</em> は空になります)。</p>
 <p>比較するどちらかのエンティティが <strong>Null</strong> である場合、エラーが生成されます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-1"></a><a href="#例題-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$diff1</span>; <span class="hljs-variable">$diff2 </span>: Collection
@@ -354,7 +354,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk force drop if stamp changed</code>: スタンプが変更されていた場合でも強制的にドロップする</td></tr>
+<tr><td>mode</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk force drop if stamp changed</code>: スタンプが変更されていた場合でも強制的にドロップする</td></tr>
 <tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>ドロップの結果</td></tr>
 </tbody>
 </table>
@@ -375,7 +375,7 @@
 <tr><td>status(*)</td><td></td><td>number</td><td>エラーコード、以下参照</td></tr>
 <tr><td>statusText(*)</td><td></td><td>text</td><td>エラーの詳細、以下参照</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>ペシミスティック・ロックエラーの場合にのみ利用可能:</em></strong></td></tr>
-<tr><td>LockKindText</td><td></td><td>text</td><td>&quot;Locked by record&quot;</td></tr>
+<tr><td>lockKindText</td><td></td><td>text</td><td>&quot;Locked by record&quot;</td></tr>
 <tr><td>lockInfo</td><td></td><td>object</td><td>ロック元についての情報</td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>プロセスID</td></tr>
 <tr><td></td><td>user_name</td><td>text</td><td>マシン上でのセッションユーザー名</td></tr>
@@ -491,6 +491,7 @@
 <ul>
 <li>オブジェクトのプロパティがデータクラスに存在しない場合、それは無視されます。</li>
 <li>データタイプは同じである必要があります。 オブジェクトとデータクラス間で型が合致しない場合、4D は可能であればデータを変換しようとし (<a href="/docs/Rx/ja/Concepts/data-types.html#データタイプの変換"><code>データタイプの変換</code></a>) 参照)、それ以外の場合にはその属性は更新されません。</li>
+<li>プライマリーキーはそのまま、あるいは &quot;__KEY&quot; プロパティを (プライマリーキー値とともに) 使って指定することができます。 その値のエンティティがデータクラス内に存在しない場合には、<a href="#save">.save()</a> が呼び出されたときに指定値を使ってエンティティが作成されます。 プライマリーキーを指定していない場合、エンティティは作成され、データベースのルールに基づいてプライマリーキー値が割り当てられます。 自動インクリメント機能はプライマリーキーが null の場合にのみ計算されます。</li>
 </ul>
 <p><em>filler</em> 引数のオブジェクトは、以下の条件のいずれかを満たしている場合にはリレートエンティティを扱うことができます:</p>
 <ul>
@@ -586,9 +587,9 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk key as string</code>: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します</td></tr>
+<tr><td>mode</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk key as string</code>: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します</td></tr>
 <tr><td>戻り値</td><td>テキスト</td><td style="text-align:center">&lt;-</td><td>エンティティのテキスト型プライマリーキーの値</td></tr>
-<tr><td>戻り値</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>エンティティの数値型プライマリーキーの値</td></tr>
+<tr><td>戻り値</td><td>整数</td><td style="text-align:center">&lt;-</td><td>エンティティの数値型プライマリーキーの値</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -652,7 +653,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)</td></tr>
+<tr><td>戻り値</td><td>整数</td><td style="text-align:center">&lt;-</td><td>エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -692,7 +693,7 @@
 </thead>
 <tbody>
 <tr><td>entitySelection</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>エンティティの位置を取得する対象のエンティティセレクション</td></tr>
-<tr><td>戻り値</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>エンティティセレクション内でのエンティティの位置</td></tr>
+<tr><td>戻り値</td><td>整数</td><td style="text-align:center">&lt;-</td><td>エンティティセレクション内でのエンティティの位置</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -791,7 +792,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk reload if stamp changed</code>: スタンプが変更されてる場合はロック前にリロードします</td></tr>
+<tr><td>mode</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk reload if stamp changed</code>: スタンプが変更されてる場合はロック前にリロードします</td></tr>
 <tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>ロックの結果</td></tr>
 </tbody>
 </table>
@@ -1013,7 +1014,7 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>mode</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk auto merge</code>: 自動マージモードを有効化します</td></tr>
+<tr><td>mode</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk auto merge</code>: 自動マージモードを有効化します</td></tr>
 <tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>保存の結果</td></tr>
 </tbody>
 </table>
@@ -1134,7 +1135,7 @@
 <tbody>
 <tr><td>filterString</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>取得する属性 (カンマ区切り)</td></tr>
 <tr><td>filterCol</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>取得する属性のコレクション</td></tr>
-<tr><td>options</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code>: __KEY プロパティを追加;<br><code>dk with stamp</code>: __STAMP プロパティを追加</td></tr>
+<tr><td>options</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>dk with primary key</code>: __KEY プロパティを追加;<br><code>dk with stamp</code>: __STAMP プロパティを追加</td></tr>
 <tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>エンティティを元にビルドされたオブジェクト</td></tr>
 </tbody>
 </table>
@@ -1143,8 +1144,8 @@
 <p><em>filterString</em> 引数が空の文字列、あるいは &quot;*&quot; の場合、以下のいずれかが返されます:</p>
 <ul>
 <li>すべてのストレージエンティティ属性</li>
-<li>リレートエンティティ型の属性 (<a href="dataclassAttributeClass.md#kind">kind</a> が <code>relatedEntity</code>) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。</li>
-<li>リレートエンティティズ型の属性 (<a href="dataclassAttributeClass.md#kind">kind</a> が <code>relatedEntities</code>): 属性は返されません。</li>
+<li>リレートエンティティ型の属性 (<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>relatedEntity</code>) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。</li>
+<li>リレートエンティティズ型の属性 (<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>relatedEntities</code>): 属性は返されません。</li>
 </ul>
 <p>最初の引数として、取得するエンティティ属性を渡します。 以下のものを渡すことができます:</p>
 <ul>
@@ -1364,7 +1365,7 @@
 <h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.touched()</code> 関数は、 エンティティがメモリに読み込まれてから、あるいは保存されてから、エンティティ属性が変更されたかどうかをテストします。</p>
 <p>属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。</p>
-<p>この関数は、(<a href="dataclassClass.md#new"><code>.new( )</code></a> で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、<code>.touched()</code> 関数は true を返します。 たとえば、プライマリーキーを計算するために <a href="#getkey"><code>.getKey()</code></a> を呼び出した場合、<code>.touched()</code> メソッドは true を返します。</p>
+<p>この関数は、(<a href="/docs/Rx/ja/API/DataClassClass.html#new"><code>.new( )</code></a> で作成された) 新規エンティティに対しては常に false を返します。 ただし、エンティティの属性を計算する関数を使用した場合には、<code>.touched()</code> 関数は true を返します。 たとえば、プライマリーキーを計算するために <a href="#getkey"><code>.getKey()</code></a> を呼び出した場合、<code>.touched()</code> メソッドは true を返します。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-15"></a><a href="#例題-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>エンティティを保存する必要があるかどうかをチェックします:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp </span>: cs.EmployeeEntity
@@ -1397,7 +1398,7 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.touchedAttributes()</code> 関数は、 メモリに読み込み後に変更されたエンティティの属性名を返します。</p>
-<p>この関数は、種類 (<a href="dataclassAttributeClass.md#kind">kind</a>) が <code>storage</code> あるいは <code>relatedEntity</code> である属性に適用されます。</p>
+<p>この関数は、種類 (<a href="/docs/Rx/ja/API/DataClassAttributeClass.html#kind">kind</a>) が <code>storage</code> あるいは <code>relatedEntity</code> である属性に適用されます。</p>
 <p>リレート先のエンティティそのものが更新されていた場合 (外部キーの変更)、リレートエンティティの名称とそのプライマリーキー名が返されます。</p>
 <p>エンティティ属性がいずれも更新されていなかった場合、関数は空のコレクションを返します。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-6"></a><a href="#例題-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
@@ -1493,7 +1494,7 @@
  End if</span>
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/API/EmailObjectClass.html"><span class="arrow-prev">← </span><span>Email</span></a><a class="docs-next button" href="/docs/Rx/ja/API/EntitySelectionClass.html"><span class="function-name-prevnext">EntitySelection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#clone">.clone()</a></li><li><a href="#diff">.diff()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#first">.first()</a></li><li><a href="#fromobject">.fromObject()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#getkey">.getKey()</a></li><li><a href="#getselection">.getSelection()</a></li><li><a href="#getstamp">.getStamp()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#isnew">.isNew()</a></li><li><a href="#last">.last()</a></li><li><a href="#lock">.lock()</a></li><li><a href="#next">.next()</a></li><li><a href="#previous">.previous()</a></li><li><a href="#reload-">.reload( )</a></li><li><a href="#save">.save()</a></li><li><a href="#toobject">.toObject()</a></li><li><a href="#touched-">.touched( )</a></li><li><a href="#touchedattributes-">.touchedAttributes( )</a></li><li><a href="#unlock">.unlock()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/API/EmailObjectClass.html"><span class="arrow-prev">← </span><span>Email</span></a><a class="docs-next button" href="/docs/Rx/ja/API/EntitySelectionClass.html"><span class="function-name-prevnext">EntitySelection</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#clone">.clone()</a></li><li><a href="#diff">.diff()</a></li><li><a href="#drop">.drop()</a></li><li><a href="#first">.first()</a></li><li><a href="#fromobject">.fromObject()</a></li><li><a href="#getdataclass">.getDataClass()</a></li><li><a href="#getkey">.getKey()</a></li><li><a href="#getselection">.getSelection()</a></li><li><a href="#getstamp">.getStamp()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#isnew">.isNew()</a></li><li><a href="#last">.last()</a></li><li><a href="#lock">.lock()</a></li><li><a href="#next">.next()</a></li><li><a href="#previous">.previous()</a></li><li><a href="#reload-">.reload( )</a></li><li><a href="#save">.save()</a></li><li><a href="#toobject">.toObject()</a></li><li><a href="#touched-">.touched( )</a></li><li><a href="#touchedattributes-">.touchedAttributes( )</a></li><li><a href="#unlock">.unlock()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

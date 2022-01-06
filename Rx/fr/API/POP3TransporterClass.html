@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/API/POP3TransporterClass.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">POP3Transporter</h1></header><article><div><span><p>La classe <code>POP3Transporter</code> vous permet de récupérer des messages à partir d'un serveur de messagerie POP3.</p>
 <h3><a class="anchor" aria-hidden="true" id="objet-pop3-transporter"></a><a href="#objet-pop3-transporter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objet POP3 Transporter</h3>
-<p>Les objets Transporter POP3 sont instanciés avec la commande <a href="#pop3-new-transporter">POP3 New transporter</a>. They provide the following properties and functions:</p>
+<p>Les objets Transporter POP3 sont instanciés avec la commande <a href="#pop3-new-transporter">POP3 New transporter</a>. Leurs propriétés et fonctions sont les suivantes :</p>
 <table>
 <thead>
 <tr><th></th></tr>
@@ -78,16 +78,16 @@
 <tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    the authentication mode used to open the session on the mail server</td></tr>
 <tr><td><a href="#checkconnection"><strong>.checkConnection()</strong> : Object</a><p>     checks the connection using information stored in the transporter object</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    the maximum wait time (in seconds) allowed to establish a connection to the server</td></tr>
-<tr><td><a href="#delete"><strong>.delete</strong>( <em>msgNumber</em> : Integer )</a><p>    flags the <em>msgNumber</em> email for deletion from the POP3 server</td></tr>
-<tr><td><a href="#getboxinfo"><strong>.getBoxInfo()</strong> : Object</a><p>    returns a <code>boxInfo</code> object corresponding to the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmail"><strong>.getMail</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    returns the <code>Email</code> object corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmailinfo"><strong>.getMailInfo</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    returns a <code>mailInfo</code> object corresponding  corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmailinfolist"><strong>.getMailInfoList()</strong> : Collection</a><p>    returns a collection of <code>mailInfo</code> objects describing all messages in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
-<tr><td><a href="#getmimeasblob"><strong>.getMIMEAsBlob</strong>( <em>msgNumber</em> : Integer ) : Blob</a><p>    returns a BLOB containing the MIME contents for the message corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
+<tr><td><a href="#delete"><strong>.delete</strong>( <em>msgNumber</em> : Integer )</a><p>    marque l'email <em>msgNumber</em> comme devant être supprimé sur le serveur POP3</td></tr>
+<tr><td><a href="#getboxinfo"><strong>.getBoxInfo()</strong> : Object</a><p>    </td></tr>
+<tr><td><a href="#getmail"><strong>.getMail</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    retourne l'objet <code>Email</code> correspondant au <em>msgNumber</em> de la boite de réception désignée par le <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
+<tr><td><a href="#getmailinfo"><strong>.getMailInfo</strong>( <em>msgNumber</em> : Integer ) : Object</a><p>    </td></tr>
+<tr><td><a href="#getmailinfolist"><strong>.getMailInfoList()</strong> : Collection</a><p>    retourne une collection d'objets <code>mailInfo</code> décrivant les messages de la boite de réception désignés par le <a href="#pop3-transporter-object"><code>POP3 transporter</code></a></td></tr>
+<tr><td><a href="#getmimeasblob"><strong>.getMIMEAsBlob</strong>( <em>msgNumber</em> : Integer ) : Blob</a><p>    retourne un BLOB avec le contenu MIME du message correspondant au <em>msgNumber</em> dans la boîte de réception désignée par le <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    the name or the IP address of the host server</td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     the port number used for mail transactions</td></tr>
-<tr><td><a href="#undeleteall"><strong>.undeleteAll()</strong></a><p>    removes all delete flags set on the emails in the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
+<tr><td><a href="#undeleteall"><strong>.undeleteAll()</strong></a><p>    supprime tous les marqueurs de suppression définis pour les emails de <a href="#pop3-transporter-object"><code>POP3_transporter</code></a></td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     the user name used for authentication on the mail server</td></tr>
 </tbody>
 </table>
@@ -98,7 +98,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -108,31 +108,31 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>server</td><td>object</td><td style="text-align:center">-&gt;</td><td>Mail server information</td></tr>
+<tr><td>server</td><td>object</td><td style="text-align:center">-&gt;</td><td>Informations sur le serveur IMAP</td></tr>
 <tr><td>Résultat</td><td>4D.POP3Transporter</td><td style="text-align:center">&lt;-</td><td><a href="#pop3-transporter-object">Objet POP3 transporter</a></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La commande <code>POP3 New transporter</code> configure une nouvelle connexion POP3en fonction du paramètre <em>server</em> et retourne un nouvel objet <em><a href="#pop3-transporter-object">POP3 transporter</a></em>. The returned transporter object will then usually be used to receive emails.</p>
-<p>In the <em>server</em> parameter, pass an object containing the following properties:</p>
+<p>La commande <code>POP3 New transporter</code> configure une nouvelle connexion POP3en fonction du paramètre <em>server</em> et retourne un nouvel objet <em><a href="#pop3-transporter-object">POP3 transporter</a></em>. L'objet transporteur retourné sera alors utilisé pour la réception d'emails.</p>
+<p>Dans le paramètre <em>server</em>, passez un objet contenant les propriétés suivantes :</p>
 <table>
 <thead>
-<tr><th><em>server</em></th><th>Default value (if omitted)</th></tr>
+<tr><th><em>server</em></th><th>Valeur par défaut (si omise)</th></tr>
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"><strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    <strong>True</strong> if 4D is allowed to establish an unencrypted connection</td><td>Faux</td></tr>
-<tr><td>.<strong>accessTokenOAuth2</strong>: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in <em><a href="#smtptransporterobject">SMTP transporter</a></em> object.</td><td>none</td></tr>
-<tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    the authentication mode used to open the session on the mail server</td><td>the most secure authentication mode supported by the server is used</td></tr>
+<tr><td>.<strong>accessTokenOAuth2</strong> : Text<p>Chaîne représentant les informations d'autorisation OAuth2. Il est utilisé uniquement avec OAUTH2 <code>authenticationMode</code>. Si <code>accessTokenOAuth2</code> est utilisé mais que <code>authenticationMode</code> est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné dans l'objet <em><a href="#smtptransporterobject">SMTP transporter</a></em>.</td><td>aucune</td></tr>
+<tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    the authentication mode used to open the session on the mail server</td><td>le mode d'authentification le plus sûr pris en charge par le serveur est utilisé</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    the maximum wait time (in seconds) allowed to establish a connection to the server</td><td>30</td></tr>
-<tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    the name or the IP address of the host server</td><td><em>mandatory</em></td></tr>
-<tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td><td>none</td></tr>
-<tr><td><strong>.password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#smtptransporterobject">SMTP transporter</a></em> object.</td><td>none</td></tr>
+<tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    the name or the IP address of the host server</td><td><em>obligatoire</em></td></tr>
+<tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td><td>aucune</td></tr>
+<tr><td><strong>.password</strong> : Text<p>Mot de passe de l'utilisateur pour l'authentification sur le serveur. Non retourné dans l'objet <em><a href="#smtptransporterobject">SMTP transporter</a></em>.</td><td>aucune</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     the port number used for mail transactions</td><td>995</td></tr>
-<tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     the user name used for authentication on the mail server</td><td>none</td></tr>
+<tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     the user name used for authentication on the mail server</td><td>aucune</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="résultat"></a><a href="#résultat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
-<p>La fonction retourne un <a href="#pop3-transporter-object"><strong>objet POP3 transporter</strong></a>. All returned properties are <strong>read-only</strong>.</p>
+<p>La fonction retourne un <a href="#pop3-transporter-object"><strong>objet POP3 transporter</strong></a>. Toutes les propriétés retournées sont en <strong>lecture seule</strong>.</p>
 <blockquote>
 <p>La connexion POP3 est automatiquement fermée lorsque l'objet transporteur est détruit.</p>
 </blockquote>
@@ -160,7 +160,7 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>server</td><td>Objet</td><td style="text-align:center">-&gt;</td><td>Mail server information</td></tr>
+<tr><td>server</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Informations sur le serveur IMAP</td></tr>
 <tr><td>Résultat</td><td>4D.POP3Transporter</td><td style="text-align:center">&lt;-</td><td><a href="#pop3-transporter-object">Objet POP3 transporter</a></td></tr>
 </tbody>
 </table>
@@ -173,29 +173,29 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R4</td><td>Ajoutées</td></tr>
+<tr><td>v17 R4</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.acceptUnsecureConnection</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.acceptUnsecureConnection</code> property contains <strong>True</strong> if 4D is allowed to establish an unencrypted connection when encrypted connection is not possible.</p>
-<p>It contains <strong>False</strong> if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.</p>
-<p>Available secured ports are:</p>
+<p>Elle contient <strong>False</strong> si les connexions non chiffrées ne sont pas autorisées, auquel cas une erreur est retournée lorsque la connexion chiffrée n'est pas possible.</p>
+<p>Ports sécurisés disponibles :</p>
 <ul>
 <li><p>SMTP</p>
 <ul>
 <li>465: SMTPS</li>
-<li>587 or 25: SMTP with STARTTLS upgrade if supported by the server.</li>
+<li>587 ou 25 : SMTP avec mise à niveau STARTTLS si le serveur le prend en charge.</li>
 </ul></li>
 <li><p>IMAP</p>
 <ul>
-<li>143: IMAP non-encrypted port</li>
-<li>993: IMAP with STARTTLS upgrade if supported by the server</li>
+<li>143 : Port IMAP non chiffré</li>
+<li>993 : IMAP avec mise à niveau STARTTLS si le serveur le prend en charge</li>
 </ul></li>
 <li><p>POP3</p>
 <ul>
-<li>110: POP3 non-encrypted port</li>
+<li>110 : Port POP3 non chiffré</li>
 <li>995: POP3 with STARTTLS upgrade if supported by the server.</li>
 </ul></li>
 </ul>
@@ -206,25 +206,25 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R4</td><td>Ajoutées</td></tr>
+<tr><td>v17 R4</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.authenticationMode</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.authenticationMode</code> property contains the authentication mode used to open the session on the mail server.</p>
-<p>By default, the most secured mode supported by the server is used.</p>
-<p>Possible values are:</p>
+<p>La propriété <code>.authenticationMode</code> contient le mode d'authentification utilisé pour ouvrir la session sur le serveur de messagerie.</p>
+<p>Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.</p>
+<p>Valeurs possibles :</p>
 <table>
 <thead>
 <tr><th>Valeur</th><th>Constantes</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
-<tr><td>APOP</td><td><code>POP3 authentication APOP</code></td><td>Authentication using APOP protocol (POP3 only)</td></tr>
-<tr><td>CRAM-MD5</td><td><code>POP3 authentication CRAM-MD5</code></td><td>Authentication using CRAM-MD5 protocol</td></tr>
-<tr><td>LOGIN</td><td><code>POP3 authentication login</code></td><td>Authentication using LOGIN protocol</td></tr>
-<tr><td>OAUTH2</td><td><code>POP3 authentication OAUTH2</code></td><td>Authentication using OAuth2 protocol</td></tr>
-<tr><td>PLAIN</td><td><code>POP3 authentication plain</code></td><td>Authentication using PLAIN protocol</td></tr>
+<tr><td>APOP</td><td><code>POP3 authentication APOP</code></td><td>Authentification à l'aide du protocole APOP (POP3 uniquement)</td></tr>
+<tr><td>CRAM-MD5</td><td><code>POP3 authentication CRAM-MD5</code></td><td>Authentification à l'aide du protocole CRAM-MD5</td></tr>
+<tr><td>LOGIN</td><td><code>POP3 authentication login</code></td><td>Authentification à l'aide du protocole LOGIN</td></tr>
+<tr><td>OAUTH2</td><td><code>POP3 authentication OAUTH2</code></td><td>Authentification à l'aide du protocole OAuth2</td></tr>
+<tr><td>PLAIN</td><td><code>POP3 authentication plain</code></td><td>Authentification à l'aide du protocole PLAIN</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="checkconnection"></a><a href="#checkconnection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.checkConnection()</h2>
@@ -234,7 +234,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R4</td><td>Ajoutées</td></tr>
+<tr><td>v17 R4</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -244,25 +244,25 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td>Status of the transporter object connection</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Status of the transporter object connection</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.checkConnection()</code> function  checks the connection using information stored in the transporter object, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.</p>
-<h4><a class="anchor" aria-hidden="true" id="returned-object"></a><a href="#returned-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Returned object</h4>
-<p>The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:</p>
+<h4><a class="anchor" aria-hidden="true" id="objet-retourné"></a><a href="#objet-retourné" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objet retourné</h4>
+<p>The function sends a request to the mail server and returns an object describing the mail status. Cet objet peut avoir les propriétés suivantes :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th></th><th>Type</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>boolean</td><td>True if the check is successful, False otherwise</td></tr>
-<tr><td>status</td><td></td><td>number</td><td>(SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing)</td></tr>
-<tr><td>statusText</td><td></td><td>Texte</td><td>Status message returned by the mail server, or last error returned in the 4D error stack</td></tr>
-<tr><td>errors</td><td></td><td>collection</td><td>4D error stack (not returned if a mail server response is received)</td></tr>
-<tr><td></td><td>[ ].errCode</td><td>number</td><td>4D error code</td></tr>
-<tr><td></td><td>[ ].message</td><td>Texte</td><td>Description of the 4D error</td></tr>
-<tr><td></td><td>[ ].componentSignature</td><td>Texte</td><td>Signature of the internal component which returned the error</td></tr>
+<tr><td>success</td><td></td><td>boolean</td><td>Vrai si la vérification a été effectuée avec succès, sinon Faux</td></tr>
+<tr><td>status</td><td></td><td>number</td><td>(SMTP uniquement) Code du statut retourné par le serveur de messagerie (0 en cas de problème non lié au traitement du mail)</td></tr>
+<tr><td>statusText</td><td></td><td>Texte</td><td>Message du statut retourné par le serveur de messagerie, ou dernière erreur retournée dans la pile d'erreurs 4D</td></tr>
+<tr><td>errors</td><td></td><td>collection</td><td>Pile d'erreurs 4D (non retournée si une réponse du serveur de messagerie est reçue)</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>number</td><td>Code d'erreur 4D</td></tr>
+<tr><td></td><td>[ ].message</td><td>Texte</td><td>Description de l'erreur 4D</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>Texte</td><td>Signature du composant interne qui a retourné l'erreur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
@@ -294,13 +294,13 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R5</td><td>Ajoutées</td></tr>
+<tr><td>v17 R5</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.connectionTimeOut</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.connectionTimeOut</code> property contains the maximum wait time (in seconds) allowed to establish a connection to the server. By default, if the property has not been set in the server object (used to create the transporter object with <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, or <code>IMAP New transporter</code>), the value is 30.</p>
+<p>The <code>.connectionTimeOut</code> property contains the maximum wait time (in seconds) allowed to establish a connection to the server. Par défaut, si la propriété n'a pas été définie dans l'objet server (utilisé pour créer l'objet transporteur avec <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, <code>IMAP New transporter</code>), la valeur utilisée est 30.</p>
 <h2><a class="anchor" aria-hidden="true" id="delete"></a><a href="#delete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.delete()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -308,7 +308,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -318,15 +318,15 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Number of the message to delete</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro du message à supprimer</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.delete( )</code> function flags the <em>msgNumber</em> email for deletion from the POP3 server.</p>
-<p>In the <em>msgNumber</em> parameter, pass the number of the email to delete. This number is returned in the number property by the <a href="#getmailinfolist"><code>.getMailInfoList()</code></a> method.</p>
-<p>Executing this method does not actually remove any email. The flagged email will be deleted from the POP3 server only when the <code>POP3_transporter</code> object (created with <code>POP3 New transporter</code>) is destroyed. The flag could be also be removed using the <code>.undeleteAll()</code> method.</p>
+<p>La fonction <code>.delete( )</code> marque l'email <em>msgNumber</em> comme devant être supprimé sur le serveur POP3.</p>
+<p>Dans le paramètre <em>msgNumber</em>, passez le numéro de l'email à supprimer. Ce numéro est retourné dans la propriété number par la fonction <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
+<p>L'exécution de cette méthode ne supprime pas réellement l'email. L'email marqué sera supprimé sur le serveur POP3 uniquement lorsque l'objet <code>POP3_transporter</code> (créé à l'aide de <code>POP3 New transporter</code>) sera détruit. Le marqueur pourra également être retiré via la fonction <code>.undeleteAll()</code>.</p>
 <blockquote>
-<p>If the current session unexpectedly terminates and the connection is closed (e.g., timeout, network failure, etc.), an error message is generated and messages marked for deletion will remain on the POP3 server.</p>
+<p>Si la session courante se termine inopinément et que le connexion est fermée (ex : timeout, panne de réseau, etc.), un message d'erreur est généré et les messages marqués pour suppression demeureront sur le serveur POP3.</p>
 </blockquote>
 <h5><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h5>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$mailInfoList</span>:=<span class="hljs-variable">$POP3_transporter</span>.<span class="hljs-function">getMailInfoList</span>()<span class="hljs-keyword">
@@ -349,7 +349,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -359,12 +359,12 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td>boxInfo object</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Objet boxInfo</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getBoxInfo()</code> function returns a <code>boxInfo</code> object corresponding to the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to retrieve information about the mailbox.</p>
-<p>The <code>boxInfo</code> object returned contains the following properties:</p>
+<p>La fonction <code>.getBoxInfo()</code>retourne un objet <code>boxInfo</code> correspondant à la boîte de réception désignée par le <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Cette fonction vous permet de récupérer des informations sur la boite de réception.</p>
+<p>L'objet <code>boxInfo</code> contient les propriété suivantes :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
@@ -396,7 +396,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -406,22 +406,22 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Number of the message in the list</td></tr>
-<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td><a href="/docs/Rx/fr/API/EmailObjectClass.html#email-object">Email object</a></td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro du message dans la liste</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td><a href="/docs/Rx/fr/API/EmailObjectClass.html#email-object">Objet email</a></td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMail()</code> function returns the <code>Email</code> object corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to locally handle the email contents.</p>
-<p>Pass in <em>msgNumber</em> the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfolist"><code>.getMailInfoList()</code></a> function.</p>
-<p>The method returns Null if:</p>
+<p>La fonction <code>.getMail()</code> retourne l'objet <code>Email</code> correspondant au <em>msgNumber</em> de la boite de réception désignée par le <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Cette fonction vous permet de gérer localement le contenu de l'email.</p>
+<p>Passez dans <em>msgNumber</em> le numéro du message à récupérer. Ce numéro est retourné dans la propriété number par la fonction <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
+<p>La fonction retourne Null si :</p>
 <ul>
 <li><em>msgNumber</em> désigne un message inexistant,</li>
 <li>le message a été marqué pour suppression à l'aide de <code>.delete()</code>.</li>
 </ul>
-<p><strong>Returned object</strong></p>
-<p><code>.getMail()</code> returns an <a href="/docs/Rx/fr/API/EmailObjectClass.html#email-object"><code>Email</code> object</a>.</p>
+<p><strong>Objet retourné</strong></p>
+<p><code>.getMail()</code> retourne un <a href="/docs/Rx/fr/API/EmailObjectClass.html#email-object">objet <code>Email</code></a>.</p>
 <h5><a class="anchor" aria-hidden="true" id="exemple-4"></a><a href="#exemple-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h5>
-<p>You want to know the sender of the first mail of the mailbox:</p>
+<p>Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server</span>; <span class="hljs-variable">$transporter </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailInfo </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$sender </span>: Variant
@@ -444,7 +444,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -454,14 +454,14 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Number of the message in the list</td></tr>
-<tr><td>Résultat</td><td>Objet</td><td style="text-align:center">&lt;-</td><td>mailInfo object</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro du message dans la liste</td></tr>
+<tr><td>Résultat</td><td>Object</td><td style="text-align:center">&lt;-</td><td>Objet MailInfo</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMailInfo()</code> function returns a <code>mailInfo</code> object corresponding  corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to retrieve information about the email.</p>
-<p>In <em>msgNumber</em>, pass the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfo"><code>.getMailInfoList()</code></a> method.</p>
-<p>The <code>mailInfo</code> object returned contains the following properties:</p>
+<p>La fonction <code>.getMailInfo()</code>retourne un objet <code>mailInfo</code> correspondant au <em>msgNumber</em> de la boite de réception désignée par le <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Cette fonction vous permet de récupérer des informations sur l'email.</p>
+<p>Dans le paramètre <em>msgNumber</em>, passez le numéro de l'email à récupérer. Ce numéro est retourné dans la propriété number par la fonction <a href="#getmailinfo"><code>.getMailInfoList()</code></a>.</p>
+<p>L'objet <code>mailInfo</code> retourné contient les propriété suivantes :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
@@ -471,7 +471,7 @@
 <tr><td>id</td><td>Texte</td><td>ID unique du message</td></tr>
 </tbody>
 </table>
-<p>The method returns <strong>Null</strong> if:</p>
+<p>La fonction retourne <strong>Null</strong> si :</p>
 <ul>
 <li><em>msgNumber</em> désigne un message inexistant,</li>
 <li>le message a été marqué pour suppression à l'aide de <code>.delete()</code>.</li>
@@ -501,7 +501,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -511,12 +511,12 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection of <code>mailInfo</code> objects</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'objets <code>mailInfo</code></td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMailInfoList()</code> function returns a collection of <code>mailInfo</code> objects describing all messages in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. This function allows you to locally manage the list of messages located on the POP3 mail server.</p>
-<p>Each <code>mailInfo</code> object in the returned collection contains the following properties:</p>
+<p>La fonction <code>.getMailInfoList()</code> retourne une collection d'objets <code>mailInfo</code> décrivant les messages de la boite de réception désignés par le <a href="#pop3-transporter-object"><code>POP3 transporter</code></a>. Cette fonction vous permet de gérer localement les listes de messages situés sur le serveur de messagerie POP3.</p>
+<p>Chaque objet <code>mailInfo</code> retourné contient les propriété suivantes :</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
@@ -527,12 +527,12 @@
 <tr><td>[ ].id</td><td>Texte</td><td>ID unique du message (utile si vous stockez le message localement)</td></tr>
 </tbody>
 </table>
-<p>If the mailbox does not contain a message, an empty collection is returned.</p>
-<h4><a class="anchor" aria-hidden="true" id="number-and-id-properties"></a><a href="#number-and-id-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>number and ID properties</h4>
-<p><em>number</em> is the number of a message in the mailbox at the time the <code>POP3_transporter</code> was created. The <em>number</em> property is not a static value in relation to any specific message and will change from session to session dependent on its relation to other messages in the mailbox at the time the session was opened. The numbers assigned to the messages are only valid during the lifetime of the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>. At the time the <code>POP3_transporter</code> is deleted any message marked for deletion will be removed. When the user logs back into the server, the current messages in the mailbox will be renumbered from 1 to x.</p>
-<p>The <em>id</em> however is a unique number assigned to the message when it was received by the server. This number is calculated using the time and date that the message is received and is a value assigned by your POP3 server. Unfortunately, POP3 servers do not use the <em>id</em> as the primary reference to their messages. Throughout the POP3 sessions you will need to specify the <em>number</em> as the reference to messages on the server. Developers may need to take some care if developing solutions which bring references to messages into a database but leave the body of the message on the server.</p>
+<p>Si la boîte de réception ne contient pas de message, une collection vide est retournée.</p>
+<h4><a class="anchor" aria-hidden="true" id="propriétés-number-et-id"></a><a href="#propriétés-number-et-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propriétés number et ID</h4>
+<p><em>number</em> est le numéro d'un message de la boite de réception au moment de la création du <code>POP3_transporter</code>. La propriété <em>number</em> n'est pas une valeur statique liée à un message spécifique. Elle change d'une session à l'autre en fonction de sa relation à d'autres messages de la boîte de réception au moment de l'ouverture de la session. Les numéros assignés aux messages sont valides uniquement pendant la durée de vie du <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>. Lorsque le <code>POP3_transporter</code> est supprimé, les messages marqués pour suppression seront supprimés. Lorsque l'utilisateur se reconnecte au serveur, les messages courants de la boîte de réception sont renumérotés de 1 à x.</p>
+<p>A l'inverse, <em>id</em> est un numéro unique assigné à un message lorsqu'il a été reçu par le serveur. Ce numéro est calculé à l'aide de l'heure et de la date de réception du message et sa valeur est assignée par votre serveur POP3. Malheureusement, les serveurs POP3 n'utilisent pas l'<em>id</em> comme référence primaire à leurs messages. Durant les sessions POP3, vous aurez besoin d'indiquer le <em>number</em> comme référence aux messages du serveur. Les développeurs doivent être vigilants s'ils développent des solutions qui importent des références aux messages dans une base de données tout en laissant le corps du message sur le serveur.</p>
 <h5><a class="anchor" aria-hidden="true" id="exemple-6"></a><a href="#exemple-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h5>
-<p>You want to know the total number and size of emails in the mailbox:</p>
+<p>Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ainsi que leur taille :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object
  <span class="hljs-variable">$server</span>:=New object
  <span class="hljs-variable">$server</span>.host:=<span class="hljs-string">"pop.gmail.com"</span> <span class="hljs-comment">//Obligatoire</span>
@@ -559,7 +559,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R3</td><td>Ajoutées</td></tr>
+<tr><td>v18 R3</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -569,22 +569,22 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>msgNumber</td><td>Entier long</td><td style="text-align:center">-&gt;</td><td>Number of the message in the list</td></tr>
-<tr><td>Résultat</td><td>Blob</td><td style="text-align:center">&lt;-</td><td>Blob of the MIME string returned from the mail server</td></tr>
+<tr><td>msgNumber</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro du message dans la liste</td></tr>
+<tr><td>Résultat</td><td>Blob</td><td style="text-align:center">&lt;-</td><td>Blob de la chaine MIME retournée par le serveur mail</td></tr>
 </tbody>
 </table>
 <h5><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.getMIMEAsBlob()</code> function returns a BLOB containing the MIME contents for the message corresponding to the <em>msgNumber</em> in the mailbox designated by the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
-<p>In <em>msgNumber</em>, pass the number of the message to retrieve. This number is returned in the number property by the <a href="#getmailinfolist"><code>.getMailInfoList()</code></a> method.</p>
-<p>The method returns an empty BLOB if:</p>
+<p>La fonction <code>.getMIMEAsBlob()</code> retourne un BLOB avec le contenu MIME du message correspondant au <em>msgNumber</em> dans la boîte de réception désignée par le <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
+<p>Dans le paramètre <em>msgNumber</em>, passez le numéro de l'email à récupérer. Ce numéro est retourné dans la propriété number par la fonction <a href="#getmailinfolist"><code>.getMailInfoList()</code></a>.</p>
+<p>La fonction retourne un Blob vide si :</p>
 <ul>
 <li><em>msgNumber</em> désigne un message inexistant,</li>
 <li>le message a été marqué pour suppression à l'aide de <code>.delete()</code>.</li>
 </ul>
-<p><strong>Returned BLOB</strong></p>
-<p><code>.getMIMEAsBlob()</code> returns a <code>BLOB</code> which can be archived in a database or converted to an <a href="/docs/Rx/fr/API/EmailObjectClass.html#email-object"><code>Email</code> object</a> with the <code>MAIL Convert from MIME</code> command.</p>
+<p><strong>BLOB retourné</strong></p>
+<p><code>.getMIMEAsBlob()</code> retourne un <code>BLOB</code> qui peut être archivé dans une base de données ou converti en un objet <a href="/docs/Rx/fr/API/EmailObjectClass.html#objet-email"><code>Email</code></a> avec la commande <code>MAIL Convert from MIME</code>.</p>
 <h5><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h5>
-<p>You want to know the total number and size of emails in the mailbox:</p>
+<p>Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ainsi que leur taille :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$server </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$mailInfo </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$blob </span>: Blob<span class="hljs-keyword">
@@ -608,13 +608,13 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R5</td><td>Ajoutées</td></tr>
+<tr><td>v17 R5</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.host</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.host</code> property contains the name or the IP address of the host server. Used for mail transactions (SMTP, POP3, IMAP).</p>
+<p>The <code>.host</code> property contains the name or the IP address of the host server. Utilisée pour les échanges de courrier (SMTP, POP3, IMAP).</p>
 <h2><a class="anchor" aria-hidden="true" id="logfile"></a><a href="#logfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.logFile</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -622,18 +622,18 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R5</td><td>Ajoutées</td></tr>
+<tr><td>v17 R5</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.logFile</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="description-13"></a><a href="#description-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.logFile</code> property contains the path of the extended log file defined (if any) for the mail connection. It can be relative (to the current Logs folder) or absolute.</p>
-<p>Unlike regular log files (enabled via the <code>SET DATABASE PARAMETER</code> command), extended log files store MIME contents of all sent mails and do not have any size limit. For more information about extended log files, refer to:</p>
+<p>The <code>.logFile</code> property contains the path of the extended log file defined (if any) for the mail connection. Elle peut être relative (au dossier Logs courant) ou absolue.</p>
+<p>Contrairement aux fichiers log habituels (activés via la commande <code>SET DATABASE PARAMETER</code>), les fichiers log étendus stockent le contenu MIME de tous les emails envoyés et n'ont pas de limite de taille. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :</p>
 <ul>
-<li><strong>SMTP connections</strong> - <a href="/docs/Rx/fr/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DSMTPLog.txt</a></li>
-<li><strong>POP3 connections</strong> - <a href="/docs/Rx/fr/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DPOP3Log.txt</a></li>
-<li><strong>IMAP connections</strong> - <a href="/docs/Rx/fr/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DIMAPLog.txt</a></li>
+<li><strong>Connexions SMTP</strong> - <a href="/docs/Rx/fr/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DSMTPLog.txt</a></li>
+<li><strong>Connexions POP3</strong> - <a href="/docs/Rx/fr/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DPOP3Log.txt</a></li>
+<li><strong>Connexions IMAP</strong> - <a href="/docs/Rx/fr/Admin/debugLogFiles.html#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt">4DIMAPLog.txt</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="port"></a><a href="#port" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.port</h2>
 <p><details><summary>Historique</summary></p>
@@ -642,13 +642,13 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R4</td><td>Ajoutées</td></tr>
+<tr><td>v17 R4</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.port</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="description-14"></a><a href="#description-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.port</code> property contains  the port number used for mail transactions. By default, if the <em>port</em> property has not been set in the <em>server</em> object (used to create the transporter object with <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, <code>IMAP New transporter</code>), the port used is:</p>
+<p>The <code>.port</code> property contains  the port number used for mail transactions. Par défaut, si la propriété <em>port</em> n'a pas été définie dans l'objet <em>server</em> (utilisé pour créer l'objet transporteur avec <code>SMTP New transporter</code>, <code>POP3 New transporter</code>, <code>IMAP New transporter</code>), le port utilisé est :</p>
 <ul>
 <li><strong>SMTP</strong> - 587</li>
 <li><strong>POP3</strong> - 995</li>
@@ -661,16 +661,16 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v18 R2</td><td>Ajoutées</td></tr>
+<tr><td>v18 R2</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
 <p><strong>.undeleteAll()</strong>
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |</p>
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |</p>
 <h5><a class="anchor" aria-hidden="true" id="description-15"></a><a href="#description-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h5>
-<p>The <code>.undeleteAll()</code> function removes all delete flags set on the emails in the <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
+<p>La fonction <code>.undeleteAll()</code> supprime tous les marqueurs de suppression définis pour les emails de <a href="#pop3-transporter-object"><code>POP3_transporter</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="user"></a><a href="#user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.user</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -678,7 +678,7 @@
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v17 R4</td><td>Ajoutées</td></tr>
+<tr><td>v17 R4</td><td>Ajout</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -686,7 +686,7 @@
 <h4><a class="anchor" aria-hidden="true" id="description-16"></a><a href="#description-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>.user</code> property contains  the user name used for authentication on the mail server.</p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/API/MailAttachmentClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">MailAttachment</span></a><a class="docs-next button" href="/docs/Rx/fr/API/SessionClass.html"><span>Session</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#pop3-new-transporter">POP3 New transporter</a></li><li><a href="#4dpop3transporternew">4D.POP3Transporter.new()</a></li><li><a href="#acceptunsecureconnection">.acceptUnsecureConnection</a></li><li><a href="#authenticationmode">.authenticationMode</a></li><li><a href="#checkconnection">.checkConnection()</a></li><li><a href="#connectiontimeout">.connectionTimeOut</a></li><li><a href="#delete">.delete()</a></li><li><a href="#getboxinfo">.getBoxInfo()</a></li><li><a href="#getmail">.getMail()</a></li><li><a href="#getmailinfo">.getMailInfo()</a></li><li><a href="#getmailinfolist">.getMailInfoList()</a></li><li><a href="#getmimeasblob">.getMIMEAsBlob()</a></li><li><a href="#host">.host</a></li><li><a href="#logfile">.logFile</a></li><li><a href="#port">.port</a></li><li><a href="#undeleteall">.undeleteAll()</a></li><li><a href="#user">.user</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/API/MailAttachmentClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">MailAttachment</span></a><a class="docs-next button" href="/docs/Rx/fr/API/SessionClass.html"><span>Session</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#pop3-new-transporter">POP3 New transporter</a></li><li><a href="#4dpop3transporternew">4D.POP3Transporter.new()</a></li><li><a href="#acceptunsecureconnection">.acceptUnsecureConnection</a></li><li><a href="#authenticationmode">.authenticationMode</a></li><li><a href="#checkconnection">.checkConnection()</a></li><li><a href="#connectiontimeout">.connectionTimeOut</a></li><li><a href="#delete">.delete()</a></li><li><a href="#getboxinfo">.getBoxInfo()</a></li><li><a href="#getmail">.getMail()</a></li><li><a href="#getmailinfo">.getMailInfo()</a></li><li><a href="#getmailinfolist">.getMailInfoList()</a></li><li><a href="#getmimeasblob">.getMIMEAsBlob()</a></li><li><a href="#host">.host</a></li><li><a href="#logfile">.logFile</a></li><li><a href="#port">.port</a></li><li><a href="#undeleteall">.undeleteAll()</a></li><li><a href="#user">.user</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
