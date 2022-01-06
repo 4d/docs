@@ -67,13 +67,13 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/18/docs/Concepts/cf_looping.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Estruturas de loop</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="whileend-while"></a><a href="#whileend-while" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>While...End while</h2>
-<p>A sintaxe da estrutura condicional <code>While...End while</code> é:</p>
+<p>A sintaxe da estrutura condicional <code>While... End while</code> é:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> While</span>(Boolean_Expression)
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End while</span>
 </code></pre>
-<p>Um loop <code>While...End while</code> executa as instruções dentro do loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.</p>
-<p>É comum inicializar o valor provado na expressão booleana imediatamente antes de entrar no loop <code>While...End while</code>. Inicializar o valor significa atribuir o valor para algo apropriado, geralmente para que a expressão booleana seja TRUE e <code>While...End while</code> execute o loop.</p>
+<p>Um loop <code>While... End while</code> executa as instruções dentro do loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.</p>
+<p>É comum inicializar o valor provado na expressão booleana imediatamente antes de entrar no loop <code>While... End while</code>. Inicializar o valor significa atribuir o valor para algo apropriado, geralmente para que a expressão booleana seja TRUE e <code>While... End while</code> execute o loop.</p>
 <p>O valor da expressão booleana deve poder ser modificado por um elemento dentro do loop, do contrário será executado indefinidamente. O próximo loop continua para sempre porque <em>NeverStop</em> sempre será TRUE:</p>
 <pre><code class="hljs css language-4d"> NeverStop:=<span class="hljs-literal">True</span><span class="hljs-keyword">
  While</span>(NeverStop)<span class="hljs-keyword">
@@ -81,182 +81,182 @@
 </code></pre>
 <p>Se você se encontrar em uma situação desse tipo, na qual um método fica executando de forma descontrolada, pode usar as funções de rastreamento para parar o loop e rastrear o problema. Para saber mais sobre o rastreio de um método veja a página <a href="/docs/18/pt/Concepts/error-handling.html">Error handling</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="exemplo"></a><a href="#exemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h3>
-<pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"Add a new record?"</span>) <span class="hljs-comment">//The user wants to add a record?</span><span class="hljs-keyword">
- While</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//Loop as long as the user wants to</span>
-<span class="hljs-function">    ADD RECORD</span>([aTable]) <span class="hljs-comment">//Add a new record</span><span class="hljs-keyword">
- End while</span> <span class="hljs-comment">//The loop always ends with End while</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function"> CONFIRM</span>(<span class="hljs-string">"Add a new record?"</span>) <span class="hljs-comment">//o usuário quer adicionar um registro?</span><span class="hljs-keyword">
+ While</span>(OK=<span class="hljs-number">1</span>) <span class="hljs-comment">//Loop enquanto o usuário quiser</span>
+<span class="hljs-function">    ADD RECORD</span>([aTable]) <span class="hljs-comment">//Adiciona um novo registro</span><span class="hljs-keyword">
+ End while</span> <span class="hljs-comment">//O loop sempre termina com End while</span>
 </code></pre>
 <p>Nesse exemplo, o valor da variável sistema <code>OK</code> é estabelecida pelo comando <code>CONFIRM</code> antes de que inicia o loop. Se o usuário clicar no botão <strong>OK</strong> da caixa de diálogo de confirmação, a variável do sistema <code>OK</code> toma o valor 1 e se inicia o loop. Senão, a variável de sistema <code>OK</code> toma o valor 0 e se omite o loop. Quando iniciar o loop, o comando <code>ADD RECORD</code> permite continuar a execução do loop porque se define a variável sistema <code>OK</code> em 1 quando o usuário salvar o registro. Quando o usuário cancelar (não salvar) o último registro, a variável do sistema <code>OK</code> é estabelecida como 0 e o loop para.</p>
 <h2><a class="anchor" aria-hidden="true" id="repeatuntil"></a><a href="#repeatuntil" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Repeat...Until</h2>
-<p>A sintaxe da estrutura condicional <code>Repeat...Until</code> é:</p>
+<p>A sintaxe da estrutura condicional <code>Repeat... Until</code> é:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Repeat</span>
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  Until</span>(Boolean_Expression)
 </code></pre>
-<p>Um loop <code>Repeat...Until</code> é similar a um loop <a href="flow-control#whileend-while">While...End while</a>, exceto que comprova a expressão booleana depois do loop  e não antes. Assim, um loop <code>Repeat...Until</code> sempre executa o loop uma vez, enquanto que se a expressão booleana for inicialmente False, um loop <code>While...End while</code> não executa o loop em absoluto.</p>
-<p>A outra diferença com um loop <code>Repeat...Until</code> é que o loop continua até que a expressão seja TRUE.</p>
+<p>A outra diferença com um loop <code>Repeat... Until</code> é que o loop continua até que a expressão seja TRUE.</p>
+<p>Um loop <code>Repeat... Until</code> é similar a um loop <a href="flow-control#whileend-while">While... End while</a>, exceto que comprova a expressão booleana depois do loop  e não antes.</p>
 <h3><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h3>
-<p>Compare o exemplo abaixo com o exemplo para o lopp <code>While...End while</code>. Lembre que a expressão booleana não precisa ser iniciada - não há um comando <code>CONFIRM</code> para inicializar a variável <code>OK</code>.</p>
+<p>Compare o exemplo abaixo com o exemplo para o lopp <code>While... End while</code>. Lembre que a expressão booleana não precisa ser iniciada - não há um comando <code>CONFIRM</code> para inicializar a variável <code>OK</code>.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Repeat</span>
 <span class="hljs-function">    ADD RECORD</span>([aTable])<span class="hljs-keyword">
  Until</span>(OK=<span class="hljs-number">0</span>)
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="forend-for"></a><a href="#forend-for" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For...End for</h2>
-<p>A sintaxe da estrutura condicional <code>For...End for</code> é:</p>
+<p>A sintaxe da estrutura condicional <code>For... End for</code> é:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
 <span class="hljs-function">    statement</span>(s)<span class="hljs-keyword">
  End for</span>
 </code></pre>
-<p>O loop <code>For...End for</code> é um loop controlado por um contador:</p>
+<p>O loop <code>For... End for</code> é um loop controlado por um contador:</p>
 <ul>
-<li>The counter variable <em>Counter_Variable</em> is a numeric variable (Real or Long Integer) that the <code>For...End for</code> loop initializes to the value specified by <em>Start_Expression</em>.</li>
-<li>Each time the loop is executed, the counter variable is incremented by the value specified in the optional value <em>Increment_Expression</em>. If you do not specify <em>Increment_Expression</em>, the counter variable is incremented by one (1), which is the default.</li>
-<li>When the counter variable passes the <em>End_Expression</em> value, the loop stops.</li>
+<li>A variável contador <em>Counter_Variable</em> é uma variável numérica (Real ou Long Integer) iniciada por <code>For...End for</code> com o valor especificado por <em>Start_Expression</em>.</li>
+<li>Cada vez que se executa o loop, a variável do contador se incrementa no valor especificado no valor opcional <em>Increment_Expression</em>. Se não especificar <em>Increment_Expression</em>, a variável contadora é incrementada por um (1), que é o padrão.</li>
+<li>Quando a variável contador passar o valor <em>End_Expression</em> daí o loop para.</li>
 </ul>
 <p><strong>Importante:</strong> as expressões numéricas <em>Start_Expression</em>, <em>End_Expression</em> e <em>Increment_Expression</em> são avaliadas apenas uma vez no começo do loop. Se essas expressões forem variáveis, mudar uma deles dentro do loop não vai afetar o loop.</p>
 <p><strong>Dicas:</strong> Entretanto, para fins especiais, pode mudar o valor da variável <em>Counter_Variable</em> dentro do loop; isso afetará o loop.</p>
 <ul>
-<li>Usually <em>Start_Expression</em> is less than <em>End_Expression</em>.</li>
-<li>If <em>Start_Expression</em> and <em>End_Expression</em> are equal, the loop will execute only once.</li>
-<li>If <em>Start_Expression</em> is greater than <em>End_Expression</em>, the loop will not execute at all unless you specify a negative <em>Increment_Expression</em>. See the examples.</li>
+<li>Geralmente <em>Start_Expression</em> pe menor que <em>End_Expression</em>.</li>
+<li>Se <em>Start_Expression</em> e <em>End_Expression</em> forem iguais, o loop se executará só uma vez.</li>
+<li>Se <em>Start_Expression</em> for maior que <em>End_Expression</em>, o loop não vai executar a não ser que especifique uma <em>Increment_Expression</em> negativa. Ver os exemplos.</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="basic-examples"></a><a href="#basic-examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic examples</h3>
+<h3><a class="anchor" aria-hidden="true" id="exemplos-básicos"></a><a href="#exemplos-básicos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplos básicos</h3>
 <ol>
-<li>The following example executes 100 iterations:</li>
+<li>O seguinte exemplo executa 100 iterações:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
-  <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Faz algo</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="2">
-<li>The following example goes through all elements of the array anArray:</li>
+<li>O exemplo abaixo percorre todos os elementos no array anArray:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
-  <span class="hljs-comment">//Do something with the element</span>
+  <span class="hljs-comment">//Fazer algo com o elemento</span>
     anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="3">
-<li>The following example goes through all the characters of the text vtSomeText:</li>
+<li>O exemplo abaixo recorre todos os caracteres do texto vtSomeText:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Length</span>(vtSomeText))
-  <span class="hljs-comment">//Do something with the character if it is a TAB</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Faz algo com o caractere se for uma TAB</span><span class="hljs-keyword">
     If</span>(<span class="hljs-function">Character code</span>(vtSomeText<span class="hljs-variable">[[$vlChar]]</span>)=Tab)
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="4">
-<li>The following example goes through the selected records for the table [aTable]:</li>
+<li>O exemplo abaixo recorre os registros selecionados para a tabela [aTable]:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> FIRST RECORD</span>([aTable])<span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Records in selection</span>([aTable]))
-  <span class="hljs-comment">//Do something with the record</span>
+  <span class="hljs-comment">//Faz algo com o registro</span>
 <span class="hljs-function">    SEND RECORD</span>([aTable])
   <span class="hljs-comment">//...</span>
-  <span class="hljs-comment">//Go to the next record</span>
+  <span class="hljs-comment">//Vai para o próximo registro</span>
 <span class="hljs-function">    NEXT RECORD</span>([aTable])<span class="hljs-keyword">
  End for</span>
 </code></pre>
-<p>A maioria dos loops <code>For...End for</code> que escreverá em seus bancos de dados vão parecer com aqueles listados nesses exemplos.</p>
-<h3><a class="anchor" aria-hidden="true" id="decrementing-variable-counter"></a><a href="#decrementing-variable-counter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decrementing variable counter</h3>
+<p>A maioria dos loops <code>For... End for</code> que escreverá em seus bancos de dados vão parecer com aqueles listados nesses exemplos.</p>
+<h3><a class="anchor" aria-hidden="true" id="diminuir-a-variável-contador"></a><a href="#diminuir-a-variável-contador" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Diminuir a variável contador</h3>
 <p>Em alguns casos, pode querer ter um loop cuja variável de contador seja decrescente ao invés de crescente. Para fazer isso, deve especificar <em>Start_Expression</em> maior que <em>End_Expression</em> e <em>Increment_Expression</em> deve ser negativa. Os exemplos abaixo fazem a mesma coisa que nos exemplos acima, mas na ordem inversa:</p>
 <ol start="5">
-<li>The following example executes 100 iterations:</li>
+<li>O seguinte exemplo executa 100 iterações:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">100</span>;<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
-  <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Faz algo</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="6">
-<li>The following example goes through all elements of the array anArray:</li>
+<li>O exemplo abaixo percorre todos os elementos no array anArray:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
-  <span class="hljs-comment">//Do something with the element</span>
+  <span class="hljs-comment">//Faz algo com o elemento</span>
     anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="7">
-<li>The following example goes through all the characters of the text vtSomeText:</li>
+<li>O exemplo abaixo recorre todos os caracteres do texto vtSomeText:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlChar</span>;<span class="hljs-function">Length</span>(vtSomeText);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
-  <span class="hljs-comment">//Do something with the character if it is a TAB</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Faz algo com o caractere se for uma TAB</span><span class="hljs-keyword">
     If</span>(<span class="hljs-function">Character code</span>(vtSomeText<span class="hljs-variable">[[$vlChar]]</span>)=Tab)
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="8">
-<li>The following example goes through the selected records for the table [aTable]:</li>
+<li>O exemplo abaixo recorre os registros selecionados para a tabela [aTable]:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> LAST RECORD</span>([aTable])<span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlRecord</span>;<span class="hljs-function">Records in selection</span>([aTable]);<span class="hljs-number">1</span>;-<span class="hljs-number">1</span>)
-  <span class="hljs-comment">//Do something with the record</span>
+  <span class="hljs-comment">//Faz algo com o registro</span>
 <span class="hljs-function">    SEND RECORD</span>([aTable])
   <span class="hljs-comment">//...</span>
-  <span class="hljs-comment">//Go to the previous record</span>
+  <span class="hljs-comment">//Ir ao registro anterior</span>
 <span class="hljs-function">    PREVIOUS RECORD</span>([aTable])<span class="hljs-keyword">
  End for</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="incrementing-the-counter-variable-by-more-than-one"></a><a href="#incrementing-the-counter-variable-by-more-than-one" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incrementing the counter variable by more than one</h3>
+<h3><a class="anchor" aria-hidden="true" id="incrementar-a-variável-do-contador-em-mais-de-um"></a><a href="#incrementar-a-variável-do-contador-em-mais-de-um" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incrementar a variável do contador em mais de um</h3>
 <p>Se precisar, pode usar uma <em>Increment_Expression</em> (positiva ou negativa) cujo valor absoluto seja maior que um.</p>
 <ol start="9">
-<li>The following loop addresses only the even elements of the array anArray:</li>
+<li>O loop a seguir aborda só os elementos pares do array anArray:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">2</span>;<span class="hljs-function">Size of array</span>(anArray);<span class="hljs-number">2</span>)
-  <span class="hljs-comment">//Do something with the element #2,#4...#2n</span>
+  <span class="hljs-comment">//Faz algo com o elemento #2,#4...#2n</span>
     anArray{<span class="hljs-variable">$vlElem</span>}:=...<span class="hljs-keyword">
  End for</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="comparing-looping-structures"></a><a href="#comparing-looping-structures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparing looping structures</h3>
-<p>Voltamos ao primeiro exemplo de <code>For...End for</code>. The following example executes 100 iterations:</p>
+<h3><a class="anchor" aria-hidden="true" id="comparação-de-estruturas-de-loop"></a><a href="#comparação-de-estruturas-de-loop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comparação de estruturas de loop</h3>
+<p>Voltamos ao primeiro exemplo de <code>For... End for</code>. O seguinte exemplo executa 100 iterações:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">100</span>)
-  <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Faz algo</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
-<p>É interessante ver como  o loop <code>While...End while</code> e o loop <code>Repeat...Until</code> realizariam a mesma ação. Aqui está o loop equivalente <code>While...End while</code>:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
- While</span>(<span class="hljs-variable">$i</span>&lt;=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 times</span>
-  <span class="hljs-comment">//Do something</span>
-    <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Need to increment the counter</span><span class="hljs-keyword">
+<p>Aquí está o loop equivalente <code>Repeat... Until</code>:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initializa o contador</span><span class="hljs-keyword">
+ While</span>(<span class="hljs-variable">$i</span>&lt;=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 vezes</span>
+  <span class="hljs-comment">//Faz algo</span>
+    <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Precisa incrementar o contador</span><span class="hljs-keyword">
  End while</span>
 </code></pre>
-<p>Aquí está o loop equivalente <code>Repeat...Until</code>:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initialize the counter</span><span class="hljs-keyword">
+<p>Aqui está o loop equivalente <code>While... End while</code>:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$i</span>:=<span class="hljs-number">1</span> <span class="hljs-comment">//Initializa o contador</span><span class="hljs-keyword">
  Repeat</span>
-  <span class="hljs-comment">//Do something</span>
-    <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Need to increment the counter</span><span class="hljs-keyword">
- Until</span>(<span class="hljs-variable">$i</span>=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 times</span>
+  <span class="hljs-comment">//Faz algo</span>
+    <span class="hljs-variable">$i</span>:=<span class="hljs-variable">$i</span>+<span class="hljs-number">1</span> <span class="hljs-comment">//Precisa incrementar o contador</span><span class="hljs-keyword">
+ Until</span>(<span class="hljs-variable">$i</span>=<span class="hljs-number">100</span>) <span class="hljs-comment">//Loop 100 vezes</span>
 </code></pre>
-<p><strong>Dica:</strong> o loop <code>For...End for</code> é geralmente mais rápido que os loops <code>While...End while</code> ou <code>Repeat...Until</code>, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Portanto, utilize o loop <code>For...End for</code> sempre que for possível.</p>
-<h3><a class="anchor" aria-hidden="true" id="optimizing-the-execution-of-the-forend-for-loops"></a><a href="#optimizing-the-execution-of-the-forend-for-loops" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optimizing the execution of the For...End for loops</h3>
+<p><strong>Dica:</strong> o loop <code>For... End for</code> é geralmente mais rápido que os loops <code>While... End while</code> ou <code>Repeat... Until</code>, porque 4D comprova a condição internamente em cada ciclo do loop e incrementa o contador. Portanto, utilize o loop <code>For... End for</code> sempre que for possível.</p>
+<h3><a class="anchor" aria-hidden="true" id="otimizar-a-execução-dos-loops-for-end-for"></a><a href="#otimizar-a-execução-dos-loops-for-end-for" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Otimizar a execução dos loops For... End for</h3>
 <p>Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, de processo e de variáveis locais. Para loops repetitivos longos, especialmente em modo compilado, use variáveis locais de tipo Inteiro longo.</p>
 <ol start="10">
-<li>Here is an example:</li>
+<li>Aqui um exemplo simples:</li>
 </ol>
-<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlCounter</span>) <span class="hljs-comment">//use local Long Integer variables</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$vlCounter</span>) <span class="hljs-comment">//usa variáveis locais Long Integer</span><span class="hljs-keyword">
  For</span>(<span class="hljs-variable">$vlCounter</span>;<span class="hljs-number">1</span>;<span class="hljs-number">10000</span>)
-  <span class="hljs-comment">//Do something</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Faz algo</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="nested-forend-for-looping-structures"></a><a href="#nested-forend-for-looping-structures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nested For...End for looping structures</h3>
-<p>Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops <code>For...End for</code>. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.</p>
+<h3><a class="anchor" aria-hidden="true" id="estruturas-forend-aninhadas"></a><a href="#estruturas-forend-aninhadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Estruturas For...End aninhadas</h3>
+<p>Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops <code>For... End for</code>. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.</p>
 <p>Aqui são dois exemplos:</p>
 <ol start="11">
-<li>The following example goes through all the elements of a two-dimensional array:</li>
+<li>O exemplo abaixo percorre todos os elementos em um array de duas dimensões:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$vlElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray))
   <span class="hljs-comment">//...</span>
-  <span class="hljs-comment">//Do something with the row</span>
+  <span class="hljs-comment">//Faz algo com a linha</span>
   <span class="hljs-comment">//...</span><span class="hljs-keyword">
     For</span>(<span class="hljs-variable">$vlSubElem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(anArray{<span class="hljs-variable">$vlElem</span>}))
-  <span class="hljs-comment">//Do something with the element</span>
+  <span class="hljs-comment">//Faz algo com o elemento</span>
        anArray{<span class="hljs-variable">$vlElem</span>}{<span class="hljs-variable">$vlSubElem</span>}:=...<span class="hljs-keyword">
     End for</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <ol start="12">
-<li>The following example builds an array of pointers to all the date fields present in the database:</li>
+<li>O seguinte exemplo constrói um array de ponteiros a todos os campos de data presentes no banco:</li>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY POINTER</span>(<span class="hljs-variable">$apDateFields</span>;<span class="hljs-number">0</span>)
  <span class="hljs-variable">$vlElem</span>:=<span class="hljs-number">0</span><span class="hljs-keyword">
@@ -276,47 +276,47 @@
  End for</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="for-eachend-for-each"></a><a href="#for-eachend-for-each" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>For each...End for each</h2>
-<p>A sintaxe da estrutura condicional <code>For each...End for each</code> é:</p>
+<p>A sintaxe da estrutura condicional <code>For each... End for each</code> é:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For each</span>(Element_courant;Expression{;debut{;fin}}){<span class="hljs-keyword">Until</span>|<span class="hljs-keyword">While</span>}(Expression_booléenne)}
 <span class="hljs-function">    instruction</span>(s)<span class="hljs-keyword">
  End for each</span>
 </code></pre>
-<p>A estrutura <code>For each...End for each</code> faz uma iteração sobre um <em>Elemento_atual</em> especificado sobre todos os valores de <em>Expressão</em>. O tipo <em>elemento_atual</em> depende do tipo <em>Expression</em>. O loop <code>For each...End for each</code> pode iterar através de três tipos de <em>Expressão</em>:</p>
+<p>A estrutura <code>For each... End for each</code> faz uma iteração sobre um <em>Elemento_atual</em> especificado sobre todos os valores de <em>Expressão</em>. O tipo <em>elemento_atual</em> depende do tipo <em>Expression</em>. O loop <code>For each... End for each</code> pode iterar através de três tipos de <em>Expressão</em>:</p>
 <ul>
-<li>collections: loop through each element of the collection,</li>
-<li>entity selections: loop through each entity,</li>
-<li>objects: loop through each object property.</li>
+<li>collections: loop por cada elemento da coleção,</li>
+<li>seleções de entidades: loop em cada entidade,</li>
+<li>objetos: loop em cada propriedade do objeto.</li>
 </ul>
-<p>A tabela abaixo compara os três tipos de <code>For each...End for each</code>:</p>
+<p>A tabela abaixo compara os três tipos de <code>For each... End for each</code>:</p>
 <table>
 <thead>
-<tr><th></th><th>Loop through collections</th><th>Loop through entity selections</th><th>Loop through objects</th></tr>
+<tr><th></th><th>Loop através da coleção</th><th>Loop nas seleções de entidades</th><th>Loop nos objetos</th></tr>
 </thead>
 <tbody>
-<tr><td>Current_Item type</td><td>Variable of the same type as collection elements</td><td>Entity</td><td>Text variable</td></tr>
-<tr><td>Expression type</td><td>Collection (with elements of the same type)</td><td>Entity selection</td><td>Objeto</td></tr>
-<tr><td>Number of loops (by default)</td><td>Number of collection elements</td><td>Number of entities in the selection</td><td>Number of object properties</td></tr>
-<tr><td>Support of begin / end parameters</td><td>Sim</td><td>Sim</td><td>No</td></tr>
+<tr><td>Tipo Current_Item</td><td>Variável do mesmo tipo que os elementos da coleção</td><td>Entity</td><td>Variável texto</td></tr>
+<tr><td>Tipos de expressões</td><td>Coleção (com elementos do mesmo tipo)</td><td>Seleção de entidades</td><td>Objeto</td></tr>
+<tr><td>Número de loops (por padrão)</td><td>Número de elementos da coleção</td><td>Número de entidades na seleção</td><td>Número de propriedades de objeto</td></tr>
+<tr><td>Compatibilidade de parâmetros begin / end</td><td>Sim</td><td>Sim</td><td>No</td></tr>
 </tbody>
 </table>
 <ul>
-<li>The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.</li>
-<li>By default, the enclosed <em>statement(s)</em> are executed for each value in <em>Expression</em>. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (<code>While</code>) or at the end of the loop (<code>Until</code>).</li>
-<li>The <em>begin</em> and <em>end</em> optional parameters can be used with collections and entity selections to define boundaries for the loop.</li>
-<li>The <code>For each...End for each</code> loop can be used on a <strong>shared collection</strong> or a <strong>shared object</strong>. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the <code>Use...End use</code> keywords. Depending on your needs, you can call the <code>Use...End use</code> keywords:
+<li>O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.</li>
+<li>Por padrão, as  <em>instruções</em> anexas são executadas para cada valor de <em>Expressão</em>. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (<code>While</code>) ou ao final do loop (<code>Until</code>).</li>
+<li>Os parâmetros opcionais <em>begin</em> e <em>end</em> podem ser usados com coleç~eos e seleções de entidades para definir os limites do loop.</li>
+<li>O loop <code>For each...End for each</code> pode ser usado em uma <strong>coleção compartida</strong> ou um <strong>objeto compartilhado</strong>. Se seu código necessitar modificar um ou  mais elementos da coleção ou das propriedades de objeto, deve utilizar as palavras chave <code>Use...End use</code>. Dependendo de sus necessidades, pode chamar às palavras clave <code>Use...End use</code>:
 <ul>
-<li>before entering the loop, if items should be modified together for integrity reasons, or</li>
-<li>within the loop when only some elements/properties need to be modified and no integrity management is required.</li>
+<li>antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou</li>
+<li>dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.</li>
 </ul></li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="loop-through-collections"></a><a href="#loop-through-collections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop through collections</h3>
-<p>Quando <code>For each...End for each</code> for usado com uma <em>Expressão</em> do tipo <em>Collection</em> , o parâmetro <em>Elemento_atual</em> é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.</p>
+<h3><a class="anchor" aria-hidden="true" id="loop-através-da-coleção"></a><a href="#loop-através-da-coleção" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop através da coleção</h3>
+<p>Quando <code>For each... End for each</code> for utilizado com uma <em>Expression</em> do tipo <em>Collection</em>, o parâmetro <em>Current_Item</em> é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.</p>
 <p>A coleção deve conter só elementos do mesmo tipo, do contrário se devolverá um erro assim que a variável <em>Current_Item</em> tenha sido atribuída o primeiro tipo de valor estranho.</p>
 <p>Em cada iteração do loop, a variável <em>Current_Item</em> é preenchida automaticamente com o elemento correspondente da coleção. Os pontos abaixo devem ser considerados:</p>
 <ul>
-<li>If the <em>Current_Item</em> variable is of the object type or collection type (i.e. if <em>Expression</em> is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.</li>
-<li>The <em>Current_Item</em> variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.</li>
-<li>If the collection contains elements with a <strong>Null</strong> value, an error will be generated if the <em>Current_Item</em> variable type does not support <strong>Null</strong> values (such as longint variables).</li>
+<li>Se a variável <em>Current_Item</em> é de tipo objeto ou de tipo coleção (ou seja, se <em>Expresión</em> for uma coleção de objetos ou de coleções), ao modificar esta variável se modificará automaticamente o elemento coincidente da coleção (porque os objetos e as coleções compartem as mesmas referências). Se a variável for de tipo escalar, só se modificará a variável.</li>
+<li>A variável_Current_Item_ deve ser do mesmo tipo que os elementos da coleção. Se algum elemento da coleção não for do mesmo tipo que a variável, um erro é gerado e o loop para.</li>
+<li>Se a coleção conter elementos com um valor <strong>Null</strong>, se gerará um erro se o tipo de variável <em>Current_Item</em> não é compatível com valores <strong>Null</strong> (como as variáveis de tipo inteiro longo).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-2"></a><a href="#exemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>Se quiser computar algumas estatísticas para uma coleção de números:</p>
@@ -339,7 +339,7 @@
   <span class="hljs-comment">//$vEven=3, $vOdd=4</span>
   <span class="hljs-comment">//$vUnder=4,$vOver=2</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="loop-through-entity-selections"></a><a href="#loop-through-entity-selections" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop through entity selections</h3>
+<h3><a class="anchor" aria-hidden="true" id="loop-nas-seleções-de-entidades"></a><a href="#loop-nas-seleções-de-entidades" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop nas seleções de entidades</h3>
 <p>Quando <code>For each...End for each</code> for utilizado com uma <em>Expression</em> do tipo <em>Collection</em>, o parâmetro <em>Current_Item</em> é uma variável do mesmo tipo que os elementos da coleção.</p>
 <p>O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração do loop, o parâmetro <em>Current_Item</em> é preenchido automaticamente com a entidade da seleção de entidade que estiver sendo processada atualmente.</p>
 <p><strong>Nota:</strong> se a seleção de entidades conter uma entidade que tenha sido eliminada, enquanto isso, por outro processo, ela é pulada durante o loop.</p>
@@ -352,8 +352,8 @@
     emp.<span class="hljs-function">save</span>()<span class="hljs-keyword">
  End for each</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="loop-through-object-properties"></a><a href="#loop-through-object-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loop through object properties</h3>
-<p>Quando se utiliza <code>For each...End for each</code> com uma <em>Expression</em> de tipo Object, o parâmetro <em>Current_Item</em> é uma variável texto que é preenchida automaticamente com o nome da propriedade atualmente processada.</p>
+<h3><a class="anchor" aria-hidden="true" id="loops-nas-propriedades-de-objetos"></a><a href="#loops-nas-propriedades-de-objetos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Loops nas propriedades de objetos</h3>
+<p>Quando se utiliza <code>For each... End for each</code> com uma <em>Expression</em> de tipo Object, o parâmetro <em>Current_Item</em> é uma variável texto que é preenchida automaticamente com o nome da propriedade atualmente processada.</p>
 <p>As propriedades do objeto são processadas de acordo com sua ordem de criação. Durante o loop, propriedades podem ser adicionadas ou eliminadas no objeto, sem modificar o número de loops que permanecerão no número original de propriedades do objeto.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-4"></a><a href="#exemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>Se quiser trocar os nomes para maiúsculas no objeto a seguir:</p>
@@ -376,11 +376,11 @@
     <span class="hljs-attr">"age"</span>: <span class="hljs-number">20</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="begin--end-parameters"></a><a href="#begin--end-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>begin / end parameters</h3>
+<h3><a class="anchor" aria-hidden="true" id="parâmetros-begin--end"></a><a href="#parâmetros-begin--end" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parâmetros begin / end</h3>
 <p>Pode definir limites para a iteração usando os parâmetros opcionais inicio e fim.</p>
 <p><strong>Nota:</strong>os parâmetros <em>inicio</em> e <em>fim</em> só podem ser utilizados em iterações através de coleções e seleções de entidades (são ignoradas nas propriedades de objetos).</p>
 <ul>
-<li>In the <em>begin</em> parameter, pass the element position in <em>Expression</em> at which to start the iteration (<em>begin</em> is included).</li>
+<li>No parâmetro <em>begin</em>, passe l posilçao do elemento em <em>Expression</em> na que se iniciará a iteração (se inclui <em>begin</em>).</li>
 <li>In the <em>end</em> parameter, you can also pass the element position in <em>Expression</em> at which to stop the iteration (<em>end</em> is excluded).</li>
 </ul>
 <p>Se omitir <em>end</em> ou se <em>fim</em> for maior que o número de elementos em <em>Expression</em>, os elementos são iteragids de <em>begin</em> até o último elemento (incluído). Se os parâmetros <em>inicio</em> e<em>fim</em> forem valores positivos, representam posições reais de elementos em <em>Expression</em>. Se <em>begin</em> for um valor negativo, é recalculado como <code>begin:=begin+Expression size</code> (é considerado como o deslocamento offset desde o final de <em>Expression</em>). Se o valor calculado for negativo, <em>inicio</em> toma o valor 0. <strong>Nota:</strong> mesmo se inicio for negativo, a iteração continua sendo realizada na ordem normal. Se <em>fim</em> for um  valor negativo, se recalcula como <code>fim:=fim+tamanho da expressão</code></p>
@@ -405,7 +405,7 @@
   <span class="hljs-comment">//$col2=[1,2,3,"a","b","c","d"]</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="until-and-while-conditions"></a><a href="#until-and-while-conditions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Until and While conditions</h3>
-<p>Pode controlar a execução de <code>For each...End for each</code> adicionando uma condição <code>Until</code> ou uma condição <code>While</code> ao loop. Quando uma instrução <code>Until(condição)</code> estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como <code>True</code>, mas no caso de uma instrução <code>While(condición)</code>, a iteração para quando a condição for avaliada, pela primeira vez, como <code>False</code>.</p>
+<p>Pode controlar a execução de <code>For each... End for each</code> adicionando uma condição <code>Until</code> ou uma condição <code>While</code> ao loop. Quando uma instrução <code>Until(condição)</code> estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como <code>True</code>, mas no caso de uma instrução <code>While(condición)</code>, a iteração para quando a condição for avaliada, pela primeira vez, como <code>False</code>.</p>
 <p>Pode passar qualquer uma das duas palavras chave em função das suas necessidades:</p>
 <ul>
 <li>The <code>Until</code> condition is tested at the end of each iteration, so if the <em>Expression</em> is not empty or null, the loop will be executed at least once.</li>
@@ -426,7 +426,7 @@
  End for each</span>
 <span class="hljs-function"> ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$total</span>)) <span class="hljs-comment">//$total = 1001 (1000+1)</span>
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/pt/Concepts/branching.html"><span class="arrow-prev">← </span><span>Estruturas condicionais</span></a><a class="docs-next button" href="/docs/18/pt/Concepts/error-handling.html"><span>Gestão de erros</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#whileend-while">While...End while</a><ul class="toc-headings"><li><a href="#exemplo">Exemplo</a></li></ul></li><li><a href="#repeatuntil">Repeat...Until</a><ul class="toc-headings"><li><a href="#exemplo-1">Exemplo</a></li></ul></li><li><a href="#forend-for">For...End for</a><ul class="toc-headings"><li><a href="#basic-examples">Basic examples</a></li><li><a href="#decrementing-variable-counter">Decrementing variable counter</a></li><li><a href="#incrementing-the-counter-variable-by-more-than-one">Incrementing the counter variable by more than one</a></li><li><a href="#comparing-looping-structures">Comparing looping structures</a></li><li><a href="#optimizing-the-execution-of-the-forend-for-loops">Optimizing the execution of the For...End for loops</a></li><li><a href="#nested-forend-for-looping-structures">Nested For...End for looping structures</a></li></ul></li><li><a href="#for-eachend-for-each">For each...End for each</a><ul class="toc-headings"><li><a href="#loop-through-collections">Loop through collections</a></li><li><a href="#loop-through-entity-selections">Loop through entity selections</a></li><li><a href="#loop-through-object-properties">Loop through object properties</a></li><li><a href="#begin--end-parameters">begin / end parameters</a></li><li><a href="#until-and-while-conditions">Until and While conditions</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/pt/Concepts/branching.html"><span class="arrow-prev">← </span><span>Estruturas condicionais</span></a><a class="docs-next button" href="/docs/18/pt/Concepts/error-handling.html"><span>Gestão de erros</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#whileend-while">While...End while</a><ul class="toc-headings"><li><a href="#exemplo">Exemplo</a></li></ul></li><li><a href="#repeatuntil">Repeat...Until</a><ul class="toc-headings"><li><a href="#exemplo-1">Exemplo</a></li></ul></li><li><a href="#forend-for">For...End for</a><ul class="toc-headings"><li><a href="#exemplos-básicos">Exemplos básicos</a></li><li><a href="#diminuir-a-variável-contador">Diminuir a variável contador</a></li><li><a href="#incrementar-a-variável-do-contador-em-mais-de-um">Incrementar a variável do contador em mais de um</a></li><li><a href="#comparação-de-estruturas-de-loop">Comparação de estruturas de loop</a></li><li><a href="#otimizar-a-execução-dos-loops-for-end-for">Otimizar a execução dos loops For... End for</a></li><li><a href="#estruturas-forend-aninhadas">Estruturas For...End aninhadas</a></li></ul></li><li><a href="#for-eachend-for-each">For each...End for each</a><ul class="toc-headings"><li><a href="#loop-através-da-coleção">Loop através da coleção</a></li><li><a href="#loop-nas-seleções-de-entidades">Loop nas seleções de entidades</a></li><li><a href="#loops-nas-propriedades-de-objetos">Loops nas propriedades de objetos</a></li><li><a href="#parâmetros-begin--end">Parâmetros begin / end</a></li><li><a href="#until-and-while-conditions">Until and While conditions</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

@@ -179,32 +179,32 @@
 <li>De novo,  como um array é sempre mantido na memória em sua totalidade, a cada vez que o banco de dados for iniciados, os quatro arrays teriam que ser carregados e então salvos no disco, mesmo se os dados não forem usados ou modificados na sessão de trabalho.</li>
 </ul>
 <p><strong>Conclusão:</strong> os arrays estão pensados para manter quantidades razoáveis de dados durante um curto período de tempo. Por outro lado, como os arrays são mantidos na memória, são fáceis de manejar e rápidos de manipular.</p>
-<p>However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:</p>
+<p>Entretanto, em algumas circunstâncias, pode precisar trabalhar com arrays que contenham centenas ou milhares de elementos. A tabela abaixo lista as fórmulas usadas para calcular a quantidade de memória usada para cada tipo de array:</p>
 <table>
 <thead>
-<tr><th>Array Type</th><th>Formula for determining Memory Usage in Bytes</th></tr>
+<tr><th>Tipo de array</th><th>Fórmula para determinar o uso da memoria em bytes</th></tr>
 </thead>
 <tbody>
-<tr><td>Blob</td><td>(1+number of elements) * 12 + Sum of the size of each blob</td></tr>
-<tr><td>Booleano</td><td>(31+number of elements)\8</td></tr>
-<tr><td>Date</td><td>(1+number of elements) * 6</td></tr>
-<tr><td>Integer</td><td>(1+number of elements) * 2</td></tr>
-<tr><td>Long Integer</td><td>(1+number of elements) * 4</td></tr>
-<tr><td>Objeto</td><td>(1+number of elements) * 8 + Sum of the size of each object</td></tr>
-<tr><td>Imagem</td><td>(1+number of elements) * 8 + Sum of the size of each picture</td></tr>
-<tr><td>Ponteiro</td><td>(1+number of elements) * 8 + Sum of the size of each pointer</td></tr>
-<tr><td>Real</td><td>(1+number of elements) * 8</td></tr>
-<tr><td>Texto</td><td>(1+number of elements) * 20 + (Sum of the length of each text) * 2</td></tr>
-<tr><td>Hora</td><td>(1+number of elements) * 4</td></tr>
-<tr><td>Two-dimensional</td><td>(1+number of elements) * 16 + Sum of the size of each array</td></tr>
+<tr><td>Blob</td><td>(1+número de elementos) * 12 + Soma de tamanho de cada blob</td></tr>
+<tr><td>Booleano</td><td>(31+número de elementos)\N8</td></tr>
+<tr><td>Date</td><td>(1+número de elementos) * 6</td></tr>
+<tr><td>Integer</td><td>(1+número de elementos) * 2</td></tr>
+<tr><td>Long Integer</td><td>(1+número de elementos) * 4</td></tr>
+<tr><td>Objeto</td><td>(1+número de elementos) * 8 + Soma de tamanho de cada objeto</td></tr>
+<tr><td>Imagem</td><td>(1+número de elementos) * 8 + Soma do tamanho de cada imagem</td></tr>
+<tr><td>Ponteiro</td><td>(1+número de elementos) * 8 + Soma de tamanho de cada ponteiro</td></tr>
+<tr><td>Real</td><td>(1+número de elementos) * 8</td></tr>
+<tr><td>Texto</td><td>(1+número de elementos) * 20 + (soma da longitude de cada texto) * 2</td></tr>
+<tr><td>Hora</td><td>(1+número de elementos) * 4</td></tr>
+<tr><td>Dois dimensõees</td><td>(1+número de elementos) * 16 + Soma do tamanho de cada array</td></tr>
 </tbody>
 </table>
-<p><strong>Notes:</strong></p>
+<p><strong>Notas:</strong></p>
 <ul>
-<li>The size of a text in memory is calculated using this formula: ((Length + 1) * 2)</li>
-<li>A few additional bytes are required to keep track of the selected element, the number of elements, and the array itself.</li>
+<li>O tamanho de um texto em memoria se calcula com esta fórmula ((Longitude + 1) * 2)</li>
+<li>São necessários alguns bytes adicionais para acompanhar o elemento selecionado, o número de elementos, e o próprio array.</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/pt/Concepts/variables.html"><span class="arrow-prev">← </span><span>Variáveis</span></a><a class="docs-next button" href="/docs/18/pt/Concepts/methods.html"><span>Métodos</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#criar-arrays">Criar Arrays</a></li><li><a href="#atribuir-valores-em-arrays">Atribuir valores em arrays</a><ul class="toc-headings"><li><a href="#atribuindo-um-array-para-outro-array">Atribuindo um array para outro array</a></li></ul></li><li><a href="#usar-o-elemento-zero-de-um-array">Usar o elemento zero de um array</a></li><li><a href="#arrays-de-duas-dimensões">Arrays de duas dimensões</a></li><li><a href="#arrays-e-memória">Arrays e memória</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2021 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/18/pt/Concepts/variables.html"><span class="arrow-prev">← </span><span>Variáveis</span></a><a class="docs-next button" href="/docs/18/pt/Concepts/methods.html"><span>Métodos</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#criar-arrays">Criar Arrays</a></li><li><a href="#atribuir-valores-em-arrays">Atribuir valores em arrays</a><ul class="toc-headings"><li><a href="#atribuindo-um-array-para-outro-array">Atribuindo um array para outro array</a></li></ul></li><li><a href="#usar-o-elemento-zero-de-um-array">Usar o elemento zero de um array</a></li><li><a href="#arrays-de-duas-dimensões">Arrays de duas dimensões</a></li><li><a href="#arrays-e-memória">Arrays e memória</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/18/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://forums.4d.com/">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
