@@ -460,69 +460,69 @@ Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar
 
 
 
-## Managing row colors, styles, and display
+## Gerenciar cores linha, estilos e exibição
 
-There are several different ways to set background colors, font colors and font styles for list boxes:
+Aqui estão algumas maneiras de estabelecer cores de fundo, cores de fonte e estilos de fonte para list boxes:
 
-- at the level of the [list box object properties](#list-box-objects),
-- at the level of the [column properties](#list-box-columns),
-- using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
-- at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
-
-
+- no nível das propriedades de  [objeto list box](#list-box-objects),
+- no nível das propriedades de [colunas](#list-box-columns),
+- usar [arrays ou propriedades de expressão](#using-arrays-and-expressions) para a list box ou para cada coluna,
+- no nível de texto de cada célula (se [texti multiestilo](properties_Text.md#multi-style)).
 
 
-### Priority & inheritance
-
-Priority and inheritance principles are observed when the same property is set at more than one level.
-
-| Priority level | Setting location                                                     |
-| -------------- | -------------------------------------------------------------------- |
-| high priority  | Cell (if multi-style text)                                           |
-|                | Column arrays/methods                                                |
-|                | List box arrays/methods                                              |
-|                | Column properties                                                    |
-|                | List box properties                                                  |
-| low priority   | Meta Info expression (for collection or entity selection list boxes) |
 
 
-For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
+### Prioridade & herança
 
-For each attribute (style, color and background color), an **inheritance** is implemented when the default value is used:
+Princípios de prioridade e herança são observados quando a mesma propriedade for estabelecida em mais de um nível.
 
-- for cell attributes: attribute values of rows
-- for row attributes: attribute values of columns
-- for column attributes: attribute values of the list box
+| Nível de prioridade | Configuração de local                                                           |
+| ------------------- | ------------------------------------------------------------------------------- |
+| alta prioridade     | Célula (se texto multiestilo)                                                   |
+|                     | Arrays/métodos de coluna                                                        |
+|                     | Arrays/métodos de Listbox                                                       |
+|                     | Propriedades da coluna                                                          |
+|                     | Propriedades de list box                                                        |
+| baixa prioridade    | Expressão Meta Info (para list boxes de tipo collection ou seleção de entidade) |
 
-This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors: ![](assets/en/FormObjects/listbox_styles3.png)
 
-You perform the following modifications:
+Por exemplo se estabelecer um estilo de fonte nas propriedades de list box e outro usando um array estilo para a coluna, este último será levado em consideração.
 
-- change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
-- change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
-- two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
-- the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
+Para cada atributo (estilo, cor e cor de fundo), uma **herança** é implementada quando o valor padrão for usado:
+
+- Para atributos de célula: atributos valores de linhas
+- para atributos linhas: valores de atributos de colunas
+- para atributos coluna: valores atributos no list box
+
+Dessa maneira se quiser que um objeto herde o valor de atributo de um nível superior, pode usar a constante `lk inherited` (valor parão) à definição de comando ou diretamente no elemento do array correspondente de estilo/cor. Por exemplo dado um list box array contendo um estilo de fonte padrão com cores alternantes: ![](assets/en/FormObjects/listbox_styles3.png)
+
+Pode realizar as modificações abaixo:
+
+- mude o fundo da linha 2 para vermelho usando a propriedade [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) do objeto list box,
+- mude o estilo da linha 4 para itálico usando a propriedade [Row Style Array](properties_Text.md#row-style-array) do objeto de list box,
+- dois elementos na coluna 5 são mudados para negrito usando as propriedades [Row Style Array](properties_Text.md#row-style-array) do objeto coluna 5,
+- os 2 elementos para coluna 1 e 2 são mudados para azul escuro usando a propriedade [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) para os objetos coluna 1 e 2:
 
 ![](assets/en/FormObjects/listbox_styles3.png)
 
-To restore the original appearance of the list box, you can:
+Para restaurar a aparência original da list box, é possível:
 
-- pass the `lk inherited` constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.
-- pass the `lk inherited` constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.
-- pass the `lk inherited` constant in element 4 of the style array for the list box in order to remove the italics style.
-- pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
-
-
+- passar a constante `lk inherited` no elemento 2 dos arrays de cor de fundo para as colunas 1 e 2: elas então herdam a cor de fundo vermelha da linha.
+- passe a constante `lk inherited` em elementos 3 e 4 do array de estilo para coluna 5: elas então herdam o estilo padrão, exceto para o elemento 4, que mudam para itálico como especificado no array de estilo da list box.
+- passe a constante `lk inherited` no elemento 4 do array de estilo para a list box para poder remover o estilo de itálico.
+- passe a constante `lk inherited` em elemento 3 do array de cor de fundo para o list box para poder restaurar a cor original da list box.
 
 
-### Using arrays and expressions
 
-Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
-| Property         | Array list box                                                                             | Selection list box                                                                           | Collection or Entity Selection list box                                                                                                                         |
-| ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Background color | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
-| Font color       | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
+### Usar arrays e expressões
+
+Dependendo do tipo de list box, pode usar diferentes propriedades para personalizar cores de linha, estilos e exibição:
+
+| Propriedade  | List box array                                                                       | List box seleção                                                                        | List box coleção ou entity selection                                                                                                                            |
+| ------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cor de fundo | [Array cores de fundo](properties_BackgroundAndBorder.md#row-background-color-array) | [Expressão cor de fundo](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) ou [Meta info expression](properties_Text.md#meta-info-expression) |
+| Cor de fundo | [Array cores de Fonte](properties_Text.md#row-font-color-array)                      | [Expressão cor fonte](properties_Text.md#font-color-expression)                         | [Font Color Expression](properties_Text.md#font-color-expression) ou [Meta info expression](properties_Text.md#meta-info-expression)                            |
  Font style|
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-| 
@@ -532,42 +532,42 @@ Depending of the list box type, you can use different properties to customize ro
 
 
 
-## Printing list boxes
+## Imprimir list boxes
 
-Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
-
-
-
-### Preview mode
-
-Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
+dois modos de impressão estão disponíveis: **preview mode** - que pode ser usado imprimir uma list box como um objeto formulário e  **advanced mode** - quer permite controlar a impressão de objeto list box dentro do formulário. Note que a aparência "Impressão" está disponível para objetos list box no editor de Formulário.
 
 
 
-### Advanced mode
+### Modo de vista previa
 
-In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
-
-In this mode:
-
-- The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
-
-- An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
+Imprimir uma list box em modo preview consiste de imprimir diretamente o list box e o formulário que o contém usando os comandos de impressão normais ou o comando de menu **Print** . A list box é impressa como no formulário. Esse modo não permite controle preciso da impressão do objeto, especialmente não permite imprimir todas as linhas da list box que contenham mais linhas que podem ser exibidas.
 
 
+
+### Modo avançado
+
+Nesse modo, a impressão de list box é realizada por programação via o comando `Print object` (formulários projeto e formulários tabela são compatíveis). O comando `LISTBOX GET PRINT INFORMATION` é usado para controlar a impressão do objeto.
+
+Nesse modo:
+
+- A altura do objeto list box é reduzida automaticamente quando o número de linhas a ser impresso for menor que a altura original do objeto (não há linhas "em branco" impressas). Por outro lado a altura não aumenta automaticamente de acordo com os conteúdos do objeto. O tamanho do objeto realmente impresso pode ser obtido via o comando `LISTBOX GET PRINT INFORMATION` .
+- O objeto list box é impresso "como está" ou seja, levando em consideração seus parâmetros atuais de exibição: visibilidade de cabeçalhos e grades de impressão, linhas escondidas e exibidas, etc. Esses parâmetros também incluem a primeira linha a ser impressa: se chamar o comando `OBJECT SET SCROLL POSITION` antes de lançar a impressão, a primeira linha impressa será aquela determinada pelo comando.
+
+- Um mecanismo automático facilita a impressão de list boxes que contenham mais linhas do que é possível exibir: chamadas repetidas a `Print object` podem ser usadas para imprimir um novo conjunto de linhas a cada vez. O comando `LISTBOX GET PRINT INFORMATION` pode ser usado para checar o estado da impressão enquanto estiver sendo realizada.
 
 
 
 
 
-## Hierarchical list boxes
-
-A hierarchical list box is a list box in which the contents of the first column appears in hierarchical form. This type of representation is adapted to the presentation of information that includes repeated values and/or values that are hierarchically dependent (country/region/city and so on).
 
 
+## List box hierárquicos.
 
-> Only [array type list boxes](#array-list-boxes) can be hierarchical.
+Uma list box hierárquica é uma list box na qual o conteúdo da primeira coluna aparece em forma hierárquica. Esse tipo de representação se adapta à apresentação de informação que inclua valores repetidos ou que dependem de hierarquias (país/região/cidade e assim por diante).
+
+
+
+> Apenas [list boxes de tipo array](#array-list-boxes) podem ser hierárquicos.
 
 Hierarchical list boxes are a particular way of representing data but they do not modify the data structure (arrays). Hierarchical list boxes are managed exactly the same way as regular list boxes.
 
