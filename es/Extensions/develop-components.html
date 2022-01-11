@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Developing Components · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A 4D component is a set of 4D methods and forms representing one or more functionalities that can be [installed and used in 4D applications](/docs/es/Concepts/components.html). Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D."/><meta name="docsearch:language" content="es"/><meta property="og:title" content="Developing Components · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="A 4D component is a set of 4D methods and forms representing one or more functionalities that can be [installed and used in 4D applications](/docs/es/Concepts/components.html). Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Extensions/develop-components.html">English</a></li><li><a href="/docs/ja/Extensions/develop-components.html">日本語</a></li><li><a href="/docs/de/Extensions/develop-components.html">Deutsch</a></li><li><a href="/docs/fr/Extensions/develop-components.html">Français</a></li><li><a href="/docs/pt/Extensions/develop-components.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Extensions</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/Extensions/overview.html">Generalidades</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/es/Extensions/develop-components.html">Developing Components</a></li><li class="navListItem"><a class="navItem" href="/docs/es/Extensions/develop-plug-ins.html">Developing Plug-ins</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D View Pro<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/es/ViewPro/getting-started.html">Comencemos</a></li><li class="navListItem"><a class="navItem" href="/docs/es/ViewPro/configuring.html">Configuring 4D View Pro Areas</a></li><li class="navListItem"><a class="navItem" href="/docs/es/ViewPro/formulas.html">Formulas and Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/es/ViewPro/method-list.html">Method List</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Extensions/develop-components.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Developing Components</h1></header><article><div><span><p>A 4D component is a set of 4D methods and forms representing one or more functionalities that can be <a href="/docs/es/Concepts/components.html">installed and used in 4D applications</a>. Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D.</p>
+<p>You can develop 4D components for your own needs and keep them private. You can also <a href="https://github.com/topics/4d-component">share your components with the 4D community</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="definiciones"></a><a href="#definiciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Definiciones</h2>
+<ul>
+<li><strong>Base proyecto</strong>: proyecto 4D utilizado para desarrollar el componente. El proyecto matriz es una base estándar sin atributos específicos. Un proyecto matricial forma un único componente.</li>
+<li><strong>Proyecto local</strong>: proyecto aplicación en la que se instala y utiliza un componente.</li>
+<li><strong>Component</strong>: Matrix project that can be compiled or <a href="/docs/es/Desktop/building.html#build-component">built</a>, copied into the <a href="/docs/es/Project/architecture.html"><code>Components</code></a> folder of the host application and whose contents are used in the host application.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="básicos"></a><a href="#básicos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Básicos</h2>
+<p>Creating and installing 4D components is carried out directly from 4D:</p>
+<ul>
+<li>To install a component, you simply need to copy the component files into the <a href="/docs/es/Project/architecture.html"><code>Components</code> folder of the project</a>. You can use aliases or shortcuts.</li>
+<li>A project can be both a matrix and a &quot;host&quot;, in other words, a matrix project can itself use one or more components. However, a component cannot use &quot;sub-components&quot; itself.</li>
+<li>Un componente puede llamar a la mayoría de los elementos de 4D: métodos proyecto, formularios proyecto, barras de menú, listas de selección, etc. No puede llamar a los métodos base ni a los triggers.</li>
+<li>No se pueden utilizar tablas o archivos de datos estándar en los componentes 4D. Sin embargo, un componente puede crear y/o utilizar tablas, campos y archivos de datos utilizando mecanismos de bases externas. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.</li>
+<li>A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="alcance-de-los-comandos-del-lenguaje"></a><a href="#alcance-de-los-comandos-del-lenguaje" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Alcance de los comandos del lenguaje</h2>
+<p>A excepción de los <a href="#comandos-inutilizables">comandos no utilizables</a>, un componente puede utilizar cualquier comando del lenguaje 4D.</p>
+<p>Cuando se llaman comandos desde un componente, se ejecutan en el contexto del componente, excepto el comando <code>EXECUTE METHOD</code> o <code>EXECUTE FORMULA</code> que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema &quot;Usuarios y grupos&quot; se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).</p>
+<p>Los comandos <code>SET DATABASE PARAMETER</code> y <code>Get database parameter</code> son una excepción: su alcance es global a la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.</p>
+<p>Además, se han especificado medidas específicas para los comandos <code>Structure file</code> y <code>Get 4D folder</code> cuando se utilizan en el marco de los componentes.</p>
+<p>El comando <code>COMPONENT LIST</code> puede utilizarse para obtener la lista de componentes cargados por el proyecto local.</p>
+<h3><a class="anchor" aria-hidden="true" id="comandos-no-utilizables"></a><a href="#comandos-no-utilizables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comandos no utilizables</h3>
+<p>Los siguientes comandos no son compatibles para su uso dentro de un componente porque modifican el archivo de estructura - que está abierto en sólo lectura. Su ejecución en un componente generará el error -10511, &quot;El comando NomComando no puede ser llamado desde un componente&quot;:</p>
+<ul>
+<li><code>ON EVENT CALL</code></li>
+<li><code>Method called on event</code></li>
+<li><code>SET PICTURE TO LIBRARY</code></li>
+<li><code>REMOVE PICTURE FROM LIBRARY</code></li>
+<li><code>SAVE LIST</code></li>
+<li><code>ARRAY TO LIST</code></li>
+<li><code>EDIT FORM</code></li>
+<li><code>CREATE USER FORM</code></li>
+<li><code>DELETE USER FORM</code></li>
+<li><code>CHANGE PASSWORD</code></li>
+<li><code>EDIT ACCESS</code></li>
+<li><code>Set group properties</code></li>
+<li><code>Set user properties</code></li>
+<li><code>DELETE USER</code></li>
+<li><code>CHANGE LICENSES</code></li>
+<li><code>BLOB TO USERS</code></li>
+<li><code>SET PLUGIN ACCESS</code></li>
+</ul>
+<p><strong>Notas:</strong></p>
+<ul>
+<li>El comando <code>Current form table</code> devuelve <code>Nil</code> cuando se llama en el contexto de un formulario proyecto. Por consiguiente, no puede utilizarse en un componente.</li>
+<li>Los comandos SQL de definición de datos (<code>CREATE TABLE</code>, <code>DROP TABLE</code>, etc.) no pueden utilizarse en el proyecto componente. Sin embargo, se soportan con bases de datos externas (ver el comando SQL <code>CREATE DATABASE</code>).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="compartir-métodos-proyecto"></a><a href="#compartir-métodos-proyecto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compartir métodos proyecto</h2>
+<p>Todos los métodos proyecto de un proyecto matricial son por definición incluidos en el componente (el proyecto es el componente), lo que significa que pueden ser llamados y ejecutados por el componente.</p>
+<p>Por otro lado, por defecto estos métodos proyecto no serán visibles, y no podrán ser llamados por el proyecto local. En el proyecto matriz, debe designar explícitamente los métodos que desea compartir con el proyecto local. Estos métodos proyecto se pueden llamar en el código del proyecto local (pero no se pueden modificar en el editor de métodos del proyecto local). Estos métodos forman los <strong>puntos de entrada</strong> en el componente.</p>
+<p>Por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan al proyecto local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the <strong>Shared by components and host project</strong> box).</p>
+<p><img src="/docs/assets/en/Concepts/pict516563.en.png" alt=""></p>
+<p>Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the <code>EXECUTE FORMULA</code> or <code>EXECUTE METHOD</code> commands. Por ejemplo:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Método local</span>
+<span class="hljs-function">component_method</span>(<span class="hljs-string">"host_method_name"</span>)
+</code></pre>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// component_method</span>
+<span class="hljs-function"> C_TEXT</span>(<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> EXECUTE METHOD</span>(<span class="hljs-variable">$1</span>)
+</code></pre>
+<blockquote>
+<p>An interpreted host database that contains interpreted components can be compiled or syntax checked if it does not call methods of the interpreted component. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.<br>
+Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the <code>EXECUTE METHOD</code> and <code>EXECUTE FORMULA</code> commands.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="paso-de-variables"></a><a href="#paso-de-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paso de variables</h2>
+<p>Las variables locales, proceso e interproceso no se comparten entre los componentes y los proyectos locales. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.</p>
+<p>Ejemplo utilizando un array:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//En el proyecto local:</span>
+<span class="hljs-function">     ARRAY INTEGER</span>( MyArray;<span class="hljs-number">10</span>)
+<span class="hljs-function">     AMethod</span>(-&gt; MyArray)
+
+<span class="hljs-comment">//En el componente, el método proyecto AMethod contiene:</span>
+<span class="hljs-function">     APPEND TO ARRAY</span>(<span class="hljs-variable">$1</span>-&gt;;<span class="hljs-number">2</span>)
+</code></pre>
+<p>Ejemplos utilizando variables:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_TEXT</span>(myvariable)
+<span class="hljs-function">component_method1</span>(-&gt;myvariable)
+</code></pre>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$p</span>)
+<span class="hljs-variable">$p</span>:=<span class="hljs-function">component_method2</span>(...)
+</code></pre>
+<p>Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//En la base local</span>
+<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$input_t</span>)
+<span class="hljs-variable">$input_t</span>:=<span class="hljs-string">"DoSomething"</span>
+<span class="hljs-function">component_method</span>(<span class="hljs-variable">$input_t</span>)
+<span class="hljs-comment">// component_method obtiene "DoSomething" en $1 (pero no la variable $input_t)</span>
+</code></pre>
+<p>Cuando se utilizan punteros para que los componentes y el proyecto local se comuniquen, hay que tener en cuenta las siguientes particularidades:</p>
+<ul>
+<li><p>El comando <code>Get pointer</code> no devolverá un puntero a una variable del proyecto local si se llama desde un componente y viceversa.</p></li>
+<li><p>La arquitectura de componentes permite la coexistencia, dentro del mismo proyecto interpretado, de componentes interpretados y compilados (a la inversa, en un proyecto compilado sólo pueden utilizarse componentes compilados). Para utilizar punteros en este caso, debe respetar el siguiente principio: el intérprete puede desanclar un puntero construido en modo compilado; sin embargo, en modo compilado, no puede desanclar un puntero construido en modo interpretado. Ilustremos este principio con el siguiente ejemplo: dados dos componentes, C (compilado) e I (interpretado), instalados en el mismo proyecto local.</p></li>
+<li><p>Si el componente C define la variable <code>myCvar</code>, el componente I puede acceder al valor de esta variable utilizando el puntero <code>-&gt;myCvar</code>.</p></li>
+<li><p>Si el componente C define la variable <code>myIvar</code>, el componente C no puede acceder a esta variable utilizando el puntero <code>-&gt;myIvar</code>. Esta sintaxis provoca un error de ejecución.</p></li>
+<li><p>La comparación de punteros utilizando el comando <code>RESOLVE POINTER</code> no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en el proyecto local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros <code>myptr1</code> y <code>myptr2</code> apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:</p></li>
+</ul>
+<pre><code class="hljs css language-4d"><span class="hljs-function">     RESOLVE POINTER</span>(myptr1;vVarName1;vtablenum1;vfieldnum1)
+<span class="hljs-function">     RESOLVE POINTER</span>(myptr2;vVarName2;vtablenum2;vfieldnum2)<span class="hljs-keyword">
+     If</span>(vVarName1=vVarName2)
+      <span class="hljs-comment">//Esta prueba devuelve True aunque las variables sean diferentes</span>
+</code></pre>
+<p>En este caso, es necesario utilizar la comparación de punteros:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">     If</span>(myptr1=myptr2) <span class="hljs-comment">//Esta prueba devuelve False</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="gestión-de-errores"></a><a href="#gestión-de-errores" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestión de errores</h2>
+<p>Un <a href="/docs/es/Concepts/error-handling.html">método de gestión de errores</a> instalado por el comando <code>ON ERR CALL</code> sólo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores <code>ON ERR CALL</code> del proyecto local, y viceversa.</p>
+<h2><a class="anchor" aria-hidden="true" id="acceso-a-las-tablas-del-proyecto-local"></a><a href="#acceso-a-las-tablas-del-proyecto-local" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Acceso a las tablas del proyecto local</h2>
+<p>Aunque los componentes no pueden utilizar tablas, los punteros pueden permitir que los proyectos locales y los componentes se comuniquen entre sí. Por ejemplo, este es un método que podría ser llamado desde un componente:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// llamar a un método componente</span>
+<span class="hljs-function">methCreateRec</span>(-&gt;[PEOPLE];-&gt;[PEOPLE]Name;<span class="hljs-string">"Julie Andrews"</span>)
+</code></pre>
+<p>Dentro del componente, el código del método <code>methCreateRec</code>:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$1</span>) <span class="hljs-comment">//Puntero a una tabla del proyecto local</span>
+<span class="hljs-function">C_POINTER</span>(<span class="hljs-variable">$2</span>) <span class="hljs-comment">//Puntero a un campo del proyecto local</span>
+<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$3</span>) <span class="hljs-comment">// Valor a insertar</span>
+
+<span class="hljs-variable">$tablepointer</span>:=<span class="hljs-variable">$1</span>
+<span class="hljs-variable">$fieldpointer</span>:=<span class="hljs-variable">$2</span>
+<span class="hljs-function">CREATE RECORD</span>(<span class="hljs-variable">$tablepointer</span>-&gt;)
+
+<span class="hljs-variable">$fieldpointer</span>-&gt;:=<span class="hljs-variable">$3</span>
+<span class="hljs-function">SAVE RECORD</span>(<span class="hljs-variable">$tablepointer</span>-&gt;)
+</code></pre>
+<blockquote>
+<p>In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="uso-de-tablas-y-campos"></a><a href="#uso-de-tablas-y-campos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Uso de tablas y campos</h2>
+<p>Un componente no puede utilizar las tablas y campos definidos en la estructura 4D del proyecto matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Una base externa es un proyecto 4D independiente del proyecto 4D principal, pero con la que se puede trabajar desde el proyecto 4D principal. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL <code>CREATE DATABASE</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
+<p>El siguiente código se incluye en un componente y realiza tres acciones básicas con una base de datos externa:</p>
+<ul>
+<li>creación de la base de datos externa si aún no existe,</li>
+<li>añade datos a la base de datos externa,</li>
+<li>lectura de datos desde la base de datos externa.</li>
+</ul>
+<p>Creación de la base de datos externa:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">&lt;&gt;MyDatabase</span>:=Get 4D folder+<span class="hljs-string">"\MyDB"</span> <span class="hljs-comment">// (Windows) almacena los datos en un directorio autorizado</span><span class="hljs-keyword">
+ Begin SQL</span>
+        CREATE DATABASE IF NOT EXISTS DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
+        USE DATABASE DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
+        CREATE TABLE IF NOT EXISTS KEEPIT
+        (
+        ID INT32 PRIMARY KEY,
+        kind VARCHAR,
+        name VARCHAR,
+        code TEXT,
+        sort_order INT32
+        );
+
+<span class="hljs-function">        CREATE UNIQUE INDEX id_index ON KEEPIT </span>(ID);
+
+        USE DATABASE SQL_INTERNAL;<span class="hljs-keyword">
+
+ End SQL</span>
+</code></pre>
+<p>Escritura en la base de datos externa:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2 </span><span class="hljs-comment">// recupera datos del proyecto local mediante punteros</span>
+ <span class="hljs-variable">$Ptr_2</span>:=<span class="hljs-variable">$3</span>
+ <span class="hljs-variable">$Ptr_3</span>:=<span class="hljs-variable">$4</span>
+ <span class="hljs-variable">$Ptr_4</span>:=<span class="hljs-variable">$5</span>
+ <span class="hljs-variable">$Ptr_5</span>:=<span class="hljs-variable">$6</span><span class="hljs-keyword">
+ Begin SQL</span>
+
+        USE DATABASE DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
+
+        INSERT INTO KEEPIT
+        (ID, kind, name, code, sort_order)
+        VALUES
+        (:[<span class="hljs-variable">$Ptr_1</span>], :[<span class="hljs-variable">$Ptr_2</span>], :[<span class="hljs-variable">$Ptr_3</span>], :[<span class="hljs-variable">$Ptr_4</span>], :[<span class="hljs-variable">$Ptr_5</span>]);
+
+        USE DATABASE SQL_INTERNAL;<span class="hljs-keyword">
+
+ End SQL</span>
+</code></pre>
+<p>Lectura en una base de datos externa:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$Ptr_1</span>:=<span class="hljs-variable">$2 </span><span class="hljs-comment">// accede a los datos del proyecto local a través de punteros</span>
+ <span class="hljs-variable">$Ptr_2</span>:=<span class="hljs-variable">$3</span>
+ <span class="hljs-variable">$Ptr_3</span>:=<span class="hljs-variable">$4</span>
+ <span class="hljs-variable">$Ptr_4</span>:=<span class="hljs-variable">$5</span>
+ <span class="hljs-variable">$Ptr_5</span>:=<span class="hljs-variable">$6</span><span class="hljs-keyword">
+
+ Begin SQL</span>
+
+    USE DATABASE DATAFILE :[<span class="hljs-variable">&lt;&gt;MyDatabase</span>];
+
+    SELECT ALL ID, kind, name, code, sort_order
+    FROM KEEPIT
+    INTO :<span class="hljs-variable">$Ptr_1</span>, :<span class="hljs-variable">$Ptr_2</span>, :<span class="hljs-variable">$Ptr_3</span>, :<span class="hljs-variable">$Ptr_4</span>, :<span class="hljs-variable">$Ptr_5</span>;
+
+    USE DATABASE SQL_INTERNAL;<span class="hljs-keyword">
+
+ End SQL</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="utilización-de-formularios"></a><a href="#utilización-de-formularios" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilización de formularios</h2>
+<ul>
+<li>Sólo los &quot;formularios de proyecto&quot; (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Todos los formularios proyecto presentes en el proyecto matriz pueden ser utilizados por el componente.</li>
+<li>Un componente puede llamar a formularios tabla del proyecto local. Tenga en cuenta que en este caso es necesario utilizar punteros en lugar de nombres de tablas entre paréntesis [] para especificar los formularios en el código del componente.</li>
+</ul>
+<blockquote>
+<p>Si un componente utiliza el comando <code>ADD RECORD</code>, se mostrará el formulario de entrada actual del proyecto local, en el contexto del proyecto local. Por consiguiente, si el formulario incluye variables, el componente no tendrá acceso a ellas.</p>
+</blockquote>
+<ul>
+<li>Puede publicar formularios de componentes como subformularios en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.</li>
+</ul>
+<blockquote>
+<p>En el contexto de un componente, cualquier formulario de proyecto referenciado debe pertenecer al componente. For example, inside a component, referencing a host project form using <code>DIALOG</code> or <code>Open form window</code> will throw an error.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="utilización-de-recursos"></a><a href="#utilización-de-recursos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilización de recursos</h2>
+<p>Components can use resources located in the Resources folder of the component.</p>
+<p>Los mecanismos automáticos son operacionales: los archivos XLIFF encontrados en la carpeta Resources de un componente serán cargados por este componente.</p>
+<p>En un proyecto local que contiene uno o más componentes, cada componente, así como los proyectos locales, tiene su propia &quot;cadena de recursos.&quot; Los recursos están divididos entre las diferentes proyectos: no es posible acceder a los recursos del componente A desde el componente B o desde el proyecto local.</p>
+<h2><a class="anchor" aria-hidden="true" id="executing-initialization-code"></a><a href="#executing-initialization-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Executing initialization code</h2>
+<p>A component can execute 4D code automatically when opening or closing the host database, for example in order to load and/or save the preferences or user states related to the operation of the host database.</p>
+<p>Executing initialization or closing code is done by means of the <code>On Host Database Event</code> database method.</p>
+<blockquote>
+<p>For security reasons, you must explicitly authorize the execution of the <code>On Host Database Event</code> database method in the host database in order to be able to call it. To do this, you must check the <strong>Execute &quot;On Host Database Event&quot; method of the components</strong> option on the Security page the Settings.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="protección-de-los-componentes-compilación"></a><a href="#protección-de-los-componentes-compilación" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Protección de los componentes: compilación</h2>
+<p>Por defecto, todos los métodos proyecto de un proyecto matriz instalado como componente son potencialmente visibles desde el proyecto local. En particular:</p>
+<ul>
+<li>Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. Sin embargo, no es posible abrirlos en el editor de métodos o modificarlos.</li>
+<li>Los otros métodos proyecto del proyecto matriz no aparecen en el Explorador, pero también pueden verse en el depurador del proyecto local.</li>
+</ul>
+<p>To protect the project methods of a component effectively, simply <a href="/docs/es/Desktop/building.html#build-component">compile and build</a> the matrix project and provide it in the form of a .4dz file. Cuando se instala un proyecto matricial compilado como un componente:</p>
+<ul>
+<li>Los métodos proyecto compartidos se muestran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.</li>
+<li>Los otros métodos proyecto del proyecto matriz nunca aparecerán.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="sharing-components"></a><a href="#sharing-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sharing components</h2>
+<p>We encourage you to support the 4D developer community by sharing your components, preferably on the <a href="https://github.com/topics/4d-component">GitHub platform</a>. We recommend that you use the <strong><code>4d-component</code></strong> topic to be correctly referenced.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/Extensions/overview.html"><span class="arrow-prev">← </span><span>Generalidades</span></a><a class="docs-next button" href="/docs/es/Extensions/develop-plug-ins.html"><span>Developing Plug-ins</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#definiciones">Definiciones</a></li><li><a href="#básicos">Básicos</a></li><li><a href="#alcance-de-los-comandos-del-lenguaje">Alcance de los comandos del lenguaje</a><ul class="toc-headings"><li><a href="#comandos-no-utilizables">Comandos no utilizables</a></li></ul></li><li><a href="#compartir-métodos-proyecto">Compartir métodos proyecto</a></li><li><a href="#paso-de-variables">Paso de variables</a></li><li><a href="#gestión-de-errores">Gestión de errores</a></li><li><a href="#acceso-a-las-tablas-del-proyecto-local">Acceso a las tablas del proyecto local</a></li><li><a href="#uso-de-tablas-y-campos">Uso de tablas y campos</a><ul class="toc-headings"><li><a href="#ejemplo">Ejemplo</a></li></ul></li><li><a href="#utilización-de-formularios">Utilización de formularios</a></li><li><a href="#utilización-de-recursos">Utilización de recursos</a></li><li><a href="#executing-initialization-code">Executing initialization code</a></li><li><a href="#protección-de-los-componentes-compilación">Protección de los componentes: compilación</a></li><li><a href="#sharing-components">Sharing components</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:es","version:19 R4 BETA"]}
+              });
+            </script></body></html>

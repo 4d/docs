@@ -1,0 +1,611 @@
+<!DOCTYPE html><html lang="en"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuring 4D View Pro Areas · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The 4D View Pro area properties can be configured using the Property list. Spreadsheet properties are available through the language. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuring 4D View Pro Areas · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="The 4D View Pro area properties can be configured using the Property list. Spreadsheet properties are available through the language. "/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/ja/ViewPro/configuring.html">日本語</a></li><li><a href="/docs/de/ViewPro/configuring.html">Deutsch</a></li><li><a href="/docs/es/ViewPro/configuring.html">Español</a></li><li><a href="/docs/fr/ViewPro/configuring.html">Français</a></li><li><a href="/docs/pt/ViewPro/configuring.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>4D View Pro</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Extensions<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Extensions/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Extensions/develop-components.html">Developing Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Extensions/develop-plug-ins.html">Developing Plug-ins</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D View Pro<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/ViewPro/getting-started.html">Getting Started</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/ViewPro/configuring.html">Configuring 4D View Pro Areas</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ViewPro/formulas.html">Formulas and Functions</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ViewPro/method-list.html">Method List</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/ViewPro/configuring.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Configuring 4D View Pro Areas</h1></header><article><div><span><p>The 4D View Pro area properties can be configured using the Property list. Spreadsheet properties are available through the language.</p>
+<h2><a class="anchor" aria-hidden="true" id="form-area-properties"></a><a href="#form-area-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form area properties</h2>
+<p>Using the area's property list, you can set <a href="/docs/en/FormObjects/viewProAreaOverview.html#supported-properties">4D View Pro object properties</a> such as <strong>Object Name</strong>, <a href="#4d-view-pro-form-object-variable"><strong>Variable or Expression</strong></a>, <strong>Appearance</strong>, <strong>Action</strong>, and <strong>Events</strong>.</p>
+<p><img src="/docs/assets/en/ViewPro/vpPropertyList.PNG" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="selecting-a-user-interface"></a><a href="#selecting-a-user-interface" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selecting a user interface</h3>
+<p>You can select the interface to use with your 4D View Pro form areas in the <strong>Property List</strong>, under <strong>Appearance</strong>:</p>
+<p><img src="/docs/assets/en/ViewPro/vpUserInterface.PNG" alt=""></p>
+<blockquote>
+<p>You can also use the <a href="/docs/en/FormObjects/propertiesAppearance.html#user-interface"><code>userInterface</code></a> and <a href="/docs/en/FormObjects/propertiesAppearance.html#show-formula-bar"><code>withFormulaBar</code></a>(only with the &quot;toolbar&quot; interface) JSON properties.</p>
+</blockquote>
+<p>Interfaces allow for basic modifications and data manipulation. User-defined modifications are saved in the 4D View Pro object when the user saves the document.</p>
+<h4><a class="anchor" aria-hidden="true" id="ribbon"></a><a href="#ribbon" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ribbon</h4>
+<p><img src="/docs/assets/en/ViewPro/vpRibbon.PNG" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="toolbar"></a><a href="#toolbar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Toolbar</h4>
+<p>Enabling the Toolbar interface displays the <a href="/docs/en/FormObjects/propertiesAppearance.html#show-formula-bar"><strong>Show Formula Bar</strong></a> option. When selected, the formula bar is visible below the Toolbar interface.</p>
+<p>With visible formula bar:</p>
+<p><img src="/docs/assets/en/ViewPro/vpToolbar.PNG" alt=""></p>
+<h4><a class="anchor" aria-hidden="true" id="features"></a><a href="#features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Features</h4>
+<p>Both the Ribbon and the Toolbar interfaces group related features into tabs:</p>
+<table>
+<thead>
+<tr><th>Tab</th><th>Actions</th><th style="text-align:center">Ribbon Interface</th><th style="text-align:center">Toolbar Interface</th></tr>
+</thead>
+<tbody>
+<tr><td>File</td><td>File manipulation</td><td style="text-align:center">X</td><td style="text-align:center"></td></tr>
+<tr><td>Home</td><td>Text appearance</td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td>Insert</td><td>Add items</td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td>Formulas</td><td>Formula calculation and library</td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td>Data</td><td>Data manipulation</td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td>View</td><td>Visual presentation</td><td style="text-align:center">X</td><td style="text-align:center">X</td></tr>
+<tr><td>Settings</td><td>Sheet presentation reference</td><td style="text-align:center">X</td><td style="text-align:center"></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="form-events"></a><a href="#form-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Form Events</h2>
+<p>The following form events are available in the Property List for 4D View Pro areas.</p>
+<p>Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the <a href="https://doc.4d.com/4dv19/help/command/en/page1606.html"><code>FORM Event</code></a> command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:</p>
+<table>
+<thead>
+<tr><th>Standard 4D events</th><th>Specific and extended 4D View Pro events</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/docs/en/Events/onLoad.html">On Load</a></td><td><a href="/docs/en/Events/onVpReady.html">On VP Ready</a></td></tr>
+<tr><td><a href="/docs/en/Events/onGettingFocus.html">On Getting Focus</a></td><td><a href="/docs/en/Events/onClicked.html">On Clicked</a></td></tr>
+<tr><td><a href="/docs/en/Events/onLosingFocus.html">On Losing Focus</a></td><td><a href="/docs/en/Events/onDoubleClicked.html">On Double Clicked</a></td></tr>
+<tr><td><a href="/docs/en/Events/onUnload.html">On Unload</a></td><td><a href="/docs/en/Events/onHeaderClick.html">On Header Click</a></td></tr>
+<tr><td></td><td><a href="/docs/en/Events/onAfterEdit.html">On After Edit</a></td></tr>
+<tr><td></td><td><a href="/docs/en/Events/onSelectionChange.html">On Selection Change</a></td></tr>
+<tr><td></td><td><a href="/docs/en/Events/onColumnResize.html">On Column Resize</a></td></tr>
+<tr><td></td><td><a href="/docs/en/Events/onRowResize.html">On Row Resize</a></td></tr>
+<tr><td></td><td><a href="/docs/en/Events/onVpRangeChanged.html">On VP Range Changed</a></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="sheet-options"></a><a href="#sheet-options" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sheet Options</h2>
+<p>The 4D View Pro sheet options object allows you to control various options of your 4D View Pro areas. This object is handled by the following commands:</p>
+<ul>
+<li><a href="/docs/en/ViewPro/method-list.html#vp-set-sheet-options">VP SET SHEET OPTIONS</a></li>
+<li><a href="/docs/en/ViewPro/method-list.html#vp-get-sheet-options">VP Get sheet options</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="sheet-appearance"></a><a href="#sheet-appearance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sheet appearance</h3>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>allowCellOverflow</td><td></td><td>boolean</td><td>Specifies whether data can overflow into adjacent empty cells.</td></tr>
+<tr><td>sheetTabColor</td><td></td><td>string</td><td>A color string used to represent the sheet tab color, such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
+<tr><td>frozenlineColor</td><td></td><td>string</td><td>A color string used to represent the frozen line color, such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
+<tr><td>clipBoardOptions</td><td></td><td>longint</td><td>The clipboard option. Available values: <code>vk clipboard paste options all</code>, <code>vk clipboard paste options formatting</code>, <code>vk clipboard paste options formulas</code>, <code>vk clipboard paste options formulas and formatting</code>, <code>vk clipboard paste options values</code>, <code>vk clipboard paste options values and formatting</code></td></tr>
+<tr><td>gridline</td><td></td><td>object</td><td>The grid line's options.</td></tr>
+<tr><td></td><td>color</td><td>string</td><td>A color string used to represent the grid line color, such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
+<tr><td></td><td>showVerticalGridline</td><td>boolean</td><td>Specifies whether to show the vertical grid line.</td></tr>
+<tr><td></td><td>showHorizontalGridline</td><td>boolean</td><td>Specifies whether to show the horizontal grid line.</td></tr>
+<tr><td>rowHeaderVisible</td><td></td><td>boolean</td><td>Specifies whether the row header is visible.</td></tr>
+<tr><td>colHeaderVisible</td><td></td><td>boolean</td><td>Specifies whether the column header is visible.</td></tr>
+<tr><td>rowHeaderAutoText</td><td></td><td>longint</td><td>Specifies whether the row header displays letters or numbers or is blank. Available values: <code>vk header auto text blank</code>, <code>vk header auto text letters</code>, <code>vk header auto text numbers</code></td></tr>
+<tr><td>colHeaderAutoText</td><td></td><td>longint</td><td>Specifies whether the column header displays letters or numbers or is blank. Available values: <code>vk header auto text blank</code>, <code>vk header auto text letters</code>, <code>vk header auto text numbers</code></td></tr>
+<tr><td>selectionBackColor</td><td></td><td>string</td><td>The selection's background color for the sheet. (preferred RGBA format)</td></tr>
+<tr><td>selectionBorderColor</td><td></td><td>string</td><td>The selection's border color for the sheet.</td></tr>
+<tr><td>sheetAreaOffset</td><td></td><td>object</td><td>The sheetAreaOffset's options.</td></tr>
+<tr><td></td><td>left</td><td>longint</td><td>The offset left of sheet from host.</td></tr>
+<tr><td></td><td>top</td><td>longint</td><td>The offset top of sheet from host.</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>All properties are optional.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="sheet-protection"></a><a href="#sheet-protection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sheet protection</h3>
+<p>To lock the whole sheet, you only need to set the <em>isProtected</em> property to <strong>true</strong>. You can then unlock cells individually by setting the <a href="#layout">locked</a> cell style property.</p>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>isProtected</td><td></td><td>boolean</td><td>Specifies whether cells on this sheet that are marked as protected cannot be edited.</td></tr>
+<tr><td>protectionOptions</td><td></td><td>object</td><td>A value that indicates the elements that you want users to be able to change. If null : the protectionOptions parameter is reset.</td></tr>
+<tr><td></td><td>allowSelectLockedCells</td><td>boolean</td><td>Specifies whether the user can select locked cells, optional. True by default.</td></tr>
+<tr><td></td><td>allowSelectUnlockedCells</td><td>boolean</td><td>Specifies whether the user can select unlocked cells, optional. True by default.</td></tr>
+<tr><td></td><td>allowSort</td><td>boolean</td><td>Specifies whether the user can sort ranges, optional. False by default.</td></tr>
+<tr><td></td><td>allowFilter</td><td>boolean</td><td>Specifies whether the user can filter ranges, optional. False by default.</td></tr>
+<tr><td></td><td>allowEditObjects</td><td>boolean</td><td>Specifies whether the user can edit floating objects, optional. False by default.</td></tr>
+<tr><td></td><td>allowResizeRows</td><td>boolean</td><td>Specifies whether the user can resize rows, optional. False by default.</td></tr>
+<tr><td></td><td>allowResizeColumns</td><td>boolean</td><td>Specifies whether the user can resize columns, optional. False by default.</td></tr>
+<tr><td></td><td>allowDragInsertRows</td><td>boolean</td><td>Specifies whether the user can perform the drag operation to insert rows, optional. False by default.</td></tr>
+<tr><td></td><td>allowDragInsertColumns</td><td>boolean</td><td>Specifies whether the user can perform the drag operation to insert columns, optional. False by default.</td></tr>
+<tr><td></td><td>allowInsertRows</td><td>boolean</td><td>Specifies whether the user can insert rows, optional. False by default.</td></tr>
+<tr><td></td><td>allowInsertColumns</td><td>boolean</td><td>Specifies whether the user can insert columns, optional. False by default.</td></tr>
+<tr><td></td><td>allowDeleteRows</td><td>boolean</td><td>Specifies whether the user can delete rows, optional. False by default.</td></tr>
+<tr><td></td><td>allowDeleteColumns</td><td>boolean</td><td>Specifies whether the user can delete columns, optional. False by default.</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>All properties are optional.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="cell-format"></a><a href="#cell-format" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cell Format</h2>
+<p>Defining a format pattern ensures that the content of your 4D View Pro documents is displayed the way you intended. Formats can be set using the selected 4D View Pro <a href="#selecting-a-user-interface">interface</a>, or using the <a href="/docs/en/ViewPro/method-list.html#vp-set-value">VP SET VALUE</a> or <a href="/docs/en/ViewPro/method-list.html#vp-set-num-value">VP SET NUM VALUE</a> methods.</p>
+<p>4D View Pro has built-in formats for numbers, dates, times, and text, but you can also create your own patterns to format the contents of cells using special characters and codes.</p>
+<p>For example, when using the <a href="/docs/en/ViewPro/method-list.html#vp-set-value">VP SET VALUE</a> or <a href="/docs/en/ViewPro/method-list.html#vp-set-num-value">VP SET NUM VALUE</a> methods to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern <em>($* #,##0.00</em>) which would display amounts as shown:</p>
+<p><img src="/docs/assets/en/ViewPro/apx_vpCellFormat1.PNG" alt=""></p>
+<p>Note that when creating your own format patterns, only the display of the data is modified. The value of the data remains unchanged.</p>
+<h3><a class="anchor" aria-hidden="true" id="number-and-text-formats"></a><a href="#number-and-text-formats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number and text formats</h3>
+<p>Number formats apply to all number types (e.g., positive, negative, and zeros).</p>
+<table>
+<thead>
+<tr><th>Character</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>Placeholder that displays zeros.</td><td>#.00 will display 1.1 as 1.10</td></tr>
+<tr><td>.</td><td>Displays a decimal point</td><td>0.00 will display 1999 as 1999.00</td></tr>
+<tr><td>,</td><td>Displays the thousands separator in a number.<p><p> Thousands are separated by commas if the format contains a comma enclosed by number signs &quot;#&quot; or by zeros. A comma following a digit placeholder scales the number by 1,000.</td><td>#,0 will display 12200000 as 12,200,000</td></tr>
+<tr><td>_</td><td>Skips the width of the next character.</td><td>Usually used in combination with parentheses to add left and right indents, _( and _) respectively.</td></tr>
+<tr><td>@</td><td>Formatter for text. Applies the format to all text in the cell</td><td>&quot;[Red]@&quot; applies the red font color for text values.</td></tr>
+<tr><td>*</td><td>Repeats the next character to fill the column width.</td><td>0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros.</td></tr>
+<tr><td>&quot; &quot;</td><td>Displays the text within the quotes without interpreting it.</td><td>&quot;8%&quot; will display as: 8%</td></tr>
+<tr><td>%</td><td>Displays numbers as a percentage of 100.</td><td>8% will be displayed as .08</td></tr>
+<tr><td>#</td><td>Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.</td><td>#.# will display 1.54 as 1.5</td></tr>
+<tr><td>?</td><td>Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.</td><td>$?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.</td></tr>
+<tr><td>\</td><td>Displays the character following it.</td><td>#.00? will display 123 as 123.00?</td></tr>
+<tr><td>/</td><td>When used with numbers, displays them as fractions. When used with text, date or time codes, displayed &quot;as-is&quot;.</td><td>#/# will display .75 as 3/4</td></tr>
+<tr><td>[ ]</td><td>Creates conditional formats.</td><td>[&gt;100][GREEN]#,##0;[&lt;=-100][YELLOW]#,##0;[BLUE]#,##0</td></tr>
+<tr><td>E</td><td>Scientific notation format.</td><td>#E+# - will display 1,500,500 as 2E+6</td></tr>
+<tr><td>[color]</td><td>Formats the text or number in the color specified</td><td>[Green]###.##[Red]-###.###</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value as $125,571.35</span>
+<span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">125571.35</span>;<span class="hljs-string">"format"</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="date-and-time-formats"></a><a href="#date-and-time-formats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Date and time formats</h3>
+<p>4D View Pro provides the following constants for ISO 8601 date and time patterns:</p>
+<table>
+<thead>
+<tr><th>Constant</th><th>Value</th><th>Comment</th></tr>
+</thead>
+<tbody>
+<tr><td><code>vk pattern full date time</code></td><td>&quot;<em>fullDateTimePattern</em>&quot;</td><td>ISO 8601 format for the full date and time in current localization.<p><p>USA default pattern: &quot;dddd, dd MMMM yyyy HH:mm:ss&quot;</td></tr>
+<tr><td><code>vk pattern long date</code></td><td>&quot;<em>longDatePattern</em>&quot;</td><td>ISO 8601 format for the full date in current localization.<p><p>USA default pattern: &quot;dddd, dd MMMM yyyy&quot;</td></tr>
+<tr><td><code>vk pattern long time</code></td><td>&quot;<em>longTimePattern</em>&quot;</td><td>ISO 8601 format for the time in current localization.<p><p>USA default pattern: &quot;HH:mm:ss&quot;</td></tr>
+<tr><td><code>vk pattern month day</code></td><td>&quot;<em>monthDayPattern</em>&quot;</td><td>ISO 8601 format for the month and day in current localization.<p><p>USA default pattern: &quot;MMMM dd&quot;</td></tr>
+<tr><td><code>vk pattern short date</code></td><td>&quot;<em>shortDatePattern</em>&quot;</td><td>Abbreviated ISO 8601 format for the date in current localization.<p><p>USA default pattern: &quot;MM/dd/yyyy&quot;</td></tr>
+<tr><td><code>vk pattern short time</code></td><td>&quot;<em>shortTimePattern</em>&quot;</td><td>Abbreviated ISO 8601 format for the time in current localization.<p><p>USA default pattern: &quot;HH:mm&quot;</td></tr>
+<tr><td><code>vk pattern sortable date time</code></td><td>&quot;<em>sortableDateTimePattern</em>&quot;</td><td>ISO 8601 format for the date and time in current localization which can be sorted.<p><p>USA default pattern: &quot;yyyy'-'MM'-'dd'T'HH':'mm':'ss&quot;</td></tr>
+<tr><td><code>vk pattern universal sortable date time</code></td><td>&quot;<em>universalSortableDateTimePattern</em>&quot;</td><td>ISO 8601 format for the date and time in current localization using UTC which can be sorted.<p><p>USA default pattern: &quot;yyyy'-'MM'-'dd HH':'mm':'ss'Z'&quot;</td></tr>
+<tr><td><code>vk pattern year month</code></td><td>&quot;<em>yearMonthPattern</em>&quot;</td><td>ISO 8601 format for the month and year in current localization.<p><p>USA default pattern: &quot;yyyy MMMM&quot;</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-1"></a><a href="#example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value as specific date and time</span>
+<span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">!2024-12-18!</span>);<span class="hljs-string">"time"</span>;<span class="hljs-literal">?14:30:10?</span>;<span class="hljs-string">"format"</span>;vk pattern full date time))
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="custom-date-and-time-formats"></a><a href="#custom-date-and-time-formats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom date and time formats</h3>
+<p>To create your own date and time patterns, in your current localization, you can use combinations of the following codes:</p>
+<table>
+<thead>
+<tr><th></th><th>Code<br>(not case-sensitive)</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>Date</td><td></td><td></td><td>(January 1, 2019)</td></tr>
+<tr><td></td><td>m</td><td>Month number without leading zero</td><td>1</td></tr>
+<tr><td></td><td>mm</td><td>Month number with leading zero</td><td>01</td></tr>
+<tr><td></td><td>mmm</td><td>Month name, short</td><td>Jan</td></tr>
+<tr><td></td><td>mmmm</td><td>Month name, long</td><td>January</td></tr>
+<tr><td></td><td>d</td><td>Day number without leading zero</td><td>1</td></tr>
+<tr><td></td><td>dd</td><td>Day number with leading zero</td><td>01</td></tr>
+<tr><td></td><td>ddd</td><td>Day of week, short</td><td>Tue</td></tr>
+<tr><td></td><td>dddd</td><td>Day of week, long</td><td>Tuesday</td></tr>
+<tr><td></td><td>yy</td><td>Year, short</td><td>19</td></tr>
+<tr><td></td><td>yyyy</td><td>Year, long</td><td>2019</td></tr>
+<tr><td>Time</td><td></td><td></td><td>(2:03:05 PM)</td></tr>
+<tr><td></td><td>h</td><td>Hour without leading zero. 0-23</td><td>2</td></tr>
+<tr><td></td><td>hh</td><td>Hour with leading zero. 00-23</td><td>02</td></tr>
+<tr><td></td><td>m</td><td>Minutes without leading zero. 0-59</td><td>3</td></tr>
+<tr><td></td><td>mm</td><td>Minutes with leading zero. 00-59</td><td>03</td></tr>
+<tr><td></td><td>s</td><td>Seconds without leading zero. 0-59</td><td>5</td></tr>
+<tr><td></td><td>ss</td><td>Seconds with leading zero. 00-59</td><td>05</td></tr>
+<tr><td></td><td>[h]</td><td>Elapsed time in hours</td><td>14 (can exceed 24)</td></tr>
+<tr><td></td><td>[mm]</td><td>Elapsed time in minutes</td><td>843</td></tr>
+<tr><td></td><td>[ss]</td><td>Elapsed time in seconds</td><td>50585</td></tr>
+<tr><td></td><td>AM/PM</td><td>Periods of day. 24 hour fomat used if omitted.</td><td>PM</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="additional-symbols"></a><a href="#additional-symbols" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional symbols</h3>
+<p>In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or &quot;&quot; and do not impact the interpretation of the format pattern. They appear &quot;as-is&quot; within the pattern.</p>
+<table>
+<thead>
+<tr><th>Character</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>+ and -</td><td>Plus and minus signs</td><td>### + ### = ###,###</td></tr>
+<tr><td>( )</td><td>Left and right parenthesis</td><td>(-###.##)</td></tr>
+<tr><td>:</td><td>Colon</td><td>hh:mm:ss</td></tr>
+<tr><td>^</td><td>Caret</td><td>#^#</td></tr>
+<tr><td>'</td><td>Apostrophe</td><td>'######</td></tr>
+<tr><td>{ }</td><td>Curly brackets</td><td>{###,###,###}</td></tr>
+<tr><td>&lt; &gt;</td><td>Less-than and greater than signs</td><td>## &gt;##</td></tr>
+<tr><td>=</td><td>Equal sign</td><td>#+#=##</td></tr>
+<tr><td>/</td><td>Forward slash. When used with numbers, displays them as fractions.</td><td>mm/dd/yyyy</td></tr>
+<tr><td>!</td><td>Exclamation point</td><td>$###.00!</td></tr>
+<tr><td>&amp;</td><td>Ampersand</td><td>&quot;Hello&quot; &amp; &quot;Welcome&quot;</td></tr>
+<tr><td>~</td><td>Tilde</td><td>~##</td></tr>
+<tr><td></td><td>Space character</td><td></td></tr>
+<tr><td>€</td><td>Euro</td><td>€###.00</td></tr>
+<tr><td>£</td><td>British Pound</td><td>£###.00</td></tr>
+<tr><td>¥</td><td>Japanese Yen</td><td>¥###.00</td></tr>
+<tr><td>$</td><td>Dollar sign</td><td>$###.00</td></tr>
+<tr><td>¢</td><td>Cent sign</td><td>.00¢</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="print-attributes"></a><a href="#print-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Print Attributes</h2>
+<p>4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. These attributes are handled by the following commands:</p>
+<ul>
+<li><a href="/docs/en/ViewPro/method-list.html#vp-set-print-info">VP SET PRINT INFO</a></li>
+<li><a href="/docs/en/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="columns--rows"></a><a href="#columns--rows" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Columns / Rows</h3>
+<p>Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>columnEnd</td><td>longint</td><td>The last column to print in a cell range. Default value = -1 (all columns)</td></tr>
+<tr><td>columnStart</td><td>longint</td><td>The first column to print in a cell range. Default value = -1 (all columns)</td></tr>
+<tr><td>repeatColumnEnd</td><td>longint</td><td>The last column of a range of columns to print on the left of each page. Default value = -1 (all columns)</td></tr>
+<tr><td>repeatColumnStart</td><td>longint</td><td>The first column of a range of columns to print on the left of each page. Default value = -1 (all columns)</td></tr>
+<tr><td>repeatRowEnd</td><td>longint</td><td>The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)</td></tr>
+<tr><td>repeatRowStart</td><td>longint</td><td>The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)</td></tr>
+<tr><td>rowEnd</td><td>longint</td><td>The last row to print in a cell range. Default value = -1 (all rows)</td></tr>
+<tr><td>rowStart</td><td>longint</td><td>The first row to print in a cell range. Default value = -1 (all rows)</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="headers--footers"></a><a href="#headers--footers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Headers / Footers</h3>
+<p>Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>footerCenter</td><td>text</td><td>The text and format of the center footer on printed pages.</td></tr>
+<tr><td>footerCenterImage</td><td>picture | text*</td><td>The image for the center section of the footer.</td></tr>
+<tr><td>footerLeft</td><td>text</td><td>The text and format of the left footer on printed pages.</td></tr>
+<tr><td>footerLeftImage</td><td>picture | text*</td><td>The image for the left section of the footer.</td></tr>
+<tr><td>footerRight</td><td>text</td><td>The text and format of the right footer on printed pages.</td></tr>
+<tr><td>footerRightImage</td><td>picture | text*</td><td>The image for the right section of the footer.</td></tr>
+<tr><td>headerCenter</td><td>text</td><td>The text and format of the center header on printed pages.</td></tr>
+<tr><td>headerCenterImage</td><td>picture | text*</td><td>The image for the center section of the header.</td></tr>
+<tr><td>headerLeft</td><td>text</td><td>The text and format of the left header on printed pages.</td></tr>
+<tr><td>headerLeftImage</td><td>picture | text*</td><td>The image for the left section of the header.</td></tr>
+<tr><td>headerRight</td><td>text</td><td>The text and format of the right header on printed pages.</td></tr>
+<tr><td>headerRightImage</td><td>picture | text*</td><td>The image for the right section of the header.</td></tr>
+</tbody>
+</table>
+<p>* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by <a href="/docs/en/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="special-characters"></a><a href="#special-characters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Special Characters</h3>
+<p>The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.</p>
+<table>
+<thead>
+<tr><th>Character</th><th>Description</th><th>Example</th><th>Result</th></tr>
+</thead>
+<tbody>
+<tr><td>&amp;</td><td>Escape character</td><td>(see examples below)</td><td></td></tr>
+<tr><td>P</td><td>Current page</td><td>printInfo.headerLeft:=&quot;This is page &amp;P.&quot;</td><td>This is page 5.</td><td></td></tr>
+<tr><td>N</td><td>Page count</td><td>printInfo.headerLeft:=&quot;There are &amp;N pages.&quot;</td><td>There are 10 pages.</td></tr>
+<tr><td>D</td><td>Current date (yyyy/mm/dd format)</td><td>printInfo.headerLeft:=&quot;It is &amp;D.&quot;</td><td>It is 2015/6/19.</td></tr>
+<tr><td>T</td><td>Current time</td><td>printInfo.headerLeft:=&quot;It is &amp;T.&quot;</td><td>It is 16:30:36.</td></tr>
+<tr><td>G</td><td>Image</td><td>printInfo.headerLeftImage:=smiley<br>printInfo.headerLeft:=&quot;&amp;G&quot;</td><td><img src="/docs/assets/en/ViewPro/apx_vpPrintAttributes1.PNG" alt=""></td></tr>
+<tr><td>S</td><td>Strikethrough</td><td>printInfo.headerLeft:=&quot;&amp;SThis is text.&quot;</td><td><del>This is text.</del></td></tr>
+<tr><td>U</td><td>Underline</td><td>printInfo.headerLeft:=&quot;&amp;UThis is text.&quot;</td><td><ins>This is text.</ins></td></tr>
+<tr><td>B</td><td>Bold</td><td>printInfo.headerLeft:=&quot;&amp;BThis is text.&quot;</td><td><strong>This is text.</strong></td></tr>
+<tr><td>I</td><td>Italic</td><td>printInfo.headerLeft:=&quot;&amp;IThis is text.&quot;</td><td><em>This is text.</em></td></tr>
+<tr><td>&quot;</td><td>Font prefix</td><td>printInfo.headerLeft:=&quot;&amp;&quot;Lucida Console&quot;&amp;14This is text.&quot;</td><td><img src="/docs/assets/en/ViewPro/apx_vpPrintAttributes2.PNG" alt=""></td></tr>
+<tr><td>K</td><td>Text Color prefix</td><td>printInfo.headerLeft:=&quot;&amp;KFF0000This is text.&quot;</td><td><span style="color:red">This is text</span>.</td></tr>
+<tr><td>F</td><td>Workbook name</td><td>printInfo.headerLeft:=&quot;&amp;F&quot;</td><td>2019 Monthly Revenue Forecasts</td></tr>
+<tr><td>A</td><td>Spreadsheet name</td><td>printInfo.headerLeft:=&quot;&amp;A&quot;</td><td>June 2019 revenue forecast</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="margins"></a><a href="#margins" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Margins</h3>
+<p>Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.</p>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>margin</td><td></td><td>object</td><td>The print margins</td></tr>
+<tr><td></td><td>top</td><td>longint</td><td>Top margin, in hundredths of an inch. Default value = 75</td></tr>
+<tr><td></td><td>bottom</td><td>longint</td><td>Bottom margin, in hundredths of an inch. Default value = 75</td></tr>
+<tr><td></td><td>left</td><td>longint</td><td>Left margin, in hundredths of an inch. Default value = 70</td></tr>
+<tr><td></td><td>right</td><td>longint</td><td>Right margin, in hundredths of an inch. Default value = 70</td></tr>
+<tr><td></td><td>header</td><td>longint</td><td>Header offset, in hundredths of an inch. Default value = 30</td></tr>
+<tr><td></td><td>footer</td><td>longint</td><td>Footer offset, in hundredths of an inch. Default value = 30</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="orientation"></a><a href="#orientation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Orientation</h3>
+<p>Orientation attributes are used to specify the direction the printed page layout.</p>
+<blockquote>
+<p>This attribute defines rendering information only.</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>orientation</td><td>longint</td><td>Page orientation. Available values: <code>vk print page orientation landscape</code>, <code>vk print page orientation portrait</code> (default)</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="page"></a><a href="#page" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Page</h3>
+<p>Page attributes are used to specify general document print settings.</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>blackAndWhite</td><td>boolean</td><td>Printing in black and white only. <p>Default value = false</p><p><strong>Note</strong>: PDFs are not affected by this attribute. Colors in PDFs remain.</p></td></tr>
+<tr><td>centering</td><td>longint</td><td>How the contents are centered on the printed page. Available values: <code>vk print centering both</code>, <code>vk print centering horizontal</code>, <code>vk print centering none</code> (default), <code>vk print centering vertical</code></td></tr>
+<tr><td>firstPageNumber</td><td>longint</td><td>The page number to print on the first page.<p>Default value = 1</td></tr>
+<tr><td>pageOrder</td><td>longint</td><td>The order pages are printed. Available values: <code>vk print page order auto</code> (default), <code>vk print page order down then over</code>, <code>vk print page order over then down</code>.</td></tr>
+<tr><td>pageRange</td><td>text</td><td>The range of pages for printing</td></tr>
+<tr><td>qualityFactor</td><td>longint</td><td>The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p></td></tr>
+<tr><td>useMax</td><td>boolean</td><td>Only columns and rows with data are printed.<p>Default value = true</p></td></tr>
+<tr><td>zoomFactor</td><td>real</td><td>The amount to enlarge or reduce the printed page.<p>Default value = 1</p></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="paper-size"></a><a href="#paper-size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Paper Size</h3>
+<p>Paper size attributes are used to specify the dimensions or model of paper to use for printing. There are two ways to define paper size:</p>
+<ul>
+<li>Custom size - height and width attributes</li>
+<li>Standard size - kind attribute</li>
+</ul>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>paperSize</td><td></td><td>object</td><td>Paper dimensions (height, width) or specific format (kind) for printing.</td></tr>
+<tr><td></td><td>height</td><td>longint</td><td>Height of the paper, in hundredths of an inch.</td></tr>
+<tr><td></td><td>width</td><td>longint</td><td>Width of the paper, in hundredths of an inch.</td></tr>
+<tr><td></td><td>kind</td><td>text</td><td>Name of standard paper size (e.g., A2, A4, legal, etc.) returned by <code>Get Print Option</code>. Default value = &quot;letter&quot;</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="scale"></a><a href="#scale" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scale</h3>
+<p>Scale attributes are used to specify printing optimization and adjustments.</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>bestFitColumns</td><td>boolean</td><td>Column width is adjusted to fit the largest text width for printing.<p>Default value = &quot;false&quot;</td></tr>
+<tr><td>bestFitRows</td><td>boolean</td><td>Row height is adjusted to fit the tallest text height for printing. <p>Default value = &quot;false&quot;</td></tr>
+<tr><td>fitPagesTall</td><td>longint</td><td>The number of vertical pages (portrait orientation) to check when optimizing printing.<p> Default value = -1</td></tr>
+<tr><td>fitPagesWide</td><td>longint</td><td>The number of horizontal pages (landscape orientation) to check when optimizing printing. <p>Default value = -1</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="show--hide"></a><a href="#show--hide" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Show / Hide</h3>
+<p>Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>showBorder</td><td>boolean</td><td>Prints the outline border.<p><p>Default value = &quot;true&quot;</td></tr>
+<tr><td>showColumnHeader</td><td>longint</td><td>Column header print settings. Available values: <code>vk print visibility hide</code>, <code>vk print visibility inherit</code> (default), <code>vk print visibility show</code>, <code>vk print visibility show once</code></td></tr>
+<tr><td>showGridLine</td><td>boolean</td><td>Prints the gridlines.<p>Default value = &quot;false&quot;</td></tr>
+<tr><td>showRowHeader</td><td>longint</td><td>Row headers print settings. Available values: <code>vk print visibility hide</code>, <code>vk print visibility inherit</code> (default), <code>vk print visibility show</code>, <code>vk print visibility show once</code></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="watermark"></a><a href="#watermark" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Watermark</h3>
+<p>Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.</p>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>watermark</td><td></td><td>collection</td><td>Collection of watermark settings. <p>Default value: undefined</td></tr>
+<tr><td></td><td>[ ].height</td><td>longint</td><td>The height of the watermark text / image.</td></tr>
+<tr><td></td><td>[ ].imageSrc</td><td>picture | text*</td><td>The watermark text / image.</td></tr>
+<tr><td></td><td>[ ].page</td><td>text</td><td>The page(s) where the watermark is printed.<p>For all pages: &quot;all&quot;. For specific pages: page numbers or page ranges separated by commas. Ex.: &quot;1,3,5-12&quot;</td></tr>
+<tr><td></td><td>[ ].width</td><td>longint</td><td>The width of the watermark text / image.</td></tr>
+<tr><td></td><td>[ ].x</td><td>longint</td><td>The horizontal coordinate of the top left point of the watermark text / image.</td></tr>
+<tr><td></td><td>[ ].y</td><td>longint</td><td>The vertical coordinate of the top left point of the watermark text / image.</td></tr>
+</tbody>
+</table>
+<p>* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by <a href="/docs/en/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="style-objects"></a><a href="#style-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Objects</h2>
+<p>4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.</p>
+<h3><a class="anchor" aria-hidden="true" id="style-objects--style-sheets"></a><a href="#style-objects--style-sheets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style objects &amp; Style sheets</h3>
+<p>Style objects contain the style settings. They can be used either in a style sheet or on their own. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the <a href="/docs/en/ViewPro/method-list.html#vp-set-cell-style">VP SET CELL STYLE</a> and <a href="/docs/en/ViewPro/method-list.html#vp-set-default-style">VP SET DEFAULT STYLE</a> commands.</p>
+<p>A <strong>style sheet</strong> groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the &quot;name&quot; property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead_internal, Letterhead_external).</p>
+<p>Style sheets are created with the <a href="/docs/en/ViewPro/method-list.html#vp-add-stylesheet">VP ADD STYLESHEET</a> command and applied with the the <a href="/docs/en/ViewPro/method-list.html#vp-set-default-style">VP SET DEFAULT STYLE</a> or <a href="/docs/en/ViewPro/method-list.html#vp-set-cell-style">VP SET CELL STYLE</a> commands. You can  remove a style sheet with the <a href="/docs/en/ViewPro/method-list.html#vp-remove-stylesheet">VP REMOVE STYLESHEET</a> command.</p>
+<p>The <a href="/docs/en/ViewPro/method-list.html#vp-get-stylesheet">VP Get stylesheet</a> command can be used to return the style object of a single style sheet or you can use the <a href="/docs/en/ViewPro/method-list.html#vp-get-stylesheets">VP Get stylesheets</a> command to retrieve a collection of style objects for multiple style sheets.</p>
+<h3><a class="anchor" aria-hidden="true" id="style-object-properties"></a><a href="#style-object-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style object properties</h3>
+<p>Example:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$style</span>:=New object
+ <span class="hljs-variable">$style</span>.hAlign:=vk horizontal align left
+ <span class="hljs-variable">$style</span>.font:=<span class="hljs-string">"12pt papyrus"</span>
+ <span class="hljs-variable">$style</span>.backColor:=<span class="hljs-string">"#E6E6FA"</span> <span class="hljs-comment">//light purple color</span>
+ 
+<span class="hljs-function"> VP SET DEFAULT STYLE</span>(<span class="hljs-string">"myDoc"</span>;<span class="hljs-variable">$style</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="background--foreground"></a><a href="#background--foreground" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Background &amp; Foreground</h4>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th><th>Possible values</th></tr>
+</thead>
+<tbody>
+<tr><td>backColor</td><td>text</td><td>Defines the color of the background.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td>backgroundImage</td><td>picture, text</td><td>Specifies a background image.</td><td>Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included.</td></tr>
+<tr><td>backgroundImageLayout</td><td>longint</td><td>Defines the layout for the background image.</td><td><code>vk image layout center</code>, <code>vk image layout none</code>, <code>vk image layout stretch</code>, <code>vk image layout zoom</code></td></tr>
+<tr><td>foreColor</td><td>text</td><td>Defines the color of the foreground.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="borders"></a><a href="#borders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Borders</h4>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th><th>Possible values</th></tr>
+</thead>
+<tbody>
+<tr><td>borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp</td><td></td><td>object</td><td>Defines the corresponding border line</td><td></td></tr>
+<tr><td></td><td>color</td><td>text</td><td>Defines the color of the border. Default = black.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td></td><td>style</td><td>longint</td><td>Defines the style of the border. Default = empty. Cannot be null or undefined.</td><td><code>vk line style dash dot</code>, <code>vk line style dash dot dot</code>, <code>vk line style dashed</code>, <code>vk line style dotted</code>, <code>vk line style double</code>, <code>vk line style empty</code>, <code>vk line style hair</code>, <code>vk line style medium</code>, <code>vk line style medium dash dot</code>, <code>vk line style medium dash dot dot</code>,<code>vk line style medium dashed</code>, <code>vk line style slanted dash dot</code>, <code>vk line style thick</code></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="fonts-and-text"></a><a href="#fonts-and-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fonts and text</h4>
+<table>
+<thead>
+<tr><th>Property</th><th></th><th>Type</th><th>Description</th><th>Possible values</th></tr>
+</thead>
+<tbody>
+<tr><td>font</td><td></td><td>text</td><td>Specifies the font characteristics in CSS font shorthand (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;). Example: &quot;14pt Century Gothic&quot;. The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes.</td><td>A CSS font shorthand.<p>4D provides utility commands to handle font characteristics as objects: <a href="/docs/en/ViewPro/method-list.html#vp-font-to-object"><code>VP Font to object</code></a> and <a href="/docs/en/ViewPro/method-list.html#vp-object-to-font"><code>VP Object to font</code></a></td></tr>
+<tr><td>formatter</td><td></td><td>text</td><td>Pattern for value/time property.</td><td>Number/text/date/time formats, special characters. See <a href="#cell-format">Cell Format</a>.</td></tr>
+<tr><td>isVerticalText</td><td></td><td>boolean</td><td>Specifies text direction.</td><td>True = vertical text, False = horizontal text.</td></tr>
+<tr><td>labelOptions</td><td></td><td>object</td><td>Defines cell label options (watermark options).</td><td></td></tr>
+<tr><td></td><td>alignment</td><td>longint</td><td>Specifies the position of the cell label. Optional property.</td><td><code>vk label alignment top left</code>, <code>vk label alignment bottom left</code>, <code>vk label alignment top center</code>, <code>vk label alignment bottom center</code>, <code>vk label alignment top right</code>, <code>vk label alignment bottom right</code></td></tr>
+<tr><td></td><td>visibility</td><td>longint</td><td>Specifies the visibility of the cell label. Optional property.</td><td><code>vk label visibility auto</code>, <code>vk label visibility hidden</code>, <code>vk label visibility visible</code></td></tr>
+<tr><td></td><td>foreColor</td><td>text</td><td>Defines the color of the foreground. Optional property.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td></td><td>font</td><td>text</td><td>Specifies the font characteristics with CSS font shorthand (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;). The font-size and font-family values are mandatory.</td><td></td></tr>
+<tr><td>textDecoration</td><td></td><td>longint</td><td>Specifies the decoration added to text.</td><td><code>vk text decoration double underline</code>, <code>vk text decoration line through</code>, <code>vk text decoration none</code>, <code>vk text decoration overline</code>, <code>vk text decoration underline</code></td></tr>
+<tr><td>textIndent</td><td></td><td>longint</td><td>Defines the unit of text indention. 1 = 8 pixels</td><td></td></tr>
+<tr><td>textOrientation</td><td></td><td>longint</td><td>Defines the rotation angle of the text in a cell. Number between -90 and 90</td><td></td></tr>
+<tr><td>watermark</td><td></td><td>text</td><td>Defines the watermark (cell label) content</td><td></td></tr>
+<tr><td>wordWrap</td><td></td><td>boolean</td><td>Specifies if text should be wrapped.</td><td>True = wrapped text, False = unwrapped text</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="layout"></a><a href="#layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Layout</h4>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th><th>Possible values</th></tr>
+</thead>
+<tbody>
+<tr><td>cellPadding</td><td>text</td><td>Defines the cell padding</td><td></td></tr>
+<tr><td>hAlign</td><td>longint</td><td>Defines the horizontal alignment of cell contents.</td><td><code>vk horizontal align center</code>, <code>vk horizontal align general</code>, <code>vk horizontal align left</code>, <code>vk horizontal align right</code></td></tr>
+<tr><td>locked</td><td>boolean</td><td>Specifies cell protection status. Note, this is only available if <a href="#sheet-protection">sheet protection</a> is enabled.</td><td>True = locked, False = unlocked.</td></tr>
+<tr><td>shrinkToFit</td><td>boolean</td><td>Specifies if the contents of the cell should be reduced.</td><td>True = reduced content, False = no reduction.</td></tr>
+<tr><td>tabStop</td><td>boolean</td><td>Specifies if the focus to the cell can be set using the Tab key.</td><td>True = Tab key sets focus, False = Tab key does not set focus.</td></tr>
+<tr><td>vAlign</td><td>longint</td><td>Specifies the vertical alignment of cell contents.</td><td><code>vk vertical align bottom</code>, <code>vk vertical align center</code>, <code>vk vertical align top</code></td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="style-information"></a><a href="#style-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style information</h4>
+<table>
+<thead>
+<tr><th>Property</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>text</td><td>Defines the name of the style</td></tr>
+<tr><td>parentName</td><td>text</td><td>Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="4d-view-pro-object"></a><a href="#4d-view-pro-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D View Pro Object</h2>
+<p>The 4D View Pro <a href="/docs/en/Concepts/object.html">object</a> stores the whole spreadsheet contents. It is automatically handled by 4D View Pro. You can set or get this object using the <a href="/docs/en/ViewPro/method-list.html#vp-import-from-object">VP IMPORT FROM OBJECT</a> or <a href="/docs/en/ViewPro/method-list.html#vp-export-to-object">VP Export to object</a> methods.</p>
+<p>It contains the following properties:</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Value type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>version</td><td>Longint</td><td>Internal component version</td></tr>
+<tr><td>dateCreation</td><td>Timestamp</td><td>Creation date</td></tr>
+<tr><td>dateModified</td><td>Timestamp</td><td>Last modification date</td></tr>
+<tr><td>meta</td><td>Object</td><td>Free contents, reserved for the 4D developer</td></tr>
+<tr><td>spreadJS</td><td>Object</td><td>Reserved for the 4D View Pro component</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="4d-view-pro-form-object-variable"></a><a href="#4d-view-pro-form-object-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D View Pro Form Object Variable</h2>
+<p>The 4D View Pro form object variable is the <a href="/docs/en/Concepts/object.html">object</a> variable associated to the 4D View Pro form area. It manages information used by the 4D View Pro object.</p>
+<blockquote>
+<p>The 4D View Pro form object variable is for information purposes only (i.e., debugging). Under no circumstances should it be modified.</p>
+</blockquote>
+<p>It contains the following properties:</p>
+<table>
+<thead>
+<tr><th>Property</th><th>Value type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>ViewPro.area</td><td>Text</td><td>4D View Pro area name</td></tr>
+<tr><td>ViewPro.callbacks</td><td>Object</td><td>Stores temporary information necessary for commands requiring callbacks such as importing and exporting.</td></tr>
+<tr><td>ViewPro.commandBuffers</td><td>Collection</td><td>Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the <a href="/docs/en/ViewPro/method-list.html#vp-flush-commands">VP FLUSH COMMANDS</a> is called. This mechanism increases performance by reducing the number of requests sent.</td></tr>
+<tr><td>ViewPro.events</td><td>Object</td><td><a href="#form-events">Event</a> list.</td></tr>
+<tr><td>ViewPro.formulaBar</td><td>Boolean</td><td>Indicates whether or not the formula bar is displayed. Available only for the &quot;toolbar&quot; interface.</td></tr>
+<tr><td>ViewPro.inited</td><td>Boolean</td><td>Indicates whether or not the 4D View Pro area has been initialized (see <a href="/docs/en/Events/onVpReady.html">On VP Ready</a> event).</td></tr>
+<tr><td>ViewPro.interface</td><td>Text</td><td>Specifies the type of user interface:&quot;ribbon&quot;, &quot;toolbar&quot;, &quot;none&quot;.</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/ViewPro/getting-started.html"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/docs/en/ViewPro/formulas.html"><span>Formulas and Functions</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#form-area-properties">Form area properties</a><ul class="toc-headings"><li><a href="#selecting-a-user-interface">Selecting a user interface</a></li></ul></li><li><a href="#form-events">Form Events</a></li><li><a href="#sheet-options">Sheet Options</a><ul class="toc-headings"><li><a href="#sheet-appearance">Sheet appearance</a></li><li><a href="#sheet-protection">Sheet protection</a></li></ul></li><li><a href="#cell-format">Cell Format</a><ul class="toc-headings"><li><a href="#number-and-text-formats">Number and text formats</a></li><li><a href="#date-and-time-formats">Date and time formats</a></li><li><a href="#custom-date-and-time-formats">Custom date and time formats</a></li><li><a href="#additional-symbols">Additional symbols</a></li></ul></li><li><a href="#print-attributes">Print Attributes</a><ul class="toc-headings"><li><a href="#columns--rows">Columns / Rows</a></li><li><a href="#headers--footers">Headers / Footers</a></li><li><a href="#special-characters">Special Characters</a></li><li><a href="#margins">Margins</a></li><li><a href="#orientation">Orientation</a></li><li><a href="#page">Page</a></li><li><a href="#paper-size">Paper Size</a></li><li><a href="#scale">Scale</a></li><li><a href="#show--hide">Show / Hide</a></li><li><a href="#watermark">Watermark</a></li></ul></li><li><a href="#style-objects">Style Objects</a><ul class="toc-headings"><li><a href="#style-objects--style-sheets">Style objects &amp; Style sheets</a></li><li><a href="#style-object-properties">Style object properties</a></li></ul></li><li><a href="#4d-view-pro-object">4D View Pro Object</a></li><li><a href="#4d-view-pro-form-object-variable">4D View Pro Form Object Variable</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:19 R4 BETA"]}
+              });
+            </script></body></html>

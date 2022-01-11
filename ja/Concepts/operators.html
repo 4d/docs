@@ -1,0 +1,319 @@
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>演算子 · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="An operator is a symbol or a group of symbols that you use to check, modify, or combine values. 日常的に使用されている演算子も多くあります。 For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or &gt;, let you compare two or more values."/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="演算子 · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="An operator is a symbol or a group of symbols that you use to check, modify, or combine values. 日常的に使用されている演算子も多くあります。 For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or &gt;, let you compare two or more values."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/Concepts/operators.html">English</a></li><li><a href="/docs/de/Concepts/operators.html">Deutsch</a></li><li><a href="/docs/es/Concepts/operators.html">Español</a></li><li><a href="/docs/fr/Concepts/operators.html">Français</a></li><li><a href="/docs/pt/Concepts/operators.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>ランゲージのコンセプト</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">プロジェクト管理<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Project/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/architecture.html">プロジェクトのアーキテクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/documentation.html">ドキュメンテーション</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Project/compiler.html">コンパイル</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ランゲージのコンセプト<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/about.html">4D ランゲージについて</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/quick-tour.html">概要</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ja/Concepts/operators.html">演算子</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/data-types.html">データタイプの概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/boolean.html">ブール</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/collection.html">コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/date.html">日付</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/null-undefined.html">Null と 未定義</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/number.html">数値 (実数、倍長整数、整数)</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/object.html">オブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/picture.html">ピクチャー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/pointer.html">ポインター</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/string.html">文字列</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/time.html">時間</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/variant.html">バリアント</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/variables.html">変数</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/arrays.html">配列</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/methods.html">メソッド</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/parameters.html">引数</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/shared.html">共有オブジェクトと共有コレクション</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/classes.html">クラス</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/control-flow.html">制御フロー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/branching.html">分岐構造</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/looping.html">ループ構造</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/ja/Tags/tags.html">変換タグ</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/error-handling.html">エラー処理</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/interpreted-compiled.html">インタープリターモードとコンパイル済みモード</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/components.html">コンポーネント</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/plug-ins.html">プラグイン</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Concepts/identifiers.html">識別子の命名規則</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORDA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/ORDA/overview.html">ORDAとは何か</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/ORDA/dsmapping.html">データモデルオブジェクト</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/ORDA/ordaClasses.html">データモデルクラス</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/ORDA/entities.html">データ操作</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/ORDA/datastores.html">リモートデータストアの利用</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/ORDA/glossary.html">用語集</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">クラス API リファレンス<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/API/overview.html">クラス API の概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/BlobClass.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/ClassClass.html">Class</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/CollectionClass.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/CryptoKeyClass.html">CryptoKey</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/DataClassClass.html">DataClass</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/DataClassAttributeClass.html">DataClassAttribute</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/DataStoreClass.html">DataStore</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/EmailObjectClass.html">Email</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/EntityClass.html">Entity</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/EntitySelectionClass.html">EntitySelection</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/FileClass.html">File</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/FolderClass.html">Folder</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/FunctionClass.html">Formula</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/IMAPTransporterClass.html">IMAPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/MailAttachmentClass.html">MailAttachment</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/POP3TransporterClass.html">POP3Transporter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/SessionClass.html">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/SignalClass.html">Signal</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/SMTPTransporterClass.html">SMTPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/SystemWorkerClass.html">SystemWorker</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/WebServerClass.html">WebServer</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/ZipArchiveClass.html">ZIPArchive</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/ZipFileClass.html">ZIPFile</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/API/ZipFolderClass.html">ZIPFolder</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">コードエディター<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/code-editor/navigation.html">Navigation dropdown</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">デバッガー<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Debugging/basics.html">画面の説明</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Debugging/debugger.html">デバッガー</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Debugging/breakpoints.html">ブレークポイントとキャッチコマンド</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Debugging/debugging-remote.html">リモートマシンからのデバッグ</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Debugging/debugLogFiles.html">ログファイルの詳細</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">設定<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/settings/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/general.html">General page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/interface.html">Interface page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/compiler.html">Compiler page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/database.html">Database page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/backup.html">Backup page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/client-server.html">Client-server page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/web.html">Web page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/sql.html">SQL page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/php.html">PHP page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/security.html">Security page</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/settings/compatibility.html">Compatibility page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">環境設定<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ja/Preferences/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Preferences/general.html">一般ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Preferences/structure.html">ストラクチャーページ</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Preferences/forms.html">フォームページ</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Preferences/methods.html">メソッドページ</a></li><li class="navListItem"><a class="navItem" href="/docs/ja/Preferences/shortcuts.html">ショートカットページ</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Concepts/operators.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">演算子</h1></header><article><div><span><p>An operator is a symbol or a group of symbols that you use to check, modify, or combine values. 日常的に使用されている演算子も多くあります。 For example, <code>1 + 2</code> uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or &gt;, let you compare two or more values.</p>
+<p>The 4D language supports the operators you may already know from other languages like C or JavaScript. However, the assignment operator is <code>:=</code> to prevent it from being mistakenly used when the equal to operator (<code>=</code>) is intended. <a href="#basic-operators">Basic operators</a> such as arithmetic operators (+, -, *, /, %...) and comparison operators (=, &gt;, &gt;=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Like JavaScript, the 4D language supports the concept of <a href="#truthy-and-falsy">truthy and falsy values</a>, which in use in <a href="#short-circuit-operators">short-cicrcuit operators</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="用語"></a><a href="#用語" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>用語</h2>
+<p>The 4D language supports <strong>binary</strong> and <strong>ternary</strong> operators:</p>
+<ul>
+<li>binary operators operate on two targets (such as 2 + 3) and appear in between their two targets.</li>
+<li>ternary operators operate on three targets. Like C, 4D has only one ternary operator, the <a href="#ternary-operator">ternary conditional operator</a> (<code>a ? b : c</code>).</li>
+</ul>
+<p>The values that operators affect are operands. In the expression 1 + 2, the + symbol is a binary operator and its two operands are the values 1 and 2.</p>
+<h2><a class="anchor" aria-hidden="true" id="代入"></a><a href="#代入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>代入</h2>
+<p>The <strong>assignment operator</strong> (<code>a:=b</code>) initializes or updates the value of <code>a</code> with the value of <code>b</code>:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$myNumber</span>:=<span class="hljs-number">3</span> <span class="hljs-comment">//assigns 3 to MyNumber variable  </span>
+<span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-comment">//assigns a date literal</span>
+<span class="hljs-variable">$myLength</span>:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">//assigns the result of the command (4) to $myLength</span>
+<span class="hljs-variable">$col</span>:=New collection <span class="hljs-comment">//$col is initialized with an empty collection</span>
+</code></pre>
+<blockquote>
+<p>Do NOT confuse the assignment operator <code>:=</code> with the equality comparison operator <code>=</code>. A different assignment operator (and not <code>=</code>) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="basic-operators"></a><a href="#basic-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic operators</h2>
+<p>Operator results depend on the <strong>data types</strong> they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:</p>
+<ul>
+<li><a href="/docs/ja/Concepts/boolean.html#logical-operators"><strong>Logical operators</strong></a> (on <strong>boolean</strong> expressions)</li>
+<li><a href="/docs/ja/Concepts/date.html#date-operators"><strong>日付演算子</strong></a></li>
+<li><a href="/docs/ja/Concepts/time.html#time-operators"><strong>時間演算子</strong></a></li>
+<li><a href="/docs/ja/Concepts/number.html#number-operators"><strong>数値演算子</strong></a></li>
+<li><a href="/docs/ja/Concepts/number.html#bitwise-operators"><strong>Bitwise operators</strong></a> (on <strong>long integer</strong> expressions)</li>
+<li><a href="/docs/ja/Concepts/picture.html#picture-operators"><strong>ピクチャー演算子</strong></a></li>
+<li><a href="/docs/ja/Concepts/pointer.html#pointer-operators"><strong>ポインター演算子</strong></a></li>
+<li><a href="/docs/ja/Concepts/string.html#string-operators"><strong>文字列演算子</strong></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="compound-assignment-operators"></a><a href="#compound-assignment-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compound assignment operators</h2>
+<p>4D provides <strong>compound assignment operators</strong> that combine assignment with another operation. One example is the addition assignment operator (<code>+=</code>):</p>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$a</span>:=<span class="hljs-number">1</span> 
+<span class="hljs-variable">$a</span>+=<span class="hljs-number">2</span> <span class="hljs-comment">// $a=3</span>
+</code></pre>
+<p>The following compound assignment operators are supported:</p>
+<table>
+<thead>
+<tr><th>演算子</th><th>シンタックス</th><th>Assigns</th><th>例題</th></tr>
+</thead>
+<tbody>
+<tr><td>加算 (足し算)</td><td>Text += Text</td><td>テキスト</td><td><code>$t+=&quot; World&quot; //$t:=$t+&quot; World&quot;</code></td></tr>
+<tr><td></td><td>Number += Number</td><td>数値</td><td><code>$n+=5 //$n:=$n+5</code></td></tr>
+<tr><td></td><td>Date += Number</td><td>日付</td><td><code>$d+=5 //$d:=$d+5</code></td></tr>
+<tr><td></td><td>Time += Time</td><td>時間</td><td><code>$t1+=$t2 //$t1:=$t1+$t2</code></td></tr>
+<tr><td></td><td>Time += Number</td><td>数値</td><td><code>$t1+=5 //$t1:=$t1+5</code></td></tr>
+<tr><td></td><td>Picture += Picture</td><td>ピクチャー</td><td><code>$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)</code></td></tr>
+<tr><td></td><td>Picture += Number</td><td>ピクチャー</td><td><code>$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)</code></td></tr>
+<tr><td>減算 (引き算)</td><td>Number -= Number</td><td>数値</td><td><code>$n-=5 //$n:=$n-5</code></td></tr>
+<tr><td></td><td>Date -= Number</td><td>日付</td><td><code>$d-=5 //$d:=$d-5</code></td></tr>
+<tr><td></td><td>Time -= Time</td><td>時間</td><td><code>$t1-=$t2 //$t1:=$t1-$t2</code></td></tr>
+<tr><td></td><td>Time -= Number</td><td>数値</td><td><code>$t1-=5 //$t1:=$t1-5</code></td></tr>
+<tr><td></td><td>Picture -= Number</td><td>ピクチャー</td><td><code>$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)</code></td></tr>
+<tr><td>除算 (割り算)</td><td>Number /= Number</td><td>数値</td><td><code>$n/=5 //$n:=$n/5</code></td></tr>
+<tr><td></td><td>Time /= Time</td><td>時間</td><td><code>$t1/=$t2 //$t1:=$t1/$t2</code></td></tr>
+<tr><td></td><td>Time /= Number</td><td>数値</td><td><code>$t1/=5 //$t1:=$t1/5</code></td></tr>
+<tr><td></td><td>Picture /= Picture</td><td>ピクチャー</td><td><code>$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)</code></td></tr>
+<tr><td></td><td>Picture /= Number</td><td>ピクチャー</td><td><code>$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)</code></td></tr>
+<tr><td>乗算 (かけ算)</td><td>Text *= Number</td><td>テキスト</td><td><code>$t*=&quot;abc&quot; //$t:=$t*&quot;abc&quot;</code></td></tr>
+<tr><td></td><td>Number *= Number</td><td>数値</td><td><code>$n*=5 //$n:=$n*5</code></td></tr>
+<tr><td></td><td>Time *= Time</td><td>時間</td><td><code>$t1*=$t2 //$t1:=$t1*$t2</code></td></tr>
+<tr><td></td><td>Time *= Number</td><td>数値</td><td><code>$t1*=5 //$t1:=$t1*5</code></td></tr>
+<tr><td></td><td>Picture *= Number</td><td>ピクチャー</td><td><code>$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)</code></td></tr>
+</tbody>
+</table>
+<p>These operators apply on any <a href="/docs/ja/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expressions</a> (except pictures as object properties or collection elements).</p>
+<p>The operation &quot;source <code>operator</code> value&quot; is not strictly equivalent to &quot;source := source <code>operator</code> value&quot; because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as <code>getPointer()-&gt;+=1</code> the <code>getPointer</code> method is called only once.</p>
+<blockquote>
+<p><a href="/docs/ja/Concepts/string.html#character-reference-symbols">Character indexing in text</a> and <a href="/docs/ja/Concepts/blob.html#accessing-a-scalar-blobs-bytes">byte indexing in blob</a> do not support these operators.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Addition</span>
+<span class="hljs-variable">$x</span>:=<span class="hljs-number">2</span>
+<span class="hljs-variable">$x</span>+=<span class="hljs-number">5</span> <span class="hljs-comment">//$x=7</span>
+
+<span class="hljs-variable">$t</span>:=<span class="hljs-string">"Hello"</span> 
+<span class="hljs-variable">$t</span>+=<span class="hljs-string">" World"</span> <span class="hljs-comment">//$t="Hello World" </span>
+
+<span class="hljs-variable">$d</span>:=<span class="hljs-literal">!2000-11-10!</span>
+<span class="hljs-variable">$d</span>+=<span class="hljs-number">10</span> <span class="hljs-comment">//$d=!2000-11-20!</span>
+
+<span class="hljs-comment">// Subtraction</span>
+<span class="hljs-variable">$x1</span>:=<span class="hljs-number">10</span>
+<span class="hljs-variable">$x1</span>-=<span class="hljs-number">5</span> <span class="hljs-comment">//$x1=5</span>
+
+<span class="hljs-variable">$d1</span>:=<span class="hljs-literal">!2000-11-10!</span>
+<span class="hljs-variable">$d1</span>-=<span class="hljs-number">10</span> <span class="hljs-comment">// $d1=!2000-10-31!</span>
+
+<span class="hljs-comment">// Division</span>
+<span class="hljs-variable">$x3</span>:=<span class="hljs-number">10</span>
+<span class="hljs-variable">$x3</span>/=<span class="hljs-number">2</span> <span class="hljs-comment">// $x3=5</span>
+
+
+<span class="hljs-comment">// Multiplication</span>
+<span class="hljs-variable">$x2</span>:=<span class="hljs-number">10</span>
+<span class="hljs-variable">$x2</span>*=<span class="hljs-number">5</span> <span class="hljs-comment">// $x2=10</span>
+
+<span class="hljs-variable">$t2</span>:=<span class="hljs-string">"Hello"</span> 
+<span class="hljs-variable">$t2</span>*=<span class="hljs-number">2</span> <span class="hljs-comment">// $t2="HelloHello"</span>
+
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="short-circuit-operators"></a><a href="#short-circuit-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Short-circuit operators</h2>
+<p>The <strong>&amp;&amp;</strong> and <strong>||</strong> operators are <strong>short circuit operators</strong>. A short circuit operator is one that doesn't necessarily evaluate all of its operands.</p>
+<p>The difference with the single <a href="/docs/ja/Concepts/boolean.html#logical-operators"><strong>&amp;</strong> and <strong>|</strong> boolean operators</a> is that the short-circuit operators <strong>&amp;&amp;</strong> and <strong>||</strong> don't return a boolean value. They evaluate expressions as <a href="#truthy-and-falsy">truthy or falsy</a>, then return one of the expressions.</p>
+<h3><a class="anchor" aria-hidden="true" id="short-circuit-and-operator-"></a><a href="#short-circuit-and-operator-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Short-circuit AND operator (&amp;&amp;)</h3>
+<p>The rule is as follows:</p>
+<p>Given <code>Expr1 &amp;&amp; Expr2</code>:</p>
+<p>The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are <a href="#truthy-and-falsy">truthy</a>, the value of the last operand is returned.</p>
+<p>The following table summarizes the different cases for the <strong>&amp;&amp;</strong> operator:</p>
+<table>
+<thead>
+<tr><th>Expr1</th><th>Expr2</th><th>Value returned</th></tr>
+</thead>
+<tbody>
+<tr><td>truthy</td><td>truthy</td><td>Expr2</td></tr>
+<tr><td>truthy</td><td>falsy</td><td>Expr2</td></tr>
+<tr><td>falsy</td><td>truthy</td><td>Expr1</td></tr>
+<tr><td>falsy</td><td>falsy</td><td>Expr1</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="例題-1"></a><a href="#例題-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$v </span>: Variant
+
+<span class="hljs-variable">$v</span>:= <span class="hljs-string">"Hello"</span> &amp;&amp; <span class="hljs-string">"World"</span> <span class="hljs-comment">//"World"</span>
+<span class="hljs-variable">$v</span>:=<span class="hljs-literal">False</span> &amp;&amp; <span class="hljs-number">0</span> <span class="hljs-comment">// False</span>
+<span class="hljs-variable">$v</span>:=<span class="hljs-number">0</span> &amp;&amp; <span class="hljs-literal">False</span> <span class="hljs-comment">// False</span>
+<span class="hljs-variable">$v</span>:=<span class="hljs-number">5</span> &amp;&amp; <span class="hljs-literal">!00-00-00!</span> <span class="hljs-comment">// 00/00/00</span>
+<span class="hljs-variable">$v </span>:= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-number">10</span> &amp;&amp; <span class="hljs-string">"hello"</span> <span class="hljs-comment">//"hello"</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="例題-2"></a><a href="#例題-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
+<p>Say you have an online store, and some products have a tax rate applied, and others don't.</p>
+<p>To calculate the tax, you multiply the price by the tax rate, which may not have been specified.</p>
+<p>So you can write this:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$tax </span>: Variant
+
+<span class="hljs-variable">$tax</span>:=<span class="hljs-variable">$item</span>.taxRate &amp;&amp; (<span class="hljs-variable">$item</span>.price*<span class="hljs-variable">$item</span>.taxRate)
+</code></pre>
+<p><code>$tax</code> will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-3"></a><a href="#例題-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 3</h4>
+<p>Short-circuit operators are useful in tests such as:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span>((<span class="hljs-variable">$myObject</span>#<span class="hljs-literal">Null</span>) &amp;&amp; (<span class="hljs-variable">$myObject</span>.value&gt;<span class="hljs-number">10</span>))
+    <span class="hljs-comment">//code</span><span class="hljs-keyword">
+End if</span>
+</code></pre>
+<p>If $myObject is Null, the second argument is not executed, thus no error is thrown.</p>
+<h3><a class="anchor" aria-hidden="true" id="short-circuit-or-operator-"></a><a href="#short-circuit-or-operator-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Short-circuit OR operator (||)</h3>
+<p>The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible &quot;short-circuit&quot; evaluation using the following rule:</p>
+<p>Given <code>Expr1 || Expr2</code>:</p>
+<p>If Expr1 is <a href="#truthy-and-falsy">truthy</a>, Expr2 is not evaluated and the calculation returns Expr1.</p>
+<p>If Expr1 is <a href="#truthy-and-falsy">falsy</a>, the calculation returns Expr2.</p>
+<p>The following table summarizes the different cases and the value returned for the <strong>||</strong> operator:</p>
+<table>
+<thead>
+<tr><th>Expr1</th><th>Expr2</th><th>Value returned</th></tr>
+</thead>
+<tbody>
+<tr><td>truthy</td><td>truthy</td><td>Expr1</td></tr>
+<tr><td>truthy</td><td>falsy</td><td>Expr1</td></tr>
+<tr><td>falsy</td><td>truthy</td><td>Expr2</td></tr>
+<tr><td>falsy</td><td>falsy</td><td>Expr2</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="例題-1-1"></a><a href="#例題-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
+<p>Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that <code>$emp.phone</code> could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$phone </span>: Text
+
+<span class="hljs-variable">$phone</span>:=<span class="hljs-variable">$emp</span>.phone || <span class="hljs-string">"n/a"</span>
+</code></pre>
+<p>In which case <code>$phone</code> will store either a phone number or the &quot;n/a&quot; string.</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-2-1"></a><a href="#例題-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
+<p>Given a table called Person with a <em>name</em> field, as well as a <em>maiden name</em> field for married women.</p>
+<p>The following example checks if there is a maiden name and stores it in a variable, otherwise it simply stores the person's name:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$name</span>: Text
+
+<span class="hljs-variable">$name</span>:=<span class="hljs-variable">$person</span>.maidenName || <span class="hljs-variable">$person</span>.name
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="優先順位"></a><a href="#優先順位" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>優先順位</h3>
+<p>The <code>&amp;&amp;</code> and <code>||</code> operators have the same precedence as the logical operators <code>&amp;</code> and <code>|</code>, and are evaluated left to right.</p>
+<p>This means that <code>a || b &amp;&amp; c</code> is evaluated as <code>(a || b) &amp;&amp; c</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="ternary-operator"></a><a href="#ternary-operator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ternary operator</h2>
+<p>The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of <a href="/docs/ja/Concepts/branching.html#ifelseend-if">If…Else</a> statements.</p>
+<p>It takes three operands in the following order:</p>
+<ul>
+<li>a condition followed by a question mark (?)</li>
+<li>an expression to execute if the condition is <a href="#truthy-and-falsy">truthy</a>, followed by a colon (:)</li>
+<li>an expression to execute if the condition is <a href="#truthy-and-falsy">falsy</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="シンタックス"></a><a href="#シンタックス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>シンタックス</h3>
+<p>シンタックスは次のとおりです:</p>
+<p><code>condition ? exprIfTruthy : exprIfFalsy</code></p>
+<blockquote>
+<p>Since the <a href="https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html">token syntax</a> uses colons, we recommend inserting a space after the colon <code>:</code> or enclosing tokens using parentheses to avoid any conflicts.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="例題-4"></a><a href="#例題-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h3>
+<h4><a class="anchor" aria-hidden="true" id="a-simple-example"></a><a href="#a-simple-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A simple example</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$age </span>: Integer<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$beverage </span>: Text
+
+<span class="hljs-variable">$age</span>:=<span class="hljs-number">26</span>
+<span class="hljs-variable">$beverage</span>:=(<span class="hljs-variable">$age</span>&gt;=<span class="hljs-number">21</span>) ? <span class="hljs-string">"Beer"</span> : <span class="hljs-string">"Juice"</span>
+
+<span class="hljs-function">ALERT</span>(<span class="hljs-variable">$beverage</span>) <span class="hljs-comment">// "Beer"</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="handling-data-from-a-table"></a><a href="#handling-data-from-a-table" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling data from a table</h4>
+<p>This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$fullname </span>: Text
+
+<span class="hljs-comment">// If one of the names is missing, store the one that exists, otherwise store an empty string.</span>
+<span class="hljs-variable">$fullname</span>:=(<span class="hljs-variable">$person</span>.firstname &amp;&amp; <span class="hljs-variable">$person</span>.lastname)<span class="hljs-function"> ? </span>(<span class="hljs-variable">$person</span>.firstname+<span class="hljs-string">" "</span>+<span class="hljs-variable">$person</span>.lastname) : (<span class="hljs-variable">$person</span>.lastname || <span class="hljs-variable">$person</span>.firstname) || <span class="hljs-string">""</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="truthy-and-falsy"></a><a href="#truthy-and-falsy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Truthy and falsy</h2>
+<p>As well as a type, each value also has an inherent Boolean value, generally known as either <strong>truthy</strong> or <strong>falsy</strong>.</p>
+<p>The following values are <strong>falsy</strong>:</p>
+<ul>
+<li>false</li>
+<li>Null</li>
+<li>未定義</li>
+<li>Null object</li>
+<li>Null collection</li>
+<li>Null pointer</li>
+<li>Null picture</li>
+<li>Null date !00-00-00!</li>
+<li>&quot;&quot; - Empty strings</li>
+<li>[] - Empty collections</li>
+<li>{} - Empty objects</li>
+</ul>
+<p>All other values are considered <strong>truthy</strong>, including:</p>
+<ul>
+<li>0 - numeric zero (Integer or otherwise)</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/Concepts/quick-tour.html"><span class="arrow-prev">← </span><span>概要</span></a><a class="docs-next button" href="/docs/ja/Concepts/data-types.html"><span>データタイプの概要</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#用語">用語</a></li><li><a href="#代入">代入</a></li><li><a href="#basic-operators">Basic operators</a></li><li><a href="#compound-assignment-operators">Compound assignment operators</a></li><li><a href="#short-circuit-operators">Short-circuit operators</a><ul class="toc-headings"><li><a href="#short-circuit-and-operator-">Short-circuit AND operator (&amp;&amp;)</a></li><li><a href="#short-circuit-or-operator-">Short-circuit OR operator (||)</a></li><li><a href="#優先順位">優先順位</a></li></ul></li><li><a href="#ternary-operator">Ternary operator</a><ul class="toc-headings"><li><a href="#シンタックス">シンタックス</a></li><li><a href="#例題-4">例題</a></li></ul></li><li><a href="#truthy-and-falsy">Truthy and falsy</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:ja","version:19 R4 BETA"]}
+              });
+            </script></body></html>
