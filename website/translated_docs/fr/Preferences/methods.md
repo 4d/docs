@@ -7,71 +7,71 @@ Cette page contient des paramètres permettant de définir l’interface, l’af
 
 ## Thèmes
 
-This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
+Cette page permet de sélectionner, de créer ou de configurer les thèmes de l'éditeur de méthode. Un thème définit la police, la taille de la police, les couleurs et les styles des éléments de l'éditeur de code.
 
 ![](assets/en/Preferences/themes.png)
 
-### Theme list
+### Liste des thèmes
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
+Sélectionnez, dans cette liste, le thème à appliquer à l'éditeur de code. Tous les thèmes disponibles sont affichés, y compris les thèmes personnalisés (le cas échéant). 4D propose deux thèmes par défaut :
 
 *   **Default Light Theme**
 *   **Default Dark Theme**
 
-> Default themes cannot be modified or deleted.
+> Les thèmes par défaut ne peuvent être ni modifiés ni supprimés.
 
-A **myTheme** theme is automatically added if you already customized method editor styles in previous 4D releases.
+Un thème **myTheme** est automatiquement ajouté si vous avez déjà personnalisé les styles de l'éditeur de méthodes dans les précédentes versions de 4D.
 
-### Creating custom themes
+### Création de thèmes personnalisés
 
-You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+Vous pouvez créer des thèmes à personnaliser entièrement. Pour créer un thème, sélectionnez un thème existant et cliquez sur le **+** en bas de la liste des thèmes. Vous pouvez également ajouter des thèmes personnalisés en copiant les fichiers de thème dans le dossier `4D Editor Themes` (voir ci-dessous).
 
-### Custom theme files
+### Fichiers de thèmes personnalisés
 
-Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+Chaque thème personnalisé est stocké dans un seul fichier JSON nommé *themeName.json*. Les fichiers JSON des thèmes personnalisés sont stockés dans le dossier `4D Editor Themes` situé au même niveau que le [fichier de préférences](overview.md#storage) de 4D.
 
-If key values are not defined in a custom theme, they default to the values from the *Default Light Theme*. If a JSON theme file is invalid, the *Default Light Theme* is loaded and an error is generated.
+Si des valeurs clés ne sont pas définies dans un thème personnalisé, elles prennent par défaut les valeurs du thème *Default Light Theme*. Si un fichier de thème JSON est invalide, le thème *Default Light Theme* est chargé et une erreur est générée.
 
-> When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
+> Lorsqu'un fichier de thème est modifié par un éditeur externe, 4D doit être redémarré pour prendre en compte la ou les modifications.
 
-## Theme definition
+## Définition d'un thème
 
-Defining a theme means:
+Définir un thème signifie :
 
-- setting a global font and font size for the whole code editor,
-- assigning specific styles and colors to each 4D language element (fields, tables, variables, parameters, SQL, etc.), SQL language element (keywords, functions, etc.), and color backgrounds.
+- définir une police et une taille de police pour l'ensemble de l'éditeur de code,
+- attribuer des styles et des couleurs spécifiques à chaque élément de langage 4D (champs, tables, variables, paramètres, SQL, etc.), à chaque élément de langage SQL (mots-clés, fonctions, etc.) et aux fonds de couleur.
 
-Combining different colors and styles is particularly useful for code maintenance purposes.
+La combinaison de couleurs et de styles différents est particulièrement utile à des fins de maintenance du code.
 
-### Font and Font size
+### Police et taille de police
 
-The **font** and **font size** menus allows you to select the font name and size used in the Method editor entry area for all categories.
+Les menus **Police** et **Taille de la police** vous permettent de sélectionner le nom et la taille de la police utilisés dans la zone de saisie de l'éditeur de méthode pour toutes les catégories.
 
-### 4D Language and SQL Language
+### Langage 4D et langage SQL
 
-You can set different font styles and colors (font color or background color) for each type of language element. You can select the element(s) to customize in the Category list.
+Vous pouvez définir différents styles et couleurs de police (couleur de police ou couleur de fond) pour chaque type d'élément de langage. Vous pouvez sélectionner le ou les éléments à personnaliser dans la liste Catégorie.
 
 
-### Other Styles
+### Autres styles
 
-These options configure the various colors used in the Method editor and debugger interfaces.
+Ces options permettent de configurer les différentes couleurs utilisées dans les interfaces de l'éditeur de méthode et du débogueur.
 
 ![](assets/en/Preferences/categories.png)
 
 
-|                                                   | Description                                                                                                                                                              |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Background color**                              | Background color of Method editor window.                                                                                                                                |
-| **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Cursor line background color**                  | Background color of line containing the cursor.                                                                                                                          |
-| **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
-| **Highlight of the found words**                  | Highlight color of words found in a search.                                                                                                                              |
-| **Highlight of the parentheses**                  | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
-| **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Selection back color**                          | Background color of selection.                                                                                                                                           |
-| **Suggested text**                                | Color of autocomplete text suggested by the Method editor.                                                                                                               |
+|                                                                | Description                                                                                                                                                                                                   |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Background color**                                           | Couleur de fond de la fenêtre de l'éditeur de la méthode.                                                                                                                                                     |
+| **Bordure de la ligne en cours d'exécution dans le débogueur** | Couleur de la bordure entourant la ligne en cours d'exécution dans le débogueur lorsque l'option "Surligner la ligne en cours d'exécution" est activée dans la page [Options](#options).                      |
+| **Couleur de fond de la ligne du curseur**                     | Couleur de fond de la ligne contenant le curseur.                                                                                                                                                             |
+| **Couleur de fond de la ligne en cours d'exécution**           | Couleur de fond de la ligne en cours d'exécution dans le débogueur.                                                                                                                                           |
+| **Mise en évidence des mots trouvés**                          | Couleur de surlignage des mots trouvés à l'issue d'une recherche.                                                                                                                                             |
+| **Mise en évidence des parenthèses**                           | Couleur de mise en évidence des parenthèses correspondantes (utilisée lorsque des paires de parenthèses sont signalées par la mise en évidence, voir [Options](#options)).                                    |
+| **Mise en évidence des blocs**                                 | Couleur de mise en évidence des blocs logiques sélectionnés lorsque l'option "Mise en évidence des blocs logiques" est activée dans les [Options](#options).                                                  |
+| **Mise en évidence de la même variable ou du même champ**      | Couleur de mise en évidence pour les autres occurrences de la même variable ou du même texte de champ lorsque l'option "Mise en évidence des variables et du texte" est activée dans les [Options](#options). |
+| **Mise en évidence de la ligne courante dans le débogueur**    | Couleur de mise en évidence de la ligne courante dans le débogueur lorsque l'option "Surlignage de la ligne en cours" est activée dans les [Options](#options).                                               |
+| **Couleur de fond de la sélection**                            | Couleur de fond de la sélection.                                                                                                                                                                              |
+| **Texte suggéré**                                              | Couleur du texte de l'autocomplétion suggéré par l'éditeur de méthode.                                                                                                                                        |
 
 
 

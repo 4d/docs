@@ -62,9 +62,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 <!-- REF FolderClass.Folder.Params -->
 | 引数             | タイプ       |    | 説明                                             |
 | -------------- | --------- |:--:| ---------------------------------------------- |
-| path           | テキスト      | -> | フォルダーパス                                        |
-| folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
-| pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| path           | Text      | -> | フォルダーパス                                        |
+| folderConstant | Integer   | -> | 4Dフォルダー定数                                      |
+| pathType       | Integer   | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
 | 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                  |
 <!-- END REF -->
@@ -147,9 +147,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| 引数  | タイプ |    | 説明                                     |
-| --- | --- | -- | -------------------------------------- |
-| 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
+| 引数  | タイプ     |    | 説明                                     |
+| --- | ------- | -- | -------------------------------------- |
+| 戻り値 | Boolean | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
 <!-- END REF -->
 
 
@@ -211,8 +211,8 @@ End if
 | 引数                | タイプ       |    | 説明                       |
 | ----------------- | --------- | -- | ------------------------ |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
-| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称       |
-| aliasType         | 整数        | -> | エイリアスリンクのタイプ             |
+| aliasName         | Text      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | Integer   | -> | エイリアスリンクのタイプ             |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照  |
 <!-- END REF -->
 
@@ -270,9 +270,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| 引数     | タイプ |    | 説明            |
-| ------ | --- | -- | ------------- |
-| option | 整数  | -> | フォルダー削除のオプション |
+| 引数     | タイプ     |    | 説明            |
+| ------ | ------- | -- | ------------- |
+| option | Integer | -> | フォルダー削除のオプション |
 <!-- END REF -->
 
 
@@ -387,7 +387,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 | 引数                | タイプ       |    | 説明               |
 | ----------------- | --------- | -- | ---------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー          |
-| newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称 |
+| newName           | Text      | -> | 移動先でのフォルダーの完全な名称 |
 | 戻り値               | 4D.Folder | <- | 移動したフォルダー        |
 <!-- END REF -->
 
@@ -456,7 +456,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!--REF #FolderClass.rename().Params -->
 | 引数      | タイプ       |    | 説明             |
 | ------- | --------- | -- | -------------- |
-| newName | テキスト      | -> | フォルダーの新しい完全な名称 |
+| newName | Text      | -> | フォルダーの新しい完全な名称 |
 | 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー   |
 <!-- END REF -->
 

@@ -1353,7 +1353,7 @@ Retourne :
     "employerID": 20,
     "photo": "[object Picture]",
     "extra": null,
-    "employer": { // relatedEntity extracted with simple form
+    "employer": { // relatedEntity extraite sous forme simple
         "__KEY": 20
     },
     "manager": {

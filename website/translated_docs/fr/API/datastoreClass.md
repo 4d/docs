@@ -60,12 +60,7 @@ Vous pouvez également obtenir une référence sur un datastore distant ouvert e
 
 Si aucun datastore nommé *localID* n'est trouvé, la commande renvoie **Null**.
 
-L'utilisation de `ds` nécessite que la base de données cible soit conforme à ORDA. Les règles suivantes s'appliquent :
-
-*   Un datastore ne référence que les tables avec une seule clé primaire. Les tables sans clé primaire ou avec une clé primaire composite ne sont pas référencées.
-*   Les attributs de type BLOB ne sont pas gérés via le datastore.
-
-
+Les objets disponibles dans le `cs.Datastore` sont mappés à partir de la base de données cible en respectant les [règles générales d'ORDA](Concepts/dsMapping.md#general-rules).
 
 #### Exemple 1
 
@@ -137,6 +132,8 @@ La base de données *connectionInfo* 4D doit être disponible en tant que datast
 Si aucune base de données correspondante n'est trouvée, `Open datastore` retourne **Null**.
 
 *localID* est un alias local de la session ouverte sur le datastore distant. Si *localID* existe déjà dans l'application, il est utilisé. Sinon, une nouvelle session *localID* est créée lors de l’utilisation de l’objet datastore.
+
+Les objets disponibles dans le `cs.Datastore` sont mappés à partir de la base de données cible en respectant les [règles générales d'ORDA](Concepts/dsMapping.md#general-rules).
 
 Une fois la session ouverte, les instructions suivantes deviennent équivalentes et renvoient une référence sur le même objet datastore :
 

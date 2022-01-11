@@ -17,6 +17,9 @@
       "Admin/licenses": {
         "title": "Managing 4D Licenses"
       },
+      "Admin/server-admin": {
+        "title": "4D Server Administration Window"
+      },
       "Admin/tls": {
         "title": "TLS Protocol (HTTPS)"
       },
@@ -119,6 +122,9 @@
       "Backup/settings": {
         "title": "Backup Settings"
       },
+      "code-editor/dropdown": {
+        "title": "Navigation dropdown"
+      },
       "Concepts/about": {
         "title": "About the 4D Language"
       },
@@ -220,7 +226,7 @@
         "title": "Debugging from remote machines"
       },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Build Application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -718,6 +724,9 @@
       "Project/compiler": {
         "title": "Compilation"
       },
+      "Project/components": {
+        "title": "4D Components Library"
+      },
       "Project/creating": {
         "title": "Working with a project"
       },
@@ -881,6 +890,7 @@
       "4D Language Concepts": "4D Language Concepts",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
+      "Code Editor": "Code Editor",
       "Debugging": "Debugging",
       "Preferences": "Preferences",
       "Administration": "Administration",
@@ -897,7 +907,7 @@
       "Form Object Properties": "Form Object Properties",
       "Form Events": "Form Events",
       "Menus": "Menus",
-      "Build application": "Build application"
+      "Build Application": "Build Application"
     }
   },
   "pages-strings": {
@@ -921,16 +931,19 @@
     "License Management|no description given": "License Management",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
+    "4D Server Administration Window|no description given": "4D Server Administration Window",
+    "4D Components Library|no description given": "4D Components Library",
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol (HTTPS)|no description given": "TLS Protocol (HTTPS)",
     "Debugging|no description given": "Debugging",
+    "Code Editor|no description given": "Code Editor",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",
     "Description of log files|no description given": "Description of log files",
     "Command Line Interface|no description given": "Command Line Interface",
     "Preferences|no description given": "Preferences",
-    "https://doc.4d.com/4Dv19R2/4D/19-R2/4D-Language-Reference.100-5493454.en.html|no description given": "https://doc.4d.com/4Dv19R2/4D/19-R2/4D-Language-Reference.100-5493454.en.html",
+    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",

@@ -164,10 +164,10 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| 引数        | タイプ  |    | 説明                                                |
-| --------- | ---- |:--:| ------------------------------------------------- |
-| privilege | テキスト | <- | 確認するアクセス権の名称                                      |
-| 戻り値       | ブール  | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
+| 引数        | タイプ     |    | 説明                                                |
+| --------- | ------- |:--:| ------------------------------------------------- |
+| privilege | Text    | <- | 確認するアクセス権の名称                                      |
+| 戻り値       | Boolean | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false |
 <!-- END REF -->
 
 
@@ -247,9 +247,9 @@ End if
 **.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.isGuest().Params -->
-| 引数  | タイプ |    | 説明                            |
-| --- | --- |:--:| ----------------------------- |
-| 戻り値 | ブール | <- | ゲストセッションの場合は true、それ以外は false |
+| 引数  | タイプ     |    | 説明                            |
+| --- | ------- |:--:| ----------------------------- |
+| 戻り値 | Boolean | <- | ゲストセッションの場合は true、それ以外は false |
 <!-- END REF -->
 
 #### 説明
@@ -285,11 +285,11 @@ End if
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| 引数         | タイプ    |    | 説明                                          |
-| ---------- | ------ |:--:| ------------------------------------------- |
-| privilege  | テキスト   | -> | アクセス権の名称                                    |
-| privileges | コレクション | -> | アクセス権の名称のコレクション                             |
-| settings   | オブジェクト | -> | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
+| 引数         | タイプ        |    | 説明                                          |
+| ---------- | ---------- |:--:| ------------------------------------------- |
+| privilege  | Text       | -> | アクセス権の名称                                    |
+| privileges | Collection | -> | アクセス権の名称のコレクション                             |
+| settings   | Object     | -> | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
 <!-- END REF -->
 
 #### 説明
@@ -305,7 +305,7 @@ End if
 | プロパティ      | タイプ                 | 説明                                                 |
 | ---------- | ------------------- | -------------------------------------------------- |
 | privileges | Text または Collection | <li>アクセス権名の文字列</li><li>アクセス権名のコレクション</li> |
-| userName   | テキスト                | (任意) セッションと紐づけるユーザー名                               |
+| userName   | Text                | (任意) セッションと紐づけるユーザー名                               |
 
 無効なアクセス権名を含む場合、`privileges` プロパティは無視されます。
 

@@ -1,7 +1,7 @@
 {
   "docs": {
     "Getting Started":["GettingStarted/installation"],
-    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler"],
+    "Project Management":["Project/overview","Project/creating","Project/architecture","Project/documentation","Project/compiler","Project/components"],
 	"4D Language Concepts":
 	["Concepts/about","Concepts/quick-tour",
       {
@@ -52,7 +52,7 @@
 	"API/ZipFolderClass"
 	],
   "Debugging":["Debugging/basics","Debugging/debugger","Debugging/breakpoints", "Debugging/debugging-remote"],
-
+ 
   "Preferences":["Preferences/overview","Preferences/general","Preferences/structure","Preferences/forms","Preferences/methods","Preferences/shortcuts"],
   "Administration":["Admin/webAdmin","Admin/dataExplorer","Admin/server-admin","Admin/licenses","Admin/tls","Admin/cli","Admin/debugLogFiles"],
    "Access Rights":["Users/overview","Users/editing"],
@@ -211,7 +211,7 @@
 			"Events/onVpReady",
 			"Events/onWindowOpeningDenied"],
   "Menus":["Menus/overview","Menus/creating","Menus/properties","Menus/bars","Menus/sdi"],
-   "Build application":["Desktop/building"]
+   "Build Application":["Desktop/building"]
 
 
   }

@@ -61,7 +61,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Params -->
 | 引数       | タイプ          |    | 説明                                               |
 | -------- | ------------ | -- | ------------------------------------------------ |
-| settings | オブジェクト       | -> | キーペアを生成・ロードするための設定                               |
+| settings | Object       | -> | キーペアを生成・ロードするための設定                               |
 | result   | 4D.CryptoKey | <- | 暗号化キーペアをカプセル化したオブジェクト|<!-- END REF -->
 
 
@@ -74,10 +74,10 @@ ASSERT($status.success)
 
 | プロパティ           | タイプ     | 説明                                 |
 | --------------- | ------- | ---------------------------------- |
-| [curve](#curve) | text    | ECDSA 曲線名                          |
-| [pem](#pem)     | text    | ロードする PEM 形式の暗号化キー                 |
+| [curve](#curve) | テキスト    | ECDSA 曲線名                          |
+| [pem](#pem)     | テキスト    | ロードする PEM 形式の暗号化キー                 |
 | [size](#size)   | integer | RSA キーのサイズ (ビット単位)                 |
-| [type](#type)   | text    | キーのタイプ: "RSA", "ECDSA", "PEM"</li> |
+| [type](#type)   | テキスト    | キーのタイプ: "RSA", "ECDSA", "PEM"</li> |
 
 
 #### *CryptoKey*
@@ -119,9 +119,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.decrypt().Params -->
 | 引数      | タイプ    |    | 説明                                                |
 | ------- | ------ | -- | ------------------------------------------------- |
-| message | テキスト   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
-| options | オブジェクト | -> | デコーディングオプション                                      |
-| 戻り値     | オブジェクト | <- | ステータス                                             |
+| message | Text   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
+| options | Object | -> | デコーディングオプション                                      |
+| 戻り値     | Object | <- | ステータス                                             |
 <!-- END REF -->
 
 
@@ -133,9 +133,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | プロパティ             | タイプ  | 説明                                                                                         |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------ |
-| hash              | text | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。                                       |
-| encodingEncrypted | text | 復号するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"   |
-| encodingDecrypted | text | バイナリの復号メッセージを文字列に変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
+| hash              | テキスト | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。                                       |
+| encodingEncrypted | テキスト | 復号するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"   |
+| encodingDecrypted | テキスト | バイナリの復号メッセージを文字列に変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
 
 #### *戻り値*
@@ -145,7 +145,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | プロパティ   | タイプ        | 説明                                                |
 | ------- | ---------- | ------------------------------------------------- |
 | success | boolean    | メッセージの復号に成功した場合は true                             |
-| result  | text       | options.encodingDecrypted を使って復号およびデコードされたメッセージ   |
+| result  | テキスト       | options.encodingDecrypted を使って復号およびデコードされたメッセージ   |
 | errors  | collection | `success` が `false` の場合、エラーのコレクションが含まれている場合があります。 |
 
 
@@ -168,9 +168,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.encrypt().Params -->
 | 引数      | タイプ    |    | 説明                                                  |
 | ------- | ------ | -- | --------------------------------------------------- |
-| message | テキスト   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
-| options | オブジェクト | -> | エンコーディングオプション                                       |
-| 戻り値     | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ   |
+| message | Text   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
+| options | Object | -> | エンコーディングオプション                                       |
+| 戻り値     | Text   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ   |
 <!-- END REF -->
 
 `.encrypt()` 関数は、 <!-- REF #CryptoKey.encrypt().Summary -->**公開** 鍵を使って *message* を暗号化します<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
@@ -181,9 +181,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | プロパティ             | タイプ  | 説明                                                                                                |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------------- |
-| hash              | text | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。                                              |
-| encodingEncrypted | text | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"               |
-| encodingDecrypted | text | 暗号化するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
+| hash              | テキスト | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。                                              |
+| encodingEncrypted | テキスト | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"               |
+| encodingDecrypted | テキスト | 暗号化するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
 
 #### *戻り値*
@@ -210,7 +210,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 | 引数  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
-| 戻り値 | テキスト | <- | PEM 形式の秘密鍵 |
+| 戻り値 | Text | <- | PEM 形式の秘密鍵 |
 <!-- END REF -->
 
 `.getPrivateKey()` 関数は、  <!-- REF #CryptoKey.getPrivateKey().Summary -->`CryptoKey` オブジェクトの秘密鍵を返します<!-- END REF --> (PEM形式)。無い場合は空の文字列を返します。
@@ -237,7 +237,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPublicKey().Params -->
 | 引数  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
-| 戻り値 | テキスト | <- | PEM 形式の公開鍵 |
+| 戻り値 | Text | <- | PEM 形式の公開鍵 |
 <!-- END REF -->
 
 
@@ -275,9 +275,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | v18 R4 | 追加 |
 </details><!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF --><!-- REF #CryptoKey.sign().Params -->| 引数      | タイプ    |    | 説明                                              |
 | ------- | ------ | -- | ----------------------------------------------- |
-| message | テキスト   | -> | 署名をするメッセージ                                      |
-| options | オブジェクト | -> | 署名オプション                                         |
-| 戻り値     | テキスト   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |<!-- END REF -->`.sign()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.sign().Summary -->utf8 形式の *message* 文字列を署名します
+| message | Text   | -> | 署名をするメッセージ                                      |
+| options | Object | -> | 署名オプション                                         |
+| 戻り値     | Text   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |<!-- END REF -->`.sign()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.sign().Summary -->utf8 形式の *message* 文字列を署名します
 <!-- END REF -->
 
 
@@ -289,10 +289,10 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 | プロパティ             | タイプ     | 説明                                                                                                                           |
 | ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
-| encodingEncrypted | text    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                          |
+| hash              | テキスト    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
+| encodingEncrypted | テキスト    | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                          |
 | pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                           |
-| encoding          | text    | 戻り値の署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                             |
+| encoding          | テキスト    | 戻り値の署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                             |
 
 
 #### *戻り値*
@@ -313,10 +313,10 @@ utf8 形式の *message* 文字列。<!-- END REF --><!-- REF CryptoKey.size -->
 | v18 R4 | 追加 |
 </details><!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF --><!-- REF #CryptoKey.verify().Params -->| 引数        | タイプ    |    | 説明                                                          |
 | --------- | ------ | -- | ----------------------------------------------------------- |
-| message   | テキスト   | -> | 署名生成時に使われたメッセージ文字列                                          |
-| signature | テキスト   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
-| options   | オブジェクト | -> | 署名オプション                                                     |
-| 戻り値       | オブジェクト | <- | 検証ステータス                                                     |<!-- END REF -->`.verify()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.verify().Summary -->utf8 形式の message 文字列の署名を検証します
+| message   | Text   | -> | 署名生成時に使われたメッセージ文字列                                          |
+| signature | Text   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
+| options   | Object | -> | 署名オプション                                                     |
+| 戻り値       | Object | <- | 検証ステータス                                                     |<!-- END REF -->`.verify()` 関数は、`CryptoKey` オブジェクトキーおよび指定された *options* を使って、<!-- REF #CryptoKey.verify().Summary -->utf8 形式の message 文字列の署名を検証します
 <!-- END REF -->
 
 。
@@ -328,9 +328,9 @@ utf8 形式の *message* 文字列。<!-- END REF --><!-- REF CryptoKey.size -->
 
 | プロパティ    | タイプ     | 説明                                                                                                                           |
 | -------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| hash     | text    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
+| hash     | テキスト    | 使用する Digest アルゴリズム。 例: "SHA256", "SHA384", "SHA512"。 JWT の生成に使われた場合、ハッシュサイズは PS@, ES@, RS@, または PS@ のアルゴリズムサイズと同じでなくてはなりません。 |
 | pss      | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                           |
-| encoding | text    | 署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                 |
+| encoding | テキスト    | 署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                 |
 
 
 #### *戻り値*

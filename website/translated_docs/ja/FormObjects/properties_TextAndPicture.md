@@ -34,7 +34,7 @@ title: テキスト、ピクチャー
 
 |  名称   | データタイプ | とりうる値                                                                                                                                                              |
 |:-----:|:------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |  テキスト  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### 対象オブジェクト
@@ -150,9 +150,9 @@ title: テキスト、ピクチャー
 
 #### JSON 文法
 
-| 名称   | データタイプ  | とりうる値                           |
-| ---- | ------- | ------------------------------- |
-| icon | picture | POSIX シンタックスの相対パス、またはファイルシステムパス |
+| 名称   | データタイプ | とりうる値                           |
+| ---- | ------ | ------------------------------- |
+| icon | ピクチャー  | POSIX シンタックスの相対パス、またはファイルシステムパス |
 
 #### 対象オブジェクト
 

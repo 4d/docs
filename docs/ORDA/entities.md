@@ -102,9 +102,10 @@ For example, to set a storage attribute:
  $entity:=ds.Employee.get(1) //get employee attribute with ID 1
  $name:=$entity.lastname //get the employee name, e.g. "Smith"
  $entity.lastname:="Jones" //set the employee name
+ $entity.save() //save the modifications
 ```
 
->Pictures attributes cannot be assigned directly with a given path in an entity.
+> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
 
 Accessing a related attribute depends on the attribute kind. For example, with the following structure:
 

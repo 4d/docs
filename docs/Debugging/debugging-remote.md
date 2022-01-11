@@ -33,11 +33,13 @@ Note that:
 * The code executed in the `On Server Startup Database` Method cannot be debugged remotely. It can only be debugged on the server side
 * If no debugger is attached, the running code is not stopped by debugging commands
 
-## Attaching the debugger to a remote 4D client
 
-By default, the debugger is not attached to a remote 4D client:
-* If 4D Server is not running headless, the debugger is attached to the server
-* If 4D Server is running headless, no debugger is attached
+## Attaching the debugger
+
+By default when you start an application:
+
+* if 4D Server is not running headless, the debugger is attached to the server,
+* if 4D Server is running headless, no debugger is attached.
 
 You can attach the debugger to any remote 4D client allowed to connect to the 4D Server application. 
 
@@ -45,10 +47,8 @@ You can attach the debugger to any remote 4D client allowed to connect to the 4D
 
 To attach the debugger to a remote 4D client:
 
-* In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines.
-    - This step is useless if the 4D Server is running headless. 
-    - You can attach the debugger back to the server by selecting **Edit** > **Attach debugger** (if not attached to a remote 4D client, see [Rejected attachment requests](#rejected-attachment-requests)).
-* In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
+1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless). 
+2. In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
 
 If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the menu command becomes **Detach Remote Debugger**. 
 
@@ -56,7 +56,13 @@ The debugger is then attached to the remote 4D client:
 * until the end of the user session
 * until you select `Detach Remote Debugger`
 
-## Attach Debugger or Remote Debugger at Startup
+To attach the debugger back to the server:
+
+1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
+2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
+
+
+## Attaching debugger at startup
 
 4D allows you to automatically attach the debugger to a remote 4D client or the server at startup:
 
@@ -70,7 +76,7 @@ The debugger is then attached to the remote 4D client:
 
 ## Rejected attachment requests
 
-While the debugger is already attached to a remote 4D client, or to 4D Server (default), no other machine can attach the debugger. 
+While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger. 
 
 If a machine tries to attach the debugger while it is already attached, the attachment is rejected and a dialog box appears:
 
@@ -80,5 +86,5 @@ If a machine tries to attach the debugger while it is already attached, the atta
 
 Attaching the debugger in this case requires that:
 
-* the attached debugger is detached from the remote 4D client using the **Detach remote debugger** menu command or from the server using the **Detach debugger** command
-* the attached remote 4D client session is closed
+* the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
+* the attached remote 4D client session is closed.

@@ -1696,20 +1696,20 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 **SINCE date** <date>: Messages dont la date interne est égale ou postérieure à la date spécifiée.  
 **SENTBEFORE date** <date>: Messages dont l’en-tête Date est antérieur à la date spécifiée.  
 **SENTON date** <date>: Messages dont l’en-tête Date est égal à la date spécifiée.  
-**SENTSINCE** <date>: Messages whose Date header is within or later than the specified date.  
-**TO** <string>: Messages that contain the specified string in the TO header.  
-**FROM** <string>: Messages that contain the specified string in the FROM header.  
-**CC** <string>: Messages that contain the specified string in the CC header.  
-**BCC** <string>: Messages that contain the specified string in the BCC header.  
-**SUBJECT** <string>: Messages that contain the specified string in the Subject header.  
-**BODY** <string>: Messages that contain the specified string in the message body.  
-**TEXT** <string>: Messages that contain the specified string in the header or in the message body.  
-**HEADER** <field-name> <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-**UID** <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.  
-**LARGER** <n>: Messages with a size larger than the specified number of bytes.  
-**SMALLER** <n>: Messages with a size smaller than the specified number of bytes.  
-**NOT** <search-key>: Messages that do not match the specified search key.  
-**OU** <search-key1> <search-key2>: Messages that match either search key.  
+**SENTSINCE** <date>: Messages dont l’en-tête Date est égal ou postérieur à la date spécifiée.  
+**TO** <string>: Messages contenant la chaîne spécifiée dans l’en-tête Destinataire.  
+**FROM** <string>: Messages contenant la chaîne spécifiée dans l’en-tête Emetteur.  
+**CC** <string>: Messages contenant la chaîne spécifiée dans l’en-tête CC.  
+**BCC** <string>: Messages contenant la chaîne spécifiée dans l’en-tête BCC.  
+**SUBJECT** <string>: Messages contenant la chaîne spécifiée dans l’en-tête Objet.  
+**BODY** <string>: Messages dont le corps contient la chaîne spécifiée.  
+**TEXT** <string>: Messages contenant la chaîne spécifiée dans l’en-tête ou le corps.  
+**HEADER** <field-name> <string>: Messages dont l’en-tête contient le champ défini et dont ce champ contient la chaîne définie.  
+**UID** <message UID>: Messages dont le numéro unique correspond à la valeur spécifiée.  
+**LARGER** <n>: Messages dont la taille en octets est supérieure à la taille spécifiée.  
+**SMALLER** <n>: Messages dont la taille en octets est inférieure à la taille spécifiée.  
+**NOT** <search-key>: Messages ne correspondant pas au critère spécifié.  
+**OR** <search-key1> <search-key2>: Messages correspondant au premier ou au deuxième critère spécifié.  
 
 
 <!-- END REF -->

@@ -98,8 +98,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 <!-- REF #EntityClass.clone().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|New entity referencing the record	
-|
+|Result|4D.Entity|<-|New entity referencing the record|
 <!-- END REF -->
 
 

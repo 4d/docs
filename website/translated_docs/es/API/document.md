@@ -575,7 +575,7 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 
 La función `.getIcon()` devuelve <!-- REF #document.getIcon().Summary -->el icono del archivo<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). If you pass 0 or omit this parameter, the "large icon" version is returned.
+El parámetro opcional *size* especifica las dimensiones en píxeles del icono devuelto. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
 Si el archivo no existe en el disco, se devuelve un icono vacío por defecto.
 

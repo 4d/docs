@@ -60,12 +60,7 @@ También puede obtener una referencia en un datastore remoto abierto pasando su 
 
 Si no se encuentra ningún almacén de datos *localID*, el comando devuelve **Null**.
 
-El uso de `ds` requiere que la base de datos de destino sea compatible con ORDA, como se especifica en la sección **Requisitos previos de ORDA**. Se aplican las siguientes reglas:
-
-*   Un datastore sólo hace referencia a las tablas con una sola llave primaria. Las tablas sin llave primaria o con llaves primarias compuestas no se referencian.
-*   Los atributos de tipo BLOB no se gestionan en el almacén de datos.
-
-
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 #### Ejemplo 1
 
@@ -137,6 +132,8 @@ La base de datos *connectionInfo* 4D debe estar disponible como almacén de dato
 Si no se encuentra ninguna base de datos coincidente, `Open datastore` devuelve **Null**.
 
 *localID* es un alias local para la sesión abierta en el almacén de datos remoto. Si *localID* ya existe en la aplicación, se utiliza. En caso contrario, se crea una nueva sesión *localID* cuando se utiliza el objeto datastore.
+
+Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelven una referencia sobre el mismo objeto datastore:
 
