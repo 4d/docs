@@ -23,9 +23,9 @@ title: On Double Clicked
 | プロパティ       | タイプ    | 説明                  |
 | ----------- | ------ | ------------------- |
 | code        | 倍長整数   | 13                  |
-| description | text   | "On Double Clicked" |
-| objectName  | text   | 4D View Pro エリア名    |
-| sheetName   | text   | イベントが発生したシート名       |
+| description | テキスト   | "On Double Clicked" |
+| objectName  | テキスト   | 4D View Pro エリア名    |
+| sheetName   | テキスト   | イベントが発生したシート名       |
 | range       | object | セルのレンジ              |
 
 #### 例題

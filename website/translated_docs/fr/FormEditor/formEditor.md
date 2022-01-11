@@ -233,12 +233,12 @@ Grouper des objets n’a d’effet que dans l’éditeur de formulaires. Lors de
 Pour grouper les objets :
 
 1.  Sélectionnez les objets que vous souhaitez grouper.
-2.  Sélectionnez **Grouper** dans le menu Objets.<p>OU<p> Cliquez sur le bouton Grouper dans la barre d’outils de l’éditeur de formulaires :<p>![](assets/en/FormEditor/group.png)<p> 4D matérialise les bordures du groupe avec des poignées. Les objets du groupe ne sont plus marqués séparément par des poignées. Désormais, lorsque vous modifiez le groupe d’objets, vous modifiez tous les objets qui le composent.
+2.  Sélectionnez **Grouper** dans le menu Objets.<p>OR<p> Cliquez sur le bouton Grouper dans la barre d’outils de l’éditeur de formulaires :<p>![](assets/en/FormEditor/group.png)<p> 4D matérialise les bordures du groupe avec des poignées. Les objets du groupe ne sont plus marqués séparément par des poignées. Désormais, lorsque vous modifiez le groupe d’objets, vous modifiez tous les objets qui le composent.
 
 Pour dégrouper un groupe d’objets :
 
 1.  Sélectionnez le groupe que vous souhaitez dégrouper.
-2.  Choisissez **Dégrouper** dans le menu **Objets**.<p>OU<p>Sélectionnez la commande **Dégrouper** (menu du bouton **Grouper**) dans la barre d’outils de l’éditeur de formulaires.<p>Si la commande **Dégrouper** est désactivée, cela veut dire que l’objet sélectionné est déjà sous sa forme la plus simple.<p>4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
+2.  Choisissez **Dégrouper** dans le menu **Objets**.<p>OR<p>Sélectionnez la commande **Dégrouper** (menu du bouton **Grouper**) dans la barre d’outils de l’éditeur de formulaires.<p>Si la commande **Dégrouper** est désactivée, cela veut dire que l’objet sélectionné est déjà sous sa forme la plus simple.<p>4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
 
 
 ### Aligner des objets
@@ -303,7 +303,7 @@ Pour répartir directement une sélection d’objets (verticalement ou horizonta
 
 1.  Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2.  Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](assets/en/FormEditor/distributionTool.png)<p>OU<p>Choisissez la commande Répartir horizontalement ou Répartir verticalement dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l'éditeur.<p>4D répartit les objets par rapport à leurs centres, la plus grande distance entre deux objets contigus est utilisée comme distance de référence.
+2.  Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](assets/en/FormEditor/distributionTool.png)<p>OR<p>Choisissez la commande Répartir horizontalement ou Répartir verticalement dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l'éditeur.<p>4D répartit les objets par rapport à leurs centres, la plus grande distance entre deux objets contigus est utilisée comme distance de référence.
 
 Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :
 
@@ -695,7 +695,7 @@ Sélectionnez simplement la vue de destination, faites un clic droit puis sélec
 
 ![](assets/en/FormEditor/moveObject.png)
 
-OU
+OR
 
 Sélectionnez la vue de destination de la sélection et cliquez sur le bouton **Déplacer vers** en bas de la palette des vues :
 

@@ -490,17 +490,17 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 **.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
-| Parámetros | Tipo    |    | Descripción                          |
-| ---------- | ------- | -- | ------------------------------------ |
-| path       | Texto   | -> | Relative POSIX file pathname         |
-| Resultado  | 4D.File | <- | `File` object (null if invalid path) |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| path       | Texto   | -> | Ruta POSIX relativa                          |
+| Resultado  | 4D.File | <- | Objeto `File` (null si la ruta no es válida) |
 <!-- END REF -->
 
 #### Descripción
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+La función `.file()` <!-- REF #directory.file().Summary -->crea un objeto `File` en el objeto `Folder` y devuelve su referencia<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the file to return. The path will be evaluated from the parent folder as root.
+En *path*, pase una ruta relativa POSIX para designar el archivo a devolver. La ruta se evaluará a partir de la carpeta padre como raíz.
 
 **Valor devuelto**
 
@@ -538,10 +538,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Descripción
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+La función `.files()` devuelve <!-- REF #directory.files().Summary -->una colección de objetos `File` contenidos en la carpeta<!-- END REF -->.
 > Los alias o enlaces simbólicos no se resuelven.
 
-By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección los archivos del primer nivel de la carpeta, así como los archivos o carpetas invisibles. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
 | Constante             | Valor | Comentario                                                                             |
 | --------------------- | ----- | -------------------------------------------------------------------------------------- |
@@ -554,7 +554,7 @@ Colección de objetos `File`.
 
 #### Ejemplo 1
 
-You want to know if there are invisible files in the Database folder:
+Quiere saber si hay archivos invisibles en la carpeta de la base:
 
 ```4d
  var $all; $noInvisible : Collection
@@ -567,7 +567,7 @@ You want to know if there are invisible files in the Database folder:
 
 #### Ejemplo 2
 
-You want to get all files that are not invisible in the Documents folder:
+Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 
 ```4d
  var $recursive : Collection
@@ -591,17 +591,17 @@ You want to get all files that are not invisible in the Documents folder:
 **.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
-| Parámetros | Tipo      |    | Descripción                                    |
-| ---------- | --------- | -- | ---------------------------------------------- |
-| path       | Texto     | -> | Relative POSIX file pathname                   |
-| Resultado  | 4D.Folder | <- | Created folder object (null if invalid *path*) |
+| Parámetros | Tipo      |    | Descripción                                        |
+| ---------- | --------- | -- | -------------------------------------------------- |
+| path       | Texto     | -> | Ruta POSIX relativa                                |
+| Resultado  | 4D.Folder | <- | Objeto carpeta creado (null si *path*no es válido) |
 <!-- END REF -->
 
 #### Descripción
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+La función `.folder()` <!-- REF #directory.folder().Summary -->crea un objeto `Folder` dentro del objeto padre `Folder` y devuelve su referencia<!-- END REF -->.
 
-In *path*, pass a relative POSIX path to designate the folder to return. The path will be evaluated from the parent folder as root.
+En *path*, pase una ruta relativa POSIX para designar la carpeta a devolver. La ruta se evaluará a partir de la carpeta padre como raíz.
 
 **Valor devuelto**
 
@@ -639,9 +639,9 @@ Un objeto `Folder` o null si *path* no es válido.
 
 #### Descripción
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+La función `.folders()` <!-- REF #directory.folders().Summary -->devuelve una colección de objetos `Folder` contenidos en la carpeta padre<!-- END REF -->.
 
-By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
+Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección las carpetas del primer nivel de la carpeta. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
 | Constante             | Valor | Comentario                                                                             |
 | --------------------- | ----- | -------------------------------------------------------------------------------------- |
@@ -654,7 +654,7 @@ Colección de objetos `Folder`.
 
 #### Ejemplo
 
-You want the collection of all folders and subfolders of the database folder:
+Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta de la base:
 
 ```4d
  var $allFolders : Collection
@@ -687,15 +687,15 @@ You want the collection of all folders and subfolders of the database folder:
 
 #### Descripción
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+La función `.getIcon()` <!-- REF #directory.getIcon().Summary -->devuelve el icono de la carpeta<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels ("large icons") or 16x16 pixels ("small icons"). If you pass 0 or omit this parameter, the "large icon" version is returned.
+El parámetro opcional *size* especifica las dimensiones en píxeles del icono devuelto. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
-If the folder does not exist on disk, a default blank icon is returned.
+Si la carpeta no existe en el disco, se devuelve un icono vacío por defecto.
 
 **Valor devuelto**
 
-Folder icon [picture](Concepts/dt_picture.md).
+[Imagen](Concepts/dt_picture.md) del icono de la carpeta.
 
 <!-- END REF -->
 
