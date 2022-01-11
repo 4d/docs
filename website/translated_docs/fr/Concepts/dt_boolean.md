@@ -36,7 +36,7 @@ monBooléen:=(monBouton=1)
 | AND       | Booléen & Booléen | Booléen  | ("A" = "A") & (15 # 3)       | Vrai   |
 |           |                   |          | ("A" = "B") & (15 # 3)       | Faux   |
 |           |                   |          | ("A" = "B") & (15 = 3)       | Faux   |
-| OU        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3)  | Vrai   |
+| OR        | Booléen & Booléen | Booléen  | ("A" = "A") &#124; (15 # 3)  | Vrai   |
 |           |                   |          | ("A" = "B") &#124;  (15 # 3) | Vrai   |
 |           |                   |          | ("A" = "B") &#124;  (15 = 3) | Faux   |
 
