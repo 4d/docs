@@ -771,10 +771,12 @@ La función `.lock()`<!-- REF #EntityClass.lock().Summary -->pone un bloqueo pes
 
 Otros procesos verán este registro como bloqueado (la propiedad `result.success` contendrá False si intentan bloquear la misma entidad usando esta función). Sólo las funciones ejecutadas en la sesión de "bloqueo" pueden editar y guardar los atributos de la entidad. La entidad puede ser cargada como de sólo lectura por otras sesiones, pero no podrán introducir y guardar valores.
 
-Un registro bloqueado se desbloquea:
+A record locked by `.lock()` is unlocked:
 
 *   when the [`unlock()`](#unlock) function is called on a matching entity in the same process
 *   automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
+
+> An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
 
 Por defecto, si se omite el parámetro *mode*, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
 
@@ -784,29 +786,34 @@ De lo contrario, puede pasar la opción `dk reload if stamp changed` en el pará
 
 El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 
-| Propiedad        |                     | Tipo                  | Descripción                                                                                                                 |
-| ---------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario. |
-|                  |                     |                       | ***Disponible sólo si se utiliza la opción `dk reload if stamp changed`:***                                                 |
-| **wasReloaded**  |                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                        |
-|                  |                     |                       | ***Disponible sólo en caso de error:***                                                                                     |
-| status(\*)     |                     | number                | Código de error, ver abajo                                                                                                  |
-| statusText(\*) |                     | text                  | Descripción del error, ver abajo                                                                                            |
-|                  |                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                |
-| lockKindText     |                     | text                  | "Locked by record"                                                                                                          |
-| lockInfo         |                     | object                | Información sobre el origen del bloqueo                                                                                     |
-|                  | task_id             | number                | ID del Proceso                                                                                                              |
-|                  | user_name           | text                  | Nombre de usuario de la sesión en la máquina                                                                                |
-|                  | user4d_alias        | text                  | Nombre o alias del usuario 4D                                                                                               |
-|                  | user4d_id           | number                | ID del usuario en el directorio de la base de datos 4D                                                                      |
-|                  | host_name           | text                  | Nombre de la máquina                                                                                                        |
-|                  | task_name           | text                  | Nombre del proceso                                                                                                          |
-|                  | client_version      | text                  |                                                                                                                             |
-|                  |                     |                       | ***Disponible sólo en caso de error grave*** (la llave primaria ya existe, el disco está lleno...):                         |
-| errors           |                     | collection of objects |                                                                                                                             |
-|                  | message             | text                  | Mensaje de error                                                                                                            |
-|                  | component signature | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                       |
-|                  | errCode             | number                | Error code                                                                                                                  |
+| Propiedad        |                     | Tipo                  | Descripción                                                                                                                                                 |
+| ---------------- | ------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          |                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                 |
+|                  |                     |                       | ***Disponible sólo si se utiliza la opción `dk reload if stamp changed`:***                                                                                 |
+| **wasReloaded**  |                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                        |
+|                  |                     |                       | ***Disponible sólo en caso de error:***                                                                                                                     |
+| status(\*)     |                     | number                | Código de error, ver abajo                                                                                                                                  |
+| statusText(\*) |                     | text                  | Descripción del error, ver abajo                                                                                                                            |
+|                  |                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                                                |
+| lockKindText     |                     | text                  | "Locked by record" if locked by a 4D process, "Locked by session" if locked by a REST session                                                               |
+| lockInfo         |                     | object                | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
+|                  |                     |                       | ***Available only for a 4D process lock:***                                                                                                                 |
+|                  | task_id             | number                | ID del Proceso                                                                                                                                              |
+|                  | user_name           | text                  | Nombre de usuario de la sesión en la máquina                                                                                                                |
+|                  | user4d_alias        | texto                 | Nombre o alias del usuario 4D                                                                                                                               |
+|                  | user4d_id           | number                | ID del usuario en el directorio de la base de datos 4D                                                                                                      |
+|                  | host_name           | text                  | Nombre de la máquina                                                                                                                                        |
+|                  | task_name           | text                  | Nombre del proceso                                                                                                                                          |
+|                  | client_version      | texto                 | Version of the client                                                                                                                                       |
+|                  |                     |                       | ***Available only for a REST session lock:***                                                                                                               |
+|                  | host                | text                  | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
+|                  | IPAddr              | text                  | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
+|                  | userAgent           | texto                 | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|                  |                     |                       | ***Disponible sólo en caso de error grave*** (la llave primaria ya existe, el disco está lleno...):                                                         |
+| errors           |                     | collection of objects |                                                                                                                                                             |
+|                  | message             | texto                 | Mensaje de error                                                                                                                                            |
+|                  | component signature | texto                 | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                       |
+|                  | errCode             | number                | Error code                                                                                                                                                  |
 
 
 (\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
@@ -974,7 +981,7 @@ En una aplicación multiusuario o multiproceso, la función `.save()` se ejecuta
 Por defecto, si se omite el parámetro *mode*, el método devolverá un error (ver más abajo) siempre que la misma entidad haya sido modificada por otro proceso o usuario mientras tanto, sin importar el atributo o atributos modificados.
 
 En caso contrario, se puede pasar la opción `dk auto merge` en el parámetro *mode*: cuando el modo de fusión automática está activado, una modificación realizada simultáneamente por otro proceso/usuario en la misma entidad pero en un atributo diferente no dará lugar a un error. Los datos resultantes guardados en la entidad serán la combinación (la "fusión") de todas las modificaciones no concurrentes (si se aplicaron modificaciones al mismo atributo, el guardado falla y se devuelve un error, incluso con el modo de fusión automática).
-> The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
+> El modo de fusión automática no está disponible para los atributos de tipo Imagen, Objeto y Texto cuando se almacenan fuera del registro. Los cambios concurrentes en estos atributos darán lugar a un error `dk status stamp has changed`.
 
 **Resultado**
 
@@ -1446,10 +1453,10 @@ En este caso:
 
 La función `.unlock()`<!-- REF #EntityClass.unlock().Summary -->elimina el bloqueo pesimista del registro que coincide con la entidad<!-- END REF -->en el datastore y la tabla relacionada con su dataclass.
 
-> For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
+> Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
 
 Un registro se desbloquea automáticamente cuando ya no es referenciado por ninguna entidad en el proceso de bloqueo (por ejemplo: si el bloqueo se pone sólo en una referencia local de una entidad, la entidad y, por tanto, el registro se desbloquea cuando el proceso termina).
-> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Por ejemplo:
+> Cuando un registro se bloquea, debe desbloquearse desde el proceso de bloqueo y en la referencia de la entidad que puso el bloqueo. Por ejemplo:
 
 ```4d
  $e1:=ds.Emp.all()[0]

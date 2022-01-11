@@ -356,7 +356,7 @@ Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utili
 
 #### Voir aussi
 
-[guide de référence 4D View Pro](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[guide de référence 4D View Pro](ViewPro/overview.md)
 
 ---
 ## Barre de défilement verticale

@@ -27,7 +27,7 @@ Multi-user development is managed via standard **source control** repository too
 Les fichiers du projet peuvent être [compilés](compiler.md) et facilement déployés. 4D vous permet de créer trois types d'applications à partir de vos projets :
 
 - des applications [web](WebServer/webServer.md),
-- des applications [mobile](https://developer.4d.com/4d-for-ios/),
+- des applications [mobile](https://developer.4d.com/go-mobile/),
 - des applications [desktop](Desktop/building.md) (client/serveur ou monoposte).
 
-Les applications back-end peuvent être déployées à l'aide de 4D Server, de 4D, ou bien fusionnées avec la licence 4D Volume.
+Les applications back-end peuvent être déployées à l'aide de 4D Server, de 4D, ou bien [fusionnées avec la licence 4D Volume](Desktop/building.md).

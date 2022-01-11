@@ -7,7 +7,7 @@ A boolean field, variable or expression can be either TRUE or FALSE.
 
 ## Boolean functions
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands
+4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands.
 
 ### Exemplo
 
@@ -63,3 +63,5 @@ The following is the truth table for the OR logical operator:
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
+
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [trushy and falsy](operators.md#truthy-and-falsy) concept. 

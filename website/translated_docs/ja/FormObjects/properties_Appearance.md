@@ -97,7 +97,7 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 | 名称                  | データタイプ | とりうる値                            |
 | ------------------- | ------ | -------------------------------- |
-| scrollbarHorizontal | text   | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | テキスト   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 
@@ -356,7 +356,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 参照
 
-[4D View Pro リファレンスガイド](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.ja.html)
+[4D View Pro リファレンスガイド](ViewPro/overview.md)
 
 ---
 ## 縦スクロールバー
@@ -381,7 +381,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 | 名称                | データタイプ | とりうる値                            |
 | ----------------- | ------ | -------------------------------- |
-| scrollbarVertical | text   | "visible", "hidden", "automatic" |
+| scrollbarVertical | テキスト   | "visible", "hidden", "automatic" |
 
 #### 対象オブジェクト
 

@@ -92,13 +92,32 @@ macOS Sierra 以降、Mac のアプリケーションは、複数のウィンド
 
 この原則のため、macOS ではデータベースフォルダーが専用プロパティ付きのパッケージとして表示されます。 Windows では、これは普通のフォルダーと変わりありません。
 
+### Include tokens in project source files
+
+When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+
+If you intend to use VCS or external code editors with your new projects, you might want to uncheck this option for a better readability of the code with these tools.
+
+> This option can only be applied to projects (binary databases always include tokens).
+
+> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
+
+#### Excluding tokens in existing projects
+
+You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+
+```
+"tokenizedText": false
+```
+
+> This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
+
+
 ### `.gitignore` ファイルを作成する
 
 新しいプロジェクトでは、いくつかのファイルを git に無視させたいことがあるかもしれません。
 
 この設定をおこなうには、**.gitignore ファイルを作成する** オプションをチェックします。
-
-![](assets/en/Preferences/gitignore.png)
 
 このボックスがチェックされている場合、4D でプロジェクトを作成すると、4D は `.gitignore` ファイルを `Project` フォルダーと同階層に作成します ([プロジェクトのアーキテクチャー](Project/architecture.md#.gitignore-ファイル-任意) 参照)。
 

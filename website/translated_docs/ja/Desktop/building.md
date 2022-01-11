@@ -661,14 +661,21 @@ userPrefs:=Get 4D folder(Active 4D Folder)
 
 組み込みクライアントアプリの接続プロシージャーは、専用サーバーが使用不可能な場合にも柔軟に対応します。 4Dクライアントアプリのスタートアップシナリオは、次のとおりです:
 
-- クライアントアプリは検索サービスを使用してサーバーへの接続を試みます (同じサブネット内に公開されたサーバー名に基づいて検索します)。  
-  または  
-  クライアントアプリ内の "EnginedServer.4DLink" ファイルに有効な接続情報が保存されていた場合、クライアントアプリは指定されたサーバーアドレスへ接続を試みます。
-- これが失敗した場合、クライアントアプリケーションは、アプリケーションのユーザー設定フォルダーに保存されている情報 ("lastServer.xml" ファイル、詳細は後述参照) を使用してサーバーへの接続を試みます。
-- これが失敗した場合、クライアントアプリケーションは接続エラーダイアログボックスを表示します。
+1.  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application connects to the specified server address.  
+   OR  
+   The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).
+
+2.  これが失敗した場合、クライアントアプリケーションは、アプリケーションのユーザー設定フォルダーに保存されている情報 ("lastServer.xml" ファイル、詳細は後述参照) を使用してサーバーへの接続を試みます。
+3.  これが失敗した場合、クライアントアプリケーションは接続エラーダイアログボックスを表示します。
     - ユーザーが **選択...** ボタンをクリックした場合、標準の "サーバー接続" ダイアログボックスが表示されます (ビルドの段階で許可されていた場合に限ります。詳細は後述)。
     - ユーザーが **終了** ボタンをクリックした場合、クライアントアプリケーションは終了します。
-- 接続が成功した場合、クライアントアプリケーションは将来の使用のために、その接続情報をアプリケーションのユーザー設定フォルダーに保存します。
+4. 接続が成功した場合、クライアントアプリケーションは将来の使用のために、その接続情報をアプリケーションのユーザー設定フォルダーに保存します。
+
+The whole procedure is described in the following diagram:
+
+![](assets/en/Desktop/client-connect.png)
+
+
 
 ### 最後に使用したサーバーパスを保存する
 

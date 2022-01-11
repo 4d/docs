@@ -39,6 +39,7 @@ Utilisez la commande [Value type](https://doc.4d.com/4dv19R/help/command/en/page
 ```4d
 var $myBlob: Blob
 var $myBlobObject: 4D.Blob
+$myBlobObject:=4D.Blob.new()
 
 $type:= Value type($myblobObject) // 38 (object)
 $is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  //True
@@ -157,7 +158,7 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 #### Accéder aux octets d'un blob scalaire
 
-Vous pouvez accéder aux octets individuels d'un blob scalaire en utilisant des crochets. Dans un blob, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB:
+You can access individual bytes of a scalar blob using curly brackets `{}`. Dans un blob, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB:
 
 ```4d
   // Déclarer une variable de type BLOB
@@ -174,7 +175,7 @@ Etant donné que vous pouvez adresser tous les octets d'un blob individuellement
 
 #### Accéder aux octets d'un `4D.Blob`
 
-Utilisez les crochets pour accéder directement à un octet spécifique dans un `4D.Blob`
+Use square brackets `[]` to directly access a specific byte in a `4D.Blob`
 
 ```4d
 var $myBlob: 4D.Blob

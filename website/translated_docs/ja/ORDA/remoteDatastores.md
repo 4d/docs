@@ -7,15 +7,15 @@ title: リモートデータストアの利用
 
 - 4D リモートアプリケーションは ORDA を使っていれば、`ds` コマンドでメインデータストアにアクセスできます。 この 4D リモートアプリケーションは従来のモードでもデータベースにアクセスできます。 これらのアクセスを処理するのは **4Dアプリケーションサーバー** です。
 - 他の 4Dアプリケーション (4Dリモート、4D Server) は、`Open datastore` コマンドを使ってリモートデータストアのセッションを開始できます。 アクセスを処理するのは **HTTP REST サーバー** です。
-- iOS アプリケーションを更新するため、4D for iOS のクエリでアクセスできます。 アクセスを処理するのは **HTTP サーバー** です。
+- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. アクセスを処理するのは **HTTP サーバー** です。
 
-
-`Open datastore` コマンドによって参照されるリモートデータストアの場合、リクエスト元プロセスとリモートデータストア間の接続はセッションにより管理されます。
 
 
 ## セッションの開始
 
-4Dアプリケーション (のプロセス) が `Open datastore` コマンドを使って外部のデータストアを開くと、この接続を管理するためにリモートデータストアではセッションが開始されます。 このセッションは内部的にセッションID によって識別され、4Dアプリケーション上では ` localID` と紐づいています。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。
+`Open datastore` コマンドによって参照されるリモートデータストアの場合、リクエスト元プロセスとリモートデータストア間の接続はセッションにより管理されます。
+
+A session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。
 
 `localID` はリモートデータストアに接続しているマシンにおけるローカルな識別IDです:
 
@@ -29,19 +29,19 @@ title: リモートデータストアの利用
 
 > REST リクエストによって開かれたセッションについては、[ユーザーとセッション](REST/authUsers.md) を参照ください。
 
-## セッションの監視
+### セッションの監視
 
 データストアアクセスを管理しているセッションは 4D Server の管理ウィンドウに表示されます:
 
 *   プロセス名: "REST Handler: \<process name\>"
 *   タイプ: HTTP Server Worker
-*   セッション: `Open datastore` コマンドに渡されたユーザー名
+*   session: session name is the user name passed to the `Open datastore` command.
 
 次の例では、1つのセッション上で 2つのプロセスが実行中です:
 
 ![](assets/en/ORDA/sessionAdmin.png)
 
-## ロッキングとトランザクション
+### ロッキングとトランザクション
 
 エンティティロッキングやトランザクションに関連した ORDA 機能は、ORDA のクライアント / サーバーモードと同様に、リモートデータストアにおいてもプロセスレベルで管理されます:
 
@@ -53,8 +53,97 @@ title: リモートデータストアの利用
     *   サーバー上でセッションが閉じられた
     *   サーバー管理ウィンドウからセッションが強制終了された
 
-## セッションの終了
+### セッションの終了
 
-アクティビティなしにタイムアウト時間が経過すると、4D は自動的にセッションを終了します。 デフォルトのタイムアウト時間は 60分です。`Open datastore` コマンドの `connectionInfo` パラメーターを指定して、タイムアウト時間を変更することができます。
+アクティビティなしにタイムアウト時間が経過すると、4D は自動的にセッションを終了します。 The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the `Open datastore` command.
 
-セッション終了後にリクエストがリモートデータストアに送信された場合、セッションは可能な限り (ライセンスがあり、サーバーが停止していない、など) 再開されます。 ただしセッションが再開しても、ロックやトランザクションに関わるコンテキストは失われていることに留意が必要です (前述参照)。 
+セッション終了後にリクエストがリモートデータストアに送信された場合、セッションは可能な限り (ライセンスがあり、サーバーが停止していない、など) 再開されます。 ただしセッションが再開しても、ロックやトランザクションに関わるコンテキストは失われていることに留意が必要です (前述参照)。
+
+## クライアント/サーバーの最適化
+
+4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。
+
+この機能には、以下の最適化機構が実装されています:
+
+*   クライアントがサーバーに対してエンティティセレクションのリクエストを送ると、4D はコード実行の途中で、エンティティセレクションのどの属性がクライアント側で実際に使用されているかを自動的に "学習" し、それに対応した "最適化コンテキスト" をビルドします。 このコンテキストはエンティティセレクションに付随し、使用された属性を保存していきます。 他の属性があとで使用された場合には自動的に情報を更新していきます。
+
+*   サーバー上の同じエンティティセレクションに対してその後に送られたリクエストは、最適化コンテキストを再利用して、サーバーから必要な属性のみを取得していくことで、処理を速くします。 たとえば、エンティティセレクション型のリストボックスにおいては、"学習" フェーズは最初の行を表示中におこなわれるため、次の行からは表示が最適化されています。
+
+*   既存の最適化コンテキストは、同じデータクラスの他のエンティティセレクションであればプロパティとして渡すことができるので、学習フェーズを省略して、アプリケーションをより速く実行することができます (以下の [contextプロパティの使用](#contextプロパティの使用) を参照してください)。
+
+以下のメソッドは、ソースのエンティティセレクションの最適化コンテキストを、戻り値のエンティティセレクションに自動的に付与します:
+
+*   `entitySelection.and()`
+*   `entitySelection.minus()`
+*   `entitySelection.or()`
+*   `entitySelection.orderBy()`
+*   `entitySelection.slice()`
+*   `entitySelection.drop()`
+
+
+
+**例題**
+
+以下のようなコードがあるとき:
+
+```4d
+ $sel:=$ds.Employee.query("firstname = ab@")
+ For each($e;$sel)
+    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer は Company テーブルを参照します
+ End for each
+```
+
+最適化機構のおかげで、このリクエストは学習フェーズ以降は、*$sel* の中で実際に使用されている属性 (firstname, lastname, employer, employer.name) のデータのみを取得するようになります。
+
+
+
+### contextプロパティの使用
+
+**context** プロパティを使用することで、最適化の利点をさらに増幅させることができます。 このプロパティは、あるエンティティセレクション用に "学習した" 最適化コンテキストを参照します。 これを新しいエンティティセレクションを返す ORDA メソッドに引数として渡すことで、その返されたエンティティセレクションでは学習フェーズを最初から省略して使用される属性をサーバーにリクエストできるようになります。
+
+同じ最適化 context プロパティは、同じデータクラスのエンティティセレクションに対してであればどのエンティティセレクションにも渡すことができます。 エンティティセレクションを扱うすべての ORDAメソッドは、contextプロパティをサポートします (たとえば`dataClass.query( )` あるいは `dataClass.all( )` メソッドなど)。 ただし、 コードの他の部分で新しい属性が使用された際にはコンテキストは自動的に更新されるという点に注意してください。 同じコンテキストを異なるコードで再利用しすぎると、コンテキストを読み込み過ぎて、結果として効率が落ちる可能性があります。
+> 同様の機構は読み込まれたエンティティにも実装されており、それによって使用した属性のみがリクエストされるようになります (`dataClass.get( )` メソッド参照)。
+
+
+
+**`dataClass.query( )` メソッドを使用した例:**
+
+```4d
+ var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
+ var $data : Collection
+ $querysettings:=New object("context";"shortList")
+ $querysettings2:=New object("context";"longList")
+
+ $sel1:=ds.Employee.query("lastname = S@";$querysettings)
+ $data:=extractData($sel1) // extractData メソッドにおいて、最適化はトリガーされており、"shortList" のコンテキストが割り当てられています。
+
+ $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
+ $data:=extractData($sel2) // extractData メソッドにおいて、"shortList" のコンテキストに割り当てられている最適化が適用されます。
+
+ $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
+ $data:=extractDetailedData($sel3) // extractDetailedData メソッドにおいて、最適化はトリガーされており、"longList" のコンテキストが割り当てられています。
+
+ $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
+ $data:=extractDetailedData($sel4) // extractDetailedData メソッドにおいて、"longList" のコンテキストに割り当てられている最適化が適用されます。
+```
+
+### エンティティセレクション型リストボックス
+
+クライアント/サーバー環境におけるエンティティセレクション型リストボックスにおいては、そのコンテンツを表示またはスクロールする際に、最適化が自動的に適用されます。つまり、リストボックスに表示されている属性のみがサーバーにリクエストされます。
+
+また、リストボックスの **カレントの項目** プロパティ式 ([コレクション/エンティティセレクション型リストボックス](FormObjects/listbox_overview.md#リストボックスの型) 参照) を介してカレントエンティティをロードする場合には、専用の "ページモード" コンテキストが提供されます。 これによって、"ページ" が追加属性をリクエストしても、リストボックスのコンテキストのオーバーロードが避けられます。 なお、ページコンテキストの生成/使用は **カレントの項目** 式を使用した場合に限ります (たとえば、`entitySelection[index]` を介して同じエンティティにアクセスした場合は、エンティティセレクションコンテキストが変化します)。
+
+その後、エンティティを走査するメソッドがサーバーに送信するリクエストにも、同じ最適化が適用されます。 以下のメソッドは、ソースエンティティの最適化コンテキストを、戻り値のエンティティに自動的に付与します:
+
+*   `entity.next( )`
+*   `entity.first( )`
+*   `entity.last( )`
+*   `entity.previous( )`
+
+たとえば、次のコードは選択したエンティティをロードし、所属しているエンティティセレクションを走査します。 エンティティは独自のコンテキストにロードされ、リストボックスのコンテキストは影響されません:
+
+```4d
+ $myEntity:=Form.currentElement // カレントの項目式
+  //... なんらかの処理
+ $myEntity:=$myEntity.next() // 次のエンティティも同じコンテキストを使用してロードされます
+```

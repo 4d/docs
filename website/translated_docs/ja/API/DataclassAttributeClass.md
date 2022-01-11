@@ -30,6 +30,7 @@ title: DataClassAttribute
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.path.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
@@ -118,9 +119,10 @@ title: DataClassAttribute
 ## .fieldType
 
 <details><summary>履歴</summary>
-| バージョン  | 内容        |
-| ------ | --------- |
-| v19 R3 | 計算属性をサポート |
+| バージョン  | 内容                          |
+| ------ | --------------------------- |
+| v19 R4 | Support of alias attributes |
+| v19 R3 | 計算属性をサポート                   |
 </details>
 
 
@@ -140,6 +142,7 @@ title: DataClassAttribute
 | relatedEntity           | 38 (`Is object`)                                                                                               |
 | relatedEntities         | 42 (`Is collection`)                                                                                           |
 | calculated              | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>エンティティセレクション: 42 (`Is collection)` |
+| alias                   | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>エンティティセレクション: 42 (`Is collection)` |
 
 
 <!-- END REF -->
@@ -231,6 +234,7 @@ title: DataClassAttribute
 <details><summary>履歴</summary>
 | バージョン  | 内容               |
 | ------ | ---------------- |
+| v19 R4 | Added "alias"    |
 | v19 R3 | "calculated" を追加 |
 </details>
 
@@ -245,6 +249,7 @@ title: DataClassAttribute
 
 *   "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
 *   "calculated": 計算属性。[`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
+*   "alias": attribute built upon [another attribute](ORDA/ordaClasses.md#alias-attributes-1)
 *   "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
 *   "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)
 
@@ -322,6 +327,33 @@ title: DataClassAttribute
 
 <!-- END REF -->
 
+
+<!-- REF DataClassAttributeClass.path.Desc -->
+## .path
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
+
+
+<!-- REF DataClassAttributeClass.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
+
+#### 説明
+
+The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
+
+#### 例題
+
+```4d
+ var $path : Text
+ $path:=ds.Teacher.students.path //$path="courses.student"
+```
+
+<!-- END REF -->
 
 
 <!-- REF DataClassAttributeClass.readOnly.Desc -->

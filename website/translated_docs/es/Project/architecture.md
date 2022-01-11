@@ -49,6 +49,7 @@ Project development file, used to designate and launch the project. This file ca
 
 > In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server can open .4DProject files for testing purposes.
 
+This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
 
 ### `Sources`
 
@@ -165,7 +166,7 @@ La carpeta Data contiene el archivo de datos y todos los archivos y carpetas rel
 
 This folder contains **user settings files for data** used for application administration.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **[structure settings](#sources-folder)** files.
+> These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
 
 | Contenido           | Descripción                                                                                                                                                                                                         | Formato |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -190,13 +191,14 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 
 This folder contains **user settings files** used for application administration.
 
-> These settings take priority over **[structure settings](#sources-folder)** files. However, if a **[user settings file for data](#settings-folder)** exists, it takes priority over user settings file.
+> These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file.
 
 | Contenido           | Descripción                                                                                                                                                                                                                                                                                                                          | Formato |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
 | directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                               | JSON    |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML     |
+| settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                    | XML     |
 
 
 ## `userPreferences.<userName>`

@@ -40,6 +40,7 @@ To check that an object is a blob object (`4D.Blob`), use [OB instance of](https
 ```4d
 var $myBlob: Blob
 var $myBlobObject: 4D.Blob
+$myBlobObject:=4D.Blob.new()
 
 $type:= Value type($myblobObject) // 38 (object)
 $is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  //True
@@ -159,7 +160,7 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 #### Accessing a scalar blob's bytes
 
-You can access individual bytes of a scalar blob using curly brackets. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
+You can access individual bytes of a scalar blob using curly brackets `{}`. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
 
 ```4d
   // Declare a variable of type Blob
@@ -176,7 +177,7 @@ Since you can address all the bytes of a blob individually, you can store whatev
 
 #### Accessing a `4D.Blob`'s bytes
 
-Use square brackets to directly access a specific byte in a `4D.Blob`
+Use square brackets `[]` to directly access a specific byte in a `4D.Blob`
 
 ```4d
 var $myBlob: 4D.Blob

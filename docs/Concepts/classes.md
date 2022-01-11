@@ -56,6 +56,8 @@ For example, if you want to define a class named "Polygon", you need to create t
 - Project folder
 	+ Project
 
+
+
 		* Sources
 			- Classes
 				+ Polygon.4dm
@@ -172,7 +174,7 @@ When 4D does not find a function or a property in a class, it searches it in its
 
 Specific 4D keywords can be used in class definitions:
 
-- `Function <Name>` to define class functions of the objects. 
+- `Function <Name>` to define class functions of the objects.
 - `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
 - `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
@@ -225,7 +227,6 @@ In the application code, class functions are called as member methods of the obj
 
 
 
-
 #### Parameters
 
 Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;). 
@@ -233,22 +234,9 @@ Function parameters are declared using the parameter name and the parameter type
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ``` 
- 
 
 >If the type is not stated, the parameter will be defined as `Variant`. 
 
-You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
-
-```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
-```
- 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example: 
-
-```4d
-Function add($x : Variant; $y : Integer): Integer
-	$0:=$x+$y
-```
 
 
 >The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
@@ -261,9 +249,25 @@ Function add($x : Variant; $y : Integer): Integer
 >	$0:=String($value)
 >```
 
+#### Return value 
+
+You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. For example:
+
+```4d
+Function add($x : Variant; $y : Integer)->$result : Integer
+	$result:=$x+$y
+```
+ 
+You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). For example: 
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+	// some code
+	return $x+$y
+```
 
 
-#### Example
+#### Example 1
 
 ```4d
 // Class: Rectangle
@@ -286,6 +290,21 @@ var $area : Real
 $rect:=cs.Rectangle.new(50;100)  
 $area:=$rect.getArea() //5000
 ```
+
+#### Example 1
+
+This example uses the [`return expression`](parameters.md#return-expression):
+
+```4d
+Function getRectArea($width : Integer; $height : Integer) : Integer
+	If ($width > 0 && $height > 0)
+		return $width * $height
+	Else
+		return 0
+	End if
+```
+
+
 
 
 ### `Function get` and `Function set`

@@ -280,7 +280,7 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
  var $server; $transporter; $email; $status : Object
 
-  // メールの準備
+  //Prepare emails
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -289,16 +289,17 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
  $email:=New object()
  $email.from:="myName@company.com"
 
-  // エンティティセレクションをループします
+  //Loops on entity selections
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いを確認いたしました。"
+    $email.to:=$invoice.customer.address // email address of the customer
+    $email.subject:="Payment OK for invoice # "+String($invoice.number)
+
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いが確認できていません。"
+    $email.to:=$invoice.customer.address // email address of the customer
+    $email.subject:="Please pay invoice # "+String($invoice.number)
     $status:=$transporter.send($email)
  End for each
 ```
@@ -379,12 +380,15 @@ ORDA では、以下の二つのロックモードを提供しています:
 
 エンティティは、データアクセス時に任意にロックおよびアンロックすることができます。 エンティティがプロセスからロックされている場合、そのエンティティはプロセスに読み書き可能モードで読み込まれていますが、他のすべてのプロセスに対してロックされています。 ロックされたエンティティは、他のプロセスからは読み込みモードでのみ読み込むことができます。つまり、その値を編集・保存することはできません。
 
-この機能は `Entity` クラスの 2つのメソッドに基づいています:
+この機能は `Entity` クラスの 2つの関数に基づいています:
 
-*   `entity.lock()`
-*   `entity.unlock()`
+*   [`entity.lock()`](../API/EntityClass.md#lock)
+*   [`entity.unlock()`](../API/EntityClass.md#unlock)
 
-詳細な情報については、これらのメソッドの説明を参照してください。
+詳細な情報については、これらの関数の説明を参照してください。
+
+> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+
 
 
 ### 4Dクラシック・ロックとORDAのペシミスティック・ロックの組み合わせ
@@ -401,95 +405,4 @@ ORDA では、以下の二つのロックモードを提供しています:
 **トランザクションロック** はクラシックコマンドと ORDAコマンドの両方に適用されます。 マルチプロセスあるいはマルチユーザーアプリケーションにおいては、トランザクション内でクラシックコマンドを使用してレコードをロックした場合、そのトランザクションが OK あるいはキャンセルされるまで、他のプロセスからそのレコードに相当するエンティティをロックすることはできません (逆もまた然りです)。
 
 *   クラシックコマンドを使用してロックした場合:<br><br>![](assets/en/ORDA/concurrent2.png)
-*   ORDAメソッドを使用してロックした場合:<br><br>![](assets/en/ORDA/concurrent3.png)
-
-
-
-## クライアント/サーバーの最適化
-
-4Dは、クライアント/サーバー環境においてエンティティセレクションを使用、あるいはエンティティを読み込む ORDAリクエストについて自動的に最適化する機構を提供しています。 この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。
-
-この機能には、以下の最適化機構が実装されています:
-
-*   クライアントがサーバーに対してエンティティセレクションのリクエストを送ると、4D はコード実行の途中で、エンティティセレクションのどの属性がクライアント側で実際に使用されているかを自動的に "学習" し、それに対応した "最適化コンテキスト" をビルドします。 このコンテキストはエンティティセレクションに付随し、使用された属性を保存していきます。 他の属性があとで使用された場合には自動的に情報を更新していきます。
-
-*   サーバー上の同じエンティティセレクションに対してその後に送られたリクエストは、最適化コンテキストを再利用して、サーバーから必要な属性のみを取得していくことで、処理を速くします。 たとえば、エンティティセレクション型のリストボックスにおいては、"学習" フェーズは最初の行を表示中におこなわれるため、次の行からは表示が最適化されています。
-
-*   既存の最適化コンテキストは、同じデータクラスの他のエンティティセレクションであればプロパティとして渡すことができるので、学習フェーズを省略して、アプリケーションをより速く実行することができます (以下の [contextプロパティの使用](#contextプロパティの使用) を参照してください)。
-
-以下のメソッドは、ソースのエンティティセレクションの最適化コンテキストを、戻り値のエンティティセレクションに自動的に付与します:
-
-*   `entitySelection.and()`
-*   `entitySelection.minus()`
-*   `entitySelection.or()`
-*   `entitySelection.orderBy()`
-*   `entitySelection.slice()`
-*   `entitySelection.drop()`
-
-
-
-**例題**
-
-以下のようなコードがあるとき:
-
-```4d
- $sel:=$ds.Employee.query("firstname = ab@")
- For each($e;$sel)
-    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer は Company テーブルを参照します
- End for each
-```
-
-最適化機構のおかげで、このリクエストは学習フェーズ以降は、*$sel* の中で実際に使用されている属性 (firstname, lastname, employer, employer.name) のデータのみを取得するようになります。
-
-
-
-### contextプロパティの使用
-
-**context** プロパティを使用することで、最適化の利点をさらに増幅させることができます。 このプロパティは、あるエンティティセレクション用に "学習した" 最適化コンテキストを参照します。 これを新しいエンティティセレクションを返す ORDA メソッドに引数として渡すことで、その返されたエンティティセレクションでは学習フェーズを最初から省略して使用される属性をサーバーにリクエストできるようになります。
-
-同じ最適化 context プロパティは、同じデータクラスのエンティティセレクションに対してであればどのエンティティセレクションにも渡すことができます。 エンティティセレクションを扱うすべての ORDAメソッドは、contextプロパティをサポートします (たとえば`dataClass.query( )` あるいは `dataClass.all( )` メソッドなど)。 ただし、 コードの他の部分で新しい属性が使用された際にはコンテキストは自動的に更新されるという点に注意してください。 同じコンテキストを異なるコードで再利用しすぎると、コンテキストを読み込み過ぎて、結果として効率が落ちる可能性があります。
-> 同様の機構は読み込まれたエンティティにも実装されており、それによって使用した属性のみがリクエストされるようになります (`dataClass.get( )` メソッド参照)。
-
-
-
-**`dataClass.query( )` メソッドを使用した例:**
-
-```4d
- var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
- var $data : Collection
- $querysettings:=New object("context";"shortList")
- $querysettings2:=New object("context";"longList")
-
- $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // extractData メソッドにおいて、最適化はトリガーされており、"shortList" のコンテキストが割り当てられています。
-
- $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // extractData メソッドにおいて、"shortList" のコンテキストに割り当てられている最適化が適用されます。
-
- $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // extractDetailedData メソッドにおいて、最適化はトリガーされており、"longList" のコンテキストが割り当てられています。
-
- $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // extractDetailedData メソッドにおいて、"longList" のコンテキストに割り当てられている最適化が適用されます。
-```
-
-### エンティティセレクション型リストボックス
-
-クライアント/サーバー環境におけるエンティティセレクション型リストボックスにおいては、そのコンテンツを表示またはスクロールする際に、最適化が自動的に適用されます。つまり、リストボックスに表示されている属性のみがサーバーにリクエストされます。
-
-また、リストボックスの **カレントの項目** プロパティ式 ([コレクション/エンティティセレクション型リストボックス](FormObjects/listbox_overview.md#リストボックスの型) 参照) を介してカレントエンティティをロードする場合には、専用の "ページモード" コンテキストが提供されます。 これによって、"ページ" が追加属性をリクエストしても、リストボックスのコンテキストのオーバーロードが避けられます。 なお、ページコンテキストの生成/使用は **カレントの項目** 式を使用した場合に限ります (たとえば、`entitySelection[index]` を介して同じエンティティにアクセスした場合は、エンティティセレクションコンテキストが変化します)。
-
-その後、エンティティを走査するメソッドがサーバーに送信するリクエストにも、同じ最適化が適用されます。 以下のメソッドは、ソースエンティティの最適化コンテキストを、戻り値のエンティティに自動的に付与します:
-
-*   `entity.next( )`
-*   `entity.first( )`
-*   `entity.last( )`
-*   `entity.previous( )`
-
-たとえば、次のコードは選択したエンティティをロードし、所属しているエンティティセレクションを走査します。 エンティティは独自のコンテキストにロードされ、リストボックスのコンテキストは影響されません:
-
-```4d
- $myEntity:=Form.currentElement // カレントの項目式
-  //... なんらかの処理
- $myEntity:=$myEntity.next() // 次のエンティティも同じコンテキストを使用してロードされます
-```
+*   ORDA関数を使用してロックした場合:<br><br>![](assets/en/ORDA/concurrent3.png)

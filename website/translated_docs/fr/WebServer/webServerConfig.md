@@ -10,24 +10,24 @@ Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les
 
 Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la portée et du serveur que vous souhaitez configurer :
 
-| Setting location                           | Portée                                                | Serveur web concerné                                                 |
-| ------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------------------------- |
-| [objet webServer](webServerObject.md)      | Temporaire (session courante)                         | N'importe quel serveur web, y compris les serveurs Web de composants |
-| `WEB SET OPTION` ou commande `WEB XXX`     | Temporaire (session courante)                         | Serveur principal                                                    |
-| Fenêtre des **Propriétés** (pages **Web**) | Permanent (toutes les sessions, stocké sur le disque) | Serveur principal                                                    |
+| Setting location                                              | Portée                                                | Serveur web concerné                                                 |
+| ------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------- |
+| [objet webServer](webServerObject.md)                         | Temporaire (session courante)                         | N'importe quel serveur web, y compris les serveurs Web de composants |
+| `WEB SET OPTION` ou commande `WEB XXX`                        | Temporaire (session courante)                         | Serveur principal                                                    |
+| [**Settings** dialog box](../settings/web.md) (**Web** pages) | Permanent (toutes les sessions, stocké sur le disque) | Serveur principal                                                    |
 
 > Certains paramètres ne sont pas disponibles depuis tous les emplacements.
 
 ## Cache
 
-| Peut être configuré via  | Nom                                               | Commentaires |
-| ------------------------ | ------------------------------------------------- | ------------ |
-| Fenêtre de configuration | Page de configuration/Utilisation du cache Web 4D |              |
-| Fenêtre de configuration | Page de configuration/Taille du cache des pages   |              |
+| Peut être configuré via  | Nom                                                                                          | Commentaires |
+| ------------------------ | -------------------------------------------------------------------------------------------- | ------------ |
+| Fenêtre de configuration | [Page de configuration/Utilisation du cache Web 4D](../settings/web.md#use-the-4d-web-cache) |              |
+| Fenêtre de configuration | [Page de configuration/Taille du cache des pages](../settings/web.md#page-cache-size)        |              |
 
 Active et configure le cache des pages web.
 
-Le serveur web 4D dispose d'un cache qui permet de charger les pages statiques, les images GIF, les images JPEG (<512 kb) et les feuilles de style (fichiers .css) en mémoire, au fur et à mesure qu'elles sont appelées. L'utilisation du cache permet d'augmenter considérablement les performances du serveur web lors de l'envoi de pages statiques. Le cache est partagé entre tous les processus web.
+Le serveur web 4D dispose d'un cache qui permet de charger les pages statiques, les images GIF, les images JPEG (<512 kb) et les feuilles de style (fichiers .css) en mémoire, au fur et à mesure qu'elles sont appelées. L'utilisation du cache permet d'augmenter considérablement les performances du serveur web lors de l'envoi de pages statiques. Le cache est partagé entre tous les processus web. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. If it finds the page, it sends it immediately. If not, 4D loads the page from disk and places it in the cache.
 
 Vous pouvez modifier la taille du cache dans la zone **Taille du cache des pages**. La valeur à définir dépend du nombre et de la taille des pages statiques de votre site Web, ainsi que des ressources dont dispose la machine hôte.
 > Lorsque vous utilisez votre base de données web, vous pouvez vérifier les performances du cache en utilisant la commande `WEB LIRE STATISTIQUES`. Si, par exemple, vous remarquez que le taux d'utilisation du cache est proche de 100 %, vous pouvez envisager d'augmenter la taille qui lui a été allouée. Les URL [/4DSTATS] et [/4DHTMLSTATS] vous permettent également d'obtenir des informations sur l'état du cache.
@@ -50,11 +50,11 @@ Avec 4D à distance, ces fichiers doivent être placés dans le dossier des ress
 
 ## Jeu de caractères
 
-| Peut être configuré via  | Nom                            | Commentaires                                        |
-| ------------------------ | ------------------------------ | --------------------------------------------------- |
-| objet webServer          | `characterSet`                 | Entier long (MIBEnum) ou chaîne de caractères (nom) |
-| `WEB SET OPTION`         | `Web character set`            | Entier long (MIBEnum) ou chaîne de caractères (nom) |
-| Fenêtre de configuration | Page Options (II)/Jeu standard | Menu popup                                          |
+| Peut être configuré via  | Nom                                                               | Commentaires                                        |
+| ------------------------ | ----------------------------------------------------------------- | --------------------------------------------------- |
+| objet webServer          | `characterSet`                                                    | Entier long (MIBEnum) ou chaîne de caractères (nom) |
+| `WEB SET OPTION`         | `Web character set`                                               | Entier long (MIBEnum) ou chaîne de caractères (nom) |
+| Fenêtre de configuration | [Page Options (II)/Jeu standard](../settings/web.md#standard-set) | Menu popup                                          |
 
 Définit le jeu de caractères à utiliser par le serveur web 4D. La valeur par défaut dépend de la langue du système d'exploitation.
 > Ce paramètre est également utilisé pour générer des États Rapides au format HTML.
@@ -72,11 +72,11 @@ Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité 
 
 ## Paramètres CORS
 
-| Peut être configuré via  | Nom                                                                           | Commentaires                                                                            |
-| ------------------------ | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| objet webServer          | [`CORSSettings`](API/WebServerClass.md#corssettings)                          | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
-| `WEB SET OPTION`         | `Web CORS settings`                                                           | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
-| Fenêtre de configuration | Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
+| Peut être configuré via  | Nom                                                                                                                                   | Commentaires                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| objet webServer          | [`CORSSettings`](API/WebServerClass.md#corssettings)                                                                                  | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| `WEB SET OPTION`         | `Web CORS settings`                                                                                                                   | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
+| Fenêtre de configuration | [Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-names-HTTP-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
 List of allowed hosts and methods for the CORS service.
 
@@ -133,16 +133,17 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 
 
 
+
 |1|wdl enable without body|Le journal de débogage de Web HTTP est activé sans le body (la taille du body est fournie dans ce cas). |3|wdl enable with response body|Le journal de débogage de Web HTTP est activé, le body est inclus uniquement dans la réponse |5|wdl enable with request body| Le journal de débogage de Web HTTP est activé, le body est inclus uniquement dans la requête |7|wdl enable with all body parts|Web HTTP debug log est activé, le body est inclus dans la réponse et la requête|
 
 
-## Page d'accueil par défaut
+## Default Home page
 
-| Peut être configuré via  | Nom                                                        | Commentaires                                 |
-| ------------------------ | ---------------------------------------------------------- | -------------------------------------------- |
-| objet webServer          | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Texte                                        |
-| `WEB SET HOME PAGE`      |                                                            | Peut être différente pour chaque web process |
-| Fenêtre de configuration | Configuration > Page d'accueil par défaut                  |                                              |
+| Peut être configuré via  | Nom                                                                               | Commentaires                                 |
+| ------------------------ | --------------------------------------------------------------------------------- | -------------------------------------------- |
+| objet webServer          | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                        | Texte                                        |
+| `WEB SET HOME PAGE`      |                                                                                   | Peut être différente pour chaque web process |
+| Fenêtre de configuration | [Configuration > Page d'accueil par défaut](../settings/web.md#default-home-page) |                                              |
 
 Désigne une page comme page d'accueil par défaut pour le serveur web. Cette page peut être statique ou [semi-dynamic].
 
@@ -162,11 +163,11 @@ Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base `On We
 
 ## Activer CORS
 
-| Peut être configuré via  | Nom                                                | Commentaires                               |
-| ------------------------ | -------------------------------------------------- | ------------------------------------------ |
-| objet webServer          | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | True pour activer CORS (False par défaut). |
-| `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
-| Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                         |
+| Peut être configuré via  | Nom                                                                | Commentaires                               |
+| ------------------------ | ------------------------------------------------------------------ | ------------------------------------------ |
+| objet webServer          | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                 | True pour activer CORS (False par défaut). |
+| `WEB SET OPTION`         | `Web CORS enabled`                                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
+| Fenêtre de configuration | [Page Options (II) > Activer CORS](../settings/web.md#enable-cors) | Décoché par défaut                         |
 
 Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisée envoie une demande cross-site, celle-ci est rejetée et une erreur "403 - forbidden" est renvoyée.
 
@@ -179,11 +180,11 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 
 ## Activer HTTP
 
-| Peut être configuré via  | Nom                                                | Commentaires |
-| ------------------------ | -------------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean      |
-| `WEB SET OPTION`         | `Web HTTP enabled`                                 |              |
-| Fenêtre de configuration | Configuration > Activer HTTP                       |              |
+| Peut être configuré via  | Nom                                                            | Commentaires |
+| ------------------------ | -------------------------------------------------------------- | ------------ |
+| objet webServer          | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)             | boolean      |
+| `WEB SET OPTION`         | `Web HTTP enabled`                                             |              |
+| Fenêtre de configuration | [Configuration > Activer HTTP](../settings/web.md#enable-http) |              |
 
 Indique si le web server accepte des connexions non sécurisées.
 
@@ -257,11 +258,11 @@ Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de com
 
 ## Port HTTP
 
-| Peut être configuré via  | Nom                                          | Commentaires |
-| ------------------------ | -------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPPort`](API/WebServerClass.md#httpport) | number       |
-| `WEB SET OPTION`         | `Web port ID`                                |              |
-| Fenêtre de configuration | Configuration > Port HTTP                    |              |
+| Peut être configuré via  | Nom                                                       | Commentaires |
+| ------------------------ | --------------------------------------------------------- | ------------ |
+| objet webServer          | [`HTTPPort`](API/WebServerClass.md#httpport)              | number       |
+| `WEB SET OPTION`         | `Web port ID`                                             |              |
+| Fenêtre de configuration | [Configuration > Port HTTP](../settings/web.md#http-port) |              |
 
 Numéro de port IP (TCP) d'écoute pour HTTP. Par défaut, 4D publie une application Web sur le port HTTP normal (port TCP), qui est le port 80. Si ce port est déjà utilisé par un autre service Web, vous devez modifier le port HTTP utilisé par 4D pour ce projet.
 
@@ -287,22 +288,22 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 
 ## Port HTTPS
 
-| Peut être configuré via  | Nom                                            | Commentaires |
-| ------------------------ | ---------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number       |
-| `WEB SET OPTION`         | `Web HTTPS port ID`                            |              |
-| Fenêtre de configuration | Configuration > Port HTTP                      |              |
+| Peut être configuré via  | Nom                                                        | Commentaires |
+| ------------------------ | ---------------------------------------------------------- | ------------ |
+| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport)             | number       |
+| `WEB SET OPTION`         | `Web HTTPS port ID`                                        |              |
+| Fenêtre de configuration | [Configuration > Port HTTP](../settings/web.md#https-port) |              |
 
 Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par défaut est 443 (valeur standard). Voir aussi [HTTP Port](#http-port) pour plus d'informations sur les numéros de port.
 
 
 ## Durée de vie des process inactifs
 
-| Peut être configuré via  | Nom                                                                      | Commentaires |
-| ------------------------ | ------------------------------------------------------------------------ | ------------ |
-| objet webServer          | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |              |
-| `WEB SET OPTION`         | `Web inactive process timeout`                                           |              |
-| Fenêtre de configuration | Options (I) > Conservation des Process inactifs                          | Curseur      |
+| Peut être configuré via  | Nom                                                                                            | Commentaires |
+| ------------------------ | ---------------------------------------------------------------------------------------------- | ------------ |
+| objet webServer          | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)                       |              |
+| `WEB SET OPTION`         | `Web inactive process timeout`                                                                 |              |
+| Fenêtre de configuration | [Options (I) > Conservation des Process inactifs](../settings/web.md#inactive-process-timeout) | Curseur      |
 
 Durée de vie (en minutes) des process inactifs associés aux sessions. À la fin du délai d'attente (tiemout), le process est tué sur le serveur, la méthode base `On Web Close Process` est appelée, puis le contexte de session est détruit.
 
@@ -327,7 +328,7 @@ Valeur par défaut : 480 minutes (passez 0 pour restaurer la valeur par défaut)
 | ------------------------ | -------------------------------------------------------------- | ------------ |
 | objet webServer          | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |              |
 | `WEB SET OPTION`         | `Web IP address to listen`                                     |              |
-| Fenêtre de configuration | Configuration > Adresse IP                                     | Menu popup   |
+| Fenêtre de configuration | [Configuration > Adresse IP](../settings/web.md#ip-address)    | Menu popup   |
 
 Adresses IP (chaînes) sur lesquelles le serveur web 4D recevra les requêtes HTTP (4D local et 4D Server).
 
@@ -356,15 +357,13 @@ Pour éviter cette confusion, nous recommandons d'utiliser la notation [ ] lorsq
 
 ## Keep Session
 
-| Peut être configuré via  | Nom                                                | Commentaires |
-| ------------------------ | -------------------------------------------------- | ------------ |
-| objet webServer          | [`keepSession`](API/WebServerClass.md#keepsession) |              |
-| `WEB SET OPTION`         | `Web keep session`                                 |              |
-| Fenêtre de configuration | Options (I) page/Automatic Session Management      |              |
+| Peut être configuré via  | Nom                                                                                                                      | Commentaires               |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| objet webServer          | [`keepSession`](API/WebServerClass.md#keepsession)                                                                       |                            |
+| `WEB SET OPTION`         | `Web keep session`                                                                                                       |                            |
+| Fenêtre de configuration | [Options (I) page/Legacy sessions (single process sessions)](../settings/web.md#legacy-sessions-single-process-sessions) | only in converted projects |
 
-Statut de la gestion de session pour le serveur Web 4D. Le fonctionnement des sessions est décrit dans la section [Gestion des sessions](sessions.md).
-
-True par défaut (activé).
+Legacy session management enabling status for the 4D web server (deprecated).
 
 > Lorsque cette option est cochée, l'option "réutilisation des contextes temporaires" est automatiquement cochée (et verrouillée).
 
@@ -375,7 +374,7 @@ True par défaut (activé).
 | ------------------------ | ---------------------------------------------------- | ------------ |
 | objet webServer          | [`logRecording`](API/WebServerClass.md#logrecording) |              |
 | `WEB SET OPTION`         | `Web log recording`                                  |              |
-| Fenêtre de configuration | Journal (format)/Format du journal                   | Menu popup   |
+| Fenêtre de configuration | [Log (type) page](../settings/web.md#log-format)     | Menu popup   |
 
 Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. Par défaut, les requêtes ne sont pas enregistrées (0/Pas de journal). Lorsqu'il est activé, le fichier *logweb.txt* est automatiquement placé dans le dossier Logs.
 
@@ -389,16 +388,16 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | 3      | ELF            | Extended Log Format - À personnaliser dans la boîte de dialogue des Propriétés                                                                                                                                                                    |
 | 4      | WLF            | Webstar Log Format- À personnaliser dans la boîte de dialogue des Propriétés                                                                                                                                                                      |
 
-> Les formats 3 et 4 sont des formats personnalisés dont le contenu doit être défini au préalable dans la boîte de dialogue des Propriétés. Si vous utilisez l'un de ces formats sans qu'aucun de ses champs n'ait été sélectionné sur cette page, le fichier d'enregistrement des logs ne sera pas généré.
+> Formats 3 and 4 are custom formats whose contents must be set beforehand in the [Settings dialog box](../settings/web.md#log-format). Si vous utilisez l'un de ces formats sans qu'aucun de ses champs n'ait été sélectionné sur cette page, le fichier d'enregistrement des logs ne sera pas généré.
 
 
 ## Nombre maximal de process Web simultanés
 
-| Peut être configuré via  | Nom                                                                      | Commentaires |
-| ------------------------ | ------------------------------------------------------------------------ | ------------ |
-| objet webServer          | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |              |
-| `WEB SET OPTION`         | `Web max concurrent processes`                                           |              |
-| Fenêtre de configuration | Options (I) > Process Web simultanés maxi                                |              |
+| Peut être configuré via  | Nom                                                                                              | Commentaires |
+| ------------------------ | ------------------------------------------------------------------------------------------------ | ------------ |
+| objet webServer          | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)                         |              |
+| `WEB SET OPTION`         | `Web max concurrent processes`                                                                   |              |
+| Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#maximum-concurrent-web-processes) |              |
 
 Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
@@ -515,11 +514,11 @@ Dans ce cas, les robots n'auront accès à aucune partie du site.
 
 ## Dossier racine
 
-| Peut être configuré via  | Nom                                              | Commentaires                                                                                                                                                    |
-| ------------------------ | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objet webServer          | [`rootFolder`](API/WebServerClass.md#rootfolder) | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
-| `WEB SET ROOT FOLDER`    |                                                  |                                                                                                                                                                 |
-| Fenêtre de configuration | Configuration > Racine HTML par défaut           |                                                                                                                                                                 |
+| Peut être configuré via  | Nom                                                                            | Commentaires                                                                                                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objet webServer          | [`rootFolder`](API/WebServerClass.md#rootfolder)                               | La propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
+| `WEB SET ROOT FOLDER`    |                                                                                |                                                                                                                                                                 |
+| Fenêtre de configuration | [Configuration > Racine HTML par défaut](../settings/web.md#default-html-root) |                                                                                                                                                                 |
 
 Chemin du dossier racine du serveur web, i.e le dossier dans lequel 4D va chercher les pages HTML statiques et semi-dynamiques, les images, etc. à envoyer aux navigateurs. Le chemin d'accès est au format POSIX (chemin entier). Le serveur web doit être redémarré pour que le nouveau dossier racine soit pris en compte.
 
@@ -600,7 +599,7 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 
 Les paramètres suivants sont toujours pris en charge mais reposent sur des fonctionnalités ou des technologies obsolètes. Il est généralement recommandé de conserver les valeurs par défaut.
 
-#### Autoriser l'accès à la base de données via les URL "4DSYNC"
+#### Allow database access through 4DSYNC URLs
 
 Cette option contrôle le support des requêtes de synchronisation HTTP contenant des URLs dépréciées */4DSYNC*.
 

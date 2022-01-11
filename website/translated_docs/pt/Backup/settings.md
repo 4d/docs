@@ -3,7 +3,7 @@ id: settings
 title: Parâmetros da cópia de segurança
 ---
 
-Os parâmetros da cópia de segurança são definidas através de três páginas na caixa de diálogo Propriedades. Pode estabelecer:
+Backup settings are defined through three pages in the [Settings dialog box](../settings/overview.md). Pode estabelecer:
 
 - a periodicidade das cópias de segurança automáticas
 - os arquivos a incluir em cada backup

@@ -34,7 +34,7 @@ Este icono indica que la imagen no puede ser visualizada o manipulada localmente
 
 4D soporta imágenes de alta resolución tanto en plataformas macOS como Windows. Las imágenes de alta resolución pueden definirse por el factor de escala o dpi.
 
-### Factor de escala (sólo para macOS)
+### Scale factor
 
 Las pantallas de alta resolución tienen una mayor densidad de píxeles que las pantallas estándar tradicionales. Para que las imágenes se muestren correctamente en pantallas de alta resolución, el número de píxeles de la imagen debe multiplicarse por el *factor de escala* (*es decir*, dos veces más grande, tres veces más grande, etc.).
 
@@ -58,19 +58,19 @@ Las imágenes de alta resolución con la convención @nx pueden utilizarse en lo
 
 
 
-4D prioriza automáticamente las imágenes con mayor resolución. <br><br> **Ejemplo**: cuando se utilizan dos pantallas (una de alta resolución y otra estándar) y se mueve un formulario de una pantalla a otra, 4D renderiza automáticamente la mayor resolución posible de la imagen. Incluso si un comando o propiedad especifica *circle.png*, se utilizará *circle@3x.png* (si existe).
+4D prioriza automáticamente las imágenes con mayor resolución. For example, when using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Incluso si un comando o propiedad especifica *circle.png*, se utilizará *circle@3x.png* (si existe).
 > Tenga en cuenta que la priorización de la resolución sólo se produce para la visualización de imágenes en pantalla, no se realiza una priorización automática al imprimir.
 
 
 
-### DPI (macOS and Windows)
+### DPI
 
 Aunque 4D prioriza automáticamente la resolución más alta, existen, sin embargo, algunas diferencias de comportamiento en función de los ppp de la pantalla y de la imagen*(\*)*, y del formato de la imagen:
 
-| Operación                                                                                                                                                    | Comportamiento                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| Soltar o pegar                                                                                                                                               | Si la imagen tiene:<ul><li>**72dpi o 96dpi** - La imagen tiene el formato "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" y el objeto que contiene la imagen tiene el mismo número de píxeles.</li><li>**Otro dpi** - La imagen tiene el formato "{Escalada para encajar](FormObjects/properties_Picture.md#scaled-to-fit)" y el objeto que contiene la imagen es igual a (número de píxeles de la imagen * dpi de la pantalla) / (dpi de la imagen)</li> <li>**Sin dpi** - La imagen tiene el formato "{Escala para ajustar](FormObjects/properties_Picture.md#scaled-to-fit)".</li> |
-| [Tamaño automático](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (menú contextual del editor de formularios) | Si el formato de visualización de la imagen es:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - El objeto que contiene la imagen se redimensiona según (número de píxeles de la imagen * dpi de la pantalla) / (dpide la imagen) </li> <li>**Sin escalar** - El objeto que contiene la imagen tiene el mismo número de píxeles que la imagen.</li></ul><p>                       |
+| Operación                                                                                                                                | Comportamiento                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Soltar o pegar                                                                                                                           | Si la imagen tiene:<ul><li>**72dpi o 96dpi** - La imagen tiene el formato "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" y el objeto que contiene la imagen tiene el mismo número de píxeles.</li><li>**Otro dpi** - La imagen tiene el formato "{Escalada para encajar](FormObjects/properties_Picture.md#scaled-to-fit)" y el objeto que contiene la imagen es igual a (número de píxeles de la imagen * dpi de la pantalla) / (dpi de la imagen)</li> <li>**Sin dpi** - La imagen tiene el formato "{Escala para ajustar](FormObjects/properties_Picture.md#scaled-to-fit)".</li> |
+| [Automatic Size](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (Form Editor context menu) | Si el formato de visualización de la imagen es:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - El objeto que contiene la imagen se redimensiona según (número de píxeles de la imagen * dpi de la pantalla) / (dpide la imagen) </li> <li>**Sin escalar** - El objeto que contiene la imagen tiene el mismo número de píxeles que la imagen.</li></ul>                                                 |
 
 *(\*) Generalmente, macOS = 72 dpi, Windows = 96 dpi*
 

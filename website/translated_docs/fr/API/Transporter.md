@@ -21,7 +21,7 @@ title: Classe Transporter
 
 #### Description
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+La propriété `.acceptUnsecureConnection` contient <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** si 4D est autorisé à établir une connexion non chiffrée<!-- END REF --> lorsqu'une connexion chiffrée n'est pas possible.
 
 Elle contient **False** si les connexions non chiffrées ne sont pas autorisées, auquel cas une erreur est retournée lorsque la connexion chiffrée n'est pas possible.
 
@@ -37,7 +37,7 @@ Ports sécurisés disponibles :
 
 - POP3
     - 110 : Port POP3 non chiffré
-    - 995: POP3 with STARTTLS upgrade if supported by the server.
+    - 995 : POP3 avec mise à niveau STARTTLS si le serveur le prend en charge.
 <!-- END REF -->
 
 --- 
@@ -56,7 +56,7 @@ Ports sécurisés disponibles :
 
 #### Description
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+La propriété `.authenticationMode` contient <!-- REF #transporter.authenticationMode.Summary -->le mode d'authentification utilisé pour ouvrir la session sur le serveur de mail<!-- END REF -->.
 
 Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilisé.
 
@@ -140,10 +140,10 @@ Valeurs possibles :
 ## .bodyCharset
 
 <details><summary>Historique</summary>
-| Version | Modifications           |
-| ------- | ----------------------- |
-| v18     | Support for UTF8 base64 |
-| v17 R5  | Ajout                   |
+| Version | Modifications                  |
+| ------- | ------------------------------ |
+| v18     | Prise en charge de UTF8 base64 |
+| v17 R5  | Ajout                          |
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
@@ -152,7 +152,7 @@ Valeurs possibles :
 
 #### Description
 
-The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
+La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary -->  contient le charset et l'encodage utilisés pour le corps du mail<!-- END REF -->.
 
 *   subject,
 *   attachment filename(s),
@@ -188,7 +188,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 #### Description
 
-The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. Par défaut, si la propriété n'a pas été définie dans l'objet server (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), la valeur utilisée est 30.
+La propriété `.connectionTimeOut` contient <!-- REF #transporter.connectionTimeOut.Summary -->la durée maximale (en secondes) autorisée avant vérification de la connexion au serveur<!-- END REF -->. Par défaut, si la propriété n'a pas été définie dans l'objet server (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), la valeur utilisée est 30.
 
 <!-- END REF -->
 
@@ -210,7 +210,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 #### Description
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. L'en-tête comprend les éléments suivants de l'e-mail :
+La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Summary --> le charset et l'encodage utilisés pour l'en-tête de l'email<!-- END REF -->. L'en-tête comprend les éléments suivants de l'e-mail :
 
 *   subject,
 *   attachment filename(s),
@@ -245,7 +245,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### Description
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Utilisée pour les échanges de courrier (SMTP, POP3, IMAP).
+La propriété `.host` contient <!-- REF #transporter.host.Summary -->contient le nom ou l'adresse IP du serveur hôte<!-- END REF -->. Utilisée pour les échanges de courrier (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
@@ -266,7 +266,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 #### Description
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. Elle peut être relative (au dossier Logs courant) ou absolue.
+La propriété `.logFile` contient <!-- REF #transporter.logFile.Summary -->le chemin complet du fichier d'historique qui a été défini (le cas échéant) pour la connexion<!-- END REF -->. Elle peut être relative (au dossier Logs courant) ou absolue.
 
 Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE PARAMETER`), les fichiers log étendus stockent le contenu MIME de tous les emails envoyés et n'ont pas de limite de taille. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :
 
@@ -297,7 +297,7 @@ Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE
 
 #### Description
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. Par défaut, si la propriété *port* n'a pas été définie dans l'objet *server* (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), le port utilisé est :
+La propriété `.port` contient <!-- REF #transporter.port.Summary --> le numéro de port utilisé pour les transactions d'emails<!-- END REF -->. Par défaut, si la propriété *port* n'a pas été définie dans l'objet *server* (utilisé pour créer l'objet transporteur avec `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), le port utilisé est :
 
 *   **SMTP** - 587
 *   **POP3** - 995
@@ -324,7 +324,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 
 #### Description
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. Par défaut, si la propriété `.sendTimeOut` n'a pas été définie dans l'objet `server`, la valeur 100 est utilisée.
+La propriété `.sendTimeOut` contient <!-- REF #transporter.sendTimeOut.Summary --> le temps d'attente maximal (en secondes) d'un appel à `.send( )` avant le timeout (l'expiration du délai)<!-- END REF -->. Par défaut, si la propriété `.sendTimeOut` n'a pas été définie dans l'objet `server`, la valeur 100 est utilisée.
 
 <!-- END REF -->
 
@@ -345,7 +345,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 
 #### Description
-The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->. 
+La propriété `.user` contient <!-- REF #transporter.user.Summary --> le nom d'utilisateur employé pour l'authentification sur le serveur mail<!-- END REF -->. 
 
 <!-- END REF -->
 
@@ -364,20 +364,20 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Paramètres | Type   |    | Description                                 |
-| ---------- | ------ |:--:| ------------------------------------------- |
-| Résultat   | Object | <- | Status of the transporter object connection |
+| Paramètres | Type   |    | Description                                    |
+| ---------- | ------ |:--:| ---------------------------------------------- |
+| Résultat   | Object | <- | Statut de la connexion de l'objet transporteur |
 <!-- END REF -->
 
 
 #### Description
 
-The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
+La fonction `.checkConnection()` <!-- REF #transporter.checkConnection().Summary --> vérifie la connexion à l'aide des informations stockées dans l'objet transporteur<!-- END REF -->, recrée la connexion si nécessaire et retourne son statut. Cette fonction vous permet de vérifier que les valeurs fournies par l'utilisateur sont valides et cohérentes.
 
 
 #### Objet retourné
 
-The function sends a request to the mail server and returns an object describing the mail status. Cet objet peut avoir les propriétés suivantes :
+La fonction envoie une requête au serveur de mail et retourne un objet décrivant le statut. Cet objet peut avoir les propriétés suivantes :
 
 | Propriété  |                          | Type       | Description                                                                                                                 |
 | ---------- | ------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |

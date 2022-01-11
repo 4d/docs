@@ -293,6 +293,7 @@ The `sendMails` method:
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
+
     $status:=$transporter.send($email)
  End for each
 
@@ -379,12 +380,15 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
-This feature is based upon two methods of the `Entity` class:
+This feature is based upon two functions of the `Entity` class:
 
-*   `entity.lock()`
-*   `entity.unlock()`
+*   [`entity.lock()`](../API/EntityClass.md#lock)
+*   [`entity.unlock()`](../API/EntityClass.md#unlock)
 
-For more information, please refer to the descriptions for these methods.
+For more information, please refer to the descriptions for these functions.
+
+> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+
 
 
 ### Concurrent use of 4D classic locks and ORDA pessimistic locks
@@ -401,95 +405,4 @@ These principles are shown in the following diagram:
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
 *   Example with a lock set by a classic command:<br><br>![](assets/en/ORDA/concurrent2.png)
-*   Example with a lock set by an ORDA method:<br><br>![](assets/en/ORDA/concurrent3.png)
-
-
-
-## Client/server optimization
-
-4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
-
-The following optimization mechanisms are implemented:
-
-*   When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
-
-*   Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
-
-*   An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Using the context property](#using-the-context-property) below).
-
-The following methods automatically associate the optimization context of the source entity selection to the returned entity selection:
-
-*   `entitySelection.and()`
-*   `entitySelection.minus()`
-*   `entitySelection.or()`
-*   `entitySelection.orderBy()`
-*   `entitySelection.slice()`
-*   `entitySelection.drop()`
-
-
-
-**Beispiel**
-
-Given the following code:
-
-```4d
- $sel:=$ds.Employee.query("firstname = ab@")
- For each($e;$sel)
-    $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
- End for each
-```
-
-Thanks to the optimization, this request will only get data from used attributes (firstname, lastname, employer, employer.name) in *$sel* after a learning phase.
-
-
-
-### Using the context property
-
-You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
-
-A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
-
-
-
-**Example with `dataClass.query( )` method:**
-
-```4d
- var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
- var $data : Collection
- $querysettings:=New object("context";"shortList")
- $querysettings2:=New object("context";"longList")
-
- $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
-
- $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
-
- $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
-
- $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
-```
-
-### Entity selection-based list box
-
-Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
-
-A specific "page mode" context is also provided when loading the current entity through the **Current item** property expression of the list box (see [Collection or entity selection type list boxes](FormObjects/listbox_overview.md#list-box-types)). This feature allows you to not overload the list box initial context in this case, especially if the "page" requests additional attributes. Note that only the use of **Current item** expression will create/use the page context (access through `entitySelection\[index]` will alter the entity selection context).
-
-Subsequent requests to server sent by entity browsing methods will also support this optimization. The following methods automatically associate the optimization context of the source entity to the returned entity:
-
-*   `entity.next( )`
-*   `entity.first( )`
-*   `entity.last( )`
-*   `entity.previous( )`
-
-For example, the following code loads the selected entity and allows browsing in the entity selection. Entities are loaded in a separate context and the list box initial context is left untouched:
-
-```4d
- $myEntity:=Form.currentElement //current item expression
-  //... do something
- $myEntity:=$myEntity.next() //loads the next entity using the same context
-```
+*   Example with a lock set by an ORDA function:<br><br>![](assets/en/ORDA/concurrent3.png)

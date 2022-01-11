@@ -7,7 +7,7 @@ title: ブール
 
 ## ブール関数
 
-4Dにはブール演算に使用することのできる、ブール関数があります: `True`, `False`, `Not`。 詳細については、これらのコマンドの説明を参照ください。
+4Dにはブール演算に使用することのできる、ブール関数があります: `True`, `False`, `Not`。 For more information, see the descriptions of these commands.
 
 ### 例題
 
@@ -63,3 +63,5 @@ myBoolean:=(myButton=1)
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
+
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [trushy and falsy](operators.md#truthy-and-falsy) concept. 

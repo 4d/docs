@@ -94,13 +94,32 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
+### Include tokens in project source files
+
+When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+
+If you intend to use VCS or external code editors with your new projects, you might want to uncheck this option for a better readability of the code with these tools. 
+
+> This option can only be applied to projects (binary databases always include tokens).
+
+> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
+
+#### Excluding tokens in existing projects
+
+You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+
+```
+"tokenizedText": false
+```
+
+> This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them. 
+
+
 ### Create `.gitignore` file
 
 You might need or want git to ignore some files in your new projects.  
 
 You can set this preference by checking the **Create .gitignore file**  option.
-
-![](assets/en/Preferences/gitignore.png)
 
 When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
 

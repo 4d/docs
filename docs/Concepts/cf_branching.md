@@ -47,6 +47,8 @@ The expression is TRUE only if both methods are TRUE. However, even if _MethodA_
 
 The result is similar and _MethodB_ is evaluated only if necessary. 
 
+> **Note:** The [ternary operator](../dt_boolean.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of [If…Else](../cf_branching.md#ifelseend-if) statements.
+
 ### Example 
 
 ```4d

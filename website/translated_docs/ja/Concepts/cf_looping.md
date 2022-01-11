@@ -9,12 +9,18 @@ title: ループ構造
 ## While...End while
 
 `While...End while` による制御フロー構造の正式な構文は以下のようになります:
+
 ```4d
  While(Boolean_Expression)
     statement(s)
+    {break}  
+    {continue}
  End while
 ```
+
 `While...End while` ループは、ブール式が true である限り、ループ内のステートメントを実行し続けます。 ループの始めにブール式を評価し、ブール式が FALSE の場合にはループをおこないません。
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 一般に、`While...End while` ループに入る手前で、ブール式で判定する値を初期化しておきます。 通常はブール式が true になるように設定してからループに入ります。
 
@@ -41,14 +47,19 @@ title: ループ構造
 ## Repeat...Until
 
 `Repeat...Until` による制御フロー構造の正式な構文は以下のようになります:
+
 ```4d
- Repeat
+Repeat
     statement(s)
- Until(Boolean_Expression)
+    {break}  
+    {continue}
+Until(Boolean_Expression)
 ```
 `Repeat...Until` ループは、[While...End while](flow-control#whileend-while) ループと似ていますが、まずループの後でブール式を判定する点が異なります。 つまり、`Repeat...Until` ループは最低でも1回は必ずループを実行しますが、`While...End while` ループは最初のブール式が FALSE である場合には、ループを1回も実行しません。
 
 もう一つの `While...End while` ループとの相違点は、 `Repeat...Until` はブール式が true になるまでループを続行することです。
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### 例題
 
@@ -65,9 +76,11 @@ title: ループ構造
 `For...End for` による制御フロー構造の正式な構文は以下のようになります:
 
 ```4d
- For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
-    statement(s)
- End for
+For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
+   statement(s)
+    {break}  
+    {continue}
+End for
 ```
 
 `For...End for` ループは、カウンター変数によりループを制御します:
@@ -83,6 +96,8 @@ title: ループ構造
 - 通常、*Start_Expression* は *End_Expression* より小さい。
 - *Start_Expression* と *End_Expression* が等しい場合、1回だけループがおこなわれます。
 - *Start_Expression* が *End_Expression* より大きい場合、*Increment_Expression* に負の値を指定しない限り、ループはおこなわれません。 次に例を示します。
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### 基本的な使用例
 
@@ -235,7 +250,7 @@ title: ループ構造
 
 次に例を示します:
 
-11. 以下の例は二次元配列の全要素への処理です:
+1. 以下の例は二次元配列の全要素への処理です:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
@@ -249,7 +264,7 @@ title: ループ構造
  End for
 ```
 
-12. 以下の例は、データベースのすべての日付フィールドに対するポインターの配列を作成します:
+2. 以下の例は、データベースのすべての日付フィールドに対するポインターの配列を作成します:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -277,6 +292,8 @@ title: ループ構造
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
     statement(s)
+    {break}  
+    {continue}
  End for each
 ```
 
@@ -302,6 +319,8 @@ title: ループ構造
     - 整合性のため要素やプロパティを一括で処理しなくてはならない場合には、ループに入る前 (外側) に使います。
     - 要素やプロパティを個々に変更して差し支えない場合は、ループの中で使います。
 
+The `break` and `continue` statements are [described below](#break-and-continue).
+
 ### コレクション内のループ
 
 `For each...End for each` が _Collection_ 型の _Expression_ に対して使用された場合、_Current_Item_ はコレクション要素と同じ型の変数です。 デフォルトでは、ループの回数はコレクションの要素数に基づいています。
@@ -317,6 +336,7 @@ title: ループ構造
 #### 例題
 
 数値のコレクションを対象に、統計情報を計算します:
+
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -351,6 +371,7 @@ title: ループ構造
 #### 例題
 
 Employees データクラスの中から、英国の従業員の給与を引き上げます:
+
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -368,6 +389,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
 #### 例題
 
 下のオブジェクトに格納されている名前に関したプロパティの値をすべて大文字に変えます:
+
 ```4d
 {
     "firstname": "gregory",
@@ -376,6 +398,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
 }
 ```
 以下のように書くことができます:
+
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -383,6 +406,7 @@ Employees データクラスの中から、英国の従業員の給与を引き�
     End if
  End for each
 ```
+
 ```
 {
     "firstname": "GREGORY",
@@ -450,3 +474,39 @@ Employees データクラスの中から、英国の従業員の給与を引き�
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
+## `break` and `continue`
+
+All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+
+### break
+
+The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+
+
+#### 例題
+
+```4d
+For (vCounter;1;100)
+    If ($tab{vCounter}="") //if a condition becomes true
+        break //end of the for loop
+    End if
+End for
+```
+
+### continue
+
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+
+```4d
+var $text : Text
+For ($i; 0; 9)
+    If ($i=3)
+        continue //go directly to the next iteration
+    End if
+    $text:=$text+String($i)
+End for
+// $text="012456789" 
+
+```

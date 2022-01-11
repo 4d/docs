@@ -3,7 +3,7 @@ id: settings
 title: Backup Settings
 ---
 
-Backup settings are defined through three pages in the Settings dialog box. You can set:
+Backup settings are defined through three pages in the [Settings dialog box](../settings/overview.md). You can set:
 
 - the scheduler for automatic backups
 - the files to include in every backup

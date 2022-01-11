@@ -9,12 +9,18 @@ Estruturas de loop repetem uma sequência de declarações até que uma condiç�
 ## While...End while
 
 A sintaxe da estrutura condicional `While... End while` é:
+
 ```4d
  While(Boolean_Expression)
     statement(s)
+    {break}  
+    {continue}
  End while
 ```
+
 Um loop `While... End while` executa as instruções dentro do loop enquanto a expressão booleana for TRUE. Comprova a expressão booleana ao início do loop e não entra no loop se a expressão for FALSE.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 É comum inicializar o valor provado na expressão booleana imediatamente antes de entrar no loop `While... End while`. Inicializar o valor significa atribuir o valor para algo apropriado, geralmente para que a expressão booleana seja TRUE e `While... End while` execute o loop.
 
@@ -41,14 +47,19 @@ Nesse exemplo, o valor da variável sistema `OK` é estabelecida pelo comando `C
 ## Repeat...Until
 
 A sintaxe da estrutura condicional `Repeat... Until` é:
+
 ```4d
- Repeat
+Repeat
     statement(s)
- Until(Boolean_Expression)
+    {break}  
+    {continue}
+Until(Boolean_Expression)
 ```
 A outra diferença com um loop `Repeat... Until` é que o loop continua até que a expressão seja TRUE.
 
 Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Exemplo
 
@@ -65,9 +76,11 @@ Compare o exemplo abaixo com o exemplo para o lopp `While... End while`. Lembre 
 A sintaxe da estrutura condicional `For... End for` é:
 
 ```4d
- For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
-    statement(s)
- End for
+For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
+   statement(s)
+    {break}  
+    {continue}
+End for
 ```
 
 O loop `For... End for` é um loop controlado por um contador:
@@ -83,6 +96,8 @@ O loop `For... End for` é um loop controlado por um contador:
 - Geralmente *Start_Expression* pe menor que *End_Expression*.
 - Se *Start_Expression* e *End_Expression* forem iguais, o loop se executará só uma vez.
 - Se *Start_Expression* for maior que *End_Expression*, o loop não vai executar a não ser que especifique uma *Increment_Expression* negativa. Ver os exemplos.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Exemplos básicos
 
@@ -235,7 +250,7 @@ Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. 
 
 Aqui são dois exemplos:
 
-11. O exemplo abaixo percorre todos os elementos em um array de duas dimensões:
+1. O exemplo abaixo percorre todos os elementos em um array de duas dimensões:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
@@ -249,7 +264,7 @@ Aqui são dois exemplos:
  End for
 ```
 
-12. O seguinte exemplo constrói um array de ponteiros a todos os campos de data presentes no banco:
+2. O seguinte exemplo constrói um array de ponteiros a todos os campos de data presentes no banco:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -275,8 +290,10 @@ Aqui são dois exemplos:
 A sintaxe da estrutura condicional `For each... End for each` é:
 
 ```4d
- For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}
-    instruction(s)
+ For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
+    statement(s)
+    {break}  
+    {continue}
  End for each
 ```
 
@@ -302,6 +319,8 @@ A tabela abaixo compara os três tipos de `For each... End for each`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
+The `break` and `continue` statements are [described below](#break-and-continue).
+
 ### Loop através da coleção
 
 Quando `For each... End for each` for utilizado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção. Como padrão, o número de loops é baseado no número de elementos da coleção.
@@ -317,6 +336,7 @@ Em cada iteração do loop, a variável _Current_Item_ é preenchida automaticam
 #### Exemplo
 
 Se quiser computar algumas estatísticas para uma coleção de números:
+
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -351,6 +371,7 @@ Lembre que qualquer modificação aplicada na entidade atual deve ser guardada e
 #### Exemplo
 
 Se quiser aumentar o salário de todos os empregados britânicos em uma seleção de entidades:
+
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -368,6 +389,7 @@ As propriedades do objeto são processadas de acordo com sua ordem de criação.
 #### Exemplo
 
 Se quiser trocar os nomes para maiúsculas no objeto a seguir:
+
 ```4d
 {
     "firstname": "gregory",
@@ -376,6 +398,7 @@ Se quiser trocar os nomes para maiúsculas no objeto a seguir:
 }
 ```
 You can write:
+
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -383,6 +406,7 @@ You can write:
     End if
  End for each
 ```
+
 ```
 {
     "firstname": "GREGORY",
@@ -450,3 +474,39 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
+## `break` and `continue`
+
+All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+
+### break
+
+The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+
+
+#### Exemplo
+
+```4d
+For (vCounter;1;100)
+    If ($tab{vCounter}="") //if a condition becomes true
+        break //end of the for loop
+    End if
+End for
+```
+
+### continue
+
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+
+```4d
+var $text : Text
+For ($i; 0; 9)
+    If ($i=3)
+        continue //go directly to the next iteration
+    End if
+    $text:=$text+String($i)
+End for
+// $text="012456789" 
+
+```

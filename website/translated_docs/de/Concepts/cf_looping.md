@@ -9,12 +9,18 @@ Schleifenstrukturen wiederholen eine Abfolge von Anweisungen, bis eine Bedingung
 ## While...End while
 
 Die formale Syntax der Abfragefolge `While...End while` lautet:
+
 ```4d
  While(Boolean_Expression)
     statement(s)
+    {break}  
+    {continue}
  End while
 ```
+
 Eine Schleife `While...End while` führt die Anweisung innerhalb der Schleife solange aus, wie der Boolean Ausdruck wahr ist. Sie prüft den Boolean Ausdruck am Beginn der Schleife und tritt gar nicht in die Schleife ein, wenn der Ausdruck FALSE ist.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 Es ist üblich, den getesteten Wert im Boolean Ausdruck direkt vor Eintreten in die Schleife `While...End while` zu initialisieren. Den Wert initialisieren heißt, Sie setzen etwas Passendes, so dass der Boolean Ausdruck TRUE ist und `While...End while` die Schleife ausführt.
 
@@ -41,14 +47,19 @@ In diesem Beispiel wird die Systemvariable `OK` über den Befehl `CONFIRM` geset
 ## Repeat...Until
 
 Die formale Syntax der Abfragefolge `Repeat...Until` lautet:
+
 ```4d
- Repeat
+Repeat
     statement(s)
- Until(Boolean_Expression)
+    {break}  
+    {continue}
+Until(Boolean_Expression)
 ```
 Die Schleife `Repeat...Until` arbeitet ähnlich wie die Schleife [While...End while](flow-control#whileend-while), mit dem Unterschied, dass der Boolean Ausdruck nicht vor, sondern nach der Schleife getestet wird. So führt `Repeat...Until` die Schleife immer einmal aus, während `While...End while` die Schleife gar nicht ausführt, wenn am Anfang der Boolean Ausdruck falsch ist.
 
 Ein weiterer Unterschied ist, dass `Repeat...Until` weiterläuft, bis der Boolean Ausdruck TRUE ist.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Beispiel
 
@@ -65,9 +76,11 @@ Vergleichen Sie folgendes Beispiel mit dem Beispiel zu `While...End while`. Beac
 Die formale Syntax der Abfragefolge `For..End for` lautet:
 
 ```4d
- For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
-    statement(s)
- End for
+For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
+   statement(s)
+    {break}  
+    {continue}
+End for
 ```
 
 Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
@@ -83,6 +96,8 @@ Die Schleife `For...End for` wird über eine Zählervariable gesteuert:
 - Im Normalfall ist *Start_Expression* kleiner als *End_Expression*.
 - Sind *Start_Expression* und *End_Expression* gleich, wird die Schleife nur einmal ausgeführt.
 - Ist *Start_Expression* größer als *End_Expression*, wird die Schleife gar nicht ausgeführt, außer *Increment_Expression* hat einen negativen Wert. Sehen Sie die Beispiele.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Allgemeine Beispiele
 
@@ -235,7 +250,7 @@ Sie können so viele Kontrollstrukturen verschachteln, wie Sie (vernünftigerwei
 
 Hier zwei Beispiele:
 
-11. Folgendes Beispiel durchläuft alle Elemente eines zweidimensionalen Array:
+1. Folgendes Beispiel durchläuft alle Elemente eines zweidimensionalen Array:
 
 ```4d
  For($vlElem;1;Size of array(anArray))
@@ -249,7 +264,7 @@ Hier zwei Beispiele:
  End for
 ```
 
-12. Dieses Beispiel erstellt ein Array mit Zeigern auf alle vorhandenen Datumsfelder in der Anwendung:
+2. Dieses Beispiel erstellt ein Array mit Zeigern auf alle vorhandenen Datumsfelder in der Anwendung:
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -277,6 +292,8 @@ Die formale Syntax der Abfragefolge `For each..End for each` lautet:
 ```4d
  For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
     statement(s)
+    {break}  
+    {continue}
  End for each
 ```
 
@@ -302,6 +319,8 @@ Folgende Tabelle vergleicht drei Typen von `For each...End for each`:
     - Vor Eintreten in die Schleife, wenn Einträge zur Wahrung der Integrität gemeinsman geändert werden sollen, oder
     - Innerhalb der Schleife, wenn nur ein paar Elemente/Eigenschaften geändert werden müssen und kein Verwalten der Integrität erforderlich ist.
 
+The `break` and `continue` statements are [described below](#break-and-continue).
+
 ### Schleife durch Collections
 
 Beim Verwenden von `For each...End for each` mit einer _Expression_ vom Typ _Collection_ ist der Parameter _Current_Item_ eine Variable vom gleichen Typ wie die Collection Elemente. Die Anzahl Schleifen basiert standardmäßig auf der Anzahl Einträge in der Collection.
@@ -317,6 +336,7 @@ Bei jeder Wiederholung der Schleife wird die Variable _Current_Item_ automatisch
 #### Beispiel
 
 Sie wollen für eine Collection mit Zahlen ein paar Statistiken berechnen:
+
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -351,6 +371,7 @@ Beachten Sie, dass jede Änderung in der aktuellen Entity explizit mit `entity.s
 #### Beispiel
 
 Sie wollen das Gehalt aller britischen Angestellten in einer Entity-Selection erhöhen:
+
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -368,6 +389,7 @@ Die Eigenschaften des Objekts werden in der Reihenfolge ihrer Erstellung bearbei
 #### Beispiel
 
 Sie wollen die Namen in folgendem Objekt auf Großschreibung umstellen:
+
 ```4d
 {
     "firstname": "gregory",
@@ -376,6 +398,7 @@ Sie wollen die Namen in folgendem Objekt auf Großschreibung umstellen:
 }
 ```
 Sie schreiben:
+
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -383,6 +406,7 @@ Sie schreiben:
     End if
  End for each
 ```
+
 ```
 {
     "firstname": "GREGORY",
@@ -450,3 +474,39 @@ Sie können je nach Bedarf ein anderes Schlüsselwort verwenden:
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
+## `break` and `continue`
+
+All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+
+### break
+
+The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+
+
+#### Beispiel
+
+```4d
+For (vCounter;1;100)
+    If ($tab{vCounter}="") //if a condition becomes true
+        break //end of the for loop
+    End if
+End for
+```
+
+### continue
+
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+
+```4d
+var $text : Text
+For ($i; 0; 9)
+    If ($i=3)
+        continue //go directly to the next iteration
+    End if
+    $text:=$text+String($i)
+End for
+// $text="012456789" 
+
+```

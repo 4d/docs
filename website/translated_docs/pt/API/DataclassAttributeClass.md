@@ -30,6 +30,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.path.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
@@ -120,6 +121,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <details><summary>Histórico</summary>
 | Versão | Mudanças                       |
 | ------ | ------------------------------ |
+| v19 R4 | Support of alias attributes    |
 | v19 R3 | Support of computed attributes |
 </details>
 
@@ -140,6 +142,7 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 | relatedEntity           | 38 (`Is object`)                                                                                                   |
 | relatedEntities         | 42 (`Is collection`)                                                                                               |
 | calculated              | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
+| alias                   | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
 
 
 <!-- END REF -->
@@ -231,6 +234,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 <details><summary>Histórico</summary>
 | Versão | Mudanças           |
 | ------ | ------------------ |
+| v19 R4 | Added "alias"      |
 | v19 R3 | Added "calculated" |
 </details>
 
@@ -244,7 +248,8 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 A propriedade `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->devolve a categoria do atributo<!-- END REF -->. O valor retornado pode ser um dos abaixo:
 
 *   "storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute
-*   "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename).
+*   "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename)
+*   "alias": attribute built upon [another attribute](ORDA/ordaClasses.md#alias-attributes-1)
 *   "relatedEntity": N -> 1 atributo de relação (referência a uma entidade)
 *   "relatedEntities": 1 -> N atributo de relação (referência a uma seleção de entidades)
 
@@ -322,6 +327,33 @@ A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->retorna o
 
 <!-- END REF -->
 
+
+<!-- REF DataClassAttributeClass.path.Desc -->
+## .path
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R4 | Adicionado |
+</details>
+
+
+<!-- REF DataClassAttributeClass.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
+
+#### Description
+
+The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
+
+#### Exemplo
+
+```4d
+ var $path : Text
+ $path:=ds.Teacher.students.path //$path="courses.student"
+```
+
+<!-- END REF -->
 
 
 <!-- REF DataClassAttributeClass.readOnly.Desc -->

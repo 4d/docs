@@ -56,6 +56,8 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 - Project folder
     + Project
 
+
+
         * Sources
             - Classes
                 + Polygon.4dm
@@ -213,38 +215,24 @@ Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<Clas
 
 Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#parameter) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
-- Verwendung einer Class Member Method "4D.Function":
+- Verwendung des Operators `()` For example, `myObject.methodName("hello")`
+- use of a "4D.Function" class member method:
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-Safety Warnung:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit der Option "In preemptive Prozess starten" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
 
 
 
+#### Parameters
 
-#### Parameter
-
-Function Parameter werden mit Name und Typ des Parameters, getrennt durch Komma, deklariert. Der Parametername muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein. Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. Der Parametername muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein. Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-> Ist kein Typ angegeben, wird der Parameter als `Variant` deklariert.
-
-Den Rückgabeparameter (optional) deklarieren Sie mit einem Pfeil (->) und der entsprechenden Definition nach der Liste der Eingabeparameter. Zum Beispiel:
-
-```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
-```
-
-Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` deklarieren, dann ist er automatisch durch $0 verfügbar. Zum Beispiel:
-
-```4d
-Function add($x : Variant; $y : Integer): Integer
-    $0:=$x+$y
-```
-> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
+> If the type is not stated, the parameter will be defined as `Variant`.
+> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Beide Syntaxarten lassen sich miteinander mischen. For example:
 > 
 > ```4d
 > Function add($x : Integer)
@@ -254,9 +242,25 @@ Function add($x : Variant; $y : Integer): Integer
 >   $0:=String($value)
 > ```
 
+#### Return value
+
+You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. For example:
+
+```4d
+Function add($x : Variant; $y : Integer)->$result : Integer
+    $result:=$x+$y
+```
+
+You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). For example:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+    // some code
+    return $x+$y
+```
 
 
-#### Example
+#### Example 1
 
 ```4d
 // Class: Rectangle
@@ -279,6 +283,21 @@ var $area : Real
 $rect:=cs.Rectangle.new(50;100)  
 $area:=$rect.getArea() //5000
 ```
+
+#### Example 1
+
+This example uses the [`return expression`](parameters.md#return-expression):
+
+```4d
+Function getRectArea($width : Integer; $height : Integer) : Integer
+    If ($width > 0 && $height > 0)
+        return $width * $height
+    Else
+        return 0
+    End if
+```
+
+
 
 
 ### `Function get` and `Function set`

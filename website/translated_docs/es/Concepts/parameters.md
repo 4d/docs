@@ -126,12 +126,15 @@ El parámetro de retorno de una función se declara añadiendo una flecha (->) y
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-También puedes declarar el parámetro de retorno sólo añadiendo `: type`, en cuyo caso estará disponible automáticamente a través de `$0` ([ver sintaxis secuencial más abajo](#returned-value-1)). Por ejemplo:
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
+
+
+
 
 
 ### Tipos de datos soportados
@@ -209,6 +212,43 @@ Puede utilizar toda [expresión](quick-tour.md#expression-types) como parámetro
 - arrays
 
 Las expresiones de tablas o arrays sólo pueden pasarse [como referencia utilizando un puntero](dt_pointer.md#pointers-as-parameters-to-methods).
+
+## `return {expression}`
+
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
+
+The `return` statement ends function or method execution and can be used to return an expression to the caller.
+
+For example, the following function returns the square of its argument, $x, where $x is a number.
+
+```4d
+Function square($x : Integer) 
+   return $x * $x
+```
+
+> Internally, `return x` executes `$0:=x` or (if declared) `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+
+
+The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. Por ejemplo:
+
+
+```4d
+Function getValue
+    $0:=10
+    return 20
+    // returns 20
+
+Function getValue -> $v : Integer
+    return 10
+    $v:=20 // never executed
+    // returns 10
+```
+
+
 
 ## Indirección de parámetros (${N})
 

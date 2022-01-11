@@ -3,7 +3,7 @@ id: settings
 title: Paramètres de sauvegarde
 ---
 
-Les paramètres de sauvegarde sont définis sur trois pages dans la boîte de dialogue des Propriétés. Vous pouvez définir :
+Les paramètres de sauvegarde sont définis sur trois pages dans la [boîte de dialogue des Paramètres](../settings/overview.md). Vous pouvez définir :
 
 - la périodicité des sauvegardes automatiques
 - les fichiers à inclure dans chaque sauvegarde

@@ -32,7 +32,7 @@ La première fois que vous vous connectez à un projet 4D Server via un 4D dista
 
 Pour vous connecter à distance à un projet 4D Server :
 
-1. Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue, <p>OU<p> Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
+1. Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue, <p>OR<p> Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
 
 La boîte de dialogue de connexion à 4D Server apparaît. Cette boîte de dialogue comporte trois onglets : **Récent**, **Disponible** et **Personnalisé**.
 

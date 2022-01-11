@@ -34,7 +34,7 @@ Es gibt an, dass das Bild nicht angezeigt bzw. konvertiert werden kann -- es lä
 
 4D unterstützt hochauflösende Bilder auf den beiden Plattformen Windows und macOS. Sie lassen sich über den Skalierungsfaktor oder dpi definieren.
 
-### Skalierungsfaktor (nur macOS)
+### Scale factor
 
 Hochauflösende Anzeigen haben eine höhere Pixeldichte als herkömmliche Standardanzeigen. Damit Bilder auf hochauflösenden Anzeigen korrekt dargestellt werden, muss die Anzahl der Pixel im Bild mit dem *Skalierungsfaktor* multipliziert werden (*d.h.*, zwei Mal größer, drei Mal größer usw.).
 
@@ -58,19 +58,19 @@ Hochauflösende Bilder mit der @nx-Konvention lassen sich in folgenden Objekten 
 
 
 
-4D priorisiert automatisch die Bilder mit der höchsten Auflösung. <br><br> **Beispiel**: Wenn Sie zwei Bildschirme verwenden (ein hochauflösendes Display, ein Standard-Display) und Sie ein Formular von einem Bildschirm auf den anderen verschieben, rendert 4D automatisch die höchstmögliche Auflösung des Bildes. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
+4D priorisiert automatisch die Bilder mit der höchsten Auflösung. For example, when using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
 > Beachten Sie, dass die Priorisierung der Auflösung nur für die Anzeige von Bildern auf dem Bildschirm erfolgt, beim Drucken wird keine automatische Priorisierung vorgenommen.
 
 
 
-### DPI (macOS and Windows)
+### DPI
 
 Auch wenn 4D automatisch die höchste Auflösung priorisiert, gibt es jedoch einige Unterschiede im Verhalten je nach dpi von Bildschirm und Bild*(\*)* und Bildformat:
 
-| Operation                                                                                                                                           | Verhalten                                                                                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Drop oder Paste                                                                                                                                     | Hat das Bild:<ul><li>**72dpi oder 96dpi** - Das Bild hat das Format "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" und das Objekt, das das Bild enthält, hat die gleiche Anzahl von Pixel.</li><li>**Andere dpi** - Das Bild hat das Format "[Größe angepasst](FormObjects/properties_Picture.md#scaled-to-fit)" und das Objekt, das das Bild enthält, ist gleich (Anzahl der Pixel des Bildes * dpi des Bildschirms) / (dpi des Bildes)</li> <li>**Keine dpi** - Das Bild hat das Format "[Scaled to fit (FormObjects/properties_Picture.md#scaled-to-fit)".</li> |
-| [Automatische Größe](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Kontextmenü des Formulareditors) | Ist das Anzeigeformat des Bildes:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - Das Objekt, das das Bild enthält, wird nach (Anzahl der Pixel des Bildes * dpi des Bildschirms) / (dpi des Bildes) skaliert </li> <li>**Nicht skaliert** - Das Objekt, das das Bild enthält, hat die gleiche Anzahl von Pixel wie das Bild.</li></ul><p>                               |
+| Operation                                                                                                                                | Verhalten                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Drop oder Paste                                                                                                                          | Hat das Bild:<ul><li>**72dpi oder 96dpi** - Das Bild hat das Format "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" und das Objekt, das das Bild enthält, hat die gleiche Anzahl von Pixel.</li><li>**Andere dpi** - Das Bild hat das Format "[Größe angepasst](FormObjects/properties_Picture.md#scaled-to-fit)" und das Objekt, das das Bild enthält, ist gleich (Anzahl der Pixel des Bildes * dpi des Bildschirms) / (dpi des Bildes)</li> <li>**Keine dpi** - Das Bild hat das Format "[Scaled to fit (FormObjects/properties_Picture.md#scaled-to-fit)".</li> |
+| [Automatic Size](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (Form Editor context menu) | Ist das Anzeigeformat des Bildes:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - Das Objekt, das das Bild enthält, wird nach (Anzahl der Pixel des Bildes * dpi des Bildschirms) / (dpi des Bildes) skaliert </li> <li>**Nicht skaliert** - Das Objekt, das das Bild enthält, hat die gleiche Anzahl von Pixel wie das Bild.</li></ul>                                                         |
 
 *(\*) In der Regel gilt für macOS = 72dpi, Windows = 96dpi*
 

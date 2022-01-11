@@ -6,6 +6,19 @@ title: Documentation updates
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
 
 
+## 4D v19 R4
+
+- [Alias attributes](ORDA/ordaClasses.md#alias-attributes) are available in ORDA classes.
+- Support for [break and continue](Concepts/cf_looping.md#break-and-continue) statements in loops.
+- Support for [return](Concepts/flow-control.md#return-expression) statement and [return expression](Concepts/parameters.md#return-expression) to return values.
+- Support for [compound assignment operators](Concepts/operators.md#compound-assignment-operators), [short-circuit operators](Concepts/operators.md#short-circuit-operators), and [ternary operator](Concepts/operators.md#ternary-operator)
+- The [Code Editor](code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
+- New Preferences: [**Include tokens in project source files**](Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](Preferences/methods.md#show-clipboards) option on the Methods page.
+- New REST request to [lock/unlock](REST/$lock.md) entities.
+- [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list#vp-paste-from-object).
+- New [SystemWorker class](API/SystemWorkerClass.md).
+
+
 ## 4D v19 R3
 
 - [Les propriétés calculées](Concepts/classes.md#function-get-and-function-set) sont disponibles dans les classes.
@@ -15,10 +28,10 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - Une [nouvelle option de build](Desktop/building.md#allow-connection-of-silicon-mac-clients) permet d'inclure plus facilement les clients Silicon Mac dans les applications serveur sous Windows.
 - Plus large [prise en charge du mode sombre](Preferences/general.md#appearance-macos-only) sur macOS.
 - Prise en charge de **l'objet token OAuth2** dans [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter) et [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter).
-- Les utilisateurs peuvent désormais charger un [fichier de configuration de journal](Admin/debugLogFiles.md#using-a-log-configuration-file) à l'aide d'un bouton dans la [fenêtre d'administration du serveur](/Admin/server-admin.md#load-logs-configuration-file).
+- Les utilisateurs peuvent désormais charger un [fichier de configuration de journal](Debugging/debugLogFiles.md#using-a-log-configuration-file) à l'aide d'un bouton dans la [fenêtre d'administration du serveur](ServerWindow/maintenance.md#load-logs-configuration-file).
 - La gestion des [paramètres optionnels](Concepts/parameters.md#optional-parameters) est plus flexible dans le langage 4D.
 - Le débogage des sessions de serveur web [est plus facile sur 4D Server](WebServer/sessions.md#preemptive-mode).
-- Le nouveau composant [4D NetKit](Project/components.md#list-of-4d-components) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
+- Le nouveau composant [4D NetKit](Extensions/overview.md#list-of-4d-components) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
 
 
 ## 4D v19 R2
@@ -39,6 +52,7 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
 - New, comprehensive [CLI](Admin/cli.md) page.
+
 
 
 ## 4D v18 R6

@@ -9,12 +9,18 @@ Les structures en boucle répètent une séquence d'instructions jusqu'à ce qu'
 ## While...End while
 
 La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
+
 ```4d
- While(Expression_booléenne)
-    instruction(s)
+ While(Boolean_Expression)
+    statement(s)
+    {break}  
+    {continue}
  End while
 ```
+
 Une boucle `While...End while` exécute les instructions comprises entre `While` et `End while` aussi longtemps que l’expression booléenne est TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 Il est utile d’initialiser la valeur testée dans l’expression booléenne juste avant d’entrer dans la boucle `While...End while`. Initialiser la valeur signifie lui affecter un contenu approprié, généralement pour que l’expression booléenne soit TRUE et que le programme entre dans la boucle.
 
@@ -41,14 +47,19 @@ Dans cet exemple, la valeur de la variable système `OK` est définie par la com
 ## Repeat...Until
 
 La syntaxe de la structure répétitive (ou boucle) `Repeat...Until` est la suivante :
+
 ```4d
- Repeat
-    instruction(s)
- Until(Boolean_Expression)
+Repeat
+    statement(s)
+    {break}  
+    {continue}
+Until(Boolean_Expression)
 ```
 La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
 
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Exemple
 
@@ -65,9 +76,11 @@ Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous c
 La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 ```4d
- For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
-    instruction(s)
- End for
+For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
+   statement(s)
+    {break}  
+    {continue}
+End for
 ```
 
 La structure `For...End for` est une boucle contrôlée par un compteur :
@@ -83,6 +96,8 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 - Généralement, *Start_Expression* est inférieure à *End_Expression*.
 - Si les deux expressions sont égales, la boucle ne sera exécutée qu'une fois.
 - Si *Start_Expression* est supérieure à *End_Expression*, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une *Increment_Expression* négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.
+
+The `break` and `continue` statements are [described below](#break-and-continue).
 
 ### Exemples élémentaires
 
@@ -235,7 +250,7 @@ Vous pouvez emboîter autant de structures répétitives que vous voulez (dans l
 
 Voici deux exemples :
 
-11. L'exemple suivant permet de traiter tous les éléments d'un tableau à deux dimensions :
+1. L'exemple suivant permet de traiter tous les éléments d'un tableau à deux dimensions :
 
 ```4d
  For($vlElem;1;Size of array(anArray))
@@ -249,7 +264,7 @@ Voici deux exemples :
  End for
 ```
 
-12. L'exemple suivant construit un tableau de pointeurs vers tous les champs de type Date présents dans la base :
+2. L'exemple suivant construit un tableau de pointeurs vers tous les champs de type Date présents dans la base :
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -275,8 +290,10 @@ Voici deux exemples :
 La syntaxe de la structure répétitive (ou boucle) `For each...End for each` est la suivante :
 
 ```4d
- For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}
-    instruction(s)
+ For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
+    statement(s)
+    {break}  
+    {continue}
  End for each
 ```
 
@@ -302,6 +319,8 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
     - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
     - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
 
+The `break` and `continue` statements are [described below](#break-and-continue).
+
 ### Boucle sur collections
 
 Lorsque `For each...End for each` est utilisée avec une _Expression_ de type _Collection_, le paramètre _Elément_courant_ est une variable du même type que les éléments de la collection. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
@@ -317,6 +336,7 @@ A chaque itération de la boucle, la variable _Elément_courant_ reçoit automat
 #### Exemple
 
 Vous souhaitez calculer quelques statistiques sur une collection de nombres :
+
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -351,6 +371,7 @@ N'oubliez pas que toute modification effectuée sur l'entity en cours de traitem
 #### Exemple
 
 Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :
+
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -368,6 +389,7 @@ Les propriétés de l'objet sont itérées en fonction de leur ordre de créatio
 #### Exemple
 
 Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :
+
 ```4d
 {
     "firstname": "gregory",
@@ -376,6 +398,7 @@ Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'o
 }
 ```
 Vous pouvez écrire :
+
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -383,6 +406,7 @@ Vous pouvez écrire :
     End if
  End for each
 ```
+
 ```
 {
     "firstname": "GREGORY",
@@ -450,3 +474,39 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
+## `break` and `continue`
+
+All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+
+### break
+
+The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+
+If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+
+
+#### Exemple
+
+```4d
+For (vCounter;1;100)
+    If ($tab{vCounter}="") //if a condition becomes true
+        break //end of the for loop
+    End if
+End for
+```
+
+### continue
+
+The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+
+```4d
+var $text : Text
+For ($i; 0; 9)
+    If ($i=3)
+        continue //go directly to the next iteration
+    End if
+    $text:=$text+String($i)
+End for
+// $text="012456789" 
+
+```

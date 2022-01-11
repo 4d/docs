@@ -1,6 +1,6 @@
 ---
 id: webAdmin
-title: Administration Web
+title: WebAdmin
 ---
 
 

@@ -124,12 +124,15 @@ You declare the return parameter of a function by adding an arrow (->) and the p
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
  
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). For example: 
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). For example: 
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
 	$0:=$x+$y
 ```
+
+
+
 
 
 ### Supported data types
@@ -207,6 +210,43 @@ You can use any [expression](quick-tour.md#expression-types) as sequential param
 - arrays
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods). 
+
+## `return {expression}`
+
+<details><summary>History</summary>
+|Version|Changes|
+|---|---|
+|v19 R4|Added
+</details>
+
+The `return` statement ends function or method execution and can be used to return an expression to the caller. 
+
+For example, the following function returns the square of its argument, $x, where $x is a number.
+
+```4d
+Function square($x : Integer) 
+   return $x * $x
+```
+
+> Internally, `return x` executes `$0:=x` or (if declared) `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+
+
+The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. For example:
+
+
+```4d
+Function getValue
+	$0:=10
+	return 20
+	// returns 20
+
+Function getValue -> $v : Integer
+	return 10
+	$v:=20 // never executed
+	// returns 10
+```
+
+
 
 ## Parameter indirection (${N})
 

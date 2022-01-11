@@ -356,7 +356,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Ver también
 
-[4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[4D View Pro reference guide](ViewPro/overview.md)
 
 ---
 ## Barra de desplazamiento vertical

@@ -39,9 +39,10 @@ BLOB に演算子を適用することはできません。
 ```4d
 var $myBlob: Blob
 var $myBlobObject: 4D.Blob
+$myBlobObject:=4D.Blob.new()
 
-$type:= Value type($myblobObject) // 38 (オブジェクト)
-$is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  // true
+$type:= Value type($myblobObject) // 38 (object)
+$is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  //True
 ```
 
 ## BLOB を引数として渡す
@@ -157,7 +158,7 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 #### スカラーBLOB のバイトへのアクセス
 
-中カッコ {...} を使用し、BLOB の各バイトを個別にアクセスすることができます。 BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。N は BLOB のサイズです:
+You can access individual bytes of a scalar blob using curly brackets `{}`. BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。N は BLOB のサイズです:
 
 ```4d
   // BLOB型変数を定義します
@@ -174,7 +175,7 @@ BLOB の各バイトはすべて個別にアドレス指定できるため、BLO
 
 #### `4D.Blob` のバイトへのアクセス
 
-大カッコ [...] を使用し、`4D.Blob` の各バイトを個別にアクセスすることができます。
+Use square brackets `[]` to directly access a specific byte in a `4D.Blob`
 
 ```4d
 var $myBlob: 4D.Blob
