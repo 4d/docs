@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>リストボックス · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="リストボックスは複合アクティブオブジェクトで、同期化された複数列 (カラムとも呼びます) の形式でデータの表示・入力がおこなえます。 リストボックスは、エンティティセレクションやレコードセレクションなどのデータベースコンテンツのほか、コレクションや配列などのランゲージコンテンツと紐づけることができます。 データ入力、列の並べ替え、イベント管理、外観のカスタマイズ、 列の移動など、リストボックスには高度な機能が備わっています。"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="リストボックス · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="リストボックスは複合アクティブオブジェクトで、同期化された複数列 (カラムとも呼びます) の形式でデータの表示・入力がおこなえます。 リストボックスは、エンティティセレクションやレコードセレクションなどのデータベースコンテンツのほか、コレクションや配列などのランゲージコンテンツと紐づけることができます。 データ入力、列の並べ替え、イベント管理、外観のカスタマイズ、 列の移動など、リストボックスには高度な機能が備わっています。"/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R3 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R2</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/FormObjects/listboxOverview.html">English</a></li><li><a href="/docs/19/de/FormObjects/listboxOverview.html">Deutsch</a></li><li><a href="/docs/19/es/FormObjects/listboxOverview.html">Español</a></li><li><a href="/docs/19/fr/FormObjects/listboxOverview.html">Français</a></li><li><a href="/docs/19/pt/FormObjects/listboxOverview.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>リストボックス · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="リストボックスは複合アクティブオブジェクトで、同期化された複数列 (カラムとも呼びます) の形式でデータの表示・入力がおこなえます。 リストボックスは、エンティティセレクションやレコードセレクションなどのデータベースコンテンツのほか、コレクションや配列などのランゲージコンテンツと紐づけることができます。 データ入力、列の並べ替え、イベント管理、外観のカスタマイズ、 列の移動など、リストボックスには高度な機能が備わっています。"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="リストボックス · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="リストボックスは複合アクティブオブジェクトで、同期化された複数列 (カラムとも呼びます) の形式でデータの表示・入力がおこなえます。 リストボックスは、エンティティセレクションやレコードセレクションなどのデータベースコンテンツのほか、コレクションや配列などのランゲージコンテンツと紐づけることができます。 データ入力、列の並べ替え、イベント管理、外観のカスタマイズ、 列の移動など、リストボックスには高度な機能が備わっています。"/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/FormObjects/listboxOverview.html">English</a></li><li><a href="/docs/19/de/FormObjects/listboxOverview.html">Deutsch</a></li><li><a href="/docs/19/es/FormObjects/listboxOverview.html">Español</a></li><li><a href="/docs/19/fr/FormObjects/listboxOverview.html">Français</a></li><li><a href="/docs/19/pt/FormObjects/listboxOverview.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -262,12 +262,12 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>area</td><td>text</td><td>リストボックスオブジェクトエリア (&quot;header&quot;, &quot;footer&quot;, &quot;cell&quot;)</td></tr>
-<tr><td>areaName</td><td>text</td><td>エリアの名称</td></tr>
+<tr><td>area</td><td>テキスト</td><td>リストボックスオブジェクトエリア (&quot;header&quot;, &quot;footer&quot;, &quot;cell&quot;)</td></tr>
+<tr><td>areaName</td><td>テキスト</td><td>エリアの名称</td></tr>
 <tr><td>column</td><td>倍長整数</td><td>列番号</td></tr>
-<tr><td>columnName</td><td>text</td><td>列の名称</td></tr>
-<tr><td>footerName</td><td>text</td><td>フッターの名称</td></tr>
-<tr><td>headerName</td><td>text</td><td>ヘッダーの名称</td></tr>
+<tr><td>columnName</td><td>テキスト</td><td>列の名称</td></tr>
+<tr><td>footerName</td><td>テキスト</td><td>フッターの名称</td></tr>
+<tr><td>headerName</td><td>テキスト</td><td>ヘッダーの名称</td></tr>
 <tr><td>horizontalScroll</td><td>倍長整数</td><td>右方向スクロールの場合は正の数値、左方向の場合は負の数値</td></tr>
 <tr><td>isRowSelected</td><td>boolean</td><td>行が選択されていれば true、でなければ false</td></tr>
 <tr><td>newPosition</td><td>倍長整数</td><td>列あるいは行の変更後の位置</td></tr>
@@ -731,11 +731,11 @@
 <tr><th>valueType</th><th>デフォルトのウィジェット</th><th>他に選択可能なウィジェット</th></tr>
 </thead>
 <tbody>
-<tr><td>text</td><td>テキスト入力</td><td>ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)</td></tr>
+<tr><td>テキスト</td><td>テキスト入力</td><td>ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)</td></tr>
 <tr><td>実数</td><td>管理されたテキスト入力 (数字とセパレーター)</td><td>ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト)</td></tr>
 <tr><td>integer</td><td>管理されたテキスト入力 (数字のみ)</td><td>ドロップダウンメニュー (指定リスト) またはコンボボックス (選択リスト) またはスリーステートチェックボックス</td></tr>
 <tr><td>boolean</td><td>チェックボックス</td><td>ドロップダウンメニュー (指定リスト)</td></tr>
-<tr><td>color</td><td>背景色</td><td>text</td></tr>
+<tr><td>color</td><td>背景色</td><td>テキスト</td></tr>
 <tr><td>event</td><td>ラベル付ボタン</td><td></td></tr>
 <tr><td></td><td></td><td>すべてのウィジェットには、単位切り替えボタン または 省略ボタン を追加でセルに付属させることができます</td></tr>
 </tbody>
@@ -748,7 +748,7 @@
 <tr><th>値の型</th><th>デフォルトのフォーマット</th><th>入力コントロール</th></tr>
 </thead>
 <tbody>
-<tr><td>text</td><td>オブジェクト内で定義されているものと同じ</td><td>制限なし</td></tr>
+<tr><td>テキスト</td><td>オブジェクト内で定義されているものと同じ</td><td>制限なし</td></tr>
 <tr><td>実数</td><td>オブジェクト内で定義されているものと同じ (システムの小数点セパレーターを使用)</td><td>&quot;0-9&quot; と &quot;.&quot; と &quot;-&quot;</td></tr>
 <tr><td></td><td></td><td>min&gt;=0 の場合、&quot;0-9&quot; と &quot;.&quot;</td></tr>
 <tr><td>integer</td><td>オブジェクト内で定義されているものと同じ</td><td>&quot;0-9&quot; と &quot;-&quot;</td></tr>
@@ -763,7 +763,7 @@
 <p>唯一必須の属性は &quot;valueType&quot; であり、サポートされる値は &quot;text&quot;、&quot;real&quot;、&quot;integer&quot;、&quot;boolean&quot;、&quot;color&quot; そして &quot;event&quot;です。 以下の表には、リストボックスオブジェクト配列において &quot;valueType&quot;の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。</p>
 <table>
 <thead>
-<tr><th></th><th>valueType</th><th>text</th><th>実数</th><th>integer</th><th>boolean</th><th>color</th><th>event</th></tr>
+<tr><th></th><th>valueType</th><th>テキスト</th><th>実数</th><th>integer</th><th>boolean</th><th>color</th><th>event</th></tr>
 </thead>
 <tbody>
 <tr><td><em>属性</em></td><td><em>説明</em></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
