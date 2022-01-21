@@ -6,24 +6,24 @@ title: Imagen
 ---
 ## Ruta de acceso
 
-Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
+Ruta de una imagen source estática para un [botón imagen](pictureButton_overview.md), [menú emergente de imagen](picturePopupMenu_overview.md), o [imagen estática](staticPicture.md). Debe utilizar la sintaxis POSIX.
 
-Two main locations can be used for static picture path:
+Se pueden utilizar dos ubicaciones principales para la trayectoria de la imagen estática:
 
-- en la carpeta **Resources** de la base proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios de la base de datos. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
+- en la carpeta **Resources** de la base proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios de la base de datos. En este caso, el nombre de la ruta es "/RESOURCES/\<picture path\>".
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es ""\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                            |
-|:------:|:--------------:| ------------------------------------------- |
-| imagen |     texto      | Relative or filesystem path in POSIX syntax |
+| Nombre | Tipos de datos | Valores posibles                             |
+|:------:|:--------------:| -------------------------------------------- |
+| imagen |     texto      | Ruta relativa o filesystem en sintaxis POSIX |
 
 
 #### Objetos soportados
 
-[Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
+[Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Imagen estática](staticPicture.md)
 
 
 ---
