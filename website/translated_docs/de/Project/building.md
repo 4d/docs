@@ -516,6 +516,10 @@ You can select the data linking mode during the build application process. You c
 
 More specifically, the following cases are covered:
 
+- Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.</p>
+
+More specifically, the following cases are covered:
+
 - Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.
 - Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
 

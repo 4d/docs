@@ -51,7 +51,7 @@ Retrieve information about the entity sets currently stored in 4D Server's cache
 
 `GET /rest/$info`
 
-**Result**:
+**Resultado**:
 
 ```
 {

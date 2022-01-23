@@ -47,20 +47,20 @@ O valor padrão depende do tipo variável e categoria, seu contexto de educaçã
 
 The following table illustrates these default values:
 
-| Type       | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ---------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen    | False                                                                               | True                    | True (varies)                |
-| Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Hora       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Imagem     | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Ponteiro   | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Texto      | ""                                                                                  | ""                      | ""                           |
-| Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Objeto     | null                                                                                | null                    | null                         |
-| Collection | null                                                                                | null                    | null                         |
-| Variant    | undefined                                                                           | undefined               | undefined                    |
+| Type          | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
+| ------------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
+| Booleen       | False                                                                               | True                    | True (varies)                |
+| Date          | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
+| Inteiro longo | 0                                                                                   | 1919382119              | 909540880 (varies)           |
+| Hora          | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
+| Imagem        | picture size=0                                                                      | picture size=0          | picture size=0               |
+| Real          | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
+| Ponteiro      | Nil=true                                                                            | Nil=true                | Nil=true                     |
+| Texto         | ""                                                                                  | ""                      | ""                           |
+| Blob          | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
+| Objeto        | null                                                                                | null                    | null                         |
+| Coleção       | null                                                                                | null                    | null                         |
+| Variant       | undefined                                                                           | undefined               | undefined                    |
 
 
 ## Converting data types

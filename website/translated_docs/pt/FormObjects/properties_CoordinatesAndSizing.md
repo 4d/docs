@@ -43,7 +43,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 
 ---
-## Bottom
+## Fundo
 
 Bottom coordinate of the object in the form.
 
@@ -60,7 +60,7 @@ Bottom coordinate of the object in the form.
 
 
 ---
-## Left
+## Esquerda
 
 Left coordinate of the object on the form.
 
@@ -155,7 +155,7 @@ This property designates an object's vertical size.
 
 
 ---
-## Width
+## Largura
 
 This property designates an object's horizontal size.
 > * Some objects may have a predefined height that cannot be altered.
@@ -224,7 +224,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 
 ---
-## Row Height
+## Altura linha
 
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
@@ -242,12 +242,12 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 
 #### See also
-[Row Height Array](#row-height-array)
+[Array altura linha](#row-height-array)
 
 
 
 ---
-## Row Height Array
+## Array altura linha
 `Só para 4D View Pro: esta funcionalidade exige uma licença 4D View Pro.`
 
 This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
@@ -277,4 +277,4 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 
 #### See also
-[Row Height](#row-height)
+[Altura linha](#row-height)

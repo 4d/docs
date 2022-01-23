@@ -11,7 +11,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### JSON Grammar
 
-| Property             | Data Type | Possible Values       |
+| Propriedade          | Data Type | Possible Values       |
 | -------------------- | --------- | --------------------- |
 | allowFontColorPicker | booleano  | false (default), true |
 
@@ -20,7 +20,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 [Entrada](input_overview.md)
 
 ---
-## Bold
+## Negrito
 
 Sets the selected text to appear darker and heavier.
 
@@ -29,9 +29,9 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### JSON Grammar
 
-| Property   | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| Propriedade | Data Type | Possible Values  |
+| ----------- | --------- | ---------------- |
+| fontWeight  | texto     | "normal", "bold" |
 
 #### Objects Supported
 
@@ -39,7 +39,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 
 ---
-## Italic
+## Itálico
 
 Sets the selected text to slant slightly to the right.
 
@@ -60,7 +60,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 
 ---
-## Underline
+## Sublinhado
 Sets the text to have a line running beneath it.
 > This is normal text.<br> This is <span style="text-decoration:underline">underlined</span> text.
 
@@ -80,7 +80,7 @@ Sets the text to have a line running beneath it.
 
 
 ---
-## Font
+## Fonte
 
 This property allows you to specify either the **font theme** or the **font family** used in the object.
 > **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
@@ -144,7 +144,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 
 ---
-## Font Size
+## Tamanho fonte
 
 > Esta propriedade só está disponível quando não estiver selecionado [tema de fonte](#font-theme).
 
@@ -162,7 +162,7 @@ Allows defining the object's font size in points.
 
 
 ---
-## Font Color
+## Cor fonte
 
 Designates the font color.
 
@@ -191,7 +191,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ---
 
-## Font Color Expression
+## Expressão cor fonte
 
 `Selection and collection/entity selection type list boxes`
 
@@ -220,7 +220,7 @@ Foreground color;Dark shadow color)
 [List Box](listbox_overview.md#overview)
 
 ---
-## Style Expression
+## Expressão estilo
 
 `Selection and collection/entity selection type list boxes`
 
@@ -254,7 +254,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 
 ---
-## Horizontal Alignment
+## Alihamento horizontal
 
 Horizontal location of text within the area that contains it.
 
@@ -270,7 +270,7 @@ Horizontal location of text within the area that contains it.
 
 
 ---
-## Vertical Alignment
+## Alinhamento vertical
 
 Vertical location of text within the area that contains it.
 
@@ -550,7 +550,7 @@ Esta propriedade ativa a possibilidade de usar estilos específicos na área sel
 
 <hr />
 <h2 spaces-before="0">
-  Row Font Color Array
+  Array cores de fonte
 </h2>
 
 <p spaces-before="0">
@@ -613,7 +613,7 @@ Esta propriedade ativa a possibilidade de usar estilos específicos na área sel
 
 <hr />
 <h2 spaces-before="0">
-  Row Style Array
+  Array estilo linha
 </h2>
 
 <p spaces-before="0">
