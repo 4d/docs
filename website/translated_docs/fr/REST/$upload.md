@@ -22,13 +22,11 @@ Téléchargez ensuite l'image sélectionnée sur 4D Server :
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
- Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant[`$method=update`]($method.md#methodupdate) pour ajouter l'image à une entité :</p> 
+ Utilisez ensuite cet ID pour l'ajouter à un attribut en utilisant[`$method=update`]($method.md#methodupdate) pour ajouter l'image à une entité :
 
-`POST  /rest/Employee/?$method=update`
+ `POST  /rest/Employee/?$method=update`
 
 **Données POST** :
-
-
 
 ````
 {
@@ -38,12 +36,9 @@ Téléchargez ensuite l'image sélectionnée sur 4D Server :
 }
 ````
 
-
 **Réponse** :
 
 L'entité modifiée est retournée :
-
-
 
 ````
 {
