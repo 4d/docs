@@ -62,6 +62,8 @@ If we pass the following REST request for our Company dataclass (which has a rel
             ...
     }
 }
+    }
+}
 ```
 
 If you want to get all attributes from employees:
