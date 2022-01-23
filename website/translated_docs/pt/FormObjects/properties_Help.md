@@ -24,7 +24,7 @@ You can either:
 
 |  Name   | Data Type | Possible Values                       |
 |:-------:|:---------:| ------------------------------------- |
-| tooltip |   text    | additional information to help a user |
+| tooltip |   texto   | additional information to help a user |
 
 #### Objects Supported
 
