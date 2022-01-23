@@ -13,7 +13,7 @@ Cuando tenga atributos relacionales en una dataclass, utilice `$attributes` para
 Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity selection (*p. Ej.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
 
-- Si `$attributes` no se especifica en una consulta, o si se pasa el valor "*", se extraen todos los atributos disponibles. Los atributos **de entidad relacionada ** se extraen con la forma simple: un objeto con la propiedad `__KEY ` (llave primaria) y `URI`. Los atributos de las **entidades relacionadas** no se extraen.
+- Si `$attributes` no se especifica en una consulta, o si se pasa el valor "*", se extraen todos los atributos disponibles. Los atributos **de entidad relacionada ** se extraen con la forma simple: un objeto con la propiedad `__KEY` (llave primaria) y `URI`. Los atributos de las **entidades relacionadas** no se extraen.
 
 - Si se especifica `$attributes` para los atributos **de entidad relacionada**:
     - `$attributes=relatedEntity`: se devuelve la entidad relacionada con forma simple (propiedad __KEY diferida (llave primaria)) y `URI`.
