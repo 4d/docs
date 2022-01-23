@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: Check Box
+title: Casilla a seleccionar
 ---
 
 ## Generalidades
@@ -255,7 +255,7 @@ El estilo Gradient OS X tiene un fondo gris claro con un título y se muestra co
 
 El estilo de casilla de selección OS X Textured es similar al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, puede tener una apariencia diferente. Al igual que el estilo Bevel, el estilo OS X Textured combina la apariencia del estilo [Clásico](#regular) con el comportamiento del estilo [Barra de herramientas](#toolbar).
 
-By default, the OS X Textured style appears as:
+Por defecto, el estilo OS X Textured aparece como:
 
  - *Windows* - un botón sistema estándar con un fondo azul claro con un título en el centro.
 
@@ -286,7 +286,7 @@ By default, the OS X Textured style appears as:
 
 El estilo de casilla de selección Office XP combina la apariencia del estilo [Clásico](#regular) con el comportamiento del estilo [Barra de herramientas](#toolbar).
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
+Los colores (resaltado y fondo) de un botón con el estilo Office XP se basan en los colores del sistema. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima. Ejemplo con estados seleccionado / no seleccionado / subrayado:
 
@@ -317,7 +317,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ### Contraer/Desplegar
 
-Este estilo de casilla de selección se puede utilizar para añadir un icono estándar de contraer/expandir. These buttons are used natively in hierarchical lists.
+Este estilo de casilla de selección se puede utilizar para añadir un icono estándar de contraer/expandir. Estos botones se utilizan de forma nativa en las listas jerárquicas.
 
  - *Windows* - el botón parece un [+] o un [-]
 
