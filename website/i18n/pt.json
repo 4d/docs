@@ -175,7 +175,7 @@
         "title": "Crop"
       },
       "FormObjects/propertiesDataSource": {
-        "title": "Data Source"
+        "title": "Fonte de dados"
       },
       "FormObjects/propertiesDisplay": {
         "title": "Display"
@@ -431,19 +431,19 @@
         "title": "Server Configuration"
       },
       "REST/genInfo": {
-        "title": "Getting Server Information"
+        "title": "Obter informação do servidor"
       },
       "REST/gettingStarted": {
-        "title": "Getting Started"
+        "title": "Começando"
       },
       "REST/manData": {
-        "title": "Manipulating Data"
+        "title": "Manipulação de dados"
       },
       "REST/REST_requests": {
-        "title": "About REST Requests"
+        "title": "Sobre petições REST"
       },
       "Users/editing": {
-        "title": "Managing 4D users and groups"
+        "title": "Gestão de usuários e grupos 4D"
       },
       "Users/overview": {
         "title": "Visão Geral"
@@ -456,7 +456,7 @@
       "v18": "v18"
     },
     "categories": {
-      "Getting Started": "Getting Started",
+      "Getting Started": "Começando",
       "4D Language Concepts": "4D Language Concepts",
       "Project Databases": "Bancos de dados Projeto",
       "Form Editor": "Form Editor",
