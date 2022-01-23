@@ -21,7 +21,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 [List Box](listbox_overview.md)
 
 ---
-## Detail Form Name
+## Nome formulário detalhe
 `Selection type list box`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
@@ -47,7 +47,7 @@ The specified form is displayed:
 
 
 ---
-## Double-click on row
+## Duplo clique em linha
 `Selection type list box`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
@@ -75,7 +75,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 
 ---
-## Highlight Set
+## Ressaltar conjunto
 
 `Selection type list box`
 
@@ -120,7 +120,7 @@ These properties interact as follows:
 
 *   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
-### Number of Locked Columns
+### Número de colunas trancadas
 
 Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
 
@@ -135,7 +135,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 [List Box](listbox_overview.md)
 
 
-### Number of Static Columns
+### Número de colunas estáticas
 
 Number of columns that cannot be moved during execution.
 
@@ -155,7 +155,7 @@ Number of columns that cannot be moved during execution.
 
 
 ---
-## Number of Columns
+## Número de colunas
 
 Sets the number of columns of the list box.
 > You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
@@ -174,7 +174,7 @@ Sets the number of columns of the list box.
 
 
 ---
-## Row Control Array
+## Array controle linha
 
 `Array type list box`
 
@@ -229,7 +229,7 @@ Note that setting properties for an element overrides any other values for this 
 
 
 ---
-## Selection Mode
+## Modo seleção
 
 Designates the option for allowing users to select rows:
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
