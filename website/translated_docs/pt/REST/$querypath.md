@@ -13,12 +13,12 @@ For more information about query paths, refer to [queryPlan and queryPath](genIn
 
 In the steps collection, there is an object with the following properties defining the query executed:
 
-| Property      | Type       | Description                                                                 |
-| ------------- | ---------- | --------------------------------------------------------------------------- |
-| description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Número     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Número     | Number of records found                                                     |
-| steps         | Collection | An collection with an object defining the subsequent step of the query path |
+| Propriedade   | Type    | Description                                                                 |
+| ------------- | ------- | --------------------------------------------------------------------------- |
+| description   | String  | Actual query executed or "AND" when there are multiple steps                |
+| time          | Número  | Number of milliseconds needed to execute the query                          |
+| recordsfounds | Número  | Number of records found                                                     |
+| steps         | Coleção | An collection with an object defining the subsequent step of the query path |
 
 ## Exemplo
 
