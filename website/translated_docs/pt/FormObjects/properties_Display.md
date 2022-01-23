@@ -435,7 +435,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 
 
-Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
+Allows a check box object to accept a third state. A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
 
 
 #### Three-states check boxes in list box columns
@@ -529,7 +529,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 
 ---
-## Visibility
+## Visibilidade
 
 This property allows hiding by default the object in the Application environment.
 
