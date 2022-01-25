@@ -118,9 +118,9 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter | Type       |    | Description                                    |
-| --------- | ---------- | -- | ---------------------------------------------- |
-| Result    | Collection | <- | Collection of the available Web server objects |
+| Parameter | Type    |    | Description                                    |
+| --------- | ------- | -- | ---------------------------------------------- |
+| Result    | Coleção | <- | Collection of the available Web server objects |
 
 <!-- END REF -->
 
@@ -793,7 +793,7 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
 The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
+All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
@@ -802,13 +802,13 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Property |                         | Type       | Description                                                          |
-| -------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
-| success  |                         | Booleano   | True if the web server was correctly started, False otherwise        |
-| errors   |                         | Collection | 4D error stack (not returned if the web server started successfully) |
-|          | \[].errCode            | Número     | 4D error code                                                        |
-|          | \[].message            | Texto      | Description of the 4D error                                          |
-|          | \[].componentSignature | Texto      | Signature of the internal component which returned the error         |
+| Propriedade |                         | Type     | Description                                                          |
+| ----------- | ----------------------- | -------- | -------------------------------------------------------------------- |
+| success     |                         | Booleano | True if the web server was correctly started, False otherwise        |
+| errors      |                         | Coleção  | 4D error stack (not returned if the web server started successfully) |
+|             | \[].errCode            | Número   | 4D error code                                                        |
+|             | \[].message            | Texto    | Description of the 4D error                                          |
+|             | \[].componentSignature | Texto    | Signature of the internal component which returned the error         |
 > If the Web server was already launched, an error is returned.
 
 #### Exemplo

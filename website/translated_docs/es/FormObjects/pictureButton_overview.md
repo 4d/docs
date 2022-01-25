@@ -3,27 +3,27 @@ id: pictureButtonOverview
 title: Botón Imagen
 ---
 
-A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
+Un botón imagen es similar a un [botón estándar](button_overview.md). Sin embargo, a diferencia de un botón estándar (que acepta tres estados: activado, desactivado y pulsado), un botón imagen tiene una imagen diferente para representar cada estado.
 
-Picture buttons can be used in two ways:
+Los botones imagen pueden utilizarse de dos maneras:
 
-* As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
-  For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* Como botones de comando en un formulario. En este caso, el botón imagen generalmente incluye cuatro estados diferentes: activado, desactivado, presionado y pasado por encima.      
+  Por ejemplo, una tabla de miniaturas que tiene una línea de cuatro columnas, cada una de las miniaturas corresponde a los estados Por defecto, Presionado, Pasado por encima y Desactivado.
 
-  | Propiedad                  | Nombre JSON            | Valor |
-  | -------------------------- | ---------------------- | ----- |
-  | Rows                       | rowCount               | 1     |
-  | Columnas                   | columnCount            | 4     |
-  | Switch back when Released  | switchBackWhenReleased | true  |
-  | Switch when Roll Over      | switchWhenRollover     | true  |
-  | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
+  | Propiedad                                  | Nombre JSON            | Valor |
+  | ------------------------------------------ | ---------------------- | ----- |
+  | Rows                                       | rowCount               | 1     |
+  | Columnas                                   | columnCount            | 4     |
+  | Switch back when Released                  | switchBackWhenReleased | true  |
+  | Switch when Roll Over                      | switchWhenRollover     | true  |
+  | Utilizar el Último cuadro como Desactivado | useLastFrameAsDisabled | true  |
 
-* As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).   
-  Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:
+* Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los [Menús emergergentes imagen](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que un botón imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).   
+  Este es un ejemplo de botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
 
 ![](assets/en/FormObjects/button_pictureButton.png)
 
-Clicking the object changes the picture.
+Al hacer clic en el objeto, la imagen cambia.
 
 
 ## Utilizar los botones imagen
@@ -54,9 +54,9 @@ Hay otros modos disponibles:
 - [Switch back when Released](properties_Animation.md#switch-back-when-released)
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Desplazamiento continuo en clics](properties_Animation.md#switch-continuously-on-clicks)
-- [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
+- [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled)
 - [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled)
-> [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
+> [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 

@@ -158,7 +158,7 @@ Se *formulaExp* usar variáveis locais, seus valores são copiados e armazenados
 Os objetos criados por `Formula` podem ser salvos, por exemplo, em um campo de database ou em um documento blob.
 
 
-#### Example 1
+#### Exemplo 1
 
 Uma fórmula simples:
 
@@ -172,7 +172,7 @@ Uma fórmula simples:
  $result:=$o.f() // devoluções 3
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Uma fórmula usando variáveis locais:
 
@@ -310,11 +310,11 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
-| Parameter     | Type       |    | Description                                                                     |
-| ------------- | ---------- |:--:| ------------------------------------------------------------------------------- |
-| thisObj       | Objeto     | -> | Objeto a ser retornado pelo comando This na fórmula                             |
-| formulaParams | Collection | -> | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
-| Result        | any        | <- | Valores de execução de fórmula                                                  |
+| Parameter     | Type    |    | Description                                                                     |
+| ------------- | ------- |:--:| ------------------------------------------------------------------------------- |
+| thisObj       | Objeto  | -> | Objeto a ser retornado pelo comando This na fórmula                             |
+| formulaParams | Coleção | -> | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
+| Result        | any     | <- | Valores de execução de fórmula                                                  |
 <!-- END REF -->
 
 
@@ -330,7 +330,7 @@ Também pode passar uma coleção a ser usada como parâmetros $1...$n na fórmu
 Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são passados como coleção. Isso pode ser útil para passar resultados calculados.
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $f : 4D.Function
@@ -341,7 +341,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $calc : 4D.Function
@@ -389,7 +389,7 @@ Pode passar valores a serem usados como parâmetros *$1...$n* na fórmula usando
 
 Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são passados diretamente.
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $f : 4D.Function
@@ -397,7 +397,7 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
  $result:=$f.call(Null;"hello") // retorna "HELLO"
 ```
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  $o:=New object("value";50)

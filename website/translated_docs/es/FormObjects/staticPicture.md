@@ -19,10 +19,10 @@ Static pictures are stored outside the forms and inserted by reference. In the f
 
 The original picture must be stored in a format managed natively by 4D (4D recognizes the main picture formats: JPEG, PNG, BMP, SVG, GIF, etc.).
 
-Two main locations can be used for static picture path:
+Se pueden utilizar dos ubicaciones principales para la trayectoria de la imagen estática:
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is in the "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or yon want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "<\picture path\>" and is resolved from the root of the form folder.
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Appropriate when the static pictures are used only in the form and/or yon want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "<\picture path\>" and is resolved from the root of the form folder.
 
 
 ## Propiedades soportadas

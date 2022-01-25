@@ -108,7 +108,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &@                              | Allow only alphanumeric characters. No special characters.                                                                                   |
 | ~a##                            | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
 | !0&9##/##/##                    | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Day: ## Month: ## Year: ## | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
+| !0&9 Day: ## Month: ## Year: ## | Time entry format. Display zeros in entry spaces. Allow any numbers. Limited to hours and minutes.                                           |
 | !0&9##:##                       | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
 | !0&9## Hrs ## Mins ## Secs      | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
 | !0&9Hrs: ## Mins: ## Secs: ##   | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
@@ -145,7 +145,9 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected <p> <p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected
+<p>
+<p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
 

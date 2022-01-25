@@ -96,11 +96,13 @@ Les attributs d'entité stockent les données et mappent les champs correspondan
 Par exemple, pour définir un attribut de stockage :
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
+ $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
+ $name:=$entity.lastname //obtenir le nom de l'employé, par exemple "Smith"
+$entity.lastname:="Jones" //définir le nom de l'employé
+$entity.save() //sauvegarder les modifications
 ```
-> Les attributs d'images ne peuvent pas être assignés directement à un chemin donné dans une entité.
+
+> Les champs Blob des bases de données (les [blobs scalaires](Concepts/dt_blob.md) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
 
 L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 

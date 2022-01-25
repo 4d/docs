@@ -27,18 +27,18 @@ ASSERT($status.success)
 
 
 ### Resumo
-|                                                                                                                                                                                               |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
-| [<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> |
-| [<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary -->|
-| [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary -->|
-| [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
-| [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
-| [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> |
-| [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> |
-| [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> |
-| [<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary -->|
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary --></p>       |
+| [<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> </p>                   |
+| [<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary --></p>             |
+| [<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary --></p>             |
+| [<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary --></p> |
+| [<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary --></p>   |
+| [<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> </p>                   |
+| [<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> </p>                     |
+| [<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> </p>                     |
+| [<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary --></p>               |
 
 
 
@@ -72,12 +72,12 @@ A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um 
 
 #### *settings*
 
-| Property        | Type    | Description                                    |
+| Propriedade     | Type    | Description                                    |
 | --------------- | ------- | ---------------------------------------------- |
-| [curve](#curve) | text    | Name of ECDSA curve                            |
-| [pem](#pem)     | text    | PEM definition of an encryption key to load    |
+| [curve](#curve) | texto   | Name of ECDSA curve                            |
+| [pem](#pem)     | texto   | PEM definition of an encryption key to load    |
 | [size](#size)   | integer | Size of RSA key in bits                        |
-| [type](#type)   | text    | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
+| [type](#type)   | texto   | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
 
 
 #### *CryptoKey*
@@ -100,11 +100,13 @@ O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um obje
 
 
 
-Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->curva normalizada nome da chave<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
+Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->curva normalizada nome da chave<!-- END REF -->.
+
+Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
+
 <!-- END REF -->
 
 
-<!-- REF CryptoKey.decrypt().Desc -->
 ## .decrypt()
 
 <details><summary>Histórico</summary>
@@ -125,32 +127,32 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->curva norm
 <!-- END REF -->
 
 
+
 A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descifra o parâmetro *message* utilizando a chave **private**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 A chave deveser do estilo RSA, o algoritmo é RSA-OAEP (ver [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 #### *options*
 
-| Property          | Type | Description                                                                                                                                      |
-| ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hash              | text | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                           |
-| encodingEncrypted | text | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
-| encodingDecrypted | text | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
+| Propriedade       | Type  | Description                                                                                                                                      |
+| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                           |
+| encodingEncrypted | texto | Encoding used to convert the `message` parameter into the binary representation to decrypt. Can be "Base64" or "Base64URL". Default is "Base64". |
+| encodingDecrypted | texto | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8".      |
 
 
 #### *Result*
 
 A função devolve um objeto "status" com a propriedade `success` definida como `true` se *message* puder ser descifrada com êxito.
 
-| Property | Type       | Description                                                         |
-| -------- | ---------- | ------------------------------------------------------------------- |
-| success  | booleano   | True if the message has been successfully decrypted                 |
-| result   | text       | Message decrypted and decoded using the `options.encodingDecrypted` |
-| errors   | collection | If `success` is `false`, may contain a collection of errors         |
+| Propriedade | Type       | Description                                                         |
+| ----------- | ---------- | ------------------------------------------------------------------- |
+| success     | booleano   | True if the message has been successfully decrypted                 |
+| result      | texto      | Message decrypted and decoded using the `options.encodingDecrypted` |
+| errors      | collection | If `success` is `false`, may contain a collection of errors         |
 
 
 Caso *message* não possa ser decifrado por não ter sido criptografado com a mesma chave ou algoritmo, o objeto `status` que se devolve conter uma coleção de erros em `status.errors`.
-<!-- END REF -->
 
 
 <!-- REF CryptoKey.encrypt().Desc -->
@@ -179,11 +181,11 @@ A chave deveser do estilo RSA, o algoritmo é RSA-OAEP (ver [RFC 3447](https://t
 
 ##### *options*
 
-| Property          | Type | Description                                                                                                                                               |
-| ----------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                    |
-| encodingEncrypted | text | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
-| encodingDecrypted | text | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
+| Propriedade       | Type  | Description                                                                                                                                               |
+| ----------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | texto | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512".                                                                                    |
+| encodingEncrypted | texto | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                       |
+| encodingDecrypted | texto | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Default is "UTF-8". |
 
 
 #### *Result*
@@ -292,12 +294,12 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 
 #### *options*
 
-| Property          | Type     | Description                                                                                                                                                          |
+| Propriedade       | Type     | Description                                                                                                                                                          |
 | ----------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| encodingEncrypted | text     | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
+| hash              | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
+| encodingEncrypted | texto    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Default is "Base64".                                  |
 | pss               | booleano | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao produzir um JWT para o algoritmo PS@                        |
-| encoding          | text     | Representação que se utilizará para a assinatura de resultados. Valores possíveis: "Base64" ou "Base64URL". Default is "Base64".                                     |
+| encoding          | texto    | Representação que se utilizará para a assinatura de resultados. Valores possíveis: "Base64" ou "Base64URL". Default is "Base64".                                     |
 
 
 #### *Result*
@@ -366,11 +368,11 @@ A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica a assina
 
 #### *options*
 
-| Property | Type     | Description                                                                                                                                                          |
-| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash     | text     | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
-| pss      | booleano | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                        |
-| encoding | text     | Representação de uma assinatura fornecida. Valores possíveis: "Base64" ou "Base64URL". Default is "Base64".                                                          |
+| Propriedade | Type     | Description                                                                                                                                                          |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash        | texto    | Digest algorithm to use. For example: "SHA256", "SHA384", or "SHA512". When used to produce a JWT, the hash size must match the PS@, ES@, RS@, or PS@ algorithm size |
+| pss         | booleano | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao verficar um JWT para o algoritmo PS@                        |
+| encoding    | texto    | Representação de uma assinatura fornecida. Valores possíveis: "Base64" ou "Base64URL". Default is "Base64".                                                          |
 
 
 #### *Result*
@@ -379,10 +381,10 @@ A função devolve um objeto "status" com a propriedade `success`estabelecida pa
 
 Caso a assinatura não possa ser confirmada porque *message* não foi assinada com a mesma chave ou algoritmo, o objeto `status` retornado terá um erro de coleção em `status.errors`.
 
-| Property | Type       | Description                                                 |
-| -------- | ---------- | ----------------------------------------------------------- |
-| success  | booleano   | True se a assinatura corresponder com a mensagem            |
-| errors   | collection | If `success` is `false`, may contain a collection of errors |
+| Propriedade | Type       | Description                                                 |
+| ----------- | ---------- | ----------------------------------------------------------- |
+| success     | booleano   | True se a assinatura corresponder com a mensagem            |
+| errors      | collection | If `success` is `false`, may contain a collection of errors |
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -8,7 +8,7 @@ title: Classes
 
 Die 4D Programmiersprache unterstützt das Konzept **Klassen**. In der objektorientierten Programmierung definieren Sie in einer Klasse das Verhalten eines Objekts mit zugewiesenen Eigenschaften und Funktionen.
 
-Ist eine Benutzerklasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. Eine Klasse kann eine andere Klasse [`erweitern`](#class-extends-classname) und erbt dann von deren [Function](#function).
+Ist eine Benutzerklasse definiert, können Sie Objekte dieser Klasse als **Instanz** überall in Ihrem Code verwenden. Jedes Objekt ist eine Instanz seiner Klasse. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
 
 > Das Klassenmodell in 4D ist ähnlich zu Klassen in JavaScript und basiert auf einer Kette von Prototypen.
 
@@ -20,8 +20,11 @@ Class constructor($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
     This.lastName:=$lastname
 
+Function get fullName() -> $fullName : text
+    $fullName:=This.firstName+" "+This.lastName
+
 Function sayHello()->$welcome : Text
-    $welcome:="Hello "+This.firstName+" "+This.lastName
+    $welcome:="Hello "+This.fullName
 ```
 
 In einer Methode erstellen Sie eine "Person":
@@ -30,7 +33,7 @@ In einer Methode erstellen Sie eine "Person":
 var $person : cs.Person //object of Person class  
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
-// $person:{firstName: "John"; lastName: "Doe" }
+// $person:{firstName: "John"; lastName: "Doe"; fullName: "John Doe"}
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
@@ -52,6 +55,7 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 
 - Project folder
     + Project
+
         * Sources
             - Classes
                 + Polygon.4dm
@@ -99,8 +103,10 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
 
 Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 
+
 - `cs` Store für Benutzerklassen
 - `4D` Store für vorgegebene Klassen
+
 
 
 ### `cs`
@@ -166,7 +172,8 @@ Findet 4D eine Funktion oder Eigenschaft nicht in einer Klasse, sucht es in dere
 In der Definition von Klassen lassen sich spezifische 4D Schlüsselwörter verwenden:
 
 - `Function <Name>` zum Definieren von Class Functions der Objekte.
-- `Class constructor` zum Definieren der Eigenschaften der Objekte.
+- `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
+- `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>` zum Definieren der Vererbung.
 
 
@@ -274,6 +281,82 @@ $area:=$rect.getArea() //5000
 ```
 
 
+### `Function get` and `Function set`
+
+#### Syntax
+
+```4d
+Function get <name>()->$result : type
+// code
+```
+
+```4d
+Function set <name>($parameterName : type)
+// code
+```
+
+`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+
+- when the property is read, the `Function get` is executed,
+- when the property is written, the `Function set` is executed.
+
+If the property is not accessed, the code never executes.
+
+Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
+
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
+
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+
+`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+
+When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
+
+The type of the computed property is defined by the `$return` type declaration of the *getter*.
+
+The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md). It can be of any [valid property type](dt_object.md).
+
+> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+
+#### Example 1
+
+```4d  
+//Class: Person.4dm
+
+Class constructor($firstname : Text; $lastname : Text)
+    This.firstName:=$firstname
+    This.lastName:=$lastname
+
+Function get fullName() -> $fullName : Text
+    $fullName:=This.firstName+" "+This.lastName
+
+Function set fullName( $fullName : Text )
+    $p:=Position(" "; $fullName)
+    This.firstName:=Substring($fullName; 1; $p-1)
+    This.lastName:=Substring($fullName; $p+1)
+
+```
+
+```4d
+//in a project method
+$fullName:=$person.fullName // Function get fullName() is called
+$person.fullName:="John Smith" // Function set fullName() is called
+```
+
+#### Example 2
+
+```4d
+Function get fullAddress()->$result : Object
+
+    $result:=New object
+
+    $result.fullName:=This.fullName
+    $result.address:=This.address
+    $result.zipCode:=This.zipCode
+    $result.city:=This.city
+    $result.state:=This.state
+    $result.country:=This.country 
+```
 
 ### `Class Constructor`
 
@@ -446,6 +529,7 @@ Function nbSides()
     $0:="I have 4 sides"
 ```
 
+
 You also created the `Square` class with a function calling the superclass function:
 
 ```4d
@@ -504,10 +588,10 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Beachten Sie beim Aufrufen des Superclass Constructor in einem Constructor mit dem Schlüsselwort [Super](#super), dass  `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. Siehe [dieses Beispiel](#beispiel-1-1).
+> Beachten Sie beim Aufrufen des Superclass Constructor in einem Constructor mit dem Schlüsselwort [Super](#super), dass  `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. See [this example](#example-1).
 
 
-In allen Fällen bezieht sich `This` auf das Objekt, wo die Methode aufgerufen wurde, als ob sie im Objekt wäre.
+In any cases, `This` refers to the object the method was called on, as if the method were on the object.
 
 ```4d
 //Class: ob
@@ -516,15 +600,16 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Dann können Sie in einer Projektmethode schreiben:
+Then you can write in a project method:
 
 ```4d
 $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
+
 ```
-In diesem Beispiel hat das der Variable $o zugewiesene Objekt keine eigene Eigenschaft *f*, sondern erbt sie von seiner Klasse. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
+In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
 
 
 ## Befehle für Klassen
@@ -537,6 +622,13 @@ Einige Befehle der 4D Programmiersprache eignen sich zum Verwalten von Features 
 #### OB Class ( object ) -> Object | Null
 
 `OB Class` gibt die Klasse des Objekts zurück, das im Parameter übergeben ist.
+
+
+### OB Instance of
+
+#### OB Instance of ( object ; class ) -> Boolean
+
+`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klassen, sonst `false`.</p>
 
 
 ### OB Instance of

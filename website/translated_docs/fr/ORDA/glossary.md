@@ -26,6 +26,11 @@ Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou 
 
 Code pour la (les) fonction(s) de classe utilisateurs.
 
+
+## Champ calculé
+
+Un champ calculé ne stocke pas réellement d'informations. Il détermine plutôt sa valeur en fonction d'autres valeurs provenant de la même entité ou d'autres entités, champs ou fonctions. Lorsqu'un champ calculé est référencé, le "calcul" sous-jacent est évalué pour déterminer la valeur. Les champs calculés peuvent même se voir attribuer des valeurs où le code défini par l'utilisateur détermine ce qu'il faut faire pendant l'attribution.
+
 ## Data model class
 
 Classe étendue disponible pour un objet modèle de données.
@@ -79,7 +84,7 @@ Une copie profonde (deep copy) duplique un objet et toutes les références qu'i
 
 `ds` est la commande de langage 4D qui retourne une référence d'objet [datastore](dsMapping.md#datastore). Elle correspond au datastore disponible sur la base de données principale 4D.
 
-## Entité (entity)
+## Entity
 
 Une entité est un objet qui correspond à un modèle de dataclass. Une entité contient les mêmes attributs que la dataclass.
 
@@ -87,7 +92,7 @@ Une entité peut être vue comme une instance de la dataclass, comme un enregist
 
 Pour plus d'informations, voir le chapitre Entités.
 
-## Sélection d'entités (entity selection)
+## Entity selection
 
 Une sélection d'entités (entity selection) est un objet. Lorsqu'une requête est envoyée au datastore, une sélection d'entités est retournée. Une sélection d'entité est un ensemble de références à des entités liées à la même dataclass.
 
@@ -196,6 +201,10 @@ Les sessions inactives sont automatiquement fermées après un délai. Le timeou
 
 Une copie superficielle (shallow copy) ne fait que dupliquer la structure des éléments et conserve les mêmes références internes. Après une copie superficielle, deux collections partageront les éléments individuels. Voir également Copie profonde.
 
-## Marqueur (stamp)
+## Stamp
 
 Utilisé dans la technologie du verrouillage "optimiste". Toutes les entités ont un compteur interne, le marqueur, qui est incrémenté chaque fois que l'entité est sauvegardée. En comparant automatiquement les marqueurs entre une entité sauvegardée et sa version stockée sur disque, 4D peut empêcher les modifications simultanées sur les mêmes entités.
+
+## Attribut de stockage
+
+Un attribut de stockage (parfois appelé attribut scalaire) est le type d'attribut le plus basique dans une classe de datastore et correspond le plus directement à un champ dans une base de données relationnelle. Un attribut de stockage contient une seule valeur pour chaque entité de la classe.

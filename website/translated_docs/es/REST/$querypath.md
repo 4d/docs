@@ -42,7 +42,7 @@ __queryPath: {
             recordsfounds: 0,
             steps: [
                 {
-                    description: "Join on Table : Company : People.employer = Company.ID",
+                    description: "Join on Table : Company : People.employer = Company. ID",
                     time: 0,
                     recordsfounds: 0,
                     steps: [
@@ -83,7 +83,7 @@ If at least one entity was found, the following query path would be returned, if
             "recordsfounds": 4,
             "steps": [
                 {
-                    "description": "Join on Table : Company : Employee.employer = Company.ID",
+                    "description": "Join on Table : Company : Employee.employer = Company. ID",
                     "time": 1,
                     "recordsfounds": 4,
                     "steps": [

@@ -4,23 +4,23 @@ title: Indicador de progreso
 ---
 
 
-A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
+Un indicador de progreso (también llamado "termómetro") está diseñado para mostrar o definir gráficamente los valores numéricos o fecha/hora.
 
 ![](assets/en/FormObjects/progress1.png)
 
 ## Utilizar los indicadores
 
-Los indicadores se pueden utilizar tanto para visualizar como para definir valores. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
+Los indicadores se pueden utilizar tanto para visualizar como para definir valores. Por ejemplo, si a un indicador de progreso se le da un valor por un método, muestra el valor. Si el usuario arrastra el punto indicador, el valor cambia. El valor puede utilizarse en otro objeto, como un campo o un objeto introducible o no introducible.
 
-The variable associated with the indicator controls the display. Los valores se introducen o utilizan en el indicador mediante métodos. For example, a method for a field or enterable object could be used to control a progress indicator:
+La variable asociada al indicador controla la visualización. Puede introducir y utilizar lo valores del indicador utilizando métodos. Por ejemplo, un método para un campo o un objeto introducible podría utilizarse para controlar un indicador de progreso:
 
 ```4d
  vTherm:=[Employees]Salary
 ```
 
-This method assigns the value of the Salary field to the vTherm variable. This method would be attached to the Salary field.
+This method assigns the value of the Salary field to the vTherm variable. Este método se adjuntará al campo Salario.
 
-Conversely, you could use the indicator to control the value in a field. The user drags the indicator to set the value. En este caso el método se convierte en:
+Por el contrario, puede utilizar el indicador para controlar el valor de un campo. El usuario arrastra el indicador para definir el valor. En este caso el método se convierte en:
 
 ```4d
  [Employees]Salary:=vTherm

@@ -87,7 +87,7 @@ title: フォームエディター
 | ![](assets/en/FormEditor/indicator.png) | [進捗インジケーター](FormObjects/progressIndicator.md) / [ルーラー](FormObjects/ruler.md) / [ステッパー](FormObjects/stepper.md) / [スピナー](FormObjects/spinner.md)                                                                                                    | I  |
 | ![](assets/en/FormEditor/rectangle.png) | [四角](FormObjects/shapesOverview.html#四角) / [線](FormObjects/shapesOverview.html#線) / [楕円](FormObjects/shapesOverview.html#楕円)                                                                                                                       | S  |
 | ![](assets/en/FormEditor/splitter.png)  | [スプリッター](FormObjects/splitters.md) / [タブコントロール](FormObjects/tabControl.md)                                                                                                                                                                         | D  |
-| ![](assets/en/FormEditor/plugin.png)    | [プラグインエリア](FormObjects/pluginArea_overview.md) / [サブフォーム](FormObjects/subform_overview.md) / [Webエリア](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) | X  |
+| ![](assets/en/FormEditor/plugin.png)    | [プラグインエリア](FormObjects/pluginArea_overview.md) / [サブフォーム](FormObjects/subform_overview.md) / [Webエリア](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) | ○  |
 
 任意のオブジェクトタイプを描画するには、該当するボタンを選択してから、フォーム上でそのオブジェクトを描きます。 オブジェクトを作成した後でも、プロパティリストを用いてオブジェクトのタイプを変更することができます。 強制的にオブジェクトを規則正しい形で描画するには、**Shift**キーを押しながらオブジェクトを作成します。 この場合、線は水平方向、45度、または垂直方向に引かれます。また、四角は正方形に、楕円は正円に固定されます。
 
@@ -239,7 +239,7 @@ title: フォームエディター
 オブジェクトのグループ化を解除するには:
 
 1.  グループ化を解除したいグループオブジェクトを選択します。
-2.  **オブジェクト** メニューから **グループ化解除** を選択します。<p>または<p>フォームエディターのツールバーで **グループ化解除** ボタン (**グループ化** ボタンのサブ項目) をクリックします。<p>**グループ化解除** が選択不可の場合、選択したオブジェクトはグループに属していないことを意味します。<p>4D は個々のオブジェクトの境界をハンドルで表わします。
+2.  **オブジェクト** メニューから **グループ化解除** を選択します。<p>OR<p>フォームエディターのツールバーで **グループ化解除** ボタン (**グループ化** ボタンのサブ項目) をクリックします。<p>**グループ化解除** が選択不可の場合、選択したオブジェクトはグループに属していないことを意味します。<p>4D は個々のオブジェクトの境界をハンドルで表わします。
 
 
 ### オブジェクトの整列
@@ -545,7 +545,7 @@ stroke: #800080;
 | -------------------------------------------- | --------------------------- | -------------------------------------------------------------- |
 | ![](assets/en/FormEditor/objectMethod.png)   | オブジェクトメソッド                  | オブジェクトメソッドが割り当てられたオブジェクト                                       |
 | ![](assets/en/FormEditor/standardAction.png) | 標準アクション                     | 標準アクションが割り当てられたオブジェクト                                          |
-| ![](assets/en/FormEditor/resizing.png)       | リサイズ                        | リサイズプロパティが 1つ以上割り当てられたオブジェクトについて、カレントプロパティの組み合わせを表します          |
+| ![](assets/en/FormEditor/resizing.png)       | サイズ変更                       | リサイズプロパティが 1つ以上割り当てられたオブジェクトについて、カレントプロパティの組み合わせを表します          |
 | ![](assets/en/FormEditor/entryOrder.png)     | 入力順                         | 入力可能なオブジェクトの入力順を表示します                                          |
 | ![](assets/en/FormEditor/viewNumber.png)     | カレントビュー                     | カレントビュー内にあるオブジェクト                                              |
 | ![](assets/en/FormEditor/cssShield.png)      | [スタイルシート](stylesheets.html) | 1つ以上の属性値がスタイルシートにより上書きされたオブジェクト                                |

@@ -58,15 +58,15 @@ O comando `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summar
 In the *server* parameter, pass an object containing the following properties:
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                                        | Default value (if omitted)                                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                | Default value (if omitted)                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | none                                                                |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | none                                                                |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                              | none                                                                |
+| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                                                                                      | none                                                                |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
 
@@ -228,10 +228,10 @@ A função `.getBoxInfo()` <!-- REF #POP3TransporterClass.getBoxInfo().Summary -
 
 O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
-| Property  | Type   | Description                       |
-| --------- | ------ | --------------------------------- |
-| mailCount | Número | Number of messages in the mailbox |
-| size      | Número | Tamanho da mensagem em bytes      |
+| Propriedade | Type   | Description                       |
+| ----------- | ------ | --------------------------------- |
+| mailCount   | Número | Number of messages in the mailbox |
+| size        | Número | Tamanho da mensagem em bytes      |
 
 
 
@@ -339,14 +339,14 @@ Se quiser saber o emissário do primeiro email da mailbox:
 
 A função `.getMail()`<!-- REF #POP3TransporterClass.getMail().Summary -->retorna o objeto`mailInfo` correspondente a *msgNumber* na mailbox determinada pelo [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Essa função permite que recupere informação sobre o email.
 
-Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pelo método [`.getMailInfoList()`](#getmailinfo).
+Passe em *msgNumber* o número da mensagem a recuperar. O número é retornado na propriedade número pelo método [`.getMailInfoList()`](#getmailinfolist).
 
 O objeto `mailInfo` retornado contém as funcionalidades abaixo:
 
-| Property | Type   | Description                  |
-| -------- | ------ | ---------------------------- |
-| size     | Número | Tamanho da mensagem em bytes |
-| id       | Texto  | ID única da mensagem         |
+| Propriedade | Type   | Description                  |
+| ----------- | ------ | ---------------------------- |
+| size        | Número | Tamanho da mensagem em bytes |
+| id          | Texto  | ID única da mensagem         |
 
 O método retorna **Null** se:
 
@@ -391,9 +391,9 @@ O método retorna **Null** se:
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| Parameter | Type       |    | Description                      |
-| --------- | ---------- |:--:| -------------------------------- |
-| Result    | Collection | <- | Collection of `mailInfo` objects |
+| Parameter | Type    |    | Description                      |
+| --------- | ------- |:--:| -------------------------------- |
+| Result    | Coleção | <- | Collection of `mailInfo` objects |
 <!-- END REF -->
 
 
@@ -403,7 +403,7 @@ A função`.getMailInfoList()` <!-- REF #POP3TransporterClass.getMailInfoList().
 
 Cada objeto `mailInfo` na coleção retornada contém as propriedades abaixo:
 
-| Property     | Type   | Description                                                    |
+| Propriedade  | Type   | Description                                                    |
 | ------------ | ------ | -------------------------------------------------------------- |
 | \[ ].size   | Número | Tamanho da mensagem em bytes                                   |
 | \[ ].number | Número | Número da mensagem                                             |

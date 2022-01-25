@@ -57,7 +57,12 @@ This command lets you verify that the web server, home page display, etc. work c
 
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
 
-To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box. The cache is then immediately cleared.
+Para ello, puede:
+
+-   4D: click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box.
+-   4D Server: click on the **Clear Cache** button in the HTTP page of the [4D Server Administration window](Admin/server-admin.md#http-server-page).
+
+The cache is then immediately cleared.
 > You can also use the [/4DCACHECLEAR](#cacheclear) URL.
 
 
@@ -140,9 +145,9 @@ Both log files are automatically created in the **Logs** folder of the applicati
 
 The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
 
-This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Este archivo de historial registra cada petición HTTP y cada respuesta en modo crudo. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
-The following fields are logged for both Request and Response:
+Los siguientes campos se registran tanto para la solicitud como para la respuesta:
 
 | Nombre del campo | Descripción                                                   |
 | ---------------- | ------------------------------------------------------------- |

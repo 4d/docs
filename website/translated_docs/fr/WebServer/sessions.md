@@ -55,11 +55,12 @@ Web processes usually do not end, they are recycled in a pool for efficiency. Wh
 
 ### Mode préemptif
 
-Sur 4D Server, les sessions du serveur Web sont automatiquement gérées par des process préemptifs, **y compris en mode interprété**. You need to make sure that your web code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
+Sur 4D Server, les sessions du serveur Web sont automatiquement gérées par des process préemptifs, **y compris en mode interprété**. Vous devez vous assurer que le code de votre serveur web est [conforme à une exécution préemptive](preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug web code on 4D Server (interpreted), you need to launch and connect [4D on the same machine as 4D Server](Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine) and open the development environment (e.g., the Explorer) on the 4D application. With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+> Pour déboguer le code web interprété sur la machine serveur, assurez-vous que le débogueur est [rattaché au serveur](Debugging/debugging-remote.md) ou [à une machine distante](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
 
-With 4D single-user, interpreted code is always run in cooperative mode.
+Avec 4D monoposte, le code interprété s'exécute toujours en mode coopératif.
+
 
 ## Partage d'informations
 
@@ -89,7 +90,7 @@ Privileges can be associated to sessions. On the web server, you can provide spe
 
 Vous pouvez attribuer des privilèges à l'aide de la fonction [`.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **invité** (la fonction [`.isGuest()`](API/SessionClass.md#isguest) retourne true).
 
-> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
+> Dans l'implémentation actuelle, seul le privilège "WebAdmin" est disponible.
 
 Exemple :
 
@@ -167,13 +168,13 @@ If ($sales#Null)
             If (Session.storage.myTop3=Null)
                 $userTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
                 Session.storage.myTop3:=$userTop3
-            End if 
-        End use 
+            End if
+        End use
         WEB SEND HTTP REDIRECT("/authenticationOK.shtml")
-    Else 
+    Else
         WEB SEND TEXT("This password is wrong")
-    End if 
-Else 
+    End if
+Else
     WEB SEND TEXT("This userId is unknown")
-End if 
+End if
 ```

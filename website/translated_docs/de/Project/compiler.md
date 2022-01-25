@@ -123,7 +123,7 @@ This area groups the generic options used during the compilation process.
 
 #### Generate the symbol file
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the symbol file (see [symbol file](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
 
 #### Generate error file
 

@@ -12,9 +12,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Gramática JSON
 
-| Nombre                  | Tipos de datos | Valores posibles                                                                                             |
-| ----------------------- | -------------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | cadena         | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Nombre                  | Tipos de datos | Valores posibles                                                                                              |
+| ----------------------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
+| customBackgroundPicture | cadena         | Ruta relativa en sintaxis POSIX. Debe utilizarse junto con la opción "Personalizado" de la propiedad "Style". |
 
 
 #### Objetos soportados

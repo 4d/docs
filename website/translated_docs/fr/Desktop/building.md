@@ -1,6 +1,6 @@
 ---
 id: building
-title: Générer un package projet
+title: Générateur d'application
 ---
 
 4D inclut un générateur d’application pour créer un package de projet (version finale). Ce générateur simplifie le processus de finalisation et de déploiement des applications compilées 4D. Il gère automatiquement les fonctionnalités spécifiques de différents systèmes d'exploitation et facilite le déploiement d'applications client-serveur.
@@ -17,16 +17,18 @@ Le générateur d'applications vous permet de :
 > Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. A noter que l'utilisation de commandes ou de fonctions qui modifient les fichiers sources (telles que `CREATE INDEX` ou `CREATE TABLE` (SQL)) n'est pas possible par défaut dans les applications compilées. Vous pouvez néanmoins créer des applications spécifiques qui prennent en charge les modifications locales en utilisant la clé XML du `PackProject` (voir [doc.4d.com](https://doc.4d.com)).
 
 
-## Aperçu du générateur d'application
+## Aperçu
 
 Générer un package de projet peut être réalisée à l'aide de :
 
 - soit la commande
 `BUILD APPLICATION<code></a>,</li>
-<li>soit la<a href="#application-builder"> fenêtre Générateur d'application</a>.</li>
+<li>Utiliser la <a href="#application">Page Application</a> ou la <a href="#client-server">Page Client/Serveur</a> de boîte de dialogue du Générateur d'applications.</li>
 </ul>
 
-<p spaces-before="0">Pour afficher la boîte de dialogue du générateur d'application, sélectionnez <strong x-id="1">Développement</strong> > <strong x-id="1">Générer l'application...</strong> dans la barre de menus.</p>
+<h3 spaces-before="0">Construire application cliente</h3>
+
+<p spaces-before="0">Cochez l'option <strong x-id="1">Créer une application autonome</strong> et cliquez sur <strong x-id="1">Générer</strong> pour créer une application autonome (double-cliquable) directement à partir de votre projet d'application.</p>
 
 <p spaces-before="0"><img src="assets/en/Project/buildappProj.png" alt="" /></p>
 
@@ -65,7 +67,6 @@ La vérification de ce fichier peut vous aider à gagner du temps lors des proch
 
 
 
-
 ## Nom de l'application et dossier de destination
 
 ![](assets/en/Project/buidappstructureProj.png)
@@ -95,13 +96,13 @@ Cette fonctionnalité crée un fichier *.4dz* dans un dossier *Compiled Database
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
-
-
-> Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.  
+Un fichier .4dz est essentiellement une version compressée du dossier du projet. .4dz files can be used by 4D Server, 4D Volume license (merged applications), and 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.  
 
 
 
 > Lors de la génération de fichiers .4dz, 4D utilise par défaut un format zip **standard**. L'avantage de ce format est qu'il est facilement lisible par tout outil de dézippage. Si vous ne souhaitez pas utiliser ce format standard, ajoutez la clé XML `UseStandardZipFormat` avec la valeur `False` dans votre fichier [`buildApp.4DSettings`](#build-application-settings) (pour plus d'informations, voir le manuel *4D XML Keys Backup* sur [doc.4d.com](https://doc.4d.com)).
+
+
 
 
 
@@ -302,6 +303,24 @@ Utilisée pour indiquer le numéro de version courante de l'application génér�
 #### Data linking mode
 
 This option lets you choose the linking mode between the merged application and the local data file. 
+
+
+
+#### Autoriser la connexion des clients Silicon Mac
+
+Lorsque vous créez un serveur sous Windows, cochez cette option pour permettre aux clients Apple Silicon de se connecter à votre application serveur. Vous pouvez alors spécifier un chemin d'accès à la structure compilée pour Apple Silicon/Intel.
+
+Pour permettre aux clients Apple Silicon de se connecter à une application serveur créée sous Windows, vous devez d'abord créer une application cliente sous macOS, avec un projet compilé pour Apple Silicon et Intel. Cela crée automatiquement une structure compilée, identique à celle créée avec l'option **[Build compiled structure](#build-compiled-structure)** (sans les dossiers associés). 
+
+Vous pouvez ensuite copier cette structure sur votre machine Windows, et l'utiliser pour construire l'application serveur : 
+
+![](assets/en/Desktop/allow-mac-clients.png)
+
+
+
+#### Emplacement de la structure compilée
+
+Chemin d'accès à la structure compilée de l'application cliente Apple Silicon/Intel utilisée pour créer un serveur Windows (voir [Autoriser la connexion des clients Silicon Mac](#allow-connection-of-silicon-mac-clients)).
 
 
 

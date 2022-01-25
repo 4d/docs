@@ -55,11 +55,12 @@ Webプロセスは通常終了せず、効率化のためにプールされリ�
 
 ### プリエンプティブモード
 
-4D Server上では、**インタプリタモードであっても**、Webサーバーセッションは自動的にプリエンプティブプロセスで処理されます。 そのため、Webのコードは [プリエンプティブ実行に準拠](preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
+4D Server上では、**インタプリタモードであっても**、Webサーバーセッションは自動的にプリエンプティブプロセスで処理されます。 そのため、Webサーバーのコードは [プリエンプティブ実行に準拠](preemptiveWeb.md#スレッドセーフなWebサーバーコードの書き方) している必要があります。
 
-> Web のコードを 4D Server (インタープリターモード) でデバッグするには、[4D Server と同じマシン上で 4D](Desktop/clientServer.md#4d-と-4d-server-の同じマシン上での使用) を起動後、サーバーに接続し、4D アプリケーション上で開発環境 (エクスプローラー等) を開きます。 これにより、すべてのプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
+> サーバーマシン上のインタープリターWebコードをデバッグするには、あらかじめサーバーのデバッガーを [サーバー](Debugging/debugging-remote.md) または [リモートマシン](Debugging/debugging-remote.md#リモート4dクライアントでのデバッガーの有効化) で有効化する必要があります。 これにより、Webプロセスがコオペラティブモードに切り替わり、Webサーバーコードのデバッグが可能になります。
 
 シングルユーザーの 4D では、インタープリターコードは常にコオペラティブモードで実行されます。
+
 
 ## 情報の共有
 
@@ -167,13 +168,13 @@ If ($sales#Null)
             If (Session.storage.myTop3=Null)
                 $userTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
                 Session.storage.myTop3:=$userTop3
-            End if 
-        End use 
+            End if
+        End use
         WEB SEND HTTP REDIRECT("/authenticationOK.shtml")
-    Else 
+    Else
         WEB SEND TEXT("This password is wrong")
-    End if 
-Else 
+    End if
+Else
     WEB SEND TEXT("This userId is unknown")
-End if 
+End if
 ```

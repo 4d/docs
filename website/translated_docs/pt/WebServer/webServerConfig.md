@@ -10,7 +10,7 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Setting location                        | Scope                                    | Involved web server                             |
+| Configuração de local                   | Scope                                    | Involved web server                             |
 | --------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
 | [webServer object](webServerObject.md)  | Temporary (current session)              | Any web server, including component web servers |
 | `WEB SET OPTION` or a `WEB XXX` command | Temporary (current session)              | Main server                                     |

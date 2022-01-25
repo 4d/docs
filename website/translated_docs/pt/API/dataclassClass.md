@@ -45,7 +45,7 @@ Os atributos das classes de dados são<!-- REF ClaseDeDatos.attributeName.Summar
 The returned objects are of the [`DataClassAttribute`](DataClassAttributeClass.md) class. These objects have properties that you can read to get information about your dataclass attributes.
 > Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
 $salary:=ds.Employee.salary //returns the salary attribute in the Employee dataclass
@@ -53,7 +53,7 @@ $compCity:=ds.Company["city"] //returns the city attribute in the Company datacl
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 Considering the following database structure:
 
@@ -132,9 +132,9 @@ Se aplica carregamento diferido/lazy loading.
 
 No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                          |
-| -------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Type  | Description                                                                                                                                                                                                                                                                                          |
+| ----------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
 #### Exemplo
@@ -185,7 +185,7 @@ The `.exposed` property is <!-- REF DataClassClass.exposed.Summary -->true if th
 <!-- REF #DataClassClass.fromCollection().Params -->
 | Parameter | Type               |    | Description                                 |
 | --------- | ------------------ |:--:| ------------------------------------------- |
-| objectCol | Collection         | -> | Coleção de objetos a mapear com entidades   |
+| objectCol | Coleção            | -> | Coleção de objetos a mapear com entidades   |
 | settings  | Objeto             | -> | Build option: context                       |
 | Result    | 4D.EntitySelection | <- | Seleção de entidades preenchidas da coleção |
 <!-- END REF -->
@@ -228,12 +228,12 @@ Se um atributo \_\_STAMP for dado, se realiza uma comprovação com o selo no ar
 
 No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                          |
-| -------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Type  | Description                                                                                                                                                                                                                                                                                          |
+| ----------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| context     | Texto | Label for the optimization context applied to the entity selection. This context will be used by the code that handles the entity selection so that it can benefit from the optimization. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
-#### Example 1
+#### Exemplo 1
 
 Queremos atualizar uma entidade existente. A propriedade \_\_NEW não for dada, a chave primária do empregado é dada e existe:
 
@@ -253,7 +253,7 @@ Queremos atualizar uma entidade existente. A propriedade \_\_NEW não for dada, 
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Queremos atualizar uma entidade existente. A propriedade \_\_NEW não é dada, a chave primária do empregado com o atributo \_\_KEY e existir:
 
@@ -404,13 +404,13 @@ Se nenhuma entidade for encontrada com  *primaryKey*, uma entidade**Null** é re
 
 No parâmetro opcional*settings* pode passar um objeto contendo as opções abaixo. As propriedades abaixo são compatíveis:
 
-| Property | Type  | Description                                                                                                                                                                                                                                                                                            |
-| -------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context  | Texto | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
+| Propriedade | Type  | Description                                                                                                                                                                                                                                                                                            |
+| ----------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context     | Texto | Etiqueta para o contexto de otimização automático aplicados à entidade. Esse contexto será usado pelo código subsequente que carrega a entidade para que se possa beneficiar da otimização. This feature is [designed for ORDA client/server processing](ORDA/entities.md#client-server-optimization). |
 
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $entity : cs.EmployeeEntity  
@@ -419,7 +419,7 @@ No parâmetro opcional*settings* pode passar um objeto contendo as opções abai
  $entity2:=ds.Invoice.get("DGGX20030") // return the entity whose primary key value is "DGGX20030"
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Este exemplo ilustra o uso da propriedade *context* :
 
@@ -526,7 +526,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 **Returned object**
 
-| Property    | Type    | Description                              |
+| Propriedade | Type    | Description                              |
 | ----------- | ------- | ---------------------------------------- |
 | name        | Texto   | Name of the dataclass                    |
 | primaryKey  | Texto   | Name of the primary key of the dataclass |
@@ -534,7 +534,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d 
  #DECLARE ($entity : Object)  
@@ -548,7 +548,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  End if
 ```
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $settings : Object
@@ -812,7 +812,7 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
 
 2.  It prevents having to worry about formatting or character issues, especially when handling *attributePath* or *value* parameters that might contain non-alphanumeric characters such as ".", "['...
 
-3.  It allows the use of variables or expressions in query arguments. Examples:
+3.  It allows the use of variables or expressions in query arguments. Exemplos:
 
     ```4d
     $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
@@ -919,7 +919,7 @@ Additional examples are provided in example 3.
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
-| Property      | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Propriedade   | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | parameters    | Objeto   | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                    |
 | attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
@@ -931,7 +931,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 
 **About queryPlan and queryPath**
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. You may find it useful to analyze this information while developing your application(s). Geralmente a descrição do plano de pesquisa e sua rota são idênticas mas podem ser diferentes porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar a performance. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.
 
 For example, if you execute the following query:
 
@@ -960,7 +960,7 @@ queryPath:
     steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
 
-#### Example 1
+#### Exemplo 1
 
 This section provides various examples of queries.
 
@@ -1097,7 +1097,7 @@ $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith
   //salesperson is a related entity
 ```
 
-#### Example 2
+#### Exemplo 2
 
 This section illustrates queries with named placeholders for attributes.
 

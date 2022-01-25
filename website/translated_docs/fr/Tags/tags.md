@@ -46,17 +46,17 @@ L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux 
 - En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées au moyen d'une URL. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed.
 
 
-### Recursive processing
+### Traitement récursif
 
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
+Les balises 4D sont interprétées de manière récursive : 4D tente toujours de réinterpréter le résultat d'une transformation et, si une nouvelle transformation a eu lieu, une interprétation supplémentaire est effectuée, et ainsi de suite jusqu'à ce que le produit obtenu ne nécessite plus aucune transformation. Par exemple, étant donné l'énoncé suivant :
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
 ```
 
-If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4DSCRIPT/m_Gender-->`, this tag will be evaluated recursively after the interpretation of the 4DHTML tag.
+Si le champ de texte `[Mail]Letter_type` contient lui-même une balise, telle que `<!--#4DSCRIPT/m_Gender-->`, cette balise sera évaluée récursivement après l'interprétation de la balise 4DHTML.
 
-This powerful principle meets most needs related to text transformation. Notez toutefois que, dans certains cas, cela peut également permettre l'insertion d'un code malveillant dans le contexte web, [ce qui peut être évité](WebServer/templates.md#prevention-of-malicious-code-insertion).
+Ce principe puissant répond à la plupart des besoins liés à la transformation des textes. Notez toutefois que, dans certains cas, cela peut également permettre l'insertion d'un code malveillant dans le contexte web, [ce qui peut être évité](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 
 ### Identifiants avec tokens
@@ -203,7 +203,7 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. À c
 
 #### Exemple avec une collection de valeurs scalaires
 
-*getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+*getNames* retourne une collection de chaînes de caractères. La méthode a été déclarée comme "[disponible via les balises 4D et les URL](WebServer/allowProject.md)".
 
 
 ```html
@@ -219,9 +219,9 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. À c
     </table>
 ```
 
-#### Example with a collection of objects
+#### Exemple avec une collection d'objets
 
-*getSalesPersons* returns a collection of objects.
+*getSalesPersons* retourne une collection d'objets.
 
 ```html
     <table class="table">    

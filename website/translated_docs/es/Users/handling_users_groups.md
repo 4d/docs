@@ -4,27 +4,27 @@ title: Gestión de usuarios y grupos 4D
 ---
 
 
-4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+4D ofrece a los usuarios ciertos privilegios de acceso estándar y ciertas prerrogativas. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
 
 
-## Designer and Administrator
+## Diseñador y administrador
 
-The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. El diseñador puede:
+El usuario más poderoso se llama el **Diseñador**. No aspect of the application is closed to the Designer. El diseñador puede:
 - access all application servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+- crear usuarios y grupos,
+- asignar privilegios de acceso a los grupos,
+- acceder al entorno Diseño. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
 
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
 El administrador puede:
-- create users and groups,
+- crear usuarios y grupos,
 - access the 4D Server Administration window and monitor
 - access the MSC window to monitor backup, restore, or server.
 
 The Administrator cannot:
 - modificar el usuario Diseñador
-- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the application. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
@@ -137,7 +137,7 @@ The “Plug-in” area on the Groups page of the tool box lists all the plug-ins
 The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
 
 
-### An access hierarchy scheme
+### Un esquema de acceso jerárquico
 
 The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
 

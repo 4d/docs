@@ -1,5 +1,5 @@
 ---
-id: binary
+id: バイナリ
 title: '$binary'
 ---
 

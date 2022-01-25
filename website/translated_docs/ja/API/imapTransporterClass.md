@@ -70,16 +70,16 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
-| *server*                                                                                                                                                                                                                                                                                       | デフォルト値 (省略時)                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                            | デフォルト値 (省略時)                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                            |
-| .**accessTokenOAuth2**: Text<p>OAuth 2 認証の資格情報を表すテキスト文字列。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。 | なし                               |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。 | なし                               |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| サーバーがサポートするもっともセキュアな認証モードが使用されます |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                              |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *必須*                             |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| なし                               |
-| .**password** : Text<p>サーバーとの認証のためのユーザーパスワード *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                            | なし                               |
+| .**password** : Text<p>サーバーとの認証のためのユーザーパスワード *[IMAP transporter](#imap-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                                                                                 | なし                               |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| なし                               |
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
@@ -652,10 +652,11 @@ End if
 **.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| 引数   | タイプ    |    | 説明                |
-| ---- | ------ |:--:| ----------------- |
-| name | Text   | -> | 削除するメールボックスの名称    |
-| 戻り値  | Object | <- | deleteBox処理のステータス |
+| 引数   | タイプ  |    | 説明             |
+| ---- | ---- |:--:| -------------- |
+| name | Text | -> | 削除するメールボックスの名称 |
+
+|Result|Object|<-|deleteBox処理のステータス|
 <!-- END REF -->
 
 
@@ -795,8 +796,8 @@ $status:=$transporter.expunge()
 | バージョン  | 内容           |
 | ------ | ------------ |
 | v18 R5 | *name* は任意です |
-| v18 R4 | 追加           |
-</details>
+
+|v18 R4|追加| </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
 **.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
@@ -1249,7 +1250,6 @@ ID = 1のメッセージを取得します:
 </details>
 
 <!-- REF #IMAPTransporterClass.move().Syntax -->
-
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
@@ -1498,6 +1498,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 <!-- END REF -->
 
 
+
+
+
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()
 
@@ -1688,27 +1691,27 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 **SEEN**: \Seen フラグが設定されているメッセージ  
 **UNSEEN**: \Seen フラグが設定されていないメッセージ  
 **NEW**: \Recent フラグが設定されているが \Seen フラグが設定されていないメッセージ。 これは機能的には “(RECENT UNSEEN)” と同じです。  
-**KEYWORD** <flag>: 指定されたキーワードが設定されているメッセージ  
-**UNKEYWORD** <flag>: 指定されたキーワードが設定されていないメッセージ  
-**BEFORE** <date>: 内部の日付が指定日より前のメッセージ  
-**ON** <date>: 内部の日付が指定日に合致するメッセージ  
-**SINCE** <date>: 内部の日付が指定日より後のメッセージ  
-**SENTBEFORE** <date>: 日付ヘッダーが指定日より前のメッセージ  
-**SENTON** <date>: 日付ヘッダーが指定日に合致するメッセージ  
-**SENTSINCE** <date>: 日付ヘッダーが指定日以降のメッセージ  
-**TO** <string>: TO ヘッダーに指定文字列が含まれているメッセージ  
-**FROM** <string>: FROM ヘッダーに指定文字列が含まれているメッセージ  
-**CC** <string>: CC ヘッダーに指定文字列が含まれているメッセージ  
-**BCC** <string>: BCC ヘッダーに指定文字列が含まれているメッセージ  
-**SUBJECT** <string>: 件名ヘッダーに指定文字列が含まれているメッセージ  
-**BODY** <string>: メッセージ本文に指定文字列が含まれているメッセージ  
-**TEXT** <string>: ヘッダーまたはメッセージ本文に指定文字列が含まれているメッセージ  
-**HEADER** <field-name> <string>: 指定フィールド名のヘッダーを持ち、そのフィールド内に指定文字列が含まれているメッセージ  
-**UID** <message UID>: 指定された固有識別子に対応する固有識別子を持つメッセージ  
-**LARGER** <n>: 指定バイト数以上のサイズを持つメッセージ  
-**SMALLER** <n>: 指定バイト数以下のサイズを持つメッセージ  
-**NOT** <search-key>: 指定検索キーに合致しないメッセージ  
-**OR** <search-key1> <search-key2>: いずれかの検索キーに合致するメッセージ  
+***KEYWORD ***flag******: 指定されたキーワードが設定されているメッセージ  
+***UNKEYWORD ***flag******: 指定されたキーワードが設定されていないメッセージ  
+***BEFORE ***date******: 内部の日付が指定日より前のメッセージ  
+***ON ***date******: 内部の日付が指定日に合致するメッセージ  
+***SINCE ***date******: 内部の日付が指定日より後のメッセージ  
+***SENTBEFORE ***date******: 日付ヘッダーが指定日より前のメッセージ  
+***SENTON ***date******: 日付ヘッダーが指定日に合致するメッセージ  
+***SENTSINCE ***date******: 日付ヘッダーが指定日以降のメッセージ  
+***TO ***string******: TO ヘッダーに指定文字列が含まれているメッセージ  
+***FROM ***string******: FROM ヘッダーに指定文字列が含まれているメッセージ  
+***CC ***string******: CC ヘッダーに指定文字列が含まれているメッセージ  
+***BCC ***string******: BCC ヘッダーに指定文字列が含まれているメッセージ  
+***SUBJECT ***string******: 件名ヘッダーに指定文字列が含まれているメッセージ  
+***BODY ***string******: メッセージ本文に指定文字列が含まれているメッセージ  
+***TEXT ***string******: ヘッダーまたはメッセージ本文に指定文字列が含まれているメッセージ  
+***HEADER *field-name* ***string******: 指定フィールド名のヘッダーを持ち、そのフィールド内に指定文字列が含まれているメッセージ  
+***UID ***message-UID******: 指定された固有識別子に対応する固有識別子を持つメッセージ  
+***LARGER ***n******: 指定バイト数以上のサイズを持つメッセージ  
+***SMALLER ***n******: 指定バイト数以下のサイズを持つメッセージ  
+***NOT ***search-key******: 指定検索キーに合致しないメッセージ  
+***OR *search-key1* ***search-key2******: いずれかの検索キーに合致するメッセージ  
 
 
 <!-- END REF -->

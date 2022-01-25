@@ -160,7 +160,7 @@ The object created by `Formula` can be saved, for example, in a database field o
 
 #### Ejemplo 1
 
-A simple formula:
+Una fórmula simple:
 
 ```4d
  var $f : 4D.Function
@@ -174,7 +174,7 @@ A simple formula:
 
 #### Ejemplo 2
 
-A formula using local variables:
+Una fórmula utilizando variables locales:
 
 ```4d
 
@@ -189,7 +189,7 @@ A formula using local variables:
 
 #### Ejemplo 3
 
-A simple formula using parameters:
+Una fórmula sencilla que utiliza parámetros:
 
 ```4d
  $o:=New object("f";Formula($1+$2))
@@ -199,7 +199,7 @@ A simple formula using parameters:
 
 #### Ejemplo 4
 
-A formula using a project method with parameters:
+Una fórmula utilizando un método proyecto con parámetros:
 
 ```4d
  $o:=New object("f";Formula(myMethod))
@@ -209,7 +209,7 @@ A formula using a project method with parameters:
 
 #### Ejemplo 5
 
-Using `This`:
+Utilizando `This`:
 
 ```4d
  $o:=New object("fullName";Formula(This.firstName+" "+This.lastName))
@@ -220,7 +220,7 @@ Using `This`:
 
 #### Ejemplo 6
 
-Calling a formula using object notation:
+Llamar a una fórmula utilizando la notación de objetos:
 
 ```4d
  var $feta; $robot : Object
@@ -287,7 +287,7 @@ The following code will create a dialog accepting a formula in text format:
 ![](assets/en/API/formulaDialog.png)
 
 
-...and execute the formula:
+...y ejecuta la fórmula:
 
 
 ![](assets/en/API/formulaAlert.png)

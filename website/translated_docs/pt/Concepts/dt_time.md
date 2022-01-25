@@ -11,7 +11,7 @@ Um valor de Hora pode ser tratado como um número. O número retornado de uma Ho
 
 **Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
 
-## Time literals
+## Constantes literais de tipo hora
 
 Uma constante hora está rodeada por sinais de interrogação (?....?).
 
@@ -20,63 +20,63 @@ Uma constante hora se ordena hora:minuto:segundo, com dois pontos (:) para separ
 Aqui são exemplos de constantes de tipo hora:
 
 ```4d
-?00:00:00? ` midnight
+?00:00:00? ` meia noite
 ?09:30:00? ` 9:30 am
-?13:01:59? ` 1 pm, 1 minute, and 59 seconds
+?13:01:59? ` 1 pm, 1 minuto, e 59 segundos
 ```
 
 Uma hora nula se escreve ?00:00:00?
 
 **Dica:** o Editor de métodos inclui um acesso direto para introduzir uma hora nula. Para escrever uma hora nula, introduza o sinal de interrogação (?) e aperte Enter.
 
-## Time operators
+## Operadores de horas
 
 | Operation                | Sintaxe        | Returns  | Expression              | Value      |
 | ------------------------ | -------------- | -------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                 | Time + Number  | Número   | ?02:03:04? + 65         | 7449       |
-| Subtraction              | Time – Number  | Número   | ?02:03:04? – 65         | 7319       |
-| Multiplication           | Time * Number  | Número   | ?02:03:04? * 2          | 14768      |
-| Division                 | Time / Number  | Número   | ?02:03:04? / 2          | 3692       |
-| Longint division         | Time \ Number | Número   | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                   | Time % Number  | Número   | ?02:03:04? % 2          | 0          |
-| Equality                 | Time = Time    | Booleano | ?01:02:03? = ?01:02:03? | True       |
+| Addition                 | Hora + Hora    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Subtraction              | Hora – Hora    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
+| Addition                 | Hora + Número  | Número   | ?02:03:04? + 65         | 7449       |
+| Subtraction              | Hora – Número  | Número   | ?02:03:04? – 65         | 7319       |
+| Multiplication           | Hora * Número  | Número   | ?02:03:04? * 2          | 14768      |
+| Division                 | Hora / Número  | Número   | ?02:03:04? / 2          | 3692       |
+| Longint division         | Hora \ Número | Número   | ?02:03:04? \ 2         | 3692       |
+| Modulo                   | Hora % Hora    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo                   | Hora % Número  | Número   | ?02:03:04? % 2          | 0          |
+| Equality                 | Hora = Hora    | Booleano | ?01:02:03? = ?01:02:03? | True       |
 |                          |                |          | ?01:02:03? = ?01:02:04? | False      |
-| Inequality               | Time # Time    | Booleano | ?01:02:03? # ?01:02:04? | True       |
+| Inequality               | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |
 |                          |                |          | ?01:02:03? # ?01:02:03? | False      |
-| Greater than             | Time > Time    | Booleano | ?01:02:04? > ?01:02:03? | True       |
+| Greater than             | Hora > Hora    | Booleano | ?01:02:04? > ?01:02:03? | True       |
 |                          |                |          | ?01:02:03? > ?01:02:03? | False      |
-| Less than                | Time < Time    | Booleano | ?01:02:03? < ?01:02:04? | True       |
+| Less than                | Hora < Hora    | Booleano | ?01:02:03? < ?01:02:04? | True       |
 |                          |                |          | ?01:02:03? < ?01:02:03? | False      |
-| Greater than or equal to | Time >= Time   | Booleano | ?01:02:03? >=?01:02:03? | True       |
+| Greater than or equal to | Hora >= Hora   | Booleano | ?01:02:03? >=?01:02:03? | True       |
 |                          |                |          | ?01:02:03? >=?01:02:04? | False      |
-| Less than or equal to    | Time <= Time   | Booleano | ?01:02:03? <=?01:02:03? | True       |
+| Less than or equal to    | Hora <= Hora   | Booleano | ?01:02:03? <=?01:02:03? | True       |
 |                          |                |          | ?01:02:04? <=?01:02:03? | False      |
 
-### Example 1
+### Exemplo 1
 
 Para obter uma expressão de tipo hora a partir de uma expressão que combina uma expressão de hora com um número, utilize os comandos `Time` e `Time string`.
 
 Pode combinar expressões dos tipos hora e número utilizando as funções `Time` ou `Current time`:
 
 ```4d
-    //The following line assigns to $vlSeconds the number of seconds   
-    //that will be elapsed between midnight and one hour from now
+    //A linha abaixo atribuir a $vlSeconds o número de segundos   
+    //que estão entre meia noite e uma hora a partir de agora
 $vlSeconds:=Current time+3600
-    //The following line assigns to $vHSoon the time it will be in one hour
+    //A linha abaixo atribui a $vHSoon a hora que será em uma hora de tempo
 $vhSoon:=Time(Current time+3600)
 ```
 
 A segunda linha pode ser escrita de forma mais simples:
 
 ```4d
-  // The following line assigns to $vHSoon the time it will be in one hour
+  //A linha abaixo atribui a $vHSoon a hora que será em uma hora
  $vhSoon:=Current time+?01:00:00?
 ```
 
-### Example 2
+### Exemplo 2
 
 O operador Modulo pode ser usado, mais concretamente, para somar tempos que considerem o formato de 24 horas:
 

@@ -81,7 +81,7 @@ You can pass blobs and blob objects (`4D.Blob`) to methods. Keep in mind that un
 
 To pass a scalar blob to your own methods without duplicating it in memory, define a pointer to the variable that stores it and pass the pointer as a parameter.
 
-**Examples:**
+**Exemplos:**
 
 ```4d
 // Declare a variable of type Blob

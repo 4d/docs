@@ -603,17 +603,17 @@ $status:=$transporter.send($email)
 
 El comando `MAIL Convert to MIME` <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->convierte un objeto de correo electrónico en texto MIME<!-- END REF -->. Este comando es llamado internamente por [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) para formatear el objeto de correo electrónico antes de enviarlo. Se puede utilizar para analizar el formato MIME del objeto.
 
-En *mail*, pase el contenido y los detalles de la estructura del correo electrónico a convertir. This includes information such as the email addresses (sender and recipient(s)), the message itself, and the type of display for the message.
+En *mail*, pase el contenido y los detalles de la estructura del correo electrónico a convertir. Esto incluye información como las direcciones de correo electrónico (remitente y destinatario(s)), el propio mensaje y el tipo de visualización del mensaje.
 > 4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the email object.
 
-In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
+En *options*, puede configurar la codificación y el charset del mail. Las siguientes propiedades están disponibles:
 
 | Propiedad     | Tipo  | Descripción                                                                                                                                                                                                                |
 | ------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | headerCharset | Texto | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Valores posibles:<p><p><table><tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table> |
 | bodyCharset   | Texto | Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)                                                                                         |
 
-If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
+Si se omite el parámetro *options*, se utiliza la configuración del modo de correo UTF8 para las partes encabezado y cuerpo.
 
 
 #### Ejemplo

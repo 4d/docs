@@ -17,7 +17,7 @@ Les informations de l'historique doivent être analysées pour détecter et corr
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [Fichier d'historique des requêtes ORDA clientes](#orda-client-requests)
 
-Note: When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
+> Lorsqu'un fichier d'historique peut être généré soit sur 4D Server, soit sur le client distant, le mot " Server " est ajouté au nom du fichier d'historique côté serveur, par exemple " 4DRequestsLogServer.txt"
 
 Log files share some fields so that you can establish a chronology and make connections between entries while debugging:
 
@@ -58,7 +58,7 @@ This file starts with the following headers:
 
 For each request, the following fields are logged:
 
-| Noms des champs                            | Description                                                                                                                                                                                                                                                                  |
+| Nom des champs                             | Description                                                                                                                                                                                                                                                                  |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sequence_number                            | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                         |
 | time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                 |
@@ -109,7 +109,7 @@ This file starts with the following headers:
 
 For each process, the following fields are logged:
 
-| Noms des champs                   | Description                                                          |
+| Nom des champs                    | Description                                                          |
 | --------------------------------- | -------------------------------------------------------------------- |
 | sequence_number                   | Numéro d'opération séquentiel et unique dans la session d'historique |
 | time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"         |
@@ -140,14 +140,14 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 
 Les champs suivants sont enregistrés pour chaque requête et réponse :
 
-| Noms des champs | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                           |
-| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
-| PeerPort        | Port utilisé par l'hôte (client)                                     |
-| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
-| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
+| Nom des champs | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| SocketID       | ID du socket utilisé pour la communication                           |
+| PeerIP         | Adresse IPv4 de l'hôte (client)                                      |
+| PeerPort       | Port utilisé par l'hôte (client)                                     |
+| TimeStamp      | Horodatage en millisecondes (depuis le démarrage du système)         |
+| ConnectionID   | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
+| SequenceNumber | Numéro d'opération séquentiel et unique dans la session d'historique |
 
 ## 4DDebugLog.txt (standard)
 
@@ -190,7 +190,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 The following fields are logged for each event:
 
-| Colonne # | Noms des champs                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Colonne # | Nom des champs                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -319,11 +319,198 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 The following fields are logged for each request:
 
-| Noms des champs | Description                                                          | Exemple                                                 |
-| --------------- | -------------------------------------------------------------------- | ------------------------------------------------------- |
-| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique | 104                                                     |
-| url             | URL de la requête ORDA effectuée par le poste client                 | "rest/Persons(30001)"                                   |
-| startTime       | Date et heure de début au format ISO 8601                            | "2019-05-28T08:25:12.346Z"                              |
-| endTime         | Date et heure de fin au format ISO 8601                              | "2019-05-28T08:25:12.371Z"                              |
-| duration        | Durée de traitement client (ms)                                      | 25                                                      |
-| response        | Objet réponse du serveur                                             | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| Nom des champs | Description                                                          | Exemple                                                   |
+| -------------- | -------------------------------------------------------------------- | --------------------------------------------------------- |
+| sequenceNumber | Numéro d'opération séquentiel et unique dans la session d'historique | 104                                                       |
+| url            | URL de la requête ORDA effectuée par le poste client                 | "rest/Persons(30001)"                                     |
+| startTime      | Date et heure de début au format ISO 8601                            | "2019-05-28T08:25:12.346Z"                                |
+| endTime        | Date et heure de fin au format ISO 8601                              | "2019-05-28T08:25:12.371Z"                                |
+| duration       | Durée de traitement client (ms)                                      | 25                                                        |
+| response       | Objet réponse du serveur                                             | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+
+
+
+## Utilisation d'un fichier de configuration de log
+
+Vous pouvez utiliser un **fichier de configuration de log** pour gérer facilement l'enregistrement des journaux dans un environnement de production. Ce fichier est préconfiguré par le développeur. En général, il peut être envoyé aux clients pour qu'ils n'aient qu'à le sélectionner ou à le copier dans un dossier local. Une fois activé, le fichier de configuration de log déclenche l'enregistrement de journaux spécifiques.
+
+### Activation du fichier
+
+Il existe plusieurs façons d'activer le fichier de configuration des logs :
+
+- Sur le serveur 4D avec interface, vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Charger le fichier de configuration des logs](Admin/server-admin.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
+- Vous pouvez copier le fichier de configuration du journal dans le [dossier Settings](Project/architecture.md#settings-1) du projet. Dans ce cas, le fichier doit être nommé `logConfig.json`. Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
+- Avec une application générée, vous pouvez copier le fichier `logConfig.json` dans le dossier suivant :
+    + Windows : `Users\[userName]\AppData\Roaming\[application]`
+    + macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
+
+> Si vous souhaitez activer le fichier de configuration log pour tous les projets dans les applications autonomes, les applications serveur et les applications distantes, copiez le ficher `logConfig.json` dans le dossier suivant : - Windows: `Users\[userName]\AppData\Roaming\4D ou \4D Server` - macOS: `/Users/[userName]/Library/ApplicationSupport/4D ou /4D Server`
+
+### Description du fichier JSON
+
+Le fichier de configuration de log est un fichier `.json` qui peut contenir les propriétés suivantes :
+
+```json
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Logs Configuration File",
+    "description": "A file that controls the state of different types of logs in 4D clients and servers",
+    "type": "object",
+    "properties": {
+        "forceLoggingConfiguration": {
+            "description": "Forcing the logs configuration described in the file ingoring changes coming from code or user interface",
+            "type": "boolean",
+            "default": true
+        },
+        "requestLogs": {
+            "description": "Configuration for request logs",
+            "type": "object",
+            "properties": {
+                "clientState": {
+                    "description": "Enable/Disable client request logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "serverState": {
+                    "description": "Enable/Disable server request logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "debugLogs": {
+            "description": "Configuration for debug logs",
+            "type": "object",
+            "properties": {
+                "commandList": {
+                    "description": "Commands to log or not log",
+                    "type": "array",
+                    "items": {
+                        "type": "string" 
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                },
+                "state": {
+                    "description": "integer to specify type of debuglog and options",
+
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "diagnosticLogs":{
+            "description": "Configuration for debug logs",
+            "type": "object",
+            "properties": {
+                "state":{
+                    "description": "Enable/Disable diagnostic logs 0 or 1 (0 = do not record, 1 = record)",
+                    "type": "integer",
+                    "minimum": 0    
+                }
+            }
+          },
+        "httpDebugLogs": {
+            "description": "Configuration for http debug logs",
+            "type": "object",
+            "properties": {
+                "level": {
+                    "description": "Configure http request logs",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 7
+                },
+                "state": {
+                    "description": "Enable/Disable recording of web requests",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4
+                }
+            }
+        },
+        "POP3Logs": {
+            "description": "Configuration for POP3 logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable POP3 logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "SMTPLogs": {
+            "description": "Configuration for SMTP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "IMAPLogs": {
+            "description": "Configuration for IMAP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
+                    "type": "integer" 
+                }
+            }
+        },
+        "ORDALogs": {
+            "description": "Configuration for ORDA logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable ORDA logs (0 or 1)",
+                    "type": "integer" 
+                },
+                "filename": {
+                    "type": "string" 
+                }
+            }
+        }
+    }
+}
+```
+
+### Exemple
+
+Voici un exemple de fichier de configuration de log :
+
+```json
+{
+    "forceLoggingConfiguration": false,
+    "requestLogs": {
+        "clientState": 1,
+        "serverState": 1
+    },
+    "debugLogs": {
+        "commandList":["322","311","112"],
+        "state": 4
+    },
+    "diagnosticLogs":{
+        "state" : 1
+    },
+    "httpDebugLogs": {
+        "level": 5,
+        "state" : 1
+    },
+    "POP3Logs": {
+        "state" : 1 
+    },
+    "SMTPLogs": {
+        "state" : 1 
+    },
+    "IMAPLogs": {
+        "state" : 1 
+    },
+    "ORDALogs": {
+        "state" : 1,
+        "filename": "ORDALog.txt"
+    }
+}
+```

@@ -1,6 +1,6 @@
 ---
 id: CollectionClass
-title: コレクション
+title: Collection
 ---
 
 
@@ -188,7 +188,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 *   数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
 *   テキスト
 *   ブール
-*   date
+*   日付
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
 *   共有オブジェクト(*)

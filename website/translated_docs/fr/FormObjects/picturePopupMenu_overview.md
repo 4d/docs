@@ -19,7 +19,7 @@ Vous pouvez gérer les pop-up menus image par l’intermédiaire de méthodes. A
 
 ### Aller à page
 
-Vous pouvez associer l’[action standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) `Aller à page` à un objet de type pop-up menu image. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant à la position de l'image sélectionnée dans le tableau d'images. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
+Vous pouvez associer l’[action standard](https://doc.4d.com/4Dv19R4/4D/19-R4/Standard-actions.300-5736871.en.html) `Aller à page` à un pop-up menu image. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant à la position de l'image sélectionnée dans le tableau d'images. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
 
 Par exemple, si l’utilisateur clique sur le 3e élément, 4D affichera la page 3 du formulaire courant (si elle existe). Si vous souhaitez gérer vous-même l’effet du clic, conservez l’option par défaut `Pas d’action`.
 

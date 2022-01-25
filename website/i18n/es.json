@@ -17,6 +17,9 @@
       "Admin/licenses": {
         "title": "Gestión de licencias 4D"
       },
+      "Admin/server-admin": {
+        "title": "Ventana de administración de 4D Server"
+      },
       "Admin/tls": {
         "title": "Protocolo TLS (HTTPS)"
       },
@@ -119,6 +122,9 @@
       "Backup/settings": {
         "title": "Parámetros de la copia de seguridad"
       },
+      "code-editor/dropdown": {
+        "title": "Navigation dropdown"
+      },
       "Concepts/about": {
         "title": "Acerca del lenguaje 4D"
       },
@@ -220,7 +226,7 @@
         "title": "Debugging from remote machines"
       },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Generador de aplicaciones"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -457,7 +463,7 @@
         "title": "Rejilla de botones"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "Casilla a seleccionar"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
@@ -718,6 +724,9 @@
       "Project/compiler": {
         "title": "Compilación"
       },
+      "Project/components": {
+        "title": "Librería de componentes 4D"
+      },
       "Project/creating": {
         "title": "Working with a project"
       },
@@ -881,6 +890,7 @@
       "4D Language Concepts": "Conceptos del lenguaje 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Clases API",
+      "Code Editor": "Editor de código",
       "Debugging": "Depuración",
       "Preferences": "Preferencias",
       "Administration": "Administración",
@@ -897,7 +907,7 @@
       "Form Object Properties": "Propiedades de los objetos formulario",
       "Form Events": "Eventos formulario",
       "Menus": "Menús",
-      "Build application": "Build application"
+      "Build Application": "Generador de aplicaciones"
     }
   },
   "pages-strings": {
@@ -921,16 +931,19 @@
     "License Management|no description given": "Gestión de licencias",
     "Build Application|no description given": "Generador de aplicaciones",
     "Web Administration|no description given": "Administración Web",
+    "4D Server Administration Window|no description given": "Ventana de administración de 4D Server",
+    "4D Components Library|no description given": "Librería de componentes 4D",
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
     "Debugging|no description given": "Depuración",
+    "Code Editor|no description given": "Editor de código",
     "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
     "Description of log files|no description given": "Description of log files",
     "Command Line Interface|no description given": "Interfaz de línea de comando",
     "Preferences|no description given": "Preferencias",
-    "https://doc.4d.com/4Dv19R2/4D/19-R2/4D-Language-Reference.100-5493454.en.html|no description given": "https://doc.4d.com/4Dv19R2/4D/19-R2/4D-Language-Reference.100-5493454.en.html",
+    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",
     "Administration|no description given": "Administración",

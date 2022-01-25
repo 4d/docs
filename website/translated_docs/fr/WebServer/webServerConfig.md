@@ -10,7 +10,7 @@ Les paramètres du serveur web 4D comprennent les paramètres de sécurité, les
 
 Vous pouvez configurer les paramètres du serveur web 4D, en fonction de la portée et du serveur que vous souhaitez configurer :
 
-| Emplacement du paramètre                   | Portée                                                | Serveur web concerné                                                 |
+| Setting location                           | Portée                                                | Serveur web concerné                                                 |
 | ------------------------------------------ | ----------------------------------------------------- | -------------------------------------------------------------------- |
 | [objet webServer](webServerObject.md)      | Temporaire (session courante)                         | N'importe quel serveur web, y compris les serveurs Web de composants |
 | `WEB SET OPTION` ou commande `WEB XXX`     | Temporaire (session courante)                         | Serveur principal                                                    |
@@ -121,8 +121,8 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 
 | Peut être configuré via | Nom             | Commentaires |
 | ----------------------- | --------------- | ------------ |
-| objet webServer         | `debugLog`      | Entier long  |
-| `WEB SET OPTION`        | `Web debug log` | Entier long  |
+| objet webServer         | `debugLog`      | number       |
+| `WEB SET OPTION`        | `Web debug log` | number       |
 
 État du fichier journal des requêtes HTTP du serveur web (HTTPDebugLog_nn.txt, stocké dans le dossier "Logs" de l'application -- nn est le numéro du fichier). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent optionellement être enregistrées.
 
@@ -181,7 +181,7 @@ Pour plus d'informations sur CORS, veuillez consulter la [page de partage de res
 
 | Peut être configuré via  | Nom                                                | Commentaires |
 | ------------------------ | -------------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | booléen      |
+| objet webServer          | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean      |
 | `WEB SET OPTION`         | `Web HTTP enabled`                                 |              |
 | Fenêtre de configuration | Configuration > Activer HTTP                       |              |
 
@@ -192,7 +192,7 @@ Indique si le web server accepte des connexions non sécurisées.
 
 | Peut être configuré via  | Nom                                                  | Commentaires |
 | ------------------------ | ---------------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | booléen      |
+| objet webServer          | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean      |
 | `WEB SET OPTION`         | `Web HTTPS enabled`                                  |              |
 | Fenêtre de configuration | Configuration > Activer HTTPS                        |              |
 
@@ -259,7 +259,7 @@ Comme valeur, passez la taille exprimée en octets. Par défaut, le seuil de com
 
 | Peut être configuré via  | Nom                                          | Commentaires |
 | ------------------------ | -------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPPort`](API/WebServerClass.md#httpport) | entier long  |
+| objet webServer          | [`HTTPPort`](API/WebServerClass.md#httpport) | number       |
 | `WEB SET OPTION`         | `Web port ID`                                |              |
 | Fenêtre de configuration | Configuration > Port HTTP                    |              |
 
@@ -289,7 +289,7 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 
 | Peut être configuré via  | Nom                                            | Commentaires |
 | ------------------------ | ---------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport) | nombre       |
+| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number       |
 | `WEB SET OPTION`         | `Web HTTPS port ID`                            |              |
 | Fenêtre de configuration | Configuration > Port HTTP                      |              |
 
@@ -381,7 +381,7 @@ Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D
 
 Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs possibles :
 
-| Valeur | Nom du format  | Description                                                                                                                                                                                                                                       |
+| Valeur | Format name    | Description                                                                                                                                                                                                                                       |
 | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0      | Pas de journal | Par défaut                                                                                                                                                                                                                                        |
 | 1      | CLF            | Format de journal commun - Chaque ligne du fichier représente une requête, telle que : `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF. |
@@ -435,7 +435,7 @@ Valeur par défaut : 100 (passez 0 pour restaurer la valeur par défaut).
 
 | Peut être configuré via | Nom                                                    | Commentaires |
 | ----------------------- | ------------------------------------------------------ | ------------ |
-| objet webServer         | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | nombre       |
+| objet webServer         | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number       |
 
 Version TLS minimale acceptée pour les connexions. Les tentatives de connexion de clients prenant en charge uniquement les versions inférieures au minimum seront rejetées.
 

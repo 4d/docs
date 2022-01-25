@@ -3,7 +3,7 @@ id: overview
 title: Generalidades
 ---
 
-A 4D project contains all of the source code of a 4D application, whatever its deployement type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
+A 4D project contains all of the source code of a 4D application, whatever its deployement type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. Un proyecto 4D se compone principalmente de archivos texto.
 
 
 ## Archivos del proyecto

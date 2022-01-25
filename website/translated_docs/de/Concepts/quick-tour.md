@@ -193,7 +193,7 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-## Klassen
+## Classes
 
 Die 4D Programmiersprache unterstützt Objekt Klassen. Um eine Klasse mit Name "myClass" zu erstellen, fügen Sie im Ordner Project/Sources/Classes eines Projekts die Datei `myClass.4dm` hinzu.
 

@@ -78,7 +78,7 @@ Ces options permettent de configurer les différentes couleurs utilisées dans l
 ## Options
 
 
-This page configures Method editor display options.
+Cette page configure les options d'affichage de l'éditeur de méthodes.
 
 ![](assets/en/Preferences/options.png)
 
@@ -87,13 +87,13 @@ This page configures Method editor display options.
 
 
 
-#### 4D Programming Language (Use regional system settings)
+#### Langage de programmation 4D (Utiliser les paramètres régionaux du système)
 
-Allows you to disable/enable the "international" code settings for the local 4D application.
-- **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
-- **checked**: Regional settings are used in 4D methods.
+Permet de désactiver/activer les paramètres du code "international" pour l'application 4D locale.
+- **non coché (par défaut)** : Les paramètres Anglais-US et la langue de programmation anglaise sont utilisés dans les méthodes 4D.
+- **coché** : Les paramètres régionaux sont utilisés dans les méthodes 4D.
 
-> If you modify this option, you need to restart the 4D application so that the change is taken into account.
+> Si vous modifiez cette option, vous devez redémarrer l'application 4D pour que le changement soit pris en compte.
 
 #### Indentation
 
@@ -103,15 +103,15 @@ Le code 4D est automatiquement indenté afin de faire apparaître sa structure :
 
 ![](assets/en/Preferences/optionsIndent.png)
 
-Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.
+Modifier cette valeur par défaut peut être utile si vos méthodes contiennent des algorithmes complexes avec de nombreux niveaux d'intégration. Une indentation plus étroite peut être utilisée afin de limiter le défilement horizontal.
 
-#### Show Line Numbers
+#### Afficher les numéros de ligne
 
-Lets you display the line numbers by default in each window of the Method editor. You can also show/hide line numbers for the current window directly from the Method editor.
+Cela vous permet d'afficher les numéros de ligne par défaut dans chaque fenêtre de l'éditeur de méthode. Vous pouvez également afficher/masquer les numéros de ligne pour la fenêtre courante directement depuis l'éditeur de méthode.
 
-#### Show Lists
+#### Afficher les listes
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. You can also show or hide each list directly from the Method editor.
+Cela vous permet de choisir d'afficher ou non les listes d'objets (Commandes, Tables et champs, etc.) par défaut lorsque la fenêtre de l'éditeur de méthode est ouverte. Vous pouvez également afficher ou masquer chaque liste directement à partir de l'éditeur de méthode.
 
 #### Highlight the logical blocks
 
@@ -137,9 +137,9 @@ Allows you to hide all expand/collapse icons by default when displaying code. Wh
 
 Enables automatic insertion of () and closing braces while typing code. This option controls two automatic features:
 
-- **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. For example, if you type "C_OB" and press Tab, 4D writes "C_OBJECT()" and sets the insertion point inside the ().
+- **paire de parenthèses ()** : Ajoutée après une commande 4D, un mot-clé ou une méthode projet insérée à partir d'une liste de suggestions ou de complétion, si l'élément inséré nécessite un ou plusieurs arguments obligatoires. Par exemple, si vous tapez "C_OB" et vous appuyez sur la touche Tab, 4D écrit "C_OBJECT()" et place le point d'insertion à l'intérieur du ().
 
-- **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
+- **fermeture }, ), ] ou "** : caractère ajouté lorsque vous tapez respectivement une ouverture {, (, ] ou ". Cette fonction permet d'insérer des paires de symboles correspondants au point d'insertion ou autour d'un texte sélectionné. Par exemple, si vous mettez en surbrillance une chaîne de caractères et que vous tapez un simple caractère ", toute la chaîne sélectionnée sera entourée de "" :
 
 ![](assets/en/Preferences/optionsClosing.png) -> " -> ![](assets/en/Preferences/optionsClosing2.png)
 
@@ -147,11 +147,11 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 Sets the graphic signaling of matching braces and double quotes in the code. This signaling appears whenever a square bracket, parenthesis, curly bracket, or double quote is selected. Les options suivantes sont disponibles :
 
-- **None**: No signaling
-- **Rectangle** (default): Braces/double quotes surrounded by a black line  
+- **Aucun** : Aucun signal
+- **Rectangle** (par défaut) : Accolades/guillemets entourés d'une ligne noire  
   ![](assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces/double quotes highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces/double quotes displayed in bold.
+- **Couleur de fond** : accolades/guillemets mis en évidence (la couleur est définie dans la page [Thème](#theme-definition)).
+- **Gras** : Les accolades/guillemets sont affichés en gras.
 
 #### Highlighted variables and fields
 
@@ -159,9 +159,9 @@ Allows to highlight all occurrences of the same variable or field in an open met
 
 ![](assets/en/Preferences/optionsVariables.png)
 
-- **No**(default): No highlight
-- **On cursor**: All occurrences are highlighted when the text is clicked
-- **On selection**: All occurrences are highlighted when the text is selected
+- **Non** (par défaut) : Pas de surbrillance
+- **Sur curseur** : Toutes les occurrences sont mises en évidence lorsque le texte est cliqué
+- **Sur sélection** : Toutes les occurrences sont mises en évidence lorsque le texte est sélectionné
 
 The highlight color can be set in the [Theme](#theme-definition) page.
 
@@ -177,9 +177,9 @@ If you deselect this option, only the yellow arrow is shown.
 
 This area lets you configure autocomplete mechanisms in the Method editor to adapt it to your own work habits.
 
-|                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Automatic opening of window for | Triggers the automatic display of the suggestion window for:<p> <ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validation of a suggestion for  | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
+|                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Affichage automatique de la fenêtre | Ouverture automatique de la fenêtre de suggestion pour :<p> <ul><li>Constantes</li><li>Variables (locales et interprocess) et attributs d'objets</li><li>Tables</li><li>Prototypes (c'est-à-dire les fonctions de classe)</li></ul><p><p>Par exemple, lorsque l'option "Variables (locales ou interprocess) et attributs d'objets" est cochée, une liste de suggestions apparaît lorsque vous tapez le caractère $ :<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    Vous pouvez désactiver ce fonctionnement pour certains éléments du langage en décochant leur option correspondante. |
+| Validation d'une suggestion         | Définit le contexte de saisie qui permet à l'éditeur de méthode de valider automatiquement la suggestion courante affichée dans la fenêtre d'autocomplétion.<p><p><ul><li>**Tabulation et délimiteurs**<br> Lorsque cette option est cochée, vous pouvez valider la sélection courante à l'aide de la touche Tab ou de tout autre délimiteur pertinent. Par exemple, si vous entrez "ALE" et ensuite "(", 4D écrit automatiquement "ALERT(" dans l'éditeur. Voici la liste des délimiteurs qui sont pris en compte :<br> ( ; : = < [ {</li><li>**Tabulation uniquement**<br> Lorsque cette option est cochée, vous pouvez utiliser uniquement la touche Tab pour insérer la suggestion courante. Ceci peut être utilisé plus particulièrement pour faciliter la saisie de caractères délimiteurs dans les noms d'éléments, tels que ${1}.<p><p>**Note** : Vous pouvez également double-cliquer sur la fenêtre ou appuyer sur la touche Retour chariot pour valider une suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                              |
 	
 

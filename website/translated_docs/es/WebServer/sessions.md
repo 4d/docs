@@ -55,11 +55,12 @@ Web processes usually do not end, they are recycled in a pool for efficiency. Wh
 
 ### Modo apropiativo
 
-On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
+On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web server code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug web code on 4D Server (interpreted), you need to launch and connect [4D on the same machine as 4D Server](Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine) and open the development environment (e.g., the Explorer) on the 4D application. With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](Debugging/debugging-remote.md) or [to a remote machine](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
 
-With 4D single-user, interpreted code is always run in cooperative mode.
+With 4D single-user, interpreted code always runs in cooperative mode.
+
 
 ## Compartir información
 
@@ -167,13 +168,13 @@ If ($sales#Null)
             If (Session.storage.myTop3=Null)
                 $userTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
                 Session.storage.myTop3:=$userTop3
-            End if 
-        End use 
+            End if
+        End use
         WEB SEND HTTP REDIRECT("/authenticationOK.shtml")
-    Else 
+    Else
         WEB SEND TEXT("This password is wrong")
-    End if 
-Else 
+    End if
+Else
     WEB SEND TEXT("This userId is unknown")
-End if 
+End if
 ```

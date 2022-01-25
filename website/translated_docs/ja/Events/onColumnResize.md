@@ -27,7 +27,7 @@ title: On Column Resize
 | objectName  | テキスト    | 4D View Pro エリア名                                    |
 | sheetName   | テキスト    | イベントが発生したシート名                                       |
 | range       | object  | 幅が変更されたカラムのセルレンジ                                    |
-| header      | boolean | 行ヘッダーカラム (最初のカラム) がリサイズされた場合には true、それ以外の場合には false |
+| headers     | boolean | 行ヘッダーカラム (最初のカラム) がリサイズされた場合には true、それ以外の場合には false |
 
 #### 例題
 

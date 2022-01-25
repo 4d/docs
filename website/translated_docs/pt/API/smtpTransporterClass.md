@@ -65,10 +65,10 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 
 In the *server* parameter, pass an object containing the following properties:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                          | Default value (if omitted)                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                  | Default value (if omitted)                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object. | none                                                                |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object. | none                                                                |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->| `mail mode UTF8` (US-ASCII_UTF8_QP)                               |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
@@ -76,7 +76,7 @@ In the *server* parameter, pass an object containing the following properties:
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
 | [<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->| True                                                                |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| **password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.                                                                                                                                                                                               | none                                                                |
+| **password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.                                                                                                                                                                                                                                                       | none                                                                |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 587                                                                 |
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->| 100                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
@@ -269,21 +269,21 @@ In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to se
 
 The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
 
-| Property   | Type     | Description                                                                                      |
-| ---------- | -------- | ------------------------------------------------------------------------------------------------ |
-| success    | booleano | True if the send is successful, False otherwise                                                  |
-| status     | number   | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
-| statusText | text     | Status message returned by the SMTP server                                                       |
+| Propriedade | Type     | Description                                                                                      |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------ |
+| success     | booleano | True if the send is successful, False otherwise                                                  |
+| status      | number   | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
+| statusText  | texto    | Status message returned by the SMTP server                                                       |
 
 In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
 
 In this case, the resulting status object contains the following values:
 
-| Property   | Value                  |
-| ---------- | ---------------------- |
-| success    | False                  |
-| status     | 0                      |
-| statusText | "Failed to send email" |
+| Propriedade | Value                  |
+| ----------- | ---------------------- |
+| success     | False                  |
+| status      | 0                      |
+| statusText  | "Failed to send email" |
 
 
 <!-- INCLUDE transporter.sendTimeOut.Desc -->

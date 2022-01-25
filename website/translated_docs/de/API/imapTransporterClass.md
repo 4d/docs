@@ -70,16 +70,16 @@ The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summ
 
 In the *server* parameter, pass an object containing the following properties:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                           | Default value (if omitted)                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                   | Default value (if omitted)                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| Falsch                                                              |
-| .**accessTokenOAuth2**: Text<p>Text string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | none                                                                |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | none                                                                |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                 |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                         |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| none                                                                |
-| .**password** : Text<p>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                              | none                                                                |
+| .**password** : Text<p>User password for authentication on the server. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                      | none                                                                |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| none                                                                |
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
@@ -653,10 +653,11 @@ To delete all messages in the current mailbox:
 **.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parameter | Typ    |    | Beschreibung                             |
-| --------- | ------ |:--:| ---------------------------------------- |
-| name      | Text   | -> | Name of the mailbox to delete            |
-| Ergebnis  | Objekt | <- | Status of the mailbox deletion operation |
+| Parameter | Typ  |    | Beschreibung                  |
+| --------- | ---- |:--:| ----------------------------- |
+| name      | Text | -> | Name of the mailbox to delete |
+
+|Result|Object|<-|Status of the mailbox deletion operation|
 <!-- END REF -->
 
 
@@ -796,8 +797,8 @@ $status:=$transporter.expunge()
 | Version | Changes            |
 | ------- | ------------------ |
 | v18 R5  | *name* is optional |
-| v18 R4  | Added              |
-</details>
+
+|v18 R4|Added| </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
 **.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
@@ -1250,7 +1251,6 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 </details>
 
 <!-- REF #IMAPTransporterClass.move().Syntax -->
-
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
@@ -1499,6 +1499,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 <!-- END REF -->
 
 
+
+
+
 <!-- REF IMAPTransporterClass.renameBox().Desc -->
 ## .renameBox()
 
@@ -1689,27 +1692,27 @@ Search-keys may request the value to search for:
 **SEEN**: Messages that have the \Seen flag set.  
 **UNSEEN**: Messages that do not have the \Seen flag set.  
 **NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
-**KEYWORD** <flag>: Messages with the specified keyword set.  
-**UNKEYWORD** <flag>: Messages that do not have the specified keyword set.  
-**BEFORE** <date>: Messages whose internal date is earlier than the specified date.  
-**ON** <date>: Messages whose internal date is within the specified date.  
-**SINCE** <date>: Messages whose internal date is within or later than the specified date.  
-**SENTBEFORE** <date>: Messages whose Date header is earlier than the specified date.  
-**SENTON** <date>: Messages whose Date header is within the specified date.  
-**SENTSINCE** <date>: Messages whose Date header is within or later than the specified date.  
-**TO** <string>: Messages that contain the specified string in the TO header.  
-**FROM** <string>: Messages that contain the specified string in the FROM header.  
-**CC** <string>: Messages that contain the specified string in the CC header.  
-**BCC** <string>: Messages that contain the specified string in the BCC header.  
-**SUBJECT** <string>: Messages that contain the specified string in the Subject header.  
-**BODY** <string>: Messages that contain the specified string in the message body.  
-**TEXT** <string>: Messages that contain the specified string in the header or in the message body.  
-**HEADER** <field-name> <string>: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-**UID** <message UID>: Messages with unique identifiers corresponding to the specified unique identifier set.  
-**LARGER** <n>: Messages with a size larger than the specified number of bytes.  
-**SMALLER** <n>: Messages with a size smaller than the specified number of bytes.  
-**NOT** <search-key>: Messages that do not match the specified search key.  
-**ODER** <search-key1> <search-key2>: Messages that match either search key.  
+***KEYWORD ***flag******: Messages with the specified keyword set.  
+***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.  
+***BEFORE ***date******: Messages whose internal date is earlier than the specified date.  
+***ON ***date******: Messages whose internal date is within the specified date.  
+***SINCE ***date******: Messages whose internal date is within or later than the specified date.  
+***SENTBEFORE ***date******: Messages whose Date header is earlier than the specified date.  
+***SENTON ***date******: Messages whose Date header is within the specified date.  
+***SENTSINCE ***date******: Messages whose Date header is within or later than the specified date.  
+***TO ***string******: Messages that contain the specified string in the TO header.  
+***FROM ***string******: Messages that contain the specified string in the FROM header.  
+***CC ***string******: Messages that contain the specified string in the CC header.  
+***BCC ***string******: Messages that contain the specified string in the BCC header.  
+***SUBJECT ***string******: Messages that contain the specified string in the Subject header.  
+***BODY ***string******: Messages that contain the specified string in the message body.  
+***TEXT ***string******: Messages that contain the specified string in the header or in the message body.  
+***HEADER *field-name* ***string******: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
+***UID ***message-UID******: Messages with unique identifiers corresponding to the specified unique identifier set.  
+***LARGER ***n******: Messages with a size larger than the specified number of bytes.  
+***SMALLER ***n******: Messages with a size smaller than the specified number of bytes.  
+***NOT ***search-key******: Messages that do not match the specified search key.  
+***OR *search-key1* ***search-key2******: Messages that match either search key.  
 
 
 <!-- END REF -->

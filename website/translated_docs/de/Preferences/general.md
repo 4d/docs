@@ -22,7 +22,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 > This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
 
-#### Window tabbing (macOS only)
+### Window tabbing (macOS only)
 
 Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
 
@@ -48,6 +48,21 @@ Three options are available:
 *   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
 *   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+
+### Appearance (macOS only)
+
+This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
+
+> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+
+Three options are available:
+
+*   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
+*   **Light**: Use the Light Theme
+*   **Dark**: Use the Dark Theme
+
+> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
+
 
 ### Exit Design when going to Application Environment
 
@@ -118,7 +133,7 @@ Language of the HTML documentation to display. You can select a documentation in
 
 Sets where 4D will look for documentation pages.
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If not, 4D automatically looks for it in the on-line documentation Web site. This makes it possible to access the documentation even when you are offline.
+*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
 *   When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
 
 ### Local folder

@@ -153,7 +153,9 @@ title: 入力
 
 > [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。 
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>選択時にフォーカスを表示しているチェックボックス <p> <p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>選択時にフォーカスを表示しているチェックボックス
+<p>
+<p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>選択されているが、フォーカスを表示していないチェックボックス
 

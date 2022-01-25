@@ -98,7 +98,7 @@ http://localhost/friends.shtml
 データを *表示* するだけでなく、*使用* するには、ORDA と RESTサーバーを使うことができます。 [ORDAコンセプト](ORDA/overview.md) により、`Friends` テーブルは自動的にデータクラスにマッピングされ、[REST](REST/gettingStarted.md) を通じて利用可能です。
 
 
-1. RESTサーバーを使ってデータにアクセスしましょう: "ストラクチャー設定" ダイアログボックスで "Web/RESTリソース" ページを選択し、**RESTサーバーとして公開** オプションをチェックします。
+1. RESTサーバーを使ってデータにアクセスしましょう: **ストラクチャー設定** ダイアログボックスで **Web** ＞ **Web機能** ページを選択し、**RESTサーバーとして公開** オプションをチェックします。
 
 ![](assets/en/WebServer/hello5.png)
 

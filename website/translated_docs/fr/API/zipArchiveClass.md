@@ -40,9 +40,10 @@ End if
 ## ZIP Create archive
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v18     | Ajout         |
+| Version | Modifications                                                               |
+| ------- | --------------------------------------------------------------------------- |
+| v19 R3  | Ajout des propriétés `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
+| v18     | Ajout                                                                       |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -175,7 +176,23 @@ Vous souhaitez passer une collection de dossiers et de fichiers à compresser à
 ```
 
 
+#### Exemple 5
 
+Vous souhaitez utiliser un autre algorithme de compression à un niveau de compression élevé :
+
+```4d
+var $destination : 4D.File
+var $zip; $err : Object
+
+$zip:=New object
+$zip.files:=New collection
+$zip.files.push(Folder(fk desktop folder).folder("images"))
+$zip.compression:=ZIP Compression LZMA
+$zip.level:=7 //4 par défaut
+
+$destination:=Folder(fk desktop folder).file("images.zip")
+$err:=ZIP Create archive($zip; $destination)
+```
 
 ## ZIP Read archive
 

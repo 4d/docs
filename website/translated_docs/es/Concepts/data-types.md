@@ -35,32 +35,22 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 Cuando las variables se introducen mediante una directiva del compilador, reciben un valor por defecto, que mantendrán durante la sesión mientras no hayan sido asignadas.
 
-El valor por defecto depende del tipo y la categoría de la variable, su contexto de ejecución (interpretada o compilada), así como, para el modo compilado, las opciones de compilación definidas en la página Compilador de las Propiedades de la base:
+The default value depends on the variable type:
 
-- Las variables proceso e interproceso se ponen siempre "en cero" (lo que significa, según el caso, "0", una cadena vacía, un Blob vacío, un puntero Nil, una fecha en blanco (00-00-00), etc.)
-- Se establecen las variables locales:
-    - en modo interpretado: en cero
-    - en modo compilado, dependiendo de la opción **Inicializar variables locales** de las Propiedades de la base:
-        - "en cero": en cero (ver arriba),
-        - "a un valor aleatorio": 0x72677267 para números y horas, siempre True para booleanos, igual que "en cero" para los demás,
-        - "no": no hay inicialización, lo que significa que lo que está en la RAM se utiliza para las variables, como los valores utilizados antes para otras variables. **Nota:** 4D recomienda utilizar "en cero".
-
-La siguiente tabla ilustra estos valores por defecto:
-
-| Tipo         | Interproceso/Proceso (interpretado/compilado), Local (interpretado/compilado "en cero") | Local compilado "aleatorio" | Local compilado "no"        |
-| ------------ | --------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
-| Booleano     | False                                                                                   | True                        | True (varía)                |
-| Fecha        | 00-00-00                                                                                | 00-00-00                    | 00-00-00                    |
-| Entero largo | 0                                                                                       | 1919382119                  | 909540880 (varía)           |
-| Hora         | 00:00:00                                                                                | 533161:41:59                | 249345:34:24 (varía)        |
-| Imagen       | picture size=0                                                                          | picture size=0              | picture size=0              |
-| Real         | 0                                                                                       | 1.250753659382e+243         | 1.972748538022e-217 (varía) |
-| Puntero      | Nil=true                                                                                | Nil=true                    | Nil=true                    |
-| Texto        | ""                                                                                      | ""                          | ""                          |
-| Blob         | Tamaño Blob=0                                                                           | Tamaño Blob=0               | Tamaño Blob=0               |
-| Objeto       | null                                                                                    | null                        | null                        |
-| Collection   | null                                                                                    | null                        | null                        |
-| Variant      | indefinido                                                                              | indefinido                  | indefinido                  |
+| Tipo         | Default value  |
+| ------------ | -------------- |
+| Booleano     | False          |
+| Fecha        | 00-00-00       |
+| Entero largo | 0              |
+| Hora         | 00:00:00       |
+| Imagen       | picture size=0 |
+| Real         | 0              |
+| Puntero      | Nil=true       |
+| Texto        | ""             |
+| Blob         | Tamaño Blob=0  |
+| Objeto       | null           |
+| Collection   | null           |
+| Variant      | indefinido     |
 
 
 ## Convertir los tipos de datos

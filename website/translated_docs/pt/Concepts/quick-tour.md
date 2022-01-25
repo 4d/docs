@@ -4,39 +4,39 @@ title: A Quick Tour
 sidebar_label: A Quick Tour
 ---
 
-Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
+Usando a linguagem 4D, imprimir a mensagem tradicional ""Hello, world!" na tela pode ser feito de várias maneiras. A maneira mais simples é provavelmente escrever a linha única abaixo em um método de projeto:
 
 ```4d  
 ALERT("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:
+Esse código vai exibir um alerta normal de plataforma com a mensagem "hello world" contendo um botão OK. Para executar o código, precisa clicar no botão de execução do editor de Método:
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
-Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
+Ou poderia anexar esse código a um botão em um formulário e executar o formulário, nesse caso, clicar no botão exibira a caixa de diálogo de alerta. Em qualquer caso, acabou de executar sua primeira linha de código 4D!
 
 
-## Assigning Values
+## Atribuir valores
 
-Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.
+Dados podem ser colocado ou copiados de ou em variáveis, campos, elementos arrays... Colocar dados em uma variável é chamado atribuiindo os dados a uma variável e é feito com o operador de atribuição (:=). O operador de atribuição também é usado para atribuir dados para elementos campos ou arrays.
 
 ```4d
-$MyNumber:=3 //assigns 3 to MyNumber variable  
-[Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
-arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
-MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
-$myDate:=!2018/01/21! //assigns a date literal
-$myHour:=?08:12:55? //assigns a time literal
+$MyNumber:=3 //atribui 3 a variável MyNumber  
+[Products]Size:=$MyNumber //atribui variável MyNumber ao campo [Products]Size
+arrDays{2}:="Tuesday" //atribui a string"Tuesday" ao segundo elemento arrDays
+MyVar:=Length("Acme") //atribui o resultado da função (4) a MyVar
+$myDate:=!2018/01/21! //atribui uma data literal
+$myHour:=?08:12:55? //atribui uma hora literal
 ```
 
-You MUST distinguish the assignment operator := from the other operators. Rather than combining expressions into a new one, the assignment operator copies the value of the expression to the right of the assignment operator into the variable or field to the left of the operator.
+Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao invés de combinar expressões a uma nova, o operador de atribuição copia o valor da expressão para a direita do operador de atribuição para a variável ou campo para a esquerda do operador.
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+**Importante:** Não confunda o operador de atribuição := com o operador de comparação de igualdade =. Um operador de atribuição diferente (e não =) foi escolhido deliberadamente para evitar problemas e confusão que ocorrem frequentemente em outras linguagens com operadores como == ou ===. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
-## Variables
+## Variáveis
 
-The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using the `var` keyword. For example, to create a variable of the date type, you can write:
+A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. You create a typed variable using the `var` keyword. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
 var MyDate : Date 
@@ -50,23 +50,23 @@ var myPerson : cs.Person
 ```
 
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. Por exemplo, se quiser criar uma variável que contenha a data atual mais 30 dias, pode escrever:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
 
 ## Commands
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Exemplo:
+Os comandos 4D são métodos integrados para realizar uma ação. Todos os comandos 4D, como `CREATE RECORD`, o `ALERT`, se descrevem no manual _Linguagem de 4D_, agrupados por temas. Comandos são frequentemente usados com parâmetros, que são passados em parênteses () e separados por ponto e vírgula (;). Exemplo:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
+Alguns comandos são anexados à coleções ou objetos, em cujo caso são métodos temporais que se utilizam com a notação de pontos. For example:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -75,77 +75,77 @@ $nc:=$c.slice(0;3) //$nc=[1,2,3]
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
+Pode utilizar os plug-ins ou os componentes 4D que adicionem novos comandos a seu entorno de desenvolvimento 4D.
 
-There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
+Há vários plug-ins propostos pela comunidade de usuários 4D ou desenvolvedores de terceira parte no mercado. Por exemplo, usar [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) em macOS:
 
 ```4d
 PDF REMOVE PAGE(path;page)
 ```
 
-4D SVG is an example of a utility component extending the capabilities of your application:
+4D SVG é um exemplo de componente utilitário que aumenta as capacidades de sua aplicação:
 
 ```4d
-//drawing a picture
+//desenhar uma imagem
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
-4D SVG is included in 4D.
+4D SVG é incluído em 4D.
 
-## Constants
+## Constantes
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. Isso permite escrever código mais legível. Por exemplo, `Read Mode` é uma constante (valor 2).
+4D oferece um conjunto extensivo de constantes predefinidas, cujos valores são acessíveis por nome. Isso permite escrever código mais legível. Por exemplo, `Read Mode` é uma constante (valor 2).
 
 ```4d
-vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
+vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apenas leitura
 ```
 
 > Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
 
 ## Métodos
 
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
+4D oferece un grande número de métodos (ou comandos) integrados, mas também lhe permite criar seus próprios **métodos de projeto**. Os métodos de projeto são métodos definidos pelo usuário que contenham comandos, operadores e outras partes da linguaje. Los métodos projeto são métodos genéricos, mas há outros tipos de métodos: métodos objeto, métodos formulário, métodos tabela (Triggers) e métodos base.
 
-A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.
+Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. A statement performs an action, and may be simple or complex.
 
-For example, the following line is a statement that will display a confirmation dialog box:
+Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálogo de confirmação:
 
 ```4d
-CONFIRM("Do you really want to close this account?";"Yes";"No")
+CONFIRM("Quer realmente fechar esta conta?"; "Sím"; "Não")
 ```
 
-A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+Um método também contém testes e loops que controlam o fluxo da execução. Os métodos 4D são compatíveis com estruturas `If...Else...End if` e `Case of...Else...End case`, assim como os loops: `While...End while`, `Repeat...Until`, `For...End for`, e `For each...End for each`:
 
 O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Fazer algo com o caractere se for uma TAB
     If(Character code(vtSomeText[[$vlChar]])=Tab)
         //...
     End if
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) //chamar o método Do_Something
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
+  //Aqui está o código do método Do_Something
 $0:=Uppercase($1)
 ```
 
 
-## Data Types
+## Tipos de dados
 
-In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
+Na linguagem, os diferentes tipos de dados que podem ser manejados são denominados tipos de dados. Existem tipos de dados básicos (string, numérico, data, hora, booleano, imagem, ponteiros, arrays), e também tipos de dados compostos (BLOBs, objetos, coleções).
 
-Note that string and numeric data types can be associated with more than one type of field. When data is put into a field, the language automatically converts the data to the correct type for the field. For example, if an integer field is used, its data is automatically treated as numeric. In other words, you need not worry about mixing similar field types when using the language; it will manage them for you.
+Lembre que os dados de tipo string e numérico podem ser associados a mais de um tipo de campo. Quando são introduzidos dados em um campo, a linguagem converte automaticamente os dados no tipo correto para o campo. Por exemplo, se um campo inteiro for usado, seus dados são tratados automaticamente como numéricos. Em outras palavras não precisa se preocupar sobre misturar tipos de campos similares quando usando a linguagem; vai ser gerenciada por você.
 
-However, when using the language it is important that you do not mix different data types. In the same way that it makes no sense to store “ABC” in a Date field, it makes no sense to put “ABC” in a variable used for dates. In most cases, 4D is very tolerant and will try to make sense of what you are doing. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
+Entretanto, quando usar a linguagem é importante que não misture diferentes tipos de dados. Da mesma forma que não tem sentido armazenar "ABC" em um campo de data, tampouco tem sentido por "ABC" em uma variável utilizada para datas. Na maioria dos casos, 4D é muito tolerante e tentará dar sentido ao que está fazendo. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
 
 There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
 
@@ -309,7 +309,7 @@ You refer to an expression by the data type it returns. There are several expres
 | ->[People]Name           | Ponteiro           | This expression returns a pointer to the field called [People]Name.                                                                                                             |
 | Table (1)                | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
 | JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
+| JSON Parse (MyJSONArray) | Coleção            | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
 | Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
 | Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
 | $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |

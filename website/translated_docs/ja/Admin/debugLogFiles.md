@@ -17,7 +17,7 @@ title: ログファイルの詳細
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 *   [ORDA クライアントリクエストのログファイル](#ordaクライアントリクエスト)
 
-注: サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。たとえば、"4DRequestsLogServer.txt" のようにです。
+> サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。たとえば、"4DRequestsLogServer.txt" のようにです。
 
 これらのログファイルは、デバッグ中に時系列を確立しエントリー間のつながりを分かりやすくするために、いくつかのフィールドを共有しています:
 
@@ -320,11 +320,198 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 各リクエストに対して、以下のフィールドが記録されます:
 
-| フィールド名         | 説明                             | 例題                                                      |
-| -------------- | ------------------------------ | ------------------------------------------------------- |
-| sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号 | 104                                                     |
-| url            | クライアントの ORDAリクエストURL           | "rest/Persons(30001)"                                   |
-| startTime      | 開始日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.346Z"                              |
-| endTime        | 終了日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.371Z"                              |
-| duration       | クライアント処理時間 (ミリ秒)               | 25                                                      |
-| response       | サーバーレスポンスオブジェクト                | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| フィールド名         | 説明                             | 例題                                                        |
+| -------------- | ------------------------------ | --------------------------------------------------------- |
+| sequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号 | 104                                                       |
+| url            | クライアントの ORDAリクエストURL           | "rest/Persons(30001)"                                     |
+| startTime      | 開始日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.346Z"                                |
+| endTime        | 終了日時 (ISO 8601 フォーマット)         | "2019-05-28T08:25:12.371Z"                                |
+| duration       | クライアント処理時間 (ミリ秒)               | 25                                                        |
+| response       | サーバーレスポンスオブジェクト                | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+
+
+
+## ログ設定ファイルを使用する
+
+運用環境におけるログ記録を簡単に管理するため、**ログ設定ファイル** を使用することができます。 このファイルは、デベロッパーによってあらかじめ設定されています。 一般的には、エンドユーザーに送って、選択してもらうか、ローカルフォルダーにコピーしてもらいます。 一旦有効化されると、ログ設定ファイルは専用仕様のログ記録を開始します。
+
+### ファイルを有効化する方法
+
+ログ設定ファイルを有効化する方法はいくつかあります:
+
+- インターフェース付きの 4D Server のメンテナンスページを開き、[ログ設定ファイルを読み込む](Admin/server-admin.md#ログ設定ファイルを読み込む) ボタンをクリックしてファイルを選択します。 この場合、設定ファイルには任意の名前を使用することができます。 ファイルは、サーバー上で即座に有効化されます。
+- ログ設定ファイルを、プロジェクトの [Settingsフォルダー](Project/architecture.md#settings-1) にコピーすることができます。 この場合、ファイル名は `logConfig.json` でなくてはなりません。 このファイルは、プロジェクトの起動時に有効化されます (クライアント/サーバーのサーバーのみ)。
+- ビルドしたアプリケーションでは、`logConfig.json` ファイルを次のフォルダーにコピーできます:
+    + Windows: `Users\[userName]\AppData\Roaming\[application]`
+    + macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
+
+> スタンドアロン、サーバー、リモート4Dアプリケーションのプロジェクトすべてでログ設定ファイルを有効化するには、次のフォルダーに `logConfig.json` ファイルをコピーします: <br /> - Windows: `Users\[userName]\AppData\Roaming\4D または \4D Server`<br /> - macOS: `/Users/[userName]/Library/ApplicationSupport/4D または /4D Server`
+
+### JSONでの記述
+
+ログ設定ファイルは、次のようなプロパティを持つ `.json` ファイルです:
+
+```json
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Logs Configuration File",
+    "description": "A file that controls the state of different types of logs in 4D clients and servers",
+    "type": "object",
+    "properties": {
+        "forceLoggingConfiguration": {
+            "description": "Forcing the logs configuration described in the file ingoring changes coming from code or user interface",
+            "type": "boolean",
+            "default": true
+        },
+        "requestLogs": {
+            "description": "Configuration for request logs",
+            "type": "object",
+            "properties": {
+                "clientState": {
+                    "description": "Enable/Disable client request logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "serverState": {
+                    "description": "Enable/Disable server request logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "debugLogs": {
+            "description": "Configuration for debug logs",
+            "type": "object",
+            "properties": {
+                "commandList": {
+                    "description": "Commands to log or not log",
+                    "type": "array",
+                    "items": {
+                        "type": "string" 
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                },
+                "state": {
+                    "description": "integer to specify type of debuglog and options",
+
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "diagnosticLogs":{
+            "description": "Configuration for debug logs",
+            "type": "object",
+            "properties": {
+                "state":{
+                    "description": "Enable/Disable diagnostic logs 0 or 1 (0 = do not record, 1 = record)",
+                    "type": "integer",
+                    "minimum": 0    
+                }
+            }
+          },
+        "httpDebugLogs": {
+            "description": "Configuration for http debug logs",
+            "type": "object",
+            "properties": {
+                "level": {
+                    "description": "Configure http request logs",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 7
+                },
+                "state": {
+                    "description": "Enable/Disable recording of web requests",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4
+                }
+            }
+        },
+        "POP3Logs": {
+            "description": "Configuration for POP3 logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable POP3 logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "SMTPLogs": {
+            "description": "Configuration for SMTP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "IMAPLogs": {
+            "description": "Configuration for IMAP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
+                    "type": "integer" 
+                }
+            }
+        },
+        "ORDALogs": {
+            "description": "Configuration for ORDA logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable ORDA logs (0 or 1)",
+                    "type": "integer" 
+                },
+                "filename": {
+                    "type": "string" 
+                }
+            }
+        }
+    }
+}
+```
+
+### 例題
+
+ログ設定ファイルの例です:
+
+```json
+{
+    "forceLoggingConfiguration": false,
+    "requestLogs": {
+        "clientState": 1,
+        "serverState": 1
+    },
+    "debugLogs": {
+        "commandList":["322","311","112"],
+        "state": 4
+    },
+    "diagnosticLogs":{
+        "state" : 1
+    },
+    "httpDebugLogs": {
+        "level": 5,
+        "state" : 1
+    },
+    "POP3Logs": {
+        "state" : 1 
+    },
+    "SMTPLogs": {
+        "state" : 1 
+    },
+    "IMAPLogs": {
+        "state" : 1 
+    },
+    "ORDALogs": {
+        "state" : 1,
+        "filename": "ORDALog.txt"
+    }
+}
+```

@@ -57,7 +57,12 @@ Cette commande vous permet de vérifier que le serveur web, l'affichage de la pa
 
 À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache).
 
-4D : cliquez sur le bouton **Vider le cache** dans la page Web/Options (I) de la boîte de dialogue des Paramètres. Le cache est alors immédiatement effacé.
+Pour ce faire, vous pouvez :
+
+-   4D : cliquez sur le bouton **Vider le cache** dans la page Web/Options (I) de la boîte de dialogue des Paramètres.
+-   4D Server : cliquez sur le bouton **Vider le cache** dans la page HTTP de la fenêtre [Administration de 4D Server](Admin/server-admin.md#http-server-page).
+
+Le cache est alors immédiatement effacé.
 > Vous pouvez aussi utiliser l'url [/4DCACHECLEAR](#cacheclear).
 
 
@@ -127,7 +132,7 @@ L'URL */4DWEBTEST* permet de vérifier l'état du serveur web. Lorsque cette URL
 
 
 
-## Fichiers d'historique
+## Logs
 
 4D vous permet de générer deux historiques de requêtes Web :
 
@@ -144,14 +149,14 @@ Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mo
 
 Les champs suivants sont enregistrés pour chaque requête et réponse :
 
-| Noms des champs | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                           |
-| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
-| PeerPort        | Port utilisé par l'hôte (client)                                     |
-| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
-| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
+| Nom des champs | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| SocketID       | ID du socket utilisé pour la communication                           |
+| PeerIP         | Adresse IPv4 de l'hôte (client)                                      |
+| PeerPort       | Port utilisé par l'hôte (client)                                     |
+| TimeStamp      | Horodatage en millisecondes (depuis le démarrage du système)         |
+| ConnectionID   | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
+| SequenceNumber | Numéro d'opération séquentiel et unique dans la session d'historique |
 
 
 ### logweb.txt
@@ -164,7 +169,7 @@ Chaque ligne du fichier représente une requête, comme : *host rfc931 user \[DD
 
 Le format DLF (Distilled Log Format) est similaire au format CLF (Common Log format) et utilise exactement la même structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent. Voici la description des formats CLF/DLF (non personnalisables) :
 
-| Noms des champs      | Description                                                                                                                                                                    |
+| Nom des champs       | Description                                                                                                                                                                    |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | host                 | Adresse IP du client (ex. 192.100.100.10)                                                                                                                                      |
 | rfc931               | information non générée par 4D, c'est toujours - (le signe moins)                                                                                                              |

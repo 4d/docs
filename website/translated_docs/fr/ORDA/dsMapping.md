@@ -3,12 +3,12 @@ id: dsmapping
 title: Objets Data Model
 ---
 
-La technologie ORDA est fondée sur une cartographie automatique d'une structure 4D sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
+La technologie ORDA est fondée sur une cartographie automatique d'une structure de base sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
 
 
 ## Correspondance de la structure
 
-Lorsque vous appelez un datastore à l'aide de la commande `ds` ou `Open datastore`, 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) retourné :
+Lorsque vous appelez un datastore à l'aide de la commande [`ds`](API/DataStoreClass.md#ds) ou [`Open datastore`](API/DataStoreClass.md#open-datastore), 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) retourné :
 
 *   Les tables correspondent à des dataclasses.
 *   Les champs correspondent à des attributs de stockage.
@@ -25,7 +25,7 @@ Les règles suivantes s'appliquent à toutes les conversions :
 *   Un datastore ne référence que les tables avec une seule clé primaire. Les tables suivantes ne sont pas référencées :
     *   Tables sans clé primaire
     *   Tables avec clés primaires composites.
-*   Les attributs de type [BLOB](Concepts/dt_blob.md) ne sont pas gérés dans le datastore. Les attributs de type BLOB sont retournés comme Null dans les entités et ne peuvent pas être affectés.
+*   Les champs BLOB sont automatiquement disponibles comme attributs de type [objet Blob](Concepts/dt_blob.md#blob-types).
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
@@ -113,7 +113,7 @@ $compClass:=ds.Company //affecte la référence de dataclasse Company à $compCl
 
 Un objet dataclass peut contenir :
 
-*   des attributs
+*   attributes
 *   des attributs relationnels
 
 La dataclass offre une abstraction de la base de données physique et permet de gérer un modèle de données conceptuel. La dataclass est le seul moyen d'interroger le datastore. Une requête est effectuée à partir d'une seule dataclass. Les requêtes sont construites autour des attributs et des noms d'attributs relationnels des dataclasses. Les attributs relationnels sont ainsi les moyens d'impliquer plusieurs tables liées dans une requête.
@@ -129,7 +129,7 @@ Les propriétés de la dataclass sont toutefois énumérables :
 ```code4d 
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-//$prop contient les noms de tous les attributs de la dataclass
+//$prop contient les noms de tous les attributs de dataclass
 ```
 
 
@@ -149,7 +149,7 @@ Tous les fichiers éligibles d'une table sont disponibles en tant qu'attributs d
 
 #### Attributs de stockage et relationnels
 
-Les attributs de la Dataclass sont de plusieurs types : storage, relatedEntity et relatedEntities. Les attributs scalaires (c'est-à-dire qui ne fournissent qu'une seule valeur) prennent en charge le type de données standard (Entier long, texte, objet, etc.).
+Les attributs de la Dataclass sont de plusieurs types : storage, relatedEntity et relatedEntities. Les attributs scalaires (c'est-à-dire qui ne fournissent qu'une seule valeur) prennent en charge tous les types de données standard 4D (Entier, texte, objet, etc.).
 
 *   Un **attribut de stockage** (storage) est équivalent à un champ dans la base de données 4D et peut être indexé. Les valeurs affectées à un attribut de stockage sont stockées en tant que partie de l'entité lors de son enregistrement. Lorsqu'on accède à un attribut de stockage, sa valeur provient directement du datastore. Les attributs de stockage sont le bloc de construction le plus élémentaire d'une entité et sont définis par un nom et un type de données.
 *   Un **attribut relationnel** (relatedEntity et relatedEntities) donne accès à d'autres entités. Les attributs relationnels peuvent aboutir soit à une entité unique (ou à aucune entité), soit à une sélection d'entité (0 à N entités). Les attributs relationnels s'appuient sur les relations "classiques" dans la structure relationnelle pour fournir un accès direct à une entité ou à des entités reliées. Tous les attributs relationnels sont directement disponibles dans ORDA si vous utilisez leurs noms.
@@ -174,6 +174,11 @@ Tous les attributs de la dataclass sont exposés en tant que propriétés de la 
 ![](assets/en/ORDA/dataclassProperties.png)
 
 Gardez à l'esprit que ces objets décrivent des attributs, mais ne donnent pas accès aux données. La lecture ou l'écriture des données se fait à travers des [objets entité](entities.md#using-entity-attributes).
+
+#### Champs calculés
+
+dans la [définition de la classe Entity](ordaClasses.md#entity-class). Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
+
 
 ### Entity
 

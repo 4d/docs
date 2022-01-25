@@ -3,31 +3,31 @@ id: attributes
 title: '$attributes'
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+Permite seleccionar los atributos relacionales a obtener de la dataclass (*por ejemplo*, `Company(1)?$attributes=employees.lastname` o `Employee?$attributes=employer.name`).
 
 
 ## Descripción
 
-When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+Cuando tenga atributos relacionales en una dataclass, utilice `$attributes` para definir la ruta de los atributos cuyos valores desea obtener para la entidad o entidades relacionadas.
 
-You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity selection (*e.g.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
+Puede aplicar `$attributes` a una entidad (*p. Ej.*, People(1)) o una entity selection (*p. Ej.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
 
-- If `$attributes` is not specified in a query, or if the "*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
+- Si `$attributes` no se especifica en una consulta, o si se pasa el valor "*", se extraen todos los atributos disponibles. Los atributos **de entidad relacionada ** se extraen con la forma simple: un objeto con la propiedad `__KEY` (llave primaria) y `URI`. Los atributos de las **entidades relacionadas** no se extraen.
 
-- If `$attributes` is specified for **related entity** attributes:
-    - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
+- Si se especifica `$attributes` para los atributos **de entidad relacionada**:
+    - `$attributes=relatedEntity`: se devuelve la entidad relacionada con forma simple (propiedad __KEY diferida (llave primaria)) y `URI`.
     - `$attributes=relatedEntity.*`: se devuelven todos los atributos de la entidad relacionada
-    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
+    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: sólo se devuelven los atributos de la entidad relacionada.
 
 
-- If `$attributes` is specified for **related entities** attributes:
-    - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
-    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
+- Si se especifica `$attributes` para los atributos **de entidades relacionadas**:
+    - `$attributes=relatedEntities.*`: se devuelven todas las propiedades de todas las entidades relacionadas
+    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: sólo se devuelven los atributos de las entidades relacionadas.
 
 
 
-## Example with related entities
+## Ejemplo con varias entidades relacionadas
 
 Si pasamos la petición REST siguiente para nuestra clase de datos Company (que tiene un atributo de relación "empleados"):
 
@@ -64,16 +64,16 @@ Si pasamos la petición REST siguiente para nuestra clase de datos Company (que 
 }
 ```
 
-If you want to get all attributes from employees:
+Si desea obtener todos los atributos de los empleados:
 
  `GET  /rest/Company(1)/?$attributes=employees.*`
 
-If you want to get last name and job name attributes from employees:
+Si quiere obtener el apellido y los atributos de nombre del trabajo de los empleados:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
 
-## Example with related entity
+## Ejemplo con una entidad relacionada
 
 Si pasamos la petición REST siguiente para nuestra clase de datos Employee (que tiene varios atributos relacionales, incluyendo "employer"):
 
@@ -97,10 +97,10 @@ Si pasamos la petición REST siguiente para nuestra clase de datos Employee (que
 }
 ```
 
-If you want to get all attributes of the employer:
+Si desea obtener todos los atributos del empleador:
 
  `GET  /rest/Employee(1)?$attributes=employer.*`
 
-If you want to get the last names of all employees of the employer:
+Si desea obtener los apellidos de todos los empleados de la empresa:
 
  `GET  /rest/Employee(1)?$attributes=employer.employees.lastname`

@@ -3,7 +3,7 @@ id: debugger
 title: デバッガー
 ---
 
-デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 It allows you to step through your code slowly and examine the information. このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
+デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
 ![ローカルデバッガーウィンドウ](assets/en/Debugging/debugger-window-intro.png)
 

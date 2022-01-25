@@ -145,7 +145,9 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
 
-* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected <p> <p>
+* ![](assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected
+<p>
+<p>
 
 * ![](assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
 

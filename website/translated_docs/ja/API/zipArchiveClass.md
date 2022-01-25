@@ -40,9 +40,10 @@ End if
 ## ZIP Create archive
 
 <details><summary>履歴</summary>
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| バージョン  | 内容                                                              |
+| ------ | --------------------------------------------------------------- |
+| v19 R3 | `ZIP Compression LZMA`, `ZIP Compression XZ`, `.level` プロパティを追加 |
+| v18    | 追加                                                              |
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -175,7 +176,23 @@ ZIPアーカイブの圧縮にパスワードと進捗バーを使います:
 ```
 
 
+#### 例題 5
 
+高い圧縮レベルの代替圧縮アルゴリズムを使用します:
+
+```4d
+var $destination : 4D.File
+var $zip; $err : Object
+
+$zip:=New object
+$zip.files:=New collection
+$zip.files.push(Folder(fk desktop folder).folder("images"))
+$zip.compression:=ZIP Compression LZMA
+$zip.level:=7 // デフォルト値は 4 です
+
+$destination:=Folder(fk desktop folder).file("images.zip")
+$err:=ZIP Create archive($zip; $destination)
+```
 
 ## ZIP Read archive
 

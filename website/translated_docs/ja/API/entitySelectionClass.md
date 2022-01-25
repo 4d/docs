@@ -38,6 +38,7 @@ title: EntitySelection
 | [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->|
@@ -86,6 +87,37 @@ $employees:=Create entity selection([Employee])
 #### 参照
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
+
+
+## USE ENTITY SELECTION
+
+<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->
+**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
+
+<!-- REF #_command_.USE ENTITY SELECTION.Params -->
+| 引数              | タイプ             |    | 説明           |
+| --------------- | --------------- |:--:| ------------ |
+| entitySelection | EntitySelection | -> | エンティティセレクション |
+<!-- END REF -->
+
+#### 説明
+
+`USE ENTITY SELECTION` コマンドは、*entitySelection* 引数で指定したデータクラスに合致するテーブルのカレントセレクションを、エンティティセレクションの中身に応じて更新します。
+
+[リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
+
+> `USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+
+#### 例題
+
+```4d
+var $entitySel : Object
+
+$entitySel:=ds.Employee.query("lastName = :1";"M@") // $entitySel は Employee データクラスにリレートされています
+REDUCE SELECTION([Employee];0)
+USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されました
+```
+
 
 <!-- REF EntitySelectionClass.index.Desc -->
 ## &#91;*index*&#93;
@@ -1682,6 +1714,73 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 <!-- END REF -->
 
 
+<!-- REF EntitySelectionClass.selected().Desc -->
+## .selected()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R3 | 追加 |
+
+</details>
+
+<!-- REF #EntitySelectionClass.selected().Syntax -->
+**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.selected().Params -->
+| 引数               | タイプ                |    | 説明                                                |
+| ---------------- | ------------------ |:--:| ------------------------------------------------- |
+| selectedEntities | 4D.EntitySelection | -> | 呼び出し対象のエンティティセレクション内での位置を取得したい、選別されたエンティティのセレクション |
+| 戻り値              | Object             | <- | 呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲           |
+<!-- END REF -->
+
+#### 説明
+
+`.selected()` 関数は、 <!-- REF #EntitySelectionClass.selected().Summary -->呼び出し対象のエンティティセレクションにおける、*selectedEntities* に含まれるエンティティの位置を表すオブジェクトを返します<!-- END REF -->。
+> この関数は、元のエンティティセレクションを変更しません。
+
+*selectedEntities* 引数として、呼び出し対象のエンティティセレクション内の位置を取得したい、選別されたエンティティのセレクションを渡します。 呼び出し対象のエンティティセレクションと *selectedEntities* のエンティティセレクションは同じデータクラスに属している必要があります。そうでない場合には、エラー 1587 - "そのエンティティセレクションは互換性のないデータクラスからきています" が発生します。
+
+#### 戻り値
+
+戻り値のオブジェクトには、以下のプロパティが格納されています:
+
+| プロパティ          | タイプ        | 説明                        |
+| -------------- | ---------- | ------------------------- |
+| ranges         | Collection | レンジオブジェクトのコレクション          |
+| ranges[].start | Integer    | レンジ内の先頭エンティティのインデックス (位置) |
+| ranges[].end   | Integer    | レンジ内の最終エンティティのインデックス (位置) |
+
+`ranges` プロパティに 1件のエンティティしか含まれない場合、`start` = `end` です。 インデックスは 0 起点です。
+
+呼び出し対象のエンティティセレクション、または *selectedEntities* のエンティティセレクションが空の場合、関数は `ranges` に空のコレクションを返します。
+
+#### 例題
+
+```4d
+var $invoices; $cashSel; $creditSel : cs.Invoices
+var $result1; $result2 : Object
+
+$invoices:=ds.Invoices.all()
+
+$cashSelection:=ds.Invoices.query("payment = :1"; "Cash")
+$creditSel:=ds.Invoices.query("payment IN :1"; New collection("Cash"; "Credit Card"))
+
+$result1:=$invoices.selected($cashSelection)
+$result2:=$invoices.selected($creditSel)
+
+//$result1 = {ranges:[{start:0;end:0},{start:3;end:3},{start:6;end:6}]}
+//$result2 = {ranges:[{start:0;end:1},{start:3;end:4},{start:6;end:7}]}
+
+```
+
+<!-- END REF -->
+
+
+
+
+
+
 
 <!-- REF EntitySelectionClass.slice().Desc -->
 ## .slice()
@@ -1895,6 +1994,7 @@ filterString や filterCol、および options 引数を渡さない例:
         },
         "manager": {
             "__KEY": 412
+
         }
     },
     {

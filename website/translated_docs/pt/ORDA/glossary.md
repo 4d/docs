@@ -26,6 +26,11 @@ An attributePath is the path of an attribute inside a given dataclass or entity.
 
 Code for the user class function(s).
 
+
+## Computed attribute
+
+A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+
 ## Data model class
 
 Extended class available for a data model object.
@@ -113,7 +118,7 @@ Since entities are managed as references, data is loaded only when necessary, i.
 
 The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
 
-## Method
+## Métodos
 
 ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
 
@@ -128,7 +133,7 @@ $myClass.query("name = smith")
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
 
 *   number
-*   text
+*   texto
 *   null
 *   booleano
 *   date
@@ -146,7 +151,7 @@ In "optimistic lock" mode, entities are not locked explicitly before updating th
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
-## Property
+## Propriedade
 
 See [Attribute](#attribute).
 > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
@@ -199,3 +204,7 @@ A shallow copy only duplicates the structure of elements, and keeps the same int
 ## Stamp
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+
+## Storage attribute
+
+A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.

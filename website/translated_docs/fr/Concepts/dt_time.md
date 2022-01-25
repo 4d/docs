@@ -34,8 +34,8 @@ Une heure nulle s’écrit ?00:00:00?
 | Opération           | Syntaxe         | Retourne | Expression              | Valeur     |
 | ------------------- | --------------- | -------- | ----------------------- | ---------- |
 | Addition            | Heure + Heure   | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? ?01:02:03?   | ?01:01:01? |
-| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? ?01:02:03?   | 7449       |
+| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? ?02:03:04?   | ?01:01:01? |
+| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 7449       |
 | Soustraction        | Heure – Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 7319       |
 | Multiplication      | Heure * Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 14768      |
 | Division            | Heure / Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 3692       |

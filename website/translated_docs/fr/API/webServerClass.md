@@ -777,7 +777,7 @@ La fonction `.start()` function <!-- REF #WebServerClass.start().Summary -->dém
 
 Le serveur Web démarre avec les paramètres par défaut définis dans le fichier de settings du projet ou (base hôte uniquement) à l'aide de la commande `WEB SET OPTION`. Cependant, à l'aide du paramètre *settings*, vous pouvez définir des paramètres personnalisés pour la session du serveur Web.
 
-Tous les paramètres des [objets Web Server](#web-server-object) peuvent être personnalisés, hormis les propriétés en lecture seule ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), et [.sessionCookieName](#sessioncookiename)).
+La fonction `.stop()`<!-- REF #WebServerClass.stop().Summary -->arrête le serveur Web auquel elle est appliquée<!-- END REF -->.
 
 Les paramètres de session personnalisés seront réinitialisés lorsque la fonction [`.stop()`](#stop) sera appelée.
 
@@ -808,33 +808,19 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
  If($result.success)
   //...
  End if
-```
-
-<!-- END REF -->
-
-
-<!-- REF WebServerClass.stop().Desc -->
-
-## .stop()
+```<!-- END REF --><!-- REF WebServerClass.stop().Desc -->## .stop()
 
 <details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R3  | Ajout         |
-</details>
-
-<!-- REF #WebServerClass.stop().Syntax -->
-**.stop()** <!-- END REF -->
-
-<!-- REF #WebServerClass.stop().Params -->
-
-| Paramètres | Type |  | Description                 |
-| ---------- | ---- |  | --------------------------- |
-|            |      |  | Ne requiert aucun paramètre |
+</details><!-- REF #WebServerClass.stop().Syntax -->**.stop()**
 
  <!-- END REF -->
 
-La fonction `.stop()` <!-- REF #WebServerClass.stop().Summary -->arrête le serveur Web auquel elle est appliquée<!-- END REF -->.
+<!-- REF #WebServerClass.stop().Params -->| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |<!-- END REF -->La fonction `.stop()`<!-- REF #WebServerClass.stop().Summary -->arrête le serveur Web auquel elle est appliquée<!-- END REF -->.
 
 Si le serveur Web était lancé, toutes les connexions Web et tous les process Web sont fermés une fois que les requêtes actuellement traitées sont terminées. Si le serveur Web n'était pas démarré, la fonction ne fait rien.
 > Cette fonction réinitialise les paramètres Web personnalisés définis pour la session à l'aide du paramètre *settings* de la fonction [`.start()`](#start), le cas échéant.
@@ -849,9 +835,7 @@ Pour arrêter le serveur Web de la base :
 
  $webServer:=WEB Server(Web server database)
  $webServer.stop()
-```
-
-<!-- END REF -->
+```<!-- END REF -->
 
 
 

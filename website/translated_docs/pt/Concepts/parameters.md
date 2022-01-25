@@ -1,14 +1,14 @@
 ---
 id: parameters
-title: Parameters
+title: Parâmetros
 ---
 
 
-You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
+You'll often find that you need to pass data to your methods and functions. Isso é facilmente feito com parâmetros.
 
 ## Visão Geral
 
-**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -68,7 +68,7 @@ Inside called methods or class functions, parameter values are assigned to local
 - For class functions, parameters are declared along with the `Function` keyword.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
-Examples:
+Exemplos:
 
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
@@ -349,6 +349,8 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
  End if
 ```
 
+
+
 ## Wrong parameter type
 
 Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
@@ -450,9 +452,21 @@ No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opci
 ALERT("Are you sure?";"Yes I am") //2 parâmetros ALERT("Time is over") //1 parâmetro
 ```
 
-Os métodos projeto 4D também aceitam esses parâmetros opcionais, começando pela direita. O problema com os parâmetros opcionais é como manejar o caso em que alguns deles estejam faltando no método chamado, nunca deveria produzir um erro. Uma boa prática é atribuir valores padrão aos parâmetros não utilizados.
+4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). For example:
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+```4d
+// "concate" function of myClass
+Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+$result:=$param1+" "+$param2
+```
+```4d
+  // Calling method
+ $class:=cs.myClass.new()
+ $class.concate("Hello") // "Hello "
+ $class.concate() // Displays " "
+```
+
+> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
 
 Utilizando o comando `Count parameters` desde dentro do método chamado, pode detectar o número real de parâmetros e realizar diferentes operações dependendo do que tenha recebido.
 
@@ -480,6 +494,7 @@ Depois de adicionar este método projeto a sua aplicação, pode escrever:
 APPEND TEXT(vtSomeText) //Só mostrará a mensagem APPEND TEXT(vtSomeText;$path) //Mostra a mensagem e o anexo ao documento em $path APPEND TEXT(vtSomeText;"";$wpArea) //Mostra a mensagem e escreve em $wpArea
 ```
 
+> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
 
 
 
@@ -499,7 +514,7 @@ A caixa de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" e a caixa de aler
 
 Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
-1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
+1. Ao invés de passar o campo para o método, passa um ponteiro para ele, por isso pode escrever:
 
 ```4d
   //Esta é uma parte do código do método MY_METHOD
@@ -513,7 +528,7 @@ Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
 Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, dentro do método `DO SOMETHING`, $1 já não é o valor do campo mas um ponteiro ao campo. O objeto **referenciado** por $1 ($1-> no código anterior) é o campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. Ao invés de ter o método `DO_SOMETHING` "faça algo", pode reescrever o método para que devolva um valor. Portanto escreveria:
 
 ```4d
     //Esta é uma parte do código do método MY_METHO

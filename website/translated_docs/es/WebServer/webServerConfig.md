@@ -414,7 +414,7 @@ By default, the value is 100. You can set the number anywhere between 10 and 320
 
 Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
 
-This limit is used to avoid web server saturation due to incoming requests that are too large. When a request reaches this limit, the 4D web server rejects it.
+Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. When a request reaches this limit, the 4D web server rejects it.
 
 Valores posibles: 500 000 a 2 147 483 648.
 
@@ -437,7 +437,7 @@ Default value: 100 (pass 0 to restore the default value).
 | ------------------- | ------------------------------------------------------ | ----------- |
 | objeto webServer    | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
-Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.
+Minimum TLS version accepted for connections. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
 
 Valores posibles:
 
@@ -446,7 +446,7 @@ Valores posibles:
 - 3 = TLSv1_2 (por defecto)
 - 4 = TLSv1_3
 
-If modified, the server must be restarted to use the new value.
+Si se modifica, el servidor debe reiniciarse para utilizar el nuevo valor.
 
 > The minimum TLS version used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server and client/server connections.
 
@@ -549,7 +549,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 | objeto webServer    | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`    | `Web session cookie domain`                                        |             |
 
-Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
+Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
 
 
 ## Nombre de la cookie de sesión
@@ -569,7 +569,7 @@ Name of the cookie used for saving the session ID. Por defecto = "4DSID".
 | objeto webServer    | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |             |
 | `WEB SET OPTION`    | `Web session cookie path`                                      |             |
 
-Campo "path" de la cookie de sesión. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+Campo "path" de la cookie de sesión. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.
 
 ## Session Cookie SameSite
 

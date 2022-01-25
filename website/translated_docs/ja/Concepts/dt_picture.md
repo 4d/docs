@@ -1,5 +1,5 @@
 ---
-id: ピクチャー
+id: picture
 title: ピクチャー
 ---
 

@@ -5,53 +5,53 @@ title: '$filter'
 
 
  
-Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
+Permite consultar los datos de una clase de datos o de un método *(p. ej.*, `$filter="firstName!='' AND salary>30000"`)
 
 
 ## Descripción
 
-This parameter allows you to define the filter for your dataclass or method.
+Este parámetro le permite definir el filtro para su clase de datos o método.
 
-### Using a simple filter
+### Utilizar un filtro simple
 
-A filter is composed of the following elements:
+Un filtro se compone de los siguientes elementos:
 
 **{attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+Por ejemplo: `$filter="firstName=john"` donde `firstName` es el **atributo**, `=` es el **comparador** y `john` es el **valor**.
 
 ### Utilizar un filtro complejo
 
-A more compex filter is composed of the following elements, which joins two queries:
+Un filtro más compejo se compone de los siguientes elementos, que unen dos consultas:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
 
 Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `salary` son atributos de la clase de datos Employee.
 
-### Using the params property
+### Utilizar la propiedad params
 
-You can also use 4D's params property.
+También puede utilizar la propiedad params de 4D.
 
 **{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
 
 Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation.
-> When inserting quotes (') or double quotes ("), you must escape them using using their character code:
+Para más información sobre cómo consultar los datos en 4D, consulte la [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentación.
+> Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
 > 
-> <li>Quotes ('):    \u0027 <li>Double quotes ("): \u0022
+> <li>Comillas ('):    \u0027 <li>Comillas dobles ("): \u0022
 > 
-> For example, you can write the following when passing a value with a quote when using the *params* property:  
+> Por ejemplo, se puede escribir lo siguiente al pasar un valor con una comilla cuando se utiliza la propiedad *params*:  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 > 
-> If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
+> Si pasa el valor directamente, puede escribir lo siguiente: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
 ## Atributo
 
-If the attribute is in the same dataclass, you can just pass it directly (*e.g.*, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (*e.g.*, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
+Si el atributo está en la misma clase de datos, puede pasarlo directamente (*p. ej.*, `firstName`). Sin embargo, si quiere consultar otra clase de datos, debe incluir el nombre del atributo relacional y el nombre del atributo, es decir, la ruta de acceso (*por ejemplo*, nombre.empleador). El nombre del atributo distingue entre mayúsculas y minúsculas (`firstName` no es igual a `FirstName`).
 
-You can also query attributes of type Object by using dot-notation. For example, if you have an attribute whose name is "objAttribute" with the following structure:
+También puede consultar los atributos de tipo Object utilizando la anotación de puntos. Por ejemplo, si tiene un atributo cuyo nombre es "objAttributo" con la siguiente estructura:
 
 ```
 {
@@ -61,7 +61,7 @@ You can also query attributes of type Object by using dot-notation. For example,
 }
 ```
 
-You can search in the object by writing the following:
+Puede buscar en el objeto escribiendo lo siguiente:
 
 `GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
@@ -69,19 +69,19 @@ You can search in the object by writing the following:
 
 El comparador debe ser uno de los siguientes valores:
 
-| Comparador | Descripción              |
-| ---------- | ------------------------ |
-| =          | igual a                  |
-| !=         | diferente de             |
-| >          | mayor que                |
-| >=         | greater than or equal to |
-| <          | menor que                |
-| <=         | less than or equal to    |
-| begin      | comienza con             |
+| Comparador | Descripción       |
+| ---------- | ----------------- |
+| =          | igual a           |
+| !=         | diferente de      |
+| >          | mayor que         |
+| >=         | mayor o igual que |
+| <          | menor que         |
+| <=         | menor o igual que |
+| begin      | comienza con      |
 
 ## Ejemplos
 
-In the following example, we look for all employees whose last name begins with a "j":
+En el siguiente ejemplo, buscamos a todos los empleados cuyo apellido empieza por "j":
 
 ```
  GET  /rest/Employee?$filter="lastName begin j"

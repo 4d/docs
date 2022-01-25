@@ -22,7 +22,7 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 
 > Cette option n'est utilisée que dans les bases de données binaires ; elle est ignorée dans l'architecture projets. Voir doc.4d.com.
 
-#### Window tabbing (macOS only)
+### Window tabbing (macOS only)
 
 Depuis macOS Sierra, les applications Mac bénéficient d'onglets automatiques facilitant l'organisation de l'écran lors de l'ouverture de fenêtres multiples : les fenêtres documents sont regroupées dans une seule fenêtre parente et sont accessibles via des onglets. Cette fonctionnalité est particulièrement utile avec les écrans de taille réduite ou lorsqu'un trackpad est utilisé.
 
@@ -48,6 +48,21 @@ Trois options sont disponibles :
 *   **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
 *   **Jamais** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera toujours la création d'une nouvelle fenêtre (les onglets ne sont jamais créés).
 *   **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
+
+### Apparence (macOS uniquement)
+
+Ce menu vous permet de sélectionner la palette de couleurs à utiliser pour l'environnement de **développement 4D**. La palette spécifiée sera appliquée à tous les éditeurs et fenêtres du mode Développement.
+
+> Vous pouvez également définir la palette de couleurs à utiliser dans vos **applications de bureau** dans la page "Interface" de la boîte de dialogue des Paramètres.
+
+Trois options sont disponibles :
+
+*   **Selon les préférences de la palette de couleurs du système** (par défaut) : Utilisez la palette de couleurs définie dans les préférences système de macOS.
+*   **Clair** : Utiliser le thème clair
+*   **Sombre** : utiliser le thème sombre
+
+> Cette préférence n'est prise en charge que sur macOS. Sous Windows, la palette "Light" est toujours utilisée.
+
 
 ### Exit Design when going to Application Environment
 
@@ -104,26 +119,26 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
-*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
+*   Lorsque vous appuyez sur la touche **F1** pendant que le curseur est inséré dans une fonction de classe 4D ou un nom de commande dans l'éditeur de méthode ;
+*   Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
 
 
-### Documentation language
+### Langue de documentation
 
-Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
+Langue de la documentation HTML à afficher. Vous pouvez sélectionner une documentation dans une langue différente de celle de l'application.
 
 ### Commencer par consulter le dossier local
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> Cette option n'est prise en compte que pour l'accès à la documentation des commandes (à l'exclusion des fonctions de classe).
 
-Sets where 4D will look for documentation pages.
+Définit l'emplacement des pages de documentation recherchées par 4D.
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
+*   Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
 *   If it is not found, 4D displays an error message in the browser. When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser.
 
 ### Local folder
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> Cette option n'est prise en compte que pour l'accès à la documentation des commandes (à l'exclusion des fonctions de classe).
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 

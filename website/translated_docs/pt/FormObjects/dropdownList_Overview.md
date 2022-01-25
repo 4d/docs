@@ -1,11 +1,11 @@
 ---
 id: dropdownListOverview
-title: Drop-down List
+title: Lista suspensa ou drop down
 ---
 
 Drop-down lists are form objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an object, an array, a choice list, or a standard action.
 
-On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:
+Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes referem aos mesmos objetos. Como no exemplo abaixo, a aparência desses objetos podem diferenciar levemente de acordo com a plataforma:
 
 ![](assets/en/FormObjects/popupDropdown_appearance.png)
 
@@ -21,7 +21,7 @@ You can create different types of drop-down lists with different features. To de
 | Choice list saved as value     | Built upon a choice list (standard)              | List            | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
 | Choice list saved as reference | Built upon a choice list. Item position is saved | List            | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
 | Hierarchical choice list       | Can display hierarchical contents                | List            | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Standard action                | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Ação padrão                    | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 
 
@@ -31,9 +31,9 @@ You can create different types of drop-down lists with different features. To de
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
 
-| Property       | Type               | Description                                                                                                                                                                                                                                            |
+| Propriedade    | Type               | Description                                                                                                                                                                                                                                            |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the drop-down list is empty |
+| `values`       | Coleção            | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the drop-down list is empty |
 | `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                   |
 | `currentValue` | same as Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                     |
 
@@ -41,7 +41,7 @@ If the object contains other properties, they are ignored.
 
 To initialize the object associated to the drop-down list, you can:
 
-* Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an object automatically.
+* Digite uma lista de valores padrão nas propriedades objeto ao selecionar "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an object automatically.
 
 * Execute code that creates the object and its properties. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
 
@@ -76,7 +76,7 @@ Um [array](Concepts/arrays.md) é uma lista de valores na memória que são refe
 
 To initialize the array associated to the drop-down list, you can:
 
-* Enter a list of default values in the object properties by selecting "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
+* Digite uma lista de valores padrão nas propriedades objeto ao selecionar "\<Static List>" in the [Data Source](properties_DataSource.md) theme of the Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
 
 * Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. For example:
 

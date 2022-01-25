@@ -17,12 +17,12 @@ Un componente 4D es un conjunto de métodos y formularios 4D que representan una
 
 La creación e instalación de componentes 4D se realiza directamente desde 4D. Básicamente, los componentes se gestionan como [plug-ins](Concepts/plug-ins.md) según los siguientes principios:
 
-- A component consists of a regular 4D project file.
-- To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
+- Un componente consiste en un archivo de proyecto 4D clásico.
+- Para instalar un componente, basta con copiarlo en la carpeta [`Components` del proyecto](Project/architecture.md). Puede utilizar alias o atajos.
 - Un proyecto puede ser a la vez "matriz" y "local", es decir, que un proyecto matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar "subcomponentes" por sí mismo.
 - Un componente puede llamar a la mayoría de los elementos de 4D: métodos proyecto, formularios proyecto, barras de menú, listas de selección, etc. No puede llamar a los métodos base ni a los triggers.
 - No se pueden utilizar tablas o archivos de datos estándar en los componentes 4D. Sin embargo, un componente puede crear y/o utilizar tablas, campos y archivos de datos utilizando mecanismos de bases externas. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.
-- A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
+- Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
 
 
@@ -75,11 +75,11 @@ Todos los métodos proyecto de un proyecto matricial son por definición incluid
 
 Por otro lado, por defecto estos métodos proyecto no serán visibles, y no podrán ser llamados por el proyecto local. En el proyecto matriz, debe designar explícitamente los métodos que desea compartir con el proyecto local. Estos métodos proyecto se pueden llamar en el código del proyecto local (pero no se pueden modificar en el editor de métodos del proyecto local). Estos métodos forman los **puntos de entrada** en el componente.
 
-Por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan al proyecto local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
+Por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan al proyecto local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. Para ello, debe designar explícitamente qué métodos proyecto del proyecto local quiere hacer accesibles a los componentes (en las propiedades del método, marque la casilla **Compartido por componentes y proyecto local**).
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Por ejemplo:
+Una vez que los métodos del proyecto anfitrión están disponibles para los componentes, se puede ejecutar un método anfitrión desde dentro de un componente utilizando los comandos `EXECUTE FORMULA` o `EXECUTE METHOD`. Por ejemplo:
 
 ```4d 
 // Método local
@@ -93,8 +93,8 @@ component_method("host_method_name")
  EXECUTE METHOD($1)
 ```
 
-> An interpreted host database that contains interpreted components can be compiled or syntax checked if it does not call methods of the interpreted component. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation.   
-> Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+> Una base local interpretada que contenga componentes interpretados puede ser compilada o verificada sintácticamente si no llama a métodos del componente interpretado. En caso contrario, aparecerá una caja de diálogo de advertencia al intentar lanzar la compilación o una comprobación de sintaxis y no será posible realizar la operación.   
+> Tenga en cuenta que un método interpretado puede llamar a un método compilado, pero no a la inversa, salvo mediante el uso de los comandos  `EXECUTE METHOD` y `EXECUTE FORMULA`.
 
 
 
@@ -125,7 +125,7 @@ C_POINTER($p)
 $p:=component_method2(...)
 ```
 
-Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
+Sin un puntero, un componente puede seguir accediendo al valor de una variable de la base local (pero no a la propia variable) y viceversa:
 
 ```4d
 //En la base local
@@ -186,7 +186,7 @@ $fieldpointer->:=$3
 SAVE RECORD($tablepointer->)
 ```
 
-> In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
+> En el contexto de un componente, 4D asume que una referencia a un formulario tabla es una referencia al formulario tabla local (ya que los componentes no pueden tener tablas.)
 
 ## Uso de tablas y campos
 
@@ -277,25 +277,25 @@ Lectura en una base de datos externa:
 
 - Puede publicar formularios de componentes como subformularios en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
 
-> En el contexto de un componente, cualquier formulario de proyecto referenciado debe pertenecer al componente. For example, inside a component, referencing a host project form using `DIALOG` or `Open form window` will throw an error.
+> En el contexto de un componente, cualquier formulario de proyecto referenciado debe pertenecer al componente. Por ejemplo, dentro de un componente, hacer referencia a un formulario proyecto local utilizando `DIALOG` u `Open form window` arrojará un error.
 
 
 ## Utilización de recursos
 
-Components can use resources located in the Resources folder of the component.
+Los componentes pueden utilizar recursos situados en la carpeta Resources del componente.
 
 Los mecanismos automáticos son operacionales: los archivos XLIFF encontrados en la carpeta Resources de un componente serán cargados por este componente.
 
 En un proyecto local que contiene uno o más componentes, cada componente, así como los proyectos locales, tiene su propia "cadena de recursos." Los recursos están divididos entre las diferentes proyectos: no es posible acceder a los recursos del componente A desde el componente B o desde el proyecto local.
 
 
-## Executing initialization code
+## Ejecución del código de inicialización
 
-A component can execute 4D code automatically when opening or closing the host database, for example in order to load and/or save the preferences or user states related to the operation of the host database.
+Un componente puede ejecutar automáticamente código 4D al abrir o cerrar la base local, por ejemplo para cargar y/o guardar las preferencias o los estados usuario relacionados con el funcionamiento de la base local.
 
-Executing initialization or closing code is done by means of the `On Host Database Event` database method.
+La ejecución del código de inicialización o cierre se realiza mediante el método base `On Host Database Event`.
 
-> For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it. To do this, you must check the **Execute "On Host Database Event" method of the components** option on the Security page the Settings.
+> Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. Para ello, debe marcar la opción **Ejecutar el método "On Host Database Event" de los componentes** en la página de Seguridad de los parámetros.
 
 
 ## Protección de los componentes: compilación

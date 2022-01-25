@@ -4,43 +4,43 @@ title: '$catalog'
 ---
 
 
-The catalog describes all the dataclasses and attributes available in the datastore.
+El catálogo describe todas las clases de datos y atributos disponibles en el almacén de datos.
 
 
 ## Sintaxis disponible
 
-| Sintaxis                                      | Ejemplo              | Descripción                                                                      |
-| --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
-| [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
-| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
-| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Returns information about a dataclass and its attributes                         |
+| Sintaxis                                      | Ejemplo              | Descripción                                                                       |
+| --------------------------------------------- | -------------------- | --------------------------------------------------------------------------------- |
+| [**$catalog**](#catalog)                      | `/$catalog`          | Devuelve una lista de las clases de datos de su proyecto junto con dos URIs       |
+| [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Devuelve información sobre todas las clases de datos del proyecto y sus atributos |
+| [**$catalog/{dataClass}**](#catalogdataclass) | `/$catalog/Employee` | Devuelve información sobre una clase de datos y sus atributos                     |
 
 
 ## $catalog
-Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
+Devuelve una lista de las clases de datos de su proyecto junto con dos URI: una para acceder a la información sobre su estructura y otra para recuperar los datos de la clase de datos
 
 
 ### Descripción
 
-When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
+Cuando se llama a `$catalog`, se devuelve una lista de las clases de datos junto con dos URI para cada clase de datos en el almacén de datos de su proyecto.
 
-Only the exposed dataclasses are shown in this list for your project's datastore. For more information, please refer to [**Exposing tables and fields**](configuration.md#exposing-tables-and-fields) section.
+En esta lista sólo se muestran las clases de datos expuestas para el almacén de datos de su proyecto. Para más información, consulte la sección [**Exponer tablas y campos**](configuration.md#exposing-tables-and-fields).
 
-Here is a description of the properties returned for each dataclass in your project's datastore:
+A continuación se describen las propiedades devueltas para cada clase de datos en el almacén de datos de su proyecto:
 
 
-| Propiedad | Tipo   | Descripción                                                                       |
-| --------- | ------ | --------------------------------------------------------------------------------- |
-| name      | Cadena | Nombre de la dataclass.                                                           |
-| uri       | Cadena | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI   | Cadena | A URI that allows you to view the data in the dataclass.                          |
+| Propiedad | Tipo   | Descripción                                                                      |
+| --------- | ------ | -------------------------------------------------------------------------------- |
+| name      | Cadena | Nombre de la dataclass.                                                          |
+| uri       | Cadena | Un URI que permite obtener información sobre la |clase de datos y sus atributos. |
+| dataURI   | Cadena | Un URI que permite ver los datos en la clase de datos.                           |
 
 
 ### Ejemplo
 
 `GET  /rest/$catalog`
 
-**Result**:
+**Resultado**:
 
 ````
 {
@@ -62,7 +62,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 ## $catalog/$all
 
-Returns information about all of your project's dataclasses and their attributes
+Devuelve información sobre todas las clases de datos del proyecto y sus atributos
 
 ### Descripción
 
@@ -75,7 +75,7 @@ Para más información sobre lo que se devuelve para cada clase de datos y sus a
 
 `GET /rest/$catalog/$all`
 
-**Result**:
+**Resultado**:
 
 ````
 {
@@ -183,13 +183,13 @@ Para más información sobre lo que se devuelve para cada clase de datos y sus a
 
 ## $catalog/{dataClass}
 
-Returns information about a dataclass and its attributes
+Devuelve información sobre una clase de datos y sus atributos
 
 ### Descripción
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. Si quiere recuperar esta información para todas las clases de datos del almacén de datos de su proyecto, utilice [`$catalog/$all`](#catalogall).
+La llamada de `$catalog/{dataClass}` para una clase de datos específica devolverá la siguiente información sobre la clase de datos y los atributos que contiene. Si quiere recuperar esta información para todas las clases de datos del almacén de datos de su proyecto, utilice [`$catalog/$all`](#catalogall).
 
-The information you retrieve concerns the following:
+La información que recupera se refiere a lo siguiente:
 
 *   Dataclass
 *   Atributo(s)
@@ -198,31 +198,31 @@ The information you retrieve concerns the following:
 
 ### DataClass
 
-The following properties are returned for an exposed dataclass:
+Las siguientes propiedades se devuelven para una clase de datos expuesta:
 
 
 | Propiedad      | Tipo   | Descripción                                                                                                         |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
 | name           | Cadena | Nombre de la dataclass                                                                                              |
-| collectionName | Cadena | Name of an entity selection on the dataclass                                                                        |
-| tableNumber    | Número | Table number in the 4D database                                                                                     |
+| collectionName | Cadena | Nombre de una selección de entidades en la clase de datos                                                           |
+| tableNumber    | Número | Número de tabla en la base 4D                                                                                       |
 | scope          | Cadena | Alcance de la clase de datos (tenga en cuenta que sólo se muestran las clases de datos cuyo **Alcance** es público) |
-| dataURI        | Cadena | A URI to the data in the dataclass                                                                                  |
+| dataURI        | Cadena | Un URI a los datos de la clase de datos                                                                             |
 
 
 ### Atributo(s)
 
-Here are the properties for each exposed attribute that are returned:
+Aquí están las propiedades de cada atributo expuesto que se devuelven:
 
 | Propiedad   | Tipo     | Descripción                                                                                                                                                           |
 | ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | Cadena   | El nombre del atributo.                                                                                                                                               |
-| kind        | Cadena   | Attribute type (storage or relatedEntity).                                                                                                                            |
-| fieldPos    | Número   | Position of the field in the database table).                                                                                                                         |
-| scope       | Cadena   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                                     |
-| indexed     | Cadena   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                                         |
+| kind        | Cadena   | Tipo de atributo (almacenamiento o entidad relacionada).                                                                                                              |
+| fieldPos    | Número   | Posición del campo en la tabla de la base).                                                                                                                           |
+| scope       | Cadena   | Alcance del atributo (sólo aparecerán los atributos cuyo alcance sea Público).                                                                                        |
+| indexed     | Cadena   | Si se seleccionó algún **tipo de índice**, esta propiedad devolverá true. En caso contrario, esta propiedad no aparece.                                               |
 | type        | Cadena   | Tipo de atributo (booleano, blob, byte, fecha, duración, imagen, long, long64, número, cadena, uuid o palabra) o la clase de datos para un atributo de relación N->1. |
-| identifying | Booleano | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                             |
+| identifying | Booleano | Esta propiedad devuelve True si el atributo es la llave primaria. En caso contrario, esta propiedad no aparece.                                                       |
 | path        | Cadena   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                         |
 | foreignKey  | Cadena   | For a relatedEntity attribute, name of the related attribute.                                                                                                         |
 | inverseName | Cadena   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                        |
@@ -238,7 +238,7 @@ Puede recuperar la información relativa a una clase de datos específica.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**Resultado**:
 
 ````
 {

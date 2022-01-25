@@ -56,7 +56,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
 ### Managing list boxes
@@ -423,7 +423,7 @@ Selections are managed differently depending on whether the list box is based on
     - [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
     - [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
 
-- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
+- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
   //tBListBox is the name of the list box variable in the form
@@ -605,7 +605,7 @@ Depending of the list box type, you can use different properties to customize ro
 | ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Background color | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
 | Font color       | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
- Font style|
+
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
 
@@ -627,7 +627,7 @@ In this mode, the printing of list boxes is carried out by programming, via the 
 In this mode:
 
 - The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
+- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
 - An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
 
@@ -705,7 +705,7 @@ If this list box is displayed in hierarchical form (the first three arrays being
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
 
-    > A B A C
+    > &gt; A B A C
 
 To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
@@ -841,10 +841,19 @@ the value type (mandatory): text, color, event, etc. the value itself (optional)
 
 ```4d  
 ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
- APPEND TO ARRAY(obColumn;$ob)  
+ C_OBJECT($ob1)
+ $entry:="Hello world!" OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)  
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
@@ -921,21 +930,11 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
 
 ````4d
- ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
- $entry:="Hello world!"
- OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
- C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
- OB SET($ob2;"value";2/3)
- C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
-
- APPEND TO ARRAY(obColumn;$ob1)
- APPEND TO ARRAY(obColumn;$ob2)
- APPEND TO ARRAY(obColumn;$ob3)
+$entry:="Hello world!"
+ OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 ````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
@@ -1126,9 +1125,11 @@ Beispiel:
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
-OB SET($ob;"valueType";"text")
-OB SET($ob;"alternateButton";True)
-OB SET($ob;"value";$entry)
+ARRAY OBJECT(obColumn;0) //column array
+ C_OBJECT($ob) //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
+ APPEND TO ARRAY(obColumn;$ob)
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)

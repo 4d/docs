@@ -62,7 +62,7 @@ If no *localID* datastore is found, the command returns **Null**.
 
 Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
-#### Example 1
+#### Exemplo 1
 
 Using the main datastore on the 4D database:
 
@@ -70,7 +70,7 @@ Using the main datastore on the 4D database:
  $result:=ds.Employee.query("firstName = :1";"S@")
 ```
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
@@ -145,14 +145,14 @@ Once the session is opened, the following statements become equivalent and retur
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Property    | Type     | Description                                                                                                                                                                                                                                                            |
-| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Texto    | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | Texto    | User name                                                                                                                                                                                                                                                              |
-| password    | Texto    | User password                                                                                                                                                                                                                                                          |
-| idleTimeout | Longint  | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Booleano | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Texto    | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| Propriedade | Type          | Description                                                                                                                                                                                                                                                            |
+| ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname    | Texto         | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
+| user        | Texto         | User name                                                                                                                                                                                                                                                              |
+| password    | Texto         | User password                                                                                                                                                                                                                                                          |
+| idleTimeout | Inteiro longo | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
+| tls         | Booleano      | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
+| type        | Texto         | Must be "4D Server"                                                                                                                                                                                                                                                    |
 
 (*) If tls is true, the HTTPS protocol is used if:
 
@@ -160,7 +160,7 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 *   the given port is the right HTTPS port configured in the database settings
 *   a valid certificate and private encryption key are installed in the database. Otherwise, error "1610 - A remote request to host xxx has failed" is raised
 
-#### Example 1
+#### Exemplo 1
 
 Connection to a remote datastore without user / password:
 
@@ -172,7 +172,7 @@ Connection to a remote datastore without user / password:
  ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Connection to a remote datastore with user / password / timeout / tls:
 
@@ -310,7 +310,7 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 The returned object contains the following properties:
 
-| Property    |             |               | Type     | Description                                                                        |
+| Propriedade |             |               | Type     | Description                                                                        |
 | ----------- | ----------- | ------------- | -------- | ---------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Booleano | True if the data file is encrypted                                                 |
 | keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
@@ -379,18 +379,18 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
 
 **Returned object**
 
-| Property   | Type     | Description                                                                                                                                                     |
-| ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
-| networked  | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
-| localID    | text     | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
-| connection | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>text</td><td>User authenticated on the remote datastore</td></tr></table> |
+| Propriedade | Type     | Description                                                                                                                                                     |
+| ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type        | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
+| networked   | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
+| localID     | texto    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
+| connection  | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propriedade</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
 *   If the `.getInfo()` function is executed on a remote 4D, `networked` is True
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $info : Object
@@ -402,7 +402,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns 
   //{"type":"4D","networked":true,"localID":""}
 ```
 
-#### Example 2
+#### Exemplo 2
 
 On a remote datastore:
 
@@ -438,9 +438,9 @@ On a remote datastore:
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parameter | Type       |    | Description                                                  |
-| --------- | ---------- |:--:| ------------------------------------------------------------ |
-| Result    | Collection | <- | Collection of objects, where each object describes a request |
+| Parameter | Type    |    | Description                                                  |
+| --------- | ------- |:--:| ------------------------------------------------------------ |
+| Result    | Coleção | <- | Collection of objects, where each object describes a request |
 <!-- END REF -->
 
 
@@ -574,16 +574,16 @@ If a valid data encryption key is provided, it is added to the *keyChain* in mem
 
 The result of the command is described in the returned object:
 
-| Property   |                          | Type       | Description                                                                     |
-| ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------- |
-| success    |                          | Booleano   | True if the provided encryption key matches the encrypted data, False otherwise |
-|            |                          |            | Properties below are returned only if success is *FALSE*                        |
-| status     |                          | Número     | Error code (4 if the provided encryption key is wrong)                          |
-| statusText |                          | Texto      | Error message                                                                   |
-| errors     |                          | Collection | Stack of errors. The first error has the highest index                          |
-|            | \[ ].componentSignature | Texto      | Internal component name                                                         |
-|            | \[ ].errCode            | Número     | Error number                                                                    |
-|            | \[ ].message            | Texto      | Error message                                                                   |
+| Propriedade |                          | Type     | Description                                                                     |
+| ----------- | ------------------------ | -------- | ------------------------------------------------------------------------------- |
+| success     |                          | Booleano | True if the provided encryption key matches the encrypted data, False otherwise |
+|             |                          |          | Properties below are returned only if success is *FALSE*                        |
+| status      |                          | Número   | Error code (4 if the provided encryption key is wrong)                          |
+| statusText  |                          | Texto    | Error message                                                                   |
+| errors      |                          | Coleção  | Stack of errors. The first error has the highest index                          |
+|             | \[ ].componentSignature | Texto    | Internal component name                                                         |
+|             | \[ ].errCode            | Número   | Error number                                                                    |
+|             | \[ ].message            | Texto    | Error message                                                                   |
 
 If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **null** (no error is generated).
 
@@ -691,7 +691,7 @@ The ORDA request log can be sent to a file or to memory, depending on the parame
 
 For a description of the ORDA request log format, please refer to the [**ORDA client requests**](https://doc.4d.com/4Dv18/4D/18/Description-of-log-files.300-4575486.en.html#4385373) section.
 
-#### Example 1
+#### Exemplo 1
 
 You want to log ORDA client requests in a file and use the log sequence number:
 
@@ -708,7 +708,7 @@ You want to log ORDA client requests in a file and use the log sequence number:
  SET DATABASE PARAMETER(Client Log Recording;0)
 ```
 
-#### Example 2
+#### Exemplo 2
 
 You want to log ORDA client requests in memory:
 
