@@ -37,28 +37,28 @@ Un list box se compone de cuatro partes distintas:
 
 ![](assets/en/FormObjects/listbox_parts.png)
 
-Each part has its own name as well as specific properties. For example, the number of columns or the alternating color of each row is set in the list box object properties, the width of each column is set in the column properties, and the font of the header is set in the header properties.
+Cada parte tiene su propio nombre y propiedades específicas. Por ejemplo, el número de columnas o el color alternativo de cada línea se define en las propiedades del objeto list box, el ancho de cada columna se define en las propiedades de las columnas y el tipo de fuente del encabezado se define en las propiedades de los encabezados.
 
-It is possible to add an object method to the list box object and/or to each column of the list box. Object methods are called in the following order:
+Es posible añadir un método objeto al objeto list box y/o a cada columna del list box. Los métodos objeto se llaman en el siguiente orden:
 
-1. Object method of each column
-2. Object method of the list box
+1. Método objeto de cada columna
+2. Método objeto del list box
 
-The column object method gets events that occur in its [header](#list-box-headers) and [footer](#list-box-footers).
+El método objeto de columna obtiene los eventos que se producen en su [encabezado](#list-box-headers) y [pie](#list-box-footers).
 
 
 
 ### Tipos de list box
 
-There are several types of list boxes, with their own specific behaviors and properties. The list box type depends on its [Data Source property](properties_Object.md#data-source):
+Hay varios tipos de list box, con sus propios comportamientos y propiedades específicas. El tipo de list box depende de su [propiedad Fuente de datos](properties_Object.md#data-source):
 
-- **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
+- **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
 > > > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
-### Managing list boxes
+### Gestión de list boxes
 
 You can completely configure a list box object through its properties, and you can also manage it dynamically through programming.
 
