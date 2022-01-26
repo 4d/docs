@@ -30,13 +30,13 @@ Al hacer clic en el objeto, la imagen cambia.
 
 ## Utilizar los botones imagen
 
-You can implement a picture button in the following manner:
+Puede implementar un botón imagen de la siguiente manera:
 
-1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
+1. En primer lugar, prepare un único gráfico en el que las series de imágenes estén dispuestas en líneas, en columnas o en las dos.
 
    ![](assets/en/FormObjects/pictureButton_grid.png)
 
-You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
+Puede organizar las imágenes en columnas, líneas o en una cuadrícula (como se muestra arriba). Cuando se organizan las imágenes en forma de cuadrícula, se numeran de izquierda a derecha, línea por línea, empezando por 0. Por ejemplo, la segunda imagen de la segunda línea de una cuadrícula que consta de dos líneas y tres columnas, tiene el número 4 (la bandera del Reino Unido en el ejemplo anterior).
 
 2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
 
