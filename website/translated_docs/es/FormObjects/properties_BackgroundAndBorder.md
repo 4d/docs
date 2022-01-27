@@ -6,7 +6,7 @@ title: Fondo y borde
 ---
 ## Color de fondo alternado
 
-Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
+Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Por defecto, *Automático* está seleccionado: la columna utiliza el color de fondo alternativo definido en el nivel del list box.
 
 #### Gramática JSON
 
@@ -20,11 +20,11 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 
 ---
-## Background Color / Fill Color
+## Color de fondo / Color de relleno
 
-Defines the background color of an object.
+Define el color de fondo de un objeto.
 
-In the case of a list box, by default *Automatic* is selected: the column uses the background color set at the list box level.
+En el caso de un list box, por defecto se selecciona *Automático*: la columna utiliza el color de fondo definido al nivel del list box.
 
 #### Gramática JSON
 
@@ -35,7 +35,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### Objetos soportados
 
-[Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
+[Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Óvalo](shapes_overview.md#oval) - [Rectángulo](shapes_overview.md#rectangle) - [Área de texto](text.md)
 
 #### Ver también
 [Transparente](#transparent)
@@ -44,18 +44,18 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 ---
 ## Expresión color de fondo
 
-`Selection and collection type list boxes`
+`List box de tipo colección y de tipo selección de entidades`
 
-An expression or a variable (array variables cannot be used) to apply a custom background color to each row of the list box. The expression or variable will be evaluated for each row displayed and must return a RGB color value. For more information, refer to the description of the `OBJECT SET RGB COLORS` command in the *4D Language Reference manual*.
+Una expresión o una variable (no se pueden utilizar variables array) para aplicar un color de fondo personalizado a cada línea del list box. La expresión o la variable se evaluará para cada línea mostrada y debe devolver un valor de color RGB. Para más información, consulte la descripción del comando `OBJECT SET RGB COLORS` en el manual *Lenguaje de 4D*.
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk background color expression` constant.
-> With collection or entity selection type list boxes, this property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERTY` con la constante `lk background color expression`.
+> Con los list box de tipo colección o selección de entidades, esta propiedad también puede definirse utilizando una [Meta Info Expression](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                          |
-| ------------- | -------------- | ----------------------------------------- |
-| rowFillSource | cadena         | An expression returning a RGB color value |
+| Nombre        | Tipos de datos | Valores posibles                                 |
+| ------------- | -------------- | ------------------------------------------------ |
+| rowFillSource | cadena         | Una expresión que devuelve un valor de color RGB |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
@@ -68,7 +68,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 ---
 ## Estilo del borde
 
-Allows setting a standard style for the object border.
+Permite definir un estilo estándar para el borde del objeto.
 
 #### Gramática JSON
 
@@ -78,14 +78,14 @@ Allows setting a standard style for the object border.
 
 #### Objetos soportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md) - [Buttons](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicator](progressIndicator.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botones](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugin](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Regla](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md#overview) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
 
 
 
 ---
-## Dotted Line Type
+## Tipo de línea punteada
 
-Describes dotted line type as a sequence of black and white points.
+Describe el tipo de línea punteada como una secuencia de puntos blancos y negros.
 
 #### Gramática JSON
 
@@ -95,7 +95,7 @@ Describes dotted line type as a sequence of black and white points.
 
 #### Objetos soportados
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Rectángulo](shapes_overview.md#rectangle) - [Óvalo](shapes_overview.md#oval) - [Línea](shapes_overview.md#line)
 
 
 
@@ -103,11 +103,11 @@ Describes dotted line type as a sequence of black and white points.
 ---
 ## Ocultar líneas vacías finales
 
-Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
+Controla la visualización de las líneas vacías adicionales añadidas en la parte inferior de un objeto list box. Por defecto, 4D añade esas líneas adicionales para llenar el área vacía:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
+Puede eliminar estas líneas vacías seleccionando esta opción. La parte inferior del objeto del list box se deja vacía:
 
 ![](assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -228,4 +228,4 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 [List Box](listbox_overview.md#overview)
 
 #### Ver también
-[Background Color / Fill Color](#background-color-fill-color)
+[Color de fondo / Color de relleno](#background-color-fill-color)
