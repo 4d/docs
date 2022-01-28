@@ -246,7 +246,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -606,7 +606,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
+  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Columna List Box</a>
 </p>
 
 
@@ -660,7 +660,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </td>
     
     <td>
-      The name of a longint array.
+      El nombre de un array entero largo.
     </td>
   </tr>
 </table>
