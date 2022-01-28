@@ -197,17 +197,17 @@ A continuación, quiere colorear las celdas con valores negativos en naranja osc
 ```
 ![](assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
+Puede obtener el mismo resultado utilizando los comandos `LISTBOX SET ROW FONT STYLE` y `LISTBOX SET ROW COLOR`. Tienen la ventaja de permitirle omitir el tener que predefinir arrays de estilo/color para las columnas: en su lugar son creadas dinámicamente por los comandos.
 
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles             |
-| ------------- | -------------- | ---------------------------- |
-| rowFillSource | cadena         | The name of a longint array. |
+| Nombre        | Tipos de datos | Valores posibles                    |
+| ------------- | -------------- | ----------------------------------- |
+| rowFillSource | cadena         | El nombre de un array entero largo. |
 
 #### Objetos soportados
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -216,7 +216,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 ---
 ## Transparente
 
-Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
+Define el fondo del list box como "Transparent". Cuando se define, se ignora cualquier [color de fondo alternativo](#alternate-background-color) o [color de fondo](#background-color-fill-color) definido para la columna.
 
 #### Gramática JSON
 
