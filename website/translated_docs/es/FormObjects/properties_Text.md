@@ -168,20 +168,20 @@ Designates the font color.
 
 > This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
 
-The color can be specified by:
+El color puede ser especificado por:
 
-* a color name - like "red"
+* un nombre de color - como "red"
 * un valor HEX - como "# ff0000"
 * un valor RVB - como "rgb (255,0,0)"
 
-You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html) command.
+También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB COLORS**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-RGB-COLORS.301-4505456.en.html).
 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                          |
-| ------ | -------------- | ----------------------------------------- |
-| stroke | cadena         | any css value, "transparent", "automatic" |
+| Nombre | Tipos de datos | Valores posibles                         |
+| ------ | -------------- | ---------------------------------------- |
+| stroke | cadena         | un valor css, "transparent", "automatic" |
 
 #### Objetos soportados
 
@@ -197,7 +197,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
 
 You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
 > This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
@@ -382,7 +382,7 @@ Entonces, el método *Color* contendría:
 Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas \<SPAN> HTML presentes en el área.</p> 
 
 <p spaces-before="0">
-  Por defecto, esta opción no está activada.
+  Por defecto, esta opción no está activa.
 </p>
 
 
@@ -564,7 +564,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </p>
 
 <p spaces-before="0">
-  Se debe utilizar el nombre de un array Entero largo. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+  Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a>. Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 </p>
 
 <h4 spaces-before="0">
@@ -627,7 +627,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </p>
 
 <p spaces-before="0">
-  Se debe utilizar el nombre de un array Entero largo. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para llenar el array (utilizando un método), utilice las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estilos de fuente</a>. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+  Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar el array (utilizando un método), utilice las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estilos de fuente</a>. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
 </p>
 
 
