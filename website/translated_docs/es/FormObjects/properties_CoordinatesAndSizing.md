@@ -7,20 +7,20 @@ title: Coordenadas y dimensiones
 ## Altura de línea automática
 `Sólo para 4D View Pro: esta funcionalidad requiere una licencia 4D View Pro.`
 
-This property is only available for array-based, non-hierarchical list boxes. The property is not selected by default.
+Esta propiedad sólo está disponible para los list box de tipo array, no jerárquicos. Esta propiedad no está seleccionada por defecto.
 
-When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. Note that only columns with the option selected will be taken into account to calculate the row height.
-> When resizing the form, if the "Grow" [horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
+Cuando se utiliza, la altura de cada línea de la columna será calculada automáticamente por 4D, y se tendrá en cuenta el contenido de la columna. Tenga en cuenta que sólo se tendrán en cuenta las columnas con la opción seleccionada para calcular el alto de línea.
+> Al redimensionar el formulario, si la propiedad de [dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) "Agrandar" fue asignada al list box, la columna más a la derecha se agrandará más allá de su ancho máximo, si es necesario.
 
-When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
+Cuando esta propiedad está activada, la altura de cada línea se calcula automáticamente para que el contenido de la celda quepa por completo sin ser truncado (a menos que la opción [Wordwrap](properties_Display.md#wordwrap) esté desactivada.
 
-*   The row height calculation takes into account:
-    *   any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
-    *   any control types (inputs, check boxes, lists, dropdowns),
-    *   fonts, fonts styles and font sizes,
-    *   the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
+*   El cálculo de la altura de línea tiene en cuenta:
+    *   todo tipo de contenido (texto, números, fechas, horas, imágenes (el cálculo depende del formato de la imagen), objetos),
+    *   todo tipo de control (entradas, casillas de selección, listas, listas desplegables),
+    *   fuentes, estilos y tamaños de letra,
+    *   la opción [Wordwrap](properties_Display.md#wordwrap): si está desactivada, la altura se basa en el número de párrafos (las líneas se truncan); si está activada, la altura se basa en el número de líneas (no se trunca).
 
-*   The row height calculation ignores:
+*   El cálculo de la altura de línea no tiene en cuenta:
     *   contenido de columna oculta
     *   [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 > > > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
