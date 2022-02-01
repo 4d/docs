@@ -347,11 +347,11 @@ Define la altura de las líneas del list box (excluyendo los encabezados y pies 
 
 `Sólo para 4D View Pro: esta funcionalidad requiere una licencia 4D View Pro.`
 
-Esta propiedad se utiliza para indicar el nombre de un array de altura de línea que se quiere asociar al list box. A row height array must be of the numeric type (longint by default).
+Esta propiedad se utiliza para indicar el nombre de un array de altura de línea que se quiere asociar al list box. Un array de altura de línea debe ser de tipo numérico (entero largo por defecto).
 
-When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
+Cuando se define un array de altura de línea, cada uno de sus elementos cuyo valor es diferente de 0 (cero) se tiene en cuenta para determinar la altura de la línea correspondiente en el list box, basándose en la unidad de altura de línea actual.
 
-For example, you can write:
+Por ejemplo, puede escribir:
 
 
 
@@ -361,11 +361,11 @@ RowHeights{5}:=3
 ```
 
 
-Assuming that the unit of the rows is "lines," then the fifth row of the list box will have a height of three lines, while every other row will keep its default height.
+Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea del list box tendrá una altura de tres líneas, mientras que todas las demás líneas mantendrán su altura por defecto.
 
 
-> * The Row Height Array property is not taken into account for hierarchical list boxes.
-> * For array-based list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
+> * La propiedad Row Height Array no se tiene en cuenta para los list box jerárquicos.
+> * Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
 
 
 
