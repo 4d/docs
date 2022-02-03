@@ -6,19 +6,19 @@ title: Fuente de datos
 ---
 ## Inserción automática
 
-When this option is selected, if a user enters a value that is not found in the choice list associated with the object, this value is automatically added to the list stored in memory. You can associate choice lists to objects using:
-- the [Choice List](properties_DataSource.md#choice-list) JSON property
-- the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html) commands.
-- the form editor's Property List.
+Cuando se selecciona esta opción, si un usuario introduce un valor que no se encuentra en la lista de selección asociada al objeto, este valor se añade automáticamente a la lista almacenada en memoria. Se pueden asociar listas de selección a los objetos utilizando:
+- la propiedad JSON [Choice List](properties_DataSource.md#choice-list)
+- los comandos [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-NAME.301-4128227.en.html) o [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIST-BY-REFERENCE.301-4128237.en.html).
+- la lista de propiedades del editor de formularios.
 
-For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+Por ejemplo, dada una lista de selección que contiene "Francia, Alemania, Italia" que está asociada a un combo box "Países": si la propiedad **inserción automática** está activada y un usuario introduce "España", entonces el valor "España" se añade automáticamente a la lista en memoria:
 
 ![](assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
-> If the list was created from a list defined in Design mode, the original list is not modified.
+Naturalmente, el valor introducido no debe pertenecer a la lista de [valores excluidos](properties_RangeOfValues.md#excluded-list) asociada al objeto, si se ha definido una.
+> Si la lista se creó a partir de una lista definida en el modo Diseño, la lista original no se modifica.
 
-When the **automatic insertion** option is not selected (default), the value entered is stored in the object but not in the list in memory.
+Cuando la opción **inserción automática** no está seleccionada (por defecto), el valor introducido se almacena en el objeto pero no en la lista en memoria.
 
 #### Gramática JSON
 
@@ -28,7 +28,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Box](comboBox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -36,13 +36,13 @@ When the **automatic insertion** option is not selected (default), the value ent
 ---
 ## Lista de selección
 
-Associates a choice list with an object. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
+Asocia una lista de selección a un objeto. Puede ser un nombre de lista de elección (una referencia de lista) o una colección de valores por defecto.
 
 #### Gramática JSON
 
 | Nombre     | Tipos de datos   | Valores posibles                                              |
 | ---------- | ---------------- | ------------------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                                     |
+| choiceList | list, collection | Una lista de valores posibles                                 |
 | lista      | list, collection | Una lista de valores posibles (listas jerárquicas únicamente) |
 
 
@@ -53,15 +53,15 @@ Associates a choice list with an object. Puede ser un nombre de lista de elecci�
 
 
 ---
-## Choice List (static list)
+## Lista de selección (lista estática)
 
-List of static values to use as labels for the tab control object.
+Lista de valores estáticos a utilizar como etiquetas para el objeto de control de pestañas.
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos   | Valores posibles                         |
-| ------ | ---------------- | ---------------------------------------- |
-| labels | list, collection | A list of values to fill the tab control |
+| Nombre | Tipos de datos   | Valores posibles                                        |
+| ------ | ---------------- | ------------------------------------------------------- |
+| labels | list, collection | Una lista de valores para llenar el control de pestañas |
 
 #### Objetos soportados
 
@@ -72,8 +72,8 @@ List of static values to use as labels for the tab control object.
 ## Elemento actual
 `Collection or entity selection list boxes`
 
-Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+Especifica una variable o expresión a la que se asignará el elemento/entidad de la colección seleccionado por el usuario. Debe utilizar una variable objeto o una expresión asignable que acepte objetos. Si el usuario no selecciona nada o si ha utilizado una colección de valores escalares, se asigna el valor Null.
+> Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON
 
@@ -90,14 +90,14 @@ Specifies a variable or expression that will be assigned the collection element/
 ---
 
 ## Posición elemento actual
-`Collection or entity selection list boxes`
+`List boxes colección o entity selection`
 
-Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
+Indica una variable o expresión a la que se le asignará un entero largo que indica la posición del elemento/entidad de colección seleccionado por el usuario.
 
-*   if no element/entity is selected, the variable or expression receives zero,
-*   if a single element/entity is selected, the variable or expression receives its location,
-*   if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+*   si no se selecciona ningún elemento/entidad, la variable o expresión recibe cero,
+*   si se selecciona un solo elemento/entidad, la variable o expresión recibe su ubicación,
+*   si se seleccionan varios elementos/entidades, la variable o expresión recibe la posición del elemento/entidad que se seleccionó de última.
+> Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON
 
@@ -115,7 +115,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 ---
 ## Tipos de datos
 
-Please refer to [Expression Type](properties_Object.md#expression-type) section.
+Consulte la sección [Tipo de expresión](properties_Object.md#expression-type).
 
 #### Objetos soportados
 
@@ -128,7 +128,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ---
 
-## Default (list of) values
+## Valores por defecto (lista de)
 
 List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
 
@@ -169,7 +169,7 @@ A 4D expression to be associated with a column. Puede introducir:
     *   Hora
     *   Imagen
     *   Boolean  
-      You can use fields from the Master Table or from other tables.
+      Puede utilizar campos de la tabla maestra o de otras tablas.
 
 -   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
   The following expression types are supported:
@@ -190,9 +190,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                        |
-| ---------- | -------------- | ----------------------------------------------------------------------- |
-| dataSource | cadena         | A 4D variable, field name, or an arbitrary complex language expression. |
+| Nombre     | Tipos de datos | Valores posibles                                                                      |
+| ---------- | -------------- | ------------------------------------------------------------------------------------- |
+| dataSource | cadena         | Una variable 4D, un nombre de campo o una expresión del lenguaje compleja arbitraria. |
 
 #### Objetos soportados
 
@@ -258,13 +258,13 @@ Using this property requires compliance with the following principles:
 
 ---
 ## Elementos seleccionados
-`Collection or entity selection list boxes`
+`List box colección o entity selection`
 
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.
 
 *   for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
-*   for an entity selection list box, an entity selection object is built. You must use an object variable or an assignable expression that accepts objects.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+*   for an entity selection list box, an entity selection object is built. Debe utilizar una variable objeto o una expresión asignable que acepte objetos.
+> Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON
 
