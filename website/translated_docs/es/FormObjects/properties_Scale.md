@@ -6,13 +6,13 @@ title: Escala
 ---
 ## Barber shop
 
-Enables the "barber shop" variant for the thermometer.
+Activa la variante "barber shop" para el termómetro.
 
 #### Gramática JSON
 
-|     Nombre      | Tipos de datos | Valores posibles                                            |
-|:---------------:|:--------------:| ----------------------------------------------------------- |
-| [max](#maximum) |     number     | NOT passed = enabled; passed = disabled (basic thermometer) |
+|     Nombre      | Tipos de datos | Valores posibles                                               |
+|:---------------:|:--------------:| -------------------------------------------------------------- |
+| [max](#maximum) |     number     | NO pasado = activado; pasado = desactivado (termómetro básico) |
 
 #### Objetos soportados
 
@@ -33,14 +33,14 @@ Muestra/Oculta las graduaciones junto a las etiquetas.
 
 #### Objetos soportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 
 
 ---
 ## Paso en la graduación
 
-Scale display measurement.
+Medición de la visualización de la escala.
 
 #### Gramática JSON
 
@@ -51,16 +51,16 @@ Scale display measurement.
 
 #### Objetos soportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 
 
 ---
 ## Posición de la etiqueta
 
-Specifies the location of an object's displayed text.
+Especifica la ubicación del texto mostrado de un objeto.
 
-* None - no label is displayed
+* Ninguno - no se muestra ninguna etiqueta
 * Arriba - Muestra las etiquetas a la izquierda o sobre el indicador
 * Bottom - Displays labels to the right of or below an indicator
 
@@ -72,7 +72,7 @@ Specifies the location of an object's displayed text.
 
 #### Objetos soportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 
 
