@@ -272,13 +272,13 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 ---
 ## Alineamiento vertical
 
-Vertical location of text within the area that contains it.
+Ubicación vertical del texto dentro del área que lo contiene.
 
-The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
-- `bottom` for all data (except pictures) and
-- `top` for picture type data.
+La opción **Predeterminado** (`automático` valor JSON) define la alineación según el tipo de datos que se encuentran en cada columna:
+- `abajo` para todos los datos (excepto las imágenes) y
+- `arriba` para los datos del tipo imagen.
 
-This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
+Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) y [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html).
 
 
 #### Gramática JSON
@@ -289,7 +289,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### Objetos soportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado List Box](listbox_overview.md#list-box-headers)
 
 
 
@@ -300,23 +300,23 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 
 ---
-## Meta Info Expression
-`Collection or entity selection type list boxes`
+## Meta Info expression
+`List box de tipo colección o entity selection (selección de entidades)`
 
-Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
+Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. Se soportan las siguientes propiedades:
 
-| Nombre de propiedad | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | cadena   | Color de la fuente. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                    |
-| fill                | cadena   | Color de fondo. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                        |
-| fontStyle           | cadena   | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                |
-| fontWeight          | cadena   | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                  |
-| textDecoration      | cadena   | "normal","underline"                                                                                                                                                                                                                                                                                                                                                             |
-| unselectable        | booleano | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Valores por defecto: False. |
-| disabled            | booleano | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Valores por defecto: False.                                                                                                                                                                          |
-| cell.\<columnName> | objeto   | Allows applying the property to a single column. Pase en \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                             |
+| Nombre de propiedad | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke              | cadena   | Color de la fuente. Todo color CSS (por ejemplo: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                           |
+| fill                | cadena   | Color de fondo. Todo color CSS (por ejemplo: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                               |
+| fontStyle           | cadena   | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| fontWeight          | cadena   | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| textDecoration      | cadena   | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| unselectable        | booleano | Designa la línea correspondiente como no seleccionable (* es decir, *, no es posible el resaltado). Las áreas que se pueden introducir ya no se pueden introducir si esta opción está activada, a menos que la opción "Edición con un solo clic" también esté activada. Los controles como las casillas de selección y las listas siguen siendo funcionales. Este ajuste se ignora si el modo de selección del list box es "Ninguno". Valores por defecto: False. |
+| disabled            | booleano | Desactiva la línea correspondiente. Las áreas editables ya no son accesibles si esta opción está activada. El texto y los controles (casillas de selección, listas, etc.) aparecen atenuados o en gris. Valores por defecto: False.                                                                                                                                                                                                                               |
+| cell.\<columnName> | objeto   | Permite aplicar la propiedad a una sola columna. Pase en \<columnName> el nombre del objeto de la columna de list box. **Nota**: las propiedades "no seleccionable" y "desactivada" sólo pueden definirse a nivel de la línea. Se ignoran si se pasan en el objeto "celda"                                                                                                                                                                                       |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Los parámetros de estilo definidos con esta propiedad se ignoran si ya se han definido otros parámetros de estilo mediante expresiones (*es decir, *, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 **Ejemplo**
 
@@ -361,9 +361,9 @@ Entonces, el método *Color* contendría:
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                 |
-| ---------- | -------------- | ------------------------------------------------ |
-| metaSource | cadena         | Object expression to evaluate for each row/cell. |
+| Nombre     | Tipos de datos | Valores posibles                                     |
+| ---------- | -------------- | ---------------------------------------------------- |
+| metaSource | cadena         | Expresión de objeto a evaluar para cada línea/celda. |
 
 #### Objetos soportados
 
@@ -426,7 +426,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 </h4>
 
 <p spaces-before="0">
-  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
+  <a href="listbox_overview.md#list-box-columns">Columna List Box</a> - <a href="input_overview.md">Entrada</a>
 </p>
 
 
@@ -596,7 +596,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
     </td>
     
     <td>
-      The name of a longint array
+      El nombre de un array entero largo
     </td>
   </tr>
 </table>
@@ -677,7 +677,7 @@ Esta propiedad permite la posibilidad de utilizar estilos específicos en el ár
 
 <hr />
 <h2 spaces-before="0">
-  Store with default style tags
+  Almacenar con etiquetas de estilo por defecto
 </h2>
 
 <p spaces-before="0">
