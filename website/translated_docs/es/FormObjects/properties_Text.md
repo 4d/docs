@@ -195,14 +195,14 @@ También puede definir esta propiedad utilizando el comando [**OBJECT SET RGB CO
 
 `List box de tipo colección/selección de entidades`
 
-Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
+Se utiliza para aplicar un color de fuente personalizado a cada línea del list box. Debe utilizar valores de color RGB. Para más información al respecto, consulte la descripción del comando [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) en el manual Lenguaje de 4D.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html).
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERTY` con la constante `lk font color expression`.
+> Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
-The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
+El siguiente ejemplo utiliza un nombre de variable: introduzca *CompanyColor* para la **Expresión color fuente** y, en el método formulario, escriba el siguiente código:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color;   
@@ -224,9 +224,9 @@ Foreground color;Dark shadow color)
 
 `List box de tipo colección/selección de entidades`
 
-Used to apply a custom character style to each row of the list box or each cell of the column.
+Utilizado para aplicar un estilo de fuente personalizado a cada línea de list box o de cada celda de la columna.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+Debe introducir una expresión o una variable (no se pueden utilizar variables de tipo array). La expresión o variable se evaluará para cada línea mostrada (si se aplica al list box) o cada celda mostrada (si se aplica a una columna). Puede utilizar las constantes del tema [Estilos de fuentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
 
 Ejemplo:
 
@@ -234,15 +234,15 @@ Ejemplo:
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+También puede definir esta propiedad utilizando el comando `LISTBOX SET PROPERTY` con la constante `lk font style expression`.
+> Esta propiedad también puede definirse mediante una [Expresión Meta Info](properties_Text.md#meta-info-expression).
 
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                                |
-| -------------- | -------------- | ----------------------------------------------- |
-| rowStyleSource | cadena         | Style expression to evaluate for each row/cell. |
+| Nombre         | Tipos de datos | Valores posibles                                     |
+| -------------- | -------------- | ---------------------------------------------------- |
+| rowStyleSource | cadena         | Expresión de estilo a evaluar para cada línea/celda. |
 
 #### Objetos soportados
 
@@ -256,7 +256,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 ---
 ## Alineación horizontal
 
-Horizontal location of text within the area that contains it.
+Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Gramática JSON
 
@@ -266,7 +266,7 @@ Horizontal location of text within the area that contains it.
 
 #### Objetos soportados
 
-[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Text Area](text.md)
+[Group Box](groupBox.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-headers) - [Pie List Box](listbox_overview.md#list-box-footers) - [Área de texto](text.md)
 
 
 ---
