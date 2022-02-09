@@ -6,7 +6,7 @@ title: Texto e Imagen
 ---
 ## Ruta de acceso fondo
 
-Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
+Define la ruta de la imagen que se dibujará en el fondo del objeto. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
 
 The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
 
