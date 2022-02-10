@@ -367,7 +367,7 @@ Then, the *Color* method would contain:
     Form.meta.stroke:="purple"
     Form.meta.cell:=Form.colStyle //reuse the same object for better performance
  ...
-``` 
+```
 
 
 >See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
@@ -394,7 +394,7 @@ Then, the *Color* method would contain:
 ---
 ## Multi-style
 
-This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any \<SPAN> HTML tags found in the area.
+This property enables the possibility of using specific styles in the selected area. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
 
 By default, this option is not enabled.
 
