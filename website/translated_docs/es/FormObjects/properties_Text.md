@@ -379,371 +379,131 @@ Entonces, el método *Color* contendría:
 ---
 ## Multistyle
 
-Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. Cuando esta opción está marcada, 4D interpreta todas las etiquetas \<SPAN> HTML presentes en el área.</p> 
-
-<p spaces-before="0">
-  Por defecto, esta opción no está activa.
-</p>
-
-
-
-<h4 spaces-before="0">
-  Gramática JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nombre
-    </th>
-    
-    <th>
-      Tipos de datos
-    </th>
-    
-    <th>
-      Valores posibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      styledText
-    </td>
-    
-    <td>
-      booleano
-    </td>
-    
-    <td>
-      true, false
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objetos soportados
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#list-box-columns">Columna List Box</a> - <a href="input_overview.md">Entrada</a>
-</p>
-
-
-
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Orientación
-</h2>
-
-<p spaces-before="0">
-  Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
-</p>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Valor de orientación
-    </th>
-    
-    <th>
-      Resultado
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      0 (por defecto)
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation1.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      90
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation2.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      180
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation3.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      270
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation4.png" alt="" />
-    </td>
-  </tr>
-</table>
-
-<p spaces-before="0">
-  Además de <a href="text.md">áreas de texto estáticas</a>, los objetos de texto de las <a href="input_overview.md">áreas de entrada</a> pueden girar cuando no son<a href="properties_Entry.md#enterable">editables</a>. Cuando se aplica una propiedad de rotación a un objeto de entrada, se elimina la propiedad editable (si la hay). Este objeto se excluye entonces del orden de entrada.
-</p>
-
-
-
-
-<h4 spaces-before="0">
-  Gramática JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nombre
-    </th>
-    
-    <th>
-      Tipos de datos
-    </th>
-    
-    <th>
-      Valores posibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      textAngle
-    </td>
-    
-    <td>
-      number
-    </td>
-    
-    <td>
-      0, 90, 180, 270
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objetos soportados
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">Entrada</a> (no editable) - <a href="text.md">Área de texto</a>
-</p>
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Array colores de fuente
-</h2>
-
-<p spaces-before="0">
-  <code>List box de tipo array</code>
-</p>
-
-<p spaces-before="0">
-  Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
-</p>
-
-<p spaces-before="0">
-  Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a>. Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
-</p>
-
-<h4 spaces-before="0">
-  Gramática JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nombre
-    </th>
-    
-    <th>
-      Tipos de datos
-    </th>
-    
-    <th>
-      Valores posibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStrokeSource
-    </td>
-    
-    <td>
-      cadena
-    </td>
-    
-    <td>
-      El nombre de un array entero largo
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objetos soportados
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Columna List Box</a>
-</p>
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Array de estilos
-</h2>
-
-<p spaces-before="0">
-  <code>List box de tipo array</code>
-</p>
-
-<p spaces-before="0">
-  Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
-</p>
-
-<p spaces-before="0">
-  Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar el array (utilizando un método), utilice las constantes del tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estilos de fuente</a>. Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
-</p>
-
-
-<h4 spaces-before="0">
-  Gramática JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nombre
-    </th>
-    
-    <th>
-      Tipos de datos
-    </th>
-    
-    <th>
-      Valores posibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStyleSource
-    </td>
-    
-    <td>
-      cadena
-    </td>
-    
-    <td>
-      El nombre de un array entero largo.
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objetos soportados
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">Columna List Box</a>
-</p>
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Almacenar con etiquetas de estilo por defecto
-</h2>
-
-<p spaces-before="0">
-  Esta propiedad sólo está disponible para un área de entrada <a href="#multi-estilo">Multi-estilo</a>. Cuando esta propiedad está activada, el área almacenará las etiquetas de estilo con el texto, incluso si no se ha realizado ninguna modificación. En este caso, las etiquetas corresponden al estilo por defecto. Cuando esta propiedad está desactivada, sólo se almacenan las etiquetas de estilo modificadas.
-</p>
-
-<p spaces-before="0">
-  Por ejemplo, este es un texto que incluye una modificación de estilo:
-</p>
-
-<p spaces-before="0">
-  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
-</p>
-
-<p spaces-before="0">
-  Cuando la propiedad está desactivada, el área sólo almacena la modificación. Por lo tanto, los contenidos almacenados son:
-</p>
-
-<pre><code>¡Qué &lt;SPAN STYLE="font-size:13.5pt"&gt;hermoso&lt;/SPAN&gt; día!
-</code></pre>
-
-<p spaces-before="0">
-  Cuando la propiedad está activa, el área almacena toda la información de formato. La primera etiqueta genérica describe el estilo por defecto y luego cada variación es objeto de un par de etiquetas anidadas. Por lo tanto, los contenidos almacenados en el área son:
-</p>
-
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;¡Qué &lt;SPAN STYLE="font-size:13.5pt"&gt;hermoso&lt;/SPAN&gt; día!&lt;/SPAN&gt;
-</code></pre>
-
-<h4 spaces-before="0">
-  Gramática JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nombre
-    </th>
-    
-    <th>
-      Tipos de datos
-    </th>
-    
-    <th>
-      Valores posibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      storeDefaultStyle
-    </td>
-    
-    <td>
-      booleano
-    </td>
-    
-    <td>
-      true, false (por defecto).
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objetos soportados
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">Entrada</a>
-</p>
+Esta propiedad permite la posibilidad de utilizar estilos específicos en el área seleccionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
+
+Por defecto, esta opción no está activa.
+
+
+
+#### Gramática JSON
+
+| Nombre     | Tipos de datos | Valores posibles |
+| ---------- | -------------- | ---------------- |
+| styledText | booleano       | true, false      |
+
+#### Objetos soportados
+
+
+[Columna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
+
+
+
+
+
+
+
+
+---
+## Orientación
+
+Modifica la orientación (rotación) de un área de texto. Las áreas de texto pueden girarse en incrementos de 90°. Cada valor de orientación se aplica manteniendo el mismo punto de partida inferior izquierdo para el objeto:
+
+| Valor de orientación | Resultado                                   |
+| -------------------- | ------------------------------------------- |
+| 0 (por defecto)      | ![](assets/en/FormObjects/orientation1.png) |
+| 90                   | ![](assets/en/FormObjects/orientation2.png) |
+| 180                  | ![](assets/en/FormObjects/orientation3.png) |
+| 270                  | ![](assets/en/FormObjects/orientation4.png) |
+
+Además de [áreas de texto estáticas](text.md), los objetos de texto de las [áreas de entrada](input_overview.md) pueden girar cuando no son[editables](properties_Entry.md#enterable). Cuando se aplica una propiedad de rotación a un objeto de entrada, se elimina la propiedad editable (si la hay). Este objeto se excluye entonces del orden de entrada.
+
+
+
+
+#### Gramática JSON
+
+| Nombre    | Tipos de datos | Valores posibles |
+| --------- | -------------- | ---------------- |
+| textAngle | number         | 0, 90, 180, 270  |
+
+#### Objetos soportados
+
+[Entrada](input_overview.md) (no editable) - [Área de texto](text.md)
+
+
+
+
+
+---
+## Array colores de fuente
+`List box de tipo array`
+
+Permite definir un color de fuente personalizado para cada línea del list box o celda de la columna.
+
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Puede utilizar las constantes del tema [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Si desea que la celda herede el color de fondo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+
+#### Gramática JSON
+
+| Nombre          | Tipos de datos | Valores posibles                   |
+| --------------- | -------------- | ---------------------------------- |
+| rowStrokeSource | cadena         | El nombre de un array entero largo |
+
+#### Objetos soportados
+
+[List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
+
+
+
+
+
+---
+## Array de estilos
+`List box de tipo array`
+
+Permite definir un estilo de fuente personalizado para cada línea del list box o cada celda de la columna.
+
+Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array corresponde a una línea del list box (si se aplica al list box) o a una celda de la columna (si se aplica a una columna), por lo que el array debe tener el mismo tamaño que el array asociado a la columna. Para llenar el array (utilizando un método), utilice las constantes del tema [Estilos de fuente](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Se pueden añadir constantes para combinar estilos. Si desea que la celda herede el estilo definido en el nivel superior, pase el valor -255 al elemento del array correspondiente.
+
+
+#### Gramática JSON
+
+| Nombre         | Tipos de datos | Valores posibles                    |
+| -------------- | -------------- | ----------------------------------- |
+| rowStyleSource | cadena         | El nombre de un array entero largo. |
+
+#### Objetos soportados
+
+[List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
+
+
+
+---
+## Almacenar con etiquetas de estilo por defecto
+
+Esta propiedad sólo está disponible para un área de entrada [Multi-estilo](#multi-estilo). Cuando esta propiedad está activada, el área almacenará las etiquetas de estilo con el texto, incluso si no se ha realizado ninguna modificación. En este caso, las etiquetas corresponden al estilo por defecto. Cuando esta propiedad está desactivada, sólo se almacenan las etiquetas de estilo modificadas.
+
+Por ejemplo, este es un texto que incluye una modificación de estilo:
+
+![](assets/en/FormObjects/tagStyle1.png)
+
+Cuando la propiedad está desactivada, el área sólo almacena la modificación. Por lo tanto, los contenidos almacenados son:
+
+```
+¡Qué <SPAN STYLE="font-size:13.5pt">hermoso</SPAN> día!
+```
+
+Cuando la propiedad está activa, el área almacena toda la información de formato. La primera etiqueta genérica describe el estilo por defecto y luego cada variación es objeto de un par de etiquetas anidadas. Por lo tanto, los contenidos almacenados en el área son:
+
+```
+<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">¡Qué <SPAN STYLE="font-size:13.5pt">hermoso</SPAN> día!</SPAN>
+```
+
+#### Gramática JSON
+
+| Nombre            | Tipos de datos | Valores posibles           |
+| ----------------- | -------------- | -------------------------- |
+| storeDefaultStyle | booleano       | true, false (por defecto). |
+
+#### Objetos soportados
+
+[Entrada](input_overview.md)
