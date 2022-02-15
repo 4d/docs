@@ -54,9 +54,9 @@ La elección entre asociar una acción estándar o un método proyecto a un coma
 
 ### Asociar un método proyecto o una acción estándar
 
-You can assign a project method and/or a standard action to a selected menu command in the Menu editor:
-- **Method Name**: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D displays a project method creation dialog that is used to access the Method editor.
-- **Associated Standard Action**: Choose or write the action you want to assign in the "Associated Standard Action" combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the **Standard actions** section in the *Design Reference*. **Note for macOS:** Under macOS, the custom menu commands associated with the *Quit* action are automatically placed in the application menu, in compliance with the platform interface standards.
+Puede asignar un método proyecto y/o una acción estándar a un comando de menú seleccionado en el editor de menú:
+- **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. Si el método proyecto no existe, introduzca su nombre en el combo "Nombre del método" y haga clic en el botón [...]. 4D muestra un diálogo de creación de método proyecto que se utiliza para acceder al editor de métodos.
+- **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el *Modo Diseño*. **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción *Salir* se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
 
 Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
 
