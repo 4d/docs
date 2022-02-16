@@ -58,63 +58,63 @@ Puede asignar un método proyecto y/o una acción estándar a un comando de men�
 - **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. Si el método proyecto no existe, introduzca su nombre en el combo "Nombre del método" y haga clic en el botón [...]. 4D muestra un diálogo de creación de método proyecto que se utiliza para acceder al editor de métodos.
 - **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el *Modo Diseño*. **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción *Salir* se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
 
-Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
+Utilizando el lenguaje 4D, puedes asociar un método proyecto utilizando el comando `SET MENU ITEM METHOD`, y una acción estándar utilizando el comando `SET MENU ITEM PROPERTY`.
 
-### Iniciar un nuevo proceso
-The **Start a New Process** option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the *property* parameter of the `SET MENU ITEM PROPERTY` command.
+### Iniciar un proceso
+La opción **Iniciar un nuevo proceso** está disponible para los comandos de menú asociados a los métodos. Puede definirse a través de una casilla de selección en el editor de menús, o a través del parámetro *propiedad* del comando `SET MENU ITEM PROPERTY`.
 
-When the **Start a New Process** option is enabled, a new process is created when the menu command is chosen. Normally, a method attached to a menu command executes within the current process unless you explicitly call a new process in your code. The **Start a New Process** option makes it easier to start a new process. When enabled, 4D will create a new process when the menu command is chosen.
+Cuando la opción **Iniciar un nuevo proceso** está activada, se crea un nuevo proceso cuando se elige el comando de menú. Normalmente, un método asociado a un comando de menú se ejecuta en el proceso actual a menos que llame explícitamente a un nuevo proceso en su código. La opción **Iniciar un nuevo proceso** facilita el lanzamiento de un nuevo proceso. Si se activa, 4D creará un nuevo proceso cuando se elija el comando del menú.
 
-In the Process list, 4D assigns the new process a default name using the format "ML_ProcessNumber". The names of processes started from a menu are created by combining the prefix "ML_" with the process number.
+En la lista de procesos, 4D asigna al nuevo proceso un nombre por defecto utilizando el formato "ML_NúmeroProceso". Los nombres de los procesos iniciados desde un menú se crean combinando el prefijo "ML_" con el número del proceso.
 
-### Execute without validating
-The **Execute without validating** option is available for menu commands associated to standard actions in the Menu editor only.
+### Ejecutar sin validar
+La opción **Ejecutar sin validar** está disponible sólo para los comandos de menú asociados a acciones estándar en el editor de menús.
 
-When this option is checked, 4D does not trigger the "validation" of the field where the cursor is located before executing the associated action. This option is mainly intended for **Edit** menu commands. By default, 4D processes and "validates" the contents of a field before executing a standard action (via a menu command or a shortcut), which has the effect of generating an `On Data Change` form event. This can disrupt the functioning of copy or paste type commands because when they are called, the `On Data Change` form event is generated unexpectedly. In this case, it is useful to check the **Execute without validating** option.
+Cuando esta opción está marcada, 4D no activa la "validación" del campo donde se encuentra el cursor antes de ejecutar la acción asociada. Esta opción está pensada principalmente para los comandos del menú **Edición**. Por defecto, 4D procesa y "valida" el contenido de un campo antes de ejecutar una acción estándar (a través de un comando de menú o un acceso directo), que tiene el efecto de generar un evento de formulario `On Data Change`. Esto puede interrumpir el funcionamiento de los comandos de tipo copiar o pegar, ya que cuando son llamados, el evento formulario `On Data Change` se genera inesperadamente. En este caso, es útil marcar la opción **Ejecutar sin validar**.
 
 
-## Remote access privileges
+## Privilegios de acceso remoto
 
-This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).
+Esta opción del editor de menús permite definir un grupo para un comando de menú para que sólo los usuarios de ese grupo puedan utilizar el comando de menú desde una aplicación remota 4D (ver Usuarios y grupos).
 
 ## Opciones
 
 ### Líneas de separación
 
-Groups of menu commands in a menu can be divided by a separator line. This convention is useful for grouping associated menu commands by function.
+Los grupos de comandos de menús pueden estar divididos por una línea de separación. Esta convención es útil para agrupar los comandos de menú asociados por función.
 
 ![](assets/en/Menus/separator.png)
 
-You add a separator line by creating a specific menu command.
+Se añade una línea de separación mediante la creación de un comando de menú específico.
 
-In the Menu editor, instead of entering the menu command’s text in the title area, you simply select the **Separator Line** option. Instead of text, a line appears in the current menu bar area. When this option is checked, the other properties have no effect. **Note:** Under macOS, if you use the dash “-” as the first character of a menu item, it will appear as a separator line.
+En el editor de menús, en lugar de introducir el texto del comando de menú en el área del título, basta con seleccionar la opción **Línea separadora**. En lugar de texto, aparece una línea en el área de la barra de menú actual. Cuando esta opción está marcada, las otras propiedades no tienen efecto. **Nota:** en macOS, si utiliza el guión "-" como primer caracter de un elemento de menú, aparecerá como línea de separación.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM` commands.
+En el lenguaje 4D, se inserta una línea de separación introduciendo `-` o `(-` como itemText para los comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, o `SET MENU ITEM`.
 
 
 ### Atajos de teclado
 
-You can add keyboard shortcuts to any menu command. If a menu command has one of these keyboard shortcuts, users will see it next to the menu command. For example, "Ctrl+C" (Windows) or "Command+C" (macOS) appears next to the **Copy** menu command in the **Edit** menu.
+Puede añadir atajos de teclado a todo comando de menú. Si un comando de menú tiene uno de estos atajos de teclado, los usuarios lo verán junto al comando de menú. Por ejemplo, "Ctrl+C" (Windows) o "Comando+C" (macOS) aparece junto al comando de menú **Copiar** en el menú **Edición**.
 
-You can also add the **Shift** key as well as the **Alt** key (Windows) or **Option** key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:
+También puede añadir la tecla **Mayús**, así como la tecla **Alt** (Windows) u **Opción** (macOS) al acceso directo asociado a un comando de menú. Esto multiplica el número de accesos directos que se pueden utilizar. Por lo tanto, se pueden definir los siguientes tipos de atajos de teclado:
 
 - En Windows:
     - Ctrl+caracter
-    - Ctrl+Shift+character
+    - Ctrl+Mayús+letra
     - Ctrl+Alt+caracter
-    - Ctrl+Shift+Alt+character
+    - Ctrl+Mayús+Alt+letra
 
 - En macOS:
-    - Comando+caracter
-    - Comando+Mayús+caracter
-    - Command+Option+character
-    - Command+Shift+Option+character
+    - Comando+letra
+    - Comando+Mayús+letra
+    - Comando+Opción+letra
+    - Comando+Mayús+Opción+letra
 
-> We recommend that you keep the default keyboard shortcuts that are associated with standard actions.
+> Le recomendamos que mantenga los atajos de teclado por defecto que están asociados a las acciones estándar.
 
-You can use any alphanumeric keys as a keyboard shortcut, except for the keys reserved by standard menu commands that appear in the **Edit** and **File** menus, and the keys reserved for 4D menu commands.
+Puede utilizar cualquier tecla alfanumérica como atajo de teclado, excepto las teclas reservadas por los comandos de menú estándar que aparecen en los menús **Edición** y **Archivo**, y las teclas reservadas para los comandos de menú 4D.
 
-These reserved key combinations are listed in the following table:
+Estas combinaciones de teclas reservadas se indican en la siguiente tabla:
 
 | Llave (Windows) | Llave (macOS)     | Operación         |
 | --------------- | ----------------- | ----------------- |
@@ -125,24 +125,24 @@ These reserved key combinations are listed in the following table:
 | Ctrl+Z          | Comando+Z         | Deshacer          |
 | Ctrl+. (punto)  | Comando+. (punto) | Detener la acción |
 
-To assign a keyboard shortcut in the Menu editor:
+Para asignar un atajo de teclado en el editor de menús:
 
-Select the menu item to which you want to assign a keyboard shortcut. Click on the [...] button to the right of the "Shortcut" entry area. The following window appears:
+Seleccione la opción de menú a la que desea asignar un atajo de teclado. Haga clic en el botón [...] situado a la derecha del área de entrada "Acceso directo". Aparece la siguiente ventana:
 
 ![](assets/en/Menus/Shortcut.png)
 
-Enter the character to use then (optional) click the **Shift** and/or **Alt** (**Option**) checkboxes according to the combination desired. You can also directly press the keys that make up the desired combination (do not press the **Ctrl/Command** key).
+Introduzca el carácter que desea utilizar y, a continuación (opcional), haga clic en las casillas de selección **Mayús** y/o **Alt** (**Opción**) según la combinación deseada. También puede presionar directamente las teclas que componen la combinación deseada (no presione la tecla **Ctrl/Comando**).
 
-> You cannot deselect the Ctrl/Command key, which is mandatory for keyboard shortcuts for menus. To start over, click on **Clear**. Click **OK** to validate the changes. The shortcut defined is shown in the "Shortcut" entry area.
+> No se puede desmarcar la tecla Ctrl/Comando, que es obligatoria para los atajos de teclado de los menús. Para volver a empezar, haga clic en **Borrar**. Haga clic en **Aceptar** para validar los cambios. El acceso directo definido se muestra en el área de entrada "Acceso directo".
 
-To assign a keyboard shortcut using the 4D language, use the `SET ITEM SHORTCUT` command.
+Para asignar un atajo de teclado utilizando el lenguaje 4D, utilice el comando `SET ITEM SHORTCUT`.
 
-> An active object can also have a keyboard shortcut. If the **Ctrl/Command** key assignments conflict, the active object takes precedence.
+> Un objeto activo también puede tener un atajo de teclado. Si las asignaciones de las teclas **Ctrl/Comando** entran en conflicto, el objeto activo tiene prioridad.
 
 
 ### Línea activa
 
-In the Menu editor, you can specify whether a menu item will appear enabled or disabled. An enabled menu command can be chosen by the user; a disabled menu command is dimmed and cannot be chosen. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
+En el editor de menús, puede especificar si un elemento del menú aparecerá activo o inactivo. Un comando de menú activo puede ser elegido por el usuario; un comando de menú inactivo está atenuado y no puede ser elegido. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
 
 Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with `ENABLE MENU ITEM` and `DISABLE MENU ITEM` commands.
 
