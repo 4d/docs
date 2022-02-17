@@ -4,11 +4,11 @@ title: Generalidades
 sidebar_label: Generalidades
 ---
 
-The Maintenance and Security Center (MSC) window contains all the tools needed for verification, analysis, maintenance, backup, compacting, and encrypting of data files. The MSC window is available in all 4D applications: 4D single user, 4D Server or 4D Desktop.
+La ventana del Centro de Mantenimiento y Seguridad (CSM) contiene todas las herramientas necesarias para la verificación, el análisis, el mantenimiento, la copia de seguridad, la compactación y el cifrado de los archivos de datos. La ventana CSM está disponible en todas las aplicaciones 4D: 4D monousuario, 4D Server o 4D Desktop.
 
-**Note:** The MSC window is not available from a 4D remote connection.
+**Nota:** la ventana del CSM no está disponible desde una conexión remota 4D.
 
-There are several ways to open the MSC window. El modo de acceso también determina el modo de apertura de la base: en modo "mantenimiento" o en modo "estándar". En modo mantenimiento, la base no es abierta por 4D, sólo se provee su referencia al CSM. En modo estándar, la base es abierta por 4D.
+Hay varias formas de abrir la ventana del CSM. El modo de acceso también determina el modo de apertura de la base: en modo "mantenimiento" o en modo "estándar". En modo mantenimiento, la base no es abierta por 4D, sólo se provee su referencia al CSM. En modo estándar, la base es abierta por 4D.
 
 
 ## Display in maintenance mode
