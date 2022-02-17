@@ -6,13 +6,13 @@ title: List Box
 ---
 ## Columnas
 
-Collection of columns of the list box.
+Colección de columnas del list box.
 
 #### Gramática JSON
 
-| Nombre  | Tipos de datos               | Valores posibles                                 |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| Nombre  | Tipos de datos               | Valores posibles                                     |
+| ------- | ---------------------------- | ---------------------------------------------------- |
+| columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
@@ -24,9 +24,9 @@ For a list of properties supported by column objects, please refer to the [Colum
 ## Nombre formulario detallado
 `List box del tipo selección`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+Especifica el formulario que se utilizará para modificar o mostrar los registros individuales del list box.
 
-The specified form is displayed:
+Se muestra el formulario especificado:
 
 *   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
 *   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
