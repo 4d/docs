@@ -142,35 +142,35 @@ Para asignar un atajo de teclado utilizando el lenguaje 4D, utilice el comando `
 
 ### Línea activa
 
-En el editor de menús, puede especificar si un elemento del menú aparecerá activo o inactivo. Un comando de menú activo puede ser elegido por el usuario; un comando de menú inactivo está atenuado y no puede ser elegido. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
+En el editor de menús, puede especificar si un elemento del menú aparecerá activo o inactivo. Un comando de menú activo puede ser elegido por el usuario; un comando de menú inactivo está atenuado y no puede ser elegido. Cuando la casilla de selección **Línea activa** está desmarcada, el comando de menú aparece atenuado, lo que indica que no se puede elegir.
 
-Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with `ENABLE MENU ITEM` and `DISABLE MENU ITEM` commands.
+A menos que especifique lo contrario, 4D habilita automáticamente cada elemento de menú que añada a un menú personalizado. Puede desactivar un elemento para, por ejemplo, activarlo sólo por programación con los comandos `ENABLE MENU ITEM` y `DISABLE MENU ITEM`.
 
 
 ### Marca de verificación
 
-This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (`SET MENU ITEM MARK` and `Get menu item mark`).
+Esta opción del editor de menús puede utilizarse para asociar una marca de verificación del sistema a un elemento del menú. A continuación, puede gestionar la visualización de la marca de verificación utilizando los comandos del lenguaje (`SET MENU ITEM MARK` y `Get menu item mark`).
 
-Check marks are generally used for continuous action menu items and indicate that the action is currently underway.
+Las marcas de verificación se utilizan generalmente para los elementos del menú de acción continua e indican que la acción está en curso.
 
 ### Estilos de fuentes
 
-4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the `SET MENU ITEM STYLE` language command.
+4D le permite personalizar los menús aplicando diferentes estilos de letra a los comandos del menú. Puede personalizar sus menús con los estilos Negrita, Cursiva o Subrayado a través de las opciones del editor de menús, o utilizando el comando de lenguaje `SET MENU ITEM STYLE`.
 
-As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.
-> You can also apply styles by inserting special characters in the menu title (see [Using control characters](properties.md#using-control-characters) above).
+Como regla general, aplique los estilos de fuente con moderación a sus menús; demasiados estilos distraerán al usuario y darán un aspecto desordenado a su aplicación.
+> También puede aplicar estilos insertando caracteres especiales en el título del menú (ver [Usar caracteres de control](properties.md#using-control-characters) más arriba).
 
 
-### Item icon
+### Icono línea
 
-You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:
+Puede asociar un icono a un elemento del menú. Aparecerá directamente en el menú, junto al elemento:
 
 ![](assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. Si selecciona un archivo imagen que no está almacenado en la carpeta Recursos de la base, se copiará automáticamente en esa carpeta. Una vez definido, el icono del elemento aparece en el área de vista previa:
+Para definir el icono en el editor de menús, haga clic en el área "Icono del elemento" y seleccione **Abrir** para abrir una imagen del disco. Si selecciona un archivo imagen que no está almacenado en la carpeta Recursos de la base, se copiará automáticamente en esa carpeta. Una vez definido, el icono del elemento aparece en el área de vista previa:
 
 ![](assets/en/Menus/iconpreview.png)
 
-To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
+Para eliminar el icono del elemento, elija la opción **Sin icono** del área "Icono línea".
 
-To define item icons using the 4D language, call the `SET MENU ITEM ICON` command.
+Para definir los iconos de los elementos utilizando el lenguaje 4D, llame al comando `SET MENU ITEM ICON`.
