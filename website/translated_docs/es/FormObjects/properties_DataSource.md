@@ -70,7 +70,7 @@ Lista de valores estáticos a utilizar como etiquetas para el objeto de control 
 
 ---
 ## Elemento actual
-`Collection or entity selection list boxes`
+`List boxes colección o entity selection`
 
 Especifica una variable o expresión a la que se asignará el elemento/entidad de la colección seleccionado por el usuario. Debe utilizar una variable objeto o una expresión asignable que acepte objetos. Si el usuario no selecciona nada o si ha utilizado una colección de valores escalares, se asigna el valor Null.
 > Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
