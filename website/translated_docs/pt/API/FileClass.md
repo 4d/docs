@@ -352,7 +352,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 All property values are Text.
 
-| Property         | Type  |
+| Propriedade      | Type  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -583,7 +583,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Property         | Type  |
+| Propriedade      | Type  |
 | ---------------- | ----- |
 | InternalName     | Texto |
 | ProductName      | Texto |
@@ -689,7 +689,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 <!--REF #FileClass.setText().Params -->
 | Parameter   | Type    |    | Description                                                |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
-| text        | Texto   | -> | Text to store in the file                                  |
+| texto       | Texto   | -> | Text to store in the file                                  |
 | charSetName | Texto   | -> | Name of character set                                      |
 | charSetNum  | Integer | -> | Number of character set                                    |
 | breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->

@@ -33,9 +33,9 @@ You use this property to declare the detail form to use in the subform. Puede se
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                    |
-| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| detailForm | cadena         | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                 |
+| ---------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| detailForm | cadena         | Nombre (cadena) de la tabla o formulario proyecto, una ruta POSIX (cadena) a un archivo .json que describa el formulario, o un objeto que describa el formulario |
 
 #### Objetos soportados
 
@@ -44,7 +44,7 @@ You use this property to declare the detail form to use in the subform. Puede se
 ---
 ## Double-click on empty row
 
-Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
+Acción a realizar en caso de doble clic en una línea vacía de un subformulario listado. The following options are available:
 - Do nothing: Ignores double-click.
 - Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
 
@@ -120,9 +120,9 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 #### Gramática JSON
 
-| Nombre   | Tipos de datos | Valores posibles                                                                                                                    |
-| -------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| listForm | cadena         | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
+| Nombre   | Tipos de datos | Valores posibles                                                                                                                                                 |
+| -------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| listForm | cadena         | Nombre (cadena) de la tabla o formulario proyecto, una ruta POSIX (cadena) a un archivo .json que describa el formulario, o un objeto que describa el formulario |
 
 #### Objetos soportados
 

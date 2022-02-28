@@ -241,7 +241,7 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> The following entity selections are always **ordered**:
+> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
 > * entity selections returned by 4D Server to a remote client
 > * entity selections built upon remote datastores.

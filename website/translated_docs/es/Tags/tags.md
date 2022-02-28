@@ -692,7 +692,7 @@ This alternative syntax is available only for tags used to return processed valu
 
 (Other tags, such as 4DIF or 4DSCRIPT, must be written with the regular syntax).
 
-For example, you can write:
+Por ejemplo, puede escribir:
 
 ```html
 $4DEVAL(UserName)

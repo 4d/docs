@@ -128,15 +128,15 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 
 
-### Collapse / Expand
+### Contrair/expandir
 
-This button style can be used to add a standard collapse/expand icon. These buttons are used natively in hierarchical lists. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
+This button style can be used to add a standard collapse/expand icon. Esses botões são usados nativamente em listas hierárquicas. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 
 
 
-### Disclosure Button
+### Botão disclosure
 
 The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. The button symbol points downwards with value 0 and upwards with value 1.
 
@@ -157,4 +157,4 @@ All radio buttons share the same set of basic properties:
 Additional specific properties are available depending on the [button style](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)
+- [Número de estados](properties_TextAndPicture.md#number-of-states) - [Rota de imagem](properties_TextAndPicture.md#picture-pathname) - [Titulo/posição imagem](properties_TextAndPicture.md#title-picture-position) (botão Toolbar, Bevel, Bevel arredondado, OS X Gradient, OS X Textured, Office XP, Custom)

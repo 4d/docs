@@ -605,7 +605,11 @@ You can select the data linking mode during the build application process. You c
 
 ### Defining a default data folder
 
-4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. When the application is launched for the first time, if no local data file is found (see [opening sequence described above](#opening-the-data-file)), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.
+
+More specifically, the following cases are covered:
+
+- Avoiding the display of the 4D "Open Data File" dialog box when launching a new or updated merged application. This gives you better control over data file creation and/or opening when launching a merged application for the first time. </p>
 
 More specifically, the following cases are covered:
 

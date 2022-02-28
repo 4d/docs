@@ -1613,12 +1613,12 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v16 R6  | Añadidos       |
-</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Parámetros  | Tipo       |    | Descripción                                       |
-| ----------- | ---------- |:--:| ------------------------------------------------- |
-| pathStrings | Texto      | -> | Property path(s) on which to order the collection |
-| pathObjects | Collection | -> | Colección de objetos criterio                     |
-| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values) |
-| Resultado   | Collection | <- | Ordered copy of the collection (shallow copy)     |<!-- END REF -->#### Descripción
+</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Parámetros  | Tipo       |    | Descripción                                                   |
+| ----------- | ---------- |:--:| ------------------------------------------------------------- |
+| pathStrings | Texto      | -> | Ruta(s) de propiedad(es) a utilizar para ordenar la colección |
+| pathObjects | Collection | -> | Colección de objetos criterio                                 |
+| ascOrDesc   | Integer    | -> | `ck ascending` o `ck descending` (valores escalares)          |
+| Resultado   | Collection | <- | Copia ordenada de la colección (copia superficial)            |<!-- END REF -->#### Descripción
 
 La función `.orderBy()`<!-- REF #collection.orderBy().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
 
@@ -2349,7 +2349,7 @@ Si desea ordenar los elementos de la colección en otro orden o clasificar cualq
         *   *$1.value2* (todo tipo): segundo valor del elemento a comparar
     *   $2...$N (cualquier tipo): parámetros adicionales
 
-*methodName* sets the following parameter:
+*methodName* define el siguiente parámetro:
     *   *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Los tipos se devuelven en el siguiente orden:

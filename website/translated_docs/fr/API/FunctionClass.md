@@ -257,7 +257,7 @@ Appeler une formule à l'aide de la notation objet :
 <!-- REF #_command_.Formula from string.Params -->
 | Paramètres    | Type        |    | Description                           |
 | ------------- | ----------- |:--:| ------------------------------------- |
-| formulaString | Texte       | -> | Formule texte à retourner comme objet |
+| formulaString | Text        | -> | Formule texte à retourner comme objet |
 | Résultat      | 4D.Function | <- | Objet natif encapsulant la formule    |
 <!-- END REF -->
 

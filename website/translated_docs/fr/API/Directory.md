@@ -492,7 +492,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 <!-- REF #directory.file().Params -->
 | Paramètres | Type    |    | Description                            |
 | ---------- | ------- | -- | -------------------------------------- |
-| path       | Texte   | -> | Chemin POSIX relatif                   |
+| path       | Text    | -> | Chemin POSIX relatif                   |
 | Résultat   | 4D.File | <- | Objet `File` (null si chemin invalide) |
 <!-- END REF -->
 
@@ -593,7 +593,7 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 <!-- REF #directory.folder().Params -->
 | Paramètres | Type      |    | Description                             |
 | ---------- | --------- | -- | --------------------------------------- |
-| path       | Texte     | -> | Chemin POSIX relatif                    |
+| path       | Text      | -> | Chemin POSIX relatif                    |
 | Résultat   | 4D.Folder | <- | Objet dossier (null si *path* invalide) |
 <!-- END REF -->
 

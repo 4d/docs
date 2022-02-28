@@ -240,7 +240,7 @@ A new entity selection **inherits** from the original entity selection nature in
     - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
     - [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
 
-Examples:
+Exemplos:
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
@@ -382,7 +382,10 @@ This feature is based upon two methods of the `Entity` class:
 *   `entity.lock()`
 *   `entity.unlock()`
 
-For more information, please refer to the descriptions for these methods.
+For more information, please refer to the descriptions for these functions.
+
+> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+
 
 
 ### Concurrent use of 4D classic locks and ORDA pessimistic locks

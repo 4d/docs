@@ -7,7 +7,7 @@ Une combo box est semblable à une [liste déroulante](dropdownList_Overview.md#
 
 ![](assets/en/FormObjects/combo_box.png)
 
-Fundamentally, you treat a combo box as an enterable area that uses its object, array or a choice list as the set of default values.
+Fondamentalement, vous devez considérer l’objet combo box comme une zone saisissable qui utilise un tableau ou une liste de choix en tant que liste de valeurs par défaut.
 
 ## Handling combo boxes
 

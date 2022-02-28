@@ -68,7 +68,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <!-- REF #_command_.File.Params -->
 | Paramètres   | Type    |    | Description                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
-| path         | Texte   | -> | Chemin de fichier                               |
+| path         | Text    | -> | Chemin de fichier                               |
 | fileConstant | Integer | -> | 4D file constant                                |
 | pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
@@ -212,7 +212,7 @@ Creation of a preferences file in the database folder:
 | Paramètres        | Type      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texte     | -> | Name of the alias or shortcut                |
+| aliasName         | Text      | -> | Name of the alias or shortcut                |
 | aliasType         | Integer   | -> | Type of the alias link                       |
 | Résultat          | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
@@ -352,16 +352,16 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 All property values are Text.
 
-| Propriété        | Type  |
-| ---------------- | ----- |
-| InternalName     | Texte |
-| ProductName      | Texte |
-| CompanyName      | Texte |
-| LegalCopyright   | Texte |
-| ProductVersion   | Texte |
-| FileDescription  | Texte |
-| FileVersion      | Texte |
-| OriginalFilename | Texte |
+| Propriété        | Type |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 **Returned object with a .plist file**
 
@@ -455,7 +455,7 @@ ALERT($info.Copyright)
 | Paramètres        | Type      |    | Description                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Dossier de destination       |
-| newName           | Texte     | -> | Full name for the moved file |
+| newName           | Text      | -> | Full name for the moved file |
 | Résultat          | 4D.File   | <- | Moved file                   |
 <!-- END REF -->
 
@@ -522,7 +522,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.rename().Params -->
 | Paramètres | Type    |    | Description                |
 | ---------- | ------- | -- | -------------------------- |
-| newName    | Texte   | -> | New full name for the file |
+| newName    | Text    | -> | New full name for the file |
 | Résultat   | 4D.File | <- | Renamed file               |
 <!-- END REF -->
 
@@ -583,16 +583,16 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
 
-| Propriété        | Type  |
-| ---------------- | ----- |
-| InternalName     | Texte |
-| ProductName      | Texte |
-| CompanyName      | Texte |
-| LegalCopyright   | Texte |
-| ProductVersion   | Texte |
-| FileDescription  | Texte |
-| FileVersion      | Texte |
-| OriginalFilename | Texte |
+| Propriété        | Type |
+| ---------------- | ---- |
+| InternalName     | Text |
+| ProductName      | Text |
+| CompanyName      | Text |
+| LegalCopyright   | Text |
+| ProductVersion   | Text |
+| FileDescription  | Text |
+| FileVersion      | Text |
+| OriginalFilename | Text |
 
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
@@ -689,8 +689,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 <!--REF #FileClass.setText().Params -->
 | Paramètres  | Type    |    | Description                                                |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
-| Texte       | Texte   | -> | Text to store in the file                                  |
-| charSetName | Texte   | -> | Nom du jeu de caractères                                   |
+| Texte       | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | Nom du jeu de caractères                                   |
 | charSetNum  | Integer | -> | Numéro du jeu de caractères                                |
 | breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 

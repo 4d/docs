@@ -21,8 +21,11 @@ Estos son algunos ejemplos de constantes de tipo hora:
 
 ```4d
 ?00:00:00? ` media noche
+?09:30:00? ?00:00:00? ` media noche
 ?09:30:00? ` 9:30 am
 ?13:01:59? ?00:00:00? ` media noche
+?09:30:00? ` 9:30 am
+?13:01:59? ` 1 pm, 1 minuto, y 59 segundos ?00:00:00? ` media noche
 ?09:30:00? ` 9:30 am
 ?13:01:59? ` 1 pm, 1 minuto, y 59 segundos
 ```
@@ -33,29 +36,29 @@ Una hora nula se escribe ?00:00:00?
 
 ## Operadores de horas
 
-| Operación         | Sintaxis       | Devuelve | Expresión                                       | Valor      |
-| ----------------- | -------------- | -------- | ----------------------------------------------- | ---------- |
-| Adición           | Hora + Hora    | Hora     | ?02:03:04? ?02:03:04? + ?01:02:03?              | ?03:05:07? |
-| Resta             | Hora – Hora    | Hora     | ?02:03:04? – ?01:02:03?                         | ?01:01:01? |
-| Adición           | Hora + Número  | Número   | ?02:03:04? ?02:03:04? + 65                      | 7449       |
-| Resta             | Hora – Número  | Número   | ?02:03:04? – 65                                 | 7319       |
-| Multiplicación    | Hora * Número  | Número   | ?02:03:04? * 2                                  | 14768      |
-| División          | Hora / Número  | Número   | ?02:03:04? ?02:03:04? / 2                       | 3692       |
-| División entera   | Hora \ Número | Número   | ?02:03:04? \ 2                                 | 3692       |
-| Módulo            | Hora % Hora    | Hora     | ?20:10:00? ?20:10:00? % ?04:20:00?              | ?02:50:00? |
-| Módulo            | Hora % Número  | Número   | ?02:03:04? ?02:03:04? % 2                       | 0          |
-| Igual             | Hora = Hora    | Booleano | ?01:02:03? ?01:02:03? = ?01:02:03?              | True       |
-|                   |                |          | ?01:02:03? ?01:02:03? = ?01:02:04?              | False      |
-| Desigualdad       | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04?                         | True       |
-|                   |                |          | ?01:02:03? # ?01:02:03?                         | False      |
-| Mayor que         | Hora > Hora    | Booleano | ?01:02:03? # ?01:02:04? ?01:02:03? > ?01:02:03? | True       |
-|                   |                |          | ?01:02:03? ?01:02:03? > ?01:02:03?              | False      |
-| Menor que         | Hora < Hora    | Booleano | ?01:02:03? ?01:02:03? < ?01:02:04?              | True       |
-|                   |                |          | ?01:02:03? ?01:02:03? < ?01:02:03?              | False      |
-| Mayor o igual que | Hora >= Hora   | Booleano | ?01:02:03? ?01:02:03? >=?01:02:03?              | True       |
-|                   |                |          | ?01:02:03? ?01:02:04? > ?01:02:03?              | False      |
-| Menor o igual que | Hora <= Hora   | Booleano | ?01:02:03? <=?01:02:03?                         | True       |
-|                   |                |          | ?01:02:03? # ?01:02:04? <=?01:02:03?            | False      |
+| Operación         | Sintaxis       | Devuelve | Expresión                                                  | Valor      |
+| ----------------- | -------------- | -------- | ---------------------------------------------------------- | ---------- |
+| Adición           | Hora + Hora    | Hora     | ?02:03:04? ?02:03:04? + ?01:02:03?                         | ?03:05:07? |
+| Resta             | Hora – Hora    | Hora     | ?02:03:04? – ?01:02:03?                                    | ?01:01:01? |
+| Adición           | Hora + Número  | Número   | ?02:03:04? ?02:03:04? + 65                                 | 7449       |
+| Resta             | Hora – Número  | Número   | ?02:03:04? – 65                                            | 7319       |
+| Multiplicación    | Hora * Número  | Número   | ?02:03:04? * 2                                             | 14768      |
+| División          | Hora / Número  | Número   | ?02:03:04? ?02:03:04? / 2                                  | 3692       |
+| División entera   | Hora \ Número | Número   | ?02:03:04? \ 2                                            | 3692       |
+| Módulo            | Hora % Hora    | Hora     | ?20:10:00? ?20:10:00? % ?04:20:00? ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Módulo            | Hora % Número  | Número   | ?02:03:04? ?02:03:04? % 2                                  | 0          |
+| Igual             | Hora = Hora    | Booleano | ?01:02:03? ?01:02:03? = ?01:02:03?                         | True       |
+|                   |                |          | ?01:02:03? ?01:02:03? = ?01:02:04?                         | False      |
+| Desigualdad       | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04?                                    | True       |
+|                   |                |          | ?01:02:03? # ?01:02:03?                                    | False      |
+| Mayor que         | Hora > Hora    | Booleano | ?01:02:03? # ?01:02:04? ?01:02:03? ?01:02:03? > ?01:02:03? | True       |
+|                   |                |          | ?01:02:03? ?01:02:03? ?01:02:03? > ?01:02:03?              | False      |
+| Menor que         | Hora < Hora    | Booleano | ?01:02:03? ?01:02:03? < ?01:02:04?                         | True       |
+|                   |                |          | ?01:02:03? ?01:02:03? < ?01:02:03?                         | False      |
+| Mayor o igual que | Hora >= Hora   | Booleano | ?01:02:03? ?01:02:03? >=?01:02:03?                         | True       |
+|                   |                |          | ?01:02:03? ?01:02:04? > ?01:02:03?                         | False      |
+| Menor o igual que | Hora <= Hora   | Booleano | ?01:02:03? ?01:02:03? <=?01:02:03?                         | True       |
+|                   |                |          | ?01:02:03? # ?01:02:04? ?01:02:03? <=?01:02:03?            | False      |
 
 ### Ejemplo 1
 
@@ -83,7 +86,7 @@ La segunda línea podría escribirse de forma más sencilla:
 El operador Modulo puede utilizarse, más concretamente, para sumar tiempos que tengan en cuenta el formato de 24 horas:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 hours
+$t1:=?23:00:00? // Son las 23:00 p.m. // It is 23:00 hours
   // We want to add 2 and a half hours
 $t2:=$t1 +?02:30:00? // Con una simple adición, $t2 es ?25:30:00?
 $t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 es ?01:30:00? and it is 1:30 hour the next morning

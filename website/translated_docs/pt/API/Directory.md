@@ -530,10 +530,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Parameter | Type       |    | Description                         |
-| --------- | ---------- | -- | ----------------------------------- |
-| options   | Integer    | -> | File list options                   |
-| Result    | Collection | <- | Collection of children file objects |
+| Parameter | Type    |    | Description                         |
+| --------- | ------- | -- | ----------------------------------- |
+| options   | Integer | -> | File list options                   |
+| Result    | Coleção | <- | Collection of children file objects |
 <!-- END REF -->
 
 #### Description
@@ -552,7 +552,7 @@ By default, if you omit the *options* parameter, only the files at the first lev
 
 Collection of `File` objects.
 
-#### Example 1
+#### Exemplo 1
 
 You want to know if there are invisible files in the Database folder:
 
@@ -565,7 +565,7 @@ You want to know if there are invisible files in the Database folder:
  End if
 ```
 
-#### Example 2
+#### Exemplo 2
 
 You want to get all files that are not invisible in the Documents folder:
 
@@ -631,10 +631,10 @@ A `Folder` object or null if *path* is invalid.
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Parameter | Type       |    | Description                           |
-| --------- | ---------- | -- | ------------------------------------- |
-| options   | Integer    | -> | Folder list options                   |
-| Result    | Collection | <- | Collection of children folder objects |
+| Parameter | Type    |    | Description                           |
+| --------- | ------- | -- | ------------------------------------- |
+| options   | Integer | -> | Folder list options                   |
+| Result    | Coleção | <- | Collection of children folder objects |
 <!-- END REF -->
 
 #### Description

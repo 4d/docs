@@ -78,9 +78,9 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant l
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
-// L'entity selection $employees contient maintenant un ensemble de 
-// références vers toutes les entités de la dataclass Employee
+$employees:=Create entity selection([Employee])
+// The $employees entity selection now contains a set of reference
+// on all entities related to the Employee dataclass
 ```
 
 #### Voir aussi
@@ -696,6 +696,9 @@ Exemple avec l'option `dk stop dropping on first error` :
 </details>
 
 
+
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -754,33 +757,33 @@ Considérons les tables et relations suivantes :
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames est une collection de Chaînes
+  //$firstnames is a collection of Strings
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  //$addresses est une collection d'entités liées à la dataclass Address
-  //Les valeurs null d'Address sont extraites
+  //$addresses is a collection of entities related to dataclass Address
+  //Null values for address are extracted
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing est une collection d'objets avec les propriétés "who" et "to"
-  //Le contenu de la propriété "who" est de type Chaîne 
-  //Le contenu de la propriété "to" est de type entity (dataclass Address)
+  //$mailing is a collection of objects with properties "who" and "to"
+  //"who" property content is String type
+  //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing est une collection d'objets avec les propriétés "who" et "city"
-  //Le contenu de la propriété "who" est de type Chaîne 
-  //Le contenu de la propriété "city" est de type Chaîne 
+  //$mailing is a collection of objects with properties "who" and "city"
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers est une collection d'objets avec les propriétés "where" et "who"
-  //Le contenu de la propriété "where" est de type Chaîne
-  //Le contenu de la propriété "who" est une entity selection (dataclass Teachers)
+  //$teachers is a collection of objects with properties "where" and "who"
+  //"where" property content is String
+  //"who" property content is an entity selection (Teachers dataclass)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers est une collection d'entity selections
+  //$teachers is a collection of entity selections
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -1088,10 +1091,9 @@ Les entity selections ont toujours une propriété `.length`.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Paramètres    | Type |    | Description                                    |
-| ------------- | ---- |:--:| ---------------------------------------------- |
-| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul |
-| Résultat      | any  | <- | Valeur la plus haute de l'attribut             |
+|Parameter|Type||Description|
+
+|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### Description
@@ -1216,9 +1218,9 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
-  // l'entity selection $employees contient l'entité avec la clé primaire 710 ainsi que d'autres entités
-  // par ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (clé primaire 710)
+ $employees:=ds.Employee.query("lastName = :1";"H@")
+  // The $employees entity selection contains the entity with primary key 710 and other entities
+  // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (clé primaire 710)
 
  $employee:=ds.Employee.get(710) // "Sherlock Holmes"
 
@@ -1376,7 +1378,7 @@ Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critè
 
 
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
-## .orderByFormula( )
+## .orderByFormula()
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -1572,7 +1574,7 @@ Vous trouverez plus d'exemples de requêtes dans la page [`.query()`](DataClassC
 
 La propriété `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contient la description détaillée du chemin de recherche réel utilisé par 4D<!-- END REF -->. Cette propriété est disponible pour les objets de type `EntitySelection` générés via des recherches si la propriété `"queryPath":true` a été passée dans le paramètre *querySettings* de la fonction [`.query()`](#query).
 
-Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings** de la fonction de dataclass [`.query()`](DataClassClass.html#query). 
+Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings** de la fonction de dataclass [`.query()`](DataClassClass.html#query).
 
 <!-- END REF -->
 
@@ -1596,7 +1598,7 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings**
 
 La propriété `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contient la description détaillée du plan de recherche prévu par 4D avant de l'exécuter<!-- END REF -->. Cette propriété est disponible pour les objets de type `EntitySelection` générés via des recherches si la propriété `"queryPlan":true` a été passée dans le paramètre *querySettings* de la fonction [`.query()`](#query).
 
-Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings** de la fonction de dataclass [`.query()`](DataClassClass.html#query). 
+Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings** de la fonction de dataclass [`.query()`](DataClassClass.html#query).
 
 <!-- END REF -->
 
@@ -1758,7 +1760,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 | Paramètres    | Type |    | Description                                    |
 | ------------- | ---- |:--:| ---------------------------------------------- |
 | attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul |
-| Résultat      | Real | <- | Somme des valeurs de l'entity selection        |
+| Résultat      | Réel | <- | Somme des valeurs de l'entity selection        |
 <!-- END REF -->
 
 #### Description

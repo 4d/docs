@@ -540,18 +540,18 @@ If you don't want to display shields, select **No Shields** in the selection men
 
 Here is a description of each type of shield:
 
-| Icon                                         | Name                            | Is displayed ...                                                                                                                     |
-| -------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/objectMethod.png)   | Object Method                   | For objects with an associated object method                                                                                         |
-| ![](assets/en/FormEditor/standardAction.png) | Standard Action                 | For objects with an associated standard action                                                                                       |
-| ![](assets/en/FormEditor/resizing.png)       | Resizing                        | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](assets/en/FormEditor/entryOrder.png)     | Entry Order                     | For enterable objects, indicates the number of entry order                                                                           |
-| ![](assets/en/FormEditor/viewNumber.png)     | Current View                    | For all objects in the current view                                                                                                  |
-| ![](assets/en/FormEditor/cssShield.png)      | [Style Sheet](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
-| ![](assets/en/FormEditor/filter.png)         | Filter                          | For enterable objects with an associated entry filter                                                                                |
-| ![](assets/en/FormEditor/helpTip.png)        | Help Tip                        | For objects with an associated tip                                                                                                   |
-| ![](assets/en/FormEditor/localized.png)      | Localized                       | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
-| ![](assets/en/FormEditor/noShields.png)      | No Shields                      | No shields appear                                                                                                                    |
+| Icon                                         | Name                                | Is displayed ...                                                                                                                     |
+| -------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](assets/en/FormEditor/objectMethod.png)   | Object Method                       | For objects with an associated object method                                                                                         |
+| ![](assets/en/FormEditor/standardAction.png) | Standard Action                     | For objects with an associated standard action                                                                                       |
+| ![](assets/en/FormEditor/resizing.png)       | Resizing                            | For objects with at least one resizing property, indicates the combination of current properties                                     |
+| ![](assets/en/FormEditor/entryOrder.png)     | Entry Order                         | For enterable objects, indicates the number of entry order                                                                           |
+| ![](assets/en/FormEditor/viewNumber.png)     | Current View                        | For all objects in the current view                                                                                                  |
+| ![](assets/en/FormEditor/cssShield.png)      | [Folha de Estilo](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
+| ![](assets/en/FormEditor/filter.png)         | Filter                              | For enterable objects with an associated entry filter                                                                                |
+| ![](assets/en/FormEditor/helpTip.png)        | Help Tip                            | For objects with an associated tip                                                                                                   |
+| ![](assets/en/FormEditor/localized.png)      | Localized                           | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
+| ![](assets/en/FormEditor/noShields.png)      | No Shields                          | No shields appear                                                                                                                    |
 
 ## Views
 

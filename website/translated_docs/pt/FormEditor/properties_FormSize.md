@@ -70,7 +70,7 @@ This value also determines the top margins of forms used in the Label editor.
 
 
 ---
-## Width
+## Largura
 
 Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
 

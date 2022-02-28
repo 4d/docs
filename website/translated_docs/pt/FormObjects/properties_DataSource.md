@@ -1,6 +1,6 @@
 ---
 id: propertiesDataSource
-title: Data Source
+title: Fonte de dados
 ---
 
 ---
@@ -75,7 +75,7 @@ List of static values to use as labels for the tab control object.
 
 
 ---
-## Current item
+## Item atual
 `Collection or entity selection list boxes`
 
 Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
@@ -95,7 +95,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 ---
 
-## Current item position
+## Posição item atual
 `Collection or entity selection list boxes`
 
 Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
@@ -253,7 +253,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 ---
 
-## Master Table
+## Tabela mestre
 `Current selection list boxes`
 
 Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
@@ -305,7 +305,7 @@ Using this property requires compliance with the following principles:
 
 
 ---
-## Selected Items
+## Itens selecionados
 `Collection or entity selection list boxes`
 
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.

@@ -4,11 +4,11 @@ title: '$upload'
 ---
 
 
-Returns an ID of the file uploaded to the server
+Devuelve un ID del archivo subido al servidor
 
 ## Descripción
 
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+Publique esta petición cuando tenga un archivo que quiera subir al Servidor. Si tiene una imagen, pase `$rawPict=true`. Para todos los demás archivos, se pasa `$binary=true`.
 
 You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout` parameter.
 
@@ -32,7 +32,7 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 
  `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Datos POST**:
 
 ```
 {

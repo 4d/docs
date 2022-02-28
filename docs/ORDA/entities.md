@@ -387,7 +387,10 @@ This feature is based upon two methods of the `Entity` class:
 *	`entity.lock()`
 *	`entity.unlock()`
 
-For more information, please refer to the descriptions for these methods.
+For more information, please refer to the descriptions for these functions.
+
+> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+
 
 
 ### Concurrent use of 4D classic locks and ORDA pessimistic locks  

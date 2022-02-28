@@ -4,7 +4,7 @@ title: Background and Border
 ---
 
 ---
-## Alternate Background Color
+## Cor de fundo alternado
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
@@ -38,11 +38,11 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
 #### See also
-[Transparent](#transparent)
+[Transparente](#transparent)
 
 
 ---
-## Background Color Expression
+## Expressão cor fundo
 
 `Selection and collection type list boxes`
 
@@ -66,7 +66,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 
 ---
-## Border Line Style
+## Estilo borda linha
 
 Allows setting a standard style for the object border.
 
@@ -74,7 +74,7 @@ Allows setting a standard style for the object border.
 
 | Name        | Data Type | Possible Values                                                   |
 | ----------- | --------- | ----------------------------------------------------------------- |
-| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| borderStyle | texto     | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### Objects Supported
 
@@ -101,7 +101,7 @@ Describes dotted line type as a sequence of black and white points.
 
 
 ---
-## Hide extra blank rows
+## Esconder linhas em branco extras
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
@@ -172,7 +172,7 @@ Designates the thickness of a line.
 
 
 ---
-## Row Background Color Array
+## Array cor fundo linha
 
 `Array type list boxes`
 
@@ -215,7 +215,7 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 
 ---
-## Transparent
+## Transparente
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 
@@ -223,7 +223,7 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 
 | Name | Data Type | Possible Values |
 | ---- | --------- | --------------- |
-| fill | text      | "transparent"   |
+| fill | texto     | "transparent"   |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)

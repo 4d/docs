@@ -3,7 +3,7 @@ id: comboBoxOverview
 title: Combo Box
 ---
 
-A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options.
+Um combo box é parecido com uma lista [drop-down](dropdownList_Overview.md#overview), exceto que aceita texto digitado do teclado e tem opções adicionais.
 
 ![](assets/en/FormObjects/combo_box.png)
 
@@ -19,9 +19,9 @@ You initialize a combo box in exactly the same way as a [drop-down list](dropdow
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
 
-| Property       | Type               | Description                                                                                                                                                                                                                                       |
+| Propriedade    | Type               | Description                                                                                                                                                                                                                                       |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
+| `values`       | Coleção            | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
 | `currentValue` | same as Collection | Text entered by the user                                                                                                                                                                                                                          |
 
 If the object contains other properties, they are ignored.
@@ -51,7 +51,7 @@ Please refer to **Using a choice** in the [drop-down list page](dropdownList_Ove
 Combo box type objects accept two specific options:
 
 - [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.
-- [Excluded List](properties_RangeOfValues.md#excluded-list) (list of excluded values): allows setting a list whose values cannot be entered in the combo box. If an excluded value is entered, it is not accepted and an error message is displayed.
+- [Excluded List](properties_RangeOfValues.md#excluded-list) (lista de valores excluídos): permite estabelecer uma lista cujos valores não podem ser digitados na combo box. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 > Associar uma [lista de valores exigidos](properties_RangeOfValues.md#required-list) não está disponível para  combo boxes. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md#overview) object.
 
 ## Supported Properties

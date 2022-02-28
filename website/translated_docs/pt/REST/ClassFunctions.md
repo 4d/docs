@@ -42,7 +42,7 @@ Functions are called on the corresponding object on the server datastore.
 > The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
-## Parameters
+## Parâmetros
 
 
 

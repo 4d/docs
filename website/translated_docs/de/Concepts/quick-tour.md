@@ -316,7 +316,7 @@ Sie beziehen sich auf einen Ausdruck über den Datentyp, den er zurückgibt. Es 
 
 ### Zuweisbare und nicht-zuweisbare Ausdrücke
 
-Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String "Hello", oder eine Variable wie `$myButton`. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. Diese Ausdrücke sind in allen Fällen **nicht-zuweisbar**, d.h. Sie können ihnen keinen Wert zuweisen. In 4D können Ausdrücke **zuweisbar** sein. Ein Ausdruck ist zuweisbar, wenn er sich auf der rechten Seite einer Zuweisung verwenden lässt. Beispiel:
+Ein Ausdruck kann einfach eine wortgetreue Konstante sein, wie die Zahl 4 oder der String "Hello", oder eine Variable wie `$myButton`. Er kann auch Operatoren verwenden. Zum Beispiel ist 4 + 2 ein Ausdruck, der den Operator (+) zum Addieren von zwei Zahlen verwendet und das Ergebnis 6 zurückgibt. Diese Ausdrücke sind in allen Fällen **nicht-zuweisbar**, d.h. Sie können ihnen keinen Wert zuweisen. In 4D können Ausdrücke **zuweisbar** sein. An expression is assignable when it can be used on the left side of an assignation. Beispiel:
 
 ```4d  
 //$myVar variable is assignable, you can write:  

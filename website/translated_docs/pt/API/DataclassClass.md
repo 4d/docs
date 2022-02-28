@@ -193,7 +193,7 @@ Para cada objeto de *objectCol*:
     *   Se a chave primária não for dada, a entidade é criada e o valor da chave primária é assignado com respeito às regras padrão de database.
 > A propriedade "\__KEY" que contém um valor só levado em consideração qando a propriedade "\__NEW" se estabelece como **false** (ou se omite) e existe uma entidade correspondente. em todos os outros casos, o valor de propriedade "\_\_KEY" é ignorado, valores de chave primária devem ser pasados "tal qual".
 
-**Related entities**
+**Entidades relacionadas**
 
 Os objetos de *objectCol* podem conter um ou mais objetos aninhados que apresentam uma ou mais entidades relacionadas, o que pode ser útil para criar ou atualizar links entre entidades.
 
@@ -438,34 +438,34 @@ Este exemplo ilustra o uso da propriedade *context* :
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parameter | Type         |    | Description                |
-| --------- | ------------ |:--:| -------------------------- |
-| Result    | cs.DataStore | <- | Datastore of the dataclass |
+| Parâmetros | Tipo         |    | Descrição                    |
+| ---------- | ------------ |:--:| ---------------------------- |
+| Resultados | cs.DataStore | <- | Datastore da classe de dados |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+A função `.getDataStore( )` <!-- REF #DataClassClass.getDataStore().Summary -->retorna a datastore para a classe de dados especificada<!-- END REF -->.
 
-The datastore can be:
+A datastore pode ser:
 
-*   the main datastore, as returned by the `ds` command.
-*   a remote datastore, opened using the `Open datastore` command.
+*   a datastore principal, retornada pelo comando `ds`.
+*   uma datastore remota, aberta com o comando `Open datastore`.
 
 
 #### Exemplo
 
-The ***SearchDuplicate*** project method searches for duplicated values in any dataclass.
+O método de projeto ***SearchDuplicate*** procura por valores duplicados em qualquer dataclass.
 
 ```4d
  var $pet : cs.CatsEntity
- $pet:=ds.Cats.all().first() //get an entity
+ $pet:=ds.Cats.all().first() //obtém uma entidade
  SearchDuplicate($pet;"Dogs")
 ```
 
 ```4d
-  // SearchDuplicate method
+  // Pesquisa SearchDuplicate
   // SearchDuplicate(entity_to_search;dataclass_name)
 
  #DECLARE ($pet : Object ; $dataClassName : Text)
@@ -489,36 +489,36 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
-**.getInfo()** : Object <!-- END REF -->
+**.getInfo()** : Objeto <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parameter | Type   |    | Description                  |
-| --------- | ------ | -- | ---------------------------- |
-| Result    | Objeto | <- | Information on the dataclass |
+| Parâmetros | Tipo   |    | Descrição                |
+| ---------- | ------ | -- | ------------------------ |
+| Resultados | Objeto | <- | Informação da dataclass. |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. This function is useful for setting up generic code.
+A função `.getInfo( )`<!-- REF #DataClassClass.getInfo().Sumário -->devolve um objeto que proporciona informação sobre a classe de dados<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
-**Returned object**
+**Objeto devolvido**
 
-| Property    | Type    | Description                              |
-| ----------- | ------- | ---------------------------------------- |
-| name        | Texto   | Name of the dataclass                    |
-| primaryKey  | Texto   | Name of the primary key of the dataclass |
-| tableNumber | Integer | Internal 4D table number                 |
+| Propriedade | Tipo    | Descrição                                 |
+| ----------- | ------- | ----------------------------------------- |
+| name        | Texto   | Nome da dataclass                         |
+| primaryKey  | Texto   | Nome da chave primária da classe de dados |
+| tableNumber | Integer | Número daa tabela 4D interna              |
 
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d 
  #DECLARE ($entity : Object)  
  var $status : Object
 
- computeEmployeeNumber($entity) //do some actions on entity
+ computeEmployeeNumber($entity) //faz uma ação na entidade
 
  $status:=$entity.save()
  if($status.success)
@@ -526,7 +526,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  End if
 ```
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $settings : Object
@@ -545,7 +545,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  var $dataClassAttribute : Object
 
  $pk:=ds.Employee.getInfo().primaryKey
- $dataClassAttribute:=ds.Employee[$pk] // If needed the attribute matching the primary key is accessible
+ $dataClassAttribute:=ds.Employee[$pk] // Se necessário o atributo correspondente à chave primária é acessível
 ```
 
 <!-- END REF -->
@@ -565,29 +565,29 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
-| Parameter | Type      |    | Description                       |
-| --------- | --------- | -- | --------------------------------- |
-| Result    | 4D.Entity | <- | New entity matching the Dataclass |
+| Parâmetros | Tipo      |    | Descrição                                        |
+| ---------- | --------- | -- | ------------------------------------------------ |
+| Resultado  | 4D.Entity | <- | Nova entidade que coincide com a classe de dados |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+A função `.new( )`<!-- REF #DataClassClass.new().Sumário -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
-The entity object is created in memory and is not saved in the database until the [`.save( )`](EntityClass.md#save) function is called. If the entity is deleted before being saved, it cannot be recovered.
+O objeto entidade se cria em memória e não se guarda no banco de dados até que se chama a função [`.save( )`](EntityClass.md#save). Se a entidade for apagada antes de ser salva, não se pode recuperar.
 
-**4D Server**: In client-server, if the primary key of the corresponding table is auto-incremented, it will be calculated when the entity is saved on the server.
+**4D Server**: eám cliente-servidor, se a chave primaria da tabela correspondente se autoincrementa, se calculará quando a entidade se guarde no servidor.
 
 #### Exemplo
 
-This example creates a new entity in the "Log" Dataclass and records information in the "info" attribute:
+Este ejemplo cria uma nova entidade na classe de dados "Log" e registra a informação no atributo "info":
 
 ```4d 
  var $entity : cs.LogEntity
- $entity:=ds.Log.new() //create a reference
- $entity.info:="New entry" //store some information
- $entity.save() //save the entity
+ $entity:=ds.Log.new() //cria uma referência
+ $entity.info:="New entry" //armazena informação
+ $entity.save() //salva a entidade
 ```
  
 <!-- END REF -->
@@ -608,23 +608,23 @@ This example creates a new entity in the "Log" Dataclass and records information
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
-| Parameter | Type               |    | Description                                                                                                                                   |
-| --------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| keepOrder | Integer            | -> | `dk keep ordered`: creates an ordered entity selection,<br>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-| Result    | 4D.EntitySelection | <- | New blank entity selection related to the dataclass                                                                                           |
+| Parámetros | Tipo               |    | Descrição                                                                                                                                           |
+| ---------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| keepOrder  | Integer            | -> | `dk keep ordered`: cria uma seleção de entidades ordenada,<br>`dk non ordered`: cria uma seleção de entidade não ordenada (padrão se omitido) |
+| Resultado  | 4D.EntitySelection | <- | Nova seleção de entidades em branco relacionadas com a classe de dados                                                                              |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+função `.newSelection( )` <!-- REF #DataClassClass.newSelection().Summary -->cria uma nova seleção de entidades em branco, não compartilhável, relacionado à dataclasse na memória<!-- END REF -->.
 
-> For information on non-shareable entity selections, please refer to [this section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
+> Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
 
-If you want to create an ordered entity selection, pass the `dk keep ordered` selector in the *keepOrder* parameter. By default if you omit this parameter, or if you pass the `dk non ordered` selector, the method creates an unordered entity selection. Unordered entity selections are faster but you cannot rely on entity positions. For more information, please see [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+Se quiser uma seleção de entidades ordenada, passe o seletor `dk keep ordered` no parâmetro *keepOrder*. Como padrão se omitir este parâmetro ou se passar o seletor `dk non ordered`, o método cria uma seleção de entidades não ordenada. As seleções de entidades desordenadas são mais rápidas mas não se pode confiar nas posições das entidades. Para mas informação, consulte [Seleções de entidades ordenadas e desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
-When created, the entity selection does not contain any entities (`mySelection.length` returns 0). This method lets you build entity selections gradually by making subsequent calls to the [`add()`](EntitySelectionClass.md#add) function.
+Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySelection.length` devolve 0). Este método lhe permite criar seleções de entidades gradualmente fazendo chamadas posteriores à função [`add()`](EntitySelectionClass.md#add).
 
 
 #### Exemplo
@@ -632,8 +632,8 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 ```4d 
  var $USelection; $OSelection : cs.EmployeeSelection
- $USelection:=ds.Employee.newSelection() //create an unordered empty entity selection
- $OSelection:=ds.Employee.newSelection(dk keep ordered) //create an ordered empty entity selection
+ $USelection:=ds.Employee.newSelection() //cria uma seleção de entidade vazia não ordenada
+ $OSelection:=ds.Employee.newSelection(dk keep ordered) //cria uma seleção de entidade vazia ordenada
 ```
  
 
@@ -645,34 +645,34 @@ When created, the entity selection does not contain any entities (`mySelection.l
 ## .query()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                           |
-| ------ | ---------------------------------- |
-| v17 R6 | Support of Formula parameters      |
-| v17 R5 | Support of placeholders for values |
-| v17    | Adicionado                         |
+| Versão | Mudanças                               |
+| ------ | -------------------------------------- |
+| v17 R6 | Soporte dos Parâmetros Formula         |
+| v17 R5 | Suporte dos marcadores para os valores |
+| v17    | Adicionado                             |
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
-| Parameter     | Type               |    | Description                                                                                                                 |
-| ------------- | ------------------ | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Texto              | -> | Search criteria as string                                                                                                   |
-| formula       | Objeto             | -> | Search criteria as formula object                                                                                           |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                  |
-| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                   |
-| Result        | 4D.EntitySelection | <- | New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula* |
+| Parâmetros    | Tipo               |    | Descrição                                                                                                                           |
+| ------------- | ------------------ | -- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Texto              | -> | Criterios de pesquisa como string                                                                                                   |
+| formula       | Objeto             | -> | Criterios de pesquisa como objeto fórmula                                                                                           |
+| value         | any                | -> | Valores a usar para placeholders indexados                                                                                          |
+| querySettings | Objeto             | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                       |
+| Resultados    | 4D.EntitySelection | <- | Nova seleção de entidade feita de entidades de dataclass realizano o critério de pesquia especificado em *queryString* or *formula* |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A `.query( )` função <!-- REF #DataClassClass.query().Summary -->pesquisa por entidades que encontram o critério de pesquisa especificado em *queryString* ou *formula* e (opcionalmente) *value*(s)<!-- END REF -->, para todas as entidades na dataclass e retorna um novo objeto de tipo `EntitySelection` contendo todas as entidades que foram encontradas. Se aplica carregamento diferido/lazy loading.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
-**queryString parameter**
+**parâmetro queryString**
 
 O parâmetro *queryString* usa a sintaxe abaixo:
 
@@ -682,10 +682,10 @@ attributePath|formula comparator value
     {order by attributePath {desc | asc}}
 ```
 
-where:
+onde:
 
-*   **attributePath**: path of attribute on which you want to execute the query. This parameter can be a simple name (for example "country") or any valid attribute path (for example "country.name".) In case of an attribute path whose type is `Collection`, \[ ] notation is used to handle all the occurences (for example "children\[ ].age"). You can also use a **placeholder** (see below).
-> *You cannot use directly attributes whose name contains special characters such as ".", "\[ ]", or "=", ">", "#"..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see* **Using placeholders** *below).*
+*   **attributePath**: rota de atributo no quaal se quiser executar a query. Este parâmetro pode ser um nome simples (por exemplo "country") ou uma rota de atributo válida (por exemplo "country.name") No caso de  uma rota de atributo cujo tipo for `Collection`, a notação \[ ] é usada para manejar as ocorrências (por exemplo "children\[ ].age"). Também pode usar um **placeholder** (ver abaixo).
+> *Não pode usar diretamente atributos cujo nome contenha caracteres especiais como ".", "\[ ]", or "=", ">", "#"..., porque serão avaliados incorretamente na string da query. Se precisar de uma query com esses atributos, deve considerar o uso de placeholders que permitem uma gama estendida de caracteres em rotas de atributo (ver* **Using placeholders** *below).*
 
 *   **formula**: a valid formula passed as `Text` or `Object`. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the `This` object.
 
@@ -786,7 +786,7 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
 
 2.  It prevents having to worry about formatting or character issues, especially when handling *attributePath* or *value* parameters that might contain non-alphanumeric characters such as ".", "['...
 
-3.  It allows the use of variables or expressions in query arguments. Examples:
+3.  It allows the use of variables or expressions in query arguments. Exemplos:
 
     ```4d
     $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
@@ -893,7 +893,7 @@ Additional examples are provided in example 3.
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
-| Property      | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Propriedade   | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | parameters    | Objeto   | **Named placeholders for values** used in the *queryString* or *formula*. Values are expressed as property / value pairs, where property is the placeholder name inserted for a value in the *queryString* or *formula* (":placeholder") and value is the value to compare. You can mix indexed placeholders (values directly passed in value parameters) and named placeholder values in the same query.                                                                                                                                                                                                                                                   |
 | attributes    | Objeto   | **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass<p><table><tr><th>Type</th><th>Description</th></tr><tr><td>String</td><td>attributePath expressed using the dot notation, e.g. "name" or "user.address.zipCode"</td></tr><tr><td>Collection of strings</td><td>Each string of the collection represents a level of attributePath, e.g. \["name"] or \["user","address","zipCode"]. Using a collection allows querying on attributes with names that are not compliant with dot notation, e.g. \["4Dv17.1","en/fr"]</td></tr></table>You can mix indexed placeholders (values directly passed in *value* parameters) and named placeholder values in the same query. |
@@ -905,7 +905,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 
 **About queryPlan and queryPath**
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. You may find it useful to analyze this information while developing your application(s). Geralmente a descrição do plano de pesquisa e sua rota são idênticas mas podem ser diferentes porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar a performance. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.
 
 For example, if you execute the following query:
 
@@ -934,7 +934,7 @@ queryPath:
     steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
 
-#### Example 1
+#### Exemplo 1
 
 This section provides various examples of queries.
 
@@ -1071,7 +1071,7 @@ $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith
   //salesperson is a related entity
 ```
 
-#### Example 2
+#### Exemplo 2
 
 This section illustrates queries with named placeholders for attributes.
 

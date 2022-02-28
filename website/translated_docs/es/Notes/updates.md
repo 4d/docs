@@ -7,6 +7,7 @@ The list of main updates in this documentation. For general information about ne
 
 ## 4D v19
 
+- New REST request to [lock/unlock](REST/$lock.md) entities (19.2).
 - [IMAPTransporter Class](API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](Tags/tags.md#4deach-and-4dendeach) transformation tag.

@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Description des fichiers historiques
 ---
 
-Les applications 4D peuvent générer plusieurs fichiers d'historique qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les logs sont généralement démarrés ou arrêtés à l'aide des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs-folder) de la base.
+Les applications 4D peuvent générer plusieurs fichiers d'historique qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Les informations de l'historique doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -58,7 +58,7 @@ This file starts with the following headers:
 
 For each request, the following fields are logged:
 
-| Noms des champs                            | Description                                                                                                                                                                                                                                                                  |
+| Nom des champs                             | Description                                                                                                                                                                                                                                                                  |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sequence_number                            | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                         |
 | time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                                                 |
@@ -109,7 +109,7 @@ This file starts with the following headers:
 
 For each process, the following fields are logged:
 
-| Noms des champs                   | Description                                                          |
+| Nom des champs                    | Description                                                          |
 | --------------------------------- | -------------------------------------------------------------------- |
 | sequence_number                   | Numéro d'opération séquentiel et unique dans la session d'historique |
 | time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"         |
@@ -140,14 +140,14 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 
 Les champs suivants sont enregistrés pour chaque requête et réponse :
 
-| Noms des champs | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                           |
-| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
-| PeerPort        | Port utilisé par l'hôte (client)                                     |
-| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
-| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
+| Nom des champs | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| SocketID       | ID du socket utilisé pour la communication                           |
+| PeerIP         | Adresse IPv4 de l'hôte (client)                                      |
+| PeerPort       | Port utilisé par l'hôte (client)                                     |
+| TimeStamp      | Horodatage en millisecondes (depuis le démarrage du système)         |
+| ConnectionID   | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
+| SequenceNumber | Numéro d'opération séquentiel et unique dans la session d'historique |
 
 ## 4DDebugLog.txt (standard)
 
@@ -190,7 +190,7 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 The following fields are logged for each event:
 
-| Colonne # | Noms des champs                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Colonne # | Nom des champs                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -319,11 +319,11 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 The following fields are logged for each request:
 
-| Noms des champs | Description                                                          | Exemple                                                 |
-| --------------- | -------------------------------------------------------------------- | ------------------------------------------------------- |
-| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique | 104                                                     |
-| url             | URL de la requête ORDA effectuée par le poste client                 | "rest/Persons(30001)"                                   |
-| startTime       | Date et heure de début au format ISO 8601                            | "2019-05-28T08:25:12.346Z"                              |
-| endTime         | Date et heure de fin au format ISO 8601                              | "2019-05-28T08:25:12.371Z"                              |
-| duration        | Durée de traitement client (ms)                                      | 25                                                      |
-| response        | Objet réponse du serveur                                             | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| Nom des champs | Description                                                          | Exemple                                                 |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------------- |
+| sequenceNumber | Numéro d'opération séquentiel et unique dans la session d'historique | 104                                                     |
+| url            | URL de la requête ORDA effectuée par le poste client                 | "rest/Persons(30001)"                                   |
+| startTime      | Date et heure de début au format ISO 8601                            | "2019-05-28T08:25:12.346Z"                              |
+| endTime        | Date et heure de fin au format ISO 8601                              | "2019-05-28T08:25:12.371Z"                              |
+| duration       | Durée de traitement client (ms)                                      | 25                                                      |
+| response       | Objet réponse du serveur                                             | {"status":200,"body":{"__entityModel":"Persons",\[...] |

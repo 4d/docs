@@ -113,7 +113,7 @@ Since entities are managed as references, data is loaded only when necessary, i.
 
 The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
 
-## Method
+## Métodos
 
 ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
 
@@ -128,7 +128,7 @@ $myClass.query("name = smith")
 In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
 
 *   number
-*   text
+*   texto
 *   null
 *   booleano
 *   date
@@ -146,7 +146,7 @@ In "optimistic lock" mode, entities are not locked explicitly before updating th
 
 A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
 
-## Property
+## Propriedade
 
 See [Attribute](#attribute).
 > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
@@ -174,7 +174,7 @@ A dataclass can have recursive relation attributes.
 
 In an entity, the value of a relation attribute can be an entity or an entity selection.
 
-## Related entities
+## Entidades relacionadas
 
 A related entity can be seen as the instance of a relation attribute in a dataclass.
 

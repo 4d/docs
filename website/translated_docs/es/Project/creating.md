@@ -17,11 +17,11 @@ To create a new project:
 1. Lance 4D o 4D Server.
 2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>O<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**.<p> Este nombre se utilizará:
+3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**.<p> Este nombre se utilizará:
     - as the name of the entire project folder,
-    - as the name of the .4DProject file at the first level of the "Project" folder.
+    - como nombre del archivo .4DProject en el primer nivel de la carpeta "Project".
 
-    You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
+    Puedes elegir cualquier nombre permitido por su sistema operativo. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
 
 When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. Para más información, consulte [Arquitectura de un proyecto 4D](Project/architecture.md).
 
@@ -100,7 +100,7 @@ That folder is divided into two subfolders:
 
 When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
-Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Por ejemplo, si se edita el mismo método en una ventana del editor de métodos *y* en un editor de texto, al guardar ambas modificaciones se producirá un conflicto.
 
 The 4D development framework includes a file access manager to control concurrent access:
 
@@ -109,7 +109,7 @@ The 4D development framework includes a file access manager to control concurren
 
 ![](assets/en/Project/projectReload.png)
     - **Yes**: discard editor changes and reload the modified version
-    - **No**: save changes and overwrite the other version
-    - **Cancel**: do not save
+    - **No**: guardar los cambios y sobrescribir la otra versión
+    - **Cancelar**: no guardar
 
 This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).

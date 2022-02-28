@@ -6,13 +6,13 @@ title: List Box
 ---
 ## Columnas
 
-Collection of columns of the list box.
+Colección de columnas del list box.
 
 #### Gramática JSON
 
-| Nombre  | Tipos de datos               | Valores posibles                                 |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| Nombre  | Tipos de datos               | Valores posibles                                     |
+| ------- | ---------------------------- | ---------------------------------------------------- |
+| columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
@@ -24,9 +24,9 @@ For a list of properties supported by column objects, please refer to the [Colum
 ## Nombre formulario detallado
 `List box del tipo selección`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+Especifica el formulario que se utilizará para modificar o mostrar los registros individuales del list box.
 
-The specified form is displayed:
+Se muestra el formulario especificado:
 
 *   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
 *   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
@@ -55,7 +55,7 @@ Sets the action to be performed when a user double-clicks on a row in the list b
 *   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
 *   **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
 *   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> > Double-clicking an empty row is ignored in list boxes.
+> > > Double-clicking an empty row is ignored in list boxes.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
 
@@ -104,7 +104,7 @@ Locked columns and static columns are two separate and independent functionaliti
 
 *   Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 *   Static columns cannot be moved by drag and drop within the list box.
-> > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+> > > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
 
 These properties interact as follows:
 

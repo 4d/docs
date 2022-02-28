@@ -24,7 +24,7 @@ Las imágenes se muestran en un bucle continuo. Cuando el usuario llega a la úl
 ---
 ## Retorna cuando se libera
 
-Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en el botón. Muestra la segunda imagen hasta que se suelta el botón del ratón. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en el botón. Muestra la segunda imagen hasta que se suelta el botón del ratón. Este modo le permite crear un botón de acción con una imagen diferente para cada estado (inactivo y pulsado). Puede utilizar este modo para crear un efecto 3D o mostrar cualquier imagen que represente la acción del botón.
 
 
 #### Gramática JSON
@@ -44,7 +44,7 @@ Muestra la primera imagen todo el tiempo, excepto cuando el usuario hace clic en
 ---
 ## Desplazamiento continuo en clics
 
-Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
+Permite al usuario mantener pulsado el botón del ratón para mostrar las imágenes de forma continua (es decir, como una animación). Cuando el usuario llega a la última imagen, el objeto no vuelve a la primera imagen.
 
 #### Gramática JSON
 
@@ -62,7 +62,7 @@ Allows the user to hold down the mouse button to display the pictures continuous
 ---
 ## Cambiar cada x ticks
 
-Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
+Permite recorrer el contenido del botón de imagen a la velocidad especificada (en ticks). En este modo, se ignoran todas las demás opciones.
 
 #### Gramática JSON
 
@@ -81,7 +81,7 @@ Enables cycling through the contents of the picture button at the specified spee
 ---
 ## Cambiar cuando se pasa por encima el cursor
 
-Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
+Modifica el contenido del botón de la imagen cuando el cursor del ratón pasa por encima. La imagen inicial se muestra cuando el cursor sale del área del botón.
 
 #### Gramática JSON
 
@@ -101,7 +101,7 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 ---
 ## Utilizar el último cuadro como desactivado
 
-Enables setting the last thumbnail as the one to display when the button is disabled. The thumbnail used when the button is disabled is processed separately by 4D: when you combine this option with "Switch Continuously" and "Loop Back to First Frame", the last picture is excluded from the sequence associated with the button and only appears when it is disabled.
+Permite definir la última miniatura como la que se mostrará cuando el botón esté desactivado. La imagen en miniatura utilizada cuando el botón está desactivado es procesada por separado por 4D: cuando se combina esta opción con "Cambiar continuamente" y "Retroceder en bucle a la primera imagen", la última imagen se excluye de la secuencia asociada al botón y sólo aparece cuando está desactivado.
 
 
 #### Gramática JSON

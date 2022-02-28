@@ -7,6 +7,7 @@ title: ドキュメンテーション更新情報
 
 ## 4D v19
 
+- New REST request to [lock/unlock](REST/$lock.md) entities (19.2).
 - [IMAPTransporter クラス](API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](API/FileClass.md): 新しい `setAppInfo()` および `getAppInfo()` 関数
 - 新しい [4DEACH](Tags/tags.md#4deach-and-4dendeach) 変換タグ

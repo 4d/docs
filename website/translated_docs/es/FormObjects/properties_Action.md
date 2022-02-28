@@ -140,7 +140,7 @@ Autoriza el desplazamiento de líneas durante la ejecución. Esta opción está 
 ---
 ## Multi-seleccionable
 
-Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
+Permite la selección de múltiples registros/opciones en una [lista jerárquica](list_overview.md).
 
 #### Gramática JSON
 

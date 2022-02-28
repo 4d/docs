@@ -25,60 +25,60 @@ When it is used, this event is generated after each change made to the contents 
 
 The object returned by the `FORM Event` command contains:
 
-| Property    | Type    | Description                                                                                         |
+| Propriedade | Type    | Description                                                                                         |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro area name                                                                               |
-| sheetName   | text    | Name of the sheet of the event                                                                      |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| description | texto   | "On After Edit"                                                                                     |
+| objectName  | texto   | 4D View Pro area name                                                                               |
+| sheetName   | texto   | Name of the sheet of the event                                                                      |
+| action      | texto   | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
 #### action = editChange
 
-| Property    | Type    | Description                       |
+| Propriedade | Type    | Description                       |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 #### action = valueChanged
 
-| Property | Type    | Description                 |
-| -------- | ------- | --------------------------- |
-| range    | object  | Cell range                  |
-| oldValue | variant | Value of cell before change |
-| newValue | variant | Value of cell after change  |
+| Propriedade | Type    | Description                 |
+| ----------- | ------- | --------------------------- |
+| range       | object  | Cell range                  |
+| oldValue    | variant | Value of cell before change |
+| newValue    | variant | Value of cell after change  |
 
 
 #### action = DragDropBlock
 
-| Property  | Type     | Description                                         |
-| --------- | -------- | --------------------------------------------------- |
-| fromRange | object   | Range of source cell range (being dragged)          |
-| toRange   | object   | Range of the destination cell range (drop location) |
-| copy      | booleano | Specifies if the source range is copied or not      |
-| insert    | booleano | Specifies if the source range is inserted or not    |
+| Propriedade | Type     | Description                                         |
+| ----------- | -------- | --------------------------------------------------- |
+| fromRange   | object   | Range of source cell range (being dragged)          |
+| toRange     | object   | Range of the destination cell range (drop location) |
+| copy        | booleano | Specifies if the source range is copied or not      |
+| insert      | booleano | Specifies if the source range is inserted or not    |
 
 
 #### action = DragFillBlock
 
-| Property  | Type   | Description         |
-| --------- | ------ | ------------------- |
-| fillRange | object | Range used for fill |
+| Propriedade | Type   | Description         |
+| ----------- | ------ | ------------------- |
+| fillRange   | object | Range used for fill |
  autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
 
 
 #### action = formulaChanged
 
-| Property | Type   | Description         |
-| -------- | ------ | ------------------- |
-| range    | object | Cell range          |
-| formula  | text   | The formula entered |
+| Propriedade | Type   | Description         |
+| ----------- | ------ | ------------------- |
+| range       | object | Cell range          |
+| formula     | texto  | The formula entered |
 
 #### action = clipboardPasted
 
-| Property    | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Propriedade | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | range       | object  | Cell range                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | pasteOption | longint | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values) |

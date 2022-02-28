@@ -74,7 +74,7 @@ A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um 
 
 | Propriedade     | Tipo    | Descrição                                        |
 | --------------- | ------- | ------------------------------------------------ |
-| [curve](#curve) | text    | Nome da curva ECDSA                              |
+| [curve](#curve) | texto   | Nome da curva ECDSA                              |
 | [pem](#pem)     | text    | Definição PEM de uma chave de cifrado a carregar |
 | [size](#size)   | integer | Tamanho da chave RSA em bits                     |
 | [tipo](#type)   | text    | Tipo da chave: "RSA", "ECDSA" ou "PEM"</li>      |
@@ -131,11 +131,11 @@ A chave deveser do estilo RSA, o algoritmo é RSA-OAEP (ver [RFC 3447](https://t
 
 #### *options*
 
-| Propriedade       | Tipo | Descrição                                                                                                                                                   |
-| ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                  |
-| encodingEncrypted | text | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".  |
-| encodingDecrypted | text | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| Propriedade       | Tipo  | Descrição                                                                                                                                                   |
+| ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | texto | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                  |
+| encodingEncrypted | texto | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a decifrar. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".  |
+| encodingDecrypted | text  | Codificação utilizada para converter a mensagem binário decifrado na string de resultados. Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 
 #### *Resultados*
@@ -145,7 +145,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 | Propriedade | Tipo       | Descrição                                                                |
 | ----------- | ---------- | ------------------------------------------------------------------------ |
 | success     | booleano   | True se a mensagem tiver sido decifrada com êxito                        |
-| result      | text       | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
+| result      | texto      | Mensagem decifrado e decodificado utilizando `options.encodingDecrypted` |
 | errors      | collection | Se `success` for `false`, pode conter uma coleção de erros               |
 
 
@@ -181,9 +181,9 @@ A chave deve ser do estilo RSA, o algoritmo é RSA-OAEP (ver [RFC 3447](https://
 
 | Propriedade       | Tipo  | Descrição                                                                                                                                                         |
 | ----------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | text  | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                        |
+| hash              | texto | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512".                                                                                        |
 | encodingEncrypted | texto | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".            |
-| encodingDecrypted | text  | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a encriptar Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
+| encodingDecrypted | texto | Codificação utilizada para converter o parâmetro `mensagem` na representação binaria a encriptar Pode ser "UTF-8", "Base64" ou "Base64URL". Por padrão é "UTF-8". |
 
 
 #### *Resultados*
@@ -297,7 +297,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 | hash              | text     | Algoritmo Digest a utilizar. Por exemplo: "SHA256", "SHA384", ou "SHA512". Quando utilizar para produzir um JWT, o tamanho de hash deve coincidir com o tamanho do algoritmo PS@, ES@, RS@ ou PS@ |
 | encodingEncrypted | text     | Codificação utilizada para converter a mensagem binária criptografada na string  resultante. Pode ser "Base64", ou "Base64URL". Por padrão é "Base64".                                            |
 | pss               | booleano | Utiliza Probabilistic Signature Scheme (PSS). Ignorado se a chave não for uma chave RSA. Passa `true` ao produzir um JWT para o algoritmo PS@                                                     |
-| encoding          | text     | Representação que se utilizará para a assinatura de resultados. Valores possíveis: "Base64" ou "Base64URL". Por padrão é "Base64".                                                                |
+| encoding          | texto    | Representação que se utilizará para a assinatura de resultados. Valores possíveis: "Base64" ou "Base64URL". Por padrão é "Base64".                                                                |
 
 
 #### *Resultados*

@@ -109,7 +109,7 @@ Méthode ***OpenForm*** :
 <!-- REF SignalClass.New signal.Params -->
 | Paramètres  | Type      |    | Description                  |
 | ----------- | --------- |:--:| ---------------------------- |
-| description | Texte     | -> | Description du signal        |
+| description | Text      | -> | Description du signal        |
 | Résultat    | 4D.Signal | <- | Object encapsulant le signal |
 <!-- END REF -->
 

@@ -10,12 +10,12 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | Types de données                             | Pris en charge par la base(1) | Pris en charge par le langage | [déclaration `var`](variables.md#using-the-var-keyword) | [déclaration `C_` ou `ARRAY`](variables.md#using-a-c_-directive) |
 | -------------------------------------------- | ----------------------------- | ----------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
 | [Alphanumérique](dt_string.md)               | Oui                           | Converti en texte             | -                                                       | -                                                                |
-| [Texte](Concepts/dt_string.md)               | Oui                           | Oui                           | Texte                                                   | `C_TEXT`, `ARRAY TEXT`                                           |
+| [Text](Concepts/dt_string.md)                | Oui                           | Oui                           | Text                                                    | `C_TEXT`, `ARRAY TEXT`                                           |
 | [Date](Concepts/dt_date.md)                  | Oui                           | Oui                           | Date                                                    | `C_DATE`, `ARRAY DATE`                                           |
 | [Heure](Concepts/dt_time.md)                 | Oui                           | Oui                           | Heure                                                   | `C_TIME`, `ARRAY TIME`                                           |
 | [Booléen](Concepts/dt_boolean.md)            | Oui                           | Oui                           | Booléen                                                 | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
 | [Integer](Concepts/dt_number.md)             | Oui                           | Converti en entier long       | Integer                                                 | `ARRAY INTEGER`                                                  |
-| [Entier long](Concepts/dt_number.md)         | Oui                           | Oui                           | Integer                                                 | `C_LONGINT`, `ARRAY LONGINT`                                     |
+| [Longint](Concepts/dt_number.md)             | Oui                           | Oui                           | Integer                                                 | `C_LONGINT`, `ARRAY LONGINT`                                     |
 | [Entier long 64 bits](Concepts/dt_number.md) | Oui (SQL)                     | Converti en réel              | -                                                       | -                                                                |
 | [Réel](Concepts/dt_number.md)                | Oui                           | Oui                           | Réel                                                    | `C_REAL`, `ARRAY REAL`                                           |
 | [Indéfini](Concepts/dt_null_undefined.md)    | -                             | Oui                           | -                                                       | -                                                                |
@@ -37,20 +37,20 @@ Au moment de leur typage via une directive de compilation, les variables reçoiv
 
 La valeur par défaut dépend du type de variable :
 
-| Type        | Valeur par défaut |
-| ----------- | ----------------- |
-| Booléen     | Faux              |
-| Date        | 00-00-00          |
-| Entier long | 0                 |
-| Heure       | 00:00:00          |
-| Image       | picture size=0    |
-| Réel        | 0                 |
-| Pointeur    | Nil=true          |
-| Texte       | ""                |
-| Blob        | Blob size=0       |
-| Object      | null              |
-| Collection  | null              |
-| Variant     | indéfini          |
+| Type       | Valeur par défaut |
+| ---------- | ----------------- |
+| Booléen    | Faux              |
+| Date       | 00-00-00          |
+| Longint    | 0                 |
+| Heure      | 00:00:00          |
+| Image      | picture size=0    |
+| Réel       | 0                 |
+| Pointeur   | Nil=true          |
+| Text       | ""                |
+| Blob       | Blob size=0       |
+| Object     | null              |
+| Collection | null              |
+| Variant    | indéfini          |
 
 
 ## Convertir les types de données

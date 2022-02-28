@@ -1672,7 +1672,7 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Paramètres  | Type       |    | Description                                                   |
 | ----------- | ---------- |:--:| ------------------------------------------------------------- |
-| pathStrings | Texte      | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
+| pathStrings | Text       | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
 | pathObjects | Collection | -> | Collection d'objets critère                                   |
 | ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valeurs scalaires)         |
 | Résultat    | Collection | <- | Copie triée de la collection (shallow copy)                   |<!-- END REF -->#### Description
@@ -1791,7 +1791,7 @@ Tri avec un chemin de propriété :
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF --><!-- REF #collection.orderByMethod().Params -->| Paramètres | Type       |    | Description                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Texte      | -> | Nom de la méthode utilisée pour trier la collection |
+| methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
 | extraParam | expression | -> | Paramètre(s) à passer à la méthode                  |
 | Résultat   | Collection | <- | Copiée triée de la collection (shallow copy)        |<!-- END REF -->#### Description
 
@@ -1945,7 +1945,7 @@ Vous souhaitez trier la collection résultante :
 | v16 R6  | Ajout                            |
 </details><!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection<!-- END REF --><!-- REF #collection.query().Params -->| Paramètres    | Type       |    | Description                                                               |
 | ------------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| queryString   | Texte      | -> | Critère(s) de recherche                                                   |
+| queryString   | Text       | -> | Critère(s) de recherche                                                   |
 | value         | Mixed      | -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
 | querySettings | Object     | -> | Options de requête : paramètres, attributs                                |
 | Résultat      | Collection | <- | Élément(s) correspondant à queryString dans la collection                 |<!-- END REF -->#### Description
@@ -2037,7 +2037,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`. <!
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.reduce().Syntax -->**.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any<!-- END REF --><!-- REF #collection.reduce().Params -->| Paramètres | Type                                            |    | Description                                                               |
 | ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------------- |
-| methodName | Texte                                           | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
+| methodName | Text                                            | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
 | param      | expression                                      | -> | Paramètre(s) à passer à *methodName*                                      |
 | Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Résultat de la valeur de l'accumulateur                                   |<!-- END REF -->#### Description
@@ -2263,7 +2263,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 </details><!-- REF #collection.some().Syntax -->**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF --><!-- REF #collection.some().Params -->| Paramètres | Type    |    | Description                                   |
 | ---------- | ------- |:--:| --------------------------------------------- |
 | startFrom  | Integer | -> | Elément à partir duquel débuter l'évaluation  |
-| methodName | Texte   | -> | Nom de la méthode à appeler pour l'évaluation |
+| methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
 | param      | Mixed   | -> | Paramètre(s) à passer à *methodName*          |
 | Résultat   | Booléen | <- | Vrai si au moins un élément a réussi le test  |<!-- END REF -->#### Description
 
@@ -2322,7 +2322,7 @@ Avec la méthode *NumberGreaterThan0* suivante :
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection<!-- END REF --><!-- REF #collection.sort().Params -->| Paramètres | Type       |    | Description                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Texte      | -> | Nom de la méthode utilisée pour trier la collection |
+| methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
 | extraParam | any        | -> | Paramètre(s) à passer à la méthode                  |
 | Résultat   | Collection | <- | Collection d'origine triée                          |<!-- END REF -->#### Description
 
@@ -2389,10 +2389,10 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
-</details><!-- REF #collection.sum().Syntax -->**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF --><!-- REF #collection.sum().Params -->| Paramètres   | Type  |    | Description                                                     |
-| ------------ | ----- |:--:| --------------------------------------------------------------- |
-| propertyPath | Texte | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Réel  | <- | Somme des valeurs de collection                                 |<!-- END REF -->#### Description
+</details><!-- REF #collection.sum().Syntax -->**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF --><!-- REF #collection.sum().Params -->| Paramètres   | Type |    | Description                                                     |
+| ------------ | ---- |:--:| --------------------------------------------------------------- |
+| propertyPath | Text | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| Résultat     | Réel | <- | Somme des valeurs de collection                                 |<!-- END REF -->#### Description
 
 La fonction `.sum()`<!-- REF #collection.sum().Summary -->retourne la somme de toutes les valeurs de l'instance de collection<!-- END REF -->.
 

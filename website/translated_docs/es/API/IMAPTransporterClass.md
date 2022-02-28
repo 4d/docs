@@ -1005,7 +1005,7 @@ In the first parameter, you can pass either:
 *   *msgNumber*, an *integer* value indicating the sequence number of the message to retrieve or
 *   *msgID*, a *text* value indicating the unique ID of the message to retrieve.
 
-The optional *options* parameter allows you pass an object defining additional instructions for handling the message. The following properties are available:
+The optional *options* parameter allows you pass an object defining additional instructions for handling the message. Las siguientes propiedades están disponibles:
 
 | Propiedad  | Tipo     | Descripción                                                                                                                     |
 | ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |

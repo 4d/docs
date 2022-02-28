@@ -339,14 +339,14 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 
 La fonction `.getMailInfo()`<!-- REF #IMAPTransporterClass.getMailInfo().Summary -->retourne un objet `mailInfo` correspondant au *msgNumber* de la boite de réception désignée par le [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Cette fonction vous permet de récupérer des informations sur l'email.
 
-Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer. Ce numéro est retourné dans la propriété number par la fonction [`.getMailInfoList()`](#getmailinfo).
+Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer. Ce numéro est retourné dans la propriété number par la fonction [`.getMailInfoList()`](#getmailinfolist).
 
 L'objet `mailInfo` retourné contient les propriété suivantes :
 
 | Propriété | Type   | Description                 |
 | --------- | ------ | --------------------------- |
 | size      | Nombre | Taille du message en octets |
-| id        | Texte  | ID unique du message        |
+| id        | Text   | ID unique du message        |
 
 La fonction retourne **Null** si :
 
@@ -407,7 +407,7 @@ Chaque objet `mailInfo` retourné contient les propriété suivantes :
 | ------------ | ------ | ------------------------------------------------------------------ |
 | \[ ].size   | Nombre | Taille du message en octets                                        |
 | \[ ].number | Nombre | Numéro du message                                                  |
-| \[ ].id     | Texte  | ID unique du message (utile si vous stockez le message localement) |
+| \[ ].id     | Text   | ID unique du message (utile si vous stockez le message localement) |
 
 Si la boîte de réception ne contient pas de message, une collection vide est retournée.
 

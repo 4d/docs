@@ -144,7 +144,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 ## El objeto clase
 
-Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. A class is an object itself, of ["Class" class](API/ClassClass.md). Una clase es un objeto en sí mismo, de ["Class" class](API/classClass.md).
+Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto de la [clase "Class"](API/ClassClass.md). Una clase es un objeto en sí mismo, de ["Class" class](API/classClass.md).
 
 - String [`name`](API/ClassClass.md#name)
 - objeto [`superclass`](API/ClassClass.md#superclass) (null si ninguno)
@@ -179,7 +179,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Las funciones de clase son propiedades específicas de la clase. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
+Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
 
 En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function`, y el nombre de la función. El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
@@ -206,19 +206,19 @@ Para una función de clase, el comando `Current method name` devuelve: "*\<Class
 
 En el código de la aplicación, las funciones de clase se llaman como métodos miembros de la instancia del objeto y pueden recibir los [parámetros](#class-function-parameters) si los hay. Se soportan las siguientes sintaxis:
 
-- uso del operador `()`. For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method:
+- uso del operador `()`. Por ejemplo, `miObjeto.methodName("hola")`
+- uso de un método miembro de clase "4D.Function":
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **Advertencia de seguridad de hilos:** si una función de clase no es hilo seguro y es llamada por un método con el atributo "Puede ejecutarse en un proceso apropiativo": - el compilador no genera ningún error (que es diferente en comparación con los métodos clásicos), - un error es generado por 4D sólo en tiempo de ejecución.
 
 
 
 
-#### Parameters
+#### Parámetros
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. El nombre del parámetro debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties). Múltiples parámetros (y tipos) están separados por punto y coma (;).
+Los parámetros de función se declaran utilizando el nombre del parámetro y el tipo de parámetro, separados por dos puntos. El nombre del parámetro debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties). Múltiples parámetros (y tipos) están separados por punto y coma (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -669,4 +669,4 @@ OB Class devuelve la clase del objeto pasado como parámetro.
 
 #### OB Instance of ( object ; class ) -&#062; Boolean
 
-OB Instance of devuelve true si objeto pertenece a class o a una de sus clases heredadas, y false de lo contrario,.
+OB Instance of devuelve true si objeto pertenece a class o a una de sus clases heredadas, y false de lo contrario.

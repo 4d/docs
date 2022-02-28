@@ -1,12 +1,13 @@
 ---
 id: updates
-title: Documentation updates
+title: Mises à jour de la documentation
 ---
 
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
 
 ## 4D v19
 
+- New REST request to [lock/unlock](REST/$lock.md) entities (19.2).
 - [IMAPTransporter Class](API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](Tags/tags.md#4deach-and-4dendeach) transformation tag.

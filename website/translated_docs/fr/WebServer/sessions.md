@@ -90,7 +90,7 @@ Privileges can be associated to sessions. On the web server, you can provide spe
 
 Vous pouvez attribuer des privilèges à l'aide de la fonction [`.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **invité** (la fonction [`.isGuest()`](API/SessionClass.md#isguest) retourne true).
 
-> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
+> Dans l'implémentation actuelle, seul le privilège "WebAdmin" est disponible.
 
 Exemple :
 

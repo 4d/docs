@@ -44,7 +44,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 <!-- REF #_command_.ds.Params -->
 | Paramètres | Type         |    | Description                            |
 | ---------- | ------------ | -- | -------------------------------------- |
-| localID    | Texte        | -> | Identifiant local du datastore distant |
+| localID    | Text         | -> | Identifiant local du datastore distant |
 | Résultat   | cs.DataStore | <- | Nouvelle référence de datastore        |
 <!-- END REF -->
 
@@ -119,7 +119,7 @@ Utilisation du datastore principal de la base 4D :
 | Paramètres     | Type         |    | Description                                                                       |
 | -------------- | ------------ | -- | --------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
-| localID        | Texte        | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| localID        | Text         | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
 | Résultat       | cs.DataStore | <- | Objet datastore                                                                   |
 <!-- END REF -->
 
@@ -148,14 +148,14 @@ Une fois la session ouverte, les instructions suivantes deviennent équivalentes
 
 Passez dans *connectionInfo* un objet décrivant le datastore distant auquel vous souhaitez vous connecter. Il peut contenir les propriétés suivantes (toutes les propriétés sont optionnelles, à l'exception de *hostname*) :
 
-| Propriété   | Type        | Description                                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| hostname    | Texte       | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
-| user        | Texte       | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
-| password    | Texte       | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                    |
-| idleTimeout | Entier long | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
-| tls         | Booléen     | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
-| type        | Texte       | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
+| Propriété   | Type    | Description                                                                                                                                                                                                                                                                                                                                      |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hostname    | Text    | Nom ou adresse IP de la base de données distante + " :" + numéro de port (le numéro de port est obligatoire)                                                                                                                                                                                                                                     |
+| user        | Text    | Nom d'utilisateur                                                                                                                                                                                                                                                                                                                                |
+| password    | Text    | Mot de passe de l'utilisateur                                                                                                                                                                                                                                                                                                                    |
+| idleTimeout | Longint | Délai d'inactivité de la session (exprimé en minutes), au terme duquel la session est automatiquement fermée par 4D. Si cette propriété est omise, la valeur par défaut est 60 (1h). La valeur ne peut pas être < 60 (si une valeur inférieure est passée, le timeout est fixé à 60). Pour plus d'informations, voir **Fermeture des sessions**. |
+| tls         | Booléen | Utilisez une connexion sécurisée(*). Si cette propriété est omise, "false" par défaut. L'utilisation d'une connexion sécurisée est recommandée dans la mesure du possible.                                                                                                                                                                       |
+| type        | Text    | Doit être "4D Server"                                                                                                                                                                                                                                                                                                                            |
 
 (*) Si tls est vrai, le protocole HTTPS est utilisé si :
 
@@ -319,7 +319,7 @@ L'objet retourné contient les propriétés suivantes :
 | keyProvided |             |               | Booléen | Vrai si la clé de chiffrement correspondant au fichier de données chiffré est fournie(*). |
 | tables      |             |               | Object  | Objet contenant autant de propriétés que de tables chiffrables ou chiffrées.              |
 |             | *tableName* |               | Object  | Table chiffrable ou chiffrée                                                              |
-|             |             | name          | Texte   | Nom de la table                                                                           |
+|             |             | name          | Text    | Nom de la table                                                                           |
 |             |             | num           | Nombre  | Numéro de la table                                                                        |
 |             |             | isEncryptable | Booléen | Vrai si la table est déclarée chiffrable dans le fichier de structure                     |
 |             |             | isEncrypted   | Booléen | Vrai si les enregistrements de la table sont chiffrés dans le fichier de données          |
@@ -551,7 +551,7 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | Paramètres    | Type   |    | Description                                                    |
 | ------------- | ------ | -- | -------------------------------------------------------------- |
-| curPassPhrase | Texte  | -> | Phrase secrète courante                                        |
+| curPassPhrase | Text   | -> | Phrase secrète courante                                        |
 | curDataKey    | Object | -> | Clé de chiffrement des données courante                        |
 | Résultat      | Object | <- | Résultat de la mise en correspondance de la clé de chiffrement |
 <!-- END REF -->
@@ -582,11 +582,11 @@ Le résultat de la commande est décrit dans l'objet retourné :
 | success    |                          | Booléen    | Vrai si la clé de chiffrement fournie correspond aux données chiffrées, sinon Faux |
 |            |                          |            | Les propriétés ci-dessous sont retournées uniquement si success est à *Faux*       |
 | status     |                          | Nombre     | Code d'erreur (4 si la clé de chiffrement fournie est erronée)                     |
-| statusText |                          | Texte      | Message d'erreur                                                                   |
+| statusText |                          | Text       | Message d'erreur                                                                   |
 | errors     |                          | Collection | Pile d'erreurs. La première erreur possède l'indice le plus élevé.                 |
-|            | \[ ].componentSignature | Texte      | Nom du composant interne                                                           |
+|            | \[ ].componentSignature | Text       | Nom du composant interne                                                           |
 |            | \[ ].errCode            | Nombre     | Numéro de l'erreur                                                                 |
-|            | \[ ].message            | Texte      | Message d'erreur                                                                   |
+|            | \[ ].message            | Text       | Message d'erreur                                                                   |
 
 Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataKey()` retourne **null** (aucune erreur n'est générée).
 

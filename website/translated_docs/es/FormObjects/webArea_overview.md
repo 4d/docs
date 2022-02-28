@@ -8,13 +8,13 @@ Web areas can display various types of web content within your forms: HTML pages
 
 It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-areas-rules).
 
-Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Specific variables can be used to exchange information between the area and the 4D environment.
+Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
 > The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
 
 
 ## Propiedades específicas
 
-### Associated variables
+### Variables asociadas
 
 Two specific variables can be associated with each web area:
 - [`URL`](properties_WebArea.md#url) --to control the URL displayed by the web area
@@ -37,31 +37,31 @@ When the [Access 4D methods](properties_WebArea.md#access-4d-methods) property i
 
 The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) supplies the area with a JavaScript object named $4d that you can associate with any 4D project method using the "." object notation.
 
-For example, to call the `HelloWorld` 4D method, you just execute the following statement:
+Por ejemplo, para llamar al método `HelloWorld` de 4D, basta con ejecutar la siguiente declaración:
 
 ```codeJS
 $4d.HelloWorld();
 ```
-> JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
+> JavaScript es sensible a las mayúsculas y minúsculas, por lo que es importante tener en cuenta que el objeto se llama $4d (con "d" minúscula).
 
-The syntax of calls to 4D methods is as follows:
+La sintaxis de las llamadas a los métodos 4D es la siguiente:
 
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})
 ```
-- `param1...paramN`: You can pass as many parameters as you need to the 4D method. These parameters can be of any type supported by JavaScript (string, number, array, object).
+- `param1...paramN`: Puede pasar tantos parámetros como necesite al método 4D. Estos parámetros pueden ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto).
 
-- `function(result)`: Function to pass as last argument. This "callback" function is called synchronously once the 4D method finishes executing. It receives the `result` parameter.
+- `function(result)`: Función a pasar como último argumento. Esta función "callback" se llama de forma sincrónica una vez que el método 4D termina de ejecutarse. Recibe el parámetro `result`.
 
-- `result`: resultado de la ejecución del método 4D, devuelto en la expresión "$0". This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: resultado de la ejecución del método 4D, devuelto en la expresión "$0". Este resultado puede ser de cualquier tipo soportado por JavaScript (cadena, número, array, objeto). Puede utilizar el comando `C_OBJECT` para devolver los objetos.
 
-> By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+> Por defecto, 4D trabaja en UTF-8. Cuando devuelva un texto que contenga caracteres extendidos, por ejemplo, caracteres con acentos, asegúrese de que la codificación de la página mostrada en el área web esté declarada como UTF-8, ya que de lo contrario los caracteres podrían representarse incorrectamente. En este caso, añada la siguiente línea en la página HTML para declarar la codificación: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Ejemplo 1
 
-Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
+Dado un método proyecto 4D llamado `today` que no recibe parámetros y devuelve la fecha actual como una cadena.
 
-4D code of `today` method:
+Código 4D del método `today`:
 
 ```4d
  C_TEXT($0)
@@ -74,9 +74,9 @@ In the web area, the 4D method can be called with the following syntax:
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the value of $0 to the callback function called by 4D after the execution of the method. We want to display the date in the HTML page that is loaded by the web area.
+El método 4D no recibe ningún parámetro pero devuelve el valor $0 a la función callback llamada por 4D tras la ejecución del método. We want to display the date in the HTML page that is loaded by the web area.
 
-Here is the code of the HTML page:
+Aquí está el código de la página HTML:
 
 ```html
 <html>
@@ -97,13 +97,13 @@ $4d.today(function(dollarZero)
 
 #### Ejemplo 2
 
-The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
+El método proyecto 4D `calcSum` recibe los parámetros (`$1...$n`) y devuelve su suma en `$0`:
 
-4D code of `calcSum` method:
+Código 4D del método `calcSum`:
 
 ```4d
- C_REAL(${1}) // receives n REAL type parameters
- C_REAL($0) // returns a Real
+ C_REAL(${1}) // recibe n parámetros de tipo REAL
+ C_REAL($0) // devuelve un Real
  C_LONGINT($i;$n)
  $n:=Count parameters
  For($i;1;$n)
@@ -153,20 +153,20 @@ In addition, web areas support the following generic form events:
 When the form is executed, standard browser interface functions are available to the user in the web area, which permit interaction with other form areas:
 
 - **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
-- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
+- **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. La visualización del menú contextual se puede controlar con el comando `WA SET PREFERENCE`.
 - **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the web area.
 
 ### Subformularios
 
 For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
 
-- The subform must not be able to scroll
+- El subformulario no debe poder desplazarse
 - The limits of the web area must not exceed the size of the subform
 
 > Superimposing a web area on top of or beneath other form objects is not supported.
 
 
-### Web Area and Web server conflict (Windows)
+### Conflicto entre el área web y el servidor web (Windows)
 
 In Windows, it is not recommended to access, via a web area, the Web server of the 4D application containing the area because this configuration could lead to a conflict that freezes the application. Of course, a remote 4D can access the Web server of 4D Server, but not its own web server.
 

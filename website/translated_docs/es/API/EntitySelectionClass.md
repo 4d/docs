@@ -78,9 +78,9 @@ En el parámetro opcional *settings*, puede pasar un objeto que contenga la sigu
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
-// La entity selection $employees ahora contiene un conjunto de referencias
-// en todas las entidades relacionadas con la clase de datos Employee
+$employees:=Create entity selection([Employee])
+// The $employees entity selection now contains a set of reference
+// on all entities related to the Employee dataclass
 ```
 
 #### Ver también
@@ -696,6 +696,9 @@ Ejemplo con la opción `dk stop dropping on first error`:
 </details>
 
 
+
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -754,33 +757,33 @@ Dada la siguiente tabla y relación:
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames es una colección de cadenas
+  //$firstnames is a collection of Strings
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  //$addresses es una colección de entidades relacionadas con la dataclass Address
-  //Se extraen los valores null de Address
+  //$addresses is a collection of entities related to dataclass Address
+  //Null values for address are extracted
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing es una colección de objetos con las propiedades "who" y "to"
-  //El contenido de la propiedad "who" es de tipo Cadena
-  //El contenido de la propiedad "to" es de tipo entity (dataclass Address)
+  //$mailing is a collection of objects with properties "who" and "to"
+  //"who" property content is String type
+  //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing es una colección de objetos con las propiedades "who" y "city"
-  //El contenido de la propiedad "who" es de tipo Cadena
-  //El contenido de la propiedad "city" es de tipo Cadena
+  //$mailing is a collection of objects with properties "who" and "city"
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers es una colección de objetos con las propiedades "where" y "who"
-  //El contenido de la propiedad "where" es de tipo Cadena
-  //El contenido de la propiedad "who" es una entity selection (dataclass Teachers)
+  //$teachers is a collection of objects with properties "where" and "who"
+  //"where" property content is String
+  //"who" property content is an entity selection (Teachers dataclass)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers es una colección de entity selections
+  //$teachers is a collection of entity selections
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -1088,10 +1091,9 @@ Las entity selections siempre tienen una propiedad `.length`.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parámetros    | Tipo |    | Descripción                                        |
-| ------------- | ---- |:--:| -------------------------------------------------- |
-| attributePath | Text | -> | Ruta del atributo que se utilizará para el cálculo |
-| Resultado     | any  | <- | Valor más alto del atributo                        |
+|Parameter|Type||Description|
+
+|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### Descripción
@@ -1140,10 +1142,10 @@ Queremos encontrar el salario más alto entre todas las empleadas:
 **.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| Parámetros    | Tipo |    | Descripción                                        |
-| ------------- | ---- |:--:| -------------------------------------------------- |
-| attributePath | Text | -> | Ruta del atributo que se utilizará para el cálculo |
-| Resultado     | any  | <- | Valor más bajo del atributo                        |
+| Parámetros    | Tipo  |    | Descripción                                        |
+| ------------- | ----- |:--:| -------------------------------------------------- |
+| attributePath | Texto | -> | Ruta del atributo que se utilizará para el cálculo |
+| Resultado     | any   | <- | Valor más bajo del atributo                        |
 <!-- END REF -->
 
 #### Descripción
@@ -1216,9 +1218,9 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
-  // la entity selection $employees contiene la entidad con llave primaria 710 y otras entidades
-  // por ejemplo. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
+ $employees:=ds.Employee.query("lastName = :1";"H@")
+  // The $employees entity selection contains the entity with primary key 710 and other entities
+  // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
  $employee:=ds.Employee.get(710) // Devuelve "Sherlock Holmes"
 
@@ -1316,7 +1318,7 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 | Parámetros  | Tipo               |    | Descripción                                                                    |
 | ----------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| pathString  | Text               | -> | Ruta(s) de atributos e instrucciones de clasificación para la entity selection |
+| pathString  | Texto              | -> | Ruta(s) de atributos e instrucciones de clasificación para la entity selection |
 | pathObjects | Collection         | -> | Colección de objetos criterio                                                  |
 | Resultado   | 4D.EntitySelection | <- | Nueva entity selection en el orden especificado                                |
 <!-- END REF -->
@@ -1376,7 +1378,7 @@ Puede añadir tantos objetos en la colección de criterios como sea necesario.
 
 
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
-## .orderByFormula( )
+## .orderByFormula()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
@@ -1391,8 +1393,8 @@ Puede añadir tantos objetos en la colección de criterios como sea necesario.
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 | Parámetros    | Tipo               |    | Descripción                                   |
 | ------------- | ------------------ |:--:| --------------------------------------------- |
-| formulaString | Text               | -> | Cadena formula                                |
-| formulaObj    | Object             | -> | Objeto formula                                |
+| formulaString | Texto              | -> | Cadena formula                                |
+| formulaObj    | Objeto             | -> | Objeto formula                                |
 | sortOrder     | Integer            | -> | `dk ascending` (por defecto) o`dk descending` |
 | parámetros    | Objeto             | -> | Parámetros de la fórmula                      |
 | Resultado     | 4D.EntitySelection | <- | Nueva entity selection ordenada               |
@@ -1514,10 +1516,10 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 <!-- REF #EntitySelectionClass.query().Params -->
 | Parámetros    | Tipo               |    | Descripción                                                                                                                                                                              |
 | ------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Criterios de búsqueda como cadena                                                                                                                                                        |
-| formula       | Object             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                                                |
+| queryString   | Texto              | -> | Criterios de búsqueda como cadena                                                                                                                                                        |
+| formula       | Objeto             | -> | Criterios de búsqueda como objeto fórmula                                                                                                                                                |
 | value         | any                | -> | Valor(es) a utilizar para los marcadores de posición indexados                                                                                                                           |
-| querySettings | Object             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                         |
+| querySettings | Objeto             | -> | Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                         |
 | Resultado     | 4D.EntitySelection | <- | Nueva selección de entidades formada por las entidades de la entity selection que cumplen los criterios de búsqueda especificados en *queryString* o*formula*|<!-- END REF -->
 
 |
@@ -1572,7 +1574,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página [`.query()`](DataC
 
 La propiedad `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contiene una descripción detallada de la búsqueda tal y como fue realizada por 4D<!-- END REF -->. Esta propiedad está disponible para los objetos de tipo `EntitySelection` generados a través de búsquedas si la propiedad `"queryPath":true` fue pasada en el parámetro *querySettings* de la función [`.query()`](#query).
 
-Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass. 
+Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass.
 
 <!-- END REF -->
 
@@ -1596,7 +1598,7 @@ Para más información, consulte el párrafo **querySettings** en la página [`.
 
 La propiedad `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contiene una descripción detallada de la búsqueda justo antes de su ejecución (es decir, la búsqueda planeada)<!-- END REF -->. Esta propiedad está disponible para los objetos de tipo `EntitySelection` generados a través de búsquedas si la propiedad `"queryPlan":true` fue pasada en el parámetro *querySettings* de la función [`.query()`](#query).
 
-Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass. 
+Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass.
 
 <!-- END REF -->
 
@@ -1755,10 +1757,10 @@ $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 
 **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.sum().Params -->
-| Parámetros    | Tipo |    | Descripción                                        |
-| ------------- | ---- |:--:| -------------------------------------------------- |
-| attributePath | Text | -> | Ruta del atributo que se utilizará para el cálculo |
-| Resultado     | Real | <- | Suma de los valores de la entity selection         |
+| Parámetros    | Tipo  |    | Descripción                                        |
+| ------------- | ----- |:--:| -------------------------------------------------- |
+| attributePath | Texto | -> | Ruta del atributo que se utilizará para el cálculo |
+| Resultado     | Real  | <- | Suma de los valores de la entity selection         |
 <!-- END REF -->
 
 #### Descripción
@@ -1807,7 +1809,7 @@ $sum:=$sel.sum("salary")
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 | Parámetros   | Tipo       |    | Descripción                                                                                  |
 | ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Cadena con la(s) ruta(s) de atributos de la entidad a extraer                                |
+| filterString | Texto      | -> | Cadena con la(s) ruta(s) de atributos de la entidad a extraer                                |
 | filterCol    | Collection | -> | Colección de rutas de atributos de entidad a extraer                                         |
 | options      | Integer    | -> | `dk with primary key`: añade la llave primaria <br>`dk with stamp<`: añade el sello |
 | begin        | Integer    | -> | Designa el índice inicial                                                                    |

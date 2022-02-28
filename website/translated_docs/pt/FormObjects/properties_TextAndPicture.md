@@ -4,7 +4,7 @@ title: Text and Picture
 ---
 
 ---
-## Background pathname
+## Rota de acesso ao Fundo
 
 Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
 
@@ -34,7 +34,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 | Name  | Data Type | Possible Values                                                                                                                                                    |
 |:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text    | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
+| style |   texto   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
 
 #### Objects Supported
@@ -91,7 +91,7 @@ Designates the placement of an icon in relation to the form object.
 
 
 ---
-## Icon Offset
+## Offset do ícone
 
 Sets a custom offset value in pixels, which will be used when the button is clicked
 
@@ -170,10 +170,10 @@ Here are the results using the various options for this property:
 
 | Option       | Description                                                                                                                                      | Exemplo                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Esquerda** | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Direita**  | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Bottom**   | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Fundo**    | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### JSON Grammar

@@ -56,7 +56,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
 ### Managing list boxes
@@ -105,11 +105,11 @@ In the case of a list box based on the current selection of a table, any modific
 
 In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection.
 
-Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Each element of the collection or each entity is available as an object that can be accessed through the [This](../Concepts/classes.md#this) keyword. A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Beispiel:
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Beispiel:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -423,7 +423,7 @@ Selections are managed differently depending on whether the list box is based on
     - [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
     - [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
 
-- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
+- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
   //tBListBox is the name of the list box variable in the form
@@ -523,13 +523,60 @@ You can write in the *UI_SetColor* method:
 
 ## Managing sorts
 
-By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. All columns are always synchronized automatically.
+A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.
 
-You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
+### Standard sort
 
-The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) command) and relevant 4D commands.
+By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
 
-> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command does not take this property into account.
+You can enable or disable standard user sorts by disabling the [Sortable](properties_Action.md#sortable) property of the list box (enabled by default).
+
+Standard sort support depends on the list box type:
+
+| List box type               | Support of standard sort | Kommentare                                                                                                   |
+| --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Collection of objects       | Ja                       | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](propertiesObject.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Collection of scalar values | Nein                     | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
+| Entity-Selection            | Ja                       | <li>The [list box source property](propertiesObject.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Current selection           | Ja                       | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
+| Named selection             | Nein                     |                                                                                                              |
+| Arrays                      | Ja                       | Columns bound to picture and pointer arrays are not sortable                                                 |
+
+
+
+
+### Custom sort
+
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+
+Custom sorts allow you to:
+
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+- use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+
+#### Beispiel
+
+You want to sort a list box using values of a property stored in a related object attribute. You have the following structure:
+
+![](assets/en/FormObjects/relationLB.png)
+
+You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds.Child.all()`.
+
+You display two columns:
+
+| Child name  | Parent's nickname            |
+| ----------- | ---------------------------- |
+| `This.name` | `This.parent.extra.nickname` |
+
+If you want to sort the list box using the values of the second column, you have to write:
+
+```4d
+If (Form event code=On Header Click)
+    Form.child:=Form.child.orderByFormula("This.parent.extra.nickname"; dk ascending)
+End if
+```
+
+### Column header variable
 
 The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
 
@@ -605,7 +652,7 @@ Depending of the list box type, you can use different properties to customize ro
 | ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Background color | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
 | Font color       | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
- Font style|
+
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
 
@@ -627,7 +674,7 @@ In this mode, the printing of list boxes is carried out by programming, via the 
 In this mode:
 
 - The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
+- The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
 - An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
 
@@ -705,7 +752,7 @@ If this list box is displayed in hierarchical form (the first three arrays being
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
 
-    > A B A C
+    > &gt; A B A C
 
 To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
@@ -807,6 +854,7 @@ You can optimize hierarchical list boxes display and management using the `On Ex
 
 A hierarchical list box is built from the contents of its arrays so it can only be displayed when all these arrays are loaded into memory. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the `SELECTION TO ARRAY` command), not only because of the display speed but also the memory used.
 
+
 Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
 
 In this case, you must fill and empty arrays through the code. The principles to be implemented are:
@@ -841,10 +889,19 @@ the value type (mandatory): text, color, event, etc. the value itself (optional)
 
 ```4d  
 ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
- APPEND TO ARRAY(obColumn;$ob)  
+ C_OBJECT($ob1)
+ $entry:="Hello world!" OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)  
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
@@ -921,21 +978,11 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
 
 ````4d
- ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
- $entry:="Hello world!"
- OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
- C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
- OB SET($ob2;"value";2/3)
- C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
-
- APPEND TO ARRAY(obColumn;$ob1)
- APPEND TO ARRAY(obColumn;$ob2)
- APPEND TO ARRAY(obColumn;$ob3)
+$entry:="Hello world!"
+ OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 ````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
@@ -1126,9 +1173,11 @@ Beispiel:
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
-OB SET($ob;"valueType";"text")
-OB SET($ob;"alternateButton";True)
-OB SET($ob;"value";$entry)
+ARRAY OBJECT(obColumn;0) //column array
+ C_OBJECT($ob) //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
+ APPEND TO ARRAY(obColumn;$ob)
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)

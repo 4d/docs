@@ -43,7 +43,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 ## Excluded List
 
-Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
+Allows setting a list whose values cannot be entered in the object. Si se introduce un valor excluido, no se acepta y se muestra un mensaje de error.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
 #### Gramática JSON

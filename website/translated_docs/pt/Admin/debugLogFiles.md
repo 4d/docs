@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Descrição de arquivos de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Históricos são geralmente começados ou parados usando seletores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) e são armazenados na pasta [Logs](Project/architecture.md#logs-folder) do banco de dados.
+Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 

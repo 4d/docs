@@ -754,6 +754,9 @@
       "REST/info": {
         "title": "$info"
       },
+      "REST/lock": {
+        "title": "$lock"
+      },
       "REST/method": {
         "title": "$method"
       },
@@ -855,8 +858,8 @@
       }
     },
     "links": {
-      "v19 R3 BETA": "v19 R3 BETA",
-      "v19 R2": "v19 R2",
+      "v19 R4 BETA": "v19 R4 BETA",
+      "v19 R3": "v19 R3",
       "v19": "v19",
       "v18": "v18"
     },

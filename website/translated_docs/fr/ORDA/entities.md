@@ -383,6 +383,9 @@ This feature is based upon two methods of the `Entity` class:
 
 Pour plus d'informations, reportez-vous aux descriptions de ces méthodes.
 
+> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+
+
 
 ### Utilisation simultanée des verrouillages classiques 4D et des verrouillages pessimistes ORDA
 

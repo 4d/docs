@@ -96,12 +96,12 @@ The `On Web Authentication` database method is NOT called:
 
 | Paramètres | Type    |    | Description                                       |
 | ---------- | ------- |:--:| ------------------------------------------------- |
-| $1         | Texte   | <- | Variable URL                                      |
-| $2         | Texte   | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Texte   | <- | IP address of the web client (browser)            |
-| $4         | Texte   | <- | IP address of the server                          |
-| $5         | Texte   | <- | Nom d'utilisateur                                 |
-| $6         | Texte   | <- | Password                                          |
+| $1         | Text    | <- | Variable URL                                      |
+| $2         | Text    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
+| $3         | Text    | <- | IP address of the web client (browser)            |
+| $4         | Text    | <- | IP address of the server                          |
+| $5         | Text    | <- | Nom d'utilisateur                                 |
+| $6         | Text    | <- | Password                                          |
 | $0         | Booléen | -> | True = request accepted, False = request rejected |
 
 You must declare these parameters as follows:

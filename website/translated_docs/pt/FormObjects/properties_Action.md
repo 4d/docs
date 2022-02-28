@@ -5,7 +5,7 @@ title: Action
 
 
 ---
-## Draggable
+## Arrastável
 
 Control whether and how the user can drag the object. By default, no drag operation is allowed.
 
@@ -23,7 +23,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Name     | Data Type | Possible Values                                              |
 | -------- | --------- | ------------------------------------------------------------ |
-| dragging | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | texto     | "none" (default), "custom", "automatic" (excluding list box) |
 
 
 #### Objects Supported
@@ -34,11 +34,11 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 #### See also
-[Droppable](#droppable)
+[Soltável](#droppable)
 
 
 ---
-## Droppable
+## Soltável
 
 Control whether and how the object can be the destination of a drag and drop operation.
 
@@ -55,7 +55,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Name     | Data Type | Possible Values                                              |
 | -------- | --------- | ------------------------------------------------------------ |
-| dropping | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | texto     | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### Objects Supported
 
@@ -63,7 +63,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 
 #### See also
-[Draggable](#draggable)
+[Arrastável](#draggable)
 
 
 ---
@@ -86,7 +86,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 
 ---
-## Method
+## Métodos
 
 Reference of a method attached to the object. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
@@ -107,7 +107,7 @@ Several types of method references are supported:
 
 | Name   | Data Type | Possible Values                                                    |
 | ------ | --------- | ------------------------------------------------------------------ |
-| method | text      | Object method standard or custom file path, or project method name |
+| method | texto     | Object method standard or custom file path, or project method name |
 
 
 #### Objects Supported
@@ -118,7 +118,7 @@ Several types of method references are supported:
 
 
 ---
-## Movable Rows
+## Linhas móveis
 `Array type list boxes`
 
 Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
@@ -146,7 +146,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 | Name          | Data Type | Possible Values              |
 | ------------- | --------- | ---------------------------- |
-| selectionMode | text      | "multiple", "single", "none" |
+| selectionMode | texto     | "multiple", "single", "none" |
 
 #### Objects Supported
 
@@ -156,7 +156,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 
 ---
-## Sortable
+## Ordenável
 
 Allows sorting column data by clicking a [listbox](listbox_overview.md) header. This option is selected by default. Picture type arrays (columns) cannot be sorted using this feature.
 
@@ -181,7 +181,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 
 ---
-## Standard action
+## Ação padrão
 Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section of the *Design Reference*.
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed.

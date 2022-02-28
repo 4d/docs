@@ -3,7 +3,7 @@ id: installation
 title: Instalación
 ---
 
-¡Bienvenido a 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
+¡Bienvenido a 4D! ¡Bienvenido a 4D! A continuación encontrará toda la información necesaria sobre cómo instalar y registrar su aplicación 4D. On this page, you will find all of the necessary information about installing and launching your 4D product.
 
 
 ## Configuración requerida
@@ -13,7 +13,7 @@ The [Product Download](https://us.4d.com/product-download) page on the 4D websit
 Additional technical details are available on the 4D website's [Resources page](https://us.4d.com/resources/feature-release).
 
 
-## Installation on disk
+## Instalación en disco
 
 4D products are installed from the 4D website:
 

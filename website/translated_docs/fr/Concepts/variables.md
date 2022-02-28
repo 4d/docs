@@ -7,7 +7,7 @@ Fondamentalement, dans 4D, les données peuvent être stockées de deux manière
 
 Lorsque vous définissez votre base, vous indiquez à 4D les noms et les types de champs que vous voulez utiliser. C’est pratiquement la même chose pour les variables — vous leur donnez un nom et un type (cf. [Type de données](Concepts/data-types.md)).
 
-Une fois créée, vous pouvez utiliser une variable partout dans votre application. For example, you might need to store a text variable in a field of same type:
+Une fois créée, vous pouvez utiliser une variable partout dans votre application. Par exemple, vous pouvez stocker une variable de type texte dans un champ du même type :
 
 ```4d
  [MaTable]MonChamp:=MonTexte
@@ -23,47 +23,47 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
 - à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
 - à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (langage classique uniquement).
 
-**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
+**Note :**Bien que cela ne soit généralement pas recommandé, vous pouvez créer des variables basiques simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous souhaitez déclarer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire ce qui suit :
 
 ```4d
- MyDate:=Current date+30 //MyDate is created  
- // 4D guesses it is of date type  
- // and assigns the current date plus 30 days
+ MyDate:=Current date+30 //MyDate est créé 
+ // 4D identifie le type date  
+ // et affecte la date courante + 30 jours
 ```
 
 
-### Using the `var` keyword
+### Utilisation du mot-clé `var`
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+Il est recommandé de déclarer les variables à l'aide du mot-clé `var`, car cette syntaxe permet de lier les variables objet aux classes. L'utilisation de cette syntaxe améliore les suggestions de l'éditeur de code et les fonctionnalités type-ahead.
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+Pour déclarer une variable de n'importe quel type avec le mot-clé `var`, utilisez la syntaxe suivante :
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
 Par exemple :
 
 ```4d
-var $myText : Text  //a text variable
-var myDate1; myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
-var $myVar //a variant variable
+var $myText : Text  //une variable de type texte
+var myDate1; myDate2 : Date  //plusieurs variables de type texte
+var $myFile : 4D.File  //une variable objet de classe de fichier
+var $myVar //une variable variant
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` est le nom de la variable, il doit être conforme aux [règles 4D](Concepts/identifiers.md) concernant les identifiants.   
+Cette syntaxe prend uniquement en charge les déclarations de [variables locales et variables process](#local-process-and-interprocess-variables), excluant ainsi les [variables interprocess](#interprocess-variables) et les [tableaux](Concepts/arrays.md).
 
-`varType` can be:
+`varType` peut être :
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- un [type basique](Concepts/data-types.md), auquel cas la variable contient une valeur du type déclaré,
+- une [référence de classe](Concepts/classes.md) (classe 4D ou classe utilisateur), auquel cas la variable contient une référence à un objet de la classe définie.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Si `varType` est omis, une variable de type **variant** est créée.
 
 Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 
 | varType        | Contenu                                  |
 | -------------- | ---------------------------------------- |
-| Texte          | Valeur texte                             |
+| Text           | Valeur texte                             |
 | Date           | Valeur date                              |
 | Heure          | Valeur Heure                             |
 | Booléen        | Valeur booléen                           |
@@ -80,7 +80,7 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 
 #### Exemples
 
-- To declare local and process basic variables:
+- Pour déclarer les variables locales et les variables process basiques :
 
 ```4d
 var $myText; myText; $vt : Text
@@ -92,14 +92,14 @@ var $o : 4D.Object
 //également équivalent à C_OBJECT($o)
 ```
 
-- To declare object variables of 4D class:
+- Pour déclarer les variables objet de la classe 4D :
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- To declare object variables of user class:
+- Pour déclarer les variables objet de la classe utilisateur :
 
 ```4d
 var $myClass : cs.MyClass
@@ -108,11 +108,11 @@ var $entity : cs.EmployeeEntity
 ```
 
 
-### Using a C_ directive
+### Utilisatation de la directive C_
 
 > **Note de compatibilité :** cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#using-the-var-keyword).
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+Les directives du thème "Compilateur" vous permettent de déclarer des variables de types basiques.
 
 Par exemple, si vous souhaitez définir une variable de type texte, il suffira d'écrire :
 
@@ -123,14 +123,13 @@ Par exemple, si vous souhaitez définir une variable de type texte, il suffira d
 Voici quelques déclarations de variables simples :
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
+ C_BLOB(vxMyBlob) // La variable process vxMyBlob est déclarée comme variable de type BLOB C_DATE($vdCurDate) // La variable locale $vdCurDate est déclarée comme variable de type Date
+ C_C_LONGINT(vg1;vg2;vg3) // Les 3 variables process vg1, vg2 et vg3 sont déclarées comme variables de type Entier long
+ C_OBJECT($vObj) // La variable locale $vObj est déclarée comme variable de type Objet
+ C_COLLECTION($vCol) // La variable locale $vCol est déclarée comme variable de type Collection
 ```
 
-**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
+**Note :** Les tableaux sont un type particulier de variables (un tableau est une série ordonnée de variables du même type). Les tableaux sont déclarés avec des commandes spécifiques, telles que `ARRAY LONGINT(alAnArray;10)`. Pour plus d'informations, veuillez consulter le thème [Tableaux](Concepts/arrays.md).
 
 
 ## Assigner des valeurs
@@ -145,7 +144,7 @@ MonNombre:=3
 
 crée la variable _MonNombre_ et lui donne la valeur numérique 3. Si MonNombre existait déjà, elle prend simplement la valeur 3.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> Il n’est généralement pas recommandé de créer des variables sans [déclarer leur type](#creating-variables).
 
 Bien entendu, les variables ne seraient pas très utiles si vous ne pouviez pas récupérer les valeurs qu’elles contiennent. De nouveau, vous utilisez l’opérateur d’assignation. Si vous devez placer la valeur de MonNombre dans un champ nommé [Produits]Taille, il vous suffit de placer _MonNombre_ à droite de l’opérateur d’assignation :
 

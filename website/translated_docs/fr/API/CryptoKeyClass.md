@@ -119,7 +119,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 <!-- REF #CryptoKey.decrypt().Params -->
 | Paramètres | Type   |    | Description                                                                       |
 | ---------- | ------ | -- | --------------------------------------------------------------------------------- |
-| message    | Texte  | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
+| message    | Text   | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
 | options    | Object | -> | Options de décodage                                                               |
 | Résultat   | Object | <- | Statut                                                                            |
 <!-- END REF -->
@@ -168,9 +168,9 @@ Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec 
 <!-- REF #CryptoKey.encrypt().Params -->
 | Paramètres | Type   |    | Description                                                                     |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| message    | Texte  | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
+| message    | Text   | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
 | options    | Object | -> | Options de chiffrement                                                          |
-| Résultat   | Texte  | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
+| Résultat   | Text   | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
 <!-- END REF -->
 
 La fonction `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->crypte le paramètre *message* à l'aide de la clé **publique**<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
@@ -208,9 +208,9 @@ La valeur retournée est un message chiffré.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Paramètres | Type  |    | Description                |
-| ---------- | ----- | -- | -------------------------- |
-| Résultat   | Texte | <- | Clé primaire au format PEM |
+| Paramètres | Type |    | Description                |
+| ---------- | ---- | -- | -------------------------- |
+| Résultat   | Text | <- | Clé primaire au format PEM |
 <!-- END REF -->
 
 La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->retourne la clé privée de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.
@@ -235,9 +235,9 @@ La valeur retournée est la clé privée.
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Paramètres | Type  |    | Description                |
-| ---------- | ----- | -- | -------------------------- |
-| Résultat   | Texte | <- | Clé publique au format PEM |
+| Paramètres | Type |    | Description                |
+| ---------- | ---- | -- | -------------------------- |
+| Résultat   | Text | <- | Clé publique au format PEM |
 <!-- END REF -->
 
 
@@ -281,9 +281,9 @@ La valeur retournée est la clé publique.
 <!-- REF #CryptoKey.sign().Params -->
 | Paramètres | Type   |    | Description                                                                |
 | ---------- | ------ | -- | -------------------------------------------------------------------------- |
-| message    | Texte  | -> | Chaîne message à signer                                                    |
+| message    | Text   | -> | Chaîne message à signer                                                    |
 | options    | Object | -> | Options de signature                                                       |
-| Résultat   | Texte  | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
+| Résultat   | Text   | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 <!-- END REF -->
 
 La fonction `.sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
@@ -353,8 +353,8 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 <!-- REF #CryptoKey.verify().Params -->
 | Paramètres | Type   |    | Description                                                                                     |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------------------------- |
-| message    | Texte  | -> | Chaîne message utilisée pour générer la signature                                               |
-| signature  | Texte  | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
+| message    | Text   | -> | Chaîne message utilisée pour générer la signature                                               |
+| signature  | Text   | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
 | options    | Object | -> | Options de signature                                                                            |
 | Résultat   | Object | <- | Statut de la vérification                                                                       |
 <!-- END REF -->

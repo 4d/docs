@@ -205,7 +205,7 @@
         "title": "Variables"
       },
       "Desktop/building": {
-        "title": "Building a project package"
+        "title": "Construir un paquete proyecto"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
@@ -442,7 +442,7 @@
         "title": "Rejilla de botones"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "Casilla a seleccionar"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
@@ -754,6 +754,9 @@
       "REST/info": {
         "title": "$info"
       },
+      "REST/lock": {
+        "title": "$lock"
+      },
       "REST/method": {
         "title": "$method"
       },
@@ -855,8 +858,8 @@
       }
     },
     "links": {
-      "v19 R3 BETA": "v19 R3 BETA",
-      "v19 R2": "v19 R2",
+      "v19 R4 BETA": "v19 R4 BETA",
+      "v19 R3": "v19 R3",
       "v19": "v19",
       "v18": "v18"
     },
