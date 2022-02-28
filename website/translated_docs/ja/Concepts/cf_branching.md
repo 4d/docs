@@ -47,7 +47,7 @@ title: 分岐構造
 
 上記の結果はほぼ同じで、_MethodB_ は必要な場合にのみ評価されます。
 
-> **Note:** The [ternary operator](../dt_boolean.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of [If…Else](../cf_branching.md#ifelseend-if) statements.
+> **注記:** [三項演算子](../dt_boolean.md#三項演算子) を使うことで、条件式を 1行で書くことができ、[If...Else](../cf_branching.md#ifelseend-if) 文を置き換えることもできます。
 
 ### 例題
 

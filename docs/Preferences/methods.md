@@ -149,18 +149,19 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 - **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
 
-![](assets/en/Preferences/optionsClosing.png) -> " -> ![](assets/en/Preferences/optionsClosing2.png)
+![](assets/en/Preferences/optionsClosing.png)  
+![](assets/en/Preferences/optionsClosing2.png)
 
-#### Matching [](){}""
+#### Matching \[]\(){}
 
-Sets the graphic signaling of matching braces and double quotes in the code. This signaling appears whenever a square bracket, parenthesis, curly bracket, or double quote is selected. 
+Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. 
 The following options are available:
 
 - **None**: No signaling
-- **Rectangle** (default): Braces/double quotes surrounded by a black line  
+- **Rectangle** (default): Braces surrounded by a black line  
 	![](assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces/double quotes highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces/double quotes displayed in bold.
+- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
+- **Bold**: Braces displayed in bold.
 
 #### Highlighted variables and fields
 

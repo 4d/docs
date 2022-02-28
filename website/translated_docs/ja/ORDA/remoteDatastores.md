@@ -7,7 +7,7 @@ title: リモートデータストアの利用
 
 - 4D リモートアプリケーションは ORDA を使っていれば、`ds` コマンドでメインデータストアにアクセスできます。 この 4D リモートアプリケーションは従来のモードでもデータベースにアクセスできます。 これらのアクセスを処理するのは **4Dアプリケーションサーバー** です。
 - 他の 4Dアプリケーション (4Dリモート、4D Server) は、`Open datastore` コマンドを使ってリモートデータストアのセッションを開始できます。 アクセスを処理するのは **HTTP REST サーバー** です。
-- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. アクセスを処理するのは **HTTP サーバー** です。
+- モバイルアプリケーションを更新するための [4D for iOS または 4D for Android](https://developer.4d.com/go-mobile/) のクエリでアクセスできます。 アクセスを処理するのは **HTTP サーバー** です。
 
 
 
@@ -15,7 +15,7 @@ title: リモートデータストアの利用
 
 `Open datastore` コマンドによって参照されるリモートデータストアの場合、リクエスト元プロセスとリモートデータストア間の接続はセッションにより管理されます。
 
-A session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。
+リモートデータストア上では、接続を管理するためのセッションが作成されます。 このセッションは内部的にセッションID によって識別され、4Dアプリケーション上では ` localID` と紐づいています。 データ、エンティティセレクション、エンティティへのアクセスはこのセッションによって自動的に管理されます。
 
 `localID` はリモートデータストアに接続しているマシンにおけるローカルな識別IDです:
 
@@ -35,7 +35,7 @@ A session in created on the remote datastore to handle the connection. This sess
 
 *   プロセス名: "REST Handler: \<process name\>"
 *   タイプ: HTTP Server Worker
-*   session: session name is the user name passed to the `Open datastore` command.
+*   セッション: `Open datastore` コマンドに渡されたユーザー名
 
 次の例では、1つのセッション上で 2つのプロセスが実行中です:
 
@@ -55,13 +55,13 @@ A session in created on the remote datastore to handle the connection. This sess
 
 ### セッションの終了
 
-アクティビティなしにタイムアウト時間が経過すると、4D は自動的にセッションを終了します。 The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the `Open datastore` command.
+アクティビティなしにタイムアウト時間が経過すると、4D は自動的にセッションを終了します。 デフォルトのタイムアウト時間は 60分です。*Open datastore* コマンドの `connectionInfo` パラメーターを指定して、タイムアウト時間を変更することができます。
 
 セッション終了後にリクエストがリモートデータストアに送信された場合、セッションは可能な限り (ライセンスがあり、サーバーが停止していない、など) 再開されます。 ただしセッションが再開しても、ロックやトランザクションに関わるコンテキストは失われていることに留意が必要です (前述参照)。
 
 ## クライアント/サーバーの最適化
 
-4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。
+4Dは、クライアント/サーバー環境において (`ds` または `Open datastore` によりアクセスされたデータストアの場合) エンティティセレクションを使用、あるいはエンティティを読み込む ORDAリクエストについて自動的に最適化する機構を提供しています。 この最適化機構は、ネットワーク間でやり取りされるデータの量を大幅に縮小させることで 4Dの実行速度を向上させます。
 
 この機能には、以下の最適化機構が実装されています:
 

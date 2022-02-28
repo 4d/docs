@@ -501,13 +501,13 @@ The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet con
 
 It contains the following properties:
 
-| Propriété    | Value type  | Description                                  |
-| ------------ | ----------- | -------------------------------------------- |
-| version      | Entier long | Internal component version                   |
-| dateCreation | Timestamp   | Creation date                                |
-| dateModified | Timestamp   | Last modification date                       |
-| meta         | Object      | Free contents, reserved for the 4D developer |
-| spreadJS     | Object      | Reserved for the 4D View Pro component       |
+| Propriété    | Value type | Description                                  |
+| ------------ | ---------- | -------------------------------------------- |
+| version      | Longint    | Internal component version                   |
+| dateCreation | Timestamp  | Creation date                                |
+| dateModified | Timestamp  | Last modification date                       |
+| meta         | Object     | Free contents, reserved for the 4D developer |
+| spreadJS     | Object     | Reserved for the 4D View Pro component       |
 
 
 ## 4D View Pro Form Object Variable
@@ -519,12 +519,12 @@ It contains the following properties:
 
 | Propriété              | Value type | Description                                                                                                                                                                                                                                                                                                                  |
 | ---------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ViewPro.area           | Texte      | Nom de la zone 4D View Pro                                                                                                                                                                                                                                                                                                   |
+| ViewPro.area           | Text       | Nom de la zone 4D View Pro                                                                                                                                                                                                                                                                                                   |
 | ViewPro.callbacks      | Object     | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
 | ViewPro.commandBuffers | Collection | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
 | ViewPro.events         | Object     | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
 | ViewPro.formulaBar     | Booléen    | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
 | ViewPro.inited         | Booléen    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
-| ViewPro.interface      | Texte      | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |
+| ViewPro.interface      | Text       | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |
 
 

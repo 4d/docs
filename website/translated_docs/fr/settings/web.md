@@ -1,55 +1,55 @@
 ---
 id: web
-title: Web page
+title: Page Web
 ---
 
-Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html) chapter.
+Les onglets de la page **Web** permettent de paramétrer les multiples aspects du serveur Web intégré de 4D (sécurité, démarrage, connexions, services Web, etc.). Pour plus d’informations sur le fonctionnement du serveur Web de 4D, reportez-vous au chapitre [Serveur Web](../WebServer/webServer.md). Pour plus d’informations sur les services Web de 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
 
 ## Configuration
 
-### Publishing Information
+### Information de publication
 
-#### Launch Web Server at Startup
+#### Lancer le serveur Web au démarrage
 
-Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
+Indique si le serveur Web doit être démarré dès le lancement de l'application 4D. Cette option est détaillée dans la section [Administration du serveur Web](../WebServer/webServerAdmin.md#starting-the-4d-web-server).
 
 #### Activer HTTP
 
-Indicates whether or not the Web server will accept non-secure connections. See [Enable HTTP](../WebServer/webServerConfig.md#enable-http).
+Indique si le Web server accepte des connexions non sécurisées. Voir [Activer HTTP](../WebServer/webServerConfig.md#enable-http).
 
 
 #### Port HTTP
 
-Numéro de port IP (TCP) d'écoute pour HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
+Numéro de port IP (TCP) d'écoute pour HTTP. Voir [Port HTTP](../WebServer/webServerConfig.md#http-port).
 
-#### IP Address
+#### Adresse IP
 
-IP address on which the 4D web server will receive HTTP requests (4D local and 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
+Adresse IP sur laquelle le serveur web 4D recevra les requêtes HTTP (4D local et 4D Server). Voir [Adresse IP à écouter](../WebServer/webServerConfig.md#ip-address-to-listen).
 
 
 #### Activer HTTPS
 
-Indicates whether or not the Web server will accept secure connections. See [Enable HTTPS](../WebServer/webServerConfig.md#enable-https).
+Indique si le Web server accepte des connexions sécurisées. Voir [Activer HTTPS](../WebServer/webServerConfig.md#enable-https).
 
 
 #### Port HTTPS
 
-Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). See [HTTPS Port](../WebServer/webServerConfig.md#https-port).
+Permet de modifier le numéro du port TCP/IP utilisé par le serveur Web pour les connexions HTTP sécurisées sur TLS (protocole HTTPS). Voir [Port HTTPS](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database access through 4DSYNC URLs
+#### Autoriser l'accès aux bases de données par le biais des URL 4DSYNC
 
-*Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
+*Note de compatibilité :* Cette option est [obsolète](../WebServer/webServerConfig.md#deprecated-settings). Pour l'accès aux bases de données via HTTP, il est désormais recommandé d'utiliser les fonctionnalités de stockage de données à distance ORDA et les requêtes REST.
 
 
-### Paths
+### Chemins
 
-#### Default HTML Root
+#### Racine HTML par défaut
 
-Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. See [Root Folder](../WebServer/webServerConfig.md#root-folder).
+Permet de définir l'emplacement par défaut des fichiers du site Web et indique le niveau hiérarchique sur le disque au-dessus duquel aucune requête ne pourra accéder. Voir [Dossier Racine](../WebServer/webServerConfig.md#root-folder).
 
-#### Default Home Page
+#### Page d’accueil par défaut
 
-Designate a default home page for the Web server. See [Default Home page](../WebServer/webServerConfig.md#default-home-page).
+Cette option permet de désigner la page d’accueil par défaut pour le serveur Web. Voir [page d'accueil par défaut](../WebServer/webServerConfig.md#default-home-page).
 
 
 
@@ -59,81 +59,81 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 ### Cache
 
 
-#### Use the 4D Web cache
+#### Utiliser le cache Web de 4D
 
-Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
+Active le cache de la page web. Voir [Cache](../WebServer/webServerConfig.md#cache).
 
-#### Pages Cache Size
+#### Taille du cache des pages
 
-Sets the cache size. See [Cache](../WebServer/webServerConfig.md#cache).
+Définit la taille du cache. Voir [Cache](../WebServer/webServerConfig.md#cache).
 
 
-#### Clear Cache
+#### Vider le cache
 
 À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache). À tout moment, vous pouvez vider le cache des pages et des images qu'il contient (si, par exemple, vous avez modifié une page statique et que vous souhaitez la recharger dans le cache). Le cache est alors immédiatement effacé.
 
-> You can also use the special URL [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
+> Vous pouvez également utiliser l'URL spécifique [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
-### Web Process
+### Process Web
 
-This area allows you to configure how the web server will handle user sessions and their associated processes.
+Cette zone vous permet de configurer, par le serveur Web, la gestion des sessions utilisateur et leurs process associés.
 
-> The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
+> L'option **Sessions héritées** n'est disponible que pour la compatibilité dans les bases/projets créé(e) s avec les versions de 4D antérieures à 4D v18 R6.
 
-#### Scalable sessions (multi-process sessions)
+#### Sessions extensibles (sessions multi-process)
 
-When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
-
-
-#### No sessions
-
-When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
-
-In this mode, you can configure additional web server setttings:
-
--   [Nombre maximal de process Web simultanés](#maximum-concurrent-web-processes)
--   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
--   [Use preemptive processes](#use-preemptive-web-processes)
-
-#### Legacy sessions (single process sessions)
-
-*Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
-
-This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. See [Keep Session](../WebServer/webServerConfig.md#keep-session).
-
-When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
-
-#### Nombre maximal de process Web simultanés
-
-Not available with [scalable sessions](../WebServer/sessions.md).
-
-Strictly high limit of concurrent web processes. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Lorsque vous sélectionnez cette option (recommandée), une session utilisateur est gérée via un objet **Session**. Voir la [page Sessions utilisateur](../WebServer/sessions.md#enabling-sessions).
 
 
-#### Reuse Temporary Contexts
+#### Pas de sessions
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+Lorsque cette option est sélectionnée, le serveur Web ne fournit aucune prise en charge spécifique pour les [sessions utilisateur](../WebServer/sessions.md). Les requêtes successives des clients Web sont toujours indépendantes et aucun contexte n'est conservé sur le serveur.
 
-Allows you to optimize the operation of the 4D Web server in remote mode. See [Reuse temporary contexts in remote mode)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
+Dans ce mode, vous pouvez configurer des paramètres de serveur Web supplémentaires :
 
-#### Use preemptive processes
+-   [Process Web simultanés maxi](#maximum-concurrent-web-processes)
+-   [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts)
+-   [Utiliser des process préemptifs](#use-preemptive-web-processes)
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+#### Anciennes sessions (sessions process uniques)
 
-Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
+*Note de compatibilité :* Cette option est disponible uniquement dans les bases/projets créé(e) s avec une version 4D antérieure à 4D v18 R6.
 
-**Note:** This option does not apply to Web service processes (server or client). Preemptive mode is supported by Web service processes at method level: you just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
+Cette option permet de gérer les anciennes sessions utilisateur par le serveur 4D HTTP. Ce mécanisme est décrit dans la section [Gestion des sessions Web](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Voir [Garder session](../WebServer/webServerConfig.md#keep-session).
+
+L'option [Réutilisation des contextes temporaires (4D en mode distant)](#reuse-temporary-contexts) est automatiquement cochée (et verrouillée).
+
+#### Process Web simultanés maxi
+
+Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
+
+Cette option indique la limite strictement supérieure du nombre de process Web pouvant être simultanément ouverts sur le serveur. Voir [Process Web simultanés maxi](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+
+
+#### Réutilisation des contextes temporaires
+
+Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
+
+Permet d’optimiser le fonctionnement du serveur Web de 4D en mode distant. Voir [Réutilisation des contextes temporaires en mode distant](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
+
+#### Utiliser des process préemptifs
+
+Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
+
+Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des processus Web préemptifs](../WebServer/preemptiveWeb.md).
+
+**Note :** cette option ne s'applique pas aux process de service Web (serveur ou client). Preemptive mode is supported by Web service processes at method level: you just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
 
 #### Durée de vie des process inactifs
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
 Allows you to set the maximum timeout before closing for inactive Web processes on the server. See [Inactive Process Timeout](../WebServer/webServerConfig.md#inactive-process-timeout).
 
 
 
-### Web Passwords
+### Mots de passe Web
 
 Set the authentication system that you want to apply to your Web server. Three options are proposed:
 

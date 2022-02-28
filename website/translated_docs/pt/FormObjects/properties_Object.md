@@ -24,7 +24,7 @@ This property designates the type of the [active or inactive form object](formOb
 
 
 ---
-## Object Name
+## Nome de objeto
 
 Each active form object is associated with an object name. Each object name must be unique.
 > Object names are limited to a size of 255 bytes.
@@ -55,12 +55,12 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objeto                                     | Saved value                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Value of associated variable (0, 1, 2)                                                 |
-| [Drop-down List](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)          | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)               | Number of selected tab                                                                 |
+| Objeto                                                  | Saved value                                                                            |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [Check Box](checkbox_overview.md)                       | Value of associated variable (0, 1, 2)                                                 |
+| [Lista suspensa ou drop down](dropdownList_Overview.md) | Number of selected row                                                                 |
+| [Radio Button](radio_overview.md)                       | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
 
 
 #### JSON Grammar
@@ -76,7 +76,7 @@ Here is the list of objects whose value can be saved:
 
 
 ---
-## Variable or Expression
+## Variável ou expressão
 
 > See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
 
@@ -203,7 +203,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 
 ---
-## Collection or entity selection
+## Seleção de entidade ou coleção
 
 To use collection elements or entities to define the row contents of the list box.
 
@@ -231,7 +231,7 @@ The collection or the entity selection must be available to the form when it is 
 
 
 ---
-## Data Source
+## Fonte de dados
 
 Specify the type of list box.
 
@@ -312,9 +312,9 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| text | string    | any text        |
+| Name  | Data Type | Possible Values |
+| ----- | --------- | --------------- |
+| texto | string    | any text        |
 
 #### Objects Supported
 
@@ -339,7 +339,7 @@ There are several types of calculations available. The following table shows whi
 | Minimum               | X   | X     | X    | X    | X    |      | Same as column type |
 | Maximum               | X   | X     | X    | X    | X    |      | Same as column type |
 | Sum                   | X   |       |      | X    | X    |      | Same as column type |
-| Count                 | X   | X     | X    | X    | X    | X    | Longint             |
+| Count                 | X   | X     | X    | X    | X    | X    | Inteiro longo       |
 | Average               | X   |       |      | X    |      |      | Real                |
 | Standard deviation(*) | X   |       |      | X    |      |      | Real                |
 | Variance(*)           | X   |       |      | X    |      |      | Real                |

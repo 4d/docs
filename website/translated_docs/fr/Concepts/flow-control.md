@@ -3,7 +3,7 @@ id: control-flow
 title: Conditions et boucles
 ---
 
-Regardless of the simplicity or complexity of a method or function, you will always use one or more of three types of programming structures. Les structures de programmation déterminent si et dans quel ordre les lignes d’instructions sont exécutées à l’intérieur d’une méthode. Il existe trois types de structures :
+Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonction, vous utiliserez toujours un ou plusieurs types de structure de programmation. Les structures de programmation déterminent si et dans quel ordre les lignes d’instructions sont exécutées à l’intérieur d’une méthode. Il existe trois types de structures :
 
 - **Séquentielle** : une structure séquentielle est une structure simple, linéaire. Une séquence est une série d’instructions que 4D exécute les unes après les autres, de la première à la dernière. Une instruction d'une ligne, fréquemment utilisée pour les méthodes objet, est le cas le plus simple de structure séquentielle. Par exemple : `[Personnes]Nom:=Uppercase([Personnes]Nom)`
 - **[Conditionnelle](Concepts/cf_branching.md)** : une structure conditionnelle permet aux méthodes de tester une condition et d’exécuter des séquences d’instructions différentes en fonction du résultat. La condition est une expression booléenne, c’est-à-dire pouvant retourner VRAI ou FAUX. L’une des structures conditionnelles est la structure `If...Else...End if`, qui aiguille le déroulement du programme vers une séquence ou une autre. L’autre structure conditionnelle est la structure `Case of...Else...End case`, qui aiguille le programme vers une séquence parmi une ou plusieurs alternatives.
@@ -24,9 +24,9 @@ Regardless of the simplicity or complexity of a method or function, you will alw
 | v19 R4  | Ajout         |
 </details>
 
-The `return` statement can be called from anywhere. When a `return` statement is used in a function or method, the execution of the function or method is stopped. The remaining code is not executed and the control is returned to the caller.
+L'instruction `return` peut être appelée de n'importe où. Lorsqu'une instruction `return` est utilisée dans une fonction ou une méthode, l'exécution de la fonction ou de la méthode est arrêtée. Le code restant n'est pas exécuté et le contrôle est renvoyé à l'appelant.
 
-The `return` statement can be used to [return a value](parameters.md#return-expression) to the caller.
+L'instruction `return` peut être utilisée pour [retourner une valeur](parameters.md#return-expression) à l'appelant.
 
 ### Exemple
 
@@ -34,17 +34,17 @@ The `return` statement can be used to [return a value](parameters.md#return-expr
 var $message : Text
 var $i : Integer
 
-While (True) //infinite loop
+While (True) //boucle infinie
     $i:=$i+1
-    $message+=String($i)+"A\r"  // until 5
+    $message+=String($i)+"A\r"  // jusqu'à 5
     logConsole($message)
     If ($i=5)
         return //stops the loop
     End if 
-    $message+=String($i)+"B\r"  // until 4
+    $message+=String($i)+"B\r"  // jusqu'à 4
     logConsole($message)
 End while 
-$message+=String($i)+"C\r"  //never executed 
+$message+=String($i)+"C\r"  //jamais exécutée 
 logConsole($message)
 
 // 1A

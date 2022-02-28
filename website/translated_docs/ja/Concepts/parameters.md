@@ -123,7 +123,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). たとえば:
+矢印と出力変数名を省略して、コロン (:) 記号の後に戻り値のデータ型だけを指定した場合には、戻り値は [return文](#return-expression) または [受け渡し順シンタックス](#戻り値-1) の `$0` を使って管理します。 たとえば:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -219,31 +219,31 @@ ALERT($0)
 | v19 R4 | 追加 |
 </details>
 
-The `return` statement ends function or method execution and can be used to return an expression to the caller.
+`return`文は、関数やメソッドの実行を終了させ、呼び出し元に式を返すために使用します。
 
-For example, the following function returns the square of its argument, $x, where $x is a number.
+たとえば、次の関数は引数 $x の 2乗を返します。$x 数値です。
 
 ```4d
 Function square($x : Integer) 
    return $x * $x
 ```
 
-> Internally, `return x` executes `$0:=x` or (if declared) `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+> 内部的に、`return x` は `$0:=x` または (宣言されていれば) `myReturnValue:=x` を実行し、呼び出し元に戻ります。 `return` が式なしで使われた場合、関数またはメソッドは宣言された戻り値の型 (あれば)の null値を返し、それ以外の場合には *undefined* です。
 
 
-The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. たとえば:
+`return`文は、[戻り値](#戻り値) の標準的なシンタックスと併用することができます (戻り値は宣言された型でなくてはなりません)。 ただし、`return` はコードの実行を直ちに終了させることに注意が必要です。 たとえば:
 
 
 ```4d
 Function getValue
     $0:=10
     return 20
-    // returns 20
+    // 20 が返されます
 
 Function getValue -> $v : Integer
     return 10
-    $v:=20 // never executed
-    // returns 10
+    $v:=20 // 実行されません
+    // 10 が返されます
 ```
 
 

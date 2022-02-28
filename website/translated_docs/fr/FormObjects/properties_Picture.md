@@ -8,17 +8,18 @@ title: Image
 
 Chemin d'une image source statique pour un [bouton image](pictureButton_overview.md), [un menu pop-up ](picturePopupMenu_overview.md) ou une [image ou une image statique](staticPicture.md). Vous devez utiliser la syntaxe POSIX.
 
-Deux emplacements principaux peuvent être utilisés pour le chemin d'image statique :
+Les emplacements suivants peuvent être utilisés pour le chemin d'images statiques :
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. Dans ce cas, le chemin d'accès se trouve dans "/RESOURCES/\<picture path\>".
 - dans un dossier d'images (nommé **Images** par exemple) dans le dossier du formulaire. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. Dans ce cas, le chemin d'accès est "\<picture path\>" et est déterminé à la racine du dossier du formulaire.
+- dans une variable image 4D. L'image doit être chargée en mémoire lors de l'exécution du formulaire. Dans ce cas, le nom de chemin est "var:\<variableName\>".
 
 
 #### Grammaire JSON
 
-|   Nom   | Type de données | Valeurs possibles                             |
-|:-------:|:---------------:| --------------------------------------------- |
-| picture |      Texte      | Chemin relatif ou filesystem en syntaxe POSIX |
+|   Nom   | Type de données | Valeurs possibles                                                                                                         |
+|:-------:|:---------------:| ------------------------------------------------------------------------------------------------------------------------- |
+| picture |      Texte      | Chemin relatif ou chemin du système de fichiers dans la syntaxe POSIX, ou "var:\<variableName\>" pour la variable image |
 
 
 #### Objets pris en charge

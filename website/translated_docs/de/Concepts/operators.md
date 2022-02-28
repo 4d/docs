@@ -13,7 +13,7 @@ The 4D language supports the operators you may already know from other languages
 The 4D language supports **binary** and **ternary** operators:
 
 - binary operators operate on two targets (such as 2 + 3) and appear in between their two targets.
-- ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
+- ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`). b : c</code>).
 
 The values that operators affect are operands. In the expression 1 + 2, the + symbol is a binary operator and its two operands are the values 1 and 2.
 
@@ -253,7 +253,7 @@ It takes three operands in the following order:
 
 The syntax is as follows:
 
-`condition ? exprIfTruthy : exprIfFalsy`
+`condition ? condition ? exprIfTruthy : exprIfFalsy`
 
 > Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
 
@@ -268,6 +268,8 @@ var $beverage : Text
 $age:=26
 $beverage:=($age>=21) ? "Beer" : "Juice"
 
+ALERT($beverage) // "Beer" "Beer" : "Juice"
+
 ALERT($beverage) // "Beer"
 ```
 
@@ -279,7 +281,7 @@ This example stores a person's full name in a variable, and handles the case whe
 var $fullname : Text
 
 // If one of the names is missing, store the one that exists, otherwise store an empty string.
-$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
+$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
 ## Truthy and falsy

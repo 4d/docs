@@ -98,7 +98,7 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
     $lang.CompanyName:="Company:"
     $lang.LastName:="Name:"
  End if
- InvoiceAddress.Label:=$lang
+ InvoiceAddress. Label:=$lang
 ```
 
 ![](assets/en/FormObjects/subforms5.png)

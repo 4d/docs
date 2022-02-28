@@ -285,11 +285,11 @@ End if
 **.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parameter  | Type       |    | Description                                                      |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
-| privilege  | Texto      | -> | Nome do privilégio                                               |
-| privileges | Collection | -> | Collection de nomes de privilégios                               |
-| settings   | Objeto     | -> | Objetos com as propriedades "privilégios" (string ou collection) |
+| Parameter  | Type    |    | Description                                                      |
+| ---------- | ------- |:--:| ---------------------------------------------------------------- |
+| privilege  | Texto   | -> | Nome do privilégio                                               |
+| privileges | Coleção | -> | Collection de nomes de privilégios                               |
+| settings   | Objeto  | -> | Objetos com as propriedades "privilégios" (string ou collection) |
 <!-- END REF -->
 
 #### Description
@@ -302,10 +302,10 @@ A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->
 
 - In the *settings* parameter, pass an object containing the following properties:
 
-| Property   | Type               | Description                                        |
-| ---------- | ------------------ | -------------------------------------------------- |
-| privileges | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li> |
-| userName   | Texto              | Nome de usuário associado à sessão (opcional)      |
+| Propriedade | Type               | Description                                        |
+| ----------- | ------------------ | -------------------------------------------------- |
+| privileges  | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li> |
+| userName    | Texto              | Nome de usuário associado à sessão (opcional)      |
 
 Se a propriedade `privileges` conter um nome de privilégio inválido, é ignorado.
 

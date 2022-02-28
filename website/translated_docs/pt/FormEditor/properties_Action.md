@@ -4,7 +4,7 @@ title: Action
 ---
 
 
-## Method
+## Métodos
 
 Reference of a method attached to the form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. See [Specialized methods](Concepts/methods.md#specialized-methods).
 
@@ -27,5 +27,5 @@ Several types of method references are supported:
 
 | Name   | Data Type | Possible Values                                                  |
 | ------ | --------- | ---------------------------------------------------------------- |
-| method | text      | Form method standard or custom file path, or project method name |
+| method | texto     | Form method standard or custom file path, or project method name |
 

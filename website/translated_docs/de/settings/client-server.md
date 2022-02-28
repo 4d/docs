@@ -42,7 +42,7 @@ To update any other client machines that are not connected, you just need to ent
 
 -   **SQL Server**: 19812 by default (can be modified via the "SQL/Configuration" page of the Preferences).
 -   **Application Server**: 19813 by default (can be modified via the "Client-Server/Configuration" page of the Preferences, see above).
--   **DB4D Server** (database server): 19814 by default . This port number cannot be modified directly but it always consists of the application server port number + 1.\ When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\ Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+-   **DB4D Server** (database server): 19814 by default . **DB4D Server** (database server): 19814 by default . This port number cannot be modified directly but it always consists of the application server port number + 1.\ When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\ Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 
 #### Authentication of user with domain server
 

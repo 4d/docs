@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: Check Box
+title: Casilla a seleccionar
 ---
 
 Una casilla de selección es un tipo de botón utilizado para introducir o mostrar datos binarios (verdadero-falso). Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.

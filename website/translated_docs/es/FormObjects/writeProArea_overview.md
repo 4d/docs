@@ -3,15 +3,15 @@ id: writeProAreaOverview
 title: Área 4D Write Pro
 ---
 
-4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D application. Using 4D Write Pro, you can write pre-formatted emails and/or letters containing images, a scanned signature, formatted text and placeholders for dynamic variables. You can also create invoices or reports dynamically, including formatted text and images.
+4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D application. Con 4D Write Pro, puede escribir correos electrónicos y/o cartas preformateadas que contengan imágenes, una firma escaneada, texto formateado y marcadores de posición para variables dinámicas. También puede crear facturas o informes de forma dinámica, incluyendo texto e imágenes con formato.
 
 
 ![](assets/en/FormObjects/writePro2.png)
 
 
-## Using 4D Write Pro areas
+## Utilizar las áreas 4D Write Pro
 
-4D Write Pro areas are documented in the [4D Write Pro Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Write-Pro.100-4433851.fe.html) manual.
+Las áreas 4D Write Pro están documentadas en el manual [4D Write Pro](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Write-Pro.100-4433851.fe.html).
 
 ## Propiedades soportadas
 

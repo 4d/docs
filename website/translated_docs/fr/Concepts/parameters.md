@@ -221,31 +221,31 @@ Tables or array expressions can only be passed [as reference using a pointer](dt
 | v19 R4  | Ajout         |
 </details>
 
-The `return` statement ends function or method execution and can be used to return an expression to the caller.
+L'instruction `return` met fin à l'exécution d'une fonction ou d'une méthode et peut être utilisée pour retourner une expression à l'appelant.
 
-For example, the following function returns the square of its argument, $x, where $x is a number.
+Par exemple, la fonction suivante retourne le carré de son argument, $x, où $x est un nombre.
 
 ```4d
 Function square($x : Integer) 
    return $x * $x
 ```
 
-> Internally, `return x` executes `$0:=x` or (if declared) `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+> En interne, `return x` exécute `$0:=x` ou (si elle est déclarée) `myReturnValue:=x`, et retourne à l'appelant. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est *indéfinie*.
 
 
-The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. Par exemple :
+L'instruction `return` peut être utilisée avec la syntaxe standard pour les [valeurs retournées](#returned-value) (la valeur retournée doit être du type déclaré). Cependant, notez qu'elle met immédiatement fin à l'exécution du code. Par exemple :
 
 
 ```4d
 Function getValue
     $0:=10
     return 20
-    // returns 20
+    // retourne 20
 
 Function getValue -> $v : Integer
     return 10
-    $v:=20 // never executed
-    // returns 10
+    $v:=20 // jamais exécutée
+    // retourne 10
 ```
 
 

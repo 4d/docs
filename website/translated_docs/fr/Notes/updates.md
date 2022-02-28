@@ -1,6 +1,6 @@
 ---
 id: updates
-title: Documentation updates
+title: Mises à jour de la documentation
 ---
 
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
@@ -8,15 +8,15 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 
 ## 4D v19 R4
 
-- [Alias attributes](ORDA/ordaClasses.md#alias-attributes) are available in ORDA classes.
-- Support for [break and continue](Concepts/cf_looping.md#break-and-continue) statements in loops.
-- Support for [return](Concepts/flow-control.md#return-expression) statement and [return expression](Concepts/parameters.md#return-expression) to return values.
-- Support for [compound assignment operators](Concepts/operators.md#compound-assignment-operators), [short-circuit operators](Concepts/operators.md#short-circuit-operators), and [ternary operator](Concepts/operators.md#ternary-operator)
-- The [Code Editor](code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
-- New Preferences: [**Include tokens in project source files**](Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](Preferences/methods.md#show-clipboards) option on the Methods page.
-- New REST request to [lock/unlock](REST/$lock.md) entities.
-- [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list#vp-paste-from-object).
-- New [SystemWorker class](API/SystemWorkerClass.md).
+- Les [attributs d'alias](ORDA/ordaClasses.md#alias-attributes) sont disponibles dans les classes ORDA.
+- Prise en charge des instructions [break et continue](Concepts/cf_looping.md#break-and-continue) dans les boucles.
+- Prise en charge de l'instruction [return](Concepts/flow-control.md#return-expression) et de [l'expression return](Concepts/parameters.md#return-expression) pour retourner des valeurs.
+- Prise en charge des [opérateurs d'assignation composés](Concepts/operators.md#compound-assignment-operators), des [opérateurs de court-circuit](Concepts/operators.md#short-circuit-operators) et de [l'opérateur ternaire](Concepts/operators.md#ternary-operator)
+- [L'éditeur de code](code-editor/navigation.md) inclut désormais un outil de liste déroulante et prend en charge les marqueurs pour une meilleure navigation dans le code.
+- Nouvelles préférences : [**Inclure les tokens dans les fichiers source du projet**](Preferences/general.md#include-tokens-in-project-source-files) et l'option [**Afficher les presse-papiers**](Preferences/methods.md#show-clipboards) sur la page Méthodes.
+- Nouvelle requête REST pour [verrouiller/déverrouiller](REST/$lock.md) les entités.
+- [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
+- Nouvelle [classe SystemWorker](API/SystemWorkerClass.md).
 
 
 ## 4D v19 R3

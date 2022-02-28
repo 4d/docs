@@ -478,7 +478,7 @@
         "title": "Rejilla de botones"
       },
       "FormObjects/checkboxOverview": {
-        "title": "Check Box"
+        "title": "Casilla a seleccionar"
       },
       "FormObjects/comboBoxOverview": {
         "title": "Combo Box"
@@ -969,8 +969,8 @@
       }
     },
     "links": {
-      "v19 R3 BETA": "v19 R3 BETA",
-      "v19 R2": "v19 R2",
+      "v19 R4 BETA": "v19 R4 BETA",
+      "v19 R3": "v19 R3",
       "v19": "v19",
       "v18": "v18"
     },
@@ -980,7 +980,7 @@
       "4D Language Concepts": "Conceptos del lenguaje 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Clases API",
-      "Code Editor": "Code Editor",
+      "Code Editor": "Editor de código",
       "Debugging": "Depuración",
       "Settings": "Settings",
       "Preferences": "Preferencias",
@@ -1034,7 +1034,7 @@
     "Client/Server|no description given": "Cliente/Servidor",
     "TLS Protocol|no description given": "TLS Protocol",
     "Debugging|no description given": "Depuración",
-    "Code Editor|no description given": "Code Editor",
+    "Code Editor|no description given": "Editor de código",
     "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",

@@ -59,6 +59,7 @@ El resultado es similar y _MethodB_ se evalúa sólo si es necesario.
  Else
     ALERT("No ha introducido un nombre.")
  End if
+ End if
  End if 
 ```
 
@@ -135,9 +136,17 @@ Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con 
     :(vResult=1) //Probar si el número es 1
        ALERT("One.") //Si es 1, mostrar una alerta
     :(vResult=2) //Probar si el número es 2
+       ALERT("Two.") Case of
+    :(vResult=1) //Probar si el número es 1
+       ALERT("One.") //Si es 1, mostrar una alerta
+    :(vResult=2) //Probar si el número es 2
        ALERT("Two.") //Si es 2, mostrar una alerta
     :(vResult=3) //Probar si el número es 3
        ALERT("Three.") //Si es 3, mostrar una alerta
+    Else //Si no es 1, 2 o 3, mostrar una alerta
+       ALERT("It was not one, two, or three.")
+ //statement(s)
+ End case //Si es 3, mostrar una alerta
     Else //Si no es 1, 2 o 3, mostrar una alerta
        ALERT("It was not one, two, or three.")
  //statement(s)
@@ -148,10 +157,19 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
  If(vResult=1) //Probar si el número es 1
+    ALERT("One.") If(vResult=1) //Probar si el número es 1
     ALERT("One.") //Si es 1, mostrar una alerta
  Else
     If(vResult=2) //Probar si el número es 2
        ALERT("Two.") //Si es 2, mostrar una alerta
+    Else
+       If(vResult=3) //Probar si el número es 3
+          ALERT("Three.") //Si es 3, mostrar una alerta
+    Else //Si no es 1, 2 o 3, mostrar una alerta
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Si es 2, mostrar una alerta
     Else
        If(vResult=3) //Probar si el número es 3
           ALERT("Three.") //Si es 3, mostrar una alerta

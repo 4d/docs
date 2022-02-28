@@ -42,21 +42,21 @@ Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autori
 var MyDate : Date 
 ```
 
-The `var` keyword allows declaring object variables of a defined class type, for example:
+Le mot-clé `var` permet de déclarer des variables objet d'un type de classe défini, par exemple :
 
 ```4d
 var myPerson : cs.Person 
-//variable of the Person user class
+//variable de la classe utilisateur Person
 ```
 
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
+Même si cela est généralement déconseillé, vous pouvez déclarer des variables simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous voulez créer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire dans 4D :
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-La ligne de code indique "MyOtherDate obtient la date actuelle plus 30 jours." This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+La ligne de code indique "MyOtherDate obtient la date actuelle plus 30 jours." Cette ligne crée la variable, lui attribue à la fois le type de date (temporaire) et un contenu. Une variable déclarée par affectation est interprétée comme étant non typée, c'est-à-dire qu'elle peut être affectée à d'autres types dans d'autres lignes, puis modifie le type de manière dynamique. Une variable typée avec `var` ne peut pas changer le type. En revanche, en [mode compilé](interpreted.md), le type ne peut jamais être modifié, quelle que soit la façon dont la variable a été déclarée.
 
 ## Commandes
 
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
+> Par défaut, les constantes prédéfinies sont <u>soulignées</u> dans l'éditeur de méthodes 4D.
 
 ## Méthodes
 
@@ -198,14 +198,14 @@ myColl[3]  //accède au 4ème élément de la collection
 
 Le langage 4D prend en charge les classes d'objets. Ajoutez un fichier `myClass.4dm` dans le dossier Project/Sources/Classes d'un projet pour créer une classe nommée "myClass".
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. Vous pouvez passer des paramètres.
+Pour instancier un objet de la classe dans une méthode, appelez la classe utilisateur à partir du *class store* (`cs`) et utilisez la fonction membre `new()`. Vous pouvez passer des paramètres.
 
 ```4d  
 // dans une méthode 4D
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. Une méthode membre de classe peut recevoir et retourner des paramètres comme n'importe quelle méthode, et utiliser `This` comme instance d'objet.
+Dans la méthode de classe `myClass`, utilisez l'instruction `Function <methodName>` pour définir la méthode membre de classe *methodName*. Une méthode membre de classe peut recevoir et retourner des paramètres comme n'importe quelle méthode, et utiliser `This` comme instance d'objet.
 
 ```4d  
 // dans le fichier myClass.4dm
@@ -223,10 +223,10 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+Vous pouvez utiliser le mot-clé `Class constructor` pour déclarer les propriétés de l'objet.
 
 ```4d  
-//in the Rectangle.4dm file
+//dans le fichier Rectangle.4dm 
 Class constructor
 C_LONGINT($1;$2)
 This.height:=$1
@@ -234,17 +234,17 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Par exemple :
+Une classe peut étendre une autre classe en utilisant `Class extends<ClassName>`. Les superclasses peuvent être appelées à l'aide de la commande `Super`. Par exemple :
 
 ```4d  
-//in the Square.4dm file
+//dans le fichier Square.4dm
 Class extends rectangle
 
 Class constructor
 C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // il appelle le constructor de la classe mère avec les dimensions
+  // fournies pour la largeur et la hauteur du Rectangle
 Super($1;$1)
 
 This.name:="Square"
@@ -317,7 +317,7 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 
 ### Expressions assignables et non-assignables
 
-Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à droite d'une assignation. Par exemple :
+Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur. Dans 4D, les expressions peuvent être **assignables**. An expression is assignable when it can be used on the left side of an assignation. Par exemple :
 
 ```4d  
 //La variable $myVar est assignable, vous pouvez écrire :  

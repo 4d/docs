@@ -149,14 +149,14 @@ Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mo
 
 Les champs suivants sont enregistrés pour chaque requête et réponse :
 
-| Noms des champs | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                           |
-| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
-| PeerPort        | Port utilisé par l'hôte (client)                                     |
-| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
-| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
+| Nom des champs | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| SocketID       | ID du socket utilisé pour la communication                           |
+| PeerIP         | Adresse IPv4 de l'hôte (client)                                      |
+| PeerPort       | Port utilisé par l'hôte (client)                                     |
+| TimeStamp      | Horodatage en millisecondes (depuis le démarrage du système)         |
+| ConnectionID   | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
+| SequenceNumber | Numéro d'opération séquentiel et unique dans la session d'historique |
 
 
 ### logweb.txt
@@ -169,7 +169,7 @@ Chaque ligne du fichier représente une requête, comme : *host rfc931 user \[DD
 
 Le format DLF (Distilled Log Format) est similaire au format CLF (Common Log format) et utilise exactement la même structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent. Voici la description des formats CLF/DLF (non personnalisables) :
 
-| Noms des champs      | Description                                                                                                                                                                    |
+| Nom des champs       | Description                                                                                                                                                                    |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | host                 | Adresse IP du client (ex. 192.100.100.10)                                                                                                                                      |
 | rfc931               | information non générée par 4D, c'est toujours - (le signe moins)                                                                                                              |

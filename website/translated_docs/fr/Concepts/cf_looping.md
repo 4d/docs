@@ -20,7 +20,7 @@ La syntaxe de la structure répétitive (ou boucle) `While...End while` est la s
 
 Une boucle `While...End while` exécute les instructions comprises entre `While` et `End while` aussi longtemps que l’expression booléenne est TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
 
 Il est utile d’initialiser la valeur testée dans l’expression booléenne juste avant d’entrer dans la boucle `While...End while`. Initialiser la valeur signifie lui affecter un contenu approprié, généralement pour que l’expression booléenne soit TRUE et que le programme entre dans la boucle.
 
@@ -59,7 +59,7 @@ La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-c
 
 L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
 
 ### Exemple
 
@@ -97,7 +97,7 @@ La structure `For...End for` est une boucle contrôlée par un compteur :
 - Si les deux expressions sont égales, la boucle ne sera exécutée qu'une fois.
 - Si *Start_Expression* est supérieure à *End_Expression*, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une *Increment_Expression* négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
 
 ### Exemples élémentaires
 
@@ -319,7 +319,7 @@ Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
     - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
     - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-continue).
 
 ### Boucle sur collections
 
@@ -474,36 +474,36 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## `break` and `continue`
+## `break` et `continue`
 
-All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+Toutes les structures de boucles ci-dessus prennent en charge les instructions `break` et `continue`. Ces instructions vous donnent plus de contrôle sur les boucles en vous permettant de sortir de la boucle et de contourner, à tout moment, l'itération en cours.
 
 ### break
 
-The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+L'instruction `break` met fin à la boucle qui la contient. Le contrôle du programme passe à l'instruction située immédiatement après le corps de la boucle.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Si l'instruction `break` se trouve à l'intérieur d'une [boucle imbriquée](#nested-forend-for-looping-structures) (boucle dans une autre boucle), l'instruction `break` mettra fin à la boucle la plus interne.
 
 
 #### Exemple
 
 ```4d
 For (vCounter;1;100)
-    If ($tab{vCounter}="") //if a condition becomes true
-        break //end of the for loop
+    If ($tab{vCounter}="") //si une condition devient vraie
+        break //fin de la boucle For
     End if
 End for
 ```
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+L'instruction `continue` met fin à l'exécution des instructions de l'itération de la boucle courante, et poursuit l'exécution de la boucle à l'itération suivante.
 
 ```4d
 var $text : Text
 For ($i; 0; 9)
     If ($i=3)
-        continue //go directly to the next iteration
+        continue //traite directement l'itération suivante
     End if
     $text:=$text+String($i)
 End for

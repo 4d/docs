@@ -8,17 +8,18 @@ title: Imagem
 
 Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
 
-Two main locations can be used for static picture path:
+The following locations can be used for static pictures:
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is "/RESOURCES/\<picture path\>".
 - in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
+- in a 4D picture variable. The picture must be loaded in memory when the form is executed. In this case, the Pathname is "var:\<variableName\>".
 
 
 #### JSON Grammar
 
-|  Name  | Data Type | Possible Values                             |
-|:------:|:---------:| ------------------------------------------- |
-| imagem |   text    | Relative or filesystem path in POSIX syntax |
+|  Name  | Data Type | Possible Values                                                                               |
+|:------:|:---------:| --------------------------------------------------------------------------------------------- |
+| imagem |   texto   | Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable |
 
 
 #### Objects Supported

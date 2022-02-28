@@ -131,30 +131,30 @@ $c:=a+b
 
 1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
 
-    | $a | Undefined |
-    | -- | --------- |
-    |    |           |
+    | $a | Indefinido |
+    | -- | ---------- |
+    |    |            |
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
 
-    | $a | 1         |
-    | -- | --------- |
-    | $b | Undefined |
+    | $a | 1          |
+    | -- | ---------- |
+    | $b | Indefinido |
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
 
-    | $c | Undefined |
-    | -- | --------- |
-    | $a | 1         |
-    | $b | 2         |
+    | $c | Indefinido |
+    | -- | ---------- |
+    | $a | 1          |
+    | $b | 2          |
 
     The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-#### Variables
+#### Variáveis
 
 This theme is composed of the following subthemes:
 
@@ -163,7 +163,7 @@ This theme is composed of the following subthemes:
 | Interprocess | List of interprocess variables being used at this point      | Sim                         |
 | Processo     | List of process variables used by the current process        | Sim                         |
 | Local        | List of local variables used by the method being traced      | Sim                         |
-| Parameters   | List of parameters received by the method                    | Sim                         |
+| Parâmetros   | List of parameters received by the method                    | Sim                         |
 | Self         | Pointer to the current object, when tracing an Object Method | No                          |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
@@ -184,7 +184,7 @@ This theme contains the name of each dynamic object included in the current form
 
 Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
 
-#### Constants
+#### Constantes
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 

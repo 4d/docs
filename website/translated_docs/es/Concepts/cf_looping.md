@@ -36,7 +36,7 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 ### Ejemplo
 
 ```4d
- CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro? //¿El usuario quiere añadir un registro?
+ CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro? CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro? //¿El usuario quiere añadir un registro?
  While(OK=1) //Bucle mientras el usuario quiera
     ADD RECORD([aTable]) /Añadir un nuevo registro
  End while //El bucle siempre termina con End while

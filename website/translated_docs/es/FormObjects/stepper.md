@@ -3,22 +3,22 @@ id: stepper
 title: Stepper
 ---
 
-A stepper lets the user scroll through numeric values, durations (times) or dates by predefined steps by clicking on the arrow buttons.
+Un stepper permite al usuario desplazarse por valores numéricos, duraciones (tiempos) o fechas por pasos predefinidos haciendo clic en los botones de flecha.
 
 ![](assets/en/FormObjects/indicator_numericStepper.png)
 
-## Utilización del stepper
+## Uso del stepper
 
-You can assign the variable associated with the object to an enterable area (field or variable) to store or modify the current value of the object.
+Puede asignar la variable asociada al objeto a un área introducible (campo o variable) para almacenar o modificar el valor actual del objeto.
 
-A stepper can be associated directly with a number, time or date variable.
+Se puede asociar un stepper directamente a una variable numérica, hora o fecha.
 
-* For values of the time type, the Minimum, Maximum and Step properties represent seconds. For example, to set a stepper from 8:00 to 18:00 with 10-minute steps:
+* Para los valores de tipo hora, las propiedades Mínimo, Máximo y Paso representan segundos. Por ejemplo, para programar un paso de 8:00 a 18:00 con pasos de 10 minutos:
     * [minimum](properties_Scale.md#minium) = 28 800 (8\*60\*60)
     * [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
     * [step](properties_Scale.md#step) = 600 (10\*60)
-* For values of the date type, the value entered in the [step](properties_Scale.md#step) property represents days. The Minimum and Maximum properties are ignored.
-> For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to declare it explicitly via the [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) or [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html) command.
+* Para los valores de tipo fecha, el valor introducido en la propiedad [paso](properties_Scale.md#step) representa días. Las propiedades Mínimo y Máximo se ignoran.
+> Para que el stepper trabaje con una variable de hora o fecha, es imprescindible definir su tipo en la Lista de propiedades Y declararlo explícitamente a través del comando [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) o [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html).
 
 For more information, please refer to [Using indicators](progressIndicator.md#using-indicatire) in the "Progress Indicator" page.
 

@@ -10,7 +10,7 @@ If more than one person uses an application, which is usually the case in client
 - in multi-user applications, you can rely on 4D users and groups,
 - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
-> For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 
 
 
@@ -23,9 +23,9 @@ In multi-user applications, access control is done through [4D users and groups]
 
 You initiate the 4D password access control system with 4D Server by [assigning a password to the Designer user](handling_users_groups.md#designer-and-administrator). Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have [set up users and groups](handling_users_groups.md) (when the application opens, no ID is required). Any part of the application can be opened.
 
-When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the application or to a [server with protected access](handling_users_groups.md#assigning-group-access), remote users must enter a login/password.
+Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso entran en vigor. In order to connect to the application or to a [server with protected access](handling_users_groups.md#assigning-group-access), remote users must enter a login/password.
 
-To disable the password access system, you just need to remove the Designer password.
+Para desactivar el sistema de acceso por contraseña, basta con eliminar la contraseña del Diseñador.
 
 
 ## Access control in single-user applications

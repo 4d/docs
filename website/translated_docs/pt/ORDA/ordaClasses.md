@@ -42,7 +42,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
-| Class                       | Example name         | Instantiated by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Classe                      | Example name         | Instantiated by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | cs.DataStore                | cs.DataStore         | [`ds`](API/DataStoreClass.md#ds) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -348,7 +348,7 @@ The *getter* function defines the data type of the computed attribute thanks to 
 
 The *$event* parameter contains the following properties:
 
-| Property      | Type    | Description                                                                               |
+| Propriedade   | Type    | Description                                                                               |
 | ------------- | ------- | ----------------------------------------------------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                                                                   |
 | dataClassName | Texto   | Dataclass name                                                                            |
@@ -409,7 +409,7 @@ The *$value* parameter receives the value assigned to the attribute.
 
 The *$event* parameter contains the following properties:
 
-| Property      | Type    | Description                                   |
+| Propriedade   | Type    | Description                                   |
 | ------------- | ------- | --------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                       |
 | dataClassName | Texto   | Dataclass name                                |
@@ -446,10 +446,10 @@ This function supports three syntaxes:
     - If *$result* is a Text, it must be a valid query string
     - If *$result* is an Object, it must contain two properties:
 
-    | Property           | Type       | Description                                         |
-    | ------------------ | ---------- | --------------------------------------------------- |
-    | $result.query      | Texto      | Valid query string with placeholders (:1, :2, etc.) |
-    | $result.parameters | Collection | values for placeholders                             |
+    | Propriedade        | Type    | Description                                         |
+    | ------------------ | ------- | --------------------------------------------------- |
+    | $result.query      | Texto   | Valid query string with placeholders (:1, :2, etc.) |
+    | $result.parameters | Coleção | values for placeholders                             |
 
 The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
@@ -457,7 +457,7 @@ The `query` function executes whenever a query using the computed attribute is l
 
 The *$event* parameter contains the following properties:
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                                                                                                                      |
+| Propriedade   | Type    | Description                                                                                                                                                                                                                                                                                                                                                      |
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                                                                                                                                                                                                                                                                                                                                          |
 | dataClassName | Texto   | Dataclass name                                                                                                                                                                                                                                                                                                                                                   |
@@ -590,7 +590,7 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 The *$event* parameter contains the following properties:
 
-| Property      | Type     | Description                                                                                                |
+| Propriedade   | Type     | Description                                                                                                |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
 | attributeName | Texto    | Computed attribute name                                                                                    |
 | dataClassName | Texto    | Dataclass name                                                                                             |

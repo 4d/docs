@@ -145,7 +145,7 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Examples:
+You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
 
 ```4d
 o:=New object
@@ -210,7 +210,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 
 
-### Parameters
+### Parâmetros
 
 Parameters can be passed to 4D functions that call project methods using the following syntax:
 
@@ -243,10 +243,10 @@ For more information on supported incoming parameter types, please refer to the 
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 * [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
-    | Property | Type | Description     |
-    | -------- | ---- | --------------- |
-    | value    | Date | Date value      |
-    | time     | Real | Time in seconds |
+    | Propriedade | Type | Description     |
+    | ----------- | ---- | --------------- |
+    | value       | Date | Date value      |
+    | time        | Real | Time in seconds |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 

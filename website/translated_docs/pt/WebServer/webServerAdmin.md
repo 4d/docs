@@ -145,9 +145,9 @@ Both log files are automatically created in the **Logs** folder of the applicati
 
 The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
 
-This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Este arquivo registra cada petição HTTP e cada resposta em modo raw (não processado). Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
-The following fields are logged for both Request and Response:
+Os campos abaixo são registrados tanto para Request quanto para Response:
 
 | Field name     | Description                                                   |
 | -------------- | ------------------------------------------------------------- |

@@ -3,69 +3,69 @@ id: navigation
 title: Navigation dropdown
 ---
 
-The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+La liste déroulante de navigation vous aide à organiser votre code et à naviguer plus facilement dans vos classes et méthodes :
 
 ![dropdown-list](assets/en/code-editor/dropdown-list.png)
 
-Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+Certaines balises sont ajoutées automatiquement ; vous pouvez compléter la liste déroulante à l'aide de [marqueurs](#manual-tagging).
 
-## Code navigation
+## Navigation dans le code
 
-Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+Cliquez sur un élément de la liste déroulante pour accéder à sa première ligne dans le code. Vous pouvez également naviguer avec les touches fléchées et appuyer sur **Entrée**.
 
-## Automatic tagging
+## Balisage automatique
 
-Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+Les constructeurs, les déclarations de méthodes, les fonctions et les attributs calculés sont automatiquement balisés et ajoutés à la liste déroulante.
 
-When there is no tag in the class/method, the tool displays "No tag".
+Lorsqu'il n'y a pas de balise dans la classe/méthode, l'outil affiche "No tag".
 
-The following items are added automatically:
+Les éléments suivants sont ajoutés automatiquement :
 
-| Icône                                                                    | Élément                                          |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | No tag                                           |
-| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
-| ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](assets/en/code-editor/function.png)                     | Class function name                              |
+| Icône                                                                    | Élément                                       |
+| ------------------------------------------------------------------------ | --------------------------------------------- |
+| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | Pas de balise                                 |
+| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor ou déclaration de méthode   |
+| ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Attribut calculé (get, set, orderBy et query) |
+| ![function-icon](assets/en/code-editor/function.png)                     | Nom de la fonction de classe                  |
 
 
-## Manual tagging
+## Balisage manuel
 
-By adding markers in your code, you can add the following tags to the dropdown:
+En ajoutant des marqueurs dans votre code, vous pouvez ajouter les balises suivantes à la liste déroulante :
 
-| Icône                                                | Élément    |
-| ---------------------------------------------------- | ---------- |
-| ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK: tag  |
-| ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: tag  |
-| ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME: tag |
+| Icône                                                | Élément        |
+| ---------------------------------------------------- | -------------- |
+| ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK : balise  |
+| ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO : balise  |
+| ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME : balise |
 
-You declare them by adding comments such as:
+Vous les déclarez en ajoutant des commentaires tels que :
 
 ```4d 
-// FIXME: Fix following items
+// FIXME : Corrige les éléments suivants
 ```
 
-Declarations are not case-sensitive; writing `fixme:` has the same effect.
+Les déclarations ne sont pas sensibles à la casse ; écrire `fixme` : a le même effet.
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
+L'ajout d'un trait d'union après la balise `MARK: ` trace une ligne de séparation dans l'éditeur de code et dans le menu déroulant. Ainsi, cette saisie :
 
 ![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
 
-Results in this:
+Se traduit par ceci :
 
 ![mark-hyphen-image](assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+Tous les marqueurs situés à l'intérieur des fonctions sont indentés dans la liste déroulante, à l'exception des balises `MARK:` situées à la fin des fonctions et non suivies d'instructions. Celles-ci apparaîtront au premier niveau.
 
-## Display order
+## Ordre d'affichage
 
-Tags are displayed in their appearing order inside the method/class.
+Les balises sont affichées dans leur ordre d'apparition à l'intérieur de la méthode/classe.
 
-To display the tags of a method or class in alphabetical order, do one of the following:
-* **right-click** the dropdown tool
-* hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
+Pour afficher les balises d'une méthode ou d'une classe par ordre alphabétique, effectuez l'une des opérations suivantes :
+* Faites un **clic droit** sur l'outil déroulant
+* maintenez la touche **Cmd** sous macOS ou **Alt** sous Windows, et cliquez sur l'outil de liste déroulante
 
-> Tags inside functions move with their parent items.
+> Les balises à l'intérieur des fonctions se déplacent avec leurs éléments parents.
 
 
 

@@ -140,7 +140,7 @@ When you click on a boolean attribute area, you can filter on **true**/**false**
 - **null** indicates that the attribute value was not defined
 - **not null** indicates that the attribute value is defined (thus true or false).
 
-#### Texte
+#### Text
 
 Text filters are not diacritic (a = A).
 

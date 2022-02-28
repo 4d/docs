@@ -47,7 +47,7 @@ L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même 
 
 Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 
-> **Note:** The [ternary operator](../dt_boolean.md#ternary-operator) allows writing one-line conditional expressions and can replace a full sequence of [If…Else](../cf_branching.md#ifelseend-if) statements.
+> **Note** : L'[opérateur ternaire](../dt_boolean.md#ternary-operator) permet d'écrire des expressions conditionnelles d'une ligne et peut remplacer une séquence complète d'instructions [If... Else](../cf_branching.md#ifelseend-if).
 
 ### Exemple
 
@@ -58,6 +58,7 @@ Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
+ End if
  End if
  End if
  End if 
@@ -134,9 +135,17 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 ```4d
  Case of
     :(vResult=1) //Tester si le chiffre est 1
+       ALERT("One.") Case of
+    :(vResult=1) //Tester si le chiffre est 1
        ALERT("One.") //Si le chiffre est 1, afficher une alerte
     :(vResult=2) //Tester si le chiffre est 2
        ALERT("Two.") //Si le chiffre est 2, afficher une alerte
+    :(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+ //déclaration(s)
+ End case //Si le chiffre est 2, afficher une alerte
     :(vResult=3) //Tester si le chiffre est 3
        ALERT("Three.") //Si le chiffre est 3, afficher une alerte
     Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
@@ -150,10 +159,19 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
 ```4d
  If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
+    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") //Si le chiffre est 1, afficher une alerte
  Else
     If(vResult=2) //Tester si le chiffre est 2
        ALERT("Two.") //Si le chiffre est 2, afficher une alerte
+    Else
+    If(vResult=3) //Tester si le chiffre est 3
+       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
+    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
+       ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Si le chiffre est 2, afficher une alerte
     Else
     If(vResult=3) //Tester si le chiffre est 3
        ALERT("Three.") //Si le chiffre est 3, afficher une alerte

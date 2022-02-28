@@ -21,7 +21,7 @@ D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le
 
 ## Installer une méthode de gestion des erreurs
 
-In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
+Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
 
 Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre. Par exemple :
 

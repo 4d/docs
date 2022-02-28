@@ -26,7 +26,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 - 構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) and [alias attributes](XXX) are **not exposed** to remote applications and cannot be called from REST requests. 公開する関数やエイリアスは [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
+- デフォルトでは、データモデルクラス関数 ([計算属性関数](#計算属性) 含む) および [エイリアス属性](エイリアス属性) はすべて、リモートアプリケーションに対して **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数やエイリアスは [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
 
 ![](assets/en/ORDA/api.png)
 
@@ -66,8 +66,8 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 | バージョン  | 内容                                                                   |
 | ------ | -------------------------------------------------------------------- |
-| v19 R4 | Alias attributes in the Entity Class                                 |
-| v19 R3 | Computed attributes in the Entity Class                              |
+| v19 R4 | Entity クラスのエイリアス属性                                                   |
+| v19 R3 | Entity クラスの計算属性                                                      |
 | v18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
 </details>
 
@@ -235,7 +235,7 @@ Entity クラスでは、専用のキーワードを使用して **計算属性*
 
 #### エイリアス属性
 
-Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
+Entity クラスでは、`Alias` キーワードを使用して **エイリアス属性** を定義することができます (通常はリレート属性を対象に定義します):
 
 `Alias` *attributeName* *targetPath*
 
@@ -643,13 +643,13 @@ Function orderBy age($event : Object)-> $result : Text
 
 ### 概要
 
-An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. You can define as many alias attributes as you want in a dataclass.
+**エイリアス** 属性は、**ターゲット** 属性と呼ばれるデータモデルの別の属性を元に定義されます。 ターゲット属性には、リレートデータクラス (リレートレベルは無制限) または同じデータクラスのものを使用できます。 エイリアス属性はデータではなく、ターゲット属性へのパスを格納します。 データクラスには、必要な数だけエイリアス属性を定義することができます。
 
-Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
+エイリアス属性は、N対Nリレーションを扱うのに便利です。 実装の詳細ではなくビジネスの概念を扱ってコードやクエリを作成できるため、これらの可読性が向上します。
 
-### How to define alias attributes
+### エイリアス属性の定義
 
-You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
+データクラス内にエイリアス属性を作成するには、データクラスの [**Entityクラス**](#entity-クラス) において `Alias` キーワードを使用します。
 
 
 ### `Alias <attributeName> <targetPath>`
@@ -661,20 +661,20 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* must comply with [standard rules for property names](Concepts/identifiers.html#object-properties).
+*attributeName* は、[プロパティ名の命名規則](Concepts/identifiers.html#オブジェクトプロパティ) に準拠している必要があります。
 
-*targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
+*targetPath* は、"employee.company.name" のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、*targetPath* は属性名となります。
 
-An alias can be used as a part of a path of another alias.
+エイリアスは、他のエイリアスのパスに使用することができます。
 
-A [computed attribute](#computed-attributes) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
+[計算属性](#計算属性) もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。そうでない場合は、エラーが返されます。 たとえば、"fullName" 計算属性がある場合、"employee.fullName" というエイリアスパスは有効です。
 
-> ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+> ORDA のエイリアス属性は、デフォルトでは **公開されません**。 リモートリクエストでエイリアスを利用するには、`Alias` キーワードの前に [`exposed`](#公開vs非公開関数) キーワードを追加する必要があります。
 
 
-### Using alias attributes
+### エイリアス属性の使用
 
-Alias attributes are read-only (except when based upon a scalar attribute of the same dataclass, see the last example below). They can be used instead of their target attribute path in class functions such as:
+エイリアス属性は読み取り専用です (同じデータクラスのスカラー属性に基づく場合は例外です; 最後の例題参照)。 エイリアス属性は、次のようなクラス関数において、ターゲット属性パスの代わりに使用することができます:
 
 | Function                                       |
 | ---------------------------------------------- |
@@ -693,96 +693,96 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 | `entity.diff()`                                |
 | `entity.touchedAttributes()`                   |
 
-> Keep in mind that alias attributes are calculated on the server. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
+> エイリアス属性はサーバー上で計算されることに留意してください。 リモート環境において、エンティティのエイリアス属性を更新するには、エンティティをサーバーから再ロードする必要があります。
 
-### Alias properties
+### エイリアスのプロパティ
 
-Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
+エイリアス属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティ (属性の種類) は "alias" です。
 
-An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
+エイリアス属性は、ターゲット属性の [`type`](../API/DataClassAttributeClass.md#type) プロパティを継承します。
 
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
+- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("*classname*Entity" または "*classname*Selection") になります。
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
+リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassAttributeClass.md#path) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
 
 
 ### 例題
 
-Considering the following model:
+以下のモデルがあるとき:
 
 ![](assets/en/ORDA/alias1.png)
 
-In the Teacher dataclass, an alias attribute returns all students of a teacher:
+Teacher データクラスに、教師の生徒をすべて返すエイリアス属性を定義します:
 
 ```4d
-// cs.TeacherEntity class
+// cs.TeacherEntity クラス
 
 Class extends Entity
 
 Alias students courses.student //relatedEntities 
 ```
 
-In the Student dataclass, an alias attribute returns all teachers of a student:
+Student データクラスには、生徒の教師をすべて返すエイリアス属性を定義します:
 
 ```4d
-// cs.StudentEntity class
+// cs.StudentEntity クラス
 
 Class extends Entity
 
 Alias teachers courses.teacher //relatedEntities 
 ```
 
-In the Course dataclass:
+Course データクラスには次を定義します:
 
-- an alias attribute returns another label for the "name" attribute
-- an alias attribute returns the teacher name
-- an alias attribute returns the student name
+- "name" 属性を別名で参照するためのエイリアス属性
+- 教師の名前を返すエイリアス属性
+- 生徒の名前を返すエイリアス属性
 
 
 ```4d
-// cs.CourseEntity class
+// cs.CourseEntity クラス
 
 Class extends Entity
 
-Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+Exposed Alias courseName name //スカラー値
+Exposed Alias teacherName teacher.name //スカラー値
+Exposed Alias studentName student.name //スカラー値
 
 ```
 
-You can then execute the following queries:
+すると、以下のクエリを実行することができます:
 
 ```4d
-// Find course named "Archaeology"
+// "Archaeology" の授業を検索します
 ds.Course.query("courseName = :1";"Archaeology")
 
-// Find courses given by the professor Smith
+// Smith 教師が教えている授業を検索します
 ds.Course.query("teacherName = :1";"Smith")
 
-// Find courses where Student "Martin" assists
+// 生徒 "Martin" が参加している授業を検索します
 ds.Course.query("studentName = :1";"Martin")
 
-// Find students who have M. Smith as teacher 
+// M. Smith 教師の生徒を検索します
 ds.Student.query("teachers.name = :1";"Smith")
 
-// Find teachers who have M. Martin as Student
+// M. Martin を生徒に持つ教師を検索します
 ds.Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex 
-// query including a double join, as you can see in the queryPlan:   
+// シンプルなクエリ文字列で複雑なクエリを実行していることに注目してください
+// queryPlan は次のとおりです:   
 // "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
 //  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
 //  subquery:[ Student.name === Martin]]"
 ```
 
 
-You can also edit the value of the *courseName* alias:
+*courseName* エイリアスの値は編集することができます:
 
 ```4d
-// Rename a course using its alias attribute
+// エイリアス属性を使って、授業の名称を変更します
 $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
-$arch.save() //courseName and name are "Archaeology II"
+$arch.save() //courseName と name は "Archaeology II" に変更されます
 ```
 
 

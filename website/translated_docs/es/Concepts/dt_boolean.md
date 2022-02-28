@@ -7,7 +7,7 @@ Un campo, variable o expresión booleana puede ser TRUE o FALSE.
 
 ## Funciones booleanas
 
-4D ofrece las funciones booleanas `True`, `False` y `Not` en el tema dedicado **Booleanos**. For more information, see the descriptions of these commands.
+4D ofrece las funciones booleanas `True`, `False` y `Not` en el tema dedicado **Booleanos**. Para más información, consulte las descripciones de estos comandos.
 
 ### Ejemplo
 
@@ -64,4 +64,4 @@ La siguiente es la tabla de verdad del operador lógico OR:
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [trushy and falsy](operators.md#truthy-and-falsy) concept. 
+> En contextos booleanos, el lenguaje 4D también soporta los operadores [cortocircuitos](operators.md#short-circuit-operators) (`&&` y `||`) y el concepto [trusos y falsos](operators.md#truthy-and-falsy). 

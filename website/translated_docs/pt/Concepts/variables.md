@@ -1,6 +1,6 @@
 ---
 id: variables
-title: Variables
+title: Variáveis
 ---
 
 Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
@@ -72,7 +72,7 @@ The following table lists all supported `varType` values:
 | `Ponteiro`             | Pointer value                         |
 | `Imagem`               | Picture value                         |
 | `Blob`                 | BLOB value                            |
-| `Collection`           | Collection value                      |
+| `Coleção`              | Collection value                      |
 | `Variant`              | Variant value                         |
 | `Objeto`               | Object with default class (4D.Object) |
 | `4D.<className>` | Object of the 4D class name           |

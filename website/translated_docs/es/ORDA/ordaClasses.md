@@ -522,42 +522,15 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 - This function handles queries on the *age* computed attribute and returns an object with parameters:
 
 ```4d
-Function query age($event : Object)->$result : Object
+Class extends Entity
 
-    var $operator : Text
-    var $age : Integer
-    var $_ages : Collection
+local Function age() -> $age: Variant
 
-    $operator:=$event.operator
-
-    $age:=Num($event.value)  // integer
-    $d1:=Add to date(Current date; -$age-1; 0; 0)
-    $d2:=Add to date($d1; 1; 0; 0)
-    $parameters:=New collection($d1; $d2)
-
-    Case of 
-
-        : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
-
-        : ($operator="===") 
-
-            $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
-
-        : ($operator=">=")
-            $query:="birthday <= :2"
-
-            //... other operators           
-
-
-    End case 
-
-
-    If (Undefined($event.result))
-        $result:=New object
-        $result.query:=$query
-        $result.parameters:=$parameters
-    End if
+If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null
+End if
 
 ```
 
@@ -755,23 +728,23 @@ You can then execute the following queries:
 
 ```4d
 // Find course named "Archaeology"
-ds.Course.query("courseName = :1";"Archaeology")
+ds. Course.query("courseName = :1";"Archaeology")
 
 // Find courses given by the professor Smith
-ds.Course.query("teacherName = :1";"Smith")
+ds. Course.query("teacherName = :1";"Smith")
 
 // Find courses where Student "Martin" assists
-ds.Course.query("studentName = :1";"Martin")
+ds. Course.query("studentName = :1";"Martin")
 
 // Find students who have M. Smith as teacher 
-ds.Student.query("teachers.name = :1";"Smith")
+ds. Student.query("teachers.name = :1";"Smith")
 
 // Find teachers who have M. Martin as Student
-ds.Teacher.query("students.name = :1";"Martin")
+ds. Teacher.query("students.name = :1";"Martin")
 // Note that this very simple query string processes a complex 
 // query including a double join, as you can see in the queryPlan:   
-// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
-//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
+// "Join on Table : Course  :  Teacher. ID = Course.teacherID,    
+//  subquery:[ Join on Table : Student  :  Course.studentID = Student. ID,
 //  subquery:[ Student.name === Martin]]"
 ```
 

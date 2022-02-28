@@ -21,13 +21,13 @@ If you pass the following query:
 
  `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
 
-#### Response:
+#### Respuesta:
 
 ```
 __queryPlan: {
     And: [
         {
-            item: "Join on Table : Company : People.employer = Company.ID",
+            item: "Join on Table : Company : People.employer = Company. ID",
             subquery: [
                 {
                     item: "Company.name = acme"

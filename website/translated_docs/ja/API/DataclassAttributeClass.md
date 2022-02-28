@@ -119,10 +119,10 @@ title: DataClassAttribute
 ## .fieldType
 
 <details><summary>履歴</summary>
-| バージョン  | 内容                          |
-| ------ | --------------------------- |
-| v19 R4 | Support of alias attributes |
-| v19 R3 | 計算属性をサポート                   |
+| バージョン  | 内容           |
+| ------ | ------------ |
+| v19 R4 | エイリアス属性をサポート |
+| v19 R3 | 計算属性をサポート    |
 </details>
 
 
@@ -234,7 +234,7 @@ title: DataClassAttribute
 <details><summary>履歴</summary>
 | バージョン  | 内容               |
 | ------ | ---------------- |
-| v19 R4 | Added "alias"    |
+| v19 R4 | "alias" を追加      |
 | v19 R3 | "calculated" を追加 |
 </details>
 
@@ -248,8 +248,8 @@ title: DataClassAttribute
 `.kind` プロパティは、 <!-- REF DataClassAttributeClass.kind.Summary -->属性の種類<!-- END REF -->を格納します。 以下のいずれかの値が返されます:
 
 *   "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
-*   "calculated": 計算属性。[`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
-*   "alias": attribute built upon [another attribute](ORDA/ordaClasses.md#alias-attributes-1)
+*   "calculated": 計算属性。 [`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
+*   "alias": [他の属性](ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。
 *   "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
 *   "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)
 
@@ -344,13 +344,13 @@ title: DataClassAttribute
 
 #### 説明
 
-The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
+`.path` プロパティは、 <!-- REF DataClassAttributeClass.path.Summary -->リレーション属性を指し示すエイリアス属性のパス<!-- END REF -->を返します。
 
 #### 例題
 
 ```4d
  var $path : Text
- $path:=ds.Teacher.students.path //$path="courses.student"
+ $path:=ds.Teacher.students.path // $path="courses.student"
 ```
 
 <!-- END REF -->

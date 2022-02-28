@@ -15,7 +15,7 @@ Un [datastore](dsMapping.md#datastore) exposé sur une application 4D Server est
 
 Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande `Open datastore`, la connexion entre les process qui effectuent la requête et le datastore distant est gérée par des sessions.
 
-A session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. Cette session gère automatiquement l'accès aux données, aux sélections d'entités ou aux entités.
+A session in created on the remote datastore to handle the connection. Cette session est identifiée à l'aide d'un ID de session interne, associé au `localID` de l'application 4D. Cette session gère automatiquement l'accès aux données, aux sélections d'entités ou aux entités.
 
 Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie :
 

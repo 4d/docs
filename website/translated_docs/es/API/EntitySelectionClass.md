@@ -79,7 +79,7 @@ En el parámetro opcional *settings*, puede pasar un objeto que contenga la sigu
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
+$employees:=Create entity selection([Employee])
 // The $employees entity selection now contains a set of reference
 // on all entities related to the Employee dataclass
 ```
@@ -728,6 +728,9 @@ Ejemplo con la opción `dk stop dropping on first error`:
 </details>
 
 
+
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -766,7 +769,7 @@ Por defecto, las entidades para las que *attributePath* es *null* o indefinida s
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-Con esta sintaxis, `.extract()` llena la colección devuelta con las propiedades *attributePath*. Cada elemento de la colección devuelta es un objeto con las propiedades *targetPath* llenadas con las propiedades *attributePath* correspondientes. Null values are kept (*option* parameter is ignored with this syntax).
+Con esta sintaxis, `.extract()` llena la colección devuelta con las propiedades *attributePath*. Cada elemento de la colección devuelta es un objeto con las propiedades *targetPath* llenadas con las propiedades *attributePath* correspondientes. Se mantienen los valores null (el parámetro *option* se ignora) con esta sintaxis.
 
 Si se dan varios *attributePath*, debe darse un *targetPath* para cada uno. Sólo se extraen los pares válidos \[*attributePath*, *targetPath*].
 
@@ -786,33 +789,33 @@ Dada la siguiente tabla y relación:
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames es una colección de cadenas
+  //$firstnames is a collection of Strings
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  //$addresses es una colección de entidades relacionadas con la dataclass Address
-  //Se extraen los valores null de Address
+  //$addresses is a collection of entities related to dataclass Address
+  //Null values for address are extracted
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing es una colección de objetos con las propiedades "who" y "to"
-  //El contenido de la propiedad "who" es de tipo Cadena
-  //El contenido de la propiedad "to" es de tipo entity (dataclass Address)
+  //$mailing is a collection of objects with properties "who" and "to"
+  //"who" property content is String type
+  //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing es una colección de objetos con las propiedades "who" y "city"
-  //El contenido de la propiedad "who" es de tipo Cadena
-  //El contenido de la propiedad "city" es de tipo Cadena
+  //$mailing is a collection of objects with properties "who" and "city"
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers es una colección de objetos con las propiedades "where" y "who"
-  //El contenido de la propiedad "where" es de tipo Cadena
-  //El contenido de la propiedad "who" es una entity selection (dataclass Teachers)
+  //$teachers is a collection of objects with properties "where" and "who"
+  //"where" property content is String
+  //"who" property content is an entity selection (Teachers dataclass)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers es una colección de entity selections
+  //$teachers is a collection of entity selections
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -1120,10 +1123,9 @@ Las entity selections siempre tienen una propiedad `.length`.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parámetros    | Tipo  |    | Descripción                                        |
-| ------------- | ----- |:--:| -------------------------------------------------- |
-| attributePath | Texto | -> | Ruta del atributo que se utilizará para el cálculo |
-| Resultado     | any   | <- | Valor más alto del atributo                        |
+|Parameter|Type||Description|
+
+|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### Descripción
@@ -1248,9 +1250,9 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
-  // la entity selection $employees contiene la entidad con llave primaria 710 y otras entidades
-  // por ejemplo. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
+ $employees:=ds.Employee.query("lastName = :1";"H@")
+  // The $employees entity selection contains the entity with primary key 710 and other entities
+  // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
  $employee:=ds.Employee.get(710) // Devuelve "Sherlock Holmes"
 
@@ -1367,7 +1369,7 @@ Debe utilizar un parámetro de criterio para definir cómo deben ordenarse las e
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-El orden en que se pasan los atributos determina la prioridad de ordenación de las entidades. Por defecto, los atributos se clasifican en orden ascendente. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+El orden en que se pasan los atributos determina la prioridad de ordenación de las entidades. Por defecto, los atributos se clasifican en orden ascendente. Puede definir el orden de clasificación de una propiedad en la cadena de criterios, separado de la ruta de la propiedad por un solo espacio: pase "asc" para ordenar en orden ascendente o "desc" en orden descendente.
 
 *   *pathObjects* (collection): each element of the collection contains an object structured in the following way:
 
@@ -1408,7 +1410,7 @@ Puede añadir tantos objetos en la colección de criterios como sea necesario.
 
 
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
-## .orderByFormula( )
+## .orderByFormula()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
@@ -1604,7 +1606,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página [`.query()`](DataC
 
 La propiedad `.queryPath` <!-- REF #EntitySelectionClass.queryPath.Summary -->contiene una descripción detallada de la búsqueda tal y como fue realizada por 4D<!-- END REF -->. Esta propiedad está disponible para los objetos de tipo `EntitySelection` generados a través de búsquedas si la propiedad `"queryPath":true` fue pasada en el parámetro *querySettings* de la función [`.query()`](#query).
 
-Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass. 
+Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass.
 
 <!-- END REF -->
 
@@ -1628,7 +1630,7 @@ Para más información, consulte el párrafo **querySettings** en la página [`.
 
 La propiedad `.queryPlan` <!-- REF #EntitySelectionClass.queryPlan.Summary --> contiene una descripción detallada de la búsqueda justo antes de su ejecución (es decir, la búsqueda planeada)<!-- END REF -->. Esta propiedad está disponible para los objetos de tipo `EntitySelection` generados a través de búsquedas si la propiedad `"queryPlan":true` fue pasada en el parámetro *querySettings* de la función [`.query()`](#query).
 
-Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass. 
+Para más información, consulte el párrafo **querySettings** en la página [`.query()`](DataClassClass.html#query) Dataclass.
 
 <!-- END REF -->
 
@@ -1808,10 +1810,10 @@ La función `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->devuelv
 
 La entity selection devuelta contiene las entidades especificadas por *startFrom* y todas las entidades subsiguientes hasta, pero sin incluir, la entidad especificada por *end*. Si sólo se especifica el parámetro *startFrom*, la entity selection devuelta contiene todas las entidades entre *startFrom* y la última entidad de la entity selection original.
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
+*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). Si el valor calculado < 0, *startFrom* toma el valor 0.
 *   If *startFrom >= length*, the function returns an empty entity selection.
 *   If *end* < 0, it is recalculated as *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 Si la entity selection contiene entidades que se han eliminado mientras tanto, también se devuelven.
 

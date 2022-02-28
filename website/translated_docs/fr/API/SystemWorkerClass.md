@@ -65,7 +65,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Params -->
 | Paramètres  | Type            |    | Description                                                   |
 | ----------- | --------------- |:--:| ------------------------------------------------------------- |
-| commandLine | Texte           | -> | Command line to execute                                       |
+| commandLine | Text            | -> | Command line to execute                                       |
 | options     | Object          | -> | Worker parameters                                             |
 | result      | 4D.SystemWorker | <- | New asynchronous System worker or null if process not started |  
 <!-- END REF -->
@@ -96,8 +96,8 @@ In the *options* parameter, pass an object that can contain the following proper
 | onError          | Formula | indéfini   | Callback for execution errors, returned by the system worker in case of unusual runtime conditions (system errors). It receives two objects as parameters (see below)</li>                                                                                                                           |
 | onTerminate      | Formula | indéfini   | Callback when the external process is terminated. It receives two objects as parameters (see below)                                                                                                                                                                                                  |
 | timeout          | Nombre  | indéfini   | Time in seconds before the process is killed if it is still alive                                                                                                                                                                                                                                    |
-| dataType         | Texte   | "text"     | Type of the response body content. Possible values: "text" (default), "blob".                                                                                                                                                                                                                        |
-| encoding         | Texte   | "UTF-8"    | Only if `dataType="text"`. Encoding of the response body content. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                       |
+| dataType         | Text    | "text"     | Type of the response body content. Possible values: "text" (default), "blob".                                                                                                                                                                                                                        |
+| encoding         | Text    | "UTF-8"    | Only if `dataType="text"`. Encoding of the response body content. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                       |
 | variables        | Object  |            | Sets custom environment variables for the system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Values are converted into strings when possible. The value cannot contain a '='. If not defined, the system worker inherits from the 4D environment. |
 | currentDirectory | Folder  |            | Working directory in which the process is executed                                                                                                                                                                                                                                                   |
 | hideWindow       | Booléen | true       | (Windows) Hide the application window (if possible) or the Windows console                                                                                                                                                                                                                           |
@@ -107,7 +107,7 @@ All callback functions receive two object parameters. Their contents depend on t
 | Paramètres   | Type         | *onResponse* | *onData*      | *onDataError* | *onError*    | *onTerminate* |
 | ------------ | ------------ | ------------ | ------------- | ------------- | ------------ | ------------- |
 | $param1      | Object       | SystemWorker | SystemWorker  | SystemWorker  | SystemWorker | SystemWorker  |
-| $param2.type | Texte        | "response"   | "data"        | "error"       | "error"      | "termination" |
+| $param2.type | Text         | "response"   | "data"        | "error"       | "error"      | "termination" |
 | $param2.data | Text or Blob |              | received data | error data    |              |               |
 
 Here is the sequence of callback calls:
@@ -454,10 +454,10 @@ Cette propriété est en **lecture seule**.
 
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
-| Paramètres  | Type  |    | Description                                                       |
-| ----------- | ----- |:--:| ----------------------------------------------------------------- |
-| message     | Texte | -> | Text to write on the input stream (stdin) of the external process |
-| messageBLOB | Blob  | -> | Bytes write on the input stream                                   |
+| Paramètres  | Type |    | Description                                                       |
+| ----------- | ---- |:--:| ----------------------------------------------------------------- |
+| message     | Text | -> | Text to write on the input stream (stdin) of the external process |
+| messageBLOB | Blob | -> | Bytes write on the input stream                                   |
 <!-- END REF -->
 
 #### Description

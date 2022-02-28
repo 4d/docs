@@ -1,14 +1,14 @@
 ---
 id: parameters
-title: Parameters
+title: Parâmetros
 ---
 
 
-You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
+You'll often find that you need to pass data to your methods and functions. Isso é facilmente feito com parâmetros.
 
 ## Visão Geral
 
-**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
@@ -68,7 +68,7 @@ Inside called methods or class functions, parameter values are assigned to local
 - For class functions, parameters are declared along with the `Function` keyword.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
 
-Examples:
+Exemplos:
 
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
@@ -554,7 +554,7 @@ A caixa de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" e a caixa de aler
 
 Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
-1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
+1. Ao invés de passar o campo para o método, passa um ponteiro para ele, por isso pode escrever:
 
 ```4d
   //Esta é uma parte do código do método MY_METHOD
@@ -568,7 +568,7 @@ Há duas formas de fazer com que o método `DO_SOMETHING` mude o valor de campo:
 
 Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, dentro do método `DO SOMETHING`, $1 já não é o valor do campo mas um ponteiro ao campo. O objeto **referenciado** por $1 ($1-> no código anterior) é o campo real. Portanto, mudar o objeto referenciado vai além do escopo da subrotina, e o campo real não é afetado. Neste exemplo, as duas caixas de alerta dirão "WILLIAMS".
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. Ao invés de ter o método `DO_SOMETHING` "faça algo", pode reescrever o método para que devolva um valor. Portanto escreveria:
 
 ```4d
     //Esta é uma parte do código do método MY_METHO

@@ -586,7 +586,7 @@
         "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
-        "title": "Texte"
+        "title": "Text"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Texte et Image"
@@ -622,7 +622,7 @@
         "title": "Onglets"
       },
       "FormObjects/text": {
-        "title": "Texte"
+        "title": "Text"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "Zone 4D View Pro"
@@ -695,7 +695,7 @@
         "sidebar_label": "Page Vérification"
       },
       "Notes/updates": {
-        "title": "Documentation updates"
+        "title": "Mises à jour de la documentation"
       },
       "ORDA/dsmapping": {
         "title": "Objets Data Model"
@@ -848,13 +848,13 @@
         "title": "A propos des requêtes REST"
       },
       "ServerWindow/application-server": {
-        "title": "Application Server Page"
+        "title": "Page Serveur d’application"
       },
       "ServerWindow/http-server": {
-        "title": "HTTP Server Page"
+        "title": "Page Serveur HTTP"
       },
       "ServerWindow/maintenance": {
-        "title": "Maintenance Page"
+        "title": "Page maintenance"
       },
       "ServerWindow/monitor": {
         "title": "Page Moniteur"
@@ -866,49 +866,49 @@
         "title": "Page Process"
       },
       "ServerWindow/real-time-monitor": {
-        "title": "Real Time Monitor Page"
+        "title": "Page Moniteur temps réel"
       },
       "ServerWindow/sql-server": {
-        "title": "SQL Server Page"
+        "title": "Page Serveur SQL"
       },
       "ServerWindow/users": {
         "title": "Page Utilisateurs"
       },
       "settings/backup": {
-        "title": "Backup page"
+        "title": "Page Sauvegarde"
       },
       "settings/client-server": {
-        "title": "Client-server page"
+        "title": "Page Client/Serveur"
       },
       "settings/compatibility": {
-        "title": "Compatibility page"
+        "title": "Page de compatibilité"
       },
       "settings/compiler": {
-        "title": "Compiler page"
+        "title": "Page Compilateur"
       },
       "settings/database": {
-        "title": "Database page"
+        "title": "Page Base de données"
       },
       "settings/general": {
-        "title": "General page"
+        "title": "Page Général"
       },
       "settings/interface": {
-        "title": "Interface page"
+        "title": "Page Interface"
       },
       "settings/overview": {
         "title": "Aperçu"
       },
       "settings/php": {
-        "title": "PHP page"
+        "title": "Page PHP"
       },
       "settings/security": {
-        "title": "Security page"
+        "title": "Page sécurité"
       },
       "settings/sql": {
-        "title": "SQL page"
+        "title": "Page SQL"
       },
       "settings/web": {
-        "title": "Web page"
+        "title": "Page Web"
       },
       "Tags/tags": {
         "title": "Balises de transformation"
@@ -929,7 +929,7 @@
         "title": "Prise en main"
       },
       "ViewPro/method-list": {
-        "title": "Liste de méthodes"
+        "title": "Liste des méthodes"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
@@ -969,8 +969,8 @@
       }
     },
     "links": {
-      "v19 R3 BETA": "v19 R3 BETA",
-      "v19 R2": "v19 R2",
+      "v19 R4 BETA": "v19 R4 BETA",
+      "v19 R3": "v19 R3",
       "v19": "v19",
       "v18": "v18"
     },
@@ -1003,7 +1003,7 @@
       "Form Events": "Evénements formulaire",
       "Menus": "Menus",
       "User Settings": "Paramètres utilisateur",
-      "Build application": "Build application",
+      "Build application": "Générateur d'application",
       "Extensions": "Extensions",
       "4D View Pro": "4D View Pro"
     }
@@ -1056,7 +1056,7 @@
     "Mobile applications|no description given": "Applications Mobile",
     "Desktop applications|no description given": "Applications Desktop",
     "Extensions|no description given": "Extensions",
-    "Documentation updates|no description given": "Documentation updates",
+    "Documentation updates|no description given": "Mises à jour de la documentation",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"

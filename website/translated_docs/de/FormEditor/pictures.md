@@ -58,7 +58,7 @@ Hochauflösende Bilder mit der @nx-Konvention lassen sich in folgenden Objekten 
 
 
 
-4D priorisiert automatisch die Bilder mit der höchsten Auflösung. For example, when using two screens (one high resolution display, one standard display) and you move a form from one screen to another, 4D automatically renders the highest possible resolution of the picture. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
+4D priorisiert automatisch die Bilder mit der höchsten Auflösung. 4D priorisiert automatisch die Bilder mit der höchsten Auflösung. Selbst wenn ein Befehl oder eine Eigenschaft *circle.png* angibt, wird *circle@3x.png* verwendet (wenn es existiert).
 > Beachten Sie, dass die Priorisierung der Auflösung nur für die Anzeige von Bildern auf dem Bildschirm erfolgt, beim Drucken wird keine automatische Priorisierung vorgenommen.
 
 

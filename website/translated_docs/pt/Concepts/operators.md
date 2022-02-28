@@ -30,7 +30,7 @@ $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
 ```
 
-> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
 
 ## Basic operators
@@ -39,7 +39,7 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 
 - [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
 - [**Date operators**](dt_date.md#date-operators)
-- [**Time operators**](dt_time.md#time-operators)
+- [**Operadores de horas**](dt_time.md#time-operators)
 - [**Number operators**](dt_number.md#number-operators)
 - [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
 - [**Picture operators**](dt_picture.md#picture-operators)
@@ -149,7 +149,7 @@ The following table summarizes the different cases for the **&&** operator:
 | falsy  | truthy | Expr1          |
 | falsy  | falsy  | Expr1          |
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
 var $v : Variant
@@ -161,7 +161,7 @@ $v:=5 && !00-00-00! // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Say you have an online store, and some products have a tax rate applied, and others don't.
 
@@ -208,7 +208,7 @@ The following table summarizes the different cases and the value returned for th
 | falsy  | truthy | Expr2          |
 | falsy  | falsy  | Expr2          |
 
-#### Example 1
+#### Exemplo 1
 
 Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
 
@@ -220,7 +220,7 @@ $phone:=$emp.phone || "n/a"
 
 In which case `$phone` will store either a phone number or the "n/a" string.
 
-#### Example 2
+#### Exemplo 2
 
 Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
 

@@ -114,7 +114,7 @@ Utilisation du datastore principal de la base 4D :
 | Paramètres     | Type         |    | Description                                                                       |
 | -------------- | ------------ | -- | --------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
-| localID        | Texte        | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
+| localID        | Text         | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
 | Résultat       | cs.DataStore | <- | Objet datastore                                                                   |
 <!-- END REF -->
 

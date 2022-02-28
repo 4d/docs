@@ -1,18 +1,18 @@
 ---
 id: general
-title: General page
+title: Page Général
 ---
 
-The General page contains options to configure generic parameters for the 4D project.
+La page Général contient des options permettant de configurer les paramètres génériques du projet 4D.
 
-## Design
+## Développeur
 
-This area contains the **Display toolbar** option. When it is checked, the 4D toolbar is displayed in the Design environment.
+Cette zone comporte l'option **Afficher la barre d'outils**. Lorsqu'elle est cochée, la barre d'outils 4D est affichée dans l'environnement de Développement.
 
-## General
+## Général
 
-You use this area to set options concerning project startup and operation.
+Cette zone vous permet de personnaliser diverses options relatives au démarrage et au fonctionnement du projet.
 
-### Startup Environment
+### Mode de démarrage
 
-You use this menu to select the default startup mode for the database: **Design** or **Application**. Unless specified, 4D opens by default in the Design environment if a password access system is not activated. 
+Ce menu permet de sélectionner le mode dans lequel vous souhaitez que la base soit ouverte par défaut : **Développement** ou **Application**. A moins que vous ne le spécifiiez, 4D s'ouvre par défaut en mode Développement s’il n’y a pas de mots de passe en contrôlant l’accès. 

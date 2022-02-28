@@ -771,12 +771,12 @@ La función `.lock()`<!-- REF #EntityClass.lock().Summary -->pone un bloqueo pes
 
 Otros procesos verán este registro como bloqueado (la propiedad `result.success` contendrá False si intentan bloquear la misma entidad usando esta función). Sólo las funciones ejecutadas en la sesión de "bloqueo" pueden editar y guardar los atributos de la entidad. La entidad puede ser cargada como de sólo lectura por otras sesiones, pero no podrán introducir y guardar valores.
 
-A record locked by `.lock()` is unlocked:
+El objeto devuelto por <`.unlock()<` contiene la siguiente propiedad:
 
 *   when the [`unlock()`](#unlock) function is called on a matching entity in the same process
 *   automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
 
-> An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
+> Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
 
 Por defecto, si se omite el parámetro *mode*, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
 

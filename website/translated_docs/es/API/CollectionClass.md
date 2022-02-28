@@ -90,7 +90,7 @@ El comando `Nueva colección` <!-- REF #_command_.New collection.Summary --> cre
 Si no se pasa ningún parámetro, `New collection` crea una colección vacía y devuelve su referencia.
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+> Tenga en cuenta que las instrucciones `var : Collection` or `C_COLLECTION` declaran una variable de tipo `Collection` pero no crea ninguna colección.
 
 Opcionalmente, puede prellenar la nueva colección pasando uno o varios *valores* como parámetro(s).
 
@@ -106,9 +106,9 @@ Puede pasar cualquier número de valores de todos los tipos soportados (number, 
 
 Debe prestar atención a los siguientes aspectos de la conversión:
 
-*   If you pass a pointer, it is kept "as is"; it is evaluated using the `JSON Stringify` command
-*   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
-*   If you pass a time, it is stored as a number of milliseconds (Real).
+*   Si pasa un puntero, se mantiene "tal cual"; se evalúa con el comando `JSON Stringify`
+*   Las fechas se almacenan como fechas "aaaa-mm-dd" o de cadenas con el formato "AAAA-MM-DDTHH:mm:ss.SSSZ", según la configuración actual "fechas dentro de los objetos" de la base de datos. Al convertir las fechas 4D en texto antes de almacenarlas en la colección, por defecto el programa tiene en cuenta la zona horaria local. Puede modificar este comportamiento utilizando el selector `Dates inside objects` del comando `SET DATABASE PARAMETER`.
+*   Si pasa un tiempo, se almacena como un número de milisegundos (Real).
 
 #### Ejemplo 1
 
@@ -172,12 +172,12 @@ Se crea una nueva colección y se añade un nuevo elemento:
 El comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> crea una nueva colección compartida vacía o precargada<!-- END REF --> y devuelve su referencia.
 
 La adición de un elemento a esta colección debe estar rodeada por la estructura de uso [`Use...End`](Concepts/shared.md#useend-use), de lo contrario se genera un error. Sin embargo, es posible leer un elemento sin estructura.
-> For more information on shared collections, please refer to the [Shared objects and collections](Concepts/shared.md) page.
+> Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
 
 Si no se pasa ningún parámetro, `New shared collection` crea una colección compartida vacía y devuelve su referencia.
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
-> Keep in mind that `var : Collection` or `C_COLLECTION` statements declare a variable of the `Collection` type but does not create any collection.
+> Tenga en cuenta que las instrucciones `var : Collection` or `C_COLLECTION` declaran una variable de tipo `Collection` pero no crea ninguna colección.
 
 Opcionalmente, puede prellenar la nueva colección compartida pasando uno o varios *valores* como parámetro(s). De lo contrario, puede añadir o modificar elementos posteriormente por asignación notación objeto (ver ejemplo).
 
@@ -185,15 +185,15 @@ Si el nuevo índice del elemento está más allá del último elemento existente
 
 Puede pasar cualquier número de valores de los siguientes tipos soportados:
 
-*   number (real, longint...). Number values are always stored as reals.
+*   number (real, longint...). Los valores numéricos se almacenan siempre como reales.
 *   texto
 *   booleano
 *   fecha
-*   time (stored as number of milliseconds - real)
+*   time (almacenado como número de milisegundos - real)
 *   null
 *   objeto compartido(*)
 *   collection compartida(*)
-> Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+> A diferencia de las colecciones estándar (no compartidas), las colecciones compartidas no soportan imágenes, punteros y objetos o colecciones no compartidas.
 
 (*)Cuando un objeto o colección compartida se añade a una colección compartida, comparten el mismo *identificador de bloqueo*. Para obtener más información sobre este punto, consulte la guía del **Desarrollador 4D**.
 
@@ -242,9 +242,9 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 `.average()` devuelve `undefined` if:
 
-*   the collection is empty,
-*   the collection does not contain numerical elements,
-*   *propertyPath* is not found in the collection.
+*   la colección está vacía,
+*   la colección no contiene elementos numéricos,
+*   *propertyPath* no se encuentra en la colección.
 
 
 #### Ejemplo 1
@@ -337,11 +337,11 @@ La función `.combine()` <!-- REF #collection.combine().Summary -->inserta *col2
 > Esta función modifica la colección original.
 
 Por defecto, los elementos *col2* se añaden al final de la colección original. Puede pasar en *index* la posición en la que quiere que se inserten los elementos *col2* en la colección.
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+> **Atención:** recuerde que los elementos de la colección están numerados desde 0.
 
-*   If *index* > the length of the collection, the actual starting *index* will be set to the length of the collection.
-*   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value is negative, *index* is set to 0.
+*   Si *índice* > la longitud de la colección, el *índice* inicial real se fijará en la longitud de la colección.
+*   Si *índice* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
+*   Si el valor calculado es negativo, *index* toma el valor 0.
 
 
 #### Ejemplo
@@ -454,9 +454,9 @@ var $text : Text
 $sharedObject:=New shared object
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) //$lastnames es una colección estándar
 
-$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames is a shared collection
+$sharedLastnames:=$lastnames.copy(ck shared) //$sharedLastnames es una colección compartida
 
 //Now we can put $sharedLastnames into $sharedObject
 Use($sharedObject)
@@ -475,7 +475,7 @@ var $sharedColl1;$sharedColl2;$copyColl : Collection
 $sharedColl1:=New shared collection(New shared object("lastname";"Smith"))
 $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
 
-//$copyColl belongs to the same shared group as $sharedColl2
+//$copyColl pertenece al mismo grupo compartido que $sharedColl2
  $copyColl:=$sharedColl1.copy(ck shared;$sharedColl2)
  Use($sharedColl2)
     $sharedColl2.combine($copyColl)
@@ -491,9 +491,9 @@ var $lastnames;$sharedLastnames : Collection
 var $text : Text
 
 $text:=Document to text(Get 4D folder(Current resources folder)+"lastnames.txt")
-$lastnames:=JSON Parse($text) //$lastnames is a regular collection
+$lastnames:=JSON Parse($text) //$lastnames es una colección clásica
 
-$sharedLastnames:=$lastnames.copy(ck shared) // shared copy
+$sharedLastnames:=$lastnames.copy(ck shared) // copia compartida
 
 Use(Storage)
     Storage.lastnames:=$sharedLastnames
@@ -519,7 +519,7 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
- ALERT($col3[0].alpha+" "+$col3[1].what) //displays "Hello You!"
+ ALERT($col3[0].alpha+" "+$col3[1].what) //muestra "Hello You!"
 ``` 
 
 
@@ -605,8 +605,8 @@ La función `.countValues()` <!-- REF #collection.countValues().Summary -->devue
 
 Puede pasar en *value*:
 
-*   a scalar value (text, number, boolean, date),
-*   an object or a collection reference.
+*   un valor escalar (texto, número, booleano, fecha),
+*   una referencia de objeto o de colección.
 
 
 Para encontrar un elemento, el tipo de *value* debe ser equivalente al tipo del elemento; el método utiliza el operador de igualdad.
@@ -739,7 +739,7 @@ Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para
 La función `.equal()` <!-- REF #collection.equal().Summary -->compara collection con collection2 <!-- END REF -->y devuelve **true** si son idénticas (comparación profunda/deep comparison).
 
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
-> Elements with **Null** values are not equal to Undefined elements.
+> Los elementos con valores **Null** no son iguales a los elementos Undefined.
 
 #### Ejemplo
 
@@ -806,16 +806,16 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-*   *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (Boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+*   *>$1.result* (Boolean): **true** si la evaluación del valor del elemento tiene éxito, si no **false**.
+*   *$1.stop* (Boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 En todos los casos, en el momento en que la función `.every()` encuentre el primer elemento de la colección que devuelva **false** en *$1.result*, deja de llamar a *methodName* y devuelve **false**.
 
 Por defecto, `.every()` comprueba toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la prueba.
 
-*   If *startFrom* >= the collection's length, **false** is returned, which means the collection is not tested.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection ( *startFrom:=startFrom+length*).
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Si *startFrom* >= la longitud de la colección, se devuelve **false**, lo que significa que la colección no se prueba.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*).
+*   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 
 #### Ejemplo 1
@@ -825,9 +825,9 @@ var $c : Collection
 var $b : Boolean
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //returns true
+$b:=$c.every("NumberGreaterThan0") //devuelve true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //returns false
+$b:=$c.every("NumberGreaterThan0") //devuelve false
 ```
 
 Con lo siguiente método ***NumberGreaterThan0***:
@@ -895,12 +895,12 @@ La función `.extract()` <!-- REF #collection.extract().Summary -->crea y devuel
 
 El contenido de la colección devuelta depende del parámetro *targetPath*:
 
-*   If the *targetPath* parameter is omitted, `.extract()` populates the new collection with the *propertyPath* values of the original collection.
+*   Si se omite el parámetro, *targetPath*, `.extract()` rellena la nueva colección con los valores de *propertyPath* de la colección original.
 
-    By default, elements for which *propertyPath* is null or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as null elements in the returned collection.
+    Por defecto, los elementos cuya *propertyPath* es null o indefinida se ignoran en la colección resultante. Puede pasar la constante `ck keep null` en el parámetro *option* para incluir estos valores como elementos nulos en la colección devuelta.
 
 
-*   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+*   Si se pasan uno o más parámetros *targetPath*, `.extract()` rellena la nueva colección con las propiedades *propertyPath* y cada elemento de la nueva colección es un objeto con propiedades *targetPath* rellenadas con las propiedades *propertyPath* correspondientes. Se mantienen los valores null (el parámetro *option* se ignora) con esta sintaxis.
 
 
 #### Ejemplo 1
@@ -969,15 +969,15 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 La función `.fill()` <!-- REF #collection.fill().Summary -->llena la colección con el *value* especificado, opcionalmente desde el índice *startFrom* hasta el índice *end*, y devuelve la colección resultante<!-- END REF -->.
 > Esta función modifica la colección original.
 
-*   If the *startFrom* parameter is omitted, *value* is set to all collection elements (*startFrom*=0).
-*   If the *startFrom* parameter is passed and *end* omitted, *value* is set to collection elements starting at *startFrom* to the last element of the collection (*end*=length).
-*   If both the *startFrom* parameter and *end* are passed, *value* is set to collection elements starting at *startFrom* to the element *end*.
+*   Si se omite el parámetro *startFrom*, *value* se define en todos los elementos de la colección (*startFrom*=0).
+*   Si se pasa el parámetro *startFrom* y se omite *end*, *value* se establece en los elementos de la colección empezando por *startFrom* hasta el último elemento de la colección (*end*=length).
+*   Si se pasan ambos parámetros *startFrom* y *end*, *value* se establece en los elementos de la colección empezando por *startFrom* hasta el elemento *end*.
 
 En caso de incoherencia, se aplican las siguientes reglas:
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, *startFrom* is set to 0.
-*   If *end* < 0 , it is recalculated as *end:=end+length*.
-*   If *end* < *startFrom* (passed or calculated values), the method does nothing.
+*   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección). Si el valor calculado es negativo, *startFrom* toma el valor 0.
+*   Si *end* < 0 , se recalcula como *end:=end+length*.
+*   Si *end* < *startFrom* (valores pasados o calculados), el método no hace nada.
 
 
 #### Ejemplo
@@ -1028,14 +1028,14 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* recibe los siguientes parámetros:
 
-*   in *$1.value*: element value to be filtered
+*   en *$1.value*: valor del elemento a filtrar
 *   en *$2*: *param*
 *   en *$N...*: param2...paramN
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-*   *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+*   *$1.result* (boolean): **true** si el valor del elemento coincide con la condición del filtro y debe mantenerse.
+*   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 
 #### Ejemplo 1
@@ -1129,14 +1129,14 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-*   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+*   *>$1.result* (boolean): **true** si el valor del elemento coincide con la condición de búsqueda.
+*   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.find()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+*   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 
 #### Ejemplo 1
@@ -1228,14 +1228,14 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-*   *$1.result* (boolean): **true** if the element value matches the search condition.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+*   *>$1.result* (boolean): **true** si el valor del elemento coincide con la condición de búsqueda.
+*   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 Por defecto, `.findIndex()` busca en toda la colección. Opcionalmente, se puede pasar en *startFrom* el índice del elemento desde el que iniciar la búsqueda.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+*   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
 
@@ -1297,17 +1297,17 @@ La función `.indexOf()` <!-- REF #collection.indexOf().Summary -->busca la expr
 
 En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 
-*   a scalar value (text, number, boolean, date),
+*   un valor escalar (texto, número, booleano, fecha),
 *   el valor null,
-*   an object or a collection reference.
+*   una referencia de objeto o de colección.
 
 *toSearch* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad del tipo de datos).
 
 Opcionalmente, puede pasar el índice de la colección desde el que iniciar la búsqueda en *startFrom*.
 
-*   If *startFrom* >= the collection's length, -1 is returned, which means the collection is not searched.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Si *startFrom* >= la longitud de la colección, se devuelve -1, lo que significa que la colección no se busca.
+*   Si *startFrom* < 0, se considera el desplazamiento desde el final de la colección (*startFrom:=startFrom+length*). **Nota**: incluso si *startFrom* es negativo, la colección se sigue buscando de izquierda a derecha.
+*   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
 
@@ -1395,11 +1395,11 @@ La función `.insert()`<!-- REF #collection.insert().Summary -->inserta *element
 > Esta función modifica la colección original.
 
 En *index*, pase la posición donde quiere que se inserte el elemento en la colección.
-> **Warning**: Keep in mind that collection elements are numbered from 0.
+> **Atención:** recuerde que los elementos de la colección están numerados desde 0.
 
-*   If *index* > the length of the collection, actual starting index will be set to the length of the collection.
-*   If *index* <0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value is negative, index is set to 0.
+*   Si *índice* > la longitud de la colección, el índice inicial real se fijará en la longitud de la colección.
+*   Si *index* <0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
+*   Si el valor calculado es negativo, index toma el valor 0.
 
 Se puede insertar cualquier tipo de elemento aceptado por una colección, incluso otra colección.
 
@@ -1454,17 +1454,17 @@ La función `.lastIndexOf()`<!-- REF #collection.lastIndexOf().Summary -->busca 
 
 En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
 
-*   a scalar value (text, number, boolean, date),
+*   un valor escalar (texto, número, booleano, fecha),
 *   el valor null,
-*   an object or a collection reference.
+*   una referencia de objeto o de colección.
 
 *toSearch* debe coincidir exactamente con el elemento a encontrar (se aplican las mismas reglas que para el operador de igualdad).
 
 Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una búsqueda en reversa en *startFrom*.
 
-*   If *startFrom* >= the collection's length minus one (coll.length-1), the whole collection is searched (default).
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
-*   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
+*   Si *startFrom* >= la longitud de la colección menos uno (coll.length-1), se busca en toda la colección (por defecto).
+*   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección). Si el valor calculado es negativo, se devuelve -1 (no se busca en la colección). **Nota:** incluso si *startFrom* es negativo, la colección se sigue buscando de derecha a izquierda.
+*   Si *startFrom* = 0, se devuelve -1 lo que significa que la colección no se busca.
 
 #### Ejemplo
 
@@ -1473,11 +1473,11 @@ Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una
  var $col : Collection
  var $pos1;$pos2;$pos3;$pos4;$pos5 : Integer 
  $col:=Split string("a,b,c,d,e,f,g,h,i,j,e,k,e";",") //$col.length=13
- $pos1:=$col.lastIndexOf("e") //returns 12
- $pos2:=$col.lastIndexOf("e";6) //returns 4
- $pos3:=$col.lastIndexOf("e";15) //returns 12
- $pos4:=$col.lastIndexOf("e";-2) //returns 10
- $pos5:=$col.lastIndexOf("x") //returns -1
+ $pos1:=$col.lastIndexOf("e") //devuelve 12
+ $pos2:=$col.lastIndexOf("e";6) //devuelve 4
+ $pos3:=$col.lastIndexOf("e";15) //devuelve 12
+ $pos4:=$col.lastIndexOf("e";-2) //devuelve 10
+ $pos5:=$col.lastIndexOf("x") //devuelve -1
 ```<!-- END REF --><!-- REF collection.length.Desc -->## .length
 
 <details><summary>Histórico</summary>
@@ -1494,9 +1494,9 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 
 ```4d
- var $col : Collection //$col.length initialized to 0
- $col:=New collection("one";"two";"three") //$col.length updated to 3
- $col[4]:="five" //$col.length updated to 5
+ var $col : Collection //$col.length inicializada en 0
+ $col:=New collection("one";"two";"three") //$col.length actualizada a 3
+ $col[4]:="five" //$col.length actualizada a 5
  $vSize:=$col.remove(0;3).length //$vSize=2
 ```<!-- END REF --><!-- REF collection.map().Desc -->## .map()
 
@@ -1518,7 +1518,7 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 *methodName* recibe los siguientes parámetros:
 
 *   en *$1.value* (todo tipo): valor del elemento que se va a asignar
-*   in *$2* (any type): *param*
+*   en *$2* (todo tipo): *param*
 *   en *$N...* (any type): *paramN...*
 
 *methodName* define el(los) siguiente(s) parámetro(s):
@@ -1613,12 +1613,12 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v16 R6  | Añadidos       |
-</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Parámetros  | Tipo       |    | Descripción                                       |
-| ----------- | ---------- |:--:| ------------------------------------------------- |
-| pathStrings | Texto      | -> | Property path(s) on which to order the collection |
-| pathObjects | Collection | -> | Colección de objetos criterio                     |
-| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values) |
-| Resultado   | Collection | <- | Ordered copy of the collection (shallow copy)     |<!-- END REF -->#### Descripción
+</details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Parámetros  | Tipo       |    | Descripción                                                   |
+| ----------- | ---------- |:--:| ------------------------------------------------------------- |
+| pathStrings | Texto      | -> | Ruta(s) de propiedad(es) a utilizar para ordenar la colección |
+| pathObjects | Collection | -> | Colección de objetos criterio                                 |
+| ascOrDesc   | Integer    | -> | `ck ascending` o `ck descending` (valores escalares)          |
+| Resultado   | Collection | <- | Copia ordenada de la colección (copia superficial)            |<!-- END REF -->#### Descripción
 
 La función `.orderBy()`<!-- REF #collection.orderBy().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
 
@@ -1629,9 +1629,9 @@ Si no se pasa ningún parámetro, la función ordena los valores escalares de la
 
 También puede pasar un parámetro de criterios para definir cómo deben ordenarse los elementos de la colección. Se admiten tres sintaxis para este parámetro:
 
-*   *pathStrings* : Text (formula). **Syntax**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (default order: asc). *pathStrings* contains a formula made of 1 to x property paths and (optionally) sort orders, separated by commas. The order in which the properties are passed determines the sorting priority of the collection elements. By default, properties are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+*   *pathStrings*: Texto (fórmula). **Sintaxis**: `propertyPath1 {desc or asc}, propertyPath2 {desc or asc},...` (orden por defecto: asc). *pathStrings* contiene una fórmula compuesta de 1 a x rutas de propiedades y (opcionalmente) órdenes de clasificación, separados por comas. El orden en que se pasan las propiedades determina la prioridad de ordenación de los elementos de la colección. Por defecto, las propiedades se clasifican en orden ascendente. Puede definir el orden de clasificación de una propiedad en la cadena de criterios, separado de la ruta de la propiedad por un solo espacio: pase "asc" para ordenar en orden ascendente o "desc" en orden descendente.
 
-*   *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
+*   *pathObjects* : Collection. Puede añadir tantos objetos en la colección *pathObjects* como sea necesario. Por defecto, las propiedades se clasifican en orden ascendente ("descending" es false). Cada elemento de la colección contiene un objeto estructurado de la siguiente manera:
 
 ```4d
 {
@@ -1640,14 +1640,14 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 }
 ```
 
-*   *ascOrDesc*: Integer. You pass one of the following constants from the **Objects and collections** theme:
+*   *ascOrDesc*: Integer. Se pasa una de las siguientes constantes del tema **Objects and collections**:
 
-    | Constante     | Tipo         | Valor | Comentario                                        |
-    | ------------- | ------------ | ----- | ------------------------------------------------- |
-    | ck ascending  | Entero largo | 0     | Elements are ordered in ascending order (default) |
-    | ck descending | Entero largo | 1     | Elements are ordered in descending order          |
+    | Constante     | Tipo         | Valor | Comentario                                                 |
+    | ------------- | ------------ | ----- | ---------------------------------------------------------- |
+    | ck ascending  | Entero largo | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
+    | ck descending | Entero largo | 1     | Los elementos se ordenan de forma descendente              |
 
-    This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+    Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Los tipos se devuelven en el siguiente orden:
 
@@ -1745,13 +1745,13 @@ Esta función devuelve una *copia superficial*, lo que significa que los objetos
 
 En *methodName*, pase un método de comparación que compare dos valores y devuelva **true** en *$1.result* si el primer valor es menor que el segundo. Puede suministrar parámetros adicionales a *methodName* si es necesario.
 
-*   *methodName* will receive the following parameters:
+*   *methodName* recibirá los siguientes parámetros:
     *   $1 (objeto), donde:
-        *   *$1.value* (any type): first element value to be compared
-        *   *$1.value2* (any type): second element value to be compared
-    *   $2...$N (any type): extra parameters
-*   *methodName* sets the following parameter:
-    *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+        *   *$1.value* (todo tipo): primer valor del elemento a comparar
+        *   *$1.value2* (todo tipo): segundo valor del elemento a comparar
+    *   $2...$N (cualquier tipo): parámetros adicionales
+*   *methodName* define el siguiente parámetro:
+    *   *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario
 
 #### Ejemplo 1
 
@@ -1799,13 +1799,13 @@ Ordenar los elementos de la colección por código de caracteres o alfabéticame
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+//utilizando el código de caracteres:
 $strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
-// result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
+// resultado : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+//utilizando el lenguaje:
 $strings2:=$string1s.orderByMethod("sortCollection";sk strict)
-// result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
+// resultado : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 El método ***sortCollection***:
@@ -1844,10 +1844,10 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
  var $stack : Collection
  $stack:=New collection //$stack=[]
  $stack.push(1;2) //$stack=[1,2]
- $stack.pop() //$stack=[1]  Returns 2
+ $stack.pop() //$stack=[1]  Devuelve 2
  $stack.push(New collection(4;5)) //$stack=[[1,[4,5]]
- $stack.pop() //$stack=[1]  Returns [4,5]
- $stack.pop() //$stack=[]  Returns 1
+ $stack.pop() //$stack=[1]  Devuelve [4,5]
+ $stack.pop() //$stack=[]  Devuelve 1
 ```<!-- END REF --><!-- REF collection.push().Desc -->## .push()
 
 <details><summary>Histórico</summary>
@@ -1918,12 +1918,12 @@ definidas por *queryString* y (opcionalmente) *value* o *querySettings*. Si la c
 El parámetro *queryString* utiliza la siguiente sintaxis:
 
 ```4d
-propertyPath comparator value {logicalOperator propertyPath comparator value}
+valor del comparador propertyPath {logicalOperator propertyPath comparator value}
 ```
 
 Para obtener información detallada sobre cómo construir una consulta utilizando los parámetros *queryString*, *value* y *querySettings*, consulte la descripción de la función [`dataClass.query()`](DataClassClass.md#query).
 
-> Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
+> Las fórmulas no son soportadas por la función `collection.query()`, ni en el parámetro *queryString* ni como parámetro del objeto *formula*.
 
 #### Ejemplo 1
 
@@ -1973,7 +1973,7 @@ Este ejemplo devuelve las personas cuyo nombre no empieza por una cadena de una 
 Este ejemplo devuelve las personas cuya edad no se conoce (propiedad definida como null o indefinida):
 
 ```4d
- $col:=$c.query("age=null") //placeholders not allowed with "null"
+ $col:=$c.query("age=null") //no están permitidos los marcadores de posición con "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
@@ -2019,12 +2019,12 @@ Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite,
 
 *   en *$1.value*: valor del elemento a procesar
 *   en *$2: param*
-*   in *$N...*: *paramN...*
+*   en *$N...*: *paramN...*
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-*   *$1.accumulator*: value to be modified by the function and which is initialized by *initValue*.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+*   *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
+*   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 
 #### Ejemplo 1
@@ -2033,7 +2033,7 @@ Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite,
 ```4d
  C_COLLECTION($c)
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
- $r:=$c.reduce("Multiply";1) //returns 86400
+ $r:=$c.reduce("Multiply";1) //devuelve 86400
 ```
 
 Con el siguiente método ***Multiply***:
@@ -2088,11 +2088,11 @@ La función `.remove()`<!-- REF #collection.remove().Summary -->elimina uno o m�
 > Esta función modifica la colección original.
 
 En *index*, pase la posición donde quiere eliminar el elemento de la colección.
-> **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Atención:** recuerde que los elementos de la colección están numerados desde 0. Si *índice* es mayor que la longitud de la colección, el índice inicial real se fijará en la longitud de la colección.
 
-*   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value < 0, *index* is set to 0.
-*   If the calculated value > the length of the collection, *index* is set to the length.
+*   Si *index* < 0, se recalcula como *index:=index+length* (se considera el desplazamiento desde el final de la colección).
+*   Si el valor calculado < 0, *index* toma el valor 0.
+*   Si el valor calculado > la longitud de la colección, *index* se establece para la longitud.
 
 En *howMany*, pase el número de elementos a eliminar de *index*. Si no se especifica *howMany*, se elimina un elemento.
 
@@ -2133,8 +2133,8 @@ La función `.resize()`<!-- REF #collection.resize().Summary -->ajusta la longit
 .
 > Esta función modifica la colección original.
 
-*   If *size* < collection length, exceeding elements are removed from the collection.
-*   If *size* > collection length, the collection length is increased to size.
+*   Si *size* < la longitud de la colección, los elementos que exceden se eliminan de la colección.
+*   Si *size* > longitud de la colección, la longitud de la colección se incrementa al tamaño.
 
 Por defecto, los nuevos elementos se llenan con valores **null**. Puede especificar el valor a llenar en los elementos añadidos utilizando el parámetro *defaultValue*.
 
@@ -2235,10 +2235,10 @@ La función `.slice()`<!-- REF #collection.slice().Summary -->devuelve una porci
 
 La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection).
-*   If the calculated value < 0, *startFrom* is set to 0.
-*   If *end* < 0 , it is recalculated as *end:=end+length*.
-*   If *end < startFrom* (passed or calculated values), the method does nothing.
+*   Si *startFrom* < 0, se recalcula como *startFrom:=startFrom+length* (se considera el desplazamiento desde el final de la colección).
+*   Si el valor calculado < 0, *startFrom* toma el valor 0.
+*   Si *end* < 0 , se recalcula como *end:=end+length*.
+*   Si *end < startFrom* (valores pasados o calculados), el método no hace nada.
 
 #### Ejemplo
 
@@ -2283,16 +2283,16 @@ En *methodName*, pase el nombre del método a utilizar para evaluar los elemento
 
 *methodName* define el(los) siguiente(s) parámetro(s):
 
-*   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. El valor devuelto es el último calculado.
+*   *$1.result* (boolean): **true** si la evaluación del valor del elemento tiene éxito, si no **false**.
+*   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
 
 En algún caso, en el momento en que la función `.some()` encuentre el primer elemento de la colección que devuelva true en *$1.result*, deja de llamar a *methodName* y devuelve **false**.
 
 Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar el índice de un elemento desde el cual iniciar la prueba en *startFrom*.
 
-*   If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
-*   If *startFrom* < 0, it is considered as the offset from the end of the collection.
-*   If *startFrom* = 0, the whole collection is searched (default).
+*   Si *startFrom* >= la longitud de la colección, se devuelve **False**, lo que significa que la colección no se prueba.
+*   Si *startFrom* < 0, se considera como el desplazamiento desde el final de la colección.
+*   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 
 #### Ejemplo
@@ -2303,9 +2303,9 @@ Por defecto, `.some()` comprueba toda la colección. Opcionalmente, puede pasar 
  var $b : Boolean
  $c:=New collection
  $c.push(-5;-3;-1;-4;-6;-2)
- $b:=$c.some("NumberGreaterThan0") // returns false
+ $b:=$c.some("NumberGreaterThan0") // devuelve false
  $c.push(1)
- $b:=$c.some("NumberGreaterThan0") // returns true
+ $b:=$c.some("NumberGreaterThan0") // devuelve true
 
  $c:=New collection
  $c.push(1;-5;-3;-1;-4;-6;-2)
@@ -2343,14 +2343,14 @@ Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares 
 
 Si desea ordenar los elementos de la colección en otro orden o clasificar cualquier tipo de elemento, debe suministrar en *methodName*, un método de comparación que compare dos valores y devuelva **true** en *$1.result* si el primer valor es menor que el segundo. Puede suministrar parámetros adicionales a *methodName* si es necesario.
 
-*   *methodName* will receive the following parameters:
+*   *methodName* recibirá los siguientes parámetros:
     *   $1 (objeto), donde:
-        *   *$1.value* (any type): first element value to be compared
-        *   *$1.value2* (any type): second element value to be compared
-    *   $2...$N (any type): extra parameters
+        *   *$1.value* (todo tipo): primer valor del elemento a comparar
+        *   *$1.value2* (todo tipo): segundo valor del elemento a comparar
+    *   $2...$N (cualquier tipo): parámetros adicionales
 
-*methodName* sets the following parameter:
-    *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+*methodName* define el siguiente parámetro:
+    *   *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Los tipos se devuelven en el siguiente orden:
 
@@ -2385,8 +2385,8 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 ```4d
  var $col; $col2; $col3 : Collection
  $col:=New collection(33;4;66;1111;222)
- $col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
- $col3:=$col.sort("numberOrder") //alphabetical sort: [1111,222,33,4,66]
+ $col2:=$col.sort() //ordenación numérica: [4,33,66,222,1111]
+ $col3:=$col.sort("numberOrder") //ordenación alfabética: [1111,222,33,4,66]
 ```
 
 ```4d
@@ -2418,9 +2418,9 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 `.sum()` devuelve 0 si:
 
-*   the collection is empty,
-*   the collection does not contain numerical elements,
-*   *propertyPath* is not found in the collection.
+*   la colección está vacía,
+*   la colección no contiene elementos numéricos,
+*   *propertyPath* no se encuentra en la colección.
 
 #### Ejemplo 1
 

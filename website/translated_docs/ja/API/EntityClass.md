@@ -906,12 +906,12 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 他のプロセスからはこのレコードがロックされて見えます (この関数を使って同エンティティをロックしようとした場合、`result.success` プロパティには false が返されます)。 ロックをおこなったセッション内で実行される関数のみが、当該エンティティの属性を編集・保存できます。 他のセッションは同エンティティを読み取り専用にロードできますが、値の入力・保存はできません。
 
-A record locked by `.lock()` is unlocked:
+`.lock()` でロックされたレコードは、以下の場合にロック解除されます:
 
 *   同プロセス内で合致するエンティティに対して [`.unlock()`](#unlock) 関数が呼び出された場合
 *   メモリ内のどのエンティティからも参照されなくなった場合、自動的にロックが解除されます。 たとえば、エンティティのローカル参照に対してのみロックがかかっていた場合、関数の実行が終了すればロックは解除されます。 メモリ内にエンティティへの参照がある限り、レコードはロックされたままです。
 
-> An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
+> エンティティは [RESTセッションによってロックされる](../REST/$lock.md) 場合もあります。その場合、そのセッションによってのみロックを解除することができます。
 
 *mode* 引数を渡さなかった場合のデフォルトでは、同エンティティが他のプロセスまたはユーザーによって変更されていた場合 (つまり、スタンプが変更されていた場合) にエラーを返します (以下参照)。
 
@@ -921,34 +921,34 @@ A record locked by `.lock()` is unlocked:
 
 `.lock( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| プロパティ            |                     | タイプ                 | 説明                                                                                                                                                          |
-| ---------------- | ------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean             | ロックに成功した場合 (あるいはエンティティがすでにカレントプロセスでロックされていた場合) には true、それ以外は false                                                                                          |
-|                  |                     |                     | ***`dk reload if stamp changed` オプションが使用されていた場合にのみ利用可能:***                                                                                                  |
-| **wasReloaded**  |                     | boolean             | エンティティがリロードされ、かつリロードに成功した場合には true、それ以外は false                                                                                                              |
-|                  |                     |                     | ***エラーの場合にのみ利用可能:***                                                                                                                                        |
-| status(\*)     |                     | number              | エラーコード、以下参照                                                                                                                                                 |
-| statusText(\*) |                     | テキスト                | エラーの詳細、以下参照                                                                                                                                                 |
-|                  |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                                                                                                            |
-| lockKindText     |                     | テキスト                | "Locked by record" if locked by a 4D process, "Locked by session" if locked by a REST session                                                               |
-| lockInfo         |                     | object              | ロック元についての情報。 Returned properties depend on the lock origin (4D process or REST session).                                                                    |
-|                  |                     |                     | ***Available only for a 4D process lock:***                                                                                                                 |
-|                  | task_id             | number              | プロセスID                                                                                                                                                      |
-|                  | user_name           | テキスト                | マシン上でのセッションユーザー名                                                                                                                                            |
-|                  | user4d_alias        | テキスト                | 4D ユーザーの名前またはエイリアス                                                                                                                                          |
-|                  | user4d_id           | number              | 4DデータベースディレクトリでのユーザーID                                                                                                                                      |
-|                  | host_name           | テキスト                | マシン名                                                                                                                                                        |
-|                  | task_name           | テキスト                | プロセス名                                                                                                                                                       |
-|                  | client_version      | テキスト                | Version of the client                                                                                                                                       |
-|                  |                     |                     | ***Available only for a REST session lock:***                                                                                                               |
-|                  | host                | テキスト                | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
-|                  | IPAddr              | テキスト                | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
-|                  | userAgent           | テキスト                | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
-|                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):                                                                                    |
-| errors           |                     | Object の Collection |                                                                                                                                                             |
-|                  | message             | テキスト                | エラーメッセージ                                                                                                                                                    |
-|                  | component signature | テキスト                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                                                                                                                  |
-|                  | errCode             | number              | エラーコード                                                                                                                                                      |
+| プロパティ            |                     | タイプ                 | 説明                                                                                                                                                |
+| ---------------- | ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          |                     | boolean             | ロックに成功した場合 (あるいはエンティティがすでにカレントプロセスでロックされていた場合) には true、それ以外は false                                                                                |
+|                  |                     |                     | ***`dk reload if stamp changed` オプションが使用されていた場合にのみ利用可能:***                                                                                        |
+| **wasReloaded**  |                     | boolean             | エンティティがリロードされ、かつリロードに成功した場合には true、それ以外は false                                                                                                    |
+|                  |                     |                     | ***エラーの場合にのみ利用可能:***                                                                                                                              |
+| status(\*)     |                     | number              | エラーコード、以下参照                                                                                                                                       |
+| statusText(\*) |                     | テキスト                | エラーの詳細、以下参照                                                                                                                                       |
+|                  |                     |                     | ***ペシミスティック・ロックエラーの場合にのみ利用可能:***                                                                                                                  |
+| lockKindText     |                     | テキスト                | "Locked by record" 4Dプロセスによるロック、"Locked by session" RESTセッションによるロック                                                                               |
+| lockInfo         |                     | object              | ロック元についての情報。 返されるプロパティはロック元 (4Dプロセスまたは RESTセッション) によって異なります。                                                                                      |
+|                  |                     |                     | ***4Dプロセスによるロックの場合:***                                                                                                                            |
+|                  | task_id             | number              | プロセスID                                                                                                                                            |
+|                  | user_name           | テキスト                | マシン上でのセッションユーザー名                                                                                                                                  |
+|                  | user4d_alias        | テキスト                | 4D ユーザーの名前またはエイリアス                                                                                                                                |
+|                  | user4d_id           | number              | 4DデータベースディレクトリでのユーザーID                                                                                                                            |
+|                  | host_name           | テキスト                | マシン名                                                                                                                                              |
+|                  | task_name           | テキスト                | プロセス名                                                                                                                                             |
+|                  | client_version      | テキスト                | クライアントのバージョン                                                                                                                                      |
+|                  |                     |                     | ***RESTセッションによるロックの場合:***                                                                                                                         |
+|                  | host                | テキスト                | エンティティをロックした URL (例: "127.0.0.1:8043")                                                                                                            |
+|                  | IPAddr              | テキスト                | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
+|                  | userAgent           | テキスト                | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):                                                                          |
+| errors           |                     | Object の Collection |                                                                                                                                                   |
+|                  | message             | テキスト                | エラーメッセージ                                                                                                                                          |
+|                  | component signature | テキスト                | 内部コンポーネント署名 (例 "dmbg" はデータベースコンポーネントを表します)                                                                                                        |
+|                  | errCode             | number              | エラーコード                                                                                                                                            |
 
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:

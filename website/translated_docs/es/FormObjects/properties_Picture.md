@@ -6,24 +6,25 @@ title: Imagen
 ---
 ## Ruta de acceso
 
-Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
+Ruta de una imagen source estática para un [botón imagen](pictureButton_overview.md), [menú emergente de imagen](picturePopupMenu_overview.md), o [imagen estática](staticPicture.md). Debe utilizar la sintaxis POSIX.
 
-Two main locations can be used for static picture path:
+The following locations can be used for static pictures:
 
-- in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
+- in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. En este caso, el nombre de la ruta es "/RESOURCES/\<picture path\>".
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es ""\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
+- in a 4D picture variable. The picture must be loaded in memory when the form is executed. In this case, the Pathname is "var:\<variableName\>".
 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                            |
-|:------:|:--------------:| ------------------------------------------- |
-| imagen |     texto      | Relative or filesystem path in POSIX syntax |
+| Nombre | Tipos de datos | Valores posibles                                                                              |
+|:------:|:--------------:| --------------------------------------------------------------------------------------------- |
+| imagen |     texto      | Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable |
 
 
 #### Objetos soportados
 
-[Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
+[Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Imagen estática](staticPicture.md)
 
 
 ---
@@ -50,11 +51,11 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 
 
-### Center / Truncated (non-centered)
+### Centrado / Truncado (no centrado)
 
 `JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D crops equally from each edge and from the top and bottom.
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 > When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.

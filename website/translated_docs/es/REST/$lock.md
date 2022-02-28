@@ -92,7 +92,7 @@ We lock an entity in a first browser:
 GET /rest/Customers(1)/?$lock=true
 ```
 
-**Response:**
+**Respuesta:**
 
 ```
 {
@@ -105,7 +105,7 @@ GET /rest/Customers(1)/?$lock=true
 
 In a second browser (other session), we send the same request.
 
-**Response:**
+**Respuesta:**
 
 ```
 {

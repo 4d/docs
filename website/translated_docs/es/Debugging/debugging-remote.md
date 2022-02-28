@@ -5,7 +5,7 @@ title: Debugging from remote machines
 
 ## Generalidades
 
-When a 4D database is running on 4D Server, you can debug the 4D code running on the server from a remote 4D client logged to the project. You just need to attach the debugger to a specific remote machine, and the code execution can be monitored in the debugger directly on the remote machine.
+When a 4D database is running on 4D Server in interpreted mode, you can debug the 4D code running on the server from a remote 4D client logged to the project. You just need to attach the debugger to a specific remote machine, and the code execution can be monitored in the debugger directly on the remote machine.
 
 On a remote machine, the [debugger window](debugger.md) displays a specific server icon and a blue background color to indicate that you are debugging server code:
 
@@ -36,7 +36,7 @@ Note que:
 
 ## Attaching the debugger
 
-By default when you start an application:
+By default when you start an interpreted application:
 
 * if 4D Server is not running headless, the debugger is attached to the server,
 * if 4D Server is running headless, no debugger is attached.
@@ -60,6 +60,9 @@ To attach the debugger back to the server:
 
 1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
 2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
+
+> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. This can have a significant impact on performance. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+
 
 
 ## Attaching debugger at startup

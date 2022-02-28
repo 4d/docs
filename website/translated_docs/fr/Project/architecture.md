@@ -49,7 +49,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 
 > Dans les projets 4D, le développement est réalisé avec 4D et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
-This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
+Ce fichier texte peut également contenir des clés de configuration, notamment "[`tokenizedText" : false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
 
 ### `Sources`
 
@@ -166,7 +166,7 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 Ce dossier contient des **fichiers de propriétés utilisateur des données** utilisés pour l'administration de l'application.
 
-> These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
+> Ces paramètres ont la priorité sur les **[fichiers de propriétés utilisateur](#settings-1)** et les fichiers de **[propriétés structure](#sources)**.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -191,14 +191,14 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de l'application.
 
-> These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file.
+> Ces paramètres ont la priorité sur les fichiers de **[propriétés structure](#sources)**. Toutefois, si un **[fichier de paramètres utilisateur](#settings)** existe, il est prioritaire par rapport au fichier des propriétés utilisateur.
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | directory.json      | Description des groupes et utilisateurs 4D pour l'application, ainsi que leurs droits d'accès                                                                                                                                                                                                                                                                                                                                                      | JSON   |
 | Backup.4DSettings   | Paramètres de sauvegarde de la base de données, utilisés pour définir les [options de sauvegarde](Backup/settings.md)) à chaque lancement de sauvegarde. Ce fichier peut également être utilisé pour lire ou définir des options supplémentaires, telles que la quantité d'informations stockées dans le *journal de sauvegarde*. Les clés concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*. | XML    |
 | BuildApp.4DSettings | Fichier de paramètres de génération, créé automatiquement lors de l'utilisation de la boîte de dialogue du générateur d'applications ou de la commande `BUILD APPLICATION`                                                                                                                                                                                                                                                                         | XML    |
-| settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                                                                                                                                  | XML    |
+| settings.4DSettings | Paramètres personnalisés pour ce projet (tous les fichiers de données)                                                                                                                                                                                                                                                                                                                                                                             | XML    |
 
 
 ## `userPreferences.<userName>`

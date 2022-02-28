@@ -55,9 +55,6 @@ For example, if you want to define a class named "Polygon", you need to create t
 
 - Project folder
     + Project
-
-
-
         * Sources
             - Classes
                 + Polygon.4dm

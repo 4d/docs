@@ -69,9 +69,9 @@ Se a tabela *dsTable* não estiver exposta em [`ds`](API/DataStoreClass.md#ds), 
 
 No parâmetro opcional*settings* pode passar um objeto contendo as propriedades abaixo:
 
-| Property | Type  | Description                                                                                                       |
-| -------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
-| context  | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| Propriedade | Type  | Description                                                                                                       |
+| ----------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
+| context     | Texto | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Exemplo
@@ -79,7 +79,7 @@ No parâmetro opcional*settings* pode passar um objeto contendo as propriedades 
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
+$employees:=Create entity selection([Employee])
 // The $employees entity selection now contains a set of reference
 // on all entities related to the Employee dataclass
 ```
@@ -143,7 +143,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 *   If *index* is out of range, an error is returned.
 *   If *index* corresponds to a dropped entity, a Null value is returned.
-> **Atenção**: `EntitySelection[index]` é uma expressão não atribuível, o que significa que não pode utilizar-se como referência editável da entidade com métodos como [`.lock()`](EntityClass.md#lock) o [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Examples:
+> **Atenção**: `EntitySelection[index]` é uma expressão não atribuível, o que significa que não pode utilizar-se como referência editável da entidade com métodos como [`.lock()`](EntityClass.md#lock) o [`.save()`](EntityClass.md#save). Para trabalhar com a entidade correspondente, é necessário atribuir a expressão devolvida a uma expressão atribuível, como uma variável. Exemplos:
 
 ```4d
  $sel:=ds.Employee.all() //criação da entity selection
@@ -203,7 +203,7 @@ If the attribute does not exist in the entity selection, an error is returned.
 
 
 
-#### Example 1
+#### Exemplo 1
 
 Projection of storage values:
 
@@ -224,7 +224,7 @@ The resulting collection is a collection of strings, for example:
 ]
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Projection of related entity:
 
@@ -290,7 +290,7 @@ The modified entity selection is returned by the function, so that function call
 
 An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -302,7 +302,7 @@ An error occurs if *entity* and the entity selection are not related to the same
  $employees.add($employee) //The $employee entity is added to the $employees entity selection
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Calls to the function can be chained:
 
@@ -355,7 +355,7 @@ If the original entity selection or the *entitySelection* parameter is empty, or
 If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
 
 
-#### Example 1
+#### Exemplo 1
 
 
 ```4d
@@ -372,7 +372,7 @@ If the original entity selection and the parameter are not related to the same d
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 We want to have a selection of employees named "Jones" who live in New York:
 
@@ -609,11 +609,11 @@ Then this entity selection is updated with products and you want to share the pr
 **.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Parameter     | Type       |    | Description                                                      |
-| ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Texto      | -> | Rota do atributo cujos valores quer obter                        |
-| option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Result        | Collection | <- | Collection with only distinct values                             |
+| Parameter     | Type    |    | Description                                                      |
+| ------------- | ------- |:--:| ---------------------------------------------------------------- |
+| attributePath | Texto   | -> | Rota do atributo cujos valores quer obter                        |
+| option        | Integer | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
+| Result        | Coleção | <- | Collection with only distinct values                             |
 <!-- END REF -->
 
 #### Description
@@ -728,16 +728,19 @@ Example with the `dk stop dropping on first error` option:
 </details>
 
 
+
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.extract().Params -->
-| Parameter     | Type       |    | Description                                                                             |
-| ------------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
-| attributePath | Texto      | -> | Attribute path whose values must be extracted to the new collection                     |
-| targetPath    | Texto      | -> | Target attribute path or attribute name                                                 |
-| option        | Integer    | -> | `ck keep null`: include null attributes in the returned collection (ignored by default) |
-| Result        | Collection | <- | Collection containing extracted values                                                  |
+| Parameter     | Type    |    | Description                                                                             |
+| ------------- | ------- |:--:| --------------------------------------------------------------------------------------- |
+| attributePath | Texto   | -> | Attribute path whose values must be extracted to the new collection                     |
+| targetPath    | Texto   | -> | Target attribute path or attribute name                                                 |
+| option        | Integer | -> | `ck keep null`: include null attributes in the returned collection (ignored by default) |
+| Result        | Coleção | <- | Collection containing extracted values                                                  |
 <!-- END REF -->
 
 #### Description
@@ -797,14 +800,14 @@ Dada a seguinte tabela e relação:
   //
   //
   //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type 
+  //"who" property content is String type
   //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
   //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type 
-  //"city" property content is String type 
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
   //$teachers is a collection of objects with properties "where" and "who"
@@ -1120,10 +1123,9 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parameter     | Type  |    | Description                                      |
-| ------------- | ----- |:--:| ------------------------------------------------ |
-| attributePath | Texto | -> | Path of the attribute to be used for calculation |
-| Result        | any   | <- | Highest value of attribute                       |
+|Parameter|Type||Description|
+
+|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### Description
@@ -1242,13 +1244,13 @@ If *entitySelection* is empty or if *entity* is Null, a new reference to the ori
 If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
+ $employees:=ds.Employee.query("lastName = :1";"H@")
   // The $employees entity selection contains the entity with primary key 710 and other entities
   // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
@@ -1258,7 +1260,7 @@ If the original entity selection and the parameter are not related to the same d
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 We want to have a selection of female employees named "Jones" who live in New York :
 
@@ -1308,7 +1310,7 @@ If *entitySelection* is empty or if *entity* is Null, a new reference to the ori
 If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
 
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
  var $employees1; $employees2; $result : cs.EmployeeSelection
@@ -1317,7 +1319,7 @@ If the original entity selection and the parameter are not related to the same d
  $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
 ```
 
-#### Example 2
+#### Exemplo 2
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
@@ -1349,7 +1351,7 @@ If the original entity selection and the parameter are not related to the same d
 | Parameter   | Type               |    | Description                                                           |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | pathString  | Texto              | -> | Attribute path(s) and sorting instruction(s) for the entity selection |
-| pathObjects | Collection         | -> | Collection of criteria objects                                        |
+| pathObjects | Coleção            | -> | Collection of criteria objects                                        |
 | Result      | 4D.EntitySelection | <- | New entity selection in the specified order                           |
 <!-- END REF -->
 
@@ -1408,7 +1410,7 @@ You can add as many objects in the criteria collection as necessary.
 
 
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
-## .orderByFormula( )
+## .orderByFormula()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -1454,7 +1456,7 @@ Within the *formulaString* or *formulaObj*, the processed entity and thus its at
 
 You can pass parameter(s) to the formula using the `args` property (object) of the `settings` parameter: the formula receives the `settings.args` object in $1.
 
-#### Example 1
+#### Exemplo 1
 
 Sorting students using a formula provided as text:
 
@@ -1477,7 +1479,7 @@ Same sort order but using a formula object:
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 A formula is given as a formula object with parameters; `settings.args` object is received as $1 in the ***computeAverage*** method.
 
@@ -1532,11 +1534,11 @@ In this example, the "marks" object field in the **Students** dataClass contains
 ## .query()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                           |
-| ------ | ---------------------------------- |
-| v17 R6 | Support of Formula parameters      |
-| v17 R5 | Support of placeholders for values |
-| v17    | Adicionado                         |
+| Versão | Mudanças                               |
+| ------ | -------------------------------------- |
+| v17 R6 | Soporte dos Parâmetros Formula         |
+| v17 R5 | Suporte dos marcadores para os valores |
+| v17    | Adicionado                             |
 
 </details>
 
@@ -1546,10 +1548,10 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- REF #EntitySelectionClass.query().Params -->
 | Parameter     | Type               |    | Description                                                                                                                                                   |
 | ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Texto              | -> | Search criteria as string                                                                                                                                     |
-| formula       | Objeto             | -> | Search criteria as formula object                                                                                                                             |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
-| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
+| queryString   | Texto              | -> | Criterios de pesquisa como string                                                                                                                             |
+| formula       | Objeto             | -> | Criterios de pesquisa como objeto fórmula                                                                                                                     |
+| value         | any                | -> | Valores a usar para placeholders indexados                                                                                                                    |
+| querySettings | Objeto             | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                 |
 | Result        | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 |
@@ -1559,12 +1561,12 @@ In this example, the "marks" object field in the **Students** dataClass contains
 The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 > This function does not modify the original entity selection.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
 For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
 > By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
 
-#### Example 1
+#### Exemplo 1
 
 
 ```4d
@@ -1574,7 +1576,7 @@ For detailed information on how to build a query using *queryString*, *value*, a
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 More examples of queries can be found in the DataClass [`.query()`](DataClassClass.md#query) page.
 
@@ -1604,7 +1606,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -1628,7 +1630,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -1659,7 +1661,7 @@ The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->im
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
-#### Example 1
+#### Exemplo 1
 
 In this example, classic and ORDA code modify the same data simultaneously:
 
@@ -1687,7 +1689,7 @@ In this example, classic and ORDA code modify the same data simultaneously:
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 A list box displays the Form.students entity selection and several clients work on it.
 
@@ -1743,11 +1745,11 @@ Pass in the *selectedEntities* parameter an entity selection containing entities
 
 The returned object contains the following properties:
 
-| Property       | Type       | Description                     |
-| -------------- | ---------- | ------------------------------- |
-| ranges         | Collection | Collection of range objects     |
-| ranges[].start | Integer    | First entity index in the range |
-| ranges[].end   | Integer    | Last entity index in the range  |
+| Propriedade    | Type    | Description                     |
+| -------------- | ------- | ------------------------------- |
+| ranges         | Coleção | Collection of range objects     |
+| ranges[].start | Integer | First entity index in the range |
+| ranges[].end   | Integer | Last entity index in the range  |
 
 If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
 
@@ -1815,7 +1817,7 @@ The returned entity selection contains the entities specified by *startFrom* and
 
 If the entity selection contains entities that were dropped in the meantime, they are also returned.
 
-#### Example 1
+#### Exemplo 1
 
 You want to get a selection of the first 9 entities of the entity selection:
 
@@ -1826,7 +1828,7 @@ $sliced:=$sel.slice(0;9) //
 ```
 
 
-#### Example 2
+#### Exemplo 2
 
 Assuming we have ds.Employee.all().length = 10
 
@@ -1904,14 +1906,14 @@ $sum:=$sel.sum("salary")
 **.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
-| Parameter    | Type       |    | Description                                                                          |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------ |
-| filterString | Texto      | -> | String with entity attribute path(s) to extract                                      |
-| filterCol    | Collection | -> | Collection of entity attribute path(s) to extract                                    |
-| options      | Integer    | -> | `dk with primary key`: adds the primary key<br>`dk with stamp`: adds the stamp |
-| begin        | Integer    | -> | Designates the starting index                                                        |
-| howMany      | Integer    | -> | Number of entities to extract                                                        |
-| Result       | Collection | <- | Collection of objects containing attributes and values of entity selection           |
+| Parameter    | Type    |    | Description                                                                          |
+| ------------ | ------- |:--:| ------------------------------------------------------------------------------------ |
+| filterString | Texto   | -> | String with entity attribute path(s) to extract                                      |
+| filterCol    | Coleção | -> | Collection of entity attribute path(s) to extract                                    |
+| options      | Integer | -> | `dk with primary key`: adds the primary key<br>`dk with stamp`: adds the stamp |
+| begin        | Integer | -> | Designates the starting index                                                        |
+| howMany      | Integer | -> | Number of entities to extract                                                        |
+| Result       | Coleção | <- | Collection of objects containing attributes and values of entity selection           |
 <!-- END REF -->
 
 #### Description
@@ -1954,7 +1956,7 @@ An empty collection is returned if:
 *   *begin* is greater than the length of the entity selection.
 
 
-#### Example 1
+#### Exemplo 1
 
 The following structure will be used throughout all examples of this section:
 
@@ -2016,7 +2018,7 @@ Returns:
 ]
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Example with options:
 

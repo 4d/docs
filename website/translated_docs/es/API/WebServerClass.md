@@ -563,7 +563,7 @@ Por defecto = 100
 **.maxRequestSize** : Number<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.maxRequestSize.Summary -->tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. This limit is used to avoid web server saturation due to incoming requests that are too large. Si una petición alcanza este límite, el servidor web la rechaza.
+El <!-- REF #WebServerClass.maxRequestSize.Summary -->tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.
 
 Valores posibles: 500000 - 2147483647
 
@@ -592,7 +592,7 @@ El <!-- REF #WebServerClass.maxSessions.Summary -->número máximo de sesiones s
 **.minTLSVersion** : Number<!-- END REF -->
 
 
-La <!-- REF #WebServerClass.minTLSVersion.Summary -->versión TLS mínima aceptada para las conexiones<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
+La <!-- REF #WebServerClass.minTLSVersion.Summary -->versión TLS mínima aceptada para las conexiones<!-- END REF -->. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
 
 Valores posibles:
 
@@ -601,7 +601,7 @@ Valores posibles:
 *   3 = TLSv1_2 (por defecto)
 *   4 = TLSv1_3
 
-If modified, the server must be restarted to use the new value.
+Si se modifica, el servidor debe reiniciarse para utilizar el nuevo valor.
 
 <!-- END REF -->
 
@@ -689,7 +689,7 @@ La <!-- REF #WebServerClass.rootFolder.Summary -->ruta de la carpeta raíz del s
 **.sessionCookieDomain** : Text<!-- END REF -->
 
 
-El campo <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" de la cookie de sesión<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
+El campo <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" de la cookie de sesión<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
 
 <!-- END REF -->
 
@@ -719,7 +719,7 @@ El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie uti
 **.sessionCookiePath** : Text<!-- END REF -->
 
 
-El campo <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" de la cookie de sesión<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+El campo <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" de la cookie de sesión<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.
 
 <!-- END REF -->
 

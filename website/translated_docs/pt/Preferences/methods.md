@@ -61,7 +61,7 @@ These options configure the various colors used in the Method editor and debugge
 
 |                                                   | Description                                                                                                                                                              |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Background color**                              | Background color of Method editor window.                                                                                                                                |
+| **Cor de fundo**                                  | Background color of Method editor window.                                                                                                                                |
 | **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
 | **Cursor line background color**                  | Background color of line containing the cursor.                                                                                                                          |
 | **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
@@ -149,17 +149,18 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 - **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
 
-![](assets/en/Preferences/optionsClosing.png) -> " -> ![](assets/en/Preferences/optionsClosing2.png)
+![](assets/en/Preferences/optionsClosing.png)  
+![](assets/en/Preferences/optionsClosing2.png)
 
-#### Matching [](){}""
+#### Matching \[]\(){}
 
-Sets the graphic signaling of matching braces and double quotes in the code. This signaling appears whenever a square bracket, parenthesis, curly bracket, or double quote is selected. The following options are available:
+Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. The following options are available:
 
 - **None**: No signaling
-- **Rectangle** (default): Braces/double quotes surrounded by a black line  
+- **Rectangle** (default): Braces surrounded by a black line  
   ![](assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces/double quotes highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces/double quotes displayed in bold.
+- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
+- **Bold**: Braces displayed in bold.
 
 #### Highlighted variables and fields
 
@@ -187,7 +188,7 @@ This area lets you configure autocomplete mechanisms in the Method editor to ada
 
 |                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Automatic opening of window for | Triggers the automatic display of the suggestion window for:<p> <ul><li>Constants</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
+| Automatic opening of window for | Triggers the automatic display of the suggestion window for:<p> <ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
 | Validation of a suggestion for  | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
 	
 

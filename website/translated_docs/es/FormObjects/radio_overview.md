@@ -53,14 +53,14 @@ The Flat radio button style is a standard system button (*i.e.*, a small bullsey
 
 ![](assets/en/FormObjects/radio_flat.png)
 
-By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+By default, the Flat style has a minimalist appearance. El estilo gráfico del botón Flat es especialmente útil para los formularios a imprimir.
 
 
 ### Barra de herramientas
 
 The Toolbar radio button style is primarily intended for integration in a toolbar.
 
-By default, the Toolbar style has a transparent background with a label in the center. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
+Por defecto, el estilo Barra de herramientas tiene un fondo transparente con una etiqueta en el centro. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - el botón está resaltado.
 
@@ -83,7 +83,7 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
 ### Bevel redondeado
 
-The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded.
+El estilo de botón Bevel redondeado es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, las esquinas del botón pueden ser redondeadas.
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
@@ -92,7 +92,7 @@ The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style 
 
 ### OS X Gradient
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, it may have a two-toned appearance.
+El estilol botón OS X Gradient es casi idéntico al estilo [Bevel](#bevel), excepto que, dependiendo del sistema operativo, puede tener una apariencia de dos tonos.
 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
@@ -104,7 +104,7 @@ The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style 
 
 The OS X Textured radio button style is nearly identical to the [Toolbar](#toolbar) style except, depending on the OS, it may have a different appearance and does not display hover.
 
-By default, the OS X Textured style appears as:
+Por defecto, el estilo OS X Textured aparece como:
 
  - *Windows* - a toolbar-like button with a label in the center and the background is always displayed.
 
@@ -118,7 +118,7 @@ By default, the OS X Textured style appears as:
 
 The Office XP button style combines the appearance of the [Regular](#regular) style (standard system button) with the [Toolbar](#toolbar) style's behavior.
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
+Los colores (resaltado y fondo) de un botón con el estilo Office XP se basan en los colores del sistema. La apariencia del botón puede ser diferente cuando el cursor pasa por encima de él dependiendo del sistema operativo:
 
  - *Windows* - su fondo sólo aparece cuando el ratón pasa por encima.
 
@@ -130,7 +130,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ### Contraer/Desplegar
 
-This button style can be used to add a standard collapse/expand icon. These buttons are used natively in hierarchical lists. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
+This button style can be used to add a standard collapse/expand icon. Estos botones se utilizan de forma nativa en las listas jerárquicas. These buttons are used natively in hierarchical lists.
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 

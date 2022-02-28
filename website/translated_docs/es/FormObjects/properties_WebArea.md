@@ -6,11 +6,11 @@ title: Área Web
 ---
 ## Acceder a los métodos 4D
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
+Puede llamar a los métodos 4D desde el código JavaScript ejecutado en un área web y recibir valores a cambio. Para poder llamar a los métodos 4D desde un área Web, debe activar la propiedad de accesibilidad de los métodos 4D ("todos").
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+> Esta propiedad sólo está disponible si el área web [utiliza el motor de renderizado web integrado](#use-embedded-web-rendering-engine).
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+Cuando esta propiedad está activada, se instancia un objeto JavaScript especial llamado `$4d`en el área web, que puede [utilizar para gestionar las llamadas a los métodos proyecto de 4D](webArea_overview.md#4d-object).
 
 
 
@@ -28,13 +28,13 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 ---
 ## Variable Progression
 
-Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
+Nombre de una variable de tipo Longint. Esta variable recibirá un valor entre 0 y 100, que representa el porcentaje de finalización de la carga de la página en el área web. Actualizado automáticamente por 4D, no puede ser modificado manualmente.
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles           |
-| -------------- | -------------- | -------------------------- |
-| progressSource | cadena         | Name of a Longint variable |
+| Nombre         | Tipos de datos | Valores posibles               |
+| -------------- | -------------- | ------------------------------ |
+| progressSource | cadena         | Nombre de una variable Longint |
 
 #### Objetos soportados
 
@@ -46,20 +46,20 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 ---
 ## URL
 
-A String type variable that designates the URL loaded or being loading by the associated Web area. The association between the variable and the Web area works in both directions:
+La variable URL es de tipo cadena. Contiene la URL cargada o que está siendo cargada por el área web asociada. La asociación entre la variable y el área web funciona en ambas direcciones:
 
-*   If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
-*   Any browsing done within the Web area will automatically update the contents of the variable.
+*   Si el usuario asigna una nueva URL a la variable, esta URL es cargada automáticamente por el área web.
+*   Toda la navegación que se realice dentro del área web actualizará automáticamente el contenido de la variable.
 
-Schematically, this variable functions like the address area of a Web browser. You can represent it via a text area above the Web area.
+Esquemáticamente, esta variable funciona como el área de direcciones de un navegador web. Puede representarlo a través de un área de texto sobre el área Web.
 
-### URL Variable and WA OPEN URL command
+### Variable URL y comando WA OPEN URL
 
-The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. The following differences should nevertheless be noted:
-- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command accepts both notations.
-- If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html). No obstante, hay que señalar las siguientes diferencias:
+- Para el acceso a los documentos, esta variable sólo acepta URLs que cumplan con el RFC ("file://c:/My%20Doc") y no los nombres de ruta del sistema ("c:\MyDoc"). El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) acepta ambas notaciones.
+- Si la variable URL contiene una cadena vacía, el área web no intenta cargar la URL. El comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) genera un error en este caso.
+- Si la variable URL no contiene un protocolo (http, mailto, archivo, etc.), el área web añade "http://", lo que no ocurre con el comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html).
+- Cuando el área web no se muestra en el formulario (cuando se encuentra en otra página del formulario), la ejecución del comando [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) no tiene ningún efecto, mientras que la asignación de un valor a la variable URL puede utilizarse para actualizar la URL actual.
 
 #### Gramática JSON
 
@@ -77,12 +77,12 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 
 ---
-## Use embedded Web rendering engine
+## Utilizar el motor de renderizado web integrado
 
-This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
+Esta opción permite elegir entre dos motores de renderizado para el área web, dependiendo de las particularidades de su aplicación:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. On Windows, 4D automatically uses the most recent version of the browser found on the machine (IE11, MS Edge, etc.). On macOS, 4D uses the current version of WebKit (Safari). This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and WebKit ones.
-*   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google (CEF). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are provided through 4D.
+*   **no marcado** - `valor JSON: sistema` (por defecto): en este caso, 4D utiliza el "mejor" motor correspondiente al sistema. En Windows, 4D utiliza automáticamente la versión más reciente del navegador encontrado en la máquina (IE11, MS Edge, etc.). En macOS, 4D utiliza la versión actual de WebKit (Safari). Esto significa que usted se beneficia automáticamente de los últimos avances en la renderización web, a través de HTML5 o JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and WebKit ones.
+*   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). Cuando se elige esta opción, ya no se beneficia de las actualizaciones automáticas del motor web realizadas por el sistema operativo; sin embargo, las nuevas versiones de los motores se ofrecen a través de 4D.
 
 The Blink engine has the following limitations:
 

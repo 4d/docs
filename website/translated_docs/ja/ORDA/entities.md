@@ -280,7 +280,7 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
  var $server; $transporter; $email; $status : Object
 
-  //Prepare emails
+  // メールの準備
  $server:=New object()
  $server.host:="exchange.company.com"
  $server.user:="myName@company.com"
@@ -289,17 +289,17 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
  $email:=New object()
  $email.from:="myName@company.com"
 
-  //Loops on entity selections
+  // エンティティセレクションをループします
  For each($invoice;$paid)
-    $email.to:=$invoice.customer.address // email address of the customer
-    $email.subject:="Payment OK for invoice # "+String($invoice.number)
+    $email.to:=$invoice.customer.address // 顧客のメールアドレス
+    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いを確認いたしました。"
 
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
-    $email.to:=$invoice.customer.address // email address of the customer
-    $email.subject:="Please pay invoice # "+String($invoice.number)
+    $email.to:=$invoice.customer.address // 顧客のメールアドレス
+    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いが確認できていません。"
     $status:=$transporter.send($email)
  End for each
 ```
@@ -387,7 +387,7 @@ ORDA では、以下の二つのロックモードを提供しています:
 
 詳細な情報については、これらの関数の説明を参照してください。
 
-> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+> ペシミスティック・ロックは [REST API](../REST/$lock.md) によって扱うことも可能です。
 
 
 

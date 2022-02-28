@@ -4,55 +4,55 @@ title: Gestión de usuarios y grupos 4D
 ---
 
 
-In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
 
 
 ## Users and groups in projects
 
-In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. The following table lists the main users and groups features and their availability:
+In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. La siguiente tabla enumera las principales funcionalidades de los usuarios y grupos y su disponibilidad:
 
-|                                                               | 4D (monopuesto)              | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | sí                           | sí        |
-| Assigning user/group access to servers                        | sí                           | sí        |
-| Identificación del usuario                                    | no (all users are Designer)  | sí        |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | sí        |
+|                                                                          | 4D (monopuesto)                       | 4D Server |
+| ------------------------------------------------------------------------ | ------------------------------------- | --------- |
+| Añadir/editar usuarios y grupos                                          | sí                                    | sí        |
+| Asignar el acceso de usuarios/grupos a los servidores                    | sí                                    | sí        |
+| Identificación del usuario                                               | no (todos los usuarios son Diseñador) | sí        |
+| Control de acceso una vez que se ha asignado una contraseña al Diseñador | no (todos los accesos son Diseñador)  | sí        |
 
 > For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
 
-## Designer and Administrator
+## Diseñador y administrador
 
-The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. El diseñador puede:
+El usuario más poderoso se llama el **Diseñador**. No aspect of the application is closed to the Designer. El diseñador puede:
 - access all application servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+- crear usuarios y grupos,
+- asignar privilegios de acceso a los grupos,
+- acceder al entorno Diseño. En un entorno monopuesto, siempre se utilizan los derechos de acceso del Diseñador. En el entorno cliente/servidor, la asignación de una contraseña al Diseñador activa la visualización del diálogo de inicio de sesión del usuario 4D.  El acceso al entorno Diseño es de sólo lectura.
 
-After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
+Después del Diseñador, el siguiente usuario más poderoso es el **Administrador**, al que se le suelen encomendar las tareas de gestión del sistema de acceso y las funciones de administración.
 
 El administrador puede:
-- create users and groups,
-- access the 4D Server Administration window and monitor
-- access the MSC window to monitor backup, restore, or server.
+- crear usuarios y grupos,
+- acceder al monitor y a la ventana de administración de 4D Server
+- acceder a la ventana CSM para supervisar la copia de seguridad, la restauración o el servidor.
 
-The Administrator cannot:
+El administrador no puede:
 - modificar el usuario Diseñador
-- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the application. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator must be part of one or more groups to have access privileges in the application. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Icono Diseñador: ![](assets/en/Users/iconDesigner.png)
 - Icono del Administrador: ![](assets/en/Users/iconAdmin.png)
 
-You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+Puede cambiar el nombre de los usuarios Diseñador y Administrador. En el lenguaje, el ID del diseñador es siempre 1 y el ID del administrador es siempre 2.
 
-The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+El Diseñador y el Administrador pueden crear hasta 16.000 grupos y 16.000 usuarios cada uno.
 
 
 
 ## Editor de usuarios
 
-The editor for users is located in the Toolbox of 4D.
+El editor de usuarios se encuentran en la caja de herramientas de 4D.
 
 ![](assets/en/Users/editor.png)
 
@@ -153,7 +153,7 @@ The “Plug-in” area on the Groups page of the tool box lists all the plug-ins
 The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
 
 
-### An access hierarchy scheme
+### Un esquema de acceso jerárquico
 
 The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
 
@@ -181,7 +181,7 @@ Groups are assigned access privileges to specific parts or features of the appli
 - REST server,
 - SQL server.
 
-These accesses are defined in the Settings dialog. The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+These accesses are defined in the Settings dialog. El siguiente ejemplo muestra los derechos de acceso del explorador de diseño y tiempo de ejecución asignados al grupo "Devs":
 
 ![](assets/en/Users/Access1.png)
 

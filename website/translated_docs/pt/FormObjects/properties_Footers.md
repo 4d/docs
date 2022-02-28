@@ -4,7 +4,7 @@ title: Footers
 ---
 
 ---
-## Display Footers
+## Exibir rodapés
 
 This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
 

@@ -313,4 +313,4 @@ SAVE RECORD($tablepointer->)
 
 ## コンポーネントの共有
 
-開発したコンポーネントを [GitHub](https://github.com/topics/4d-component) で公開し、4D開発者のコミュニティをサポートすることをお勧めします。 We recommend that you use the **`4d-component`** topic to be correctly referenced.  
+開発したコンポーネントを [GitHub](https://github.com/topics/4d-component) で公開し、4D開発者のコミュニティをサポートすることをお勧めします。 正しく参照されるためには、**`4d-component`** トピックをご利用ください。  

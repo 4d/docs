@@ -350,9 +350,9 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                   |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Nom du champ calculé                                                                                          |
-| dataClassName | Texte   | Nom de la dataclass                                                                                           |
-| kind          | Texte   | "get"                                                                                                         |
+| attributeName | Text    | Nom du champ calculé                                                                                          |
+| dataClassName | Text    | Nom de la dataclass                                                                                           |
+| kind          | Text    | "get"                                                                                                         |
 | result        | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
 
 
@@ -411,9 +411,9 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                         |
 | ------------- | ------- | ----------------------------------- |
-| attributeName | Texte   | Nom du champ calculé                |
-| dataClassName | Texte   | Nom de la dataclass                 |
-| kind          | Texte   | "set"                               |
+| attributeName | Text    | Nom du champ calculé                |
+| dataClassName | Text    | Nom de la dataclass                 |
+| kind          | Text    | "set"                               |
 | value         | Variant | Valeur à gérer par le champ calculé |
 
 #### Exemple
@@ -448,7 +448,7 @@ Cette fonction prend en charge trois syntaxes :
 
     | Propriété          | Type       | Description                                               |
     | ------------------ | ---------- | --------------------------------------------------------- |
-    | $result.query      | Texte      | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+    | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
     | $result.parameters | Collection | valeurs pour placeholders                                 |
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
@@ -459,11 +459,11 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Nom du champ calculé                                                                                                                                                                                                                                                                                                                                                               |
-| dataClassName | Texte   | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                                                |
-| kind          | Texte   | "query"                                                                                                                                                                                                                                                                                                                                                                            |
+| attributeName | Text    | Nom du champ calculé                                                                                                                                                                                                                                                                                                                                                               |
+| dataClassName | Text    | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                                                |
+| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Variant | Valeur à gérer par le champ calculé                                                                                                                                                                                                                                                                                                                                                |
-| operator      | Texte   | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
+| operator      | Text    | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
 | result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` dans cette propriété si vous voulez laisser 4D exécuter la requête par défaut (toujours séquentielle pour les champs calculés).                                                                                                                                                                                       |
 
 > Si la fonction retourne une valeur dans *$result* et qu'une autre valeur est attribuée à la propriété `$event.result`, la priorité est donnée à `$event.result`.
@@ -592,11 +592,11 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                        |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| attributeName | Texte   | Nom du champ calculé                                                                                               |
-| dataClassName | Texte   | Nom de la dataclass                                                                                                |
-| kind          | Texte   | "orderBy"                                                                                                          |
+| attributeName | Text    | Nom du champ calculé                                                                                               |
+| dataClassName | Text    | Nom de la dataclass                                                                                                |
+| kind          | Text    | "orderBy"                                                                                                          |
 | value         | Variant | Valeur à gérer par le champ calculé                                                                                |
-| operator      | Texte   | "desc" or "asc" (default)                                                                                          |
+| operator      | Text    | "desc" or "asc" (default)                                                                                          |
 | descending    | Booléen | `true` pour l'ordre décroissant, `false` pour l'ordre croissant                                                    |
 | result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
 

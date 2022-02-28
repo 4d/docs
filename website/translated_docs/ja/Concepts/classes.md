@@ -1,6 +1,6 @@
 ---
 id: classes
-title: クラス
+title: Classes
 ---
 
 
@@ -55,11 +55,8 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 - Project フォルダー
     + Project
-
-
-
         * Sources
-            - クラス
+            - Classes
                 + Polygon.4dm
 
 ### クラスの削除
@@ -234,22 +231,22 @@ Function getFullname()->$fullname : Text
 
 アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、<a href="#クラス関数の引数>引数</a> を受け取ることができます。 次のシンタックスがサポートされています:
 
-- `()` 演算子の使用 For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method: 
+- `()` 演算子の使用 例: `myObject.methodName("hello")`
+- "4D.Function" クラスメンバーメソッドの使用: 
       - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
 
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
+> **スレッドセーフに関する警告:** クラス関数がスレッドセーフではないのに、"プリエンプティブプロセスで実行可能" なメソッドから呼び出された場合: <br /> - 普通のメソッドの場合とは異なり、コンパイラーはエラーを生成しません。 <br /> - ランタイムにおいてのみ、4D はエラーを生成します。
 
 
 
 
 
-#### Parameters
+#### 引数
 
-Function parameters are declared using the parameter name and the parameter type, separated by a colon. パラメーター名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。 
+関数の引数は、引数名とデータ型をコロンで区切って宣言します。 パラメーター名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。 複数のパラメーター (およびその型) を宣言する場合は、それらをセミコロン (;) で区切ります。 
 
 
 
@@ -259,10 +256,10 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 
 
-> If the type is not stated, the parameter will be defined as `Variant`.
+> パラメーターの型が宣言されていない場合には、バリアント型 として定義されます。
 
 
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. 両方のシンタックスは併用することができます。 For example:
+> クラス関数の引数を宣言するにあたっては、メソッド引数の場合と同様に [従来の 4Dシンタックス](parameters.md#順番引数) を使用することもできます。 両方のシンタックスは併用することができます。 たとえば:
 > 
 > ```4d
 > Function add($x : Integer)
@@ -274,9 +271,9 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 
 
-#### Return value
+#### 戻り値
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. For example:
+関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (`->`) と戻り値の定義を追加するか、コロン (`:`) と戻り値のデータ型のみを追加します。 たとえば:
 
 
 
@@ -286,13 +283,13 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
 
-You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). For example: 
+コロン (:) 記号の後に戻り値のデータ型だけを指定して戻り値を宣言し、[`return`](parameters.md#return-expression)文を使うこともできます (これは同時に関数の実行を終了します)。 たとえば: 
 
 
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
-    // some code
+    // なんらかのコード
     return $x+$y
 ```
 
@@ -300,18 +297,18 @@ Function add($x : Variant; $y : Integer): Integer
 
 
 
-#### Example 1
+#### 例題 1
 
 
 
 ```4d
-// Class: Rectangle
+// クラス: Rectangle
 Class constructor($width : Integer; $height : Integer)
     This.name:="Rectangle"
     This.height:=$height
     This.width:=$width
 
-// Function definition
+// Function 定義
 Function getArea()->$result : Integer
     $result:=(This.height)*(This.width)
 ```
@@ -320,7 +317,7 @@ Function getArea()->$result : Integer
 
 
 ```4d
-// In a project method
+// プロジェクトメソッドにて
 
 var $rect : cs.Rectangle
 var $area : Real
@@ -332,9 +329,9 @@ $area:=$rect.getArea() //5000
 
 
 
-#### Example 1
+#### 例題 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+[`return`](parameters.md#return-expression)文を使った例です:
 
 
 
@@ -353,17 +350,17 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 
 
-### `Function get` and `Function set`
+### `Function get` と `Function set`
 
 
 
-#### Syntax
+#### シンタックス
 
 
 
 ```4d
 Function get <name>()->$result : type
-// code
+// コード
 ```
 
 
@@ -371,11 +368,11 @@ Function get <name>()->$result : type
 
 ```4d
 Function set <name>($parameterName : type)
-// code
+// コード
 ```
 
 
-`Function get` and `Function set` are accessors defining **computed properties** in the class. 計算プロパティとは、計算をマスクするデータ型を持つ命名プロパティです。 計算プロパティの値にアクセスすると、4D は対応するアクセサーのコードを実行します:
+`Function get` と `Function set` は、クラスの **計算プロパティ** を定義するアクセサーです。 計算プロパティとは、計算をマスクするデータ型を持つ命名プロパティです。 計算プロパティの値にアクセスすると、4D は対応するアクセサーのコードを実行します:
 
 - プロパティを読み取るときには `Function get` が実行されます。
 - プロパティに書き込むときには `Function set` が実行されます。

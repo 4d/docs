@@ -242,7 +242,7 @@ A new entity selection **inherits** from the original entity selection nature in
     - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
     - [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
 
-Examples:
+Exemplos:
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   

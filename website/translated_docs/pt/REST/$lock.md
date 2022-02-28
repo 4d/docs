@@ -46,29 +46,29 @@ A `?$lock` request returns a JSON object with `"result"=true` if the lock operat
 
 The returned "__STATUS" object has the following properties:
 
-| Property     |                | Type     | Description                                                                                                                                                 |
+| Propriedade  |                | Type     | Description                                                                                                                                                 |
 | ------------ | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |                |          | ***Available only in case of success:***                                                                                                                    |
 | success      |                | booleano | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).             |
 |              |                |          | ***Available only in case of error:***                                                                                                                      |
 | status       |                | number   | Error code, see below                                                                                                                                       |
-| statusText   |                | text     | Description of the error, see below                                                                                                                         |
+| statusText   |                | texto    | Description of the error, see below                                                                                                                         |
 | lockKind     |                | number   | Lock code                                                                                                                                                   |
-| lockKindText |                | text     | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
+| lockKindText |                | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
 | lockInfo     |                | object   | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
 |              |                |          | ***Available only for a 4D process lock:***                                                                                                                 |
 |              | task_id        | number   | Process ID                                                                                                                                                  |
-|              | user_name      | text     | Session user name on the machine                                                                                                                            |
-|              | user4d_alias   | text     | Name or alias of the 4D user                                                                                                                                |
+|              | user_name      | texto    | Session user name on the machine                                                                                                                            |
+|              | user4d_alias   | texto    | Name or alias of the 4D user                                                                                                                                |
 |              | user4d_id      | number   | User id in the 4D database directory                                                                                                                        |
-|              | host_name      | text     | Machine name                                                                                                                                                |
-|              | task_name      | text     | Process name                                                                                                                                                |
-|              | client_version | text     | Version of the client                                                                                                                                       |
+|              | host_name      | texto    | Machine name                                                                                                                                                |
+|              | task_name      | texto    | Process name                                                                                                                                                |
+|              | client_version | texto    | Version of the client                                                                                                                                       |
 |              |                |          | ***Available only for a REST session lock:***                                                                                                               |
-|              | host           | text     | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
-|              | IPAddr         | text     | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
+|              | host           | texto    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
+|              | IPAddr         | texto    | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
 |              | recordNumber   | number   | Record number of the locked record                                                                                                                          |
-|              | userAgent      | text     | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|              | userAgent      | texto    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
 The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:

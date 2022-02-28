@@ -55,9 +55,6 @@ Par exemple, si vous souhaitez définir une classe nommée "Polygon", vous devez
 
 - Dossier Project
     + Project
-
-
-
         * Sources
             - Classes
                 + Polygon.4dm
@@ -231,7 +228,7 @@ Function parameters are declared using the parameter name and the parameter type
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-> If the type is not stated, the parameter will be defined as `Variant`. The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. For example:
+> If the type is not stated, the parameter will be defined as `Variant`. The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Les deux syntaxes peuvent être mélangées. Par exemple :
 > 
 > ```4d
 > Function add($x : Integer)
@@ -241,25 +238,25 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 >   $0:=String($value)
 > ```
 
-#### Return value
+#### Valeur Return
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. For example:
+Déclarez le paramètre return (facultatif) en ajoutant une flèche (`->`), définissez-le après la liste de paramètre(s) d'entrée, ou saisissez un caractère deux-points (`:`) et déclarez le type de paramètre de retour uniquement. Par exemple :
 
 ```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
-    $result:=$x+$y
+Function add($x : Variant ; $y : Integer)->$result : Integer
+    $résultat:=$x+$y
 ```
 
-You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). For example:
+Vous pouvez également déclarer le paramètre de retour en ajoutant uniquement le `: type` et utiliser [`l'expression return`](parameters.md#return-expression) (elle mettra également fin à l'exécution de la fonction). Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
-    // some code
+    // code
     return $x+$y
 ```
 
 
-#### Example 1
+#### Exemple 1
 
 ```4d
 // Class: Rectangle
@@ -274,7 +271,7 @@ Function getArea()->$result : Integer
 ```
 
 ```4d
-// In a project method
+// Dans une méthode projet
 
 var $rect : cs.Rectangle
 var $area : Real
@@ -283,9 +280,9 @@ $rect:=cs.Rectangle.new(50;100)
 $area:=$rect.getArea() //5000
 ```
 
-#### Example 1
+#### Exemple 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Dans cet exemple, nous utilisons [`l'expression return`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -299,9 +296,9 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 
 
-### `Function get` and `Function set`
+### `Function get` et `Function set`
 
-#### Syntax
+#### Syntaxe
 
 ```4d
 Function get <name>()->$result : type
@@ -313,7 +310,7 @@ Function set <name>($parameterName : type)
 // code
 ```
 
-`Function get` and `Function set` are accessors defining **computed properties** in the class. Une propriété calculée est une propriété nommée avec un type de données qui masque un calcul. Lorsqu'on accède à une valeur de propriété calculée, 4D substitue le code correspondant :.
+`Function get` et `Function set` sont des accessoires définissant **les propriétés calculées** d'une classe. Une propriété calculée est une propriété nommée avec un type de données qui masque un calcul. Lorsqu'on accède à une valeur de propriété calculée, 4D substitue le code correspondant :.
 
 - lorsque la propriété est lue, la fonction `get` est exécutée,.
 - lorsque la propriété est écrite, la fonction `set` est exécutée,.
@@ -321,6 +318,8 @@ Function set <name>($parameterName : type)
 Si on n'accède pas à la propriété, le code ne s'exécute jamais.
 
 Les propriétés calculées sont conçues pour gérer les données qui n'ont pas nécessairement besoin d'être conservées en mémoire. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
+
+Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
 
 Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
 
@@ -376,7 +375,7 @@ Function get fullAddress()->$result : Object
 
 ### `Class Constructor`
 
-#### Syntax
+#### Syntaxe
 
 ```4d
 // Class: MyClass
@@ -414,7 +413,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### `Class extends <ClassName>`
 
-#### Syntax
+#### Syntaxe
 
 ```4d
 // Class: ChildClass
@@ -648,44 +647,23 @@ $o.b:=3
 $val:=$o.f() //8
 
 ```
-Dans cet exemple, l'objet assigné à la variable $o n'a pas sa propre propriété *f*, il l'hérite de sa classe. Since *f* is called as a method of $o, its `This` refers to $o.
+Dans cet exemple, l'objet assigné à la variable $o n'a pas sa propre propriété *f*, il l'hérite de sa classe. Puisque *f* est appelée comme une méthode de $o, son `This` fait référence à $o.
 
 
-## Class commands
+## Commandes de classe
 
-Several commands of the 4D language allows you to handle class features.
+Plusieurs commandes du langage 4D permettent de manipuler les caractéristiques des classes.
 
 
 ### `OB Class`
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` returns the class of the object passed in parameter.
+`OB Class` retourne la classe de l'objet passé en paramètre.
 
 
 ### `OB Instance of`
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
-
-
-### `OB Instance of`
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
-
-
-### `OB Instance of`
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` retourne `true` si `object` appartient à `class` ou à l'une de ses classes héritées, sinon retourne `false`.</p>
-
-
-### `OB Instance of`
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` retourne `true` si `object` appartient à `class` ou à l'une de ses classes héritées, sinon retourne `false`.
+`OB Instance of` retourne `true` si `object` appartient à la `class` ou à l'une de ses classes héritées, sinon elle retourne `false`.

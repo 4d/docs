@@ -68,7 +68,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <!-- REF #_command_.File.Params -->
 | Paramètres   | Type    |    | Description                                     |
 | ------------ | ------- |:--:| ----------------------------------------------- |
-| path         | Texte   | -> | Chemin de fichier                               |
+| path         | Text    | -> | Chemin de fichier                               |
 | fileConstant | Integer | -> | 4D file constant                                |
 | pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
@@ -213,7 +213,7 @@ Creation of a preferences file in the database folder:
 | Paramètres        | Type      |    | Description                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texte     | -> | Name of the alias or shortcut                |
+| aliasName         | Text      | -> | Name of the alias or shortcut                |
 | aliasType         | Integer   | -> | Type of the alias link                       |
 | Résultat          | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
@@ -456,7 +456,7 @@ ALERT($info.Copyright)
 | Paramètres        | Type      |    | Description                  |
 | ----------------- | --------- | -- | ---------------------------- |
 | destinationFolder | 4D.Folder | -> | Dossier de destination       |
-| newName           | Texte     | -> | Full name for the moved file |
+| newName           | Text      | -> | Full name for the moved file |
 | Résultat          | 4D.File   | <- | Moved file                   |
 <!-- END REF -->
 
@@ -523,7 +523,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.rename().Params -->
 | Paramètres | Type    |    | Description                |
 | ---------- | ------- | -- | -------------------------- |
-| newName    | Texte   | -> | New full name for the file |
+| newName    | Text    | -> | New full name for the file |
 | Résultat   | 4D.File | <- | Renamed file               |
 <!-- END REF -->
 
@@ -690,8 +690,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 <!--REF #FileClass.setText().Params -->
 | Paramètres  | Type    |    | Description                                                |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
-| Texte       | Texte   | -> | Text to store in the file                                  |
-| charSetName | Texte   | -> | Nom du jeu de caractères                                   |
+| Texte       | Text    | -> | Text to store in the file                                  |
+| charSetName | Text    | -> | Nom du jeu de caractères                                   |
 | charSetNum  | Integer | -> | Numéro du jeu de caractères                                |
 | breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
 

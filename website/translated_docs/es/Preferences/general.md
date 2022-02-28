@@ -43,7 +43,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 
 ![](assets/en/Preferences/general4.png)
 
-Three options are available:
+Hay tres opciones disponibles:
 
 *   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
@@ -55,7 +55,7 @@ This menu lets you select the color scheme to use for the **4D development** env
 
 > You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
 
-Three options are available:
+Hay tres opciones disponibles:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
 *   **Light**: Use the Light Theme
@@ -152,7 +152,7 @@ Language of the HTML documentation to display. You can select a documentation in
 
 Sets where 4D will look for documentation pages.
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If not, 4D automatically looks for it in the on-line documentation Web site. This makes it possible to access the documentation even when you are offline.
+*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
 *   If it is not found, 4D displays an error message in the browser. When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser.
 
 ### Carpeta local

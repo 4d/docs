@@ -3,106 +3,106 @@ id: compiler
 title: Compilation
 ---
 
-You can compile your projects, i.e., translate all of your methods into machine language. Compiling a project lets you check the consistency of the code and accelerate its execution, as well as making it possible to obfuscate the code in its entirety. Compilation is an indispensable step between the development of projects using 4D and their deployment as stand-alone applications.
+Vous pouvez compiler vos projets, c'est-à-dire traduire toutes vos méthodes en langage machine. La compilation d'un projet permet de vérifier la cohérence du code et d'accélérer son exécution, mais aussi de masquer le code dans son intégralité. La compilation est une étape indispensable, entre le développement de projets avec 4D et leur déploiement en tant qu'applications autonomes.
 
 
-## Compile
+## Compilation
 
-The compilation is handled from your 4D application and is entirely automatic.
+La compilation est gérée depuis votre application 4D et est entièrement automatique.
 
-> On macOS, the compilation requires that you install `Xcode`. See [this section](#silicon-compiler) for more information about this requirement.
+> Sur macOS, la compilation nécessite l'installation d'`Xcode`. Consultez [cette section](#silicon-compiler) pour plus d'informations sur ce pré-requis.
 
-1. Open the compiler window by selecting the **Compiler...** command in the **Design** menu or the **Compiler** toolbar button.
+1. Ouvrez la fenêtre de compilation en sélectionnant la commande **Compiler...** dans le menu **Design** ou le bouton **Compiler** de la barre d'outils.
 
     ![](assets/en/Project/compilerWin1.png)
 
     ![](assets/en/Project/comp1.png)
 
-> You can also launch directly the compilation by selecting the **Start Compilation** menu item from the **Design** menu.
+> Vous pouvez également lancer directement la compilation en sélectionnant l'élément de menu **Start Compilation** dans le menu **Design**.
 
-2. Click the **Compile** button to launch the compilation using the current [compilation settings](#compiler-settings).
+2. Cliquez sur le bouton **Compiler** pour lancer la compilation à l'aide des [paramètres de compilation](#compiler-settings) actuels.
 
-If no errors are detected, the actual compilation begins and the "Compilation successful" message is displayed at the bottom of the window when the compilation is completed:
+Si aucune erreur n'est détectée, la compilation démarre et le message "Compilation successful" s'affiche au bas de la fenêtre lorsque la compilation est terminée :
 
 ![](assets/en/Project/success.png)
 
-You can immediately [run your application in compiled mode](#run-compiled) and see how faster it is.
+Vous pouvez immédiatement [exécuter votre application en mode compilé](#run-compiled) et identifier sa rapidité.
 
-If errors are detected, the process is stopped and the "Compilation failed" message is displayed. The information area of the window displays the method names and line numbers concerned in a hierarchical list:
+Si des erreurs sont détectées, le process est stoppé et le message "Compilation failed" s'affiche. La zone d'information de la fenêtre affiche les noms des méthodes et les numéros de ligne concernés dans une liste hiérarchique :
 
 ![](assets/en/Project/compilerWin2.png)
 
-Double-click on each error detected to open the method or class concerned directly in the 4D method editor. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
+Double-cliquez sur chaque erreur détectée pour ouvrir la méthode ou la classe concernée directement dans l'éditeur de méthode 4D. La ligne contenant l'erreur est mise en évidence et le type d'erreur est affiché dans la zone syntaxique de la fenêtre.
 
-Use the **Previous Error** / **Next Error** commands of the **Method** menu to navigate from one error to the next.
+Utilisez les commandes **Erreur précédente** / **Erreur suivante** du menu **Méthode** pour naviguer d'une erreur à l'autre.
 
-The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-files) of the errors in order to help you correct them.
+Le nombre d'erreurs trouvées lors de vos premières compilations peut être déconcertant, mais ne vous laissez pas décourager. Vous découvrirez rapidement qu'elles proviennent souvent de la même source, à savoir la non-conformité avec certaines conventions du projet. Le compilateur fournit toujours un [diagnostic précis](#error-files) des erreurs afin de vous aider à les corriger.
 
-> Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
+> La compilation nécessite une licence appropriée. Sans cette licence, il n'est pas possible d'effectuer une compilation (les boutons sont désactivés). Néanmoins, il est toujours possible de vérifier la syntaxe et de générer des méthodes de typage.
 
-## Run Compiled
+## Exécuter la compilation
 
-Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. La [boîte de dialogue d'ouverture de projet](GettingStarted/creating.md#options) offre également le choix entre le mode interprété ou compilé pour le démarrage de la base de données.
+Une fois le projet compilé, il est possible de passer du [mode interprété au mode compilé](Concepts/interpreted.md), et vice versa, à tout moment et sans avoir à quitter l'application 4D (sauf si le code interprété a été supprimé). Pour ce faire, utilisez les commandes **Restart Interpreted** et **Restart Compiled** du menu **Run**. La [boîte de dialogue d'ouverture de projet](GettingStarted/creating.md#options) offre également le choix entre le mode interprété ou compilé pour le démarrage de la base de données.
 
-When you switch from one mode to the other, 4D closes the current mode and opens the new one. This is equivalent to exiting and reopening the application. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
+Lorsque vous passez d'un mode à l'autre, 4D ferme le mode courant et ouvre le nouveau. Cela équivaut à quitter et à rouvrir l'application. Chaque fois que vous passez d'un mode à l'autre, 4D exécute les deux méthodes base suivantes (si elles sont spécifiées) dans cet ordre : `On Exit` -> `On Startup`.
 
-If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
+Si vous modifiez votre projet en mode interprété, vous devez le recompiler pour que vos modifications soient prises en compte en mode compilé.
 
-## Compiler window features
+## Caractéristiques de la fenêtre du compilateur
 
-In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
+En plus du bouton [**Compiler**](#compile), la fenêtre du Compilateur offre des fonctionnalités supplémentaires qui sont utiles durant la phase de développement du projet.
 
-### Check Syntax
+### Vérifier la syntaxe
 
-The **Check Syntax** button starts the execution of the syntax-checking phase. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method.
+Le bouton **Vérifier la syntaxe** lance l'exécution de la phase de vérification de la syntaxe. À la fin du processus de vérification, les erreurs détectées sont listées dans la zone d'information. Vous pouvez double-cliquer sur une ligne d'erreur afin d'afficher la méthode correspondante.
 
-Syntax checking can also be launched directly using the **Check Syntax** command associated with the **Compiler** toolbar button. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
+Le contrôle syntaxique peut également être lancé directement à l'aide de la commande **Check Syntax** associée au bouton de la barre d'outils **Compiler**. Cette option est la seule disponible si vous ne disposez pas d'une licence adéquate pour permettre la compilation d'applications.
 
-### Generate Typing
+### Générer le typage
 
-The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
+Le bouton **Générer le typage** crée ou met à jour les méthodes de compilation du typage. Les méthodes de compilation sont des méthodes projet qui regroupent toutes les déclarations de typage des variables et des tableaux (process et interprocess), ainsi que les paramètres des méthodes. Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
 
-The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
+Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le nom par défaut de chacune des 5 méthodes du compilateur dans [la fenêtre des paramètres du compilateur](#compiler-methods-for). Les méthodes de compilation qui sont générées et gérées par 4D ont automatiquement l'attribut `Invisible` :
 
 ![](assets/en/Project/compilerWin3.png)
 
-Only the necessary compiler methods (i.e., those for which items already exist in the project) are generated.
+Seules les méthodes de compilation nécessaires (c'est-à-dire celles pour lesquelles des éléments existent déjà dans le projet) sont générées.
 
-The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Method editor.
-
-
-### Clear compiled code
-
-The **Clear compiled code** button deletes the compiled code of the project. When you click on it, all of the [code generated during compilation](#classic-compiler) is deleted, the **Restart Compiled** command of the **Run** menu is disabled and the "Compiled Project" option is not available at startup.
+La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. En double-cliquant sur une ligne d'erreur, la méthode et la ligne concernées sont affichées dans l'éditeur de méthode.
 
 
-### Show/Hide Warnings
+### Effacer le code compilé
 
-Warnings are specific messages generated by the compiler when it checks the syntax. These messages are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation.
+Le bouton **Effacer le code compilé** permet de supprimer le code compilé du projet. Lorsque vous cliquez dessus, tout le [code généré lors de la compilation](#classic-compiler) est supprimé, la commande **Restart Compiled** du menu **Run** est désactivée et l'option "Compiled Project" n'est pas disponible au démarrage.
 
-Depending on circumstances and the programming style used, these warnings may be more or less relevant. You can toggle the warnings on or off by clicking the **Show/Hide Warnings** button:
+
+### Afficher/masquer les avertissements
+
+Les avertissements sont des messages spécifiques générés par le compilateur lorsqu'il vérifie la syntaxe. Ces messages sont destinés à attirer votre attention sur les déclarations qui pourraient entraîner des erreurs d'exécution. Ils n'empêchent pas la compilation.
+
+Selon les circonstances et le style de programmation utilisé, ces avertissements peuvent être plus ou moins pertinents. Vous pouvez activer ou désactiver les avertissements en cliquant sur le bouton **Afficher/Masquer** les avertissements :
 
 ![](assets/en/Project/compilerWin4.png)
 
-When this option is checked, the warnings (if any) are displayed in the window, after the other error types. They appear in italics:
+Lorsque cette option est cochée, les avertissements (le cas échéant) sont affichés dans la fenêtre, après les autres types d'erreur. Ils apparaissent en italique :
 
 ![](assets/en/Project/compilerWin5.png)
 
-Double-clicking a warning opens the corresponding method.
+Un double-clic sur un avertissement ouvre la méthode correspondante.
 
-#### Disabling warnings during compilation
+#### Désactiver les avertissements pendant la compilation
 
-You can selectively disable certain warnings during compilation by inserting the following into the code of a 4D method:
+Vous pouvez désactiver sélectivement certains avertissements lors de la compilation en insérant le texte suivant dans le code d'une méthode 4D :
 
 ```4d
   //%W-<warning number>
 ```
 
-Only warnings with numbers can be disabled. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
+Seuls les avertissements comportant un numéro peuvent être désactivés. Les numéros d'avertissement sont indiqués à la fin de chaque message dans la liste des erreurs de compilation. Par exemple, pour désactiver l'avertissement suivant :
 
-*1: Pointer in an array declaration (518.5)*
+*1 : Pointeur dans une déclaration de tableau (518.5)*
 
-... you just need to write the following comment in a 4D method, preferably a `COMPILER_xxx` method (method compiled first):
+... il suffit d'écrire le commentaire suivant dans une méthode 4D, de préférence une méthode `COMPILER_xxx` (méthode compilée en premier) :
 
 ```4d
   //%W-518.5
@@ -110,33 +110,33 @@ Only warnings with numbers can be disabled. Warning numbers are specified at the
 
 
 
-## Compiler Settings
+## Paramètres du compilateur
 
-The "Compiler" page of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window) by clicking on the **Compiler Settings** button:
+La page "Compilateur" de la boîte de dialogue Paramètres vous permet de définir les paramètres liés à la compilation du projet. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window) en cliquant sur le bouton **Paramètres du compilateur** :
 
 ![](assets/en/Project/compilerWin6.png)
 
 
-### Compilation options
+### Options de compilation
 
-This area groups the generic options used during the compilation process.
+Cette zone regroupe les options génériques utilisées lors du processus de compilation.
 
-#### Generate the symbol file
+#### Générer le fichier de symboles
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
+Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
 
-#### Generate error file
+#### Générer le fichier d'erreurs
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Utilisé pour générer le fichier d'erreurs (voir [fichier d'erreurs](#symbol-file)) au moment du contrôle syntaxique. Le fichier d'erreur est créé dans le [dossier Logs](Project/architecture.md#logs) du projet portant le nom `ProjectName_errors.xml`.
 
 
-#### Compilation Path
+#### Chemin de compilation
 
-Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
+Permet de définir le nombre de passages (analyse du code) effectués par le compilateur et donc la durée de la compilation.
 
-- **Type the variables**: Passes by all the stages that make compilation possible.
-- **Process and interprocess are typed**: The pass for typing process and interprocess variables is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
-- **All variables are typed**: The pass for typing local, process and interprocess variables is not carried out. Use this option when you are certain that all the process, interprocess and local variables have been clearly typed.
+- **Typez les variables** : Passe par toutes les étapes qui permettent la compilation.
+- **Les process et interprocess sont typés** : Le passage pour le typage des variables de process et interprocess n'est pas effectué. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes de compilation.
+- **Toutes les variables sont typées** : Le pass pour le typage des variables locales, process et interprocess n'est pas effectué. Utilisez cette option lorsque vous êtes certain que toutes les variables process, interprocess et locales ont été clairement typées.
 
 #### Compilation Target
 
@@ -146,56 +146,56 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 | v19     | Ajout         |
 </details>
 
-This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
+Ce paramètre vous permet de sélectionner la famille de processeurs pour laquelle votre projet 4D doit être compilé en mode natif. Le compilateur 4D peut construire du code natif pour deux familles de processeurs :
 
-- **Intel/AMD** processors (all machines),
-- **Apple Silicon** processors.
+- Les processeurs **Intel/AMD** (toutes les machines),
+- les processeurs **Apple Silicon**.
 
-Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
+Deux options de cible sont proposées. Le résultat dépend du processeur de la machine sur laquelle 4D est exécuté.
 
-| *Option*                                         | *on Windows Intel/AMD*                                                                    | *on macOS Intel*                                                                            | *on macOS Silicon*                                                                          |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* |
-| **My processor (processor)**                     | Code for Intel/AMD                                                                        | Code for Intel/AMD                                                                          | Code for Apple Silicon                                                                      |
+| *Option*                                              | *sur Windows Intel/AMD*                                                                            | *sur macOS Intel*                                                                               | *sur macOS Silicon*                                                                             |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **Tous les processeurs (Intel/AMD et Apple Silicon)** | Code pour Intel/AMD<br>*Il n'est pas possible de produire du code Apple Silicon sur Windows* | Code pour Apple Silicon + Code pour Intel/AMD<br>*Deux codes compilés seront disponibles* | Code pour Apple Silicon + Code pour Intel/AMD<br>*Deux codes compilés seront disponibles* |
+| **My processor (processor)**                          | Code for Intel/AMD                                                                                 | Code for Intel/AMD                                                                              | Code for Apple Silicon                                                                          |
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
-### Default typing
+### Type par défaut
 
-Use this area to set the default type for ambiguous database objects.
+Utilisez cette zone pour définir le type par défaut pour les objets de base de données ambigus.
 
-- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. You can optimize the running of your database by choosing the Longint type.
-- **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
+- **Numérique** : Permet de forcer le typage numérique de manière non ambiguë, soit en real ou longint. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Vous pouvez optimiser le fonctionnement de votre base de données en choisissant le type Longint.
+- **Bouton** : Utilisé pour forcer la saisie d'un bouton de manière non ambiguë, soit en real ou en longint. Ceci ne remplacera pas les directives que vous avez pu définir dans votre projet. Ce type s'applique aux boutons ainsi qu'aux cases à cocher, aux boutons image, aux grilles de boutons, aux boutons radio, aux menus image pop-up et aux listes déroulantes.
 
-### Compiler Methods for...
+### Méthodes du compilateur pour...
 
-This area lets you rename the Compiler methods that are generated automatically by the compiler when you click [Generate Typing](#generate-typing).
+Cette zone vous permet de renommer les méthodes du compilateur qui sont générées automatiquement par le compilateur lorsque vous cliquez sur [Générer le typage](#generate-typing).
 
-Up to 5 compiler methods may be generated; a compiler method is only generated if the project contains the following items:
+Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de compilateur n'est générée que si le projet contient les éléments suivants :
 
-- **Variables**: Groups together process variable declarations;
-- **Interprocess Variables**: Groups together interprocess variable declarations;
-- **Arrays**: Groups together process array declarations;
-- **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`).
+- **Variables** : Regroupe les déclarations de variables process ;
+- **Variables interprocess** : Regroupe les déclarations de variables interprocess ;
+- **Tableaux** : Regroupe les déclarations de tableaux de process ;
+- **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
+- **Méthodes** : Regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod;$1;$2)`).
 
-You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
+Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#project-methods).
 
 
-## Compilation tools
+## Outils de compilation
 
-### Symbol file
+### Fichier de symboles
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
+Si vous cochez l'option [**Générer le fichier de symboles**](#generate-the-symbol-file) dans les propriétés du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le [dossier Logs](Project/architecture.md#logs) du projet pendant la compilation. Il est divisé en plusieurs parties :
 
-#### List of process and interprocess variables
+#### Liste des variables process et interprocess
 
-These two lists contain four columns:
+Ces deux listes contiennent quatre colonnes :
 
-- Names of process and interprocess variables and arrays used in your project. These variables are listed in alphabetical order.
-- Type of the variable. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
-- Number of dimensions if the variable is an array.
-- Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
+- Noms des variables process et interprocess et des tableaux utilisés dans votre projet. Ces variables sont classées par ordre alphabétique.
+- Le type de variable. Les types sont définis par des commandes de directive du compilateur ou sont déterminés par le compilateur en fonction de l'utilisation de la variable. Si le type d'une variable ne peut être déterminé, la colonne est vide.
+- Nombre de dimensions si la variable est un tableau.
+- Référence au contexte dans lequel le compilateur a établi le type de la variable. Si la variable est utilisée dans plusieurs contextes, le contexte mentionné est celui utilisé par le compilateur pour déterminer son type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
     - If the variable was found in a project method, the method is identified as it has been defined in 4D, preceded by (M).
     - If the variable was found in a trigger, the table name is given, preceded by (TM).
@@ -233,7 +233,7 @@ result data type, number of calls, Thread Safe or Thread Unsafe
 
 ### Error file
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
+You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. Le fichier d'erreur est automatiquement nommé `projectName_errors.xml` et est placé dans le [dossier Logs](Project/architecture.md#logs) du projet.
 
 Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces.
 

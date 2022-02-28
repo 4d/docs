@@ -652,7 +652,7 @@ Document contents are converted with respect to their viewing attributes, includ
 *   Row height
 *   Column width
 *   Hidden columns / rows.
-> Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
+> > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Function result
 
@@ -755,7 +755,7 @@ In *rangeObj*, pass an object containing a range of columns to remove. If the pa
 
 *   both columns and rows, only the columns are removed.
 *   only rows, the command does nothing.
-> Columns are deleted from right to left.
+> > Columns are deleted from right to left.
 
 
 #### Beispiel
@@ -794,7 +794,7 @@ In *rangeObj*, pass an object containing a range of rows  to remove. If the pass
 
 *   both columns and rows, only the rows  are removed.
 *   only columns, the command does nothing.
-> Rows are deleted from bottom to top.
+> > Rows are deleted from bottom to top.
 
 
 #### Beispiel
@@ -1736,6 +1736,37 @@ firstPageNumber:1,
 fitPagesTall:1,
 fitPagesWide:1,
 footerCenter:"&BS.H.I.E.L.D. &A Sales Per Region",
+footerCenterImage:,
+footerLeft:,
+footerLeftImage:,
+footerRight:"page &P of &N",
+footerRightImage:,
+headerCenter:,
+headerCenterImage:,
+headerLeft:"&G",
+headerLeftImage:logo.png,
+headerRight:,
+headerRightImage:,
+margin:{top:75,bottom:75,left:70,right:70,header:30,footer:30},
+orientation:2,
+pageOrder:0,
+pageRange:,
+paperSize:{width:850,height:1100,kind:1},
+qualityFactor:2,
+repeatColumnEnd:-1,
+repeatColumnStart:-1,
+repeatRowEnd:-1,
+repeatRowStart:-1,
+rowEnd:24,
+rowStart:0,
+showBorder:false,
+showColumnHeader:0,
+showGridLine:false,
+showRowHeader:0,
+useMax:true,
+watermark:[],
+zoomFactor:1
+} &A Sales Per Region",
 footerCenterImage:,
 footerLeft:,
 footerLeftImage:,
@@ -3168,7 +3199,7 @@ The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range ob
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-The *row* parameter defines the first row of the row range. Pass the row index (counting begins at 0) in this parameter. If the range contains multiple rows, you should also use the optional *rowCount* parameter.
+The *row* parameter defines the first row of the row range. Pass the row index (counting begins at 0) in this parameter. Pass the row index (counting begins at 0) in this parameter.
 
 The optional *rowCount* parameter allows you to define the total number of rows of the range. *rowCount* must be greater than 0. If omitted, the value will be set to 1 by default.
 
@@ -3747,7 +3778,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 #### Beschreibung
 
-The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . The current sheet is the selected sheet in the document.
+The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . The current sheet is the selected sheet in the document. The current sheet is the selected sheet in the document.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -4009,7 +4040,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. If *rangeObj* includes multiple cells, the specified field will be linked in each cell.
+In *rangeObj*, pass a range of the cell(s) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
 
 The *field* parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
@@ -4042,7 +4073,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
+In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
 
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
 
@@ -4259,6 +4290,12 @@ The following code will print a 4D View Pro area to a PDF document:
 
 ```4d
 var $printInfo : Object
+
+//declare print attributes object
+$printInfo:=New object
+
+//define print attributes
+$printInfo.headerCenter:="&BS.H.I.E.L.D. var $printInfo : Object
 
 //declare print attributes object
 $printInfo:=New object
@@ -4799,6 +4836,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 //Set the cell value as Hello World!
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
 
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
+
 //Set the cell value as current date
 VP SET VALUE(VP Cell("ViewProArea";4;2);New object("value";Current date))
 
@@ -4838,7 +4877,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 
 The *valuesCol* parameter is two-dimensional:
 
-*   The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row.
+*   The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row.
 *   Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:
 
     | Property | Typ                                      | Beschreibung                     |

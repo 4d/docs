@@ -813,7 +813,7 @@ Le processus de connexion des applications clientes fusionnées prend en charge 
     - Si l'utilisateur clique sur le bouton **Quitter**, l'application client quitte.
 4. Si la connexion est établie avec succès, les paramètres de cette connexion sont sauvegardés dans le dossier de préférences utilisateur de l'application cliente, ce qui permettra de les réutiliser ultérieurement en cas de besoin.
 
-The whole procedure is described in the following diagram:
+La procédure complète est décrite dans le diagramme suivant :
 
 ![](assets/en/Desktop/client-connect.png)
 

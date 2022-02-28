@@ -88,7 +88,7 @@ In the *commandLine* parameter, pass the full path of the application's file to 
 
 In the *options* parameter, pass an object that can contain the following properties:
 
-| Property         | Type     | Default   | Description                                                                                                                                                                                                                                                                                          |
+| Propriedade      | Type     | Default   | Description                                                                                                                                                                                                                                                                                          |
 | ---------------- | -------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onResponse       | Formula  | undefined | Callback for system worker messages. This callback is called once the complete response is received. It receives two objects as parameters (see below)                                                                                                                                               |
 | onData           | Formula  | undefined | Callback for system worker data. This callback is called each time the system worker receives data. It receives two objects as parameters (see below)                                                                                                                                                |
@@ -387,11 +387,11 @@ The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a 
 
 Each element of the collection is an object with the following properties:
 
-| Property               | Type   | Description                                                  |
+| Propriedade            | Type   | Description                                                  |
 | ---------------------- | ------ | ------------------------------------------------------------ |
 | [].errorCode           | number | 4D error code                                                |
-| [].message             | text   | Description of the 4D error                                  |
-| [ ].componentSignature | text   | Signature of the internal component which returned the error |
+| [].message             | texto  | Description of the 4D error                                  |
+| [ ].componentSignature | texto  | Signature of the internal component which returned the error |
 
 If no error occured, `.errors` contains an empty collection. 
 

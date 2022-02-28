@@ -129,7 +129,7 @@ Para cada processo, os campos abaixo são registrados:
 
 ## HTTPDebugLog.txt
 
-This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Este arquivo registra cada petição HTTP e cada resposta em modo raw (não processado). Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
 Como iniciar esse log:
 
@@ -138,7 +138,7 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 //other values are available
 ```
 
-The following fields are logged for both Request and Response:
+Os campos abaixo são registrados tanto para Request quanto para Response:
 
 | Field name     | Description                                                   |
 | -------------- | ------------------------------------------------------------- |

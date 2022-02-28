@@ -51,17 +51,17 @@ Trois options sont disponibles :
 
 ### Apparence (macOS uniquement)
 
-Ce menu vous permet de sélectionner la palette de couleurs à utiliser pour l'environnement de **développement 4D**. Le schéma spécifié sera appliqué à tous les éditeurs et fenêtres du mode Développement.
+Ce menu vous permet de sélectionner la palette de couleurs à utiliser pour l'environnement de **développement 4D**. La palette spécifiée sera appliquée à tous les éditeurs et fenêtres du mode Développement.
 
-> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+> Vous pouvez également définir la palette de couleurs à utiliser dans vos **applications de bureau** dans la page "Interface" de la boîte de dialogue des Paramètres.
 
 Trois options sont disponibles :
 
-*   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-*   **Light**: Use the Light Theme
-*   **Dark**: Use the Dark Theme
+*   **Selon les préférences de la palette de couleurs du système** (par défaut) : Utilisez la palette de couleurs définie dans les préférences système de macOS.
+*   **Clair** : Utiliser le thème clair
+*   **Sombre** : utiliser le thème sombre
 
-> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
+> Cette préférence n'est prise en charge que sur macOS. Sous Windows, la palette "Light" est toujours utilisée.
 
 
 ### Exit Design when going to Application Environment
@@ -92,38 +92,38 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Include tokens in project source files
+### Inclure les tokens dans les fichiers sources des projets
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+Lorsque cette option est cochée, les [fichiers sources des méthodes](../Project/architecture.md#sources) enregistrées dans les nouveaux projets 4D contiendront des **tokens** pour les objets classiques du langage et de la base (constantes, commandes, tables et champs). Les tokens sont des caractères supplémentaires tels que `:C10` ou `:5` insérés dans les fichiers de code source, qui permettent de renommer les tables et les champs et d'identifier les éléments indépendamment de la version 4D (voir [Utilisation des tokens dans les formules](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
-If you intend to use VCS or external code editors with your new projects, you might want to uncheck this option for a better readability of the code with these tools.
+Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes avec vos nouveaux projets, il est préférable de décocher cette option pour une meilleure lisibilité du code avec ces outils.
 
-> This option can only be applied to projects (binary databases always include tokens).
+> Cette option ne peut être appliquée qu'aux projets (les bases binaires incluent toujours les tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
+> Vous pouvez toujours obtenir le code avec les tokens en appelant la [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) avec 1 dans le paramètre *option*.
 
-#### Excluding tokens in existing projects
+#### Exclusion des tokens dans les projets existants
 
-You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+Vous pouvez configurer vos projets existants pour enregistrer le code **sans tokens** en insérant la clé suivante dans le fichier [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) à l'aide d'un éditeur de texte :
 
 ```
-"tokenizedText": false
+"tokenizedText" : false
 ```
 
-> This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
+> Ce paramètre n'est pris en compte que lors de l'enregistrement des méthodes. Les méthodes existantes dans vos projets ne sont pas modifiées, sauf si vous les enregistrez à nouveau.
 
 
 ### Créer le fichier `.gitignore`
 
-You might need or want git to ignore some files in your new projects.
+Si vous avez besoin ou souhaitez que git ignore certains fichiers dans vos nouveaux projets.
 
-You can set this preference by checking the **Create .gitignore file**  option.
+Vous pouvez définir cette préférence en cochant l'option **Créer le fichier .gitignore**.
 
-When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
+Lorsqu'un projet est créé dans 4D et que cette case est cochée, 4D crée un fichier `.gitignore` au même niveau que le dossier `Project` (voir [Architecture d'un projet](Project/architecture.md#gitignore-file-optional)).
 
-You can define the default contents of the `.gitignore` file by clicking the pencil icon. This will open the .gitignore configuration file in your text editor. The contents of this file will be used to generate the `.gitignore` files in your new projects.
+Vous pouvez définir le contenu par défaut du fichier `.gitignore` en cliquant sur l'icône du crayon. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte. Le contenu de ce fichier sera utilisé pour générer les fichiers `.gitignore` dans vos nouveaux projets.
 
-The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
+La [documentation officielle de git](https://git-scm.com/docs/gitignore) est une excellente ressource pour comprendre le fonctionnement des fichiers `.gitignore`.
 
 ### Language of text comparison
 
@@ -138,26 +138,26 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
-*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
+*   Lorsque vous appuyez sur la touche **F1** pendant que le curseur est inséré dans une fonction de classe 4D ou un nom de commande dans l'éditeur de méthode ;
+*   Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
 
 
-### Documentation language
+### Langue de documentation
 
-Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
+Langue de la documentation HTML à afficher. Vous pouvez sélectionner une documentation dans une langue différente de celle de l'application.
 
 ### Commencer par consulter le dossier local
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> Cette option n'est prise en compte que pour l'accès à la documentation des commandes (à l'exclusion des fonctions de classe).
 
-Sets where 4D will look for documentation pages.
+Définit l'emplacement des pages de documentation recherchées par 4D.
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
+*   Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
 *   If it is not found, 4D displays an error message in the browser. When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser.
 
 ### Local folder
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> Cette option n'est prise en compte que pour l'accès à la documentation des commandes (à l'exclusion des fonctions de classe).
 
 Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 

@@ -34,8 +34,8 @@ Une heure nulle s’écrit ?00:00:00?
 | Opération           | Syntaxe         | Retourne | Expression              | Valeur     |
 | ------------------- | --------------- | -------- | ----------------------- | ---------- |
 | Addition            | Heure + Heure   | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? ?01:02:03?   | ?01:01:01? |
-| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? ?01:02:03?   | 7449       |
+| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? ?02:03:04?   | ?01:01:01? |
+| Addition            | Heure + Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 7449       |
 | Soustraction        | Heure – Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 7319       |
 | Multiplication      | Heure * Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 14768      |
 | Division            | Heure / Nombre  | Nombre   | ?02:03:04? ?02:03:04?   | 3692       |
@@ -80,9 +80,9 @@ La seconde ligne peut également être écrite de la façon suivante :
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 hours
-  // We want to add 2 and a half hours
+$t1:=?23:00:00? // Il est 23 heures
+  // Nous souhaitons ajouter 2 heures et demi
 $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? and it is 1:30 hour the next morning
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? , il est bien 1h30 du matin le lendemain
 ```
 

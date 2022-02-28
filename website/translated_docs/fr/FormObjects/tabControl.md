@@ -57,7 +57,7 @@ Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collecti
 | -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection | Mandatory - Collection of scalar values. Seules les valeurs de type chaîne sont prises en charge. Si elle est invalide, vide ou non définie, l'onglet est vide |
 | `index`        | number     | Indice de la page de l'onglet en cours (valeur comprise entre 0 et `collection.length-1`)                                                                      |
-| `currentValue` | Texte      | Valeur courante sélectionnée                                                                                                                                   |
+| `currentValue` | Text       | Valeur courante sélectionnée                                                                                                                                   |
 
 Le code d'initialisation doit être exécuté avant que le formulaire ne soit présenté à l'utilisateur.
 

@@ -13,7 +13,7 @@ The 4D language supports the operators you may already know from other languages
 The 4D language supports **binary** and **ternary** operators:
 
 - binary operators operate on two targets (such as 2 + 3) and appear in between their two targets.
-- ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
+- ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`). b : c</code>).
 
 The values that operators affect are operands. In the expression 1 + 2, the + symbol is a binary operator and its two operands are the values 1 and 2.
 
@@ -25,6 +25,7 @@ The **assignment operator** (`a:=b`) initializes or updates the value of `a` wit
 
 ```4d
 $myNumber:=3 //assigns 3 to MyNumber variable  
+$myDate:=!2018/01/21! $myNumber:=3 //assigns 3 to MyNumber variable  
 $myDate:=!2018/01/21! //assigns a date literal
 $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
@@ -120,6 +121,26 @@ $x2*=5 // $x2=10
 
 $t2:="Hello" 
 $t2*=2 // $t2="HelloHello"
+$d+=10 //$d=!2000-11-20!
+
+// Subtraction
+$x1:=10
+$x1-=5 //$x1=5
+
+$d1:=!2000-11-10!
+$d1-=10 // $d1=!2000-10-31!
+
+// Division
+$x3:=10
+$x3/=2 // $x3=5
+
+
+// Multiplication
+$x2:=10
+$x2*=5 // $x2=10
+
+$t2:="Hello" 
+$t2*=2 // $t2="HelloHello"
 
 ```
 
@@ -158,6 +179,7 @@ $v:= "Hello" && "World" //"World"
 $v:=False && 0 // False
 $v:=0 && False // False
 $v:=5 && !00-00-00! // 00/00/00
+$v := 5 && 10 && "hello" //"hello" // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
 
@@ -251,9 +273,9 @@ It takes three operands in the following order:
 
 ### Sintaxis
 
-The syntax is as follows:
+La sintaxis es la siguiente:
 
-`condition ? exprIfTruthy : exprIfFalsy`
+`condition ? condition ? exprIfTruthy : exprIfFalsy`
 
 > Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
 
@@ -268,6 +290,8 @@ var $beverage : Text
 $age:=26
 $beverage:=($age>=21) ? "Beer" : "Juice"
 
+ALERT($beverage) // "Beer" "Beer" : "Juice"
+
 ALERT($beverage) // "Beer"
 ```
 
@@ -279,7 +303,7 @@ This example stores a person's full name in a variable, and handles the case whe
 var $fullname : Text
 
 // If one of the names is missing, store the one that exists, otherwise store an empty string.
-$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
+$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
 ## Truthy and falsy

@@ -36,7 +36,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 
 ---
-## Hide focus rectangle
+## Esconder retangulo foco
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
@@ -53,7 +53,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 
 ---
-## Hide selection highlight
+## Esconder ressalte seleção
 `Selection type list boxes`
 
 This property is used to disable the selection highlight in list boxes.
@@ -77,7 +77,7 @@ By default, this option is not enabled.
 
 
 ---
-## Horizontal Scroll Bar
+## Barra rolagem horizontal
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
@@ -97,7 +97,7 @@ Available values:
 
 | Name                | Data Type | Possible Values                  |
 | ------------------- | --------- | -------------------------------- |
-| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | texto     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -359,7 +359,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 [4D View Pro reference guide](ViewPro/overview.md)
 
 ---
-## Vertical Scroll Bar
+## Barra rolagem vertical
 
 An interface tool allowing the user to move the viewing area up and down.
 
@@ -381,7 +381,7 @@ Available values:
 
 | Name              | Data Type | Possible Values                  |
 | ----------------- | --------- | -------------------------------- |
-| scrollbarVertical | text      | "visible", "hidden", "automatic" |
+| scrollbarVertical | texto     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
