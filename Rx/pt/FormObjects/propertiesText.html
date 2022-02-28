@@ -375,302 +375,100 @@ Else</span>
 <p><a href="/docs/Rx/pt/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="multi-style"></a><a href="#multi-style" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multi-style</h2>
-<p>Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. Quando essa opção for marcada, 4D interpreta qualquer tag&lt;SPAN&gt; HTML encontrada nessa área. </p></p>
-<p spaces-before="0">
-  By default, this option is not enabled.
-</p>
-<p><h4 spaces-before="0">
-JSON Grammar
-</h4></p>
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-<pre><code class="hljs">&lt;th&gt;
-  Data Type
-&lt;/th&gt;
-
-&lt;th&gt;
-  Possible Values
-&lt;/th&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      styledText
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  booleano
-&lt;/td&gt;
-
-&lt;td&gt;
-  true, false
-&lt;/td&gt;
-</code></pre>
-  </tr>
+<p>Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. When this option is checked, 4D interprets any <code>&lt;SPAN&gt; HTML</code> tags found in the area.</p>
+<p>By default, this option is not enabled.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-13"></a><a href="#json-grammar-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>styledText</td><td>booleano</td><td>true, false</td></tr>
+</tbody>
 </table>
-<p><h4 spaces-before="0">
-Objects Supported
-</h4></p>
-<p spaces-before="0">
-  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
-</p>
-<hr />
-<h2 spaces-before="0">
-  Orientation
-</h2>
-<p spaces-before="0">
-  Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
-</p>
-<table spaces-before="0">
-  <tr>
-    <th>
-      Orientation value
-    </th>
-<pre><code class="hljs">&lt;th&gt;
-  Result
-&lt;/th&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      0 (default)
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  &lt;img src=&quot;assets/en/FormObjects/orientation1.png&quot; alt=&quot;&quot; /&gt;
-&lt;/td&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      90
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  &lt;img src=&quot;assets/en/FormObjects/orientation2.png&quot; alt=&quot;&quot; /&gt;
-&lt;/td&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      180
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  &lt;img src=&quot;assets/en/FormObjects/orientation3.png&quot; alt=&quot;&quot; /&gt;
-&lt;/td&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      270
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  &lt;img src=&quot;assets/en/FormObjects/orientation4.png&quot; alt=&quot;&quot; /&gt;
-&lt;/td&gt;
-</code></pre>
-  </tr>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-13"></a><a href="#objects-supported-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/Rx/pt/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/Rx/pt/FormObjects/inputOverview.html">Input</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="orientation"></a><a href="#orientation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Orientation</h2>
+<p>Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:</p>
+<table>
+<thead>
+<tr><th>Orientation value</th><th>Result</th></tr>
+</thead>
+<tbody>
+<tr><td>0 (default)</td><td><img src="/docs/Rx/assets/en/FormObjects/orientation1.png" alt=""></td></tr>
+<tr><td>90</td><td><img src="/docs/Rx/assets/en/FormObjects/orientation2.png" alt=""></td></tr>
+<tr><td>180</td><td><img src="/docs/Rx/assets/en/FormObjects/orientation3.png" alt=""></td></tr>
+<tr><td>270</td><td><img src="/docs/Rx/assets/en/FormObjects/orientation4.png" alt=""></td></tr>
+</tbody>
 </table>
-<p spaces-before="0">
-  Além de <a href="text.md">áreas de texto estáticas</a>, <a href="input_overview.md">input</a> os objetos de texto podem ser girados quando forem não-<a href="properties_Entry.md#enterable">digitáveis</a>. Quando uma propriedade rotação for aplicada a um objeto input, a propriedade digitável é removida (se houver). Esse objeto é então excluído da ordem de entrada.
-</p>
-<p><h4 spaces-before="0">
-JSON Grammar
-</h4></p>
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-<pre><code class="hljs">&lt;th&gt;
-  Data Type
-&lt;/th&gt;
-
-&lt;th&gt;
-  Possible Values
-&lt;/th&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      textAngle
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  number
-&lt;/td&gt;
-
-&lt;td&gt;
-  0, 90, 180, 270
-&lt;/td&gt;
-</code></pre>
-  </tr>
+<p>Além de <a href="/docs/Rx/pt/FormObjects/text.html">áreas de texto estáticas</a>, <a href="/docs/Rx/pt/FormObjects/inputOverview.html">input</a> os objetos de texto podem ser girados quando forem não-<a href="/docs/Rx/pt/FormObjects/propertiesEntry.html#enterable">digitáveis</a>. Quando uma propriedade rotação for aplicada a um objeto input, a propriedade digitável é removida (se houver). Esse objeto é então excluído da ordem de entrada.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-14"></a><a href="#json-grammar-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>textAngle</td><td>number</td><td>0, 90, 180, 270</td></tr>
+</tbody>
 </table>
-<p><h4 spaces-before="0">
-Objects Supported
-</h4></p>
-<p spaces-before="0">
-  <a href="input_overview.md">Input</a> (não-digitável) - <a href="text.md">Área Texto</a>
-</p>
-<hr />
-<h2 spaces-before="0">
-  Array cores de fonte
-</h2>
-<p spaces-before="0">
-  <code>Array type list boxes</code>
-</p>
-<p spaces-before="0">
-  Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
-</p>
-<p spaces-before="0">
-  O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
-</p>
-<p><h4 spaces-before="0">
-JSON Grammar
-</h4></p>
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-<pre><code class="hljs">&lt;th&gt;
-  Data Type
-&lt;/th&gt;
-
-&lt;th&gt;
-  Possible Values
-&lt;/th&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      rowStrokeSource
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  string
-&lt;/td&gt;
-
-&lt;td&gt;
-  The name of a longint array
-&lt;/td&gt;
-</code></pre>
-  </tr>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-14"></a><a href="#objects-supported-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/Rx/pt/FormObjects/inputOverview.html">Input</a> (não-digitável) - <a href="/docs/Rx/pt/FormObjects/text.html">Área Texto</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="array-cores-de-fonte"></a><a href="#array-cores-de-fonte" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array cores de fonte</h2>
+<p><code>Array type list boxes</code></p>
+<p>Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.</p>
+<p>O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-15"></a><a href="#json-grammar-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>rowStrokeSource</td><td>string</td><td>The name of a longint array</td></tr>
+</tbody>
 </table>
-<p><h4 spaces-before="0">
-Objects Supported
-</h4></p>
-<p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
-</p>
-<hr />
-<h2 spaces-before="0">
-  Array estilo linha
-</h2>
-<p spaces-before="0">
-  <code>Array type list boxes</code>
-</p>
-<p spaces-before="0">
-  Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
-</p>
-<p spaces-before="0">
-  O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para preencher esse array (usando um método) use as constantes do tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estillos de Fonte</a>. Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
-</p>
-<p><h4 spaces-before="0">
-JSON Grammar
-</h4></p>
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-<pre><code class="hljs">&lt;th&gt;
-  Data Type
-&lt;/th&gt;
-
-&lt;th&gt;
-  Possible Values
-&lt;/th&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      rowStyleSource
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  string
-&lt;/td&gt;
-
-&lt;td&gt;
-  The name of a longint array.
-&lt;/td&gt;
-</code></pre>
-  </tr>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-15"></a><a href="#objects-supported-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/Rx/pt/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/Rx/pt/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="array-estilo-linha"></a><a href="#array-estilo-linha" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array estilo linha</h2>
+<p><code>Array type list boxes</code></p>
+<p>Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.</p>
+<p>O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para preencher esse array (usando um método) use as constantes do tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estillos de Fonte</a>. Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.</p>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-16"></a><a href="#json-grammar-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>rowStyleSource</td><td>string</td><td>The name of a longint array.</td></tr>
+</tbody>
 </table>
-<p><h4 spaces-before="0">
-Objects Supported
-</h4></p>
-<p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
-</p>
-<hr />
-<h2 spaces-before="0">
-  Store with default style tags
-</h2>
-<p spaces-before="0">
-  Essa propriedade só está disponível para a área input <a href="#multi-style">Multiestilo</a>. Quando essa propriedade for ativada, a área armazena as tags de estilo com o texto, mesmo se nenhuma modificação for feita. Nesse caso, as tags correspondem ao estilo padrão. Quando essa propriedade for desativada, só as tags de estilo modificadas são armazenadas.
-</p>
-<p spaces-before="0">
-  Por exemplo, aqui está um texto que inclui uma modificação de estilo:
-</p>
-<p spaces-before="0">
-  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
-</p>
-<p spaces-before="0">
-  Quando a propriedade for desativada, a área só armazena a modificação. Os conteúdos armazenados são entretanto:
-</p>
-<pre><code class="hljs">Que &lt;SPAN STYLE="font-size:13.5pt"&gt;lindo&lt;/SPAN&gt; dia!
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-16"></a><a href="#objects-supported-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/Rx/pt/FormObjects/listboxOverview.html#overview">List Box</a> - <a href="/docs/Rx/pt/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a></p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="store-with-default-style-tags"></a><a href="#store-with-default-style-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Store with default style tags</h2>
+<p>Essa propriedade só está disponível para a área input <a href="#multi-style">Multiestilo</a>. Quando essa propriedade for ativada, a área armazena as tags de estilo com o texto, mesmo se nenhuma modificação for feita. Nesse caso, as tags correspondem ao estilo padrão. Quando essa propriedade for desativada, só as tags de estilo modificadas são armazenadas.</p>
+<p>Por exemplo, aqui está um texto que inclui uma modificação de estilo:</p>
+<p><img src="/docs/Rx/assets/en/FormObjects/tagStyle1.png" alt=""></p>
+<p>Quando a propriedade for desativada, a área só armazena a modificação. Os conteúdos armazenados são entretanto:</p>
+<pre><code class="hljs">Que <span class="hljs-tag">&lt;<span class="hljs-name">SPAN</span> <span class="hljs-attr">STYLE</span>=<span class="hljs-string">"font-size:13.5pt"</span>&gt;</span>lindo<span class="hljs-tag">&lt;/<span class="hljs-name">SPAN</span>&gt;</span> dia!
 </code></pre>
-<p spaces-before="0">
-  Quando a propriedade for ativada, a área armazena todas as informações de formatação. A primeira tag genérica descreve o estilo padrão quando cada variação no sujeito for um par de tags aninhadas. Os conteúdos armazenados na área são portanto:
-</p>
-<pre><code class="hljs">&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;Que &lt;SPAN STYLE="font-size:13.5pt"&gt;lindo&lt;/SPAN&gt; dia!&lt;/SPAN&gt;
+<p>Quando a propriedade for ativada, a área armazena todas as informações de formatação. A primeira tag genérica descreve o estilo padrão quando cada variação no sujeito for um par de tags aninhadas. Os conteúdos armazenados na área são portanto:</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">SPAN</span> <span class="hljs-attr">STYLE</span>=<span class="hljs-string">"font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"</span>&gt;</span>Que <span class="hljs-tag">&lt;<span class="hljs-name">SPAN</span> <span class="hljs-attr">STYLE</span>=<span class="hljs-string">"font-size:13.5pt"</span>&gt;</span>lindo<span class="hljs-tag">&lt;/<span class="hljs-name">SPAN</span>&gt;</span> dia!<span class="hljs-tag">&lt;/<span class="hljs-name">SPAN</span>&gt;</span>
 </code></pre>
-<p><h4 spaces-before="0">
-JSON Grammar
-</h4></p>
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-<pre><code class="hljs">&lt;th&gt;
-  Data Type
-&lt;/th&gt;
-
-&lt;th&gt;
-  Possible Values
-&lt;/th&gt;
-</code></pre>
-  </tr>
-  <tr>
-    <td>
-      storeDefaultStyle
-    </td>
-<pre><code class="hljs">&lt;td&gt;
-  booleano
-&lt;/td&gt;
-
-&lt;td&gt;
-  true, false (default).
-&lt;/td&gt;
-</code></pre>
-  </tr>
+<h4><a class="anchor" aria-hidden="true" id="json-grammar-17"></a><a href="#json-grammar-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Data Type</th><th>Possible Values</th></tr>
+</thead>
+<tbody>
+<tr><td>storeDefaultStyle</td><td>booleano</td><td>true, false (default).</td></tr>
+</tbody>
 </table>
-<p><h4 spaces-before="0">
-Objects Supported
-</h4></p>
-<p spaces-before="0">
-  <a href="input_overview.md">Entrada</a>
-</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/pt/FormObjects/propertiesSubform.html"><span class="arrow-prev">← </span><span>Subform</span></a><a class="docs-next button" href="/docs/Rx/pt/FormObjects/propertiesTextAndPicture.html"><span>Text and Picture</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#allow-fontcolor-picker">Allow font/color picker</a></li><li><a href="#negrito">Negrito</a></li><li><a href="#itálico">Itálico</a></li><li><a href="#sublinhado">Sublinhado</a></li><li><a href="#fonte">Fonte</a><ul class="toc-headings"><li><a href="#font-theme">Font Theme</a></li><li><a href="#font-family">Font Family</a></li></ul></li><li><a href="#tamanho-fonte">Tamanho fonte</a></li><li><a href="#cor-fonte">Cor fonte</a></li><li><a href="#expressão-cor-fonte">Expressão cor fonte</a></li><li><a href="#expressão-estilo">Expressão estilo</a></li><li><a href="#alihamento-horizontal">Alihamento horizontal</a></li><li><a href="#alinhamento-vertical">Alinhamento vertical</a></li><li><a href="#meta-info-expression">Meta Info Expression</a></li><li><a href="#multi-style">Multi-style</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h4><a class="anchor" aria-hidden="true" id="objects-supported-17"></a><a href="#objects-supported-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objects Supported</h4>
+<p><a href="/docs/Rx/pt/FormObjects/inputOverview.html">Entrada</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/pt/FormObjects/propertiesSubform.html"><span class="arrow-prev">← </span><span>Subform</span></a><a class="docs-next button" href="/docs/Rx/pt/FormObjects/propertiesTextAndPicture.html"><span>Text and Picture</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#allow-fontcolor-picker">Allow font/color picker</a></li><li><a href="#negrito">Negrito</a></li><li><a href="#itálico">Itálico</a></li><li><a href="#sublinhado">Sublinhado</a></li><li><a href="#fonte">Fonte</a><ul class="toc-headings"><li><a href="#font-theme">Font Theme</a></li><li><a href="#font-family">Font Family</a></li></ul></li><li><a href="#tamanho-fonte">Tamanho fonte</a></li><li><a href="#cor-fonte">Cor fonte</a></li><li><a href="#expressão-cor-fonte">Expressão cor fonte</a></li><li><a href="#expressão-estilo">Expressão estilo</a></li><li><a href="#alihamento-horizontal">Alihamento horizontal</a></li><li><a href="#alinhamento-vertical">Alinhamento vertical</a></li><li><a href="#meta-info-expression">Meta Info Expression</a></li><li><a href="#multi-style">Multi-style</a></li><li><a href="#orientation">Orientation</a></li><li><a href="#array-cores-de-fonte">Array cores de fonte</a></li><li><a href="#array-estilo-linha">Array estilo linha</a></li><li><a href="#store-with-default-style-tags">Store with default style tags</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

@@ -90,19 +90,19 @@ Este es un ejemplo de botón imagen. Supongamos que quiere dar a los usuarios de
 <p><img src="/docs/Rx/assets/en/FormObjects/button_pictureButton.png" alt=""></p>
 <p>Al hacer clic en el objeto, la imagen cambia.</p>
 <h2><a class="anchor" aria-hidden="true" id="utilizar-los-botones-imagen"></a><a href="#utilizar-los-botones-imagen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilizar los botones imagen</h2>
-<p>You can implement a picture button in the following manner:</p>
+<p>Puede implementar un botón imagen de la siguiente manera:</p>
 <ol>
-<li><p>First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.</p>
+<li><p>En primer lugar, prepare un único gráfico en el que las series de imágenes estén dispuestas en líneas, en columnas o en las dos.</p>
 <p><img src="/docs/Rx/assets/en/FormObjects/pictureButton_grid.png" alt=""></p></li>
 </ol>
-<p>You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).</p>
+<p>Puede organizar las imágenes en columnas, líneas o en una cuadrícula (como se muestra arriba). Cuando se organizan las imágenes en forma de cuadrícula, se numeran de izquierda a derecha, línea por línea, empezando por 0. Por ejemplo, la segunda imagen de la segunda línea de una cuadrícula que consta de dos líneas y tres columnas, tiene el número 4 (la bandera del Reino Unido en el ejemplo anterior).</p>
 <ol start="2">
-<li><p>Next, make sure the image is in your project's Resources and enter the path in the <a href="/docs/Rx/es/FormObjects/propertiesTextAndPicture.html#picture-pathname">Pathname</a> property.</p></li>
-<li><p>Define the graphic's <a href="/docs/Rx/es/FormObjects/propertiesCrop.html">Rows and Columns</a> properties.</p></li>
-<li><p>Specify when the images change by selecting appropriate <a href="/docs/Rx/es/FormObjects/propertiesAnimation.html">animation</a> properties.</p></li>
+<li><p>A continuación, asegúrese de que la imagen está en los recursos de su proyecto e introduzca la ruta en la propiedad <a href="/docs/Rx/es/FormObjects/propertiesTextAndPicture.html#picture-pathname">Ruta de acceso imagen</a>.</p></li>
+<li><p>Defina las propiedades de <a href="/docs/Rx/es/FormObjects/propertiesCrop.html">líneas y columnas</a> del gráfico.</p></li>
+<li><p>Especifique cuándo cambian las imágenes seleccionando las propiedades de <a href="/docs/Rx/es/FormObjects/propertiesAnimation.html">animación</a> apropiadas.</p></li>
 </ol>
 <h2><a class="anchor" aria-hidden="true" id="animación"></a><a href="#animación" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Animación</h2>
-<p>In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. Estas opciones de propiedades pueden combinarse para mejorar sus botones de imagen.</p>
+<p>Además de los parámetros de posicionamiento y de apariencia estándar, puede definir algunas propiedades específicas para los botones imagen, especialmente en lo que respecta a cómo y cuándo se muestran las imágenes. Estas opciones de propiedades pueden combinarse para mejorar sus botones de imagen.</p>
 <ul>
 <li>Por defecto (<a href="/docs/Rx/es/FormObjects/propertiesAnimation.html">cuando no se selecciona la opción animación</a>), un botón de imagen muestra la siguiente imagen de la serie cuando el usuario hace clic; muestra la imagen anterior de la serie cuando el usuario mantiene pulsada la tecla <strong>Mayúsculas</strong> y hace clic en el botón. Cuando el usuario llega a la última imagen de la serie, la imagen no cambia cuando el usuario hace clic de nuevo. En otras palabras, no vuelve a la primera imagen de la serie.</li>
 </ul>
