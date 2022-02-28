@@ -85,14 +85,14 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ADD FORMULA NAME</code> command creates or modifies a named formula in the open document.</p>
+<p>The <code>VP ADD FORMULA NAME</code> commandcreates or modifies a named formula in the open document.</p>
 <blockquote>
 <p>Named formulas created by this command are saved with the document.</p>
 </blockquote>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>Pass the 4D View Pro formula that you want to name in <em>vpFormula</em>. For detailed information about formula syntax, see <a href="/docs/es/ViewPro/formulas.html">Formulas and Functions</a> page.</p>
 <p>Pass the new name for the formula in <em>name</em>. If the name is already used within the same scope, the new named formula replaces the existing one. Note that you can use the same name for different scopes (see below).</p>
-<p>You can pass an object with additional properties for the named formula in <em>options</em>. The following properties are supported:</p>
+<p>You can pass an object with additional properties for the named formula in <em>options</em>. Se soportan las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
@@ -120,12 +120,12 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ADD RANGE NAME</code> command creates or modifies a named range in the open document.</p>
+<p>The <code>VP ADD RANGE NAME</code> commandcreates or modifies a named range in the open document.</p>
 <blockquote>
 <p>Named ranges created by this command are saved with the document.</p>
 </blockquote>
 <p>In <em>rangeObj</em>, pass the range that you want to name and in <em>name</em>, pass the new name for the range. If the name is already used within the same scope, the new named range replaces the existing one. Note that you can use the same name for different scopes (see below).</p>
-<p>You can pass an object with additional properties for the named range in <em>options</em>. The following properties are supported:</p>
+<p>You can pass an object with additional properties for the named range in <em>options</em>. Se soportan las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
@@ -159,7 +159,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ADD SELECTION</code> command adds the specified cells to the currently selected cells.</p>
+<p>The <code>VP ADD SELECTION</code> commandadds the specified cells to the currently selected cells.</p>
 <p>In <em>rangeObj</em>, pass a range object of cells to add to the current selection.</p>
 <blockquote>
 <p>The active cell is not modified.</p>
@@ -188,7 +188,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ADD SHEET</code> command inserts a sheet in the document loaded in <em>vpAreaName</em>.</p>
+<p>The <code>VP ADD SHEET</code> commandinserts a sheet in the document loaded in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>index</em>, you can pass an index for the new sheet. If the passed <em>index</em> is inferior to or equal to 0, the command inserts the new sheet at the beginning. If <em>index</em> exceeds the number of sheets, the command inserts the new sheet after the existing ones.</p>
 <blockquote>
@@ -254,7 +254,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-5"></a><a href="#descripción-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ADD STYLESHEET</code> command creates or modifies the <em>styleName</em> style sheet based upon the combination of the properties specified in <em>styleObj</em> in the open document. If a style sheet with the same name and scope already exists in the document, this command will overwrite it with the new values.</p>
+<p>The <code>VP ADD STYLESHEET</code> commandcreates or modifies the <em>styleName</em> style sheet based upon the combination of the properties specified in <em>styleObj</em> in the open document. If a style sheet with the same name and scope already exists in the document, this command will overwrite it with the new values.</p>
 <blockquote>
 <p>Style sheets created by this command are saved with the document.</p>
 </blockquote>
@@ -310,7 +310,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ALL</code> command returns a new range object referencing all cells.</p>
+<p>The <code>VP ALL</code> commandreturns a new range object referencing all cells.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass <code>vk current sheet</code>, the current spreadsheet is used.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-6"></a><a href="#ejemplo-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -335,7 +335,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Cell</code> command returns a new range object referencing a specific cell.</p>
+<p>The <code>VP Cell</code> commandreturns a new range object referencing a specific cell.</p>
 <blockquote>
 <p>This command is intended for ranges of a single cell. To create a range object for multiple cells, use the <a href="#vp-cells">VP Cells</a> command.</p>
 </blockquote>
@@ -381,7 +381,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-8"></a><a href="#descripción-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Cells</code> command returns a new range object referencing specific cells.</p>
+<p>The <code>VP Cells</code> commandreturns a new range object referencing specific cells.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>The <em>column</em> parameter defines the first column of the cell range. Pass the column index (counting begins at 0) in this parameter. If the range is within multiple columns, you should also use the <em>columnCount</em> parameter.</p>
 <p>In the <em>row</em> parameter, you can define the row(s) of the cell range's position. Pass the row index (counting begins at 0) in this parameter. If the range is within multiple rows, you should also use the <em>rowCount</em> parameter.</p>
@@ -411,7 +411,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-9"></a><a href="#descripción-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Column</code> command returns a new range object referencing a specific column or columns.</p>
+<p>The <code>VP Column</code> commandreturns a new range object referencing a specific column or columns.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>The <em>column</em> parameter defines the first column of the column range. Pass the column index (counting begins at 0)  in this parameter. If the range contains multiple columns, you should also use the optional <em>columnCount</em> parameter.</p>
 <p>The optional <em>columnCount</em> parameter allows you to define the total number of columns of the range. <em>columnCount</em> must be greater than 0. If omitted, the value will be set to 1 by default and a column type range is created.</p>
@@ -435,7 +435,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP COLUMN AUTOFIT</code> command automatically sizes the column(s) in <em>rangeObj</em> according to their contents.</p>
+<p>The <code>VP COLUMN AUTOFIT</code> commandautomatically sizes the column(s) in <em>rangeObj</em> according to their contents.</p>
 <p>In <em>rangeObj</em>, pass a range object containing a range of the columns whose size will be automatically handled.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-10"></a><a href="#ejemplo-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>The following columns are all the same size and don't display some of the text:</p>
@@ -460,7 +460,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Combine Ranges</code> command returns a new range object that incorporates two or more existing range objects. All of the ranges must be from the same 4D View Pro area.</p>
+<p>The <code>VP Combine Ranges</code> commandreturns a new range object that incorporates two or more existing range objects. All of the ranges must be from the same 4D View Pro area.</p>
 <p>In <em>rangeObj</em>, pass the first range object.</p>
 <p>In <em>otherRangeObj</em>, pass another range object(s) to combine with <em>rangeObj</em>.</p>
 <blockquote>
@@ -488,7 +488,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-12"></a><a href="#descripción-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Convert from 4D View</code> command allows you to convert a legacy 4D View document into a 4D View Pro object.</p>
+<p>The <code>VP Export to object</code> commandreturns the 4D View Pro object attached to the 4D View Pro area <em>vpAreaName</em>.</p>
 <blockquote>
 <p>This command does not require that the legacy 4D View plug-in be installed in your environment.</p>
 </blockquote>
@@ -534,7 +534,9 @@
 <li>Hidden columns / rows.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>Gridline visibility depends on document attribute defined with <a href="#vp-set-print-info">VP SET PRINT INFO</a>.</p>
+</blockquote>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="function-result"></a><a href="#function-result" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Function result</h4>
 <p>The command returns a picture in SVG format.</p>
@@ -570,7 +572,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-14"></a><a href="#descripción-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Copy to object</code> command copies the contents, style and formulas from <em>rangeObj</em> to an object.</p>
+<p>The <code>VP Copy to object</code> commandcopies the contents, style and formulas from <em>rangeObj</em> to an object.</p>
 <p>In <em>rangeObj</em>, pass the cell range with the values, formatting, and formulas to copy. If <em>rangeObj</em> is a combined range, only the first one is used.</p>
 <p>You can pass an optional <em>options</em> parameter with the following properties:</p>
 <table>
@@ -613,14 +615,16 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-15"></a><a href="#descripción-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP DELETE COLUMNS</code> command removes the columns in the <em>rangeObj</em>.</p>
+<p>The <code>VP DELETE COLUMNS</code> commandremoves the columns in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of columns to remove. If the passed range contains:</p>
 <ul>
 <li>both columns and rows, only the columns are removed.</li>
 <li>only rows, the command does nothing.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>Columns are deleted from right to left.</p>
+</blockquote>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-15"></a><a href="#ejemplo-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To delete columns selected by the user (in the image below columns B, C, and D):</p>
@@ -641,14 +645,16 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-16"></a><a href="#descripción-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP DELETE ROWS</code> command removes the rows  in the <em>rangeObj</em>.</p>
+<p>The <code>VP DELETE ROWS</code> commandremoves the rows  in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of rows  to remove. If the passed range contains:</p>
 <ul>
 <li>both columns and rows, only the rows  are removed.</li>
 <li>only columns, the command does nothing.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>Rows are deleted from bottom to top.</p>
+</blockquote>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-16"></a><a href="#ejemplo-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To delete rows selected by the user (in the image below rows 1, 2, and 3):</p>
@@ -672,7 +678,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-17"></a><a href="#descripción-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP EXPORT DOCUMENT</code> command exports the 4D View Pro object attached to the 4D View Pro area <em>vpAreaName</em> to a document on disk according to the <em>filePath</em> and <em>paramObj</em> parameters.</p>
+<p>The <code>VP EXPORT DOCUMENT</code> commandexports the 4D View Pro object attached to the 4D View Pro area <em>vpAreaName</em> to a document on disk according to the <em>filePath</em> and <em>paramObj</em> parameters.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In <em>filePath</em>, pass the destination path and name of the document to be exported. If you don't specify a path, the document will be saved at the same level as the Project folder.</p>
 <p>You can specify the exported file's format by including an extension after the document's name:</p>
@@ -799,7 +805,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-18"></a><a href="#descripción-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Export to object</code> command  returns the 4D View Pro object attached to the 4D View Pro area <em>vpAreaName</em>. You can use this command for example to store the 4D View Pro area in a 4D database object field.</p>
+<p>The <code>VP Convert from 4D View</code> commandallows you to convert a legacy 4D View document into a 4D View Pro object.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In the <em>option</em> parameter, you can pass the following export option, if required:</p>
 <table>
@@ -842,10 +848,10 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-19"></a><a href="#descripción-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Find</code> command searches the <em>rangeObj</em> for the <em>searchValue</em>. Optional parameters can be used to refine the search and/or replace any results found.</p>
+<p>The <code>VP Find</code> commandsearches the <em>rangeObj</em> for the <em>searchValue</em>. Optional parameters can be used to refine the search and/or replace any results found.</p>
 <p>In the <em>rangeObj</em> parameter, pass an object containing a range to search.</p>
 <p>The <em>searchValue</em> parameter lets you pass the text to search for within the <em>rangeObj</em>.</p>
-<p>You can pass the optional <em>searchCondition</em> parameter to specify how the search is performed. The following properties are supported:</p>
+<p>You can pass the optional <em>searchCondition</em> parameter to specify how the search is performed. Se soportan las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
@@ -854,7 +860,7 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 <tr><td>afterColumn</td><td>Integer</td><td>The number of the column just before the starting column of the search. If the <em>rangeObj</em> is a combined range, the column number given must be from the first range. Default value: -1 (beginning of the <em>rangeObj</em>)</td></tr>
 <tr><td>afterRow</td><td>Integer</td><td>The number of the row just before the starting row of the search. If the <em>rangeObj</em> is a combined range, the row number given must be from the first range. Default value: -1 (beginning of the <em>rangeObj</em>)</td></tr>
 <tr><td>all</td><td>Booleano</td><td><li>True - All cells in <em>rangeObj</em> corresponding to <em>searchValue</em> are returned</li><li>False - (default value) Only the first cell in <em>rangeObj</em> corresponding to <em>searchValue</em> is returned</li></td></tr>
-<tr><td>flags</td><td>Integer</td><td><table><tr><td><code>vk find flag exact match</code></td><td>The entire content of the cell must completely match the search value</td></tr><tr><td><code>vk find flag ignore case</code></td><td>Capital and lower-case letters are considered the same. Ex: &quot;a&quot; is the same as &quot;A&quot;.</td></tr><tr><td><code>vk find flag none</code></td><td>no search flags are considered (default)</td></tr><tr><td><code>vk find flag use wild cards</code></td><td>Wildcard characters (*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>* for zero or multiple characters (for example, searching for &quot;bl*&quot;  can find &quot;bl&quot;, &quot;black&quot;, or &quot;blob&quot;)</li><li>? for a single character (for example, searching for &quot;h?t&quot; can find &quot;hot&quot;, or &quot;hit&quot;</li></td></tr></table><p>These flags can be combined. Por ejemplo:<p> <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code></p></td></tr>
+<tr><td>flags</td><td>Integer</td><td><table><tr><td><code>vk find flag exact match</code></td><td>The entire content of the cell must completely match the search value</td></tr><tr><td><code>vk find flag ignore case</code></td><td>Capital and lower-case letters are considered the same. Ex: &quot;a&quot; is the same as &quot;A&quot;.</td></tr><tr><td><code>vk find flag none</code></td><td>no search flags are considered (default)</td></tr><tr><td><code>vk find flag use wild cards</code></td><td>Wildcard characters (*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>* for zero or multiple characters (for example, searching for &quot;bl*&quot;  can find &quot;bl&quot;, &quot;black&quot;, or &quot;blob&quot;)</li><li>? ? for a single character (for example, searching for &quot;h?t&quot; can find &quot;hot&quot;, or &quot;hit&quot;</li></td></tr></table><p>These flags can be combined. Por ejemplo:<p> <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code></p></td></tr>
 <tr><td>order</td><td>Integer</td><td><table><tr><td><code>vk find order by columns</code></td><td>The search is performed by columns. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td><code>vk find order by rows</code></td><td>The search is performed by rows. Each column of a row is searched before the search continues to the next row (default)</td></tr></table></td></tr>
 <tr><td>target</td><td>Integer</td><td><table><tr><td><code>vk find target formula</code></td><td>The search is performed in the cell formula</td></tr><tr><td><code>vk find target tag</code></td><td>The search is performed in the cell tag</td></tr><tr><td><code>vk find target text</code></td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. Por ejemplo:<p> <code>$search.target:=vk find target formula+vk find target text</code></p></td></tr>
 </tbody>
@@ -902,7 +908,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-20"></a><a href="#descripción-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP FLUSH COMMANDS</code> command immediately executes stored commands and clears the command buffer.</p>
+<p>The <code>VP FLUSH COMMANDS</code> commandimmediately executes stored commands and clears the command buffer.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In order to increase performance and reduce the number of requests sent, the 4D View Pro commands called by the developer are stored in a command buffer. When called, <code>VP FLUSH COMMANDS</code> executes the commands as a batch when leaving the method and empties the contents of the command buffer.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-17"></a><a href="#ejemplo-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -925,7 +931,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-21"></a><a href="#descripción-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Font to object</code> utility command returns an object from a font shorthand string. This object can then be used to set or get font property settings via object notation.</p>
+<p>The <code>VP Object to font</code> commandreturns a font shorthand string from <em>fontObj</em>.</p>
 <p>In the <em>font</em> parameter, pass a font shorthand string to specify the different properties of a font (e.g., &quot;12 pt Arial&quot;). You can learn more about font shorthand strings <a href="https://www.w3schools.com/cssref/pr_font_font.asp">in this page</a> for example.</p>
 <p>The returned object contains defined font attributes as properties. For more information about the available properties, see the <a href="#vp-object-to-font">VP Object to font</a> command.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-4"></a><a href="#ejemplo-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
@@ -984,7 +990,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-23"></a><a href="#descripción-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get cell style</code> command returns a <a href="/docs/es/ViewPro/configuring.html#style-objects">style object</a> for the first cell in the <em>rangeObj</em>.</p>
+<p>The <code>VP Get cell style</code> commandreturns a <a href="/docs/es/ViewPro/configuring.html#style-objects">style object</a> for the first cell in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range containing the style to retrieve.</p>
 <ul>
 <li>If <em>rangeObj</em> contains a cell range, the cell style is returned.</li>
@@ -1026,7 +1032,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-24"></a><a href="#descripción-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get column attributes</code> command returns a collection of properties for any column in the <em>rangeObj</em>.</p>
+<p>The <code>VP Get column attributes</code> commandreturns a collection of properties for any column in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of the columns whose attributes will be retrieved.</p>
 <p>The returned collection contains any properties for the columns, whether or not they have been set by the <a href="#vp-set-column-attributes">VP SET COLUMN ATTRIBUTES</a> command.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-20"></a><a href="#ejemplo-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1076,7 +1082,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-26"></a><a href="#descripción-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get current sheet</code> command returns the index of the current sheet in <em>vpAreaName</em>. The current sheet is the selected sheet in the document.</p>
+<p>The <code>VP Get current sheet</code> commandreturns the index of the current sheet in <em>vpAreaName</em>. The current sheet is the selected sheet in the document.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <blockquote>
 <p>Indexing starts at 0.</p>
@@ -1102,7 +1108,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-27"></a><a href="#descripción-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get default style</code> command returns a default style object for a sheet. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the <a href="#vp-set-default-style">VP SET DEFAULT STYLE</a> method. For more information about style properties, see <a href="/docs/es/ViewPro/configuring.html#style-objects--style-sheets">Style Objects &amp; Style Sheets</a>.</p>
+<p>The <code>VP Get default style</code> commandreturns a default style object for a sheet. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the <a href="#vp-set-default-style">VP SET DEFAULT STYLE</a> method. For more information about style properties, see <a href="/docs/es/ViewPro/configuring.html#style-objects--style-sheets">Style Objects &amp; Style Sheets</a>.</p>
 <p>In <em>vpAreaName</em>, pass the name property of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>You can define where to get the column count in the optional <em>sheet</em> parameter using the sheet index (counting begins at 0). If omitted or if you pass <code>vk current sheet</code>, the current spreadsheet is used.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-23"></a><a href="#ejemplo-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1133,7 +1139,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-28"></a><a href="#descripción-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get formula</code> command retrieves the formula from a designated cell range.</p>
+<p>The <code>VP Get formula</code> commandretrieves the formula from a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range whose formula you want to retrieve. If <em>rangeObj</em> designates multiple cells or multiple ranges, the formula of the first cell is returned. If <em>rangeObj</em> is a cell that does not contain a formula, the method returns an empty string.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-24"></a><a href="#ejemplo-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//set a formula</span>
@@ -1200,7 +1206,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-30"></a><a href="#descripción-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get formulas</code> command retrieves the formulas from a designated <em>rangeObj</em>.</p>
+<p>The <code>VP Get formulas</code> commandretrieves the formulas from a designated <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range whose formulas you want to retrieve. If <em>rangeObj</em> designates multiple ranges, the formula of the first range is returned. If <em>rangeObj</em> does not contain any formulas, the command returns an empty string.</p>
 <p>The returned collection is two-dimensional:</p>
 <ul>
@@ -1309,7 +1315,7 @@ size:<span class="hljs-number">16</span>pt
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-33"></a><a href="#descripción-33" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get print info</code> command returns an object containing the print attributes of the <em>vpAreaName</em>.</p>
+<p>The <code>VP Get print info</code> commandreturns an object containing the print attributes of the <em>vpAreaName</em>.</p>
 <p>Pass the the name of the 4D View Pro area in <em>vpAreaName</em>. If you pass a name that does not exist, an error is returned.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  If omitted or if you pass <code>vk current sheet</code>, the current spreadsheet is used.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-29"></a><a href="#ejemplo-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1374,7 +1380,7 @@ zoomFactor:<span class="hljs-number">1</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-34"></a><a href="#descripción-34" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get row attributes</code> command returns a collection of properties for any row in the <em>rangeObj</em>.</p>
+<p>The <code>VP Get row attributes</code> commandreturns a collection of properties for any row in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of the rows whose attributes will be retrieved.</p>
 <p>The returned collection contains any properties for the rows, whether or not they have been set by the <a href="#vp-set-row-attributes">VP SET ROW ATTRIBUTES</a> method.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-30"></a><a href="#ejemplo-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1424,7 +1430,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-36"></a><a href="#descripción-36" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get selection</code> command returns a new range object referencing the current selected cells.</p>
+<p>The <code>VP Get selection</code> commandreturns a new range object referencing the current selected cells.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass <code>vk current sheet</code>, the current spreadsheet is used.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-32"></a><a href="#ejemplo-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1478,7 +1484,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-38"></a><a href="#descripción-38" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get sheet index</code> command returns the index of a sheet based on its name in <em>vpAreaName</em>.</p>
+<p>The <code>VP Get sheet index</code> commandreturns the index of a sheet based on its name in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>name</em>, pass the name of the sheet whose index will be returned. If no sheet named <em>name</em> is found in the document, the method returns -1.</p>
 <blockquote>
@@ -1531,7 +1537,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-40"></a><a href="#descripción-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get sheet options</code> command returns an object containing the current sheet options of the <em>vpAreaName</em> area.</p>
+<p>The <code>VP Get sheet options</code> commandreturns an object containing the current sheet options of the <em>vpAreaName</em> area.</p>
 <p>Pass the name of the 4D View Pro area in <em>vpAreaName</em>. If you pass a name that does not exist, an error is returned.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet (counting begins at 0). If omitted or if you pass <code>vk current sheet</code>, the current spreadsheet is used.</p>
 <h4><a class="anchor" aria-hidden="true" id="objeto-devuelto-1"></a><a href="#objeto-devuelto-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto devuelto</h4>
@@ -1558,7 +1564,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-41"></a><a href="#descripción-41" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get show print lines</code> command returns <code>True</code> if the print preview lines are visible and <code>False</code> if they are hidden.</p>
+<p>The <code>VP Get show print lines</code> commandreturns <code>True</code> if the print preview lines are visible and <code>False</code> if they are hidden.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>sheet</em>, pass the index of the target sheet. If <em>sheet</em> is omitted, the command applies to the current sheet.</p>
 <blockquote>
@@ -1583,7 +1589,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-42"></a><a href="#descripción-42" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get spans</code> command retrieves the cell spans in the designated <em>rangeObj</em>.</p>
+<p>The <code>VP Get spans</code> commandretrieves the cell spans in the designated <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range of cell spans you want to retrieve. If <em>rangeObj</em> does not contain a cell span, an empty range is returned.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-38"></a><a href="#ejemplo-38" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to center the text for the spanned cells in this document:</p>
@@ -1611,7 +1617,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-43"></a><a href="#descripción-43" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get stylesheet</code> command returns the <em>styleName</em> style sheet object containing the property values which have been defined.</p>
+<p>The <code>VP Get stylesheet</code> commandreturns the <em>styleName</em> style sheet object containing the property values which have been defined.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In <em>styleName</em>, pass the name of the style sheet to get.</p>
 <p>You can define where to get the style sheet in the optional <em>scope</em> parameter using the sheet index (counting begins at 0) or with the following constants:</p>
@@ -1647,7 +1653,7 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-44"></a><a href="#descripción-44" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get stylesheets</code> command returns the collection of defined style sheet objects from the designated <em>scope</em>.</p>
+<p>The <code>VP Get stylesheets</code> commandreturns the collection of defined style sheet objects from the designated <em>scope</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name property of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>You can define where to get the style sheets in the optional <em>scope</em> parameter using the sheet index (counting begins at 0) or with the following constants:</p>
 <ul>
@@ -1689,7 +1695,7 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-45"></a><a href="#descripción-45" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get value</code> command retrieves a cell value from a designated cell range.</p>
+<p>The <code>VP Get value</code> commandretrieves a cell value from a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range whose value you want to retrieve.</p>
 <h4><a class="anchor" aria-hidden="true" id="objeto-devuelto-2"></a><a href="#objeto-devuelto-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto devuelto</h4>
 <p>The object returned will contain the <code>value</code> property, as well as a <code>time</code> property in case of date value:</p>
@@ -1729,7 +1735,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-46"></a><a href="#descripción-46" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Get values</code> command  retrieves the values from the designated <em>rangeObj</em>.</p>
+<p>The <code>VP Get values</code> commandretrieves the values from the designated <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range whose values you want to retrieve. If <em>rangeObj</em> includes multiple ranges, only the first range is used.</p>
 <p>The collection returned by <code>VP Get values</code> contains a two-dimensional collection:</p>
 <ul>
@@ -1773,7 +1779,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-47"></a><a href="#descripción-47" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p><code>VP Get workbook options</code> returns an object containing all the workbook options in <em>vpAreaName</em></p>
+<p><code>VP Get workbook options</code>returns an object containing all the workbook options in <em>vpAreaName</em></p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>The returned object contains all the workbook options (default and modified ones), in the workbook.</p>
 <p>The list of workbook options is referenced in <a href="#vp-set-workbook-options"><code>VP SET WORKBOOK OPTIONS</code>'s description</a>.</p>
@@ -1798,7 +1804,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-48"></a><a href="#descripción-48" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP IMPORT DOCUMENT</code> command imports and displays the document designated by <em>filePath</em> in the 4D View Pro area <em>vpAreaName</em>. The imported document replaces any data already inserted in the area.</p>
+<p>The <code>VP IMPORT DOCUMENT</code> commandimports and displays the document designated by <em>filePath</em> in the 4D View Pro area <em>vpAreaName</em>. The imported document replaces any data already inserted in the area.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In <em>filePath</em>, pass the path and name of the document to be imported. The following formats are supported :</p>
 <ul>
@@ -1865,7 +1871,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-49"></a><a href="#descripción-49" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP IMPORT FROM OBJECT</code> command imports and displays the <em>viewPro</em> 4D View Pro object in the <em>vpAreaName</em> 4D View Pro area. The imported object contents replaces any data already inserted in the area.</p>
+<p>The <code>VP IMPORT FROM OBJECT</code> commandimports and displays the <em>viewPro</em> 4D View Pro object in the <em>vpAreaName</em> 4D View Pro area. The imported object contents replaces any data already inserted in the area.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>In <em>viewPro</em>, pass a valid 4D View Pro object. This object can have been created using <a href="#vp-export-to-object">VP Export to object</a> or manually. For more information on 4D View Pro objects, please refer to the <a href="languageOverview.html#4d-view-pro-object">4D View Pro object</a> section.</p>
 <p>An error is returned if the <em>viewPro</em> object is invalid.</p>
@@ -1887,7 +1893,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-50"></a><a href="#descripción-50" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP INSERT COLUMNS</code> command inserts columns into the <em>rangeObj</em>.</p>
+<p>The <code>VP INSERT COLUMNS</code> commandinserts columns into the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. If the number of column to insert is omitted (not defined), a single column is inserted.</p>
 <p>New columns are inserted on the left, directly before the starting column in the <em>rangeObj</em>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-45"></a><a href="#ejemplo-45" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1909,7 +1915,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-51"></a><a href="#descripción-51" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP INSERT ROWS</code> command inserts rows defined by the <em>rangeObj</em>.</p>
+<p>The <code>VP INSERT ROWS</code> commandinserts rows defined by the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. If the number of rows to insert is omitted (not defined), a single row is inserted.</p>
 <p>New rows are inserted directly before the first row in the <em>rangeObj</em>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-46"></a><a href="#ejemplo-46" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -1944,7 +1950,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-52"></a><a href="#descripción-52" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP MOVE CELLS</code> command moves or copies the values, style and formulas from <em>originRange</em> to <em>targetRange</em>.</p>
+<p>The <code>VP MOVE CELLS</code> commandmoves or copies the values, style and formulas from <em>originRange</em> to <em>targetRange</em>.</p>
 <p><em>originRange</em> and <em>targetRange</em> can refer to different View Pro areas.</p>
 <p>In <em>originRange</em>, pass a range object containing the values, style, and formula cells to copy or move. If <em>originRange</em> is a combined range, only the first one is used.</p>
 <p>In <em>targetRange</em>, pass the range of cells where the cell values, style, and formulas will be copied or moved.</p>
@@ -1990,7 +1996,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-53"></a><a href="#descripción-53" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Name</code> command returns a new range object referencing a named range.</p>
+<p>The <code>VP Name</code> commandreturns a new range object referencing a named range.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>The <em>rangeName</em> parameter specifies an existing named cell range.</p>
 <p>In the optional <em>scope</em> parameter, you can designate a specific spreadsheet where <em>rangeName</em> is defined. If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet or the entire workbook with the following constants:</p>
@@ -2018,7 +2024,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-54"></a><a href="#descripción-54" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP NEW DOCUMENT</code> command loads and display a new, default document in the 4D View Pro form area object <em>vpAreaName</em>. The new empty document replaces any data already inserted in the area.</p>
+<p>The <code>VP NEW DOCUMENT</code> commandloads and display a new, default document in the 4D View Pro form area object <em>vpAreaName</em>. The new empty document replaces any data already inserted in the area.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-49"></a><a href="#ejemplo-49" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to display an empty document in the &quot;myVPArea&quot; form object:</p>
@@ -2040,8 +2046,8 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-55"></a><a href="#descripción-55" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Object to font</code> command returns a font shorthand string from <em>fontObj</em>.</p>
-<p>In <em>fontObj</em>, pass an object containing the font properties. The following properties are supported:</p>
+<p>The <code>VP Font to object</code> utility commandreturns an object from a font shorthand string.</p>
+<p>In <em>fontObj</em>, pass an object containing the font properties. Se soportan las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th><th>Possible values</th><th>Mandatory</th></tr>
@@ -2093,7 +2099,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-56"></a><a href="#descripción-56" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP PASTE FROM OBJECT</code> command pastes the contents, style and formulas stored in <em>dataObject</em> to the <em>rangeObj</em> object.</p>
+<p>The <code>VP PASTE FROM OBJECT</code> commandpastes the contents, style and formulas stored in <em>dataObject</em> to the <em>rangeObj</em> object.</p>
 <p>In <em>rangeObj</em>, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If <em>rangeObj</em> refers to more than one cell, only the first one is used.</p>
 <p>In <em>dataObject</em>, pass the object that contains the cell data, formatting, and formulas to be pasted.</p>
 <p>In the optional <em>options</em> parameter, you can specify what to paste in the cell range. Valores posibles:</p>
@@ -2128,7 +2134,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-57"></a><a href="#descripción-57" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP PRINT</code> command opens a print dialog window to print <em>vpAreaName</em>.</p>
+<p>The <code>VP PRINT</code> commandopens a print dialog window to print <em>vpAreaName</em>.</p>
 <p>Pass the 4D View Pro area to be printed in <em>vpAreaName</em>. The command will open the system print dialog window where the printer can be specified and the page properties can be defined.</p>
 <blockquote>
 <p>The properties defined in the print dialog window are for the printer paper, they are not the printing properties for the 4D View Pro area. Printing properties for 4D View Pro areas are defined using the <a href="#vp-set-print-info">VP SET PRINT INFO</a> command. It is highly recommended that the properties for both the printer and the 4D View Pro area match, otherwise the printed document may not correspond to your expectations.</p>
@@ -2165,7 +2171,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-58"></a><a href="#descripción-58" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP RECOMPUTE FORMULAS</code> command immediately evaluates all formulas in <em>vpAreaName</em>. By default, 4D automatically computes formulas when they are inserted, imported, or exported. <code>VP RECOMPUTE FORMULAS</code> allows you to force the compute at any time (e.g, in case modifications are made to the formulas or if the formulas contain calls to the database). The command launches the execution of the <a href="#vp-flush-commands">VP FLUSH COMMANDS</a> command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.</p>
+<p>The <code>VP RECOMPUTE FORMULAS</code> commandimmediately evaluates all formulas in <em>vpAreaName</em>. By default, 4D automatically computes formulas when they are inserted, imported, or exported. <code>VP RECOMPUTE FORMULAS</code> allows you to force the compute at any time (e.g, in case modifications are made to the formulas or if the formulas contain calls to the database). The command launches the execution of the <a href="#vp-flush-commands">VP FLUSH COMMANDS</a> command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <blockquote>
 <p>Be sure the <a href="#vp-suspend-computing">VP SUSPEND COMPUTING</a> command has not been executed before using <code>VP RECOMPUTE FORMULAS</code>, otherwise the command does nothing.</p>
@@ -2189,7 +2195,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-59"></a><a href="#descripción-59" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP REMOVE NAME</code> command removes the named range or named formula passed in the <em>name</em> parameter in the defined <em>scope</em>.</p>
+<p>The <code>VP REMOVE NAME</code> commandremoves the named range or named formula passed in the <em>name</em> parameter in the defined <em>scope</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>Pass the named range or named formula that you want to remove in <em>name</em>.</p>
 <p>You can define where to remove the name in <em>scope</em> using either the sheet index (counting begins at 0) or the following constants:</p>
@@ -2221,7 +2227,7 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="ver-también-56"></a><a href="#ver-también-56" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también</h4>
 <p><a href="#vp-add-sheet">VP ADD SHEET</a></p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-60"></a><a href="#descripción-60" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP REMOVE SHEET</code> command removes the sheet with the specified <em>index</em> from the document loaded in <em>vpAreaName</em>.</p>
+<p>The <code>VP REMOVE SHEET</code> commandremoves the sheet with the specified <em>index</em> from the document loaded in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>index</em>, pass the index of the sheet to remove. If the passed <em>index</em> does not exist, the command does nothing.</p>
 <blockquote>
@@ -2245,7 +2251,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-61"></a><a href="#descripción-61" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP REMOVE SPAN</code> command removes the span from the cells in <em>rangeObj</em>.</p>
+<p>The <code>VP REMOVE SPAN</code> commandremoves the span from the cells in <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range object of the cell span. The spanned cells in the range are divided into individual cells.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-56"></a><a href="#ejemplo-56" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To remove all cell spans from this document:</p>
@@ -2274,7 +2280,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-62"></a><a href="#descripción-62" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP REMOVE STYLESHEET</code> command removes the style sheet passed in the <em>styleName</em> from the <em>vpAreaName</em>.</p>
+<p>The <code>VP REMOVE STYLESHEET</code> commandremoves the style sheet passed in the <em>styleName</em> from the <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>Pass the style sheet to remove in the <em>styleName</em> parameter.</p>
 <p>You can define where to remove the style in the optional <em>scope</em> parameter using the sheet index (counting begins at 0) or with the following constants:</p>
@@ -2300,7 +2306,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-63"></a><a href="#descripción-63" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP RESET SELECTION</code> command deselects all cells, resulting in no current selection or visible active cell.</p>
+<p>The <code>VP RESET SELECTION</code> commanddeselects all cells, resulting in no current selection or visible active cell.</p>
 <blockquote>
 <p>A default active cell (cell A1) remains defined for 4D View Pro commands.</p>
 </blockquote>
@@ -2326,7 +2332,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-64"></a><a href="#descripción-64" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP RESUME COMPUTING</code> command  restarts the calculation of formulas in <em>vpAreaName</em>.</p>
+<p>The <code>VP RESUME COMPUTING</code> commandrestarts the calculation of formulas in <em>vpAreaName</em>.</p>
 <p>The command reactivates the calculation service in 4D View Pro. Any formulas impacted by changes made while calculations were suspended are updated, and formulas added after <code>VP RESUME COMPUTING</code> is executed are calculated.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <blockquote>
@@ -2351,9 +2357,9 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-65"></a><a href="#descripción-65" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Row</code> command returns a new range object referencing a specific row or rows.</p>
+<p>The <code>VP Row</code> commandreturns a new range object referencing a specific row or rows.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
-<p>The <em>row</em> parameter defines the first row of the row range. Pass the row index (counting begins at 0) in this parameter. If the range contains multiple rows, you should also use the optional <em>rowCount</em> parameter.</p>
+<p>The <em>row</em> parameter defines the first row of the row range. Pass the row index (counting begins at 0) in this parameter. Pass the row index (counting begins at 0) in this parameter.</p>
 <p>The optional <em>rowCount</em> parameter allows you to define the total number of rows of the range. <em>rowCount</em> must be greater than 0. If omitted, the value will be set to 1 by default.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If not specified, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
 <ul>
@@ -2379,7 +2385,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-66"></a><a href="#descripción-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP ROW AUTOFIT</code> command automatically sizes the row(s) in <em>rangeObj</em> according to their contents.</p>
+<p>The <code>VP ROW AUTOFIT</code> commandautomatically sizes the row(s) in <em>rangeObj</em> according to their contents.</p>
 <p>In <em>rangeObj</em>, pass a range object containing a range of the rows whose size will be automatically handled.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-61"></a><a href="#ejemplo-61" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>The following rows don't correctly display the text:</p>
@@ -2402,7 +2408,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-67"></a><a href="#descripción-67" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP Run offscreen area</code> command creates an offscreen area in memory which can be used to process 4D View Pro area commands and functions.</p>
+<p>The <code>VP Run offscreen area</code> commandcreates an offscreen area in memory which can be used to process 4D View Pro area commands and functions.</p>
 <p>In <em>parameters</em> object, pass any of the following optional properties. These properties will be available through the <code>This</code> command within the <code>onEvent</code> method and reference the instance:</p>
 <table>
 <thead>
@@ -2516,7 +2522,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-68"></a><a href="#descripción-68" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET ACTIVE CELL</code> command defines a specified cell as active.</p>
+<p>The <code>VP SET ACTIVE CELL</code> commanddefines a specified cell as active.</p>
 <p>In <em>rangeObj</em>, pass a range containing a single cell as an object (see <a href="#vp-cell">VP Cell</a>). If <em>rangeObj</em> is not a cell range or contains multiple ranges, the first cell of the first range is used.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-62"></a><a href="#ejemplo-62" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To set the cell in column D, row 5 as the active cell:</p>
@@ -2541,8 +2547,8 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>For greater flexiblity, it is recommended to use the <a href="#vp-set-custom-functions"><code>VP SET CUSTOM FUNCTIONS</code></a> command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as <code>VP SET CUSTOM FUNCTIONS</code> is called, <code>VP SET ALLOWED METHODS</code> calls are ignored. 4D View Pro also supports 4D's generic <code>SET ALLOWED METHODS</code> command if neither <code>VP SET CUSTOM FUNCTIONS</code> nor <code>VP SET ALLOWED METHODS</code> are called, however using the generic command is not recommended.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="descripción-69"></a><a href="#descripción-69" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET ALLOWED METHODS</code> command designates the project methods that can be called in 4D View Pro formulas. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.</p>
-<p>By default for security reasons, if you do not execute the <code>VP SET ALLOWED METHODS</code> command, no method call is allowed in 4D View Pro areas -- except if 4D's generic <code>SET ALLOWED METHODS</code> command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area.</p>
+<p>The <code>VP SET ALLOWED METHODS</code> commanddesignates the project methods that can be called in 4D View Pro formulas. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.</p>
+<p>By default for security reasons, if you do not execute the <code>VP SET ALLOWED METHODS</code> command, no method call is allowed in 4D View Pro areas -- except if 4D's generic <code>SET ALLOWED METHODS</code> command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area. error in the 4D View Pro area.</p>
 <p>In the <em>methodObj</em> parameter, pass an object in which each property is the name of a function to define in the 4D View Pro areas:</p>
 <table>
 <thead>
@@ -2599,7 +2605,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-70"></a><a href="#descripción-70" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET BOOLEAN VALUE</code> command assigns a specified boolean value to a designated cell range.</p>
+<p>The <code>VP SET BOOLEAN VALUE</code> commandassigns a specified boolean value to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The <em>boolValue</em> parameter allows you to pass the boolean value (<strong>True</strong> or <strong>False</strong>) that will be assigned to the <em>rangeObj</em>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-64"></a><a href="#ejemplo-64" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -2621,7 +2627,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-71"></a><a href="#descripción-71" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET BORDER</code> command applies the border style(s) defined in <em>borderStyleObj</em> and <em>borderPosObj</em> to the range defined in the <em>rangeObj</em>.</p>
+<p>The <code>VP SET BORDER</code> commandapplies the border style(s) defined in <em>borderStyleObj</em> and <em>borderPosObj</em> to the range defined in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range of cells where the border style will be applied. If the <em>rangeObj</em> contains multiple cells, borders applied with <code>VP SET BORDER</code> will be applied to the <em>rangeObj</em> as a whole (as opposed to the <a href="#vp-set-cell-style"><code>VP SET CELL STYLE</code></a> command which applies borders to each cell of the <em>rangeObj</em>). If a style sheet has already been applied, <code>VP SET BORDER</code> will override the previously applied border settings for the <em>rangeObj</em>.</p>
 <p>The <em>borderStyleObj</em> parameter allows you to define the style for the lines of the border. The <em>borderStyleObj</em> supports the following properties:</p>
 <table>
@@ -2685,7 +2691,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-72"></a><a href="#descripción-72" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET CELL STYLE</code> command applies the style(s) defined in the <em>styleObj</em> to the cells defined in the <em>rangeObj</em>.</p>
+<p>The <code>VP SET CELL STYLE</code> commandapplies the style(s) defined in the <em>styleObj</em> to the cells defined in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range of cells where the style will be applied. If the <em>rangeObj</em> contains multiple cells, the style is applied to each cell.</p>
 <blockquote>
 <p>Borders applied with <code>VP SET CELL STYLE</code> will be applied to each cell of the <em>rangeObj</em>, as opposed to the <a href="#vp-set-border">VP SET BORDER</a> command which applies borders to the <em>rangeObj</em> as a whole.</p>
@@ -2718,7 +2724,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-73"></a><a href="#descripción-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET COLUMN ATTRIBUTES</code> command  applies the attributes defined in the <em>propertyObj</em> to the columns in the <em>rangeObj</em>.</p>
+<p>The <code>VP SET COLUMN ATTRIBUTES</code> commandapplies the attributes defined in the <em>propertyObj</em> to the columns in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range. If the range contains both columns and rows, attributes are applied only to the columns.</p>
 <p>The <em>propertyObj</em> parameter lets you specify the attributes to apply to the columns in the <em>rangeObj</em>. These attributes are:</p>
 <table>
@@ -2758,7 +2764,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-74"></a><a href="#descripción-74" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET COLUMN COUNT</code> command defines the total number of columns in <em>vpAreaName</em>.</p>
+<p>The <code>VP SET COLUMN COUNT</code> commanddefines the total number of columns in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>Pass the total number of columns in the <em>columnCount</em> parameter. <em>columnCount</em> must be greater than 0.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the <em>columnCount</em> will be applied (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
@@ -2784,7 +2790,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-75"></a><a href="#descripción-75" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET CURRENT SHEET</code> command sets the current sheet in <em>vpAreaName</em> . The current sheet is the selected sheet in the document.</p>
+<p>The <code>VP SET CURRENT SHEET</code> commandsets the current sheet in <em>vpAreaName</em> . The current sheet is the selected sheet in the document.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>index</em>, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.</p>
 <blockquote>
@@ -2811,7 +2817,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-76"></a><a href="#descripción-76" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET CUSTOM FUNCTIONS</code> command designates the 4D formulas that can be called directly from 4D View Pro formulas. Because custom functions are not stored in the document,<code>VP SET CUSTOM FUNCTIONS</code> must be executed in the <code>On Load</code> form event.</p>
+<p>The <code>VP SET CUSTOM FUNCTIONS</code> commanddesignates the 4D formulas that can be called directly from 4D View Pro formulas. Because custom functions are not stored in the document,<code>VP SET CUSTOM FUNCTIONS</code> must be executed in the <code>On Load</code> form event.</p>
 <p>The formulas specified by <code>VP SET CUSTOM FUNCTIONS</code> appear in a pop-up menu when the first letter of their name is entered. See the <a href="/docs/es/ViewPro/formulas.html">Formulas and Functions</a> page.</p>
 <blockquote>
 <p>If <code>VP SET CUSTOM FUNCTIONS</code> is called multiple times for the same area, in the same session, only the last call is taken into account.</p>
@@ -2890,7 +2896,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-77"></a><a href="#descripción-77" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET DATE TIME VALUE</code> command assigns a specified date and time value to a designated cell range.</p>
+<p>The <code>VP SET DATE TIME VALUE</code> commandassigns a specified date and time value to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The <em>dateValue</em> parameter specifies a date value to be assigned to the <em>rangeObj</em>.</p>
 <p>The <em>timeValue</em> parameter specifies a time value (expressed in seconds) to be assigned to the <em>rangeObj</em>.</p>
@@ -2917,7 +2923,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-78"></a><a href="#descripción-78" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET DATE VALUE</code> command assigns a specified date value to a designated cell range.</p>
+<p>The <code>VP SET DATE VALUE</code> commandassigns a specified date value to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The <em>dateValue</em> parameter specifies a date value to be assigned to the <em>rangeObj</em>.</p>
 <p>The optional <em>formatPattern</em> defines a pattern for the <em>dateValue</em> parameter. Pass any custom format or you can use one of the following constants:</p>
@@ -2956,7 +2962,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-79"></a><a href="#descripción-79" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET DEFAULT STYLE</code> command defines the style in the <em>styleObj</em> as the default style for a <em>sheet</em>.</p>
+<p>The <code>VP SET DEFAULT STYLE</code> commanddefines the style in the <em>styleObj</em> as the default style for a <em>sheet</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>The <em>styleObj</em> lets you pass an object containing style settings. You can use an existing style sheet or you can create a new style. For more information, see the <a href="/docs/es/ViewPro/configuring.html#style-objects">Style objects</a> paragraph.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the style will be defined. If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
@@ -2987,8 +2993,8 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-80"></a><a href="#descripción-80" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET FIELD</code> command assigns a 4D database virtual field to a designated cell range.</p>
-<p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the specified field will be linked in each cell.</p>
+<p>The <code>VP SET FIELD</code> commandassigns a 4D database virtual field to a designated cell range.</p>
+<p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify.</p>
 <p>The <em>field</em> parameter specifies a 4D database <a href="/docs/es/ViewPro/formulas.html#referencing-fields-using-the-virtual-structure">virtual field</a> to be assigned to the <em>rangeObj</em>. The virtual structure name for <em>field</em> can be viewed in the formula bar. If any of the cells in <em>rangeObj</em> have existing content, it will be replaced by <em>field</em>.</p>
 <p>The optional <em>formatPattern</em> defines a pattern for the <em>field</em> parameter. You can pass any valid <a href="/docs/es/ViewPro/configuring.html#cell-format">custom format</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-73"></a><a href="#ejemplo-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -3009,8 +3015,8 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-81"></a><a href="#descripción-81" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET FORMULA</code> command assigns a specified formula or 4D method to a designated cell range.</p>
-<p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the formula specified will be linked in each cell.</p>
+<p>The <code>VP SET FORMULA</code> commandassigns a specified formula or 4D method to a designated cell range.</p>
+<p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify.</p>
 <p>The <em>formula</em> parameter specifies a formula or 4D method name to be assigned to the <em>rangeObj</em>. If a 4D method is used, it must be allowed with the <a href="#vp-set-allowed-method"><code>VP SET ALLOWED METHODS</code></a> command.</p>
 <p>The optional <em>formatPattern</em> defines a <a href="/docs/es/ViewPro/configuring.html#cell-format">pattern</a> for the <em>formula</em>.</p>
 <p>You remove the formula in <em>rangeObj</em> by replacing it with an empty string (&quot;&quot;).</p>
@@ -3035,7 +3041,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-82"></a><a href="#descripción-82" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET FORMULAS</code> command assigns a collection of formulas starting at the specified cell range.</p>
+<p>The <code>VP SET FORMULAS</code> commandassigns a collection of formulas starting at the specified cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell (created with <a href="#vp-cell">VP Cell</a>) whose formula you want to specify. If <em>rangeObj</em> includes multiple ranges, only the first range is used.</p>
 <p>The <em>formulasCol</em> is a two-dimensional collection:</p>
 <ul>
@@ -3077,7 +3083,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-83"></a><a href="#descripción-83" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET FROZEN PANES</code> command sets the frozen status of the columns and rows in the <em>paneObj</em> so they are always displayed in the <em>vpAreaName</em>. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen. The location of the line depends on where the frozen column or row is on the sheet:</p>
+<p>The <code>VP SET FROZEN PANES</code> commandsets the frozen status of the columns and rows in the <em>paneObj</em> so they are always displayed in the <em>vpAreaName</em>. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen. The location of the line depends on where the frozen column or row is on the sheet:</p>
 <ul>
 <li><strong>Columns on the left or right</strong>: For columns on the left of the sheet, the line is displayed on the right side of the last frozen column. For columns on the right side of the sheet, the line is displayed on the left side of the first frozen column.</li>
 <li><strong>Rows on the top or bottom</strong>: For rows at the top of the sheet, the line is displayed below the last frozen row. For rows at the bottom of the sheet, the line is displayed above the first frozen row.</li>
@@ -3126,7 +3132,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-84"></a><a href="#descripción-84" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET NUM VALUE</code> command assigns a specified numeric value to a designated cell range.</p>
+<p>The <code>VP SET NUM VALUE</code> commandassigns a specified numeric value to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The <em>numberValue</em> parameter specifies a numeric value to be assigned to the <em>rangeObj</em>.</p>
 <p>The optional <em>formatPattern</em> defines a <a href="/docs/es/ViewPro/configuring.html#cell-format">pattern</a> for the <em>numberValue</em> parameter.</p>
@@ -3152,7 +3158,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-85"></a><a href="#descripción-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET PRINT INFO</code> command defines the attributes to use when printing the <em>vpAreaName</em>.</p>
+<p>The <code>VP SET PRINT INFO</code> commanddefines the attributes to use when printing the <em>vpAreaName</em>.</p>
 <p>Pass the name of the 4D View Pro area to print in <em>vpAreaName</em>. If you pass a name that does not exist, an error is returned.</p>
 <p>You can pass an object containing definitions for various printing attributes in the <em>printInfo</em> parameter. To view the full list of the available attributes, see <a href="/docs/es/ViewPro/configuring.html#print-attributes">Print Attributes</a>.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet to print (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
@@ -3210,7 +3216,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-86"></a><a href="#descripción-86" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET ROW ATTRIBUTES</code> command applies the attributes defined in the <em>propertyObj</em> to the rows in the <em>rangeObj</em>.</p>
+<p>The <code>VP SET ROW ATTRIBUTES</code> commandapplies the attributes defined in the <em>propertyObj</em> to the rows in the <em>rangeObj</em>.</p>
 <p>In the <em>rangeObj</em>, pass an object containing a range. If the range contains both columns and rows, attributes are applied only to the rows.</p>
 <p>The <em>propertyObj</em> parameter lets you specify the attributes to apply to the rows in the <em>rangeObj</em>. These attributes are:</p>
 <table>
@@ -3250,7 +3256,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-87"></a><a href="#descripción-87" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET ROW COUNT</code> command defines the total number of rows in <em>vpAreaName</em>.</p>
+<p>The <code>VP SET ROW COUNT</code> commanddefines the total number of rows in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>Pass the total number of rows in the <em>rowCount</em> parameter. <em>rowCount</em> must be greater than 0.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the <em>rowCount</em> will be applied (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
@@ -3275,7 +3281,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-88"></a><a href="#descripción-88" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET SELECTION</code> command defines the specified cells as the selection and the first cell as the active cell.</p>
+<p>The <code>VP SET SELECTION</code> commanddefines the specified cells as the selection and the first cell as the active cell.</p>
 <p>In <em>rangeObj</em>, pass a range object of cells to designate as the current selection.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-79"></a><a href="#ejemplo-79" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$currentSelection</span>:=<span class="hljs-function">VP Combine ranges</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"myVPArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>;<span class="hljs-number">1</span>;<span class="hljs-number">6</span>);<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"myVPArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">7</span>;<span class="hljs-number">1</span>;<span class="hljs-number">7</span>))
@@ -3296,7 +3302,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-89"></a><a href="#descripción-89" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET SHEET COUNT</code> command sets the number of sheets in <em>vpAreaName</em>.</p>
+<p>The <code>VP SET SHEET COUNT</code> commandsets the number of sheets in <em>vpAreaName</em>.</p>
 <p>In <code>number</code>, pass a number corresponding to how many sheets the document will contain after the command is executed.</p>
 <blockquote>
 <p><strong>Warning</strong>: The command will delete sheets if the previous amount of sheets in your document is superior to the number passed. For example, if there are 5 sheets in your document and you set the sheet count to 3, the command will delete sheets number 4 and 5.</p>
@@ -3323,7 +3329,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-90"></a><a href="#descripción-90" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET SHEET NAME</code> command renames a sheet in the document loaded in <em>vpAreaName</em>.</p>
+<p>The <code>VP SET SHEET NAME</code> commandrenames a sheet in the document loaded in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>name</em>, pass a new name for the sheet.</p>
 <p>In <em>index</em>, pass the index of the sheet to rename.</p>
@@ -3357,7 +3363,7 @@ End case</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-91"></a><a href="#descripción-91" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET SHEET OPTIONS</code> command allows defining various sheet options of the <em>vpAreaName</em> area.</p>
+<p>The <code>VP SET SHEET OPTIONS</code> commandallows defining various sheet options of the <em>vpAreaName</em> area.</p>
 <p>Pass the name of the 4D View Pro area in <em>vpAreaName</em>. If you pass a name that does not exist, an error is returned.</p>
 <p>Pass an object containing definitions for the options to set in the <em>sheetOptions</em> parameter. To view the full list of the available options, see the <a href="/docs/es/ViewPro/configuring.html#sheet-options">Sheet Options</a> paragraph.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
@@ -3448,7 +3454,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-92"></a><a href="#descripción-92" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET SHOW PRINT LINES</code> command  sets whether to display print preview lines in a spreadsheet..</p>
+<p>The <code>VP SET SHOW PRINT LINES</code> commandsets whether to display print preview lines in a spreadsheet..</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>visible</em>, pass <code>True</code> to display the print lines, and <code>False</code> to hide them. <code>True</code> is passed by default.</p>
 <p>In <em>index</em>, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.</p>
@@ -3479,7 +3485,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-93"></a><a href="#descripción-93" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET TEXT VALUE</code> command assigns a specified text value to a designated cell range.</p>
+<p>The <code>VP SET TEXT VALUE</code> commandassigns a specified text value to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The <em>textValue</em> parameter specifies a text value to be assigned to the <em>rangeObj</em>.</p>
 <p>The optional <em>formatPattern</em> defines a <a href="/docs/es/ViewPro/configuring.html#cell-format">pattern</a> for the <em>textValue</em> parameter.</p>
@@ -3501,7 +3507,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-94"></a><a href="#descripción-94" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET TIME VALUE</code> command assigns a specified time value to a designated cell range.</p>
+<p>The <code>VP SET TIME VALUE</code> commandassigns a specified time value to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The <em>timeValue</em> parameter specifies a time expressed in seconds to be assigned to the <em>rangeObj</em>.</p>
 <p>The optional <em>formatPattern</em> defines a <a href="/docs/es/ViewPro/configuring.html#cell-format">pattern</a> for the <em>timeValue</em> parameter.</p>
@@ -3526,7 +3532,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-95"></a><a href="#descripción-95" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET VALUE</code> command assigns a specified value to a designated cell range.</p>
+<p>The <code>VP SET VALUE</code> commandassigns a specified value to a designated cell range.</p>
 <p>The command allows you to use a generic code to set and format the types of values in <em>rangeObj</em>, whereas other commands, such as <a href="#vp-set-text-value"><code>VP SET TEXT VALUE</code></a> and <a href="#vp-set-num-value"><code>VP SET NUM VALUE</code></a>, reduce the values to specific types.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
 <p>The parameter <em>valueObj</em> is an object that includes properties for the value and the <a href="/docs/es/ViewPro/configuring.html#cell-format">format</a> to assign to <em>rangeObj</em>. It can include the following properties :</p>
@@ -3551,6 +3557,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">125571.35</span>;<span class="hljs-string">"format"</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>))
 
 <span class="hljs-comment">//Set the cell value as Hello World!</span>
+<span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
+
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
 
 <span class="hljs-comment">//Set the cell value as current date</span>
@@ -3579,7 +3587,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-96"></a><a href="#descripción-96" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SET VALUES</code> command assigns a collection of values starting at the specified cell range.</p>
+<p>The <code>VP SET VALUES</code> commandassigns a collection of values starting at the specified cell range.</p>
 <p>In <em>rangeObj</em>, pass a range for the cell (created with <a href="#vp-cell"><code>VP Cell</code></a>) whose value you want to specify. The cell defined in the <em>rangeObj</em> is used to determine the starting point.</p>
 <blockquote>
 <ul>
@@ -3589,7 +3597,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </blockquote>
 <p>The <em>valuesCol</em> parameter is two-dimensional:</p>
 <ul>
-<li><p>The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row.</p></li>
+<li><p>The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row.</p></li>
 <li><p>Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:</p>
 <table>
 <thead>
@@ -3627,7 +3635,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-97"></a><a href="#descripción-97" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p><code>VP SET WORKBOOK OPTIONS</code> sets the workbook options in <em>vpAreaName</em>.</p>
+<p><code>VP SET WORKBOOK OPTIONS</code>sets the workbook options in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>optionObj</em>, pass the workbook options to apply to <em>vpAreaName</em>.</p>
 <p>If <em>optionObj</em> is empty, the command does nothing.</p>
@@ -3722,7 +3730,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-98"></a><a href="#descripción-98" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SHOW CELL</code> command vertically and horizontally repositions the view of the <em>rangeObj</em>.</p>
+<p>The <code>VP SHOW CELL</code> commandvertically and horizontally repositions the view of the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass a range of cells as an object to designate the cells to be viewed. The view of the <em>rangeObj</em> will be positioned vertically or horizontally (i.e., where <em>rangeObj</em> appears) based on the <em>vPos</em> and <em>hPos</em> parameters. The <em>vPos</em> parameter defines the desired vertical position to display the <em>rangeObj</em>, and the <em>hPos</em> parameter defines the desired horizontal position to display the <em>rangeObj</em>.</p>
 <p>The following selectors are available:</p>
 <table>
@@ -3769,7 +3777,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-99"></a><a href="#descripción-99" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>VP SUSPEND COMPUTING</code> command stops the calculation of all formulas in <em>vpAreaName</em>. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.</p>
+<p>The <code>VP SUSPEND COMPUTING</code> commandstops the calculation of all formulas in <em>vpAreaName</em>. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.</p>
 <p>The command pauses the calculation service in 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after <code>VP SUSPEND COMPUTING</code> command  is executed are not calculated.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <blockquote>

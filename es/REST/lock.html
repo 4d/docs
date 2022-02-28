@@ -134,7 +134,7 @@
 <p>We lock an entity in a first browser:</p>
 <pre><code class="hljs"><span class="hljs-builtin-name">GET</span> /rest/Customers(1)/?<span class="hljs-variable">$lock</span>=<span class="hljs-literal">true</span>
 </code></pre>
-<p><strong>Response:</strong></p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"result"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"__STATUS"</span>: {
@@ -143,7 +143,7 @@
 }
 </code></pre>
 <p>In a second browser (other session), we send the same request.</p>
-<p><strong>Response:</strong></p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="hljs">{
     <span class="hljs-string">"result"</span><span class="hljs-symbol">:false</span>,
     <span class="hljs-string">"__STATUS"</span>:{

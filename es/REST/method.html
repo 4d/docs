@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>$method · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This parameter allows you to define the operation to execute with the returned entity or entity selection."/><meta name="docsearch:language" content="es"/><meta property="og:title" content="$method · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="This parameter allows you to define the operation to execute with the returned entity or entity selection."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/method.html">English</a></li><li><a href="/docs/ja/REST/method.html">日本語</a></li><li><a href="/docs/de/REST/method.html">Deutsch</a></li><li><a href="/docs/fr/REST/method.html">Français</a></li><li><a href="/docs/pt/REST/method.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="es"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>$method · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Este parámetro permite definir la operación a ejecutar con la entidad o selección de entidades devuelta."/><meta name="docsearch:language" content="es"/><meta property="og:title" content="$method · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Este parámetro permite definir la operación a ejecutar con la entidad o selección de entidades devuelta."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/es"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/method.html">English</a></li><li><a href="/docs/ja/REST/method.html">日本語</a></li><li><a href="/docs/de/REST/method.html">Deutsch</a></li><li><a href="/docs/fr/REST/method.html">Français</a></li><li><a href="/docs/pt/REST/method.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,87 +66,87 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/REST/$method.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">$method</h1></header><article><div><span><p>This parameter allows you to define the operation to execute with the returned entity or entity selection.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/REST/$method.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">$method</h1></header><article><div><span><p>Este parámetro permite definir la operación a ejecutar con la entidad o selección de entidades devuelta.</p>
 <h2><a class="anchor" aria-hidden="true" id="sintaxis-disponible"></a><a href="#sintaxis-disponible" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxis disponible</h2>
 <table>
 <thead>
 <tr><th>Sintaxis</th><th>Ejemplo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#methoddelete"><strong>$method=delete</strong></a></td><td><code>POST /Employee?$filter=&quot;ID=11&quot;&amp; $method=delete</code></td><td>Deletes the current entity, entity collection, or entity selection</td></tr>
-<tr><td><a href="#methodentityset"><strong>$method=entityset</strong></a></td><td><code>GET /People/?$filter=&quot;ID&gt;320&quot;&amp; $method=entityset&amp; $timeout=600</code></td><td>Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request</td></tr>
-<tr><td><a href="#methodrelease"><strong>$method=release</strong></a></td><td><code>GET /Employee/$entityset/&lt;entitySetID&gt;?$method=release</code></td><td>Releases an existing entity set stored in 4D Server's cache</td></tr>
-<tr><td><a href="#methodsubentityset"><strong>$method=subentityset</strong></a></td><td><code>GET /Company(1)/staff?$expand=staff&amp; $method=subentityset&amp; $subOrderby=lastName ASC</code></td><td>Creates an entity set based on the collection of related entities defined in the REST request</td></tr>
-<tr><td><a href="#methodupdate"><strong>$method=update</strong></a></td><td><code>POST /Person/?$method=update</code></td><td>Updates and/or creates one or more entities</td></tr>
+<tr><td><a href="#methoddelete"><strong>$method=delete</strong></a></td><td><code>POST /Employee?$filter=&quot;ID=11&quot;&amp; $method=delete</code></td><td>Elimina la entidad actual, la colección de entidades o la selección de entidades</td></tr>
+<tr><td><a href="#methodentityset"><strong>$method=entityset</strong></a></td><td><code>GET /People/?$filter=&quot;ID&gt;320&quot;&amp; $method=entityset&amp; $timeout=600</code></td><td>Crea un conjunto de entidades en la caché de 4D Server basado en la colección de entidades definidas en la solicitud REST</td></tr>
+<tr><td><a href="#methodrelease"><strong>$method=release</strong></a></td><td><code>GET /Employee/$entityset/&lt;entitySetID&gt;?$method=release</code></td><td>Libera un conjunto de entidades existente almacenado en la caché de 4D Server</td></tr>
+<tr><td><a href="#methodsubentityset"><strong>$method=subentityset</strong></a></td><td><code>GET /Company(1)/staff?$expand=staff&amp; $method=subentityset&amp; $subOrderby=lastName ASC</code></td><td>Crea un conjunto de entidades basado en la colección de entidades relativas definidas en la petición REST</td></tr>
+<tr><td><a href="#methodupdate"><strong>$method=update</strong></a></td><td><code>POST /Person/?$method=update</code></td><td>Actualiza y/o crea una o varias entidades</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="methoddelete"></a><a href="#methoddelete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=delete</h2>
-<p>Deletes the current entity, entity collection, or entity selection (created through REST)</p>
+<p>Elimina la entidad actual, la colección de entidades o la selección de entidad actual (creada vía REST)</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p>Con <code>$method=delete</code>, puede eliminar una entidad o una colección de entidades entera. You can define the collection of entities by using, for example, <a href="/docs/es/REST/filter.html"><code>$filter</code></a> or specifying one directly using <a href="%7BdataClass%7D.html#dataclasskey"><code>{dataClass}({key})</code></a> <em>(e.g.</em>, /Employee(22)).</p>
-<p>You can also delete the entities in an entity set, by calling <a href="/docs/es/REST/entityset.html#entitysetentitysetid"><code>$entityset/{entitySetID}</code></a>.</p>
+<p>Con <code>$method=delete</code>, puede eliminar una entidad o una colección de entidades entera. Puede definir la colección de entidades utilizando, por ejemplo,<a href="/docs/es/REST/filter.html"><code>$filter</code></a> o especificando uno directamente mediante <a href="%7BdataClass%7D.html#dataclasskey"><code>{dataClass}({key})</code></a> <em>(por ejemplo</em>, /Employee(22)).</p>
+<p>También puede eliminar las entidades de un conjunto de entidades, llamando a <a href="/docs/es/REST/entityset.html#entitysetentitysetid"><code>$entityset/{entitySetID}</code></a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h2>
-<p>You can then write the following REST request to delete the entity whose key is 22:</p>
+<p>A continuación, puede escribir la siguiente petición REST para eliminar la entidad cuya llave es 22:</p>
 <p><code>POST /rest/Employee(22)/?$method=delete</code></p>
 <p>También se puede hacer una petición de información utilizando $filter:</p>
 <p><code>POST /rest/Employee?$filter=&quot;ID=11&quot;&amp;$method=delete</code></p>
 <p>También puede eliminar un conjunto de entidades utilizando $entityset/{entitySetID}:</p>
 <p><code>POST /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete</code></p>
-<p>Response:</p>
+<p>Respuesta:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"ok"</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methodentityset"></a><a href="#methodentityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=entityset</h2>
-<p>Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request</p>
+<p>Crea un conjunto de entidades en la caché de 4D Server basado en la colección de entidades definidas en la solicitud REST</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p>When you create a collection of entities in REST, you can also create an entity set that will be saved in 4D Server's cache. El conjunto de entidades tendrá un número de referencia que puede pasar a <code>$entityset/{entitySetID}</code> para acceder a él. By default, it is valid for two hours; however, you can modify that amount of time by passing a value (in seconds) to $timeout.</p>
-<p>If you have used <code>$savedfilter</code> and/or <code>$savedorderby</code> (in conjunction with <code>$filter</code> and/or <code>$orderby</code>) when you created your entity set, you can recreate it with the same reference ID even if it has been removed from 4D Server's cache.</p>
+<p>Cuando se crea una colección de entidades en REST, también se puede crear un conjunto de entidades que se guardará en la caché de 4D Server. El conjunto de entidades tendrá un número de referencia que puede pasar a <code>$entityset/{entitySetID}</code> para acceder a él. Por defecto, es válido durante dos horas; sin embargo, puede modificar esa cantidad de tiempo pasando un valor (en segundos) a $timeout.</p>
+<p>Si ha utilizado <code>$savedfilter</code> y/o <code>$savedorderby</code> (junto con <code>$filter</code> y/o <code>$orderby</code>) cuando creó su conjunto de entidades, puede volver a crearlo con el mismo ID de referencia aunque se haya eliminado de la caché de 4D Server.</p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
-<p>To create an entity set, which will be saved in 4D Server's cache for two hours, add <code>$method=entityset</code> at the end of your REST request:</p>
+<p>Para crear un conjunto de entidades, que se guardará en la caché de 4D Server durante dos horas, añada <code>$method=entityset</code> al final de su petición REST:</p>
 <p><code>GET /rest/People/?$filter=&quot;ID&gt;320&quot;&amp;$method=entityset</code></p>
-<p>You can create an entity set that will be stored in 4D Server's cache for only ten minutes by passing a new timeout to <code>$timeout</code>:</p>
+<p>Puede crear un conjunto de entidades que se almacenará en la caché de 4D Server durante sólo diez minutos pasando un nuevo tiempo de espera a <code>$timeout</code>:</p>
 <p><code>GET /rest/People/?$filter=&quot;ID&gt;320&quot;&amp;$method=entityset&amp;$timeout=600</code></p>
 <p>También puede guardar el filtro y ordenar por, pasando true a <code>$savedfilter</code> y <code>$savedorderby</code>.</p>
 <blockquote>
-<p><code>$skip</code> and <code>$top/$limit</code> are not taken into consideration when saving an entity set.</p>
+<p><code>$skip</code> y <code>$top/$limit</code> no se tienen en cuenta al guardar un conjunto de entidades.</p>
 </blockquote>
-<p>After you create an entity set, the first element, <code>__ENTITYSET</code>, is added to the object returned and indicates the URI to use to access the entity set:</p>
+<p>Después de crear un conjunto de entidades, el primer elemento, <code>__ENTITYSET</code>, se añade al objeto devuelto e indica la URI a utilizar para acceder al conjunto de entidades:</p>
 <p><code>__ENTITYSET: &quot;http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7&quot;</code></p>
 <h2><a class="anchor" aria-hidden="true" id="methodrelease"></a><a href="#methodrelease" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=release</h2>
-<p>Releases an existing entity set stored in 4D Server's cache.</p>
+<p>Libera un conjunto de entidades existente almacenado en la caché de 4D Server.</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p>You can release an entity set, which you created using <a href="#methodentityset"><code>$method=entityset</code></a>, from 4D Server's cache.</p>
+<p>Puede liberar un conjunto de entidades, que creó utilizando <a href="#methodentityset"><code>$method=entityset</code></a>, de la caché de 4D Server.</p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
-<p>Release an existing entity set:</p>
+<p>Muestra un conjunto de entidades existente:</p>
 <p><code>GET /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release</code></p>
-<h4><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response:</h4>
-<p>If the request was successful, the following response is returned:</p>
+<h4><a class="anchor" aria-hidden="true" id="respuesta"></a><a href="#respuesta" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Respuesta:</h4>
+<p>Si la petición fue exitosa, se devuelve la siguiente respuesta:</p>
 <pre><code class="hljs">{
-    <span class="hljs-string">"ok"</span>: <span class="hljs-literal">true</span>
+    <span class="hljs-string">"ok"</span>: true
 }
-<span class="hljs-keyword">If</span> the entity <span class="hljs-builtin-name">set</span> wasn<span class="hljs-string">'t found, an error is returned:
+Si <span class="hljs-keyword">no</span> <span class="hljs-keyword">se</span> encuentra el conjunto <span class="hljs-keyword">de</span> entidades, <span class="hljs-keyword">se</span> devuelve un <span class="hljs-keyword">error</span>:
 
 {
-    "__ERROR": [
+    <span class="hljs-string">"__ERROR"</span>: [
         {
-             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  '</span>dbmg<span class="hljs-string">'\ntask 22, name: '</span>HTTP<span class="hljs-built_in"> connection </span>handler<span class="hljs-string">'\n",
-            "componentSignature": "dbmg",
-            "errCode": 1802
+             <span class="hljs-string">"message"</span>: <span class="hljs-string">"Error code: 1802\nEntitySet  \"</span>4C51204DD8184B65AC7D79F09A077F24\<span class="hljs-string">" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n"</span>,
+            <span class="hljs-string">"componentSignature"</span>: <span class="hljs-string">"dbmg"</span>,
+            <span class="hljs-string">"errCode"</span>: 1802
         }
     ]
 }
-</span></code></pre>
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methodsubentityset"></a><a href="#methodsubentityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=subentityset</h2>
-<p>Creates an entity set in 4D Server's cache based on the collection of related entities defined in the REST request</p>
+<p>Crea un conjunto de entidades en la caché de 4D Server basado en la colección de entidades relativas definidas en la petición REST</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p><code>$method=subentityset</code> allows you to sort the data returned by the relation attribute defined in the REST request.</p>
-<p>Para ordenar los datos, se utiliza la propiedad <code>$subOrderby</code>. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. By default, the data is sorted in ascending order.</p>
-<p>If you want to specify multiple attributes, you can delimit them with a comma, µ, <code>$subOrderby=&quot;lastName desc, firstName asc&quot;</code>.</p>
+<p><code>$method=subentityset</code> permite ordenar los datos devueltos por el atributo relacional definido en la petición REST.</p>
+<p>Para ordenar los datos, se utiliza la propiedad <code>$subOrderby</code>. Para cada atributo, se define el orden como ASC (o asc) para el orden ascendente y DESC (desc) para el orden descendente. Por defecto, los datos se clasifican en orden ascendente.</p>
+<p>Si desea especificar varios atributos, puede delimitarlos con una coma, µ, <code>$subOrderby=&quot;lastName desc, firstName asc&quot;</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
-<p>If you want to retrieve only the related entities for a specific entity, you can make the following REST request where staff is the relation attribute in the Company dataclass linked to the Employee dataclass:</p>
+<p>Si quiere recuperar sólo las entidades relacionadas para una entidad específica, puede hacer la siguiente petición REST donde personal es el atributo de relación en la clase de datos Company vinculada a la clase de datos Employee:</p>
 <p><code>GET /rest/Company(1)/staff?$expand=staff&amp;$method=subentityset&amp;$subOrderby=lastName ASC</code></p>
-<h4><a class="anchor" aria-hidden="true" id="response-1"></a><a href="#response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response:</h4>
+<h4><a class="anchor" aria-hidden="true" id="respuesta-1"></a><a href="#respuesta-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Respuesta:</h4>
 <pre><code class="hljs">{
 
     <span class="hljs-attr">"__ENTITYSET"</span>: <span class="hljs-string">"/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB"</span>,
@@ -188,24 +188,24 @@
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methodupdate"></a><a href="#methodupdate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>$method=update</h2>
-<p>Updates and/or creates one or more entities</p>
+<p>Actualiza y/o crea una o varias entidades</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p><code>$method=update</code> allows you to update and/or create one or more entities in a single <strong>POST</strong>. If you update and/or create one entity, it is done in an object with each property an attribute with its value, <em>e.g.</em>, <code>{ lastName: &quot;Smith&quot; }</code>. If you update and/or create multiple entities, you must create a collection of objects.</p>
-<p>In any cases, you must set the <strong>POST</strong> data in the <strong>body</strong> of the request.</p>
-<p>To update an entity, you must pass the <code>__KEY</code> and <code>__STAMP</code> parameters in the object along with any modified attributes. If both of these parameters are missing, an entity will be added with the values in the object you send in the body of your <strong>POST</strong>.</p>
-<p>Triggers are executed immediately when saving the entity to the server. The response contains all the data as it exists on the server.</p>
-<p>También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a <code>$atomic/$atonce</code>. If any errors occur during data validation, none of the entities are saved. También puede utilizar $method=validate para validar las entidades antes de crearlas o actualizarlas.</p>
-<p>If a problem arises while adding or modifying an entity, an error will be returned to you with that information.</p>
+<p><code>$method=update</code> le permite actualizar y/o crear una o más entidades en un solo <strong>POST</strong>. Si se actualiza y/o crea una entidad, se efectúa en un objeto con, para cada propiedad, un atributo y su valor, <em>por ejemplo</em> <code>{ lastName: &quot;Smith&quot; }</code>. Si actualiza y/o crea varias entidades, debe crear una colección de objetos.</p>
+<p>En cualquier caso, debe definir los <strong>POST</strong> datos en el <strong>body</strong> de la petición.</p>
+<p>Para actualizar una entidad, debes pasar los parámetros <code>__KEY</code> y <code>__STAMP</code> en el objeto junto con todos los atributos modificados. Si faltan ambos parámetros, se añadirá una entidad con los valores del objeto que envíe en el cuerpo de su <strong>POST</strong>.</p>
+<p>Los triggers se ejecutan inmediatamente al guardar la entidad en el servidor. La respuesta contiene todos los datos tal y como existen en el servidor.</p>
+<p>También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a <code>$atomic/$atonce</code>. Si se produce algún error durante la validación de los datos, no se guarda ninguna de las entidades. También puede utilizar $method=validate para validar las entidades antes de crearlas o actualizarlas.</p>
+<p>Si surge un problema al añadir o modificar una entidad, se le devolverá un error con esa información.</p>
 <blockquote>
-<p>Notes for specific attribute types:</p>
+<p>Notas para tipos de atributos específicos:</p>
 <ul>
-<li><strong>Dates</strong> must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., &quot;2010-10-05T23:00:00Z&quot;). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).</li>
-<li><strong>Booleans</strong> are either true or false.</li>
-<li>Uploaded files using <code>$upload</code> can be applied to an attribute of type Image or BLOB by passing the object returned in the following format { &quot;ID&quot;: &quot;D507BC03E613487E9B4C2F6A0512FE50&quot;}</li>
+<li><strong>Las fechas</strong> deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, &quot;2010-10-05T23:00:00Z&quot;). Si ha seleccionado la propiedad Fecha únicamente para su atributo Fecha, se eliminará la zona horaria y la hora (hora, minutos y segundos). En este caso, también puede enviar la fecha en el formato que se le devuelve dd!mm!aaaa (por ejemplo, 05!10!2013).</li>
+<li><strong>Booleanos</strong> son true o false.</li>
+<li>Los archivos subidos mediante <code>$upload</code> pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato {&quot;ID&quot;: &quot;D507BC03E613487E9B4C2F6A0512FE50&quot;}</li>
 </ul>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
-<p>To update a specific entity, you use the following URL:</p>
+<p>Para actualizar una entidad específica, se utiliza la siguiente URL:</p>
 <p><code>POST /rest/Person/?$method=update</code></p>
 <p><strong>Datos POST:</strong></p>
 <pre><code class="hljs">{
@@ -215,8 +215,8 @@
     lastName: <span class="hljs-string">"Miller"</span>
 }
 </code></pre>
-<p>The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.</p>
-<p>If you want to create an entity, you can POST the attributes using this URL:</p>
+<p>Los atributos firstName y lastName de la entidad indicada anteriormente se modificarán dejando todos los demás atributos (excepto los calculados basados en estos atributos) sin cambios.</p>
+<p>Si quiere crear una entidad, puede enviar, vía POST los atributos utilizando esta URL:</p>
 <p><code>POST /rest/Person/?$method=update</code></p>
 <p><strong>Datos POST:</strong></p>
 <pre><code class="hljs">{ 
@@ -224,7 +224,7 @@
     lastName: <span class="hljs-string">"Smith"</span>
 }
 </code></pre>
-<p>You can also create and update multiple entities at the same time using the same URL above by passing multiple objects in an array to the POST:</p>
+<p>También puede crear y actualizar múltiples entidades al mismo tiempo utilizando la misma URL anterior pasando múltiples objetos en un array al POST:</p>
 <p><code>POST /rest/Person/?$method=update</code></p>
 <p><strong>Datos POST:</strong></p>
 <pre><code class="hljs">[{ 
@@ -238,8 +238,8 @@
     <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Jones"</span>
 }]
 </code></pre>
-<p><strong>Response:</strong></p>
-<p>When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:</p>
+<p><strong>Respuesta:</strong></p>
+<p>Cuando añade o modifica una entidad, se devuelve con los atributos modificados. Por ejemplo, si se crea el nuevo empleado anterior, se devolverá lo siguiente:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"622"</span>, 
     <span class="hljs-attr">"__STAMP"</span>: <span class="hljs-number">1</span>, 
@@ -250,7 +250,7 @@
     <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Smith"</span>
 }
 </code></pre>
-<p>If, for example, the stamp is not correct, the following error is returned:</p>
+<p>Si, por ejemplo, el sello no es correcto, se devuelve el siguiente error:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__STATUS"</span>: {
         <span class="hljs-attr">"status"</span>: <span class="hljs-number">2</span>,

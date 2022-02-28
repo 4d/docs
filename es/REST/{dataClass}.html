@@ -73,9 +73,9 @@
 <tr><th>Sintaxis</th><th>Ejemplo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#dataClass"><strong>{dataClass}</strong></a></td><td><code>/Employee</code></td><td>Returns all the data (by default the first 100 entities) for the dataclass</td></tr>
-<tr><td><a href="#dataclasskey"><strong>{dataClass}({key})</strong></a></td><td><code>/Employee(22)</code></td><td>Returns the data for the specific entity defined by the dataclass's primary key</td></tr>
-<tr><td><a href="#dataclassattributevalue"><strong>{dataClass}:{attribute}(value)</strong></a></td><td><code>/Employee:firstName(John)</code></td><td>Returns the data for one entity in which the attribute's value is defined</td></tr>
+<tr><td><a href="#dataClass"><strong>{dataClass}</strong></a></td><td><code>/Employee</code></td><td>Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos</td></tr>
+<tr><td><a href="#dataclasskey"><strong>{dataClass}({key})</strong></a></td><td><code>/Employee(22)</code></td><td>Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos</td></tr>
+<tr><td><a href="#dataclassattributevalue"><strong>{dataClass}:{attribute}(value)</strong></a></td><td><code>/Employee:firstName(John)</code></td><td>Devuelve los datos de una entidad en la que está definido el valor del atributo</td></tr>
 <tr><td><a href="/docs/es/REST/classFunctions.html#function-calls"><strong>{dataClass}/{DataClassClassFunction}</strong></a></td><td><code>/City/getCity</code></td><td>Executes a dataclass class function</td></tr>
 <tr><td><a href="/docs/es/REST/classFunctions.html#function-calls"><strong>{dataClass}({EntitySelectionClassFunction}</strong></a></td><td><code>/City/getPopulation/?$filter=&quot;ID&lt;3&quot;</code></td><td>Executes an entity selection class function</td></tr>
 <tr><td><a href="/docs/es/REST/classFunctions.html#function-calls"><strong>{dataClass}({key})/{EntityClassFunction}</strong></a></td><td><code>City(2)/getPopulation</code></td><td>Executes an entity class function</td></tr>
@@ -85,10 +85,10 @@
 <p>Function calls are detailed in the <a href="/docs/es/REST/classFunctions.html">Calling ORDA class functions</a> section.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="dataclass"></a><a href="#dataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}</h2>
-<p>Returns all the data (by default the first 100 entities) for a specific dataclass (<em>e.g.</em>, <code>Company</code>)</p>
+<p>Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (<em>por ejemplo</em>, <code>Company</code>)</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p>When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using <a href="/docs/es/REST/top_$limit.html"><code>$top/$limit</code></a>.</p>
-<p>Here is a description of the data returned:</p>
+<p>Cuando se llama a este parámetro en la petición REST, se devuelven las 100 primeras entidades, a menos que se haya especificado un valor con <a href="/docs/es/REST/top_$limit.html"><code>$top/$limit</code></a>.</p>
+<p>A continuación se describen los datos devueltos:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
@@ -96,28 +96,28 @@
 <tbody>
 <tr><td>__entityModel</td><td>Cadena</td><td>Nombre de la dataclass.</td></tr>
 <tr><td>__COUNT</td><td>Número</td><td>Número de entidades en la clase de datos.</td></tr>
-<tr><td>__SENT</td><td>Número</td><td>Number of entities sent by the REST request. Este número puede ser el número total de entidades si es menor que el valor definido por <code>$top/$limit</code>.</td></tr>
-<tr><td>__FIRST</td><td>Número</td><td>Entity number that the selection starts at. O bien 0 por defecto o el valor definido por <code>$skip</code>.</td></tr>
-<tr><td>__ENTITIES</td><td>Collection</td><td>This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.</td></tr>
+<tr><td>__SENT</td><td>Número</td><td>Número de entidades enviadas por la petición REST. Este número puede ser el número total de entidades si es menor que el valor definido por <code>$top/$limit</code>.</td></tr>
+<tr><td>__FIRST</td><td>Número</td><td>Número de entidad en la que comienza la selección. O bien 0 por defecto o el valor definido por <code>$skip</code>.</td></tr>
+<tr><td>__ENTITIES</td><td>Collection</td><td>Esta colección de objetos contiene un objeto para cada entidad con todos sus atributos. Todos los atributos relacionales se devuelven como objetos con una URI para obtener información sobre el padre.</td></tr>
 </tbody>
 </table>
-<p>Each entity contains the following properties:</p>
+<p>Cada entidad contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
 <tr><td>__KEY</td><td>Cadena</td><td>Valor de la llave primaria definida para la clase de datos.</td></tr>
-<tr><td>__TIMESTAMP</td><td>Fecha</td><td>Timestamp of the last modification of the entity</td></tr>
+<tr><td>__TIMESTAMP</td><td>Fecha</td><td>Marca de tiempo de la última modificación de la entidad</td></tr>
 <tr><td>__STAMP</td><td>Número</td><td>Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar <code>$method=update</code>.</td></tr>
 </tbody>
 </table>
-<p>If you want to specify which attributes you want to return, define them using the following syntax <a href="/docs/es/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. Por ejemplo:</p>
+<p>Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis <a href="/docs/es/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. Por ejemplo:</p>
 <p><code>GET /rest/Company/name,address</code></p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
 <p>Devuelve todos los datos de una clase de datos específica.</p>
 <p><code>GET /rest/Company</code></p>
-<p><strong>Result</strong>:</p>
+<p><strong>Resultado</strong>:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Company"</span>,
     <span class="hljs-attr">"__GlobalStamp"</span>: <span class="hljs-number">51</span>,
@@ -194,18 +194,18 @@
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="dataclasskey"></a><a href="#dataclasskey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}({key})</h2>
-<p>Returns the data for the specific entity defined by the dataclass's primary key, <em>e.g.</em>, <code>Company(22) or Company(&quot;IT0911AB2200&quot;)</code></p>
+<p>Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, <em>p. ej.</em>, <code>Company(22) o Company(&quot;IT0911AB2200&quot;)</code></p>
 <h3><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p>By passing the dataclass and a key, you can retrieve all the public information for that entity. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. For more information about defining a primary key, refer to the <strong>Modifying the Primary Key</strong> section in the <strong>Data Model Editor</strong>.</p>
+<p>Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Para más información sobre la definición de una llave primaria, consulte la sección <strong>Modifying the Primary Key</strong> en el <strong>Editor del modelo de datos</strong>.</p>
 <p>For more information about the data returned, refer to <a href="#datastoreclass">{DataStoreClass}</a>.</p>
-<p>If you want to specify which attributes you want to return, define them using the following syntax <a href="/docs/es/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. Por ejemplo:</p>
+<p>Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis <a href="/docs/es/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. Por ejemplo:</p>
 <p><code>GET /rest/Company(1)/name,address</code></p>
 <p>Si desea expandir un atributo de relación utilizando <code>$expand</code>, lo hará especificándolo como se muestra a continuación:</p>
 <p><code>GET /rest/Company(1)/name,address,staff?$expand=staff</code></p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
 <p>La siguiente petición devuelve todos los datos públicos de la clase de datos Company cuya llave es 1.</p>
 <p><code>GET /rest/Company(1)</code></p>
-<p><strong>Result</strong>:</p>
+<p><strong>Resultado</strong>:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Company"</span>,
     <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"1"</span>,
@@ -226,16 +226,16 @@
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="dataclassattributevalue"></a><a href="#dataclassattributevalue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>{dataClass}:{attribute}(value)</h2>
-<p>Returns the data for one entity in which the attribute's value is defined</p>
+<p>Devuelve los datos de una entidad en la que está definido el valor del atributo</p>
 <h3><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h3>
-<p>By passing the <em>dataClass</em> and an <em>attribute</em> along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.</p>
+<p>Pasando la <em>clase de datos</em> y un <em>atributo</em> junto con un valor, se puede recuperar toda la información pública de esa entidad. El valor es un valor único para el atributo, pero no es la llave primaria.</p>
 <p><code>GET /rest/Company:companyCode(Acme001)</code></p>
-<p>If you want to specify which attributes you want to return, define them using the following syntax <a href="/docs/es/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. Por ejemplo:</p>
+<p>Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis <a href="/docs/es/REST/manData.html##selecting-attributes-to-get">{attribute1, attribute2, ...}</a>. Por ejemplo:</p>
 <p><code>GET /rest/Company:companyCode(Acme001)/name,address</code></p>
-<p>If you want to use a relation attribute using <a href="/docs/es/REST/attributes.html">$attributes</a>, you do so by specifying it as shown below:</p>
+<p>Si desea utilizar un atributo relacional utilizando <a href="$attributes.md">/docs/es/REST/attributes.html&quot;&gt;</a>, lo hará especificándolo como se muestra a continuación:</p>
 <p><code>GET /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name</code></p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
-<p>The following request returns all the public data of the employee named &quot;Jones&quot;.</p>
+<p>La siguiente petición devuelve todos los datos públicos del empleado llamado &quot;Jones&quot;.</p>
 <p><code>GET /rest/Employee:lastname(Jones)</code></p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/REST/upload.html"><span class="arrow-prev">← </span><span>$upload</span></a><a class="docs-next button" href="/docs/es/REST/asArray.html"><span class="function-name-prevnext">$asArray</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sintaxis-disponible">Sintaxis disponible</a></li><li><a href="#dataclass">{dataClass}</a><ul class="toc-headings"><li><a href="#descripción">Descripción</a></li><li><a href="#ejemplo">Ejemplo</a></li></ul></li><li><a href="#dataclasskey">{dataClass}({key})</a><ul class="toc-headings"><li><a href="#descripción-1">Descripción</a></li><li><a href="#ejemplo-1">Ejemplo</a></li></ul></li><li><a href="#dataclassattributevalue">{dataClass}:{attribute}(value)</a><ul class="toc-headings"><li><a href="#descripción-2">Descripción</a></li><li><a href="#ejemplo-2">Ejemplo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

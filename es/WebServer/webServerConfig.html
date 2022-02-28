@@ -482,7 +482,7 @@
 </tbody>
 </table>
 <p>Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.</p>
-<p>This limit is used to avoid web server saturation due to incoming requests that are too large. When a request reaches this limit, the 4D web server rejects it.</p>
+<p>Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. When a request reaches this limit, the 4D web server rejects it.</p>
 <p>Valores posibles: 500 000 a 2 147 483 648.</p>
 <h2><a class="anchor" aria-hidden="true" id="número-máximo-de-sesiones"></a><a href="#número-máximo-de-sesiones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Número máximo de sesiones</h2>
 <table>
@@ -505,7 +505,7 @@
 <tr><td>objeto webServer</td><td><a href="/docs/es/API/WebServerClass.html#mintlsversion"><code>minTLSVersion</code></a></td><td>number</td></tr>
 </tbody>
 </table>
-<p>Minimum TLS version accepted for connections. Connection attempts from clients supporting only versions below the minimum will be rejected.</p>
+<p>Minimum TLS version accepted for connections. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.</p>
 <p>Valores posibles:</p>
 <ul>
 <li>1 = TLSv1_0</li>
@@ -513,7 +513,7 @@
 <li>3 = TLSv1_2 (por defecto)</li>
 <li>4 = TLSv1_3</li>
 </ul>
-<p>If modified, the server must be restarted to use the new value.</p>
+<p>Si se modifica, el servidor debe reiniciarse para utilizar el nuevo valor.</p>
 <blockquote>
 <p>The minimum TLS version used by 4D can be modified for the session using the <code>SET DATABASE PARAMETER</code> command, in which case the modification applies to the entire 4D application, including the web server, SQL server and client/server connections.</p>
 </blockquote>
@@ -609,7 +609,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie domain</code></td><td></td></tr>
 </tbody>
 </table>
-<p>Value of the &quot;domain&quot; field of the session cookie. Useful for controlling the scope of the session cookies. If you set, for example, the value &quot;/*.4d.fr&quot; for this selector, the client will only send a cookie when the request is addressed to the domain &quot;.4d.fr&quot;, which excludes servers hosting external static data.</p>
+<p>Value of the &quot;domain&quot; field of the session cookie. Useful for controlling the scope of the session cookies. Si define, por ejemplo, el valor &quot;/*.4d.fr&quot; para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio &quot;.4d.fr&quot;, lo que excluye a los servidores que alojan datos estáticos externos.</p>
 <h2><a class="anchor" aria-hidden="true" id="nombre-de-la-cookie-de-sesión"></a><a href="#nombre-de-la-cookie-de-sesión" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nombre de la cookie de sesión</h2>
 <table>
 <thead>
@@ -631,7 +631,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie path</code></td><td></td></tr>
 </tbody>
 </table>
-<p>Campo &quot;path&quot; de la cookie de sesión. Used to control the scope of the session cookies. If you set, for example, the value &quot;/4DACTION&quot; for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.</p>
+<p>Campo &quot;path&quot; de la cookie de sesión. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor &quot;/4DACTION&quot; para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.</p>
 <h2><a class="anchor" aria-hidden="true" id="session-cookie-samesite"></a><a href="#session-cookie-samesite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session Cookie SameSite</h2>
 <table>
 <thead>

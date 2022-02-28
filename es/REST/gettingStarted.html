@@ -68,16 +68,16 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/REST/gettingStarted.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Comencemos</h1></header><article><div><span><p>4D provides you with a powerful REST server, that allows direct access to data stored in your 4D applications.</p>
 <p>The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications <a href="/docs/es/REST/configuration.html">once it is configured</a>.</p>
-<p>This section is intended to help familiarize you with REST functionality by means of a simple example. Vamos a:</p>
+<p>Esta sección pretende ayudar a familiarizarse con la funcionalidad de REST mediante un ejemplo sencillo. Vamos a:</p>
 <ul>
 <li>create and configure a basic 4D application project</li>
 <li>access data from the 4D project through REST using a standard browser.</li>
 </ul>
-<p>To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Of course, you could also use a remote architecture.</p>
+<p>To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Por supuesto, también puede utilizar una arquitectura remota.</p>
 <h2><a class="anchor" aria-hidden="true" id="creating-and-configuring-the-4d-project"></a><a href="#creating-and-configuring-the-4d-project" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating and configuring the 4D project</h2>
 <ol>
-<li><p>Launch your 4D or 4D Server application and create a new project. You can name it &quot;Emp4D&quot;, for example.</p></li>
-<li><p>In the Structure editor, create an [Employees] table and add the following fields to it:</p>
+<li><p>Launch your 4D or 4D Server application and create a new project. Puede llamarlo, por ejemplo, &quot;Emp4D&quot;.</p></li>
+<li><p>En el editor de estructura, cree una tabla [Employees] y añada los siguientes campos a la misma:</p>
 <ul>
 <li>Lastname (Alpha)</li>
 <li>Firstname (Alpha)</li>
@@ -86,23 +86,23 @@
 </ol>
 <p><img src="/docs/assets/en/REST/getstarted1.png" alt=""></p>
 <blockquote>
-<p>The &quot;Expose a REST resource&quot; option is checked by default for the table and every field; do not change this setting.</p>
+<p>La opción &quot;Exponer un recurso REST&quot; está marcada por defecto para la tabla y cada campo; no cambie esta configuración.</p>
 </blockquote>
 <ol start="3">
-<li>Create forms, then create a few employees:</li>
+<li>Cree los formularios y, a continuación, cree algunos empleados:</li>
 </ol>
 <p><img src="/docs/assets/en/REST/getstarted2.png" alt=""></p>
 <ol start="4">
 <li><p>Open the <strong>Web &gt; Web Features</strong> page of the Settings dialog box and <a href="/docs/es/REST/configuration.html#starting-the-rest-server">check the Expose as REST server</a> option.</p></li>
-<li><p>In the <strong>Run</strong> menu, select <strong>Start Web Server</strong> (if necessary), then select <strong>Test Web Server</strong>.</p></li>
+<li><p>En el menú <strong>Ejecutar</strong>, seleccione <strong>Iniciar el servidor Web</strong> (si es necesario), luego seleccione <strong>Probar el servidor Web</strong>.</p></li>
 </ol>
-<p>4D displays the default home page of the 4D Web Server.</p>
-<h2><a class="anchor" aria-hidden="true" id="accessing-4d-data-through-the-browser"></a><a href="#accessing-4d-data-through-the-browser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Accessing 4D data through the browser</h2>
-<p>You can now read and edit data within 4D only through REST requests.</p>
-<p>Any 4D REST URL request starts with <code>/rest</code>, to be inserted after the <code>address:port</code> area. For example, to see what's inside the 4D datastore, you can write:</p>
+<p>4D muestra la página de inicio por defecto del servidor web de 4D.</p>
+<h2><a class="anchor" aria-hidden="true" id="acceso-a-los-datos-4d-con-el-navegador"></a><a href="#acceso-a-los-datos-4d-con-el-navegador" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Acceso a los datos 4D con el navegador</h2>
+<p>Ahora puede leer y editar datos dentro de 4D sólo a través de peticiones REST.</p>
+<p>Toda petición de URL 4D REST comienza por <code>/rest</code>, que se debe insertar después del área <code>address:port</code>. Por ejemplo, para ver lo que hay dentro del almacén de datos de 4D, puede escribir:</p>
 <pre><code class="hljs">http:<span class="hljs-regexp">//</span><span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span><span class="hljs-regexp">/rest/</span><span class="hljs-variable">$catalog</span>
 </code></pre>
-<p>The REST server replies:</p>
+<p>El servidor REST responde:</p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__UNIQID"</span>: <span class="hljs-string">"96A49F7EF2ABDE44BF32059D9ABC65C1"</span>,
     <span class="hljs-attr">"dataClasses"</span>: [
@@ -114,13 +114,13 @@
     ]
 }
 </code></pre>
-<p>It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:</p>
+<p>Esto significa que el almacén de datos contiene la clase de datos Employees. Puede ver los atributos de la clase de datos escribiendo:</p>
 <pre><code class="hljs">/<span class="hljs-built_in">rest</span>/$catalog/Employees
 </code></pre>
-<p>If you want to get all entities of the Employee dataclass, you write:</p>
+<p>Si desea obtener todas las entidades de la clase de datos Employee, escriba:</p>
 <pre><code class="hljs">/<span class="hljs-built_in">rest</span>/Employees
 </code></pre>
-<p><strong>Response:</strong></p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employees"</span>,
     <span class="hljs-attr">"__GlobalStamp"</span>: <span class="hljs-number">0</span>,
@@ -158,10 +158,10 @@
     <span class="hljs-attr">"__SENT"</span>: <span class="hljs-number">3</span>
 }
 </code></pre>
-<p>You have many possibilities to filter data to receive. For example, to get only the &quot;Lastname&quot; attribute value from the 2nd entity, you can just write:</p>
+<p>Tiene muchas posibilidades para filtrar los datos a recibir. Por ejemplo, para obtener sólo el valor del atributo &quot;Lastname&quot; de la 2ª entidad, basta con escribir:</p>
 <pre><code class="hljs"><span class="hljs-string">/rest/Employees</span><span class="hljs-params">(2)</span><span class="hljs-string">/Lastname</span>
 </code></pre>
-<p><strong>Response:</strong></p>
+<p><strong>Respuesta:</strong></p>
 <pre><code class="hljs">{
     <span class="hljs-attr">"__entityModel"</span>: <span class="hljs-string">"Employees"</span>,
     <span class="hljs-attr">"__KEY"</span>: <span class="hljs-string">"2"</span>,
@@ -171,7 +171,7 @@
 }
 </code></pre>
 <p>The 4D <a href="/docs/es/REST/REST_requests.html">REST API</a> provides various commands to interact with the 4D applications.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/WebServer/preemptiveWeb.html"><span class="arrow-prev">← </span><span>Using preemptive web processes</span></a><a class="docs-next button" href="/docs/es/REST/configuration.html"><span>Configuración del servidor</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-and-configuring-the-4d-project">Creating and configuring the 4D project</a></li><li><a href="#accessing-4d-data-through-the-browser">Accessing 4D data through the browser</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/WebServer/preemptiveWeb.html"><span class="arrow-prev">← </span><span>Using preemptive web processes</span></a><a class="docs-next button" href="/docs/es/REST/configuration.html"><span>Configuración del servidor</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-and-configuring-the-4d-project">Creating and configuring the 4D project</a></li><li><a href="#acceso-a-los-datos-4d-con-el-navegador">Acceso a los datos 4D con el navegador</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

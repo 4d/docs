@@ -102,20 +102,20 @@
 <tr><td>statusText</td><td></td><td>テキスト</td><td>エラーの詳細、以下参照</td></tr>
 <tr><td>lockKind</td><td></td><td>number</td><td>Lock code</td></tr>
 <tr><td>lockKindText</td><td></td><td>テキスト</td><td>&quot;Locked by session&quot; if locked by a REST session, &quot;Locked by record&quot; if locked by a 4D process</td></tr>
-<tr><td>lockInfo</td><td></td><td>object</td><td>ロック元についての情報。 Returned properties depend on the lock origin (4D process or REST session).</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only for a 4D process lock:</em></strong></td></tr>
+<tr><td>lockInfo</td><td></td><td>object</td><td>ロック元についての情報。 返されるプロパティはロック元 (4Dプロセスまたは RESTセッション) によって異なります。</td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>4Dプロセスによるロックの場合:</em></strong></td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>プロセスID</td></tr>
 <tr><td></td><td>user_name</td><td>テキスト</td><td>マシン上でのセッションユーザー名</td></tr>
 <tr><td></td><td>user4d_alias</td><td>テキスト</td><td>4D ユーザーの名前またはエイリアス</td></tr>
 <tr><td></td><td>user4d_id</td><td>number</td><td>4DデータベースディレクトリでのユーザーID</td></tr>
 <tr><td></td><td>host_name</td><td>テキスト</td><td>マシン名</td></tr>
 <tr><td></td><td>task_name</td><td>テキスト</td><td>プロセス名</td></tr>
-<tr><td></td><td>client_version</td><td>テキスト</td><td>Version of the client</td></tr>
-<tr><td></td><td></td><td></td><td><strong><em>Available only for a REST session lock:</em></strong></td></tr>
-<tr><td></td><td>host</td><td>テキスト</td><td>URL that locked the entity (e.g. &quot;127.0.0.1:8043&quot;)</td></tr>
-<tr><td></td><td>IPAddr</td><td>テキスト</td><td>IP address of the locker (e.g. &quot;127.0.0.1&quot;)</td></tr>
+<tr><td></td><td>client_version</td><td>テキスト</td><td>クライアントのバージョン</td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>RESTセッションによるロックの場合:</em></strong></td></tr>
+<tr><td></td><td>host</td><td>テキスト</td><td>エンティティをロックした URL (例: &quot;127.0.0.1:8043&quot;)</td></tr>
+<tr><td></td><td>IPAddr</td><td>テキスト</td><td>ロック元の IPアドレス (例: &quot;127.0.0.1&quot;)</td></tr>
 <tr><td></td><td>recordNumber</td><td>number</td><td>Record number of the locked record</td></tr>
-<tr><td></td><td>userAgent</td><td>テキスト</td><td>userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36&quot;)</td></tr>
+<tr><td></td><td>userAgent</td><td>テキスト</td><td>ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36&quot;)</td></tr>
 </tbody>
 </table>
 <p>エラー時には <em>__STATUS</em> オブジェクトの <em>status</em> および <em>statusText</em> プロパティに以下のいずれかの値が返されます:</p>
