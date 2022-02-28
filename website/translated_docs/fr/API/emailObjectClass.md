@@ -53,7 +53,7 @@ Les objets Email exposent les propriétés suivantes :
 
 Toutes les propriétés qui contiennent des adresses email ([`from`](#from), [`cc`](#cc), [`bcc`](#bcc), [`to`](#to), [`sender`](#sender), [`replyTo`](#replyto)) acceptent des valeurs de type texte, objet ou collection.
 
-#### Texte
+#### Text
 
 - une adresse uniquement : "somebody@domain.com"
 - un nom+adresse : "Somebody <somebody@domain.com>"
@@ -63,10 +63,10 @@ Toutes les propriétés qui contiennent des adresses email ([`from`](#from), [`c
 
 Un objet avec deux propriétés :
 
-| Propriété | Type  | Description                     |
-| --------- | ----- | ------------------------------- |
-| name      | Texte | Nom à afficher (peut être null) |
-| email     | Texte | Adresse email                   |
+| Propriété | Type | Description                     |
+| --------- | ---- | ------------------------------- |
+| name      | Text | Nom à afficher (peut être null) |
+| email     | Text | Adresse email                   |
 
 #### Collection
 
@@ -153,13 +153,13 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 
 | Propriété   | Type                 | Valeur                                                                                                                                                                          |
 | ----------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| partID      | Texte                | Identifie la partie de manière unique dans l'email                                                                                                                              |
-| type        | Texte                | (obligatoire) Valeur du champ d'en-tête Content-Type de la partie                                                                                                               |
-| charset     | Texte                | Valeur du paramètre charset du champ d'en-tête Content-Type                                                                                                                     |
-| encoding    | Texte                | Si `isEncodingProblem=true`, la valeur de Content-Transfer-Encoding est ajoutée (par défaut indéfini)                                                                           |
-| disposition | Texte                | Valeur du champ d'en-tête Content-Disposition de la partie                                                                                                                      |
+| partID      | Text                 | Identifie la partie de manière unique dans l'email                                                                                                                              |
+| type        | Text                 | (obligatoire) Valeur du champ d'en-tête Content-Type de la partie                                                                                                               |
+| charset     | Text                 | Valeur du paramètre charset du champ d'en-tête Content-Type                                                                                                                     |
+| encoding    | Text                 | Si `isEncodingProblem=true`, la valeur de Content-Transfer-Encoding est ajoutée (par défaut indéfini)                                                                           |
+| disposition | Text                 | Valeur du champ d'en-tête Content-Disposition de la partie                                                                                                                      |
 | language    | Collection de textes | Liste de balises de langage, telles que définies dans la [RFC3282](https://tools.ietf.org/html/rfc3282), dans le champ d'en-tête Content-Language de la partie, le cas échéant. |
-| location    | Texte                | URI, tel que défini dans la [RFC2557](https://tools.ietf.org/html/rfc2557), dans le champ d'en-tête Content-Location de la partie, le cas échéant.                              |
+| location    | Text                 | URI, tel que défini dans la [RFC2557](https://tools.ietf.org/html/rfc2557), dans le champ d'en-tête Content-Location de la partie, le cas échéant.                              |
 | subParts    | Collection d'objets  | Parties du corps de chaque enfant (collection d'objets *EmailBodyPart*)                                                                                                         |
 | headers     | Collection d'objets  | Liste de tous les champs d'en-tête de la partie, dans leur ordre d'apparition de l'email (collection d'objets *EmailHeader* voir propriété [headers](#headers-))                |
 
@@ -596,7 +596,7 @@ $status:=$transporter.send($email)
 | ---------- | ------ |:--:| ---------------------------------------- |
 | mail       | Object | -> | Objet email                              |
 | options    | Object | -> | Options d'encodage et de charset du mail |
-| Résultat   | Texte  | <- | Objet email converti en MIME             |
+| Résultat   | Text   | <- | Objet email converti en MIME             |
 <!-- END REF -->
 
 #### Description
@@ -608,10 +608,10 @@ Dans *mail*, passez les éléments du contenu et de la structure de l'email à c
 
 Dans *options*, vous pouvez configurer l'encodage et le charset du mail. Les propriétés suivantes sont disponibles :
 
-| Propriété     | Type  | Description                                                                                                                                                                                                                 |
-| ------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Texte | Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<p><p><table><tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li><i>bodyCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &<i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & base64</td></tr></table> |
-| bodyCharset   | Texte | Charset et encodage utilisés pour le contenu html et le texte du body du mail. Valeurs possibles : Identiques à celles de headerCharset (voir ci-dessus)                                                                    |
+| Propriété     | Type | Description                                                                                                                                                                                                                 |
+| ------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| headerCharset | Text | Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<p><p><table><tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li><i>bodyCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &<i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & base64</td></tr></table> |
+| bodyCharset   | Text | Charset et encodage utilisés pour le contenu html et le texte du body du mail. Valeurs possibles : Identiques à celles de headerCharset (voir ci-dessus)                                                                    |
 
 Si le paramètre *options* est omis, la configuration mail mode UTF8 est utilisée pour les parties en-tête et corps.
 

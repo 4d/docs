@@ -55,7 +55,6 @@ Um z.B. eine Klasse mit Namen "Polygon" zu definieren, müssen Sie folgende Date
 
 - Project folder
     + Project
-
         * Sources
             - Classes
                 + Polygon.4dm
@@ -213,38 +212,38 @@ Der Befehl `Current method name` gibt für eine Class Function zurück: "*\<Clas
 
 Im Code der Anwendung werden Class Functions als Member Methods der Instanz des Objekts aufgerufen und können [Parameter](#parameter) empfangen, falls vorhanden. Folgende Syntaxarten werden unterstützt
 
-- Verwendung des Operators `()` Zum Beispiel, `myObject.methodName("hello")`
-- Verwendung einer Class Member Method "4D.Function":
+- Verwendung des Operators `()` For example, `myObject.methodName("hello")`
+- use of a "4D.Function" class member method:
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-Safety Warnung:** Ist eine Class Function nicht thread-safe und wird mit einer Methode mit der Option "In preemptive Prozess starten" aufgerufen:</br> - generiert der Compiler keinen Fehler (im Unterschied zu regulären Methoden),</br> - Gibt 4D nur im laufenden Betrieb einen Fehler aus.
+> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute: - the compiler does not generate any error (which is different compared to regular methods), - an error is thrown by 4D only at runtime.
 
 
 
 
-#### Parameter
+#### Parameters
 
-Function Parameter werden mit Name und Typ des Parameters, getrennt durch Komma, deklariert. Der Parametername muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein. Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
+Function parameters are declared using the parameter name and the parameter type, separated by a colon. Der Parametername muss mit den [Schreibregeln für Eigenschaftsnamen](Concepts/identifiers.md#objekteigenschaften) konform sein. Multiple parameters (and types) are separated by semicolons (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
-> Ist kein Typ angegeben, wird der Parameter als `Variant` deklariert.
+> If the type is not stated, the parameter will be defined as `Variant`.
 
-Den Rückgabeparameter (optional) deklarieren Sie mit einem Pfeil (->) und der entsprechenden Definition nach der Liste der Eingabeparameter. Zum Beispiel:
+You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. Zum Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` deklarieren, dann ist er automatisch durch $0 verfügbar. Zum Beispiel:
+Sie können den Rückgabeparameter auch nur durch Hinzufügen von `: type` deklarieren, dann ist er automatisch durch $0 verfügbar. For example:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> Mit der [klassischen 4D Syntax](parameters.md#sequentielle-parameter) für Parameter von Methoden lassen sich Parameter von Class Function deklarieren. Beide Syntaxarten lassen sich miteinander mischen. For example:
+> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Beide Syntaxarten lassen sich miteinander mischen. For example:
 > 
 > ```4d
 > Function add($x : Integer)
@@ -304,17 +303,13 @@ If the property is not accessed, the code never executes.
 
 Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
-
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
 `Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
 
 When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
 
-The type of the computed property is defined by the `$return` type declaration of the *getter*.
-
-The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md). It can be of any [valid property type](dt_object.md).
+The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md).
 
 > Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
 
@@ -355,7 +350,7 @@ Function get fullAddress()->$result : Object
     $result.zipCode:=This.zipCode
     $result.city:=This.city
     $result.state:=This.state
-    $result.country:=This.country 
+    $result.country:=This.country
 ```
 
 ### `Class Constructor`
@@ -425,7 +420,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm 
+//path: Classes/Square.4dm
 
 Class extends Polygon
 
@@ -561,16 +556,16 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 The `This` keyword returns a reference to the currently processed object. In 4D lässt es sich in [verschiedenen Kontexten](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) verwenden.
 
-In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. Es lässt sich während der Ausführung nicht per Zuweisung setzen und kann bei jedem Aufrufen der Funktion anders sein.
+In den meisten Fällen bestimmt der Wert von `This`, wie eine Function aufgerufen wird. It can't be set by assignment during execution, and it may be different each time the function is called.
 
-Wird eine Formel als Member Method eines Objekts aufgerufen, wird das dazugehörige `This` auf das Objekt gesetzt, wo die Methode aufgerufen wird. Beispiel:
+When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-Bei Verwendung einer Function [class constructor](#class-constructor) (mit der Function [`new()`](API/classClass.md#new)), wird ihr `This` an das neue Objekt in Konstruktion gebunden.
+When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
 
 ```4d
 //Class: ob
@@ -579,7 +574,7 @@ Class Constructor
 
     // Create properties on This as
     // desired by assigning to them
-    This.a:=42 
+    This.a:=42
 ```
 
 ```4d
@@ -588,7 +583,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> Beachten Sie beim Aufrufen des Superclass Constructor in einem Constructor mit dem Schlüsselwort [Super](#super), dass  `This` nicht vor dem Superclass Constructor aufgerufen wird, sonst wird ein Fehler generiert. See [this example](#example-1).
+> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
 
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.
@@ -609,30 +604,23 @@ $o.b:=3
 $val:=$o.f() //8
 
 ```
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Da *f* als eine Methode von $o, aufgerufen wird, bezieht sich das dazugehörige `This` auf $o.
+In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
 
 
-## Befehle für Klassen
+## Class commands
 
-Einige Befehle der 4D Programmiersprache eignen sich zum Verwalten von Features für Klassen.
+Several commands of the 4D language allows you to handle class features.
 
 
-### OB Class
+### `OB Class`
 
 #### OB Class ( object ) -> Object | Null
 
-`OB Class` gibt die Klasse des Objekts zurück, das im Parameter übergeben ist.
+`OB Class` returns the class of the object passed in parameter.
 
 
-### OB Instance of
-
-#### OB Instance of ( object ; class ) -> Boolean
-
-`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klassen, sonst `false`.</p>
-
-
-### OB Instance of
+### `OB Instance of`
 
 #### OB Instance of ( object ; class ) -> Boolean
 
-`OB Instance of` gibt `wahr` zurück, wenn `object` zu `class` gehört oder zu einer seiner geerbten Klassen, sonst `false`.
+`OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.

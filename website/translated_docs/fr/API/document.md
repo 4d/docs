@@ -468,7 +468,7 @@ Cette propriété est en **lecture seule**.
 | Paramètres        | Type      |    | Description                                        |
 | ----------------- | --------- |:--:| -------------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Dossier de destination                             |
-| newName           | Texte     | -> | Nom de la copie                                    |
+| newName           | Text      | -> | Nom de la copie                                    |
 | overwrite         | Integer   | -> | `fk overwrite` pour écraser les éléments existants |
 | Résultat          | 4D.File   | <- | Fichier copié                                      |
 <!-- END REF -->
@@ -605,10 +605,10 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 <!-- REF #document.getText().Params -->
 | Paramètres  | Type    |    | Description                               |
 | ----------- | ------- | -- | ----------------------------------------- |
-| charSetName | Texte   | -> | Nom du jeu de caractères                  |
+| charSetName | Text    | -> | Nom du jeu de caractères                  |
 | charSetNum  | Integer | -> | Numéro du jeu de caractères               |
 | breakMode   | Integer | -> | Mode de traitement des retours à la ligne |
-| Résultat    | Texte   | <- | Texte du document                         |
+| Résultat    | Text    | <- | Texte du document                         |
 <!-- END REF -->
 
 

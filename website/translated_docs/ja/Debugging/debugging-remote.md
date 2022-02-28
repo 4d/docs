@@ -5,7 +5,7 @@ title: リモートマシンからのデバッグ
 
 ## 概要
 
-4Dデータベースが 4D Server 上で動いている場合、プロジェクトにログインしているリモート4Dクライアントからサーバーで実行中の 4Dコードをデバッグすることができます。 特定のリモートマシンでデバッガーを起動すると、そのリモートマシン上で直接、コードの実行をモニターすることができます。
+4Dデータベースが 4D Server 上でインタープリターモードで動いている場合、プロジェクトにログインしているリモート4Dクライアントからサーバーで実行中の 4Dコードをデバッグすることができます。 特定のリモートマシンでデバッガーを起動すると、そのリモートマシン上で直接、コードの実行をモニターすることができます。
 
 リモートマシン上で起動された [デバッガー](debugger.md) には、サーバーコードのデバッグ中であることを示すサーバーアイコンと青い背景色のデバッグアイコンが表示されるほか、呼び出し連鎖と式のペインの背景が薄っすらと青く色づきます:
 
@@ -36,7 +36,7 @@ title: リモートマシンからのデバッグ
 
 ## デバッガーの有効化
 
-アプリケーションを起動したとき、デフォルトでは:
+インタープリターモードのアプリケーションを起動したとき、デフォルトでは:
 
 * 4D Server がヘッドレス実行中でない場合、デバッガーはサーバー側で有効化されています。
 * 4D Server がヘッドレス実行中の場合には、デバッガーは有効化されていない状態です。
@@ -60,6 +60,9 @@ title: リモートマシンからのデバッグ
 
 1. デバッガーが有効化されているリモート4Dクライアントにおいて、**実行** ＞ **リモートデバッガを無効化する** を選択します。
 2. 4D Server のメニューバーから、**編集** ＞ **デバッガを有効化する** を選択します。
+
+> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. This can have a significant impact on performance. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+
 
 
 ## デバッガを開始時に有効化する

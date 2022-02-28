@@ -79,9 +79,9 @@ title: EntitySelection
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
-// $employees エンティティセレクションには、
-// Employee データクラスの全エンティティへの参照が格納されています
+$employees:=Create entity selection([Employee])
+// The $employees entity selection now contains a set of reference
+// on all entities related to the Employee dataclass
 ```
 
 #### 参照
@@ -730,6 +730,9 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 </details>
 
 
+
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -788,33 +791,33 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  // $firstnames は文字列のコレクション
+  //$firstnames is a collection of Strings
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  // $addresses は addressリレートエンティティのコレクション
-  // Null値も取得・保持されます
+  //$addresses is a collection of entities related to dataclass Address
+  //Null values for address are extracted
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  // $mailing は "who" および "to" のプロパティを持つオブジェクトのコレクション
-  // "who" プロパティの中身は文字列型
-  // "to" プロパティの中身はエンティティ型 (Address データクラス)
+  //$mailing is a collection of objects with properties "who" and "to"
+  //"who" property content is String type
+  //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  // $mailing は "who" および "city" のプロパティを持つオブジェクトのコレクション
-  // "who" プロパティの中身は文字列型
-  // "city" プロパティの中身は文字列型
+  //$mailing is a collection of objects with properties "who" and "city"
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  // $teachers は"where" および "who" のプロパティを持つオブジェクトのコレクション
-  // "where" プロパティの中身は文字列型
-  // "who" プロパティの中身はエンティティセレクション (Teachers データクラス)
+  //$teachers is a collection of objects with properties "where" and "who"
+  //"where" property content is String
+  //"who" property content is an entity selection (Teachers dataclass)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers はエンティティセレクションのコレクション
+  //$teachers is a collection of entity selections
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -1122,10 +1125,9 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| 引数            | タイプ  |    | 説明          |
-| ------------- | ---- |:--:| ----------- |
-| attributePath | Text | -> | 計算に使用する属性パス |
-| 戻り値           | any  | <- | 属性の最大値      |
+|Parameter|Type||Description|
+
+|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### 説明
@@ -1176,7 +1178,7 @@ Form.products.add(Form.product)
 <!-- REF #EntitySelectionClass.min().Params -->
 | 引数            | タイプ  |    | 説明          |
 | ------------- | ---- |:--:| ----------- |
-| attributePath | Text | -> | 計算に使用する属性パス |
+| attributePath | テキスト | -> | 計算に使用する属性パス |
 | 戻り値           | any  | <- | 属性の最小値      |
 <!-- END REF -->
 
@@ -1250,9 +1252,9 @@ Form.products.add(Form.product)
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
-  // $employees エンティティセレクションは、主キー710 のエンティティと他のエンティティを格納しています
-  //  例: "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (主キー710)
+ $employees:=ds.Employee.query("lastName = :1";"H@")
+  // The $employees entity selection contains the entity with primary key 710 and other entities
+  // for ex. 例: "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (主キー710)
 
  $employee:=ds.Employee.get(710) // "Sherlock Holmes" を返します
 
@@ -1350,8 +1352,8 @@ Form.products.add(Form.product)
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 | 引数          | タイプ                |    | 説明                            |
 | ----------- | ------------------ |:--:| ----------------------------- |
-| pathString  | Text               | -> | エンティティセレクションの属性パスと並べ替えの指定     |
-| pathObjects | Collection         | -> | 条件オブジェクトのコレクション               |
+| pathString  | テキスト               | -> | エンティティセレクションの属性パスと並べ替えの指定     |
+| pathObjects | コレクション             | -> | 条件オブジェクトのコレクション               |
 | 戻り値         | 4D.EntitySelection | <- | 指定された順番に並べ替えられた新規エンティティセレクション |
 <!-- END REF -->
 
@@ -1410,7 +1412,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
-## .orderByFormula( )
+## .orderByFormula()
 
 <details><summary>履歴</summary>
 | バージョン  | 内容 |
@@ -1425,10 +1427,10 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 | 引数            | タイプ                |    | 説明                                         |
 | ------------- | ------------------ |:--:| ------------------------------------------ |
-| formulaString | Text               | -> | フォーミュラ文字列                                  |
-| formulaObj    | Object             | -> | フォーミュラオブジェクト                               |
-| sortOrder     | Integer            | -> | `dk ascending` (デフォルト) または `dk descending` |
-| settings      | Object             | -> | フォーミュラに渡す引数                                |
+| formulaString | テキスト               | -> | フォーミュラ文字列                                  |
+| formulaObj    | オブジェクト             | -> | フォーミュラオブジェクト                               |
+| sortOrder     | 整数                 | -> | `dk ascending` (デフォルト) または `dk descending` |
+| settings      | オブジェクト             | -> | フォーミュラに渡す引数                                |
 | 戻り値           | 4D.EntitySelection | <- | 順列ありの新規エンティティセレクション                        |
 <!-- END REF -->
 
@@ -1548,10 +1550,10 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 <!-- REF #EntitySelectionClass.query().Params -->
 | 引数            | タイプ                |    | 説明                                                                                                              |
 | ------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | 検索条件 (文字列)                                                                                                      |
-| formula       | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                             |
+| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                                                      |
+| formula       | オブジェクト             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                             |
 | value         | any                | -> | プレースホルダー用の値                                                                                                     |
-| querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                            |
+| querySettings | オブジェクト             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                            |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
 
 |
@@ -1606,7 +1608,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 `.queryPath` プロパティは、 <!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4Dで実行されたクエリの詳細な情報<!-- END REF -->を格納します。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。 
+詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
@@ -1630,7 +1632,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 `.queryPlan` プロパティは、 <!-- REF #EntitySelectionClass.queryPlan.Summary --> 実行前のクエリの詳細な情報 (クエリプラン) を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。 
+詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
@@ -1731,7 +1733,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 | 引数               | タイプ                |    | 説明                                                |
 | ---------------- | ------------------ |:--:| ------------------------------------------------- |
 | selectedEntities | 4D.EntitySelection | -> | 呼び出し対象のエンティティセレクション内での位置を取得したい、選別されたエンティティのセレクション |
-| 戻り値              | Object             | <- | 呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲           |
+| 戻り値              | オブジェクト             | <- | 呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲           |
 <!-- END REF -->
 
 #### 説明
@@ -1798,8 +1800,8 @@ $result2:=$invoices.selected($creditSel)
 <!-- REF #EntitySelectionClass.slice().Params -->
 | 引数        | タイプ                |    | 説明                                      |
 | --------- | ------------------ |:--:| --------------------------------------- |
-| startFrom | Integer            | -> | 処理を開始するインデックス)                          |
-| end       | Integer            | -> | 終了インデックス (含まれない)                        |
+| startFrom | 整数                 | -> | 処理を開始するインデックス)                          |
+| end       | 整数                 | -> | 終了インデックス (含まれない)                        |
 | 戻り値       | 4D.EntitySelection | <- | 抜粋エンティティを格納した新しいエンティティセレクション (シャロウ・コピー) |
 <!-- END REF -->
 
@@ -1858,8 +1860,8 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 <!-- REF #EntitySelectionClass.sum().Params -->
 | 引数            | タイプ  |    | 説明                |
 | ------------- | ---- |:--:| ----------------- |
-| attributePath | Text | -> | 計算に使用する属性パス       |
-| 戻り値           | Real | <- | エンティティセレクションの値の合計 |
+| attributePath | テキスト | -> | 計算に使用する属性パス       |
+| 戻り値           | 実数   | <- | エンティティセレクションの値の合計 |
 <!-- END REF -->
 
 #### 説明
@@ -1906,14 +1908,14 @@ $sum:=$sel.sum("salary")
 **.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
-| 引数           | タイプ        |    | 説明                                                                   |
-| ------------ | ---------- |:--:| -------------------------------------------------------------------- |
-| filterString | Text       | -> | 抽出するエンティティの属性パスの文字列                                                  |
-| filterCol    | Collection | -> | 抽出するエンティティの属性パスのコレクション                                               |
-| options      | Integer    | -> | `dk with primary key`: プライマリーキーを追加<br>`dk with stamp`: スタンプを追加 |
-| begin        | Integer    | -> | 開始インデックス                                                             |
-| howMany      | Integer    | -> | 抽出するエンティティ数                                                          |
-| 戻り値          | Collection | <- | エンティティセレクションの属性と値を格納したオブジェクトのコレクション                                  |
+| 引数           | タイプ    |    | 説明                                                                   |
+| ------------ | ------ |:--:| -------------------------------------------------------------------- |
+| filterString | テキスト   | -> | 抽出するエンティティの属性パスの文字列                                                  |
+| filterCol    | コレクション | -> | 抽出するエンティティの属性パスのコレクション                                               |
+| options      | 整数     | -> | `dk with primary key`: プライマリーキーを追加<br>`dk with stamp`: スタンプを追加 |
+| begin        | 整数     | -> | 開始インデックス                                                             |
+| howMany      | 整数     | -> | 抽出するエンティティ数                                                          |
+| 戻り値          | コレクション | <- | エンティティセレクションの属性と値を格納したオブジェクトのコレクション                                  |
 <!-- END REF -->
 
 #### 説明

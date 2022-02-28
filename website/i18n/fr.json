@@ -571,7 +571,7 @@
         "title": "Sous-formulaire"
       },
       "FormObjects/propertiesText": {
-        "title": "Texte"
+        "title": "Text"
       },
       "FormObjects/propertiesTextAndPicture": {
         "title": "Texte et Image"
@@ -607,7 +607,7 @@
         "title": "Onglets"
       },
       "FormObjects/text": {
-        "title": "Texte"
+        "title": "Text"
       },
       "FormObjects/viewProAreaOverview": {
         "title": "Zone 4D View Pro"
@@ -677,7 +677,7 @@
         "sidebar_label": "Page Vérification"
       },
       "Notes/updates": {
-        "title": "Documentation updates"
+        "title": "Mises à jour de la documentation"
       },
       "ORDA/dsmapping": {
         "title": "Objets Data Model"
@@ -879,8 +879,8 @@
       }
     },
     "links": {
-      "v19 R3 BETA": "v19 R3 BETA",
-      "v19 R2": "v19 R2",
+      "v19 R4 BETA": "v19 R4 BETA",
+      "v19 R3": "v19 R3",
       "v19": "v19",
       "v18": "v18"
     },
@@ -950,7 +950,7 @@
     "Web applications|no description given": "Applications Web",
     "Mobile applications|no description given": "Applications Mobile",
     "Desktop applications|no description given": "Applications Desktop",
-    "Documentation updates|no description given": "Documentation updates",
+    "Documentation updates|no description given": "Mises à jour de la documentation",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",
     "Translate this Doc|recruitment message asking to translate the docs": "Traduire"

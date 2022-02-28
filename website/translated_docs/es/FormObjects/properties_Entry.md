@@ -6,7 +6,7 @@ title: Entrada
 ---
 ## Corrección ortográfica automática
 
-4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D incluye funcionalidades de corrección ortográfica integradas y personalizables. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
 The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
@@ -20,7 +20,7 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### Objetos soportados
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md) - [Área de entrada](input_overview.md)
 
 
 ---
@@ -194,20 +194,20 @@ By default, the object uses the current keyboard layout.
 ---
 ## Multilínea
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. Puede tener tres valores diferentes: Sí, No, Automático (por defecto).
+Esta propiedad está disponible para [objetos de entrada](input_overview.md) que contienen expresiones de tipo Texto y campos de tipo Alfa y Texto. Puede tener tres valores diferentes: Sí, No, Automático (por defecto).
 
 #### Automático
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- In multiline inputs, 4D carries out automatic line returns:  
+- En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
+- En las entradas multilínea, 4D realiza retornos de línea automáticos:  
   ![](assets/en/FormObjects/multilineAuto.png)
 
 #### No
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
+- En las entradas de una línea, las palabras situadas al final de las líneas se truncan y no hay retornos de línea.
+- Nunca hay retornos de línea: el texto siempre se muestra en una sola línea. Si el campo o la variable Alfa o Texto contiene retornos de carro, el texto situado después del primer retorno de carro se elimina en cuanto se modifica el área:  
   ![](assets/en/FormObjects/multilineNo.png)
 
 #### Sí
-When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+Cuando se selecciona este valor, la propiedad es gestionada por la opción [Retorno de línea](properties_Display.md#wordwrap).
 
 
 #### Gramática JSON
@@ -248,13 +248,13 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                             |
-| ----------- | -------------- | ---------------------------------------------------------------------------- |
-| placeholder | cadena         | Text to be displayed (grayed out) when the object does not contain any value |
+| Nombre      | Tipos de datos | Valores posibles                                                    |
+| ----------- | -------------- | ------------------------------------------------------------------- |
+| placeholder | cadena         | Texto a mostrar (en gris) cuando el objeto no contiene ningún valor |
 
 #### Objetos soportados
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Área de entrada](input_overview.md)
 
 
 #### Ver también
@@ -264,7 +264,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 
 ---
-## Selection always visible
+## Selección siempre visible
 
 This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
 
@@ -302,7 +302,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | shortcutAccel   | booleano       | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
 | shortcutAlt     | booleano       | true, false                                                                                                                                                                                                                                                                                 |
 | shortcutCommand | booleano       | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | booleano       | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutControl | booleano       | true, false (macOS: Control)                                                                                                                                                                                                                                                                |
 | shortcutShift   | booleano       | true, false                                                                                                                                                                                                                                                                                 |
 |                 |                |                                                                                                                                                                                                                                                                                             |
 | shortcutKey     | cadena         | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |

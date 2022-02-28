@@ -55,7 +55,6 @@ For example, if you want to define a class named "Polygon", you need to create t
 
 - Project folder
     + Project
-
         * Sources
             - Classes
                 + Polygon.4dm
@@ -351,7 +350,7 @@ Function get fullAddress()->$result : Object
     $result.zipCode:=This.zipCode
     $result.city:=This.city
     $result.state:=This.state
-    $result.country:=This.country 
+    $result.country:=This.country
 ```
 
 ### `Class Constructor`
@@ -421,7 +420,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm 
+//path: Classes/Square.4dm
 
 Class extends Polygon
 
@@ -575,7 +574,7 @@ Class Constructor
 
     // Create properties on This as
     // desired by assigning to them
-    This.a:=42 
+    This.a:=42
 ```
 
 ```4d

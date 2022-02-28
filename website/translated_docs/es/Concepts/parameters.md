@@ -190,7 +190,7 @@ $NewPhrase:=Uppercase4("This is good.")
 
 En este ejemplo, la variable *$NewPhrase* recibe “THIS is good.”
 
-El valor devuelto, `$0`, es una variable local dentro de la subrutina. Puede utilizarse como tal dentro de la subrutina. For example, you can write:
+El valor devuelto, `$0`, es una variable local dentro de la subrutina. Puede utilizarse como tal dentro de la subrutina. Por ejemplo, puede escribir:
 
 ```4d
 // Do_something

@@ -791,8 +791,8 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 | success   |                         | Booléen    | Vrai si le serveur web a été correctement démarré, sinon Faux             |
 | errors    |                         | Collection | Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès) |
 |           | \[].errCode            | Nombre     | Code d'erreur 4D                                                          |
-|           | \[].message            | Texte      | Description de l'erreur 4D                                                |
-|           | \[].componentSignature | Texte      | Signature du composant interne qui a retourné l'erreur                    |
+|           | \[].message            | Text       | Description de l'erreur 4D                                                |
+|           | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                    |
 > Si le serveur Web a déjà été lancé, une erreur est générée.
 
 #### Exemple

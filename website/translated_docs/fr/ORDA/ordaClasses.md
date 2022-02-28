@@ -26,7 +26,7 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 - Si la structure phySique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) are **not exposed** to remote applications and cannot be called from REST requests. Vous devez déclarer explicitement chaque fonction publique avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
+- Par défaut, toutes les fonctions de classe de votre modèle de données (y compris [les fonctions des champs calculés](#computed-attributes)) ne sont pas exposées (**not exposed**) aux applications distantes et ne peuvent pas être appelées à partir de requêtes REST. Vous devez déclarer explicitement chaque fonction publique avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
 
 ![](assets/en/ORDA/api.png)
 
@@ -189,12 +189,12 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// cs.EmployeeSelection class
+// classe cs.EmployeeSelection
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extraire, de cette entity selection, les employés dont le salaire est supérieur à la moyenne.
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -223,7 +223,7 @@ Les classes Entity vous permettent de définir des **champs calculés** à l'aid
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 
-For more information, please refer to the [Computed attributes](#computed-attributes) section.
+Pour plus d'informations, reportez-vous à la section [Champs calculés](#computed-attributes).
 
 #### Exemple
 
@@ -334,9 +334,9 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                   |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Nom du champ calculé                                                                                          |
-| dataClassName | Texte   | Nom de la dataclass                                                                                           |
-| kind          | Texte   | "get"                                                                                                         |
+| attributeName | Text    | Nom du champ calculé                                                                                          |
+| dataClassName | Text    | Nom de la dataclass                                                                                           |
+| kind          | Text    | "get"                                                                                                         |
 | result        | Variant | Optionnel. Complétez cette propriété avec la valeur Null si vous souhaitez qu'un champ scalaire retourne Null |
 
 
@@ -349,7 +349,7 @@ Function get fullName($event : Object)-> $fullName : Text
 
   Case of   
     : (This.firstName=Null) & (This.lastName=Null)
-        $event.result:=Null //use result to return Null
+        $event.result:=Null //utiliser le résultat pour retourner Null
     : (This.firstName=Null)
         $fullName:=This.lastName
     : (This.lastName=Null)
@@ -395,9 +395,9 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                         |
 | ------------- | ------- | ----------------------------------- |
-| attributeName | Texte   | Nom du champ calculé                |
-| dataClassName | Texte   | Nom de la dataclass                 |
-| kind          | Texte   | "set"                               |
+| attributeName | Text    | Nom du champ calculé                |
+| dataClassName | Text    | Nom de la dataclass                 |
+| kind          | Text    | "set"                               |
 | value         | Variant | Valeur à gérer par le champ calculé |
 
 #### Exemple
@@ -432,22 +432,22 @@ Cette fonction prend en charge trois syntaxes :
 
     | Propriété          | Type       | Description                                               |
     | ------------------ | ---------- | --------------------------------------------------------- |
-    | $result.query      | Texte      | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+    | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
     | $result.parameters | Collection | valeurs pour placeholders                                 |
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
-> The following features are not supported: - calling a `query` function on computed attributes of type Entity or Entity selection, - using the `order by` keyword in the resulting query string.
+> Les fonctionnalités suivantes ne sont pas prises en charge : - l'appel d'une fonction de requête `query` sur des champs calculés de type Entity ou Entity Selection - l'utilisation du mot-clé `order by` dans la chaîne de requête résultante.
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| attributeName | Texte   | Nom du champ calculé                                                                                                                                                                                                                                                                                                                                                               |
-| dataClassName | Texte   | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                                                |
-| kind          | Texte   | "query"                                                                                                                                                                                                                                                                                                                                                                            |
+| attributeName | Text    | Nom du champ calculé                                                                                                                                                                                                                                                                                                                                                               |
+| dataClassName | Text    | Nom de la dataclass                                                                                                                                                                                                                                                                                                                                                                |
+| kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Variant | Valeur à gérer par le champ calculé                                                                                                                                                                                                                                                                                                                                                |
-| operator      | Texte   | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
+| operator      | Text    | Opérateur de requête (voir également la fonction de classe [`query`](API/DataClassClass.md#query)). Valeurs possibles :<li>== (égal à, @ est un joker)</li><li>=== (égal à, @ n'est pas un joker)</li><li>!= (non égal à, @ est un joker)</li><li>!== (non égal à, @ n'est pas un joker)</li><li>< (inférieur à)</li><li><= (less than or equal to)</li><li>> (supérieur à)</li><li>>= (supérieur ou égal à)</li><li>IN (inclus dans)</li><li>% (contient un mot-clé)</li> |
 | result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` dans cette propriété si vous voulez laisser 4D exécuter la requête par défaut (toujours séquentielle pour les champs calculés).                                                                                                                                                                                       |
 
 > Si la fonction retourne une valeur dans *$result* et qu'une autre valeur est attribuée à la propriété `$event.result`, la priorité est donnée à `$event.result`.
@@ -514,7 +514,7 @@ Function query age($event : Object)->$result : Object
 
     $operator:=$event.operator
 
-    $age:=Num($event.value)  // integer
+    $age:=Num($event.value)  // entier
     $d1:=Add to date(Current date; -$age-1; 0; 0)
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
@@ -522,16 +522,16 @@ Function query age($event : Object)->$result : Object
     Case of
 
         : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+            $query:="birthday > :1 and birthday <= :2"  // après d1 et avant ou égal à d2
 
         : ($operator="===")
 
-            $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+            $query:="birthday = :2"  // d2 = seconde date calculée (= date d'anniversaire)
 
         : ($operator=">=")
             $query:="birthday <= :2"
 
-            //... other operators           
+            //... autres opérateurs           
 
 
     End case
@@ -576,11 +576,11 @@ Les propriétés du paramètre *$event* sont les suivantes :
 
 | Propriété     | Type    | Description                                                                                                        |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
-| attributeName | Texte   | Nom du champ calculé                                                                                               |
-| dataClassName | Texte   | Nom de la dataclass                                                                                                |
-| kind          | Texte   | "orderBy"                                                                                                          |
+| attributeName | Text    | Nom du champ calculé                                                                                               |
+| dataClassName | Text    | Nom de la dataclass                                                                                                |
+| kind          | Text    | "orderBy"                                                                                                          |
 | value         | Variant | Valeur à gérer par le champ calculé                                                                                |
-| operator      | Texte   | "desc" or "asc" (default)                                                                                          |
+| operator      | Text    | "desc" or "asc" (default)                                                                                          |
 | descending    | Booléen | `true` pour l'ordre décroissant, `false` pour l'ordre croissant                                                    |
 | result        | Variant | Valeur devant être gérée par le champ calculé. Passez `Null` si vous voulez laisser 4D exécuter le tri par défaut. |
 

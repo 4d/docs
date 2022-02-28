@@ -55,7 +55,6 @@ Par exemple, si vous souhaitez définir une classe nommée "Polygon", vous devez
 
 - Dossier Project
     + Project
-
         * Sources
             - Classes
                 + Polygon.4dm
@@ -225,7 +224,7 @@ Dans le code de l'application, les fonctions de classe sont appelées en tant qu
 
 #### Paramètres
 
-Les paramètres de fonction sont déclarés à l'aide du nom du paramètre et du type de paramètre, séparés par deux points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Les paramètres de fonction sont déclarés à l'aide du nom du paramètre et du type de paramètre, séparés par deux points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Les multiples paramètres (et les types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -244,7 +243,7 @@ Vous pouvez également déclarer le paramètre de retour uniquement en ajoutant 
 Function add ($x : Variant; $y : Integer): Integer
      $0:=$x+$y
 ```
-> La [syntaxe 4D classique](parameters.md#sequential-parameters) des paramètres de méthode peut être utilisée pour déclarer les paramètres des fonctions de classe. Les deux syntaxes peuvent être mélangées. Par exemple :
+> La [syntaxe 4D classique](parameters.md#sequential-parameters) des paramètres de méthode peut être utilisée pour déclarer les paramètres de fonction de classe. Les deux syntaxes peuvent être mélangées. Par exemple :
 > 
 > ```4d
 > Function add($x : Integer)
@@ -302,21 +301,17 @@ Function set <name>($parameterName : type)
 
 Si on n'accède pas à la propriété, le code ne s'exécute jamais.
 
-Les propriétés calculées sont conçues pour gérer les données qui n'ont pas nécessairement besoin d'être conservées en mémoire. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
+Les propriétés calculées sont conçues pour gérer les données qui n'ont pas nécessairement besoin d'être conservées en mémoire. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient le *prix brut* et *le taux de TVA* en guise de propriété persistante, le *prix net* pourrait être traité par une propriété calculée..
 
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
+Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété. Le nom doit être conforme aux [règles de dénomination des propriétés](Concepts/identifiers.md#object-properties).
 
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
+`Function get` retourne une valeur du type de propriété et `Function set` prend un paramètre du type de propriété. Les deux arguments doivent être conformes aux [paramètres standard des fonctions](#parameters).
 
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété. Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
+Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
 
-`Function get` retourne une valeur du type de la propriété et `Function set` prend un paramètre du type de la propriété. Les deux arguments doivent être conformes aux [paramètres standard des fonctions](#parameters).
+Le type de la propriété calculée est défini par la déclaration de type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
 
-Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
-
-Le type de la propriété calculée est défini par la déclaration du type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md). Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
-
-> Assigner *undefined* à une propriété d'objet efface sa valeur tout en préservant son type. Pour ce faire, on appelle d'abord la fonction `get` pour récupérer le type de valeur, puis la fonction `set` avec une valeur vide de ce type.
+> Assigner *undefined* à une propriété d'objet efface sa valeur tout en préservant son type. Pour ce faire, `Function get` est appelée dans un premier temps pour récupérer le type de valeur, suivie de `Function set` qui est appelée avec une valeur vide de ce type.
 
 #### Exemple 1
 
@@ -339,8 +334,8 @@ Function set fullName( $fullName : Text )
 
 ```4d
 //dans une méthode projet
-$fullName:=$person.fullName // la fonction get fullName() est appelée
-$person.fullName:="John Smith" // la fonction set fullName() est appelée
+$fullName:=$person.fullName // Function get fullName() est appelée
+$person.fullName:="John Smith" // Function set fullName() est appelée
 ```
 
 #### Exemple 2
@@ -355,7 +350,7 @@ Function get fullAddress()->$result : Object
     $result.zipCode:=This.zipCode
     $result.city:=This.city
     $result.state:=This.state
-    $result.country:=This.country 
+    $result.country:=This.country
 ```
 
 ### `Class Constructor`
@@ -407,57 +402,56 @@ Class extends <ParentClass>
 
 Le mot-clé `Class extends` est utilisé dans la déclaration de classe pour créer une user class qui est un enfant d'une autre user class. La classe enfant hérite de toutes les fonctions de la classe parente.
 
-L'extension des classes doit suivre les règles suivantes :
+L'extension des classes doit respecter les règles suivantes :
 
-- Une classe utilisateur ne peut pas étendre une classe intégrée (sauf 4D.Object, qui est étendue par défaut pour les classes utilisateur)
+- Une classe utilisateur ne peut pas étendre une classe intégrée (à l'exception de 4D.Object qui est étendue par défaut pour les classes utilisateur)
 - Une classe utilisateur ne peut pas étendre une classe utilisateur d'un autre projet ou composant.
 - Une classe utilisateur ne peut pas s'étendre elle-même.
 - Il n'est pas possible d'étendre des classes de manière circulaire (i.e. "a" étend "b" qui étend "a").
 
-Le non respect de cette règle n'est pas détecté par l'éditeur de code ou l'interpréteur, seul le compilateur et le `contrôle syntaxique` génèreront une erreur dans ce cas.
+Tout manquement à cette règle n'est pas détecté par l'éditeur de code ou par l'interpréteur, seuls le compilateur et le `contrôle syntaxique` génèreront une erreur dans ce cas.
 
-Une classe étendue peut appeler le constructeur de sa classe parente en utilisant la commande [`Super`](#super).
+Une classe étendue peut appeler le constructor de sa classe parente en utilisant la commande [`Super`](#super).
 
 #### Exemple
 
 Cet exemple crée une classe appelée `Square` à partir d'une classe appelée `Polygon`.
 
-```4d
-//Class: Square
+<code class="4d" spaces="0" spaces-closing-marker="0" marker="```" spaces-after-opening-marker="0">//Class: Square
 
-//path: Classes/Square.4dm 
+//path: Classes/Square.4dm
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
-    // Il appelle le constructeur de la classe parente avec des mesures
-    // fournies pour la largeur et la hauteur du polygone
+    // Appeler le parent de class constructor avec les mesures
+    // fourni par les dimensions du Polygon
     Super($side;$side)
-    // Dans les classes dérivées, Super doit être appelé avant de
-    // pouvoir utiliser 'This'
+    // Dans les classes dérivées, Super doit être appelée avant 
+    // de pouvoir utiliser 'This'
     This.name:="Square"
 
     Function getArea()
         C_LONGINT($0)
         $0:=This.height*This.width
-```
+</code></pre>
 
 ### `Super`
 
 
 #### Super {( param{;...;paramN} )} {-> Object}
 
-| Paramètre | Type   |    | Description                                  |
-| --------- | ------ | -- | -------------------------------------------- |
-| param     | mixed  | -> | Paramètre(s) à passer au constructeur parent |
-| Result    | object | <- | Parent de l'objet                            |
+| Parameter | Type   |    | Description                                 |
+| --------- | ------ | -- | ------------------------------------------- |
+| param     | mixed  | -> | Paramètre(s) à passer au constructor parent |
+| Résultat  | object | <- | Parent de l'objet                           |
 
-Le mot clé `Super` permet d'appeler la `superclass`, c'est-à-dire la classe prente.
+Le mot-clé `Super` permet d'appeler la `superclass`, c'est-à-dire la classe mère.
 
-`Super` a deux finalités :
+`Super` possède deux finalités :
 
-- dans un [constructor code](#class-constructor), `Super` est une commande qui permet d'appeler le constructeur de la superclass. Lorsqu'elle est utilisée dans un constructeur, la commande `Super` apparaît seule et doit être utilisée avant que le mot clé `This` ne soit utilisé.
+- à l'intérieur d'un [code constructor](#class-constructor), `Super` est une commande qui permet d'appeler le constructor de la superclasse. Lorsqu'elle est utilisée dans un constructeur, la commande `Super` apparaît seule et doit être utilisée avant que le mot clé `This` ne soit utilisé.
     - Si tous les constructeurs de classe de l'arborescence d'héritage ne sont pas appelés correctement, l'erreur -10748 est générée. C'est au développeur 4D de s'assurer que les appels sont valides.
     - Si la commande `This` est appelée sur un objet dont les superclasses n'ont pas été construites, l'erreur -10743 est générée.
 
@@ -584,34 +578,34 @@ $message:=$square.description() //Je possède 4 côtés égaux
 
 Le mot-clé `This` retourne une référence à l'objet qui est cours de traitement. Dans 4D, il peut être utilisé dans [différents contextes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
-Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
+Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
 
-Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` est défini à l'objet sur lequel la méthode est appelée. For example:
+Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` est défini sur l'objet sur lequel la méthode est appelée. Par exemple :
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Lorsqu'une fonction [class constructor](#class-constructor) est utilisée (avec la fonction [`new()`](API/ClassClass.md#new)), son `This` est lié au nouvel objet en cours de construction.
 
 ```4d
 //Class: ob
 
 Class Constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
-    This.a:=42 
+    // Créer des propriétés sur This comme souhaité
+    // en leur assignant
+    This.a:=42
 ```
 
 ```4d
-// in a 4D method  
+// dans une méthode 4D
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Prenons [cet exemple](#example-1).
+> Lorsque vous appelez le superclass constructor dans un constructor utilisant le mot clé [Super](#super), gardez à l'esprit que `This` ne doit pas être appelé avant le superclass constructor, sinon une erreur est générée. Prenons [cet exemple](#example-1).
 
 
 Dans tous les cas, `This` fait référence à l'objet sur lequel la méthode a été appelée, comme si la méthode était sur l'objet.
@@ -637,18 +631,18 @@ Dans cet exemple, l'objet assigné à la variable $o n'a pas sa propre propriét
 
 ## Commandes de classe
 
-Plusieurs commandes du langage 4D permettent de manipuler les caractéristiques des classes.
+Plusieurs commandes du langage 4D permettent de gérer les fonctionnalités de classe.
 
 
-### OB Class</code>
+### OB Class
 
-#### OB Class ( object ) -> Object | Null
+#### OB Class (object) -> Object | Null
 
-OB Class</code> retourne la classe de l'objet passé en paramètre.
+`OB Class` retourne la classe de l'objet passé en paramètre.
 
 
-### `OB Instance of`
+### OB Instance of
 
-#### OB Instance of ( object ; class ) -> Boolean
+#### OB Instance of (objet; classe) -> Booléen
 
-`OB Instance of` retourne `true` si `l'objet` appartient à la `classe` ou à l'une de ses classes héritées, sinon elle retourne `false`
+`OB Instance of` retourne `true` si `object` appartient à `class` ou à l'une de ses classes héritées, et `false` dans le cas contraire

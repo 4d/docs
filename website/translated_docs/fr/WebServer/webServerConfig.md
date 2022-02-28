@@ -64,7 +64,7 @@ Définit le jeu de caractères à utiliser par le serveur web 4D. La valeur par 
 
 | Peut être configuré via | Nom                                                | Commentaires |
 | ----------------------- | -------------------------------------------------- | ------------ |
-| objet webServer         | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Texte        |
+| objet webServer         | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text         |
 
 Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité des algorithmes de chiffrement implémentés par le serveur web. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la [page des chiffrements](https://www.openssl.org/docs/manmaster/man1/ciphers.html) sur le site OpenSSL.
 
@@ -140,7 +140,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 
 | Peut être configuré via  | Nom                                                        | Commentaires                                 |
 | ------------------------ | ---------------------------------------------------------- | -------------------------------------------- |
-| objet webServer          | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Texte                                        |
+| objet webServer          | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text                                         |
 | `WEB SET HOME PAGE`      |                                                            | Peut être différente pour chaque web process |
 | Fenêtre de configuration | Configuration > Page d'accueil par défaut                  |                                              |
 
@@ -392,7 +392,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 > Les formats 3 et 4 sont des formats personnalisés dont le contenu doit être défini au préalable dans la boîte de dialogue des Propriétés. Si vous utilisez l'un de ces formats sans qu'aucun de ses champs n'ait été sélectionné sur cette page, le fichier d'enregistrement des logs ne sera pas généré.
 
 
-## Nombre maximal de process Web simultanés
+## Process Web simultanés maxi
 
 | Peut être configuré via  | Nom                                                                      | Commentaires |
 | ------------------------ | ------------------------------------------------------------------------ | ------------ |

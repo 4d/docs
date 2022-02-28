@@ -193,7 +193,7 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
 ```
 
-## Classes
+## クラス
 
 4D ランゲージではオブジェクトクラスがサポートされています。 "myClass" という名称のクラスを作成するには、プロジェクトの Project/Sources/Classes フォルダーに `myClass.4dm` ファイルを追加します。
 

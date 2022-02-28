@@ -166,7 +166,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 <!-- REF #SessionClass.hasPrivilege().Params -->
 | Paramètres | Type    |    | Description                                      |
 | ---------- | ------- |:--:| ------------------------------------------------ |
-| privilege  | Texte   | <- | Name of the privilege to verify                  |
+| privilege  | Text    | <- | Name of the privilege to verify                  |
 | Résultat   | Booléen | <- | True if session has *privilege*, False otherwise |
 <!-- END REF -->
 
@@ -287,7 +287,7 @@ End if
 <!-- REF #SessionClass.setPrivileges().Params -->
 | Paramètres | Type       |    | Description                                                |
 | ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| privilege  | Texte      | -> | Privilege name                                             |
+| privilege  | Text       | -> | Privilege name                                             |
 | privileges | Collection | -> | Collection of privilege names                              |
 | settings   | Object     | -> | Object with a "privileges" property (string or collection) |
 <!-- END REF -->
@@ -305,7 +305,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 | Propriété  | Type               | Description                                        |
 | ---------- | ------------------ | -------------------------------------------------- |
 | privileges | Text or Collection | <li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li> |
-| userName   | Texte              | User name to associate to the session (optional)   |
+| userName   | Text               | User name to associate to the session (optional)   |
 
 If the `privileges` property contains an invalid privilege name, it is ignored.
 

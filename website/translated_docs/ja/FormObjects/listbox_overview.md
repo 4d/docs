@@ -105,11 +105,11 @@ LIST TO ARRAY("ListName";varCol)
 
 このタイプのリストボックスでは、各カラムに式が割り当てられている必要があります。 各行の中身はコレクション要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。
 
-コレクションの各要素、またはエンティティセレクションの各エンティティは、[This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドを用いてオブジェクトとして取得します。 カラムの式にはプロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、`This` を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。例: `This.<propertyPath>` (あるいはスカラー値のコレクションの場合は `This.value`)。 カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
+Each element of the collection or each entity is available as an object that can be accessed through the [This](../Concepts/classes.md#this) keyword. A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
 
 データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。 その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。
 
-データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 その一方で、コレクションに対して、たとえば *コレクション* テーマの様々なメソッドを使用して変更をおこなった場合、コレクション変数を自らに再代入することで明示的に 4D に通知する必要があり、それによってリストボックスのコンテンツは更新されます。 たとえば:
+データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. たとえば:
 
 ```4d
 myCol:=myCol.push("new value") // リストボックスに new value を表示
@@ -523,13 +523,60 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 ## ソートの管理
 
-ヘッダーがクリックされると、リストボックスはデフォルトで標準的なカラムの並べ替えを自動的におこないます。 標準的な並べ替えとは、列の値を英数字順に並べ替え、続けてクリックされると昇順/降順を交互に切り替えます。 すべての列は常に自動で同期されます。
+A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.
 
-リストボックスの [ソート可](properties_Action.md#ソート可) プロパティの選択を解除すると、ユーザーによる標準の並べ替えを禁止することができます。
+### Standard sort
 
-開発者は、`LISTBOX SORT COLUMNS` コマンドを使用するか、または `On Header Click` と `On After Sort` フォームイベント ([`FORM Event`](https://doc.4d.com/4dv19/help/command/ja/page1606.html) コマンド参照) を 4D の配列管理コマンドと組み合わせて、独自の並べ替えを設定することができます。
+By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
 
-> [ソート可](properties_Action.md#ソート可) プロパティは、ユーザーによる標準の並べ替えにのみ影響します。[`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/ja/page916.html) コマンドは、このプロパティを考慮しません。
+You can enable or disable standard user sorts by disabling the [Sortable](properties_Action.md#sortable) property of the list box (enabled by default).
+
+Standard sort support depends on the list box type:
+
+| List box type               | Support of standard sort | コメント                                                                                                         |
+| --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Object の Collection         | ◯                        | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Collection of scalar values | ×                        | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
+| エンティティセレクション                | ◯                        | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Current selection           | ◯                        | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
+| Named selection             | ×                        |                                                                                                              |
+| 配列                          | ◯                        | Columns bound to picture and pointer arrays are not sortable                                                 |
+
+
+
+
+### Custom sort
+
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+
+Custom sorts allow you to:
+
+- carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+- use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+
+#### 例題
+
+You want to sort a list box using values of a property stored in a related object attribute. You have the following structure:
+
+![](assets/en/FormObjects/relationLB.png)
+
+You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds.Child.all()`.
+
+You display two columns:
+
+| Child name  | Parent's nickname            |
+| ----------- | ---------------------------- |
+| `This.name` | `This.parent.extra.nickname` |
+
+If you want to sort the list box using the values of the second column, you have to write:
+
+```4d
+If (Form event code=On Header Click)
+    Form.child:=Form.child.orderByFormula("This.parent.extra.nickname"; dk ascending)
+End if
+```
+
+### Column header variable
 
 [列ヘッダー変数](properties_Object.md#変数あるいは式)の値を使用すると、列の現在の並べ替え状況 (読み込み) や並べ替え矢印の表示など、追加情報を管理することができます。
 
@@ -807,6 +854,7 @@ Variable 1 は常に、リストボックスの先頭列の変数名に対応し
 
 階層リストボックスはその配列の内容から構築されます。そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから (`SELECTION TO ARRAY` コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
 
+
 `On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、`LISTBOX GET CELL POSITION` コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
@@ -969,6 +1017,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 ```4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
+
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
  OB SET($ob4;"valueType";"integer")

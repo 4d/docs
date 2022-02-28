@@ -11,15 +11,15 @@ This property specifies that the list box must be displayed in hierarchical form
 
 Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Up to 10 variables can be specified. These variables set the hierarchical levels to be displayed in the first column.
 
-See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
+Ver [List box jerárquicos](listbox_overview.md#hierarchical-list-boxes)
 
 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                 |
-| ---------- | -------------- | ------------------------------------------------ |
-| datasource | array cadena   | Collection of array names defining the hierarchy |
+| Nombre     | Tipos de datos | Valores posibles                                        |
+| ---------- | -------------- | ------------------------------------------------------- |
+| datasource | array cadena   | Colección de nombres de arrays que definen la jerarquía |
 
 #### Objetos soportados
 

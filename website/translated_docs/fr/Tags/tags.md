@@ -477,7 +477,7 @@ This syntax makes a loop for each record from the table current selection in the
 
 > When the `4DLOOP` tag is used with a table, records are loaded in "Read only" mode.
 
-The following code:
+Le code suivant :
 
 ```html
 <!--#4DLOOP [People]-->

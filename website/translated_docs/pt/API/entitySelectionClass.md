@@ -79,7 +79,7 @@ No parâmetro opcional*settings* pode passar um objeto contendo as propriedades 
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
+$employees:=Create entity selection([Employee])
 // The $employees entity selection now contains a set of reference
 // on all entities related to the Employee dataclass
 ```
@@ -728,6 +728,9 @@ Example with the `dk stop dropping on first error` option:
 </details>
 
 
+
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -797,14 +800,14 @@ Dada a seguinte tabela e relação:
   //
   //
   //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type 
+  //"who" property content is String type
   //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
   //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type 
-  //"city" property content is String type 
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
   //$teachers is a collection of objects with properties "where" and "who"
@@ -1120,10 +1123,9 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parameter     | Type  |    | Description                                      |
-| ------------- | ----- |:--:| ------------------------------------------------ |
-| attributePath | Texto | -> | Path of the attribute to be used for calculation |
-| Result        | any   | <- | Highest value of attribute                       |
+|Parameter|Type||Description|
+
+|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### Description
@@ -1248,7 +1250,7 @@ If the original entity selection and the parameter are not related to the same d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
+ $employees:=ds.Employee.query("lastName = :1";"H@")
   // The $employees entity selection contains the entity with primary key 710 and other entities
   // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
@@ -1408,7 +1410,7 @@ You can add as many objects in the criteria collection as necessary.
 
 
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
-## .orderByFormula( )
+## .orderByFormula()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -1532,11 +1534,11 @@ In this example, the "marks" object field in the **Students** dataClass contains
 ## .query()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                           |
-| ------ | ---------------------------------- |
-| v17 R6 | Support of Formula parameters      |
-| v17 R5 | Support of placeholders for values |
-| v17    | Adicionado                         |
+| Versão | Mudanças                               |
+| ------ | -------------------------------------- |
+| v17 R6 | Soporte dos Parâmetros Formula         |
+| v17 R5 | Suporte dos marcadores para os valores |
+| v17    | Adicionado                             |
 
 </details>
 
@@ -1546,10 +1548,10 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- REF #EntitySelectionClass.query().Params -->
 | Parameter     | Type               |    | Description                                                                                                                                                   |
 | ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Texto              | -> | Search criteria as string                                                                                                                                     |
-| formula       | Objeto             | -> | Search criteria as formula object                                                                                                                             |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
-| querySettings | Objeto             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
+| queryString   | Texto              | -> | Criterios de pesquisa como string                                                                                                                             |
+| formula       | Objeto             | -> | Criterios de pesquisa como objeto fórmula                                                                                                                     |
+| value         | any                | -> | Valores a usar para placeholders indexados                                                                                                                    |
+| querySettings | Objeto             | -> | Opções de pesquisa: parâmetros, atributos, args, allowFormulas, contexto, queryPath,queryPlan                                                                 |
 | Result        | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 |
@@ -1559,7 +1561,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 > This function does not modify the original entity selection.
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
 For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
 > By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
@@ -1604,7 +1606,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -1628,7 +1630,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
 <!-- END REF -->
 

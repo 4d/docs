@@ -141,17 +141,18 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 - **fermeture }, ), ] ou "** : caractère ajouté lorsque vous tapez respectivement une ouverture {, (, ] ou ". Cette fonction permet d'insérer des paires de symboles correspondants au point d'insertion ou autour d'un texte sélectionné. Par exemple, si vous mettez en surbrillance une chaîne de caractères et que vous tapez un simple caractère ", toute la chaîne sélectionnée sera entourée de "" :
 
-![](assets/en/Preferences/optionsClosing.png) -> " -> ![](assets/en/Preferences/optionsClosing2.png)
+![](assets/en/Preferences/optionsClosing.png)  
+![](assets/en/Preferences/optionsClosing2.png)
 
-#### Matching [](){}""
+#### Matching \[]\(){}
 
-Sets the graphic signaling of matching braces and double quotes in the code. This signaling appears whenever a square bracket, parenthesis, curly bracket, or double quote is selected. Les options suivantes sont disponibles :
+Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. Les options suivantes sont disponibles :
 
 - **Aucun** : Aucun signal
-- **Rectangle** (par défaut) : Accolades/guillemets entourés d'une ligne noire  
+- **Rectangle** (default): Braces surrounded by a black line  
   ![](assets/en/Preferences/optionsRectangle.png)
-- **Couleur de fond** : accolades/guillemets mis en évidence (la couleur est définie dans la page [Thème](#theme-definition)).
-- **Gras** : Les accolades/guillemets sont affichés en gras.
+- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
+- **Bold**: Braces displayed in bold.
 
 #### Highlighted variables and fields
 

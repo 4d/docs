@@ -628,7 +628,7 @@ Le code générique suivant duplique toute entité :
 | Paramètres | Type    |    | Description                                                                              |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Résultat   | Texte   | <- | Valeur de la clé primaire texte de l'entité                                              |
+| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                              |
 | Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                          |
 
 <!-- END REF -->
@@ -1290,7 +1290,7 @@ Mise à jour d'une entité avec option `dk auto merge` :
 <!-- REF #EntityClass.toObject().Params -->
 | Paramètres   | Type       |    | Description                                                                                                      |
 | ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
-| filterString | Texte      | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                       |
+| filterString | Text       | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                       |
 | filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                              |
 | options      | Integer    | -> | `dk with primary key` : ajouter la propriété \_KEY ;<br>`dk with stamp` : ajouter la propriété \_STAMP |
 | Résultat     | Object     | <- | Objet généré à partir de l'entité                                                                                |

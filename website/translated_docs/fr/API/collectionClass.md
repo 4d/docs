@@ -223,7 +223,7 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 <!-- REF #collection.average().Params -->
 | Paramètres   | Type            |    | Description                                                     |
 | ------------ | --------------- |:--:| --------------------------------------------------------------- |
-| propertyPath | Texte           | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| propertyPath | Text            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Real, Undefined | <- | Moyenne arithmétique des valeurs de la collection               |
 <!-- END REF -->
 
@@ -542,10 +542,10 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 
 
 <!-- REF #collection.count().Params -->
-| Paramètres   | Type  |    | Description                                                     |
-| ------------ | ----- |:--:| --------------------------------------------------------------- |
-| propertyPath | Texte | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Réel  | <- | Nombre d'éléments dans la collection                            |
+| Paramètres   | Type |    | Description                                                     |
+| ------------ | ---- |:--:| --------------------------------------------------------------- |
+| propertyPath | Text | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| Résultat     | Réel | <- | Nombre d'éléments dans la collection                            |
 <!-- END REF -->
 
 
@@ -593,7 +593,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 | Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | Valeur à compter                                                |
-| propertyPath | Texte                                           | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Réel                                            | <- | Nombre d'occurrences de la valeur                               |
 <!-- END REF -->
 
@@ -674,7 +674,7 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 | Paramètres   | Type       |    | Description                                                             |
 | ------------ | ---------- |:--:| ----------------------------------------------------------------------- |
 | option       | Integer    | -> | `ck diacritical` : évaluation diacritique ("A" # "a" par exemple)       |
-| propertyPath | Texte      | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
+| propertyPath | Text       | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
 | Résultat     | Collection | <- | Nouvelle collection contenant uniquement les valeurs distinctes         |
 <!-- END REF -->
 
@@ -784,7 +784,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 | Paramètres | Type    |    | Description                                   |
 | ---------- | ------- |:--:| --------------------------------------------- |
 | startFrom  | Integer | -> | Elément à partir duquel débuter l'évaluation  |
-| methodName | Texte   | -> | Nom de la méthode à appeler pour l'évaluation |
+| methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
 | param      | Mixed   | -> | Paramètre(s) à passer à nomMéthode            |
 | Résultat   | Booléen | <- | Vrai si tous les éléments sont évalués à vrai |
 <!-- END REF -->
@@ -880,8 +880,8 @@ End if
 <!-- REF #collection.extract().Params -->
 | Paramètres   | Type       |    | Description                                                                                                                                  |
 | ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| propertyPath | Texte      | -> | Chemin de propriété d'objet dont les valeurs doivent être extraites dans la nouvelle collection                                              |
-| targetpath   | Texte      | -> | Chemin ou nom de propriété cible                                                                                                             |
+| propertyPath | Text       | -> | Chemin de propriété d'objet dont les valeurs doivent être extraites dans la nouvelle collection                                              |
+| targetpath   | Text       | -> | Chemin ou nom de propriété cible                                                                                                             |
 | option       | Integer    | -> | `ck keep null` : inclure les propriétés null dans la collection retournée (ignorées par défaut). Paramètre ignoré si *targetPath* est passé. |
 | Résultat     | Collection | <- | Nouvelle collection contenant les valeurs extraites                                                                                          |
 <!-- END REF -->
@@ -1012,7 +1012,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 <!-- REF #collection.filter().Params -->
 | Paramètres | Type       |    | Description                                                       |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------- |
-| methodName | Texte      | -> | Nom de la méthode à appeler pour filtrer la collection            |
+| methodName | Text       | -> | Nom de la méthode à appeler pour filtrer la collection            |
 | param      | Mixed      | -> | Paramètre(s) à passer à *methodName*                              |
 | Résultat   | Collection | <- | Nouvelle collection contenant les éléments filtrés (shallow copy) |
 <!-- END REF -->
@@ -1107,7 +1107,7 @@ Le code de ***TypeLookUp*** est :
 | Paramètres | Type    |    | Description                                        |
 | ---------- | ------- |:--:| -------------------------------------------------- |
 | startFrom  | Integer | -> | Elément à partir duquel débuter la recherche       |
-| methodName | Texte   | -> | Nom de la méthode à appeler pour la recherche      |
+| methodName | Text    | -> | Nom de la méthode à appeler pour la recherche      |
 | param      | any     | -> | Paramètre(s) à passer à *methodName*               |
 | Résultat   | any     | <- | Première valeur trouvée (Undefined si non trouvée) |
 <!-- END REF -->
@@ -1206,7 +1206,7 @@ Le code de la méthode ***FindCity*** est :
 | Paramètres | Type    |    | Description                                         |
 | ---------- | ------- |:--:| --------------------------------------------------- |
 | startFrom  | Integer | -> | Elément à partir duquel débuter la recherche        |
-| methodName | Texte   | -> | Nom de la méthode à appeler pour la recherche       |
+| methodName | Text    | -> | Nom de la méthode à appeler pour la recherche       |
 | param      | any     | -> | Paramètre(s) à passer à *methodName*                |
 | Résultat   | Integer | <- | Numéro du premier élément trouvé (-1 si non trouvé) |
 <!-- END REF -->
@@ -1345,7 +1345,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 <!-- REF #collection.indices().Params -->
 | Paramètres  | Type       |    | Description                                                                     |
 | ----------- | ---------- |:--:| ------------------------------------------------------------------------------- |
-| queryString | Texte      | -> | Critère(s) de recherche                                                         |
+| queryString | Text       | -> | Critère(s) de recherche                                                         |
 | value       | any        | -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne       |
 | Résultat    | Collection | <- | Numéro(s) d'élément(s) de la collection répondant au(x) critère(s) de recherche |
 <!-- END REF -->
@@ -1451,9 +1451,9 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 <!-- REF #collection.join().Params -->
 | Paramètres | Type    |    | Description                                                                    |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------ |
-| delimiter  | Texte   | -> | Séparateur à utiliser entre les éléments                                       |
+| delimiter  | Text    | -> | Séparateur à utiliser entre les éléments                                       |
 | option     | Integer | -> | `ck ignore null or empty` : ignorer les chaînes null ou vides dans le résultat |
-| Résultat   | Texte   | <- | Chaîne contenant tous les éléments de la collection, séparés par delimiter     |
+| Résultat   | Text    | <- | Chaîne contenant tous les éléments de la collection, séparés par delimiter     |
 <!-- END REF -->
 
 
@@ -1563,7 +1563,7 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.map().Syntax -->**.map**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF --><!-- REF #collection.map().Params -->| Paramètres | Type       |    | Description                                                                |
 | ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| methodName | Texte      | -> | Nom de la méthode à appeler pour transformer les éléments de la collection |
+| methodName | Text       | -> | Nom de la méthode à appeler pour transformer les éléments de la collection |
 | param      | any        | -> | Paramètre(s) à passer à la méthode                                         |
 | Résultat   | Collection | <- | Collection de valeurs transformées                                         |<!-- END REF -->#### Description
 
@@ -1608,7 +1608,7 @@ Voici la méthode ***Percentage***:
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.max().Syntax -->**.max**( { *propertyPath* : Text } ) : any<!-- END REF --><!-- REF #collection.max().Params -->| Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
-| propertyPath | Texte                                           | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Boolean, Text, Number, Collection, Object, Date | <- | Valeur maximum de la collection                                 |<!-- END REF -->#### Description
 
 La fonction `.max()`<!-- REF #collection.max().Summary -->retourne l'élément ayant la plus grande valeur dans la collection<!-- END REF -->(équivaut au dernier élément de la collection après un tri croissant effectué par la fonction [`.sort()`](#sort)).
@@ -1640,7 +1640,7 @@ Si la collection est vide, `.max()` retourne *Undefined*.
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.min().Syntax -->**.min**( { *propertyPath* : Text } ) : any<!-- END REF --><!-- REF #collection.min().Params -->| Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
-| propertyPath | Texte                                           | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Boolean, Text, Number, Collection, Object, Date | <- | Valeur minimum de la collection                                 |<!-- END REF -->#### Description
 
 La fonction `.min()`<!-- REF #collection.min().Summary -->retourne l'élément ayant la plus petite valeur dans la collection<!-- END REF -->(équivaut au premier élément de la collection après un tri croissant effectué par la fonction [`.sort()`](#sort)).
@@ -1672,7 +1672,7 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection<!-- END REF --><!-- REF #collection.orderBy().Params -->| Paramètres  | Type       |    | Description                                                   |
 | ----------- | ---------- |:--:| ------------------------------------------------------------- |
-| pathStrings | Texte      | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
+| pathStrings | Text       | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
 | pathObjects | Collection | -> | Collection d'objets critère                                   |
 | ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valeurs scalaires)         |
 | Résultat    | Collection | <- | Copie triée de la collection (shallow copy)                   |<!-- END REF -->#### Description
@@ -1699,10 +1699,10 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
 *   *ascOrDesc* : Entier. Passez une des constantes suivantes du thème **Objets et collections** :
 
-    | Constante     | Type        | Valeur | Commentaire                                          |
-    | ------------- | ----------- | ------ | ---------------------------------------------------- |
-    | ck ascending  | Entier long | 0      | Les éléments sont triés par ordre croissant (défaut) |
-    | ck descending | Entier long | 1      | Les éléments sont triés par ordre décroissant        |
+    | Constante     | Type    | Valeur | Commentaire                                          |
+    | ------------- | ------- | ------ | ---------------------------------------------------- |
+    | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
+    | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant        |
 
     Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
@@ -1791,7 +1791,7 @@ Tri avec un chemin de propriété :
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF --><!-- REF #collection.orderByMethod().Params -->| Paramètres | Type       |    | Description                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Texte      | -> | Nom de la méthode utilisée pour trier la collection |
+| methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
 | extraParam | expression | -> | Paramètre(s) à passer à la méthode                  |
 | Résultat   | Collection | <- | Copiée triée de la collection (shallow copy)        |<!-- END REF -->#### Description
 
@@ -1945,7 +1945,7 @@ Vous souhaitez trier la collection résultante :
 | v16 R6  | Ajout                            |
 </details><!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection<!-- END REF --><!-- REF #collection.query().Params -->| Paramètres    | Type       |    | Description                                                               |
 | ------------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| queryString   | Texte      | -> | Critère(s) de recherche                                                   |
+| queryString   | Text       | -> | Critère(s) de recherche                                                   |
 | value         | Mixed      | -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
 | querySettings | Object     | -> | Options de requête : paramètres, attributs                                |
 | Résultat      | Collection | <- | Élément(s) correspondant à queryString dans la collection                 |<!-- END REF -->#### Description
@@ -2037,7 +2037,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`. <!
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.reduce().Syntax -->**.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any<!-- END REF --><!-- REF #collection.reduce().Params -->| Paramètres | Type                                            |    | Description                                                               |
 | ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------------- |
-| methodName | Texte                                           | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
+| methodName | Text                                            | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
 | param      | expression                                      | -> | Paramètre(s) à passer à *methodName*                                      |
 | Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Résultat de la valeur de l'accumulateur                                   |<!-- END REF -->#### Description
@@ -2263,7 +2263,7 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 </details><!-- REF #collection.some().Syntax -->**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF --><!-- REF #collection.some().Params -->| Paramètres | Type    |    | Description                                   |
 | ---------- | ------- |:--:| --------------------------------------------- |
 | startFrom  | Integer | -> | Elément à partir duquel débuter l'évaluation  |
-| methodName | Texte   | -> | Nom de la méthode à appeler pour l'évaluation |
+| methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
 | param      | Mixed   | -> | Paramètre(s) à passer à *methodName*          |
 | Résultat   | Booléen | <- | Vrai si au moins un élément a réussi le test  |<!-- END REF -->#### Description
 
@@ -2322,7 +2322,7 @@ Avec la méthode *NumberGreaterThan0* suivante :
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection<!-- END REF --><!-- REF #collection.sort().Params -->| Paramètres | Type       |    | Description                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Texte      | -> | Nom de la méthode utilisée pour trier la collection |
+| methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
 | extraParam | any        | -> | Paramètre(s) à passer à la méthode                  |
 | Résultat   | Collection | <- | Collection d'origine triée                          |<!-- END REF -->#### Description
 
@@ -2389,10 +2389,10 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
-</details><!-- REF #collection.sum().Syntax -->**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF --><!-- REF #collection.sum().Params -->| Paramètres   | Type  |    | Description                                                     |
-| ------------ | ----- |:--:| --------------------------------------------------------------- |
-| propertyPath | Texte | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Réel  | <- | Somme des valeurs de collection                                 |<!-- END REF -->#### Description
+</details><!-- REF #collection.sum().Syntax -->**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF --><!-- REF #collection.sum().Params -->| Paramètres   | Type |    | Description                                                     |
+| ------------ | ---- |:--:| --------------------------------------------------------------- |
+| propertyPath | Text | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
+| Résultat     | Réel | <- | Somme des valeurs de collection                                 |<!-- END REF -->#### Description
 
 La fonction `.sum()`<!-- REF #collection.sum().Summary -->retourne la somme de toutes les valeurs de l'instance de collection<!-- END REF -->.
 

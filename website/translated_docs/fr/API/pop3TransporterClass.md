@@ -346,7 +346,7 @@ L'objet `mailInfo` retourné contient les propriété suivantes :
 | Propriété | Type   | Description                 |
 | --------- | ------ | --------------------------- |
 | size      | Nombre | Taille du message en octets |
-| id        | Texte  | ID unique du message        |
+| id        | Text   | ID unique du message        |
 
 La fonction retourne **Null** si :
 
@@ -407,7 +407,7 @@ Chaque objet `mailInfo` retourné contient les propriété suivantes :
 | ------------ | ------ | ------------------------------------------------------------------ |
 | \[ ].size   | Nombre | Taille du message en octets                                        |
 | \[ ].number | Nombre | Numéro du message                                                  |
-| \[ ].id     | Texte  | ID unique du message (utile si vous stockez le message localement) |
+| \[ ].id     | Text   | ID unique du message (utile si vous stockez le message localement) |
 
 Si la boîte de réception ne contient pas de message, une collection vide est retournée.
 

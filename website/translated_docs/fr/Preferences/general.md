@@ -94,17 +94,17 @@ Thanks to this principle, under macOS the database folders appear as packages ha
 
 ### Créer le fichier `.gitignore`
 
-You might need or want git to ignore some files in your new projects.
+Si vous avez besoin ou souhaitez que git ignore certains fichiers dans vos nouveaux projets.
 
-You can set this preference by checking the **Create .gitignore file**  option.
+Vous pouvez définir cette préférence en cochant l'option **Créer le fichier .gitignore**.
 
 ![](assets/en/Preferences/gitignore.png)
 
-When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
+Lorsqu'un projet est créé dans 4D et que cette case est cochée, 4D crée un fichier `.gitignore` au même niveau que le dossier `Project` (voir [Architecture d'un projet](Project/architecture.md#gitignore-file-optional)).
 
-You can define the default contents of the `.gitignore` file by clicking the pencil icon. This will open the .gitignore configuration file in your text editor. The contents of this file will be used to generate the `.gitignore` files in your new projects.
+Vous pouvez définir le contenu par défaut du fichier `.gitignore` en cliquant sur l'icône du crayon. Cela ouvrira le fichier de configuration .gitignore dans votre éditeur de texte. Le contenu de ce fichier sera utilisé pour générer les fichiers `.gitignore` dans vos nouveaux projets.
 
-The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
+La [documentation officielle de git](https://git-scm.com/docs/gitignore) est une excellente ressource pour comprendre le fonctionnement des fichiers `.gitignore`.
 
 ### Language of text comparison
 

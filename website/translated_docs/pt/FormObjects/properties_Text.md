@@ -377,374 +377,134 @@ O método *Color* iria conter :
 ---
 ## Multi-style
 
-Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. Quando essa opção for marcada, 4D interpreta qualquer tag\<SPAN> HTML encontrada nessa área. </p> 
-
-<p spaces-before="0">
-  By default, this option is not enabled.
-</p>
-
-
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      styledText
-    </td>
-    
-    <td>
-      booleano
-    </td>
-    
-    <td>
-      true, false
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
-</p>
-
-
-
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Orientation
-</h2>
-
-<p spaces-before="0">
-  Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
-</p>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Orientation value
-    </th>
-    
-    <th>
-      Result
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      0 (default)
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation1.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      90
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation2.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      180
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation3.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      270
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation4.png" alt="" />
-    </td>
-  </tr>
-</table>
-
-<p spaces-before="0">
-  Além de <a href="text.md">áreas de texto estáticas</a>, <a href="input_overview.md">input</a> os objetos de texto podem ser girados quando forem não-<a href="properties_Entry.md#enterable">digitáveis</a>. Quando uma propriedade rotação for aplicada a um objeto input, a propriedade digitável é removida (se houver). Esse objeto é então excluído da ordem de entrada.
-</p>
-
-
-
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      textAngle
-    </td>
-    
-    <td>
-      number
-    </td>
-    
-    <td>
-      0, 90, 180, 270
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">Input</a> (não-digitável) - <a href="text.md">Área Texto</a>
-</p>
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Array cores de fonte
-</h2>
-
-<p spaces-before="0">
-  <code>Array type list boxes</code>
-</p>
-
-<p spaces-before="0">
-  Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
-</p>
-
-<p spaces-before="0">
-  O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a> theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
-</p>
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStrokeSource
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      The name of a longint array
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
-</p>
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Array estilo linha
-</h2>
-
-<p spaces-before="0">
-  <code>Array type list boxes</code>
-</p>
-
-<p spaces-before="0">
-  Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
-</p>
-
-<p spaces-before="0">
-  O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para preencher esse array (usando um método) use as constantes do tema <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Estillos de Fonte</a>. Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
-</p>
-
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStyleSource
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      The name of a longint array.
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">List Box Column</a>
-</p>
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Store with default style tags
-</h2>
-
-<p spaces-before="0">
-  Essa propriedade só está disponível para a área input <a href="#multi-style">Multiestilo</a>. Quando essa propriedade for ativada, a área armazena as tags de estilo com o texto, mesmo se nenhuma modificação for feita. Nesse caso, as tags correspondem ao estilo padrão. Quando essa propriedade for desativada, só as tags de estilo modificadas são armazenadas.
-</p>
-
-<p spaces-before="0">
-  Por exemplo, aqui está um texto que inclui uma modificação de estilo:
-</p>
-
-<p spaces-before="0">
-  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
-</p>
-
-<p spaces-before="0">
-  Quando a propriedade for desativada, a área só armazena a modificação. Os conteúdos armazenados são entretanto:
-</p>
-
-<pre><code>Que &lt;SPAN STYLE="font-size:13.5pt"&gt;lindo&lt;/SPAN&gt; dia!
-</code></pre>
-
-<p spaces-before="0">
-  Quando a propriedade for ativada, a área armazena todas as informações de formatação. A primeira tag genérica descreve o estilo padrão quando cada variação no sujeito for um par de tags aninhadas. Os conteúdos armazenados na área são portanto:
-</p>
-
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;Que &lt;SPAN STYLE="font-size:13.5pt"&gt;lindo&lt;/SPAN&gt; dia!&lt;/SPAN&gt;
-</code></pre>
-
-<h4 spaces-before="0">
-  JSON Grammar
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Name
-    </th>
-    
-    <th>
-      Data Type
-    </th>
-    
-    <th>
-      Possible Values
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      storeDefaultStyle
-    </td>
-    
-    <td>
-      booleano
-    </td>
-    
-    <td>
-      true, false (default).
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objects Supported
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">Entrada</a>
-</p>
+Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
+
+By default, this option is not enabled.
+
+
+
+#### JSON Grammar
+
+| Name       | Data Type | Possible Values |
+| ---------- | --------- | --------------- |
+| styledText | booleano  | true, false     |
+
+#### Objects Supported
+
+
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+
+
+
+
+
+
+
+
+---
+## Orientation
+
+Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
+
+| Orientation value | Result                                      |
+| ----------------- | ------------------------------------------- |
+| 0 (default)       | ![](assets/en/FormObjects/orientation1.png) |
+| 90                | ![](assets/en/FormObjects/orientation2.png) |
+| 180               | ![](assets/en/FormObjects/orientation3.png) |
+| 270               | ![](assets/en/FormObjects/orientation4.png) |
+
+Além de [áreas de texto estáticas](text.md), [input](input_overview.md) os objetos de texto podem ser girados quando forem não-[digitáveis](properties_Entry.md#enterable). Quando uma propriedade rotação for aplicada a um objeto input, a propriedade digitável é removida (se houver). Esse objeto é então excluído da ordem de entrada.
+
+
+
+
+#### JSON Grammar
+
+| Name      | Data Type | Possible Values |
+| --------- | --------- | --------------- |
+| textAngle | number    | 0, 90, 180, 270 |
+
+#### Objects Supported
+
+[Input](input_overview.md) (não-digitável) - [Área Texto](text.md)
+
+
+
+
+
+---
+## Array cores de fonte
+`Array type list boxes`
+
+Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
+
+O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme. If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
+
+#### JSON Grammar
+
+| Name            | Data Type | Possible Values             |
+| --------------- | --------- | --------------------------- |
+| rowStrokeSource | string    | The name of a longint array |
+
+#### Objects Supported
+
+[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+
+
+---
+## Array estilo linha
+`Array type list boxes`
+
+Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
+
+O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para preencher esse array (usando um método) use as constantes do tema [Estillos de Fonte](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
+
+
+#### JSON Grammar
+
+| Name           | Data Type | Possible Values              |
+| -------------- | --------- | ---------------------------- |
+| rowStyleSource | string    | The name of a longint array. |
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+
+
+
+---
+## Store with default style tags
+
+Essa propriedade só está disponível para a área input [Multiestilo](#multi-style). Quando essa propriedade for ativada, a área armazena as tags de estilo com o texto, mesmo se nenhuma modificação for feita. Nesse caso, as tags correspondem ao estilo padrão. Quando essa propriedade for desativada, só as tags de estilo modificadas são armazenadas.
+
+Por exemplo, aqui está um texto que inclui uma modificação de estilo:
+
+![](assets/en/FormObjects/tagStyle1.png)
+
+Quando a propriedade for desativada, a área só armazena a modificação. Os conteúdos armazenados são entretanto:
+
+```
+Que <SPAN STYLE="font-size:13.5pt">lindo</SPAN> dia!
+```
+
+Quando a propriedade for ativada, a área armazena todas as informações de formatação. A primeira tag genérica descreve o estilo padrão quando cada variação no sujeito for um par de tags aninhadas. Os conteúdos armazenados na área são portanto:
+
+```
+<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">Que <SPAN STYLE="font-size:13.5pt">lindo</SPAN> dia!</SPAN>
+```
+
+#### JSON Grammar
+
+| Name              | Data Type | Possible Values        |
+| ----------------- | --------- | ---------------------- |
+| storeDefaultStyle | booleano  | true, false (default). |
+
+#### Objects Supported
+
+[Entrada](input_overview.md)
 
 
 

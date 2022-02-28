@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Texte
+title: Text
 ---
 
 ---
@@ -380,374 +380,134 @@ La méthode *Color* contiendrait alors :
 ---
 ## Multistyle
 
-Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. Lorsque cette option est cochée, 4D interprète toutes les balises \<SPAN> HTML présentes dans la zone. </p> 
-
-<p spaces-before="0">
-  Par défaut, cette option n'est pas activée.
-</p>
-
-
-
-<h4 spaces-before="0">
-  Grammaire JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nom
-    </th>
-    
-    <th>
-      Type de données
-    </th>
-    
-    <th>
-      Valeurs possibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      styledText
-    </td>
-    
-    <td>
-      boolean
-    </td>
-    
-    <td>
-      true, false
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objets pris en charge
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#list-box-columns">List Box Column</a> - <a href="input_overview.md">Input</a>
-</p>
-
-
-
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Orientation
-</h2>
-
-<p spaces-before="0">
-  Modifie l'orientation (rotation) d'une zone de texte. Les zones de texte peuvent être pivotées par incréments de 90°. Chaque valeur d'orientation est appliquée tout en conservant le même point de départ inférieur gauche pour l'objet :
-</p>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Valeur d'orientation
-    </th>
-    
-    <th>
-      Résultat
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      0 (par défaut)
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation1.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      90
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation2.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      180
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation3.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      270
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation4.png" alt="" />
-    </td>
-  </tr>
-</table>
-
-<p spaces-before="0">
-  En plus des <a href="text.md">zones de texte statiques</a>, les objets de texte des <a href="input_overview.md">zones de saisie</a> peuvent être pivotés lorsqu'ils ne sont pas <a href="properties_Entry.md#enterable">saisissables</a>. Lorsqu'une propriété de rotation est appliquée à un objet de saisie, la propriété saisissable est supprimée (le cas échéant). Cet objet est alors exclu de l'ordre de saisie.
-</p>
-
-
-
-
-<h4 spaces-before="0">
-  Grammaire JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nom
-    </th>
-    
-    <th>
-      Type de données
-    </th>
-    
-    <th>
-      Valeurs possibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      textAngle
-    </td>
-    
-    <td>
-      number
-    </td>
-    
-    <td>
-      0, 90, 180, 270
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objets pris en charge
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">Zone de saisie</a> (non saisissable) - <a href="text.md">Zone de texte</a>
-</p>
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Tableau couleurs de police
-</h2>
-
-<p spaces-before="0">
-  <code>List box de type tableau</code>
-</p>
-
-<p spaces-before="0">
-  Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
-</p>
-
-<p spaces-before="0">
-  Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html">SET RGB COLORS</a>. Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
-</p>
-
-<h4 spaces-before="0">
-  Grammaire JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nom
-    </th>
-    
-    <th>
-      Type de données
-    </th>
-    
-    <th>
-      Valeurs possibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStrokeSource
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      Nom d'un tableau entier long
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objets pris en charge
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
-</p>
-
-
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Tableau de styles
-</h2>
-
-<p spaces-before="0">
-  <code>List box de type tableau</code>
-</p>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
-</p>
-
-<p spaces-before="0">
-  Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html">Styles de caractères</a>. Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
-</p>
-
-
-<h4 spaces-before="0">
-  Grammaire JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nom
-    </th>
-    
-    <th>
-      Type de données
-    </th>
-    
-    <th>
-      Valeurs possibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStyleSource
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      Nom d'un tableau entier long.
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objets pris en charge
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#overview">List Box</a> - <a href="listbox_overview.md#list-box-columns">Colonne List Box</a>
-</p>
-
-
-
-<hr />
-<h2 spaces-before="0">
-  Stocker les balises par défaut
-</h2>
-
-<p spaces-before="0">
-  Cette propriété n'est disponible que pour une zone de saisie <a href="#multi-style">multi-styles</a>. Lorsque cette propriété est activée, la zone stockera les balises de style avec le texte, même si aucune modification n'a été apportée. Dans ce cas, les balises correspondent au style par défaut. Lorsque cette propriété est désactivée, seules les balises de style modifiées sont stockées.
-</p>
-
-<p spaces-before="0">
-  Par exemple, voici un texte qui inclut une modification de style :
-</p>
-
-<p spaces-before="0">
-  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
-</p>
-
-<p spaces-before="0">
-  Lorsque la propriété est désactivée, la zone ne stocke que la modification qui a été apportée. Les contenus stockés sont donc :
-</p>
-
-<pre><code>Quelle &lt;SPAN STYLE="font-size:13.5pt"&gt;belle&lt;/SPAN&gt; journée !
-</code></pre>
-
-<p spaces-before="0">
-  Lorsque la propriété est activée, la zone stocke toutes les informations de mise en forme. La première balise générique décrit le style par défaut puis chaque variation fait l'objet d'une paire de balises imbriquées. Les contenus stockés dans la zone sont donc :
-</p>
-
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
-</code></pre>
-
-<h4 spaces-before="0">
-  Grammaire JSON
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      Nom
-    </th>
-    
-    <th>
-      Type de données
-    </th>
-    
-    <th>
-      Valeurs possibles
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      storeDefaultStyle
-    </td>
-    
-    <td>
-      boolean
-    </td>
-    
-    <td>
-      true, false (par défaut).
-    </td>
-  </tr>
-</table>
-
-<h4 spaces-before="0">
-  Objets pris en charge
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">Input</a>
-</p>
+Cette propriété permet d'utiliser des styles spécifiques dans la zone sélectionnée. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
+
+Par défaut, cette option n'est pas activée.
+
+
+
+#### Grammaire JSON
+
+| Nom        | Type de données | Valeurs possibles |
+| ---------- | --------------- | ----------------- |
+| styledText | boolean         | true, false       |
+
+#### Objets pris en charge
+
+
+[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+
+
+
+
+
+
+
+
+---
+## Orientation
+
+Modifie l'orientation (rotation) d'une zone de texte. Les zones de texte peuvent être pivotées par incréments de 90°. Chaque valeur d'orientation est appliquée tout en conservant le même point de départ inférieur gauche pour l'objet :
+
+| Valeur d'orientation | Résultat                                    |
+| -------------------- | ------------------------------------------- |
+| 0 (par défaut)       | ![](assets/en/FormObjects/orientation1.png) |
+| 90                   | ![](assets/en/FormObjects/orientation2.png) |
+| 180                  | ![](assets/en/FormObjects/orientation3.png) |
+| 270                  | ![](assets/en/FormObjects/orientation4.png) |
+
+En plus des [zones de texte statiques](text.md), les objets de texte des [zones de saisie](input_overview.md) peuvent être pivotés lorsqu'ils ne sont pas [saisissables](properties_Entry.md#enterable). Lorsqu'une propriété de rotation est appliquée à un objet de saisie, la propriété saisissable est supprimée (le cas échéant). Cet objet est alors exclu de l'ordre de saisie.
+
+
+
+
+#### Grammaire JSON
+
+| Nom       | Type de données | Valeurs possibles |
+| --------- | --------------- | ----------------- |
+| textAngle | number          | 0, 90, 180, 270   |
+
+#### Objets pris en charge
+
+[Zone de saisie](input_overview.md) (non saisissable) - [Zone de texte](text.md)
+
+
+
+
+
+---
+## Tableau couleurs de police
+`List box de type tableau`
+
+Permet de définir un style de police personnalisé à chaque ligne de list box ou de chaque cellule de la colonne.
+
+Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+
+#### Grammaire JSON
+
+| Nom             | Type de données | Valeurs possibles            |
+| --------------- | --------------- | ---------------------------- |
+| rowStrokeSource | string          | Nom d'un tableau entier long |
+
+#### Objets pris en charge
+
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+
+
+
+
+
+---
+## Tableau de styles
+`List box de type tableau`
+
+[List Box](listbox_overview.md) - [Colonne List Box](listbox_overview.md#list-box-columns)
+
+Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Pour remplir le tableau (à l'aide d'une méthode), utilisez les constantes du thème [Styles de caractères](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Vous pouvez ajouter des constantes ensemble pour combiner plusieurs styles. Si vous souhaitez que la cellule hérite du style défini au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+
+
+#### Grammaire JSON
+
+| Nom            | Type de données | Valeurs possibles             |
+| -------------- | --------------- | ----------------------------- |
+| rowStyleSource | string          | Nom d'un tableau entier long. |
+
+#### Objets pris en charge
+
+[List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns)
+
+
+
+---
+## Stocker les balises par défaut
+
+Cette propriété n'est disponible que pour une zone de saisie [multi-styles](#multi-style). Lorsque cette propriété est activée, la zone stockera les balises de style avec le texte, même si aucune modification n'a été apportée. Dans ce cas, les balises correspondent au style par défaut. Lorsque cette propriété est désactivée, seules les balises de style modifiées sont stockées.
+
+Par exemple, voici un texte qui inclut une modification de style :
+
+![](assets/en/FormObjects/tagStyle1.png)
+
+Lorsque la propriété est désactivée, la zone ne stocke que la modification qui a été apportée. Les contenus stockés sont donc :
+
+```
+Quelle <SPAN STYLE="font-size:13.5pt">belle</SPAN> journée !
+```
+
+Lorsque la propriété est activée, la zone stocke toutes les informations de mise en forme. La première balise générique décrit le style par défaut puis chaque variation fait l'objet d'une paire de balises imbriquées. Les contenus stockés dans la zone sont donc :
+
+```
+<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!</SPAN>
+```
+
+#### Grammaire JSON
+
+| Nom               | Type de données | Valeurs possibles         |
+| ----------------- | --------------- | ------------------------- |
+| storeDefaultStyle | boolean         | true, false (par défaut). |
+
+#### Objets pris en charge
+
+[Input](input_overview.md)
 
 
 

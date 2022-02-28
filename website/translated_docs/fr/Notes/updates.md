@@ -1,6 +1,6 @@
 ---
 id: updates
-title: Documentation updates
+title: Mises à jour de la documentation
 ---
 
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
@@ -15,10 +15,10 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - Une [nouvelle option de build](Desktop/building.md#allow-connection-of-silicon-mac-clients) permet d'inclure plus facilement les clients Silicon Mac dans les applications serveur sous Windows.
 - Plus large [prise en charge du mode sombre](Preferences/general.md#appearance-macos-only) sur macOS.
 - Prise en charge de **l'objet token OAuth2** dans [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter) et [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter).
-- Users can now load a [log configuration file](Admin/debugLogFiles.md#using-a-log-configuration-file) using a button in the [server administration window](/Admin/server-admin.md#load-logs-configuration-file).
+- Les utilisateurs peuvent désormais charger un [fichier de configuration de log](Admin/debugLogFiles.md#using-a-log-configuration-file) à l'aide d'un bouton dans la [fenêtre d'administration du serveur](/Admin/server-admin.md#load-logs-configuration-file).
 - La gestion des [paramètres optionnels](Concepts/parameters.md#optional-parameters) est plus flexible dans le langage 4D.
 - Le débogage des sessions de serveur web [est plus facile sur 4D Server](WebServer/sessions.md#preemptive-mode).
-- The new [4D NetKit](Project/components.md#list-of-4d-components) component allows you to connect to third-party APIs such as Microsoft Graph.
+- Le nouveau composant [4D NetKit](Project/components.md#list-of-4d-components) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
 
 
 ## 4D v19 R2

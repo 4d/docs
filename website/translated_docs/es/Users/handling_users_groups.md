@@ -13,33 +13,33 @@ El usuario más poderoso se llama el **Diseñador**. No aspect of the applicatio
 - access all application servers without restriction,
 - crear usuarios y grupos,
 - asignar privilegios de acceso a los grupos,
-- acceder al entorno Diseño. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+- acceder al entorno Diseño. En un entorno monopuesto, siempre se utilizan los derechos de acceso del Diseñador. En el entorno cliente/servidor, la asignación de una contraseña al Diseñador activa la visualización del diálogo de inicio de sesión del usuario 4D.  El acceso al entorno Diseño es de sólo lectura.
 
-After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
+Después del Diseñador, el siguiente usuario más poderoso es el **Administrador**, al que se le suelen encomendar las tareas de gestión del sistema de acceso y las funciones de administración.
 
 El administrador puede:
 - crear usuarios y grupos,
-- access the 4D Server Administration window and monitor
-- access the MSC window to monitor backup, restore, or server.
+- acceder al monitor y a la ventana de administración de 4D Server
+- acceder a la ventana CSM para supervisar la copia de seguridad, la restauración o el servidor.
 
-The Administrator cannot:
+El administrador no puede:
 - modificar el usuario Diseñador
-- by default, access to protected parts of the application. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the application. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator must be part of one or more groups to have access privileges in the application. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
 - Icono Diseñador: ![](assets/en/Users/iconDesigner.png)
 - Icono del Administrador: ![](assets/en/Users/iconAdmin.png)
 
-You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+Puede cambiar el nombre de los usuarios Diseñador y Administrador. En el lenguaje, el ID del diseñador es siempre 1 y el ID del administrador es siempre 2.
 
-The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+El Diseñador y el Administrador pueden crear hasta 16.000 grupos y 16.000 usuarios cada uno.
 
 
 
 ## Editor de usuarios
 
-The editor for users is located in the Toolbox of 4D.
+El editor de usuarios se encuentran en la caja de herramientas de 4D.
 
 ![](assets/en/Users/editor.png)
 

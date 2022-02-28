@@ -318,7 +318,7 @@ You refer to an expression by the data type it returns. There are several expres
 ### Assignable vs non-assignable expressions
 
 An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them.
-In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the right side of an assignation. For example:
+In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the left side of an assignation. For example:
 
 ```4d  
 //$myVar variable is assignable, you can write:  
