@@ -7,23 +7,23 @@ Define qué formato de imagen utilizar para recuperar imágenes (por ejemplo, `$
 
 ## Descripción
 
-Define which format to use to display images. By default, the best format for the image will be chosen. You can, however, select one of the following formats:
+Definir el formato a utilizar para mostrar las imágenes. Por defecto, se elegirá el mejor formato para la imagen. No obstante, puede seleccionar uno de los siguientes formatos:
 
-| Tipo | Descripción                    |
-| ---- | ------------------------------ |
-| GIF  | Formato GIF                    |
-| PNG  | Formato PNG                    |
-| JPEG | Formato JPEG                   |
-| TIFF | Formato TIFF                   |
-| best | Best format based on the image |
+| Tipo | Descripción                              |
+| ---- | ---------------------------------------- |
+| GIF  | Formato GIF                              |
+| PNG  | Formato PNG                              |
+| JPEG | Formato JPEG                             |
+| TIFF | Formato TIFF                             |
+| best | El mejor formato en función de la imagen |
 
-Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
+Una vez que haya definido el formato, debe pasar el atributo de imagen a [`$expand`]($expand.md) para cargar la foto completamente.
 
-If there is no image to be loaded or the format doesn't allow the image to be loaded, the response will be empty.
+Si no hay ninguna imagen para cargar o el formato no permite cargar la imagen, la respuesta estará vacía.
 
 ## Ejemplo
 
-The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
+El siguiente ejemplo define el formato de la imagen a JPEG independientemente del tipo real de la foto y pasa el número de versión real enviado por el servidor:
 
 `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
 

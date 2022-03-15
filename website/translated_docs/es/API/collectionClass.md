@@ -1314,6 +1314,8 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 
 
+
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1581,6 +1583,7 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v16 R6  | Añadidos       |
+
 </details><!-- REF #collection.min().Syntax -->**.min**( { *propertyPath* : Text } ) : any<!-- END REF --><!-- REF #collection.min().Params -->| Parámetros   | Tipo                                            |    | Descripción                                                         |
 | ------------ | ----------------------------------------------- |:--:| ------------------------------------------------------------------- |
 | propertyPath | Texto                                           | -> | Ruta de la propiedad del objeto que se utilizará para la evaluación |
@@ -1927,7 +1930,6 @@ Para obtener información detallada sobre cómo construir una consulta utilizand
 
 #### Ejemplo 1
 
-
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2044,7 +2046,7 @@ Con el siguiente método ***Multiply***:
  End if
 ```
 
-#### Ejemplo
+#### Ejemplo 2
 
 Este ejemplo permite reducir varios elementos de la colección a uno solo:
 
@@ -2220,7 +2222,7 @@ Si la colección está vacía, este método no hace nada.
 | v16 R6  | Añadidos       |
 </details><!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.slice().Params -->| Parámetros | Tipo       |    | Descripción                                                         |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Índice para iniciar la búsqueda (incluído)                          |
+| startFrom  | Integer    | -> | Índice de inicio (incluido)                                         |
 | end        | Integer    | -> | Índice final (no incluido)                                          |
 | Resultado  | Collection | <- | Nueva colección que contiene elementos cortados (copia superficial) |<!-- END REF -->
 

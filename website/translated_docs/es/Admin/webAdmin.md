@@ -102,7 +102,7 @@ Path of the folder where the TLS certificate files are located. By default, the 
 
 #### Modo de registro de depuración
 
-Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). The following options are available:
+Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). Las siguientes opciones están disponibles:
 
 - **Disable** (default)
 - **With all body parts** - enabled with body parts in response and request

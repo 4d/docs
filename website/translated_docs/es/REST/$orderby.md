@@ -4,20 +4,20 @@ title: '$orderby'
 ---
 
 
-Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)
+Ordena los datos devueltos por el atributo y el orden de clasificación definidos (*por ejemplo*, `$orderby="lastName desc, salary asc"`)
 
 ## Descripción
 
-`$orderby` ordena las entidades devueltas por la petición REST. For each attribute, you specify the order as `ASC` (or `asc`) for ascending order and `DESC` (`desc`) for descending order. Por defecto, los datos se clasifican en orden ascendente. By default, the data is sorted in ascending order.
+`$orderby` ordena las entidades devueltas por la petición REST. Para cada atributo, se especifica el orden como `ASC` (o `asc`) para el orden ascendente y `DESC` (`desc`) para el orden descendente. Por defecto, los datos se clasifican en orden ascendente. Si desea especificar varios atributos, puede delimitarlos con una coma, *por ejemplo*, `$orderby="lastName desc, firstName asc"`.
 
 
 ## Ejemplo
 
-In this example, we retrieve entities and sort them at the same time:
+En este ejemplo, recuperamos las entidades y las ordenamos al mismo tiempo:
 
  `GET  /rest/Employee/?$filter="salary!=0"&$orderby="salary DESC,lastName ASC,firstName ASC"`
 
-The example below sorts the entity set by lastName attribute in ascending order:
+El ejemplo siguiente ordena el conjunto de entidades por el atributo lastName en orden ascendente:
 
  `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 

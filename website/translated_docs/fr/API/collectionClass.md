@@ -68,7 +68,7 @@ Une collection est initialisée avec :
 
 
 
-## `Nouvelle collection`
+## `New collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -78,7 +78,7 @@ Une collection est initialisée avec :
 | Paramètres | Type                                                                    |    | Description             |
 | ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection |
-| Résultat   | Collection                                                              | <- | Nouvelle collection     |
+| Résultat   | Collection                                                              | <- | New collection          |
 <!-- END REF -->
 
 
@@ -1313,6 +1313,8 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 
 
+
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1638,6 +1640,7 @@ Si la collection est vide, `.max()` retourne *Undefined*.
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
+
 </details><!-- REF #collection.min().Syntax -->**.min**( { *propertyPath* : Text } ) : any<!-- END REF --><!-- REF #collection.min().Params -->| Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
@@ -1965,7 +1968,6 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
 #### Exemple 1
 
-
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2079,7 +2081,7 @@ Avec la méthode ***Multiply*** suivante :
  End if
 ```
 
-#### Exemple
+#### Exemple 2
 
 Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
@@ -2230,7 +2232,7 @@ Si la collection est vide, cette méthode ne fait rien.
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.slice().Params -->| Paramètres | Type       |    | Description                                                               |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Index pour démarrer la recherche (inclus)                                 |
+| startFrom  | Integer    | -> | Numéro de l'élément de départ (inclus)                                    |
 | end        | Integer    | -> | Position de fin (non incluse)                                             |
 | Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |<!-- END REF -->#### Description
 

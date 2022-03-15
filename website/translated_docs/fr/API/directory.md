@@ -543,10 +543,10 @@ La fonction `.files()` retourne <!-- REF #directory.files().Summary -->une colle
 
 Par défaut, si vous omettez le paramètre *options*, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
-| Constante             | Valeur | Commentaire                                                                                 |
-| --------------------- | ------ | ------------------------------------------------------------------------------------------- |
-| `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
-| `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
+| Constante             | Valeur | Commentaire                                                              |
+| --------------------- | ------ | ------------------------------------------------------------------------ |
+| `fk recursive`        | 1      | The collection contains files of the specified folder and its subfolders |
+| `fk ignore invisible` | 8      | Invisible files are not listed                                           |
 
 **Valeur retournée**
 
@@ -643,10 +643,10 @@ La fonction `.folders()` <!-- REF #directory.folders().Summary -->retourne une c
 
 Par défaut, si vous omettez le paramète *options* , seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
-| Constante             | Valeur | Commentaire                                                                                 |
-| --------------------- | ------ | ------------------------------------------------------------------------------------------- |
-| `fk recursive`        | 1      | La collection contient les fichiers ou dossiers du dossier spécifié et de ses sous-dossiers |
-| `fk ignore invisible` | 8      | Les fichiers ou dossiers invisibles ne sont pas répertoriés                                 |
+| Constante             | Valeur | Commentaire                                                                |
+| --------------------- | ------ | -------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | The collection contains folders of the specified folder and its subfolders |
+| `fk ignore invisible` | 8      | Invisible folders are not listed                                           |
 
 **Valeur retournée**
 

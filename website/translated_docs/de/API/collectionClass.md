@@ -1314,6 +1314,8 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 
+
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1550,7 +1552,8 @@ Optionally, you can pass the index of collection from which to start a reverse s
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** : Integer<!-- END REF -->
+**.length** : Integer 
+<!-- END REF -->
 
 
 
@@ -1698,6 +1701,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 | Version | Changes |
 | ------- | ------- |
 | v16 R6  | Added   |
+
 </details>
 
 <!-- REF #collection.min().Syntax -->
@@ -2137,7 +2141,6 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 #### Beispiel 1
 
-
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2267,7 +2270,7 @@ With the following ***Multiply*** method:
  End if
 ```
 
-#### Beispiel
+#### Beispiel 2
 
 This example allows reducing several collection elements to a single one:
 
@@ -2499,6 +2502,7 @@ If the collection is empty, this method does nothing.
 
 
 
+
 <!-- REF collection.slice().Desc -->
 ## .slice()
 
@@ -2514,7 +2518,7 @@ If the collection is empty, this method does nothing.
 <!-- REF #collection.slice().Params -->
 | Parameter | Typ        |    | Beschreibung                                             |
 | --------- | ---------- |:--:| -------------------------------------------------------- |
-| startFrom | Ganzzahl   | -> | Index to start the search at (included)                  |
+| startFrom | Ganzzahl   | -> | Start index (included)                                   |
 | end       | Ganzzahl   | -> | End index (not included)                                 |
 | Ergebnis  | Collection | <- | New collection containing sliced elements (shallow copy) |
 <!-- END REF -->

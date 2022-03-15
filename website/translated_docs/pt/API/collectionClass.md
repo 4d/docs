@@ -1314,6 +1314,8 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 
 
+
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1550,7 +1552,8 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** : Integer<!-- END REF -->
+**.length** : Integer 
+<!-- END REF -->
 
 
 
@@ -1698,6 +1701,7 @@ Se a coleção estiver vazia, `.max()` devolve *Undefined*.
 | Versão | Mudanças   |
 | ------ | ---------- |
 | v16 R6 | Adicionado |
+
 </details>
 
 <!-- REF #collection.min().Syntax -->
@@ -2075,7 +2079,6 @@ Para obter informação detalhada sobre como construir uma consulta utilizando o
 
 #### Exemplo 1
 
-
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2185,7 +2188,7 @@ Com o método ***Multiply***:
  End if
 ```
 
-#### Exemplo
+#### Exemplo 2
 
 Este exemplo permite reduzir vários elementos da coleção a um só:
 
@@ -2336,7 +2339,7 @@ If the collection is empty, this method does nothing.
 | v16 R6 | Adicionado |
 </details><!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.slice().Params -->| Parameter | Type    |    | Description                                              |
 | --------- | ------- |:--:| -------------------------------------------------------- |
-| startFrom | Integer | -> | Index to start the search at (included)                  |
+| startFrom | Integer | -> | Início do índice (incluído)                              |
 | end       | Integer | -> | Final do índice (não incluído)                           |
 | Result    | Coleção | <- | New collection containing sliced elements (shallow copy) |<!-- END REF -->#### Description
 

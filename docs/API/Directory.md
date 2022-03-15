@@ -547,8 +547,8 @@ By default, if you omit the *options* parameter, only the files at the first lev
 
 |Constant|	Value|	Comment|
 |---|---|---|
-|`fk recursive`|1|The collection contains files or folders of the specified folder and its subfolders|
-|`fk ignore invisible`|	8|Invisible files or folders are not listed|
+|`fk recursive`|1|The collection contains files of the specified folder and its subfolders|
+|`fk ignore invisible`|	8|Invisible files are not listed|
 
 **Returned value**
 
@@ -647,8 +647,8 @@ By default, if you omit the *options* parameter, only the folders at the first l
 
 |Constant|	Value|	Comment|
 |---|---|---|
-|`fk recursive`|	1|The collection contains files or folders of the specified folder and its subfolders|
-|`fk ignore invisible`|	8|Invisible files or folders are not listed|
+|`fk recursive`|	1|The collection contains folders of the specified folder and its subfolders|
+|`fk ignore invisible`|	8|Invisible folders are not listed|
 
 **Returned value**
 

@@ -543,10 +543,10 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 By default, if you omit the *options* parameter, only the files at the first level of the folder are returned in the collection, as well as invisible files or folders. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constant              | Wert | Kommentar                                                                           |
-| --------------------- | ---- | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1    | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8    | Invisible files or folders are not listed                                           |
+| Constant              | Wert | Kommentar                                                                |
+| --------------------- | ---- | ------------------------------------------------------------------------ |
+| `fk recursive`        | 1    | The collection contains files of the specified folder and its subfolders |
+| `fk ignore invisible` | 8    | Invisible files are not listed                                           |
 
 **Rückgabewert**
 
@@ -643,10 +643,10 @@ The `.folders()` function <!-- REF #directory.folders().Summary -->returns a col
 
 By default, if you omit the *options* parameter, only the folders at the first level of the folder are returned in the collection. You can modify this by passing, in the *options* parameter, one or more of the following constants:
 
-| Constant              | Wert | Kommentar                                                                           |
-| --------------------- | ---- | ----------------------------------------------------------------------------------- |
-| `fk recursive`        | 1    | The collection contains files or folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8    | Invisible files or folders are not listed                                           |
+| Constant              | Wert | Kommentar                                                                  |
+| --------------------- | ---- | -------------------------------------------------------------------------- |
+| `fk recursive`        | 1    | The collection contains folders of the specified folder and its subfolders |
+| `fk ignore invisible` | 8    | Invisible folders are not listed                                           |
 
 **Rückgabewert**
 

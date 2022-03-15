@@ -61,7 +61,7 @@ title: リモートマシンからのデバッグ
 1. デバッガーが有効化されているリモート4Dクライアントにおいて、**実行** ＞ **リモートデバッガを無効化する** を選択します。
 2. 4D Server のメニューバーから、**編集** ＞ **デバッガを有効化する** を選択します。
 
-> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. This can have a significant impact on performance. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+> サーバー上でデバッガーが有効化されていると (デフォルト)、デバッグを可能にするため、サーバープロセスはすべて自動的にコオオペラティブモードで実行されます。 これは、パフォーマンスに大きな影響を与えかねません。 サーバーマシン上でデバッグする必要がない場合は、デバッガーを無効化し、必要に応じてリモートマシンで有効化することが推奨されます。
 
 
 
