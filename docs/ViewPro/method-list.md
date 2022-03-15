@@ -3223,9 +3223,7 @@ $row:=VP Row("ViewProArea";9) // row 10
 
 [VP All](#vp-all)<br/>[VP Cell](#vp-cell)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)
 
-### VP ROW AUTOFIT#### See also
-
-[VP All](#vp-all)<br/>[VP Cell](#vp-cell)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)
+### VP ROW AUTOFIT
 
 <!-- REF #_method_.VP ROW AUTOFIT.Syntax -->**VP ROW AUTOFIT** ( *rangeObj* : Object) <!-- END REF -->  
 
@@ -3394,7 +3392,7 @@ $o:=cs.OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-## See also
+#### See also
 
 [Blog post: End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
 
@@ -3430,7 +3428,7 @@ VP SET ACTIVE CELL($activeCell)
 
 ![](assets/en/ViewPro/cmd_vpSetActiveCell.PNG)
 
-## See also 
+#### See also 
 
 [VP ADD SELECTION](#vp-add-selection)<br/>[VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -3506,7 +3504,7 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 > In 4D View Pro formulas, function names are automatically displayed in uppercase.
 
-## See also 
+#### See also 
 
 [4D functions](formulas.md#4d-functions)<br/>[VP SET CUSTOM FUNCTIONS](#vp-set-custom-functions)
 
@@ -3538,7 +3536,7 @@ The *boolValue* parameter allows you to pass the boolean value (**True** or **Fa
 //Set the cell value as False
 VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 ```
-## See also 
+#### See also 
 
 [VP SET VALUE](#vp-set-value)
 
@@ -3621,7 +3619,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 ![](assets/en/ViewPro/cmd_vpSETBORDER2.PNG)
 
-## See also 
+#### See also 
 
 [VP SET CELL STYLE](#vp-set-cell-style)
 

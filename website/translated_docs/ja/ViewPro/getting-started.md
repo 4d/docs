@@ -20,14 +20,14 @@ title: はじめに
 
 しかしながら、4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 
-![](assets/en/ViewPro/licenseError.PNG)
+![](assets/en/ViewPro/licenseError.png)
 
 
 ## 4D View Pro エリアを挿入する
 
 4D View Pro ドキュメントは 4D View Pro という名前の [4Dフォームオブジェクト](FormObjects/viewProArea_overview.md) 内に表示され、手動で編集されます。 このオブジェクトを選択するには、オブジェクトバーの最後のツールをクリックします:
 
-![](assets/en/ViewPro/vpArea.PNG)
+![](assets/en/ViewPro/vpArea.png)
 
 また、[オブジェクトライブラリ](FormEditor/objectLibrary.md) であらかじめ設定された 4D View Pro エリアを選択することもできます。
 
@@ -95,7 +95,7 @@ title: はじめに
 
 4D View Pro はビルトインの 4Dコンポーネントであるため、そのメソッドの一覧はエクスプローラーにおいて、メソッドページの **コンポーネントメソッド** 内に表示されます:
 
-![コンポーネントメソッド](assets/en/ViewPro/explorer-methods.PNG)
+![コンポーネントメソッド](assets/en/ViewPro/explorer-methods.png)
 
 コンポーネントメソッドの詳細な一覧については [メソッドリスト](method-list.md) を参照ください。
 

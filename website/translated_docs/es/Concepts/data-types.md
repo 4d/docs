@@ -37,20 +37,20 @@ Cuando las variables se introducen mediante una directiva del compilador, recibe
 
 The default value depends on the variable type:
 
-| Tipo         | Default value  |
-| ------------ | -------------- |
-| Booleano     | False          |
-| Fecha        | 00-00-00       |
-| Entero largo | 0              |
-| Hora         | 00:00:00       |
-| Imagen       | picture size=0 |
-| Real         | 0              |
-| Puntero      | Nil=true       |
-| Texto        | ""             |
-| Blob         | Tamaño Blob=0  |
-| Objeto       | null           |
-| Collection   | null           |
-| Variant      | indefinido     |
+| Tipo         | Valor por defecto |
+| ------------ | ----------------- |
+| Booleano     | False             |
+| Fecha        | 00-00-00          |
+| Entero largo | 0                 |
+| Hora         | 00:00:00          |
+| Imagen       | picture size=0    |
+| Real         | 0                 |
+| Puntero      | Nil=true          |
+| Texto        | ""                |
+| Blob         | Tamaño Blob=0     |
+| Objeto       | null              |
+| Collection   | null              |
+| Variant      | indefinido        |
 
 
 ## Convertir los tipos de datos

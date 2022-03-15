@@ -1,71 +1,71 @@
 ---
 id: navigation
-title: Navigation dropdown
+title: ナビゲーションドロップダウン
 ---
 
-The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+ナビゲーションドロップダウンは、コードを整理し、クラスやメソッド内の移動を助けるツールです。
 
 ![dropdown-list](assets/en/code-editor/dropdown-list.png)
 
-Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+いくつかのタグは自動的に追加されますが、[マーカー](#手動タグ) を使ってドロップダウンリストを補完することもできます。
 
-## Code navigation
+## コードのナビゲーション
 
-Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+ドロップダウンリストの項目をクリックすると、当該項目のコードの先頭行に移動します。 また、矢印キーで項目を選択し **Enter** キーで決定して移動することもできます。
 
-## Automatic tagging
+## 自動タグ
 
-Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+コンストラクター、メソッド宣言、関数、計算属性は自動的にタグ付けされ、ドロップダウンリストに追加されます。
 
-When there is no tag in the class/method, the tool displays "No tag".
+クラス/メソッドにタグがない場合、ツールは "タグなし" アイコンを表示します。
 
-The following items are added automatically:
+次の項目が自動的に追加されます:
 
-| アイコン                                                                     | 項目                                               |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | No tag                                           |
-| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
-| ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](assets/en/code-editor/function.png)                     | クラス関数名                                           |
+| アイコン                                                                     | 項目                              |
+| ------------------------------------------------------------------------ | ------------------------------- |
+| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | タグなし                            |
+| ![constructor-icon](assets/en/code-editor/constructor.png)               | クラスコンストラクターまたはメソッド宣言            |
+| ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | 計算属性 (get, set, orderBy, query) |
+| ![function-icon](assets/en/code-editor/function.png)                     | クラス関数名                          |
 
 
-## Manual tagging
+## 手動タグ
 
-By adding markers in your code, you can add the following tags to the dropdown:
+コードにマーカーを追加して、以下のタグをドロップダウンに追加できます:
 
-| アイコン                                                 | 項目         |
-| ---------------------------------------------------- | ---------- |
-| ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK: tag  |
-| ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: tag  |
-| ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME: tag |
+| アイコン                                                 | 項目        |
+| ---------------------------------------------------- | --------- |
+| ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK: タグ  |
+| ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: タグ  |
+| ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME: タグ |
 
-You declare them by adding comments such as:
+タグは、次のようにコメントを付けて宣言します:
 
 ```4d 
-// FIXME: Fix following items
+// FIXME: 要修正
 ```
 
-Declarations are not case-sensitive; writing `fixme:` has the same effect.
+タグ宣言の際、文字の大小は区別されません。`fixme:` と記述することもできます。
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
+`MARK:` タグの後にハイフンを付けると、コードエディターとドロップダウンメニューに区切り線が引かれます。 つまり、次のように書くと:
 
 ![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
 
-Results in this:
+このような結果になります:
 
 ![mark-hyphen-image](assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+関数内のマーカーはドロップダウンリスト内でインデント (字下げ) されますが、関数末尾の `MARK:` タグの後に指示がない場合を除きます。 この場合は、インデントなしで表示されます。
 
-## Display order
+## 表示順
 
-Tags are displayed in their appearing order inside the method/class.
+タグは、メソッド/クラス内の出現順に表示されます。
 
-To display the tags of a method or class in alphabetical order, do one of the following:
-* **right-click** the dropdown tool
-* hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
+メソッドやクラスのタグをアルファベット順に表示するには、次のいずれかを実行します:
+* ドロップダウンツールを **右クリックする**
+* macOS では **option**、Windows では **Alt** を押しながら、ドロップダウンツールをクリックします。
 
-> Tags inside functions move with their parent items.
+> 関数内のタグは、親項目と一緒に移動します。
 
 
 

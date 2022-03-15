@@ -1480,15 +1480,15 @@ retournera les informations suivantes dans l'objet *$defaultStyle* :
 
 La commande `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->récupère la formule depuis une plage de cellules désignée<!-- END REF -->.
 
-Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
+Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si *rangeObj* désigne plusieurs cellules ou plusieurs plages, la formule de la première cellule est retournée. Si *rangeObj* est une cellule qui ne contient pas de formule, la commande retourne une chaine vide.
 
 #### Exemple
 
 ```4d
-  //set a formula
-VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
-
-$result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
+  //fixer une formule
+ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
+ 
+ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 ```
 #### Voir aussi
 
@@ -1500,23 +1500,23 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Paramètres | Type   |    | Description                             |
-| ---------- | ------ | -- | --------------------------------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |
-| name       | Text   | -> | Name of the named range                 |
-| scope      | Nombre | -> | Target scope (default=current sheet)    |
-| Résultat   | Text   | <- | Named formula or named range definition |
+| Paramètres | Type   |    | Description                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro               |
+| name       | Text   | -> | Nom de la plage nommée                                |
+| scope      | Nombre | -> | "Scope" cible (par défaut=feuille courante)           |
+| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
+La commande `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> retourne la formule et le commentaire correspondant à la plage nommée ou à la formule nommée qui a été passée dans le paramètre *name*, ou retourne **null** si le nom n'existe pas dans le scope défini<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass the named range or named formula that you want to get in *name*. Note that named ranges are returned as formulas containing absolute cell references.
+Passez la plage nommée ou la formule nommée que vous souhaitez lire dans*name*. A noter que les plages nommées sont retournées sous forme de formules contenant des références absolues de cellules.
 
-You can define where to get the formula in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Le paramètre *scope* vous permet de définir l'espace de la zone dans lequel lire la formule, en passant l'indice de la feuille (la numérotation débute à 0) ou l'une des constantes suivantes :
 
 *   `vk current sheet`
 *   `vk workbook`
@@ -1526,10 +1526,10 @@ You can define where to get the formula in *scope* using either the sheet index 
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété | Type | Description                                                                                                                                 |
-| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula   | Text | Text of the formula corresponding to the named formula or named range. For named ranges, the formula is a sequence of absolute coordinates. |
-| comment   | Text | Comment corresponding to the named formula or named range                                                                                   |
+| Propriété | Type | Description                                                                                                                                               |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula   | Text | Texte de la formule correspondant à la formule nommée ou à la plage nommée. Pour les plages nommées, la formule est une séquence de coordonnées absolues. |
+| comment   | Text | Commentaire correspondant à la formule nommée ou à la plage nommée                                                                                        |
 
 #### Exemple
 
@@ -1554,31 +1554,31 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 <!-- REF #_method_.VP Get formulas.Params -->
 
-| Paramètres | Type       |    | Description                  |
-| ---------- | ---------- | -- | ---------------------------- |
-| rangeObj   | Object     | -> | Objet plage                  |
-| Résultat   | Collection | <- | Collection of formula values |
+| Paramètres | Type       |    | Description                         |
+| ---------- | ---------- | -- | ----------------------------------- |
+| rangeObj   | Object     | -> | Objet plage                         |
+| Résultat   | Collection | <- | Collection de valeurs d'une formule |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get formulas` command <!-- REF #_method_.VP Get formulas.Summary -->retrieves the formulas from a designated *rangeObj*<!-- END REF -->.
+La commande `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->récupère les formules d'un *rangeObj*déterminé<!-- END REF -->.
 
-In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* designates multiple ranges, the formula of the first range is returned. If *rangeObj* does not contain any formulas, the command returns an empty string.
+Dans *rangeObj*, passez une plage dont vous souhaitez récupérer les formules. Si *rangeObj* désigne plusieurs plages, la formule de la première plage est retournée. Si *rangeObj* ne contient pas de formules, la commande retourne une chaîne vide.
 
-The returned collection is two-dimensional:
+La collection retournée est bidemensionnelle :
 
-*   The first-level collection contains subcollections of formulas. Each subcollection reprensents a row.
-*   Each subcollection defines cell values for the row. Values are text elements containing the cell formulas.
+*   La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection représente une ligne.
+*   Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs sont des éléments textuels contenant les formules des cellules.
 
 #### Exemple
 
-You want to retrieve the formulas in the Sum and Average columns from this document:
+Ous souhaitez récupérer les formules des colonnes Sum et Average de ce document :
 
 
 ![](assets/en/ViewPro/cmd_vpGetFormulas.PNG)
 
-You can use this code:
+Vous pouvez utiliser ce code :
 
 ```4d
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
@@ -1597,16 +1597,16 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 <!-- REF #_method_.VP Get frozen panes.Params -->
 
-| Paramètres | Type    |    | Description                                         |
-| ---------- | ------- | -- | --------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro             |
-| sheet      | Integer | -> | Indice de la feuille (feuille courante si omis)     |
-| Résultat   | Object  | <- | Object containing frozen column and row information |
+| Paramètres | Type    |    | Description                                                        |
+| ---------- | ------- | -- | ------------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                            |
+| sheet      | Integer | -> | Indice de la feuille (feuille courante si omis)                    |
+| Résultat   | Object  | <- | Objet contenant des informations sur les colonnes et lignes figées |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get frozen panes` command <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
+La commande `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->retourne un objet contenant des informations sur les lignes et colonnes figées de *vpAreaName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -1615,19 +1615,19 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 ##### Objet retourné
 
-The command returns an object describing the frozen columns and rows. Cet objet peut avoir les propriétés suivantes :
+La commande retourne un objet décrivant les lignes et colonnes figées. Cet objet peut avoir les propriétés suivantes :
 
-| Propriété           | Type    | Description                                            |
-| ------------------- | ------- | ------------------------------------------------------ |
-| columnCount         | Integer | The number of frozen columns on the left of the sheet  |
-| trailingColumnCount | Integer | The number of frozen columns on the right of the sheet |
-| rowCount            | Integer | The number of frozen rows on the top of the sheet      |
-| trailingRowCount    | Integer | The number of frozen rows on the bottom of the sheet   |
+| Propriété           | Type    | Description                                              |
+| ------------------- | ------- | -------------------------------------------------------- |
+| columnCount         | Integer | Le nombre de colonnes figées sur la gauche de la feuille |
+| trailingColumnCount | Integer | Le nombre de colonnes figées sur la droite de la feuille |
+| rowCount            | Integer | Le nombre de lignes figées en haut de la feuille         |
+| trailingRowCount    | Integer | Le nombre de lignes figées en bas de la feuille          |
 
 #### Exemple
 
 
-You want to retrieve information about the number of frozen columns and rows:
+Vous souhaitez récupérer des informations sur le nombre de colonnes et de lignes figées :
 
 ```4d
 var $panesObj : Object
@@ -1635,7 +1635,7 @@ var $panesObj : Object
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
-The returned object contains, for example:
+L'objet retourné contient, par exemple :
 
 ![](assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -1649,41 +1649,41 @@ The returned object contains, for example:
 
 <!-- REF #_method_.VP Get names.Params -->
 
-| Paramètres | Type       |    | Description                             |
-| ---------- | ---------- | -- | --------------------------------------- |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro |
-| scope      | Nombre     | -> | Target scope (default= current sheet)   |
-| Résultat   | Collection | <- | Existing names in the defined scope     |
+| Paramètres | Type       |    | Description                                 |
+| ---------- | ---------- | -- | ------------------------------------------- |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro     |
+| scope      | Nombre     | -> | "Scope" cible (par défaut=feuille courante) |
+| Résultat   | Collection | <- | Noms existant dans la zone définie          |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
+La commande `VP Get names` <!-- REF #_method_.VP Get names.Summary -->retourne une collection de tous les "noms" définis dans la feuille courante ou dans la zone définie dans le paramètre *scope*r<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the names in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Le paramètre *scope* vous permet de définir l'espace de la zone dans lequel lire la formule, en passant l'indice de la feuille (la numérotation débute à 0) ou l'une des constantes suivantes :
 
 *   `vk current sheet`
 *   `vk workbook`
 
 ##### Returned collection
 
-The returned collection contains one object per name. The following object properties can be returned:
+La collection retournée contient un objet par nom. Les propriétés d'objets suivantes peuvent être retournées :
 
-| Propriété           | Type | Description                    |
-| ------------------- | ---- | ------------------------------ |
-| result\[ ].name    | Text | cell or range name             |
-| result\[ ].formula | Text | formula                        |
-| result\[ ].comment | Text | Comment associated to the name |
+| Propriété           | Type | Description                |
+| ------------------- | ---- | -------------------------- |
+| result\[ ].name    | Text | nom de cellule ou de plage |
+| result\[ ].formula | Text | formula                    |
+| result\[ ].comment | Text | Commentaire associé au nom |
 
-Available properties depend on the type of the named element (named cell, named range, or named formula).
+Les propriétés disponibles dépendent du type d'élément nommé (cellule nommée, plage nommée ou formule nommée).
 
 #### Exemple
 
 ```4d
 var $list : Collection
-$list:=VP Get names("ViewProArea";2) //names in 3rd sheet
+$list:=VP Get names("ViewProArea";2) //noms de la 3e feuille
 ```
 
 #### Voir aussi
@@ -1701,17 +1701,17 @@ $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 | ---------- | ------- | -- | ----------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro         |
 | sheet      | Integer | -> | Indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Object of printing information                  |
+| Résultat   | Object  | <- | Objet contenant les informations d'impression   |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get print info` command <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
+La commande `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->retourne un objet contenant les attributs d'impression de *vpAreaName*<!-- END REF -->.
 
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique (la numérotation commence à zéro) dont vous souhaitez retourner les attributs d'impression.  Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 
 #### Exemple
@@ -1722,7 +1722,7 @@ Le code suivant :
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... returns the print attributes of the 4D View Pro area set in the [VP SET PRINT INFO](#vp-set-print-info) command:
+... retourne les attributs d'impression de la zone 4D View Pro dans la commande [VP SET PRINT INFO](#vp-set-print-info) :
 
 ```4d
 {
@@ -1780,24 +1780,24 @@ zoomFactor:1
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| Paramètres | Type       |    | Description                  |
-| ---------- | ---------- | -- | ---------------------------- |
-| rangeObj   | Object     | -> | Objet plage                  |
-| Résultat   | Collection | <- | Collection of row properties |
+| Paramètres | Type       |    | Description                        |
+| ---------- | ---------- | -- | ---------------------------------- |
+| rangeObj   | Object     | -> | Objet plage                        |
+| Résultat   | Collection | <- | Collection de propriétés de lignes |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get row attributes` command <!-- REF #_method_.VP Get row attributes.Summary -->returns a collection of properties for any row in the *rangeObj*<!-- END REF -->.
+La commande `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary -->retourne une collection de propriétés pour les lignes de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the rows whose attributes will be retrieved.
+Dans *rangeObj*, passez un objet contenant une plage de lignes dont les attributs seront récupérés.
 
-The returned collection contains any properties for the rows, whether or not they have been set by the [VP SET ROW ATTRIBUTES](#vp-set-row-attributes) method.
+La collection retournée contient les propriétés des lignes, qu'elles aient été définies ou non par la méthode [VP SET ROW ATTRIBUTES](#vp-set-row-attributes).
 
 
 #### Exemple
 
-The following code returns a collection of the attributes within the given range:
+Le code suivant retourne une collection d'attributs de la plage donnée :
 
 ```4d
 var $range : Object
@@ -1825,21 +1825,21 @@ $attr:=VP Get row attributes($range)
 | ---------- | ------- | -- | ----------------------------------------------- |
 | vpAreaName | Text    | -> | Nom de la zone 4D View Pro dans le formulaire   |
 | sheet      | Integer | -> | Indice de la feuille (feuille courante si omis) |
-| Résultat   | Integer | <- | Total number of rows                            |
+| Résultat   | Integer | <- | Nombre total de lignes                          |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get row count` command <!-- REF #_method_.VP Get row count.Summary -->returns the total number of rows from the designated *sheet*<!-- END REF -->.
+La commande `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->retourne le nombre total de lignes de la feuille (*sheet*) désignée<!-- END REF -->.
 
 Dans *vpAreaName*, passez la propriété du nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the row count in the optional *sheet* parameter using the sheet index (counting begins at 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
+Vous pouvez définir l'emplacement du nombre de lignes dans le paramère optionnel *sheet* à l'aide de l'indice de la feuille (la numérotation démarre à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 
 #### Exemple
 
-The following code returns the number of rows in the 4D View Pro area:
+Le code suivant retourne le nombre de lignes dans la zone 4D View Pro :
 
 ```4d
 var $rowCount : Integer
@@ -1866,7 +1866,7 @@ $rowCount:=VP Get row count("ViewProarea")
 
 #### Description
 
-The `VP Get selection` command <!-- REF #_method_.VP Get selection.Summary -->returns a new range object referencing the current selected cells<!-- END REF -->.
+La commande `VP Get selection` <!-- REF #_method_.VP Get selection.Summary -->retourne un nouvel objet plage référençant les cellules courantes sélectionnées<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -1878,12 +1878,12 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 ![](assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
-The following code will retrieve the coordinates of all the cells in the current selection:
+Le code suivant récupèrera les coordonnées de la cellule active :
 
 ```4d
 $currentSelection:=VP Get selection("myVPArea")
 
-//returns a range object containing:  
+//retourne un objet plage contenant :  
 //$currentSelection.ranges[0].column=5
 //$currentSelection.ranges[0].columnCount=2
 //$currentSelection.ranges[0].row=8
@@ -1904,28 +1904,27 @@ $currentSelection:=VP Get selection("myVPArea")
 | Paramètres | Type    |    | Description                             |
 | ---------- | ------- | -- | --------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
-| Résultat   | Integer | <- | Number of sheets                        |
+| Résultat   | Integer | <- | Nombre de feuilles                      |
 <!-- END REF --> 
 
 #### Description
 
-The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -->returns the number of sheets in the document loaded in *vpAreaName*.
+La commande `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->retourne le nombre de feuilles contenues dans le document chargé dans *vpAreaName*.
 <!-- END REF --> 
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 #### Exemple
 
-In the following document:
+Dans le document suivant :
 
 ![](assets/en/ViewPro/vp-sheet-3.png)
 
-Get the sheet count and set the current sheet to the last sheet:
+Pour obtenir le nombre de feuilles et définir la feuille courante comme étant la dernière feuille :
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
-  //set the current sheet to the last sheet (indexing starts at 0)
- VP SET CURRENT SHEET("ViewProArea";$count-1)
+  //définir la feuille courante comme étant la dernière feuille (l'indexation commence à 0) VP SET CURRENT SHEET("ViewProArea";$count-1)
 ```
 
 ![](assets/en/ViewPro/vp-sheet-3-select.png)
@@ -1960,7 +1959,7 @@ In *name*, pass the name of the sheet whose index will be returned. If no sheet 
 
 #### Exemple
 
-In the following document:
+Dans le document suivant :
 
 ![](assets/en/ViewPro/vp-sheet-index-name.png)
 
@@ -2023,31 +2022,31 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 | ---------- | ------- | -- | ----------------------------------------------- |
 | vpAreaName | Text    | -> | Nom de la zone 4D View Pro dans le formulaire   |
 | sheet      | Integer | -> | Indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Sheet options object                            |
+| Résultat   | Object  | <- | Objet options de la feuille                     |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
+La commande `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summary -->retourne un objet contenant les options relatives à la feuille courante de la zone *vpAreaName*<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 
 #### Objet retourné
 
-The method returns an object containing the current values for all available sheet options. An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](#vp-set-sheet-options) method.
+La commande retourne un objet contenant les valeurs courantes pour toutes les options de feuille disponibles. La valeur d'une option peut avoir été modifiée par l'utilisateur ou par la méthode [VP SET SHEET OPTIONS](#vp-set-sheet-options).
 
-To view the full list of the options, see [Sheet Options](configuring.md#sheet-options).
+Pour visualiser la liste complète des options, voir [Options feuille](configuring.md#sheet-options).
 
 #### Exemple
 
 ```4d
 $options:=VP Get sheet options("ViewProArea")
-If($options.colHeaderVisible) //column headers are visible
-    ... //do something
-End if
+ If($options.colHeaderVisible) //les en-têtes des colonnes sont visibles
+    ... //faire quelque chose
+ End if
 ```
 
 #### Voir aussi
@@ -2098,32 +2097,32 @@ The following code checks if preview lines are displayed or hidden in the docume
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Paramètres | Type   |    | Description                               |
-| ---------- | ------ | -- | ----------------------------------------- |
-| rangeObj   | Object | -> | Objet plage                               |
-| Résultat   | Object | <- | Object of cell spans in the defined range |
+| Paramètres | Type   |    | Description                                                     |
+| ---------- | ------ | -- | --------------------------------------------------------------- |
+| rangeObj   | Object | -> | Objet plage                                                     |
+| Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
+La commande `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->récupère les cellules fusionnées (cell spans) du paramètre *rangeObj* désigné<!-- END REF -->.
 
-In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
+Dans *rangeObj*, passez une plage de cellules fusionnées que vous souhaitez récupérer. Si *rangeObj* ne contient pas de cellules fusionnées, une plage vide est retournée.
 
 
 #### Exemple
 
-You want to center the text for the spanned cells in this document:
+Pour centrer le texte des cellules fusionnées dans ce document :
 
 ![](assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans 
-$range:=VP Get spans(VP All("ViewProArea"))
-
-//center text
-$style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
-VP SET CELL STYLE($range;$style)
+// Rechercher toutes les cellules fusionnées
+ $range:=VP Get spans(VP All("ViewProArea"))
+ 
+ //centrer le texte
+ $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
+ VP SET CELL STYLE($range;$style)
 ```
 
 #### Voir aussi
@@ -2141,18 +2140,18 @@ VP SET CELL STYLE($range;$style)
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
 | styleName  | Text    | -> | Nom du style                            |
 | scope      | Integer | -> | Cible (par défaut = feuille courante)   |
-| Résultat   | Object  | <- | Style sheet object                      |
+| Résultat   | Object  | <- | Objet feuille de style                  |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->returns the *styleName* style sheet object containing the property values which have been defined<!-- END REF -->.
+La commande `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->retourne l'objet feuille courante *styleName* qui contient les valeurs de propriété qui ont été définies<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-In *styleName*, pass the name of the style sheet to get.
+Dans *styleName*, passez le nom de la feuille de style que vous souhaitez lire.
 
-You can define where to get the style sheet in the optional *scope* parameter using the sheet index (counting begins at 0) or with the following constants:
+Vous pouvez définir l'emplacement dans lequel vous souhaitez lire la feuille de style dans le paramètre *scope* à l'aide de l'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 *   `vk current sheet`
 *   `vk workbook`
@@ -2165,7 +2164,7 @@ Le code suivant :
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the *GreenDashDotStyle* style object from the current sheet:
+... retournera l'objet style *GreenDashDotStyle* de la feuille courante :
 
 ```4d
 {
@@ -2192,29 +2191,29 @@ borderTop:{color:green,style:10}
 | ---------- | ---------- | -- | --------------------------------------- |
 | vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro |
 | scope      | Integer    | -> | Cible (par défaut = feuille courante)   |
-| Résultat   | Collection | <- | Collection of style sheet objects       |
+| Résultat   | Collection | <- | Collection d'objets feuille de style    |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *scope*<!-- END REF -->.
+La commande `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->retourne la collection d'objets feuille de style définis de la cible (*scope*) désignée<!-- END REF -->.
 
 Dans *vpAreaName*, passez la propriété du nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can define where to get the style sheets in the optional *scope* parameter using the sheet index (counting begins at 0) or with the following constants:
+Vous pouvez définir l'emplacement dans lequel vous souhaitez lire les feuilles de style dans le paramètre *scope* à l'aide de l'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 *   `vk current sheet`
 *   `vk workbook`
 
 #### Exemple
 
-The following code will return a collection of all the style objects in the current sheet:
+Le code suivant retournera une collection de tous les objets style de la feuille courante :
 
 ```4d
 $styles:=VP Get stylesheets("ViewProArea")
 ```
 
-In this case, the current sheet uses two style objects:
+Dans ce cas, la feuille courante utilise deux objets style :
 
 ```4d
 [
@@ -2244,21 +2243,21 @@ In this case, the current sheet uses two style objects:
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Paramètres | Type   |    | Description                    |
-| ---------- | ------ | -- | ------------------------------ |
-| rangeObj   | Object | -> | Objet plage                    |
-| Résultat   | Object | <- | Object containing a cell value |
+| Paramètres | Type   |    | Description                           |
+| ---------- | ------ | -- | ------------------------------------- |
+| rangeObj   | Object | -> | Objet plage                           |
+| Résultat   | Object | <- | Objet contenant une valeur de cellule |
 <!-- END REF -->  
 
 #### Description
 
-The `VP Get value` command <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
+La commande `VP Get value` <!-- REF #_method_.VP Get value.Summary -->récupère la valeur d'une cellule depuis une plage de cellules désignée<!-- END REF -->.
 
-In *rangeObj*, pass a range whose value you want to retrieve.
+Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la valeur.
 
 #### Objet retourné
 
-The object returned will contain the `value` property, as well as a `time` property in case of date value:
+L'objet retourné contiendra la propriété `value`, et la propriété `time` dans le cas d'une valeur date :
 
 | Propriété | Type                               | Description                                                               |
 | --------- | ---------------------------------- | ------------------------------------------------------------------------- |
@@ -2923,7 +2922,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 | ---------- | ------- | -- | -------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro            |
 | name       | Text    | -> | Name of the named range or named formula to remove |
-| scope      | Integer | -> | Target scope (default=current sheet)               |
+| scope      | Integer | -> | "Scope" cible (par défaut=feuille courante)        |
 
 <!-- END REF -->  
 
@@ -3793,7 +3792,7 @@ The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when
 
 > If `VP SET CUSTOM FUNCTIONS` is called multiple times for the same area, in the same session, only the last call is taken into account.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
 In the *formulaObj* parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in *formulaObj* becomes the name of a function in the 4D View Pro area.
 
@@ -4089,8 +4088,8 @@ In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose
 
 The *formulasCol* is a two-dimensional collection:
 
-*   The first-level collection contains subcollections of formulas. Each subcollection defines a row.
-*   Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells. >If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
+*   La collection de premier niveau contient des sous-collections de formules. Each subcollection defines a row.
+*   Chaque sous-collection définit les valeurs des cellules de la ligne. Values must be text elements containing the formulas to assign to the cells. >If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
 
 You remove the formulas in *rangeObj* by replacing them with an empty string ("").
 
@@ -4137,11 +4136,11 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 
-| Paramètres | Type    |    | Description                                         |
-| ---------- | ------- | -- | --------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro             |
-| paneObj    | Object  | -> | Object containing frozen column and row information |
-| sheet      | Integer | -> | Indice de la feuille (feuille courante si omis)     |
+| Paramètres | Type    |    | Description                                                        |
+| ---------- | ------- | -- | ------------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                            |
+| paneObj    | Object  | -> | Objet contenant des informations sur les colonnes et lignes figées |
+| sheet      | Integer | -> | Indice de la feuille (feuille courante si omis)                    |
 
 <!-- END REF -->  
 
@@ -4156,12 +4155,12 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. If a property is set to less than zero, the command does nothing. Vous pouvez passer :
 
-| Propriété           | Type    | Description                                            |
-| ------------------- | ------- | ------------------------------------------------------ |
-| columnCount         | Integer | The number of frozen columns on the left of the sheet  |
-| trailingColumnCount | Integer | The number of frozen columns on the right of the sheet |
-| rowCount            | Integer | The number of frozen rows on the top of the sheet      |
-| trailingRowCount    | Integer | The number of frozen rows on the bottom of the sheet   |
+| Propriété           | Type    | Description                                              |
+| ------------------- | ------- | -------------------------------------------------------- |
+| columnCount         | Integer | Le nombre de colonnes figées sur la gauche de la feuille |
+| trailingColumnCount | Integer | Le nombre de colonnes figées sur la droite de la feuille |
+| rowCount            | Integer | Le nombre de lignes figées en haut de la feuille         |
+| trailingRowCount    | Integer | Le nombre de lignes figées en bas de la feuille          |
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 
@@ -4430,7 +4429,7 @@ VP SET SELECTION($currentSelection)
 | Paramètres | Type    |    | Description                             |
 | ---------- | ------- | -- | --------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
-| number     | Integer | -> | Number of sheets                        |
+| number     | Integer | -> | Nombre de feuilles                      |
 
 <!-- END REF -->  
 
@@ -4526,7 +4525,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
 Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
 
@@ -4758,45 +4757,58 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Paramètres | Type   |    | Description                    |
-| ---------- | ------ | -- | ------------------------------ |
-| rangeObj   | Object | -> | Objet plage                    |
-| valueObj   | Object | -> | Cell values and format options |
+| Paramètres | Type   |    | Description                                   |
+| ---------- | ------ | -- | --------------------------------------------- |
+| rangeObj   | Object | -> | Objet plage                                   |
+| valueObj   | Object | -> | Valeurs de la cellule et options de formatage |
 
 <!-- END REF -->  
 
 #### Description
 
-The `VP SET VALUE` command <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
+La commande `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->assigne une valeur spécifique à une plage de cellules désignée<!-- END REF -->.
 
-The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
+Cette commande vous permet d'utiliser du code générique pour fixer et formater les types de valeurs dans *rangeObj*, tandis que d'autres commandes, telles que [`VP SET TEXT VALUE`](#vp-set-text-value) et [`VP SET NUM VALUE`](#vp-set-num-value), limitent les valeurs à des types spécifiques.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
 
-The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. It can include the following properties :
+Le paramètre *valueObj* est un objet qui définit la valeur et le [format](configuring.md#cell-format) à assigner à *rangeObj*. Il peut contenir les propriétés suivantes :
 
-| Propriété | Type                                     | Description                                                                                                                                                      |
-| --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to *rangeObj* (except- time). Pass null to erase the content of the cell.                                                                        |
-| time      | Réel                                     | Time value (in seconds) to assign to *rangeObj*                                                                                                                  |
-| format    | Text                                     | Pattern for value/time property. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propriété | Type                                     | Description                                                                                                                                                                              |
+| --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valeur à assigner à *rangeObj* (exceptée heure). Passez null pour effacer le contenu de la cellule.                                                                                      |
+| time      | Réel                                     | Time value (in seconds) to assign to *rangeObj*                                                                                                                                          |
+| format    | Text                                     | Pattern for value/time property. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format de cellule](configuring.md#cell-format). |
 
 
 
 #### Exemple
 
 ```4d
-//Set the cell value as False
-VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
-
-//Set the cell value as 2
-VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";2))
-
-//Set the cell value as $125,571.35
-VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)"))
-
-//Set the cell value as Hello World!
+//Fixer la valeur de la cellule à Faux
+ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
+ 
+ //Fixer la valeur de la cellule à 2
+ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";2))
+ 
+ //Fixer la valeur de la cellule à $125,571.35
+ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)"))
+ 
+ //Fixer la valeur de la cellule à Hello World!
+ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
+ 
+ //Fixer la valeur de la cellule à date du jour
+ VP SET VALUE(VP Cell("ViewProArea";4;2);New object("value";Current date))
+ 
+ //Fixer la valeur de la cellule à heure courante
+ VP SET VALUE(VP Cell("ViewProArea";5;2);New object("time";Current time))
+ 
+ //Fixer la valeur de la cellule à une date et une heure spécifiques
+ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
+ 
+ //Effacer le contenu de la cellule
+ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))!
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
 
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
@@ -4834,33 +4846,32 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 #### Description
 
-The `VP SET VALUES` command <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->.
+La commande `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->affecte une collection de valeurs qui commence à partir de la plage de cellule spécifiée<!-- END REF -->.
 
-In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) whose value you want to specify. The cell defined in the *rangeObj* is used to determine the starting point.
-> * If *rangeObj* is not a cell range, only the first cell of the range is used.
-> * If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
+Dans *rangeObj*, passez une plage de cellule (créée via [`VP Cell`](#vp-cell)) dont vous souhaitez indiquer la valeur. La cellule définie dans *rangeObj* est utilisée pour déterminer le point de départ.
+> * Si *rangeObj* n'est pas une plage cellule, seule la première cellule de la plage est utilisée.
+> * Si *rangeObj* comprend plusieurs plages, seule la première cellule de la première plage est utilisée.
 
-The *valuesCol* parameter is two-dimensional:
+Le paramètre *valuesCol* est bidimensionnel :
 
-*   The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row.
-*   Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:
+*   La collection de premier niveau contient des sous-collections de valeurs. Each subcollection defines a row. Passez une collection vide pour sauter une ligne.
+*   Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, date, null ou objet. Si la valeur est un objet, elle peut avoir les propriétés suivantes :
 
     | Propriété | Type                                     | Description                      |
     | --------- | ---------------------------------------- | -------------------------------- |
     | value     | Integer, Real, Boolean, Text, Date, Null | Value in the cell (except- time) |
-    | time      | Réel                                     | Time value (in seconds)          |
+    | time      | Réel                                     | Valeur heure (en secondes)       |
 
 #### Exemple
 
 ```4d
 $param:=New collection
-$param.push(New collection(1;2;3;False)) //first row, 4 values
-$param.push(New collection) //second row, untouched
-$param.push(New collection(4;5;Null;"hello";"world")) // third row, 5 values
-$param.push(New collection(6;7;8;9)) // fourth row, 4 values
-$param.push(New collection(Null;New object("value";Current date;"time";42))) //fifth row, 1 value
-
-VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
+ $param.push(Creer collection(1;2;3;False)) //première ligne, 4 valeurs
+ $param.push(Creer collection) //deuxième ligne, inchangé
+ $param.push(Creer collection(4;5;Null;"hello";"world")) // troisième ligne, 5 valeurs
+ $param.push(Creer collection(6;7;8;9)) // quatrième ligne, 4 valeurs
+ $param.push(Creer collection(Null;Creer objet("value";Current date;"time";42))) //cinquième ligne, 1 valeur
+ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 ```
 
 ![](assets/en/ViewPro/cmd_vpSetValues.PNG)
@@ -4979,52 +4990,52 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Paramètres | Type    |    | Description                             |
-| ---------- | ------- | -- | --------------------------------------- |
-| rangeObj   | Object  | -> | Objet plage                             |
-| vPos       | Integer | -> | Vertical view position of cell or row   |
-| hPos       | Integer | -> | Horizontal view position of cell or row |
+| Paramètres | Type    |    | Description                                                 |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| rangeObj   | Object  | -> | Objet plage                                                 |
+| vPos       | Integer | -> | Position verticale de la vue de la cellule ou de la ligne   |
+| hPos       | Integer | -> | Position horizontale de la vue de la cellule ou de la ligne |
 
 <!-- END REF -->  
 
 #### Description
 
-The `VP SHOW CELL` command <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
+La commande `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->repositionne verticalement et horizontalement la vue de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range of cells as an object to designate the cells to be viewed. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
+Dans *rangeObj*, passez, en tant qu'objet, une plage de cellules que vous souhaitez afficher. La vue de *rangeObj* sera positionnée verticalement ou horizontalement (i.e., là où *rangeObj* apparait) en fonction des paramètres *vPos* et *hPos*. Le paramètre *vPos* définit la position verticale souhaitée pour afficher *rangeObj* et le paramètre *vPos* définit la position horizontale souhaitée pour afficher *rangeObj*.
 
-The following selectors are available:
+Les sélecteurs suivants sont disponibles :
 
-| Selector              | Description                                                                                                                                                                                                                                                                              | Available with *vPos* | Available with *hPos* |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
-| `vk position bottom`  | Vertical alignment to the bottom of cell or row.                                                                                                                                                                                                                                         | X                     |                       |
-| `vk position center`  | Alignment to the center. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position - cell or row</li><li>Horizontal view position - cell or column</li>                                                                                                           | X                     | X                     |
-| `vk position left`    | Horizontal alignment to the left of the cell or column                                                                                                                                                                                                                                   |                       | X                     |
-| `vk position nearest` | Alignment to the closest limit (top, bottom, left, right, center). The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position (top, center, bottom) - cell or row </li><li>Horizontal view position (left, center, right) - cell or column | X                     | X                     |
-| `vk position right`   | Horizontal alignment to the right of the cell or column                                                                                                                                                                                                                                  |                       | X                     |
-| `vk position top`     | Vertical alignment to the top of cell or row                                                                                                                                                                                                                                             | X                     |                       |
-> This command is only effective if repositioning the view is possible. For example, if the *rangeObj* is in cell A1 (the first column and the first row) of the current sheet, repositioning the view will make no difference because the vertical and horizontal limits have already been reached (i.e., it is not possible to scroll any higher or any more to the left). The same is true if *rangeObj* is in cell C3 and the view is repositioned to the center or the bottom right. The view remains unaltered.
+| Sélecteur             | Description                                                                                                                                                                                                                                                                                                                         | Disponible avec *vPos* | *hPos* |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------ |
+| `vk position bottom`  | Alignement vertical vers le bas de la cellule ou de la ligne.                                                                                                                                                                                                                                                                       | X                      |        |
+| `vk position center`  | Alignement vers le centre. L'alignement s'appliquera à la limite de la cellule, ligne ou colonne, en fonction de la position de la vue indiquée :<li>Position verticale de la vue - cellule ou ligne</li><li>Position horizontale de la vue - cellule ou ligne</li>                                                                                                                               | X                      | X      |
+| `vk position left`    | Alignement horizontal vers la gauche de la cellule ou de la colonne                                                                                                                                                                                                                                                                 |                        | X      |
+| `vk position nearest` | Alignement vers la limite la plus proche (haut, bas, gauche, droite, centre). L'alignement s'appliquera à la limite de la cellule, ligne ou colonne, en fonction de la position de la vue indiquée :<li>Position verticale de la vue (haut, centre, bas) - cellule ou ligne </li><li>Position horizontale de la vue (gauche, centre, droite) - cellule ou ligne | X                      | X      |
+| `vk position right`   | Alignement horizontal vers la droite de la cellule ou de la colonne                                                                                                                                                                                                                                                                 |                        | X      |
+| `vk position top`     | Alignement vertical vers le haut de la cellule ou de la ligne                                                                                                                                                                                                                                                                       | X                      |        |
+> Cette commande n'est efficace que si le repositionnement de la vue est possible. Par example, si *rangeObj* est contenu dans la cellule A1 (la première colonne et la première ligne) de la feuille courante, le repositionnement de la vue n'apportera aucun changement, étant donné que les limites verticales et horizontales ont déjà été atteintes (i.e., il n'est pas possible de faire dérouler davantage vers le haut ou vers la gauche). De même si *rangeObj* est contenu dans la cellule C3 et que la vue est repositionnée au centre ou en bas à droite. La vue demeure inchangée.
 
 #### Exemple
 
-You want to view the cell in column AY, row 51 in the center of the 4D View Pro area:
+Vous souhaitez visualiser la cellule dans la colonne AY, ligne 51, au centre de la zone 4D View Pro. Le code suivant :
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
-// Move the view to show the cell
-VP SHOW CELL($displayCell;vk position center;vk position center)
+ // Déplacez la vue pour afficher la cellule
+ VP SHOW CELL($displayCell;vk position center;vk position center)
 ```
 
 Résultat :
 
 ![](assets/en/ViewPro/cmd_vpShowCell1.PNG)
 
-The same code with the vertical and horizontal selectors changed to show the same cell positioned at the top right of the 4D View Pro area:
+Le même code ainsi que les sélecteurs verticaux et horizontaux ont été modifiés pour afficher la même cellule en haut à droite de la zone 4D View Pro :
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
-  // Move the view to show the cell
-VP SHOW CELL($displayCell;vk position top;vk position right)
+  // Déplacez la vue pour afficher la cellule
+ VP SHOW CELL($displayCell;vk position top;vk position right)
 ```
 
 Résultat :
@@ -5049,27 +5060,27 @@ Résultat :
 
 #### Description
 
-The `VP SUSPEND COMPUTING` command <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->stops the calculation of all formulas in *vpAreaName*<!-- END REF -->. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.
+La commande `VP SUSPEND COMPUTING` <!-- REF #_method_.VP SUSPEND COMPUTING.Summary -->stoppe le calcul de toutes les formules dans *vpAreaName*<!-- END REF -->. Cette commande est utile lorsque vous souhaitez suspendre les calculs dans cette zone 4D View Pro, afin de modifier manuellement les formules sans générer d'erreurs avant la fin de vos modifications.
 
-The command pauses the calculation service in 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after `VP SUSPEND COMPUTING` command  is executed are not calculated.
+La commande met en pause les calculs dans 4D View Pro. Les formules déjà calculées restent inchangées, mais les formules ajoutées après `VP SUSPEND COMPUTING` et qui sont exécutées, ne sont pas calculées.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
-> The 4D View Pro calculation service maintains a counter of suspend/resume actions. Therefore, each execution of `VP SUSPEND COMPUTING` command  must be balanced by a corresponding execution of the `VP RESUME COMPUTING` command. Any formula impacted by modifications made while calculations are suspended will be recalculated when the command is executed.
+> The 4D View Pro calculation service maintains a counter of suspend/resume actions. Ainsi, chaque exécution de `VP SUSPEND COMPUTING` doit être compensée par une exécution correspondante de la commande `VP RESUME COMPUTING`. Toute formule modifiée durant la phase de suspension des calculs sera recalculée lorsque la commande sera exécutée.
 
 #### Exemple
 
-You've added two buttons to the form so that the user can suspend/resume calculations:
+Vous avez ajouté deux boutons au formulaire afin que l'utilisateur puisse suspendre/reprendre les calculs :
 
 ![](assets/en/ViewPro/cmd_vpStopCalculations.PNG)
 
-The Suspend Computing button code:
+Le code du bouton Suspend Computing :
 
 ```4d
- //pause calculations while users enter information
+ //mettre les calculs sur pause pendant que les utilisateurs saisissent les informations
  If(FORM Event.code=On Clicked)
-
+ 
     VP SUSPEND COMPUTING("ViewProArea")
-
+ 
  End if
 ```
 

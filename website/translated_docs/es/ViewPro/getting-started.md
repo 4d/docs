@@ -20,14 +20,14 @@ Embedding 4D View Pro areas in your forms allows you to import and export spread
 
 However, 4D View Pro requires a license. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
 
-![](assets/en/ViewPro/licenseError.PNG)
+![](assets/en/ViewPro/licenseError.png)
 
 
 ## Inserting a 4D View Pro area
 
 4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. To select this object, click on the last tool in the object bar:
 
-![](assets/en/ViewPro/vpArea.PNG)
+![](assets/en/ViewPro/vpArea.png)
 
 You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md).
 
@@ -95,7 +95,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 
 Since 4D View Pro is a built-in 4D component, you can access its list of methods from the Explorer, in the **Component Methods** section:
 
-![component-methods](assets/en/ViewPro/explorer-methods.PNG)
+![component-methods](assets/en/ViewPro/explorer-methods.png)
 
 For a detailed list of component methods, see [Method list](method-list.md).
 

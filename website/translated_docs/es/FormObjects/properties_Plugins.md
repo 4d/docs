@@ -6,17 +6,17 @@ title: Plug-ins
 ---
 ## Propiedades avanzadas
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. En este caso, puede hacer clic en este botón para definir estas opciones, normalmente a través de una caja de diálogo personalizada.
+Si las opciones avanzadas son proporcionadas por el autor del plug-in, un botón **Propiedades avanzadas** puede ser activado en la lista de propiedades. En este caso, puede hacer clic en este botón para definir estas opciones, normalmente a través de una caja de diálogo personalizada.
 
-Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
+Dado que la función de propiedades avanzadas está bajo el control del autor del plug-in, la información sobre estas opciones avanzadas es responsabilidad del distribuidor del plug-in.
 
 
 
 #### Gramática JSON
 
-| Nombre           | Tipos de datos | Valores posibles                                                                                                             |
-| ---------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| customProperties | texto          | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
+| Nombre           | Tipos de datos | Valores posibles                                                                                                                                           |
+| ---------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| customProperties | texto          | Propiedades específicas del plugin, pasadas al plugin como una cadena JSON si es un objeto, o como un buffer binario si es una cadena codificada en base64 |
 
 
 #### Objetos soportados

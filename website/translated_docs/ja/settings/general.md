@@ -1,18 +1,18 @@
 ---
 id: general
-title: General page
+title: 一般ページ
 ---
 
-The General page contains options to configure generic parameters for the 4D project.
+一般ページでは、4Dプロジェクトの一般的なパラメーターを設定します。
 
-## Design
+## デザイン
 
-This area contains the **Display toolbar** option. When it is checked, the 4D toolbar is displayed in the Design environment.
+このエリアには **ツールバー表示** オプションがあります。 このオプションがチェックされていると、デザインモードで 4Dツールバーが表示されます。
 
-## General
+## 一般
 
-You use this area to set options concerning project startup and operation.
+このエリアでは、プロジェクトの起動と実行かかわる設定をおこないます。
 
-### Startup Environment
+### 起動時モード
 
-You use this menu to select the default startup mode for the database: **Design** or **Application**. Unless specified, 4D opens by default in the Design environment if a password access system is not activated. 
+このメニューを使用して、データベースのデフォルトの起動モードを、**デザイン** モードまたは **アプリケーション** モードに設定できます。 特記されない限り、パスワードアクセスシステムが無効の場合には、4D はデフォルトでデザインモードで開きます。 

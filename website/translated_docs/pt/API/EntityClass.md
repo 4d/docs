@@ -1680,7 +1680,7 @@ If no entity attribute has been touched, the method returns an empty collection.
   //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
 ```
 
-In this case:
+Nesse modo:
 
 *   firstName and lastName have a `storage` kind
 *   employer has a `relatedEntity` kind

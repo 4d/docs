@@ -68,7 +68,7 @@ Une collection est initialisée avec :
 
 
 
-## `Nouvelle collection`
+## `New collection`
 
 
 <!-- REF #_command_.New collection.Syntax -->
@@ -1313,6 +1313,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1543,9 +1544,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 | v16 R5  | Ajout         |
 </details><!-- REF #collection.length.Syntax -->**.length** : Integer<!-- END REF -->#### Description
 
-La propriété `.length`<!-- REF #collection.length.Summary -->retourne le nombre d'éléments contenus dans la collection<!-- END REF -->.
-
-La propriété `.length` est initialisée à la création de la collection. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. Cette propriété est en **lecture seulement** (vous ne pouvez pas l'utiliser pour modifier la taille de la collection).
+La propriété `.length`<!-- REF #collection.length.Summary -->retourne le nombre d'éléments contenus dans la collection.<!-- END REF -->La propriété `.length` est initialisée à la création de la collection. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. Cette propriété est en **lecture seulement** (vous ne pouvez pas l'utiliser pour modifier la taille de la collection).
 
 #### Exemple
 
@@ -1965,7 +1964,6 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
 #### Exemple 1
 
-
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2079,7 +2077,7 @@ Avec la méthode ***Multiply*** suivante :
  End if
 ```
 
-#### Exemple
+#### Exemple 2
 
 Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
@@ -2230,7 +2228,7 @@ Si la collection est vide, cette méthode ne fait rien.
 | v16 R6  | Ajout         |
 </details><!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF --><!-- REF #collection.slice().Params -->| Paramètres | Type       |    | Description                                                               |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Index pour démarrer la recherche (inclus)                                 |
+| startFrom  | Integer    | -> | Numéro de l'élément de départ (inclus)                                    |
 | end        | Integer    | -> | Position de fin (non incluse)                                             |
 | Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |<!-- END REF -->#### Description
 

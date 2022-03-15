@@ -20,14 +20,14 @@ Les fonctionnalités de 4D View Pro sont directement inclues dans 4D, ce qui en 
 
 Cependant, 4D View Pro nécessite une licence. Vous devez activer cette licence dans votre application afin d'utiliser ses fonctionnalités. Lorsque vous utilisez ce composant sans licence, le contenu d'un objet nécessitant une fonctionnalité 4D View Pro ne s'affiche pas au moment de l'exécution; au lieu de cela, un message d'erreur :
 
-![](assets/en/ViewPro/licenseError.PNG)
+![](assets/en/ViewPro/licenseError.png)
 
 
 ## Insertion d'une zone 4D View Pro
 
 Les documents 4D View Pro sont affichés et modifiés manuellement dans un [objet du formulaire 4D](FormObjects/viewProArea_overview.md) nommé 4D View Pro. Pour sélectionner cet objet, cliquez sur le dernier outil de la barre d'objets :
 
-![](assets/en/ViewPro/vpArea.PNG)
+![](assets/en/ViewPro/vpArea.png)
 
 Vous pouvez également sélectionner une zone 4D View Pro préconfigurée dans la [bibliothèque d'objets](FormEditor/objectLibrary.md).
 
@@ -95,7 +95,7 @@ Les méthodes 4D View Pro peuvent être utilisées dans l'éditeur de méthodes 
 
 4D View Pro étant un composant 4D intégré, vous pouvez accéder à sa liste de méthodes à partir de l'Explorateur, dans la section **Méthodes composants** :
 
-![component-methods](assets/en/ViewPro/explorer-methods.PNG)
+![component-methods](assets/en/ViewPro/explorer-methods.png)
 
 Pour une liste détaillée des méthodes composants, voir [Liste des méthodes](method-list.md).
 

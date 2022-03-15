@@ -70,7 +70,7 @@ Supported types depend on the form category:
 | ------------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
 | Formulario detallado           | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing       | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| List Form                      | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
+| Formulario listado             | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
 | Formulario de lista imprimible | listPrinter      | A printed report that list records                            | Formularios tabla           |
 | Ninguno                        | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
