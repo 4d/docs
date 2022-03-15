@@ -61,22 +61,22 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 La siguiente tabla enumera todos los valores `varType` soportados:
 
-| varType        | Contenido                                |
-| -------------- | ---------------------------------------- |
-| Texto          | Valor texto                              |
-| Fecha          | Valor fecha                              |
-| Hora           | Valor Hora                               |
-| Booleano       | Valor booleano                           |
-| Integer        | Valor entero largo                       |
-| Real           | Valor real                               |
-| Puntero        | Valor puntero                            |
-| Imagen         | Valor imagen                             |
-| Blob           | Valor BLOB                               |
-| Collection     | Valor colección                          |
-| Variant        | Valor variant                            |
-| Objeto         | Objeto con clase por defecto (4D.object) |
-| 4D.*className* | Objeto del nombre de la clase 4D         |
-| cs.*className* | Objeto del nombre de la clase usuario    |
+| varType                | Contenido                               |
+| ---------------------- | --------------------------------------- |
+| `Texto`                | Valor texto                             |
+| `Fecha`                | Valor fecha                             |
+| `Hora`                 | Valor Hora                              |
+| `Booleano`             | Valor booleano                          |
+| `Integer`              | Valor entero largo                      |
+| `Real`                 | Valor real                              |
+| `Puntero`              | Valor puntero                           |
+| `Imagen`               | Valor imagen                            |
+| `Blob`                 | Valor BLOB                              |
+| `Collection`           | Valor colección                         |
+| `Variant`              | Valor variant                           |
+| `Objeto`               | Object with default class (`4D.Object`) |
+| `4D.<className>` | Objeto del nombre de la clase 4D        |
+| `cs.<className>` | Objeto del nombre de la clase usuario   |
 
 #### Ejemplos
 

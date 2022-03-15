@@ -1314,6 +1314,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 
+
 ```4d
  var $col : Collection
  var $i : Integer
@@ -1550,7 +1551,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** : Integer<!-- END REF -->
+**.length** : Integer <!-- END REF -->
 
 
 
@@ -2137,7 +2138,6 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 例題 1
 
-
 ```4d
  var $c; $c2; $c3 : Collection
  $c:=New collection
@@ -2267,7 +2267,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
  End if
 ```
 
-#### 例題
+#### 例題 2
 
 複数のコレクション要素を単一の値にまとめます:
 
@@ -2493,6 +2493,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 ```
 
 <!-- END REF -->
+
 
 
 

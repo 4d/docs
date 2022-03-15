@@ -61,22 +61,22 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType        | Conteúdos                             |
-| -------------- | ------------------------------------- |
-| Texto          | Text value                            |
-| Date           | Date value                            |
-| Hora           | Time value                            |
-| Booleano       | Boolean value                         |
-| Integer        | Long integer value                    |
-| Real           | Real value                            |
-| Ponteiro       | Pointer value                         |
-| Imagem         | Picture value                         |
-| Blob           | BLOB value                            |
-| Coleção        | Collection value                      |
-| Variant        | Variant value                         |
-| Objeto         | Object with default class (4D.Object) |
-| 4D.*className* | Object of the 4D class name           |
-| cs.*className* | Object of the user class name         |
+| varType                | Conteúdos                               |
+| ---------------------- | --------------------------------------- |
+| `Texto`                | Text value                              |
+| `Date`                 | Date value                              |
+| `Hora`                 | Time value                              |
+| `Booleano`             | Boolean value                           |
+| `Integer`              | Long integer value                      |
+| `Real`                 | Real value                              |
+| `Ponteiro`             | Pointer value                           |
+| `Imagem`               | Picture value                           |
+| `Blob`                 | BLOB value                              |
+| `Coleção`              | Collection value                        |
+| `Variant`              | Variant value                           |
+| `Objeto`               | Object with default class (`4D.Object`) |
+| `4D.<className>` | Object of the 4D class name             |
+| `cs.<className>` | Object of the user class name           |
 
 #### Exemplos
 

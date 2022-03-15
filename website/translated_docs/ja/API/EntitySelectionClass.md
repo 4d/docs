@@ -79,8 +79,8 @@ title: EntitySelection
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
 $employees:=Create entity selection([Employee])
-// The $employees entity selection now contains a set of reference
-// on all entities related to the Employee dataclass
+// $employees エンティティセレクションには、
+// Employee データクラスの全エンティティへの参照が格納されています
 ```
 
 #### 参照
@@ -759,33 +759,33 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames is a collection of Strings
+  // $firstnames は文字列のコレクション
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  //$addresses is a collection of entities related to dataclass Address
-  //Null values for address are extracted
+  // $addresses は addressリレートエンティティのコレクション
+  // Null値も取得・保持されます
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type
-  //"to" property content is entity type (Address dataclass)
+  // $mailing は "who" および "to" のプロパティを持つオブジェクトのコレクション
+  // "who" プロパティの中身は文字列型
+  // "to" プロパティの中身はエンティティ型 (Address データクラス)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type
-  //"city" property content is String type
+  // $mailing は "who" および "city" のプロパティを持つオブジェクトのコレクション
+  // "who" プロパティの中身は文字列型
+  // "city" プロパティの中身は文字列型
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers is a collection of objects with properties "where" and "who"
-  //"where" property content is String
-  //"who" property content is an entity selection (Teachers dataclass)
+  // $teachers は"where" および "who" のプロパティを持つオブジェクトのコレクション
+  // "where" プロパティの中身は文字列型
+  // "who" プロパティの中身はエンティティセレクション (Teachers データクラス)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers is a collection of entity selections
+  //$teachers はエンティティセレクションのコレクション
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -1093,9 +1093,9 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-|Parameter|Type||Description|
+|引数|タイプ||説明|
 
-|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
+|---------|--- |:---:|------| |attributePath |Text|->|計算に使用する属性パス| |戻り値|any|<-|Highest value of attribute|
 <!-- END REF -->
 
 #### 説明
@@ -1221,8 +1221,8 @@ Form.products.add(Form.product)
  var $employee : cs.EmployeeEntity
 
  $employees:=ds.Employee.query("lastName = :1";"H@")
-  // The $employees entity selection contains the entity with primary key 710 and other entities
-  // for ex. 例: "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (主キー710)
+  // $employees エンティティセレクションは、主キー710 のエンティティと他のエンティティを格納しています
+  //  例: "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (主キー710)
 
  $employee:=ds.Employee.get(710) // "Sherlock Holmes" を返します
 

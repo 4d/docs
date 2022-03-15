@@ -14,7 +14,7 @@ Colección de columnas del list box.
 | ------- | ---------------------------- | ---------------------------------------------------- |
 | columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
-For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
+Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview#column-specific-properties).
 
 #### Objetos soportados
 
@@ -50,16 +50,16 @@ Se muestra el formulario especificado:
 ## Doble clic en línea
 `List box del tipo selección`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
+Define la acción a realizar cuando un usuario haga doble clic en una línea en el list box. Las opciones disponibles son:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> > > Double-clicking an empty row is ignored in list boxes.
+*   **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
+*   **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido [ para el list box](#detail-form-name). El registro se abre en modo de lectura-escritura para que pueda ser modificado.
+*   **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
+> El doble clic en una línea vacía se ignora en los list boxes.
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+Para las dos últimas acciones, también se genera el evento de formulario `On Open Detail`. `On Close Detail` se genera cuando un registro mostrado en el formulario detallado asociado al list box está a punto de cerrarse (independientemente de que el registro se haya modificado o no).
 
 #### Gramática JSON
 
@@ -137,7 +137,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 ### Número de columnas estáticas
 
-Number of columns that cannot be moved during execution.
+Número de columnas que no se pueden mover durante la ejecución.
 
 #### Gramática JSON
 
@@ -157,8 +157,8 @@ Number of columns that cannot be moved during execution.
 ---
 ## Número de columnas
 
-Sets the number of columns of the list box.
-> You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+Define el número de columnas del list box.
+> Puede añadir o eliminar columnas de forma dinámica por programación, utilizando comandos como [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) o [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
 #### Gramática JSON
 
@@ -176,7 +176,7 @@ Sets the number of columns of the list box.
 ---
 ## Array de control de líneas
 
-`Array type list box`
+`List box de tipo array`
 
 A 4D array controlling the display of list box rows.
 
@@ -231,11 +231,11 @@ Note that setting properties for an element overrides any other values for this 
 ---
 ## Modo de selección
 
-Designates the option for allowing users to select rows:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+Designa la opción para permitir a los usuarios seleccionar líneas:
+- **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Edición con un solo clic](properties_Entry.md#single-click-edit) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
+- **Simple**: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en una línea cambia su estado (entre seleccionada o no).  
+  Las teclas de flecha arriba y abajo seleccionan la línea anterior/siguiente de la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
+- **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
 
 
 #### Gramática JSON

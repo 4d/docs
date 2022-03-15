@@ -146,7 +146,7 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 #### Matching \[]\(){}
 
-Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. The following options are available:
+Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. Las siguientes opciones están disponibles:
 
 - **None**: No signaling
 - **Rectangle** (default): Braces surrounded by a black line  

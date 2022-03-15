@@ -4,57 +4,57 @@ title: '$lock'
 ---
 
 
-Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
+[ペシミスティック・ロック機構](../ORDA/entities.md#ペシミスティック・ロック) を使ってエンティティをロック/アンロックします。
 
 
 ## シンタックス
 
-To lock an entity for other sessions and 4D processes:
+他のセッションや 4Dプロセスに対し、特定のエンティティをロックするには:
 
 ```
 /?$lock=true
 ```
 
 
-To unlock the entity for other sessions and 4D processes:
+他のセッションや 4Dプロセスに対し、特定のエンティティをアンロックするには:
 
 ```
 /?$lock=false
 ```
 
 
-The [`lockKindText` property](../API/EntityClass.html#lock) is "Locked by session".
+[`lockKindText` プロパティ](../API/EntityClass.html#lock) は "Locked by session" です。
 
 
 ### 説明
 
-The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
+REST API によるロックは、[セッション](authUsers.md#セッションの開始) レベルで設定されます。
 
-A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
+*ロック* されたエンティティは次のものから操作 (ロック / アンロック / 更新 / 削除) できません:
 
-- other REST sessions
-- 4D processes (client/server, remote datastore, standalone) running on the REST server.
+- 他の REST セッション
+- RESTサーバー上で実行されている 4D プロセス (クライアント/サーバー, リモートデータストア, スタンドアロン)。
 
-An entity locked by the REST API can only be unlocked:
+REST API によってロックされたエンティティは、次の場合にのみアンロックされます:
 
-- by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
-- or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
+- ロック元の (`/?$lock=true` をおこなった) RESTセッションが `/?$lock=false` をリクエストしたとき。
+- ロック元セッションの [非アクティブタイムアウト]($directory.md) に達したとき (セッションは閉じられます)。
 
 ### レスポンス
 
-A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
+`?$lock` リクエストでロック操作に成功した場合、`"result"=true` を格納した JSONオブジェクトが返されます (失敗した場合は `"result"=false`)。
 
-The returned "__STATUS" object has the following properties:
+戻り値の "__STATUS" オブジェクトには、以下のプロパティが格納されています:
 
 | プロパティ        |                | タイプ     | 説明                                                                                                                                                |
 | ------------ | -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |                |         | ***Available only in case of success:***                                                                                                          |
-| success      |                | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).   |
+|              |                |         | ***成功の場合にのみ利用可能:***                                                                                                                               |
+| success      |                | boolean | ロックに成功した場合 (あるいはエンティティがすでにカレントセッションでロックされていた場合) には true、それ以外は false (この場合は返されません)。                                                                |
 |              |                |         | ***エラーの場合にのみ利用可能:***                                                                                                                              |
 | status       |                | number  | エラーコード、以下参照                                                                                                                                       |
 | statusText   |                | テキスト    | エラーの詳細、以下参照                                                                                                                                       |
-| lockKind     |                | number  | Lock code                                                                                                                                         |
-| lockKindText |                | テキスト    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                     |
+| lockKind     |                | number  | ロックコード                                                                                                                                            |
+| lockKindText |                | テキスト    | "Locked by session" RESTセッションによるロック、"Locked by record" 4Dプロセスによるロック                                                                               |
 | lockInfo     |                | object  | ロック元についての情報。 返されるプロパティはロック元 (4Dプロセスまたは RESTセッション) によって異なります。                                                                                      |
 |              |                |         | ***4Dプロセスによるロックの場合:***                                                                                                                            |
 |              | task_id        | number  | プロセスID                                                                                                                                            |
@@ -67,7 +67,7 @@ The returned "__STATUS" object has the following properties:
 |              |                |         | ***RESTセッションによるロックの場合:***                                                                                                                         |
 |              | host           | テキスト    | エンティティをロックした URL (例: "127.0.0.1:8043")                                                                                                            |
 |              | IPAddr         | テキスト    | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
-|              | recordNumber   | number  | Record number of the locked record                                                                                                                |
+|              | recordNumber   | number  | ロックされたレコードのレコード番号                                                                                                                                 |
 |              | userAgent      | テキスト    | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
@@ -86,7 +86,7 @@ The returned "__STATUS" object has the following properties:
 ## 例題
 
 
-We lock an entity in a first browser:
+一つ目のブラウザーからエンティティをロックします:
 
 ```
 GET /rest/Customers(1)/?$lock=true
@@ -103,7 +103,7 @@ GET /rest/Customers(1)/?$lock=true
 }
 ```
 
-In a second browser (other session), we send the same request.
+二つ目のブラウザー (別のセッション) から、同じリクエストを送信します:
 
 **レスポンス:**
 
