@@ -78,7 +78,7 @@
 <tr><td>columns</td><td>colección de objetos columna</td><td>Contiene las propiedades de las columnas de list box</td></tr>
 </tbody>
 </table>
-<p>For a list of properties supported by column objects, please refer to the <a href="listbox_overview#column-specific-properties">Column Specific Properties</a> section.</p>
+<p>Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección <a href="listbox_overview#column-specific-properties">Propiedades específicas de la columna</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados"></a><a href="#objetos-soportados" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>
 <p><a href="/docs/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
@@ -104,21 +104,17 @@
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="doble-clic-en-línea"></a><a href="#doble-clic-en-línea" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Doble clic en línea</h2>
 <p><code>List box del tipo selección</code></p>
-<p>Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:</p>
+<p>Define la acción a realizar cuando un usuario haga doble clic en una línea en el list box. Las opciones disponibles son:</p>
 <ul>
-<li><strong>Do nothing</strong> (default): Double-clicking a row does not trigger any automatic action.</li>
-<li><strong>Edit Record</strong>: Double-clicking a row displays the corresponding record in the detail form defined <a href="#detail-form-name">for the list box</a>. The record is opened in read-write mode so it can be modified.</li>
-<li><strong>Display Record</strong>: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.</li>
+<li><strong>No hacer nada</strong> (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.</li>
+<li><strong>Editar registro</strong>: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido <a href="#detail-form-name"> para el list box</a>. El registro se abre en modo de lectura-escritura para que pueda ser modificado.</li>
+<li><strong>Mostrar registro</strong>: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.</li>
 </ul>
 <blockquote>
-<blockquote>
-<blockquote>
-<p>Double-clicking an empty row is ignored in list boxes.</p>
+<p>El doble clic en una línea vacía se ignora en los list boxes.</p>
 </blockquote>
-</blockquote>
-</blockquote>
-<p>Regardless of the action selected/chosen, the <code>On Double clicked</code> form event is generated.</p>
-<p>For the last two actions, the On <code>Open Detail</code> form event is also generated. The <code>On Close Detail</code> is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).</p>
+<p>Independientemente de la acción seleccionada/elegida, se genera el evento de formulario <code>On Double clicked</code>.</p>
+<p>Para las dos últimas acciones, también se genera el evento de formulario <code>On Open Detail</code>. <code>On Close Detail</code> se genera cuando un registro mostrado en el formulario detallado asociado al list box está a punto de cerrarse (independientemente de que el registro se haya modificado o no).</p>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-2"></a><a href="#gramática-json-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
 <table>
 <thead>
@@ -193,7 +189,7 @@
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados-4"></a><a href="#objetos-soportados-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>
 <p><a href="/docs/es/FormObjects/listboxOverview.html">List Box</a></p>
 <h3><a class="anchor" aria-hidden="true" id="número-de-columnas-estáticas"></a><a href="#número-de-columnas-estáticas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Número de columnas estáticas</h3>
-<p>Number of columns that cannot be moved during execution.</p>
+<p>Número de columnas que no se pueden mover durante la ejecución.</p>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-5"></a><a href="#gramática-json-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
 <table>
 <thead>
@@ -207,9 +203,9 @@
 <p><a href="/docs/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="número-de-columnas"></a><a href="#número-de-columnas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Número de columnas</h2>
-<p>Sets the number of columns of the list box.</p>
+<p>Define el número de columnas del list box.</p>
 <blockquote>
-<p>You can add or remove columns dynamically by programming, using commands such as <a href="https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html">LISTBOX INSERT COLUMN</a> or <a href="https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html">LISTBOX DELETE COLUMN</a>.</p>
+<p>Puede añadir o eliminar columnas de forma dinámica por programación, utilizando comandos como <a href="https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html">LISTBOX INSERT COLUMN</a> o <a href="https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html">LISTBOX DELETE COLUMN</a>.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-6"></a><a href="#gramática-json-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
 <table>
@@ -224,7 +220,7 @@
 <p><a href="/docs/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="array-de-control-de-líneas"></a><a href="#array-de-control-de-líneas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array de control de líneas</h2>
-<p><code>Array type list box</code></p>
+<p><code>List box de tipo array</code></p>
 <p>A 4D array controlling the display of list box rows.</p>
 <p>You can set the &quot;hidden&quot;, &quot;disabled&quot; and &quot;selectable&quot; interface properties for each row in an array-based list box using this array. It can also be designated using the <code>LISTBOX SET ARRAY</code> command.</p>
 <p>The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the <em>Row Control Array</em> defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the &quot;List Box&quot; constant theme:</p>
@@ -265,12 +261,12 @@
 <p><a href="/docs/es/FormObjects/listboxOverview.html">List Box</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="modo-de-selección"></a><a href="#modo-de-selección" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modo de selección</h2>
-<p>Designates the option for allowing users to select rows:</p>
+<p>Designa la opción para permitir a los usuarios seleccionar líneas:</p>
 <ul>
-<li><strong>None</strong>: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the <a href="/docs/es/FormObjects/propertiesEntry.html#single-click-edit">Single-Click Edit</a> option is enabled. The navigation keys only cause the list to scroll; the <code>On Selection Change</code> form event is not generated.</li>
-<li><strong>Single</strong>: One row at a time can be selected in this mode. Clicking on a row will select it. A <strong>Ctrl+click</strong> (Windows) or <strong>Command+click</strong> (macOS) on a row toggles its state (between selected or not).<br>
-The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The <code>On Selection Change</code> form event is generated every time the current row is changed.</li>
-<li><strong>Multiple</strong>: Several rows can be selected simultaneously in this mode.</li>
+<li><strong>Ninguna</strong>: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción <a href="/docs/es/FormObjects/propertiesEntry.html#single-click-edit">Edición con un solo clic</a> esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario <code>On Selection Change</code>.</li>
+<li><strong>Simple</strong>: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un <strong>Ctrl+clic</strong> (Windows) o <strong>Comando+clic</strong> (macOS) en una línea cambia su estado (entre seleccionada o no).<br>
+Las teclas de flecha arriba y abajo seleccionan la línea anterior/siguiente de la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario <code>On Selection Change</code> se genera cada vez que se cambia la línea actual.</li>
+<li><strong>Múltiple</strong>: en este modo se pueden seleccionar varias líneas simultáneamente.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-8"></a><a href="#gramática-json-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
 <table>

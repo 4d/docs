@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>$lock · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Locks and unlocks an entity using the [pessimistic mechanism](/docs/ja/ORDA/entities.html#pessimistic-lock)."/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="$lock · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="Locks and unlocks an entity using the [pessimistic mechanism](/docs/ja/ORDA/entities.html#pessimistic-lock)."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/lock.html">English</a></li><li><a href="/docs/de/REST/lock.html">Deutsch</a></li><li><a href="/docs/es/REST/lock.html">Español</a></li><li><a href="/docs/fr/REST/lock.html">Français</a></li><li><a href="/docs/pt/REST/lock.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19 R4 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>$lock · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="[ペシミスティック・ロック機構](/docs/ja/ORDA/entities.html#ペシミスティック・ロック) を使ってエンティティをロック/アンロックします。"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="$lock · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="[ペシミスティック・ロック機構](/docs/ja/ORDA/entities.html#ペシミスティック・ロック) を使ってエンティティをロック/アンロックします。"/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R4 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R3</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/lock.html">English</a></li><li><a href="/docs/de/REST/lock.html">Deutsch</a></li><li><a href="/docs/es/REST/lock.html">Español</a></li><li><a href="/docs/fr/REST/lock.html">Français</a></li><li><a href="/docs/pt/REST/lock.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -66,42 +66,42 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/REST/$lock.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">$lock</h1></header><article><div><span><p>Locks and unlocks an entity using the <a href="/docs/ja/ORDA/entities.html#pessimistic-lock">pessimistic mechanism</a>.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/REST/$lock.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">$lock</h1></header><article><div><span><p><a href="/docs/ja/ORDA/entities.html#ペシミスティック・ロック">ペシミスティック・ロック機構</a> を使ってエンティティをロック/アンロックします。</p>
 <h2><a class="anchor" aria-hidden="true" id="シンタックス"></a><a href="#シンタックス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>シンタックス</h2>
-<p>To lock an entity for other sessions and 4D processes:</p>
+<p>他のセッションや 4Dプロセスに対し、特定のエンティティをロックするには:</p>
 <pre><code class="hljs">/?<span class="hljs-symbol">$loc</span>k=<span class="hljs-literal">true</span>
 </code></pre>
-<p>To unlock the entity for other sessions and 4D processes:</p>
+<p>他のセッションや 4Dプロセスに対し、特定のエンティティをアンロックするには:</p>
 <pre><code class="hljs">/?<span class="hljs-symbol">$loc</span>k=<span class="hljs-literal">false</span>
 </code></pre>
-<p>The <a href="../API/EntityClass.html#lock"><code>lockKindText</code> property</a> is &quot;Locked by session&quot;.</p>
+<p><a href="../API/EntityClass.html#lock"><code>lockKindText</code> プロパティ</a> は &quot;Locked by session&quot; です。</p>
 <h3><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h3>
-<p>The locks triggered by the REST API are put at the <a href="/docs/ja/REST/authUsers.html#opening-sessions">session</a> level.</p>
-<p>A locked entity is seen as <em>locked</em> (i.e. lock / unlock / update / delete actions are not possible) by:</p>
+<p>REST API によるロックは、<a href="/docs/ja/REST/authUsers.html#セッションの開始">セッション</a> レベルで設定されます。</p>
+<p><em>ロック</em> されたエンティティは次のものから操作 (ロック / アンロック / 更新 / 削除) できません:</p>
 <ul>
-<li>other REST sessions</li>
-<li>4D processes (client/server, remote datastore, standalone) running on the REST server.</li>
+<li>他の REST セッション</li>
+<li>RESTサーバー上で実行されている 4D プロセス (クライアント/サーバー, リモートデータストア, スタンドアロン)。</li>
 </ul>
-<p>An entity locked by the REST API can only be unlocked:</p>
+<p>REST API によってロックされたエンティティは、次の場合にのみアンロックされます:</p>
 <ul>
-<li>by its locker, i.e. a <code>/?$lock=false</code> in the REST session that sets <code>/?$lock=true</code></li>
-<li>or if the session's <a href="/docs/ja/REST/directory.html">inactivity timeout</a> is reached (the session is closed).</li>
+<li>ロック元の (<code>/?$lock=true</code> をおこなった) RESTセッションが <code>/?$lock=false</code> をリクエストしたとき。</li>
+<li>ロック元セッションの <a href="/docs/ja/REST/directory.html">非アクティブタイムアウト</a> に達したとき (セッションは閉じられます)。</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="レスポンス"></a><a href="#レスポンス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>レスポンス</h3>
-<p>A <code>?$lock</code> request returns a JSON object with <code>&quot;result&quot;=true</code> if the lock operation was successful and <code>&quot;result&quot;=false</code> if it failed.</p>
-<p>The returned &quot;__STATUS&quot; object has the following properties:</p>
+<p><code>?$lock</code> リクエストでロック操作に成功した場合、<code>&quot;result&quot;=true</code> を格納した JSONオブジェクトが返されます (失敗した場合は <code>&quot;result&quot;=false</code>)。</p>
+<p>戻り値の &quot;__STATUS&quot; オブジェクトには、以下のプロパティが格納されています:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of success:</em></strong></td></tr>
-<tr><td>success</td><td></td><td>boolean</td><td>true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).</td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>成功の場合にのみ利用可能:</em></strong></td></tr>
+<tr><td>success</td><td></td><td>boolean</td><td>ロックに成功した場合 (あるいはエンティティがすでにカレントセッションでロックされていた場合) には true、それ以外は false (この場合は返されません)。</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>エラーの場合にのみ利用可能:</em></strong></td></tr>
 <tr><td>status</td><td></td><td>number</td><td>エラーコード、以下参照</td></tr>
 <tr><td>statusText</td><td></td><td>テキスト</td><td>エラーの詳細、以下参照</td></tr>
-<tr><td>lockKind</td><td></td><td>number</td><td>Lock code</td></tr>
-<tr><td>lockKindText</td><td></td><td>テキスト</td><td>&quot;Locked by session&quot; if locked by a REST session, &quot;Locked by record&quot; if locked by a 4D process</td></tr>
+<tr><td>lockKind</td><td></td><td>number</td><td>ロックコード</td></tr>
+<tr><td>lockKindText</td><td></td><td>テキスト</td><td>&quot;Locked by session&quot; RESTセッションによるロック、&quot;Locked by record&quot; 4Dプロセスによるロック</td></tr>
 <tr><td>lockInfo</td><td></td><td>object</td><td>ロック元についての情報。 返されるプロパティはロック元 (4Dプロセスまたは RESTセッション) によって異なります。</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>4Dプロセスによるロックの場合:</em></strong></td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>プロセスID</td></tr>
@@ -114,7 +114,7 @@
 <tr><td></td><td></td><td></td><td><strong><em>RESTセッションによるロックの場合:</em></strong></td></tr>
 <tr><td></td><td>host</td><td>テキスト</td><td>エンティティをロックした URL (例: &quot;127.0.0.1:8043&quot;)</td></tr>
 <tr><td></td><td>IPAddr</td><td>テキスト</td><td>ロック元の IPアドレス (例: &quot;127.0.0.1&quot;)</td></tr>
-<tr><td></td><td>recordNumber</td><td>number</td><td>Record number of the locked record</td></tr>
+<tr><td></td><td>recordNumber</td><td>number</td><td>ロックされたレコードのレコード番号</td></tr>
 <tr><td></td><td>userAgent</td><td>テキスト</td><td>ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36&quot;)</td></tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h2>
-<p>We lock an entity in a first browser:</p>
+<p>一つ目のブラウザーからエンティティをロックします:</p>
 <pre><code class="hljs"><span class="hljs-builtin-name">GET</span> /rest/Customers(1)/?<span class="hljs-variable">$lock</span>=<span class="hljs-literal">true</span>
 </code></pre>
 <p><strong>レスポンス:</strong></p>
@@ -142,7 +142,7 @@
     }
 }
 </code></pre>
-<p>In a second browser (other session), we send the same request.</p>
+<p>二つ目のブラウザー (別のセッション) から、同じリクエストを送信します:</p>
 <p><strong>レスポンス:</strong></p>
 <pre><code class="hljs">{
     <span class="hljs-string">"result"</span><span class="hljs-symbol">:false</span>,
