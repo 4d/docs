@@ -107,7 +107,8 @@
 <tr><td><a href="#insert"><strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>     <em>index</em> で指定したコレクションインスタンスの位置に <em>element</em> 要素を挿入し、変更された元のコレクションを返します</td></tr>
 <tr><td><a href="#join"><strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    <em>delimiter</em> に渡した文字列を区切り文字として、コレクションの全要素を一つの文字列につなげます</td></tr>
 <tr><td><a href="#lastindexof"><strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    <em>toSearch</em> 引数の式をコレクション要素の中から検索し、最後に見つかった要素のインデックス (見つからなかった場合には -1) を返します</td></tr>
-<tr><td><a href="#length"><strong>.length</strong> : Integer</a><p>    コレクション内の要素数を返します</td></tr>
+<tr><td>[<strong>.length</strong> : Integer</td></tr>
+<tr><td>](#length)<p>    コレクション内の要素数を返します</td></tr>
 <tr><td><a href="#map"><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    元のコレクションの各要素に対して <em>methodName</em> メソッドを呼び出した結果に基づいた、新しいコレクションを作成します</td></tr>
 <tr><td><a href="#max"><strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    コレクション内の最大値を持つ要素を返します</td></tr>
 <tr><td><a href="#min"><strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    コレクション内の最小値を持つ要素を返します</td></tr>
@@ -1412,7 +1413,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>評価するオブジェクトプロパティのパス</td></tr>
+<tr><td>propertyPath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>評価するオブジェクトプロパティのパス</td></tr>
 <tr><td>戻り値</td><td>Boolean, Text, Number, Collection, Object, Date</td><td style="text-align:center">&lt;-</td><td>コレクション内の最小値</td></tr>
 </tbody>
 </table>
@@ -1451,10 +1452,10 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>pathStrings</td><td>Text</td><td style="text-align:center">-&gt;</td><td>コレクションの並べ替え基準とするプロパティパス</td></tr>
-<tr><td>pathObjects</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>条件オブジェクトのコレクション</td></tr>
-<tr><td>ascOrDesc</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck ascending</code> または <code>ck descending</code> (スカラー値)</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>並べ替えられたコレクションのコピー (シャロウ・コピー)</td></tr>
+<tr><td>pathStrings</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>コレクションの並べ替え基準とするプロパティパス</td></tr>
+<tr><td>pathObjects</td><td>コレクション</td><td style="text-align:center">-&gt;</td><td>条件オブジェクトのコレクション</td></tr>
+<tr><td>ascOrDesc</td><td>整数</td><td style="text-align:center">-&gt;</td><td><code>ck ascending</code> または <code>ck descending</code> (スカラー値)</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>並べ替えられたコレクションのコピー (シャロウ・コピー)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1563,9 +1564,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>並べ替え順の指定に使用するメソッド名</td></tr>
+<tr><td>methodName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>並べ替え順の指定に使用するメソッド名</td></tr>
 <tr><td>extraParam</td><td>式</td><td style="text-align:center">-&gt;</td><td>methodName に渡す引数</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>並べ替えられたコレクションのコピー (シャロウ・コピー)</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>並べ替えられたコレクションのコピー (シャロウ・コピー)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-27"></a><a href="#説明-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1684,7 +1685,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 </thead>
 <tbody>
 <tr><td>element</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>コレクションに追加する要素</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>要素の追加された元のコレクション</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>要素の追加された元のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1725,10 +1726,10 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>queryString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>検索条件</td></tr>
+<tr><td>queryString</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>検索条件</td></tr>
 <tr><td>value</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>プレースホルダー使用時: 比較する値</td></tr>
-<tr><td>querySettings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>クエリオプション: parameters, attributes 他</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>queryString に合致するコレクション要素</td></tr>
+<tr><td>querySettings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>クエリオプション: parameters, attributes 他</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>queryString に合致するコレクション要素</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1800,7 +1801,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>コレクション要素を処理するのに使用するメソッド名</td></tr>
+<tr><td>methodName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>コレクション要素を処理するのに使用するメソッド名</td></tr>
 <tr><td>initValue</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td><em>methodName</em> の最初の呼び出しに最初の引数として使用する値</td></tr>
 <tr><td>param</td><td>式</td><td style="text-align:center">-&gt;</td><td><em>methodName</em> に渡す引数</td></tr>
 <tr><td>戻り値</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">&lt;-</td><td>アキュムレーター値の結果</td></tr>
@@ -1834,7 +1835,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
     <span class="hljs-variable">$1</span>.accumulator:=<span class="hljs-variable">$1</span>.accumulator*<span class="hljs-variable">$1</span>.value<span class="hljs-keyword">
  End if</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="例題-23"></a><a href="#例題-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-2-12"></a><a href="#例題-2-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <p>複数のコレクション要素を単一の値にまとめます:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>;<span class="hljs-variable">$r </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
@@ -1867,9 +1868,9 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>index</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>削除を開始する要素の位置</td></tr>
-<tr><td>howMany</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>削除する要素の数、省略時は 1要素を削除</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>要素が削除された元のコレクション</td></tr>
+<tr><td>index</td><td>整数</td><td style="text-align:center">-&gt;</td><td>削除を開始する要素の位置</td></tr>
+<tr><td>howMany</td><td>整数</td><td style="text-align:center">-&gt;</td><td>削除する要素の数、省略時は 1要素を削除</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>要素が削除された元のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-32"></a><a href="#説明-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1888,7 +1889,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 </ul>
 <p><em>howMany</em> には、<em>index</em> の位置から削除する要素の数を渡します。 <em>howMany</em> が省略された場合、1つの要素のみが削除されます。</p>
 <p>空のコレクションから要素を削除しようとした場合、関数は何もしません (エラーは生成されません)。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-24"></a><a href="#例題-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-23"></a><a href="#例題-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"a"</span>;<span class="hljs-string">"b"</span>;<span class="hljs-string">"c"</span>;<span class="hljs-string">"d"</span>;<span class="hljs-string">"e"</span>;<span class="hljs-string">"f"</span>;<span class="hljs-string">"g"</span>;<span class="hljs-string">"h"</span>)
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">// $col=["a","b","c","e","f","g","h"]</span>
@@ -1913,9 +1914,9 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>size</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>コレクションの新しいサイズ</td></tr>
+<tr><td>size</td><td>整数</td><td style="text-align:center">-&gt;</td><td>コレクションの新しいサイズ</td></tr>
 <tr><td>defaultValue</td><td>Number, Text, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td>新規要素のデフォルト値</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>リサイズされた元のコレクション</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>リサイズされた元のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-33"></a><a href="#説明-33" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1928,7 +1929,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <li><em>size</em> &gt; lengthの場合、不足分の要素がコレクションに追加されます。</li>
 </ul>
 <p>デフォルトで、新規要素には <strong>null</strong> 値が格納されます。 <em>defaultValue</em> に引数を渡すことで、新規要素の値を指定することができます。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-25"></a><a href="#例題-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-24"></a><a href="#例題-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">resize</span>(<span class="hljs-number">10</span>) <span class="hljs-comment">// $c=[null,null,null,null,null,null,null,null,null,null]</span>
@@ -1960,7 +1961,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>逆順に要素を格納した新しいコレクション</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>逆順に要素を格納した新しいコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-34"></a><a href="#説明-34" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1968,7 +1969,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="例題-26"></a><a href="#例題-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-25"></a><a href="#例題-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>)
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">reverse</span>() <span class="hljs-comment">//$c2=[6,4,2,5,3,1]</span>
@@ -1999,7 +2000,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
 <p>コレクションが空の場合、 関数はなにもしません。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-27"></a><a href="#例題-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-26"></a><a href="#例題-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$val </span>: Variant
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>;<span class="hljs-number">6</span>;<span class="hljs-number">7</span>;<span class="hljs-number">8</span>)
@@ -2024,9 +2025,9 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>開始インデックス (含まれる)</td></tr>
-<tr><td>end</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>終了インデックス (含まれない)</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>抜粋要素を格納した新しいコレクション(シャロウ・コピー)</td></tr>
+<tr><td>startFrom</td><td>整数</td><td style="text-align:center">-&gt;</td><td>開始インデックス (含まれる)</td></tr>
+<tr><td>end</td><td>整数</td><td style="text-align:center">-&gt;</td><td>終了インデックス (含まれない)</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>抜粋要素を格納した新しいコレクション(シャロウ・コピー)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-36"></a><a href="#説明-36" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2041,7 +2042,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <li><em>end</em> &lt; 0 の場合、それは <em>end:=end+length</em> として再計算されます。</li>
 <li>渡された値、あるいは再計算された値が <em>end</em> &lt; <em>startFrom</em> の場合、関数はなにもしません。</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="例題-28"></a><a href="#例題-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-27"></a><a href="#例題-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$nc </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">//$nc=[1,2,3]</span>
@@ -2066,10 +2067,10 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>テストを開始するインデックス</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>テストに呼び出すメソッド名</td></tr>
+<tr><td>startFrom</td><td>整数</td><td style="text-align:center">-&gt;</td><td>テストを開始するインデックス</td></tr>
+<tr><td>methodName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>テストに呼び出すメソッド名</td></tr>
 <tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td><em>methodName</em> に渡す引数</td></tr>
-<tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>少なくとも一つの要素がテストをパスすれば true</td></tr>
+<tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>少なくとも一つの要素がテストをパスすれば true</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-37"></a><a href="#説明-37" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2093,7 +2094,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <li><em>startFrom</em> &lt; 0 の場合には、コレクションの終わりからのオフセットであるとみなされます。</li>
 <li><em>startFrom</em> = 0 の場合、コレクション全体がテストされます (デフォルト)。</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="例題-29"></a><a href="#例題-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-28"></a><a href="#例題-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$b </span>: Boolean
  <span class="hljs-variable">$c</span>:=New collection
@@ -2127,9 +2128,9 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>並べ替え順の指定に使用するメソッド名</td></tr>
+<tr><td>methodName</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>並べ替え順の指定に使用するメソッド名</td></tr>
 <tr><td>extraParam</td><td>any</td><td style="text-align:center">-&gt;</td><td>methodName に渡す引数</td></tr>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>並べ替えられた元のコレクション</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>並べ替えられた元のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-38"></a><a href="#説明-38" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2168,7 +2169,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
  <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sort</span>() <span class="hljs-comment">// $col2=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]</span>
   <span class="hljs-comment">// $col=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="例題-2-12"></a><a href="#例題-2-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-2-13"></a><a href="#例題-2-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$col2 </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>)
  <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">1</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>).<span class="hljs-function">sort</span>() <span class="hljs-comment">//$col2=[1,2,3,4,5,6,10,20]</span>
@@ -2200,8 +2201,8 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>計算に使用するオブジェクトプロパティのパス</td></tr>
-<tr><td>戻り値</td><td>Real</td><td style="text-align:center">&lt;-</td><td>コレクション要素の値の合計</td></tr>
+<tr><td>propertyPath</td><td>テキスト</td><td style="text-align:center">-&gt;</td><td>計算に使用するオブジェクトプロパティのパス</td></tr>
+<tr><td>戻り値</td><td>実数</td><td style="text-align:center">&lt;-</td><td>コレクション要素の値の合計</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-39"></a><a href="#説明-39" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2220,7 +2221,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>;<span class="hljs-string">"Monday"</span>;<span class="hljs-literal">True</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$vSum</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sum</span>() <span class="hljs-comment">//32</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="例題-2-13"></a><a href="#例題-2-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-2-14"></a><a href="#例題-2-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vSum </span>: Real
  <span class="hljs-variable">$col</span>:=New collection
@@ -2247,7 +2248,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 </thead>
 <tbody>
 <tr><td>value</td><td>Text, Number, Object, Collection, Date</td><td style="text-align:center">-&gt;</td><td>コレクションの先頭に挿入する値</td></tr>
-<tr><td>戻り値</td><td>Real</td><td style="text-align:center">&lt;-</td><td>要素の追加された元のコレクション</td></tr>
+<tr><td>戻り値</td><td>実数</td><td style="text-align:center">&lt;-</td><td>要素の追加された元のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-40"></a><a href="#説明-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2256,7 +2257,7 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
 <p>複数の値が渡された場合、それらは一度に挿入されます。つまり、引数の順番と同じ順番で変更後のコレクションに格納されます。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-30"></a><a href="#例題-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-29"></a><a href="#例題-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$c</span>.<span class="hljs-function">unshift</span>(<span class="hljs-number">4</span>) <span class="hljs-comment">// $c=[4,1,2]</span>
