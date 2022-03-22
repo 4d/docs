@@ -3,27 +3,27 @@ id: tabControl
 title: Pestañas
 ---
 
-A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.
+Un control de pestañas crea un objeto que permite al usuario elegir entre un conjunto de pantallas virtuales que están encerradas por el objeto de control de pestañas. Se accede a cada pantalla haciendo clic en su pestaña.
 
-The following multi-page form uses a tab control object:
+El siguiente formulario multipágina utiliza un objeto de control de pestañas:
 
 ![](assets/en/FormObjects/tabControl1.png)
 
-To navigate from screen to screen, the user simply clicks the desired tab.
+Para navegar de una pantalla a otra, el usuario sólo tiene que hacer clic en la pestaña deseada.
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Las pantallas pueden representar páginas en un formulario de varias páginas o un objeto que cambia cuando el usuario hace clic en una pestaña. Si el control de pestañas se utiliza como una herramienta de navegación de la página, entonces el comando [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) o la acción estándar `gotoPage` se utilizaría cuando un usuario hace clic en una pestaña.
 
-Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
+Otro uso del control de pestañas es para controlar los datos que se muestran en un subformulario. Por ejemplo, se podría implementar un Rolodex utilizando un control de pestañas. Las pestañas mostrarían las letras del alfabeto y la acción del control de pestañas sería cargar los datos correspondientes a la letra que el usuario pulsara.
 
-Cada pestaña puede mostrar etiquetas o rótulos y un pequeño icono. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
+Cada pestaña puede mostrar etiquetas o rótulos y un pequeño icono. Si incluye iconos, éstos aparecen a la izquierda de cada etiqueta. Este es un ejemplo de un control de pestañas que utiliza iconos:
 
 ![](assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. Sólo tiene que suministrar las etiquetas en forma de array, o los iconos y etiquetas en forma de lista jerárquica.
+Cuando se crea un control de pestañas, 4D gestiona el espaciado y la colocación de las mismas. Sólo tiene que suministrar las etiquetas en forma de array, o los iconos y etiquetas en forma de lista jerárquica.
 
-If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
+Si el control de pestañas es lo suficientemente amplio como para mostrar todas las pestañas con las etiquetas y los iconos, muestra ambos. Si el control de pestañas no es lo suficientemente ancho para mostrar tanto las etiquetas como los iconos, 4D muestra sólo los iconos. Si no caben todos los iconos, coloca flechas de desplazamiento a la derecha de la última pestaña visible. Las flechas de desplazamiento permiten al usuario desplazar los iconos hacia la izquierda o la derecha.
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
+En macOS, además de la posición estándar (arriba), los controles de las pestañas también pueden alinearse en la parte inferior.
 
 
 ### Ejemplo JSON:
@@ -43,10 +43,10 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 ## Añadir etiquetas a un control de pestañas
 
-There are several ways to supply the labels for a tab control:
+Hay varias formas de suministrar las etiquetas para un control de pestañas:
 
-*   You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
-*   You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+*   Puedes asignar una [lista de opciones](properties_DataSource.md#choice-list-static-list) al control de pestañas, ya sea a través de una colección (lista estática) o un puntero JSON ("$ref") a una lista json. Los iconos asociados a los elementos de la lista en el editor de listas se mostrarán en el control de pestañas.
+*   Puede crear un array Texto que contenga los nombres de cada página del formulario. Este código debe ejecutarse antes de que el formulario se presente al usuario. Por ejemplo, podrías colocar el código en el método del objeto del control de la pestaña y ejecutarlo cuando se produzca el evento `On Load`.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -54,22 +54,22 @@ There are several ways to supply the labels for a tab control:
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
+> También puede almacenar los nombres de las páginas en una lista jerárquica y utilizar el comando `Load list` para cargar los valores en el array.
 
 
-## Managing tabs programmatically
+## Gestión programada de las pestañas
 
-### Comandoe FORM GOTO PAGE
+### Comando FORM GOTO PAGE
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+Puede utilizar el comando [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) en el método del control de pestañas:
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+El comando se ejecuta cuando se produce el evento `On Clicked`. A continuación, debes borrar el array cuando se produzca el evento `On Unload`.
 
-Here is an example object method:
+He aquí un ejemplo de método objeto:
 
 ```4d
  Case of
@@ -84,9 +84,9 @@ Here is an example object method:
 
 ### Acción Goto Page
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+Cuando se asigna la acción [acción estándar](properties_Action.md#standard-action) `gotoPage` a un control de pestañas, 4D mostrará automáticamente la página del formulario que corresponde al número de la pestaña que está seleccionada.
 
-For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
+Por ejemplo, si el usuario selecciona la tercera pestaña, 4D mostrará la página 3 del formulario actual (si existe).
 
 
 ## Propiedades soportadas
