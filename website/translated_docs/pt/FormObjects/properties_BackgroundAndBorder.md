@@ -89,9 +89,9 @@ Describes dotted line type as a sequence of black and white points.
 
 #### JSON Grammar
 
-| Name            | Data Type              | Possible Values                                                          |
-| --------------- | ---------------------- | ------------------------------------------------------------------------ |
-| strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Name            | Data Type              | Possible Values                                                              |
+| --------------- | ---------------------- | ---------------------------------------------------------------------------- |
+| strokeDashArray | number array or string | Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
 #### Objects Supported
 
