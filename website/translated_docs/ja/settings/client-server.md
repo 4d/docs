@@ -54,44 +54,44 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 #### クライアント/サーバー接続タイムアウト
 
-このサーモメーターで、4D Server とクライアントマシン間の (一定時間活動がないときに接続を閉じる) タイムアウトを設定できます。 The Unlimited option removes the timeout. When this option is selected, client activity control is eliminated.
+このサーモメーターで、4D Server とクライアントマシン間の (一定時間活動がないときに接続を閉じる) タイムアウトを設定できます。 無制限オプションは、タイムアウトを設定しないことを意味します。 このオプションが選択されると、クライアントのアクティビティコントロールはおこなわれません。
 
-When a timeout is selected, the server will close the connection of a client if it does not receive any requests from the latter during the specified time limit.
+タイムアウト時間が選択されると、その間にリクエストを受信しなかった場合、サーバーはそのクライアントとの接続を閉じます。
 
-### Client-Server Communication
+### クライアント-サーバー通信
 
-#### Register Clients at Startup For Execute On Client
+#### Execute On Clientのために起動時にクライアント登録
 
-When this option is checked, all the 4D remote machines connecting to the database can execute methods remotely. This mechanism is detailed in the section [Stored procedures on client machines](https://doc.4d.com/4Dv19/4D/19/Stored-procedures-on-client-machines.300-5422461.en.html).
+このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 このメカニズムについては [クライアントマシン上でのストアドプロシージャ](https://doc.4d.com/4Dv19/4D/19/Stored-procedures-on-client-machines.300-5422461.ja.html) で説明しています。
 
-#### Encrypt Client-Server Communications
+#### クライアント-サーバー通信の暗号化
 
-This option lets you activate the secured mode for communications between the server machine and the 4D remote machines. This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv19/4D/19/Encrypting-ClientServer-Connections.300-5422465.en.html) section.
+このオプションを使用して、サーバーマシンと 4Dリモートマシン間通信の保護モードを有効にできます。 このオプションについては [クライアント/サーバー接続の暗号化](https://doc.4d.com/4Dv19/4D/19/Encrypting-ClientServer-Connections.300-5422465.ja.html) で説明しています。
 
-#### Update Resources folder during a session
+#### セッション中に "Resources" フォルダーを更新
 
-This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Three settings are available:
+この設定は、データベースの **Resources** フォルダーがセッション中に更新された場合について、接続中のクライアントマシンにおける同フォルダーのローカルインスタンスの更新モードを包括的に指定します (**Resources** フォルダーは、セッションが開かれるたびにリモートマシン上で自動的に同期されます)。 3つの選択肢があります:
 
--   **Never**: The local **Resources** folder is not updated during the session. The notification sent by the server is ignored. The local **Resources** folder may be updated manually using the **Update Local Resources** action menu command (see [Using the Resources explorer](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
--   **Always**: The synchronization of the local **Resources** folder is automatically carried out during the session whenever notification is sent by the server.
--   **Ask**: When the notification is sent by the server, a dialog box is displayed on the client machines, indicating the modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\ The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Automatic or manual mechanisms can be used to notify each client when the contents of this folder have been modified. For more information, please refer to the [Managing the Resources folder](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.en.html) section.
+-   **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 **ローカルリソースを更新** アクションメニューコマンド [(リソースエクスプローラーを使用する](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.ja.html) 参照) を使用すれば、ローカルの **Resources**フォルダーを手動で更新することができます。
+-   **常に**: セッション中にサーバーから通知が送信されると、ローカルの **Resources** フォルダーは自動で同期されます。
+-   **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。<br/><br/> **Resources** フォルダーは、データベースインタフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 詳細については、[リソースフォルダの管理](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.ja.html) を参照ください。
 
 
-## IP configuration page
+## IP設定ページ
 
-### Allow-Deny Configuration Table
+### 許可-拒否設定表
 
-This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
+この表を使用して、4Dリモートマシンの IPアドレスに基づき、データベースへのアクセスコントロールルールを設定できます。 このオプションを使用して、たとえば戦略アプリケーションなどのセキュリティを高めることができます。
 
-> This configuration table does not control Web connections.
+> Web接続は、この設定表でコントロールされません。
 
-The behavior of the configuration table is as follows:
+設定表の動作は以下のとおりです:
 
-- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. To add a rule, click on the Add button. A new row appears in the table. The **Delete** button lets you remove the current row.
-- The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
-- The application of rules is based on the display order of the table. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). You can also move rows using drag and drop.
-- For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. たとえば:
-    - Deny 192.168.* (deny all addresses beginning with 192.168)
-    - Allow * (but allow all other addresses)
+- "許可-拒否" 列では、ポップアップメニューを使用して適用するルールを選択します (許可または拒否)。 ルールを追加するには、追加ボタンをクリックします。 すると、新しい行が表に追加されます。 **削除** ボタンで選択した行を削除できます。
+- "IPアドレス" 列で、ルールに関連する IPアドレスを指定します。 アドレスを指定するには、選択した行のセルをクリックし、以下の形式でアドレスを入力します: 123.45.67.89 (IPv4) または 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6)。 * (アスタリスク) 文字をアドレスの末尾に使用して、範囲を指定することもできます。 たとえば、192.168.* は 192.168 で始まるすべてのアドレスを示します。
+- ルールの適用は、表中の表示順に基づきます。 2つのルールが矛盾する設定の場合、より上に設定されているルールが優先されます。 行の順番を変更するには、列のヘッダーをクリックしてソートをおこなったり、 ドラッグ＆ドロップで移動したりすることができます。
+- セキュリティのため、ルールにより明示的に許可されたアドレスのみが接続を許可されます。 言い換えれば、表に拒否ルールしか定義されていない場合、許可ルールに適合するアドレスがないため、すべてのアドレスからの接続が拒否されます。 特定のアドレスからの接続のみを拒否したい場合 (そして他を許可したい場合)、許可 * ルールを表の最後に追加します。 たとえば:
+    - 拒否 192.168.* (192.168 で始まるアドレスを拒否)
+    - 許可 * (他のアドレスはすべて許可)
 
-By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.
+デフォルトでは、4D Server にアクセス制限はありません。最初の行には * (すべてのアドレス) に対する許可ルールが設定されています。

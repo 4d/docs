@@ -157,15 +157,15 @@ La función `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->a
 
 En el parámetro `msgIDs`, puede pasar:
 
-*   a *collection* containing the unique IDs of specific messages or
-*   the unique ID (*text*) of a single message or
-*   the following constant (*longint*) for all messages in the selected mailbox:
+*   una *collection* contiene los identificadores únicos de mensajes específicos, o
+*   el ID único (*texte*) de un solo mensaje o
+*   la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
-    | Constante | Valor | Comentario                                  |
-    | --------- | ----- | ------------------------------------------- |
-    | IMAP all  | 1     | Select all messages in the selected mailbox |
+    | Constante | Valor | Comentario                                            |
+    | --------- | ----- | ----------------------------------------------------- |
+    | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. You can pass any of the following keywords:
+El parámetro `keywords` le permite pasar un objeto con valores de palabras clave para las banderas específicas que se añadirán a `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
 
 | Parámetros | Tipo     | Descripción                                    |
 | ---------- | -------- | ---------------------------------------------- |
@@ -231,31 +231,31 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 **.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.append().Params -->
-| Parámetros     | Tipo   |    | Descripción                        |
-| -------------- | ------ |:--:| ---------------------------------- |
-| mailObj        | Objeto | -> | Objeto Email                       |
-| destinationBox | Texto  | -> | Buzón para recibir el objeto Email |
-| options        | Objeto | -> | Object containing charset info     |
-| Resultado      | Objeto | <- | Status of the append operation     |
+| Parámetros     | Tipo   |    | Descripción                                 |
+| -------------- | ------ |:--:| ------------------------------------------- |
+| mailObj        | Objeto | -> | Objeto Email                                |
+| destinationBox | Texto  | -> | Buzón para recibir el objeto Email          |
+| options        | Objeto | -> | Objeto que contiene información del charset |
+| Resultado      | Objeto | <- | Status of the append operation              |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
+La función `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->añade el objeto `mailObj` a la caja `destinationBox`<!-- END REF -->.
 
-In the `mailObj` parameter, pass an Email object. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
+En el parámetro `mailObj`, pase un objeto Email. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
 
-The optional `destinationBox` parameter lets you pass the name of a mailbox where the `mailObj` will be appended. If omitted, the current mailbox is used.
+El parámetro opcional `destinationBox` permite pasar el nombre del buzón donde se añadirá el objeto `mailObj`. Si se omite, se utiliza el buzón actual.
 
-In the optional `options` parameter, you can pass an object to define the charset and encoding for specific parts of the email. Propiedades disponibles:
+En el parámetro opcional `options`, puede pasar un objeto para definir el charset y la codificación para partes específicas del correo electrónico. Propiedades disponibles:
 
 | Propiedad     | Tipo  | Descripción                                                                                                                                                                    |
 | ------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | headerCharset | Texto | Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values: See possible charsets table below |
 | bodyCharset   | Texto | Charset and encoding used for the html and text body contents of the email. Possible values: See possible charsets table below                                                 |
 
-Possible charsets:
+Charsets posibles:
 
 | Constante                | Valor                          | Comentario                                                                                                |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
@@ -281,7 +281,7 @@ La función devuelve un objeto que describe el estado IMAP:
 
 #### Ejemplo
 
-To save an email in the Drafts mailbox:
+Para guardar un correo electrónico en el buzón de borradores:
 
 ```4d
 var $settings; $status; $msg; $imap: Object
@@ -335,7 +335,7 @@ $status:=$imap.append($msg; "Drafts")
 
 #### Descripción
 
-The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the *server* object, the value is 300.
+La propiedad `.checkConnectionDelay` contiene la <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->duración máxima (en segundos) permitida antes de verificar la conexión al servidor<!-- END REF -->.  Si se supera este tiempo entre dos llamadas al método, se comprobará la conexión con el servidor. Por defecto, si la propiedad no se ha definido en el objeto *server<*, el valor es de 300.
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
 
@@ -357,25 +357,25 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 **.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
-| Parámetros     | Tipo       |    | Descripción                                      |
-| -------------- | ---------- |:--:| ------------------------------------------------ |
-| msgsIDs        | Collection | -> | Collection of message unique IDs (strings)       |
-| allMsgs        | Integer    | -> | `IMAP all`: All messages in the selected mailbox |
-| destinationBox | Texto      | -> | Mailbox to receive copied messages               |
-| Resultado      | Objeto     | <- | Status of the copy operation                     |
+| Parámetros     | Tipo       |    | Descripción                                               |
+| -------------- | ---------- |:--:| --------------------------------------------------------- |
+| msgsIDs        | Collection | -> | Colección de identificadores únicos de mensajes (cadenas) |
+| allMsgs        | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado     |
+| destinationBox | Texto      | -> | Buzón para recibir mensajes copiados                      |
+| Resultado      | Objeto     | <- | Estado de la operación de copia                           |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+La función `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->copia los mensajes definidos en *msgsIDs* o *allMsgs* en la *destinationBox* en el servidor IMAP<!-- END REF -->.
 
 Puede pasar:
 
-- in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to copy, or
-- in the *allMsgs* parameter, the `IMAP all` constant (integer) to copy all messages in the selected mailbox.
+- en el parámetro *msgsIDs*, una colección contiene los IDs únicos de los mensajes específicos a copiar, o
+- en el parámetro *allMsgs*, la constante `IMAP all` (entero) para copiar todos los mensajes del buzón seleccionado.
 
-The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the copies of messages will be placed.
+El parámetro *destinationBox* permite pasar un valor texto con el nombre del buzón donde se colocarán las copias de los mensajes.
 
 
 **Objeto devuelto**
@@ -472,15 +472,15 @@ Para copiar todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.createBox()` function <!-- REF #IMAPTransporterClass.createBox().Summary -->creates a mailbox with the given `name`<!-- END REF -->. If the IMAP server’s hierarchy separator character appears elsewhere in the mailbox name, the IMAP server will create any parent names needed to create the given mailbox.
+La función `.createBox()` <!-- REF #IMAPTransporterClass.createBox().Summary -->crea un buzón con el `name` pasado<!-- END REF -->. Si el carácter separador de jerarquía del servidor IMAP aparece en otra parte del nombre del buzón, el servidor IMAP creará todos los nombre padre necesarios para crear el buzón dado.
 
-In other words, an attempt to create "Projects/IMAP/Doc" on a server in which "/" is the hierarchy separator character will create:
+En otras palabras, un intento de crear "Projects/IMAP/Doc" en un servidor en el que "/" es el carácter separador de jerarquía creará:
 
-*   Only the "Doc" mailbox if "Projects" & "IMAP" already exist.
-*   "IMAP" & "Doc" mailboxes if only “Projects” already exists.
-*   "Projects" & “IMAP” & "Doc" mailboxes, if they do not already exist.
+*   Sólo el buzón "Doc" si "Projects" & "IMAP" ya existen.
+*   Los buzones "IMAP" & "Doc" si sólo existe "Projects".
+*   Los buzones "Projects" & "IMAP" & "Doc", si no existen.
 
-In the `name` parameter, pass the name of the new mailbox.
+En el parámetro `name`, pasa el nombre del nuevo buzón.
 
 
 **Objeto devuelto**
@@ -548,24 +548,24 @@ End if
 **.delete**( *msgsIDs* : Collection ) : Object<br>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
-| Parámetros | Tipo       |    | Descripción                                      |
-| ---------- | ---------- |:--:| ------------------------------------------------ |
-| msgsIDs    | Collection | -> | Collection of message unique IDs (strings)       |
-| allMsgs    | Integer    | -> | `IMAP all`: All messages in the selected mailbox |
-| Resultado  | Objeto     | <- | Status of the delete operation                   |
+| Parámetros | Tipo       |    | Descripción                                               |
+| ---------- | ---------- |:--:| --------------------------------------------------------- |
+| msgsIDs    | Collection | -> | Colección de identificadores únicos de mensajes (cadenas) |
+| allMsgs    | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado     |
+| Resultado  | Objeto     | <- | Estado de la operación de eliminación                     |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
+La función `.delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->asocia el marcador "deleted" a los mensajes designados por `msgsIDs` o `allMsgs`<!-- END REF -->.
 
 Puede pasar:
 
-- in the `msgsIDs` parameter, a collection containing the unique IDs of the specific messages to delete, or
-- in the `allMsgs` parameter, the `IMAP all` constant (integer) to delete all messages in the selected mailbox.
+- en el parámetro `msgsIDs`, una colección contiene los IDs únicos de los mensajes específicos a eliminar, o
+- en el parámetro `allMsgs`, la constante `IMAP all` (entero) para eliminar todos los mensajes del buzón seleccionado.
 
-Executing this function does not actually remove messages. Messages with the "delete" flag can still be found by the [.searchMails()](#searchmails) function. Flagged messages are deleted from the IMAP server with the [`.expunge()`](#expunge) function or by selecting another mailbox or when the [transporter object](#imap-transporter-object) (created with [IMAP New transporter](#imap-new-transporter)) is destroyed.
+La ejecución de esta función no elimina realmente los mensajes. Los mensajes con la bandera "delete" pueden seguir siendo encontrados por la función [.searchMails()](#searchmails). Los mensajes marcados se eliminan del servidor IMAP con la función [`.expunge()`](#expunge) o al seleccionar otro buzón o cuando se destruye el objeto [transporter](#imap-transporter-object) (creado con [IMAP New transporter](#imap-new-transporter)).
 
 
 
@@ -821,13 +821,13 @@ If the mailbox *name* is not selectable or does not exist, the function generate
 
 **Objeto devuelto**
 
-The `boxInfo` object returned contains the following properties:
+El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
-| Propiedad  | Tipo   | Descripción                                                         |
-| ---------- | ------ | ------------------------------------------------------------------- |
-| name       | texto  | Nombre del buzón                                                    |
-| mailCount  | number | Número de mensajes en el buzón                                      |
-| mailRecent | number | Number of messages with the "recent" flag (indicating new messages) |
+| Propiedad  | Tipo   | Descripción                                                                    |
+| ---------- | ------ | ------------------------------------------------------------------------------ |
+| name       | texto  | Nombre del buzón                                                               |
+| mailCount  | number | Número de mensajes en el buzón                                                 |
+| mailRecent | number | Número de mensajes con el marcador "reciente" (que indica los mensajes nuevos) |
 
 
 
@@ -875,18 +875,18 @@ In the optional `parameters` parameter, pass an object containing values to filt
 
 | Propiedad    | Tipo     | Descripción                                          |
 | ------------ | -------- | ---------------------------------------------------- |
-| isSubscribed | Booleano | <li>**True** to return only subscribed mailboxes</li><li> **False** to return all available mailboxes</li> |
+| isSubscribed | Booleano | <li>**True** para devolver sólo los buzones suscritos</li><li> **False** para devolver todos los buzones disponibles</li> |
 
 #### Resultado
 
 Each object of the returned collection contains the following properties:
 
-| Propiedad        | Tipo     | Descripción                                                                                                          |
-| ---------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | texto    | Nombre del buzón                                                                                                     |
-| \[].selectable  | booleano | Indicates whether or not the access rights allow the mailbox to be selected: <ul><li>true - the mailbox can be selected</li><li>false - the mailbox can not be selected</li></ul>               |
-| \[].inferior    | booleano | Indicates whether or not the access rights allow creating a lower hierachy in the mailbox: <ul><li>true - a lower level can be created</li><li>false - a lower level can not be created</li></ul> |
-| \[].interesting | booleano | Indicates if the mailbox has been marked "interesting" by the server: <ul><li>true - The mailbox has been marked "interesting" by the server. For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>                      |
+| Propiedad        | Tipo     | Descripción                                                                                                        |
+| ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| \[].name        | texto    | Nombre del buzón                                                                                                   |
+| \[].selectable  | booleano | Indica si los derechos de acceso permiten o no seleccionar el buzón: <ul><li>true - el buzón puede ser seleccionado</li><li>false - el buzón no puede ser seleccionado</li></ul>                     |
+| \[].inferior    | booleano | Indica si los derechos de acceso permiten o no crear una jerarquía inferior en el buzón: <ul><li>true - se puede crear un nivel inferior</li><li>false - no se puede crear un nivel inferior</li></ul> |
+| \[].interesting | booleano | Indica si el buzón ha sido marcado como "interesante" por el servidor: <ul><li>true - El buzón ha sido marcado como "interesante" por el servidor. Por ejemplo, puede contener mensajes nuevos.</li><li>false - El buzón no ha sido marcado como "interesante" por el servidor.</li></ul>                   |
 
 
 If the account does not contain any mailboxes, an empty collection is returned.
@@ -940,8 +940,8 @@ The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Sum
 
 The delimiter is a character which can be used to:
 
-*   create lower level (inferior) mailboxes
-*   search higher or lower within the mailbox hierarchy
+*   crear buzones de nivel inferior
+*   buscar más arriba o más abajo en la jerarquía del buzón
 
 
 #### Resultado
@@ -997,7 +997,7 @@ Mailbox name delimiter character.
 
 #### Descripción
 
-The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. This function allows you to locally handle the email contents.
+The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. Esta función le permite manejar localmente el contenido del correo electrónico.
 
 In the first parameter, you can pass either:
 
@@ -1006,10 +1006,10 @@ In the first parameter, you can pass either:
 
 The optional *options* parameter allows you pass an object defining additional instructions for handling the message. Las siguientes propiedades están disponibles:
 
-| Propiedad  | Tipo     | Descripción                                                                                                                     |
-| ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen | booleano | If True, the message is marked as "seen" in the mailbox. If False, the message is not marked as "seen". Valor por defecto: True |
-| withBody   | booleano | Pass True to return the body of the message. If False, only the message header is returned. Valor por defecto: True             |
+| Propiedad  | Tipo     | Descripción                                                                                                                      |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen | booleano | Si True, el mensaje se marca como "visto" en el buzón. Si es False, el mensaje no se marca como "visto". Valor por defecto: True |
+| withBody   | booleano | Pase True para devolver el cuerpo del mensaje. Si es False, sólo se devuelve el encabezado del mensaje. Valor por defecto: True  |
 > * The function generates an error and returns **Null** if *msgID* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) function, an error is generated,
 > * If there is no open connection, `.getMail()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox)`.
@@ -1174,7 +1174,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 | msgNumber  | Integer  | -> | Sequence number of the message                                                                |
 | msgID      | Texto    | -> | ID único del mensaje                                                                          |
 | updateSeen | Booleano | -> | If True, the message is marked "seen" in the mailbox. If False the message is left untouched. |
-| Resultado  | BLOB     | <- | Blob of the MIME string returned from the mail server                                         |
+| Resultado  | BLOB     | <- | Blob de la cadena MIME devuelta por el servidor de correo                                     |
 <!-- END REF -->
 
 
@@ -1200,7 +1200,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 #### Resultado
 
-`.getMIMEAsBlob()` returns a `BLOB` which can be archived in a database or converted to an [`Email` object](EmailObjectClass.md#email-object) with the `MAIL Convert from MIME` command.
+`.getMIMEAsBlob()` devuelve un `BLOB` que puede almacenarse en una base de datos o convertirse en un objeto [`Email`](EmailObjectClass.md#email-object) con el comando `MAIL Convert from MIME`.
 
 
 #### Ejemplo
@@ -1254,12 +1254,12 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 **.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| Parámetros     | Tipo       |    | Descripción                                      |
-| -------------- | ---------- |:--:| ------------------------------------------------ |
-| msgsIDs        | Collection | -> | Collection of message unique IDs (strings)       |
-| allMsgs        | Integer    | -> | `IMAP all`: All messages in the selected mailbox |
-| destinationBox | Texto      | -> | Mailbox to receive moved messages                |
-| Resultado      | Objeto     | <- | Status of the move operation                     |
+| Parámetros     | Tipo       |    | Descripción                                               |
+| -------------- | ---------- |:--:| --------------------------------------------------------- |
+| msgsIDs        | Collection | -> | Colección de identificadores únicos de mensajes (cadenas) |
+| allMsgs        | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado     |
+| destinationBox | Texto      | -> | Mailbox to receive moved messages                         |
+| Resultado      | Objeto     | <- | Status of the move operation                              |
 <!-- END REF -->
 
 
@@ -1438,15 +1438,15 @@ The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summa
 
 En el parámetro `msgIDs`, puede pasar:
 
-*   a *collection* containing the unique IDs of specific messages or
-*   the unique ID (*text*) of a single message or
-*   the following constant (*longint*) for all messages in the selected mailbox:
+*   una *collection* contiene los identificadores únicos de mensajes específicos, o
+*   el ID único (*texte*) de un solo mensaje o
+*   la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
-    | Constante | Valor | Comentario                                  |
-    | --------- | ----- | ------------------------------------------- |
-    | IMAP all  | 1     | Select all messages in the selected mailbox |
+    | Constante | Valor | Comentario                                            |
+    | --------- | ----- | ----------------------------------------------------- |
+    | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
+The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
 
 | Parámetros | Tipo     | Descripción                                         |
 | ---------- | -------- | --------------------------------------------------- |
@@ -1741,7 +1741,7 @@ Search-keys may request the value to search for:
 
 #### Descripción
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. This function allows you to retrieve information about the mailbox.
+The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
 In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
@@ -1758,7 +1758,7 @@ The optional *state* parameter defines the type of access to the mailbox. Los va
 
 **Objeto devuelto**
 
-The `boxInfo` object returned contains the following properties:
+El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 | Propiedad  | Tipo   | Descripción                                |
 | ---------- | ------ | ------------------------------------------ |

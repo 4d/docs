@@ -78,7 +78,7 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 | `WEB SET OPTION` | `Web CORS settings`                                                                              | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
 | 設定ダイアログボックス      | [オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド](../settings/web.md#domain-names-HTTP-methods-allowed) | 新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。  |
 
-CORSサービスで許可されたホストとメソッドの一覧
+CORSサービスで許可されたホストとメソッドの一覧。
 
 #### ドメイン名 (hostプロパティ)
 
@@ -599,7 +599,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 以下の設定は現在もサポートされていますが、廃止予定の機能や技術に依存しています。 通常はデフォルト値のままにしておくことが推奨されます。
 
-#### Allow database access through 4DSYNC URLs
+#### "4DSYNC" URLを使用したデータベースアクセスを許可
 
 このオプションを使用して、廃止予定の */4DSYNC* URL による HTTP同期サポートを制御します。
 

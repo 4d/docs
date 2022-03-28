@@ -733,6 +733,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1125,9 +1126,10 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-|引数|タイプ||説明|
-
-|---------|--- |:---:|------| |attributePath |Text|->|計算に使用する属性パス| |戻り値|any|<-|Highest value of attribute|
+| 引数            | タイプ  |    | 説明          |
+| ------------- | ---- | -- | ----------- |
+| attributePath | テキスト | -> | 計算に使用する属性パス |
+| 戻り値           | any  | <- | 属性の最大値      |
 <!-- END REF -->
 
 #### 説明
@@ -1736,6 +1738,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 | 戻り値              | オブジェクト             | <- | 呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲           |
 <!-- END REF -->
 
+
 #### 説明
 
 `.selected()` 関数は、 <!-- REF #EntitySelectionClass.selected().Summary -->呼び出し対象のエンティティセレクションにおける、*selectedEntities* に含まれるエンティティの位置を表すオブジェクトを返します<!-- END REF -->。
@@ -2089,6 +2092,7 @@ var $employees : cs.EmployeeSelection
 
 $employeesCollection:=New collection
 $filter:=New collection
+
 $filter.push("firstName")
 $filter.push("lastName")
 

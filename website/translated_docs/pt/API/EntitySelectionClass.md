@@ -731,6 +731,7 @@ Example with the `dk stop dropping on first error` option:
 
 
 
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1123,9 +1124,10 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-|Parameter|Type||Description|
-
-|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
+| Parameter     | Type  |    | Description                                      |
+| ------------- | ----- | -- | ------------------------------------------------ |
+| attributePath | Texto | -> | Path of the attribute to be used for calculation |
+| Result        | any   | <- | Highest value of attribute                       |
 <!-- END REF -->
 
 #### Description
@@ -1734,6 +1736,7 @@ A list box displays the Form.students entity selection and several clients work 
 | Result           | Objeto             | <- | Range(s) of selected entities in entity selection                                 |
 <!-- END REF -->
 
+
 #### Description
 
 The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
@@ -2087,6 +2090,7 @@ var $employees : cs.EmployeeSelection
 
 $employeesCollection:=New collection
 $filter:=New collection
+
 $filter.push("firstName")
 $filter.push("lastName")
 

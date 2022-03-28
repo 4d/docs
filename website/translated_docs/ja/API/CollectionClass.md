@@ -1164,7 +1164,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 コレクション内を都市名で検索します:
 
 ```4d
- var $c; $c2 : Collection
+ var $c : Collection
+ var $c2 : Object
  $c:=New collection
  $c.push(New object("name";"Cleveland";"zc";35049))
  $c.push(New object("name";"Blountsville";"zc";35031))
@@ -1310,6 +1311,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 *   *startFrom* = 0 の場合、コレクション全体がテストされます (デフォルト)。
 
 #### 例題
+
+
 
 
 
@@ -1551,7 +1554,8 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** : Integer <!-- END REF -->
+**.length** : Integer 
+<!-- END REF -->
 
 
 
@@ -1699,6 +1703,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 | バージョン  | 内容 |
 | ------ | -- |
 | v16 R6 | 追加 |
+
 </details>
 
 <!-- REF #collection.min().Syntax -->
@@ -1707,7 +1712,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 <!-- REF #collection.min().Params -->
 | 引数           | タイプ                                             |    | 説明                 |
 | ------------ | ----------------------------------------------- |:--:| ------------------ |
-| propertyPath | Text                                            | -> | 評価するオブジェクトプロパティのパス |
+| propertyPath | テキスト                                            | -> | 評価するオブジェクトプロパティのパス |
 | 戻り値          | Boolean, Text, Number, Collection, Object, Date | <- | コレクション内の最小値        |
 <!-- END REF -->
 
@@ -2258,6 +2263,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
  $r:=$c.reduce("Multiply";1) // 戻り値は 86400 です
 ```
+
 
 ***Multiply*** メソッドのコードは以下のとおりです:
 

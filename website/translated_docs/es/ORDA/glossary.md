@@ -33,7 +33,7 @@ A computed attribute doesn't actually store information. Instead, it determines 
 
 ## Data model class
 
-Extended class available for a data model object.
+Clase extendida disponible para un objeto del modelo de datos.
 
 ## Data model object
 

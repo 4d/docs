@@ -1,6 +1,6 @@
 ---
 id: user-settings
-title: User Settings
+title: ユーザー設定
 ---
 
 4D provides two modes of operation for project Settings:
@@ -31,7 +31,7 @@ To enable user settings, you need to check the **Settings** > **Security** > **E
 When you check this option, the settings are separated into three dialog boxes:
 
 * **Structure Settings**
-* **User Settings**
+* **ユーザー設定**
 * **User Settings for Data file**
 
 You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
@@ -68,10 +68,10 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Web/Log (type) page](../settings/web.md#log)                                         | Identical to standard settings        | Identical to standard settings          |
 | [Web/Log (backup) page](../settings/web.md#log)                                       | Identical to standard settings        | Identical to standard settings          |
 | [Web/Web Services page](../settings/web.md#web-services)                              | Method prefixing option not available | Method prefixing option not available   |
-| [SQL page](../settings/sql.md)                                                        | Identical to standard settings        | Identical to standard settings          |
-| [PHP page](../settings/php.md)                                                        | Identical to standard settings        | Identical to standard settings          |
-| [Security page](../settings/security.md)                                              | N/a                                   | N/a                                     |
-| [Compatibility page](../settings/compatibility.md)                                    | N/a                                   | N/a                                     |
+| [SQL ページ](../settings/sql.md)                                                         | Identical to standard settings        | Identical to standard settings          |
+| [PHP ページ](../settings/php.md)                                                         | Identical to standard settings        | Identical to standard settings          |
+| [セキュリティページ](../settings/security.md)                                                  | N/a                                   | N/a                                     |
+| [互換性ページ](../settings/compatibility.md)                                                | N/a                                   | N/a                                     |
 
 When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
 

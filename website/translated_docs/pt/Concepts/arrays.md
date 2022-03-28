@@ -43,7 +43,7 @@ Pode referenciar os elementos em um array usando chaves ({…}). Dentro das chav
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-Lembre da sintaxe atNames{$vlElem}. Ao invés de especificar um literal numérico como atNames{3}, pode usar uma variável numérica para indicar a quais elementos de um array se dirige. Utilizando a iteração que oferece uma estrutura de loop ( `For...End for`, `Repeat...Until` ou `While...End while`), as peças compactas de código podem dirigir-se a todos ou a parte dos elementos de um array.
+Lembre da sintaxe atNames{$vlElem}. Ao invés de especificar um literal numérico como atNames{3}, pode usar uma variável numérica para indicar a quais elementos de um array se dirige. Utilizando a iteração que oferece uma estrutura de loop ( `For... End for`, `Repeat... Until` ou `While... End while`), as peças compactas de código podem dirigir-se a todos ou a parte dos elementos de um array.
 
 **Importante:** Não confunda o operador de atribuição := com o operador de comparação de igualdade (=). As operações de atribuição e comparação são bem diferentes.
 

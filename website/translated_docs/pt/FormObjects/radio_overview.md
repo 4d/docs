@@ -130,7 +130,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 ### Contrair/expandir
 
-This button style can be used to add a standard collapse/expand icon. Esses botões são usados nativamente em listas hierárquicas. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
+This button style can be used to add a standard collapse/expand icon. Esses botões são usados nativamente em listas hierárquicas. Esses botões são usados nativamente em listas hierárquicas.
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 

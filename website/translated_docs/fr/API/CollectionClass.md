@@ -1163,7 +1163,8 @@ Le code de la méthode ***LengthLessThan*** est le suivant :
 Vous souhaitez trouver un nom de ville dans une collection :
 
 ```4d
- var $c; $c2 : Collection
+ var $c : Collection
+ var $c2 : Object
  $c:=New collection
  $c.push(New object("name";"Cleveland";"zc";35049))
  $c.push(New object("name";"Blountsville";"zc";35031))
@@ -1309,6 +1310,8 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 *   Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
+
+
 
 
 
@@ -1637,6 +1640,7 @@ Si la collection est vide, `.max()` retourne *Undefined*.
 | Version | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
+
 </details><!-- REF #collection.min().Syntax -->**.min**( { *propertyPath* : Text } ) : any<!-- END REF --><!-- REF #collection.min().Params -->| Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
@@ -2068,6 +2072,7 @@ Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
  $r:=$c.reduce("Multiply";1) //retourne 86400
 ```
+
 
 Avec la méthode ***Multiply*** suivante :
 

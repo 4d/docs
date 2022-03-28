@@ -599,7 +599,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 </details>
 
 <!-- REF #document.getText().Syntax -->
-**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text<!-- END REF -->
+**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
 
 <!-- REF #document.getText().Params -->
@@ -657,14 +657,24 @@ id name price vat
  $myFile:=Folder(fk documents folder).file("Billing.txt") // デフォルトでUTF-8
  $txt:=$myFile.getText()
 ```
-以下の結果が得られます:
+以下の結果が `$txt` に得られます:
+
+"id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
+
+with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+
+以下は、同じファイルで改行コードが異なる例です:
 
 ```4d
-  // $Text = "id name price vat\r\n3 thé 1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
-  // \t = tab
-  // \r = CR (キャリッジリターン)
+ $txt:=$myFile.getText("UTF-8", Document with LF)
 ```
- 
+この場合、`$txt` の値は次の通りです:
+
+"id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
+
+This time `\n` (LF) is used as line delimiter.
+
+
 
 <!-- END REF -->
  

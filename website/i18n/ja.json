@@ -235,7 +235,7 @@
         "title": "クライアント/サーバー管理"
       },
       "Desktop/user-settings": {
-        "title": "User Settings"
+        "title": "ユーザー設定"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -881,7 +881,7 @@
         "title": "クライアント-サーバーページ"
       },
       "settings/compatibility": {
-        "title": "Compatibility page"
+        "title": "互換性ページ"
       },
       "settings/compiler": {
         "title": "コンパイラーページ"
@@ -899,16 +899,16 @@
         "title": "概要"
       },
       "settings/php": {
-        "title": "PHP page"
+        "title": "PHP ページ"
       },
       "settings/security": {
-        "title": "Security page"
+        "title": "セキュリティページ"
       },
       "settings/sql": {
-        "title": "SQL page"
+        "title": "SQL ページ"
       },
       "settings/web": {
-        "title": "Web page"
+        "title": "Web ページ"
       },
       "Tags/tags": {
         "title": "変換タグ"
@@ -982,7 +982,7 @@
       "Class API Reference": "クラス API リファレンス",
       "Code Editor": "コードエディター",
       "Debugging": "デバッガー",
-      "Settings": "Settings",
+      "Settings": "設定",
       "Preferences": "環境設定",
       "4D Server Administration Window": "4D Server 管理ウィンドウ",
       "Web Administration": "Web 管理",
@@ -1002,7 +1002,7 @@
       "Form Object Properties": "フォームオブジェクトプロパティ",
       "Form Events": "フォームイベント",
       "Menus": "メニュー",
-      "User Settings": "User Settings",
+      "User Settings": "ユーザー設定",
       "Build application": "アプリケーションビルド",
       "Extensions": "拡張機能",
       "4D View Pro": "4D View Pro"
@@ -1046,8 +1046,8 @@
     "Developing Components|no description given": "コンポーネントの開発",
     "Developing Plugins|no description given": "プラグインの開発",
     "Working with a project|no description given": "プロジェクトを開発する",
-    "Settings|no description given": "Settings",
-    "User Settings|no description given": "User Settings",
+    "Settings|no description given": "設定",
+    "User Settings|no description given": "ユーザー設定",
     "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.ja.html",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",

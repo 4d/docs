@@ -120,20 +120,20 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
-| Parámetros | Tipo        |    | Descripción                               |
-| ---------- | ----------- |:--:| ----------------------------------------- |
-| formulaExp | Expresión   | -> | Formula to be returned as object          |
-| Resultado  | 4D.Function | <- | Native function encapsulating the formula |
+| Parámetros | Tipo        |    | Descripción                             |
+| ---------- | ----------- |:--:| --------------------------------------- |
+| formulaExp | Expresión   | -> | Fórmula a devolver como objeto          |
+| Resultado  | 4D.Function | <- | Función nativa que encapsula la fórmula |
 <!-- END REF -->
 
 
 #### Descripción
 
-The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. *formulaExp* can be as simple as a single value or complex, such as a project method with parameters.
+El comando `Formula` <!-- REF #_command_.Formula.Summary -->crea un objeto `4D Function` basado en la expresión *formulaExp*<!-- END REF -->. *formulaExp* puede ser tan simple como un valor único o complejo, como un método proyecto con parámetros.
 
-Having a formula as an object allows it to be passed as a parameter (calculated attribute) to commands or methods or to be executed from various components without needing to declare them as "shared by components and host database". When called, the formula object is evaluated within the context of the database or component that created it.
+Tener una fórmula como objeto permite pasarla como parámetro (atributo calculado) a los comandos o a los métodos o ejecutarla desde varios componentes sin necesidad de declararla como "compartida por los componentes y la base de datos local". Cuando se llama, el objeto fórmula se evalúa en el contexto de la base de datos o del componente que lo creó.
 
-The returned formula can be called with:
+La fórmula devuelta puede ser llamada con:
 
 *   [`.call()`](#call) or [`.apply()`](#apply) methods, or
 *   object notation syntax (see [formula object](#formula-object)).
@@ -149,11 +149,11 @@ The returned formula can be called with:
  $o.myFormula() //returns 3
 ```
 
-You can pass [parameters](#passing-parameters) to the `Formula`, as seen below in [example 4](#example-4).
+Puede pasar los [parámetros](#passing-parameters) a `Formula`, como se muestra en [example-4">ejemplo 4](#example-4) abajo.
 
-You can specify the object on which the formula is executed, as seen in [example 5](#example-5). The properties of the object can then be accessed via the `This` command.
+Se puede especificar el objeto sobre el que se ejecuta la fórmula, como se ve en el [ejemplo 5](#ejemplo-5). Se puede acceder a las propiedades del objeto mediante el comando `This`.
 
-If *formulaExp* uses local variables, their values are copied and stored in the returned formula object when it is created. When executed, the formula uses these copied values rather than the current value of the local variables. Note that using arrays as local variables is not supported.
+Si *formulaExp* utiliza variables locales, sus valores se copian y almacenan en el objeto fórmula devuelto durante su creación. When executed, the formula uses these copied values rather than the current value of the local variables. Note that using arrays as local variables is not supported.
 
 The object created by `Formula` can be saved, for example, in a database field or in a blob document.
 
@@ -424,7 +424,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 #### Descripción
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
+La propiedad `.source` <!-- REF #FunctionClass.source.Summary -->contiene la expresión fuente de la `fórmula` como texto<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 

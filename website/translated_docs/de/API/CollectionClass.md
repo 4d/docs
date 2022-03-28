@@ -1164,7 +1164,8 @@ The code for ***LengthLessThan*** method is:
 You want to find a city name within a collection:
 
 ```4d
- var $c; $c2 : Collection
+ var $c : Collection
+ var $c2 : Object
  $c:=New collection
  $c.push(New object("name";"Cleveland";"zc";35049))
  $c.push(New object("name";"Blountsville";"zc";35031))
@@ -1310,6 +1311,8 @@ Optionally, you can pass the index of collection from which to start the search 
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 #### Beispiel
+
+
 
 
 
@@ -1551,7 +1554,8 @@ Optionally, you can pass the index of collection from which to start a reverse s
 </details>
 
 <!-- REF #collection.length.Syntax -->
-**.length** : Integer <!-- END REF -->
+**.length** : Integer 
+<!-- END REF -->
 
 
 
@@ -1699,6 +1703,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 | Version | Changes |
 | ------- | ------- |
 | v16 R6  | Added   |
+
 </details>
 
 <!-- REF #collection.min().Syntax -->
@@ -2258,6 +2263,7 @@ You can pass the value to initialize the accumulator in *initValue*. If omitted,
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
  $r:=$c.reduce("Multiply";1) //returns 86400
 ```
+
 
 With the following ***Multiply*** method:
 

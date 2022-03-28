@@ -100,7 +100,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | fk documents folder        | 117 | ユーザーのドキュメントフォルダー                                                         |
 | fk licenses folder         | 1   | マシンの 4Dライセンスファイルを格納しているフォルダー                                             |
 | fk logs folder             | 7   | 関連づけられたファイルシステム: "/LOGS"                                                 |
-| fk mobileApps folder       | 10  | 関連づけられたファイルシステム: "/DATA"                                                 |
+| fk mobileApps folder       | 10  |                                                                          |
 | fk remote database folder  | 3   | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                     |
 | fk resources folder        | 6   | 関連づけられたファイルシステム: "/RESOURCES"                                            |
 | fk system folder           | 100 |                                                                          |
@@ -483,3 +483,4 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
+

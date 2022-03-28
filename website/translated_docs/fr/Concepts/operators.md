@@ -12,10 +12,10 @@ Le langage 4D prend en charge les opérateurs que vous connaissez peut-être dé
 
 Le langage 4D prend en charge les opérateurs **binaires** et **ternaires** :
 
-- les opérateurs binaires opèrent sur deux cibles (comme 2 + 3) et apparaissent entre leurs deux cibles.
+- binary operators operate on two targets (such as `2 + 3`) and appear in between their two targets.
 - les opérateurs ternaires opèrent sur trois cibles. Comme le C, 4D ne possède qu'un seul opérateur ternaire, [l'opérateur conditionnel ternaire](#ternary-operator) (`a ? b : c`).
 
-Les valeurs que les opérateurs affectent sont des opérandes. Dans l'expression 1 + 2, le symbole + est un opérateur binaire et ses deux opérandes sont les valeurs 1 et 2.
+Les valeurs que les opérateurs affectent sont des opérandes. In the expression `1 + 2`, the + symbol is a binary operator and its two operands are the values 1 and 2.
 
 
 
@@ -278,13 +278,15 @@ This example stores a person's full name in a variable, and handles the case whe
 ```4d
 var $fullname : Text
 
-// Si l'un des noms est manquant, enregistrez celui qui existe, sinon enregistrez une chaîne vide.
+// If one of the names is missing, store the one that exists, otherwise store an empty string
 $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
 ## Truthy et falsy
 
 En plus d'un type, chaque valeur possède également une valeur booléenne inhérente, généralement connue sous le nom de **truthy** ou **falsy**.
+
+> **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
 
 Les valeurs suivantes sont **falsy**:
 
@@ -303,3 +305,22 @@ Les valeurs suivantes sont **falsy**:
 Toutes les autres valeurs sont considérées comme **truthy**, y compris :
 
 * 0 - zéro numérique (Entier ou autre)
+
+In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+
+For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
+
+```4d
+$value:=$object.value || $defaultValue
+```
+
+... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. So this operator checks the existence or usability of the value instead of a specific value. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
+
+Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. It is handy when you want to assign a default value whenever an empty one is encountered.
+
+```4d
+$phone:=$emp.phone || "n/a"
+```
+
+
+
