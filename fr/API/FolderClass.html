@@ -79,11 +79,11 @@
 </thead>
 <tbody>
 <tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D Folder</a><p>    copie l'objet <code>Folder</code> (dossier source) vers le <em>destinationFolder</em> spécifié</td></tr>
-<tr><td><a href="#create"><strong>.create()</strong> : Boolean</a><p>    creates a folder on disk according to the properties of the <code>Folder</code> object</td></tr>
-<tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    creates an alias (macOS) or a shortcut (Windows)</td></tr>
+<tr><td><a href="#create"><strong>.create()</strong> : Boolean</a><p>    crée un dossier sur disque en fonction des propriétés de l'objet <code>Folder</code></td></tr>
+<tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    crée un alias (macOS) ou un raccourci (Windows) du dossier</td></tr>
 <tr><td><a href="#creationdate"><strong>.creationDate</strong> : Date</a><p>    la date de création du dossier.</td></tr>
 <tr><td><a href="#creationtime"><strong>.creationTime</strong> : Time</a><p>    l'heure de création du dossier</td></tr>
-<tr><td><a href="#delete"><strong>.delete</strong>( { <em>option</em> : Integer } )</a><p>    deletes the folder</td></tr>
+<tr><td><a href="#delete"><strong>.delete</strong>( { <em>option</em> : Integer } )</a><p>    supprime le dossier</td></tr>
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    true si le dossier existe sur le disque</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    retourne l'extension du nom du dossier (le cas échéant)</td></tr>
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    retourne le nom complet du dossier, y compris son extension (le cas échéant)</td></tr>
@@ -100,8 +100,8 @@
 <tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    l'objet dossier parent du dossier</td></tr>
 <tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    le chemin POSIX du dossier</td></tr>
 <tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    le chemin du dossier exprimé dans la syntaxe de la plate-forme courante</td></tr>
-<tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</a><p>    moves or renames the <code>Folder</code> object (source folder) into the specified <em>destinationFolder</em></td></tr>
-<tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</a><p>    renames the folder with the name you passed in <em>newName</em> and returns the renamed <code>Folder</code> object</td></tr>
+<tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</a><p>    déplace ou déplace et renomme l'objet <code>Folder</code> source dans le dossier <em>destinationFolder</em></td></tr>
+<tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</a><p>    renomme le dossier avec le nom que vous avez passé dans le paramètre <em>newName</em> et retourne l'objet <code>Folder</code> renommé</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="folder"></a><a href="#folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Folder</h2>
@@ -121,53 +121,53 @@
 <tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>path</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Folder path</td></tr>
-<tr><td>folderConstant</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>4D folder constant</td></tr>
-<tr><td>pathType</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk posix path</code> (default) or <code>fk platform path</code></td></tr>
-<tr><td>*</td><td></td><td style="text-align:center">-&gt;</td><td>* to return folder of host database</td></tr>
-<tr><td>Résultat</td><td>4D.Folder</td><td style="text-align:center">&lt;-</td><td>New folder object</td></tr>
+<tr><td>path</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin du dossier</td></tr>
+<tr><td>folderConstant</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Constante de dossier 4D</td></tr>
+<tr><td>pathType</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk posix path</code> (par défaut) ou <code>fk platform path</code></td></tr>
+<tr><td>*</td><td></td><td style="text-align:center">-&gt;</td><td>* pour retourner le dossier de la base hôte</td></tr>
+<tr><td>Résultat</td><td>4D.Folder</td><td style="text-align:center">&lt;-</td><td>Nouvel objet dossier</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>Folder</code> command creates and returns a new object of the <code>4D.Folder</code> type. The command accepts two syntaxes:</p>
+<p>La commande <code>Folder</code> crée et retourne un nouvel objet de type <code>4D.Folder</code>. La commande accepte deux syntaxes :</p>
 <p><strong>Folder ( path { ; pathType } { ; * } )</strong></p>
-<p>In the <em>path</em> parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., &quot;/DATA&quot;).</p>
+<p>Dans le paramètre <em>path</em>, passez un chemin de dossier. Vous pouvez utiliser une chaine personnalisée ou un &quot;filesystem&quot; (ex : &quot;/DATA&quot;).</p>
 <blockquote>
 <p>Seuls les noms de chemin absolus sont pris en charge par la commande <code>Folder</code>.</p>
 </blockquote>
-<p>By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the <em>pathType</em> parameter. The following constants are available:</p>
+<p>Par défaut, 4D attend un chemin exprimé avec la syntaxe POSIX. Si vous travaillez avec des chemins de plate-forme (Windows ou macOS), vous devez les déclarer à l'aide du paramètre <em>pathType</em>. Les constantes suivantes sont disponibles :</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
-<tr><td>fk platform path</td><td>1</td><td>Path expressed with a platform-specific syntax (mandatory in case of platform pathname)</td></tr>
-<tr><td>fk posix path</td><td>0</td><td>Path expressed with POSIX syntax (default)</td></tr>
+<tr><td>fk platform path</td><td>1</td><td>Chemin exprimé dans une syntaxe spécifique à la plate-forme (obligatoire en cas de chemin de plate-forme)</td></tr>
+<tr><td>fk posix path</td><td>0</td><td>Chemin exprimé avec la syntaxe POSIX (par défaut)</td></tr>
 </tbody>
 </table>
 <p><strong>Folder ( folderConstant { ; * } )</strong></p>
-<p>In the <em>folderConstant</em> parameter, pass a 4D built-in or system folder, using one of the following constants:</p>
+<p>Dans le paramètre <em>folderConstant</em>, passez un dossier 4D interne ou un dossier système, à l'aide d'une des constantes suivantes :</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
 <tr><td>fk applications folder</td><td>116</td><td></td></tr>
-<tr><td>fk data folder</td><td>9</td><td>Associated filesystem: &quot;/DATA&quot;</td></tr>
-<tr><td>fk database folder</td><td>4</td><td>Associated filesystem: &quot;/PACKAGE&quot;</td></tr>
+<tr><td>fk data folder</td><td>9</td><td>Filesystem associé : &quot;/DATA&quot;</td></tr>
+<tr><td>fk database folder</td><td>4</td><td>Filesystem associé : &quot;/PACKAGE&quot;</td></tr>
 <tr><td>fk desktop folder</td><td>115</td><td></td></tr>
-<tr><td>fk documents folder</td><td>117</td><td>Document folder of the user</td></tr>
-<tr><td>fk licenses folder</td><td>1</td><td>Folder containing the machine's 4D license files</td></tr>
-<tr><td>fk logs folder</td><td>7</td><td>Associated filesystem: &quot;/LOGS&quot;</td></tr>
-<tr><td>fk mobileApps folder</td><td>10</td><td>Associated filesystem: &quot;/DATA&quot;</td></tr>
-<tr><td>fk remote database folder</td><td>3</td><td>4D database folder created on each 4D remote machine</td></tr>
-<tr><td>fk resources folder</td><td>6</td><td>Associated filesystem: &quot;/RESOURCES&quot;</td></tr>
+<tr><td>fk documents folder</td><td>117</td><td>Dossier Documents de l'utilisateur</td></tr>
+<tr><td>fk licenses folder</td><td>1</td><td>Dossier contenant les fichiers de licence 4D de la machine</td></tr>
+<tr><td>fk logs folder</td><td>7</td><td>Filesystem associé : &quot;/LOGS&quot;</td></tr>
+<tr><td>fk mobileApps folder</td><td>10</td><td></td></tr>
+<tr><td>fk remote database folder</td><td>3</td><td>Dossier de la base de données 4D créé sur chaque machine 4D distante</td></tr>
+<tr><td>fk resources folder</td><td>6</td><td>Filesystem associé : &quot;/RESOURCES&quot;</td></tr>
 <tr><td>fk system folder</td><td>100</td><td></td></tr>
-<tr><td>fk user preferences folder</td><td>0</td><td>4D folder that stores user preference files within the &lt;userName&gt; directory.</td></tr>
-<tr><td>fk web root folder</td><td>8</td><td>Current Web root folder of the database: if within the package &quot;/PACKAGE/path&quot;, otherwise full path</td></tr>
+<tr><td>fk user preferences folder</td><td>0</td><td>Dossier 4D qui stocke les préférences utilisateur dans le <userName> répertoire de l'utilisateur.</td></tr>
+<tr><td>fk web root folder</td><td>8</td><td>Dossier racine web courant du projet : &quot;/PACKAGE/chemin&quot; si son emplacement se trouve dans le package, sinon chemin complet</td></tr>
 </tbody>
 </table>
-<p>If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.</p>
+<p>Si la commande est appelée à partir d'un composant, passez le paramètre optionnel * pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre *, un objet null est systématiquement retourné.</p>
 <h2><a class="anchor" aria-hidden="true" id="4dfoldernew"></a><a href="#4dfoldernew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.Folder.new()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -181,7 +181,7 @@
 <p></details></p>
 <p><strong>4D.Folder.new</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer }{ ; <em>*</em> } ) : 4D.Folder<br><strong>4D.Folder.new</strong> ( <em>folderConstant</em> : Integer { ; <em>*</em> } ) : 4D.Folder</p>
 <h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>4D.Folder.new()</code> function creates and returns a new object of the <code>4D.Folder</code> type. It is identical to the <a href="#folder"><code>Folder</code></a> command (shortcut).</p>
+<p>La fonction <code>4D.Folder.new()</code> crée et retourne un nouvel objet de type <code>4D.Folder</code>. Elle est identique à la commande <a href="#folder"><code>Folder</code></a> (raccourci).</p>
 <blockquote>
 <p>Il est recommandé d'utiliser la commande raccourci <a href="#folder"><code>Folder</code></a> au lieu de <code>4D.Folder.new()</code>.</p>
 </blockquote>
@@ -246,24 +246,24 @@
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>Résultat</td><td>Booléen</td><td>&lt;-</td><td>True if the folder was created successfully, false otherwise</td></tr>
+<tr><td>Résultat</td><td>Booléen</td><td>&lt;-</td><td>Vrai si le dossier a été créé avec succès, sinon Faux</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.create()</code> function creates a folder on disk according to the properties of the <code>Folder</code> object.</p>
-<p>If necessary, the function creates the folder hierachy as described in the <a href="#platformpath">platformPath</a> or <a href="#path">path</a> properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.</p>
+<p>La fonction <code>.create()</code> crée un dossier sur disque en fonction des propriétés de l'objet <code>Folder</code>.</p>
+<p>Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés <a href="#platformpath">platformPath</a> ou <a href="#path">path</a>. Si le dossier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.</p>
 <p><strong>Valeur retournée</strong></p>
 <ul>
 <li><strong>Vrai</strong> si le dossier est créé avec succès ;</li>
 <li><strong>Faux</strong> si un dossier du même nom existe déjà ou si une erreur s'est produite.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>Create an empty folder in the database folder:</p>
+<p>Créer un dossier vide dans le dossier principal :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$created </span>: Boolean
 <span class="hljs-variable">$created</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE/SpecialPrefs"</span>).<span class="hljs-function">create</span>()
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
-<p>Creation of the &quot;/Archives2019/January/&quot; folder in the database folder:</p>
+<p>Création d'un dossier &quot;/Archives2019/January/&quot; dans le dossier principal :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$newFolder</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE/Archives2019/January"</span>)<span class="hljs-keyword">
 If</span>(<span class="hljs-variable">$newFolder</span>.<span class="hljs-function">create</span>())
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"The "</span>+<span class="hljs-variable">$newFolder</span>.name+<span class="hljs-string">" folder was created."</span>)<span class="hljs-keyword">
@@ -288,30 +288,30 @@ End if</span>
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Destination folder for the alias or shortcut</td></tr>
-<tr><td>aliasName</td><td>Text</td><td>-&gt;</td><td>Name of the alias or shortcut</td></tr>
-<tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>Type of the alias link</td></tr>
-<tr><td>Résultat</td><td>4D.File</td><td>&lt;-</td><td>Alias or shortcut reference</td></tr>
+<tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Dossier de destination pour l'alias ou le raccourci</td></tr>
+<tr><td>aliasName</td><td>Text</td><td>-&gt;</td><td>Nom de l'alias ou du raccourci</td></tr>
+<tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>Type de lien de l'alias</td></tr>
+<tr><td>Résultat</td><td>4D.File</td><td>&lt;-</td><td>Référence de l'alias ou du raccourci du dossier</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.createAlias()</code> function creates an alias (macOS) or a shortcut (Windows) to the folder with the specified <em>aliasName</em> name in the folder designated by the <em>destinationFolder</em> object.</p>
-<p>Pass the name of the alias or shortcut to create in the <em>aliasName</em> parameter.</p>
-<p>By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the <em>aliasType</em> parameter. The following constants are available:</p>
+<p>La fonction <code>.createAlias()</code> crée un alias (macOS) ou un raccourci (Windows) du dossier avec le nom <em>aliasName</em> dans le dossier désigné par l'objet <em>destinationFolder</em>.</p>
+<p>Passez le nom de l'alias ou du raccourci à créer dans le paramètre <em>aliasName</em>.</p>
+<p>Par défaut sur macOS, la fonction crée un alias standard. Vous pouvez également créer un lien symbolique à l'aide du paramètre <em>aliasType</em>. Les constantes suivantes sont disponibles :</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
-<tr><td><code>fk alias link</code></td><td>0</td><td>Alias link (default)</td></tr>
-<tr><td><code>fk symbolic link</code></td><td>1</td><td>Symbolic link (macOS only)</td></tr>
+<tr><td><code>fk alias link</code></td><td>0</td><td>Lien alias (macOS uniquement)(par défaut)</td></tr>
+<tr><td><code>fk symbolic link</code></td><td>1</td><td>Lien symbolique (macOS uniquement)</td></tr>
 </tbody>
 </table>
-<p>On Windows, a shortcut (.lnk file) is always created (the <em>aliasType</em> parameter is ignored).</p>
+<p>Sur Windows, un raccourci (fichier .lnk) est toujours créé (le paramètre <em>aliasType</em> est ignoré).</p>
 <p><strong>Objet retourné</strong></p>
-<p>A <code>4D.File</code> object with the <code>isAlias</code> property set to <strong>true</strong>.</p>
+<p>Un objet <code>4D.File</code> avec la propriété <code>isAlias</code> mise à <strong>true</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-3"></a><a href="#exemple-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>You want to create an alias to an archive folder in your database folder:</p>
+<p>Vous souhaitez créer un alias pour un dossier d'archives dans votre dossier principal :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$myFolder</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"C:\\Documents\\Archives\\2019\\January"</span>;fk platform path)
 <span class="hljs-variable">$aliasFile</span>:=<span class="hljs-variable">$myFolder</span>.<span class="hljs-function">createAlias</span>(<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE"</span>);<span class="hljs-string">"Jan2019"</span>)
 </code></pre>
@@ -362,22 +362,22 @@ End if</span>
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>option</td><td>Integer</td><td>-&gt;</td><td>Folder deletion option</td></tr>
+<tr><td>option</td><td>Integer</td><td>-&gt;</td><td>Option de suppression du dossier</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.delete()</code> function deletes the folder.</p>
-<p>By default, for security reasons, if you omit the option parameter, <code>.delete( )</code> only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:</p>
+<p>La fonction <code>.delete()</code> supprime le dossier.</p>
+<p>Par défaut, pour des raisons de sécurité, si vous omettez le paramètre option, <code>.delete()</code> permet uniquement de supprimer les dossiers vides. Si vous souhaitez que la commande supprime des dossiers qui ne sont pas vides, vous devez utiliser le paramètre option avec l'une des constantes suivantes :</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Delete only if empty</code></td><td>0</td><td>Deletes folder only when it is empty</td></tr>
-<tr><td><code>Delete with contents</code></td><td>1</td><td>Deletes folder along with everything it contains</td></tr>
+<tr><td><code>Delete only if empty</code></td><td>0</td><td>Supprime le dossier uniquement s'il est vide</td></tr>
+<tr><td><code>Delete with contents</code></td><td>1</td><td>Supprime le dossier ainsi que son éventuel contenu</td></tr>
 </tbody>
 </table>
-<p>When <code>Delete only if empty</code> is passed or if you omit the option parameter:</p>
+<p>Lorsque la constante <code>Delete only if empty</code> est passée ou si vous omettez le paramètre option :</p>
 <ul>
 <li>Le dossier n'est supprimé que s'il est vide ; sinon, la commande ne fait rien et une erreur -47 est générée.</li>
 <li>Si le dossier n'existe pas, l'erreur -120 est générée.</li>
@@ -736,18 +736,18 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Dossier de destination</td></tr>
-<tr><td>newName</td><td>Text</td><td>-&gt;</td><td>Full name for the moved folder</td></tr>
-<tr><td>Résultat</td><td>4D.Folder</td><td>&lt;-</td><td>Moved folder</td></tr>
+<tr><td>newName</td><td>Text</td><td>-&gt;</td><td>Nom complet du dossier déplacé</td></tr>
+<tr><td>Résultat</td><td>4D.Folder</td><td>&lt;-</td><td>Dossier déplacé</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-23"></a><a href="#description-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.moveTo( )</code> function moves or renames the <code>Folder</code> object (source folder) into the specified <em>destinationFolder</em>.</p>
+<p>La fonction <code>.moveTo()</code> déplace ou déplace et renomme l'objet <code>Folder</code> source dans le dossier <em>destinationFolder</em>.</p>
 <p>Le <em>destinationFolder</em> doit exister sur disque, sinon une erreur est générée.</p>
-<p>By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the <em>newName</em> parameter. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que &quot;:&quot;, &quot;/&quot;, etc.), sinon une erreur est retournée.</p>
+<p>Par défaut, le dossier garde le même nom lorsqu'il est déplacé. Si vous souhaitez renommer le dossier déplacé, passez le nouveau nom complet dans le paramètre <em>newName</em>. Le nouveau nom doit être conforme aux règles de nommage (ex : il ne doit pas contenir de caractères tels que &quot;:&quot;, &quot;/&quot;, etc.), sinon une erreur est retournée.</p>
 <p><strong>Objet retourné</strong></p>
-<p>The moved <code>Folder</code> object.</p>
+<p>L'objet <code>Folder</code> déplacé.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>You want to move and rename a folder:</p>
+<p>Vous souhaitez déplacer et renommer un dossier :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$tomove</span>; <span class="hljs-variable">$moved </span>: Object
  <span class="hljs-variable">$docs</span>:=<span class="hljs-function">Folder</span>(fk documents folder)
  <span class="hljs-variable">$tomove</span>:=<span class="hljs-variable">$docs</span>.<span class="hljs-function">folder</span>(<span class="hljs-string">"Pictures"</span>)
@@ -849,21 +849,21 @@ End if</span>
 <tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>newName</td><td>Text</td><td>-&gt;</td><td>New full name for the folder</td></tr>
-<tr><td>Résultat</td><td>4D.Folder</td><td>&lt;-</td><td>Renamed folder</td></tr>
+<tr><td>newName</td><td>Text</td><td>-&gt;</td><td>Nouveau nom complet du dossier</td></tr>
+<tr><td>Résultat</td><td>4D.Folder</td><td>&lt;-</td><td>Dossier renommé</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-29"></a><a href="#description-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.rename()</code> function renames the folder with the name you passed in <em>newName</em> and returns the renamed <code>Folder</code> object.</p>
-<p>The <em>newName</em> parameter must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.</p>
+<p>La fonction <code>.rename()</code> renomme le dossier avec le nom que vous avez passé dans le paramètre <em>newName</em> et retourne l'objet <code>Folder</code> renommé.</p>
+<p>Le paramètre <em>newName</em> doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que &quot;:&quot;, &quot;/&quot;, etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.</p>
 <p><strong>Objet retourné</strong></p>
-<p>The renamed <code>Folder</code> object.</p>
+<p>L'objet <code>Folder</code> renommé.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-8"></a><a href="#exemple-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$toRename </span>: 4D.Folder
  <span class="hljs-variable">$toRename</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"/RESOURCES/Pictures"</span>).<span class="hljs-function">rename</span>(<span class="hljs-string">"Images"</span>)
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/FileClass.html"><span class="arrow-prev">← </span><span>File</span></a><a class="docs-next button" href="/docs/fr/API/FunctionClass.html"><span>Formula</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#folder">Folder</a></li><li><a href="#4dfoldernew">4D.Folder.new()</a></li><li><a href="#copyto">.copyTo()</a></li><li><a href="#create">.create()</a></li><li><a href="#createalias">.createAlias()</a></li><li><a href="#creationdate">.creationDate</a></li><li><a href="#creationtime">.creationTime</a></li><li><a href="#delete">.delete()</a></li><li><a href="#exists">.exists</a></li><li><a href="#extension">.extension</a></li><li><a href="#file">.file()</a></li><li><a href="#files">.files()</a></li><li><a href="#folder-1">.folder()</a></li><li><a href="#folders">.folders()</a></li><li><a href="#fullname">.fullName</a></li><li><a href="#geticon">.getIcon()</a></li><li><a href="#hidden">.hidden</a></li><li><a href="#isalias">.isAlias</a></li><li><a href="#isfile">.isFile</a></li><li><a href="#isfolder">.isFolder</a></li><li><a href="#ispackage">.isPackage</a></li><li><a href="#modificationdate">.modificationDate</a></li><li><a href="#modificationtime">.modificationTime</a></li><li><a href="#moveto">.moveTo()</a></li><li><a href="#name">.name</a></li><li><a href="#original">.original</a></li><li><a href="#parent">.parent</a></li><li><a href="#path">.path</a></li><li><a href="#platformpath">.platformPath</a></li><li><a href="#rename">.rename()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/fr/API/FileClass.html"><span class="arrow-prev">← </span><span>File</span></a><a class="docs-next button" href="/docs/fr/API/FunctionClass.html"><span>Formula</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#folder">Folder</a></li><li><a href="#4dfoldernew">4D.Folder.new()</a></li><li><a href="#copyto">.copyTo()</a></li><li><a href="#create">.create()</a></li><li><a href="#createalias">.createAlias()</a></li><li><a href="#creationdate">.creationDate</a></li><li><a href="#creationtime">.creationTime</a></li><li><a href="#delete">.delete()</a></li><li><a href="#exists">.exists</a></li><li><a href="#extension">.extension</a></li><li><a href="#file">.file()</a></li><li><a href="#files">.files()</a></li><li><a href="#folder-1">.folder()</a></li><li><a href="#folders">.folders()</a></li><li><a href="#fullname">.fullName</a></li><li><a href="#geticon">.getIcon()</a></li><li><a href="#hidden">.hidden</a></li><li><a href="#isalias">.isAlias</a></li><li><a href="#isfile">.isFile</a></li><li><a href="#isfolder">.isFolder</a></li><li><a href="#ispackage">.isPackage</a></li><li><a href="#modificationdate">.modificationDate</a></li><li><a href="#modificationtime">.modificationTime</a></li><li><a href="#moveto">.moveTo()</a></li><li><a href="#name">.name</a></li><li><a href="#original">.original</a></li><li><a href="#parent">.parent</a></li><li><a href="#path">.path</a></li><li><a href="#platformpath">.platformPath</a></li><li><a href="#rename">.rename()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
