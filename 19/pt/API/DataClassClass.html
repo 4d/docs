@@ -801,12 +801,12 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
 <tr><td>args</td><td>Objeto</td><td>Parámetro(s) a passar para as fórmulas, se houver. O objeto <strong>args</strong> será recebido em $1 dentro das fórmulas e, portanto, seus valores estarão disponíveis através de <em>$1.property</em> (ver exemplo 3).</td></tr>
 <tr><td>allowFormulas</td><td>Booleano</td><td>True para permitir as chamadas de fórmulas na pesquisa (padrão). Passe falso para desautorizar a execução de fórmulas. Se for estabelecido como false y <code>query()</code> receber uma fórmula, se envia um erro (1278 - Fórmula não permitida neste método membro).</td></tr>
 <tr><td>context</td><td>Texto</td><td>Etiqueta para o contexto de otimização automático aplicados à seleção de entidade. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Esta função está projetada para o processamento cliente/servidor; para saber mais, consulte <strong>Otimização cliente/servidor</strong>.</td></tr>
-<tr><td>queryPlan</td><td>Booleano</td><td>Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false. <strong>Note</strong>: This property is supported only by the <code>entitySelection.query( )</code> and <code>dataClass.query( )</code> functions.</td></tr>
-<tr><td>queryPath</td><td>Booleano</td><td>In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false. <strong>Note</strong>: This property is supported only by the <code>entitySelection.query( )</code> and <code>dataClass.query( )</code> functions.</td></tr>
+<tr><td>queryPlan</td><td>Booleano</td><td>Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false. <strong>Nota</strong>: esta propriedade só são compatíveis com as funções<code>entitySelection.query( )</code> e <code>dataClass.query( )</code>.</td></tr>
+<tr><td>queryPath</td><td>Booleano</td><td>Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa tal qual for realizada. A propriedade retornada é um objeto que contém a rota atual usada para a pesquisa (geralmente idêntica àquela do queryPlan, mas deve diferenciar se o motor consegue otimizar a pesquisa), assim como o tempo de processamento e o número de registros encontrado. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false. <strong>Nota</strong>: esta propriedade só são compatíveis com as funções<code>entitySelection.query( )</code> e <code>dataClass.query( )</code>.</td></tr>
 </tbody>
 </table>
-<p><strong>About queryPlan and queryPath</strong></p>
-<p>The information recorded in <code>queryPlan</code>/<code>queryPath</code> include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. You may find it useful to analyze this information while developing your application(s). Geralmente a descrição do plano de pesquisa e sua rota são idênticas mas podem ser diferentes porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar a performance. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.</p>
+<p><strong>Sobre queryPlan e queryPath</strong></p>
+<p>A informação registrada em <code>queryPlan</code>/<code>queryPath</code> inclui o tipo de pesquisa (indexada e sequencial) e cada subconsulta necessária junto com os operadores de conjunção. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. Pode achar útil analisar esta informação enquanto desenvolver suas aplicações. Geralmente a descrição do plano de pesquisa e sua rota são idênticas mas podem ser diferentes porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar a performance. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.</p>
 <p>Por exemplo se executar esta pesquisa:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &lt; :1 and employer.name = :2 or employer.revenues &gt; :3"</span>;\  
  <span class="hljs-number">50000</span>;<span class="hljs-string">"Lima West Kilo"</span>;<span class="hljs-number">10000000</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"queryPath"</span>;<span class="hljs-literal">True</span>;<span class="hljs-string">"queryPlan"</span>;<span class="hljs-literal">True</span>))
@@ -826,89 +826,89 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
     steps:[{steps:[{description:[index : Company.revenues ] &gt; <span class="hljs-number">10000000</span>,time:<span class="hljs-number">0</span>,recordsfounds:<span class="hljs-number">933</span>}]}]}]}]}
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1-4"></a><a href="#exemplo-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 1</h4>
-<p>This section provides various examples of queries.</p>
-<p>Query on a string:</p>
+<p>Esta seção oferece vários exemplos de pesquisas.</p>
+<p>Consultas em uma string:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName = 'S@'"</span>)
 </code></pre>
-<p>Query with a NOT statement:</p>
+<p>Pesquisa com uma instrução NOT:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"not(firstName=Kim)"</span>)
 </code></pre>
-<p>Queries with dates:</p>
+<p>Pesquisas com datas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"birthDate &gt; :1"</span>;<span class="hljs-string">"1970-01-01"</span>)
 <span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"birthDate &lt;= :1"</span>;Current date<span class="hljs-number">-10950</span>)
 </code></pre>
-<p>Query with indexed placeholders for values:</p>
+<p>Pesquisa com marcadores de posição indexados para os valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)"</span>;<span class="hljs-string">"D@"</span>;<span class="hljs-string">"R@"</span>;<span class="hljs-string">"S@"</span>;<span class="hljs-string">"K@"</span>)
 </code></pre>
-<p>Query with indexed placeholders for values on a related dataclass:</p>
+<p>Pesquisa com marcadores de posição indexados para valores em u ma dataclass relacionada:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"lastName = :1 and manager.lastName = :2"</span>;<span class="hljs-string">"M@"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
-<p>Query with indexed placeholder including a descending order by statement:</p>
+<p>Pesquisa com marcador de posição indexado que inclui uma instrução de ordem descendente:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Student.<span class="hljs-function">query</span>(<span class="hljs-string">"nationality = :1 order by campus.name desc, lastname"</span>;<span class="hljs-string">"French"</span>)
 </code></pre>
-<p>Query with named placeholders for values:</p>
+<p>Pesquisa com marcadores de posição com nome para os valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$managedCustomers </span>: cs.CustomerSelection
 <span class="hljs-variable">$querySettings</span>:=New object
 <span class="hljs-variable">$querySettings</span>.parameters:=<span class="hljs-function">New object</span>(<span class="hljs-string">"userId"</span>;<span class="hljs-number">1234</span>;<span class="hljs-string">"extraInfo"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>))
 <span class="hljs-variable">$managedCustomers</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"salesperson.userId = :userId and name = :extraInfo.name"</span>;<span class="hljs-variable">$querySettings</span>)
 </code></pre>
-<p>Query that uses both named and indexed placeholders for values:</p>
+<p>Pesquisa que usa marcadores de posição nomeados e indexados para valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$managedCustomers </span>: cs.CustomerSelection
 <span class="hljs-variable">$querySettings</span>.parameters:=<span class="hljs-function">New object</span>(<span class="hljs-string">"userId"</span>;<span class="hljs-number">1234</span>)
 <span class="hljs-variable">$managedCustomers</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">"salesperson.userId = :userId and name=:1"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-variable">$querySettings</span>)
 </code></pre>
-<p>Query with queryPlan and queryPath objects:</p>
+<p>Pesquisa com objetos queryPlan e queryPath:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)"</span>;<span class="hljs-string">"D@"</span>;<span class="hljs-string">"R@"</span>;<span class="hljs-string">"S@"</span>;<span class="hljs-string">"K@"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"queryPlan"</span>;<span class="hljs-literal">True</span>;<span class="hljs-string">"queryPath"</span>;<span class="hljs-literal">True</span>))
 
-  <span class="hljs-comment">//you can then get these properties in the resulting entity selection</span><span class="hljs-keyword">
+  <span class="hljs-comment">//Pode obter essas propriedades na seleção de entidade abaixo</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$queryPlan</span>; <span class="hljs-variable">$queryPath </span>: Object
 <span class="hljs-variable">$queryPlan</span>:=<span class="hljs-variable">$entitySelection</span>.queryPlan
 <span class="hljs-variable">$queryPath</span>:=<span class="hljs-variable">$entitySelection</span>.queryPath
 </code></pre>
-<p>Query with an attribute path of Collection type:</p>
+<p>Pesquisa com uma rota de atributo de tipo Collection:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"extraInfo.hobbies[].name = :1"</span>;<span class="hljs-string">"horsebackriding"</span>)
 </code></pre>
-<p>Query with an attribute path of Collection type and linked attributes:</p>
+<p>Pesquisa com uma rota de atributos de tipo Collection e atributos vinculados:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2"</span>;<span class="hljs-string">"horsebackriding"</span>;<span class="hljs-number">2</span>)
 </code></pre>
-<p>Query with an attribute path of Collection type and multiple linked attributes:</p>
+<p>Pesquisa com uma rota de atributos de tipo Collection e múltiplos atributos vinculados:</p>
 <pre><code class="hljs css language-4d">$entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
     extraInfo.hobbies[a].level = :2 and extraInfo.hobbies[b].name = :3 and
     extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 </code></pre>
-<p>Query with an attribute path of Object type:</p>
+<p>Pesquisa com uma rota de atributo de tipo Objeto</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"extra.eyeColor = :1"</span>;<span class="hljs-string">"blue"</span>)
 </code></pre>
-<p>Query with an IN statement:</p>
+<p>Pesquisa com uma instrução IN:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"firstName in :1"</span>;<span class="hljs-function">New collection</span>(<span class="hljs-string">"Kim"</span>;<span class="hljs-string">"Dixie"</span>))
 </code></pre>
-<p>Query with a NOT (IN) statement:</p>
+<p>Pesquisa com instrução NOT (IN):</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$entitySelection</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"not (firstName in :1)"</span>;<span class="hljs-function">New collection</span>(<span class="hljs-string">"John"</span>;<span class="hljs-string">"Jane"</span>))
 </code></pre>
-<p>Query with indexed placeholders for attributes:</p>
+<p>Pesquisa com marcadores de posição indexados para os atributos:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection
 <span class="hljs-variable">$es</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">":1 = 1234 and :2 = 'Smith'"</span>;<span class="hljs-string">"salesperson.userId"</span>;<span class="hljs-string">"name"</span>)
-  <span class="hljs-comment">//salesperson is a related entity</span>
+  <span class="hljs-comment">//salesperson é uma entidade relacionada</span>
 </code></pre>
-<p>Query with indexed placeholders for attributes and named placeholders for values:</p>
+<p>Pesquisa com marcadores de posição indexados para os atributos e marcadores de posição com nome para os valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$querySettings </span>: Object
 <span class="hljs-variable">$querySettings</span>:=New object
 <span class="hljs-variable">$querySettings</span>.parameters:=<span class="hljs-function">New object</span>(<span class="hljs-string">"customerName"</span>;<span class="hljs-string">"Smith"</span>)
 <span class="hljs-variable">$es</span>:=ds.Customer.<span class="hljs-function">query</span>(<span class="hljs-string">":1 = 1234 and :2 = :customerName"</span>;<span class="hljs-string">"salesperson.userId"</span>;<span class="hljs-string">"name"</span>;<span class="hljs-variable">$querySettings</span>)
-  <span class="hljs-comment">//salesperson is a related entity</span>
+  <span class="hljs-comment">//salesperson é uma entidade relacionada</span>
 </code></pre>
-<p>Query with indexed placeholders for attributes and values:</p>
+<p>Pesquisa com marcadores de posição indexados para os atributos e os valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection
 <span class="hljs-variable">$es</span>:=ds.Clients.<span class="hljs-function">query</span>(<span class="hljs-string">":1 = 1234 and :2 = :3"</span>;<span class="hljs-string">"salesperson.userId"</span>;<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>)
-  <span class="hljs-comment">//salesperson is a related entity</span>
+  <span class="hljs-comment">//salesperson é uma entidade relacionada</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-2-4"></a><a href="#exemplo-2-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 2</h4>
-<p>This section illustrates queries with named placeholders for attributes.</p>
-<p>Given an Employee dataclass with 2 entities:</p>
-<p>Entity 1:</p>
+<p>Esta seção ilustra pesquisas com marcadores de posição com  nomes para os atributos.</p>
+<p>Dada uma dataclass Employee com 2 entidades:</p>
+<p>Entidade 1:</p>
 <pre><code class="hljs css language-4d">name: <span class="hljs-string">"Marie"</span>
 number: <span class="hljs-number">46</span>
 softwares:{
@@ -917,7 +917,7 @@ softwares:{
 <span class="hljs-string">"Powerpoint 12.4"</span>: <span class="hljs-string">"Not installed"</span>
 }
 </code></pre>
-<p>Entity 2:</p>
+<p>Entidade 2:</p>
 <pre><code class="hljs css language-4d">name: <span class="hljs-string">"Sophie"</span>
 number: <span class="hljs-number">47</span>
 softwares:{
@@ -926,7 +926,7 @@ softwares:{
 <span class="hljs-string">"Powerpoint 12.4"</span>: <span class="hljs-string">"Not installed"</span>
 }
 </code></pre>
-<p>Query with named placeholders for attributes:</p>
+<p>Pesquisa com marcadores de posição com nome para os atributos:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection
  <span class="hljs-variable">$querySettings</span>:=New object
@@ -934,46 +934,46 @@ softwares:{
  <span class="hljs-variable">$es</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">":attName = 'Marie' and :attWord = 'Installed'"</span>;<span class="hljs-variable">$querySettings</span>)
   <span class="hljs-comment">//$es.length=1 (Employee Marie)</span>
 </code></pre>
-<p>Query with named placeholders for attributes and values:</p>
+<p>Pesquisa com marcadores de posição com nome para os atributos e os valores:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$querySettings </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$es </span>: cs.EmployeeSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$name </span>: Text
  <span class="hljs-variable">$querySettings</span>:=New object
-  <span class="hljs-comment">//Named placeholders for values</span>
-  <span class="hljs-comment">//The user is asked for a name</span>
- <span class="hljs-variable">$name</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Please enter the name to search:"</span>)<span class="hljs-keyword">
+  <span class="hljs-comment">//Placeholders para os valores</span>
+  <span class="hljs-comment">//Se pede ao usuário um nome</span>
+ <span class="hljs-variable">$name</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Por favor, introduza o nombre a buscar:"</span>)<span class="hljs-keyword">
  If</span>(OK=<span class="hljs-number">1</span>)
     <span class="hljs-variable">$querySettings</span>.parameters:=<span class="hljs-function">New object</span>(<span class="hljs-string">"givenName"</span>;<span class="hljs-variable">$name</span>)
-  <span class="hljs-comment">//Named placeholders for attribute paths</span>
+  <span class="hljs-comment">//Placeholders para as rotas de atributos</span>
     <span class="hljs-variable">$querySettings</span>.attributes:=<span class="hljs-function">New object</span>(<span class="hljs-string">"attName"</span>;<span class="hljs-string">"name"</span>)
     <span class="hljs-variable">$es</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">":attName= :givenName"</span>;<span class="hljs-variable">$querySettings</span>)<span class="hljs-keyword">
  End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-3-3"></a><a href="#exemplo-3-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 3</h4>
-<p>These examples illustrate the various ways to use formulas with or without parameters in your queries.</p>
-<p>The formula is given as text with <code>eval()</code> in the <em>queryString</em> parameter:</p>
+<p>Estes exemplos ilustram as distintas formas de utilizar fórmulas com ou sem parâmetros em suas pesquisas.</p>
+<p>A fórmula se da como texto com <code>eval()</code> no parâmetro <em>queryString</em>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">"eval(length(This.lastname) &gt;=30) and nationality='French'"</span>)
 </code></pre>
-<p>The formula is given as a <code>Formula</code> object through a placeholder:</p>
+<p>A fórmula se dá como um objeto <code>Formula</code> através de um marcador de posição:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$formula </span>: Object
  <span class="hljs-variable">$formula</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">Length</span>(<span class="hljs-literal">This</span>.lastname)&gt;=<span class="hljs-number">30</span>)
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">":1 and nationality='French'"</span>;<span class="hljs-variable">$formula</span>)
 </code></pre>
-<p>Only a <code>Formula</code> object is given as criteria:</p>
+<p>Só se da como criterio um objeto <code>Formula</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$formula </span>: Object
  <span class="hljs-variable">$formula</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">Length</span>(<span class="hljs-literal">This</span>.lastname)&gt;=<span class="hljs-number">30</span>)
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-variable">$formula</span>)
 </code></pre>
-<p>Several formulas can be applied:</p>
+<p>Podem ser aplicadas várias fórmulas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$formula1</span>; <span class="hljs-variable">$1</span>; <span class="hljs-variable">$formula2 </span>;<span class="hljs-variable">$0 </span>: Object
  <span class="hljs-variable">$formula1</span>:=<span class="hljs-variable">$1</span>
  <span class="hljs-variable">$formula2</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">Length</span>(<span class="hljs-literal">This</span>.firstname)&gt;=<span class="hljs-number">30</span>)
  <span class="hljs-variable">$0</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">":1 and :2 and nationality='French'"</span>;<span class="hljs-variable">$formula1</span>;<span class="hljs-variable">$formula2</span>)
 </code></pre>
-<p>A text formula in <em>queryString</em> receives a parameter:</p>
+<p>Uma fórmula texto em <em>queryString</em> recebe um parámetro:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$settings </span>: Object
  <span class="hljs-variable">$settings</span>:=<span class="hljs-function">New object</span>()
@@ -984,30 +984,30 @@ softwares:{
  #<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$exclude </span>: Text) -&gt; <span class="hljs-variable">$result </span>: Boolean
  <span class="hljs-variable">$result</span>:=(<span class="hljs-function">Position</span>(<span class="hljs-variable">$exclude</span>;<span class="hljs-literal">This</span>.lastname)=<span class="hljs-number">0</span>)
 </code></pre>
-<p>Using the same <strong><em>checkName</em></strong> method, a <code>Formula</code> object as placeholder receives a parameter:</p>
+<p>Utilizando o mesmo método <strong><em>checkName</em></strong>, um objeto <code>Formula</code> como marcador de posição recebe um parámetro:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$settings</span>; <span class="hljs-variable">$formula </span>: Object
  <span class="hljs-variable">$formula</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">checkName</span>(<span class="hljs-variable">$1</span>.filter))
  <span class="hljs-variable">$settings</span>:=<span class="hljs-function">New object</span>()
  <span class="hljs-variable">$settings</span>.args:=<span class="hljs-function">New object</span>(<span class="hljs-string">"filter"</span>;<span class="hljs-string">"-"</span>)
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">":1 and nationality=:2"</span>;<span class="hljs-variable">$formula</span>;<span class="hljs-string">"French"</span>;<span class="hljs-variable">$settings</span>)
- <span class="hljs-variable">$settings</span>.args.filter:=<span class="hljs-string">"*"</span> <span class="hljs-comment">// change the parameters without updating the $formula object</span>
+ <span class="hljs-variable">$settings</span>.args.filter:=<span class="hljs-string">"*"</span> <span class="hljs-comment">//mudar os parâmetros sem atualizar o objeto $formula</span>
  <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-string">":1 and nationality=:2"</span>;<span class="hljs-variable">$formula</span>;<span class="hljs-string">"French"</span>;<span class="hljs-variable">$settings</span>)
 </code></pre>
-<p>We want to disallow formulas, for example when the user enters their query:</p>
+<p>Queremos desautorizar as fórmulas, por exemplo, quando el usuario introduz sua consulta:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.StudentsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$settings </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$queryString </span>: Text
  <span class="hljs-variable">$queryString</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Enter your query:"</span>)
 <span class="hljs-function"> if</span>(OK=<span class="hljs-number">1</span>)
     <span class="hljs-variable">$settings</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"allowFormulas"</span>;<span class="hljs-literal">False</span>)
-    <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-variable">$queryString</span>;<span class="hljs-variable">$settings</span>) <span class="hljs-comment">//An error is raised if $queryString contains a formula</span><span class="hljs-keyword">
+    <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-variable">$queryString</span>;<span class="hljs-variable">$settings</span>) <span class="hljs-comment">//Se produz um erro se $queryString conter uma fórmula</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="see-also"></a><a href="#see-also" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
-<p><a href="/docs/19/pt/API/EntitySelectionClass.html#query"><code>.query()</code></a> for entity selections</p>
+<h4><a class="anchor" aria-hidden="true" id="ver-também"></a><a href="#ver-também" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver também</h4>
+<p><a href="/docs/19/pt/API/EntitySelectionClass.html#query"><code>.query()</code></a> para seleções de entidades</p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/pt/API/CryptoKeyClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">CryptoKey</span></a><a class="docs-next button" href="/docs/19/pt/API/DataClassAttributeClass.html"><span class="function-name-prevnext">DataClassAttribute</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#all">.all()</a></li><li><a href="#fromcollection">.fromCollection()</a></li><li><a href="#get">.get()</a></li><li><a href="#getdatastore">.getDataStore()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#new">.new()</a></li><li><a href="#newselection">.newSelection()</a></li><li><a href="#query">.query()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/pt/API/CryptoKeyClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">CryptoKey</span></a><a class="docs-next button" href="/docs/19/pt/API/DataClassAttributeClass.html"><span class="function-name-prevnext">DataClassAttribute</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#all">.all()</a></li><li><a href="#fromcollection">.fromCollection()</a></li><li><a href="#get">.get()</a></li><li><a href="#getdatastore">.getDataStore()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#new">.new()</a></li><li><a href="#newselection">.newSelection()</a></li><li><a href="#query">.query()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

@@ -78,7 +78,8 @@
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h3>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$colVar </span>: Collection <span class="hljs-comment">//création d'une variable 4D de type collection. $colVar:=New $colVar:=New collection //initialisation de la collection et assignation à la variable 4D</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$colVar </span>: Collection <span class="hljs-comment">//création d'une variable 4D de type collection</span>
+ <span class="hljs-variable">$colVar</span>:=New collection <span class="hljs-comment">///initialisation de la collection et assignation à la variable 4D</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="sommaire"></a><a href="#sommaire" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sommaire</h3>
 <table>
@@ -105,55 +106,29 @@
 <tr><td><a href="#indices"><strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de <em>queryString</em></td></tr>
 <tr><td><a href="#insert"><strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>     insère <em>element</em> dans la collection à la position spécifiée par <em>index</em> et retourne la collection modifiée</td></tr>
 <tr><td><a href="#join"><strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    convertit tous les éléments de la collection en chaînes et les concatène en utilisant la chaîne <em>delimiter</em> spécifiée comme séparateur</td></tr>
-<tr><td><a href="#lastindexof"><strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée, ou -1 si aucune occurrence n'a été trouvée&lt;!-- END REF.</p></td></tr>
+<tr><td><a href="#lastindexof"><strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée</td></tr>
+<tr><td>[<strong>.length</strong> : Integer</td></tr>
+<tr><td>](#length)<p>    retourne le nombre d'éléments contenus dans la collection</td></tr>
+<tr><td><a href="#map"><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    crée une nouvelle collection basée sur le résultat de l'exécution de la méthode <em>methodName</em> sur chaque élément de la collection d'origine</td></tr>
+<tr><td><a href="#max"><strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    retourne l'élément ayant la plus grande valeur dans la collection</td></tr>
+<tr><td><a href="#min"><strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    retourne l'élément ayant la plus petite valeur dans la collection</td></tr>
+<tr><td><a href="#orderby"><strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis</td></tr>
+<tr><td><a href="#orderbymethod"><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection </a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par <em>methodName</em></td></tr>
+<tr><td><a href="#pop"><strong>.pop()</strong> : any </a><p>    supprime le dernier élément de la collection et le retourne comme résultat de la fonction</td></tr>
+<tr><td><a href="#push"><strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>    </td></tr>
+<tr><td><a href="#query"><strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche</td></tr>
+<tr><td><a href="#reduce"><strong>.reduce</strong>( <em>methodName</em> : Text ) : any <br><strong>.reduce</strong>( <em>methodName</em> : Text ; <em>initValue</em> : any { ; <em>...param</em> : expression } ) : any </a><p>    applique la méthode callback <em>methodName</em> à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique</td></tr>
+<tr><td><a href="#remove"><strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection </a><p>    supprime un ou plusieurs élément(s) de la position d'<em>index</em> spécifiée dans la collection et retourne la collection modifiée</td></tr>
+<tr><td><a href="#resize"><strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection </a><p>    définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée</td></tr>
+<tr><td><a href="#reverse"><strong>.reverse( )</strong> : Collection </a><p>    retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse</td></tr>
+<tr><td><a href="#shift"><strong>.shift()</strong> : any</a><p>    supprime le premier élément de la collection et le retourne comme résultat de la fonction</td></tr>
+<tr><td><a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    retourne une partie d'une collection dans une nouvelle collection</td></tr>
+<tr><td><a href="#some"><strong>.some</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( <em>startFrom</em> : Integer ; <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</a><p>    retourne true si au moins un élément de la collection a réussi un test</td></tr>
+<tr><td><a href="#sort"><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection </a><p>    trie les éléments de la collection d'origine</td></tr>
+<tr><td><a href="#sum"><strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    retourne la somme de toutes les valeurs de l'instance de collection</td></tr>
+<tr><td><a href="#unshift"><strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    insère la ou les <em>valeur(s)</em> données au début de la collection</td></tr>
 </tbody>
 </table>
-<blockquote>
-<p>Cette fonction ne modifie pas la collection d'origine.</p>
-</blockquote>
-<p>Dans <em>toSearch</em>, passez l'expression à rechercher dans la collection. Vous pouvez passer :</p>
-<ul>
-<li>une valeur scalaire (texte, numérique, booléen, date),</li>
-<li>la valeur null,</li>
-<li>une référence d'objet ou de collection.</li>
-</ul>
-<p><em>toSearch</em> doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).</p>
-<p>Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans <em>startFrom</em>.</p>
-<ul>
-<li>Si <em>startFrom</em> &gt;= taille de la collection (coll.length-1), l'ensemble de la collection est évalué (défaut).</li>
-<li>Si <em>startFrom</em> &lt; 0, le paramètre est recalculé comme <em>startFrom:=startFrom+length</em> (la fin de la collection est considérée comme point de départ du calcul de la position). Si la position calculée est négative, -1 est retourné (la collection n'est pas évaluée). <strong>Note</strong> : Même si <em>startFrom</em> est négatif, la recherche est effectuée de la droite vers la gauche.</li>
-<li>Si <em>startFrom</em> = 0, -1 est retourné, ce qui signifie que la recherche n'est pas effectuée.</li>
-</ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
- var</span> <span class="hljs-variable">$pos1</span>;<span class="hljs-variable">$pos2</span>;<span class="hljs-variable">$pos3</span>;<span class="hljs-variable">$pos4</span>;<span class="hljs-variable">$pos5 </span>: Integer 
- <span class="hljs-variable">$col</span>:=<span class="hljs-function">Split string</span>(<span class="hljs-string">"a,b,c,d,e,f,g,h,i,j,e,k,e"</span>;<span class="hljs-string">","</span>) <span class="hljs-comment">//$col.length=13</span>
- <span class="hljs-variable">$pos1</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"e"</span>) <span class="hljs-comment">//retourne 12</span>
- <span class="hljs-variable">$pos2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"e"</span>;<span class="hljs-number">6</span>) <span class="hljs-comment">//retourne 4</span>
- <span class="hljs-variable">$pos3</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"e"</span>;<span class="hljs-number">15</span>) <span class="hljs-comment">//retourne 12</span>
- <span class="hljs-variable">$pos4</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"e"</span>;<span class="hljs-number">-2</span>) <span class="hljs-comment">//retourne 10</span>
- <span class="hljs-variable">$pos5</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">lastIndexOf</span>(<span class="hljs-string">"x"</span>) <span class="hljs-comment">//retourne -1</span>
-</code></pre>
-<p>|
-| <a href="#length"><strong>.length</strong> : Integer</a><p>    retourne le nombre d'éléments contenus dans la collection|
-| <a href="#map"><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    crée une nouvelle collection basée sur le résultat de l'exécution de la méthode <em>methodName</em> sur chaque élément de la collection d'origine|
-| <a href="#max"><strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any</a><p>    retourne l'élément ayant la plus grande valeur dans la collection|
-| <a href="#min"><strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any</a><p>    retourne l'élément ayant la plus petite valeur dans la collection|
-| <a href="#orderby"><strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection</a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis|
-| <a href="#orderbymethod"><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par <em>methodName</em>|
-| <a href="#pop"><strong>.pop()</strong> : any</a><p>    supprime le dernier élément de la collection et le retourne comme résultat de la fonction|
-| <a href="#push"><strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection</a><p>    |
-| <a href="#query"><strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection</a><p>    retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche|
-| <a href="#reduce"><strong>.reduce</strong>( <em>methodName</em> : Text ) : any <br><strong>.reduce</strong>( <em>methodName</em> : Text ; <em>initValue</em> : any { ; <em>...param</em> : expression } ) : any</a><p>    applique la méthode callback <em>methodName</em> à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique|
-| <a href="#remove"><strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection</a><p>    supprime un ou plusieurs élément(s) de la position d'<em>index</em> spécifiée dans la collection et retourne la collection modifiée|
-| <a href="#resize"><strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection</a><p>    définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée|
-| <a href="#reverse"><strong>.reverse( )</strong> : Collection</a><p>    retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse|
-| <a href="#shift"><strong>.shift()</strong> : any</a><p>    supprime le premier élément de la collection et le retourne comme résultat de la fonction|
-| <a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    retourne une partie d'une collection dans une nouvelle collection|
-| <a href="#some"><strong>.some</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( <em>startFrom</em> : Integer ; <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</a><p>    retourne true si au moins un élément de la collection a réussi un test|
-| <a href="#sort"><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection</a><p>    trie les éléments de la collection d'origine|
-| <a href="#sum"><strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    retourne la somme de toutes les valeurs de l'instance de collection|
-| <a href="#unshift"><strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    insère la ou les <em>valeur(s)</em> données au début de la collection|</p>
 <h2><a class="anchor" aria-hidden="true" id="new-collection"></a><a href="#new-collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>New collection</code></h2>
 <p><strong>New collection</strong> {( <em>...value</em> : any )} : Collection</p>
 <table>
@@ -184,7 +159,7 @@
 <li>Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Vous pouvez modifier ce comportement à l'aide du sélecteur <code>Dates inside objects</code> de la commande <code>SET DATABASE PARAMETER</code>.</li>
 <li>Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Vous souhaitez créer une nouvelle collection vide et l'assigner à une variable collection 4D :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$myCol </span>: Collection
  <span class="hljs-variable">$myCol</span>:=New collection
@@ -291,7 +266,7 @@
 <li>la collection ne contient pas d'éléments numériques,</li>
 <li><em>propertyPath</em> n'est pas trouvé dans la collection.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-2"></a><a href="#exemple-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>;<span class="hljs-string">"Monday"</span>;<span class="hljs-literal">True</span>;<span class="hljs-number">6</span>)
  <span class="hljs-variable">$vAvg</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">average</span>() <span class="hljs-comment">//12</span>
@@ -452,7 +427,7 @@
 </tbody>
 </table>
 <p>Les paramètres <em>groupWithCol</em> ou <em>groupWithObj</em> vous permettent de désigner une collection ou un objet auquel/à laquelle la collection résultante sera associée.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-2"></a><a href="#exemple-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Nous souhaitons copier la collection standard (non partagée) <em>$lastnames</em> dans l'objet partagé <em>$sharedObject</em>. Pour ce faire, nous devons créer une copie partagée de la collection (<em>$sharedLastnames</em>).</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$sharedObject </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$lastnames</span>;<span class="hljs-variable">$sharedLastnames </span>: Collection<span class="hljs-keyword">
@@ -585,7 +560,7 @@ End use</span>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-4"></a><a href="#exemple-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vCount </span>: Integer
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">5</span>;<span class="hljs-number">5</span>;<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">6</span>;<span class="hljs-number">4</span>)
@@ -744,7 +719,7 @@ End use</span>
 <li>Si <em>startFrom</em> &lt; 0, la fin de la collection est considérée comme point de départ du calcul de la position( <em>startFrom:=startFrom+length</em>).</li>
 <li>Si <em>startFrom</em> = 0, l'ensemble de la collection est évalué (défaut).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-5"></a><a href="#exemple-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-4"></a><a href="#exemple-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">  
 var</span> <span class="hljs-variable">$b </span>: Boolean
 <span class="hljs-variable">$c</span>:=New collection
@@ -809,7 +784,7 @@ End if</span>
 <ul>
 <li>Si un ou plusieurs paramètre(s) <em>targetPath</em> sont passés, <code>.extract()</code> remplit la nouvelle collection avec les propriétés <em>propertyPath</em> et chaque élément de la nouvelle collection est un objet contenant les propriétés <em>targetPath</em> dont les valeurs sont celles des propriétés <em>propertyPath</em> correspondantes. Les valeurs null sont conservées (le paramètre <em>option</em> est ignoré avec cette syntaxe).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-6"></a><a href="#exemple-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-5"></a><a href="#exemple-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection
 <span class="hljs-variable">$c</span>:=New collection
 <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Cleveland"</span>))
@@ -918,7 +893,7 @@ End if</span>
 <li><em>$1.result</em> (booléen) : <strong>true</strong> si l'élément satisfait à la condition de filtrage et doit être conservé.</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-7"></a><a href="#exemple-1-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-6"></a><a href="#exemple-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Vous voulez obtenir la collection des éléments de type texte dont la longueur est inférieure à 6 :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col</span>;<span class="hljs-variable">$colNew </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"hello"</span>;<span class="hljs-string">"world"</span>;<span class="hljs-string">"red horse"</span>;<span class="hljs-number">66</span>;<span class="hljs-string">"tim"</span>;<span class="hljs-string">"san jose"</span>;<span class="hljs-string">"miami"</span>)
@@ -997,7 +972,7 @@ End if</span>
 <li>Si <em>startFrom</em> &lt; 0, la fin de la collection est considérée comme point de départ du calcul de la position (<em>startFrom:=startFrom+length</em>). <strong>Note</strong> : Même si <em>startFrom</em> est négatif, la recherche est effectuée de la gauche vers la droite.</li>
 <li>Si <em>startFrom</em> = 0, l'ensemble de la collection est évalué (défaut).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-8"></a><a href="#exemple-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-7"></a><a href="#exemple-1-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Vous souhaitez obtenir le premier élément dont la taille est inférieure à 5 caractères :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"hello"</span>;<span class="hljs-string">"world"</span>;<span class="hljs-number">4</span>;<span class="hljs-string">"red horse"</span>;<span class="hljs-string">"tim"</span>;<span class="hljs-string">"san jose"</span>)
@@ -1012,7 +987,8 @@ End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-2-7"></a><a href="#exemple-2-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Vous souhaitez trouver un nom de ville dans une collection :</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$c2 </span>: Object
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Cleveland"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-number">35049</span>))
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Blountsville"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-number">35031</span>))
@@ -1284,7 +1260,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-21"></a><a href="#description-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La fonction <code>.lastIndexOf()</code> recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée, ou -1 si aucune occurrence n'a été trouvée&lt;!-- END REF.</p></p>
+<p>La fonction <code>.lastIndexOf()</code> recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée, ou -1 si aucune occurrence n'a été trouvée.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
@@ -1321,48 +1297,58 @@ End if</span>
 <tr><td>v16 R5</td><td>Ajout</td></tr>
 </tbody>
 </table>
-<p></details><strong>.length</strong> : Integer#### Description</p>
-<p>La propriété <code>.length</code>retourne le nombre d'éléments contenus dans la collection.</p>
+<p></details></p>
+<p><strong>.length</strong> : Integer</p>
+<h4><a class="anchor" aria-hidden="true" id="description-22"></a><a href="#description-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La propriété <code>.length</code> retourne le nombre d'éléments contenus dans la collection.</p>
 <p>La propriété <code>.length</code> est initialisée à la création de la collection. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. Cette propriété est en <strong>lecture seulement</strong> (vous ne pouvez pas l'utiliser pour modifier la taille de la collection).</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-18"></a><a href="#exemple-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection <span class="hljs-comment">//$col.length est initialisée à 0</span>
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"one"</span>;<span class="hljs-string">"two"</span>;<span class="hljs-string">"three"</span>) <span class="hljs-comment">//$col.length est mise à jour et vaut 3</span>
  <span class="hljs-variable">$col</span>[<span class="hljs-number">4</span>]:=<span class="hljs-string">"five"</span> <span class="hljs-comment">//$col.length vaut 5</span>
  <span class="hljs-variable">$vSize</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>).length <span class="hljs-comment">//$vSize=2</span>
-<span class="hljs-comment">```## .map()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.map**( *methodName* : Text { ; *...param* : any } ) : Collection| Paramètres | Type       |    | Description                                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| methodName | Text       | -&gt; | Nom de la méthode à appeler pour transformer les éléments de la collection |
-| param      | any        | -&gt; |<span class="hljs-function"> Paramètre</span>(s) à passer à la méthode                                         |
-| Résultat   | Collection | &lt;- | Collection de valeurs transformées                                         |#### Description
-
-La fonction <span class="hljs-comment">`.map()`crée une nouvelle collection basée sur le résultat de l'exécution de la méthode *methodName* sur chaque élément de la collection d'origine. Optionnellement, vous pouvez passer des paramètres à *methodName* via le paramètre *param*. `.map()` retourne toujours une collection de taille égale à celle de la collection d'origine.</span>
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection,<span class="hljs-function"> ainsi que son ou ses paramètre</span>(s) dans *param* (optionnel). In *methodName*, pass the name of the method to use to evaluate collection elements,<span class="hljs-function"> along with its parameter</span>(s) in *param* (optional).
-
-*methodName* reçoit les paramètres suivants :
-
-*   dans *<span class="hljs-variable">$1</span>.value* (tout type) : valeur de l'élément à évaluer
-*   dans *<span class="hljs-variable">$2</span>* (tout type) : *param*
-*   dans *<span class="hljs-variable">$N</span>...* (tout type) : *paramN...*
-
-*methodName*<span class="hljs-function"> doit fixer le</span>(s)<span class="hljs-function"> paramètre</span>(s)<span class="hljs-function"> suivant</span>(s) :
-
-
-*   *<span class="hljs-variable">$1</span>.result* (tout type) : nouvelle valeur transformée à ajouter à la collection résultante
-*   *<span class="hljs-variable">$1</span>.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="map"></a><a href="#map" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.map()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de la méthode à appeler pour transformer les éléments de la collection</td></tr>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à la méthode</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection de valeurs transformées</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-23"></a><a href="#description-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.map()</code> crée une nouvelle collection basée sur le résultat de l'exécution de la méthode <em>methodName</em> sur chaque élément de la collection d'origine. Optionnellement, vous pouvez passer des paramètres à <em>methodName</em> via le paramètre <em>param</em>. <code>.map()</code> retourne toujours une collection de taille égale à celle de la collection d'origine.</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Dans <em>methodName</em>, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans <em>param</em> (optionnel). In <em>methodName</em>, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in <em>param</em> (optional).</p>
+<p><em>methodName</em> reçoit les paramètres suivants :</p>
+<ul>
+<li>dans <em>$1.value</em> (tout type) : valeur de l'élément à évaluer</li>
+<li>dans <em>$2</em> (tout type) : <em>param</em></li>
+<li>dans <em>$N...</em> (tout type) : <em>paramN...</em></li>
+</ul>
+<p><em>methodName</em> doit fixer le(s) paramètre(s) suivant(s) :</p>
+<ul>
+<li><em>$1.result</em> (tout type) : nouvelle valeur transformée à ajouter à la collection résultante</li>
+<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-19"></a><a href="#exemple-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">4</span>;<span class="hljs-number">9</span>;<span class="hljs-number">10</span>;<span class="hljs-number">20</span>)
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">map</span>(<span class="hljs-string">"Percentage"</span>;<span class="hljs-variable">$c</span>.<span class="hljs-function">sum</span>())
   <span class="hljs-comment">//$c2=[2.27,9.09,20.45,22.73,45.45]</span>
@@ -1371,31 +1357,38 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$1 </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$2 </span>: Real
  <span class="hljs-variable">$1</span>.result:=<span class="hljs-function">Round</span>((<span class="hljs-variable">$1</span>.value/<span class="hljs-variable">$2</span>)*<span class="hljs-number">100</span>;<span class="hljs-number">2</span>)
-<span class="hljs-comment">```## .max()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.max**( { *propertyPath* : Text } ) : any| Paramètres   | Type                                            |    | Description                                                     |
-| ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
-| propertyPath | Text                                            | -&gt; | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Boolean, Text, Number, Collection, Object, Date | &lt;- | Valeur maximum de la collection                                 |#### Description
-
-La fonction <span class="hljs-comment">`.max()`retourne l'élément ayant la plus grande valeur dans la collection(équivaut au dernier élément de la collection après un tri croissant effectué par la fonction [`.sort()`](#sort)).</span>
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-Si la collection contient différents types de valeurs, la fonction <span class="hljs-comment">`.max()` retournera la plus grande valeur du premier type d'élément dans l'ordre de la liste de types (cf. description de [`.sort()`](#sort)).</span>
-
-Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.
-
-Si la collection est vide, <span class="hljs-comment">`.max()` retourne *Undefined*.</span>
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$col </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="max"></a><a href="#max" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.max()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin de propriété d'objet à utiliser pour évaluer les valeurs</td></tr>
+<tr><td>Résultat</td><td>Boolean, Text, Number, Collection, Object, Date</td><td style="text-align:center">&lt;-</td><td>Valeur maximum de la collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-24"></a><a href="#description-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.max()</code> retourne l'élément ayant la plus grande valeur dans la collection (équivaut au dernier élément de la collection après un tri croissant effectué par la fonction <a href="#sort"><code>.sort()</code></a>).</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Si la collection contient différents types de valeurs, la fonction <code>.max()</code> retournera la plus grande valeur du premier type d'élément dans l'ordre de la liste de types (cf. description de <a href="#sort"><code>.sort()</code></a>).</p>
+<p>Si la collection contient des objets, passez le paramètre <em>propertyPath</em> pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.</p>
+<p>Si la collection est vide, <code>.max()</code> retourne <em>Undefined</em>.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-20"></a><a href="#exemple-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">200</span>;<span class="hljs-number">150</span>;<span class="hljs-number">55</span>)
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">10000</span>))
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Wesson"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">50000</span>))
@@ -1403,31 +1396,38 @@ Si la collection est vide, <span class="hljs-comment">`.max()` retourne *Undefin
  <span class="hljs-variable">$max</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">max</span>() <span class="hljs-comment">//{name:Alabama,salary:10500}</span>
  <span class="hljs-variable">$maxSal</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">max</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//50000</span>
  <span class="hljs-variable">$maxName</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">max</span>(<span class="hljs-string">"name"</span>) <span class="hljs-comment">//"Wesson"</span>
-<span class="hljs-comment">``` ## .min()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.min**( { *propertyPath* : Text } ) : any| Paramètres   | Type                                            |    | Description                                                     |
-| ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
-| propertyPath | Text                                            | -&gt; | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Boolean, Text, Number, Collection, Object, Date | &lt;- | Valeur minimum de la collection                                 |#### Description
-
-La fonction <span class="hljs-comment">`.min()`retourne l'élément ayant la plus petite valeur dans la collection(équivaut au premier élément de la collection après un tri croissant effectué par la fonction [`.sort()`](#sort)).</span>
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-Si la collection contient différents types de valeurs, la fonction <span class="hljs-comment">`.mix()` retournera la plus petite valeur du premier type d'élément dans l'ordre de la liste de types (cf. description de [`.sort()`](#sort)).</span>
-
-Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur minimum.
-
-Si la collection est vide, <span class="hljs-comment">`.min()` retourne *Undefined*.</span>
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$col </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="min"></a><a href="#min" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.min()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin de propriété d'objet à utiliser pour évaluer les valeurs</td></tr>
+<tr><td>Résultat</td><td>Boolean, Text, Number, Collection, Object, Date</td><td style="text-align:center">&lt;-</td><td>Valeur minimum de la collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-25"></a><a href="#description-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.min()</code> retourne l'élément ayant la plus petite valeur dans la collection (équivaut au premier élément de la collection après un tri croissant effectué par la fonction <a href="#sort"><code>.sort()</code></a>).</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Si la collection contient différents types de valeurs, la fonction <code>.mix()</code> retournera la plus petite valeur du premier type d'élément dans l'ordre de la liste de types (cf. description de <a href="#sort"><code>.sort()</code></a>).</p>
+<p>Si la collection contient des objets, passez le paramètre <em>propertyPath</em> pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur minimum.</p>
+<p>Si la collection est vide, <code>.min()</code> retourne <em>Undefined</em>.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-21"></a><a href="#exemple-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">200</span>;<span class="hljs-number">150</span>;<span class="hljs-number">55</span>)
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">10000</span>))
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Wesson"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">50000</span>))
@@ -1435,34 +1435,43 @@ Si la collection est vide, <span class="hljs-comment">`.min()` retourne *Undefin
  <span class="hljs-variable">$min</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>() <span class="hljs-comment">//55</span>
  <span class="hljs-variable">$minSal</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//10000</span>
  <span class="hljs-variable">$minName</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">min</span>(<span class="hljs-string">"name"</span>) <span class="hljs-comment">//"Alabama"</span>
-<span class="hljs-comment">``` ## .orderBy()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.orderBy**( ) : Collection&lt;br&gt;**.orderBy**( *pathStrings* : Text ) : Collection&lt;br&gt;**.orderBy**( *pathObjects* : Collection ) : Collection&lt;br&gt;**.orderBy**( *ascOrDesc* : Integer ) : Collection| Paramètres  | Type       |    | Description                                                   |
-| ----------- | ---------- |:--:| ------------------------------------------------------------- |
-| pathStrings | Text       | -&gt; |<span class="hljs-function"> Chemin</span>(s)<span class="hljs-function"> de propriété</span>(s) à utiliser pour trier la collection |
-| pathObjects | Collection | -&gt; | Collection d'objets critère                                   |
-| ascOrDesc   | Integer    | -&gt; |<span class="hljs-function"> `ck ascending` ou `ck descending` </span>(valeurs scalaires)         |
-| Résultat    | Collection | &lt;- |<span class="hljs-function"> Copie triée de la collection </span>(shallow copy)                   |#### Description
-
-La fonction <span class="hljs-comment">`.orderBy()`retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis.</span>
-
-Cette fonction retourne une **<span class="hljs-function">shallow copy </span>(copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-Si vous ne passez aucun paramètre,<span class="hljs-function"> la fonction trie les valeurs scalaires de la collection par ordre croissant </span>(les autres types d'éléments tels que les objets ou les collections sont retournés sans être triés). Vous pouvez modifier ce tri automatique par défaut en passant la constante <span class="hljs-comment">`ck ascending` ou `ck descending` dans le paramètre *ascOrDesc* (voir ci-dessous).</span>
-
-Vous pouvez également passer des critères afin de configurer le tri des éléments de la collection. Trois syntaxes sont prises en charge pour ce paramètre :
-
-*   *pathStrings* :<span class="hljs-function"> Texte </span>(formule). **Syntaxe** : <span class="hljs-comment">`propertyPath1 {desc ou asc}, propertyPath2 {desc ou asc},...` (défaut : asc). *pathStrings* contient une formule constituée de 1 à N chemin(s) de propriété(s) et (optionnellement) ordres de tri, séparés par des virgules. L'ordre dans lequel les propriétés sont passées détermine la priorité de tri des éléments de la collection. Par défaut, les propriétés sont triées pas ordre croissant. Vous pouvez définir l'ordre de tri de chaque propriété dans la formule de critère, séparée du chemin de propriété par un simple espace : passez "asc" pour trier par ordre croissant ou "desc" pour un ordre décroissant.</span>
-
-*   *pathObjects* : Collection. Vous pouvez ajouter autant d'objets dans la collection *pathObjects* que nécessaire. Par défaut,<span class="hljs-function"> les propriétés sont triées par ordre croissant </span>(<span class="hljs-string">"descending"</span> est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :
-
-<span class="hljs-comment">```4d</span>
-{
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="orderby"></a><a href="#orderby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.orderBy()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>pathStrings</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin(s) de propriété(s) à utiliser pour trier la collection</td></tr>
+<tr><td>pathObjects</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Collection d'objets critère</td></tr>
+<tr><td>ascOrDesc</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck ascending</code> ou <code>ck descending</code> (valeurs scalaires)</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Copie triée de la collection (shallow copy)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-26"></a><a href="#description-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.orderBy()</code> retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis.</p>
+<p>Cette fonction retourne une **shallow copy (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Si vous ne passez aucun paramètre, la fonction trie les valeurs scalaires de la collection par ordre croissant (les autres types d'éléments tels que les objets ou les collections sont retournés sans être triés). Vous pouvez modifier ce tri automatique par défaut en passant la constante <code>ck ascending</code> ou <code>ck descending</code> dans le paramètre <em>ascOrDesc</em> (voir ci-dessous).</p>
+<p>Vous pouvez également passer des critères afin de configurer le tri des éléments de la collection. Trois syntaxes sont prises en charge pour ce paramètre :</p>
+<ul>
+<li><p><em>pathStrings</em> : Texte (formule). <strong>Syntaxe</strong> : <code>propertyPath1 {desc ou asc}, propertyPath2 {desc ou asc},...</code> (défaut : asc). <em>pathStrings</em> contient une formule constituée de 1 à N chemin(s) de propriété(s) et (optionnellement) ordres de tri, séparés par des virgules. L'ordre dans lequel les propriétés sont passées détermine la priorité de tri des éléments de la collection. Par défaut, les propriétés sont triées pas ordre croissant. Vous pouvez définir l'ordre de tri de chaque propriété dans la formule de critère, séparée du chemin de propriété par un simple espace : passez &quot;asc&quot; pour trier par ordre croissant ou &quot;desc&quot; pour un ordre décroissant.</p></li>
+<li><p><em>pathObjects</em> : Collection. Vous pouvez ajouter autant d'objets dans la collection <em>pathObjects</em> que nécessaire. Par défaut, les propriétés sont triées par ordre croissant (&quot;descending&quot; est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :</p></li>
+</ul>
+<pre><code class="hljs css language-4d">{
     <span class="hljs-string">"propertyPath"</span>: string,
     <span class="hljs-string">"descending"</span>: boolean
 }
@@ -1490,7 +1499,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 <li>collections</li>
 <li>dates</li>
 </ol>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-9"></a><a href="#exemple-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-8"></a><a href="#exemple-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Tri d'une collection de nombres par ordre croissant et décroissant :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$3 </span>: Collection 
  <span class="hljs-variable">$c</span>:=New collection<span class="hljs-keyword">
@@ -1538,39 +1547,54 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Blountsville"</span>;<span class="hljs-string">"phones"</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"p1"</span>;<span class="hljs-string">"00"</span>;<span class="hljs-string">"p2"</span>;<span class="hljs-string">"03"</span>)))
  <span class="hljs-variable">$crit</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"propertyPath"</span>;<span class="hljs-string">"phones.p2"</span>;<span class="hljs-string">"descending"</span>;<span class="hljs-literal">True</span>))
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>(<span class="hljs-variable">$crit</span>)
-<span class="hljs-comment">```## .orderByMethod()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection| Paramètres | Type       |    | Description                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Text       | -&gt; | Nom de la méthode utilisée pour trier la collection |
-| extraParam | expression | -&gt; |<span class="hljs-function"> Paramètre</span>(s) à passer à la méthode                  |
-| Résultat   | Collection | &lt;- |<span class="hljs-function"> Copiée triée de la collection </span>(shallow copy)        |#### Description
-
-La fonction <span class="hljs-comment">`.orderByMethod()`retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par *methodName*.</span>
-
-Cette fonction retourne une **<span class="hljs-function">shallow copy </span>(copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-Dans *methodName*, passez le nom d'une méthode qui compare deux valeurs et retourne **true** dans *<span class="hljs-variable">$1</span>.result* si la première valeur est inférieure à la seconde valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via *extraParam*.
-
-*   *methodName* reçoit les paramètres suivants :
-    *   <span class="hljs-variable">$1 </span>(object), où :
-        *   *<span class="hljs-variable">$1</span>.value* (tout type) : valeur du premier élément à comparer
-        *   *<span class="hljs-variable">$1</span>.value2* (tout type) : valeur du second élément à comparer
-    *   <span class="hljs-variable">$2</span>...<span class="hljs-variable">$N </span>(tout type) :<span class="hljs-function"> paramètres supplémentaires </span>(extraParam)
-*   *methodName* doit fixer le paramètre suivant :
-    *   *<span class="hljs-variable">$1</span>.result* (booléen): **vrai** si *<span class="hljs-variable">$1</span>.value &lt; <span class="hljs-variable">$1</span>.value2*, **faux** sinon
-
-#### Exemple <span class="hljs-number">1</span>
-
-Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$c3 </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="orderbymethod"></a><a href="#orderbymethod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.orderByMethod()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de la méthode utilisée pour trier la collection</td></tr>
+<tr><td>extraParam</td><td>expression</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à la méthode</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Copiée triée de la collection (shallow copy)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-27"></a><a href="#description-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.orderByMethod()</code> retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par <em>methodName</em>.</p>
+<p>Cette fonction retourne une **shallow copy (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Dans <em>methodName</em>, passez le nom d'une méthode qui compare deux valeurs et retourne <strong>true</strong> dans <em>$1.result</em> si la première valeur est inférieure à la seconde valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via <em>extraParam</em>.</p>
+<ul>
+<li><em>methodName</em> reçoit les paramètres suivants :
+<ul>
+<li>$1 (object), où :
+<ul>
+<li><em>$1.value</em> (tout type) : valeur du premier élément à comparer</li>
+<li><em>$1.value2</em> (tout type) : valeur du second élément à comparer</li>
+</ul></li>
+<li>$2...$N (tout type) : paramètres supplémentaires (extraParam)</li>
+</ul></li>
+<li><em>methodName</em> doit fixer le paramètre suivant :
+<ul>
+<li><em>$1.result</em> (booléen): <strong>vrai</strong> si <em>$1.value &lt; $1.value2</em>, <strong>faux</strong> sinon</li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-9"></a><a href="#exemple-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<p>Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$c3 </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-string">"33"</span>;<span class="hljs-string">"4"</span>;<span class="hljs-string">"1111"</span>;<span class="hljs-string">"222"</span>)
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>() <span class="hljs-comment">//$c2=["1111","222","33","4"], alphabetical order</span>
@@ -1607,52 +1631,71 @@ Vous souhaitez trier une collection de chaînes contenant des nombres par valeur
 var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment">// option de tri</span>
 
 <span class="hljs-variable">$1</span>.result:=(<span class="hljs-function">Compare strings</span>(<span class="hljs-variable">$1</span>.value;<span class="hljs-variable">$1</span>.value2;<span class="hljs-variable">$2</span>)&lt;<span class="hljs-number">0</span>)
-<span class="hljs-comment">```## .pop()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.<span class="hljs-function">pop</span>()** : any| Paramètres | Type |    | Description                   |
-| ---------- | ---- |:--:| ----------------------------- |
-| Résultat   | any  | &lt;- | Dernier élément de collection |#### Description
-
-La fonction <span class="hljs-comment">`.pop()`supprime le dernier élément de la collection et le retourne comme résultat de la fonction.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-Lorsqu'il est appliqué à une collection vide, .<span class="hljs-comment">`pop()` retourne ***undefined***.</span>
-
-#### Exemple
-
-<span class="hljs-comment">`.pop()`, combiné à [`push()`](#push), peut être utilisé pour implémenter une fonctionnalité last in first out de traitement des données empilées :</span>
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$stack </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="pop"></a><a href="#pop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.pop()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.pop()</strong> : any</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Résultat</td><td>any</td><td style="text-align:center">&lt;-</td><td>Dernier élément de collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-28"></a><a href="#description-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.pop()</code> supprime le dernier élément de la collection et le retourne comme résultat de la fonction.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<p>Lorsqu'il est appliqué à une collection vide, .<code>pop()</code> retourne <strong><em>undefined</em></strong>.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-22"></a><a href="#exemple-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p><code>.pop()</code>, combiné à <a href="#push"><code>push()</code></a>, peut être utilisé pour implémenter une fonctionnalité last in first out de traitement des données empilées :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$stack </span>: Collection
  <span class="hljs-variable">$stack</span>:=New collection <span class="hljs-comment">//$stack=[]</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">push</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>) <span class="hljs-comment">//$stack=[1,2]</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">pop</span>() <span class="hljs-comment">//$stack=[1]  retourne 2</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)) <span class="hljs-comment">//$stack=[[1,[4,5]]</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">pop</span>() <span class="hljs-comment">//$stack=[1]  retourne [4,5]</span>
  <span class="hljs-variable">$stack</span>.<span class="hljs-function">pop</span>() <span class="hljs-comment">//$stack=[]  retourne 1</span>
-<span class="hljs-comment">```## .push()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.push**( *element* : any { ;...*elementN* } ) : Collection| Paramètres | Type       |    | Description                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| element    | Mixed      | -&gt; |<span class="hljs-function"> Élément</span>(s) à ajouter à la collection                |
-| Résultat   | Collection | &lt;- | Collection originale contenant des éléments ajoutés |#### Description
-
-La fonction <span class="hljs-comment">`.push()`ajoute un ou plusieurs *élément*(s) à la fin de l'instance de collection et retourne la collection modifiée.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-
-#### Exemple <span class="hljs-number">1</span>
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$col </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="push"></a><a href="#push" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.push()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>element</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Élément(s) à ajouter à la collection</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection originale contenant des éléments ajoutés</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-29"></a><a href="#description-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.push()</code>ajoute un ou plusieurs <em>élément</em>(s) à la fin de l'instance de collection et retourne la collection modifiée.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-10"></a><a href="#exemple-1-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>) <span class="hljs-comment">//$col=[1,2]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">//$col=[1,2,3]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">6</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"firstname"</span>;<span class="hljs-string">"John"</span>;<span class="hljs-string">"lastname"</span>;<span class="hljs-string">"Smith"</span>))
@@ -1665,33 +1708,44 @@ La fonction <span class="hljs-comment">`.push()`ajoute un ou plusieurs *élémen
  <span class="hljs-variable">$sortedCol</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">7</span>;<span class="hljs-number">50</span>).<span class="hljs-function">sort</span>()
   <span class="hljs-comment">//$col=[5,3,9,7,50]</span>
   <span class="hljs-comment">//$sortedCol=[3,5,7,9,50]</span>
-<span class="hljs-comment">```## .query()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications                    |
-| ------- | -------------------------------- |
-| v17 R5  | Prise en charge de querySettings |
-| v16 R6  | Ajout                            |
-&lt;/details&gt;**.query**( *queryString* : Text ; *...value* : any ) : Collection&lt;br&gt;**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection| Paramètres    | Type       |    | Description                                                               |
-| ------------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| queryString   | Text       | -&gt; |<span class="hljs-function"> Critère</span>(s) de recherche                                                   |
-| value         | Mixed      | -&gt; |<span class="hljs-function"> Valeur</span>(s) à comparer lors de l'<span class="hljs-function">utilisation de paramètre</span>(s) dans la chaîne |
-| querySettings | Object     | -&gt; | Options de requête : paramètres, attributs                                |
-| Résultat      | Collection | &lt;- |<span class="hljs-function"> Élément</span>(s) correspondant à queryString dans la collection                 |#### Description
-
-La fonction <span class="hljs-comment">`.query()`retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherchedéfinis par *queryString* et (éventuellement) *value* ou *querySettings*. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</span>
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-Le paramètre *queryString* doit respecter la syntaxe suivante :
-
-<span class="hljs-comment">```4d</span>
-propertyPath comparator value {logicalOperator propertyPath comparator value}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="query"></a><a href="#query" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.query()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v17 R5</td><td>Prise en charge de querySettings</td></tr>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>queryString</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Critère(s) de recherche</td></tr>
+<tr><td>value</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne</td></tr>
+<tr><td>querySettings</td><td>Object</td><td style="text-align:center">-&gt;</td><td>Options de requête : paramètres, attributs</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Élément(s) correspondant à queryString dans la collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-30"></a><a href="#description-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.query()</code> retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche définis par <em>queryString</em> et (éventuellement) <em>value</em> ou <em>querySettings</em>. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Le paramètre <em>queryString</em> doit respecter la syntaxe suivante :</p>
+<pre><code class="hljs css language-4d">propertyPath comparator value {logicalOperator propertyPath comparator value}
 </code></pre>
 <p>Pour plus d'informations sur la génération d'une requête à l'aide des paramètres <em>queryString</em>, <em>value</em> et <em>querySettings</em>, reportez-vous à la description de la fonction de dataclass <a href="/docs/19/fr/API/DataClassClass.html#query"><code>.query()</code></a>.</p>
 <blockquote>
 <p>Les formules ne sont pas prises en charge par la fonction <code>collection.query()</code>, ni dans le paramètre <em>queryString</em> ni en tant que paramètre objet <em>formula</em>.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-10"></a><a href="#exemple-1-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-11"></a><a href="#exemple-1-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$c3 </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Cleveland"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-number">35049</span>))
@@ -1734,7 +1788,8 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
   <span class="hljs-comment">//$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-3-5"></a><a href="#exemple-3-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 3</h4>
-<p>Vous trouverez plus d'exemples de requêtes dans la page <code>dataClass.query()</code>. ## .reduce()</p>
+<p>Vous trouverez plus d'exemples de requêtes dans la page <code>dataClass.query()</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="reduce"></a><a href="#reduce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.reduce()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
 <thead>
@@ -1742,15 +1797,23 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 </thead>
 <tbody>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
-<tr><td></details><strong>.reduce</strong>( <em>methodName</em> : Text ) : any <br><strong>.reduce</strong>( <em>methodName</em> : Text ; <em>initValue</em> : any { ; <em>...param</em> : expression } ) : any</td><td>Paramètres</td><td>Type</td><td></td><td>Description</td></tr>
-<tr><td>----------</td><td>-----------------------------------------------</td><td>:--:</td><td>-------------------------------------------------------------------------</td></tr>
-<tr><td>methodName</td><td>Text</td><td>-&gt;</td><td>Nom de la fonction à appeler pour traiter les éléments de collection</td></tr>
-<tr><td>initValue</td><td>Text, Number, Object, Collection, Date, Boolean</td><td>-&gt;</td><td>Valeur à utiliser comme premier argument du premier appel de <em>methodName</em></td></tr>
-<tr><td>param</td><td>expression</td><td>-&gt;</td><td>Paramètre(s) à passer à <em>methodName</em></td></tr>
-<tr><td>Résultat</td><td>Text, Number, Object, Collection, Date, Boolean</td><td>&lt;-</td><td>Résultat de la valeur de l'accumulateur</td><td>#### Description</td></tr>
 </tbody>
 </table>
-<p>La fonction <code>.reduce()</code>applique la méthode callback <em>methodName</em> à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique.</p>
+<p></details></p>
+<p><strong>.reduce</strong>( <em>methodName</em> : Text ) : any <br><strong>.reduce</strong>( <em>methodName</em> : Text ; <em>initValue</em> : any { ; <em>...param</em> : expression } ) : any</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de la fonction à appeler pour traiter les éléments de collection</td></tr>
+<tr><td>initValue</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td>Valeur à utiliser comme premier argument du premier appel de <em>methodName</em></td></tr>
+<tr><td>param</td><td>expression</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>methodName</em></td></tr>
+<tr><td>Résultat</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">&lt;-</td><td>Résultat de la valeur de l'accumulateur</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-31"></a><a href="#description-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.reduce()</code> applique la méthode callback <em>methodName</em> à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
@@ -1767,7 +1830,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 <li><em>$1.accumulator</em>: valeur à modifier par la fonction et qui est initialisée par <em>initValue</em>.</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-11"></a><a href="#exemple-1-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-12"></a><a href="#exemple-1-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_COLLECTION</span>(<span class="hljs-variable">$c</span>)
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">5</span>;<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$r</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">reduce</span>(<span class="hljs-string">"Multiply"</span>;<span class="hljs-number">1</span>) <span class="hljs-comment">//retourne 86400</span>
@@ -1792,71 +1855,87 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
     <span class="hljs-variable">$1</span>.accumulator:=New collection<span class="hljs-keyword">
  End if</span>
  <span class="hljs-variable">$1</span>.accumulator.<span class="hljs-function">combine</span>(<span class="hljs-variable">$1</span>.value)
-<span class="hljs-comment">```## .remove()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection| Paramètres | Type       |    | Description                                           |
-| ---------- | ---------- |:--:| ----------------------------------------------------- |
-| index      | Integer    | -&gt; | Élément à partir duquel la suppression peut commencer |
-| howMany    | Integer    | -&gt; | Nombre d'éléments à supprimer, ou <span class="hljs-number">1</span> élément si omis   |
-| Résultat   | Collection | &lt;- | Collection d'<span class="hljs-function">origine sans élément</span>(s)<span class="hljs-function"> supprimé</span>(s)      |#### Description
-
-La fonction <span class="hljs-comment">`.remove()`supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-Dans *index*, passez la position où vous souhaitez supprimer l'élément de la collection.
-&gt; **Attention** : A noter que la numérotation des éléments de collection débute à <span class="hljs-number">0.</span> Si *index* est supérieur à la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
-
-*   Si *index* &lt; <span class="hljs-number">0</span>, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
-*   Si la valeur recalculée est négative, *index* prend la valeur <span class="hljs-number">0.</span>
-*   Si valeur recalculée &gt; longueur de la collection, *index* prend comme valeur la taille de la collection.
-
-Dans *howMany*, passez le nombre d'éléments à supprimer de l'*index*. Si *howMany* n'est pas spécifié, un élément est supprimé.
-
-
-
-Si vous essayez de supprimer un élément d'une collection vide,<span class="hljs-function"> la méthode ne fait rien </span>(aucune erreur n'est générée).
-
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$col </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="remove"></a><a href="#remove" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.remove()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>index</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Élément à partir duquel la suppression peut commencer</td></tr>
+<tr><td>howMany</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Nombre d'éléments à supprimer, ou 1 élément si omis</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'origine sans élément(s) supprimé(s)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-32"></a><a href="#description-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.remove()</code> supprime un ou plusieurs élément(s) de la position d'<em>index</em> spécifiée dans la collection et retourne la collection modifiée.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<p>Dans <em>index</em>, passez la position où vous souhaitez supprimer l'élément de la collection.</p>
+<blockquote>
+<p><strong>Attention</strong> : A noter que la numérotation des éléments de collection débute à 0. Si <em>index</em> est supérieur à la longueur de la collection, l'<em>index</em> de départ réel sera fixé à la longueur de la collection.</p>
+</blockquote>
+<ul>
+<li>Si <em>index</em> &lt; 0, il est recalculé comme <em>index:=index+lenth</em> (il est considéré comme le décalage par rapport à la fin de la collection).</li>
+<li>Si la valeur recalculée est négative, <em>index</em> prend la valeur 0.</li>
+<li>Si valeur recalculée &gt; longueur de la collection, <em>index</em> prend comme valeur la taille de la collection.</li>
+</ul>
+<p>Dans <em>howMany</em>, passez le nombre d'éléments à supprimer de l'<em>index</em>. Si <em>howMany</em> n'est pas spécifié, un élément est supprimé.</p>
+<p>Si vous essayez de supprimer un élément d'une collection vide, la méthode ne fait rien (aucune erreur n'est générée).</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-23"></a><a href="#exemple-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"a"</span>;<span class="hljs-string">"b"</span>;<span class="hljs-string">"c"</span>;<span class="hljs-string">"d"</span>;<span class="hljs-string">"e"</span>;<span class="hljs-string">"f"</span>;<span class="hljs-string">"g"</span>;<span class="hljs-string">"h"</span>)
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">// $col=["a","b","c","e","f","g","h"]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">3</span>;<span class="hljs-number">2</span>) <span class="hljs-comment">// $col=["a","b","c","g","h"]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">-8</span>;<span class="hljs-number">1</span>) <span class="hljs-comment">// $col=["b","c","g","h"]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">remove</span>(<span class="hljs-number">-3</span>;<span class="hljs-number">1</span>) <span class="hljs-comment">// $col=["b","g","h"]</span>
-<span class="hljs-comment">```## .resize()</span>
-
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection| Paramètres   | Type                                            |    | Description                                         |
-| ------------ | ----------------------------------------------- |:--:| --------------------------------------------------- |
-| size         | Integer                                         | -&gt; | Nouvelle taille de la collection                    |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean | -&gt; | Valeur par défaut pour remplir de nouveaux éléments |
-| Résultat     | Collection                                      | &lt;- | Collection d'origine redimensionnée                 |#### Description
-
-La fonction <span class="hljs-comment">`.resize()`définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-*   Si *size* est inférieure à la longueur de la collection, les éléments excédentaires sont retirés de la collection.
-*   Si *size* &gt; longueur de la collection, *size* est la nouvelle longueur de la collection.
-
-Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous pouvez indiquer la valeur à remplir dans les éléments ajoutés à l'aide du paramètre *defaultValue*.
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="resize"></a><a href="#resize" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.resize()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>size</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Nouvelle taille de la collection</td></tr>
+<tr><td>defaultValue</td><td>Number, Text, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td>Valeur par défaut pour remplir de nouveaux éléments</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'origine redimensionnée</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-33"></a><a href="#description-33" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.resize()</code> définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<ul>
+<li>Si <em>size</em> est inférieure à la longueur de la collection, les éléments excédentaires sont retirés de la collection.</li>
+<li>Si <em>size</em> &gt; longueur de la collection, <em>size</em> est la nouvelle longueur de la collection.</li>
+</ul>
+<p>Par défaut, les nouveaux éléments sont remplis par des valeurs <strong>null</strong>. Vous pouvez indiquer la valeur à remplir dans les éléments ajoutés à l'aide du paramètre <em>defaultValue</em>.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-24"></a><a href="#exemple-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">resize</span>(<span class="hljs-number">10</span>) <span class="hljs-comment">// $c=[null,null,null,null,null,null,null,null,null,null]</span>
 
@@ -1869,126 +1948,159 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
  <span class="hljs-variable">$c</span>.<span class="hljs-function">resize</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">//$c=[1,2]</span>
 
-<span class="hljs-comment">```## .reverse()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.<span class="hljs-function">reverse</span>( )** : Collection| Paramètres | Type       |    | Description                     |
-| ---------- | ---------- |:--:| ------------------------------- |
-| Résultat   | Collection | &lt;- | Copie inversée de la collection |#### Description
-
-La fonction <span class="hljs-comment">`.reverse()`retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</span>
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="reverse"></a><a href="#reverse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.reverse()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.reverse( )</strong> : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Copie inversée de la collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-34"></a><a href="#description-34" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.reverse()</code> retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="exemple-25"></a><a href="#exemple-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>)
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">reverse</span>() <span class="hljs-comment">//$c2=[6,4,2,5,3,1]</span>
-<span class="hljs-comment">```## .shift()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.<span class="hljs-function">shift</span>()** : any| Paramètres | Type |    | Description                   |
-| ---------- | ---- |:--:| ----------------------------- |
-| Résultat   | any  | &lt;- | Premier élément de collection |#### Description
-
-La fonction <span class="hljs-comment">`.shift()`supprime le premier élément de la collection et le retourne comme résultat de la fonction.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-Si la collection est vide, cette méthode ne fait rien.
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="shift"></a><a href="#shift" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.shift()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.shift()</strong> : any</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Résultat</td><td>any</td><td style="text-align:center">&lt;-</td><td>Premier élément de collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-35"></a><a href="#description-35" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.shift()</code> supprime le premier élément de la collection et le retourne comme résultat de la fonction.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<p>Si la collection est vide, cette méthode ne fait rien.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-26"></a><a href="#exemple-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$val </span>: Variant
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>;<span class="hljs-number">6</span>;<span class="hljs-number">7</span>;<span class="hljs-number">8</span>)
  <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">shift</span>()
   <span class="hljs-comment">// $val=1</span>
   <span class="hljs-comment">// $c=[2,4,5,6,7,8]</span>
-<span class="hljs-comment">```## .slice()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection| Paramètres | Type       |    | Description                                                               |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Integer    | -&gt; | Numéro de l'<span class="hljs-function">élément de départ </span>(inclus)                                    |
-| end        | Integer    | -&gt; |<span class="hljs-function"> Position de fin </span>(non incluse)                                             |
-| Résultat   | Collection | &lt;- |<span class="hljs-function"> Nouvelle collection contenant des éléments scindées </span>(copie superficielle) |#### Description
-
-La fonction <span class="hljs-comment">`.slice()`retourne une partie d'une collection dans une nouvelle collection, sélectionnée de l'index *startFrom* à l'index de *fin* (fin non incluse). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</span>
-&gt; Cette fonction ne modifie pas la collection d'origine.
-
-La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.
-
-*   Si *startFrom* &lt; <span class="hljs-number">0</span>, le paramètre est recalculé comme *startFrom:=startFrom+length* (la fin de la collection est considérée comme point de départ du calcul de la position).
-*   Si la valeur calculée est négative, *startFrom* prend la valeur <span class="hljs-number">0.</span>
-*   Si *end* &lt; <span class="hljs-number">0</span> , le paramètre est recalculé comme *end:=end+length*.
-*   Si *end &lt; startFrom* (valeurs passées ou recalculées), la fonction ne fait rien.
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$nc </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="slice"></a><a href="#slice" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.slice()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Numéro de l'élément de départ (inclus)</td></tr>
+<tr><td>end</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Position de fin (non incluse)</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Nouvelle collection contenant des éléments scindées (copie superficielle)</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-36"></a><a href="#description-36" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.slice()</code> retourne une partie d'une collection dans une nouvelle collection, sélectionnée de l'index <em>startFrom</em> à l'index de <em>fin</em> (fin non incluse). Cette fonction retourne une <em>copie superficielle</em> de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>La collection retournée contient l'élément spécifié par <em>startFrom</em> et tous les éléments suivants jusqu'à l'élément spécifié par <em>end</em> (mais non compris). Si seul le paramètre <em>startFrom</em> est spécifié, la collection retournée contient tous les éléments de <em>startFrom</em> au dernier élément de la collection d'origine.</p>
+<ul>
+<li>Si <em>startFrom</em> &lt; 0, le paramètre est recalculé comme <em>startFrom:=startFrom+length</em> (la fin de la collection est considérée comme point de départ du calcul de la position).</li>
+<li>Si la valeur calculée est négative, <em>startFrom</em> prend la valeur 0.</li>
+<li>Si <em>end</em> &lt; 0 , le paramètre est recalculé comme <em>end:=end+length</em>.</li>
+<li>Si <em>end &lt; startFrom</em> (valeurs passées ou recalculées), la fonction ne fait rien.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-27"></a><a href="#exemple-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$nc </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">5</span>)
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">//$nc=[1,2,3]</span>
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">//$nc=[4,5]</span>
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">1</span>;<span class="hljs-number">-1</span>) <span class="hljs-comment">//$nc=[2,3,4]</span>
  <span class="hljs-variable">$nc</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">-3</span>;<span class="hljs-number">-2</span>) <span class="hljs-comment">//$nc=[3]</span>
-<span class="hljs-comment">```## .some()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean&lt;br&gt;**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean| Paramètres | Type    |    | Description                                   |
-| ---------- | ------- |:--:| --------------------------------------------- |
-| startFrom  | Integer | -&gt; | Elément à partir duquel débuter l'évaluation  |
-| methodName | Text    | -&gt; | Nom de la méthode à appeler pour l'évaluation |
-| param      | Mixed   | -&gt; |<span class="hljs-function"> Paramètre</span>(s) à passer à *methodName*          |
-| Résultat   | Booléen | &lt;- | Vrai si au moins un élément a réussi le test  |#### Description
-
-La fonction <span class="hljs-comment">`.some()`retourne true si au moins un élément de la collection a réussi un testimplémenté dans la méthode *methodName* fournie.</span>
-
-
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection,<span class="hljs-function"> ainsi que son ou ses paramètre</span>(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. In *methodName*, pass the name of the method to use to evaluate collection elements,<span class="hljs-function"> along with its parameter</span>(s) in *param* (optional).
-
-*methodName* reçoit les paramètres suivants :
-
-*   dans *<span class="hljs-variable">$1</span>.value* : valeur de l'élément à évaluer
-*   in *<span class="hljs-variable">$2</span>*: param
-*   dans *<span class="hljs-variable">$N</span>...* : param2...paramN
-
-*methodName*<span class="hljs-function"> doit fixer le</span>(s)<span class="hljs-function"> paramètre</span>(s)<span class="hljs-function"> suivant</span>(s) :
-
-*   *<span class="hljs-variable">$1</span>.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
-*   *<span class="hljs-variable">$1</span>.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
-
-Dans tous les cas, au moment où la fonction <span class="hljs-comment">`.some()` rencontre le premier élément de collection retournant true dans *$1.result*, elle arrête d'appeler *methodName* et retourne **true**.</span>
-
-By default, <span class="hljs-comment">`.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.</span>
-
-*   Si *startFrom* &gt;= la longueur de la collection, **<span class="hljs-literal">False</span>** est retourné, ce qui signifie que la collection n'est pas testée.
-*   Si *startFrom* &lt; <span class="hljs-number">0</span>, il est considéré comme le décalage depuis la fin de la collection.
-*   Si *startFrom* = <span class="hljs-number">0</span>, l'<span class="hljs-function">ensemble de la collection est évalué </span>(défaut).
-
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="some"></a><a href="#some" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.some()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.some</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( <em>startFrom</em> : Integer ; <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Elément à partir duquel débuter l'évaluation</td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de la méthode à appeler pour l'évaluation</td></tr>
+<tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>methodName</em></td></tr>
+<tr><td>Résultat</td><td>Booléen</td><td style="text-align:center">&lt;-</td><td>Vrai si au moins un élément a réussi le test</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-37"></a><a href="#description-37" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.some()</code> retourne true si au moins un élément de la collection a réussi un test implémenté dans la méthode <em>methodName</em> fournie.</p>
+<p>Dans <em>methodName</em>, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans <em>param</em> (optionnel). <em>methodName</em> peut effectuer tout test, avec ou sans paramètres. In <em>methodName</em>, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in <em>param</em> (optional).</p>
+<p><em>methodName</em> reçoit les paramètres suivants :</p>
+<ul>
+<li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
+<li>in <em>$2</em>: param</li>
+<li>dans <em>$N...</em> : param2...paramN</li>
+</ul>
+<p><em>methodName</em> doit fixer le(s) paramètre(s) suivant(s) :</p>
+<ul>
+<li><em>$1.result</em> (booléen) : <strong>true</strong> si l'évaluation de la valeur de l'élément est réussie, sinon <strong>false</strong>.</li>
+<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
+</ul>
+<p>Dans tous les cas, au moment où la fonction <code>.some()</code> rencontre le premier élément de collection retournant true dans <em>$1.result</em>, elle arrête d'appeler <em>methodName</em> et retourne <strong>true</strong>.</p>
+<p>By default, <code>.every()</code> tests the whole collection. Optionally, you can pass in <em>startFrom</em> the index of the element from which to start the test.</p>
+<ul>
+<li>Si <em>startFrom</em> &gt;= la longueur de la collection, <strong>False</strong> est retourné, ce qui signifie que la collection n'est pas testée.</li>
+<li>Si <em>startFrom</em> &lt; 0, il est considéré comme le décalage depuis la fin de la collection.</li>
+<li>Si <em>startFrom</em> = 0, l'ensemble de la collection est évalué (défaut).</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-28"></a><a href="#exemple-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$b </span>: Boolean
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-number">-5</span>;<span class="hljs-number">-3</span>;<span class="hljs-number">-1</span>;<span class="hljs-number">-4</span>;<span class="hljs-number">-6</span>;<span class="hljs-number">-2</span>)
@@ -2003,49 +2115,61 @@ By default, <span class="hljs-comment">`.every()` tests the whole collection. Op
 </code></pre>
 <p>Avec la méthode <em>NumberGreaterThan0</em> suivante :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$1</span>.result:=<span class="hljs-variable">$1</span>.value&gt;<span class="hljs-number">0</span>
-<span class="hljs-comment">``` ## .sort()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection| Paramètres | Type       |    | Description                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Text       | -&gt; | Nom de la méthode utilisée pour trier la collection |
-| extraParam | any        | -&gt; |<span class="hljs-function"> Paramètre</span>(s) à passer à la méthode                  |
-| Résultat   | Collection | &lt;- | Collection d'origine triée                          |#### Description
-
-La fonction <span class="hljs-comment">`.sort()`trie les éléments de la collection d'origineet retourne également la collection triée.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-Si <span class="hljs-comment">`.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.</span>
-
-Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans *methodName*, une méthode de comparaison qui compare deux valeurs et retourne **true** dans *<span class="hljs-variable">$1</span>.result* si la première valeur est inférieure à la deuxième valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via *extraParam*.
-
-*   *methodName* reçoit les paramètres suivants :
-    *   <span class="hljs-variable">$1 </span>(object), où :
-        *   *<span class="hljs-variable">$1</span>.value* (tout type) : valeur du premier élément à comparer
-        *   *<span class="hljs-variable">$1</span>.value2* (tout type) : valeur du second élément à comparer
-    *   <span class="hljs-variable">$2</span>...<span class="hljs-variable">$N </span>(tout type) :<span class="hljs-function"> paramètres supplémentaires </span>(extraParam)
-
-*methodName* doit fixer le paramètre suivant :
-    *   *<span class="hljs-variable">$1</span>.result* (booléen): **vrai** si *<span class="hljs-variable">$1</span>.value &lt; <span class="hljs-variable">$1</span>.value2*, **faux** sinon
-
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
-
-<span class="hljs-number">1.</span>  null
-<span class="hljs-number">2.</span>  booléens
-<span class="hljs-number">3.</span>  chaînes
-<span class="hljs-number">4.</span>  nombres
-<span class="hljs-number">5.</span>  objets
-<span class="hljs-number">6.</span>  collections
-<span class="hljs-number">7.</span>  dates
-
-#### Exemple <span class="hljs-number">1</span>
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$col2 </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="sort"></a><a href="#sort" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sort()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de la méthode utilisée pour trier la collection</td></tr>
+<tr><td>extraParam</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à la méthode</td></tr>
+<tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'origine triée</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-38"></a><a href="#description-38" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.sort()</code> trie les éléments de la collection d'origine et retourne également la collection triée.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<p>Si <code>.sort()</code> est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.</p>
+<p>Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans <em>methodName</em>, une méthode de comparaison qui compare deux valeurs et retourne <strong>true</strong> dans <em>$1.result</em> si la première valeur est inférieure à la deuxième valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via <em>extraParam</em>.</p>
+<ul>
+<li><em>methodName</em> reçoit les paramètres suivants :
+<ul>
+<li>$1 (object), où :
+<ul>
+<li><em>$1.value</em> (tout type) : valeur du premier élément à comparer</li>
+<li><em>$1.value2</em> (tout type) : valeur du second élément à comparer</li>
+</ul></li>
+<li>$2...$N (tout type) : paramètres supplémentaires (extraParam)</li>
+</ul></li>
+</ul>
+<p><em>methodName</em> doit fixer le paramètre suivant :
+*   <em>$1.result</em> (booléen): <strong>vrai</strong> si <em>$1.value &lt; $1.value2</em>, <strong>faux</strong> sinon</p>
+<p>Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :</p>
+<ol>
+<li>null</li>
+<li>booléens</li>
+<li>chaînes</li>
+<li>nombres</li>
+<li>objets</li>
+<li>collections</li>
+<li>dates</li>
+</ol>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-13"></a><a href="#exemple-1-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$col2 </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"Tom"</span>;<span class="hljs-number">5</span>;<span class="hljs-string">"Mary"</span>;<span class="hljs-number">3</span>;<span class="hljs-string">"Henry"</span>;<span class="hljs-number">1</span>;<span class="hljs-string">"Jane"</span>;<span class="hljs-number">4</span>;<span class="hljs-string">"Artie"</span>;<span class="hljs-number">6</span>;<span class="hljs-string">"Chip"</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sort</span>() <span class="hljs-comment">// $col2=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]</span>
   <span class="hljs-comment">// $col=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]</span>
@@ -2064,34 +2188,40 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//méthode projet numberOrder</span><span class="hljs-keyword">
  var</span> <span class="hljs-variable">$1 </span>: Object
  <span class="hljs-variable">$1</span>.result:=<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value2)
-<span class="hljs-comment">``` ## .sum()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.sum**( { *propertyPath* : Text } ) : Real| Paramètres   | Type |    | Description                                                     |
-| ------------ | ---- |:--:| --------------------------------------------------------------- |
-| propertyPath | Text | -&gt; | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
-| Résultat     | Réel | &lt;- | Somme des valeurs de collection                                 |#### Description
-
-La fonction <span class="hljs-comment">`.sum()`retourne la somme de toutes les valeurs de l'instance de collection.</span>
-
-<span class="hljs-function">Seuls les éléments ayant une valeur numérique sont pris en compte pour le calcul </span>(les autres types d'éléments sont ignorés).
-
-Si la collection contient des objets, passez le paramètre *propertyPath* si vous souhaitez désigner la propriété dont vous voulez connaître la moyenne.
-
-<span class="hljs-comment">`.sum()` retourne 0 si :</span>
-
-*   la collection est vide,
-*   la collection ne contient pas d'éléments numériques,
-*   *propertyPath* n'est pas trouvé dans la collection.
-
-#### Exemple <span class="hljs-number">1</span>
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="sum"></a><a href="#sum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sum()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>propertyPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin de propriété d'objet à utiliser pour évaluer les valeurs</td></tr>
+<tr><td>Résultat</td><td>Réel</td><td style="text-align:center">&lt;-</td><td>Somme des valeurs de collection</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-39"></a><a href="#description-39" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.sum()</code> retourne la somme de toutes les valeurs de l'instance de collection.</p>
+<p>Seuls les éléments ayant une valeur numérique sont pris en compte pour le calcul (les autres types d'éléments sont ignorés).</p>
+<p>Si la collection contient des objets, passez le paramètre <em>propertyPath</em> si vous souhaitez désigner la propriété dont vous voulez connaître la moyenne.</p>
+<p><code>.sum()</code> retourne 0 si :</p>
+<ul>
+<li>la collection est vide,</li>
+<li>la collection ne contient pas d'éléments numériques,</li>
+<li><em>propertyPath</em> n'est pas trouvé dans la collection.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-14"></a><a href="#exemple-1-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vSum </span>: Real
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>;<span class="hljs-string">"Monday"</span>;<span class="hljs-literal">True</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$vSum</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sum</span>() <span class="hljs-comment">//32</span>
@@ -2104,35 +2234,43 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Wesson"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">50000</span>))
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Gross"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">10500</span>,<span class="hljs-number">5</span>))
  <span class="hljs-variable">$vSum</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sum</span>(<span class="hljs-string">"salary"</span>) <span class="hljs-comment">//$vSum=70500,5</span>
-<span class="hljs-comment">```## .unshift()</span>
-
-&lt;details&gt;&lt;summary&gt;Historique&lt;/summary&gt;
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-&lt;/details&gt;**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection| Paramètres | Type                                   |    | Description                                   |
-| ---------- | -------------------------------------- |:--:| --------------------------------------------- |
-| value      | Text, Number, Object, Collection, Date | -&gt; |<span class="hljs-function"> Valeur</span>(s) à insérer au début de la collection |
-| Résultat   | Réel                                   | &lt;- | Collection contenant des éléments ajoutés     |#### Description
-
-La fonction <span class="hljs-comment">`.unshift()`insère la ou les *valeur(s)* données au début de la collectionet retourne la collection modifiée.</span>
-&gt; Cette fonction modifie la collection d'origine.
-
-Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps, ce qui signifie qu'elles apparaissent dans la collection résultante dans le même ordre que dans la liste d'arguments.
-
-
-#### Exemple
-
-
-<span class="hljs-comment">```4d</span><span class="hljs-keyword">
- var</span> <span class="hljs-variable">$c </span>: Collection
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="unshift"></a><a href="#unshift" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.unshift()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th style="text-align:center"></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>value</td><td>Text, Number, Object, Collection, Date</td><td style="text-align:center">-&gt;</td><td>Valeur(s) à insérer au début de la collection</td></tr>
+<tr><td>Résultat</td><td>Réel</td><td style="text-align:center">&lt;-</td><td>Collection contenant des éléments ajoutés</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-40"></a><a href="#description-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.unshift()</code> insère la ou les <em>valeur(s)</em> données au début de la collection et retourne la collection modifiée.</p>
+<blockquote>
+<p>Cette fonction modifie la collection d'origine.</p>
+</blockquote>
+<p>Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps, ce qui signifie qu'elles apparaissent dans la collection résultante dans le même ordre que dans la liste d'arguments.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-29"></a><a href="#exemple-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$c</span>.<span class="hljs-function">unshift</span>(<span class="hljs-number">4</span>) <span class="hljs-comment">// $c=[4,1,2]</span>
  <span class="hljs-variable">$c</span>.<span class="hljs-function">unshift</span>(<span class="hljs-number">5</span>) <span class="hljs-comment">//$c=[5,4,1,2]</span>
  <span class="hljs-variable">$c</span>.<span class="hljs-function">unshift</span>(<span class="hljs-number">6</span>;<span class="hljs-number">7</span>) <span class="hljs-comment">// $c=[6,7,5,4,1,2]</span>
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/fr/API/ClassClass.html"><span class="arrow-prev">← </span><span>Class</span></a><a class="docs-next button" href="/docs/19/fr/API/CryptoKeyClass.html"><span class="function-name-prevnext">CryptoKey</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#new-collection"><code>New collection</code></a></li><li><a href="#new-shared-collection"><code>New shared collection</code></a></li><li><a href="#average">.average()</a></li><li><a href="#clear">.clear()</a></li><li><a href="#combine">.combine()</a></li><li><a href="#concat">.concat()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#count">.count()</a></li><li><a href="#countvalues">.countValues()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#equal">.equal()</a></li><li><a href="#every">.every()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#fill">.fill()</a></li><li><a href="#filter">.filter()</a></li><li><a href="#find">.find()</a></li><li><a href="#findindex">.findIndex()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#indices">.indices()</a></li><li><a href="#insert">.insert()</a></li><li><a href="#join">.join()</a></li><li><a href="#lastindexof">.lastIndexOf()</a></li><li><a href="#length">.length</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/fr/API/ClassClass.html"><span class="arrow-prev">← </span><span>Class</span></a><a class="docs-next button" href="/docs/19/fr/API/CryptoKeyClass.html"><span class="function-name-prevnext">CryptoKey</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#new-collection"><code>New collection</code></a></li><li><a href="#new-shared-collection"><code>New shared collection</code></a></li><li><a href="#average">.average()</a></li><li><a href="#clear">.clear()</a></li><li><a href="#combine">.combine()</a></li><li><a href="#concat">.concat()</a></li><li><a href="#copy">.copy()</a></li><li><a href="#count">.count()</a></li><li><a href="#countvalues">.countValues()</a></li><li><a href="#distinct">.distinct()</a></li><li><a href="#equal">.equal()</a></li><li><a href="#every">.every()</a></li><li><a href="#extract">.extract()</a></li><li><a href="#fill">.fill()</a></li><li><a href="#filter">.filter()</a></li><li><a href="#find">.find()</a></li><li><a href="#findindex">.findIndex()</a></li><li><a href="#indexof">.indexOf()</a></li><li><a href="#indices">.indices()</a></li><li><a href="#insert">.insert()</a></li><li><a href="#join">.join()</a></li><li><a href="#lastindexof">.lastIndexOf()</a></li><li><a href="#length">.length</a></li><li><a href="#map">.map()</a></li><li><a href="#max">.max()</a></li><li><a href="#min">.min()</a></li><li><a href="#orderby">.orderBy()</a></li><li><a href="#orderbymethod">.orderByMethod()</a></li><li><a href="#pop">.pop()</a></li><li><a href="#push">.push()</a></li><li><a href="#query">.query()</a></li><li><a href="#reduce">.reduce()</a></li><li><a href="#remove">.remove()</a></li><li><a href="#resize">.resize()</a></li><li><a href="#reverse">.reverse()</a></li><li><a href="#shift">.shift()</a></li><li><a href="#slice">.slice()</a></li><li><a href="#some">.some()</a></li><li><a href="#sort">.sort()</a></li><li><a href="#sum">.sum()</a></li><li><a href="#unshift">.unshift()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
