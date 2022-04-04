@@ -44,6 +44,10 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)
 //pase la fecha !05/05/10! como parámetro del SetCalendarDate  
 // en el contexto de un subformulario  
 //pase la fecha !05/05/10! como parámetro del SetCalendarDate  
+// en el contexto de un subformulario  
+//pase la fecha !05/05/10! como parámetro del SetCalendarDate  
+// en el contexto de un subformulario  
+//pase la fecha !05/05/10! como parámetro del SetCalendarDate  
 // en el contexto de un subformulario
 ```
 

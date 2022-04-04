@@ -39,7 +39,7 @@ Depois que a compactação termina, 4D gera um arquivo de histórico na pasta Lo
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
 
-## Advanced mode
+## Modo avançado
 
 The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
 

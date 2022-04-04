@@ -35,7 +35,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 
 ---
-## Hide focus rectangle
+## Esconder retangulo foco
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
@@ -52,7 +52,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 
 ---
-## Hide selection highlight
+## Esconder ressalte seleção
 `Selection type list boxes`
 
 This property is used to disable the selection highlight in list boxes.
@@ -76,7 +76,7 @@ By default, this option is not enabled.
 
 
 ---
-## Horizontal Scroll Bar
+## Barra rolagem horizontal
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
@@ -96,7 +96,7 @@ Available values:
 
 | Name                | Data Type | Possible Values                  |
 | ------------------- | --------- | -------------------------------- |
-| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
+| scrollbarHorizontal | texto     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -358,7 +358,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 [4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
-## Vertical Scroll Bar
+## Barra rolagem vertical
 
 An interface tool allowing the user to move the viewing area up and down.
 
@@ -380,7 +380,7 @@ Available values:
 
 | Name              | Data Type | Possible Values                  |
 | ----------------- | --------- | -------------------------------- |
-| scrollbarVertical | text      | "visible", "hidden", "automatic" |
+| scrollbarVertical | texto     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -397,7 +397,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 - **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
 - **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
 > The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
 

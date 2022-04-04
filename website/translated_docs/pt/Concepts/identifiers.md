@@ -34,7 +34,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 
 Uma tabela se designa colocando seu nome entre parênteses: [...]. Um nome de tabela pode conter até 31 caracteres.
 
-Examples:
+Exemplos:
 ```4d
 DEFAULT TABLE([Orders])
 FORM SET INPUT([Clients];"Entry")
@@ -45,7 +45,7 @@ ADD RECORD([Letters])
 
 Para designar um campo, primeiro se especifica a tabela a qual pertence. O nome do campo segue imediatamene o nome da tabela. Um nome campo pode conter até 31 caracteres.
 
-Examples:
+Exemplos:
 ```4d
 [Orders]Total:=Sum([Line]Amount)
 QUERY([Clients];[Clients]Name="Smith")
@@ -58,7 +58,7 @@ Pode estabelecer uma variável interprocesso ao preceder o nome da variável com
 
 O nome de uma variável interprocesso pode ser de até 31 caracteres, sem incluir os símbolos <>.
 
-Examples:
+Exemplos:
 ```4d
 <>vlProcessID:=Current process
 <>vsKey:=Char(KeyCode)
@@ -69,7 +69,7 @@ If(<>vtName#"")
 
 Uma variável de processo é determinada com seu nome (que não possa começar com os símbolos <> nem $). A process variable name can contain up to 31 characters.
 
-Examples:
+Exemplos:
 ```4d
 <>vrGrandTotal:=Sum([Accounts]Amount)
 If(bValidate=1)
@@ -80,7 +80,7 @@ vsCurrentName:=""
 
 Uma variável local é determinada colocando um sinal de dólar ($) antes do nome da variável.  Um nome de variável local pode conter até 31 caracteres, sem incluir o sinal de dólar.
 
-Examples:
+Exemplos:
 ```4d
 For($vlRecord;1;100)
 If($vsTempVar="No")
@@ -100,7 +100,7 @@ O nome do array interprocesso é precedido pelos símbolos (<>) - um sinal "meno
 
 Um nome de array interprocesso pode conter até 31 caracteres, sem incluir os símbolos <>.
 
-Examples:
+Exemplos:
 ```4d
 ARRAY TEXT(<>atSubjects;Records in table([Topics]))
 SORT ARRAY(<>asKeywords;>)
@@ -110,7 +110,7 @@ ARRAY INTEGER(<>aiBigArray;10000)
 ### Arrays proceso
 Um array processo se designa com seu nome (que não pode começar com os símbolos <> nem com $). Um nome de array processo pode conter até 31 caracteres.
 
-Examples:
+Exemplos:
 ```4d
 ARRAY TEXT(atSubjects;Records in table([Topics]))
 SORT ARRAY(asKeywords;>)
@@ -120,7 +120,7 @@ ARRAY INTEGER(aiBigArray;10000)
 ### Arrays locais
 O nome de um array local vai precedido do sinal de dólar ($). Um nome de array local pode conter até 31 caracteres, sem incluir o sinal de dólar.
 
-Examples:
+Exemplos:
 ```4d
 ARRAY TEXT($atSubjects;Records in table([Topics]))
 SORT ARRAY($asKeywords;>)
@@ -130,7 +130,7 @@ ARRAY INTEGER($aiBigArray;10000)
 ### Elementos de arrays
 A referência a um elemento de um array local, processo ou interprocesso se realiza mediante chaves ("{ }"). O elemento ao qual faz referência se indica com uma expressão numérica.
 
-Examples:
+Exemplos:
 ```4d  
     If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
@@ -148,7 +148,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ### Elementos de arrays de duas dimensões
 A referência a um elemento de um array de duas dimensões se realiza utilizando as chaves ({…}) duas vezes. duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
 
-Examples:
+Exemplos:
 ```4d
     //Direcionamento de um elemento de um array interprocesso de duas dimensões If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
@@ -167,7 +167,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".") entre o nome do objeto (ou do atributo) e o nome do atributo. entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
 
-Examples:
+Exemplos:
 ```4d
 myObject.myAttribute:="10"
 $value:=$clientObj.data.address.city
@@ -179,7 +179,7 @@ $value:=$clientObj.data.address.city
 
 Um formulário se designa mediante uma expressão de tipo string que representa seu nome. Um nome de formulário pode conter até 31 caracteres.
 
-Examples:
+Exemplos:
 ```4d
 FORM SET INPUT([People];"Input")
 FORM SET OUTPUT([People];"Output")
@@ -203,7 +203,7 @@ Um método projeto (procedimento ou função) se designa utilizando seu nome. Um
 
 **Nota:** um método projeto que não devolve um resultado também se chama um procedimento. Um método projeto que devolve um resultado também se denomina função.
 
-Examples:
+Exemplos:
 ```4d
 If(New client)
 DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
@@ -213,7 +213,7 @@ DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Nota:** quando chamar a um método, só tem que escrever seu nome. Entretanto, alguns comandos integrados em 4D, como `ON EVENT CALL`, assim como todos os comandos de Plug-In, esperam o nome de um método como uma string quando se passar um parâmetro de tipo método. Exemplo:
 
-Examples:
+Exemplos:
 ```4d
     //Este comando espera um método (função) ou uma fórmula QUERY BY FORMULA([aTable];Special query)
     //Este comando espera um método (procedimento) ou uma instrução APPLY TO SELECTION([Employees];INCREASE SALARIES)
@@ -224,7 +224,7 @@ Os métodos projeto podem aceitar parâmetros (argumentos). The parameters are p
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 
-Examples:
+Exemplos:
 ```4d
     //Dentro de DROP SPACES $1 é um ponteiro ao campo [People]Name DROP SPACES(->[People]Name)
 
@@ -247,7 +247,7 @@ vtClone:=Dump("is";"the";"it")
 
 Para designar um comando de plug-in se utiliza seu nome, tal e como o define o plug-in. O nome de um comando plug-in pode conter até 31 caracteres.
 
-Examples:
+Exemplos:
 ```4d
 $error:=SMTP_From($smtp_id;"henry@gmail.com")
 ```
@@ -276,7 +276,7 @@ O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). Um nome
 
 **Nota:** os conjuntos são mantidos pelo equipamento servidor. Em certos casos, por motivos especiais ou por eficiência, pode querer trabalhar com conjuntos localmente no equipamento Cliente. Para fazer isso, use conjuntos Clientes.
 
-Examples:
+Exemplos:
 ```4d
     //Conjuntos interprocessos USE SET("<>Deleted Records")
 CREATE SET([Customers];"<>Customer Orders")
@@ -304,7 +304,7 @@ O nome de uma seleção interprocesso temporária pode conter até 255 caractere
 ### Seleções processo temporárias
 Uma seleção temporária processo é determinada mediante uma expressão de string que represente seu nome (que não pode começar com os símbolos <> nem com o sinal de dólar $). O nome de uma seleção temporária pode conter até 255 caracteres.
 
-Examples:
+Exemplos:
 ```4d
     USE NAMED SELECTION([Customers];"<>ByZipcode")
     //Seleção processo temporária USE NAMED SELECTION([Customers];"<>ByZipcode")
@@ -323,7 +323,7 @@ Pode determinar um processo global usando uma expressão string que represente s
 ### Processos locais
 Pode determinar um processo local se o nome do processo for precedido pelo sinal de dólar ($). O nome de processo pode conter até 255 caracteres, sem incluir o sinal de dólar.
 
-Examples:
+Exemplos:
 ```4d
     //Lançar o processo global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")

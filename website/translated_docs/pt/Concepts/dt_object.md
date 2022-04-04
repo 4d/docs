@@ -30,7 +30,7 @@ Cada valor de propriedade acessado através da notação de objeto é considerad
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
-## Initialization
+## Inicialização
 
 Os objetos devem ter sido inicializados, por exemplo utilizando o comando `New object`, do contrário ao tentar ler ou modificar suas propriedades se gerará um error de sintaxe.
 
@@ -45,7 +45,7 @@ Exemplo:
 Pode criar dois tipos de objetos:
 
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 
 ## Syntax basics
@@ -65,7 +65,7 @@ Exemplo:
 
 - using a string within square brackets: > object["propertyName"]
 
-Examples:
+Exemplos:
 ```4d
      $vName:=employee["name"]
      //or also:
@@ -80,7 +80,7 @@ Since an object property value can be an object or a collection, object notation
 ```
 A notação de objetos está disponível em qualquer elemento da lenguagem que possa conter ou devolver um objeto, ou seja:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Exemplos:
 
 ```4d
      $age:=$myObjVar.employee.age //variable

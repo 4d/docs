@@ -5,7 +5,7 @@ title: Web Area
 
 ## Visão Geral
 
-As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. O motor de renderizado da área web depende da plataforma de execução da aplicação e de [a opção motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) selecionada.
+As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. O motor de renderizado da área web depende da plataforma de execução da aplicação e de [a opção motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) selecionada. As áreas web podem mostrar vários tipos de conteúdo web dentro de seus formulários: Páginas HTML com conteúdos estáticos ou dinâmicos, arquivos, imagens, Javascript, etc. O motor de renderizado da área web depende da plataforma de execução da aplicação e de [a opção motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) selecionada.
 
 É possível criar várias áreas web no mesmo formulário. Lembre que o uso das áreas web deve seguir [várias regras](#web-areas-rules).
 
@@ -39,7 +39,7 @@ O [motor de renderização web embebido de 4D](#use-embedded-web-rendering-engin
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
 ```codeJS
-$4d.HelloWorld();
+$4d. HelloWorld();
 ```
 > JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
 
@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 > By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
-#### Example 1
+#### Exemplo 1
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
 4D code of `today` method:
@@ -93,7 +93,7 @@ $4d.today(function(dollarZero)
 </html>
 ```
 
-#### Example 2
+#### Exemplo 2
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 

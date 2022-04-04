@@ -12,7 +12,7 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
   For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
-  | Property                   | JSON name              | Value |
+  | Propriedade                | JSON name              | Value |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
   | Columns                    | columnCount            | 4     |
@@ -58,7 +58,7 @@ The following other modes are available:
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
 
 ## Supported Properties
 

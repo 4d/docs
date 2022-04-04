@@ -5,49 +5,49 @@ title: Botón Imagen
 
 ## Generalidades
 
-A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
+Un botón imagen es similar a un [botón estándar](button_overview.md). Sin embargo, a diferencia de un botón estándar (que acepta tres estados: activado, desactivado y pulsado), un botón imagen tiene una imagen diferente para representar cada estado.
 
-Picture buttons can be used in two ways:
+Los botones imagen pueden utilizarse de dos maneras:
 
-* As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
-  For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* Como botones de comando en un formulario. En este caso, el botón imagen generalmente incluye cuatro estados diferentes: activado, desactivado, presionado y pasado por encima.      
+  Por ejemplo, una tabla de miniaturas que tiene una línea de cuatro columnas, cada una de las miniaturas corresponde a los estados Por defecto, Presionado, Pasado por encima y Desactivado.
 
-  | Propiedad                  | Nombre JSON            | Valor |
-  | -------------------------- | ---------------------- | ----- |
-  | Rows                       | rowCount               | 1     |
-  | Columnas                   | columnCount            | 4     |
-  | Switch back when Released  | switchBackWhenReleased | true  |
-  | Switch when Roll Over      | switchWhenRollover     | true  |
-  | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
+  | Propiedad                                  | Nombre JSON            | Valor |
+  | ------------------------------------------ | ---------------------- | ----- |
+  | Rows                                       | rowCount               | 1     |
+  | Columnas                                   | columnCount            | 4     |
+  | Switch back when Released                  | switchBackWhenReleased | true  |
+  | Switch when Roll Over                      | switchWhenRollover     | true  |
+  | Utilizar el Último cuadro como Desactivado | useLastFrameAsDisabled | true  |
 
-* As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).   
-  Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:
+* Como botón de imagen que permite al usuario elegir entre varias opciones. En este caso, se puede utilizar un botón de imagen en lugar de un menú de imagen emergente. Con los [Menús emergergentes imagen](picturePopupMenu_overview.md), todas las opciones se muestran simultáneamente (como los elementos del menú emergente), mientras que un botón imagen muestra las opciones consecutivamente (a medida que el usuario hace clic en el botón).   
+  Este es un ejemplo de botón imagen. Supongamos que quiere dar a los usuarios de una aplicación personalizada la posibilidad de elegir el idioma de la interfaz de la aplicación. La opción se implementa como un botón imagen en una caja de diálogo personalizada de propiedades:
 
 ![](assets/en/FormObjects/button_pictureButton.png)
 
-Clicking the object changes the picture.
+Al hacer clic en el objeto, la imagen cambia.
 
 
 ## Utilizar los botones imagen
 
-You can implement a picture button in the following manner:
+Puede implementar un botón imagen de la siguiente manera:
 
-1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
+1. En primer lugar, prepare un único gráfico en el que las series de imágenes estén dispuestas en líneas, en columnas o en las dos.
 
    ![](assets/en/FormObjects/pictureButton_grid.png)
 
-You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
+Puede organizar las imágenes en columnas, líneas o en una cuadrícula (como se muestra arriba). Cuando se organizan las imágenes en forma de cuadrícula, se numeran de izquierda a derecha, línea por línea, empezando por 0. Por ejemplo, la segunda imagen de la segunda línea de una cuadrícula que consta de dos líneas y tres columnas, tiene el número 4 (la bandera del Reino Unido en el ejemplo anterior).
 
-2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
+2. A continuación, asegúrese de que la imagen está en los recursos de su proyecto e introduzca la ruta en la propiedad [Ruta de acceso imagen](properties_TextAndPicture.md#picture-pathname).
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. Defina las propiedades de [líneas y columnas](properties_Crop.md) del gráfico.
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. Especifique cuándo cambian las imágenes seleccionando las propiedades de [animación](properties_Animation.md) apropiadas.
 
 
 ## Animación
 
-In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. Estas opciones de propiedades pueden combinarse para mejorar sus botones de imagen.
+Además de los parámetros de posicionamiento y de apariencia estándar, puede definir algunas propiedades específicas para los botones imagen, especialmente en lo que respecta a cómo y cuándo se muestran las imágenes. Estas opciones de propiedades pueden combinarse para mejorar sus botones de imagen.
 
 - Por defecto ([cuando no se selecciona la opción animación](properties_Animation.md)), un botón de imagen muestra la siguiente imagen de la serie cuando el usuario hace clic; muestra la imagen anterior de la serie cuando el usuario mantiene pulsada la tecla **Mayúsculas** y hace clic en el botón. Cuando el usuario llega a la última imagen de la serie, la imagen no cambia cuando el usuario hace clic de nuevo. En otras palabras, no vuelve a la primera imagen de la serie.
 
@@ -57,8 +57,8 @@ Hay otros modos disponibles:
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Desplazamiento continuo en clics](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
-- [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled)
-> [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
+- [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled)
+> [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 

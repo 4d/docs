@@ -70,19 +70,19 @@ Project development file, used to designate and launch the project. This file ca
 
 | Conteúdos                | Description                                                          | Format |
 | ------------------------ | -------------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Métodos de banco definidos na database. One file per database method | text   |
+| *databaseMethodName*.4dm | Métodos de banco definidos na database. One file per database method | texto  |
 
 #### Methods folder
 
 | Conteúdos        | Description                                                   | Format |
 | ---------------- | ------------------------------------------------------------- | ------ |
-| *methodName*.4dm | Métodos de projeto definidos na database. One file per method | text   |
+| *methodName*.4dm | Métodos de projeto definidos na database. One file per method | texto  |
 
 #### Classes folder
 
 | Conteúdos       | Description                                                                                                                        | Format |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text   |
+| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | texto  |
 
 
 #### Forms folder
@@ -90,9 +90,9 @@ Project development file, used to designate and launch the project. This file ca
 | Conteúdos                                 | Description                                | Format |
 | ----------------------------------------- | ------------------------------------------ | ------ |
 | *formName*/form.4DForm                    | Project form description                   | json   |
-| *formName*/method.4dm                     | Project form method                        | text   |
+| *formName*/method.4dm                     | Project form method                        | texto  |
 | *formName*/Images/*pictureName*           | Project form static picture                | imagem |
-| *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | text   |
+| *formName*/ObjectMethods/*objectName*.4dm | Object methods. One file per object method | texto  |
 
 #### TableForms folder
 
@@ -100,18 +100,18 @@ Project development file, used to designate and launch the project. This file ca
 | ---------------------------------------------------- | ------------------------------------------------------ | ------ |
 | *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json   |
 | *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | imagem |
-| *n*/Input/*formName*/method.4dm                      | Input table form method                                | text   |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | text   |
+| *n*/Input/*formName*/method.4dm                      | Input table form method                                | texto  |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | texto  |
 | *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)  | json   |
 | *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                      | imagem |
-| *n*/Output/*formName*/method.4dm                     | Output table form method                               | text   |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | text   |
+| *n*/Output/*formName*/method.4dm                     | Output table form method                               | texto  |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | texto  |
 
 #### Triggers folder
 
 | Conteúdos     | Description                                                                               | Format |
 | ------------- | ----------------------------------------------------------------------------------------- | ------ |
-| table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | text   |
+| table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | texto  |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
@@ -148,11 +148,11 @@ A pasta Resources contém todos os arquivos e pastas de recursos personalizados 
 
 The data folder contains the data file and all files and folders relating to the data.
 
-| Conteúdos    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Format |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                    | binary |
-| data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. | binary |
-| data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML    |
+| Conteúdos    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Format |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                                                                           | binary |
+| data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. It is generated by default when a database is created. | binary |
+| data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | XML    |
 
 (*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
@@ -215,7 +215,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 
 Esta carpeta contém os componentes que devem estar disponíveis unicamente no banco de dados projeto. It must be stored at the same level as the Project folder.
 
-> Um banco de dados projeto pode ser utilizado por si mesmo como um componente: - para o desenvolvimento: ponha um alias/apelido de arquivo .4dproject na pasta Components do banco de dados local. - para o lançamento: crie o componente (ver [Criar um pacote projeto](building.md)) e ponha o arquivo .4dz resultante em uma pasta .4dbase na pasta Componentes do banco de dados local. - para o lançamento: crie o componente (ver [Criar um pacote projeto](building.md)) e ponha o arquivo .4dz resultante em uma pasta .4dbase na pasta Componentes do banco de dados local.
+> Um banco de dados projeto pode ser utilizado por si mesmo como um componente: - para o desenvolvimento: ponha um alias/apelido de arquivo .4dproject na pasta Components do banco de dados local. - para o lançamento: crie o componente (ver [Criar um pacote projeto](building.md)) e ponha o arquivo .4dz resultante em uma pasta .4dbase na pasta Componentes do banco de dados local. - para o lançamento: crie o componente (ver [Criar um pacote projeto](building.md)) e ponha o arquivo .4dz resultante em uma pasta .4dbase na pasta Componentes do banco de dados local. - para o lançamento: crie o componente (ver [Criar um pacote projeto](building.md)) e ponha o arquivo .4dz resultante em uma pasta .4dbase na pasta Componentes do banco de dados local.
 
 
 ## Plugins folder

@@ -63,7 +63,7 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 [Double click on row](#double-click-on-row)
 
 ---
-## Double-click on row
+## Duplo clique em linha
 
 `List subform`
 
@@ -146,7 +146,7 @@ Specifies the table that the list subform belongs to (if any).
 [Subform](subform_overview.md)
 
 ---
-## Selection Mode
+## Modo seleção
 
 Designates the option for allowing users to select rows:
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.

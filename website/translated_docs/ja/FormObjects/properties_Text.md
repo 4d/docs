@@ -174,7 +174,9 @@ title: テキスト
 * 16進数値 - 例: "#ff0000"
 * RGB値 - 例: "rgb(255,0,0)"
 
-このプロパティはOBJECT SET RGB COLORS** コマンドによって設定することができます。</p> 
+このプロパティは
+
+OBJECT SET RGB COLORS** コマンドによって設定することができます。</p> 
 
 
 
@@ -460,407 +462,180 @@ End case
 
 ## マルチスタイル
 
-このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の \<SPAN> HTMLタグをスタイル属性として解釈します。</p> 
-
-<p spaces-before="0">
-  デフォルトでは、このオプションは有効化されていません。
-</p>
-
-
-
-
-
-<h4 spaces-before="0">
-  JSON 文法
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      名称
-    </th>
-    
-    <th>
-      データタイプ
-    </th>
-    
-    <th>
-      とりうる値
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      styledText
-    </td>
-    
-    <td>
-      boolean
-    </td>
-    
-    <td>
-      true, false
-    </td>
-  </tr>
-</table>
-
-
-
-<h4 spaces-before="0">
-  対象オブジェクト
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md#リストボックス列">リストボックス列</a> - <a href="input_overview.md">入力</a>
-</p>
-
-
-
-
-
-
-
-
-
-
-<hr />
-
-
-<h2 spaces-before="0">
-  方向
-</h2>
-
-<p spaces-before="0">
-  テキストエリアの角度 (回転) を変更します。 テキストエリアは、90°単位で回転させることができます。 それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
-</p>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      回転角度
-    </th>
-    
-    <th>
-      戻り値
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      0 (デフォルト)
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation1.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      90
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation2.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      180
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation3.png" alt="" />
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      270
-    </td>
-    
-    <td>
-      <img src="assets/en/FormObjects/orientation4.png" alt="" />
-    </td>
-  </tr>
-</table>
-
-<p spaces-before="0">
-  <a href="text.md">スタティックなテキストエリア</a> のほかに、<a href="properties_Entry.md#入力可">入力不可</a> に設定された <a href="input_overview.md">入力オブジェクト</a> も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
-</p>
-
-
-
-
-
-
-<h4 spaces-before="0">
-  JSON 文法
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      名称
-    </th>
-    
-    <th>
-      データタイプ
-    </th>
-    
-    <th>
-      とりうる値
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      textAngle
-    </td>
-    
-    <td>
-      number
-    </td>
-    
-    <td>
-      0, 90, 180, 270
-    </td>
-  </tr>
-</table>
+このプロパティは、選択エリアでスタイルの利用を可能にするかどうかを指定するものです。 プロパティリストでこのオプションがチェックされていると、4D はエリア中の `<SPAN> HTML` タグをスタイル属性として解釈します。
 
+デフォルトでは、このオプションは有効化されていません。
 
 
-<h4 spaces-before="0">
-  対象オブジェクト
-</h4>
 
-<p spaces-before="0">
-  <a href="input_overview.md">入力</a> (入力不可) - <a href="text.md">テキストエリア</a>
-</p>
 
 
+#### JSON 文法
 
+| 名称         | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| styledText | boolean | true, false |
 
 
 
 
-<hr />
+#### 対象オブジェクト
 
+[リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
-<h2 spaces-before="0">
-  行フォントカラー配列
-</h2>
 
-<p spaces-before="0">
-  <code>配列型リストボックス</code>
-</p>
 
-<p spaces-before="0">
-  リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
-</p>
-
-<p spaces-before="0">
-  倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは <a href="https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html">SET RGB COLORS</a> テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
-</p>
-
-
-
-<h4 spaces-before="0">
-  JSON 文法
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      名称
-    </th>
-    
-    <th>
-      データタイプ
-    </th>
-    
-    <th>
-      とりうる値
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStrokeSource
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      倍長整数型配列の名前
-    </td>
-  </tr>
-</table>
 
 
 
-<h4 spaces-before="0">
-  対象オブジェクト
-</h4>
 
-<p spaces-before="0">
-  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
-</p>
 
 
 
+---
 
 
+## 方向
 
+テキストエリアの角度 (回転) を変更します。 テキストエリアは、90°単位で回転させることができます。 それぞれの回転角度を適用するとき、オブジェクトの左下の角は固定されたままで回転していきます:
 
-<hr />
+| 回転角度      | 戻り値                                         |
+| --------- | ------------------------------------------- |
+| 0 (デフォルト) | ![](assets/en/FormObjects/orientation1.png) |
+| 90        | ![](assets/en/FormObjects/orientation2.png) |
+| 180       | ![](assets/en/FormObjects/orientation3.png) |
+| 270       | ![](assets/en/FormObjects/orientation4.png) |
 
 
-<h2 spaces-before="0">
-  行スタイル配列
-</h2>
+[スタティックなテキストエリア](text.md) のほかに、[入力不可](properties_Entry.md#入力可) に設定された [入力オブジェクト](input_overview.md) も回転させることが出来ます。 入力オブジェクトの方向プロパティにて 0°以外のオプションを選んだ場合、 入力可プロパティは (選択されていた場合) 自動的に解除されます。 その際、このオブジェクトは入力順から自動的に除外されます。
 
-<p spaces-before="0">
-  <code>配列型リストボックス</code>
-</p>
 
-<p spaces-before="0">
-  リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
-</p>
 
-<p spaces-before="0">
-  倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 配列へは、<a href="https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html">Font Styles</a> テーマの定数を使用することができます (メソッドを使用しての入力も可能)。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
-</p>
 
 
 
+#### JSON 文法
 
-<h4 spaces-before="0">
-  JSON 文法
-</h4>
+| 名称        | データタイプ | とりうる値           |
+| --------- | ------ | --------------- |
+| textAngle | number | 0, 90, 180, 270 |
 
-<table spaces-before="0">
-  <tr>
-    <th>
-      名称
-    </th>
-    
-    <th>
-      データタイプ
-    </th>
-    
-    <th>
-      とりうる値
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      rowStyleSource
-    </td>
-    
-    <td>
-      string
-    </td>
-    
-    <td>
-      倍長整数型配列の名前
-    </td>
-  </tr>
-</table>
-
-
-
-<h4 spaces-before="0">
-  対象オブジェクト
-</h4>
-
-<p spaces-before="0">
-  <a href="listbox_overview.md">リストボックス</a> - <a href="listbox_overview.md#リストボックス列">リストボックス列</a>
-</p>
-
-
-
-
-
-<hr />
-
-
-<h2 spaces-before="0">
-  スタイルタグを全て保存
-</h2>
-
-<p spaces-before="0">
-  このプロパティは <a href="#マルチスタイル">マルチスタイル</a> 入力エリアの場合にのみ提供されます。 このオプションがチェックされている場合には、たとえ変更がおこなわれていなくても、エリアはテキストとともにスタイルタグを格納します。 この場合、タグはデフォルトスタイルが適用されます。 このオプションがチェックされていないと、変更されたスタイルタグのみが格納されます。
-</p>
-
-<p spaces-before="0">
-  たとえば、以下のようにスタイルが変更されたテキストがあります:
-</p>
-
-<p spaces-before="0">
-  <img src="assets/en/FormObjects/tagStyle1.png" alt="" />
-</p>
-
-<p spaces-before="0">
-  このプロパティが無効な場合、エリアは更新されたスタイルのみを格納します。 つまり、格納される内容は以下のようになります:
-</p>
-
-<pre><code>What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!
-</code></pre>
-
-<p spaces-before="0">
-  同プロパティが有効な場合には、エリアはすべてのフォーマット情報を格納します。 先頭の汎用タグはデフォルトスタイルを定義し、変更されたスタイルはネストされたタグに書き込まれます。 格納される内容は以下のようになります:
-</p>
-
-<pre><code>&lt;SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF"&gt;What a &lt;SPAN STYLE="font-size:13.5pt"&gt;beautiful&lt;/SPAN&gt; day!&lt;/SPAN&gt;
-</code></pre>
-
-
-
-<h4 spaces-before="0">
-  JSON 文法
-</h4>
-
-<table spaces-before="0">
-  <tr>
-    <th>
-      名称
-    </th>
-    
-    <th>
-      データタイプ
-    </th>
-    
-    <th>
-      とりうる値
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      storeDefaultStyle
-    </td>
-    
-    <td>
-      boolean
-    </td>
-    
-    <td>
-      true, false (デフォルト)
-    </td>
-  </tr>
-</table>
-
-
-
-<h4 spaces-before="0">
-  対象オブジェクト
-</h4>
-
-<p spaces-before="0">
-  <a href="input_overview.md">入力</a>
-</p>
+
+
+
+#### 対象オブジェクト
+
+[入力](input_overview.md) (入力不可) - [テキストエリア](text.md)
+
+
+
+
+
+
+
+---
+
+
+## 行フォントカラー配列
+
+`配列型リストボックス`
+
+リストボックスの各行/セルにカスタマイズしたフォントカラーを適用するために使用します。
+
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 ここでは [SET RGB COLORS](https://doc.4d.com/4Dv18/4D/18/SET-RGB-COLORS.302-4504454.ja.html) テーマの定数を使用することができます。 もし上のレベルで定義されている背景色をそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+
+
+
+#### JSON 文法
+
+| 名称              | データタイプ | とりうる値      |
+| --------------- | ------ | ---------- |
+| rowStrokeSource | string | 倍長整数型配列の名前 |
+
+
+
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+
+
+
+
+
+
+---
+
+
+## 行スタイル配列
+
+`配列型リストボックス`
+
+リストボックスの各行/セルにカスタマイズされた文字スタイルを適用するために使用します。
+
+倍長整数型の配列の名前を入力しなければなりません。 配列のそれぞれの要素はリストボックスの行 (あるいは列のセル) に対応します。つまりこの配列は、各列に関連づけられている配列と同じサイズでなければいけません。 配列へは、[Font Styles](https://doc.4d.com/4Dv18/4D/18/Font-Styles.302-4504412.ja.html) テーマの定数を使用することができます (メソッドを使用しての入力も可能)。 定数同士を足し合わせてスタイルを組み合わせることもできます。 もし上のレベルで定義されているスタイルをそのままセルに継承したい場合には、対応する配列の要素に -255 を渡します。
+
+
+
+
+#### JSON 文法
+
+| 名称             | データタイプ | とりうる値      |
+| -------------- | ------ | ---------- |
+| rowStyleSource | string | 倍長整数型配列の名前 |
+
+
+
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+
+
+
+
+---
+
+
+## スタイルタグを全て保存
+
+このプロパティは [マルチスタイル](#マルチスタイル) 入力エリアの場合にのみ提供されます。 このオプションがチェックされている場合には、たとえ変更がおこなわれていなくても、エリアはテキストとともにスタイルタグを格納します。 この場合、タグはデフォルトスタイルが適用されます。 このオプションがチェックされていないと、変更されたスタイルタグのみが格納されます。
+
+たとえば、以下のようにスタイルが変更されたテキストがあります:
+
+![](assets/en/FormObjects/tagStyle1.png)
+
+このプロパティが無効な場合、エリアは更新されたスタイルのみを格納します。 つまり、格納される内容は以下のようになります:
+
+
+
+```
+What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!
+```
+
+
+同プロパティが有効な場合には、エリアはすべてのフォーマット情報を格納します。 先頭の汎用タグはデフォルトスタイルを定義し、変更されたスタイルはネストされたタグに書き込まれます。 格納される内容は以下のようになります:
+
+
+
+```
+<SPAN STYLE="font-family:'Arial';font-size:9pt;text-align:left;font-weight:normal;font-style:normal;text-decoration:none;color:#000000;background-color:#FFFFFF">What a <SPAN STYLE="font-size:13.5pt">beautiful</SPAN> day!</SPAN>
+```
+
+
+
+
+#### JSON 文法
+
+| 名称                | データタイプ  | とりうる値               |
+| ----------------- | ------- | ------------------- |
+| storeDefaultStyle | boolean | true, false (デフォルト) |
+
+
+
+
+#### 対象オブジェクト
+
+[入力](input_overview.md)

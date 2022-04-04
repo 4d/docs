@@ -108,7 +108,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &@                              | Allow only alphanumeric characters. No special characters.                                                                                   |
 | ~a##                            | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
 | !0&9##/##/##                    | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Day: ## Month: ## Year: ## | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
+| !0&9 Day: ## Month: ## Year: ## | Time entry format. Display zeros in entry spaces. Allow any numbers. Limited to hours and minutes.                                           |
 | !0&9##:##                       | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
 | !0&9## Hrs ## Mins ## Secs      | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
 | !0&9Hrs: ## Mins: ## Secs: ##   | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
@@ -139,7 +139,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 
 ---
-## Focusable
+## Focável
 
 When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
 
@@ -180,7 +180,7 @@ By default, the object uses the current keyboard layout.
 
 | Name            | Data Type | Possible Values                                                             |
 | --------------- | --------- | --------------------------------------------------------------------------- |
-| keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| keyboardDialect | texto     | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
 #### Objects Supported
@@ -212,7 +212,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 | Name      | Data Type | Possible Values                                   |
 | --------- | --------- | ------------------------------------------------- |
-| multiline | text      | "yes", "no", "automatic" (default if not defined) |
+| multiline | texto     | "yes", "no", "automatic" (default if not defined) |
 
 
 #### Objects Supported
@@ -315,7 +315,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 
 ---
-## Single-Click Edit
+## Editar com um clique
 
 Enables direct passage to edit mode in list boxes.
 
