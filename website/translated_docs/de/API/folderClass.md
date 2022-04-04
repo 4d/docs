@@ -100,7 +100,7 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk documents folder        | 117  | Document folder of the user                                                                         |
 | fk licenses folder         | 1    | Folder containing the machine's 4D license files                                                    |
 | fk logs folder             | 7    | Associated filesystem: "/LOGS"                                                                      |
-| fk mobileApps folder       | 10   | Associated filesystem: "/DATA"                                                                      |
+| fk mobileApps folder       | 10   |                                                                                                     |
 | fk remote database folder  | 3    | 4D database folder created on each 4D remote machine                                                |
 | fk resources folder        | 6    | Associated filesystem: "/RESOURCES"                                                                 |
 | fk system folder           | 100  |                                                                                                     |
@@ -483,3 +483,4 @@ The renamed `Folder` object.
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
+

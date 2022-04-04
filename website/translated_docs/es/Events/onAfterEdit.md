@@ -21,6 +21,8 @@ Cuando se utiliza, este evento se genera después de cada cambio realizado en el
 - Toda entrada de teclado realizada por el usuario; en este caso, el evento `On After Edit` se genera después de los eventos [`On Before Keystroke`](onBeforeKeystroke.md) y [`On After Keystroke`](onAfterKeystroke.md), si se utilizan.
 - Cualquier modificación realizada mediante un comando del lenguaje que simule una acción del usuario (es decir, `POST KEY`).
 
+Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.
+
 ### 4D View Pro
 
 El objeto devuelto por el comando `FORM Event` contiene:

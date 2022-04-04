@@ -97,7 +97,7 @@ $myEntity.save() // エンティティを保存します
 
 ```4d
  $entity:=ds.Employee.get(1) // ID1 の社員エンティティを取得します
- $name:=$entity.lastname // 社員のラストネームを取得します。例: "Smith"
+ $name:=$entity.lastname // 社員のラストネームを取得します。 例: "Smith"
  $entity.lastname:="Jones" // 社員のラストネームを変更します
  $entity.save() // 変更を保存します
 ```

@@ -96,13 +96,13 @@ Entity attributes store data and map corresponding fields in the corresponding t
 For example, to set a storage attribute:
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
+ $entity:=ds. Employee.get(1) //get employee attribute with ID 1
  $name:=$entity.lastname //get the employee name, e.g. "Smith"
  $entity.lastname:="Jones" //set the employee name
  $entity.save() //save the modifications
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
+> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D. Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
 
 Accessing a related attribute depends on the attribute kind. For example, with the following structure:
 

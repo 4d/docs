@@ -13,8 +13,7 @@ Uma cópia de segurança pode ser iniciada de três maneiras:
 
 ## Cópia de segurança manual
 
-1. Selecione o comando **Backup...** no menu 4D **Arquivo**.   
-   Aparece a janela de cópia de segurança: ![](assets/en/Backup/backup01.png) Pode ver a localização da pasta da cópia de segurança mediante o menu emergente situado junto à área "Destino da cópia de segurança". Esta localização é definida na página **Cópia de segurança/configuração** das Propriedades do banco de dados.
+1. O estado da última cópia de segurança (correta ou com erro) é armazenada na área de informação da [página de cópias de segurança em CSM](MSC/backup.md) ou na **página de manutenção** de 4D Server. Também se registra no banco de dados **Backup journal.txt**.
 
 - Também pode abrir o [Centro de manutenção e segurança](MSC/overview.md) de 4D e mostrar a [página de cópias de segurança](MSC/backup.md).
 
@@ -54,7 +53,7 @@ Durante a cópia de segurança, acesso à aplicação é restrito por 4D depende
 Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. Nesse caso, as possibilidades de acesso à aplicação são as seguintes:
 
 - Com a versão 4D monousuário, a aplicação é trancada tanto para leitura quanto escrita, todos os processos são congelados. Nenhuma ação é realizada.
-- Com 4D Server, a aplicação está bloqueada só para escrita; as máquinas clientes podem ver os dados. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Quando a aplicação for salva, a janela desaparece a ação é realizada. Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Além disso, um método parcialmente executado pode causar inconsistências lógicas nos dados. > Quando a ação que espera ser executada vir de um método e o usuário clicar no botão **Cancelar operação**, 4D Server devolve o erro -9976 (Este comando não pode ser executardo porque a copia de segurança está em progresso).
+- Com 4D Server, a aplicação está bloqueada só para escrita; as máquinas clientes podem ver os dados. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Quando a aplicação for salva, a janela desaparece a ação é realizada. Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Além disso, um método parcialmente executado pode causar inconsistências lógicas nos dados. > Quando a ação que espera ser executada vir de um método e o usuário clicar no botão **Cancelar operação**, 4D Server devolve o erro -9976 (Este comando não pode ser executardo porque a copia de segurança está em progresso).
 
 ### Gestão dos problemas das cópias de segurança
 

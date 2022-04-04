@@ -46,8 +46,8 @@ Une heure nulle s’écrit ?00:00:00?
 |                     |                 |          | ?01:02:03? ?01:02:03?   | Faux       |
 | Inégalité           | Heure # Heure   | Booléen  | ?01:02:03? ?01:02:03?   | Vrai       |
 |                     |                 |          | ?01:02:03? ?01:02:03?   | Faux       |
-| Supérieur à         | Heure > Heure   | Booléen  | ?01:02:03? < ?01:02:04? | Vrai       |
-|                     |                 |          | ?01:02:03? < ?01:02:04? | Faux       |
+| Supérieur à         | Heure > Heure   | Booléen  | ?01:02:03? <=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? <=?01:02:03? | Faux       |
 | Inférieur à         | Heure < Heure   | Booléen  | ?01:02:03? ?01:02:03?   | Vrai       |
 |                     |                 |          | ?01:02:03? ?01:02:03?   | Faux       |
 | Supérieur ou égal à | Heure >= Heure  | Booléen  | ?01:02:03? >=?01:02:03? | Vrai       |

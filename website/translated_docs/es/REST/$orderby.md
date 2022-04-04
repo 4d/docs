@@ -8,7 +8,7 @@ Ordena los datos devueltos por el atributo y el orden de clasificación definido
 
 ## Descripción
 
-`$orderby` ordena las entidades devueltas por la petición REST. Para cada atributo, se especifica el orden como `ASC` (o `asc`) para el orden ascendente y `DESC` (`desc`) para el orden descendente. Por defecto, los datos se clasifican en orden ascendente. Si desea especificar varios atributos, puede delimitarlos con una coma, *por ejemplo*, `$orderby="lastName desc, firstName asc"`.
+`$orderby` ordena las entidades devueltas por la petición REST. Para cada atributo, se especifica el orden como `ASC` (o `asc`) para el orden ascendente y `DESC` (`desc`) para el orden descendente. Por defecto, los datos se clasifican en orden ascendente. Por defecto, los datos se clasifican en orden ascendente.
 
 
 ## Ejemplo

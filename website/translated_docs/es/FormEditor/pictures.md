@@ -63,7 +63,7 @@ Las imágenes de alta resolución con la convención @nx pueden utilizarse en lo
 
 
 
-### DPI (macOS and Windows)
+### DPI (macOS y Windows)
 
 Aunque 4D prioriza automáticamente la resolución más alta, existen, sin embargo, algunas diferencias de comportamiento en función de los ppp de la pantalla y de la imagen*(\*)*, y del formato de la imagen:
 

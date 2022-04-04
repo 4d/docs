@@ -135,11 +135,11 @@ La carpeta DerivedData contiene datos en caché utilizados internamente por 4D p
 
 > This folder is used on macOS only.
 
-The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+La carpeta Librairies contiene el archivo resultante de una compilación con el [compilador Silicon](compiler.md#silicon-compiler) en macOS.
 
 ## `Resources`
 
-The Resources folder contains any custom project resource files and folders. En esta carpeta puede colocar todos los archivos necesarios para la traducción o personalización de la interfaz de la aplicación (archivos imagen, archivos texto, archivos XLIFF, etc.). 4D utiliza mecanismos automáticos para trabajar con el contenido de esta carpeta, en particular para el manejo de archivos XLIFF e imágenes estáticas. Para su uso en modo remoto, la carpeta Resources permite compartir archivos entre el equipo servidor y todos los equipos cliente. Ver el *manual 4D Server*.
+La carpeta Resources contiene todos los archivos y carpetas de recursos personalizados del proyecto. En esta carpeta puede colocar todos los archivos necesarios para la traducción o personalización de la interfaz de la aplicación (archivos imagen, archivos texto, archivos XLIFF, etc.). 4D utiliza mecanismos automáticos para trabajar con el contenido de esta carpeta, en particular para el manejo de archivos XLIFF e imágenes estáticas. Para su uso en modo remoto, la carpeta Resources permite compartir archivos entre el equipo servidor y todos los equipos cliente. Ver el *manual 4D Server*.
 
 | Contenido             | Descripción                                                                                                                                                                                | Formato |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
@@ -163,9 +163,9 @@ La carpeta Data contiene el archivo de datos y todos los archivos y carpetas rel
 
 ### `Settings`
 
-This folder contains **user settings files for data** used for application administration.
+Esta carpeta contiene **archivos de configuración de datos** utilizados para la administración de la aplicación.
 
-> These settings take priority over **[user settings files](#settings-folder-1)** and **[structure settings](#sources-folder)** files.
+> Estos parámetros tienen prioridad sobre los **[archivos de propiedades usuario](#settings-folder-1)** y los archivos de **[propiedades estructura](#sources-folder)**.
 
 | Contenido           | Descripción                                                                                                                                                                                                                                            | Formato |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
@@ -188,9 +188,9 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 
 ## `Settings`
 
-This folder contains **user settings files** used for application administration.
+Esta carpeta contiene **archivos de propiedades usuario** utilizados para la administración de la aplicación.
 
-> These settings take priority over **[structure settings](#sources-folder)** files. However, if a **[user settings file for data](#settings-folder)** exists, it takes priority over user settings file.
+> Estos parámetros tienen prioridad sobre los archivos **[propiedades estructura](#sources-folder)**. Sin embargo, si existe un **[archivo de parámetros usuario](#settings-folder)**, éste tiene prioridad sobre el archivo de las propiedades usuario.
 
 | Contenido           | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Formato |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -217,25 +217,25 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 
 ## `Componentes`
 
-This folder contains the components to be available in the application project. Debe almacenarse en el mismo nivel que la carpeta Project.
+Esta carpeta contiene los componentes que deben estar disponibles en el proyecto aplicación. Debe almacenarse en el mismo nivel que la carpeta Project.
 
 > An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
 
 
 ## `Plugins`
 
-This folder contains the plug-ins to be available in the application project. Debe almacenarse en el mismo nivel que la carpeta Project.
+Esta carpeta contiene los plug-ins que deben estar disponibles en el proyecto aplicación. Debe almacenarse en el mismo nivel que la carpeta Project.
 
 
 ## `Documentation`
 
-This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+Esta carpeta contiene todos los archivos de documentación (.md) creados para los elementos del proyecto como clases, métodos o formularios. Los archivos de documentación se gestionan y se muestran en el Explorador 4D.
 
-For more information, refer to [Documenting a project](Project/documentation.md).
+Para más información, consulte [Documentar un proyecto](Project/documentation.md).
 
 ## `WebFolder`
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+Define la carpeta raíz por defecto del servidor web 4D para las páginas, las imágenes, etc. Se crea automáticamente cuando se lanza el servidor web por primera vez.
 
 ## `.gitignore` file (optional)
 

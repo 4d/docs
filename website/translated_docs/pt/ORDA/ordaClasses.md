@@ -327,8 +327,8 @@ The *getter* function defines the data type of the computed attribute thanks to 
 - Objeto
 - Image
 - BLOB
-- Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- Entity (i.e. cs. EmployeeEntity)
+- Entity selection (i.e. cs. EmployeeSelection)
 
 The *$event* parameter contains the following properties:
 
@@ -362,7 +362,7 @@ Function get fullName($event : Object)-> $fullName : Text
 - A computed attribute can be based upon an entity related attribute:
 
 ```4d
-Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
+Function get bigBoss($event : Object)-> $result: cs. EmployeeEntity
     $result:=This.manager.manager
 
 ```
@@ -418,8 +418,7 @@ Function set fullName($value : Text; $event : Object)
 
 ```4d
 Function query <attributeName>($event : Object)
-Function query <attributeName>($event : Object) -> $result : Text
-Function query <attributeName>($event : Object) -> $result : Object
+Function query <attributeName>($event : Object) -> $result : Text Function query <attributeName>($event : Object) -> $result : Object
 // code
 ```
 
@@ -500,7 +499,7 @@ Function query fullName($event : Object)->$result : Object
 Calling code, for example:
 
 ```4d
-$emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
+$emps:=ds. Employee.query("fullName = :1"; "Flora Pionsin")
 ```
 
 - This function handles queries on the *age* computed attribute and returns an object with parameters:

@@ -227,10 +227,10 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constante          | Valor | Comentario                    |
-| ------------------ | ----- | ----------------------------- |
-| `fk alias link`    | 0     | Enlace de alias (por defecto) |
-| `fk symbolic link` | 1     | Symbolic link (macOS only)    |
+| Constante          | Valor | Comentario                         |
+| ------------------ | ----- | ---------------------------------- |
+| `fk alias link`    | 0     | Enlace de alias (por defecto)      |
+| `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
@@ -453,11 +453,11 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                  |
-| ----------------- | --------- | -- | ---------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino           |
-| newName           | Texto     | -> | Full name for the moved file |
-| Resultado         | 4D.File   | <- | Archivo movido               |
+| Parámetros        | Tipo      |    | Descripción                            |
+| ----------------- | --------- | -- | -------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                     |
+| newName           | Texto     | -> | Nombre completo del archivo trasladado |
+| Resultado         | 4D.File   | <- | Archivo movido                         |
 <!-- END REF -->
 
 

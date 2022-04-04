@@ -543,10 +543,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 *options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるファイルのみがコレクションに返されます。これには非表示のファイルや、フォルダーも含まれます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
-| 定数                    | 値 | 説明                                                                       |
-| --------------------- | - | ------------------------------------------------------------------------ |
-| `fk recursive`        | 1 | The collection contains files of the specified folder and its subfolders |
-| `fk ignore invisible` | 8 | Invisible files are not listed                                           |
+| 定数                    | 値 | 説明                                    |
+| --------------------- | - | ------------------------------------- |
+| `fk recursive`        | 1 | コレクションには、指定フォルダーとそのサブフォルダーのファイルが含まれます |
+| `fk ignore invisible` | 8 | 非表示設定のファイルは表示されません                    |
 
 **戻り値**
 
@@ -643,10 +643,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 *options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるフォルダーのみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
-| 定数                    | 値 | 説明                                                                         |
-| --------------------- | - | -------------------------------------------------------------------------- |
-| `fk recursive`        | 1 | The collection contains folders of the specified folder and its subfolders |
-| `fk ignore invisible` | 8 | Invisible folders are not listed                                           |
+| 定数                    | 値 | 説明                                     |
+| --------------------- | - | -------------------------------------- |
+| `fk recursive`        | 1 | コレクションには、指定フォルダーとそのサブフォルダーのフォルダーが含まれます |
+| `fk ignore invisible` | 8 | 非表示設定のフォルダーは表示されません                    |
 
 **戻り値**
 

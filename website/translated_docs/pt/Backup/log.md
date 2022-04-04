@@ -3,7 +3,7 @@ id: log
 title: Arquivo de Log (.journal)
 ---
 
-Uma aplicação de uso continuo sempre registra mudanças, adições ou eliminações. Realizar backups ou cópias de segurança regularmente é importante mas lembre que não permite (em caso de problemas) restaurar os dados registrados depois do último backup. Para responder à essa necessidade, 4D oferece agora uma ferramenta específica: o arquivo de log. Este arquivo permite garantir a segurança permanente dos dados.
+Uma aplicação de uso continuo sempre registra mudanças, adições ou eliminações. Realizar backups ou cópias de segurança regularmente é importante mas lembre que não permite (em caso de problemas) restaurar os dados registrados depois do último backup. Para responder à essa necessidade, 4D oferece agora uma ferramenta específica: o arquivo de log. Este arquivo permite garantir a segurança permanente dos dados do banco de dados. Este arquivo permite garantir a segurança permanente dos dados.
 
 Além disso, 4D trabalha constantemente com dados cache em memória. Qualquer mudança feita para os dados da aplicação são armazenados temporariamente na cache antes de serem escritas no disco rigido. Isso acelera a operação das aplicações; na verdade, acessar a memória é mais rápido que acessar o disco rígido. Se acontecer algo na aplicação antes que armazenagem dos dados na cache possa ser gravada no disco rígido, precisa incluir o arquivo de histórico atual para poder restaurar a aplicação por completo.
 

@@ -342,7 +342,7 @@ A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->retorna o
 
 #### Description
 
-The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
+The `.readOnly` property is<!-- REF DataClassAttributeClass.readOnly. Summary -->true if the attribute is read-only<!-- END REF -->.
 
 For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only. 
 

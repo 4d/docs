@@ -80,7 +80,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 #### Descripción
 
-The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
+La propiedad `.exposed` es <!-- REF DataClassAttributeClass.exposed.Summary -->"true" si el atributo está "expuesto" en REST<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -118,9 +118,9 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .fieldType
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                 |
-| ------- | ------------------------------ |
-| v19 R3  | Support of computed attributes |
+| Versión | Modificaciones               |
+| ------- | ---------------------------- |
+| v19 R3  | Soporta atributos calculados |
 </details>
 
 
@@ -136,10 +136,10 @@ La propiedad `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 | dataClassAttribute.kind | fieldType                                                                                                          |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| storage                 | Corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)            |
+| storage                 | Tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)       |
 | relatedEntity           | 38 (`Is object`)                                                                                                   |
 | relatedEntities         | 42 (`Is collection`)                                                                                               |
-| calculated              | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
+| calculated              | <li>escalar: tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
 
 
 <!-- END REF -->
@@ -229,9 +229,9 @@ Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEn
 ## .kind
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R3  | Added "calculated" |
+| Versión | Modificaciones          |
+| ------- | ----------------------- |
+| v19 R3  | Adición de "calculated" |
 </details>
 
 
@@ -342,9 +342,9 @@ La propiedad `.name` <!-- REF DataClassAttributeClass.name.Summary -->devuelve e
 
 #### Descripción
 
-The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
+La propiedad `.readOnly` es <!-- REF DataClassAttributeClass.readOnly.Summary -->"true" si el atributo está en solo lectura<!-- END REF -->.
 
-For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only. 
+Por ejemplo, los atributos calculados sin función [`set`](ORDA/ordaClasses.md#function-set-attributename) son solo lectura. 
 
 <!-- END REF -->
 
@@ -392,9 +392,9 @@ Dadas las siguientes tablas y relaciones:
 ## .type
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                 |
-| ------- | ------------------------------ |
-| v19 R3  | Support of computed attributes |
+| Versión | Modificaciones               |
+| ------- | ---------------------------- |
+| v19 R3  | Soporta atributos calculados |
 </details>
 
 
@@ -410,12 +410,12 @@ El tipo de valor conceptual depende del atributo [`.kind`](#kind).
 
 **Valores posibles:**
 
-| dataClassAttribute.kind | type                                                                                                                         | Comentario                                                                                                                                                                                                                                                        |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "blob", "bool", "date", "image", "number", "object", o "string"                                                              | "number" se devuelve para cualquier tipo numérico, incluyendo la duración. "string" is returned for uuid, alpha and text field types. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md). |
-| relatedEntity           | related dataClass name                                                                                                       | Ej.: "Companies"                                                                                                                                                                                                                                                  |
-| relatedEntities         | related dataClass name + "Selection" suffix                                                                                  | Ex: "EmployeeSelection"                                                                                                                                                                                                                                           |
-| calculated              | <li>storage: type ("blob", "number", etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + "Selection" |                                                                                                                                                                                                                                                                   |
+| dataClassAttribute.kind | type                                                                                                                         | Comentario                                                                                                                                                                                                                                                                 |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "blob", "bool", "date", "image", "number", "object", o "string"                                                              | "number" se devuelve para cualquier tipo numérico, incluyendo la duración. "string" se devuelve para los tipos de campo uuid, alfa y texto. Los atributos "blob" son [objetos blob](Concepts/dt_blob.md#blob-type), se gestionan utilizando [la clase Blob](BlobClass.md). |
+| relatedEntity           | related dataClass name                                                                                                       | Ej.: "Companies"                                                                                                                                                                                                                                                           |
+| relatedEntities         | related dataClass name + "Selection" suffix                                                                                  | Ex: "EmployeeSelection"                                                                                                                                                                                                                                                    |
+| calculated              | <li>storage: type ("blob", "number", etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + "Selection" |                                                                                                                                                                                                                                                                            |
 
 <!-- END REF -->
 

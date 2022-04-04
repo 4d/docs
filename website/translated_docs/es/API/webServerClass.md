@@ -800,7 +800,7 @@ La configuración de la sesión personalizada se restablecerá cuando se llame a
 
 #### Objeto devuelto
 
-La función devuelve un objeto que describe el estado de lanzamiento del servidor web. This object can contain the following properties:
+La función devuelve un objeto que describe el estado de lanzamiento del servidor web. Este objeto puede contener las siguientes propiedades:
 
 | Propiedad |                         | Tipo       | Descripción                                                          |
 | --------- | ----------------------- | ---------- | -------------------------------------------------------------------- |

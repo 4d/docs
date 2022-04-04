@@ -40,7 +40,7 @@ The [4D embedded web rendering engine](properties_WebArea.md#use-embedded-web-re
 For example, to call the `HelloWorld` 4D method, you just execute the following statement:
 
 ```codeJS
-$4d.HelloWorld();
+$4d. HelloWorld();
 ```
 > JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
 
