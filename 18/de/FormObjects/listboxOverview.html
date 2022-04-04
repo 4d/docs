@@ -101,7 +101,11 @@
 <li><strong>Collection or Entity selection</strong>: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.</li>
 </ul>
 <blockquote>
+<blockquote>
+<blockquote>
 <p>It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.</p>
+</blockquote>
+</blockquote>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="managing-list-boxes"></a><a href="#managing-list-boxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing list boxes</h3>
 <p>You can completely configure a list box object through its properties, and you can also manage it dynamically through programming.</p>
@@ -312,7 +316,7 @@
 <li><a href="/docs/18/de/FormObjects/propertiesDataSource.html#selected-items">Selected Items</a> is a collection of selected items</li>
 <li><a href="/docs/18/de/FormObjects/propertiesDataSource.html#current-item-position">Current item position</a> returns the position of the selected element or entity.</li>
 </ul></li>
-<li><p><strong>Array list box</strong>: The <code>LISTBOX SELECT ROW</code> command can be used to select one or more rows of the list box by programming. The <a href="/docs/18/de/FormObjects/propertiesObject.html#variable-or-expression">variable linked to the List box object</a> is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains <code>True</code> if the corresponding line is selected and <code>False</code> otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The <code>Count in array</code> command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:</p></li>
+<li><p><strong>Array list box</strong>: The <code>LISTBOX SELECT ROW</code> command can be used to select one or more rows of the list box by programming. The <a href="/docs/18/de/FormObjects/propertiesObject.html#variable-or-expression">variable linked to the List box object</a> is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains <code>True</code> if the corresponding line is selected and <code>False</code> otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The <code>Count in array</code> command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:</p></li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY BOOLEAN</span>(tBListBox;<span class="hljs-number">10</span>)
   <span class="hljs-comment">//tBListBox is the name of the list box variable in the form</span><span class="hljs-keyword">
@@ -465,7 +469,6 @@
 <tbody>
 <tr><td>Background color</td><td><a href="/docs/18/de/FormObjects/propertiesBackgroundAndBorder.html#row-background-color-array">Row Background Color Array</a></td><td><a href="/docs/18/de/FormObjects/propertiesBackgroundAndBorder.html#background-color-expression">Background Color Expression</a></td><td><a href="/docs/18/de/FormObjects/propertiesBackgroundAndBorder.html#background-color-expression">Background Color Expression</a> or <a href="/docs/18/de/FormObjects/propertiesText.html#meta-info-expression">Meta info expression</a></td></tr>
 <tr><td>Font color</td><td><a href="/docs/18/de/FormObjects/propertiesText.html#row-font-color-array">Row Font Color Array</a></td><td><a href="/docs/18/de/FormObjects/propertiesText.html#font-color-expression">Font Color Expression</a></td><td><a href="/docs/18/de/FormObjects/propertiesText.html#font-color-expression">Font Color Expression</a> or <a href="/docs/18/de/FormObjects/propertiesText.html#meta-info-expression">Meta info expression</a></td></tr>
-<tr><td>Font style</td></tr>
 </tbody>
 </table>
 <p><a href="/docs/18/de/FormObjects/propertiesText.html#row-style-array">Row Style Array</a>|<a href="/docs/18/de/FormObjects/propertiesText.html#style-expression">Style Expression</a>|<a href="/docs/18/de/FormObjects/propertiesText.html#style-expression">Style Expression</a> or <a href="/docs/18/de/FormObjects/propertiesText.html#meta-info-expression">Meta info expression</a>| Display|<a href="/docs/18/de/FormObjects/propertiesListBox.html#row-control-array">Row Control Array</a>|-|-|</p>
@@ -478,7 +481,7 @@
 <p>In this mode:</p>
 <ul>
 <li>The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no &quot;blank&quot; rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the <code>LISTBOX GET PRINT INFORMATION</code> command.</li>
-<li>The list box object is printed &quot;as is&quot;, in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.</li>
+<li>The list box object is printed &quot;as is&quot;, in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command. These parameters also include the first row to be printed: if you call the <code>OBJECT SET SCROLL POSITION</code> command before launching the printing, the first row printed in the list box will be the one designated by the command.</li>
 <li>An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to <code>Print object</code> can be used to print a new set of rows each time. The <code>LISTBOX GET PRINT INFORMATION</code> command can be used to check the status of the printing while it is underway.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="hierarchical-list-boxes"></a><a href="#hierarchical-list-boxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hierarchical list boxes</h2>
@@ -528,7 +531,7 @@
 <p>If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:</p>
 <p><img src="/docs/18/assets/en/FormObjects/hierarch2.png" alt=""></p>
 <p>The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:</p>
-<pre><code class="hljs">&gt; A B A C
+<pre><code class="hljs">&gt; &amp;gt; &gt; A B A C
 </code></pre>
 <p>To expand or collapse a hierarchical &quot;node,&quot; you can just click on it. If you <strong>Alt+click</strong> (Windows) or <strong>Option+click</strong> (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the <code>LISTBOX EXPAND</code> and <code>LISTBOX COLLAPSE</code> commands.</p>
 <p>When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.</p>
@@ -611,7 +614,8 @@
 <p>Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. These types of columns can also be hidden.</p>
 <p>However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:</p>
 <p>the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write &quot;Hello World!&quot; in an object column using this simple code:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//column array</span>
+<pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
+<span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span><span class="hljs-function"> ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//column array</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob</span>) <span class="hljs-comment">//first element</span>
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"text"</span>) <span class="hljs-comment">//defines the value type (mandatory)</span>
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>) <span class="hljs-comment">//defines the value</span>
@@ -693,21 +697,11 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="value"></a><a href="#value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>value</h4>
 <p>Cell values are stored in the &quot;value&quot; attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).</p>
-<pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//column array</span>
-<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
- <span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span>
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob1</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"text"</span>)
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob1</span>;<span class="hljs-string">"value"</span>;<span class="hljs-variable">$entry</span>) <span class="hljs-comment">// if the user enters a new value, $entry will contain the edited value</span>
-<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob2</span>)
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob2</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"real"</span>)
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob2</span>;<span class="hljs-string">"value"</span>;<span class="hljs-number">2</span>/<span class="hljs-number">3</span>)
-<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob3</span>)
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"boolean"</span>)
-<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"value"</span>;<span class="hljs-literal">True</span>)
-
-<span class="hljs-function"> APPEND TO ARRAY</span>(obColumn;<span class="hljs-variable">$ob1</span>)
-<span class="hljs-function"> APPEND TO ARRAY</span>(obColumn;<span class="hljs-variable">$ob2</span>)
-<span class="hljs-function"> APPEND TO ARRAY</span>(obColumn;<span class="hljs-variable">$ob3</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
+<span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span>
+<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"text"</span>)
+<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"alternateButton"</span>;<span class="hljs-literal">True</span>)
+<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"value"</span>;<span class="hljs-variable">$entry</span>)
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png" alt=""></p>
 <blockquote>
@@ -866,9 +860,11 @@
 <p>Beispiel:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
 <span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span>
-<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"text"</span>)
-<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"alternateButton"</span>;<span class="hljs-literal">True</span>)
-<span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"value"</span>;<span class="hljs-variable">$entry</span>)
+<span class="hljs-function">ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//column array</span>
+<span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob</span>) <span class="hljs-comment">//first element</span>
+<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"text"</span>) <span class="hljs-comment">//defines the value type (mandatory)</span>
+<span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>) <span class="hljs-comment">//defines the value</span>
+<span class="hljs-function"> APPEND TO ARRAY</span>(obColumn;<span class="hljs-variable">$ob</span>)
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_alternateButton.png" alt=""></p>
 <h4><a class="anchor" aria-hidden="true" id="color-valuetype"></a><a href="#color-valuetype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>color valueType</h4>

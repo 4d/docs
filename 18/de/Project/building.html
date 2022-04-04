@@ -425,6 +425,10 @@ If you have named your application, <em>MyComponent</em>, 4D will create a Compo
 <p>4D allows you to define a default data file at the application building stage. When the application is launched for the first time, if no local data file is found (see <a href="#opening-the-data-file">opening sequence described above</a>), the default data file is automatically opened silently in read-only mode by 4D. When the application is launched for the first time, if no local data file is found (see <a href="#opening-the-data-file">opening sequence described above</a>), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.</p>
 <p>More specifically, the following cases are covered:</p>
 <ul>
+<li>Avoiding the display of the 4D &quot;Open Data File&quot; dialog box when launching a new or updated merged application. When the application is launched for the first time, if no local data file is found (see <a href="#opening-the-data-file">opening sequence described above</a>), the default data file is automatically opened silently in read-only mode by 4D. This gives you better control over data file creation and/or opening when launching a merged application for the first time.</p></li>
+</ul>
+<p>More specifically, the following cases are covered:</p>
+<ul>
 <li>Avoiding the display of the 4D &quot;Open Data File&quot; dialog box when launching a new or updated merged application. You can detect, for example at startup, that the default data file has been opened and thus execute your own code and/or dialogs to create or select a local data file.</li>
 <li>Allowing the distribution of merged applications with read-only data (for demo applications, for instance).</li>
 </ul>
