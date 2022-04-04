@@ -652,7 +652,7 @@ Document contents are converted with respect to their viewing attributes, includ
 *   Row height
 *   Column width
 *   Hidden columns / rows.
-> > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
+> > > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Function result
 
@@ -755,7 +755,7 @@ In *rangeObj*, pass an object containing a range of columns to remove. If the pa
 
 *   both columns and rows, only the columns are removed.
 *   only rows, the command does nothing.
-> > Columns are deleted from right to left.
+> > > Columns are deleted from right to left.
 
 
 #### Beispiel
@@ -794,7 +794,7 @@ In *rangeObj*, pass an object containing a range of rows  to remove. If the pass
 
 *   both columns and rows, only the rows  are removed.
 *   only columns, the command does nothing.
-> > Rows are deleted from bottom to top.
+> > > Rows are deleted from bottom to top.
 
 
 #### Beispiel

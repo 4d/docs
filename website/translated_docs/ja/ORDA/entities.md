@@ -97,7 +97,7 @@ $myEntity.save() // エンティティを保存します
 
 ```4d
  $entity:=ds.Employee.get(1) // ID1 の社員エンティティを取得します
- $name:=$entity.lastname // 社員のラストネームを取得します。例: "Smith"
+ $name:=$entity.lastname // 社員のラストネームを取得します。 例: "Smith"
  $entity.lastname:="Jones" // 社員のラストネームを変更します
  $entity.save() // 変更を保存します
 ```
@@ -292,14 +292,14 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
   // エンティティセレクションをループします
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いを確認いたしました。"
+    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いを確認いたしました。 "
 
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
     $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いが確認できていません。"
+    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いが確認できていません。 "
     $status:=$transporter.send($email)
  End for each
 ```

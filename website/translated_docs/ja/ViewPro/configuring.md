@@ -216,10 +216,10 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | 時間 |                           |                               | (2:03:05 PM)      |
 |    | h                         | 先頭のゼロなしの時間。 0-23の値            | 2                 |
 |    | hh                        | 先頭のゼロありの時間。 00-23の値           | 02                |
-|    | m                         | 先頭のゼロなしの分数。 0-59の値            | 3                 |
-|    | mm                        | 先頭のゼロありの分数。 00-59の値           | 03                |
-|    | s                         | 先頭のゼロなしの秒数。 0-59の値            | 5                 |
-|    | ss                        | 先頭のゼロありの秒数。 00-59の値           | 05                |
+|    | m                         | 先頭のゼロなしの秒数。 0-59の値            | 3                 |
+|    | mm                        | 先頭のゼロありの秒数。 00-59の値           | 03                |
+|    | s                         | 先頭のゼロなしの分数。 0-59の値            | 5                 |
+|    | ss                        | 先頭のゼロありの分数。 00-59の値           | 05                |
 |    | \[h]                     | 経過時間の時間数                      | 14 (24 を超える表示も可能) |
 |    | \[mm]                    | 経過時間の分数                       | 843               |
 |    | \[ss]                    | 経過時間の秒数                       | 50585             |
@@ -327,8 +327,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | margin |         | object | 印刷マージン                              |
 |        | top     | 倍長整数   | 上部マージン、100分の1インチ単位。 デフォルト値 = 75     |
 |        | bottom  | 倍長整数   | 下部マージン、100分の1インチ単位。 デフォルト値 = 75     |
-|        | left    | 倍長整数   | 左マージン、100分の1インチ単位。 デフォルト値 = 70      |
-|        | right   | 倍長整数   | 右マージン、100分の1インチ単位。 デフォルト値 = 70      |
+|        | left    | 倍長整数   | 右マージン、100分の1インチ単位。 デフォルト値 = 70      |
+|        | right   | 倍長整数   | 左マージン、100分の1インチ単位。 デフォルト値 = 70      |
 |        | headers | 倍長整数   | ヘッダーのオフセット、100分の1インチ単位。 デフォルト値 = 30 |
 |        | footer  | 倍長整数   | フッターのオフセット、100分の1インチ単位。 デフォルト値 = 30 |
 
@@ -363,12 +363,12 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 *   カスタムサイズ - height と width 属性を使用
 *   規格サイズ - kind 属性を使用
 
-| プロパティ     |        | タイプ    | 説明                                                                              |
-| --------- | ------ | ------ | ------------------------------------------------------------------------------- |
-| paperSize |        | object | 印刷に使用する用紙の寸法 (height、width) または規格 (kind)                                        |
-|           | height | 倍長整数   | 用紙の高さ、100分の1インチ単位                                                               |
-|           | width  | 倍長整数   | 用紙の幅、100分の1インチ単位                                                                |
-|           | kind   | テキスト   | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。`GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
+| プロパティ     |        | タイプ    | 説明                                                                               |
+| --------- | ------ | ------ | -------------------------------------------------------------------------------- |
+| paperSize |        | object | 印刷に使用する用紙の寸法 (height、width) または規格 (kind)                                         |
+|           | height | 倍長整数   | 用紙の高さ、100分の1インチ単位                                                                |
+|           | width  | 倍長整数   | 用紙の幅、100分の1インチ単位                                                                 |
+|           | kind   | テキスト   | 用紙の規格サイズの名前 (例: A2、A4、legal、など)。 `GET PRINT OPTION` によって返されます。 デフォルト値 = "letter" |
 
 ### スケール
 
@@ -423,7 +423,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 スタイルシートは [VP ADD STYLESHEET](method-list.md#vp-add-stylesheet) コマンドで作成され、[VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) あるいは [VP SET CELL STYLE](method-list.md#vp-set-cell-style) コマンドで適用されます。 スタイルシートは [VP REMOVE STYLESHEET](method-list.md#vp-remove-stylesheet) コマンドで削除できます。
 
-[VP Get stylesheet](method-list.md#vp-get-stylesheet) コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。また、[VP Get stylesheets](method-list.md#vp-get-stylesheets) コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。
+[VP Get stylesheet](method-list.md#vp-get-stylesheet) コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。 また、[VP Get stylesheets](method-list.md#vp-get-stylesheets) コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。
 
 ### スタイルオブジェクトプロパティ
 
@@ -460,7 +460,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | プロパティ           |            | タイプ     | 説明                                                                                                                                                                                                                                                                            | とりうる値                                                                                                                                                                                                            |
 | --------------- | ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | font            |            | テキスト    | フォントの特徴を CSS の fontショートハンドで指定します ("font-style font-variant font-weight font-size/line-height font-family")。 例: "14pt Century Gothic"。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。 その他の値が省略された場合には、そのデフォルト値が使用されます。 注: フォント名にスペースが含まれる場合、その名前は引用符 ("") で括られる必要があります。 | CSS fontショートハンド。<p>4D ではフォントの特徴をオブジェクトとして管理するためのユーティリティコマンドを提供しています: [`VP Font to object`](method-list.md#vp-font-to-object) および [`VP Object to font`](method-list.md#vp-object-to-font) |
-| formatter       |            | テキスト    | 値や日時に対するパターン。                                                                                                                                                                                                                                                                 | 数値/テキスト/日付/時間フォーマット、特殊文字など。 [セルフォーマット](#セルフォーマット) 参照。                                                                                                                                                            |
+| formatter       |            | テキスト    | 値や日時に対するパターン                                                                                                                                                                                                                                                                  | 数値/テキスト/日付/時間フォーマット、特殊文字など。 [セルフォーマット](#セルフォーマット) 参照。                                                                                                                                                            |
 | isVerticalText  |            | boolean | テキストの向きを指定します。                                                                                                                                                                                                                                                                | true = 縦方向のテキスト, false = 横方向のテキスト                                                                                                                                                                                |
 | labelOptions    |            | object  | セルラベルのオプションを定義します (ウォーターマークオプション)                                                                                                                                                                                                                                             |                                                                                                                                                                                                                  |
 |                 | alignment  | 倍長整数    | セルラベルの位置を指定します。 任意プロパティです。                                                                                                                                                                                                                                                    | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`          |

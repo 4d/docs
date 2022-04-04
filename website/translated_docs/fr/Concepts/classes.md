@@ -667,3 +667,10 @@ Plusieurs commandes du langage 4D permettent de manipuler les caractéristiques 
 #### OB Instance of ( object ; class ) -> Boolean
 
 `OB Instance of` retourne `true` si `object` appartient à la `class` ou à l'une de ses classes héritées, sinon elle retourne `false`.
+
+
+### `OB Instance of`
+
+#### OB Instance of ( object ; class ) -> Boolean
+
+`OB Instance of` retourne `true` si `object` appartient à la `class` ou à l'une de ses classes héritées, sinon elle retourne `false`.

@@ -47,7 +47,7 @@ Vous les déclarez en ajoutant des commentaires tels que :
 
 Les déclarations ne sont pas sensibles à la casse ; écrire `fixme` : a le même effet.
 
-L'ajout d'un trait d'union après la balise `MARK: ` trace une ligne de séparation dans l'éditeur de code et dans le menu déroulant. Ainsi, cette saisie :
+L'ajout d'un trait d'union après la balise `MARK:` trace une ligne de séparation dans l'éditeur de code et dans le menu déroulant. Ainsi, cette saisie :
 
 ![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
 

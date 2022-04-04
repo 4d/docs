@@ -94,10 +94,10 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | Constante                  | Valor | Comentario                                                                                          |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
-| fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
-| fk database folder         | 4     | Associated filesystem: "/PACKAGE"                                                                   |
+| fk data folder             | 9     | Filesystem asociado: "/DATA"                                                                        |
+| fk database folder         | 4     | Filesystem asociado: "/PACKAGE"                                                                     |
 | fk desktop folder          | 115   |                                                                                                     |
-| fk documents folder        | 117   | Document folder of the user                                                                         |
+| fk documents folder        | 117   | Carpeta Documentos del usuario                                                                      |
 | fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
 | fk logs folder             | 7     | Associated filesystem: "/LOGS"                                                                      |
 | fk mobileApps folder       | 10    |                                                                                                     |
@@ -167,7 +167,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 #### Ejemplo 1
 
-Create an empty folder in the database folder:
+Cree una carpeta vacía en la carpeta de la base:
 
 ```4d
 var $created : Boolean
@@ -225,10 +225,10 @@ Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constante          | Valor | Comentario                    |
-| ------------------ | ----- | ----------------------------- |
-| `fk alias link`    | 0     | Enlace de alias (por defecto) |
-| `fk symbolic link` | 1     | Symbolic link (macOS only)    |
+| Constante          | Valor | Comentario                         |
+| ------------------ | ----- | ---------------------------------- |
+| `fk alias link`    | 0     | Enlace de alias (por defecto)      |
+| `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 

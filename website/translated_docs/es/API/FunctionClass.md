@@ -153,9 +153,9 @@ Puede pasar los [parámetros](#passing-parameters) a `Formula`, como se muestra 
 
 Se puede especificar el objeto sobre el que se ejecuta la fórmula, como se ve en el [ejemplo 5](#ejemplo-5). Se puede acceder a las propiedades del objeto mediante el comando `This`.
 
-Si *formulaExp* utiliza variables locales, sus valores se copian y almacenan en el objeto fórmula devuelto durante su creación. When executed, the formula uses these copied values rather than the current value of the local variables. Note that using arrays as local variables is not supported.
+Si *formulaExp* utiliza variables locales, sus valores se copian y almacenan en el objeto fórmula devuelto durante su creación. Cuando se ejecuta, la fórmula utiliza estos valores copiados en lugar del valor actual de las variables locales. Tenga en cuenta que no se soporta el uso de arrays como variables locales.
 
-The object created by `Formula` can be saved, for example, in a database field or in a blob document.
+El objeto creado por `Formula` puede guardarse, por ejemplo, en un campo de la base de datos o en un documento blob.
 
 
 #### Ejemplo 1
@@ -255,10 +255,10 @@ Llamar a una fórmula utilizando la notación de objetos:
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
-| Parámetros    | Tipo        |    | Descripción                             |
-| ------------- | ----------- |:--:| --------------------------------------- |
-| formulaString | Texto       | -> | Text formula to be returned as object   |
-| Resultado     | 4D.Function | <- | Native object encapsulating the formula |
+| Parámetros    | Tipo        |    | Descripción                            |
+| ------------- | ----------- |:--:| -------------------------------------- |
+| formulaString | Texto       | -> | Fórmula texto a devolver como objeto   |
+| Resultado     | 4D.Function | <- | Objeto nativo que encapsula la fórmula |
 <!-- END REF -->
 
 
@@ -272,7 +272,7 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 
 #### Ejemplo
 
-The following code will create a dialog accepting a formula in text format:
+El siguiente código creará un diálogo que acepta una fórmula en formato texto:
 
 ```4d
  var $textFormula : Text
@@ -312,9 +312,9 @@ The following code will create a dialog accepting a formula in text format:
 <!-- REF #FunctionClass.apply().Params -->
 | Parámetros    | Tipo       |    | Descripción                                                                   |
 | ------------- | ---------- |:--:| ----------------------------------------------------------------------------- |
-| thisObj       | Objeto     | -> | Object to be returned by the This command in the formula                      |
+| thisObj       | Objeto     | -> | Objeto a devolver por el comando This en la fórmula                           |
 | formulaParams | Collection | -> | Colección de valores que se pasan como $1...$n cuando se ejecuta la `fórmula` |
-| Resultado     | any        | <- | Value from formula execution                                                  |
+| Resultado     | any        | <- | Valor obtenido de la ejecución de la fórmula                                  |
 <!-- END REF -->
 
 
@@ -371,11 +371,11 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| Parámetros | Tipo   |    | Descripción                                               |
-| ---------- | ------ | -- | --------------------------------------------------------- |
-| thisObj    | Objeto | -> | Object to be returned by the This command in the formula  |
-| params     | any    | -> | Value(s) to be passed as $1...$n when formula is executed |
-| Resultado  | any    | <- | Value from formula execution                              |
+| Parámetros | Tipo   |    | Descripción                                                        |
+| ---------- | ------ | -- | ------------------------------------------------------------------ |
+| thisObj    | Objeto | -> | Objeto a devolver por el comando This en la fórmula                |
+| params     | any    | -> | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
+| Resultado  | any    | <- | Valor obtenido de la ejecución de la fórmula                       |
 <!-- END REF -->
 
 

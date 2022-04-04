@@ -230,34 +230,33 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドの説明を参照ください。
 
-> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ
-オブジェクト   
+> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ オブジェクト   
 > として渡されます:   
-> |プロパティ|    型|   説明| |---|---|---| |value|   Date|   日付| |time |Real|  時間 (秒単位)|</p> </blockquote> 
-> 
-> 4Dプロジェクトメソッドは、$0 を介して 4D View Pro のセルフォーミュラに値を返すこともできます。 以下のデータ型の戻り値がサポートされています:
-> 
-> * [テキスト](Concepts/dt_string.md) (4D View Pro 内で文字列に変換)
-> * [実数](Concepts/dt_number.md)/[倍長整数](Concepts/dt_number.md) (4D View Pro 内で数値に変換)
-> * [日付](Concepts/dt_date.md) (4D View Pro 内で JS日付型に変換 - 時間、分、秒 = 0)
-> * [時間](Concepts/dt_time.md) (4D View Pro 内で JS日付型に変換 - 日付は基準日、つまり 1899年12月30日)
-> * [ブール](Concepts/dt_boolean.md) (4D View Pro 内でブールに変換)
-> * [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
-> * 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):
->     
->     
+> |プロパティ|    型|   説明| |---|---|---| |value|   Date|   日付| |time |Real|  時間 (秒単位)|
+
+4Dプロジェクトメソッドは、$0 を介して 4D View Pro のセルフォーミュラに値を返すこともできます。 以下のデータ型の戻り値がサポートされています:
+
+* [テキスト](Concepts/dt_string.md) (4D View Pro 内で文字列に変換)
+* [実数](Concepts/dt_number.md)/[倍長整数](Concepts/dt_number.md) (4D View Pro 内で数値に変換)
+* [日付](Concepts/dt_date.md) (4D View Pro 内で JS日付型に変換 - 時間、分、秒 = 0)
+* [時間](Concepts/dt_time.md) (4D View Pro 内で JS日付型に変換 - 日付は基準日、つまり 1899年12月30日)
+* [ブール](Concepts/dt_boolean.md) (4D View Pro 内でブールに変換)
+* [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
+* 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):   
+    
+  | プロパティ | タイプ  | 説明       | | ----- | ---- | -------- | | value | Date | 日付値      | | time  | Real | 数値 (秒単位) |
+
     | プロパティ | タイプ | 説明       |
     | ----- | --- | -------- |
     | value | 日付  | 日付値      |
     | time  | 実数  | 数値 (秒単位) |
 
-
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
 
 以下の場合は、4D View Pro セルにエラーが返されます:
 
-* 4Dメソッドが上記以外のデータ型を返した場合。
-* 4Dメソッドの実行中にエラーが発生した場合 (ユーザーが "中止" ボタンをクリックした場合)。
+*   4Dメソッドが上記以外のデータ型を返した場合。
+*   4Dメソッドの実行中にエラーが発生した場合 (ユーザーが "中止" ボタンをクリックした場合)。
 
 #### 例題
 
@@ -277,21 +276,23 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 ![](assets/en/ViewPro/params.PNG)
 
+
 ## 互換性
 
-4D View Pro エリアでフィールドやメソッドをファンクションとして宣言する場合、代わりの方法も利用可能です。 これらの方法は、互換性のために維持されており、特定のケースで使用することができます。 しかしながら、[`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) の使用が推奨されます。 
+4D View Pro エリアでフィールドやメソッドをファンクションとして宣言する場合、代わりの方法も利用可能です。 これらの方法は、互換性のために維持されており、特定のケースで使用することができます。 しかしながら、[`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) の使用が推奨されます。
 
 ### 仮想ストラクチャーを使ったフィールド参照
 
-4D View Pro では、データベースの仮想ストラクチャーを使用して 4Dフィールドを参照することができます。つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されている場合です。 この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
+
+4D View Pro では、データベースの仮想ストラクチャーを使用して 4Dフィールドを参照することができます。 つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されている場合です。 この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
 
 > **警告**: 仮想ストラクチャーと `VP SET CUSTOM FUNCTIONS` を同時に使用することはできません。 `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
 #### 要件
 
-* フィールドは、データベースの仮想ストラクチャーに属していること。つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されていなくてはなりません。
-* テーブルとフィールド名は ECMA 準拠であること ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。
-* フィールドの型が 4D View Pro でサポートされていること (前述参照)。
+*   フィールドは、データベースの仮想ストラクチャーに属していること。 つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されていなくてはなりません。
+*   テーブルとフィールド名は ECMA 準拠であること ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。
+*   フィールドの型が 4D View Pro でサポートされていること (前述参照)。
 
 準拠していないフィールドがフォーミュラに呼び出されると、4D View Pro セルにエラーが返されます。
 
@@ -310,25 +311,26 @@ TABLENAME_FIELDNAME()
 =LEN(PEOPLE_NAME())
 ```
 
-> フィールドが [4Dメソッド] と同名の場合は、フィールド名が優先されます。 
+> フィールドが [4Dメソッド] と同名の場合は、フィールド名が優先されます。
 
 #### 例題
 
 4D の仮想フィールドを使用して、4D View Pro エリアのセル内に人の名前を表示します:
 
-1. "Employee" テーブルと "L_Name" フィールドを作成します:  
+1.  "Employee" テーブルと "L_Name" フィールドを作成します:
 
 ![](assets/en/ViewPro/vpFieldMeth1.PNG)
 
-2. 次のコードを実行して、仮想ストラクチャーを初期化します: 
-    
+
+2.  次のコードを実行して、仮想ストラクチャーを初期化します:
+
     ```4d
-        ARRAY TEXT($tableTitles;1)
+    ARRAY TEXT($tableTitles;1)
         ARRAY LONGINT($tableNum;1)
         $tableTitles{1}:="Emp"
         $tableNum{1}:=2
         SET TABLE TITLES($tableTitles;$tableNum;*)
-    
+
         ARRAY TEXT($fieldTitles;1)
         ARRAY LONGINT($fieldNum;1)
         $fieldTitles{1}:="Name"
@@ -336,31 +338,33 @@ TABLENAME_FIELDNAME()
         SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
     ```
 
-3. 4D View Pro エリアのセルに "=e" と入力します":
+3.  4D View Pro エリアのセルに "=e" と入力します":
 
 ![](assets/en/ViewPro/vpFieldMeth2.PNG)
 
-4. (Tabキーを使用して) EMP_NAME を選択し、閉じる ")" を入力します。
+
+4.  (Tabキーを使用して) EMP_NAME を選択し、閉じる ")" を入力します。
 
 ![](assets/en/ViewPro/vpFieldMeth3.PNG)
 
-5. セルを確定すると、カレントの従業員の名前が表示されます:
+
+5.  セルを確定すると、カレントの従業員の名前が表示されます:
 
 ![](assets/en/ViewPro/vpFieldMeth4.PNG)
-
 > \[Employee] テーブルはカレントレコードを持っている必要があります。
+
 
 ### 許可されたメソッドの宣言
 
-4D View Pro のフォーミュラ内にて 4Dプロジェクトメソッドを直接呼び出すことができます。 セキュリティ上の理由から、ユーザーによって呼び出し可能なメソッドは [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されなくてはなりません。 
+4D View Pro のフォーミュラ内にて 4Dプロジェクトメソッドを直接呼び出すことができます。 セキュリティ上の理由から、ユーザーによって呼び出し可能なメソッドは [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されなくてはなりません。
+
 
 #### 要件
 
 4D View Pro フォーミュラ内で呼び出すには、プロジェクトメソッドは以下の条件を満たしている必要があります:
 
-* **許可されている**: [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されていること。
-* **実行可能**: メソッドがホストデータベースに属している、あるいはロードされたコンポーネントに属しており当該メソッドの "コンポーネントとホストデータベース間で共有" オプションが有効化されていること ([プロジェクトメソッドの共有](../Concepts/components.md#プロジェクトメソッドの共有) 参照)。
-* 既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
-
+*   **許可されている**: [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されていること。
+*   **実行可能**: メソッドがホストデータベースに属している、あるいはロードされたコンポーネントに属しており当該メソッドの "コンポーネントとホストデータベース間で共有" オプションが有効化されていること ([プロジェクトメソッドの共有](../Concepts/components.md#プロジェクトメソッドの共有) 参照)。
+*   既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
 > [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) および [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
 

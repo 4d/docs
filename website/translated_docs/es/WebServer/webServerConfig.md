@@ -163,11 +163,11 @@ If you do not specify any default home page, the `On Web Connection` database me
 
 ## Activar CORS
 
-| Puede ajustarse con           | Nombre                                                          | Comentarios                                         |
-| ----------------------------- | --------------------------------------------------------------- | --------------------------------------------------- |
-| objeto webServer              | [`CORSEnabled`](API/WebServerClass.md#corsenabled)              | Boolean, true to enable the CORS (false by default) |
-| `WEB SET OPTION`              | `Web CORS enabled`                                              | 0 (disabled, default) or 1 (enabled)                |
-| Caja de diálogo de parámetros | [Options (II) page/Enable CORS](../settings/web.md#enable-cors) | Unchecked by default                                |
+| Puede ajustarse con           | Nombre                                                             | Comentarios                                         |
+| ----------------------------- | ------------------------------------------------------------------ | --------------------------------------------------- |
+| objeto webServer              | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                 | Boolean, true to enable the CORS (false by default) |
+| `WEB SET OPTION`              | `Web CORS enabled`                                                 | 0 (disabled, default) or 1 (enabled)                |
+| Caja de diálogo de parámetros | [Página Options (II)/Activar CORS](../settings/web.md#enable-cors) | Unchecked by default                                |
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
@@ -180,11 +180,11 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 
 ## Activar HTTP
 
-| Puede ajustarse con           | Nombre                                                           | Comentarios |
-| ----------------------------- | ---------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)               | booleano    |
-| `WEB SET OPTION`              | `Web HTTP enabled`                                               |             |
-| Caja de diálogo de parámetros | [Configuration page/Enable HTTP](../settings/web.md#enable-http) |             |
+| Puede ajustarse con           | Nombre                                                       | Comentarios |
+| ----------------------------- | ------------------------------------------------------------ | ----------- |
+| objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)           | booleano    |
+| `WEB SET OPTION`              | `Web HTTP enabled`                                           |             |
+| Caja de diálogo de parámetros | [Configuración/Activar HTTP](../settings/web.md#enable-http) |             |
 
 Indicates whether or not the web server will accept non-secure connections.
 
@@ -436,7 +436,7 @@ Default value: 100 (pass 0 to restore the default value).
 | ------------------- | ------------------------------------------------------ | ----------- |
 | objeto webServer    | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
-Minimum TLS version accepted for connections. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
+Versión mínima de TLS aceptada para las conexiones. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
 
 Valores posibles:
 

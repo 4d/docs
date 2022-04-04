@@ -237,9 +237,7 @@ The `return` statement can be used along with the standard syntax for [returned 
 Function getValue
     $0:=10
     return 20
-    // returns 20
-
-Function getValue -> $v : Integer
+    // returns 20 Function getValue -> $v : Integer
     return 10
     $v:=20 // never executed
     // returns 10
@@ -495,8 +493,7 @@ ALERT("Are you sure?";"Yes I am") //2 parÃ¢metros ALERT("Time is over") //1 parÃ
 4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). For example:
 
 ```4d
-// "concate" function of myClass
-Function concate ($param1 : Text ; $param2 : Text)->$result : Text
+// "concate" function of myClass Function concate ($param1 : Text ; $param2 : Text)->$result : Text
 $result:=$param1+" "+$param2
 ```
 ```4d

@@ -113,13 +113,13 @@ title: メソッドページ
 
 メソッドエディターウィンドウを開いたときに、オブジェクト (コマンド、テーブル、フィールド等) のリストをデフォルトで表示するかどうかを設定します。 メソッドエディターで直接このリストを表示/非表示にすることもできます。
 
-#### Show clipboards
+#### クリップボードを表示
 
-Lets you choose whether or not to show the multiple clipboards in the code editor.
+コードエディターに複数のクリップボードを表示するかどうかを選択できます。
 
 ![](assets/en/Preferences/show-clipboards.png)
 
-The corresponding [clipboard shorcuts](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) are still active when these clipboards are hidden.
+これらのクリップボードが非表示の場合でも、対応する [クリップボードショーカット](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.ja.html#3977166) は有効です。
 
 #### 論理ブロックを強調
 

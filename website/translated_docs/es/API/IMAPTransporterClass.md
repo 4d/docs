@@ -1105,7 +1105,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 | Propiedad  | Tipo     | Descripción                                                                                                                                         |
 | ---------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen | Booleano | Si True, los mensajes especificados se marcan como "vistos" en el buzón. Si False, los mensajes no se marcan como "vistos". Valor por defecto: True |
-| withBody   | Booleano | Pass True to return the body of the specified messages. If False, only the message headers are returned. Valor por defecto: True                    |
+| withBody   | Booleano | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True  |
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated.
 > * If there is no open connection, `.getMails()` will open a connection the last mailbox specified with [`.selectBox()`](#selectbox).
 
@@ -1115,10 +1115,10 @@ The optional *options* parameter allows you to define the parts of the messages 
 `.getMails()` returns an object containing the following collections:
 
 
-| Propiedad | Tipo       | Descripción                                                                                                                        |
-| --------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| lista     | Collection | Collection of [`Email` objects](EmailObjectClass.md#email-object). If no Email objects are found, an empty collection is returned. |
-| notFound  | Collection | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                       |
+| Propiedad | Tipo       | Descripción                                                                                                                           |
+| --------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| lista     | Collection | Colección de objetos [`Email`](EmailObjectClass.md#email-object). Si no se encuentran objetos Email, se devuelve una colección vacía. |
+| notFound  | Collection | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                          |
 
 
 #### Ejemplo
@@ -1191,7 +1191,7 @@ In the first parameter, you can pass either:
 
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Puede pasar:
 
-*   **True** - to mark the message as "seen" (indicating the message has been read)
+*   **True** - para marcar el mensaje como "visto" (indicando que el mensaje ha sido leído)
 *   **False** - para dejar intacto el estado "visto" del mensaje
 > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
@@ -1269,8 +1269,8 @@ The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves th
 
 Puede pasar:
 
-- in the *msgsIDs* parameter, a collection containing the unique IDs of the specific messages to move, or
-- in the *allMsgs* parameter, the `IMAP all` constant (integer) to move all messages in the selected mailbox.
+- en el parámetro *msgsIDs*, una colección contiene los IDs únicos de los mensajes específicos a mover, o
+- en el parámetro *allMsgs*, la constante `IMAP all` (entero) para mover todos los mensajes del buzón seleccionado.
 
 The *destinationBox* parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.
 

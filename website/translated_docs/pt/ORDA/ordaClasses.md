@@ -245,15 +245,8 @@ For information, please refer to the [Alias attributes](#alias-attributes) secti
 #### Exemplo
 
 ```4d
-// cs.CityEntity class
-
-Class extends Entity
-
-Function getPopulation()
-    $0:=This.zips.sum("population")
-
-
-Function isBigCity(): Boolean
+// cs. CityEntity class Class extends Entity Function getPopulation()
+    $0:=This.zips.sum("population") Function isBigCity(): Boolean
 // The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
@@ -343,8 +336,8 @@ The *getter* function defines the data type of the computed attribute thanks to 
 - Objeto
 - Image
 - BLOB
-- Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- Entity (i.e. cs. EmployeeEntity)
+- Entity selection (i.e. cs. EmployeeSelection)
 
 The *$event* parameter contains the following properties:
 
@@ -378,7 +371,7 @@ Function get fullName($event : Object)-> $fullName : Text
 - A computed attribute can be based upon an entity related attribute:
 
 ```4d
-Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
+Function get bigBoss($event : Object)-> $result: cs. EmployeeEntity
     $result:=This.manager.manager
 
 ```
@@ -386,9 +379,9 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 - A computed attribute can be based upon an entity selection related attribute:
 
 ```4d
-Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
+Function get coWorkers($event : Object)-> $result: cs. EmployeeSelection
     If (This.manager.manager=Null)
-        $result:=ds.Employee.newSelection()
+        $result:=ds. Employee.newSelection()
     Else 
         $result:=This.manager.directReports.minus(this)
     End if
@@ -434,8 +427,7 @@ Function set fullName($value : Text; $event : Object)
 
 ```4d
 Function query <attributeName>($event : Object)
-Function query <attributeName>($event : Object) -> $result : Text
-Function query <attributeName>($event : Object) -> $result : Object
+Function query <attributeName>($event : Object) -> $result : Text Function query <attributeName>($event : Object) -> $result : Object
 // code
 ```
 
@@ -516,7 +508,7 @@ Function query fullName($event : Object)->$result : Object
 Calling code, for example:
 
 ```4d
-$emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
+$emps:=ds. Employee.query("fullName = :1"; "Flora Pionsin")
 ```
 
 - This function handles queries on the *age* computed attribute and returns an object with parameters:
@@ -702,7 +694,7 @@ Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
 An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
 
 - if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D. Entity` or `4D. EntitySelection` type ("*classname*Entity" or "*classname*Selection").
 
 Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
 
@@ -716,21 +708,13 @@ Considering the following model:
 In the Teacher dataclass, an alias attribute returns all students of a teacher:
 
 ```4d
-// cs.TeacherEntity class
-
-Class extends Entity
-
-Alias students courses.student //relatedEntities 
+// cs. TeacherEntity class Class extends Entity Alias students courses.student //relatedEntities 
 ```
 
 In the Student dataclass, an alias attribute returns all teachers of a student:
 
 ```4d
-// cs.StudentEntity class
-
-Class extends Entity
-
-Alias teachers courses.teacher //relatedEntities 
+// cs. StudentEntity class Class extends Entity Alias teachers courses.teacher //relatedEntities 
 ```
 
 In the Course dataclass:
@@ -741,13 +725,7 @@ In the Course dataclass:
 
 
 ```4d
-// cs.CourseEntity class
-
-Class extends Entity
-
-Exposed Alias courseName name //scalar 
-Exposed Alias teacherName teacher.name //scalar value
-Exposed Alias studentName student.name //scalar value
+// cs. CourseEntity class Class extends Entity Exposed Alias courseName name //scalar Exposed Alias teacherName teacher.name //scalar value Exposed Alias studentName student.name //scalar value
 
 ```
 
@@ -755,19 +733,19 @@ You can then execute the following queries:
 
 ```4d
 // Find course named "Archaeology"
-ds.Course.query("courseName = :1";"Archaeology")
+ds. Course.query("courseName = :1";"Archaeology")
 
 // Find courses given by the professor Smith
-ds.Course.query("teacherName = :1";"Smith")
+ds. Course.query("teacherName = :1";"Smith")
 
 // Find courses where Student "Martin" assists
-ds.Course.query("studentName = :1";"Martin")
+ds. Course.query("studentName = :1";"Martin")
 
 // Find students who have M. Smith as teacher 
-ds.Student.query("teachers.name = :1";"Smith")
+ds. Student.query("teachers.name = :1";"Smith")
 
 // Find teachers who have M. Martin as Student
-ds.Teacher.query("students.name = :1";"Martin")
+ds. Teacher.query("students.name = :1";"Martin")
 // Note that this very simple query string processes a complex 
 // query including a double join, as you can see in the queryPlan:   
 // "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
@@ -780,7 +758,7 @@ You can also edit the value of the *courseName* alias:
 
 ```4d
 // Rename a course using its alias attribute
-$arch:=ds.Course.query("courseName = :1";"Archaeology")
+$arch:=ds. Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName and name are "Archaeology II"
 ```

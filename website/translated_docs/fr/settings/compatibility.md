@@ -5,7 +5,7 @@ title: Page de compatibilité
 
 La page Compatibilité regroupe les paramètres relatifs au maintien de la compatibilité avec les versions précédentes de 4D.
 
-> Le nombre d’options affichées dépend de la version de 4D avec laquelle la base/le projet a été créé(e) à l’origine (2004. x, v11, v12...) ainsi que des paramétrages modifiés dans ce(tte) base/projet.   
+> ainsi que des paramétrages modifiés dans ce(tte) base/projet.   
 > Cette page liste les options de compatibilité disponibles pour les bases/projets converti(e) s depuis 4D v18 et les versions plus récentes. Pour les options de compatibilité plus anciennes, consultez la [page Compatibilité](https://doc.4d.com/4Dv19R3/4D/19-R3/Compatibility-page.300-5612610.en.html) sur **doc.4d.com**.
 
 - **Utiliser l'ancienne couche réseau** : à compter de 4D v15, les applications 4D proposent une nouvelle couche réseau, nommée *ServerNet*, pour gérer les communications entre 4D Server et les postes 4D distants (clients). L'ancienne couche réseau devient obsolète, mais est conservée pour assurer la compatibilité des bases existantes. A l'aide de cette option, vous pouvez activer ou désactiver à tout moment l'ancienne couche réseau dans vos applications 4D Server en fonction de vos besoins. *ServerNet* est automatiquement activé dans les nouvelles bases et les bases converties depuis les versions 15 et les versions plus récentes. A noter qu'en cas de modification de l'option, vous devez redémarrer l'application pour que le changement soit pris en compte. Toute application cliente qui était connectée doit également être redémarrée afin de se connecter avec la nouvelle couche réseau. **Note :** Cette option peut également être gérée par programmation via la commande `SET DATABASE PARAMETER`.

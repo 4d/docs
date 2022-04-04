@@ -661,7 +661,7 @@ id name price vat
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+このとき、区切り文字は `\t` (タブ) で、改行コードは `\r\n` (CRLF) です。
 
 以下は、同じファイルで改行コードが異なる例です:
 
@@ -672,7 +672,7 @@ with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-This time `\n` (LF) is used as line delimiter.
+このとき、改行コードは `\n` (LF) です。
 
 
 

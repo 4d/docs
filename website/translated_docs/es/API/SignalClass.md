@@ -85,12 +85,10 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 |                                                                                                                                                                                         |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #SignalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.description.Summary -->|
-| [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.signaled.Summary --> |
-| [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.trigger().Summary --> |
-| [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.wait().Summary --> |
-
-
+| [<!-- INCLUDE #SignalClass.description.Syntax -->](#description)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.description.Summary --> |
+| [<!-- INCLUDE #SignalClass.signaled.Syntax -->](#signaled)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.signaled.Summary -->          |
+| [<!-- INCLUDE #SignalClass.trigger().Syntax -->](#trigger)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.trigger().Summary -->         |
+| [<!-- INCLUDE #SignalClass.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SignalClass.wait().Summary -->                  |
 
 
 <!-- REF SignalClass.New signal.Desc -->
@@ -103,14 +101,16 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 | v17 R4  | Añadidos       |
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->
-**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
+
+<!-- REF #_command_.New signal.Syntax --> **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
+
 
 <!-- REF SignalClass.New signal.Params -->
 | Parámetros  | Tipo      |    | Descripción                          |
 | ----------- | --------- |:--:| ------------------------------------ |
 | description | Texto     | -> | Descripción para la señal            |
 | Resultado   | 4D.Signal | <- | Objeto nativo que encapsula la señal |
+
 <!-- END REF -->
 
 
@@ -163,8 +163,8 @@ El método ***doSomething*** puede ser:
  $signal.trigger() // The work is finished
 ```
 
-<!-- END REF -->
 
+<!-- END REF -->
 
 <!-- REF SignalClass.description.Desc -->
 ## .description
@@ -175,8 +175,8 @@ El método ***doSomething*** puede ser:
 | v17 R4  | Añadidos       |
 </details>
 
-<!-- REF #SignalClass.description.Syntax -->
-**.description** : Text<!-- END REF -->
+
+<!-- REF #SignalClass.description.Syntax --> **.description** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -188,8 +188,6 @@ Esta propiedad es **lectura-escritura**.
 
 <!-- END REF -->
 
-
-
 <!-- REF SignalClass.signaled.Desc -->
 ## .signaled
 
@@ -200,8 +198,8 @@ Esta propiedad es **lectura-escritura**.
 
 </details>
 
-<!-- REF #SignalClass.signaled.Syntax -->
-**.signaled**: Boolean<!-- END REF -->
+
+<!-- REF #SignalClass.signaled.Syntax --> **.signaled**: Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -210,8 +208,6 @@ La propiedad `.signaled` <!-- REF #SignalClass.signaled.Summary -->contiene el e
 Esta propiedad es **de sólo lectura**. 
 
 <!-- END REF -->
-
-
 
 <!-- REF SignalClass.trigger().Desc -->
 ## .trigger()
@@ -222,13 +218,15 @@ Esta propiedad es **de sólo lectura**.
 | v17 R4  | Añadidos       |
 </details>
 
-<!-- REF #SignalClass.trigger().Syntax -->
-**.trigger( )**<!-- END REF -->
+
+<!-- REF #SignalClass.trigger().Syntax --> **.trigger( )**<!-- END REF -->
+
 
 <!-- REF #SignalClass.trigger().Params -->
 | Parámetros | Tipo |  | Descripción                  |
 | ---------- | ---- |::| ---------------------------- |
 |            |      |  | No requiere ningún parámetro |
+
 <!-- END REF -->
 
 
@@ -240,8 +238,6 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 <!-- END REF -->
 
-
-
 <!-- REF SignalClass.wait().Desc -->
 ## .wait()
 
@@ -251,14 +247,16 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 | v17 R4  | Añadidos       |
 </details>
 
-<!-- REF #SignalClass.wait().Syntax -->
-**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
+
+<!-- REF #SignalClass.wait().Syntax --> **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
+
 
 <!-- REF #SignalClass.wait().Params -->
 | Parámetros | Tipo     |    | Descripción                                     |
 | ---------- | -------- | -- | ----------------------------------------------- |
 | timeout    | Real     | -> | Tiempo máximo de espera de la señal en segundos |
 | Resultado  | Booleano | <- | Estado de la propiedad `.signaled`              |
+
 <!-- END REF -->
 
 
@@ -272,6 +270,8 @@ Para evitar que el código se bloquee, puede pasar un tiempo máximo de espera e
 Si signal ya está en el estado de señalización (es decir, la propiedad `.signaled` ya es **true**), la función devuelve inmediatamente, sin esperar.
 
 La función devuelve el valor de la propiedad `.signaled`. La evaluación de este valor permite saber si la función devuelta porque el `.trigger( )` se ha llamado (`.signaled` es **true**) o si el *timeout* vencido (`.signaled` es **false**).
-> The state of a process that waits for a signal is `Waiting for internal flag`.<!-- END REF -->
+> The state of a process that waits for a signal is `Waiting for internal flag`.
+
+<!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

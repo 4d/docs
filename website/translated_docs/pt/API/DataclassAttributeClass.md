@@ -344,13 +344,13 @@ A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->retorna o
 
 #### Description
 
-The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
+The `.path` property<!-- REF DataClassAttributeClass.path. Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
 
 #### Exemplo
 
 ```4d
  var $path : Text
- $path:=ds.Teacher.students.path //$path="courses.student"
+ $path:=ds. Teacher.students.path //$path="courses.student"
 ```
 
 <!-- END REF -->
@@ -374,7 +374,7 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 
 #### Description
 
-The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
+The `.readOnly` property is<!-- REF DataClassAttributeClass.readOnly. Summary -->true if the attribute is read-only<!-- END REF -->.
 
 For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only. 
 
