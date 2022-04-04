@@ -256,10 +256,10 @@
 <tr><td>時間</td><td></td><td></td><td>(2:03:05 PM)</td></tr>
 <tr><td></td><td>h</td><td>先頭のゼロなしの時間。 0-23の値</td><td>2</td></tr>
 <tr><td></td><td>hh</td><td>先頭のゼロありの時間。 00-23の値</td><td>02</td></tr>
-<tr><td></td><td>m</td><td>先頭のゼロなしの分数。 0-59の値</td><td>3</td></tr>
-<tr><td></td><td>mm</td><td>先頭のゼロありの分数。 00-59の値</td><td>03</td></tr>
-<tr><td></td><td>s</td><td>先頭のゼロなしの秒数。 0-59の値</td><td>5</td></tr>
-<tr><td></td><td>ss</td><td>先頭のゼロありの秒数。 00-59の値</td><td>05</td></tr>
+<tr><td></td><td>m</td><td>先頭のゼロなしの秒数。 0-59の値</td><td>3</td></tr>
+<tr><td></td><td>mm</td><td>先頭のゼロありの秒数。 00-59の値</td><td>03</td></tr>
+<tr><td></td><td>s</td><td>先頭のゼロなしの分数。 0-59の値</td><td>5</td></tr>
+<tr><td></td><td>ss</td><td>先頭のゼロありの分数。 00-59の値</td><td>05</td></tr>
 <tr><td></td><td>[h]</td><td>経過時間の時間数</td><td>14 (24 を超える表示も可能)</td></tr>
 <tr><td></td><td>[mm]</td><td>経過時間の分数</td><td>843</td></tr>
 <tr><td></td><td>[ss]</td><td>経過時間の秒数</td><td>50585</td></tr>
@@ -374,8 +374,8 @@
 <tr><td>margin</td><td></td><td>object</td><td>印刷マージン</td></tr>
 <tr><td></td><td>top</td><td>倍長整数</td><td>上部マージン、100分の1インチ単位。 デフォルト値 = 75</td></tr>
 <tr><td></td><td>bottom</td><td>倍長整数</td><td>下部マージン、100分の1インチ単位。 デフォルト値 = 75</td></tr>
-<tr><td></td><td>left</td><td>倍長整数</td><td>左マージン、100分の1インチ単位。 デフォルト値 = 70</td></tr>
-<tr><td></td><td>right</td><td>倍長整数</td><td>右マージン、100分の1インチ単位。 デフォルト値 = 70</td></tr>
+<tr><td></td><td>left</td><td>倍長整数</td><td>右マージン、100分の1インチ単位。 デフォルト値 = 70</td></tr>
+<tr><td></td><td>right</td><td>倍長整数</td><td>左マージン、100分の1インチ単位。 デフォルト値 = 70</td></tr>
 <tr><td></td><td>headers</td><td>倍長整数</td><td>ヘッダーのオフセット、100分の1インチ単位。 デフォルト値 = 30</td></tr>
 <tr><td></td><td>footer</td><td>倍長整数</td><td>フッターのオフセット、100分の1インチ単位。 デフォルト値 = 30</td></tr>
 </tbody>
@@ -424,7 +424,7 @@
 <tr><td>paperSize</td><td></td><td>object</td><td>印刷に使用する用紙の寸法 (height、width) または規格 (kind)</td></tr>
 <tr><td></td><td>height</td><td>倍長整数</td><td>用紙の高さ、100分の1インチ単位</td></tr>
 <tr><td></td><td>width</td><td>倍長整数</td><td>用紙の幅、100分の1インチ単位</td></tr>
-<tr><td></td><td>kind</td><td>テキスト</td><td>用紙の規格サイズの名前 (例: A2、A4、legal、など)。<code>GET PRINT OPTION</code> によって返されます。 デフォルト値 = &quot;letter&quot;</td></tr>
+<tr><td></td><td>kind</td><td>テキスト</td><td>用紙の規格サイズの名前 (例: A2、A4、legal、など)。 <code>GET PRINT OPTION</code> によって返されます。 デフォルト値 = &quot;letter&quot;</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="スケール"></a><a href="#スケール" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スケール</h3>
@@ -476,7 +476,7 @@
 <p>スタイルオブジェクトには、スタイル設定が格納されます。 これらはスタイルシートで使用するか、あるいはそのまま使用することができます。 スタイルオブジェクトはスタイルシートと組み合わせて使用することもでき、ドキュメントの他の部分に影響を及ぼすことなく個別のセルレンジに異なる設定を指定することもできます。 <a href="/docs/ja/ViewPro/method-list.html#vp-set-cell-style">VP SET CELL STYLE</a> および <a href="/docs/ja/ViewPro/method-list.html#vp-set-default-style">VP SET DEFAULT STYLE</a> コマンドでは、スタイルオブジェクトを直接使用することができます。</p>
 <p><strong>スタイルシート</strong> は、プロパティの組み合わせをスタイルオブジェクトにまとめたもので、それによって 4D View Pro ドキュメントのすべてのセルの見た目を指定します。 ドキュメントとともに保存されたスタイルシートを使用して、単一のシート、複数のシート、あるいはワークブック全体に対してプロパティを設定することができます。 4D View Pro スタイルシートは作成時に名前が与えられ、この名前はスタイルシートの &quot;name&quot; プロパティに保存されます。 これによりスタイルシートの使用が容易になり、また注意深く命名することで、その定義と目的を分かりやすくすることもできます (例: Letterhead_internal、Letterhead_external、など)。</p>
 <p>スタイルシートは <a href="/docs/ja/ViewPro/method-list.html#vp-add-stylesheet">VP ADD STYLESHEET</a> コマンドで作成され、<a href="/docs/ja/ViewPro/method-list.html#vp-set-default-style">VP SET DEFAULT STYLE</a> あるいは <a href="/docs/ja/ViewPro/method-list.html#vp-set-cell-style">VP SET CELL STYLE</a> コマンドで適用されます。 スタイルシートは <a href="/docs/ja/ViewPro/method-list.html#vp-remove-stylesheet">VP REMOVE STYLESHEET</a> コマンドで削除できます。</p>
-<p><a href="/docs/ja/ViewPro/method-list.html#vp-get-stylesheet">VP Get stylesheet</a> コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。また、<a href="/docs/ja/ViewPro/method-list.html#vp-get-stylesheets">VP Get stylesheets</a> コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。</p>
+<p><a href="/docs/ja/ViewPro/method-list.html#vp-get-stylesheet">VP Get stylesheet</a> コマンドを使用することでスタイルシートのスタイルオブジェクトを取得できます。 また、<a href="/docs/ja/ViewPro/method-list.html#vp-get-stylesheets">VP Get stylesheets</a> コマンドを使用して複数のスタイルシートのスタイルオブジェクトのコレクションを取得することもできます。</p>
 <h3><a class="anchor" aria-hidden="true" id="スタイルオブジェクトプロパティ"></a><a href="#スタイルオブジェクトプロパティ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スタイルオブジェクトプロパティ</h3>
 <p>例:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$style</span>:=New object
@@ -515,7 +515,7 @@
 </thead>
 <tbody>
 <tr><td>font</td><td></td><td>テキスト</td><td>フォントの特徴を CSS の fontショートハンドで指定します (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;)。 例: &quot;14pt Century Gothic&quot;。 フォントサイズ (font-size) とフォントファミリー (font-family) の値は必須です。 その他の値が省略された場合には、そのデフォルト値が使用されます。 注: フォント名にスペースが含まれる場合、その名前は引用符 (&quot;&quot;) で括られる必要があります。</td><td>CSS fontショートハンド。<p>4D ではフォントの特徴をオブジェクトとして管理するためのユーティリティコマンドを提供しています: <a href="/docs/ja/ViewPro/method-list.html#vp-font-to-object"><code>VP Font to object</code></a> および <a href="/docs/ja/ViewPro/method-list.html#vp-object-to-font"><code>VP Object to font</code></a></td></tr>
-<tr><td>formatter</td><td></td><td>テキスト</td><td>値や日時に対するパターン。</td><td>数値/テキスト/日付/時間フォーマット、特殊文字など。 <a href="#セルフォーマット">セルフォーマット</a> 参照。</td></tr>
+<tr><td>formatter</td><td></td><td>テキスト</td><td>値や日時に対するパターン</td><td>数値/テキスト/日付/時間フォーマット、特殊文字など。 <a href="#セルフォーマット">セルフォーマット</a> 参照。</td></tr>
 <tr><td>isVerticalText</td><td></td><td>boolean</td><td>テキストの向きを指定します。</td><td>true = 縦方向のテキスト, false = 横方向のテキスト</td></tr>
 <tr><td>labelOptions</td><td></td><td>object</td><td>セルラベルのオプションを定義します (ウォーターマークオプション)</td><td></td></tr>
 <tr><td></td><td>alignment</td><td>倍長整数</td><td>セルラベルの位置を指定します。 任意プロパティです。</td><td><code>vk label alignment top left</code>, <code>vk label alignment bottom left</code>, <code>vk label alignment top center</code>, <code>vk label alignment bottom center</code>, <code>vk label alignment top right</code>, <code>vk label alignment bottom right</code></td></tr>

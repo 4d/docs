@@ -237,15 +237,8 @@ Function</span> withSalaryGreaterThanAverage
 <p><code>Alias</code> <em>attributeName</em> <em>targetPath</em></p>
 <p>For information, please refer to the <a href="#alias-attributes">Alias attributes</a> section.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-3"></a><a href="#exemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.CityEntity class</span><span class="hljs-keyword">
-
-Class extends</span> Entity<span class="hljs-keyword">
-
-Function</span><span class="hljs-function"> getPopulation</span>()
-    <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.zips.<span class="hljs-function">sum</span>(<span class="hljs-string">"population"</span>)<span class="hljs-keyword">
-
-
-Function</span><span class="hljs-function"> isBigCity</span>(): Boolean
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs. CityEntity class Class extends Entity Function getPopulation()</span>
+    <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.zips.<span class="hljs-function">sum</span>(<span class="hljs-string">"population"</span>)<span class="hljs-keyword"> Function</span><span class="hljs-function"> isBigCity</span>(): Boolean
 <span class="hljs-comment">// The getPopulation() function is usable inside the class</span>
 <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">getPopulation</span>()&gt;<span class="hljs-number">50000</span>
 </code></pre>
@@ -310,8 +303,8 @@ End if</span>
 <li>Objeto</li>
 <li>Image</li>
 <li>BLOB</li>
-<li>Entity (i.e. cs.EmployeeEntity)</li>
-<li>Entity selection (i.e. cs.EmployeeSelection)</li>
+<li>Entity (i.e. cs. EmployeeEntity)</li>
+<li>Entity selection (i.e. cs. EmployeeSelection)</li>
 </ul>
 <p>The <em>$event</em> parameter contains the following properties:</p>
 <table>
@@ -345,16 +338,16 @@ End if</span>
 <ul>
 <li>A computed attribute can be based upon an entity related attribute:</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get bigBoss</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result</span>: cs.EmployeeEntity
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get bigBoss</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result</span>: cs. EmployeeEntity
     <span class="hljs-variable">$result</span>:=<span class="hljs-literal">This</span>.manager.manager
 
 </code></pre>
 <ul>
 <li>A computed attribute can be based upon an entity selection related attribute:</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get coWorkers</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result</span>: cs.EmployeeSelection<span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get coWorkers</span>(<span class="hljs-variable">$event </span>: Object)-&gt; <span class="hljs-variable">$result</span>: cs. EmployeeSelection<span class="hljs-keyword">
     If</span> (<span class="hljs-literal">This</span>.manager.manager=<span class="hljs-literal">Null</span>)
-        <span class="hljs-variable">$result</span>:=ds.Employee.<span class="hljs-function">newSelection</span>()<span class="hljs-keyword">
+        <span class="hljs-variable">$result</span>:=ds. Employee.<span class="hljs-function">newSelection</span>()<span class="hljs-keyword">
     Else</span> 
         <span class="hljs-variable">$result</span>:=<span class="hljs-literal">This</span>.manager.directReports.<span class="hljs-function">minus</span>(this)<span class="hljs-keyword">
     End if</span>
@@ -388,8 +381,7 @@ End if</span>
 <h3><a class="anchor" aria-hidden="true" id="function-query-attributename"></a><a href="#function-query-attributename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Function query &lt;attributeName&gt;</code></h3>
 <h4><a class="anchor" aria-hidden="true" id="sintaxe-2"></a><a href="#sintaxe-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxe</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event </span>: Object)<span class="hljs-keyword">
-Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event </span>: Object) -&gt; <span class="hljs-variable">$result </span>: Text<span class="hljs-keyword">
-Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event </span>: Object) -&gt; <span class="hljs-variable">$result </span>: Object
+Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event </span>: Object) -&gt; <span class="hljs-variable">$result </span>: Text<span class="hljs-keyword"> Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event </span>: Object) -&gt; <span class="hljs-variable">$result </span>: Object
 <span class="hljs-comment">// code</span>
 </code></pre>
 <p>This function supports three syntaxes:</p>
@@ -477,7 +469,7 @@ Function</span> query &lt;attributeName&gt;(<span class="hljs-variable">$event <
 <p>Keep in mind that using placeholders in queries based upon user text input is recommended for security reasons (see <a href="/docs/pt/API/DataClassClass.html#query"><code>query()</code> description</a>).</p>
 </blockquote>
 <p>Calling code, for example:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$emps</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"fullName = :1"</span>; <span class="hljs-string">"Flora Pionsin"</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$emps</span>:=ds. Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"fullName = :1"</span>; <span class="hljs-string">"Flora Pionsin"</span>)
 </code></pre>
 <ul>
 <li>This function handles queries on the <em>age</em> computed attribute and returns an object with parameters:</li>
@@ -629,25 +621,17 @@ Function</span> orderBy &lt;attributeName&gt;(<span class="hljs-variable">$event
 <p>An alias attribute inherits its data <a href="/docs/pt/API/DataClassAttributeClass.html#type"><code>type</code></a> property from the target attribute:</p>
 <ul>
 <li>if the target attribute <a href="/docs/pt/API/DataClassAttributeClass.html#kind"><code>kind</code></a> is &quot;storage&quot;, the alias data type is of the same type,</li>
-<li>if the target attribute <a href="/docs/pt/API/DataClassAttributeClass.html#kind"><code>kind</code></a> is &quot;relatedEntity&quot; or &quot;relatedEntities&quot;, the alias data type is of the <code>4D.Entity</code> or <code>4D.EntitySelection</code> type (&quot;<em>classname</em>Entity&quot; or &quot;<em>classname</em>Selection&quot;).</li>
+<li>if the target attribute <a href="/docs/pt/API/DataClassAttributeClass.html#kind"><code>kind</code></a> is &quot;relatedEntity&quot; or &quot;relatedEntities&quot;, the alias data type is of the <code>4D. Entity</code> or <code>4D. EntitySelection</code> type (&quot;<em>classname</em>Entity&quot; or &quot;<em>classname</em>Selection&quot;).</li>
 </ul>
 <p>Alias attributes based upon relations have a specific <a href="/docs/pt/API/DataClassAttributeClass.html#path"><code>path</code></a> property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no <code>path</code> property).</p>
 <h3><a class="anchor" aria-hidden="true" id="exemplos-2"></a><a href="#exemplos-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplos</h3>
 <p>Considering the following model:</p>
 <p><img src="/docs/assets/en/ORDA/alias1.png" alt=""></p>
 <p>In the Teacher dataclass, an alias attribute returns all students of a teacher:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.TeacherEntity class</span><span class="hljs-keyword">
-
-Class extends</span> Entity
-
-Alias students courses.student <span class="hljs-comment">//relatedEntities </span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs. TeacherEntity class Class extends Entity Alias students courses.student //relatedEntities </span>
 </code></pre>
 <p>In the Student dataclass, an alias attribute returns all teachers of a student:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.StudentEntity class</span><span class="hljs-keyword">
-
-Class extends</span> Entity
-
-Alias teachers courses.teacher <span class="hljs-comment">//relatedEntities </span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs. StudentEntity class Class extends Entity Alias teachers courses.teacher //relatedEntities </span>
 </code></pre>
 <p>In the Course dataclass:</p>
 <ul>
@@ -655,30 +639,24 @@ Alias teachers courses.teacher <span class="hljs-comment">//relatedEntities </sp
 <li>an alias attribute returns the teacher name</li>
 <li>an alias attribute returns the student name</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.CourseEntity class</span><span class="hljs-keyword">
-
-Class extends</span> Entity
-
-Exposed Alias courseName name <span class="hljs-comment">//scalar </span>
-Exposed Alias teacherName teacher.name <span class="hljs-comment">//scalar value</span>
-Exposed Alias studentName student.name <span class="hljs-comment">//scalar value</span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs. CourseEntity class Class extends Entity Exposed Alias courseName name //scalar Exposed Alias teacherName teacher.name //scalar value Exposed Alias studentName student.name //scalar value</span>
 
 </code></pre>
 <p>You can then execute the following queries:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Find course named "Archaeology"</span>
-ds.Course.<span class="hljs-function">query</span>(<span class="hljs-string">"courseName = :1"</span>;<span class="hljs-string">"Archaeology"</span>)
+ds. Course.<span class="hljs-function">query</span>(<span class="hljs-string">"courseName = :1"</span>;<span class="hljs-string">"Archaeology"</span>)
 
 <span class="hljs-comment">// Find courses given by the professor Smith</span>
-ds.Course.<span class="hljs-function">query</span>(<span class="hljs-string">"teacherName = :1"</span>;<span class="hljs-string">"Smith"</span>)
+ds. Course.<span class="hljs-function">query</span>(<span class="hljs-string">"teacherName = :1"</span>;<span class="hljs-string">"Smith"</span>)
 
 <span class="hljs-comment">// Find courses where Student "Martin" assists</span>
-ds.Course.<span class="hljs-function">query</span>(<span class="hljs-string">"studentName = :1"</span>;<span class="hljs-string">"Martin"</span>)
+ds. Course.<span class="hljs-function">query</span>(<span class="hljs-string">"studentName = :1"</span>;<span class="hljs-string">"Martin"</span>)
 
 <span class="hljs-comment">// Find students who have M. Smith as teacher </span>
-ds.Student.<span class="hljs-function">query</span>(<span class="hljs-string">"teachers.name = :1"</span>;<span class="hljs-string">"Smith"</span>)
+ds. Student.<span class="hljs-function">query</span>(<span class="hljs-string">"teachers.name = :1"</span>;<span class="hljs-string">"Smith"</span>)
 
 <span class="hljs-comment">// Find teachers who have M. Martin as Student</span>
-ds.Teacher.<span class="hljs-function">query</span>(<span class="hljs-string">"students.name = :1"</span>;<span class="hljs-string">"Martin"</span>)
+ds. Teacher.<span class="hljs-function">query</span>(<span class="hljs-string">"students.name = :1"</span>;<span class="hljs-string">"Martin"</span>)
 <span class="hljs-comment">// Note that this very simple query string processes a complex </span>
 <span class="hljs-comment">// query including a double join, as you can see in the queryPlan:   </span>
 <span class="hljs-comment">// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    </span>
@@ -687,7 +665,7 @@ ds.Teacher.<span class="hljs-function">query</span>(<span class="hljs-string">"s
 </code></pre>
 <p>You can also edit the value of the <em>courseName</em> alias:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Rename a course using its alias attribute</span>
-<span class="hljs-variable">$arch</span>:=ds.Course.<span class="hljs-function">query</span>(<span class="hljs-string">"courseName = :1"</span>;<span class="hljs-string">"Archaeology"</span>)
+<span class="hljs-variable">$arch</span>:=ds. Course.<span class="hljs-function">query</span>(<span class="hljs-string">"courseName = :1"</span>;<span class="hljs-string">"Archaeology"</span>)
 <span class="hljs-variable">$arch</span>.courseName:=<span class="hljs-string">"Archaeology II"</span>
 <span class="hljs-variable">$arch</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//courseName and name are "Archaeology II"</span>
 </code></pre>

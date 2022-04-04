@@ -177,13 +177,8 @@ End if</span>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$indexUserId</span>; <span class="hljs-variable">$indexPassword</span>; <span class="hljs-variable">$userId </span>: Integer<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$password </span>: Text<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$userTop3</span>; <span class="hljs-variable">$sales</span>; <span class="hljs-variable">$info </span>: Object
-
-
-<span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-number">0</span>)
-<span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$avalues</span>; <span class="hljs-number">0</span>)
-
-<span class="hljs-function">WEB GET VARIABLES</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-variable">$avalues</span>)
+var</span> <span class="hljs-variable">$userTop3</span>; <span class="hljs-variable">$sales</span>; <span class="hljs-variable">$info </span>:<span class="hljs-function"> Object ARRAY TEXT</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-number">0</span>)
+<span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$avalues</span>; <span class="hljs-number">0</span>)<span class="hljs-function"> WEB GET VARIABLES</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-variable">$avalues</span>)
 
 <span class="hljs-variable">$indexUserId</span>:=<span class="hljs-function">Find in array</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-string">"userId"</span>)
 <span class="hljs-variable">$userId</span>:=<span class="hljs-function">Num</span>(<span class="hljs-variable">$avalues{</span><span class="hljs-variable">$indexUserId}</span>)
@@ -191,9 +186,7 @@ var</span> <span class="hljs-variable">$userTop3</span>; <span class="hljs-varia
 <span class="hljs-variable">$indexPassword</span>:=<span class="hljs-function">Find in array</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-string">"password"</span>)
 <span class="hljs-variable">$password</span>:=<span class="hljs-variable">$avalues{</span><span class="hljs-variable">$indexPassword}</span>
 
-<span class="hljs-variable">$sales</span>:=ds.SalesPersons.<span class="hljs-function">query</span>(<span class="hljs-string">"userId = :1"</span>; <span class="hljs-variable">$userId</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword">
-
-If</span> (<span class="hljs-variable">$sales</span>#<span class="hljs-literal">Null</span>)<span class="hljs-keyword">
+<span class="hljs-variable">$sales</span>:=ds. SalesPersons.<span class="hljs-function">query</span>(<span class="hljs-string">"userId = :1"</span>; <span class="hljs-variable">$userId</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword"> If</span> (<span class="hljs-variable">$sales</span>#<span class="hljs-literal">Null</span>)<span class="hljs-keyword">
     If</span> (<span class="hljs-function">Verify password hash</span>(<span class="hljs-variable">$password</span>; <span class="hljs-variable">$sales</span>.password))
         <span class="hljs-variable">$info</span>:=<span class="hljs-function">New object</span>()
         <span class="hljs-variable">$info</span>.userName:=<span class="hljs-variable">$sales</span>.firstname+<span class="hljs-string">" "</span>+<span class="hljs-variable">$sales</span>.lastname
@@ -207,8 +200,7 @@ If</span> (<span class="hljs-variable">$sales</span>#<span class="hljs-literal">
 <span class="hljs-function">        WEB SEND HTTP REDIRECT</span>(<span class="hljs-string">"/authenticationOK.shtml"</span>)<span class="hljs-keyword">
     Else</span>
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"This password is wrong"</span>)<span class="hljs-keyword">
-    End if</span><span class="hljs-keyword">
-Else</span>
+    End if</span><span class="hljs-keyword"> Else</span>
 <span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"This userId is unknown"</span>)<span class="hljs-keyword">
 End if</span>
 </code></pre>

@@ -133,7 +133,7 @@
 </blockquote>
 <p>たとえば、ストレージ属性を設定するためには:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">// ID1 の社員エンティティを取得します</span>
- <span class="hljs-variable">$name</span>:=<span class="hljs-variable">$entity</span>.lastname <span class="hljs-comment">// 社員のラストネームを取得します。例: "Smith"</span>
+ <span class="hljs-variable">$name</span>:=<span class="hljs-variable">$entity</span>.lastname <span class="hljs-comment">// 社員のラストネームを取得します。 例: "Smith"</span>
  <span class="hljs-variable">$entity</span>.lastname:=<span class="hljs-string">"Jones"</span> <span class="hljs-comment">// 社員のラストネームを変更します</span>
  <span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">// 変更を保存します</span>
 </code></pre>
@@ -284,14 +284,14 @@ var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable"
   <span class="hljs-comment">// エンティティセレクションをループします</span><span class="hljs-keyword">
  For each</span>(<span class="hljs-variable">$invoice</span>;<span class="hljs-variable">$paid</span>)
     <span class="hljs-variable">$email</span>.to:=<span class="hljs-variable">$invoice</span>.customer.address <span class="hljs-comment">// 顧客のメールアドレス</span>
-    <span class="hljs-variable">$email</span>.subject:=<span class="hljs-string">"請求書 # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$invoice</span>.number) + <span class="hljs-string">"のお支払いを確認いたしました。"</span>
+    <span class="hljs-variable">$email</span>.subject:=<span class="hljs-string">"請求書 # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$invoice</span>.number) + <span class="hljs-string">"のお支払いを確認いたしました。 "</span>
 
     <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">send</span>(<span class="hljs-variable">$email</span>)<span class="hljs-keyword">
  End for each</span><span class="hljs-keyword">
 
  For each</span>(<span class="hljs-variable">$invoice</span>;<span class="hljs-variable">$unpaid</span>)
     <span class="hljs-variable">$email</span>.to:=<span class="hljs-variable">$invoice</span>.customer.address <span class="hljs-comment">// 顧客のメールアドレス</span>
-    <span class="hljs-variable">$email</span>.subject:=<span class="hljs-string">"請求書 # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$invoice</span>.number) + <span class="hljs-string">"のお支払いが確認できていません。"</span>
+    <span class="hljs-variable">$email</span>.subject:=<span class="hljs-string">"請求書 # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$invoice</span>.number) + <span class="hljs-string">"のお支払いが確認できていません。 "</span>
     <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">send</span>(<span class="hljs-variable">$email</span>)<span class="hljs-keyword">
  End for each</span>
 </code></pre>

@@ -82,7 +82,7 @@
 </thead>
 <tbody>
 <tr><td><a href="#autofilled"><strong>.autoFilled</strong> : Boolean</a><p>    contiene True si el valor del atributo es llenado automáticamente por 4D</td></tr>
-<tr><td><a href="#exposed"><strong>.exposed</strong> : Boolean</a><p>    true if the attribute is exposed in REST</td></tr>
+<tr><td><a href="#exposed"><strong>.exposed</strong> : Boolean</a><p>    &quot;true&quot; si el atributo está &quot;expuesto&quot; en REST</td></tr>
 <tr><td><a href="#fieldnumber"><strong>.fieldNumber</strong> : Integer</a><p>    contiene el número de campo 4D interno del atributo</td></tr>
 <tr><td><a href="#fieldtype"><strong>.fieldType</strong> : Integer</a><p>    contiene el tipo de base de datos 4D del atributo</td></tr>
 <tr><td><a href="#indexed"><strong>.indexed</strong> : Boolean</a><p>    contiene <strong>True</strong> si hay un índice B-tree o Cluster B-tree en el atributo</td></tr>
@@ -91,8 +91,8 @@
 <tr><td><a href="#kind"><strong>.kind</strong> : Text</a><p>    devuelve la categoría del atributo</td></tr>
 <tr><td><a href="#mandatory"><strong>.mandatory</strong> : Boolean</a><p>    contiene True si se rechaza la entrada de valores Null para el atributo</td></tr>
 <tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    devuelve el nombre del objeto <code>dataClassAttribute</code> como cadena</td></tr>
-<tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    returns the path of an alias attribute based upon a relation</td></tr>
-<tr><td><a href="#readonly"><strong>.readOnly</strong> : Boolean</a><p>    true if the attribute is read-only</td></tr>
+<tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    devuelve el nombre de un atributo alias basado en una relación</td></tr>
+<tr><td><a href="#readonly"><strong>.readOnly</strong> : Boolean</a><p>    &quot;true&quot; si el atributo está en solo lectura</td></tr>
 <tr><td><a href="#relateddataclass"><strong>.relatedDataClass</strong>: Text</a><p>    devuelve el nombre de la clase de datos relacionada con el atributo</td></tr>
 <tr><td><a href="#type"><strong>.type</strong> : Text</a><p>    contiene el tipo de valor conceptual del atributo</td></tr>
 <tr><td><a href="#unique"><strong>.unique</strong> : Boolean</a><p>    contiene True si el valor del atributo debe ser único</td></tr>
@@ -133,7 +133,7 @@
 <p></details></p>
 <p><strong>.exposed</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.exposed</code> property is true if the attribute is exposed in REST.</p>
+<p>La propiedad <code>.exposed</code> es &quot;true&quot; si el atributo está &quot;expuesto&quot; en REST.</p>
 <h2><a class="anchor" aria-hidden="true" id="fieldnumber"></a><a href="#fieldnumber" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.fieldNumber</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -159,8 +159,8 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R4</td><td>Support of alias attributes</td></tr>
-<tr><td>v19 R3</td><td>Support of computed attributes</td></tr>
+<tr><td>v19 R4</td><td>Soporta atributos alias</td></tr>
+<tr><td>v19 R3</td><td>Soporta atributos calculados</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -173,11 +173,11 @@
 <tr><th>dataClassAttribute.kind</th><th>fieldType</th></tr>
 </thead>
 <tbody>
-<tr><td>storage</td><td>Corresponding 4D field type, see <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></td></tr>
+<tr><td>storage</td><td>Tipo de campo 4D correspondiente, ver <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></td></tr>
 <tr><td>relatedEntity</td><td>38 (<code>Is object</code>)</td></tr>
 <tr><td>relatedEntities</td><td>42 (<code>Is collection</code>)</td></tr>
-<tr><td>calculated</td><td><li>scalar: corresponding 4D field type, see <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
-<tr><td>alias</td><td><li>scalar: corresponding 4D field type, see <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
+<tr><td>calculated</td><td><li>escalar: tipo de campo 4D correspondiente, ver <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
+<tr><td>alias</td><td><li>escalar: tipo de campo 4D correspondiente, ver <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ver-también"></a><a href="#ver-también" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también</h4>
@@ -243,8 +243,8 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R4</td><td>Added &quot;alias&quot;</td></tr>
-<tr><td>v19 R3</td><td>Added &quot;calculated&quot;</td></tr>
+<tr><td>v19 R4</td><td>Adición de &quot;alias&quot;</td></tr>
+<tr><td>v19 R3</td><td>Adición de &quot;calculated&quot;</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -253,8 +253,8 @@
 <p>La propiedad <code>.kind</code> devuelve la categoría del atributo. El valor devuelto puede ser uno de los siguientes:</p>
 <ul>
 <li>&quot;storage&quot;: storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute</li>
-<li>&quot;calculated&quot;: computed attribute, i.e. defined through a <a href="/docs/es/ORDA/ordaClasses.html#function-get-attributename"><code>get</code> function</a></li>
-<li>&quot;alias&quot;: attribute built upon <a href="/docs/es/ORDA/ordaClasses.html#alias-attributes-1">another attribute</a></li>
+<li>&quot;calculated&quot;: atributo calculado, es decir definido por <a href="/docs/es/ORDA/ordaClasses.html#function-get-attributename">la función <code>get</code></a></li>
+<li>&quot;alias&quot;: atributo basado en <a href="/docs/es/ORDA/ordaClasses.html#alias-attributes-1">otro atributo</a></li>
 <li>&quot;relatedEntity&quot;: N -&gt; 1 atributo de relación (referencia a una entidad)</li>
 <li>&quot;relatedEntities&quot;: 1 -&gt; N atributo de relación (referencia a una selección de entidades)</li>
 </ul>
@@ -316,7 +316,7 @@
 <p></details></p>
 <p><strong>.path</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.path</code> property returns the path of an alias attribute based upon a relation.</p>
+<p>La propiedad <code>.path</code> devuelve el nombre de un atributo alias basado en una relación.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$path </span>: Text
  <span class="hljs-variable">$path</span>:=ds.Teacher.students.path <span class="hljs-comment">//$path="courses.student"</span>
@@ -334,8 +334,8 @@
 <p></details></p>
 <p><strong>.readOnly</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.readOnly</code> property is true if the attribute is read-only.</p>
-<p>For example, computed attributes without <a href="/docs/es/ORDA/ordaClasses.html#function-set-attributename"><code>set</code> function</a> are read-only.</p>
+<p>La propiedad <code>.readOnly</code> es &quot;true&quot; si el atributo está en solo lectura.</p>
+<p>Por ejemplo, los atributos calculados sin función <a href="/docs/es/ORDA/ordaClasses.html#function-set-attributename"><code>set</code></a> son solo lectura.</p>
 <h2><a class="anchor" aria-hidden="true" id="relateddataclass"></a><a href="#relateddataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.relatedDataClass</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -367,7 +367,7 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R3</td><td>Support of computed attributes</td></tr>
+<tr><td>v19 R3</td><td>Soporta atributos calculados</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -381,7 +381,7 @@
 <tr><th>dataClassAttribute.kind</th><th>type</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td>storage</td><td>&quot;blob&quot;, &quot;bool&quot;, &quot;date&quot;, &quot;image&quot;, &quot;number&quot;, &quot;object&quot;, o &quot;string&quot;</td><td>&quot;number&quot; se devuelve para cualquier tipo numérico, incluyendo la duración. &quot;string&quot; is returned for uuid, alpha and text field types. &quot;blob&quot; attributes are <a href="/docs/es/Concepts/blob.html#blob-type">blob objects</a>, they are handled using the <a href="/docs/es/API/BlobClass.html">Blob class</a>.</td></tr>
+<tr><td>storage</td><td>&quot;blob&quot;, &quot;bool&quot;, &quot;date&quot;, &quot;image&quot;, &quot;number&quot;, &quot;object&quot;, o &quot;string&quot;</td><td>&quot;number&quot; se devuelve para cualquier tipo numérico, incluyendo la duración. &quot;string&quot; se devuelve para los tipos de campo uuid, alfa y texto. Los atributos &quot;blob&quot; son <a href="/docs/es/Concepts/blob.html#blob-type">objetos blob</a>, se gestionan utilizando <a href="/docs/es/API/BlobClass.html">la clase Blob</a>.</td></tr>
 <tr><td>relatedEntity</td><td>related dataClass name</td><td>Ej.: &quot;Companies&quot;</td></tr>
 <tr><td>relatedEntities</td><td>related dataClass name + &quot;Selection&quot; suffix</td><td>Ex: &quot;EmployeeSelection&quot;</td></tr>
 <tr><td>calculated</td><td><li>storage: type (&quot;blob&quot;, &quot;number&quot;, etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + &quot;Selection&quot;</td><td></td></tr>

@@ -87,12 +87,12 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#4dcryptokeynew"><strong>4D.CryptoKey.new</strong>( <em>settings</em> : Object ) : 4D.CryptoKey</a><p>    crea un nuevo objeto <code>4D.CryptoKey</code> que encapsula un par de llaves de cifrado</p></td></tr>
+<tr><td><a href="#4dcryptokeynew"><strong>4D.CryptoKey.new</strong>( <em>settings</em> : Object ) : 4D.CryptoKey</a><p>     crea un nuevo objeto <code>4D.CryptoKey</code> que encapsula un par de llaves de cifrado</p></td></tr>
 <tr><td><a href="#curve"><strong>.curve</strong> : Text</a><p>    nombre de la curva normalizada de la llave </p></td></tr>
 <tr><td><a href="#decrypt"><strong>.decrypt</strong>( <em>message</em> : Text ; <em>options</em> : Object ) : Object</a><p>    descifra el parámetro <em>message</em> utilizando la llave <strong>private</strong></p></td></tr>
 <tr><td><a href="#encrypt"><strong>.encrypt</strong>( <em>message</em> : Text ; <em>options</em> : Object ) : Text</a><p>    encripta el parámetro <em>message</em> utilizando la llave <strong>pública</strong></p></td></tr>
-<tr><td><a href="#getprivatekey"><strong>.getPrivateKey()</strong> : Text</a><p>    devuelve la llave privada del objeto <code>CryptoKey</code></p></td></tr>
-<tr><td><a href="#getpublickey"><strong>.getPublicKey( )</strong> : Text</a><p>    devuelve la llave pública del objeto <code>CryptoKey</code></p></td></tr>
+<tr><td><a href="#getprivatekey"><strong>.getPrivateKey()</strong> : Text</a><p>     devuelve la llave privada del objeto <code>CryptoKey</code></p></td></tr>
+<tr><td><a href="#getpublickey"><strong>.getPublicKey( )</strong> : Text</a><p>     devuelve la llave pública del objeto <code>CryptoKey</code></p></td></tr>
 <tr><td><a href="#sign">.<strong>sign</strong> (<em>message</em> : Text ; <em>options</em> : Text) : Text</a><p>    firma la representación utf8 de un <em>message</em> string </p></td></tr>
 <tr><td><a href="#size"><strong>.size</strong> : Integer</a><p>    el tamaño de la llave en bits </p></td></tr>
 <tr><td><a href="#type"><strong>.type</strong> : Text</a><p>    Nombre del tipo de llave - &quot;RSA&quot;, &quot;ECDSA&quot;, &quot;PEM&quot; </p></td></tr>
@@ -120,8 +120,7 @@
 <tr><td>result</td><td>4D.CryptoKey</td><td>&lt;-</td><td>Objeto que contiene un par de llaves de encriptación</td></tr>
 </tbody>
 </table>
-<p>|</p>
-<p>La función <code>4D.CryptoKey.new()</code> crea un nuevo objeto <code>4D.CryptoKey</code> que encapsula un par de llaves de cifrado, basado en el parámetro del objeto <em>settings</em>. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.</p>
+<p>La función <code>4D.CryptoKey.new()</code>  crea un nuevo objeto <code>4D.CryptoKey</code> que encapsula un par de llaves de cifrado, basado en el parámetro del objeto <em>settings</em>. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.</p>
 <h4><a class="anchor" aria-hidden="true" id="parámetros"></a><a href="#parámetros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>parámetros</em></h4>
 <table>
 <thead>
@@ -277,11 +276,10 @@
 <tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Llave pública en formato PEM</td></tr>
 </tbody>
 </table>
-<p>La función <code>.getPublicKey()</code> devuelve la llave pública del objeto <code>CryptoKey</code> en formato PEM, o una cadena vacía si no hay ninguna disponible.</p>
+<p>La función <code>.getPublicKey()</code>  devuelve la llave pública del objeto <code>CryptoKey</code> en formato PEM, o una cadena vacía si no hay ninguna disponible.</p>
 <h4><a class="anchor" aria-hidden="true" id="resultado-3"></a><a href="#resultado-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Resultado</em></h4>
 <p>El valor devuelto es la llave pública.</p>
-<hr>
-<h2><a class="anchor" aria-hidden="true" id="pem"></a><a href="#pem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.pem</h2>
+<p>---## .pem</p>
 <p><details><summary>Histórico</summary></p>
 <table>
 <thead>
@@ -293,7 +291,8 @@
 </table>
 <p></details></p>
 <p><strong>.pem</strong> : Text</p>
-<p>Definición PEM de una llave de encriptación a cargar&lt;! -- END REF --&gt;. Si la llave es una llave privada, se deducirá de ella la llave pública RSA o ECDSA.## .sign()</p>
+<p>Definición PEM de una llave de encriptación a cargar&lt;! -- END REF --&gt;. Si la llave es una llave privada, se deducirá de ella la llave pública RSA o ECDSA.</p>
+<h2><a class="anchor" aria-hidden="true" id="sign"></a><a href="#sign" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sign()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
 <thead>
@@ -301,13 +300,21 @@
 </thead>
 <tbody>
 <tr><td>v18 R4</td><td>Añadidos</td></tr>
-<tr><td></details>.<strong>sign</strong> (<em>message</em> : Text ; <em>options</em> : Text) : Text</td><td>Parámetros</td><td>Tipo</td><td></td><td>Descripción</td></tr>
-<tr><td>----------</td><td>------</td><td>--</td><td>---------------------------------------------------------------------</td></tr>
-<tr><td>message</td><td>Texto</td><td>-&gt;</td><td>Cadena mensaje a firmar</td></tr>
-<tr><td>options</td><td>Objeto</td><td>-&gt;</td><td>Opciones de firma</td></tr>
-<tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Firma en representación Base64 o Base64URL, según la opción &quot;encoding</td><td>La función <code>.sign()</code>firma la representación utf8 de un <em>message</em> stringutilizando las llaves del objeto <code>CryptoKey</code> y las <em>options</em> suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo <code>options.encoding</code> que haya pasado.</td></tr>
 </tbody>
 </table>
+<p></details></p>
+<p>.<strong>sign</strong> (<em>message</em> : Text ; <em>options</em> : Text) : Text</p>
+<table>
+<thead>
+<tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
+</thead>
+<tbody>
+<tr><td>message</td><td>Texto</td><td>-&gt;</td><td>Cadena mensaje a firmar</td></tr>
+<tr><td>options</td><td>Objeto</td><td>-&gt;</td><td>Opciones de firma</td></tr>
+<tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Firma en representación Base64 o Base64URL, según la opción &quot;encoding</td></tr>
+</tbody>
+</table>
+<p>La función <code>.sign()</code> firma la representación utf8 de un <em>message</em> string utilizando las llaves del objeto <code>CryptoKey</code> y las <em>options</em> suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo <code>options.encoding</code> que haya pasado.</p>
 <p><code>CryptoKey</code> debe contener una llave válida <strong>privada</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="options-2"></a><a href="#options-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>options</em></h4>
 <table>
@@ -322,25 +329,8 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="resultado-4"></a><a href="#resultado-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>Resultado</em></h4>
-<p>Representación utf8 de la cadena <em>message</em>. ## .size<details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v18 R4</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details><strong>.size</strong> : IntegerDefinido sólo para llaves RSA:el tamaño de la llave en bits. Normalmente 2048 (por defecto).## .type<details><summary>Histórico</summary></p>
-<table>
-<thead>
-<tr><th>Versión</th><th>Modificaciones</th></tr>
-</thead>
-<tbody>
-<tr><td>v18 R4</td><td>Añadidos</td></tr>
-</tbody>
-</table>
-<p></details><strong>.type</strong> : TextNombre del tipo de llave - &quot;RSA&quot;, &quot;ECDSA&quot;, &quot;PEM&quot;<li>&quot;RSA&quot;: un par de llaves RSA, utilizando <code>settings.size</code> como <a href="#size">.size</a>.</li><li>&quot;ECDSA&quot;: un par de llaves del Algoritmo de Firma Digital de Curva Elíptica, utilizando <code>settings.curve</code> como <a href="#curve">.curve</a>. Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.</li><li>&quot;PEM&quot;: una definición de par de llaves en formato PEM, utilizando <code>settings.pem</code> como <a href="#pem">.pem</a>.## .verify()</p>
+<p>Representación utf8 de la cadena <em>message</em>.</p>
+<h2><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.size</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
 <thead>
@@ -348,14 +338,48 @@
 </thead>
 <tbody>
 <tr><td>v18 R4</td><td>Añadidos</td></tr>
-<tr><td></details><strong>.verify</strong>( <em>message</em> : Text ; <em>signature</em> : Text ; <em>options</em> : Object) : object</td><td>Parámetros</td><td>Tipo</td><td></td><td>Descripción</td></tr>
-<tr><td>----------</td><td>------</td><td>--</td><td>----------------------------------------------------------------------------------------------------</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.size</strong> : Integer</p>
+<p>Definido sólo para llaves RSA: el tamaño de la llave en bits. Normalmente 2048 (por defecto).</p>
+<h2><a class="anchor" aria-hidden="true" id="type"></a><a href="#type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.type</h2>
+<p><details><summary>Histórico</summary></p>
+<table>
+<thead>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
+</thead>
+<tbody>
+<tr><td>v18 R4</td><td>Añadidos</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.type</strong> : Text</p>
+<p>Nombre del tipo de llave - &quot;RSA&quot;, &quot;ECDSA&quot;, &quot;PEM&quot;<li>&quot;RSA&quot;: un par de llaves RSA, utilizando <code>settings.size</code> como <a href="#size">.size</a>.</li><li>&quot;ECDSA&quot;: un par de llaves del Algoritmo de Firma Digital de Curva Elíptica, utilizando <code>settings.curve</code> como <a href="#curve">.curve</a>. Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.</li><li>&quot;PEM&quot;: una definición de par de llaves en formato PEM, utilizando <code>settings.pem</code> como <a href="#pem">.pem</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="verify"></a><a href="#verify" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.verify()</h2>
+<p><details><summary>Histórico</summary></p>
+<table>
+<thead>
+<tr><th>Versión</th><th>Modificaciones</th></tr>
+</thead>
+<tbody>
+<tr><td>v18 R4</td><td>Añadidos</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.verify</strong>( <em>message</em> : Text ; <em>signature</em> : Text ; <em>options</em> : Object) : object</p>
+<table>
+<thead>
+<tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
+</thead>
+<tbody>
 <tr><td>message</td><td>Texto</td><td>-&gt;</td><td>Cadena mensaje utilizada para generar la firma</td></tr>
 <tr><td>signature</td><td>Texto</td><td>-&gt;</td><td>Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de <code>options.encoding</code></td></tr>
 <tr><td>options</td><td>Objeto</td><td>-&gt;</td><td>Opciones de firma</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Estado de la verificación</td><td>La función <code>.verify()</code>verifica la firma base64 contra la representación utf8 del <em>message</em>utilizando las llaves del objeto <code>CryptoKey</code> y las <em>options</em> proporcionadas.</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Estado de la verificación</td></tr>
 </tbody>
 </table>
+<p>La función <code>.verify()</code> verifica la firma base64 contra la representación utf8 del <em>message</em> utilizando las llaves del objeto <code>CryptoKey</code> y las <em>options</em> proporcionadas.</p>
 <p>La <code>CryptoKey</code> debe contener una llave <strong>pública</strong> válida.</p>
 <h4><a class="anchor" aria-hidden="true" id="options-3"></a><a href="#options-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><em>options</em></h4>
 <table>
@@ -381,7 +405,7 @@
 </tbody>
 </table>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/API/CollectionClass.html"><span class="arrow-prev">← </span><span>Collection</span></a><a class="docs-next button" href="/docs/es/API/DataClassClass.html"><span class="function-name-prevnext">DataClass</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#4dcryptokeynew">4D.CryptoKey.new()</a></li><li><a href="#curve">.curve</a></li><li><a href="#decrypt">.decrypt()</a></li><li><a href="#encrypt">.encrypt()</a></li><li><a href="#getprivatekey">.getPrivateKey()</a></li><li><a href="#getpublickey">.getPublicKey()</a></li><li><a href="#pem">.pem</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/API/CollectionClass.html"><span class="arrow-prev">← </span><span>Collection</span></a><a class="docs-next button" href="/docs/es/API/DataClassClass.html"><span class="function-name-prevnext">DataClass</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#4dcryptokeynew">4D.CryptoKey.new()</a></li><li><a href="#curve">.curve</a></li><li><a href="#decrypt">.decrypt()</a></li><li><a href="#encrypt">.encrypt()</a></li><li><a href="#getprivatekey">.getPrivateKey()</a></li><li><a href="#getpublickey">.getPublicKey()</a></li><li><a href="#sign">.sign()</a></li><li><a href="#size">.size</a></li><li><a href="#type">.type</a></li><li><a href="#verify">.verify()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

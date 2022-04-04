@@ -81,6 +81,9 @@
 <span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-variable">$myNumber</span>:=<span class="hljs-number">3</span> <span class="hljs-comment">//assigns 3 to MyNumber variable  </span>
 <span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-comment">//assigns a date literal</span>
 <span class="hljs-variable">$myLength</span>:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">//assigns the result of the command (4) to $myLength</span>
+<span class="hljs-variable">$col</span>:=New collection <span class="hljs-comment">//$col is initialized with an empty collection $myNumber:=3 //assigns 3 to MyNumber variable  </span>
+<span class="hljs-variable">$myDate</span>:=<span class="hljs-literal">!2018/01/21!</span> <span class="hljs-comment">//assigns a date literal</span>
+<span class="hljs-variable">$myLength</span>:=<span class="hljs-function">Length</span>(<span class="hljs-string">"Acme"</span>) <span class="hljs-comment">//assigns the result of the command (4) to $myLength</span>
 <span class="hljs-variable">$col</span>:=New collection <span class="hljs-comment">//$col is initialized with an empty collection</span>
 </code></pre>
 <blockquote>
@@ -187,6 +190,26 @@
 
 <span class="hljs-variable">$t2</span>:=<span class="hljs-string">"Hello"</span> 
 <span class="hljs-variable">$t2</span>*=<span class="hljs-number">2</span> <span class="hljs-comment">// $t2="HelloHello"</span>
+<span class="hljs-variable">$d</span>+=<span class="hljs-number">10</span> <span class="hljs-comment">//$d=!2000-11-20!</span>
+
+<span class="hljs-comment">// Subtraction</span>
+<span class="hljs-variable">$x1</span>:=<span class="hljs-number">10</span>
+<span class="hljs-variable">$x1</span>-=<span class="hljs-number">5</span> <span class="hljs-comment">//$x1=5</span>
+
+<span class="hljs-variable">$d1</span>:=<span class="hljs-literal">!2000-11-10!</span>
+<span class="hljs-variable">$d1</span>-=<span class="hljs-number">10</span> <span class="hljs-comment">// $d1=!2000-10-31!</span>
+
+<span class="hljs-comment">// Division</span>
+<span class="hljs-variable">$x3</span>:=<span class="hljs-number">10</span>
+<span class="hljs-variable">$x3</span>/=<span class="hljs-number">2</span> <span class="hljs-comment">// $x3=5</span>
+
+
+<span class="hljs-comment">// Multiplication</span>
+<span class="hljs-variable">$x2</span>:=<span class="hljs-number">10</span>
+<span class="hljs-variable">$x2</span>*=<span class="hljs-number">5</span> <span class="hljs-comment">// $x2=10</span>
+
+<span class="hljs-variable">$t2</span>:=<span class="hljs-string">"Hello"</span> 
+<span class="hljs-variable">$t2</span>*=<span class="hljs-number">2</span> <span class="hljs-comment">// $t2="HelloHello"</span>
 
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="short-circuit-operators"></a><a href="#short-circuit-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Short-circuit operators</h2>
@@ -215,6 +238,7 @@
 <span class="hljs-variable">$v</span>:=<span class="hljs-literal">False</span> &amp;&amp; <span class="hljs-number">0</span> <span class="hljs-comment">// False</span>
 <span class="hljs-variable">$v</span>:=<span class="hljs-number">0</span> &amp;&amp; <span class="hljs-literal">False</span> <span class="hljs-comment">// False</span>
 <span class="hljs-variable">$v</span>:=<span class="hljs-number">5</span> &amp;&amp; <span class="hljs-literal">!00-00-00!</span> <span class="hljs-comment">// 00/00/00</span>
+<span class="hljs-variable">$v </span>:= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-number">10</span> &amp;&amp; <span class="hljs-string">"hello"</span> <span class="hljs-comment">//"hello" // 00/00/00</span>
 <span class="hljs-variable">$v </span>:= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-number">10</span> &amp;&amp; <span class="hljs-string">"hello"</span> <span class="hljs-comment">//"hello" // 00/00/00</span>
 <span class="hljs-variable">$v </span>:= <span class="hljs-number">5</span> &amp;&amp; <span class="hljs-number">10</span> &amp;&amp; <span class="hljs-string">"hello"</span> <span class="hljs-comment">//"hello"</span>
 </code></pre>
@@ -278,7 +302,7 @@ End if</span>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="sintaxis"></a><a href="#sintaxis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxis</h3>
 <p>La sintaxis es la siguiente:</p>
-<p><code>condition ? condition ? exprIfTruthy : exprIfFalsy</code></p>
+<p><code>condition ? condition ? exprIfTruthy : exprIfFalsy condition ? exprIfTruthy : exprIfFalsy</code></p>
 <blockquote>
 <p>Since the <a href="https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html">token syntax</a> uses colons, we recommend inserting a space after the colon <code>:</code> or enclosing tokens using parentheses to avoid any conflicts.</p>
 </blockquote>
@@ -289,6 +313,8 @@ var</span> <span class="hljs-variable">$beverage </span>: Text
 
 <span class="hljs-variable">$age</span>:=<span class="hljs-number">26</span>
 <span class="hljs-variable">$beverage</span>:=(<span class="hljs-variable">$age</span>&gt;=<span class="hljs-number">21</span>) ? <span class="hljs-string">"Beer"</span> : <span class="hljs-string">"Juice"</span>
+
+<span class="hljs-function">ALERT</span>(<span class="hljs-variable">$beverage</span>) <span class="hljs-comment">// "Beer" "Beer" : "Juice"</span>
 
 <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$beverage</span>) <span class="hljs-comment">// "Beer" "Beer" : "Juice"</span>
 

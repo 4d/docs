@@ -282,13 +282,13 @@ End if</span>
 <h3><a class="anchor" aria-hidden="true" id="概要"></a><a href="#概要" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>概要</h3>
 <p>計算属性は、計算をマスクするデータ型を持つデータクラス属性です。 <a href="/docs/ja/Concepts/classes.html">標準的な 4Dクラス</a>は、<code>get</code> (<em>ゲッター</em>) および <code>set</code> (<em>セッター</em>) <a href="/docs/ja/Concepts/classes.html#function-get-と-function-set">アクセサー関数</a> を用いて、計算プロパティの概念を実装しています。 ORDA のデータクラス属性はこれを利用し、さらに <code>query</code> と <code>orderBy</code> の 2つの関数で機能を拡張しています。</p>
 <p>計算属性には最低限、その値がどのように算出されるかを記述した <code>get</code> 関数が必要です。 属性に<em>ゲッター</em>関数が定義されている場合、4D は対応するストレージスペースをデータストアに作成せず、代わりに属性がアクセスされるたびに関数のコードを実行します。 属性がアクセスされなければ、コードも実行されません。</p>
-<p>計算属性は、その属性に値が割り当てられたときに実行される <code>set</code> 関数を実装することもできます。 <em>セッター</em>関数は、割り当てられた値をどのように処理するかを記述します。通常は、1つ以上のストレージ属性や、場合によっては他のエンティティにリダイレクトします。</p>
+<p>計算属性は、その属性に値が割り当てられたときに実行される <code>set</code> 関数を実装することもできます。 <em>セッター</em>関数は、割り当てられた値をどのように処理するかを記述します。 通常は、1つ以上のストレージ属性や、場合によっては他のエンティティにリダイレクトします。</p>
 <p>ストレージ属性と同様に、計算属性も <strong>クエリ</strong> に含めることができます。 デフォルトでは、ORDA のクエリで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 場合によっては、これで十分です。 しかし、特にクライアント/サーバーにおいてはパフォーマンスを向上させるため、実際のデータクラス属性に基づいた <code>query</code> 関数を計算属性に実装することで、それらのインデックスの恩恵を受けることができます。</p>
 <p>同様に、計算属性を <strong>並べ替え</strong> に含めることもできます。 デフォルトでは、ORDA の並べ替えで計算属性が使用された場合、その属性はエンティティ毎に一度計算されます。 クエリと同様に、実際のデータクラス属性に基づいた <code>orderBy</code> 関数を計算属性に実装することで、パフォーマンスを向上させることができます。</p>
 <h3><a class="anchor" aria-hidden="true" id="計算属性の定義"></a><a href="#計算属性の定義" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>計算属性の定義</h3>
 <p>計算属性を作成するには、データクラスの <a href="#entity-クラス"><strong>Entity クラス</strong></a> に <code>get</code> アクセサー関数を定義します。 計算属性は、データクラス属性およびエンティティ属性として自動的に利用可能になります。</p>
 <p>その他の計算属性の関数 (<code>set</code>、<code>query</code>、<code>orderBy</code>) も、Entityクラスに定義することができます。 これらの関数の定義は任意です。</p>
-<p>計算属性の関数内において、<a href="/docs/ja/Concepts/classes.html#this"><code>This</code></a> はエンティティを指します。 計算属性は、他のデータクラス属性と同様に使用することができます。つまり、<a href="/docs/ja/API/EntityClass.html">Entity クラス</a> や <a href="/docs/ja/API/EntitySelectionClass.html">EntitySelection クラス</a> の関数によっても同様に処理されます。</p>
+<p>リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の <a href="/docs/ja/API/DataClassAttributeClass.html#path"><code>path</code></a> プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (<code>path</code> プロパティはありません)。</p>
 <blockquote>
 <p>ORDA の計算属性は、デフォルトでは <a href="#公開vs非公開関数"><strong>公開</strong></a> されません。 計算属性を公開するには、<strong>get 関数</strong> の定義に <code>exposed</code> キーワードを追加します。</p>
 </blockquote>
@@ -594,7 +594,7 @@ Function</span> orderBy &lt;attributeName&gt;(<span class="hljs-variable">$event
 <p><em>attributeName</em> は、<a href="Concepts/identifiers.html#オブジェクトプロパティ">プロパティ名の命名規則</a> に準拠している必要があります。</p>
 <p><em>targetPath</em> は、&quot;employee.company.name&quot; のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、<em>targetPath</em> は属性名となります。</p>
 <p>エイリアスは、他のエイリアスのパスに使用することができます。</p>
-<p><a href="#計算属性">計算属性</a> もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。そうでない場合は、エラーが返されます。 たとえば、&quot;fullName&quot; 計算属性がある場合、&quot;employee.fullName&quot; というエイリアスパスは有効です。</p>
+<p><a href="#計算属性">計算属性</a> もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。 そうでない場合は、エラーが返されます。 たとえば、&quot;fullName&quot; 計算属性がある場合、&quot;employee.fullName&quot; というエイリアスパスは有効です。</p>
 <blockquote>
 <p>ORDA のエイリアス属性は、デフォルトでは <strong>公開されません</strong>。 リモートリクエストでエイリアスを利用するには、<code>Alias</code> キーワードの前に <a href="#公開vs非公開関数"><code>exposed</code></a> キーワードを追加する必要があります。</p>
 </blockquote>

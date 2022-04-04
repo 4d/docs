@@ -1137,7 +1137,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </thead>
 <tbody>
 <tr><td>updateSeen</td><td>Booleano</td><td>Si True, los mensajes especificados se marcan como &quot;vistos&quot; en el buzón. Si False, los mensajes no se marcan como &quot;vistos&quot;. Valor por defecto: True</td></tr>
-<tr><td>withBody</td><td>Booleano</td><td>Pass True to return the body of the specified messages. If False, only the message headers are returned. Valor por defecto: True</td></tr>
+<tr><td>withBody</td><td>Booleano</td><td>Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -1153,7 +1153,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>lista</td><td>Collection</td><td>Collection of <a href="/docs/es/API/EmailObjectClass.html#email-object"><code>Email</code> objects</a>. If no Email objects are found, an empty collection is returned.</td></tr>
+<tr><td>lista</td><td>Collection</td><td>Colección de objetos <a href="/docs/es/API/EmailObjectClass.html#email-object"><code>Email</code></a>. Si no se encuentran objetos Email, se devuelve una colección vacía.</td></tr>
 <tr><td>notFound</td><td>Collection</td><td>Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.</td></tr>
 </tbody>
 </table>
@@ -1215,7 +1215,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 </ul>
 <p>The optional <em>updateSeen</em> parameter allows you to specify if the message is marked as &quot;seen&quot; in the mailbox. Puede pasar:</p>
 <ul>
-<li><strong>True</strong> - to mark the message as &quot;seen&quot; (indicating the message has been read)</li>
+<li><strong>True</strong> - para marcar el mensaje como &quot;visto&quot; (indicando que el mensaje ha sido leído)</li>
 <li><strong>False</strong> - para dejar intacto el estado &quot;visto&quot; del mensaje</li>
 </ul>
 <blockquote>
@@ -1309,8 +1309,8 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p>The <code>.move()</code> function moves the messages defined by <em>msgsIDs</em> or <em>allMsgs</em> to the <em>destinationBox</em> on the IMAP server.</p>
 <p>Puede pasar:</p>
 <ul>
-<li>in the <em>msgsIDs</em> parameter, a collection containing the unique IDs of the specific messages to move, or</li>
-<li>in the <em>allMsgs</em> parameter, the <code>IMAP all</code> constant (integer) to move all messages in the selected mailbox.</li>
+<li>en el parámetro <em>msgsIDs</em>, una colección contiene los IDs únicos de los mensajes específicos a mover, o</li>
+<li>en el parámetro <em>allMsgs</em>, la constante <code>IMAP all</code> (entero) para mover todos los mensajes del buzón seleccionado.</li>
 </ul>
 <p>The <em>destinationBox</em> parameter allows you to pass a text value with the name of the mailbox where the messages will be moved.</p>
 <blockquote>

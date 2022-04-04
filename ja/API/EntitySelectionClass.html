@@ -74,36 +74,36 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#91index93"><strong><em>[index]</em></strong> : 4D.Entity</a><p>    標準のコレクションシンタックスを使用してエンティティセレクション内のエンティティにアクセスすることができます</td></tr>
-<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</a><p>    エンティティセレクション内の属性値の &quot;投影&quot; を返します</td></tr>
-<tr><td><a href="#add"><strong>.add</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection</a><p>    <em>entity</em> に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します</td></tr>
-<tr><td><a href="#and"><strong>.and</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.and</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    エンティティセレクションと <em>entity</em> あるいは <em>entitySelection</em> 引数をAND論理演算子を使用して結合します</td></tr>
-<tr><td><a href="#average"><strong>.average</strong>( <em>attributePath</em> : Text ) : Real</a><p>    <em>attributePath</em> に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します</td></tr>
-<tr><td><a href="#contains"><strong>.contains</strong>( <em>entity</em> : 4D.Entity ) : Boolean</a><p>    エンティティ参照がエンティティセレクションに属している場合には true を返します</td></tr>
-<tr><td><a href="#count"><strong>.count</strong>( <em>attributePath</em> : Text ) : Real</a><p>    エンティティセレクション内で <em>attributePath</em> に指定したパスの値が null でないエンティティの数を返します</td></tr>
-<tr><td><a href="#distinct"><strong>.distinct</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection</a><p>    <em>attributePath</em> に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します</td></tr>
-<tr><td><a href="#drop"><strong>.drop</strong>( { <em>mode</em> : Integer } ) : 4D.EntitySelection</a><p>    データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します</td></tr>
+<tr><td><a href="#91index93"> <strong><em>[index]</em></strong> : 4D.Entity</a><p>    標準のコレクションシンタックスを使用してエンティティセレクション内のエンティティにアクセスすることができます</td></tr>
+<tr><td><a href="#attributename"> <strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</a><p>    エンティティセレクション内の属性値の &quot;投影&quot; を返します</td></tr>
+<tr><td><a href="#add"> <strong>.add</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection</a><p>    <em>entity</em> に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します</td></tr>
+<tr><td><a href="#and"> <strong>.and</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.and</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    エンティティセレクションと <em>entity</em> あるいは <em>entitySelection</em> 引数をAND論理演算子を使用して結合します</td></tr>
+<tr><td><a href="#average"> <strong>.average</strong>( <em>attributePath</em> : Text ) : Real</a><p>    <em>attributePath</em> に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します</td></tr>
+<tr><td><a href="#contains"> <strong>.contains</strong>( <em>entity</em> : 4D.Entity ) : Boolean</a><p>    エンティティ参照がエンティティセレクションに属している場合には true を返します</td></tr>
+<tr><td><a href="#count"> <strong>.count</strong>( <em>attributePath</em> : Text ) : Real</a><p>     エンティティセレクション内で <em>attributePath</em> に指定したパスの値が null でないエンティティの数を返します</td></tr>
+<tr><td><a href="#distinct"> <strong>.distinct</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection</a><p>    <em>attributePath</em> に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します</td></tr>
+<tr><td><a href="#drop"> <strong>.drop</strong>( { <em>mode</em> : Integer } ) : 4D.EntitySelection</a><p>    データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します</td></tr>
 <tr><td><a href="#extract"><strong>.extract</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection<br><strong>.extract</strong>( <em>attributePath</em> { ; <em>targetPath</em> } { ; <em>...attributePathN</em> : Text ; <em>targetPathN</em> : Text } ) : Collection</a><p>    <em>attributePath</em> で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します</td></tr>
-<tr><td><a href="#first"><strong>.first()</strong> : 4D.Entity</a><p>    エンティティセレクションの先頭エンティティへの参照を返します</td></tr>
-<tr><td><a href="#getdataclass"><strong>.getDataClass()</strong> : 4D.DataClass</a><p>    エンティティセレクションのデータクラスを返します</td></tr>
-<tr><td><a href="#isalterable"><strong>.isAlterable()</strong> : Boolean</a><p>    エンティティセレクションが追加可能の場合には true を返します</td></tr>
-<tr><td><a href="#isordered"><strong>.isOrdered()</strong> : Boolean</a><p>    エンティティセレクションが順列ありであれば true を返します</td></tr>
-<tr><td><a href="#last"><strong>.last()</strong> : 4D.Entity</a><p>    エンティティセレクションの最終エンティティへの参照を返します</td></tr>
-<tr><td><a href="#length"><strong>.length</strong> : Integer</a><p>    エンティティセレクション内のエンティティの数を返します</td></tr>
-<tr><td><a href="#max"><strong>.max</strong>( <em>attributePath</em> : Text ) : any</a><p>    <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します</td></tr>
-<tr><td><a href="#min"><strong>.min</strong>( <em>attributePath</em> : Text ) : any</a><p>     <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します</td></tr>
-<tr><td><a href="#minus"><strong>.minus</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.minus</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    元のエンティティセレクションから、<em>entity</em> 引数のエンティティ、あるいは<em>entitySelection</em> 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します</td></tr>
-<tr><td><a href="#or"><strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    OR論理演算子を使用して、<em>entity</em> または <em>entitySelection</em> のエンティティと対象エンティティセレクションを組み合わせます</td></tr>
-<tr><td><a href="#orderby"><strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</a><p>    エンティティセレクションの全エンティティが <em>pathString</em> または <em>pathObjects</em> が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します</td></tr>
-<tr><td><a href="#orderbyformula"><strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</a><p>    順列ありの新規エンティティセレクションを返します</td></tr>
-<tr><td><a href="#query"><strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection</a><p>    エンティティセレクションの全エンティティから、<em>queryString</em> または <em>formula</em> と任意の <em>value</em> 引数で指定した検索条件に合致するエンティティを検索します</td></tr>
-<tr><td><a href="#querypath"><strong>.queryPath</strong> : Text</a><p>    実際に 4Dで実行されたクエリの詳細な情報</td></tr>
-<tr><td><a href="#queryplan"><strong>.queryPlan</strong> : Text</a><p>     実行前のクエリの詳細な情報 (クエリプラン) を格納します</td></tr>
-<tr><td><a href="#refresh"><strong>.refresh()</strong></a><p>    ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に &quot;無効化&quot; します</td></tr>
-<tr><td><a href="#selected"><strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    呼び出し対象のエンティティセレクションにおける、<em>selectedEntities</em> に含まれるエンティティの位置を表すオブジェクトを返します</td></tr>
-<tr><td><a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</a><p>    エンティティセレクションの一部を、新規エンティティセレクションとして返します</td></tr>
-<tr><td><a href="#sum"><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a><p>    <em>attributePath</em> に指定したエンティティセレクションの属性値の総和を返します</td></tr>
-<tr><td><a href="#tocollection"><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></a><p>    プロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成し、返します</td></tr>
+<tr><td><a href="#first"> <strong>.first()</strong> : 4D.Entity</a><p>    エンティティセレクションの先頭エンティティへの参照を返します</td></tr>
+<tr><td><a href="#getdataclass"> <strong>.getDataClass()</strong> : 4D.DataClass</a><p>    エンティティセレクションのデータクラスを返します</td></tr>
+<tr><td><a href="#isalterable"> <strong>.isAlterable()</strong> : Boolean</a><p>    エンティティセレクションが追加可能の場合には true を返します</td></tr>
+<tr><td><a href="#isordered"> <strong>.isOrdered()</strong> : Boolean</a><p>    エンティティセレクションが順列ありであれば true を返します</td></tr>
+<tr><td><a href="#last"> <strong>.last()</strong> : 4D.Entity</a><p>    エンティティセレクションの最終エンティティへの参照を返します</td></tr>
+<tr><td><a href="#length"> <strong>.length</strong> : Integer</a><p>    エンティティセレクション内のエンティティの数を返します</td></tr>
+<tr><td><a href="#max"> <strong>.max</strong>( <em>attributePath</em> : Text ) : any</a><p>    <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します</td></tr>
+<tr><td><a href="#min"> <strong>.min</strong>( <em>attributePath</em> : Text ) : any</a><p>    <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します</td></tr>
+<tr><td><a href="#minus"> <strong>.minus</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.minus</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    元のエンティティセレクションから、<em>entity</em> 引数のエンティティ、あるいは<em>entitySelection</em> 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します</td></tr>
+<tr><td><a href="#or"> <strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    OR論理演算子を使用して、<em>entity</em> または <em>entitySelection</em> のエンティティと対象エンティティセレクションを組み合わせます</td></tr>
+<tr><td><a href="#orderby"> <strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</a><p>    エンティティセレクションの全エンティティが <em>pathString</em> または <em>pathObjects</em> が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します</td></tr>
+<tr><td><a href="#orderbyformula"> <strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</a><p>    順列ありの新規エンティティセレクションを返します</td></tr>
+<tr><td><a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection</a><p>    エンティティセレクションの全エンティティから、<em>queryString</em> または <em>formula</em> と任意の <em>value</em> 引数で指定した検索条件に合致するエンティティを検索します</td></tr>
+<tr><td><a href="#querypath"> <strong>.queryPath</strong> : Text</a><p>    実際に 4Dで実行されたクエリの詳細な情報</td></tr>
+<tr><td><a href="#queryplan"> <strong>.queryPlan</strong> : Text</a><p>    実行前のクエリの詳細な情報 (クエリプラン) を格納します</td></tr>
+<tr><td><a href="#refresh"> <strong>.refresh()</strong></a><p>    ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に &quot;無効化&quot; します</td></tr>
+<tr><td><a href="#selected"> <strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    </td></tr>
+<tr><td><a href="#slice"> <strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</a><p>    エンティティセレクションの一部を、新規エンティティセレクションとして返します</td></tr>
+<tr><td><a href="#sum"> <strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a><p>    <em>attributePath</em> に指定したエンティティセレクションの属性値の総和を返します</td></tr>
+<tr><td><a href="#tocollection"> <strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></a><p>    プロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成し、返します</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="create-entity-selection"></a><a href="#create-entity-selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create entity selection</h2>
@@ -176,7 +176,7 @@
 <p></details></p>
 <p><strong><em>[index]</em></strong> : 4D.Entity</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-2"></a><a href="#説明-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>EntitySelection[index]</code> 記法を使用すると、 標準のコレクションシンタックスを使用してエンティティセレクション内のエンティティにアクセスすることができます。取得したいエンティティの位置を <em>index</em> に渡します。</p>
+<p><code>EntitySelection[index]</code> 記法を使用すると、標準のコレクションシンタックスを使用してエンティティセレクション内のエンティティにアクセスすることができます。取得したいエンティティの位置を <em>index</em> に渡します。</p>
 <p>対応するエンティティはデータストアから再読み込みされる点に注意してください。</p>
 <p><em>index</em> には、0 と <code>.length</code>-1 の範囲内で数値を指定することができます。</p>
 <ul>
@@ -215,7 +215,7 @@
 <p></details></p>
 <p><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p>データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、 エンティティセレクション内の属性値の &quot;投影&quot; を返します。 戻り値は、属性の種類 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>storage</code> あるいは <code>relation</code>) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。</p>
+<p>データクラス属性はすべてエンティティセレクションのプロパティとして利用可能で、エンティティセレクション内の属性値の &quot;投影&quot; を返します。 戻り値は、属性の種類 (<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a> が <code>storage</code> あるいは <code>relation</code>) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。</p>
 <ul>
 <li><em>attributeName</em> で指定した属性がストレージ型の場合: <code>.attributeName</code>は <em>attributeName</em> と同じ型の値のコレクションを返します。</li>
 <li><em>attributeName</em> で指定した属性がリレートエンティティ型の場合: <code>.attributeName</code> は <em>attributeName</em> と同じ型のリレート値の新規エンティティセレクションを返します。 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。</li>
@@ -272,7 +272,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.add()</code> 関数は、 <em>entity</em> に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します。</p>
+<p><code>.add()</code> 関数は、<em>entity</em> に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のエンティティセレクションを変更します。</p>
 </blockquote>
@@ -331,7 +331,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.and()</code> 関数は、 エンティティセレクションと <em>entity</em> あるいは <em>entitySelection</em> 引数をAND論理演算子を使用して結合します。戻り値は、エンティティセレクションと引数の両方から参照されているエンティティのみを格納した、順列なしの新規エンティティセレクションです。</p>
+<p><code>.and()</code> 関数は、エンティティセレクションと <em>entity</em> あるいは <em>entitySelection</em> 引数をAND論理演算子を使用して結合します。戻り値は、エンティティセレクションと引数の両方から参照されているエンティティのみを格納した、順列なしの新規エンティティセレクションです。</p>
 <ul>
 <li><em>entity</em> 引数を渡した場合、引数のエンティティをエンティティセレクションと結合させることになります。 エンティティがエンティティセレクションに属している場合、そのエンティティのみを格納する新しいエンティティセレクションが返されます。 そうでない場合、空のエンティティセレクションが返されます。</li>
 <li><em>entitySelection</em> 引数を渡した場合、二つのエンティティセレクションを結合させることになります。 両方のセレクションから参照されているエンティティのみを格納する新しいエンティティセレクションが返されます。 重複するエンティティがなかった場合、空のエンティティセレクションが返されます。</li>
@@ -383,7 +383,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.average()</code> 関数は、 <em>attributePath</em> に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します。</p>
+<p><code>.average()</code> 関数は、<em>attributePath</em> に指定した、エンティティセレクション内の null でない値の算術平均 (相加平均) を返します。</p>
 <p><em>attributePath</em> 引数として、評価する属性パスを渡します。</p>
 <p>計算の対象となるのは数値のみです。 ただし、エンティティセレクションの <em>attributePath</em> 引数で指定したパスに異なる型の値が混在している場合、<code>.average()</code> はすべてのスカラー要素を対象として平均値を算出します。</p>
 <blockquote>
@@ -424,7 +424,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.contains()</code> 関数は、 エンティティ参照がエンティティセレクションに属している場合には true を返します。そうでない場合には false を返します。</p>
+<p><code>.contains()</code> 関数は、エンティティ参照がエンティティセレクションに属している場合には true を返します。そうでない場合には false を返します。</p>
 <p><em>entity</em> 引数として、エンティティセレクション内で検索するエンティティを渡します。 エンティティが Null の場合、関数は false を返します。</p>
 <p><em>entity</em> 引数とエンティティセレクションが同じデータクラスのものでない場合、エラーが生成されます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-5"></a><a href="#例題-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -501,7 +501,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.copy()</code> 関数は、 元のエンティティセレクションのコピーを返します。</p>
+<p><code>.copy()</code> 関数は、元のエンティティセレクションのコピーを返します。</p>
 <blockquote>
 <p>この関数は、元のエンティティセレクションを変更しません。</p>
 </blockquote>
@@ -555,7 +555,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.distinct()</code> 関数は、 <em>attributePath</em> に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します。</p>
+<p><code>.distinct()</code> 関数は、<em>attributePath</em> に指定した、エンティティセレクション内の重複しない (異なる) 値のみを格納したコレクションを返します。</p>
 <p>返されたコレクションは自動的に並べ替えられています。 <strong>Null</strong> 値は返されません。</p>
 <p><em>attributePath</em> 引数として、固有の値を取得したいエンティティ属性を渡します。 スカラー値 (テキスト、数値、ブール、あるいは日付) のみが可能です。 <em>attributePath</em> のパスが異なる型の値を格納しているオブジェクトプロパティであった場合、まず最初に型ごとにグループ分けされ、そのあとで並べ替えされます。 型は以下の順番で返されます:</p>
 <ol>
@@ -601,7 +601,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.drop()</code> 関数は、 データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します。 エンティティセレクションはメモリ内に残ります。</p>
+<p><code>.drop()</code> 関数は、データストアのデータクラスに対応するテーブルから、エンティティセレクションに所属しているエンティティを削除します。 エンティティセレクションはメモリ内に残ります。</p>
 <blockquote>
 <p>エンティティの削除は恒久的なものであり、取り消しはできません。 ロールバックで戻すことができるように、この関数はトランザクション内で呼び出すことが推奨されています。</p>
 </blockquote>
@@ -651,7 +651,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.extract()</code> 関数は、 <em>attributePath</em> で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します。</p>
+<p><code>.extract()</code> 関数は、<em>attributePath</em> で指定した値をエンティティセレクションから抽出し、コレクションに格納して返します。</p>
 <p><em>attributePath</em> には、以下のものを指定することができます:</p>
 <ul>
 <li>スカラーデータクラス属性</li>
@@ -733,7 +733,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.first()</code> 関数は、 エンティティセレクションの先頭エンティティへの参照を返します。</p>
+<p><code>.first()</code> 関数は、エンティティセレクションの先頭エンティティへの参照を返します。</p>
 <p>この関数の結果は以下のコードに似ています:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$entitySel</span>[<span class="hljs-number">0</span>]
 </code></pre>
@@ -774,7 +774,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.getDataClass()</code> 関数は、 エンティティセレクションのデータクラスを返します。</p>
+<p><code>.getDataClass()</code> 関数は、エンティティセレクションのデータクラスを返します。</p>
 <p>このメソッドはおもに汎用的なコードのコンテキストで有用です。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-12"></a><a href="#例題-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>以下の汎用的なコードは、エンティティセレクションの全エンティティを複製します:</p>
@@ -814,7 +814,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.isAlterable()</code> 関数は、 エンティティセレクションが追加可能の場合には true を返します。それ以外の場合には false を返します。</p>
+<p><code>.isAlterable()</code> 関数は、エンティティセレクションが追加可能の場合には true を返します。それ以外の場合には false を返します。</p>
 <p>詳細については <a href="/docs/ja/ORDA/entities.html#共有可能追加可能なエンティティセレクション">共有可能/追加可能なエンティティセレクション</a> を参照ください。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-13"></a><a href="#例題-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p><code>Form.products</code> をフォーム内の <a href="/docs/ja/FormObjects/listboxOverview.html">リストボックス</a> に表示し、ユーザーが新しい製品を追加できるようにします。 ユーザーが製品を追加したときにエラーが起きないよう、追加可能であることを確認します:</p>
@@ -845,7 +845,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-16"></a><a href="#説明-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.isOrdered()</code> 関数は、 エンティティセレクションが順列ありであれば true を返します。順列なしであれば false を返します。</p>
+<p><code>.isOrdered()</code> 関数は、エンティティセレクションが順列ありであれば true を返します。順列なしであれば false を返します。</p>
 <blockquote>
 <p>リモートデータストアに属しているエンティティセレクションの場合は常に true を返します。</p>
 </blockquote>
@@ -888,7 +888,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.last()</code> 関数は、 エンティティセレクションの最終エンティティへの参照を返します。</p>
+<p><code>.last()</code> 関数は、エンティティセレクションの最終エンティティへの参照を返します。</p>
 <p>この関数の結果は以下のコードに似ています:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$entitySel</span>[length<span class="hljs-number">-1</span>]
 </code></pre>
@@ -914,7 +914,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p></details></p>
 <p><strong>.length</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.length</code> プロパティは、 エンティティセレクション内のエンティティの数を返します。 エンティティセレクションが空の場合、関数は 0 を返します。</p>
+<p><code>.length</code> プロパティは、エンティティセレクション内のエンティティの数を返します。 エンティティセレクションが空の場合、関数は 0 を返します。</p>
 <p>エンティティセレクションは、常に <code>.length</code> プロパティを持っています。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-16"></a><a href="#例題-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$vSize </span>: Integer
@@ -944,7 +944,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.max()</code> 関数は、 <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します。 実際には、<a href="#orderby"><code>.orderBy()</code></a> 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。</p>
+<p><code>.max()</code> 関数は、<em>attributePath</em> に指定したエンティティセレクションの属性値のうち最高の (あるいは最大の) 値を返します。 実際には、<a href="#orderby"><code>.orderBy()</code></a> 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。</p>
 <p><em>attributePath</em> に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、<code>.max()</code> メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します (<a href="/docs/ja/API/CollectionClass.html#sort"><code>.sort()</code></a> の詳細を参照してください)。</p>
 <p>エンティティセレクションが空の場合、または <em>attributePath</em> 引数がオブジェクト属性内に見つからない場合には、<code>.max()</code> は <strong>undefined</strong> を返します。</p>
 <p>以下の場合には、エラーが返されます:</p>
@@ -982,7 +982,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.min()</code> 関数は、  <em>attributePath</em> に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します。  実際には、<a href="#orderby"><code>.orderBy()</code></a> 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (<strong>null</strong>値は除く)。</p>
+<p><code>.min()</code> 関数は、<em>attributePath</em> に指定したエンティティセレクションの属性値のうち最低の (あるいは最小の) 値を返します。  実際には、<a href="#orderby"><code>.orderBy()</code></a> 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (<strong>null</strong>値は除く)。</p>
 <p><em>attributePath</em> に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、<code>.min()</code> メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します(<a href="/docs/ja/API/CollectionClass.html#sort"><code>.sort()</code></a> の詳細を参照してください)。</p>
 <p>エンティティセレクションが空の場合、または <em>attributePath</em> 引数がオブジェクト属性内に見つからない場合には、<code>.min()</code> は <strong>undefined</strong> を返します。</p>
 <p>以下の場合には、エラーが返されます:</p>
@@ -1020,7 +1020,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-21"></a><a href="#説明-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.minus()</code> 関数は、 元のエンティティセレクションから、<em>entity</em> 引数のエンティティ、あるいは<em>entitySelection</em> 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します。</p>
+<p><code>.minus()</code> 関数は、元のエンティティセレクションから、<em>entity</em> 引数のエンティティ、あるいは<em>entitySelection</em> 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します。</p>
 <ul>
 <li><em>entity</em> を引数として渡した場合、メソッドは (<em>entity</em> が元のエンティティセレクションに所属していた場合) <em>entity</em> を除外した新しいエンティティセレクションを作成します。 <em>entity</em> が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。</li>
 <li><em>entitySelection</em> を引数として渡した場合、メソッドは <em>entitySelection</em> に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。</li>
@@ -1073,7 +1073,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.or()</code> 関数は、 OR論理演算子を使用して、<em>entity</em> または <em>entitySelection</em> のエンティティと対象エンティティセレクションを組み合わせます。戻り値は、渡した引数とエンティティセレクションの全エンティティを格納する順列なしの新規エンティティセレクションです。</p>
+<p><code>.or()</code> 関数は、OR論理演算子を使用して、<em>entity</em> または <em>entitySelection</em> のエンティティと対象エンティティセレクションを組み合わせます。戻り値は、渡した引数とエンティティセレクションの全エンティティを格納する順列なしの新規エンティティセレクションです。</p>
 <ul>
 <li><em>entity</em> を渡した場合、引数のエンティティをエンティティセレクションと比較することになります。 エンティティがエンティティセレクションに所属している場合、エンティティセレクションへの新しい参照が返されます。 そうでない場合、元のエンティティセレクションと渡したエンティティを格納した新しいエンティティセレクションが返されます。</li>
 <li><em>entitySelection</em> を渡した場合、二つのエンティティセレクションを比較することになります。 元のエンティティセレクションと <em>entitySelection</em> のどちらかに所属しているエンティティを格納した新しいエンティティセレクションが返されます (OR は排他的ではなく、また両方のセレクションで参照されているエンティティは、結果のセレクションに複数格納されることはありません)。</li>
@@ -1122,7 +1122,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-23"></a><a href="#説明-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.orderBy()</code> 関数は、 エンティティセレクションの全エンティティが <em>pathString</em> または <em>pathObjects</em> が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します。</p>
+<p><code>.orderBy()</code> 関数は、エンティティセレクションの全エンティティが <em>pathString</em> または <em>pathObjects</em> が指定する順番に並べ替えられた、新規の順列ありのエンティティセレクションを返します。</p>
 <blockquote>
 <ul>
 <li>この関数は、エンティティセレクションを変更しません。</li>
@@ -1192,7 +1192,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-24"></a><a href="#説明-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.orderByFormula()</code> 関数は、 エンティティセレクションの全エンティティが <em>formulaString</em> または <em>formulaObj</em>、および (任意の) <em>sortOrder</em> や <em>settings</em> 引数が指定する順番に並べられた、 順列ありの新規エンティティセレクションを返します 。</p>
+<p><code>.orderByFormula()</code> 関数は、 エンティティセレクションの全エンティティが <em>formulaString</em> または <em>formulaObj</em>、および (任意の) <em>sortOrder</em> や <em>settings</em> 引数が指定する順番に並べられた、順列ありの新規エンティティセレクションを返します。</p>
 <blockquote>
 <p>この関数は、元のエンティティセレクションを変更しません。</p>
 </blockquote>
@@ -1295,12 +1295,11 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><td>formula</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>検索条件 (フォーミュラオブジェクト)</td></tr>
 <tr><td>value</td><td>any</td><td style="text-align:center">-&gt;</td><td>プレースホルダー用の値</td></tr>
 <tr><td>querySettings</td><td>オブジェクト</td><td style="text-align:center">-&gt;</td><td>クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
-<tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td><em>queryString</em> または <em>formula</em> に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション</td></tr>
-<tr><td></td></tr>
+<tr><td>戻り値</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td><em>queryString</em> または <em>formula</em> に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション</td><td></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.query()</code> 関数は、 エンティティセレクションの全エンティティから、<em>queryString</em> または <em>formula</em> と任意の <em>value</em> 引数で指定した検索条件に合致するエンティティを検索します。戻り値は、見つかったエンティティをすべて格納する <code>EntitySelection</code> 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。</p>
+<p><code>.query()</code> 関数は、エンティティセレクションの全エンティティから、<em>queryString</em> または <em>formula</em> と任意の <em>value</em> 引数で指定した検索条件に合致するエンティティを検索します。戻り値は、見つかったエンティティをすべて格納する <code>EntitySelection</code> 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。</p>
 <blockquote>
 <p>この関数は、元のエンティティセレクションを変更しません。</p>
 </blockquote>
@@ -1331,7 +1330,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p></details></p>
 <p><strong>.queryPath</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.queryPath</code> プロパティは、 実際に 4Dで実行されたクエリの詳細な情報を格納します。 このプロパティは、<a href="#query"><code>.query()</code></a> 関数の <em>querySettings</em> 引数に <code>&quot;queryPath&quot;:true</code> プロパティが渡されていた場合に、クエリを通して生成された <code>EntitySelection</code> オブジェクトで利用可能です。</p>
+<p><code>.queryPath</code> プロパティは、実際に 4Dで実行されたクエリの詳細な情報を格納します。 このプロパティは、<a href="#query"><code>.query()</code></a> 関数の <em>querySettings</em> 引数に <code>&quot;queryPath&quot;:true</code> プロパティが渡されていた場合に、クエリを通して生成された <code>EntitySelection</code> オブジェクトで利用可能です。</p>
 <p>詳細については、DataClass<a href="DataClassClass.html#query"><code>.query()</code></a> の <strong>querySettings</strong> の説明を参照ください。</p>
 <h2><a class="anchor" aria-hidden="true" id="queryplan"></a><a href="#queryplan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.queryPlan</h2>
 <p><details><summary>履歴</summary></p>
@@ -1346,7 +1345,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p></details></p>
 <p><strong>.queryPlan</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-27"></a><a href="#説明-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.queryPlan</code> プロパティは、  実行前のクエリの詳細な情報 (クエリプラン) を格納します。 このプロパティは、<a href="#query"><code>.query()</code></a> 関数の <em>querySettings</em> 引数に <code>&quot;queryPlan&quot;:true</code> プロパティが渡されていた場合に、クエリを通して生成された <code>EntitySelection</code> オブジェクトで利用可能です。</p>
+<p><code>.queryPlan</code> プロパティは、実行前のクエリの詳細な情報 (クエリプラン) を格納します。 このプロパティは、<a href="#query"><code>.query()</code></a> 関数の <em>querySettings</em> 引数に <code>&quot;queryPlan&quot;:true</code> プロパティが渡されていた場合に、クエリを通して生成された <code>EntitySelection</code> オブジェクトで利用可能です。</p>
 <p>詳細については、DataClass<a href="DataClassClass.html#query"><code>.query()</code></a> の <strong>querySettings</strong> の説明を参照ください。</p>
 <h2><a class="anchor" aria-hidden="true" id="refresh"></a><a href="#refresh" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.refresh()</h2>
 <p><details><summary>履歴</summary></p>
@@ -1359,15 +1358,15 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.refresh()</strong>
-| 引数 | タイプ |  | 説明                |
+<p><strong>.refresh()</strong></p>
+<p>| 引数 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <blockquote>
 <p>このメソッドはリモートデータストア (クライアント/サーバーモード、または<code>Open datastore</code> 接続) においてのみ動作します。</p>
 </blockquote>
-<p><code>.refresh()</code> 関数は、 ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に &quot;無効化&quot; します 。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。</p>
+<p><code>.refresh()</code> 関数は、ローカルの ORDAキャッシュにあるエンティティセレクションデータを即座に &quot;無効化&quot; します。そのため、次に 4Dがエンティティセレクションを必要としたときにはそれがデータベースからリロードされます。</p>
 <p>デフォルトでは、ローカルの ORDA のキャッシュは 30秒後に無効化されます。 クライアント/サーバーアプリケーションのコンテキストにおいて ORDA とクラシック言語の両方を使用している場合、このメソッドを使用することでリモートアプリケーションが必ず最新のデータを使用するようにできます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-8"></a><a href="#例題-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <p>クラシックと ORDA言語の両方が、同じデータを同時に編集する場合を考えます:</p>
@@ -1426,16 +1425,16 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>selectedEntities</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>呼び出し対象のエンティティセレクション内での位置を取得したい、選別されたエンティティのセレクション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲</td></tr>
+<tr><td>selectedEntities</td><td>4D.EntitySelection</td><td style="text-align:center">-&gt;</td><td>呼び出し対象のエンティティセレクションにおける、選別したエンティティの位置範囲</td></tr>
+<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>呼び出し対象のエンティティセレクション内での位置を取得したい、選別されたエンティティのセレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.selected()</code> 関数は、 呼び出し対象のエンティティセレクションにおける、<em>selectedEntities</em> に含まれるエンティティの位置を表すオブジェクトを返します。</p>
+<p>呼び出し対象のエンティティセレクション、または <em>selectedEntities</em> のエンティティセレクションが空の場合、関数は <code>ranges</code> に空のコレクションを返します。</p>
 <blockquote>
 <p>この関数は、元のエンティティセレクションを変更しません。</p>
 </blockquote>
-<p><em>selectedEntities</em> 引数として、呼び出し対象のエンティティセレクション内の位置を取得したい、選別されたエンティティのセレクションを渡します。 呼び出し対象のエンティティセレクションと <em>selectedEntities</em> のエンティティセレクションは同じデータクラスに属している必要があります。そうでない場合には、エラー 1587 - &quot;そのエンティティセレクションは互換性のないデータクラスからきています&quot; が発生します。</p>
+<p><em>entity</em> を引数として渡した場合、メソッドは (<em>entity</em> が元のエンティティセレクションに所属していた場合) <em>entity</em> を除外した新しいエンティティセレクションを作成します。 <em>entity</em> が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。</p>
 <h4><a class="anchor" aria-hidden="true" id="戻り値"></a><a href="#戻り値" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>戻り値</h4>
 <p>戻り値のオブジェクトには、以下のプロパティが格納されています:</p>
 <table>
@@ -1449,7 +1448,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <p><code>ranges</code> プロパティに 1件のエンティティしか含まれない場合、<code>start</code> = <code>end</code> です。 インデックスは 0 起点です。</p>
-<p>呼び出し対象のエンティティセレクション、または <em>selectedEntities</em> のエンティティセレクションが空の場合、関数は <code>ranges</code> に空のコレクションを返します。</p>
+<p><em>attributeName</em> で指定した属性がストレージ型の場合: <code>.attributeName</code>は <em>attributeName</em> と同じ型の値のコレクションを返します。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-20"></a><a href="#例題-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$invoices</span>; <span class="hljs-variable">$cashSel</span>; <span class="hljs-variable">$creditSel </span>: cs.Invoices<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variable">$result2 </span>: Object
@@ -1489,7 +1488,7 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.slice()</code> 関数は、<em>startFrom</em> の位置 (含まれる) から <em>end</em> の位置 (含まれない) または終わりまでの エンティティセレクションの一部を、新規エンティティセレクションとして返します。 この関数は、エンティティセレクションのシャロウ・コピーを返します (同じエンティティ参照を使用します)。</p>
+<p><code>.slice()</code> 関数は、<em>startFrom</em> の位置 (含まれる) から <em>end</em> の位置 (含まれない) または終わりまでのエンティティセレクションの一部を、新規エンティティセレクションとして返します。 この関数は、エンティティセレクションのシャロウ・コピーを返します (同じエンティティ参照を使用します)。</p>
 <blockquote>
 <p>この関数は、元のエンティティセレクションを変更しません。</p>
 </blockquote>
@@ -1535,7 +1534,7 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-31"></a><a href="#説明-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.sum()</code> 関数は、 <em>attributePath</em> に指定したエンティティセレクションの属性値の総和を返します。</p>
+<p><code>.sum()</code> 関数は、<em>attributePath</em> に指定したエンティティセレクションの属性値の総和を返します。</p>
 <p>エンティティセレクションが空の場合、<code>.sum()</code> は 0 を返します。</p>
 <p>総和は、数値型の値に対してのみ実行可能です。 <em>attributePath</em> がオブジェクトプロパティだった場合、計算の対象になるのは数値型の値のみです (他の値の型は無視されます)。 この場合で、<em>attributePath</em> がオブジェクト内に存在しないパス、あるいは数値を含んでいない属性へのパスであった場合には、<code>.sum()</code> は 0 を返します。</p>
 <p>以下の場合には、エラーが返されます:</p>
@@ -1577,7 +1576,7 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-32"></a><a href="#説明-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.toCollection()</code> 関数は、エンティティセレクションの各エンティティの属性名と値に対応する プロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成し、返します 。</p>
+<p><code>.toCollection()</code> 関数は、エンティティセレクションの各エンティティの属性名と値に対応するプロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成し、返します。</p>
 <p>filterString および filterCol 引数が省略されるか、空の文字列が渡されるか、あるいは &quot;*&quot; が渡された場合、すべての属性が抽出されます。 &quot;<a href="/docs/ja/API/DataClassAttributeClass.html#kind">kind</a>&quot; プロパティが &quot;relatedEntity&quot; の属性は単純な形式で抽出されます: __KEY プロパティ (プライマリーキー) を持ったオブジェクト。 &quot;relatedEntities&quot; 型の &quot;kind&quot; プロパティの属性は抽出されません。</p>
 <p>抽出するエンティティ属性を限定したい場合には、それを指定する引数を渡すことができます。 2つのシンタックスを使用できます:</p>
 <ul>

@@ -229,7 +229,26 @@
 </thead>
 <tbody>
 <tr><td>BYTES_RECEIVED</td><td></td><td>○</td><td>サーバーが受け取ったバイト数</td></tr>
-<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>サーバーがクライアントに送ったバイト数</td><td>C_DNS</td><td>X</td><td>X</td><td>DNS の IPアドレス (ELF: C_IP フィールドと同一のフィールド)</td><td>C_IP</td><td>X</td><td>X</td><td>クライアントの IPアドレス (例: 192.100.100.10)</td><td>CONNECTION_ID</td><td></td><td>X</td><td>接続ID番号</td><td>CS(COOKIE)</td><td>X</td><td>X</td><td>HTTPリクエストに格納されている cookie に関する情報</td><td>CS(HOST)</td><td>X</td><td>X</td><td>HTTPリクエストの Hostフィールド</td><td>CS(REFERER)</td><td>X</td><td>X</td><td>リクエストされたドキュメントを指すページの URL</td><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>ソフトウェアに関する情報とクライアントのオペレーティングシステム</td><td>CS_SIP</td><td>X</td><td>X</td><td>サーバーの IPアドレス</td><td>CS_URI</td><td>X</td><td>X</td><td>リクエストが作成される URI</td><td>CS_URI_QUERY</td><td>X</td><td>X</td><td>リクエストをクエリする引数</td><td>CS_URI_STEM</td><td>X</td><td>X</td><td>エリ引数のないリクエストのパート</td><td>DATE</td><td>X</td><td>X</td><td>DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年</td><td>METHOD</td><td>X</td><td>X</td><td>サーバーへ送られるリクエスト用の HTTPメソッド</td><td>PATH_ARGS</td><td></td><td>X</td><td>CGI引数: “$” の後に続く文字列</td><td>STATUS</td><td>X</td><td>X</td><td>サーバーの返答</td><td>TIME</td><td>X</td><td>X</td><td>HH: 時間、MM: 分、SS: 秒</td><td>TRANSFER_TIME</td><td>X</td><td>X</td><td>返答を作成するためにサーバーによってリクエストされた時間</td><td>USER</td><td>X</td><td>X</td><td>認証された場合はユーザー名。その他の場合は - (マイナス記号)。<p>ユーザー名にスペースがある場合、_ (アンダーライン) に置き換えられる</td><td>URL</td><td></td><td>X</td><td>クライアントがリクエストした URL</td></tr>
+<tr><td>BYTES_SENT</td><td>○</td><td>○</td><td>サーバーがクライアントに送ったバイト数</td></tr>
+<tr><td>C_DNS</td><td>○</td><td>○</td><td>DNSのIPアドレス (ELF: C_IP フィールドと同一のフィールド)</td></tr>
+<tr><td>C_IP</td><td>○</td><td>○</td><td>クライアントの IPアドレス (例: 192.100.100.10)</td></tr>
+<tr><td>CONNECTION_ID</td><td></td><td>○</td><td>接続ID番号</td></tr>
+<tr><td>CS(COOKIE)</td><td>○</td><td>○</td><td>HTTPリクエストに格納されている cookies に関する情報</td></tr>
+<tr><td>CS(HOST)</td><td>○</td><td>○</td><td>HTTPリクエストの Hostフィールド</td></tr>
+<tr><td>CS(REFERER)</td><td>○</td><td>○</td><td>リクエストされたドキュメントを指すページの URL</td></tr>
+<tr><td>CS(USER_AGENT)</td><td>○</td><td>○</td><td>ソフトウェアとクライアントのオペレーティングシステムに関する情報</td></tr>
+<tr><td>CS_SIP</td><td>○</td><td>○</td><td>サーバーの IPアドレス</td></tr>
+<tr><td>CS_URI</td><td>○</td><td>○</td><td>リクエストが作成された URI</td></tr>
+<tr><td>CS_URI_QUERY</td><td>○</td><td>○</td><td>リクエストのクエリ引数</td></tr>
+<tr><td>CS_URI_STEM</td><td>○</td><td>○</td><td>クエリ引数のないリクエストのパート</td></tr>
+<tr><td>DATE</td><td>○</td><td>○</td><td>DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年</td></tr>
+<tr><td>METHOD</td><td>○</td><td>○</td><td>サーバーへ送られたリクエスト用の HTTPメソッド</td></tr>
+<tr><td>PATH_ARGS</td><td></td><td>○</td><td>CGI parameters: string located after the “$” character</td></tr>
+<tr><td>STATUS</td><td>○</td><td>○</td><td>サーバーの返答</td></tr>
+<tr><td>TIME</td><td>○</td><td>○</td><td>HH: 時間、MM: 分、SS: 秒</td></tr>
+<tr><td>TRANSFER_TIME</td><td>○</td><td>○</td><td>返答を作成するためにサーバーが要求した時間</td></tr>
+<tr><td>USER</td><td>○</td><td>○</td><td>認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザー名にスペースが含まれると、_ (下線) に置き換わります。</td></tr>
+<tr><td>URL</td><td></td><td>○</td><td>クライアントがリクエストした URL</td></tr>
 </tbody>
 </table>
 <blockquote>

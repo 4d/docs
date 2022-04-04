@@ -210,9 +210,7 @@ Function</span><span class="hljs-function"> getArea</span>(<span class="hljs-var
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span> getValue
     <span class="hljs-variable">$0</span>:=<span class="hljs-number">10</span>
     return <span class="hljs-number">20</span>
-    <span class="hljs-comment">// returns 20</span><span class="hljs-keyword">
-
-Function</span> getValue -&gt; <span class="hljs-variable">$v </span>: Integer
+    <span class="hljs-comment">// returns 20 Function getValue -&gt; $v : Integer</span>
     return <span class="hljs-number">10</span>
     <span class="hljs-variable">$v</span>:=<span class="hljs-number">20</span> <span class="hljs-comment">// never executed</span>
     <span class="hljs-comment">// returns 10</span>
@@ -384,8 +382,7 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ALERT</span>(<span class="hljs-string">"Are you sure?"</span>;<span class="hljs-string">"Yes I am"</span>) <span class="hljs-comment">//2 parâmetros ALERT("Time is over") //1 parâmetro</span>
 </code></pre>
 <p>4D methods and functions also accept such optional parameters. You can declare any number of parameters. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, <a href="/docs/pt/Concepts/data-types.html#default-values">according to their type</a>. For example:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// "concate" function of myClass</span><span class="hljs-keyword">
-Function</span><span class="hljs-function"> concate </span>(<span class="hljs-variable">$param1 </span>: Text ; <span class="hljs-variable">$param2 </span>: Text)-&gt;<span class="hljs-variable">$result </span>: Text
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// "concate" function of myClass Function concate ($param1 : Text ; $param2 : Text)-&gt;$result : Text</span>
 <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$param1</span>+<span class="hljs-string">" "</span>+<span class="hljs-variable">$param2</span>
 </code></pre>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// Calling method</span>

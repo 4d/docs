@@ -91,7 +91,7 @@
 </blockquote>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <p><em>vpFormula</em> には、命名する 4D View Pro フォーミュラを渡します。 フォーミュラシンタックスの詳細については、<a href="/docs/ja/ViewPro/formulas.html">式と関数</a> ページを参照ください。</p>
-<p><em>name</em> 引数には、新しいフォーミュラの名前を渡します。 同じスコープ内で名前が既に使用されている場合、新しい命名フォーミュラは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。</p>
+<p>名前をつけたいレンジを <em>rangeObj</em> に、新しいレンジの名前は <em>name</em> に渡します。 同じスコープ内で名前が既に使用されている場合、新しい命名レンジは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。</p>
 <p><em>options</em> 引数には、命名フォーミュラの追加プロパティを格納したオブジェクト型を渡すことができます。 以下のオブジェクトプロパティがサポートされています:</p>
 <table>
 <thead>
@@ -124,7 +124,7 @@
 <blockquote>
 <p>このコマンドで作成された命名レンジはドキュメントとともに保存されます。</p>
 </blockquote>
-<p>名前をつけたいレンジを <em>rangeObj</em> に、新しいレンジの名前は <em>name</em> に渡します。 同じスコープ内で名前が既に使用されている場合、新しい命名レンジは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。</p>
+<p><em>name</em> 引数には、新しいフォーミュラの名前を渡します。 同じスコープ内で名前が既に使用されている場合、新しい命名フォーミュラは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。</p>
 <p><em>options</em> 引数には、命名レンジの追加プロパティを格納したオブジェクト型を渡すことができます。 以下のオブジェクトプロパティがサポートされています:</p>
 <table>
 <thead>
@@ -531,10 +531,10 @@
 <li>ピクチャー</li>
 <li>行高さ</li>
 <li>カラム幅</li>
-<li>非表示のカラム / 行</li>
+<li>非表示のカラム / 行 &gt; 枠線の表示状態は <a href="#vp-set-print-info">VP SET PRINT INFO</a> で定義されたドキュメント属性に依存します。</li>
 </ul>
 <blockquote>
-<p>枠線の表示状態は <a href="#vp-set-print-info">VP SET PRINT INFO</a> で定義されたドキュメント属性に依存します。</p>
+<p>インデックスは 0 起点です。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ファンクションの戻り値"></a><a href="#ファンクションの戻り値" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ファンクションの戻り値</h4>
 <p>コマンドは SVGフォーマットのピクチャーを返します。</p>
@@ -617,10 +617,10 @@
 <p><em>rangeObj</em> 引数には、削除するカラムを指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください:</p>
 <ul>
 <li>レンジにカラムと行の両方が含まれる場合、カラムのみが削除されます。</li>
-<li>レンジに行しか含まれていない場合、コマンドは何もしません。</li>
+<li>レンジに行しか含まれていない場合、コマンドは何もしません。 &gt; カラムは右から左に向かって削除されます。</li>
 </ul>
 <blockquote>
-<p>カラムは右から左に向かって削除されます。</p>
+<p>インデックスは 0 起点です。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-15"></a><a href="#例題-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>ユーザーが選択したカラムを削除します (以下の画像の B、C、D のカラムを削除します):</p>
@@ -645,10 +645,10 @@
 <p><em>rangeObj</em> 引数には、削除する行を指定するレンジオブジェクトを渡します。 渡すレンジについては、以下の点に注意してください:</p>
 <ul>
 <li>レンジにカラムと行の両方が含まれる場合、行のみが削除されます。</li>
-<li>レンジにカラムしか含まれていない場合、コマンドは何もしません。</li>
+<li>レンジにカラムしか含まれていない場合、コマンドは何もしません。 &gt; 行は下から上に向かって削除されます。</li>
 </ul>
 <blockquote>
-<p>行は下から上に向かって削除されます。</p>
+<p>インデックスは 0 起点です。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-16"></a><a href="#例題-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>ユーザーが選択した行を削除します (以下の画像の 1、2、3行目を削除します):</p>
@@ -682,7 +682,7 @@
 <li>PDF (&quot;.pdf&quot;)</li>
 <li>CSV (&quot;.txt&quot; または &quot;.csv&quot;)</li>
 </ul>
-<p>ファイル名に拡張子が含まれていなくても、<em>paramObj</em> 引数によって形式が指定されている場合、書き出されたファイルには形式に対応する拡張子がつけられます。ただし CSV形式の場合には拡張子がつきません。</p>
+<p>ファイル名に拡張子が含まれていなくても、<em>paramObj</em> 引数によって形式が指定されている場合、書き出されたファイルには形式に対応する拡張子がつけられます。 ただし CSV形式の場合には拡張子がつきません。</p>
 <p>任意の <em>paramObj</em> 引数を渡すと、書き出される 4D View Pro オブジェクトの複数のプロパティに加えて、書き出しが完了した際に呼び出されるコールバックメソッド名を定義することができます。</p>
 <table>
 <thead>
@@ -2131,7 +2131,7 @@ End if</span>
 <p><code>VP PRINT</code> コマンドは、 <em>vpAreaName</em> 引数で指定したエリアを印刷する印刷ダイアログウィンドウを開きます。</p>
 <p><em>vpAreaName</em> には、印刷する 4D View Pro エリアの名前を渡します。 コマンドによって、システムの印刷ダイアログウィンドウが開かれ、プリンターを指定したりページプロパティを定義したりすることができます。</p>
 <blockquote>
-<p>印刷ダイアログウィンドウで定義されるプロパティはプリンター用紙のためのもので、4D View Pro エリアの印刷プロパティではありません。 4D View Pro エリアの印刷プロパティは <a href="#vp-set-print-info">VP SET PRINT INFO</a> コマンドで定義されます。 プリンターと 4D View Pro エリアの両プロパティが合致することが強く推奨されます。そうでない場合、ドキュメントが期待通りに印刷されない可能性があります。</p>
+<p>印刷ダイアログウィンドウで定義されるプロパティはプリンター用紙のためのもので、4D View Pro エリアの印刷プロパティではありません。 4D View Pro エリアの印刷プロパティは <a href="#vp-set-print-info">VP SET PRINT INFO</a> コマンドで定義されます。 プリンターと 4D View Pro エリアの両プロパティが合致することが強く推奨されます。 そうでない場合、ドキュメントが期待通りに印刷されない可能性があります。</p>
 </blockquote>
 <p>任意の <em>sheet</em> 引数として、シートのインデックス (0 起点) を渡すことで、印刷するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートあるいはワークブック全体を明示的に選択することができます:</p>
 <ul>
@@ -2168,7 +2168,7 @@ End if</span>
 <p><code>VP RECOMPUTE FORMULAS</code> コマンドは、 <em>vpAreaName</em> 引数で指定したエリアの全フォーミュラを即座に評価します。 デフォルトでは、4D はフォーミュラを挿入時、読み込み時、そして書き出し時のタイミングで自動計算します。 <code>VP RECOMPUTE FORMULAS</code> コマンドを使用すると、任意のタイミングで強制的に計算を実行することができます(例: フォーミュラに変更が加えられた場合、またはフォーミュラがデータベースへの呼び出しを格納している場合など)。 コマンドは <a href="#vp-flush-commands">VP FLUSH COMMANDS</a> コマンドを実行することで、実行保留されていたコマンドをすべて実行し、コマンドバッファをクリアします。そしてワークブック内の全フォーミュラを計算します。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <blockquote>
-<p><code>VP RECOMPUTE FORMULAS</code> コマンドを使用する前に <a href="#vp-suspend-computing">VP SUSPEND COMPUTING</a>コマンドが実行されていないようにしてください。そうでないと、このコマンドは何もしません。</p>
+<p><code>VP RECOMPUTE FORMULAS</code> コマンドを使用する前に <a href="#vp-suspend-computing">VP SUSPEND COMPUTING</a>コマンドが実行されていないようにしてください。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-53"></a><a href="#例題-53" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>ワークブック内の全フォーミュラを更新します:</p>
@@ -2582,7 +2582,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>このコードが実行されたあと、定義されたファンクションは 4D View Pro フォーミュラで使用することができるようになります:</p>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG" alt=""></p>
 <blockquote>
-<p>4D View Pro フォーミュラにおいて、ファンクション名は自動的に大文字で表示されます。</p>
+<p>インデックスは 0 起点です。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="参照-66"></a><a href="#参照-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
 <p><a href="/docs/ja/ViewPro/formulas.html#4d-functions">4D functions</a><br/><a href="#vp-set-custom-functions">VP SET CUSTOM FUNCTIONS</a></p>
@@ -3536,7 +3536,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tbody>
 <tr><td>value</td><td>Integer, Real, Boolean, Text, Date, Null</td><td><em>rangeObj</em> のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。</td></tr>
 <tr><td>time</td><td>Real</td><td><em>rangeObj</em> のレンジに対して割り当てる時間 (秒単位)</td></tr>
-<tr><td>format</td><td>Text</td><td>値や日時に対するパターン。 パターンおよびフォーマット文字に関しての情報については、<a href="/docs/ja/ViewPro/configuring.html#セルフォーマット">セルフォーマット</a> の章を参照してください。</td></tr>
+<tr><td>format</td><td>Text</td><td>値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、<a href="/docs/ja/ViewPro/configuring.html#セルフォーマット">セルフォーマット</a> の章を参照してください。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-85"></a><a href="#例題-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -3637,68 +3637,68 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>allowUserDragMerge</td><td>boolean</td><td>The drag merge operation is allowed (select cells and drag the selection to merge cells)</td></tr>
-<tr><td>allowAutoCreateHyperlink</td><td>boolean</td><td>Enables automatic creation of hyperlinks in the spreadsheet.</td></tr>
-<tr><td>allowContextMenu</td><td>boolean</td><td>The built-in context menu can be opened.</td></tr>
-<tr><td>allowCopyPasteExcelStyle</td><td>boolean</td><td>Styles from a spreadsheet can be copied and pasted to Excel, and vice-versa.</td></tr>
-<tr><td>allowDynamicArray</td><td>boolean</td><td>Enables dynamic arrays in worksheets</td></tr>
-<tr><td>allowExtendPasteRange</td><td>boolean</td><td>Extends the pasted range if the pasted range is not enough for the pasted data</td></tr>
-<tr><td>allowSheetReorder</td><td>boolean</td><td>Sheet reordering is allowed</td></tr>
-<tr><td>allowUndo</td><td>boolean</td><td>Undoing edits is allowed.</td></tr>
-<tr><td>allowUserDeselect</td><td>boolean</td><td>Deselecting specific cells from a selection is allowed.</td></tr>
-<tr><td>allowUserDragDrop</td><td>boolean</td><td>Drag and drop of range data is allowed</td></tr>
-<tr><td>allowUserDragFill</td><td>boolean</td><td>Drag fill is allowed</td></tr>
-<tr><td>allowUserEditFormula</td><td>boolean</td><td>Formulas can be entered in cells</td></tr>
-<tr><td>allowUserResize</td><td>boolean</td><td>Columns and rows can be resized</td></tr>
-<tr><td>allowUserZoom</td><td>boolean</td><td>Zooming (ctrl + mouse wheel) is allowed</td></tr>
-<tr><td>autoFitType</td><td>number</td><td>Content is formatted to fit in cells, or cells and headers. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table></td></tr>
-<tr><td>backColor</td><td>string</td><td>A color string used to represent the background color of the area, such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;. The initial backgroundcolor is hidden when a backgroundImage is set.</td></tr>
-<tr><td>backgroundImage</td><td>string / picture / file</td><td>Background image for the area.</td></tr>
-<tr><td>backgroundImageLayout</td><td>number</td><td>How the background image is displayed. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table></td></tr>
-<tr><td>calcOnDemand</td><td>boolean</td><td>Formulas are calculated only when they are demanded.</td></tr>
-<tr><td>columnResizeMode</td><td>number</td><td>Resize mode for columns. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table></td></tr>
-<tr><td>copyPasteHeaderOptions</td><td>number</td><td>Headers to include when data is copied to or pasted. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table></td></tr>
-<tr><td>customList</td><td>collection</td><td>The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on <a href="https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b">GrapeCity's website</a>.</td></tr>
-<tr><td>cutCopyIndicatorBorderColor</td><td>string</td><td>Border color for the indicator displayed when the user cuts or copies the selection.</td></tr>
-<tr><td>cutCopyIndicatorVisible</td><td>boolean</td><td>Display an indicator when copying or cutting the selected item.</td></tr>
-<tr><td>defaultDragFillType</td><td>number</td><td>The default drag fill type. Available values : <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Clears cell values.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table></td></tr>
-<tr><td>enableAccessibility</td><td>boolean</td><td>Accessibility support is enabled in the spreadsheet.</td></tr>
-<tr><td>enableFormulaTextbox</td><td>boolean</td><td>The formula text box is enabled.</td></tr>
-<tr><td>grayAreaBackColor</td><td>string</td><td>A color string used to represent the background color of the gray area , such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
-<tr><td>highlightInvalidData</td><td>boolean</td><td>Invalid data is highlighted.</td></tr>
-<tr><td>iterativeCalculation</td><td>boolean</td><td>Enables iterative calculation. See on <a href="https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html">Grapecity's website</a>.</td></tr>
-<tr><td>iterativeCalculationMaximumChange</td><td>numeric</td><td>Maximum amount of change between two calculation values.</td></tr>
-<tr><td>iterativeCalculationMaximumIterations</td><td>numeric</td><td>Number of times the formula should recalculate.</td></tr>
-<tr><td>newTabVisible</td><td>boolean</td><td>Display a special tab to let users insert new sheets.</td></tr>
-<tr><td>numbersFitMode</td><td>number</td><td>Changes display mode when date/number data width is longer than column width. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with &quot;###&quot; and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table></td></tr>
-<tr><td>pasteSkipInvisibleRange</td><td>boolean</td><td>Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See <a href="https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html">Grapecity's docs</a> for more information on invisible ranges.</td></tr>
-<tr><td>referenceStyle</td><td>number</td><td>Style for cell and range references in cell formulas. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table></td></tr>
-<tr><td>resizeZeroIndicator</td><td>number</td><td>Drawing policy when the row or column is resized to zero. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table></td></tr>
-<tr><td>rowResizeMode</td><td>number</td><td>The way rows are resized. Available values are the same as columnResizeMode</td></tr>
-<tr><td>scrollbarAppearance</td><td>number</td><td>Scrollbar appearance. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table></td></tr>
-<tr><td>scrollbarMaxAlign</td><td>boolean</td><td>The scroll bar aligns with the last row and column of the active sheet.</td></tr>
-<tr><td>scrollbarShowMax</td><td>boolean</td><td>The displayed scroll bars are based on the entire number of columns and rows in the sheet.</td></tr>
-<tr><td>scrollByPixel</td><td>boolean</td><td>Enable precision scrolling by pixel.</td></tr>
-<tr><td>scrollIgnoreHidden</td><td>boolean</td><td>The scroll bar ignores hidden rows or columns.</td></tr>
-<tr><td>scrollPixel</td><td>integer</td><td>Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of <code>scrolling delta * scrollPixel</code>. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15.</td></tr>
-<tr><td>showDragDropTip</td><td>boolean</td><td>Display the drag-drop tip.</td></tr>
-<tr><td>showDragFillSmartTag</td><td>boolean</td><td>Display the drag fill dialog.</td></tr>
-<tr><td>showDragFillTip</td><td>boolean</td><td>Display the drag-fill tip.</td></tr>
-<tr><td>showHorizontalScrollbar</td><td>boolean</td><td>Display the horizontal scroll bar.</td></tr>
-<tr><td>showResizeTip</td><td>number</td><td>How to display the resize tip. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table></td></tr>
-<tr><td>showScrollTip</td><td>number</td><td>How to display the scroll tip. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table></td></tr>
-<tr><td>showVerticalScrollbar</td><td>boolean</td><td>Display the vertical scroll bar.</td></tr>
-<tr><td>tabEditable</td><td>boolean</td><td>The sheet tab strip can be edited.</td></tr>
-<tr><td>tabNavigationVisible</td><td>boolean</td><td>Display the sheet tab navigation.</td></tr>
-<tr><td>tabStripPosition</td><td>number</td><td>Position of the tab strip. 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table></td></tr>
-<tr><td>tabStripRatio</td><td>number</td><td>Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.</td></tr>
-<tr><td>tabStripVisible</td><td>boolean</td><td>Display the sheet tab strip.</td></tr>
-<tr><td>tabStripWidth</td><td>number</td><td>Width of the tab strip when position is left or right. Default and minimum is 80.</td></tr>
-<tr><td>useTouchLayout</td><td>boolean</td><td>Whether to use touch layout to present the Spread component.</td></tr>
+<tr><td>allowUserDragMerge</td><td>boolean</td><td>ドラッグ＆マージオプションを許可します (複数セルを選択し、選択をドラッグしてセルを結合します)</td></tr>
+<tr><td>allowAutoCreateHyperlink</td><td>boolean</td><td>スプレッドシート内でハイパーリンクの自動作成を有効にします。</td></tr>
+<tr><td>allowContextMenu</td><td>boolean</td><td>ビルトインのコンテキストメニューの使用を許可します。</td></tr>
+<tr><td>allowCopyPasteExcelStyle</td><td>boolean</td><td>スプレッドシートのスタイルを Excel にコピー＆ペーストすることを許可します (逆も可)。</td></tr>
+<tr><td>allowDynamicArray</td><td>boolean</td><td>ワークシート内で動的配列を有効にします。</td></tr>
+<tr><td>allowExtendPasteRange</td><td>boolean</td><td>貼り付けデータが貼り付け先の範囲に収まりきらない場合に、貼り付け先の範囲を拡張します。</td></tr>
+<tr><td>allowSheetReorder</td><td>boolean</td><td>シートの順序変更を許可します。</td></tr>
+<tr><td>allowUndo</td><td>boolean</td><td>編集を元に戻す操作を許可します。</td></tr>
+<tr><td>allowUserDeselect</td><td>boolean</td><td>選択範囲から特定のセルを除外することを許可します。</td></tr>
+<tr><td>allowUserDragDrop</td><td>boolean</td><td>レンジデータのドラッグ＆ドロップを許可します。</td></tr>
+<tr><td>allowUserDragFill</td><td>boolean</td><td>ドラッグ＆フィルを許可します。</td></tr>
+<tr><td>allowUserEditFormula</td><td>boolean</td><td>セルへのフォーミュラの入力を許可します。</td></tr>
+<tr><td>allowUserResize</td><td>boolean</td><td>カラムと行のリサイズを許可します。</td></tr>
+<tr><td>allowUserZoom</td><td>boolean</td><td>ズームを許可します (Ctrl + マウスホイール)。</td></tr>
+<tr><td>autoFitType</td><td>number</td><td>セル内やヘッダー内に収まるよう、内容をフォーマットします。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> 内容をセル内に収めます。</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> 内容をセル内・ヘッダー内に収めます。</td></tr></table></td></tr>
+<tr><td>backColor</td><td>string</td><td>エリアの背景色を表すカラー文字列 (例: &quot;red&quot;、&quot;#FFFF00&quot;、&quot;rgb(255,0,0)&quot;、&quot;Accent 5&quot;)。 backgroundImage を設定している場合、背景色は非表示になります。</td></tr>
+<tr><td>backgroundImage</td><td>string / picture / file</td><td>エリアの背景画像。</td></tr>
+<tr><td>backgroundImageLayout</td><td>number</td><td>背景画像のレイアウト。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk image layout center </td><td>1</td><td> エリアの中央に表示。</td></tr><tr><td> vk image layout none </td><td>3</td><td> エリアの左上に元のサイズで表示。</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> エリアを埋めるように拡大表示。</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> アスペクト比を維持して表示。</td></tr></table></td></tr>
+<tr><td>calcOnDemand</td><td>boolean</td><td>要求されたときのみフォーミュラを計算します。</td></tr>
+<tr><td>columnResizeMode</td><td>number</td><td>カラムのリサイズモード。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> 通常のリサイズモード (残りのカラムに影響します)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> split モード (残りのカラムに影響しません)</td></tr></table></td></tr>
+<tr><td>copyPasteHeaderOptions</td><td>number</td><td>データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。データのペースト時: 選択ヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。データのペースト時: 選択されたカラムヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   データのコピー時: 選択された行ヘッダーを含めます。データのペースト時: 選択された行ヘッダーを上書きします。</td></tr></table></td></tr>
+<tr><td>customList</td><td>collection</td><td>ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 <a href="https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b">GrapeCity の Webサイト</a> 参照。</td></tr>
+<tr><td>cutCopyIndicatorBorderColor</td><td>string</td><td>ユーザーが選択をカットまたはコピーしたときの領域の境界色。</td></tr>
+<tr><td>cutCopyIndicatorVisible</td><td>boolean</td><td>コピーまたはカットされた際の領域を表示します。</td></tr>
+<tr><td>defaultDragFillType</td><td>number</td><td>デフォルトのドラッグ＆フィルタイプ。 使用可能な値 : <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> 自動でセルをフィルします。 </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> セルの値をクリアします。</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> 値・フォーマット・フォーミュラを含むすべてのデータオブジェクトでセルをフィルします。</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> フォーマットのみでセルをフィルします。</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> 連続データでフィルします。 </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> 値のみでセルをフィルします (フォーマットは除外)。 </td></tr></table></td></tr>
+<tr><td>enableAccessibility</td><td>boolean</td><td>スプレッドシートにおけるアクセシビリティのサポートを有効にします。</td></tr>
+<tr><td>enableFormulaTextbox</td><td>boolean</td><td>フォーミュラテキストボックスを有効化します。</td></tr>
+<tr><td>grayAreaBackColor</td><td>string</td><td>グレー領域の背景色を表すカラー文字列 (例: &quot;red&quot;、&quot;#FFFF00&quot;、&quot;rgb(255,0,0)&quot;、&quot;Accent 5&quot;)。</td></tr>
+<tr><td>highlightInvalidData</td><td>boolean</td><td>無効なデータをハイライト表示します。</td></tr>
+<tr><td>iterativeCalculation</td><td>boolean</td><td>反復計算を有効にします。 <a href="https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html">Grapecity の Webサイト</a> 参照。</td></tr>
+<tr><td>iterativeCalculationMaximumChange</td><td>numeric</td><td>2つの計算値の最大差。</td></tr>
+<tr><td>iterativeCalculationMaximumIterations</td><td>numeric</td><td>フォーミュラが反復計算される最大回数。</td></tr>
+<tr><td>newTabVisible</td><td>boolean</td><td>新規シートを挿入するための特別なタブを表示します。</td></tr>
+<tr><td>numbersFitMode</td><td>number</td><td>日付/数値データがカラム幅を超える場合の表示モード。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> データの中身を &quot;###&quot; で置き換え、Tipを表示します。</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> データの中身を文字列として表示します。 隣のセルが空であれば、はみ出して表示します。</td></tr></table></td></tr>
+<tr><td>pasteSkipInvisibleRange</td><td>boolean</td><td>非表示のレンジへの貼り付けについて指定します。 <ul><li>False (デフォルト): データを貼り付けます。</li><li>True: 非表示のレンジはスキップします。</li></ul>非表示のレンジについての詳細は <a href="https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html">Grapecity' のドキュメント</a> を参照ください。</td></tr>
+<tr><td>referenceStyle</td><td>number</td><td>セルフォーミュラにおける、セルやレンジ参照のスタイル。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> A1 スタイルを使用します。</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> R1C1 スタイルを使用します。</td></tr></table></td></tr>
+<tr><td>resizeZeroIndicator</td><td>number</td><td>行やカラムのサイズが 0 に変更されたときの描画ポリシー。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> 行やカラムのサイズが 0 に変更されたときに、現在の描画ポリシーを使用します。</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> 行やカラムのサイズが 0 に変更されたときに、2本の短い線を描画します。</td></tr></table></td></tr>
+<tr><td>rowResizeMode</td><td>number</td><td>行のリサイズモード。 使用可能な値は columnResizeMode と同じです。</td></tr>
+<tr><td>scrollbarAppearance</td><td>number</td><td>スクロールバーの見た目。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> モバイル風のスクロールバー。</td></tr><tr><td> vk scrollbar appearance skin (デフォルト)</td><td>0</td><td> Excel風のクラシックなスクロールバー。</td></tr></table></td></tr>
+<tr><td>scrollbarMaxAlign</td><td>boolean</td><td>スクロールバーをアクティブシートの最後の行およびカラムに揃えます。</td></tr>
+<tr><td>scrollbarShowMax</td><td>boolean</td><td>シートのカラムと行の総数に基づいてスクロールバーを表示します。</td></tr>
+<tr><td>scrollByPixel</td><td>boolean</td><td>ピクセル単位のスクロールを有効にします。</td></tr>
+<tr><td>scrollIgnoreHidden</td><td>boolean</td><td>スクロールバーは非表示の行やカラムを無視します。</td></tr>
+<tr><td>scrollPixel</td><td>integer</td><td>scrollByPixel が true の場合、スクロール毎のピクセル数を指定します。 最終的にスクロールするピクセル数は <code>scrolling delta (スクロールの相対変化値) * scrollPixel</code> によって算出されます。 例: scrolling delta が 3、scrollPixel が 5 の場合、最終的なスクロールピクセル数は 15 です。</td></tr>
+<tr><td>showDragDropTip</td><td>boolean</td><td>ドラッグ＆ドロップの Tip を表示します。</td></tr>
+<tr><td>showDragFillSmartTag</td><td>boolean</td><td>ドラッグ＆フィルダイアログを表示します。</td></tr>
+<tr><td>showDragFillTip</td><td>boolean</td><td>ドラッグ＆フィルの Tip を表示します。</td></tr>
+<tr><td>showHorizontalScrollbar</td><td>boolean</td><td>横スクロールバーを表示します。</td></tr>
+<tr><td>showResizeTip</td><td>number</td><td>リサイズ Tip の表示を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> 縦と横のリサイズ Tip が表示されます。</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> 横のリサイズ Tip のみ表示されます。</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> リサイズ Tip は表示されません。</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> 縦のリサイズ Tip のみ表示されます。</td></tr></table></td></tr>
+<tr><td>showScrollTip</td><td>number</td><td>スクロール Tip の表示を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> 縦と横のスクロール Tip が表示されます。</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> 横のスクロール Tip のみ表示されます。</td></tr><tr><td> vk show scroll tip none </td><td> スクロール Tip は表示されません。</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> 縦のスクロール Tip のみ表示されます。</td></tr></table></td></tr>
+<tr><td>showVerticalScrollbar</td><td>boolean</td><td>縦スクロールバーを表示します。</td></tr>
+<tr><td>tabEditable</td><td>boolean</td><td>タブストリップの編集を有効にします。</td></tr>
+<tr><td>tabNavigationVisible</td><td>boolean</td><td>タブナビゲーションを表示します。</td></tr>
+<tr><td>tabStripPosition</td><td>number</td><td>タブストリップの位置を指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> タブストリップはワークブックの下側に位置します。</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> タブストリップはワークブックの左側に位置します。</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> タブストリップはワークブックの右側に位置します。</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> タブストリップはワークブックの上側に位置します。</td></tr></table></td></tr>
+<tr><td>tabStripRatio</td><td>number</td><td>スプレッドシートエリアの幅において、タブストリップが占める割合を指定します (0.x)。 残るスペース (1 - 0.x) には横スクロールバーが表示されます。</td></tr>
+<tr><td>tabStripVisible</td><td>boolean</td><td>タブストリップを表示します。</td></tr>
+<tr><td>tabStripWidth</td><td>number</td><td>タブストリップの位置が左側/右側の場合に、その幅を指定します。 デフォルト値は最小値の 80 です。</td></tr>
+<tr><td>useTouchLayout</td><td>boolean</td><td>Spreadコンポーネントを提示するのにタッチレイアウトを使用するかどうかを指定します。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-87"></a><a href="#例題-87" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>To set the allowExtendpasteRange option in &quot;ViewProArea&quot;:</p>
+<p>&quot;ViewProArea&quot; 内で allowExtendpasteRange オプションを設定します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$workbookOptions </span>: Object
 
 <span class="hljs-variable">$workbookOptions</span>:= New Object
@@ -3715,42 +3715,42 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>vPos</td><td>整数</td><td>-&gt;</td><td>Vertical view position of cell or row</td></tr>
-<tr><td>hPos</td><td>整数</td><td>-&gt;</td><td>Horizontal view position of cell or row</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>vPos</td><td>Integer</td><td>-&gt;</td><td>セルあるいは行の縦方向の表示位置</td></tr>
+<tr><td>hPos</td><td>Integer</td><td>-&gt;</td><td>セルあるいはカラムの横方向の表示位置</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-98"></a><a href="#説明-98" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p>The <code>VP SHOW CELL</code> command vertically and horizontally repositions the view of the <em>rangeObj</em>.</p>
-<p>In <em>rangeObj</em>, pass a range of cells as an object to designate the cells to be viewed. The view of the <em>rangeObj</em> will be positioned vertically or horizontally (i.e., where <em>rangeObj</em> appears) based on the <em>vPos</em> and <em>hPos</em> parameters. The <em>vPos</em> parameter defines the desired vertical position to display the <em>rangeObj</em>, and the <em>hPos</em> parameter defines the desired horizontal position to display the <em>rangeObj</em>.</p>
-<p>The following selectors are available:</p>
+<p><code>VP SHOW CELL</code> コマンドは、 <em>rangeObj</em> で指定したレンジの表示位置を変更します。</p>
+<p><em>rangeObj</em> 引数には、表示位置を指定するセルのレンジオブジェクトを渡します。 <em>rangeObj</em> で指定したレンジの表示位置は、<em>vPos</em> および <em>hPos</em> 引数に従って縦・横に移動します。 <em>rangeObj</em> の縦方向の表示位置は <em>vPos</em> 引数で、横方向の表示位置は　<em>hPos</em> 引数で指定します。</p>
+<p>次のセレクターが利用可能です:</p>
 <table>
 <thead>
-<tr><th>Selector</th><th>説明</th><th>Available with <em>vPos</em></th><th>Available with <em>hPos</em></th></tr>
+<tr><th>セレクター</th><th>説明</th><th><em>vPos</em> で利用可</th><th><em>hPos</em> で利用可</th></tr>
 </thead>
 <tbody>
-<tr><td><code>vk position bottom</code></td><td>Vertical alignment to the bottom of cell or row.</td><td>○</td><td></td></tr>
-<tr><td><code>vk position center</code></td><td>Alignment to the center. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position - cell or row</li><li>Horizontal view position - cell or column</li></td><td>○</td><td>○</td></tr>
-<tr><td><code>vk position left</code></td><td>Horizontal alignment to the left of the cell or column</td><td></td><td>○</td></tr>
-<tr><td><code>vk position nearest</code></td><td>Alignment to the closest limit (top, bottom, left, right, center). The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position (top, center, bottom) - cell or row </li><li>Horizontal view position (left, center, right) - cell or column</td><td>○</td><td>○</td></tr>
-<tr><td><code>vk position right</code></td><td>Horizontal alignment to the right of the cell or column</td><td></td><td>○</td></tr>
-<tr><td><code>vk position top</code></td><td>Vertical alignment to the top of cell or row</td><td>○</td><td></td></tr>
+<tr><td><code>vk position bottom</code></td><td>セルあるいは行の下辺に対する垂直揃え。</td><td>○</td><td></td></tr>
+<tr><td><code>vk position center</code></td><td>中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li></td><td>○</td><td>○</td></tr>
+<tr><td><code>vk position left</code></td><td>セルあるいはカラムの左辺に対する水平揃え。</td><td></td><td>○</td></tr>
+<tr><td><code>vk position nearest</code></td><td>一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</td><td>○</td><td>○</td></tr>
+<tr><td><code>vk position right</code></td><td>セルあるいはカラムの右辺に対する水平揃え。</td><td></td><td>○</td></tr>
+<tr><td><code>vk position top</code></td><td>セルあるいは行の上辺に対する垂直揃え。</td><td>○</td><td></td></tr>
 </tbody>
 </table>
 <blockquote>
-<p>This command is only effective if repositioning the view is possible. For example, if the <em>rangeObj</em> is in cell A1 (the first column and the first row) of the current sheet, repositioning the view will make no difference because the vertical and horizontal limits have already been reached (i.e., it is not possible to scroll any higher or any more to the left). The same is true if <em>rangeObj</em> is in cell C3 and the view is repositioned to the center or the bottom right. The view remains unaltered.</p>
+<p>このコマンドは、表示位置の変更が可能な場合にのみ動作します。 たとえば、<em>rangeObj</em> が現在のシートの A1 セル (先頭カラムと先頭行) の場合、すでに縦および横方向の限界に接している (つまり、上にも左にもこれ以上スクロールできない) ため、表示位置を変更しても何も変わりません。 <em>rangeObj</em> が C3 セルの場合に、表示位置を中央または右下に変えても同じことが言えます。 表示は変更されません。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-88"></a><a href="#例題-88" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>You want to view the cell in column AY, row 51 in the center of the 4D View Pro area:</p>
+<p>AY カラムの 51 行目のセルを 4D View Pro エリアの中央に表示します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$displayCell</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"myVPArea"</span>;<span class="hljs-number">50</span>;<span class="hljs-number">50</span>)
-<span class="hljs-comment">// Move the view to show the cell</span>
+<span class="hljs-comment">// セルが表示されるよう、表示位置を調整します</span>
 <span class="hljs-function">VP SHOW CELL</span>(<span class="hljs-variable">$displayCell</span>;vk position center;vk position center)
 </code></pre>
 <p>結果:</p>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpShowCell1.PNG" alt=""></p>
-<p>The same code with the vertical and horizontal selectors changed to show the same cell positioned at the top right of the 4D View Pro area:</p>
+<p>先ほどのコードの縦および横方向のセレクターを変更して、AY51 セルを 4D View Pro エリアの右上に表示します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$displayCell</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"myVPArea"</span>;<span class="hljs-number">50</span>;<span class="hljs-number">50</span>)
-  <span class="hljs-comment">// Move the view to show the cell</span>
+  <span class="hljs-comment">// セルが表示されるよう、表示位置を調整します</span>
 <span class="hljs-function">VP SHOW CELL</span>(<span class="hljs-variable">$displayCell</span>;vk position top;vk position right)
 </code></pre>
 <p>結果:</p>
@@ -3764,28 +3764,29 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-99"></a><a href="#説明-99" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p>The <code>VP SUSPEND COMPUTING</code> command stops the calculation of all formulas in <em>vpAreaName</em>. This command is useful when you want to suspend calculations in this 4D View Pro area so you can manually make modifications to formulas without encountering errors before you've finished making the changes.</p>
-<p>The command pauses the calculation service in 4D View Pro. Formulas that have already been calculated remain unchanged, however any formulas added after <code>VP SUSPEND COMPUTING</code> command  is executed are not calculated.</p>
+<p><code>VP SUSPEND COMPUTING</code> こマンドは、 <em>vpAreaName</em> 引数で指定したエリア内の計算をすべて停止します。 このコマンドは、4D View Pro エリア内の計算を停止したい場合、たとえばフォーミュラを手動で編集している際に、最終的な編集が完了するまでエラーが発生しないようにするのに便利です。</p>
+<p>このコマンドは 4D View Pro 内の計算機能を停止します。 すでに計算済みのフォーミュラはそのままですが、<code>VP SUSPEND COMPUTING</code> の実行後に追加されたフォーミュラは計算されません。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <blockquote>
-<p>4D View Pro 計算機能は停止/再開アクションを内部的にカウントしています。 Therefore, each execution of <code>VP SUSPEND COMPUTING</code> command  must be balanced by a corresponding execution of the <code>VP RESUME COMPUTING</code> command. Any formula impacted by modifications made while calculations are suspended will be recalculated when the command is executed.</p>
+<p>4D View Pro 計算機能は停止/再開アクションを内部的にカウントしています。 そのため、<code>VP SUSPEND COMPUTING</code> コマンドの実行数は、<code>VP RESUME COMPUTING</code> コマンドの実行数と釣り合っていなければなりません。 計算が停止されていた間に編集された部分に影響を受けるフォーミュラは、 VP RESUME COMPUTING コマンドが実行された時に再計算されます。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-89"></a><a href="#例題-89" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>You've added two buttons to the form so that the user can suspend/resume calculations:</p>
+<p>ユーザーが計算を停止/再開できるように、フォーム上に 2つボタンを追加します:</p>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpStopCalculations.PNG" alt=""></p>
-<p>The Suspend Computing button code:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-comment">//pause calculations while users enter information</span><span class="hljs-keyword">
+<p>計算停止ボタンのコード:</p>
+<pre><code class="hljs css language-4d"> <span class="hljs-comment">// ユーザーが情報を入力する間、計算を停止します</span><span class="hljs-keyword">
  If</span>(FORM Event.code=On Clicked)
 
 <span class="hljs-function">    VP SUSPEND COMPUTING</span>(<span class="hljs-string">"ViewProArea"</span>)<span class="hljs-keyword">
 
  End if</span>
 </code></pre>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span>(FORM Event.code=On Clicked)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// 計算再開ボタンのコード:</span><span class="hljs-keyword">
+If</span>(FORM Event.code=On Clicked)
 
 <span class="hljs-function">    VP RESUME COMPUTING</span>(<span class="hljs-string">"ViewProArea"</span>)<span class="hljs-keyword">
 

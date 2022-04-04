@@ -229,7 +229,26 @@
 </thead>
 <tbody>
 <tr><td>BYTES_RECEIVED</td><td></td><td>X</td><td>Number of bytes received by the server</td></tr>
-<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>Number of bytes sent by the server to the client</td><td>C_DNS</td><td>X</td><td>X</td><td>IP address of the DNS (ELF: field identical to the C_IP field)</td><td>C_IP</td><td>X</td><td>X</td><td>IP address of the client (for example 192.100.100.10)</td><td>CONNECTION_ID</td><td></td><td>X</td><td>Connection ID number</td><td>CS(COOKIE)</td><td>X</td><td>X</td><td>Information about cookies contained in the HTTP request</td><td>CS(HOST)</td><td>X</td><td>X</td><td>Host field of the HTTP request</td><td>CS(REFERER)</td><td>X</td><td>X</td><td>URL of the page pointing to the requested document</td><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>Information about the software and operating system of the client</td><td>CS_SIP</td><td>X</td><td>X</td><td>IP address of the server</td><td>CS_URI</td><td>X</td><td>X</td><td>URI on which the request is made</td><td>CS_URI_QUERY</td><td>X</td><td>X</td><td>Request query parameters</td><td>CS_URI_STEM</td><td>X</td><td>X</td><td>Part of request without query parameters</td><td>DATE</td><td>X</td><td>X</td><td>DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year</td><td>METHOD</td><td>X</td><td>X</td><td>HTTP method used for the request sent to the server</td><td>PATH_ARGS</td><td></td><td>X</td><td>CGI parameters: string located after the “$” character</td><td>STATUS</td><td>X</td><td>X</td><td>Reply provided by the server</td><td>TIME</td><td>X</td><td>X</td><td>HH: hour, MM: minutes, SS: seconds</td><td>TRANSFER_TIME</td><td>X</td><td>X</td><td>Time requested by server to generate the reply</td><td>USER</td><td>X</td><td>X</td><td>User name if authenticated; otherwise - (minus sign).<p>If the user name contains spaces, they are replaced by _ (underlines)</td><td>URL</td><td></td><td>X</td><td>URL requested by the client</td></tr>
+<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>Number of bytes sent by the server to the client</td></tr>
+<tr><td>C_DNS</td><td>X</td><td>X</td><td>IP address of the DNS (ELF: field identical to the C_IP field)</td></tr>
+<tr><td>C_IP</td><td>X</td><td>X</td><td>IP address of the client (for example 192.100.100.10)</td></tr>
+<tr><td>CONNECTION_ID</td><td></td><td>X</td><td>Connection ID number</td></tr>
+<tr><td>CS(COOKIE)</td><td>X</td><td>X</td><td>Information about cookies contained in the HTTP request</td></tr>
+<tr><td>CS(HOST)</td><td>X</td><td>X</td><td>Host field of the HTTP request</td></tr>
+<tr><td>CS(REFERER)</td><td>X</td><td>X</td><td>URL of the page pointing to the requested document</td></tr>
+<tr><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>Information about the software and operating system of the client</td></tr>
+<tr><td>CS_SIP</td><td>X</td><td>X</td><td>IP address of the server</td></tr>
+<tr><td>CS_URI</td><td>X</td><td>X</td><td>URI on which the request is made</td></tr>
+<tr><td>CS_URI_QUERY</td><td>X</td><td>X</td><td>Request query parameters</td></tr>
+<tr><td>CS_URI_STEM</td><td>X</td><td>X</td><td>Part of request without query parameters</td></tr>
+<tr><td>DATE</td><td>X</td><td>X</td><td>DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year</td></tr>
+<tr><td>METHOD</td><td>X</td><td>X</td><td>HTTP method used for the request sent to the server</td></tr>
+<tr><td>PATH_ARGS</td><td></td><td>X</td><td>CGI parameters: string located after the “$” character</td></tr>
+<tr><td>STATUS</td><td>X</td><td>X</td><td>Reply provided by the server</td></tr>
+<tr><td>TIME</td><td>X</td><td>X</td><td>HH: hour, MM: minutes, SS: seconds</td></tr>
+<tr><td>TRANSFER_TIME</td><td>X</td><td>X</td><td>Time requested by server to generate the reply</td></tr>
+<tr><td>USER</td><td>X</td><td>X</td><td>User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines)</td></tr>
+<tr><td>URL</td><td></td><td>X</td><td>URL requested by the client</td></tr>
 </tbody>
 </table>
 <blockquote>

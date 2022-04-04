@@ -229,7 +229,26 @@
 </thead>
 <tbody>
 <tr><td>BYTES_RECEIVED</td><td></td><td>X</td><td>Nombre d'octets reçus par le serveur</td></tr>
-<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>Nombre d'octets envoyé par le serveur au client</td><td>C_DNS</td><td>X</td><td>X</td><td>adresse IP du DNS (ELF: champ identique au champ C_IP)</td><td>C_IP</td><td>X</td><td>X</td><td>addresse IP du client (for example 192.100.100.10)</td><td>CONNECTION_ID</td><td></td><td>X</td><td>numéro d'ID de connexion</td><td>CS(COOKIE)</td><td>X</td><td>X</td><td>Information sur les cookies contenus dans la requête HTTP</td><td>CS(HOST)</td><td>X</td><td>X</td><td>champ hôte de la requête HTTP</td><td>CS(REFERER)</td><td>X</td><td>X</td><td>URL de la page qui pointe vers le document de la requête</td><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>Information sur le software et système d'exploitation du client</td><td>CS_SIP</td><td>X</td><td>X</td><td>adresse IP du serveur</td><td>CS_URI</td><td>X</td><td>X</td><td>URI sur lequel la requête est effectuée</td><td>CS_URI_QUERY</td><td>X</td><td>X</td><td>Paramètres de requête (query parameters)</td><td>CS_URI_STEM</td><td>X</td><td>X</td><td>Part de la requête sans les paramètres de requête</td><td>DATE</td><td>X</td><td>X</td><td>DD: day, MMM: abbréviation de 3 lettres pour le mois (Jan, Feb, etc.), YYYY: year</td><td>METHOD</td><td>X</td><td>X</td><td>Méthode HTTP utilisée pour la requête envoyée au server</td><td>PATH_ARGS</td><td></td><td>X</td><td>Paramètres CGI: chaîne de caractères située après le caractère “$”</td><td>STATUS</td><td>X</td><td>X</td><td>Réponse donnée par le server</td><td>TIME</td><td>X</td><td>X</td><td>HH: heure, MM: minutes, SS: secondes</td><td>TRANSFER_TIME</td><td>X</td><td>X</td><td>Temps requis par le serveur pour générer une réponse</td><td>USER</td><td>X</td><td>X</td><td>Nom d'utilisateur si authentifié; dans le cas contraire, - (signe moins).<p>Si le nom d'utilisateur contient des espaces, ils sont remplacés par _ (underscore)</td><td>URL</td><td></td><td></td><td>X</td><td>URL de la requête du client</td></tr>
+<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>Number of bytes sent by the server to the client</td></tr>
+<tr><td>C_DNS</td><td>X</td><td>X</td><td>IP address of the DNS (ELF: field identical to the C_IP field)</td></tr>
+<tr><td>C_IP</td><td>X</td><td>X</td><td>IP address of the client (for example 192.100.100.10)</td></tr>
+<tr><td>CONNECTION_ID</td><td></td><td>X</td><td>Connection ID number</td></tr>
+<tr><td>CS(COOKIE)</td><td>X</td><td>X</td><td>Information about cookies contained in the HTTP request</td></tr>
+<tr><td>CS(HOST)</td><td>X</td><td>X</td><td>Host field of the HTTP request</td></tr>
+<tr><td>CS(REFERER)</td><td>X</td><td>X</td><td>URL of the page pointing to the requested document</td></tr>
+<tr><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>Information about the software and operating system of the client</td></tr>
+<tr><td>CS_SIP</td><td>X</td><td>X</td><td>IP address of the server</td></tr>
+<tr><td>CS_URI</td><td>X</td><td>X</td><td>URI on which the request is made</td></tr>
+<tr><td>CS_URI_QUERY</td><td>X</td><td>X</td><td>Request query parameters</td></tr>
+<tr><td>CS_URI_STEM</td><td>X</td><td>X</td><td>Part of request without query parameters</td></tr>
+<tr><td>DATE</td><td>X</td><td>X</td><td>DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year</td></tr>
+<tr><td>METHOD</td><td>X</td><td>X</td><td>HTTP method used for the request sent to the server</td></tr>
+<tr><td>PATH_ARGS</td><td></td><td>X</td><td>CGI parameters: string located after the “$” character</td></tr>
+<tr><td>STATUS</td><td>X</td><td>X</td><td>Reply provided by the server</td></tr>
+<tr><td>TIME</td><td>X</td><td>X</td><td>HH: hour, MM: minutes, SS: seconds</td></tr>
+<tr><td>TRANSFER_TIME</td><td>X</td><td>X</td><td>Time requested by server to generate the reply</td></tr>
+<tr><td>USER</td><td>X</td><td>X</td><td>User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines)</td></tr>
+<tr><td>Variable URL</td><td></td><td>X</td><td>URL requested by the client</td></tr>
 </tbody>
 </table>
 <blockquote>

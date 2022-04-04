@@ -132,13 +132,13 @@
 <p>For more information on the attribute kind, please refer to the <a href="/docs/pt/ORDA/dsmapping.html#storage-and-relation-attributes">Storage and Relation attributes</a> paragraph.</p>
 </blockquote>
 <p>For example, to set a storage attribute:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//get employee attribute with ID 1</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds. Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//get employee attribute with ID 1</span>
  <span class="hljs-variable">$name</span>:=<span class="hljs-variable">$entity</span>.lastname <span class="hljs-comment">//get the employee name, e.g. "Smith"</span>
  <span class="hljs-variable">$entity</span>.lastname:=<span class="hljs-string">"Jones"</span> <span class="hljs-comment">//set the employee name</span>
  <span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//save the modifications</span>
 </code></pre>
 <blockquote>
-<p>Database Blob fields (<a href="/docs/pt/Concepts/blob.html">scalar blobs</a> are automatically converted to and from blob object attributes (<a href="/docs/pt/Concepts/blob.html"><code>4D.Blob</code></a>) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.</p>
+<p>Database Blob fields (<a href="/docs/pt/Concepts/blob.html">scalar blobs</a> are automatically converted to and from blob object attributes (<a href="/docs/pt/Concepts/blob.html"><code>4D. Blob</code></a>) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.</p>
 </blockquote>
 <p>Accessing a related attribute depends on the attribute kind. For example, with the following structure:</p>
 <p><img src="/docs/assets/en/ORDA/entityAttributes.png" alt=""></p>
@@ -267,8 +267,8 @@ var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable"
 </code></pre>
 <p>The <code>sendMails</code> method:</p>
 <pre><code class="hljs css language-4d">
- #<span class="hljs-function">DECLARE </span>(<span class="hljs-variable">$paid </span>: cs.InvoicesSelection; <span class="hljs-variable">$unpaid </span>: cs.InvoicesSelection)<span class="hljs-keyword">
- var</span> <span class="hljs-variable">$invoice </span>: cs.InvoicesEntity<span class="hljs-keyword">
+ #<span class="hljs-function">DECLARE </span>(<span class="hljs-variable">$paid </span>: cs. InvoicesSelection; <span class="hljs-variable">$unpaid </span>: cs. InvoicesSelection)<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$invoice </span>: cs. InvoicesEntity<span class="hljs-keyword">
 
  var</span> <span class="hljs-variable">$server</span>; <span class="hljs-variable">$transporter</span>; <span class="hljs-variable">$email</span>; <span class="hljs-variable">$status </span>: Object
 

@@ -74,36 +74,36 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#91index93"><strong><em>[index]</em></strong> : 4D.Entity</a><p>    permite acceder a las entidades dentro de la selección de entidades utilizando la sintaxis de colección estándar</td></tr>
-<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</a><p>    una &quot;proyección&quot; de los valores del atributo en la entity selection</td></tr>
-<tr><td><a href="#add"><strong>.add</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection</a><p>    añade la <em>entity</em> especificada a la entity selection y devuelve la selección de entidades modificada</td></tr>
-<tr><td><a href="#and"><strong>.and</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.and</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    combina la entity selection con el parámetro <em>entity</em> o <em>entitySelection</em> utilizando el operador lógico AND</td></tr>
-<tr><td><a href="#average"><strong>.average</strong>( <em>attributePath</em> : Text ) : Real</a><p>    devuelve la media aritmética (promedio) de todos los valores no nulos de <em>attributePath</em> en la entity selection</td></tr>
-<tr><td><a href="#contains"><strong>.contains</strong>( <em>entity</em> : 4D.Entity ) : Boolean</a><p>    devuelve true si la referencia de entidad pertenece a la entity selection</td></tr>
-<tr><td><a href="#count"><strong>.count</strong>( <em>attributePath</em> : Text ) : Real</a><p>    devuelve el número de entidades en la entity selection con un valor no null en <em>attributePath</em></td></tr>
-<tr><td><a href="#distinct"><strong>.distinct</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection</a><p>    devuelve una colección que contiene sólo valores distintos (diferentes) del <em>attributePath</em> en la selección de la entidad</td></tr>
-<tr><td><a href="#drop"><strong>.drop</strong>( { <em>mode</em> : Integer } ) : 4D.EntitySelection</a><p>    elimina las entidades pertenecientes a la selección de entidades de la tabla relacionada con su dataclass en el datastore</td></tr>
+<tr><td><a href="#91index93"> <strong><em>[index]</em></strong> : 4D.Entity</a><p>    permite acceder a las entidades dentro de la selección de entidades utilizando la sintaxis de colección estándar</td></tr>
+<tr><td><a href="#attributename"> <strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</a><p>     una &quot;proyección&quot; de los valores del atributo en la entity selection</td></tr>
+<tr><td><a href="#add"> <strong>.add</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection</a><p>    añade la <em>entity</em> especificada a la entity selection y devuelve la selección de entidades modificada</td></tr>
+<tr><td><a href="#and"> <strong>.and</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.and</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    combina la entity selection con el parámetro <em>entity</em> o <em>entitySelection</em> utilizando el operador lógico AND</td></tr>
+<tr><td><a href="#average"> <strong>.average</strong>( <em>attributePath</em> : Text ) : Real</a><p>     devuelve la media aritmética (promedio) de todos los valores no nulos de <em>attributePath</em> en la entity selection</td></tr>
+<tr><td><a href="#contains"> <strong>.contains</strong>( <em>entity</em> : 4D.Entity ) : Boolean</a><p>     devuelve true si la referencia de entidad pertenece a la entity selection</td></tr>
+<tr><td><a href="#count"> <strong>.count</strong>( <em>attributePath</em> : Text ) : Real</a><p>     devuelve el número de entidades en la entity selection con un valor no null en <em>attributePath</em></td></tr>
+<tr><td><a href="#distinct"> <strong>.distinct</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection</a><p>    devuelve una colección que contiene sólo valores distintos (diferentes) del <em>attributePath</em> en la selección de la entidad</td></tr>
+<tr><td><a href="#drop"> <strong>.drop</strong>( { <em>mode</em> : Integer } ) : 4D.EntitySelection</a><p>     elimina las entidades pertenecientes a la selección de entidades de la tabla relacionada con su dataclass en el datastore</td></tr>
 <tr><td><a href="#extract"><strong>.extract</strong>( <em>attributePath</em> : Text { ; <em>option</em> : Integer } ) : Collection<br><strong>.extract</strong>( <em>attributePath</em> { ; <em>targetPath</em> } { ; <em>...attributePathN</em> : Text ; <em>targetPathN</em> : Text } ) : Collection</a><p>    retorna una colección que contiene los valores de <em>attributePath</em> extraídos de la entity selection</td></tr>
-<tr><td><a href="#first"><strong>.first()</strong> : 4D.Entity</a><p>    devuelve una referencia a la entidad en la primera posición de la entity selection</td></tr>
-<tr><td><a href="#getdataclass"><strong>.getDataClass()</strong> : 4D.DataClass</a><p>    devuelve la dataclass de la entity selection</td></tr>
-<tr><td><a href="#isalterable"><strong>.isAlterable()</strong> : Boolean</a><p>    devuelve True si la entity selection es modificable</td></tr>
-<tr><td><a href="#isordered"><strong>.isOrdered()</strong> : Boolean</a><p>    devuelve True si la entity selection está ordenada</td></tr>
-<tr><td><a href="#last"><strong>.last()</strong> : 4D.Entity</a><p>    devuelve una referencia a la entidad en última posición de la entity selection</td></tr>
-<tr><td><a href="#length"><strong>.length</strong>: Integer</a><p>    devuelve el número de entidades en la entity selection</td></tr>
-<tr><td><a href="#max"><strong>.max</strong>( <em>attributePath</em> : Text ) : any</a><p>    devuelve el valor más alto (o máximo) entre todos los valores de <em>attributePath</em> en la entity selection</td></tr>
-<tr><td><a href="#min"><strong>.min</strong>( <em>attributePath</em> : Text ) : any</a><p>     devuelve el valor más bajo (o mínimo) entre todos los valores de attributePath en la entity selection</td></tr>
-<tr><td><a href="#minus"><strong>.minus</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.minus</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    excluye de la entity selection a la que se aplica la <em>entity</em> o las entidades de <em>entitySelection</em> y devuelve la entity selection resultante</td></tr>
-<tr><td><a href="#or"><strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    combina la entity selection con el parámetro <em>entity</em> o <em>entitySelection</em> utilizando el operador lógico (no excluyente) OR</td></tr>
-<tr><td><a href="#orderby"><strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</a><p>    devuelve una nueva entity selection ordenada que contiene todas las entidades de la entity selection en el orden especificado por los criterios <em>pathString</em> o <em>pathObjects</em></td></tr>
-<tr><td><a href="#orderbyformula"><strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</a><p>    devuelve una nueva entity selection ordenada</td></tr>
-<tr><td><a href="#query"><strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection</a><p>    busca entidades que cumplan los criterios de búsqueda especificados en <em>queryString</em> o <em>formula</em> y (opcionalmente) <em>value</em>(s) entre todas las entidades de la selección de entidades</td></tr>
-<tr><td><a href="#querypath"><strong>.queryPath</strong> : Text</a><p>    contiene una descripción detallada de la búsqueda tal y como fue realizada por 4D</td></tr>
-<tr><td><a href="#queryplan"><strong>.queryPlan</strong> : Text</a><p>     contiene una descripción detallada de la búsqueda justo antes de su ejecución (es decir, la búsqueda planeada)</td></tr>
-<tr><td><a href="#refresh"><strong>.refresh()</strong></a><p>    invalida inmediatamente los datos de la entity selection en la caché local de ORDA</td></tr>
-<tr><td><a href="#selected"><strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    devuelve un objeto que describe la(s) posición(es) de <em>selectedEntities</em> en la selección de entidades original</td></tr>
-<tr><td><a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</a><p>    devuelve una parte de una selección de entidades en una nueva entity selection</td></tr>
-<tr><td><a href="#sum"><strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a><p>    devuelve la suma de todos los valores de <em>attributePath</em> en la entity selection</td></tr>
-<tr><td><a href="#tocollection"><strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></a><p>    crea y devuelve una colección donde cada elemento es un objeto que contiene un conjunto de propiedades y valores</td></tr>
+<tr><td><a href="#first"> <strong>.first()</strong> : 4D.Entity</a><p>     devuelve una referencia a la entidad en la primera posición de la entity selection</td></tr>
+<tr><td><a href="#getdataclass"> <strong>.getDataClass()</strong> : 4D.DataClass</a><p>     devuelve la dataclass de la entity selection</td></tr>
+<tr><td><a href="#isalterable"> <strong>.isAlterable()</strong> : Boolean</a><p>     devuelve True si la entity selection es modificable</td></tr>
+<tr><td><a href="#isordered"> <strong>.isOrdered()</strong> : Boolean</a><p>     devuelve True si la entity selection está ordenada</td></tr>
+<tr><td><a href="#last"> <strong>.last()</strong> : 4D.Entity</a><p>     devuelve una referencia a la entidad en última posición de la entity selection</td></tr>
+<tr><td><a href="#length"> <strong>.length</strong>: Integer</a><p>     devuelve el número de entidades en la entity selection</td></tr>
+<tr><td><a href="#max"> <strong>.max</strong>( <em>attributePath</em> : Text ) : any</a><p>    devuelve el valor más alto (o máximo) entre todos los valores de <em>attributePath</em> en la entity selection</td></tr>
+<tr><td><a href="#min"> <strong>.min</strong>( <em>attributePath</em> : Text ) : any</a><p>     devuelve el valor más bajo (o mínimo) entre todos los valores de attributePath en la entity selection</td></tr>
+<tr><td><a href="#minus"> <strong>.minus</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.minus</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    excluye de la entity selection a la que se aplica la <em>entity</em> o las entidades de <em>entitySelection</em> y devuelve la entity selection resultante</td></tr>
+<tr><td><a href="#or"> <strong>.or</strong>( <em>entity</em> : 4D.Entity ) : 4D.EntitySelection<br><strong>.or</strong>( <em>entitySelection</em> : 4D.EntitySelection ) : 4D.EntitySelection</a><p>    combina la entity selection con el parámetro <em>entity</em> o <em>entitySelection</em> utilizando el operador lógico (no excluyente) OR</td></tr>
+<tr><td><a href="#orderby"> <strong>.orderBy</strong>( <em>pathString</em> : Text ) : 4D.EntitySelection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : 4D.EntitySelection</a><p>    devuelve una nueva entity selection ordenada que contiene todas las entidades de la entity selection en el orden especificado por los criterios <em>pathString</em> o <em>pathObjects</em></td></tr>
+<tr><td><a href="#orderbyformula"> <strong>.orderByFormula</strong>( <em>formulaString</em> : Text { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection<br><strong>.orderByFormula</strong>( <em>formulaObj</em> : Object { ; <em>sortOrder</em> : Integer } { ; <em>settings</em> : Object} ) : 4D.EntitySelection</a><p>    devuelve una nueva entity selection ordenada</td></tr>
+<tr><td><a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection</a><p>    busca entidades que cumplan los criterios de búsqueda especificados en <em>queryString</em> o <em>formula</em> y (opcionalmente) <em>value</em>(s) entre todas las entidades de la selección de entidades</td></tr>
+<tr><td><a href="#querypath"> <strong>.queryPath</strong> : Text</a><p>    contiene una descripción detallada de la búsqueda tal y como fue realizada por 4D</td></tr>
+<tr><td><a href="#queryplan"> <strong>.queryPlan</strong> : Text</a><p>     contiene una descripción detallada de la búsqueda justo antes de su ejecución (es decir, la búsqueda planeada)</td></tr>
+<tr><td><a href="#refresh"> <strong>.refresh()</strong></a><p>    invalida inmediatamente los datos de la entity selection en la caché local de ORDA</td></tr>
+<tr><td><a href="#selected"> <strong>.selected</strong>( <em>selectedEntities</em> : 4D.EntitySelection ) : Object</a><p>    devuelve un objeto que describe la(s) posición(es) de <em>selectedEntities</em> en la selección de entidades original</td></tr>
+<tr><td><a href="#slice"> <strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : 4D.EntitySelection</a><p>    devuelve una parte de una selección de entidades en una nueva entity selection</td></tr>
+<tr><td><a href="#sum"> <strong>.sum</strong>( <em>attributePath</em> : Text ) : Real</a><p>    devuelve la suma de todos los valores de <em>attributePath</em> en la entity selection</td></tr>
+<tr><td><a href="#tocollection"> <strong>.toCollection</strong>( { <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer } } ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterString</em> : Text {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em><br><strong>.toCollection</strong>( <em>filterCol</em> : Collection {; <em>options</em> : Integer { ; <em>begin</em> : Integer { ; <em>howMany</em> : Integer }}} ) : <em>Collection</em></a><p>    crea y devuelve una colección donde cada elemento es un objeto que contiene un conjunto de propiedades y valores</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="create-entity-selection"></a><a href="#create-entity-selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create entity selection</h2>
@@ -215,7 +215,7 @@
 <p></details></p>
 <p><strong><em>.attributeName</em></strong> : Collection<br><strong><em>.attributeName</em></strong> : 4D.EntitySelection</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>Todo atributo de dataclass puede ser utilizado como una propiedad de una entity selection para devolver una &quot;proyección&quot; de los valores del atributo en la entity selection. Los valores proyectados pueden ser una colección o una nueva selección de entidades, dependiendo de <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a> (<code>storage</code> o <code>relation</code>) del atributo.</p>
+<p>Todo atributo de dataclass puede ser utilizado como una propiedad de una entity selection para devolver  una &quot;proyección&quot; de los valores del atributo en la entity selection. Los valores proyectados pueden ser una colección o una nueva selección de entidades, dependiendo de <a href="/docs/es/API/DataClassAttributeClass.html#kind">kind</a> (<code>storage</code> o <code>relation</code>) del atributo.</p>
 <ul>
 <li>If <em>attributeName</em> kind is <code>storage</code>: <code>.attributeName</code> returns a collection of values of the same type as <em>attributeName</em>.</li>
 <li>If <em>attributeName</em> kind is <code>relatedEntity</code>: <code>.attributeName</code> returns a new entity selection of related values of the same type as <em>attributeName</em>. Duplications are removed (an unordered entity selection is returned).</li>
@@ -381,7 +381,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.average()</code> devuelve la media aritmética (promedio) de todos los valores no nulos de <em>attributePath</em> en la entity selection.</p>
+<p>La función <code>.average()</code>  devuelve la media aritmética (promedio) de todos los valores no nulos de <em>attributePath</em> en la entity selection.</p>
 <p>Pase en el parámetro <em>attributePath</em> la ruta del atributo a evaluar.</p>
 <p>Sólo se tienen en cuenta los valores numéricos para el cálculo. Tenga en cuenta, sin embargo, que si el <em>attributePath</em> de la selección de entidades contiene tipos de valores mixtos, <code>.average()</code> tiene en cuenta todos los elementos escalares para calcular el valor medio.</p>
 <blockquote>
@@ -422,7 +422,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.contains()</code> devuelve true si la referencia de entidad pertenece a la entity selection, y false en caso contrario.</p>
+<p>La función <code>.contains()</code>  devuelve true si la referencia de entidad pertenece a la entity selection, y false en caso contrario.</p>
 <p>En <em>entity</em>, especifique la entidad a buscar en la entity selection. Si la entidad es Null, la función devolverá false.</p>
 <p>Si <em>entity</em> y la entity selection no pertenecen a la misma dataclass, se produce un error.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-5"></a><a href="#ejemplo-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -460,7 +460,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-8"></a><a href="#descripción-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.count()</code> devuelve el número de entidades en la entity selection con un valor no null en <em>attributePath</em>.</p>
+<p>La función <code>.count()</code>  devuelve el número de entidades en la entity selection con un valor no null en <em>attributePath</em>.</p>
 <blockquote>
 <p>Sólo se tienen en cuenta los valores escalares. Los valores de tipo objeto o colección se consideran valores nulos.</p>
 </blockquote>
@@ -499,7 +499,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-9"></a><a href="#descripción-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.copy()</code> devuelve una copia de la entity selection original.</p>
+<p>La función <code>.copy()</code>  devuelve una copia de la entity selection original.</p>
 <blockquote>
 <p>Esta función no modifica la selección de entidades original.</p>
 </blockquote>
@@ -599,7 +599,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.drop()</code> elimina las entidades pertenecientes a la selección de entidades de la tabla relacionada con su dataclass en el datastore. La entity selection permanece en la memoria.</p>
+<p>La función <code>.drop()</code>  elimina las entidades pertenecientes a la selección de entidades de la tabla relacionada con su dataclass en el datastore. La entity selection permanece en la memoria.</p>
 <blockquote>
 <p>La eliminación de entidades es permanente y no se puede deshacer. Se recomienda llamar a esta acción en una transacción para tener una opción de recuperación.</p>
 </blockquote>
@@ -731,7 +731,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-13"></a><a href="#descripción-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.first()</code> devuelve una referencia a la entidad en la primera posición de la entity selection.</p>
+<p>La función <code>.first()</code>  devuelve una referencia a la entidad en la primera posición de la entity selection.</p>
 <p>El resultado de esta función es similar a:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$entitySel</span>[<span class="hljs-number">0</span>]
 </code></pre>
@@ -772,7 +772,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-14"></a><a href="#descripción-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.getDataClass()</code> devuelve la dataclass de la entity selection.</p>
+<p>La función <code>.getDataClass()</code>  devuelve la dataclass de la entity selection.</p>
 <p>Esta función es principalmente útil en el contexto del código genérico.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-11"></a><a href="#ejemplo-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>El siguiente código genérico duplica todas las entidades de la entity selection:</p>
@@ -812,7 +812,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-15"></a><a href="#descripción-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.isAlterable()</code> devuelve True si la entity selection es modificable, y False si no lo es.</p>
+<p>La función <code>.isAlterable()</code>  devuelve True si la entity selection es modificable, y False si no lo es.</p>
 <p>Para más información, consulte la sección <a href="/docs/es/ORDA/entities.html#shareable-or-alterable-entity-selections">Entity selections compartibles o modificables</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-12"></a><a href="#ejemplo-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>Va a mostrar <code>Form.products</code> en un <a href="/docs/es/FormObjects/listboxOverview.html">list box</a> para que el usuario pueda añadir nuevos productos. Quiere asegurarse de que es modificable para que el usuario pueda añadir nuevos productos sin error:</p>
@@ -843,7 +843,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-16"></a><a href="#descripción-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.isOrdered()</code> devuelve True si la entity selection está ordenada, y False si está desordenada.</p>
+<p>La función <code>.isOrdered()</code>  devuelve True si la entity selection está ordenada, y False si está desordenada.</p>
 <blockquote>
 <p>Esta función siempre devuelve True cuando la entity selection proviene de un datastore remoto.</p>
 </blockquote>
@@ -886,7 +886,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-17"></a><a href="#descripción-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.last()</code> devuelve una referencia a la entidad en última posición de la entity selection.</p>
+<p>La función <code>.last()</code>  devuelve una referencia a la entidad en última posición de la entity selection.</p>
 <p>El resultado de esta función es similar a:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=<span class="hljs-variable">$entitySel</span>[length<span class="hljs-number">-1</span>]
 </code></pre>
@@ -912,7 +912,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p></details></p>
 <p><strong>.length</strong>: Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-18"></a><a href="#descripción-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La propiedad <code>.length</code> devuelve el número de entidades en la entity selection. Si la entity selection está vacía, devuelve 0.</p>
+<p>La propiedad <code>.length</code>  devuelve el número de entidades en la entity selection. Si la entity selection está vacía, devuelve 0.</p>
 <p>Las entity selections siempre tienen una propiedad <code>.length</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-15"></a><a href="#ejemplo-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$vSize </span>: Integer
@@ -1293,8 +1293,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <tr><td>formula</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Criterios de búsqueda como objeto fórmula</td></tr>
 <tr><td>value</td><td>any</td><td style="text-align:center">-&gt;</td><td>Valor(es) a utilizar para los marcadores de posición indexados</td></tr>
 <tr><td>querySettings</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Opciones de búsqueda: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan</td></tr>
-<tr><td>Resultado</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Nueva selección de entidades formada por las entidades de la entity selection que cumplen los criterios de búsqueda especificados en <em>queryString</em> o<em>formula</em></td></tr>
-<tr><td></td></tr>
+<tr><td>Resultado</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Nueva selección de entidades formada por las entidades de la entity selection que cumplen los criterios de búsqueda especificados en <em>queryString</em> o<em>formula</em></td><td></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-25"></a><a href="#descripción-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1303,7 +1302,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p>Esta función no modifica la selección de entidades original.</p>
 </blockquote>
 <p>Si no se encuentran entidades coincidentes, se devuelve una <code>EntitySelection</code> vacía.</p>
-<p>Para obtener información detallada sobre cómo construir una consulta utilizando los parámetros <em>queryString</em>, <em>value&lt;</em> y <em>querySettings</em>, consulte la descripción de la función de dataClass <a href="/docs/es/API/DataClassClass.html#query"><code>.query()</code></a>.</p>
+<p>Si no se encuentran entidades coincidentes, se devuelve una <code>EntitySelection</code> vacía.</p>
 <blockquote>
 <p>Por defecto, si se omite la declaración <strong>order by</strong> en <em>queryString</em>, la entity selection devuelta es <a href="/docs/es/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">no ordenada</a>. Sin embargo, tenga en cuenta que, en modo Cliente/Servidor, se comporta como una selección de entidades ordenada (las entidades se añaden al final de la selección).</p>
 </blockquote>
@@ -1313,9 +1312,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
  Form.emps:=<span class="hljs-variable">$entitySelectionTemp</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"manager.lastName = :1"</span>;<span class="hljs-string">"S@"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-7"></a><a href="#ejemplo-2-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Se pueden encontrar más ejemplos de búsquedas en la página <a href="/docs/es/API/DataClassClass.html#query"><code>.query()</code></a> DataClass.</p>
+<p>Para obtener información detallada sobre cómo construir una consulta utilizando los parámetros <em>queryString</em>, <em>value&lt;</em> y <em>querySettings</em>, consulte la descripción de la función de dataClass <a href="/docs/es/API/DataClassClass.html#query"><code>.query()</code></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ver-también-1"></a><a href="#ver-también-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también</h4>
-<p><a href="/docs/es/API/DataClassClass.html#query"><code>.query()</code></a> para dataclass</p>
+<p>Se pueden encontrar más ejemplos de búsquedas en la página <a href="/docs/es/API/DataClassClass.html#query"><code>.query()</code></a> DataClass.</p>
 <h2><a class="anchor" aria-hidden="true" id="querypath"></a><a href="#querypath" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.queryPath</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -1357,8 +1356,8 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.refresh()</strong>
-| Parámetros | Tipo |  | Descripción                  |
+<p><strong>.refresh()</strong></p>
+<p>| Parámetros | Tipo |  | Descripción                  |
 | ---------- | ---- |::| ---------------------------- |
 |            |      |  | No requiere ningún parámetro |</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-28"></a><a href="#descripción-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1391,7 +1390,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
   <span class="hljs-comment">//$student.lastname contains "Colin"</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-8"></a><a href="#ejemplo-2-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Un list box muestra la entity selection Form.students y en la que varios clientes trabajan.</p>
+<p>En este ejemplo, el código clásico y el código ORDA modifican los mismos datos simultáneamente:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Método formulario:</span><span class="hljs-keyword">
  Case of</span>
     :(Form event code=On Load)
@@ -1498,15 +1497,15 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <li>If <em>end</em> &lt; 0, it is recalculated as <em>end:=end+length</em>.</li>
 <li>Si <em>end &lt; startFrom</em> (valores pasados o calculados), el método no hace nada.</li>
 </ul>
-<p>Si la entity selection contiene entidades que se han eliminado mientras tanto, también se devuelven.</p>
+<p><code>.sum()</code> devuelve 0 si la entity selection está vacía.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-9"></a><a href="#ejemplo-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>Quiere obtener una selección de las primeras 9 entidades de la entity selection:</p>
+<p>Si la entity selection contiene entidades que se han eliminado mientras tanto, también se devuelven.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$sel</span>; <span class="hljs-variable">$sliced </span>: cs.EmployeeSelection
 <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &gt; :1"</span>;<span class="hljs-number">50000</span>)
 <span class="hljs-variable">$sliced</span>:=<span class="hljs-variable">$sel</span>.<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>;<span class="hljs-number">9</span>) <span class="hljs-comment">//
 </span></code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-9"></a><a href="#ejemplo-2-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Asumiendo que tenemos ds.Employee.all().length = 10</p>
+<p>Quiere obtener una selección de las primeras 9 entidades de la entity selection:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$slice </span>: cs.EmployeeSelection
 <span class="hljs-variable">$slice</span>:=ds.Employee.<span class="hljs-function">all</span>().<span class="hljs-function">slice</span>(<span class="hljs-number">-1</span>;<span class="hljs-number">-2</span>) <span class="hljs-comment">//intenta devolver entidades del índice 9 al 8, pero como 9 &gt; 8, devuelve una entity selection vacía
 </span>
@@ -1533,8 +1532,8 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-31"></a><a href="#descripción-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
+<p>La función <code>.toCollection()</code> crea y devuelve una colección donde cada elemento es un objeto que contiene un conjunto de propiedades y valores correspondientes a los nombres y valores de los atributos de la entity selection.</p>
 <p>La función <code>.sum()</code> devuelve la suma de todos los valores de <em>attributePath</em> en la entity selection.</p>
-<p><code>.sum()</code> devuelve 0 si la entity selection está vacía.</p>
 <p>La suma sólo puede hacerse en valores de tipo numérico. Si <em>attributePath</em> es una propiedad objeto, sólo se tienen en cuenta los valores numéricos para el cálculo (se ignoran otros tipos de valores). En este caso, si <em>attributePath</em> lleva a una propiedad que no existe en el objeto o no contiene ningún valor numérico, <code>.sum()</code> devuelve 0.</p>
 <p>Se devuelve un error si:</p>
 <ul>
@@ -1588,16 +1587,16 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 <li>propertyPath = &quot;relatedEntity.*&quot; -&gt; all the properties are extracted</li>
 <li>propertyPath = &quot;relatedEntity.propertyName1, relatedEntity.propertyName2, ...&quot; -&gt; only those properties are extracted</li>
 </ul>
-<p>Si se especifica un filtro para un atributo de tipo <code>relatedEntities</code>:</p>
+<p>Si se especifica un filtro para un atributo de tipo <code>relatedEntity</code>:</p>
 <ul>
 <li>propertyPath = &quot;relatedEntities.*&quot; -&gt; all the properties are extracted</li>
 <li>propertyPath = &quot;relatedEntities.propertyName1, relatedEntities.propertyName2, ...&quot; -&gt; only those properties are extracted</li>
 </ul>
-<p>En el parámetro <em>options</em>, puede pasar el selector <code>ddk with primary key</code> y/o <code>dk with stamp</code> para añadir las llaves primarias de la entidad y/o los sellos en los objetos extraídos.</p>
+<p>Si se especifica un filtro para un atributo de tipo <code>relatedEntities</code>:</p>
 <p>El parámetro <em>begin</em> permite indicar el índice de inicio de las entidades a extraer. Puede pasar cualquier valor entre 0 y la longitud de la entity selection -1.</p>
 <p>El parámetro <em>howMany</em> permite especificar el número de entidades a extraer, empezando por la especificada en <em>begin</em>. Las entidades descartadas no se devuelven pero se tienen en cuenta en <em>howMany</em>. Por ejemplo, si <em>howMany</em>= 3 y hay 1 entidad descartada, sólo se extraen 2 entidades.</p>
+<p>Si el &quot;kind&quot; de <em>attributeName</em> es <code>storage</code>: <code>.attributeName</code> devuelve una colección de valores del mismo tipo que <em>attributeName</em>.</p>
 <p>Si <em>howMany</em> &gt; longitud de la entity selection, el método devuelve (length - <em>begin</em>) objetos.</p>
-<p>Se devuelve una colección vacía si:</p>
 <ul>
 <li>the entity selection is empty, or</li>
 <li><em>begin</em> is greater than the length of the entity selection.</li>
@@ -1655,7 +1654,7 @@ var</span> <span class="hljs-variable">$sum </span>: Real
 ]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-10"></a><a href="#ejemplo-2-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Ejemplo con opciones:</p>
+<p>Devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection </span>: Collection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 
@@ -1707,7 +1706,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
     }]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3-1"></a><a href="#ejemplo-3-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 3</h4>
-<p>Ejemplo con descarte y filtrado en las propiedades:</p>
+<p>Devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection</span>; <span class="hljs-variable">$filter </span>: Collection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 
@@ -1734,12 +1733,12 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4-1"></a><a href="#ejemplo-4-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 4</h4>
-<p>Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:</p>
+<p>Devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection </span>: Collection
 <span class="hljs-variable">$employeesCollection</span>:=New collection
 <span class="hljs-variable">$employeesCollection</span>:=<span class="hljs-variable">$employees</span>.<span class="hljs-function">toCollection</span>(<span class="hljs-string">"firstName,lastName,employer"</span>)
 </code></pre>
-<p>devuelve:</p>
+<p>Ejemplo con el tipo <code>relatedEntity</code> con una forma simple:</p>
 <pre><code class="hljs css language-4d">[
     {
         <span class="hljs-string">"firstName"</span>: <span class="hljs-string">"Gregg"</span>,
@@ -1765,7 +1764,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
    ]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-5-1"></a><a href="#ejemplo-5-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 5</h4>
-<p>Ejemplo con el parámetro <em>filterCol</em>:</p>
+<p>devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection</span>; <span class="hljs-variable">$coll </span>: Collection
 <span class="hljs-variable">$employeesCollection</span>:=New collection
 <span class="hljs-variable">$coll</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"firstName"</span>;<span class="hljs-string">"lastName"</span>)
@@ -1784,7 +1783,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
 ]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-6-1"></a><a href="#ejemplo-6-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 6</h4>
-<p>Ejemplo con la extracción de todas las propiedades de una relatedEntity:</p>
+<p>Devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection</span>; <span class="hljs-variable">$coll </span>: Collection
 <span class="hljs-variable">$employeesCollection</span>:=New collection
 <span class="hljs-variable">$coll</span>:=New collection
@@ -1831,7 +1830,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
   ]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-7-1"></a><a href="#ejemplo-7-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 7</h4>
-<p>Ejemplo con la extracción de algunas las propiedades de relatedEntity:</p>
+<p>Devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection </span>: Collection
 <span class="hljs-variable">$employeesCollection</span>:=New collection
 <span class="hljs-variable">$employeesCollection</span>:=<span class="hljs-variable">$employees</span>.<span class="hljs-function">toCollection</span>(<span class="hljs-string">"firstName, lastName, employer.name"</span>)
@@ -1861,7 +1860,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
     }]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-8-1"></a><a href="#ejemplo-8-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 8</h4>
-<p>Ejemplo con la extracción de algunas las propiedades de <code>relatedEntities</code>:</p>
+<p>Ejemplo con la extracción de algunas las propiedades de relatedEntity:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$employeesCollection </span>: Collection
  <span class="hljs-variable">$employeesCollection</span>:=New collection
  <span class="hljs-variable">$employeesCollection</span>:=<span class="hljs-variable">$employees</span>.<span class="hljs-function">toCollection</span>(<span class="hljs-string">"firstName, lastName, directReports.firstName"</span>)
@@ -1906,7 +1905,7 @@ var</span> <span class="hljs-variable">$employees </span>: cs.EmployeeSelection
     }]
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-9-1"></a><a href="#ejemplo-9-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 9</h4>
-<p>Ejemplo con la extracción de todas las propiedades de <code>relatedEntities</code>:</p>
+<p>Devuelve:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$employeesCollection </span>: Collection
 <span class="hljs-variable">$employeesCollection</span>:=New collection
 <span class="hljs-variable">$employeesCollection</span>:=<span class="hljs-variable">$employees</span>.<span class="hljs-function">toCollection</span>(<span class="hljs-string">"firstName, lastName, directReports.*"</span>)

@@ -84,7 +84,7 @@
 <p>For information about user identification and access control in single-user deployments, see <a href="/docs/es/Users/overview.html#access-control-in-single-user-applications">this paragraph</a>.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="diseñador-y-administrador"></a><a href="#diseñador-y-administrador" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Diseñador y administrador</h2>
-<p>El usuario más poderoso se llama el <strong>Diseñador</strong>. No aspect of the application is closed to the Designer. El diseñador puede:</p>
+<p>El usuario más poderoso se llama el <strong>Diseñador</strong>. Ningún aspecto de la aplicación es inaccesible al Diseñador. El diseñador puede:</p>
 <ul>
 <li>access all application servers without restriction,</li>
 <li>crear usuarios y grupos,</li>
@@ -103,7 +103,7 @@
 <li>modificar el usuario Diseñador</li>
 <li>by default, access to protected parts of the application. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator must be part of one or more groups to have access privileges in the application. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.</li>
 </ul>
-<p>Both the Designer and Administrator are available by default in all applications. En la <a href="#users-and-groups-editor">caja de diálogo de gestión de usuarios</a>, los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:</p>
+<p>Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la <a href="#users-and-groups-editor">caja de diálogo de gestión de usuarios</a>, los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:</p>
 <ul>
 <li>Icono Diseñador: <img src="/docs/assets/en/Users/iconDesigner.png" alt=""></li>
 <li>Icono del Administrador: <img src="/docs/assets/en/Users/iconAdmin.png" alt=""></li>
@@ -207,11 +207,11 @@ Right-click in the list of groups and choose the <strong>Add</strong> or <strong
 <p><img src="/docs/assets/en/Users/Access1.png" alt=""></p>
 <p>You also use groups to <a href="#assigning-a-group-to-a-plug-in-or-to-a-server">distribute available licenses</a>. This distribution is defined in the Groups editor.</p>
 <h2><a class="anchor" aria-hidden="true" id="archivo-directoryjson"></a><a href="#archivo-directoryjson" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Archivo directory.json</h2>
-<p>Users, groups, as well as their access rights are stored in a specific project file named <strong>directory.json</strong>.</p>
+<p>Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archivo específico del proyecto llamado <strong>directory.json</strong>.</p>
 <p>This file can be stored at the following locations, depending on your needs:</p>
 <ul>
 <li>If you want to use the same directory for all data files (or if you use a single data file), store the <strong>directory.json</strong> file in the user settings folder, i.e. in the &quot;Settings&quot; folder at the <a href="/docs/es/Project/architecture.html#project-folder">same level as the &quot;Project&quot; folder</a> (default location).</li>
-<li>If you want to use a specific directory file per data file, store the <strong>directory.json</strong> file in the data settings folder, i.e. in the <a href="/docs/es/Project/architecture.html#settings">&quot;Settings&quot; folder of the &quot;Data&quot; folder</a>. If a <strong>directory.json</strong> file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.</li>
+<li>If you want to use a specific directory file per data file, store the <strong>directory.json</strong> file in the data settings folder, i.e. in the <a href="/docs/es/Project/architecture.html#settings">&quot;Settings&quot; folder of the &quot;Data&quot; folder</a>. Si un archivo <strong>directory.json</strong> está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. This custom/local Users and Groups configuration will left untouched by an application upgrade.</li>
 </ul>
 <blockquote>
 <p>If no password is assigned to the &quot;Designer&quot; user, the <strong>directory.json</strong> is not created.</p>
