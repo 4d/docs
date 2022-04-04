@@ -82,7 +82,7 @@
 </thead>
 <tbody>
 <tr><td><a href="#autofilled"><strong>.autoFilled</strong> : Boolean</a><p>    contiene True si el valor del atributo es llenado automáticamente por 4D</td></tr>
-<tr><td><a href="#exposed"><strong>.exposed</strong> : Boolean</a><p>    true if the attribute is exposed in REST</td></tr>
+<tr><td><a href="#exposed"><strong>.exposed</strong> : Boolean</a><p>    &quot;true&quot; si el atributo está &quot;expuesto&quot; en REST</td></tr>
 <tr><td><a href="#fieldnumber"><strong>.fieldNumber</strong> : Integer</a><p>    contiene el número de campo 4D interno del atributo</td></tr>
 <tr><td><a href="#fieldtype"><strong>.fieldType</strong> : Integer</a><p>    contiene el tipo de base de datos 4D del atributo</td></tr>
 <tr><td><a href="#indexed"><strong>.indexed</strong> : Boolean</a><p>    contiene <strong>True</strong> si hay un índice B-tree o Cluster B-tree en el atributo</td></tr>
@@ -91,7 +91,7 @@
 <tr><td><a href="#kind"><strong>.kind</strong> : Text</a><p>    devuelve la categoría del atributo</td></tr>
 <tr><td><a href="#mandatory"><strong>.mandatory</strong> : Boolean</a><p>    contiene True si se rechaza la entrada de valores Null para el atributo</td></tr>
 <tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    devuelve el nombre del objeto <code>dataClassAttribute</code> como cadena</td></tr>
-<tr><td><a href="#readonly"><strong>.readOnly</strong> : Boolean</a><p>    true if the attribute is read-only</td></tr>
+<tr><td><a href="#readonly"><strong>.readOnly</strong> : Boolean</a><p>    &quot;true&quot; si el atributo está en solo lectura</td></tr>
 <tr><td><a href="#relateddataclass"><strong>.relatedDataClass</strong>: Text</a><p>    devuelve el nombre de la clase de datos relacionada con el atributo</td></tr>
 <tr><td><a href="#type"><strong>.type</strong> : Text</a><p>    contiene el tipo de valor conceptual del atributo</td></tr>
 <tr><td><a href="#unique"><strong>.unique</strong> : Boolean</a><p>    contiene True si el valor del atributo debe ser único</td></tr>
@@ -132,7 +132,7 @@
 <p></details></p>
 <p><strong>.exposed</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.exposed</code> property is true if the attribute is exposed in REST.</p>
+<p>La propiedad <code>.exposed</code> es &quot;true&quot; si el atributo está &quot;expuesto&quot; en REST.</p>
 <h2><a class="anchor" aria-hidden="true" id="fieldnumber"></a><a href="#fieldnumber" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.fieldNumber</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -158,7 +158,7 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R3</td><td>Support of computed attributes</td></tr>
+<tr><td>v19 R3</td><td>Soporta atributos calculados</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -171,10 +171,10 @@
 <tr><th>dataClassAttribute.kind</th><th>fieldType</th></tr>
 </thead>
 <tbody>
-<tr><td>storage</td><td>Corresponding 4D field type, see <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></td></tr>
+<tr><td>storage</td><td>Tipo de campo 4D correspondiente, ver <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></td></tr>
 <tr><td>relatedEntity</td><td>38 (<code>Is object</code>)</td></tr>
 <tr><td>relatedEntities</td><td>42 (<code>Is collection</code>)</td></tr>
-<tr><td>calculated</td><td><li>scalar: corresponding 4D field type, see <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
+<tr><td>calculated</td><td><li>escalar: tipo de campo 4D correspondiente, ver <a href="https://doc.4d.com/4dv19/help/command/en/page1509.html"><code>Value type</code></a></li><li>entity: 38 (<code>Is object</code>)</li><li>entity selection: 42 (<code>Is collection)</code></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ver-también"></a><a href="#ver-también" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ver también</h4>
@@ -240,7 +240,7 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R3</td><td>Added &quot;calculated&quot;</td></tr>
+<tr><td>v19 R3</td><td>Adición de &quot;calculated&quot;</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -311,8 +311,8 @@
 <p></details></p>
 <p><strong>.readOnly</strong> : Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.readOnly</code> property is true if the attribute is read-only.</p>
-<p>For example, computed attributes without <a href="/docs/Rx/es/ORDA/ordaClasses.html#function-set-attributename"><code>set</code> function</a> are read-only.</p>
+<p>La propiedad <code>.readOnly</code> es &quot;true&quot; si el atributo está en solo lectura.</p>
+<p>Por ejemplo, los atributos calculados sin función <a href="/docs/Rx/es/ORDA/ordaClasses.html#function-set-attributename"><code>set</code></a> son solo lectura.</p>
 <h2><a class="anchor" aria-hidden="true" id="relateddataclass"></a><a href="#relateddataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.relatedDataClass</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -344,7 +344,7 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R3</td><td>Support of computed attributes</td></tr>
+<tr><td>v19 R3</td><td>Soporta atributos calculados</td></tr>
 </tbody>
 </table>
 <p></details></p>
@@ -358,7 +358,7 @@
 <tr><th>dataClassAttribute.kind</th><th>type</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td>storage</td><td>&quot;blob&quot;, &quot;bool&quot;, &quot;date&quot;, &quot;image&quot;, &quot;number&quot;, &quot;object&quot;, o &quot;string&quot;</td><td>&quot;number&quot; se devuelve para cualquier tipo numérico, incluyendo la duración. &quot;string&quot; is returned for uuid, alpha and text field types. &quot;blob&quot; attributes are <a href="/docs/Rx/es/Concepts/blob.html#blob-type">blob objects</a>, they are handled using the <a href="/docs/Rx/es/API/BlobClass.html">Blob class</a>.</td></tr>
+<tr><td>storage</td><td>&quot;blob&quot;, &quot;bool&quot;, &quot;date&quot;, &quot;image&quot;, &quot;number&quot;, &quot;object&quot;, o &quot;string&quot;</td><td>&quot;number&quot; se devuelve para cualquier tipo numérico, incluyendo la duración. &quot;string&quot; se devuelve para los tipos de campo uuid, alfa y texto. Los atributos &quot;blob&quot; son <a href="/docs/Rx/es/Concepts/blob.html#blob-type">objetos blob</a>, se gestionan utilizando <a href="/docs/Rx/es/API/BlobClass.html">la clase Blob</a>.</td></tr>
 <tr><td>relatedEntity</td><td>related dataClass name</td><td>Ej.: &quot;Companies&quot;</td></tr>
 <tr><td>relatedEntities</td><td>related dataClass name + &quot;Selection&quot; suffix</td><td>Ex: &quot;EmployeeSelection&quot;</td></tr>
 <tr><td>calculated</td><td><li>storage: type (&quot;blob&quot;, &quot;number&quot;, etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + &quot;Selection&quot;</td><td></td></tr>
@@ -385,7 +385,7 @@
 <p>For generic programming, you can use <strong>Bool</strong>(dataClassAttribute.unique) to get a valid value (false) even if <code>.unique</code> is not returned.</p>
 </blockquote>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/API/DataClassClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">DataClass</span></a><a class="docs-next button" href="/docs/Rx/es/API/DataStoreClass.html"><span class="function-name-prevnext">DataStore</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#autofilled">.autoFilled</a></li><li><a href="#exposed">.exposed</a></li><li><a href="#fieldnumber">.fieldNumber</a></li><li><a href="#fieldtype">.fieldType</a></li><li><a href="#indexed">.indexed</a></li><li><a href="#inversename">.inverseName</a></li><li><a href="#keywordindexed">.keywordIndexed</a></li><li><a href="#kind">.kind</a></li><li><a href="#mandatory">.mandatory</a></li><li><a href="#name">.name</a></li><li><a href="#readonly">.readOnly</a></li><li><a href="#relateddataclass">.relatedDataClass</a></li><li><a href="#type">.type</a></li><li><a href="#unique">.unique</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/API/DataClassClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">DataClass</span></a><a class="docs-next button" href="/docs/Rx/es/API/DataStoreClass.html"><span class="function-name-prevnext">DataStore</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#autofilled">.autoFilled</a></li><li><a href="#exposed">.exposed</a></li><li><a href="#fieldnumber">.fieldNumber</a></li><li><a href="#fieldtype">.fieldType</a></li><li><a href="#indexed">.indexed</a></li><li><a href="#inversename">.inverseName</a></li><li><a href="#keywordindexed">.keywordIndexed</a></li><li><a href="#kind">.kind</a></li><li><a href="#mandatory">.mandatory</a></li><li><a href="#name">.name</a></li><li><a href="#readonly">.readOnly</a></li><li><a href="#relateddataclass">.relatedDataClass</a></li><li><a href="#type">.type</a></li><li><a href="#unique">.unique</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

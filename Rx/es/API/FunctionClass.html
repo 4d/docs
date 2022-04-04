@@ -131,7 +131,7 @@
 <tbody>
 <tr><td><a href="#apply"><strong>.apply</strong>() : any<br><strong>.apply</strong>( <em>thisObj</em> : Object { ; <em>formulaParams</em> : Collection } ) : any</a><p>    executes the <code>formula</code> object to which it is applied and returns the resulting value</td></tr>
 <tr><td><a href="#call"><strong>.call</strong>() : any<br><strong>.call</strong>( <em>thisObj</em> : Object { ; ...<em>params</em> : any } ) : any</a><p>    executes the <code>formula</code> object to which it is applied and returns the resulting value</td></tr>
-<tr><td><a href="#source"><strong>.source</strong> : Text </a><p>    contains the source expression of the <code>formula</code> as text</td></tr>
+<tr><td><a href="#source"><strong>.source</strong> : Text </a><p>    contiene la expresión fuente de la <code>fórmula</code> como texto</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="formula"></a><a href="#formula" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formula</h2>
@@ -152,14 +152,14 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>formulaExp</td><td>Expresión</td><td style="text-align:center">-&gt;</td><td>Formula to be returned as object</td></tr>
-<tr><td>Resultado</td><td>4D.Function</td><td style="text-align:center">&lt;-</td><td>Native function encapsulating the formula</td></tr>
+<tr><td>formulaExp</td><td>Expresión</td><td style="text-align:center">-&gt;</td><td>Fórmula a devolver como objeto</td></tr>
+<tr><td>Resultado</td><td>4D.Function</td><td style="text-align:center">&lt;-</td><td>Función nativa que encapsula la fórmula</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>Formula</code> command creates a <code>4D Function</code> object based upon the <em>formulaExp</em> expression. <em>formulaExp</em> can be as simple as a single value or complex, such as a project method with parameters.</p>
-<p>Having a formula as an object allows it to be passed as a parameter (calculated attribute) to commands or methods or to be executed from various components without needing to declare them as &quot;shared by components and host database&quot;. When called, the formula object is evaluated within the context of the database or component that created it.</p>
-<p>The returned formula can be called with:</p>
+<p>El comando <code>Formula</code> crea un objeto <code>4D Function</code> basado en la expresión <em>formulaExp</em>. <em>formulaExp</em> puede ser tan simple como un valor único o complejo, como un método proyecto con parámetros.</p>
+<p>Tener una fórmula como objeto permite pasarla como parámetro (atributo calculado) a los comandos o a los métodos o ejecutarla desde varios componentes sin necesidad de declararla como &quot;compartida por los componentes y la base de datos local&quot;. Cuando se llama, el objeto fórmula se evalúa en el contexto de la base de datos o del componente que lo creó.</p>
+<p>La fórmula devuelta puede ser llamada con:</p>
 <ul>
 <li><a href="#call"><code>.call()</code></a> or <a href="#apply"><code>.apply()</code></a> methods, or</li>
 <li>object notation syntax (see <a href="#formula-object">formula object</a>).</li>
@@ -173,10 +173,10 @@
  <span class="hljs-variable">$f</span>.<span class="hljs-function">apply</span>(<span class="hljs-variable">$o</span>) <span class="hljs-comment">//returns 3</span>
  <span class="hljs-variable">$o</span>.<span class="hljs-function">myFormula</span>() <span class="hljs-comment">//returns 3</span>
 </code></pre>
-<p>You can pass <a href="#passing-parameters">parameters</a> to the <code>Formula</code>, as seen below in <a href="#example-4">example 4</a>.</p>
-<p>You can specify the object on which the formula is executed, as seen in <a href="#example-5">example 5</a>. The properties of the object can then be accessed via the <code>This</code> command.</p>
-<p>If <em>formulaExp</em> uses local variables, their values are copied and stored in the returned formula object when it is created. When executed, the formula uses these copied values rather than the current value of the local variables. Note that using arrays as local variables is not supported.</p>
-<p>The object created by <code>Formula</code> can be saved, for example, in a database field or in a blob document.</p>
+<p>Puede pasar los <a href="#passing-parameters">parámetros</a> a <code>Formula</code>, como se muestra en <a href="#example-4">example-4&quot;&gt;ejemplo 4</a> abajo.</p>
+<p>Se puede especificar el objeto sobre el que se ejecuta la fórmula, como se ve en el <a href="#ejemplo-5">ejemplo 5</a>. Se puede acceder a las propiedades del objeto mediante el comando <code>This</code>.</p>
+<p>Si <em>formulaExp</em> utiliza variables locales, sus valores se copian y almacenan en el objeto fórmula devuelto durante su creación. Cuando se ejecuta, la fórmula utiliza estos valores copiados en lugar del valor actual de las variables locales. Tenga en cuenta que no se soporta el uso de arrays como variables locales.</p>
+<p>El objeto creado por <code>Formula</code> puede guardarse, por ejemplo, en un campo de la base de datos o en un documento blob.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
 <p>Una fórmula simple:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword">Function</span>
@@ -249,8 +249,8 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>formulaString</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Text formula to be returned as object</td></tr>
-<tr><td>Resultado</td><td>4D.Function</td><td style="text-align:center">&lt;-</td><td>Native object encapsulating the formula</td></tr>
+<tr><td>formulaString</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Fórmula texto a devolver como objeto</td></tr>
+<tr><td>Resultado</td><td>4D.Function</td><td style="text-align:center">&lt;-</td><td>Objeto nativo que encapsula la fórmula</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -260,7 +260,7 @@
 <p>Because local variable contents can not be accessed by name in compiled mode, they can not be used in <em>formulaString</em>. An attempt to access a local variable with <code>Formula from string</code> will result in an error (-10737).</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>The following code will create a dialog accepting a formula in text format:</p>
+<p>El siguiente código creará un diálogo que acepta una fórmula en formato texto:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$textFormula </span>: Text<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword">Function</span>
  <span class="hljs-variable">$textFormula</span>:=<span class="hljs-function">Request</span>(<span class="hljs-string">"Please type a formula"</span>)<span class="hljs-keyword">
@@ -289,9 +289,9 @@
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>thisObj</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Object to be returned by the This command in the formula</td></tr>
+<tr><td>thisObj</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Objeto a devolver por el comando This en la fórmula</td></tr>
 <tr><td>formulaParams</td><td>Collection</td><td style="text-align:center">-&gt;</td><td>Colección de valores que se pasan como $1...$n cuando se ejecuta la <code>fórmula</code></td></tr>
-<tr><td>Resultado</td><td>any</td><td style="text-align:center">&lt;-</td><td>Value from formula execution</td></tr>
+<tr><td>Resultado</td><td>any</td><td style="text-align:center">&lt;-</td><td>Valor obtenido de la ejecución de la fórmula</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -334,9 +334,9 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>thisObj</td><td>Objeto</td><td>-&gt;</td><td>Object to be returned by the This command in the formula</td></tr>
-<tr><td>params</td><td>any</td><td>-&gt;</td><td>Value(s) to be passed as $1...$n when formula is executed</td></tr>
-<tr><td>Resultado</td><td>any</td><td>&lt;-</td><td>Value from formula execution</td></tr>
+<tr><td>thisObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto a devolver por el comando This en la fórmula</td></tr>
+<tr><td>params</td><td>any</td><td>-&gt;</td><td>Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula</td></tr>
+<tr><td>Resultado</td><td>any</td><td>&lt;-</td><td>Valor obtenido de la ejecución de la fórmula</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -367,7 +367,7 @@
 <p></details></p>
 <p><strong>.source</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.source</code> property contains the source expression of the <code>formula</code> as text.</p>
+<p>La propiedad <code>.source</code> contiene la expresión fuente de la <code>fórmula</code> como texto.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-7"></a><a href="#ejemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$of </span>: 4D.<span class="hljs-keyword">Function</span><span class="hljs-keyword">
@@ -376,7 +376,7 @@
  <span class="hljs-variable">$tf</span>:=<span class="hljs-variable">$of</span>.source <span class="hljs-comment">//"String(Current time;HH MM AM PM)"</span>
 </code></pre>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/API/FolderClass.html"><span class="arrow-prev">← </span><span>Folder</span></a><a class="docs-next button" href="/docs/Rx/es/API/IMAPTransporterClass.html"><span>IMAPTransporter</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#formula">Formula</a></li><li><a href="#formula-from-string">Formula from string</a></li><li><a href="#apply">.apply()</a></li><li><a href="#call">.call()</a></li><li><a href="#source">.source</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/API/FolderClass.html"><span class="arrow-prev">← </span><span>Folder</span></a><a class="docs-next button" href="/docs/Rx/es/API/IMAPTransporterClass.html"><span>IMAPTransporter</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#formula">Formula</a></li><li><a href="#formula-from-string">Formula from string</a></li><li><a href="#apply">.apply()</a></li><li><a href="#call">.call()</a></li><li><a href="#source">.source</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
