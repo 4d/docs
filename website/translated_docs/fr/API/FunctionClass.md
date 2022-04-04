@@ -320,7 +320,7 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 #### Description
 
-The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
+La fonction `.apply()` <!-- REF #FunctionClass.apply().Summary -->exécute l'objet `formula` auquel elle est appliquée et retourne la valeur résultante<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
 
 
 Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
@@ -381,7 +381,7 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 #### Description
 
-The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
+La fonction `.call()` <!-- REF #FunctionClass.call().Summary -->exécute l'objet `formula` auquel elle est appliquée et retourne la valeur résultante<!-- END REF -->. L'objet formula peut être créé à l'aide des commandes `Formula` ou `Formula from string`.
 
 Dans le paramètre *thisObj*, vous pouvez passer une référence à l'objet à utiliser en tant que `This` dans la formule.
 
@@ -424,7 +424,7 @@ A noter que `.call()` est similaire à [`.apply()`](#apply), néanmoins les para
 
 #### Description
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
+La propriété `.source` <!-- REF #FunctionClass.source.Summary -->contient l'expression source de `formula` sous forme de texte<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 

@@ -731,6 +731,7 @@ With this syntax, `.extract()` populates the returned collection with the *attri
 
 By default, entities for which *attributePath* is *null* or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as **null** elements in the returned collection.
 
+
 *   Dataclass attributes with [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" are extracted as a collection of entities (duplications are kept).
 *   Dataclass attributes with [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" are extracted as a collection of entity selections.
 
@@ -922,6 +923,7 @@ The following generic code duplicates all entities of the entity selection:
 
 The `.isAlterable()` function <!-- REF #EntitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, and False if the entity selection is not alterable.
 
+
 For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 #### Beispiel
@@ -1091,9 +1093,10 @@ Entity selections always have a `.length` property.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-|Parameter|Type||Description|
-
-|---------|--- |:---:|------| |attributePath |Text|->|Path of the attribute to be used for calculation| |Result|any|<-|Highest value of attribute|
+| Parameter     | Typ  |    | Beschreibung                                     |
+| ------------- | ---- |:--:| ------------------------------------------------ |
+| attributePath | Text | -> | Path of the attribute to be used for calculation |
+| Ergebnis      | any  | <- | Highest value of attribute                       |
 <!-- END REF -->
 
 #### Beschreibung

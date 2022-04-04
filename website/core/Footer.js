@@ -61,7 +61,7 @@ class Footer extends React.Component {
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>
-		<section className="copyright"><a className="cp2" href="https://us.4d.com/terms-and-conditions">Terms & Conditions</a> | <a className="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a className="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a className="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a className="cp2" href="https://us.4d.com/license">Product license</a></section>
+		<section className="copyright"><a className="cp2" href="https://us.4d.com/terms-and-conditions">Terms & Conditions</a> | <a className="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a className="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a className="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a className="cp2" href="https://us.4d.com/license-0">Product license</a></section>
       </footer>
     );
   }

@@ -47,7 +47,8 @@ Les collections doivent être initialisées à l'aide, par exemple, de la comman
 Exemple :
 
 ```4d
- var $colVar : Collection //création d'une variable 4D de type collection. $colVar:=New $colVar:=New collection //initialisation de la collection et assignation à la variable 4D
+ var $colVar : Collection //création d'une variable 4D de type collection
+ $colVar:=New collection ///initialisation de la collection et assignation à la variable 4D
 ```
 
 ### Collection standard ou collection partagée

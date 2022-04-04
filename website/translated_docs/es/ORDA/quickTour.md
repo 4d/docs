@@ -82,23 +82,23 @@ El editor de usuarios se encuentran en la caja de herramientas de 4D.
 
 ![](assets/en/Users/editor.png)
 
-### Adding and modifying users
+### Añadir y modificar usuarios
 
-You use the users editor to create user accounts, set their properties and assign them to various groups.
+El editor de usuarios permite crear cuentas de usuario, definir sus propiedades y asignarlas a distintos grupos.
 
-To add a user from the Toolbox :
+Para añadir un usuario desde la caja de herramientas :
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
+1. Seleccione **Caja de herramientas > Usuarios** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D. 4D muestra el editor de usuarios.
 
-The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
+La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el Administrador](#designer-and-administrator).
 
-2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of users. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Haga clic en el botón ![](assets/en/Users/PlussNew.png) situado debajo de la lista de usuarios. O Haga clic derecho en la lista de usuarios y seleccione **Añadir** o **Duplicar** en el menú contextual.
 
-> The **Duplicate** command can be used to create several users having the same characteristics quickly.
+> El comando **Duplicar** se puede utilizar para crear varios usuarios que tengan las mismas características rápidamente.
 
-4D adds a new user to the list, named "New userX" by default.
+4D añade un nuevo usuario a la lista, llamado por defecto "Nuevo usuarioX".
 
-3. Introduzca el nombre de usuario. This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la base. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 

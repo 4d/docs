@@ -56,7 +56,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
 ### Managing list boxes
@@ -423,7 +423,7 @@ Selections are managed differently depending on whether the list box is based on
     - [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
     - [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
 
-- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
+- **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
   //tBListBox is the name of the list box variable in the form
@@ -752,7 +752,7 @@ If this list box is displayed in hierarchical form (the first three arrays being
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
 
-    > &gt; A B A C
+    > &gt; > A B A C
 
 To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
@@ -888,20 +888,12 @@ However, the Data Source theme is not available for object-type list box columns
 the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
 
 ```4d  
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob1)
- $entry:="Hello world!" OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
- C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
- OB SET($ob2;"value";2/3)
- C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
-
- APPEND TO ARRAY(obColumn;$ob1)
- APPEND TO ARRAY(obColumn;$ob2)
- APPEND TO ARRAY(obColumn;$ob3)  
+C_OBJECT($ob1)
+$entry:="Hello world!" ARRAY OBJECT(obColumn;0) //column array
+ C_OBJECT($ob) //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
+ APPEND TO ARRAY(obColumn;$ob)  
 ```
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)

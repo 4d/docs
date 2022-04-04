@@ -6,15 +6,15 @@ title: Configuración
 The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
 
 
-## Where to configure settings?
+## Configurar los parámetros
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Setting location                        | Alcance                                  | Servidor web a utilizar                         |
-| --------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
-| [objeto webServer](webServerObject.md)  | Temporary (current session)              | Any web server, including component web servers |
-| `WEB SET OPTION` or a `WEB XXX` command | Temporary (current session)              | Servidor principal                              |
-| **Settings** dialog box (**Web** pages) | Permanent (all sessions, stored on disk) | Servidor principal                              |
+| Setting location                        | Alcance                                                  | Servidor web a utilizar                                               |
+| --------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------- |
+| [objeto webServer](webServerObject.md)  | Temporal (sesión actual)                                 | Todos los servidores web, incluidos los servidores web de componentes |
+| `WEB SET OPTION` o comando `WEB XXX`    | Temporal (sesión actual)                                 | Servidor principal                                                    |
+| **Settings** dialog box (**Web** pages) | Permanente (todas las sesiones, almacenadas en el disco) | Servidor principal                                                    |
 
 > Some settings are not available from all locations.
 
@@ -48,7 +48,7 @@ With 4D in remote mode, these files must be located in the local resources folde
 > TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
 
 
-## Character Set
+## Conjunto de caracteres
 
 | Puede ajustarse con           | Nombre                         | Comentarios                    |
 | ----------------------------- | ------------------------------ | ------------------------------ |
@@ -166,7 +166,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 | ----------------------------- | -------------------------------------------------- | --------------------------------------------------- |
 | objeto webServer              | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
 | `WEB SET OPTION`              | `Web CORS enabled`                                 | 0 (disabled, default) or 1 (enabled)                |
-| Caja de diálogo de parámetros | Options (II) page/Enable CORS                      | Unchecked by default                                |
+| Caja de diálogo de parámetros | Página Options (II)/Activar CORS                   | Unchecked by default                                |
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
@@ -183,20 +183,20 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 | ----------------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer              | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | booleano    |
 | `WEB SET OPTION`              | `Web HTTP enabled`                                 |             |
-| Caja de diálogo de parámetros | Configuration page/Enable HTTP                     |             |
+| Caja de diálogo de parámetros | Configuración/Activar HTTP                         |             |
 
 Indicates whether or not the web server will accept non-secure connections.
 
 
-## Enable HTTPS
+## Activar HTTPS
 
 | Puede ajustarse con           | Nombre                                               | Comentarios |
 | ----------------------------- | ---------------------------------------------------- | ----------- |
 | objeto webServer              | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | booleano    |
 | `WEB SET OPTION`              | `Web HTTPS enabled`                                  |             |
-| Caja de diálogo de parámetros | Configuration page/Enable HTTPS                      |             |
+| Caja de diálogo de parámetros | Configuración/Activar HTTPS                          |             |
 
-Status for communication over HTTPS. This option is described in [this section](Admin/tls.md).
+Estado de la comunicación a través de HTTPS. Esta opción se describe en [esta sección](Admin/tls.md).
 
 
 ## Activar HSTS
@@ -219,10 +219,10 @@ HSTS allows the 4D web server to declare that browsers should only interact with
 
 ## HSTS Max Age
 
-| Puede ajustarse con | Nombre                                           | Comentarios       |
-| ------------------- | ------------------------------------------------ | ----------------- |
-| objeto webServer    | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | number in seconds |
-| `WEB SET OPTION`    | `Web HSTS max age`                               | number in seconds |
+| Puede ajustarse con | Nombre                                           | Comentarios        |
+| ------------------- | ------------------------------------------------ | ------------------ |
+| objeto webServer    | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | número en segundos |
+| `WEB SET OPTION`    | `Web HSTS max age`                               | número en segundos |
 
 Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration. Default value is 63072000 (2 years)
 
@@ -232,7 +232,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 
 
-## HTTP Compression Level
+## Nivel de compresión HTTP
 
 | Puede ajustarse con | Nombre                                                               | Comentarios                    |
 | ------------------- | -------------------------------------------------------------------- | ------------------------------ |
@@ -277,7 +277,7 @@ If you specify 0, 4D will use the default HTTP port number 80.
 
 | Puede ajustarse con | Nombre                                         | Comentarios                     |
 | ------------------- | ---------------------------------------------- | ------------------------------- |
-| objeto webServer    | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Boolean, default = false        |
+| objeto webServer    | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Booleano, falso por defecto     |
 | `WEB SET OPTION`    | `Web HTTP TRACE`                               | Integer, default = 0 (disabled) |
 
 HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
@@ -384,7 +384,7 @@ This setting allows you to select the format of this file. Available values are:
 | Valor | Nombre del formato          | Descripción                                                                                                                                                                                                              |
 | ----- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0     | No hay archivo de historial | Por defecto                                                                                                                                                                                                              |
-| 1     | Record in CLF format        | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
+| 1     | Registro en formato CLF     | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registro en formato DLF     | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
 | 3     | Registro en formato ELF     | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
 | 4     | Registro en formato WLF     | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
@@ -437,7 +437,7 @@ Default value: 100 (pass 0 to restore the default value).
 | ------------------- | ------------------------------------------------------ | ----------- |
 | objeto webServer    | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
-Minimum TLS version accepted for connections. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
+Versión mínima de TLS aceptada para las conexiones. Se rechazarán los intentos de conexión de clientes que sólo soporten versiones inferiores a la mínima.
 
 Valores posibles:
 

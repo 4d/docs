@@ -22,7 +22,7 @@ When this property is enabled, the height of every row is automatically calculat
 *   The row height calculation ignores:
     *   hidden column contents
     *   [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
-> > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+> > > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
 
 

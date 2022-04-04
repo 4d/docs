@@ -3,7 +3,7 @@ id: manData
 title: Manipulación de datos
 ---
 
-All [exposed dataclasses, attributes](configuration.md#exposing-tables-and-fields) and [functions](classFunctions.md) can be accessed through REST. Dataclass, attribute, and function names are case-sensitive; however, the data for queries is not.
+Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-and-fields) y todas las [funciones](classFunctions.md) pueden ser accedidos a través de REST. Los nombres de clases de datos, de atributos y de funciones son sensibles a las mayúsculas y minúsculas; sin embargo, los datos de las búsquedas no lo son.
 
 ## Buscar datos
 
@@ -20,9 +20,9 @@ Con la API REST, puede realizar todas las manipulaciones a los datos como puede 
 
 Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md#methodupdate). Si desea eliminar una o varias entidades, puede utilizar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](classFunctions.md#function-calls) that returns an entity selection (or a collection).
+Además la recuperación de una sola entidad en una clase de datos utilizando [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), también puede escribir una [función de clase](classFunctions.md#function-calls) que devuelva una entity selection (o una colección).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
+Antes de devolver una selección, también puede ordenarla utilizando [`$orderby`]($orderby.md) uno o varios atributos (incluso los atributos de relación).
 
 
 ## Navegación de datos
@@ -48,7 +48,7 @@ Si desea eliminar un conjunto de entidades de la caché de 4D Server, puede util
 
 Si se modifica alguno de los atributos de la entidad en el conjunto de entidades, los valores se actualizarán. Sin embargo, si se modifica un valor que formaba parte de la consulta ejecutada para crear el conjunto de entidades, no se eliminará del conjunto de entidades aunque ya no se ajuste a los criterios de búsqueda. Las entidades que elimine, por supuesto, dejarán de formar parte del conjunto de entidades.
 
-Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
+Si el conjunto de entidades ya no existe en la caché de 4D Server, se recreará con un nuevo tiempo de espera por defecto de 10 minutos. El conjunto de entidades se refrescará (pueden incluirse ciertas entidades y eliminarse otras) desde la última vez que se creó, si ya no existía antes de recrearlo.
 
 Utilizando [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), puede combinar dos conjuntos de entidades que haya creado previamente. Puede combinar los resultados en ambos, devolver sólo lo que es común entre los dos, o devolver lo que no es común entre los dos.
 
@@ -69,16 +69,16 @@ Para calcular todos los valores y devolver un objeto JSON:
 `/rest/Employee/salary/?$compute=$all`
 
 
-## Calling Data model class functions
+## Llamar las funciones de clase del modelo de datos
 
-You can call ORDA Data Model [user class functions](classFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Puede llamar las [funciones de clase usuarios](classFunctions.md) ORDA del modelo de datos vía las peticiones POST, para poder beneficiarse del API de la aplicación objetivo. Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
 `/rest/City/getCity`
 
-with data in the body of the request: `["Paris"]`
+con los datos en el cuerpo de la petición: `["Paris"]`
 
 
-> Calls to 4D project methods that are exposed as REST Service are still supported but are deprecated.
+> Las llamadas a los métodos proyecto 4D que se exponen como servicio REST aún se soportan, pero son obsoletas.
 
 
 ## Selección de atributos a obtener

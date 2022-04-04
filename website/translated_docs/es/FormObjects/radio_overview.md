@@ -130,7 +130,7 @@ Los colores (resaltado y fondo) de un botón con el estilo Office XP se basan en
 
 ### Contraer/Desplegar
 
-Este estilo de botón se puede utilizar para añadir un icono estándar contraer/desplegar. Estos botones se utilizan de forma nativa en las listas jerárquicas. These buttons are used natively in hierarchical lists.
+Este estilo de botón se puede utilizar para añadir un icono estándar contraer/desplegar. Estos botones se utilizan de forma nativa en las listas jerárquicas. Estos botones se utilizan de forma nativa en las listas jerárquicas.
 
 ![](assets/en/FormObjects/checkbox_collapse.png)
 

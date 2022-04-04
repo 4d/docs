@@ -230,16 +230,16 @@ This CSS defines a color combination for text and text background in the light s
 ```
 
 
-### Object Attributes
+### Atributos de objetos
 
 La mayoría de los atributos del objeto formulario pueden ser definidos dentro de una hoja de estilo, excepto los siguientes atributos:
     - `method`
     - `type`
     - `class`
     - `evento`
-    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+    - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (tipo de lista)
 
-Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+Los atributos del objeto formulario pueden declararse con su [nombre JSON](FormObjets/properties_Reference.md) como atributos CSS (sin incluir los tipos de objetos, métodos, eventos y listas).
 
 #### Mapa de atributos
 
@@ -257,7 +257,7 @@ Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre C
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
-> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+> Los valores específicos 4D (*por ejemplo*, `hundido`) no se soportan cuando se utilizan nombres de atributos CSS.
 
 
 #### Valores de atributos específicos

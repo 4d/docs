@@ -24,8 +24,7 @@ Dados podem ser colocado ou copiados de ou em variáveis, campos, elementos arra
 ```4d
 $MyNumber:=3 //atribui 3 a variável MyNumber  
 [Products]Size:=$MyNumber //atribui variável MyNumber ao campo [Products]Size
-arrDays{2}:="Tuesday" //atribui a string"Tuesday" ao segundo elemento arrDays
-MyVar:=Length("Acme") //atribui o resultado da função (4) a MyVar
+arrDays{2}:="Tuesday" //atribui a string"Tuesday" ao segundo elemento arrDays MyVar:=Length("Acme") //atribui o resultado da função (4) a MyVar
 $myDate:=!2018/01/21! //atribui uma data literal
 $myHour:=?08:12:55? //atribui uma hora literal
 ```
@@ -114,28 +113,28 @@ Por exemplo, a linha abaixo é uma declaração que mostará uma caixa de diálo
 CONFIRM("Quer realmente fechar esta conta?"; "Sím"; "Não")
 ```
 
-Um método também contém testes e loops que controlam o fluxo da execução. Os métodos 4D são compatíveis com estruturas `If...Else...End if` e `Case of...Else...End case`, assim como os loops: `While...End while`, `Repeat...Until`, `For...End for`, e `For each...End for each`:
+Um método também contém testes e loops que controlam o fluxo da execução. Os métodos 4D são compatíveis com estruturas `If... End if` e `Case of... End case`, assim como os loops: `While... End while`, `Repeat... Until`, `For... End for`, e `For each... End for each`:
 
 O exemplo abaixo recorre todos os caracteres do texto vtSomeText:
 
 ```4d
-For($vlChar;1;Length(vtSomeText))
-    //Fazer algo com o caractere se for uma TAB
-    If(Character code(vtSomeText[[$vlChar]])=Tab)
-        //...
-    End if
-End for
+For ($vCounter;1;100)
+/*
+comentarios  
+    /*
+    outros comentarios
+    */
+*/
+...
+    End for
 ```
 
 Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Um método pode devolver um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
-$myText:="hello"
-$myText:=Do_Something($myText) //chamar o método Do_Something
-ALERT($myText) //"HELLO"
-
-  //Aqui está o código do método Do_Something
-$0:=Uppercase($1)
+$f:=New object
+$f.message:=New formula(ALERT("Hello world!"))
+$f.message() //displays "Hello world!"
 ```
 
 
@@ -321,10 +320,8 @@ An expression can simply be a literal constant, such as the number 4 or the stri
 ```4d  
 //$myVar variable is assignable, you can write:  
 $myVar:="Hello" //assign "Hello" to myVar
-//Form.pageNumber is assignable, you can write:  
-Form.pageNumber:=10 //assign 10 to Form.pageNumber
-//Form.pageTotal-Form.pageNumber is not assignable:
-Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
+//Form.pageNumber is assignable, you can write: Form.pageNumber:=10 //assign 10 to Form.pageNumber
+//Form.pageTotal-Form.pageNumber is not assignable: Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
 In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
@@ -336,9 +333,7 @@ The 4D language provides an advanced implementation of pointers, that allow writ
 A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
 
 ```4d
-MyVar:="Hello"
-MyPointer:=->MyVar
-ALERT(MyPointer->)
+MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
 ## Comments
@@ -357,8 +352,7 @@ Both styles of comments can be used simultaneously.
 Insert `//` at the beginning of a line or after a statement to add a single line comment. Exemplo:
 
 ```4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
+//This is a comment For($vCounter;1;100) //Starting loop
   //comment
   //comment
   //comment

@@ -18,7 +18,7 @@ A stepper can be associated directly with a number, time or date variable.
     * [maximum](properties_Scale.md#maximum) = 64 800 (18\*60\*60)
     * [step](properties_Scale.md#step) = 600 (10\*60)
 * For values of the date type, the value entered in the [step](properties_Scale.md#step) property represents days. The Minimum and Maximum properties are ignored.
-> For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to declare it explicitly via the [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) or [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html) command.
+> > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to declare it explicitly via the [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) or [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html) command.
 
 For more information, please refer to [Using indicators](progressIndicator.md#using-indicatire) in the "Progress Indicator" page.
 

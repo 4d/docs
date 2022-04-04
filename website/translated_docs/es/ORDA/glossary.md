@@ -3,7 +3,7 @@ id: glossary
 title: Glosario
 ---
 
-## Main concepts at a glance
+## Visión general de los principales conceptos
 
 ![](assets/en/ORDA/mainConcepts.png)
 
@@ -11,24 +11,24 @@ title: Glosario
 
 ## Atributo
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
+Un atributo es la celda de almacenamiento más pequeña de una base de datos relacional (ver también [Atributo relacional](#relación-atributo)). No hay que confundir los atributos de las clases de datos con los atributos de las entidades:
 
-*   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
-*   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+*   En un objeto dataclass, cada propiedad es un atributo de dataclass que se asigna a un campo correspondiente en la tabla correspondiente (mismo nombre y tipo).
+*   En un objeto entity, los atributos de entidades son propiedades que contienen los valores para los atributos del almacén de datos correspondientes.
+> Los *atributos* y las *propiedades* son conceptos similares. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## AttributePath
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+Un attributePath es la ruta de un atributo al interior de una determinada clase de datos o de una entidad. Ver también [PropertyPath](#propertyPath).
 
 
 ## Class code
 
-Code for the user class function(s).
+Código para la(s) función(es) de clase usuarios.
 
 ## Data model class
 
-Extended class available for a data model object.
+Clase extendida disponible para un objeto del modelo de datos.
 
 ## Data model object
 

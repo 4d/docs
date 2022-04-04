@@ -83,8 +83,7 @@ entitySet: [
         refreshed: "2011-11-18T10:24:24Z",
         expires: "2011-11-18T12:24:24Z"
     }
-],
-ProgressInfo: [
+], ProgressInfo: [
     {
         UserInfo: "flushProgressIndicator",
         sessions: 0,

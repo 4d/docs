@@ -21,6 +21,8 @@ title: On After Edit
 - ユーザーがおこなったキーボードからの入力。この場合、`On After Edit` イベントは [`On Before Keystroke`](onBeforeKeystroke.md) と [`On After Keystroke`](onAfterKeystroke.md) イベントの後に生成されます。
 - ユーザーアクションをシミュレートするランゲージコマンドによる変更 (例: `POST KEY`)。
 
+`On After Edit` イベント内において、入力テキストは [`Get edited text`](https://doc.4d.com/4dv19/help/command/ja/page655.html) コマンドによって返されます。
+
 ### 4D View Pro
 
 `FORM Event` によって返されるオブジェクトには以下のプロパティが格納されます:

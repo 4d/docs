@@ -12,7 +12,7 @@
         "title": "Explorador de datos Web"
       },
       "Admin/debugLogFiles": {
-        "title": "Description of log files"
+        "title": "Descripción de los archivos históricos"
       },
       "Admin/licenses": {
         "title": "Gestión de licencias 4D"
@@ -208,7 +208,7 @@
         "title": "Construir un paquete proyecto"
       },
       "Desktop/clientServer": {
-        "title": "Client/Server Management"
+        "title": "Gestión Cliente/Servidor"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -686,7 +686,7 @@
         "title": "Página general"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "Página Métodos"
       },
       "Preferences/overview": {
         "title": "Generalidades"

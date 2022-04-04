@@ -26,7 +26,7 @@ The main 4D web server can be started in different ways:
 The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
 > You do not need to relaunch the 4D application to start or stop the web server.
 
-## Stopping the 4D Web Server
+## Detener el servidor Web 4D
 
 The main 4D web server can be stopped in different ways:
 
@@ -58,7 +58,7 @@ This command lets you verify that the web server, home page display, etc. work c
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
 
 To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box. The cache is then immediately cleared.
-> You can also use the [/4DCACHECLEAR](#cacheclear) URL.
+> También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
 
 
 
@@ -88,8 +88,8 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 
 | Elemento                  | Descripción                                                  |
 | ------------------------- | ------------------------------------------------------------ |
-| Tamaño actual de la caché | Current size of web server cache (in bytes)                  |
-| Tamaño máximo de la caché | Maximum size of cache (in bytes)                             |
+| Tamaño actual de la caché | Tamaño actual de la caché del servidor web (en bytes)        |
+| Tamaño máximo de la caché | Tamaño máximo de la caché (en bytes)                         |
 | Cached Object Max Size    | Maximum size of each object in the cache (in bytes)          |
 | Cache Use                 | Percentage of cache used                                     |
 | Cached Objects            | Number of objects found in the cache, **including pictures** |
@@ -103,8 +103,8 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 
 | Elemento                  | Descripción                                                            |
 | ------------------------- | ---------------------------------------------------------------------- |
-| Tamaño actual de la caché | Current size of web server cache (in bytes)                            |
-| Tamaño máximo de la caché | Maximum size of cache (in bytes)                                       |
+| Tamaño actual de la caché | Tamaño actual de la caché del servidor web (en bytes)                  |
+| Tamaño máximo de la caché | Tamaño máximo de la caché (en bytes)                                   |
 | Cached Object Max Size    | Maximum size of each object in the cache (in bytes)                    |
 | Cache Use                 | Percentage of cache used                                               |
 | Cached Objects            | Number of objects found in the cache, **without pictures**             |
@@ -119,11 +119,11 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| Campo HTTP | Descripción                          | Ejemplo                                                                                                                         |
-| ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| Fecha      | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
-| Server     | 4D/Número de versión                 | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
-| User-Agent | name and version @ IP client address | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
+| Campo HTTP | Descripción                                 | Ejemplo                                                                                                                         |
+| ---------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Fecha      | fecha actual en el formato RFC 822          | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
+| Server     | 4D/Número de versión                        | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
+| User-Agent | nombre y versión @ dirección IP del cliente | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
 
 
@@ -144,14 +144,14 @@ Este archivo de historial registra cada petición HTTP y cada respuesta en modo 
 
 Los siguientes campos se registran tanto para la solicitud como para la respuesta:
 
-| Nombre del campo | Descripción                                                   |
-| ---------------- | ------------------------------------------------------------- |
-| SocketID         | ID of socket used for communication                           |
-| PeerIP           | IPv4 address of host (client)                                 |
-| PeerPort         | Port used by host (client)                                    |
-| TimeStamp        | Timestamp in milliseconds (since system startup)              |
-| ConnectionID     | Connection UUID (UUID of VTCPSocket used for communication)   |
-| SequenceNumber   | Unique and sequential operation number in the logging session |
+| Nombre del campo | Descripción                                                        |
+| ---------------- | ------------------------------------------------------------------ |
+| SocketID         | ID del socket utilizado para la comunicación                       |
+| PeerIP           | Dirección IPv4 del host (cliente)                                  |
+| PeerPort         | Puerto utilizado por host (cliente)                                |
+| TimeStamp        | Timestamp en milisegundos (desde el inicio del sistema)            |
+| ConnectionID     | Conexión UUID (UUID del VTCPSocket utilizado para la comunicación) |
+| SequenceNumber   | Número de operación único y secuencial en la sesión de historial   |
 
 
 ### logweb.txt
@@ -182,18 +182,38 @@ The ELF (Extended Log Format) format is very widespread in the world of HTTP bro
 
 The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
 
-##### Configuring the fields
+##### Configurar los campos
 
 When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields.
 > You cannot select the same field twice.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                  |
-| -------------- | --- | --- | -------------------------------------- |
-| BYTES_RECEIVED |     | X   | Number of bytes received by the server |
- BYTES_SENT| X|  X|  Number of bytes sent by the server to the client| C_DNS|  X|  X   |IP address of the DNS (ELF: field identical to the C_IP field)| C_IP|   X|  X|  IP address of the client (for example 192.100.100.10)| CONNECTION_ID|      |X| Connection ID number| CS(COOKIE)| X|  X|  Information about cookies contained in the HTTP request| CS(HOST)|   X|  X|  Host field of the HTTP request| CS(REFERER)|    X|  X|  URL of the page pointing to the requested document| CS(USER_AGENT)| X|  X|  Information about the software and operating system of the client| CS_SIP| X|  X|  IP address of the server| CS_URI| X|  X|  URI on which the request is made| CS_URI_QUERY|   X|  X|  Request query parameters| CS_URI_STEM|    X|  X|  Part of request without query parameters| DATE|   X|  X|  DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year| METHOD| X|  X|  HTTP method used for the request sent to the server| PATH_ARGS|  |   X|  CGI parameters: string located after the “$” character| STATUS| X|  X|  Reply provided by the server| TIME|   X|  X|  HH: hour, MM: minutes, SS: seconds| TRANSFER_TIME|  X|  X|  Time requested by server to generate the reply| USER|   X|  X|  User name if authenticated; otherwise - (minus sign).<p>If the user name contains spaces, they are replaced by _ (underlines)| URL |   |X| URL requested by the client|
-> Dates and times are given in GMT.
+| Campo          | ELF | WLF | Valor                                                                                                                       |
+| -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Number of bytes received by the server                                                                                      |
+| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                                                                            |
+| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                              |
+| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
+| CONNECTION_ID  |     | X   | Connection ID number                                                                                                        |
+| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                     |
+| CS(HOST)       | X   | X   | Host field of the HTTP request                                                                                              |
+| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                                                                          |
+| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
+| CS_SIP         | X   | X   | IP address of the server                                                                                                    |
+| CS_URI         | X   | X   | URI on which the request is made                                                                                            |
+| CS_URI_QUERY | X   | X   | Request query parameters                                                                                                    |
+| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                    |
+| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
+| METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
+| PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                      |
+| STATUS         | X   | X   | Reply provided by the server                                                                                                |
+| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
+| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                                                                              |
+| USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
+| URL            |     | X   | URL requested by the client                                                                                                 |
+
+> Las fechas y horas se indican en GMT.
 
 
 #### Frecuencia del backup
@@ -204,7 +224,7 @@ When the web log file backup is triggered, the log file is archived in a folder 
 
 The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: “D2020_09_04_T15_50_07.txt.”
 
-#### Backup Parameters
+#### Parámetros del backup
 
 The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
 

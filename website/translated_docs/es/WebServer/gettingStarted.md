@@ -33,14 +33,14 @@ The default home page is displayed:
 
 1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
 
-2. Enter the following code:
+2. Introduzca el siguiente código:
 
 ```4d
 Case of 
     : ($1="/hello")
         WEB SEND TEXT("Hello World!")
     Else 
-        // Error 404 for example
+        // Error 404 por ejemplo
 End case 
 ```
 
@@ -127,7 +127,7 @@ You get the catalog, i.e. the list of exposed dataclasses and attributes in the 
 
 También puede obtener cualquier dato.
 
-3. Enter the following URL:
+3. Introduzca el siguiente URL:
 
 ```
 http://localhost/rest/Friends

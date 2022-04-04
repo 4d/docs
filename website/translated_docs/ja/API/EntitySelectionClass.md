@@ -733,6 +733,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 デフォルトで、*attributePath* で指定された値が *null* または未定義のエンティティは、返されるコレクション内では無視されます。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの値は返されるコレクションに **null** 要素として格納されます。
 
+
 *   [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" であるデータクラス属性は、エンティティのコレクションとして取得されます (重複したものも保持されます)。
 *   [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" であるデータクラス属性は、エンティティセレクションのコレクションとして取得されます。
 
@@ -924,6 +925,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 `.isAlterable()` 関数は、 <!-- REF #EntitySelectionClass.isAlterable().Summary -->エンティティセレクションが追加可能の場合には true を返します<!-- END REF -->。それ以外の場合には false を返します。
 
+
 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 #### 例題
@@ -1093,9 +1095,10 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-|引数|タイプ||説明|
-
-|---------|--- |:---:|------| |attributePath |Text|->|計算に使用する属性パス| |戻り値|any|<-|Highest value of attribute|
+| 引数            | タイプ  |    | 説明          |
+| ------------- | ---- |:--:| ----------- |
+| attributePath | テキスト | -> | 計算に使用する属性パス |
+| 戻り値           | any  | <- | 属性の最大値      |
 <!-- END REF -->
 
 #### 説明

@@ -92,13 +92,13 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
  C_OBJECT($lang)
  $lang:=New object
  If(<>lang="fr")
-    $lang.CompanyName:="Société :"
-    $lang.LastName:="Nom :"
+    $lang. CompanyName:="Société :"
+    $lang. LastName:="Nom :"
  Else
-    $lang.CompanyName:="Company:"
-    $lang.LastName:="Name:"
+    $lang. CompanyName:="Company:"
+    $lang. LastName:="Name:"
  End if
- InvoiceAddress.Label:=$lang
+ InvoiceAddress. Label:=$lang
 ```
 
 ![](assets/en/FormObjects/subforms5.png)
@@ -133,7 +133,7 @@ The code of the event is unrestricted (for example, 20000 or -100). You can use 
 For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
 
 #### EXECUTE METHOD IN SUBFORM command
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
+The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. This method can also receive parameters.
 
 This mechanism is illustrated in the following diagram:
 

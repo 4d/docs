@@ -94,13 +94,13 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | Constante                  | Valor | Comentario                                                                                          |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
-| fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
-| fk database folder         | 4     | Associated filesystem: "/PACKAGE"                                                                   |
+| fk data folder             | 9     | Filesystem asociado: "/DATA"                                                                        |
+| fk database folder         | 4     | Filesystem asociado: "/PACKAGE"                                                                     |
 | fk desktop folder          | 115   |                                                                                                     |
-| fk documents folder        | 117   | Document folder of the user                                                                         |
+| fk documents folder        | 117   | Carpeta Documentos del usuario                                                                      |
 | fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
 | fk logs folder             | 7     | Associated filesystem: "/LOGS"                                                                      |
-| fk mobileApps folder       | 10    | Associated filesystem: "/DATA"                                                                      |
+| fk mobileApps folder       | 10    |                                                                                                     |
 | fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
 | fk resources folder        | 6     | Associated filesystem: "/RESOURCES"                                                                 |
 | fk system folder           | 100   |                                                                                                     |
@@ -167,7 +167,7 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 #### Ejemplo 1
 
-Create an empty folder in the database folder:
+Cree una carpeta vacía en la carpeta de la base:
 
 ```4d
 var $created : Boolean
@@ -483,3 +483,4 @@ El objeto `Folder` renombrado.
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>
+

@@ -123,7 +123,7 @@ Cette zone regroupe les options génériques utilisées lors du processus de com
 
 #### Generate symbol file
 
-Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
+Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)). Permet de générer le fichier de symboles (voir [fichier de symboles](#symbol-file)).
 
 #### Générer le fichier d'erreurs
 

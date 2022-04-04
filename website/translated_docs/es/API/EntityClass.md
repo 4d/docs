@@ -10,32 +10,28 @@ Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA
 
 |                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
-| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
-| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
-| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->|
-| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->|
-| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
-| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
-| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
-| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
-| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
-| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
-| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->|
-| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->|
-| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->|
-| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->|
-| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->|
-| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->|
-| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->|
-| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->|
-| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->|
-| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->|
-| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->|
-
-
-
-
+| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->                   |
+| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->                                     |
+| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->                                        |
+| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->                                        |
+| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->                                     |
+| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->                      |
+| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->                |
+| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->                                  |
+| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->                |
+| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->                            |
+| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->                               |
+| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->                                     |
+| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->                                        |
+| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->                                        |
+| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->                                        |
+| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->                            |
+| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->                                  |
+| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->                                        |
+| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->                            |
+| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->                               |
+| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary --> |
+| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->                                  |
 
 
 <!-- REF EntityClass.attributeName.Desc -->
@@ -47,13 +43,13 @@ Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA
 | v17     | Añadidos       |
 </details>
 
-<!-- REF EntityClass.attributeName.Syntax -->
-***.attributeName*** : any<!-- END REF -->
+
+<!-- REF EntityClass.attributeName.Syntax --> ***.attributeName*** : any<!-- END REF -->
 
 
 #### Descripción
 
-Todo atributo de la dataclass está disponible como una propiedad de una entidad, que <!-- REF EntityClass.attributeName.Summary -->almacena el valor del atributo para la entidad<!-- END REF -->.
+Todo atributo de la dataclass está disponible como una propiedad de una entidad, que <!-- REF EntityClass.attributeName.Summary --> almacena el valor del atributo para la entidad<!-- END REF -->.
 > Los atributos dataclass también se pueden alcanzar utilizando la sintaxis alternativa con \[ ].
 
 El tipo de valor del atributo depende del tipo [kind](DataClassAttributeClass.md#kind) de atributo (relación o almacenamiento):
@@ -73,10 +69,8 @@ El tipo de valor del atributo depende del tipo [kind](DataClassAttributeClass.md
  $myEntity.save() //guardar la entidad
 ```
 
+
 <!-- END REF -->
-
-
-
 
 <!-- REF EntityClass.clone().Desc -->
 ## .clone()
@@ -88,19 +82,21 @@ El tipo de valor del atributo depende del tipo [kind](DataClassAttributeClass.md
 </details>
 
 
-<!-- REF #EntityClass.clone().Syntax -->
-**.clone()** : 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.clone().Syntax --> **.clone()** : 4D.Entity<!-- END REF -->
+
 
 <!-- REF #EntityClass.clone().Params -->
 | Parámetros | Tipo      |    | Descripción                                   |
 | ---------- | --------- |:--:| --------------------------------------------- |
 | Resultado  | 4D.Entity | <- | Nueva entidad que hace referencia al registro |
+
 <!-- END REF -->
 
 
 #### Descripción
 
-La función `.clone()` <!-- REF #EntityClass.clone().Summary -->crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
+La función `.clone()` <!-- REF #EntityClass.clone().Summary --> crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
 > Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save( )`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
@@ -117,11 +113,8 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 ```
 
+
 <!-- END REF -->
-
-
-
-
 
 <!-- REF EntityClass.diff().Desc -->
 ## .diff()
@@ -132,8 +125,9 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 | v17     | Añadidos       |
 </details>
 
-<!-- REF #EntityClass.diff().Syntax -->
-**.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
+
+<!-- REF #EntityClass.diff().Syntax --> **.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.diff().Params -->
@@ -142,12 +136,13 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 | entityToCompare     | 4D.Entity  | -> | Entidad a comparar con la entidad original |
 | attributesToCompare | Collection | -> | Nombre de los atributos a comparar         |
 | Resultado           | Collection | <- | Diferencias entre las entidades            |
+
 <!-- END REF -->
 
 
 #### Descripción
 
-La función `.diff()` <!-- REF #EntityClass.diff().Summary -->compara el contenido de dos entidades y devuelve sus diferencias<!-- END REF -->.
+La función `.diff()` <!-- REF #EntityClass.diff().Summary --> compara el contenido de dos entidades y devuelve sus diferencias<!-- END REF -->.
 
 En *entityToCompare*, pase la entidad a comparar con la entidad original.
 
@@ -325,8 +320,6 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 <!-- END REF -->
 
-
-
 <!-- REF EntityClass.drop().Desc -->
 ## .drop()
 
@@ -337,19 +330,21 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 </details>
 
-<!-- REF #EntityClass.drop().Syntax -->
-**.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
+
+<!-- REF #EntityClass.drop().Syntax --> **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
+
 
 <!-- REF #EntityClass.drop().Params -->
 | Parámetros | Tipo    |    | Descripción                                                                        |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: activa el soltar incluso si el sello ha cambiado |
 | Resultado  | Objeto  | <- | Resultado de la operación soltar                                                   |
+
 <!-- END REF -->
 
 #### Descripción
 
-La función `.drop()` <!-- REF #EntityClass.drop().Summary -->elimina los datos contenidos en la entidad del datastore<!-- END REF -->, de la tabla relacionada con su Dataclass. Tenga en cuenta que la entidad permanece en la memoria.
+La función `.drop()` <!-- REF #EntityClass.drop().Summary --> elimina los datos contenidos en la entidad del datastore<!-- END REF -->, de la tabla relacionada con su Dataclass. Tenga en cuenta que la entidad permanece en la memoria.
 
 En una aplicación multiusuario o multiproceso, la función `.drop()` se ejecuta bajo un mecanismo de ["bloqueo optimista"](ORDA/entities.md#entity-locking), en el que un sello de bloqueo interno se incrementa automáticamente cada vez que se guarda el registro.
 
@@ -428,12 +423,10 @@ Ejemplo con la opción `dk force drop if stamp changed`:
     :($status.status=dk status entity does not exist anymore)
        ALERT($status.statusText)
  End case
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF EntityClass.first().Desc -->
 ## .first()
@@ -445,18 +438,20 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 </details>
 
-<!-- REF #EntityClass.first().Syntax -->
-**.first()**: 4D.Entity<!-- END REF -->
+
+<!-- REF #EntityClass.first().Syntax --> **.first()**: 4D.Entity<!-- END REF -->
+
 
 <!-- REF #EntityClass.first().Params -->
 | Parámetros | Tipo      |    | Descripción                                                                             |
 | ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
 | Resultado  | 4D.Entity | <- | Referencia a la primera entidad de una selección de entidades (Null si no se encuentra) |
+
 <!-- END REF -->
 
 #### Descripción
 
-La función `.first()` <!-- REF #EntityClass.first().Summary -->devuelve una referencia a la entidad en primera posición de la selección de entidades a la que pertenece la entidad<!-- END REF -->.
+La función `.first()` <!-- REF #EntityClass.first().Summary --> devuelve una referencia a la entidad en primera posición de la selección de entidades a la que pertenece la entidad<!-- END REF -->.
 
 Si la entidad no pertenece a ninguna selección de entidades existente (es decir, [.getSelection( )](#getselection) devuelve Null), la función devuelve un valor Null.
 
@@ -470,9 +465,8 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
  $firstEmployee:=$employee.first() //$firstEmployee es la primera entidad de la selección de entidades $employees
 ```
 
+
 <!-- END REF -->
-
-
 
 <!-- REF EntityClass.fromObject().Desc -->
 ## .fromObject()
@@ -484,18 +478,20 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 </details>
 
-<!-- REF #EntityClass.fromObject().Syntax -->
-**.fromObject**( *filler* : Object )<!-- END REF -->
+
+<!-- REF #EntityClass.fromObject().Syntax --> **.fromObject**( *filler* : Object )<!-- END REF -->
+
 
 <!-- REF #EntityClass.fromObject().Params -->
 | Parámetros | Tipo   |    | Descripción                                  |
 | ---------- | ------ |:--:| -------------------------------------------- |
 | filler     | Objeto | -> | Objeto a partir del cual se llena la entidad |
+
 <!-- END REF -->
 
 #### Descripción
 
-La función `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->llena una entidad con el contenido *filler*.
+La función `.fromObject()` <!-- REF #EntityClass.fromObject().Summary --> llena una entidad con el contenido *filler*.
 > Esta función modifica la entidad original.
 
 El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atributos:
@@ -556,18 +552,35 @@ También puede utilizar una entidad relacionada dada como objeto:
         "__KEY": "411"
     }
 }
-```<!-- END REF --><!-- REF EntityClass.getDataClass().Desc -->## .getDataClass()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.getDataClass().Desc -->
+## .getDataClass()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17 R5  | Añadidos       |
 
-</details><!-- REF #EntityClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF --><!-- REF #EntityClass.getDataClass().Params -->| Parámetros | Tipo         |    | Descripción                                  |
-| ---------- | ------------ |:--:| -------------------------------------------- |
-| Resultado  | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad |<!-- END REF -->#### Descripción
+</details>
 
-La función `.getDataClass()`<!-- REF #EntityClass.getDataClass().Summary -->devuelve la clase de datos de la entidad<!-- END REF -->. Esta función es útil al escribir código genérico.
+
+<!-- REF #EntityClass.getDataClass().Syntax --> **.getDataClass()** : 4D.DataClass<!-- END REF -->
+
+
+<!-- REF #EntityClass.getDataClass().Params -->
+| Parámetros | Tipo         |    | Descripción                                  |
+| ---------- | ------------ |:--:| -------------------------------------------- |
+| Resultado  | 4D.DataClass | <- | Objeto DataClass al que pertenece la entidad |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary --> devuelve la clase de datos de la entidad<!-- END REF -->. Esta función es útil al escribir código genérico.
 
 
 #### Ejemplo
@@ -586,20 +599,38 @@ El siguiente código genérico duplica cualquier entidad:
  $entityNew.fromObject($entity.toObject()) //obtiene todos los atributos
  $entityNew[$entity.getDataClass().getInfo().primaryKey]:=Null //restablece la llave primaria
  $status:=$entityNew.save() //guarda la entidad duplicada
-```<!-- END REF --><!-- REF EntityClass.getKey().Desc -->## .getKey()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.getKey().Desc -->
+## .getKey()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF --><!-- REF #EntityClass.getKey().Params -->| Parámetros | Tipo    |    | Descripción                                                                                               |
+</details>
+
+
+<!-- REF #EntityClass.getKey().Syntax --> **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+
+
+<!-- REF #EntityClass.getKey().Params -->
+| Parámetros | Tipo    |    | Descripción                                                                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: la llave primaria se devuelve como una cadena, sin importar el tipo de llave primaria |
 | Resultado  | Texto   | <- | Valor de la llave primaria de texto de la entidad                                                         |
-| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |<!-- END REF -->#### Descripción
+| Resultado  | Integer | <- | Valor de la llave primaria numérica de la entidad                                                         |
 
-La función `.getKey()`<!-- REF #EntityClass.getKey().Summary -->devuelve el valor de la llave primaria<!-- END REF -->.
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.getKey()` <!-- REF #EntityClass.getKey().Summary --> devuelve el valor de la llave primaria<!-- END REF -->.
 
 Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que el valor de la llave primaria devuelto sea una cadena, sin importar el tipo de llave primaria real, pasando la opción `dk key as string` en el parámetro *mode*.
 
@@ -612,18 +643,35 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
  $employees:=ds.Employee.query("lastName=:1";"Smith")
  $employee:=$employees[0]
  ALERT("The primary key is "+$employee.getKey(dk key as string))
-```<!-- END REF --><!-- REF EntityClass.getSelection().Desc -->## .getSelection()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.getSelection().Desc -->
+## .getSelection()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.getSelection().Syntax -->**.getSelection()**: 4D.EntitySelection<!-- END REF --><!-- REF #EntityClass.getSelection().Params -->| Parámetros | Tipo               |    | Descripción                                                              |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------ |
-| Resultado  | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |<!-- END REF -->#### Descripción
+</details>
 
-La función `.getSelection()`<!-- REF #EntityClass.getSelection().Summary -->devuelve la selección de entidades a la que pertenece la entidad<!-- END REF -->.
+
+<!-- REF #EntityClass.getSelection().Syntax --> **.getSelection()**: 4D.EntitySelection<!-- END REF -->
+
+
+<!-- REF #EntityClass.getSelection().Params -->
+| Parámetros | Tipo               |    | Descripción                                                              |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------------ |
+| Resultado  | 4D.EntitySelection | <- | Entity selection a la que pertenece la entidad (nula si no se encuentra) |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.getSelection()` <!-- REF #EntityClass.getSelection().Summary --> devuelve la selección de entidades a la que pertenece la entidad<!-- END REF -->.
 
 Si la entidad no pertenece a una selección de entidades, la función devuelve Null.
 
@@ -640,18 +688,35 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
  $emp:=$employees2[0]  // Esta entidad pertenece a una selección de entidades
 
  ALERT("La entity selection contiene "+String($emp.getSelection().length)+" entidades")
-```<!-- END REF --><!-- REF EntityClass.getStamp().Desc -->## .getStamp()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.getStamp().Desc -->
+## .getStamp()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.getStamp().Syntax -->**.getStamp()** : Integer<!-- END REF --><!-- REF #EntityClass.getStamp().Params -->| Parámetros | Tipo    |    | Descripción                                               |
-| ---------- | ------- |:--:| --------------------------------------------------------- |
-| Resultado  | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada) |<!-- END REF -->#### Descripción
+</details>
 
-La función `.getStamp()`<!-- REF #EntityClass.getStamp().Summary -->devuelve el valor actual del sello de la entidad<!-- END REF -->.
+
+<!-- REF #EntityClass.getStamp().Syntax --> **.getStamp()** : Integer<!-- END REF -->
+
+
+<!-- REF #EntityClass.getStamp().Params -->
+| Parámetros | Tipo    |    | Descripción                                               |
+| ---------- | ------- |:--:| --------------------------------------------------------- |
+| Resultado  | Integer | <- | Sello de la entidad (0 si la entidad acaba de ser creada) |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> devuelve el valor actual del sello de la entidad<!-- END REF -->.
 
 El sello interno se incrementa automáticamente en 4D cada vez que se guarda la entidad. Gestiona los accesos y modificaciones concurrentes de los usuarios a las mismas entidades (ver [**Bloqueo de entidades**](ORDA/entities.md#entity-locking)).
 > Para una entidad nueva (nunca guardada), la función devuelve 0. Para saber si una entidad acaba de ser creada, se recomienda utilizar [.isNew()](#isnew).
@@ -672,19 +737,36 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
  $entity.lastname:="Wesson"
  $entity.save()
  $stamp:=$entity.getStamp() //$stamp=2
-```<!-- END REF --><!-- REF EntityClass.indexOf().Desc -->## .indexOf()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.indexOf().Desc -->
+## .indexOf()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.indexOf().Syntax -->**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF --><!-- REF #EntityClass.indexOf().Params -->| Parámetros      | Tipo               |    | Descripción                                                               |
+</details>
+
+
+<!-- REF #EntityClass.indexOf().Syntax --> **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
+
+
+<!-- REF #EntityClass.indexOf().Params -->
+| Parámetros      | Tipo               |    | Descripción                                                               |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------------- |
 | entitySelection | 4D.EntitySelection | -> | La posición de la entidad se da en función de esta selección de entidades |
-| Resultado       | Integer            | <- | Posición de la entidad en una selección de entidades                      |<!-- END REF -->#### Descripción
+| Resultado       | Integer            | <- | Posición de la entidad en una selección de entidades                      |
 
-La función `.indexOf()`<!-- REF #EntityClass.indexOf().Summary -->devuelve la posición de la entidad en una selección de entidades<!-- END REF -->.
+<!-- END REF -->
+
+#### Descripción
+
+La función `.indexOf()` <!-- REF #EntityClass.indexOf().Summary --> devuelve la posición de la entidad en una selección de entidades<!-- END REF -->.
 
 Por defecto, si se omite el parámetro *entitySelection*, la función devuelve la posición de la entidad dentro de su propia selección de entidades. En caso contrario, devuelve la posición de la entidad dentro de la *entitySelection* especificada.
 
@@ -705,18 +787,35 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
  $employee:=ds.Employee.get(725) //Esta entidad no pertenece a una selección de entidades
  ALERT("El índice de la entidad es "+String($employee.indexOf())) // -1
-```<!-- END REF --><!-- REF EntityClass.isNew().Desc -->## .isNew()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.isNew().Desc -->
+## .isNew()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.isNew().Syntax -->**.isNew()** : Boolean<!-- END REF --><!-- REF #EntityClass.isNew().Params -->| Parámetros | Tipo     |    | Descripción                                                                               |
-| ---------- | -------- |:--:| ----------------------------------------------------------------------------------------- |
-| Resultado  | Booleano | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |<!-- END REF -->#### Descripción
+</details>
 
-La función `.isNew()`<!-- REF #EntityClass.isNew().Summary -->devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. En caso contrario, devuelve False.
+
+<!-- REF #EntityClass.isNew().Syntax --> **.isNew()** : Boolean<!-- END REF -->
+
+
+<!-- REF #EntityClass.isNew().Params -->
+| Parámetros | Tipo     |    | Descripción                                                                               |
+| ---------- | -------- |:--:| ----------------------------------------------------------------------------------------- |
+| Resultado  | Booleano | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True si la entidad a la que se aplica acaba de ser creada y aún no ha sido guardada en el datastore<!-- END REF -->. En caso contrario, devuelve False.
 
 
 #### Ejemplo
@@ -730,18 +829,35 @@ La función `.isNew()`<!-- REF #EntityClass.isNew().Summary -->devuelve True si 
  If($emp.isNew())
     ALERT("This is a new entity")
  End if
-```<!-- END REF --><!-- REF EntityClass.last().Desc -->## .last()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.last().Desc -->
+## .last()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF --><!-- REF #EntityClass.last().Params -->| Parámetros | Tipo      |    | Descripción                                                                            |
-| ---------- | --------- |:--:| -------------------------------------------------------------------------------------- |
-| Resultado  | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |<!-- END REF -->#### Descripción
+</details>
 
-La función `.last()`<!-- REF #EntityClass.first().Summary -->devuelve una referencia a la entidad en la última posición de la selección de entidades a la que pertenece la entidad<!-- END REF -->.
+
+<!-- REF #EntityClass.last().Syntax --> **.last()** : 4D.Entity<!-- END REF -->
+
+
+<!-- REF #EntityClass.last().Params -->
+| Parámetros | Tipo      |    | Descripción                                                                            |
+| ---------- | --------- |:--:| -------------------------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | <- | Referencia a la última entidad de una selección de entidades (Null si no se encuentra) |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.last()` <!-- REF #EntityClass.first().Summary --> devuelve una referencia a la entidad en la última posición de la selección de entidades a la que pertenece la entidad<!-- END REF -->.
 
 Si la entidad no pertenece a ninguna selección de entidades existente (es decir, [.getSelection( )](#getselection) devuelve Null), la función devuelve un valor Null.
 
@@ -755,19 +871,36 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
  $employees:=ds.Employee.query("lastName = :1";"H@") //Esta selección de entidades contiene 3 entidades
  $employee:=$employees[0]
  $lastEmployee:=$employee.last() //$lastEmployee es la última entidad de la selección de entidades $employees
-```<!-- END REF --><!-- REF EntityClass.lock().Desc -->## .lock()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.lock().Desc -->
+## .lock()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.lock().Syntax -->**.lock**( { *mode* : Integer } ) : Object<!-- END REF --><!-- REF #EntityClass.lock().Params -->| Parámetros | Tipo    |    | Descripción                                                                      |
+</details>
+
+
+<!-- REF #EntityClass.lock().Syntax --> **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
+
+
+<!-- REF #EntityClass.lock().Params -->
+| Parámetros | Tipo    |    | Descripción                                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk reload if stamp changed`: recargar antes de bloquear si el sello ha cambiado |
-| Resultado  | Objeto  | <- | Resultado de la operación de bloqueo                                             |<!-- END REF -->#### Descripción
+| Resultado  | Objeto  | <- | Resultado de la operación de bloqueo                                             |
 
-La función `.lock()`<!-- REF #EntityClass.lock().Summary -->pone un bloqueo pesimista en el registro referenciado por la entidad<!-- END REF -->. El [bloqueo se establece](ORDA/entities.md#entity-locking) para un registro y todas las referencias de la entidad en el proceso actual.
+<!-- END REF -->
+
+#### Descripción
+
+La función `.lock()` <!-- REF #EntityClass.lock().Summary -->pone un bloqueo pesimista en el registro referenciado por la entidad<!-- END REF -->. El [bloqueo se establece](ORDA/entities.md#entity-locking) para un registro y todas las referencias de la entidad en el proceso actual.
 
 Otros procesos verán este registro como bloqueado (la propiedad `result.success` contendrá False si intentan bloquear la misma entidad usando esta función). Sólo las funciones ejecutadas en la sesión de "bloqueo" pueden editar y guardar los atributos de la entidad. La entidad puede ser cargada como de sólo lectura por otras sesiones, pero no podrán introducir y guardar valores.
 
@@ -852,18 +985,35 @@ Ejemplo con la opción `dk reload if stamp changed`:
     :($status.status=dk status entity does not exist anymore)
        ALERT($status.statusText)
  End case
-```<!-- END REF --><!-- REF EntityClass.next().Desc -->## .next()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.next().Desc -->
+## .next()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.next().Syntax -->**.next()** : 4D.Entity<!-- END REF --><!-- REF #EntityClass.next().Params -->| Parámetros | Tipo      |    | Descripción                                                                              |
-| ---------- | --------- |:--:| ---------------------------------------------------------------------------------------- |
-| Resultado  | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |<!-- END REF -->#### Descripción
+</details>
 
-La función `.next()`<!-- REF #EntityClass.next().Summary -->devuelve una referencia a la siguiente entidad en la selección de entidades a la que pertenece la entidad<!-- END REF -->.
+
+<!-- REF #EntityClass.next().Syntax --> **.next()** : 4D.Entity<!-- END REF -->
+
+
+<!-- REF #EntityClass.next().Params -->
+| Parámetros | Tipo      |    | Descripción                                                                              |
+| ---------- | --------- |:--:| ---------------------------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | <- | Referencia a la siguiente entidad en la selección de entidades (Null si no se encuentra) |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.next()` <!-- REF #EntityClass.next().Summary --> devuelve una referencia a la siguiente entidad en la selección de entidades a la que pertenece la entidad<!-- END REF -->.
 
 Si la entidad no pertenece a ninguna selección de entidades existente (es decir, [.getSelection()](#getselection) devuelve Null), la función devuelve un valor Null.
 
@@ -879,18 +1029,35 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee es la segunda entidad de la selección de entidades $employees
 
-```<!-- END REF --><!-- REF EntityClass.previous().Desc -->## .previous()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.previous().Desc -->
+## .previous()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.previous().Syntax -->**.previous()**  : 4D.Entity<!-- END REF --><!-- REF #EntityClass.previous().Params -->| Parámetros | Tipo      |    | Descripción                                                                             |
-| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
-| Resultado  | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |<!-- END REF -->#### Descripción
+</details>
 
-La función `.previous()`<!-- REF #EntityClass.previous().Summary -->devuelve una referencia a la entidad anterior en la selección de entidades a la que pertenece la entidad<!-- END REF -->.
+
+<!-- REF #EntityClass.previous().Syntax --> **.previous()**  : 4D.Entity<!-- END REF -->
+
+
+<!-- REF #EntityClass.previous().Params -->
+| Parámetros | Tipo      |    | Descripción                                                                             |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
+| Resultado  | 4D.Entity | <- | Referencia a la entidad anterior en la selección de entidades (Null si no se encuentra) |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.previous()` <!-- REF #EntityClass.previous().Summary --> devuelve una referencia a la entidad anterior en la selección de entidades a la que pertenece la entidad<!-- END REF -->.
 
 Si la entidad no pertenece a ninguna selección de entidades existente (es decir, [.getSelection()](#getselection) devuelve Null), la función devuelve un valor Null.
 
@@ -905,18 +1072,35 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
  $employees:=ds.Employee.query("lastName = :1";"H@") //Esta selección de entidades contiene 3 entidades
  $employee:=$employees[1]
  $previousEmployee:=$employee.previous() //$previousEmployee es la primera entidad de la selección de entidades $employees
-```<!-- END REF --><!-- REF EntityClass.reload().Desc -->## .reload( )
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.reload().Desc -->
+## .reload( )
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.reload().Syntax -->**.reload()** : Object<!-- END REF --><!-- REF #EntityClass.reload().Params -->| Parámetros | Tipo   |    | Descripción      |
-| ---------- | ------ |:--:| ---------------- |
-| Resultado  | Objeto | <- | Objeto de estado |<!-- END REF -->#### Descripción
+</details>
 
-La función `.reload()`<!-- REF #EntityClass.reload().Summary -->recarga el contenido de la entidad en memoria<!-- END REF -->, según la información almacenada en la tabla relacionada con la dataclass en el datastore. La recarga se realiza sólo si la entidad sigue existiendo con la misma llave primaria.
+
+<!-- REF #EntityClass.reload().Syntax --> **.reload()** : Object<!-- END REF -->
+
+
+<!-- REF #EntityClass.reload().Params -->
+| Parámetros | Tipo   |    | Descripción      |
+| ---------- | ------ |:--:| ---------------- |
+| Resultado  | Objeto | <- | Objeto de estado |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.reload()` <!-- REF #EntityClass.reload().Summary -->recarga el contenido de la entidad en memoria<!-- END REF -->, según la información almacenada en la tabla relacionada con la dataclass en el datastore. La recarga se realiza sólo si la entidad sigue existiendo con la misma llave primaria.
 
 **Resultado**
 
@@ -953,19 +1137,36 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
     :($result.status=dk status entity does not exist anymore)
        ALERT("The entity has been dropped")
  End case
-```<!-- END REF --><!-- REF EntityClass.save().Desc -->## .save()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.save().Desc -->
+## .save()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.save().Syntax -->**.save**( { *mode* : Integer } ) : Object<!-- END REF --><!-- REF #EntityClass.save().Params -->| Parámetros | Tipo    |    | Descripción                                          |
+</details>
+
+
+<!-- REF #EntityClass.save().Syntax --> **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
+
+
+<!-- REF #EntityClass.save().Params -->
+| Parámetros | Tipo    |    | Descripción                                          |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
 | mode       | Integer | -> | `dk auto merge`: activa el modo de fusión automática |
-| Resultado  | Objeto  | <- | Resultado de la operación guardar                    |<!-- END REF -->#### Descripción
+| Resultado  | Objeto  | <- | Resultado de la operación guardar                    |
 
-La función `.save()`<!-- REF #EntityClass.save().Summary -->guarda los cambios realizados en la entidad<!-- END REF -->en la tabla relacionada con su dataClass. Debe llamar a este método después de crear o modificar una entidad si quiere guardar los cambios realizados en ella.
+<!-- END REF -->
+
+#### Descripción
+
+La función `.save()` <!-- REF #EntityClass.save().Summary --> guarda los cambios realizados en la entidad<!-- END REF --> en la tabla relacionada con su dataClass. Debe llamar a este método después de crear o modificar una entidad si quiere guardar los cambios realizados en ella.
 
 La operación de guardar se ejecuta sólo si se ha "tocado" al menos un atributo de la entidad (ver las funciones [`.touched()`](#touched) y [`.touchedAttributes()`](#touchedattributes)). En caso contrario, la función no hace nada (no se llama al activador).
 
@@ -1072,21 +1273,38 @@ Actualización de una entidad con la opción `dk auto merge`:
     :($status.status=dk status automerge failed)
        ALERT($status.statusText)
  End case
-```<!-- END REF --> <!-- REF EntityClass.toObject().Desc -->## .toObject()
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.toObject().Desc -->
+## .toObject()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.toObject().Syntax -->**.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF --><!-- REF #EntityClass.toObject().Params -->| Parámetros   | Tipo       |    | Descripción                                                                                               |
+</details>
+
+
+<!-- REF #EntityClass.toObject().Syntax --> **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
+
+
+<!-- REF #EntityClass.toObject().Params -->
+| Parámetros   | Tipo       |    | Descripción                                                                                               |
 | ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------------------- |
 | filterString | Texto      | -> | Atributo(s) a extraer (cadena separada por comas)                                                         |
 | filterCol    | Collection | -> | Colección de atributos a extraer                                                                          |
 | options      | Integer    | -> | `dk with primary key`: añade la propiedad \_KEY;<br>`dk with stamp`: añade la propiedad \_STAMP |
-| Resultado    | Objeto     | <- | Objeto creado a partir de la entidad                                                                      |<!-- END REF -->#### Descripción
+| Resultado    | Objeto     | <- | Objeto creado a partir de la entidad                                                                      |
 
-La función `.toObject()`<!-- REF #EntityClass.toObject().Summary -->devuelve un objeto que ha sido construido a partir de la entidad<!-- END REF -->. Los nombres de las propiedades en el objeto coinciden con los nombres de los atributos de la entidad.
+<!-- END REF -->
+
+#### Descripción
+
+La función `.toObject()` <!-- REF #EntityClass.toObject().Summary --> devuelve un objeto que ha sido construido a partir de la entidad<!-- END REF -->. Los nombres de las propiedades en el objeto coinciden con los nombres de los atributos de la entidad.
 
 Si no se especifica ningún filtro, o si el parámetro *filterString* contiene una cadena vacía o "*", el objeto devuelto contendrá:
 
@@ -1343,18 +1561,35 @@ Devuelve:
         "revenues": 12000000
     }
 }
-```<!-- END REF --><!-- REF EntityClass.touched().Desc -->## .touched( )
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.touched().Desc -->
+## .touched( )
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.touched().Syntax -->**.touched()** : Boolean<!-- END REF --><!-- REF #EntityClass.touched().Params -->| Parámetros | Tipo     |    | Descripción                                                                                       |
-| ---------- | -------- |:--:| ------------------------------------------------------------------------------------------------- |
-| Resultado  | Booleano | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |<!-- END REF -->#### Descripción
+</details>
 
-La función `.touched()`<!-- REF #EntityClass.touched().Summary -->comprueba si un atributo de la entidad ha sido modificado o no desde que la entidad fue cargada en memoria o guardada<!-- END REF -->.
+
+<!-- REF #EntityClass.touched().Syntax --> **.touched()** : Boolean<!-- END REF -->
+
+
+<!-- REF #EntityClass.touched().Params -->
+| Parámetros | Tipo     |    | Descripción                                                                                       |
+| ---------- | -------- |:--:| ------------------------------------------------------------------------------------------------- |
+| Resultado  | Booleano | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.touched()` <!-- REF #EntityClass.touched().Summary --> comprueba si un atributo de la entidad ha sido modificado o no desde que la entidad fue cargada en memoria o guardada<!-- END REF -->.
 
 Si un atributo ha sido modificado o calculado, la función devuelve True, en caso contrario devuelve False. Puede utilizar esta función para determinar si necesita guardar la entidad.
 
@@ -1372,18 +1607,35 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
  If($emp.touched()) //si se ha modificado al menos uno de los atributos
     $emp.save()
  End if // de lo contrario, no es necesario guardar la entidad
-```<!-- END REF --><!-- REF EntityClass.touchedAttributes().Desc -->## .touchedAttributes( )
+```
+
+
+<!-- END REF -->
+
+<!-- REF EntityClass.touchedAttributes().Desc -->
+## .touchedAttributes( )
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.touchedAttributes().Syntax -->**.touchedAttributes()** : Collection<!-- END REF --><!-- REF #EntityClass.touchedAttributes().Params -->| Parámetros | Tipo       |    | Descripción                                     |
-| ---------- | ---------- |:--:| ----------------------------------------------- |
-| Resultado  | Collection | <- | Nombres de atributos tocados, o colección vacía |<!-- END REF -->#### Descripción
+</details>
 
-La función `.touchedAttributes()`<!-- REF #EntityClass.touchedAttributes().Summary -->devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria<!-- END REF -->.
+
+<!-- REF #EntityClass.touchedAttributes().Syntax --> **.touchedAttributes()** : Collection<!-- END REF -->
+
+
+<!-- REF #EntityClass.touchedAttributes().Params -->
+| Parámetros | Tipo       |    | Descripción                                     |
+| ---------- | ---------- |:--:| ----------------------------------------------- |
+| Resultado  | Collection | <- | Nombres de atributos tocados, o colección vacía |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary --> devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria<!-- END REF -->.
 
 Esto se aplica a los atributos [kind](DataClassAttributeClass.md#kind) `storage` o `relatedEntity`.
 
@@ -1433,18 +1685,34 @@ En este caso:
 
 *   firstName y lastName tienen un tipo `storage`
 *   employer tiene un tipo `relatedEntity`
-*   employerID es la llave extranjera de la entidad relacionada con el empleador<!-- END REF --><!-- REF EntityClass.unlock().Desc -->## .unlock()
+*   employerID es la llave extranjera de la entidad relacionada con el empleador
+
+<!-- END REF -->
+
+<!-- REF EntityClass.unlock().Desc -->
+## .unlock()
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17     | Añadidos       |
 
-</details><!-- REF #EntityClass.unlock().Syntax -->**.unlock()** : Object<!-- END REF --><!-- REF #EntityClass.unlock().Params -->| Parámetros | Tipo   |    | Descripción   |
-| ---------- | ------ |:--:| ------------- |
-| Resultado  | Objeto | <- | Objeto estado |<!-- END REF -->#### Descripción
+</details>
 
-La función `.unlock()`<!-- REF #EntityClass.unlock().Summary -->elimina el bloqueo pesimista del registro que coincide con la entidad<!-- END REF -->en el datastore y la tabla relacionada con su dataclass.
+
+<!-- REF #EntityClass.unlock().Syntax --> **.unlock()** : Object<!-- END REF -->
+
+
+<!-- REF #EntityClass.unlock().Params -->
+| Parámetros | Tipo   |    | Descripción   |
+| ---------- | ------ |:--:| ------------- |
+| Resultado  | Objeto | <- | Objeto estado |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.unlock()` <!-- REF #EntityClass.unlock().Summary --> elimina el bloqueo pesimista del registro que coincide con la entidad<!-- END REF --> en el datastore y la tabla relacionada con su dataclass.
 
 > Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
 
@@ -1480,7 +1748,10 @@ El objeto devuelto por <`.unlock()<` contiene la siguiente propiedad:
  If($status.success)
     ALERT("The entity is now unlocked")
  End if
-```<!-- END REF -->
+```
+
+
+<!-- END REF -->
 
 
 

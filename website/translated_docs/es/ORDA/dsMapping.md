@@ -3,7 +3,7 @@ id: dsmapping
 title: Objeto del modelo de datos
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
+La tecnología ORDA se basa en un mapeo automático de una estructura 4D subyacente. También ofrece acceso a los datos a través de los objetos selección de entidades (entity selection) y entidad (entity). As a result, ORDA exposes the whole database as a set of data model objects.
 
 
 ## Cartografía de la estructura
@@ -241,9 +241,9 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * entity selections returned by 4D Server to a remote client
+> * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > * entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

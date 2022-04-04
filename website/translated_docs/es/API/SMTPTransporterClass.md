@@ -54,11 +54,11 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 
 #### Descripción
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> according to the *server* parameter and returns a new *[SMTP transporter](#smtp-transporter-object)* object. The returned transporter object will then usually be used to send emails.
+El comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configura una nueva conexión SMTP<!-- END REF --> en función del parámetro *server* y devuelve un nuevo objeto *[SMTP transporter](#smtp-transporter-object)*. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
 
-> This command does not open any connection to the SMTP server. The SMTP connection is actually opened when the [`.send()`](#send) function is executed.  
+> Este comando no abre ninguna conexión con el servidor SMTP. La conexión SMTP se abre realmente cuando la función [`.send()`](#send) se ejecuta.  
 > 
-> The SMTP connection is automatically closed: * when the transporter object is destroyed if the [`keepAlive`](#keepalive) property is true (default), * after each  [`.send( )`](#send) function execution if the [`keepAlive`](#keepalive) property is set to false.
+> La conexión SMTP se cierra automáticamente * cuando se destruye el objeto transportador si la propiedad [`keepAlive`](#keepalive) es true (por defecto), * después de cada ejecución de la función [`.send( )`](#send) si la propiedad [`keepAlive`](#keepalive) está en false.
 
 
 
@@ -133,7 +133,7 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 
 #### Descripción
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. It is identical to the [`SMTP New transporter`](#smtp-new-transporter) command (shortcut).
+La función `4D.SMTPTransporter.new()` <!-- REF #4D.SMTPTransporter.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.SMTPTransporter` type<!-- END REF -->. Es idéntico al comando [`SMTP New transporter`](#smtp-new-transporter) (acceso directo).
 
 
 
@@ -153,7 +153,7 @@ The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summa
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
-For information about SMTP status codes, please refer to [this page](https://www.usps.org/info/smtp_status.html).
+Para obtener información sobre los códigos de estado SMTP, consulte [esta página](https://www.usps.org/info/smtp_status.html).
 
 #### Ejemplo
 
@@ -213,12 +213,12 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 #### Descripción
 
-The `.keepAlive` property contains <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** if the SMTP connection must be kept alive until the `transporter` object is destroyed<!-- END REF -->, and **False** otherwise. By default, if the `keepAlive` property has not been set in the `server` object (used to create the `transporter` object with `SMTP New transporter`), it is **True**.
+La propiedad `.keepAlive` contiene <!-- REF #SMTPTransporterClass.keepAlive.Summary -->**True** si la conexión SMTP debe permanecer activa hasta que el objeto sea destruido `transporter`<!-- END REF -->y **False** si no. Por defecto, si la propiedad `keepAlive` no se ha definido en el objeto `server` (que permite crear el objeto `transporter` vía el comando `SMTP New transporter`), es **True**.
 
-The SMTP connection is automatically closed:
+La conexión SMTP se cierra automáticamente:
 
-*   when the `transporter` object is destroyed if the `.keepAlive` property is true,
-*   after each `.send( )` function execution if the `.keepAlive` property is set to false.
+*   cuando el objeto `transporter` se destruye si la `.keepAlive` es true,
+*   después de cada ejecución de la función `.send( )` si la propiedad `.keepAlive` es false.
 
 
 
@@ -257,27 +257,27 @@ The SMTP connection is automatically closed:
 
 #### Descripción
 
-The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
-> The `transporter` object must have already been created using the `SMTP New transporter` command.
+La función `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envía el objeto [*mail* object](EmailObjectClass.md#email-object) al servidor SMTP definido en el objeto `transporter` y devuelve un objeto estado<!-- END REF -->.
+> El objeto `transporter` debe haberse creado ya con la función `SMTP New transporter`.
 
-The method creates the SMTP connection if it is not already alive. If the `.keepAlive` property of the `transporter` object is **false**, the SMTP connection is automatically closed after the execution of `.send()`, otherwise it stays alive until the `transporter` object is destroyed. For more information, please refer to the [`SMTP New transporter`](#smtp-new-transporter) command description.
+El método crea la conexión SMTP si no está ya activa. Si la propiedad `.keepAlive` del objeto `transporter` es **false**, la conexión SMTP se cierra automáticamente tras la ejecución del `.send()`. En caso contrario, permanecerá activo hasta que se elimine el objeto `transporter`. Para más información, consulte la descripción del comando [`SMTP New transporter`](#smtp-new-transporter).
 
-In *mail*, pass a valid [`Email` object](EmailObjectClass.md#email-object) to send. The origination (where the email is coming from) and destination (one or more recipients) properties must be included, the remaining properties are optional.
+En *mail*, pase un objeto [`Email`](EmailObjectClass.md#email-object) válido a enviar. Las propiedades origen (de dónde viene el correo electrónico) y destino (uno o varios destinatarios) deben incluirse, el resto de propiedades son opcionales.
 
 
 #### Objeto devuelto
 
-The function returns an object describing the SMTP status of the operation. This object can contain the following properties:
+La función devuelve un objeto que describe el estado SMTP de la operación. Este objeto puede contener las siguientes propiedades:
 
-| Propiedad  | Tipo     | Descripción                                                                                      |
-| ---------- | -------- | ------------------------------------------------------------------------------------------------ |
-| success    | booleano | True si el envío tiene éxito, false en caso contrario                                            |
-| status     | number   | Status code returned by the SMTP server (0 in case of an issue unrelated to the mail processing) |
-| statusText | texto    | Status message returned by the SMTP server                                                       |
+| Propiedad  | Tipo     | Descripción                                                                                                              |
+| ---------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| success    | booleano | True si el envío tiene éxito, false en caso contrario                                                                    |
+| status     | number   | Código de estado devuelto por el servidor SMTP (0 en caso de un problema no relacionado con el procesamiento del correo) |
+| statusText | texto    | Mensaje de estado devuelto por el servidor SMTP                                                                          |
 
-In case of an issue unrelated to the SMTP processing (e.g. a mandatory property is missing in mail), 4D generates an error that you can intercept using a method installed by the `ON ERR CALL` command. Use the `GET LAST ERROR STACK` command for information about the error.
+En caso de un problema no relacionado con el procesamiento SMTP (por ejemplo, si falta una propiedad obligatoria en el correo), 4D genera un error que puede interceptar utilizando un método instalado por el comando `ON ERR CALL`. Utilice el comando `GET LAST ERROR STACK` para obtener información sobre el error.
 
-In this case, the resulting status object contains the following values:
+En este caso, el objeto estado resultante contiene los siguientes valores:
 
 | Propiedad  | Valor                  |
 | ---------- | ---------------------- |

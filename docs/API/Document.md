@@ -599,7 +599,7 @@ File icon [picture](../Concepts/picture.html).
 </details>
 
 <!-- REF #document.getText().Syntax -->
-**.getText**( { *charSetName* : Text } { ; } { *breakMode* : integer} ) : Text<br>**.getText**( { *charSetNum* : integer } { ; } { *breakMode* : integer} ) : Text<!-- END REF -->
+**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
 
 <!-- REF #document.getText().Params -->
@@ -662,18 +662,18 @@ When you execute this code:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r` (CR) as line delimiter.
+with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
  
 Here is another example with the same file, but a different line delimiter:
 
 ```4d
- $txt:=$myFile.getText("UTF-8", Document with CRLF)
+ $txt:=$myFile.getText("UTF-8", Document with LF)
 ```
 In this case, the contents of `$txt` are as follows: 
 
-"id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
+"id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-This time `\r\n` (CRLF) is used as line delimiter.
+This time `\n` (LF) is used as line delimiter.
 
 
 

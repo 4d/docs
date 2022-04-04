@@ -99,7 +99,7 @@ Modifica el contenido del botón de la imagen cuando el cursor del ratón pasa p
 
 
 ---
-## Utilizar el último cuadro como desactivado
+## Utilizar el Último cuadro como Desactivado
 
 Permite definir la última miniatura como la que se mostrará cuando el botón esté desactivado. La imagen en miniatura utilizada cuando el botón está desactivado es procesada por separado por 4D: cuando se combina esta opción con "Cambiar continuamente" y "Retroceder en bucle a la primera imagen", la última imagen se excluye de la secuencia asociada al botón y sólo aparece cuando está desactivado.
 

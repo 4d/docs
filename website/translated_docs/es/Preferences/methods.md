@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Methods Page
+title: Página Métodos
 ---
 
 This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.

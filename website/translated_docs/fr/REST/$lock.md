@@ -46,29 +46,15 @@ Une requête `?$lock` retourne un objet JSON avec `"result"=true` si l'opératio
 
 L'objet "__STATUS" retourné possède les propriétés suivantes :
 
-| Propriété    |                | Type    | Description                                                                                                                                                                |
-| ------------ | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |                |         | ***Disponible uniquement en cas de succès:***                                                                                                                              |
-| success      |                | boolean | vrai si l'action de verrouillage a été réussie (ou si l'entité est déjà verrouillée dans la session courante), sinon faux (non retourné dans ce cas).                      |
-|              |                |         | ***Disponible uniquement en cas d'erreur :***                                                                                                                              |
-| status       |                | number  | Code d'erreur, voir ci-dessous                                                                                                                                             |
-| statusText   |                | Texte   | Description de l'erreur, voir ci-dessous                                                                                                                                   |
-| lockKind     |                | number  | Code de verrouillage                                                                                                                                                       |
-| lockKindText |                | Texte   | "Locked by session" en cas de verrouillage par une session REST, "Locked by record" en cas de verrouillage par un process 4D                                               |
-| lockInfo     |                | object  | Information sur l'origine du verrouillage. Les propriétés retournées dépendent de l'origine du verrouillage (process 4D ou session REST).                                  |
-|              |                |         | ***Disponible uniquement pour un verrouillage par process 4D:***                                                                                                           |
-|              | task_id        | number  | ID du process                                                                                                                                                              |
-|              | user_name      | Texte   | Nom d'utilisateur de la session sur la machine                                                                                                                             |
-|              | user4d_alias   | Texte   | Nom ou alias de l'utilisateur 4D                                                                                                                                           |
-|              | user4d_id      | number  | Identifiant utilisateur dans le répertoire de la base 4D                                                                                                                   |
-|              | host_name      | Texte   | Nom de la machine                                                                                                                                                          |
-|              | task_name      | Texte   | Nom du process                                                                                                                                                             |
-|              | client_version | Texte   | Version du client                                                                                                                                                          |
-|              |                |         | ***Disponible uniquement pour un verrouillage par session REST :***                                                                                                        |
-|              | host           | Texte   | URL d'origine du verrouillage de l'entité (ex : "127.0.0.1:8043")                                                                                                          |
-|              | IPAddr         | Texte   | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                      |
-|              | recordNumber   | number  | Numéro de l'enregistrement verrouillé                                                                                                                                      |
-|              | userAgent      | Texte   | userAgent de l'origine du verouillage (ex : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+| Propriété    |  | Type    | Description                                                                                                                                           |
+| ------------ |  | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+|              |  |         | ***Disponible uniquement en cas de succès:***                                                                                                         |
+| success      |  | boolean | vrai si l'action de verrouillage a été réussie (ou si l'entité est déjà verrouillée dans la session courante), sinon faux (non retourné dans ce cas). |
+|              |  |         | ***Disponible uniquement en cas d'erreur :***                                                                                                         |
+| status       |  | number  | Code d'erreur, voir ci-dessous                                                                                                                        |
+| statusText   |  | Texte   | Description de l'erreur, voir ci-dessous                                                                                                              |
+| lockKind     |  | number  | Code de verrouillage                                                                                                                                  |
+| lockKindText |  | Texte   | "Locked by session" en cas de verrouillage par une session REST, "Locked by record" en cas de verrouillage par un process 4D                          |
 
 
 Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet *__STATUS* en cas d'erreur :
@@ -115,12 +101,6 @@ Dans un second navigateur (autre session), nous envoyons la même requête.
         "statusText":"Already Locked",
         "lockKind":7,
         "lockKindText":"Locked By Session",
-        "lockInfo":{
-            "host":"127.0.0.1:8043",
-            "IPAddr":"127.0.0.1",
-            "recordNumber": 7,
-            "userAgent": ""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36..."
-        }
     }
 }
 ```

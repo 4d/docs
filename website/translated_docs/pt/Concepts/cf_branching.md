@@ -6,7 +6,7 @@ title: Estruturas condicionais
 Uma estrutura de ramificação permite que os métodos testem uma condição e tomem caminhos alternativos, em função do resultado.
 
 
-## If...Else...End if
+## If... Else... End if
 
 A sintaxe formal da estrutura condicional `If... Else... End if` é:
 
@@ -56,6 +56,7 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("Não introduciu um nome.")
+ End if
  End if 
 ```
 
@@ -76,7 +77,7 @@ ou :
  End if
 ```
 
-## Case of...Else...End case
+## Case of... Else... End case
 
 A sintaxe da estrutura condicional  `Case of... Else... End case` é:
 ```4d
@@ -164,27 +165,38 @@ Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que
 
 ```4d
  Case of
-    :(vResult=1)
-       ... //declarações
-    :((vResult=1) & (vCondition#2)) //Esse caso nunca será detectado
-       ... //declarações
+    :(vResult=1) //Testa se o número é 1
+       ALERT("One.") //Se for 1, mostrar um alerta
+    :(vResult=2) //Testar se o número é 2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    :(vResult=3) //Testa se o número é 3
+       ALERT("Three.") //Se for 3, exibe um alerta
+    Else //Se não for 1, 2, ou 3, exibe um alerta
+       ALERT("It was not one, two, or three.")
  End case
 ```
 
 No código anterior, a presença da segunda condição não é detectada, já que o teste "vResult=1" ramifica o código antes de qualquer outro teste. Para que o código funcione corretamente, pode escrevê-lo assim:
 
 ```4d
- Case of
-    :((vResult=1) & (vCondition#2)) //esse caso será detectado primeiro
-       ... //declarações
-    :(vResult=1)
-       ... //declarações
- End case
+ If(vResult=1) //Teste se o número é 1
+    ALERT("One.") //If it is 1, display an alert
+ Else
+    If(vResult=2) //Teste se o número é  2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    Else
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if
 ```
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)
