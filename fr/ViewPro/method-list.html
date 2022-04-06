@@ -570,7 +570,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-14"></a><a href="#description-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La commande <code>VP Copy to object</code> copie les contenus, styles et formules de <em>rangeObj</em> dans un objet.</p>
+<p>The <code>VP Copy to object</code> command copies the contents, style and formulas from <em>rangeObj</em> to an object.</p>
 <p>Dans <em>rangeObj</em>, passez la plage de cellules contenant les valeurs, formatages et formules à copier. Si <em>rangeObj</em> est une plage combinée, seule la première est utilisée.</p>
 <p>Vous pouvez passer un paramètre facultatif <em>options</em> contenant les propriétés suivantes :</p>
 <table>
@@ -2882,23 +2882,23 @@ End case</span>
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>Objet plage</td></tr>
-<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>Date value to set</td></tr>
-<tr><td>timeValue</td><td>Heure</td><td>-&gt;</td><td>Time value to set</td></tr>
-<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format of value</td></tr>
+<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>Valeur date à fixer</td></tr>
+<tr><td>timeValue</td><td>Heure</td><td>-&gt;</td><td>Valeur heure à fixer</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format de la valeur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-77"></a><a href="#description-77" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>VP SET DATE TIME VALUE</code> command assigns a specified date and time value to a designated cell range.</p>
+<p>La commande <code>VP SET DATE TIME VALUE</code> assigne une valeur date et heure spécifique à une plage de cellule désignée.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
-<p>The <em>dateValue</em> parameter specifies a date value to be assigned to the <em>rangeObj</em>.</p>
-<p>The <em>timeValue</em> parameter specifies a time value (expressed in seconds) to be assigned to the <em>rangeObj</em>.</p>
-<p>The optional <em>formatPattern</em> defines a pattern for the <em>dateValue</em> and <em>timeValue</em> parameters. For information on patterns and formatting characters, please refer to the <a href="/docs/fr/ViewPro/configuring.html#date-and-time-formats">Date and time formats</a> section.</p>
+<p>Le paramètre <em>dateValue</em> indique une valeur date à assigner à <em>rangeObj</em>.</p>
+<p>Le paramètre <em>timeValue</em> indique une valeur heure (exprimée en secondes) à assigner à <em>rangeObj</em>.</p>
+<p>Le paramètre optionnel <em>formatPattern</em> définit un modèle pour les paramètres <em>dateValue</em> et <em>timeValue</em>. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section <a href="/docs/fr/ViewPro/configuring.html#date-and-time-formats">Format date et heure</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-70"></a><a href="#exemple-70" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value as the current date and time</span>
-<span class="hljs-function">VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>);Current time;Current date;vk pattern full date time)
-
-<span class="hljs-comment">//Set the cell value as the 18th of December</span>
-<span class="hljs-function">VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-literal">!2024-12-18!</span>;<span class="hljs-literal">?14:30:10?</span>;vk pattern sortable date time)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Attribuer la date et l'heure locales à la valeur de la cellule </span>
+<span class="hljs-function"> VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>);Current time;Current date;vk pattern full date time)
+ 
+ <span class="hljs-comment">//Attribuer le 18 décembre à la valeur de la cellule</span>
+<span class="hljs-function"> VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-literal">!2024-12-18!</span>;<span class="hljs-literal">?14:30:10?</span>;vk pattern sortable date time)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="voir-aussi-74"></a><a href="#voir-aussi-74" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="/docs/fr/ViewPro/configuring.html#cell-format">4D View Pro cell format</a><br/><a href="#vp-set-date-value">VP SET DATE VALUE</a><br/><a href="#vp-set-time-value">VP SET TIME VALUE</a><br/><a href="#vp-set-value">VP SET VALUE</a></p>
@@ -2910,34 +2910,34 @@ End case</span>
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>Objet plage</td></tr>
-<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>Date value to set</td></tr>
-<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format of value</td></tr>
+<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>Valeur date à fixer</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format de la valeur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-78"></a><a href="#description-78" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>VP SET DATE VALUE</code> command assigns a specified date value to a designated cell range.</p>
-<p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
-<p>The <em>dateValue</em> parameter specifies a date value to be assigned to the <em>rangeObj</em>.</p>
-<p>The optional <em>formatPattern</em> defines a pattern for the <em>dateValue</em> parameter. Pass any custom format or you can use one of the following constants:</p>
+<p>La commande <code>VP SET DATE VALUE</code> assigne une valeur date à une plage de cellules désignée.</p>
+<p>Dans <em>rangeObj</em>, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. If <em>rangeObj</em> includes multiple cells, the value specified will be repeated in each cell.</p>
+<p>Le paramètre <em>dateValue</em> indique une valeur date à assigner à <em>rangeObj</em>.</p>
+<p>Le paramètre optionnel <em>formatPattern</em> définit un modèle pour le paramètre <em>dateValue</em>. Passez un format personnalisé ou utilisez ou utilisez l'une des constantes suivantes :</p>
 <table>
 <thead>
-<tr><th>Constante</th><th>Description</th><th>Default US pattern</th></tr>
+<tr><th>Constante</th><th>Description</th><th>Configuration par défaut des US</th></tr>
 </thead>
 <tbody>
-<tr><td><code>vk pattern long date</code></td><td>ISO 8601 format for the full date</td><td>&quot;dddd, dd MMMM yyyy&quot;</td></tr>
-<tr><td><code>vk pattern month day</code></td><td>ISO 8601 format for the month and day</td><td>&quot;MMMM dd&quot;</td></tr>
-<tr><td><code>vk pattern short date</code></td><td>Abbreviated ISO 8601 format for the date</td><td>&quot;MM/dd/yyyy&quot;</td></tr>
-<tr><td><code>vk pattern year month</code></td><td>ISO 8601 format for the month and year</td><td>&quot;yyyy MMMM&quot;</td></tr>
+<tr><td><code>vk pattern long date</code></td><td>Format ISO 8601 long pour la date</td><td>&quot;dddd, dd MMMM yyyy&quot;</td></tr>
+<tr><td><code>vk pattern month day</code></td><td>Format ISO 8601 pour le mois et le jour</td><td>&quot;MMMM dd&quot;</td></tr>
+<tr><td><code>vk pattern short date</code></td><td>Format ISO 8601 court pour la date</td><td>&quot;MM/dd/yyyy&quot;</td></tr>
+<tr><td><code>vk pattern year month</code></td><td>Format ISO 8601 pour le mois et l'année</td><td>&quot;yyyy MMMM&quot;</td></tr>
 </tbody>
 </table>
-<p>For information on patterns and formatting characters, please refer to the <a href="/docs/fr/ViewPro/configuring.html#date-and-time-formats">Date and time formats</a> section.</p>
+<p>Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section <a href="/docs/fr/ViewPro/configuring.html#date-and-time-formats">Format date et heure</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-71"></a><a href="#exemple-71" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value to the current date</span>
-<span class="hljs-function">VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>);Current date))
-
-<span class="hljs-comment">//Set the cell value to a specific date with a designated format</span>
-<span class="hljs-function">VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">4</span>);<span class="hljs-function">Date</span>(<span class="hljs-string">"12/25/94"</span>);<span class="hljs-string">"d/m/yy "</span>)
-<span class="hljs-function">VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>);<span class="hljs-literal">!2005-01-15!</span>;vk pattern month day)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//Définir la valeur de la cellule à la date du jour</span>
+<span class="hljs-function"> VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>);Current date))
+ 
+ <span class="hljs-comment">//Définir la valeur de la cellule à une date spécifique avec un format désigné</span>
+<span class="hljs-function"> VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">4</span>);<span class="hljs-function">Date</span>(<span class="hljs-string">"12/25/94"</span>);<span class="hljs-string">"d/m/yy "</span>)
+<span class="hljs-function"> VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>);<span class="hljs-literal">!2005-01-15!</span>;vk pattern month day)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="voir-aussi-75"></a><a href="#voir-aussi-75" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="/docs/fr/ViewPro/configuring.html#cell-format">4D View Pro cell format</a><br/><a href="#vp-set-date-time-value">VP SET DATE TIME VALUE</a><br/><a href="#vp-set-value">VP SET VALUE</a></p>
@@ -2986,7 +2986,7 @@ End case</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-80"></a><a href="#description-80" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>VP SET FIELD</code> command assigns a 4D database virtual field to a designated cell range.</p>
-<p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify.</p>
+<p>Dans <em>rangeObj</em>, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify.</p>
 <p>The <em>field</em> parameter specifies a 4D database <a href="/docs/fr/ViewPro/formulas.html#referencing-fields-using-the-virtual-structure">virtual field</a> to be assigned to the <em>rangeObj</em>. The virtual structure name for <em>field</em> can be viewed in the formula bar. If any of the cells in <em>rangeObj</em> have existing content, it will be replaced by <em>field</em>.</p>
 <p>The optional <em>formatPattern</em> defines a pattern for the <em>field</em> parameter. You can pass any valid <a href="/docs/fr/ViewPro/configuring.html#cell-format">custom format</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-73"></a><a href="#exemple-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
@@ -3002,7 +3002,7 @@ End case</span>
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>Objet plage</td></tr>
-<tr><td>formula</td><td>Text</td><td>-&gt;</td><td>Formula or 4D method</td></tr>
+<tr><td>formula</td><td>Text</td><td>-&gt;</td><td>Formule ou méthode 4D</td></tr>
 <tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format of field</td></tr>
 </tbody>
 </table>
@@ -3120,7 +3120,7 @@ End case</span>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>Objet plage</td></tr>
 <tr><td>numberValue</td><td>Nombre</td><td>-&gt;</td><td>Number value to set</td></tr>
-<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format of value</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format de la valeur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-84"></a><a href="#description-84" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
@@ -3350,7 +3350,7 @@ End case</span>
 </thead>
 <tbody>
 <tr><td>vpAreaName</td><td>Object</td><td>-&gt;</td><td>Nom de la zone 4D View Pro</td></tr>
-<tr><td>sheetOptions</td><td>Object</td><td>-&gt;</td><td>Sheet option(s) to set</td></tr>
+<tr><td>sheetOptions</td><td>Object</td><td>-&gt;</td><td>Option(s) de la feuille à définir</td></tr>
 <tr><td>sheet</td><td>Object</td><td>-&gt;</td><td>Indice de la feuille (feuille courante si omis)</td></tr>
 </tbody>
 </table>
@@ -3473,7 +3473,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>Objet plage</td></tr>
 <tr><td>textValue</td><td>Text</td><td>-&gt;</td><td>Text value to set</td></tr>
-<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format of value</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format de la valeur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-93"></a><a href="#description-93" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
@@ -3494,8 +3494,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>Objet plage</td></tr>
-<tr><td>timeValue</td><td>Text</td><td>-&gt;</td><td>Time value to set</td></tr>
-<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format of value</td></tr>
+<tr><td>timeValue</td><td>Text</td><td>-&gt;</td><td>Valeur heure à fixer</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>Format de la valeur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-94"></a><a href="#description-94" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>

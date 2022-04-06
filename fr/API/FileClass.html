@@ -617,13 +617,13 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </code></pre>
 <p>... vous obtenez pour <code>$txt</code> :</p>
 <p>&quot;id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6&quot;</p>
-<p>with <code>\t</code> (tab) as separator and <code>\r\n</code> (CRLF) as line delimiter.</p>
+<p>avec <code>\t</code> (tab) comme séparateur et <code>\r\n</code> (CRLF) comme délimiteur de ligne.</p>
 <p>Voici un autre exemple avec le même fichier, mais un délimiteur de ligne différent :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$txt</span>:=<span class="hljs-variable">$myFile</span>.<span class="hljs-function">getText</span>(<span class="hljs-string">"UTF-8"</span>, Document with LF)
 </code></pre>
 <p>Dans ce cas, le contenu de <code>$txt</code> est :</p>
 <p>&quot;id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6&quot;</p>
-<p>This time <code>\n</code> (LF) is used as line delimiter.</p>
+<p>Cette fois-ci <code>\n</code> (LF) est utilisé comme délimiteur de ligne.</p>
 <h2><a class="anchor" aria-hidden="true" id="hidden"></a><a href="#hidden" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.hidden</h2>
 <p><details><summary>Historique</summary></p>
 <table>

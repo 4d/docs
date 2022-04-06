@@ -104,18 +104,13 @@ var <span class="hljs-variable">$hello</span> : Text
 <ul>
 <li>Project folder
 <ul>
-<li>Project
-<ul>
-<li>Sources
-<ul>
-<li>Classes
-<ul>
-<li>Polygon.4dm</li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li>Project</li>
 </ul></li>
 </ul>
+<pre><code class="hljs">    * Sources
+        - Classes
+            + Polygon.4dm
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="deleting-a-class"></a><a href="#deleting-a-class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleting a class</h3>
 <p>To delete an existing class, you can:</p>
 <ul>
@@ -225,7 +220,7 @@ var <span class="hljs-variable">$hello</span> : Text
 Function</span><span class="hljs-function"> getFullname</span>()-&gt;<span class="hljs-variable">$fullname </span>: Text
     <span class="hljs-variable">$fullname</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-function">Uppercase</span>(<span class="hljs-literal">This</span>.lastName)
 </code></pre>
-<p>For a class function, the <code>Current method name</code> command returns: &quot;<em>&lt;ClassName&gt;.&lt;FunctionName&gt;</em>&quot;, for example &quot;MyClass.myMethod&quot;.</p>
+<p>For a class function, the <code>Current method name</code> command returns: <code>&lt;ClassName&gt;.&lt;FunctionName&gt;</code>, for example &quot;MyClass.myMethod&quot;.</p>
 <p>In the application code, class functions are called as member methods of the object instance and can receive <a href="#class-function-parameters">parameters</a> if any. The following syntaxes are supported:</p>
 <ul>
 <li>use of the <code>()</code> operator. For example, <code>myObject.methodName(&quot;hello&quot;)</code></li>
@@ -249,15 +244,13 @@ Function</span><span class="hljs-function"> getFullname</span>()-&gt;<span class
 <blockquote>
 <p>If the type is not stated, the parameter will be defined as <code>Variant</code>.</p>
 </blockquote>
-<blockquote>
 <p>The <a href="/docs/en/Concepts/parameters.html#sequential-parameters">classic 4D syntax</a> for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> add</span>(<span class="hljs-variable">$x </span>: Integer)<span class="hljs-keyword">
-  var</span> <span class="hljs-variable">$2</span>; <span class="hljs-variable">$value </span>: Integer<span class="hljs-keyword">
-  var</span> <span class="hljs-variable">$0 </span>: Text
-  <span class="hljs-variable">$value</span>:=<span class="hljs-variable">$x</span>+<span class="hljs-variable">$2</span>
-  <span class="hljs-variable">$0</span>:=<span class="hljs-function">String</span>(<span class="hljs-variable">$value</span>)
+    var</span> <span class="hljs-variable">$2</span>; <span class="hljs-variable">$value </span>: Integer<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$0 </span>: Text
+    <span class="hljs-variable">$value</span>:=<span class="hljs-variable">$x</span>+<span class="hljs-variable">$2</span>
+    <span class="hljs-variable">$0</span>:=<span class="hljs-function">String</span>(<span class="hljs-variable">$value</span>)
 </code></pre>
-</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="return-value"></a><a href="#return-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Return value</h4>
 <p>You declare the return parameter (optional) by adding an arrow (<code>-&gt;</code>) and the return parameter definition after the input parameter(s) list, or a colon (<code>:</code>) and the return parameter type only. For example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> add</span>(<span class="hljs-variable">$x </span>: Variant; <span class="hljs-variable">$y </span>: Integer)-&gt;<span class="hljs-variable">$result </span>: Integer
@@ -287,7 +280,7 @@ var</span> <span class="hljs-variable">$area </span>: Real
 <span class="hljs-variable">$rect</span>:=cs.Rectangle.<span class="hljs-function">new</span>(<span class="hljs-number">50</span>;<span class="hljs-number">100</span>)  
 <span class="hljs-variable">$area</span>:=<span class="hljs-variable">$rect</span>.<span class="hljs-function">getArea</span>() <span class="hljs-comment">//5000</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="example-1-2"></a><a href="#example-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <p>This example uses the <a href="/docs/en/Concepts/parameters.html#return-expression"><code>return expression</code></a>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> getRectArea</span>(<span class="hljs-variable">$width </span>: Integer; <span class="hljs-variable">$height </span>: Integer) : Integer<span class="hljs-keyword">
     If</span> (<span class="hljs-variable">$width </span>&gt; <span class="hljs-number">0</span> &amp;&amp; <span class="hljs-variable">$height </span>&gt; <span class="hljs-number">0</span>)
@@ -318,7 +311,7 @@ var</span> <span class="hljs-variable">$area </span>: Real
 <blockquote>
 <p>Assigning <em>undefined</em> to an object property clears its value while preserving its type. In order to do that, the <code>Function get</code> is first called to retrieve the value type, then the <code>Function set</code> is called with an empty value of that type.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="example-1-3"></a><a href="#example-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-1-2"></a><a href="#example-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: Person.4dm</span><span class="hljs-keyword">
 
 Class constructor</span>(<span class="hljs-variable">$firstname </span>: Text; <span class="hljs-variable">$lastname </span>: Text)
@@ -338,7 +331,7 @@ Function</span><span class="hljs-function"> set fullName</span>( <span class="hl
 <span class="hljs-variable">$fullName</span>:=<span class="hljs-variable">$person</span>.fullName <span class="hljs-comment">// Function get fullName() is called</span>
 <span class="hljs-variable">$person</span>.fullName:=<span class="hljs-string">"John Smith"</span> <span class="hljs-comment">// Function set fullName() is called</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-2-1"></a><a href="#example-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> get fullAddress</span>()-&gt;<span class="hljs-variable">$result </span>: Object
     
     <span class="hljs-variable">$result</span>:=New object
@@ -358,7 +351,7 @@ Function</span><span class="hljs-function"> set fullName</span>( <span class="hl
 </code></pre>
 <p>A class constructor function, which can accept <a href="#parameters">parameters</a>, can be used to define a user class.</p>
 <p>In that case, when you call the <a href="/docs/en/API/ClassClass.html#new"><code>new()</code></a> function, the class constructor is called with the parameters optionally passed to the <code>new()</code> function.</p>
-<p>For a class constructor function, the <code>Current method name</code> command returns: &quot;<em>&lt;ClassName&gt;:constructor</em>&quot;, for example &quot;MyClass:constructor&quot;.</p>
+<p>For a class constructor function, the <code>Current method name</code> command returns: <code>&lt;ClassName&gt;:constructor</code>, for example &quot;MyClass:constructor&quot;.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example:</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Class: MyClass</span>
 <span class="hljs-comment">// Class constructor of MyClass</span>
@@ -408,7 +401,9 @@ Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
         <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.height*<span class="hljs-literal">This</span>.width
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="super"></a><a href="#super" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Super</code></h3>
-<h4><a class="anchor" aria-hidden="true" id="super--paramparamn----object"></a><a href="#super--paramparamn----object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Super {( param{;...;paramN} )} {-&gt; Object}</h4>
+<h4><a class="anchor" aria-hidden="true" id="syntax-4"></a><a href="#syntax-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h4>
+<pre><code class="hljs css language-4d">Super {( param{;...;paramN} )} {-&gt; Object} 
+</code></pre>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th></th><th>Description</th></tr>
@@ -420,26 +415,26 @@ Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
 </table>
 <p>The <code>Super</code> keyword allows calls to the <code>superclass</code>, i.e. the parent class.</p>
 <p><code>Super</code> serves two different purposes:</p>
+<ol>
+<li>Inside a <a href="#class-constructor">constructor code</a>, <code>Super</code> is a command that allows to call the constructor of the superclass. When used in a constructor, the <code>Super</code> command appears alone and must be used before the <code>This</code> keyword is used.</li>
+</ol>
 <ul>
-<li>inside a <a href="#class-constructor">constructor code</a>, <code>Super</code> is a command that allows to call the constructor of the superclass. When used in a constructor, the <code>Super</code> command appears alone and must be used before the <code>This</code> keyword is used.
-<ul>
-<li><p>If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.</p></li>
-<li><p>If the <code>This</code> command is called on an object whose superclasses have not been constructed, error -10743 is generated.</p></li>
-<li><p>If <code>Super</code> is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.</p></li>
-</ul></li>
+<li>If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.</li>
+<li>If the <code>This</code> command is called on an object whose superclasses have not been constructed, error -10743 is generated.</li>
+<li>If <code>Super</code> is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.</li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// inside myClass constructor</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$text1</span>; <span class="hljs-variable">$text2 </span>: Text
 <span class="hljs-function">Super</span>(<span class="hljs-variable">$text1</span>) <span class="hljs-comment">//calls superclass constructor with a text param</span>
 <span class="hljs-literal">This</span>.param:=<span class="hljs-variable">$text2 </span><span class="hljs-comment">// use second param</span>
 </code></pre>
-<ul>
-<li>inside a <a href="#class-function">class member function</a>, <code>Super</code> designates the prototype of the superclass and allows to call a function of the superclass hierarchy.</li>
-</ul>
+<ol start="2">
+<li>Inside a <a href="#class-function">class member function</a>, <code>Super</code> designates the prototype of the superclass and allows to call a function of the superclass hierarchy.</li>
+</ol>
 <pre><code class="hljs css language-4d">Super.<span class="hljs-function">doSomething</span>(<span class="hljs-number">42</span>) <span class="hljs-comment">//calls "doSomething" function  </span>
 <span class="hljs-comment">//declared in superclasses</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="example-1-4"></a><a href="#example-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-1-3"></a><a href="#example-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <p>This example illustrates the use of <code>Super</code> in a class constructor. The command is called to avoid duplicating the constructor parts that are common between <code>Rectangle</code> and <code>Square</code> classes.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Class: Rectangle</span><span class="hljs-keyword">
 Class constructor</span>(<span class="hljs-variable">$width </span>: Integer; <span class="hljs-variable">$height </span>: Integer)
@@ -473,7 +468,7 @@ Function</span><span class="hljs-function"> getArea</span>()
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$0</span>)
     <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.height*<span class="hljs-literal">This</span>.width
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="example-2-1"></a><a href="#example-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-2-2"></a><a href="#example-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <p>This example illustrates the use of <code>Super</code> in a class member method. You created the <code>Rectangle</code> class with a function:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: Rectangle</span><span class="hljs-keyword">
  
@@ -497,7 +492,9 @@ var</span> <span class="hljs-variable">$message </span>: Text
 <span class="hljs-variable">$message</span>:=<span class="hljs-variable">$square</span>.<span class="hljs-function">description</span>() <span class="hljs-comment">//I have 4 sides which are all equal</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="this"></a><a href="#this" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>This</code></h3>
-<h4><a class="anchor" aria-hidden="true" id="this---object"></a><a href="#this---object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>This -&gt; Object</h4>
+<h4><a class="anchor" aria-hidden="true" id="syntax-5"></a><a href="#syntax-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-literal">This</span> -&gt; Object
+</code></pre>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th></th><th>Description</th></tr>
@@ -506,7 +503,7 @@ var</span> <span class="hljs-variable">$message </span>: Text
 <tr><td>Result</td><td>object</td><td>&lt;-</td><td>Current object</td></tr>
 </tbody>
 </table>
-<p>The <code>This</code> keyword returns a reference to the currently processed object. In 4D, it can be used in <a href="https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html">different contexts</a>.</p>
+<p>The <code>This</code> keyword returns a reference to the currently processed object. In 4D, it can be used in <a href="https://doc.4d.com/4Dv19/help/command/page1470.html">different contexts</a>.</p>
 <p>In most cases, the value of <code>This</code> is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.</p>
 <p>When a formula is called as a member method of an object, its <code>This</code> is set to the object the method is called on. For example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"prop"</span>;<span class="hljs-number">42</span>;<span class="hljs-string">"f"</span>;<span class="hljs-function">Formula</span>(<span class="hljs-literal">This</span>.prop))
@@ -539,7 +536,6 @@ Function</span> f()
 <span class="hljs-variable">$o</span>.a:=<span class="hljs-number">5</span>
 <span class="hljs-variable">$o</span>.b:=<span class="hljs-number">3</span>
 <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$o</span>.f() <span class="hljs-comment">//8</span>
-
 </code></pre>
 <p>In this example, the object assigned to the variable $o doesn't have its own <em>f</em> property, it inherits it from its class. Since <em>f</em> is called as a method of $o, its <code>This</code> refers to $o.</p>
 <h2><a class="anchor" aria-hidden="true" id="class-commands"></a><a href="#class-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Class commands</h2>
