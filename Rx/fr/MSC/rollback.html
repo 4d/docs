@@ -67,7 +67,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/MSC/rollback.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Page Retour en arrière</h1></header><article><div><span><p>La page Retour arrière du CSM permet d’accéder à la fonction de retour en arrière parmi les opérations effectuées dans le fichier de données. Elle s’apparente à une fonction d’annulation multi-niveaux. Elle est utile notamment lorsqu’un enregistrement a été supprimé par erreur dans la base de données.</p>
-<p>This function is only available when the application functions with a data log file.</p>
+<p>Pour que cette fonction soit accessible, il est impératif que l'application travaille avec un fichier d’historique.</p>
 <p><img src="/docs/Rx/assets/en/MSC/MSC_rollback1.png" alt=""></p>
 <blockquote>
 <p>Si la base de données est chiffrée et si aucune clé de données valide correspondant au fichier d'historique ouvert n'a été fournie, les valeurs chiffrées ne s'affichent pas dans la colonne <strong>Valeurs</strong> et un dialogue s'affiche, demandant la saisie d'une phrase secrète ou de la clé de données, si vous cliquez sur le bouton <strong>Revenir en arrière</strong>.</p>
