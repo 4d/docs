@@ -206,7 +206,7 @@ ELF または WLF を選択すると、選択されたフォーマットに対�
 | CS_URI_STEM  | ○   | ○   | クエリ引数のないリクエストのパート                                                |
 | DATE           | ○   | ○   | DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年                        |
 | METHOD         | ○   | ○   | サーバーへ送られたリクエスト用の HTTPメソッド                                        |
-| PATH_ARGS      |     | ○   | CGI parameters: string located after the “$” character           |
+| PATH_ARGS      |     | ○   | CGI引数: "$" の後に続く文字列                                              |
 | STATUS         | ○   | ○   | サーバーの返答                                                          |
 | TIME           | ○   | ○   | HH: 時間、MM: 分、SS: 秒                                               |
 | TRANSFER_TIME  | ○   | ○   | 返答を作成するためにサーバーが要求した時間                                            |

@@ -4,7 +4,9 @@ title: Encrypt Page
 sidebar_label: Encrypt Page
 ---
 
-You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual.
+You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. 
+
+> For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post. 
 
 A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 
