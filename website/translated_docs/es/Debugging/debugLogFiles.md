@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Description of log files
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Los historiales suelen iniciarse o detenerse utilizando selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) o [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) y se almacenan en la carpeta [Logs folder](Project/architecture.md#logs) del proyecto.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
@@ -17,7 +17,7 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [ORDA client requests log file](#orda-client-requests)
 
-> When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
+> Cuando un archivo de historial puede generarse tanto en 4D Server como en el cliente remoto, se añade la palabra "Server" al nombre del archivo de historial del lado del servidor, por ejemplo "4DRequestsLogServer.txt"
 
 Los archivos de historial comparten algunos campos para que pueda establecer una cronología y hacer conexiones entre las entradas mientras depura:
 
@@ -246,14 +246,14 @@ Los archivos de historial pueden producirse en dos versiones:
     Para iniciar este historial:
 
     ```4d
-    SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
-    SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
-    SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+    SET DATABASE PARAMETER(SMTP Log;1) //iniciar log SMTP 
+    SET DATABASE PARAMETER(POP3 Log;1) //iniciar log POP3 
+    SET DATABASE PARAMETER(IMAP Log;1) //iniciar log IMAP
     ```
 
-> 4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](ServerWindow/maintenance.md) of the 4D Server administration window.   
+> 4D Server: clic en el botón **Iniciar los historiales de peticiones y de depuración** en la página [Mantenimiento](ServerWindow/maintenance.md) ode la ventana de administración de 4D Server.   
 
-      This log path is returned by the `Get 4D file` command.
+      Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 *   una versión extendida:
     *   attachment(s) included no automatic recycling

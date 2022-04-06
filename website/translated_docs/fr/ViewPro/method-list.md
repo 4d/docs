@@ -683,10 +683,10 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 | v19 R4  | Ajout         |
 </details>
 
-<!-- REF #_method_.Copy to object.Syntax -->**VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object
+<!-- REF #_method_.VP Copy to object.Syntax -->**VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object
 <!-- END REF -->  
 
-<!-- REF #_method_.Copy to object.Params -->
+<!-- REF #_method_.VP Copy to object.Params -->
 
 | Paramètres | Type   |    | Description                              |
 | ---------- | ------ | -- | ---------------------------------------- |
@@ -696,7 +696,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 <!-- END REF -->  
 #### Description
 
-La commande `VP Copy to object` <!-- REF #_method_.Copy to object.Summary -->copie les contenus, styles et formules de *rangeObj* dans un objet<!-- END REF -->.
+The `VP Copy to object` command <!-- REF #_method_.VP Copy to object.Summary -->copies the contents, style and formulas from *rangeObj* to an object<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage de cellules contenant les valeurs, formatages et formules à copier. Si *rangeObj* est une plage combinée, seule la première est utilisée.
 
@@ -3857,36 +3857,36 @@ End case
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
-| Paramètres    | Type   |    | Description       |
-| ------------- | ------ | -- | ----------------- |
-| rangeObj      | Object | -> | Objet plage       |
-| dateValue     | Date   | -> | Date value to set |
-| timeValue     | Heure  | -> | Time value to set |
-| formatPattern | Text   | -> | Format of value   |
+| Paramètres    | Type   |    | Description          |
+| ------------- | ------ | -- | -------------------- |
+| rangeObj      | Object | -> | Objet plage          |
+| dateValue     | Date   | -> | Valeur date à fixer  |
+| timeValue     | Heure  | -> | Valeur heure à fixer |
+| formatPattern | Text   | -> | Format de la valeur  |
 
 <!-- END REF -->  
 
 #### Description
 
-The `VP SET DATE TIME VALUE` command <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->assigns a specified date and time value to a designated cell range<!-- END REF -->.
+La commande `VP SET DATE TIME VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->assigne une valeur date et heure spécifique à une plage de cellule désignée<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
+Le paramètre *dateValue* indique une valeur date à assigner à *rangeObj*.
 
-The *timeValue* parameter specifies a time value (expressed in seconds) to be assigned to the *rangeObj*.
+Le paramètre *timeValue* indique une valeur heure (exprimée en secondes) à assigner à *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* and *timeValue* parameters. For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
+Le paramètre optionnel *formatPattern* définit un modèle pour les paramètres *dateValue* et *timeValue*. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format date et heure](configuring.md#date-and-time-formats).
 
 #### Exemple
 
 
 ```4d
-//Set the cell value as the current date and time
-VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
-
-//Set the cell value as the 18th of December
-VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
+//Attribuer la date et l'heure locales à la valeur de la cellule 
+ VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
+ 
+ //Attribuer le 18 décembre à la valeur de la cellule
+ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
 #### Voir aussi
@@ -3900,44 +3900,44 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-| Paramètres    | Type   |    | Description       |
-| ------------- | ------ | -- | ----------------- |
-| rangeObj      | Object | -> | Objet plage       |
-| dateValue     | Date   | -> | Date value to set |
-| formatPattern | Text   | -> | Format of value   |
+| Paramètres    | Type   |    | Description         |
+| ------------- | ------ | -- | ------------------- |
+| rangeObj      | Object | -> | Objet plage         |
+| dateValue     | Date   | -> | Valeur date à fixer |
+| formatPattern | Text   | -> | Format de la valeur |
 
 <!-- END REF -->  
 
 #### Description
 
-The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+La commande `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigne une valeur date à une plage de cellules désignée<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
+Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
-The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
+Le paramètre *dateValue* indique une valeur date à assigner à *rangeObj*.
 
-The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pass any custom format or you can use one of the following constants:
+Le paramètre optionnel *formatPattern* définit un modèle pour le paramètre *dateValue*. Passez un format personnalisé ou utilisez ou utilisez l'une des constantes suivantes :
 
-| Constante               | Description                              | Default US pattern   |
-| ----------------------- | ---------------------------------------- | -------------------- |
-| `vk pattern long date`  | ISO 8601 format for the full date        | "dddd, dd MMMM yyyy" |
-| `vk pattern month day`  | ISO 8601 format for the month and day    | "MMMM dd"            |
-| `vk pattern short date` | Abbreviated ISO 8601 format for the date | "MM/dd/yyyy"         |
-| `vk pattern year month` | ISO 8601 format for the month and year   | "yyyy MMMM"          |
+| Constante               | Description                             | Configuration par défaut des US |
+| ----------------------- | --------------------------------------- | ------------------------------- |
+| `vk pattern long date`  | Format ISO 8601 long pour la date       | "dddd, dd MMMM yyyy"            |
+| `vk pattern month day`  | Format ISO 8601 pour le mois et le jour | "MMMM dd"                       |
+| `vk pattern short date` | Format ISO 8601 court pour la date      | "MM/dd/yyyy"                    |
+| `vk pattern year month` | Format ISO 8601 pour le mois et l'année | "yyyy MMMM"                     |
 
-For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
+Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format date et heure](configuring.md#date-and-time-formats).
 
 
 #### Exemple
 
 
 ```4d
-//Set the cell value to the current date
-VP SET DATE VALUE(VP Cell("ViewProArea";4;2);Current date))
-
-//Set the cell value to a specific date with a designated format
-VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
-VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
+//Définir la valeur de la cellule à la date du jour
+ VP SET DATE VALUE(VP Cell("ViewProArea";4;2);Current date))
+ 
+ //Définir la valeur de la cellule à une date spécifique avec un format désigné
+ VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
+ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 ```
 
 #### Voir aussi
@@ -4006,7 +4006,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
+Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
 
 The *field* parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
@@ -4027,11 +4027,11 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Paramètres    | Type   |    | Description          |
-| ------------- | ------ | -- | -------------------- |
-| rangeObj      | Object | -> | Objet plage          |
-| formula       | Text   | -> | Formula or 4D method |
-| formatPattern | Text   | -> | Format of field      |
+| Paramètres    | Type   |    | Description           |
+| ------------- | ------ | -- | --------------------- |
+| rangeObj      | Object | -> | Objet plage           |
+| formula       | Text   | -> | Formule ou méthode 4D |
+| formatPattern | Text   | -> | Format of field       |
 
 <!-- END REF -->  
 
@@ -4196,7 +4196,7 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 | ------------- | ------ | -- | ------------------- |
 | rangeObj      | Object | -> | Objet plage         |
 | numberValue   | Nombre | -> | Number value to set |
-| formatPattern | Text   | -> | Format of value     |
+| formatPattern | Text   | -> | Format de la valeur |
 
 <!-- END REF -->  
 
@@ -4514,7 +4514,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 | Paramètres   | Type   |    | Description                                     |
 | ------------ | ------ | -- | ----------------------------------------------- |
 | vpAreaName   | Object | -> | Nom de la zone 4D View Pro                      |
-| sheetOptions | Object | -> | Sheet option(s) to set                          |
+| sheetOptions | Object | -> | Option(s) de la feuille à définir               |
 | sheet        | Object | -> | Indice de la feuille (feuille courante si omis) |
 
 <!-- END REF -->  
@@ -4682,11 +4682,11 @@ With a page break:
 
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
-| Paramètres    | Type   |    | Description       |
-| ------------- | ------ | -- | ----------------- |
-| rangeObj      | Object | -> | Objet plage       |
-| textValue     | Text   | -> | Text value to set |
-| formatPattern | Text   | -> | Format of value   |
+| Paramètres    | Type   |    | Description         |
+| ------------- | ------ | -- | ------------------- |
+| rangeObj      | Object | -> | Objet plage         |
+| textValue     | Text   | -> | Text value to set   |
+| formatPattern | Text   | -> | Format de la valeur |
 
 <!-- END REF -->  
 
@@ -4717,11 +4717,11 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
-| Paramètres    | Type   |    | Description       |
-| ------------- | ------ | -- | ----------------- |
-| rangeObj      | Object | -> | Objet plage       |
-| timeValue     | Text   | -> | Time value to set |
-| formatPattern | Text   | -> | Format of value   |
+| Paramètres    | Type   |    | Description          |
+| ------------- | ------ | -- | -------------------- |
+| rangeObj      | Object | -> | Objet plage          |
+| timeValue     | Text   | -> | Valeur heure à fixer |
+| formatPattern | Text   | -> | Format de la valeur  |
 
 <!-- END REF -->  
 

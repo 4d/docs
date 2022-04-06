@@ -726,7 +726,7 @@ donde:
 
 *   **comparator**: symbol that compares *attributePath* and *value*. The following symbols are supported:
 
-    | Comparison                           | Symbol(s)   | Comentario                                                                                                     |
+    | Comparison                           | Símbolo(s)  | Comentario                                                                                                     |
     | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
     | Igual a                              | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
     |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
@@ -748,10 +748,10 @@ donde:
     *   in case of a query with an IN comparator, value must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, " characters must be escaped with "\").
 *   **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
 
-    | Conjunction | Symbol(s)               |
-    | ----------- | ----------------------- |
-    | AND         | &, &&, and              |
-    | O           | &#124;,&#124;&#124;, or |
+    | Conjunción | Símbolo(s)              |
+    | ---------- | ----------------------- |
+    | AND        | &, &&, and              |
+    | O          | &#124;,&#124;&#124;, or |
 
 *   **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
 > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).

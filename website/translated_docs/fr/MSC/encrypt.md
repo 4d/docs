@@ -17,19 +17,19 @@ Un nouveau dossier est créé à chaque opération de chiffrement/déchiffrement
 Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vos données à l'aide du CSM :
 
 1. Dans l'éditeur de structure, cochez l'attribut **Chiffrable** pour chaque table dont vous souhaitez chiffrer les données. Consultez la section "Propriétés des tables".
-2. Ouvrez la page Chiffrement du CSM. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](assets/en/MSC/MSC_encrypt2.png)<p> This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note : **Le même message s'affiche lorsque le statut **Chiffrable** a été modifié dans un fichier de données déjà chiffré ou après le déchiffrement d'un fichier de données (voir ci-dessous).
+2. Ouvrez la page Chiffrement du CSM. Si vous ouvrez la page sans définir les tables comme étant **Chiffrables**, le message suivant s'affiche : ![](assets/en/MSC/MSC_encrypt1.png) Sinon, le message suivant s'affiche : ![](assets/en/MSC/MSC_encrypt2.png)<p> Cela signifie que le statut **Chiffrable** d'au moins une table a été modifié et que le fichier de données n'a pas encore été chiffré. **Note : **Le même message s'affiche lorsque le statut **Chiffrable** a été modifié dans un fichier de données déjà chiffré ou après le déchiffrement d'un fichier de données (voir ci-dessous).
 3. Cliquez sur le bouton de Chiffrement.  
    ![](assets/en/MSC/MSC_encrypt3.png)  
    Vous serez ensuite invité à saisir une phrase secrète pour votre fichier de données : ![](assets/fr/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de chiffrement des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
 4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
-Le processus de chiffrement est alors lancé. If the MSC was opened in standard mode, the application is reopened in maintenance mode.
+Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, l'application est rouverte en mode maintenance.
 
 4D propose de sauvegarder la clé de chiffrement (voir le paragraphe [Sauvegarder la clé de chiffrement](#saving-the-encryption-key) ci-dessous). Vous pouvez la sauvegarder à ce moment précis ou bien ultérieurement. Vous pouvez également ouvrir le fichier d'historique du chiffrement.
 
 Si le processus de chiffrement est réussi, la page Chiffrement affiche les boutons Opérations de maintenance liées au chiffrement.
 
-**Attention :** Durant l'opération de chiffrement, 4D créé un nouveau fichier de données vide et y insère des données à partir du fichier de données original. Les enregistrements correspondant aux tables "chiffrées" sont chiffrés puis copiés ; les autres enregistrements sont uniquement copiés (une opération de compactage est également exécutée). Si l'opération est réussie, le fichier de données original est déplacé vers un dossier "Replaced Files (Encrypting)". If you intend to deliver an encrypted data file, make sure to move/remove any unencrypted data file from the application folder beforehand.
+**Attention :** Durant l'opération de chiffrement, 4D créé un nouveau fichier de données vide et y insère des données à partir du fichier de données original. Les enregistrements correspondant aux tables "chiffrées" sont chiffrés puis copiés ; les autres enregistrements sont uniquement copiés (une opération de compactage est également exécutée). Si l'opération est réussie, le fichier de données original est déplacé vers un dossier "Replaced Files (Encrypting)". Si vous souhaitez transmettre un fichier de données chiffré, assurez-vous d'avoir préalablement déplacé/retiré tout fichier de données non chiffrées du dossier de l'application.
 
 ## Opérations de maintenance liées au chiffrement
 When an application is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](assets/fr/MSC/MSC_encrypt6.png)
@@ -77,17 +77,17 @@ Le fichier de données est entièrement déchiffré et un message de confirmatio
 
 ## Sauvegarder la clé de chiffrement
 
-4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. Storing this file on an external device such a USB key will facilitate the use of an encrypted application, since the user would only need to connect the device to provide the key before opening the application in order to access encrypted data.
+4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une application chiffrée, étant donné que l'utilisateur connecterait cet appareil uniquement pour fournir la clé avant d'ouvrir l'application et accéder aux données chiffrées.
 
 Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phrase secrète est fournie :
 
-- when the application is encrypted for the first time,
-- when the application is re-encrypted with a new passphrase.
+- lorsque l'application est chiffrée pour la première fois,
+- lorsque l'application est re-chiffrée avec une nouvelle phrase secrète.
 
 Les clés de chiffrement successives peuvent être sauvegardées sur le même appareil.
 
 ## Fichier d'historique
-After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
+Une fois qu'une opération de chiffrement est terminée, 4D génère un fichier dans le dossier Logs de l'application. Il est créé au format XML et nommé "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
 Chaque fois qu'un nouveau fichier d'historique est généré, un bouton Voir le compte rendu s'affiche dans la page CSM.
 

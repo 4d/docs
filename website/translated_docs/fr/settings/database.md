@@ -65,24 +65,24 @@ Three location options are provided:
 
 -   **Sorting order appropriate for searching**: This option is only displayed when the Japanese language is selected. Modifies the interpretation of characters such as the "Katakana-Hiragana Prolonged Sound Mark" or "長音記号" or the "Japanese Iteration Marks" such as "ゝ" or "ゞ". Typical Japanese speaker is likely to prefer the results when the setting is enabled.
 
-#### Support of Mecab (Japanese version)
+#### Prise en charge de Mecab (version japonaise)
 
-On Japanese systems, 4D supports the *Mecab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
+Sur les systèmes japonais, 4D prend en charge la bibliothèque *Mecab*, avec un algorithme d'indexation pour les mots-clés particulièrement adaptés à la langue japonaise.
 
-This algorithm is used by default in Japanese versions of 4D. The files required for the *Mecab* library are installed in the **mecab** folder of the **Resources** folder for 4D applications (Japanese versions only).
+Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Les fichiers requis pour la bibliothèque *Mecab* sont installés dans le dossier **mecab** du dossier **Resources** pour les applications 4D (versions japonaises uniquement).
 
-If needed, you can disable the use of the *Mecab* algorithm and use the conventional *ICU* library.
+Si nécessaire, vous pouvez désactiver l'utilisation de l'algorithme *Mecab* et utiliser la bibliothèque conventionnelle *ICU* (International Components for Unicode).
 
-To disable *Mecab*, just check the **Consider only non-alphanumeric chars for keywords** option:
+Pour désactiver *Mecab*, il suffit de cocher la case **N'utiliser que les caractères non alphanumériques pour les mots clés** :
 
 
 ![](assets/en/settings/non-alphanumeric-chars.png)
 
-> **Note:** You can also disable the use of Mecab by deleting or renaming the Resources/mecab folder of your 4D Japanese application.
+> **Note :** Vous pouvez également désactiver l'utilisation de Mecab en supprimant ou en renommant le dossier Resources/mecab de votre application japonaise 4D.
 
 ## Memory page
 
-You use the settings on this tab to configure the cache memory for the database.
+Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la base.
 
 ### Database Cache Settings
 
