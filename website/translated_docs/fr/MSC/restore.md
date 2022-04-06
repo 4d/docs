@@ -4,32 +4,32 @@ title: Page restitution
 sidebar_label: Page restitution
 ---
 
-You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
+La page **Restitution** du Centre de sécurité et de maintenance vous permet de restituer manuellement une archive de l'application courante. Cette page propose plusieurs options permettant de contrôler la restitution :
 
 ![](assets/en/MSC/MSC_restore.png)
 
-> 4D automatic recovery systems restore applications and include data log file when necessary.
+> Les systèmes de restitution automatique de 4D restituent les applications et incluent le fichier d'historique si nécessaire.
 
-The list found in the left part of the window displays any existing backups of the application. You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location. Il est alors ajouté à la liste des archives.
+La liste située dans la partie gauche de la fenêtre affiche les sauvegardes existantes de l'application. Vous pouvez également cliquer sur le bouton **Parcourir...** situé sous la zone afin d’ouvrir tout autre fichier d’archive provenant d’un autre emplacement. Il est alors ajouté à la liste des archives.
 
 Lorsque vous sélectionnez une sauvegarde dans cette liste, la partie droite de la fenêtre affiche les informations relatives à cette sauvegarde :
 
 - **Chemin d’accès** : chemin d’accès complet du fichier de sauvegarde sélectionné. Le bouton Montrer ouvre le dossier de sauvegarde dans une fenêtre système.
 - **Date et heure** : date et heure de la sauvegarde.
 - **Contenu** : contenu du fichier de sauvegarde. Chaque élément de la liste est associé à une case à cocher, permettant de spécifier si vous souhaitez ou non le restituer. Vous pouvez utiliser les boutons **Tout sélectionner** ou **Tout désélectionner** pour paramétrer la liste des éléments à restituer.
-- **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. By default, 4D restores the files in a folder named “Archivename” (no extension) that is placed next to the Project folder. Pour modifier cet emplacement, cliquez sur le bouton **[...]** et désignez le dossier dans lequel vous souhaitez effectuer la restitution.
+- **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. Par défaut, 4D restitue les fichiers dans un dossier nommé “Nomarchive” (sans extension) placé à côté du dossier Project. Pour modifier cet emplacement, cliquez sur le bouton **[...]** et désignez le dossier dans lequel vous souhaitez effectuer la restitution.
 
 Le bouton **Restituer** lance la restitution manuelle des éléments sélectionnés.
 
 ## Intégration successive de plusieurs fichiers d’historiques
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 backups, you can restore the first backup then integrate the journal (data log) archives one by one. Ce principe permet par exemple de récupérer un fichier de données alors que les derniers fichiers de sauvegarde de la base sont manquants.
+L’option **Intégrer un ou plusieurs fichier(s) d’historique après la restitution** permet d’intégrer successivement plusieurs sauvegardes d’historiques dans une base de données. Si, par exemple, vous disposez de 4 sauvegardes d’historique (.4BL) consécutives, correspondant à 4 sauvegardes, vous pouvez restituer la première sauvegarde puis intégrer une à une les sauvegardes d’historique. Ce principe permet par exemple de récupérer un fichier de données alors que les derniers fichiers de sauvegarde de la base sont manquants.
 
 Lorsque cette option est cochée, 4D affiche une boîte de dialogue standard d’ouverture de fichiers à l’issue de la restitution, vous permettant de sélectionner la sauvegarde d’historique à intégrer. La boîte de dialogue d’ouverture est affichée de nouveau après chaque intégration, jusqu’à ce qu’elle soit annulée.
 
 ## Restituer une base chiffrée
 
-Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current application. Il est important que les clés de chiffrement soient toujours mises en correspondance.
+A noter que la clé de chiffrement des données (phrase secrète) a peut-être été changée au fil des versions des fichiers de sauvegarde (.4BK), des fichiers .journal (.4BL) et de l'application courante. Il est important que les clés de chiffrement soient toujours mises en correspondance.
 
 Au moment de restituer une sauvegarde et d'intégrer le fichier d'historique courant dans une base chiffrée :
 
