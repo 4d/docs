@@ -211,23 +211,23 @@ Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant s
 
 Voici quelques exemples :
 ```4d
-If(Nouveau client)
+If(New client)
 DELETE DUPLICATED VALUES
-APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
+APPLY TO SELECTION([Employees];INCREASE SALARIES)
 ```
 
-**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D : écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
+**Conseil :** Nous vous recommandons d'adopter, pour nommer vos méthodes, la même convention que celle utilisée dans le langage de 4D. écrivez les noms de vos procédures en caractères majuscules, et vos fonctions en minuscules avec la première lettre en majuscule. Ainsi, lorsque vous rouvrirez une base au bout de plusieurs mois, vous identifierez immédiatement si une méthode retourne ou non un résultat, en regardant son nom dans la fenêtre de l'Explorateur.
 
 **Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Exemple :
 
 Voici quelques exemples :
 ```4d
     // Cette commande attend une méthode (fonction) ou une formule
- QUERY BY FORMULA([aTable];Recherche Spéciale)
+ QUERY BY FORMULA([aTable];Special query)
   // Cette commande attend une méthode (procédure) ou une formule
- APPLY TO SELECTION([Employés];AUGMENTER SALARIES)
+ APPLY TO SELECTION([Employees];INCREASE SALARIES)
   // Mais cette commande attend un nom de méthode
-ON EVENT CALL("GERER EVENEMENTS")
+ON EVENT CALL("HANDLE EVENTS")
 ```
 
 Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont passés à la méthode appelée en tant que variables locales numérotées séquentiellement : $1, $2,…, $n. De plus, plusieurs paramètres consécutifs (s'ils sont les derniers) peuvent être adressés à l'aide de la syntaxe ${n}où n, expression numérique, est le numéro du paramètre.
