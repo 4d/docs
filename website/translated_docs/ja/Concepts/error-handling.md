@@ -48,7 +48,7 @@ ON ERR CALL("") // エラーの検知を中止します
 
 独自に作成してエラー処理メソッド内では、エラーを調査するための情報がいくつか提供されています:
 
-- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
+- 4D は、いくつかの **システム変数** と呼ばれる専用の変数を自動的に管理しています (*4Dランゲージリファレンス* 参照)。
 
   - `Error` (倍長整数): エラーコード
   - `Error method` (テキスト): エラーを生成したメソッドの名称
