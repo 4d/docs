@@ -28,7 +28,7 @@ ON ERR CALL("") //redonne le contrôle à 4D
 
 ### Portée et composants
 
-Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
+Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par process.
 
 Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à la base de données en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de la base hôte n'est pas appelée, et inversement.
 
@@ -39,7 +39,7 @@ La commande `Method called on error` permet de connaître le nom de la méthode 
  ON ERR CALL("NewMethod")
   //Si le document ne peut pas être ouvert, une erreur est générée
  $ref:=Open document("MyDocument")
-  //Répéter la méthode précédente
+  //Rétablissement de la méthode précédente
  ON ERR CALL($methCurrent)
 
 ```
@@ -48,14 +48,12 @@ La commande `Method called on error` permet de connaître le nom de la méthode 
 
 Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
 
-- Variables système (*) :
+- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
 
   - `Error` (entier long): Code d'erreur
   - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
   - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
   - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
-
-(*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
 
 - La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
 - la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.

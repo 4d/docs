@@ -48,14 +48,12 @@ Mit dem Befehl `Method called on error` erfahren Sie den Namen der Methode, die 
 
 In einer eigenen Fehlermethode erhalten Sie verschiedene Angaben, die zum Identifizieren des Fehlers dienen:
 
-- Spezifische Systemvariablen (*):
+- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
 
   - `Error` (Lange Ganzzahl): Fehlernummer
   - `Error method` (Text): Namen der Methode, die den Fehler ausgelöst hat
   - `Error line` (Lange Ganzzahl): Zeilennummer in der Methode, die den Fehler ausgelöst hat.
   - `Error formula` (Text): Formel des 4D Code (Rohtext), der den Fehler verursacht hat.
-
-(*) *4D unterhält automatisch eine Reihe von Variablen, genannt **Systemvariablen**, die verschiedene Zwecke erfüllen.* Weitere Informationen dazu finden Sie im Handbuch 4D Programmiersprache*.</p>
 
 - Der Befehl `GET LAST ERROR STACK` gibt Informationen über den aktuellen Fehlerstapel der 4D Anwendung zurück.
 - Der Befehl `Get call chain` gibt eine Collection von Objekten zurück, die jeden Schritt der Aufruffolge der Methode im aktuellen Prozess beschreiben.
