@@ -24,7 +24,7 @@ Lorsque vous travaillez sur un projet dans 4D Developer, vous pouvez utiliser le
   ![](assets/en/Project/lockicon.png)
 - si un fichier ouvert est édité simultanément à partir de différents emplacements, 4D affiche une boîte de dialogue d'alerte lorsque vous tenterez d'enregistrer des modifications : ![](assets/en/Project/projectReload.png)
     - **Oui** : ignore les modifications de l'éditeur et recharge
-    - **Non** : enregistrer les modifications et écraser l'autre version
+    - **Non** : enregistre les modifications et écrase l'autre version
     - **Annuler** : ne pas enregistrer
 
 Cette fonctionnalité est activée pour tous les éditeurs intégrés :
