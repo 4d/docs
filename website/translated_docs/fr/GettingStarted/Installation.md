@@ -3,7 +3,7 @@ id: installation
 title: Installation et activation
 ---
 
-Bienvenue à 4D ! Vous trouverez ci-dessous toutes les informations nécessaires pour installer et enregistrer votre application 4D.
+Bienvenue dans 4D ! Vous trouverez ci-dessous toutes les informations nécessaires pour installer et enregistrer votre application 4D.
 
 
 ## Configuration requise
