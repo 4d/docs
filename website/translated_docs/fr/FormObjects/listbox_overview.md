@@ -470,14 +470,14 @@ There are several different ways to set background colors, font colors and font 
 
 Priority and inheritance principles are observed when the same property is set at more than one level.
 
-| Priority level | Setting location                                                     |
-| -------------- | -------------------------------------------------------------------- |
-| high priority  | Cell (if multi-style text)                                           |
-|                | Column arrays/methods                                                |
-|                | List box arrays/methods                                              |
-|                | Column properties                                                    |
-|                | List box properties                                                  |
-| low priority   | Meta Info expression (for collection or entity selection list boxes) |
+| Niveau de priorité | Setting location                                                     |
+| ------------------ | -------------------------------------------------------------------- |
+| high priority      | Cell (if multi-style text)                                           |
+|                    | Column arrays/methods                                                |
+|                    | List box arrays/methods                                              |
+|                    | Column properties                                                    |
+|                    | List box properties                                                  |
+| low priority       | Meta Info expression (for collection or entity selection list boxes) |
 
 For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
 
