@@ -48,7 +48,7 @@ La commande `Method called on error` permet de connaître le nom de la méthode 
 
 Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
 
-- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
+- 4D maintient automatiquement un certain nombre de variables appelées **variables système**, répondant à différents besoins (voir le *manuel de référence du Langage 4D*) :
 
   - `Error` (entier long): Code d'erreur
   - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
