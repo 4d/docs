@@ -3,7 +3,7 @@ id: creating
 title: Créer un projet 4D
 ---
 
-## Pré-requis
+## Conditions requises
 
 Les nouveaux projets 4D ne peuvent être créés uniquement à partir de **4D Developer** (reportez-vous à la section [Développer un projet](developing.md)).
 
