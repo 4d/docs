@@ -1,9 +1,9 @@
 ---
 id: debugLogFiles
-title: Description des fichiers historiques
+title: Description des fichiers d'historique
 ---
 
-Les applications 4D peuvent générer plusieurs fichiers d'historique qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les fichiers d'historique sont généralement démarrés ou arrêtés via des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv19/help/command/en/page1210.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
 
 Les informations de l'historique doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
@@ -17,18 +17,18 @@ Les informations de l'historique doivent être analysées pour détecter et corr
 *   [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 *   [Fichier d'historique des requêtes ORDA clientes](#orda-client-requests)
 
-Note: When a log file can be generated either on 4D Server or on the remote client, the word "Server" is added to the server-side log file name, for example "4DRequestsLogServer.txt"
+Lorsqu'un fichier d'historique peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server" est ajouté au nom du fichier d'historique côté serveur, par exemple " 4DRequestsLogServer.txt"
 
-Log files share some fields so that you can establish a chronology and make connections between entries while debugging:
+Les fichiers d'historique partagent certains champs, ce qui vous permet d'établir une chronologie et d'établir des connexions entre les entrées lors du débogage :
 
 *   `sequence_number` : ce numéro est unique parmi tous les fichiers d'historique de débogage et est incrémenté à chaque nouvelle entrée, quel que soit le fichier d'historique, de manière à ce que vous puissiez connaître la séquence exacte des opérations.
 *   `connection_uuid` : pour chaque process 4D créé sur un client 4D qui se connecte au serveur, cet UUID de connexion est stocké à la fois côté serveur et client. Il vous permet d'identifier facilement le client distant qui a lancé le process.
 
 ## 4DRequestsLog.txt
 
-This log file records standard requests carried out by the 4D Server machine or the 4D remote machine that executed the command (excluding Web requests).
+Ce fichier d'historique enregistre les requêtes standard envoyées par la machine de 4D Server ou par la machine 4D distante qui a exécuté la commande (hors requêtes web).
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 *   sur le serveur :
 
@@ -44,19 +44,19 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 //côté distant
 ```
-> This statement also starts the [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt) log file.
+> Cette instruction démarre également le fichier d'historique [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
 
 #### En-têtes
 
-This file starts with the following headers:
+Ce fichier commence avec les en-têtes suivants :
 
 *   Log Session Identifier (Identifiant de session d'historique)
 *   Nom du serveur qui héberge l'application
-*   User Login Name : Nom de l'utilisateur (défini dans l'OS) qui exécute l'application 4D sur le serveur.
+*   User Login Name : Nom de l'utilisateur (défini dans l'OS) qui a exécuté l'application 4D sur le serveur.
 
 #### Contenu
 
-For each request, the following fields are logged:
+Pour chaque requête, les champs suivants sont enregistrés :
 
 | Nom des champs                             | Description                                                                                                                                                                                                                                                                  |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,15 +73,15 @@ For each request, the following fields are logged:
 | task_kind                                  | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                          |
 | rtt                                        | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. Correspond respectivement aux chemins A vers D et E vers H dans l'image ci-dessous.<p><li>Mesuré uniquement lorsque la couche réseau ServerNet est utilisée, retourne 0 lorsque l'ancienne couche réseau est utilisée.</li><li>Dans les versions antérieures à Windows 10 ou à Windows Server 2016, l'appel retournera la valeur 0.</li> |
 
-Request flow:
+Acheminement de la requête :
 
 ![](assets/en/Admin/logRequestFlow.PNG)
 
 ## 4DRequestsLog_ProcessInfo.txt
 
-This log file records information on each process created on the 4D Server machine or the 4D remote machine that executed the command (excluding Web requests).
+Ce fichier d'historique enregistre des informations sur chaque process créé sur la machine de 4D Server, ou sur la machine 4D distante qui a exécuté la commande (hors requêtes web).
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 *   sur le serveur :
 
@@ -94,20 +94,20 @@ SET DATABASE PARAMETER(4D Server log recording;1) //côté serveur
 ```4d
 SET DATABASE PARAMETER(Client Log Recording;1) //côté distant
 ```
-> This statement also starts the [4DRequestsLog.txt](#4drequestslogtxt) log file.
+> Cette instruction démarre également le fichier d'historique [4DRequestsLog.txt](#4drequestslogtxt).
 
 #### En-têtes
 
-This file starts with the following headers:
+Ce fichier commence avec les en-têtes suivants :
 
 *   Log Session Identifier (Identifiant de session d'historique)
 *   Nom du serveur qui héberge l'application
-*   User Login Name : Nom de l'utilisateur (défini dans l'OS) qui exécute l'application 4D sur le serveur.
+*   User Login Name : Nom de l'utilisateur (défini dans l'OS) qui a exécuté l'application 4D sur le serveur.
 
 
 #### Contenu
 
-For each process, the following fields are logged:
+Pour chaque process, les champs suivants sont enregistrés :
 
 | Nom des champs                    | Description                                                          |
 | --------------------------------- | -------------------------------------------------------------------- |
@@ -131,7 +131,7 @@ For each process, the following fields are logged:
 
 Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent optionellement être enregistrées.
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 ```4d
 WEB SET OPTION(Web debug log;wdl enable without body)  
@@ -151,9 +151,9 @@ Les champs suivants sont enregistrés pour chaque requête et réponse :
 
 ## 4DDebugLog.txt (standard)
 
-This log file records each event occurring at the 4D programming level. Standard mode provides a basic view of events.
+Ce fichier d'historique enregistre chaque évènement qui a lieu au niveau de la programmation 4D. Le mode standard offre une vue basique des événements.
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2)  
@@ -163,58 +163,58 @@ SET DATABASE PARAMETER(Current process debug log recording;2)
 //standard, process courant uniquement
 ```
 
-The following fields are logged for each event:
+Les champs suivants sont enregistrés pour chaque événement :
 
 | Colonne # | Description                                                                                                                      |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | 1         | Numéro d'opération séquentiel et unique dans la session d'historique                                                             |
 | 2         | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                       |
 | 3         | ID process (p=xx) et ID unique process (puid=xx)                                                                                 |
-| 4         | Niveau de stack                                                                                                                  |
+| 4         | Niveau de stack (pile)                                                                                                           |
 | 5         | Peut être Nom de commande / Nom de méthode / Message / Info Start Stop task / Nom, événement ou callback plugin / UUID connexion |
 | 6         | Durée de l'opération de connexion en millisecondes (différent 2e colonne)                                                        |
 
-## 4DDebugLog.txt (tabulaire)
+## 4DDebugLog.txt (tabulé)
 
-This log file records each event occurring at the 4D programming level in a tabbed, compact format that includes additional information (compared to the standard format).
+Ce fichier d'historique enregistre chaque événement au niveau de la programmation 4D sous un format compact tabulé incluant des informations supplémentaires par rapport au format standard.
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2+4)  
-//format tabulaire étendu, tous les process
+//format tabulé étendu, tous les process
 
 SET DATABASE PARAMETER(Current process debug log recording;2+4)  
 //étendu, process courant uniquement
 ```
 
-The following fields are logged for each event:
+Les champs suivants sont enregistrés pour chaque événement :
 
-| Colonne # | Nom des champs                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| --------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| 3         | ProcessID                       | ID du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 4         | unique_processID                | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| 5         | stack_level                     | Niveau de stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| 6         | operation_type                  | Log operation type. This value may be an absolute value:<p><ol><li>Commande</li><li>Method (project method, database method, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task</li><li>Member method (method attached to a collection or an object)</li></ol></p>When closing a stack level, the `operation_type`, `operation` and `operation_parameters` columns have the same value as the opening stack level logged in the `stack_opening_sequence_number` column. Par exemple :<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>The 1st and 2nd lines open a stack level, the 3rd and 4th lines close a stack level. Values in the columns 6, 7 and 8 are repeated in the closing stack level line. The column 10 contains the stack level opening sequence numbers, i.e. 122 for the 3rd line and 121 for the 4th. |
-| 7         | operation                       | May represent (depending on operation type):<li>a Language Command ID (when type=1)</li><li>a Method Name (when type=2)</li><li>a combination of pluginIndex;pluginCommand (when type=4, 5, 6 or 7). May contain something like '3;2'</li><li>a Task Connection UUID (when type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| 8         | operation_parameters            | Parameters passed to commands, methods, or plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| 9         | form_event                      | Form event if any; empty in other cases (suppose that column is used when code is executed in a form method or object method)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| 10        | stack_opening_sequence_number | Only for the closing stack levels: Sequence number of the corresponding opening stack level                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| 11        | stack_level_execution_time    | Only for the closing stack levels: Elapsed time in micro seconds of the current logged action; only for the closing stack levels (see 10th columns in lines 123 and 124 in the log above)                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Colonne # | Nom des champs                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 3         | ProcessID                       | ID du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 4         | unique_processID                | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 5         | stack_level                     | Niveau de stack (pile)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 6         | operation_type                  | Type d'opération enregistrée. Il peut s'agir d'une valeur absolue :<p><ol><li>Commande</li><li>Méthode (méthode projet, méthode base, etc.)</li><li>Message (uniquement envoyé par la commande [LOG EVENT](https://doc.4d.com/4dv19/help/command/fr/page667.html))</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task (Process)</li><li>Méthode membre (méthode attachée à une collection ou un objet)</li></ol></p>Lors de la fermeture d'un niveau de stack, les colonnes `operation_type`, `operation` et `operation_parameters` ont la même valeur que le niveau de stack d'ouverture enregistré dans la colonne `stack_opening_sequence_number`. Par exemple :<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>Les 1re et 2e lignes ouvrent un niveau de stack, les 3e et 4e lignes ferment un niveau de stack. Les valeurs des colonnes 6, 7 et 8 sont répétées dans la ligne du niveau de stack de fermeture. La colonne 10 contient les numéros de séquence d'ouverture du niveau de stack, c'est-à-dire 122 pour la 3e ligne et 121 pour la 4e. |
+| 7         | operation                       | Peut représenter (en fonction du type d'opération) :<li>un ID de commande du langage (lorsque type=1)</li><li>un nom de méthode (lorsque type=2)</li><li>une combinaison de pluginIndex;pluginCommand (lorsque type=4, 5, 6 ou 7). Peut contenir des éléments tels que '3;2'</li><li>un UUID de connexion de process (lorsque type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 8         | operation_parameters            | Paramètres passés aux commandes, méthodes ou aux plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 9         | form_event                      | Evénement formulaire, le cas échéant ; vide dans les autres cas (par conséquent cette colonne est utilisée lorsque le code est exécuté dans une méthode formulaire ou méthode objet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 10        | stack_opening_sequence_number | Niveaux de fermeture de stacks uniquement : numéro de séquence du niveau d'ouverture de stack correspondant                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| 11        | stack_level_execution_time    | Niveaux de fermeture de stacks uniquement : Durée en micro secondes de l'action enregistrée courante (cf. 10e colonne des lignes 123 et 124 dans l'historique ci-dessus)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ## 4DDiagnosticLog.txt
 
-This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+Ce fichier d'historique enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. Vous pouvez inclure des informations personnalisées dans ce fichier à l'aide de la commande [LOG EVENT](https://doc.4d.com/4dv19/help/command/fr/page667.html).
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 ```4d
  SET DATABASE PARAMETER(Diagnostic log recording;1) //lancer l'enregistrement
 ```
 
-The following fields are logged for each event:
+Les champs suivants sont enregistrés pour chaque événement :
 
 | Nom des champs     | Description                                                          |
 | ------------------ | -------------------------------------------------------------------- |
@@ -225,17 +225,17 @@ The following fields are logged for each event:
 | messageLevel       | Info, Attention, Erreur                                              |
 | message            | Description de la saisie de journal                                  |
 
-Depending on the event, various other fields can also be logged, such as task, socket, etc.
+En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, et 4DIMAPLog.txt
 
-These log files record each exchange between the 4D application and the mail server (SMTP, POP3, IMAP) that has been initiated by the following commands:
+Ces fichiers d'historique enregistrent chaque échange entre l'application 4D et le serveur de mail (SMTP, POP3, IMAP) initialisé par les commandes suivantes :
 
 *   SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
 *   POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
 *   IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
 
-The log files can be produced in two versions:
+Les fichiers d'historique peuvent être générés en deux versions :
 
 *   une version classique :
     *   fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
@@ -280,7 +280,7 @@ The log files can be produced in two versions:
 
 #### Contenu
 
-For each request, the following fields are logged:
+Pour chaque requête, les champs suivants sont enregistrés :
 
 | Colonne # | Description                                                          |
 | --------- | -------------------------------------------------------------------- |
@@ -294,7 +294,7 @@ For each request, the following fields are logged:
 
 Ce journal enregistre chaque requête ORDA envoyée depuis une machine distante. Vous pouvez diriger les informations du journal vers la mémoire ou vers un fichier sur le disque. Vous pouvez choisir le nom et l'emplacement de ce fichier journal.
 
-How to start this log:
+Pour démarrer ce fichier d'historique :
 
 ```4d
 //à exécuter sur une machine distante
@@ -302,7 +302,7 @@ ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 //peut aussi être envoyé à la mémoire
 ```
 
-If you want to use the unique sequence number in ORDA request log, you need to trigger it:
+Si vous souhaitez utiliser la numérotation séquentielle unique dans le fichier des requêtes ORDA, vous devez l'activer :
 
 ```4d
 // à exécuter sur une machine distante
@@ -317,7 +317,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 //désactive la numérotation automatique
 ```
 
-The following fields are logged for each request:
+Les champs suivants sont enregistrés pour chaque requête :
 
 | Nom des champs | Description                                                          | Exemple                                                 |
 | -------------- | -------------------------------------------------------------------- | ------------------------------------------------------- |

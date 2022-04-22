@@ -168,7 +168,7 @@ Le format DLF (Distilled Log Format) est similaire au format CLF (Common Log for
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | host                 | Adresse IP du client (ex. 192.100.100.10)                                                                                                                                      |
 | rfc931               | information non générée par 4D, c'est toujours - (le signe moins)                                                                                                              |
-| user                 | le nom d'utilisateur tel qu'il est authentifié, ou bien - (le signe moins). Si le nom d'utilisateur comporte des espaces,ils seront remplacés par _ (underscore).              |
+| user                 | le nom d'utilisateur tel qu'il est authentifié, ou bien - (le signe moins). Si le nom de l’utilisateur contient des espaces, ils sont remplacés par des _ (tiret bas).         |
 | DD/MMM/YYYY:HH:MM:SS | DD : jour, MMM : abréviation de 3 lettres pour le nom du mois (Jan, Feb,...), YYYY : année, HH : heure, MM : minutes, SS : secondes. La date et heure sont locales au serveur. |
 | request              | requête envoyée par le client (ex. GET /index.htm HTTP/1.0)                                                                                                                    |
 | state                | réponse donnée par le serveur                                                                                                                                                  |
@@ -189,29 +189,29 @@ Lorsque vous choisissez le format ELF ou WLF, la zone "Web Log Token Selection" 
 
 Le tableau suivant répertorie les champs disponibles pour chaque format (par ordre alphabétique) et décrit leur contenu :
 
-| Champ          | ELF | WLF | Valeur                                                                                                                      |
-| -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                                                                        |
-| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                                                                            |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                              |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
-| CONNECTION_ID  |     | X   | Connection ID number                                                                                                        |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                     |
-| CS(HOST)       | X   | X   | Host field of the HTTP request                                                                                              |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                                                                          |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
-| CS_SIP         | X   | X   | IP address of the server                                                                                                    |
-| CS_URI         | X   | X   | URI on which the request is made                                                                                            |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                                                                    |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                    |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                      |
-| STATUS         | X   | X   | Reply provided by the server                                                                                                |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
-| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                                                                              |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
-| Variable URL   |     | X   | URL requested by the client                                                                                                 |
+| Champ          | ELF | WLF | Valeur                                                                                                                                                               |
+| -------------- | --- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                                                                                                                 |
+| BYTES_SENT     | X   | X   | Nombre d’octets envoyés par le serveur au client                                                                                                                     |
+| C_DNS          | X   | X   | Adresse IP du DNS (ELF : champ identique au champ C_IP)                                                                                                              |
+| C_IP           | X   | X   | Adresse IP du client (par exemple 192.100.100.10)                                                                                                                    |
+| CONNECTION_ID  |     | X   | Numéro unique de la connexion                                                                                                                                        |
+| CS(COOKIE)     | X   | X   | Informations sur les cookies contenus dans la requête HTTP                                                                                                           |
+| CS(HOST)       | X   | X   | Champ Host de la requête HTTP                                                                                                                                        |
+| CS(REFERER)    | X   | X   | URL de la page pointant vers le document demandé                                                                                                                     |
+| CS(USER_AGENT) | X   | X   | Informations sur le logiciel et le système d’exploitation du client                                                                                                  |
+| CS_SIP         | X   | X   | Adresse IP du serveur                                                                                                                                                |
+| CS_URI         | X   | X   | URI sur lequel la requête est effectuée                                                                                                                              |
+| CS_URI_QUERY | X   | X   | Paramètres d’interrogation de la requête                                                                                                                             |
+| CS_URI_STEM  | X   | X   | Partie de la requête sans les paramètres d’interrogation                                                                                                             |
+| DATE           | X   | X   | DD: jour, MMM: abréviation de 3 lettres pour le mois (Jan, Feb,...), YYYY: année                                                                                     |
+| METHOD         | X   | X   | Méthode HTTP utilisée pour la requête adressée au serveur                                                                                                            |
+| PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                                                               |
+| STATUS         | X   | X   | Réponse fournie par le serveur                                                                                                                                       |
+| TIME           | X   | X   | HH: heure, MM: minutes, SS: secondes                                                                                                                                 |
+| TRANSFER_TIME  | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                                                                                                        |
+| USER           | X   | X   | Nom d’utilisateur s’il s’est authentifié, sinon - (signe moins). Si le nom d’utilisateur contient des espaces, ils sont remplacés par des _ (traits de soulignement) |
+| Variable URL   |     | X   | URL demandé par le client                                                                                                                                            |
 
 > Les dates et heures sont données au format GMT
 

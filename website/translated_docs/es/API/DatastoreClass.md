@@ -32,10 +32,10 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 ## ds
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v18     | Support of localID parameter |
-| v17     | Añadidos                     |
+| Versión | Modificaciones                |
+| ------- | ----------------------------- |
+| v18     | Soporte del parámetro localID |
+| v17     | Añadidos                      |
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
@@ -756,7 +756,7 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 #### Descripción
 
 La función `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->inicia una transacción en el proceso actual en la base de datos que coincide con el datastore al que se aplica<!-- END REF -->. Todos los cambios realizados en las entidades del almacén de datos en el proceso de la transacción se almacenan temporalmente hasta que la transacción se valida o se cancela.
-> If this method is called on the main datastore (i.e. the datastore returned by the `ds` command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.
+> Si se llama a este método en el almacén de datos principal (es decir, el almacén de datos devuelto por el comando `ds`), la transacción se aplica a todas las operaciones realizadas en el almacén de datos principal y en la base de datos subyacente, incluyendo por tanto ORDA y los lenguajes clásicos.
 
 Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-transacción debe ser eventualmente cancelada o validada. Note que si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función `.validateTransaction()`.
 

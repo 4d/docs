@@ -12,13 +12,13 @@ Les objets partagés et les collections partagées peuvent être stockés dans d
 
 **Note :** Des objets partagés et des collections partagées peuvent être définis comme propriétés d'objets/éléments de collections standard (non partagés).
 
-Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Utiliser...Fin utiliser**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Utiliser...Fin utiliser**.
+Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
 Un catalogue unique et global, retourné par la commande `Storage`, est disponible à tout moment et depuis tout process de l'application et de ses composants.
 
 ## Utilisation des objets et collections partagés
 
-Une fois instanciés à l'aide des commandes `Creer objet partage` ou `Creer collection partagee`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.
+Une fois instanciés à l'aide des commandes `New shared object` ou `New shared collection`, les objets partagés et les collections partagées peuvent être modifiés et lus depuis n'importe quel process.
 
 ### Modification
 
@@ -56,7 +56,7 @@ Cependant, lorsque plusieurs valeurs sont interdépendantes et doivent être lue
 
 ### Duplication
 
-Appeler `OB Copier` avec un objet partagé (ou avec un objet dont des propriétés sont des objets partagés) est possible, mais dans ce cas un objet standard (non partagé) est retourné.
+Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés sont des objets partagés) est possible, mais dans ce cas un objet standard (non partagé) est retourné.
 
 ### Storage
 
@@ -66,7 +66,7 @@ A noter que, à la différence de objets partagés standard, l'objet `Storage` n
 
 Pour plus d'informations, reportez-vous à la description de la commande `Storage`.
 
-## Utiliser...Fin utiliser
+## Use...End use
 
 La syntaxe de la structure `Use...End use` est la suivante :
 
@@ -76,18 +76,18 @@ La syntaxe de la structure `Use...End use` est la suivante :
  End use
 ```
 
-La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Objet_partagé_ou_Collection_partagée* sous la protection d'un sémaphore interne. *Objet_partagé_ou_Collection_partagée* peut être tout objet partagé ou collection partagée valide.
+La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Shared_object_or_Shared_collection* sous la protection d'un sémaphore interne. *Shared_object_or_Shared_collection* peut être tout objet partagé ou collection partagée valide.
 
 Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les **Process 4D préemptifs**. Ils peuvent être passés par référence en paramètre d'un process à un autre. Pour plus de détails sur les objets partagés et les collections partagées, reportez-vous à la page **Objets et collections partagés**. Encadrer les modifications sur les objets partagés et les collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
 
-- Une fois que la ligne **Use/Utiliser** est exécutée avec succès, toutes les propriétés/éléments de _Objet_partagé_ou_Collection_partagée_ sont verrouillé(e) s en écriture pour tous les autres process jusqu'à ce que la ligne `End use/Fin` utiliser correspondante soit éxécutée.
-- La séquence _d'instructions_ peut alors effectuer toute modification dans les propriétés/éléments de Objet_partagé_ou_Collection_partagée sans risque d'accès concurrent.
-- Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre _Objet_partagé_ou_Collection_partagée_, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf.** Utilisation des objets et collections partagés**).
-- Si un autre process tente d'accéder à une propriété de _Objet_partagé_ou_Collection_partagée_ ou une propriété connectée alors qu'une séquence **Utiliser...Fin** utiliser est en cours d'exécution sur le même Objet_partagé_ou_Collection_partagée, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.
+- Une fois que la ligne **Use** est exécutée avec succès, toutes les propriétés/éléments de _Shared_object_or_Shared_collection_ sont verrouillé(e)s en écriture pour tous les autres process jusqu'à ce que la ligne `End use` correspondante soit exécutée.
+- La séquence d'_instructions_ peut alors effectuer toute modification dans les propriétés/éléments de Shared_object_or_Shared_collection sans risque d'accès concurrent.
+- Si un autre objet ou collection partagé(e) est ajouté(e) en tant que propriété du paramètre _Shared_object_or_Shared_collection_, il ou elle devient connecté(e) et appartiennent au même groupe partagé (cf. **Utilisation des objets et collections partagés**).
+- Si un autre process tente d'accéder à une propriété de _Shared_object_or_Shared_collection_ ou une propriété connectée alors qu'une séquence **Use...End use** est en cours d'exécution sur le même Shared_object_or_Shared_collection, il est automatiquement placé en attente et attendra jusqu'à ce que la séquence courante soit terminée.
 - La ligne **End use** déverrouille les propriétés de _Shared_object_or_Shared_collection_ et tous les objets du même groupe.
-- Plusieurs structures **Utiliser...Fin** utiliser peuvent être imbriquées dans le code 4D. Dans le cas d'un groupe, chaque **Use** incrémente le compteur de verrouillage du groupe et chaque **End use** le décrémente ; tous les éléments/propriétés ne seront libérés que lorsque le dernier appel à **End use** mettra le compteur de verrouillage à 0.
+- Plusieurs structures **Use...End use** peuvent être imbriquées dans le code 4D. Dans le cas d'un groupe, chaque **Use** incrémente le compteur de verrouillage du groupe et chaque **End use** le décrémente ; tous les éléments/propriétés ne seront libérés que lorsque le dernier appel à **End use** mettra le compteur de verrouillage à 0.
 
-**Note :** Si une fonction membre d'une collection modifie une collection partagée, un **Utiliser** interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.
+**Note :** Si une fonction membre d'une collection modifie une collection partagée, un **Use** interne est automatiquement mis en place pour cette collection partagée durant l'exécution de la fonction.
 
 
 ## Exemple 1

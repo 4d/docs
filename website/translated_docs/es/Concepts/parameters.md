@@ -289,7 +289,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 
-When using the [sequential variable syntax](#sequential-parameters), you need to make sure all parameters are properly declared. En el siguiente ejemplo, el método `Capitalize` proyecto acepta un parámetro texto y devuelve un resultado texto:
+Cuando se utiliza [la sintaxis de la variable secuencial](#sequential-parameters), hay que asegurarse de que todos los parámetros se declaran correctamente. En el siguiente ejemplo, el método `Capitalize` proyecto acepta un parámetro texto y devuelve un resultado texto:
 
 ```4d
   // Método proyecto Mayusculas

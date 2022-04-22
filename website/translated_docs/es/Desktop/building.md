@@ -240,13 +240,13 @@ Click on the **[...]** button and use the *Browse for folder* dialog box to loca
 
 Used to indicate the current version number for the application generated. A continuación, podrá aceptar o rechazar las conexiones de las aplicaciones cliente en función de su número de versión. El intervalo de compatibilidad de las aplicaciones del cliente y del servidor se define mediante el uso de [llaves XML](#build-application-settings) específicas).
 
-#### Data linking mode
+#### Modo de enlace de datos
 
 Esta opción permite elegir el modo de enlace entre la aplicación fusionada y el archivo de datos local. Hay dos modos de enlazar disponibles:
 
-*   **By application name** (default) - The 4D application automatically opens the most recently opened data file corresponding to the structure file. Esto le permite mover el paquete de aplicaciones libremente en el disco. This option should generally be used for merged applications, unless you specifically need to duplicate your application.
+*   **Por nombre de la aplicación** (por defecto) - La aplicación 4D abre automáticamente el archivo de datos abierto más recientemente correspondiente al archivo de estructura. Esto le permite mover el paquete de aplicaciones libremente en el disco. Esta opción debería usarse generalmente para aplicaciones fusionadas, a menos que necesite específicamente duplicar su aplicación.
 
-*   **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. Si se encuentra una entrada de este tipo, se abre su correspondiente archivo de datos (definido a través de su atributo "dataFilePath"). Otherwise, the last opened data file is opened (default mode).
+*   **Por ruta de la aplicación** - La aplicación 4D fusionada analizará el archivo *lastDataPath.xml* de la aplicación e intentará abrir el archivo de datos con un atributo "executablePath" que coincida con la ruta completa de la aplicación. Si se encuentra una entrada de este tipo, se abre su correspondiente archivo de datos (definido a través de su atributo "dataFilePath"). En caso contrario, se abre el último archivo de datos abierto (modo por defecto).
 
 Para más información sobre el modo de vinculación de datos, consulte la sección [Último archivo de datos abierto](#last-data-file-opened).
 
@@ -255,12 +255,12 @@ Para más información sobre el modo de vinculación de datos, consulte la secci
 
 Checking this option generates the client part of your application during the building phase.
 
-You can check this option:
+Puede marcar esta opción:
 
 - along with the [**Build server application**](#build-server-application) option to build matching server and client parts for the current platform and (optionally) include the automatic update archive files,
 - without selecting the [**Build server application**](#build-server-application) option, usually to build the update archive file to be selected from the "concurrent" platform when building the server part.
 
-#### 4D Volume Desktop Location
+#### Ubicación de 4D Volume Desktop
 
 Designates the location on your disk of the 4D Volume Desktop application to be used to build the client part of your application.
 
@@ -293,10 +293,10 @@ You can check the **Allow automatic update...** option for client applications r
 
 This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
 
-| Plataforma del servidor actual | Archivo requerido                                            | Detalles                                                                                                                                                                   |
-| ------------------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                          | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Windows                        | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| Plataforma del servidor actual | Archivo requerido                                           | Detalles                                                                                                                                                                   |
+| ------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| macOS                          | Windows 4D Volume Desktop *o* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
+| Windows                        | macOS client update archive                                 | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
@@ -352,12 +352,12 @@ If you checked the “Allow automatic update of client application” option, an
 
 #### Ubicación de los archivos web
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Estos elementos son los siguientes:
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+- archivos *cert.pem* y *key.pem* (opcional): etos archivos se utilizan para las conexiones SSL y por los comandos de encriptación de datos,
 - Default Web root folder (WebFolder).
 
-Items must be installed:
+Los elementos deben ser instalados:
 *   **en Windows**
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
@@ -427,7 +427,7 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 
 
-## Plugins & components page
+## Página Plugins y componentes
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 

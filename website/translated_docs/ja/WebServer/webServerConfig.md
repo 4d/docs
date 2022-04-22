@@ -133,6 +133,7 @@ Webサーバーの HTTPリクエストログファイル (アプリケーショ�
 
 
 
+
 |1|wdl enable without body|Web HTTP debug log はボディ部なしで有効化されています (この場合ボディ部のサイズは提供されます)| |3|wdl enable with response body|Web HTTP debug log はレスポンスのボディ部のみを含めた状態で有効化されています。| |5|wdl enable with request body|Web HTTP debug log はリクエストのボディ部のみ含めた状態で有効化されます| |7|wdl enable with all body parts|Web HTTP debug log はレスポンスとリクエスト両方をボディ部に含めた状態で有効化されます|
 
 
@@ -593,6 +594,13 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 
 
+## プリエンプティブプロセスを使用
+
+| 設定できる場所     | 名称                          | コメント |
+| ----------- | --------------------------- | ---- |
+| 設定ダイアログボックス | オプション (I) ページ / 最大同時Webプロセス |      |
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
 
 

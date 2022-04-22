@@ -4,50 +4,50 @@ title: Parâmetros
 ---
 
 
-You'll often find that you need to pass data to your methods and functions. Isso é facilmente feito com parâmetros.
+Frequentemente será preciso passar dados para seus métodos e funções. Isso é facilmente feito com parâmetros.
 
 ## Visão Geral
 
-**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
+**Os parâmetros** (ou **argumentos**) são peças de dados que um método ou uma  função de classe necessita para realizar sua tarefa. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+Os parâmetros são passados aos métodos ou funções de classe da mesma maneira. Por exemplo, se uma função de classe chamada `getArea()` aceita dois parâmetros, uma chamada à função de classe poderia ver-se assim:
 
 ```
 $area:=$o.getArea(50;100)
 ```
 
-Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
+Ou, se um método projeto chamado `DO_SOMETHING` aceitar três parâmetros, uma chamada ao método poderia ter a seguinte forma:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The input parameters are separated by semicolons (;).
+Os parâmetros input estão separados por ponto e vírgula (;).
 
 Os mesmos princípios são usados quando métodos forem executados através de comandos dedicados, por exemplo:
 
 ```4d
-EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
-//pass the !05/05/20! date as parameter to the SetCalendarDate  
-//in the context of a subform
+EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)    
+//passe a data !05/05/20! como parâmetro del SetCalendarDate  
+// no contexto de um subformulário
 ```
 
-Data can also be **returned** from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. As instruções põe o valor devolvido por `Length` em uma variável chamada *MyLength*. Esta é a instrução:
+Dados também podem ser **devolvidos**desde métodos e funções de classe. Por exemplo, a linha abaixo é uma sentença que usa o comando integrado, `Length`, para devolver a longitude de uma string. As instruções põe o valor devolvido por `Length` em uma variável chamada *MyLength*. Esta é a instrução:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Qualquer subrotina pode retornar um valor. Only one single output parameter can be declared per method or class function.
+Qualquer subrotina pode retornar um valor. Só se pode declarar um único parámetro de saída por método ou função de classe.
 
-Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
+Os valores de entrada e saida são [avaliados](#values-or-references) no momento da chamada e copiados em variáveis locais dentro da função ou método da classe chamada. Duas sintaxes são propostas para declarar os parâmetros das variáveis no codigo chamado:
 
-- [named variables](#named-parameters) (recommended in most cases) or
-- [sequentially numbered variables](#sequential-parameters).
+- [named variables](#named-parameters) (recomendado na maioria dos casos) ou
+- [variáveis numeradas sequencialmente](#sequential-parameters).
 
 
 Both [named](#named-parameters) and [sequential](#sequential-parameters) syntaxes can be mixed with no restriction to declare parameters. For example:

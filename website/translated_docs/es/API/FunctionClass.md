@@ -110,10 +110,10 @@ Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado des
 ## Formula
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R6  | Renamed (New formula -> Formula) |
-| v17 R3  | Añadidos                         |
+| Versión | Modificaciones                      |
+| ------- | ----------------------------------- |
+| v17 R6  | Renombrado (New formula -> Formula) |
+| v17 R3  | Añadidos                            |
 </details>
 
 <!-- REF #_command_.Formula.Syntax -->
@@ -245,10 +245,10 @@ Llamar a una fórmula utilizando la notación de objetos:
 ## Formula from string
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                                         |
-| ------- | ------------------------------------------------------ |
-| v17 R6  | Renamed New formula from string -> Formula from string |
-| v17 R3  | Añadidos                                               |
+| Versión | Modificaciones                                             |
+| ------- | ---------------------------------------------------------- |
+| v17 R6  | Renombrado: New formula from string -> Formula from string |
+| v17 R3  | Añadidos                                                   |
 </details>
 
 <!-- REF #_command_.Formula from string.Syntax -->

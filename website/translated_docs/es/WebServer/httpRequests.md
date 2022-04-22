@@ -34,7 +34,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | $2         | Texto | <- | HTTP headers + HTTP body (up to 32 kb limit) |
 | $3         | Texto | <- | IP address of the web client (browser)       |
 | $4         | Texto | <- | IP address of the server                     |
-| $5         | Texto | <- | User name                                    |
+| $5         | Texto | <- | Nombre de usuario                            |
 | $6         | Texto | <- | Contraseña                                   |
 
 

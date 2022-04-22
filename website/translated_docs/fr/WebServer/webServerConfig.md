@@ -78,7 +78,7 @@ Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité 
 | `WEB SET OPTION`         | `Web CORS settings`                                                           | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
 | Fenêtre de configuration | Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
-List of allowed hosts and methods for the CORS service.
+Liste des hôtes et méthodes autorisées pour le service CORS.
 
 #### Noms de domaine
 
@@ -129,6 +129,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | Valeur | Constante   | Description                             |
 | ------ | ----------- | --------------------------------------- |
 | 0      | wdl disable | Les debug logs Web HTTP sont désactivés |
+
 
 
 
@@ -296,7 +297,7 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par défaut est 443 (valeur standard). Voir aussi [HTTP Port](#http-port) pour plus d'informations sur les numéros de port.
 
 
-## Durée de vie des process inactifs
+## Conservation des process inactifs
 
 | Peut être configuré via  | Nom                                                                      | Commentaires |
 | ------------------------ | ------------------------------------------------------------------------ | ------------ |
@@ -593,6 +594,13 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 
 
 
+## Utiliser des process préemptifs
+
+| Peut être configuré via  | Nom                                       | Commentaires |
+| ------------------------ | ----------------------------------------- | ------------ |
+| Fenêtre de configuration | Options (I) > Process Web simultanés maxi |              |
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
 
 

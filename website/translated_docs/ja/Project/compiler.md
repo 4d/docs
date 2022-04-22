@@ -300,14 +300,14 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 マシンの OS に関わらず、クラシックコンパイラーは Intel/AMDプロセッサー向けのネイティブコンパイルコードを生成します。 特別な設定は必要ありません。
 
-結果のコンパイルコードはプロジェクトの [DerivedData](architecture.md#deriveddata-フォルダー) フォルダーに保存されます。
+結果のコンパイルコードはプロジェクトの [DerivedData](architecture.md#deriveddata) フォルダーに保存されます。
 
 
 ### Apple Silicon用コンパイラー
 
 Apple Silicon用コンパイラーは *Apple M1* などの Apple Silicon プロセッサー向けのネイティブコンパイルコードを生成します。
 
-結果のコンパイルコードはプロジェクトの [Libraries](architecture.md#libraries-フォルダー) フォルダーに保存されます。
+結果のコンパイルコードはプロジェクトの [Libraries](architecture.md#libraries) フォルダーに保存されます。
 
 
 #### 要件

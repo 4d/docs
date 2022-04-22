@@ -86,9 +86,9 @@ Même pour quelqu’un qui ne connaît pas le projet, le code est clair. Il n’
 
 Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les appeler à partir de vos objets.
 
-The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. Vous pouvez ainsi appliquer vos méthodes objets personnalisées.
+Les commandes `Formula` ou `Formula from string` vous permettent de créer des objets formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi implémenter des méthodes d'objets personnalisées.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. Par exemple :
+Pour exécuter une méthode stockée dans une propriété d'objet, utilisez l'opérateur **( )** après le nom de la propriété. Par exemple :
 
 ```4d
 //myAlert

@@ -797,7 +797,7 @@ $status:=$transporter.expunge()
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v18 R5  | *name* is optional |
+| v18 R5  | *name* es opcional |
 
 |v18 R4|Added| </details>
 
@@ -851,10 +851,10 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 ## .getBoxList()
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v18 R4  | Añadidos                     |
-| v19     | Add `isSubscribed` parameter |
+| Versión | Modificaciones                   |
+| ------- | -------------------------------- |
+| v18 R4  | Añadidos                         |
+| v19     | Adición parámetro `isSubscribed` |
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxList().Syntax -->
@@ -1374,16 +1374,16 @@ Para mover todos los mensajes del buzón actual:
 
 #### Descripción
 
-The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
+La función `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->convierte los números de secuencia en IDs únicos IMAP para los mensajes en el rango secuencial designado por *startMsg* y *endMsg*<!-- END REF --> en el buzón actualmente seleccionado.
 
-In the *startMsg* parameter, pass an integer value corresponding to the number of the first message in a sequential range. If you pass a negative number (*startMsg* <= 0), the first message of the mailbox will be used as the beginning of the sequence.
+En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-In the *endMsg* parameter, pass an integer value corresponding to the number of the last message to be included in a sequential range. If you pass a negative number (*endMsg* <= 0), the last message of the mailbox will be used as the end of the sequence.
+En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje a incluir en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 
 #### Resultado
 
-The function returns a collection of strings (unique IDs).
+La función devuelve una colección de cadenas (IDs únicos).
 
 #### Ejemplo
 
@@ -1437,7 +1437,7 @@ The function returns a collection of strings (unique IDs).
 
 #### Descripción
 
-The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
+La función `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->elimina las banderas de los `msgIDs` para las `keywords` definidas<!-- END REF -->.
 
 En el parámetro `msgIDs`, puede pasar:
 
@@ -1449,15 +1449,15 @@ En el parámetro `msgIDs`, puede pasar:
     | --------- | ----- | ----------------------------------------------------- |
     | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
-The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
+El parámetro `keywords` le permite pasar un objeto con valores de palabras clave para las banderas específicas a eliminar de los `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
 
-| Parámetros | Tipo     | Descripción                                         |
-| ---------- | -------- | --------------------------------------------------- |
-| $draft     | Booleano | True to remove the "draft" flag from the message    |
-| $seen      | Booleano | True to remove the "seen" flag from the message     |
-| $flagged   | Booleano | True to remove the "flagged" flag from the message  |
-| $answered  | Booleano | True to remove the "answered" flag from the message |
-| $deleted   | Booleano | True to remove the "deleted" flag from the message  |
+| Parámetros | Tipo     | Descripción                                           |
+| ---------- | -------- | ----------------------------------------------------- |
+| $draft     | Booleano | True para eliminar el marcador "draft" del mensaje    |
+| $seen      | Booleano | True para eliminar el marcador "seen" del mensaje     |
+| $flagged   | Booleano | True para eliminar el marcador "flagged" del mensaje  |
+| $answered  | Booleano | True para eliminar el marcador "answered" del mensaje |
+| $deleted   | Booleano | True para eliminar el marcador "deleted" del mensaje  |
 
 Note que los valores falsos se ignoran.
 
@@ -1525,11 +1525,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 #### Descripción
 
-The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Attempting to rename a mailbox from a mailbox name that does not exist or to a mailbox name that already exists will generate an error.
+La función `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->cambia el nombre de un buzón en el servidor IMAP<!-- END REF -->. Si se intenta renombrar un buzón desde un nombre de buzón que no existe o a un nombre de buzón que ya existe, se generará un error.
 
-In the `currentName` parameter, pass the name of the mailbox to be renamed.
+En el parámetro `currentName`, pase el nombre del buzón a renombrar.
 
-Pass the new name for the mailbox in the `newName` parameter.
+Pase el nuevo nombre del buzón en el parámetro `newName`.
 
 
 **Objeto devuelto**
@@ -1599,10 +1599,10 @@ End if
 **.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
-| Parámetros     | Tipo       |    | Descripción                   |
-| -------------- | ---------- |:--:| ----------------------------- |
-| searchCriteria | Texto      | -> | Criterio de búsqueda          |
-| Resultado      | Collection | <- | Collection of message numbers |
+| Parámetros     | Tipo       |    | Descripción                      |
+| -------------- | ---------- |:--:| -------------------------------- |
+| searchCriteria | Texto      | -> | Criterio de búsqueda             |
+| Resultado      | Collection | <- | Colección de números de mensajes |
 <!-- END REF -->
 
 
@@ -1610,7 +1610,7 @@ End if
 
 > Esta función se basa en la especificación del [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
-The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. *searchCriteria* consists of one or more search keys.
+La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coincidan con el *searchCriteria* en el buzón actual<!-- END REF -->. El parámetro *searchCriteria* contiene una o varias palabras clave de búsqueda.
 
 *searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. A search key may be a single or multiple items. Por ejemplo:
 
@@ -1822,7 +1822,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | statusText |                         | Texto      | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores de 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                     |
 |            | \[].errcode            | Número     | Código de error 4D                                                                                   |
-|            | \[].message            | Texto      | Description of the 4D error                                                                          |
+|            | \[].message            | Texto      | Descripción del error 4D                                                                             |
 |            | \[].componentSignature | Texto      | Firma del componente interno que ha devuelto el error                                                |
 
 

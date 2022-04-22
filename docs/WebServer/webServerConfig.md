@@ -135,6 +135,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 
 
+
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
 |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only|
 |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only|
@@ -604,6 +605,13 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 
 
+## Use preemptive processes
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|Settings dialog box|Options (I) page/Maximum Concurrent Web Processes||
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
 
 

@@ -1,6 +1,6 @@
 ---
 id: creating
-title: Working with a project
+title: Trabajar con un proyecto
 ---
 
 4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
@@ -12,10 +12,10 @@ Multi-user development is managed via standard **source control** repository too
 
 New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine.
 
-To create a new project:
+Para crear un nuevo proyecto:
 
 1. Lance 4D o 4D Server.
-2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>O<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+2. Seleccione **Nuevo > Proyecto** desde el menú **Archivo**: <p>![](assets/en/getStart/projectCreate1.png)<p>O<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**.<p> Este nombre se utilizará:
     - as the name of the entire project folder,
@@ -29,7 +29,7 @@ You can then start developing your project.
 
 ## Abrir un proyecto
 
-To open an existing project from 4D:
+Para abrir un proyecto existente desde 4D:
 
 1. Select **Open a local application project** in the Welcome Wizard dialog, <p>O<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
 
@@ -98,18 +98,18 @@ That folder is divided into two subfolders:
 
 ## Guardado de archivos
 
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+Cuando trabaja en un proyecto en 4D, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Las modificaciones se guardan en el disco cuando se selecciona una opción de menú **Guardar**, o cuando la ventana del editor pierde o recupera el foco.
 
 Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Por ejemplo, si se edita el mismo método en una ventana del editor de métodos *y* en un editor de texto, al guardar ambas modificaciones se producirá un conflicto.
 
-The 4D development framework includes a file access manager to control concurrent access:
+El marco de desarrollo 4D incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 
-- if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](assets/en/Project/lockicon.png)
+- si un archivo abierto está en sólo lectura a nivel del sistema operativo, se muestra un icono de bloqueo en el editor: ![](assets/en/Project/lockicon.png)
 - si un archivo abierto se edita simultáneamente desde diferentes ubicaciones, 4D muestra un diálogo de alerta al intentar guardar los cambios:
 
 ![](assets/en/Project/projectReload.png)
-    - **Yes**: discard editor changes and reload the modified version
+    - **Sí**: ignorar los cambios del editor y volver a cargar la versión modificada
     - **No**: guardar los cambios y sobrescribir la otra versión
     - **Cancelar**: no guardar
 
-This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
+Esta funcionalidad está activa para todos los editores 4D integrados (Estructura, Formulario, Método, Parámetros y Caja de herramientas).

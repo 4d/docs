@@ -202,7 +202,7 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: "*\<ClassName>.\<FunctionName>*", for example "MyClass.myMethod".
+For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
@@ -216,7 +216,7 @@ In the application code, class functions are called as member methods of the obj
 
 
 
-#### Parameters
+#### Parâmetros
 
 Function parameters are declared using the parameter name and the parameter type, separated by a colon. The parameter name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties). Multiple parameters (and types) are separated by semicolons (;).
 
@@ -225,7 +225,7 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > If the type is not stated, the parameter will be defined as `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (->) and the return parameter definition after the input parameter(s) list. For example:
+You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list. For example:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -237,19 +237,21 @@ You can also declare the return parameter only by adding `: type`, in which case
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
-> The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
-> 
-> ```4d
-> Function add($x : Integer)
->   var $2; $value : Integer
->   var $0 : Text
->   $value:=$x+$2
->   $0:=String($value)
-> ```
+
+
+The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
+
+```4d
+Function add($x : Integer)
+    var $2; $value : Integer
+    var $0 : Text
+    $value:=$x+$2
+    $0:=String($value)
+```
 
 
 
-#### Example
+#### Exemplo
 
 ```4d
 // Class: Rectangle
@@ -265,6 +267,7 @@ Function getArea()->$result : Integer
 
 ```4d
 // In a project method
+
 var $rect : cs.Rectangle
 var $area : Real
 
@@ -276,7 +279,7 @@ $area:=$rect.getArea() //5000
 
 ### Class constructor
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 // Class: MyClass
@@ -288,11 +291,11 @@ A class constructor function, which can accept [parameters](#parameters), can be
 
 In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-For a class constructor function, the `Current method name` command returns: "*\<ClassName>:constructor*", for example "MyClass:constructor".
+For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor".
 
 
 
-#### Example:
+#### Exemplo:
 
 ```4d
 // Class: MyClass
@@ -314,7 +317,7 @@ $o:=cs.MyClass.new("HelloWorld")
 
 ### Class extends \<ClassName>
 
-#### Syntax
+#### Sintaxe
 
 ```4d
 // Class: ChildClass
@@ -334,12 +337,13 @@ Breaking such a rule is not detected by the code editor or the interpreter, only
 
 An extended class can call the constructor of its parent class using the [`Super`](#super) command.
 
-#### Example
+#### Exemplo
 
 This example creates a class called `Square` from a class called `Polygon`.
 
 ```4d
 //Class: Square
+
 //path: Classes/Square.4dm 
 
 Class extends Polygon
@@ -360,8 +364,11 @@ Class constructor ($side : Integer)
 
 ### Super
 
+#### Sintaxe
 
-#### Super {( param{;...;paramN} )} {-> Object}
+```4d
+Super {( param{;...;paramN} )} {-> Object} 
+```
 
 | Parameter | Type   |    | Description                                    |
 | --------- | ------ | -- | ---------------------------------------------- |
@@ -372,11 +379,11 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
 `Super` serves two different purposes:
 
-- inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
-    - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
-    - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
+1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
 
-    - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
+- If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
+- If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
 
 ```4d
 // inside myClass constructor
@@ -385,14 +392,14 @@ Super($text1) //calls superclass constructor with a text param
 This.param:=$text2 // use second param
 ```
 
-- inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
 
 ```4d
 Super.doSomething(42) //calls "doSomething" function  
 //declared in superclasses
 ```
 
-#### Example 1
+#### Exemplo 1
 
 This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
 
@@ -432,7 +439,7 @@ Function getArea()
     $0:=This.height*This.width
 ```
 
-#### Example 2
+#### Exemplo 2
 
 This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
 
@@ -467,7 +474,11 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 ### This
 
-#### This -> Object
+#### Sintaxe
+
+```4d
+This -> Object
+```
 
 | Parameter | Type   |    | Description    |
 | --------- | ------ | -- | -------------- |

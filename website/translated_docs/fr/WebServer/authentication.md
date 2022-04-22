@@ -99,7 +99,7 @@ The `On Web Authentication` database method is NOT called:
 | $1         | Text    | <- | Variable URL                                      |
 | $2         | Text    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
 | $3         | Text    | <- | IP address of the web client (browser)            |
-| $4         | Text    | <- | IP address of the server                          |
+| $4         | Text    | <- | Adresse IP du serveur                             |
 | $5         | Text    | <- | Nom d'utilisateur                                 |
 | $6         | Text    | <- | Password                                          |
 | $0         | Booléen | -> | True = request accepted, False = request rejected |

@@ -1,16 +1,16 @@
 ---
 id: creating
-title: Working with a project
+title: Travailler avec des projets
 ---
 
-4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+Les projets 4D sont créés et développés à l'aide de l'application **4D**, qui constitue un environnement de développement intégré (IDE) complet. **4D Server** peut également créer des projets vides.
 
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+Le développement multi-utilisateur est géré via des outils de **source control** standard (Perforce, Git, SVN, etc.), permettant aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
 
 
 ## Créer un projet
 
-New 4D application projects can be created from **4D** or **4D Server**. Dans tous les cas, les fichiers de projet sont stockés sur la machine locale.
+Les nouveaux projets d'application 4D peuvent être créés à partir de **4D** ou de **4D Server**. Dans les deux cas, les fichiers de projet sont stockés sur la machine locale.
 
 Pour créer un nouveau projet :
 
@@ -18,34 +18,34 @@ Pour créer un nouveau projet :
 2. Sélectionnez **Nouveau> Projet...** depuis le menu **Fichier** : <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D uniquement) Sélectionnez **Projet...** depuis le bouton de la barre d'outils **Nouveau** :<p>![](assets/en/getStart/projectCreate2.png)<p>Un dialogue standard **Sauvegarde** apparaît, de façon à ce que vous choisissiez le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**.<p> Ce nom sera utilisé :
-    - *Fichiers de projet compressés* : extension `.4dz` - Projets de déploiement
+    - comme nom du dossier du projet,
     - comme nom du fichier .4DProject au premier niveau du dossier "Project".
 
-    Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. Toutefois, si votre projet est destiné à fonctionner sur d'autres systèmes ou à être enregistré via un outil de gestion de version, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
+    Vous pouvez choisir n'importe quel nom autorisé par votre système d'exploitation. Toutefois, si votre projet est destiné à fonctionner sur d'autres systèmes ou à être enregistré via un outil de source control, vous devez tenir compte de leurs recommandations de dénomination spécifiques.
 
-Lorsque vous validez la boîte de dialogue **Enregistrer**, 4D ferme le projet en cours (le cas échéant), crée un dossier de projet à l'emplacement indiqué et y place tous les fichiers nécessaires au projet. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
+Lorsque vous validez la boîte de dialogue **Nouveau projet**, 4D ferme le projet en cours (le cas échéant), crée un dossier de projet à l'emplacement indiqué et y place tous les fichiers nécessaires au projet. Pour plus d'informations, voir [Architecture d'un projet 4D](Project/architecture.md).
 
 Vous pouvez alors commencer à développer votre projet.
 
-## Opening a project
+## Ouvrir un projet
 
-To open an existing project from 4D:
+Pour ouvrir un projet existant depuis 4D :
 
 1. Sélectionnez **Ouvrir un projet d'application local** dans la boite de dialogue de l'Assistant de bienvenue <p>OR<p> Sélectionnez **Ouvrir > Projet local...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.<p> La boîte de dialogue standard d’ouverture de fichiers apparaît.
 
 2. Sélectionnez le fichier `.4dproject` du projet et cliquez sur **Ouvrir**.<p> Par défaut, le projet est ouvert avec son fichier de données courant. D'autres types de fichiers sont suggérés :
 
-    - *Fichiers de raccourcis* : extension `.4dlink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
-    - *Fichiers de raccourcis* : extension `.4DLink` - stockent les paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
-    - *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D hérités
+    - *Fichiers de projets compressés* : extension `.4dz` - projets pour le déploiement
+    - *Fichiers de raccourcis* : extension `.4DLink` - stockent des paramètres supplémentaires nécessaires à l'ouverture de projets ou d'applications (adresses, identifiants, etc.)
+    - *Fichiers binaires* : extension `.4db` ou `.4dc` - formats de base de données 4D traditionnels
 
 ### Options
 
-En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D propose deux menus avec des options spécifiques disponibles à l'aide du bouton **Ouvrir** et du menu **Fichier de données**.
+En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D propose deux menus d'options spécifiques disponibles des bouton **Ouvrir** et **Fichier de données**.
 
-- via les options du menu :
-    - *Barre de menu* - **Fichier** > **Ouvrir Projets récents / {project name}**
-    - *Barre d'outils 4D* -  Sélectionnez le projetà partir du menu associé au bouton **Ouvrir**
+- **Ouvrir** - mode d'ouverture du projet :
+    - **Projet interprété** ou **Projet compilé** : ces options sont disponibles lorsque le projet sélectionné contient à la fois du [code interprété et compilé](Concepts/interpreted.md).
+    - **[Centre de sécurité et de maintenance](MSC/overview.md)** : Ouverture en mode sécurisé permettant d'accéder aux projets endommagés afin d'effectuer les réparations nécessaires.
 
 - **Fichier de données** - spécifie le fichier de données à utiliser avec le projet. Par défaut, l'option **Fichier de données courant** est sélectionnée.
 
@@ -53,12 +53,12 @@ En plus des options système standard, la boîte de dialogue *Ouvrir* de 4D prop
 
 4D propose plusieurs façons d’ouvrir directement des projets, sans passer par la boîte de dialogue d’ouverture :
 
-- via les préférences :
-    -   **Ouvrir** - mode d'ouverture du projet :
-    -   Définissez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
+- via des commandes de menus :
+    -   *Barre de menus* - **Fichier** > **Ouvrir projets récents / {project name}**
+    -   *Barre d'outils 4D* -  Sélectionnez le projet à partir du menu associé au bouton **Ouvrir**
 
 - via les préférences :
-    -   **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
+    -   Fixez la préférence générale **Au démarrage** sur **Ouvrir le dernier projet utilisé**.
 
 - via un fichier `.4DLink`.
 
@@ -82,8 +82,8 @@ Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que se
 
 4D génère automatiquement un fichier `.4DLink` lorsqu'un projet local est ouvert pour la première fois ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
-- Windows 7 et versions plus récentes : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-- OS X : Users/UserName/Library/Application Support/4D/Favorites vXX/
+- Windows : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+- macOS : Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 
@@ -98,7 +98,7 @@ Les fichiers `.4DLink` peuvent également être créés avec un éditeur XML.
 
 ## Enregistrement des fichiers
 
-Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur disque lorsque vous sélectionnez un élément de menu **Sauvegarde**, ou lorsque la fenêtre de l'éditeur pert ou récupère le focus.
+Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur disque lorsque vous sélectionnez une commande **Sauvegarde**, ou lorsque la fenêtre de l'éditeur perd ou récupère le focus.
 
 Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
 
@@ -109,7 +109,7 @@ Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant
 
 ![](assets/en/Project/projectReload.png)
     - **Oui** : ignore les modifications de l'éditeur et recharge la version modifiée
-    - **Non** : enregistrer les modifications et écraser l'autre version
+    - **Non** : enregistre les modifications et écrase l'autre version
     - **Annuler** : ne pas enregistrer
 
 Cette fonctionnalité est activée pour tous les éditeurs 4D intégrés (Structure, Formulaire, Méthode, Paramètres et Boite à outils).
