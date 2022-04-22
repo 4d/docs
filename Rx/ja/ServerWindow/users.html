@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19 R3"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Users Page · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**ユーザー** ページには、サーバーに接続しているユーザーが表示されます:"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="Users Page · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/Rx/index.html"/><meta property="og:description" content="**ユーザー** ページには、サーバーに接続しているユーザーが表示されます:"/><meta property="og:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/Rx/img/logohome.png"/><link rel="shortcut icon" href="/docs/Rx/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/Rx/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/Rx/js/code-blocks-buttons.js"></script><script src="/docs/Rx/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/Rx/css/main.css"/><script src="/docs/Rx/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/Rx/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R5 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R4</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/Rx/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/Rx/en/ServerWindow/users.html">English</a></li><li><a href="/docs/Rx/de/ServerWindow/users.html">Deutsch</a></li><li><a href="/docs/Rx/es/ServerWindow/users.html">Español</a></li><li><a href="/docs/Rx/fr/ServerWindow/users.html">Français</a></li><li><a href="/docs/Rx/pt/ServerWindow/users.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>4D Server Administration Window</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Server Administration Window<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/monitor.html">Monitor Page</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/Rx/ja/ServerWindow/users.html">Users Page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/processes.html">Processes Page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/maintenance.html">Maintenance Page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/application-server.html">Application Server Page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/sql-server.html">SQL Server Page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/http-server.html">HTTP Server Page</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/ServerWindow/real-time-monitor.html">Real Time Monitor Page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Web Administration<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Admin/webAdmin.html">Web 管理</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Admin/dataExplorer.html">Webデータエクスプローラー</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Command Line Interface<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Admin/cli.html">コマンドライン・インターフェース</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">TLS Protocol<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Admin/tls.html">TLSプロトコル (HTTPS)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">License Management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Admin/licenses.html">4D ライセンスの管理</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">アクセス権限<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Users/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Users/editing.html">4Dユーザー＆グループの管理</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">MSC<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/information.html">情報ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/analysis.html">ログ解析ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/verify.html">検査ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/backup.html">バックアップページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/compact.html">圧縮ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/rollback.html">ロールバックページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/restore.html">復元ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/repair.html">修復ページ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/MSC/encrypt.html">暗号化ページ</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">バックアップと復元<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Backup/overview.html">概要</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Backup/backup.html">バックアップ</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Backup/settings.html">バックアップ設定</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Backup/log.html">ログファイル (.journal)</a></li><li class="navListItem"><a class="navItem" href="/docs/Rx/ja/Backup/restore.html">復元</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/ServerWindow/users.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Users Page</h1></header><article><div><span><p><strong>ユーザー</strong> ページには、サーバーに接続しているユーザーが表示されます:</p>
+<p><img src="/docs/Rx/assets/en/Admin/server-users.png" alt=""></p>
+<p>&quot;ユーザー&quot; ボタンには、データベースに接続中のユーザ数が括弧内に表示されます (この番号は、ウィンドウに適用される表示フィルターを考慮しません)。 このページには、動的な検索エリアやコントロールボタンもあります。 ヘッダーエリアをドラッグ＆ドロップして、列の順番を入れ替えることができます。</p>
+<p>また、ヘッダーをクリックすると、リストの値が並べ替えられます。 クリックするごとに昇順/降順が入れ替わります。</p>
+<p><img src="/docs/Rx/assets/en/Admin/server-users-sort.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="ユーザーリスト"></a><a href="#ユーザーリスト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ユーザーリスト</h2>
+<p>サーバーに接続したユーザーごとに、以下の情報がリストに表示されます:</p>
+<ul>
+<li>システム: クライアントマシンのシステム (macOS/Windows)。</li>
+<li><strong>4Dユーザー</strong>: 4Dユーザー名、またはユーザーマシン上で <a href="https://doc.4d.com/4dv19/help/command/ja/page1666.html"><code>SET USER ALIAS</code></a> コマンドで設定されていればエイリアス。 パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは &quot;Designer&quot; となります。</li>
+<li><strong>マシン名</strong>: リモートマシンの名前。</li>
+<li><strong>セッション名</strong>: リモートマシン上で開かれたセッション名。</li>
+<li><strong>IP アドレス</strong>: リモートマシンの IPアドレス。</li>
+<li><strong>ログイン日</strong>: リモートマシンが接続した日付と時刻。</li>
+<li><strong>CPU時間</strong>: 接続してからこのユーザーが消費した CPU の時間</li>
+<li><strong>Activity</strong>: 4D Server がこのユーザーのために使用する時間の割合 (動的表示)。 リモートマシンがスリープモードに切り替わっている場合には &quot;スリープ中&quot; と表示 (以下参照)。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="スリープ中ユーザーの管理"></a><a href="#スリープ中ユーザーの管理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スリープ中ユーザーの管理</h3>
+<p>4D Server は、サーバーマシンへのアクセスがアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。 この場合、接続されている 4Dリモートアプリケーションはこの急な切断を 4D Server へと自動的に知らせます。 サーバー側では、接続しているユーザーのアクティビティステータスを <strong>スリープ中</strong> へと変更されます:</p>
+<p><img src="/docs/Rx/assets/en/Admin/server-sleeping.png" alt=""></p>
+<p>このステータスはサーバー側のリソースを一部解放します。 これに加え、4Dリモートアプリケーションはスリープモードから復帰したときに自動的に 4D Server へと再接続します。</p>
+<p>サポートされるシナリオは、以下の様なものです: たとえばお昼休みなどでリモートユーザーが作業を中断するも、サーバーとの接続は開いたままにしたとします。 マシンはスリープモードへと切り替わります。 ユーザーが戻ってきてマシンをスリープから復帰させると、4Dリモートアプリケーションは自動的にサーバーへの接続を復元するとともにセッションコンテキストも復元します。</p>
+<blockquote>
+<p>スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 このデフォルトのタイムアウトを変更するには、<a href="https://doc.4d.com/4dv19/help/command/ja/page642.html"><code>SET DATABASE PARAMETER</code></a> コマンドの <code>Remote connection sleep timeout</code> セレクターを使用します。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="検索フィルターエリア"></a><a href="#検索フィルターエリア" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>検索/フィルターエリア</h2>
+<p>この機能を使用して、検索エリアに入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができます。 エリアには、どの列に対して検索/フィルターが実行されるかが表示されています。 ユーザーページでは、4D ユーザー、マシン名、そしてセッション名です。</p>
+<p>エリアにテキストが入力されると、リストはリアルタイムで更新されます。 値をセミコロンで区切ることで、一つ以上の値を使用して検索をおこなうことができます。 この場合 <code>OR</code> タイプの演算がおこなわれます。 たとえば、&quot;John;Mary;Peter&quot; と入力すると、John または Mary または Peter が対象となる列にある行のみが表示されます。</p>
+<h2><a class="anchor" aria-hidden="true" id="管理ボタン"></a><a href="#管理ボタン" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>管理ボタン</h2>
+<p>このページには 3つのコントロールボタンがあります。 これらのボタンは、最低 1つの行が選択されているときに有効になります。 <strong>Shift</strong>キーを押しながらクリックして連続した行を、あるいは <strong>Ctrl</strong> (Windows) / <strong>Command</strong> (macOS) キーを押しながらクリックして連続しない行を複数選択できます。</p>
+<h3><a class="anchor" aria-hidden="true" id="メッセージ送信"></a><a href="#メッセージ送信" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>メッセージ送信</h3>
+<p>このボタンを使用して、ウィンドウで選択した 4Dユーザーにメッセージを送信できます。 ユーザーが選択されていないと、ボタンを使用できません。 ボタンをクリックするとダイアログボックスが表示され、メッセージを入力できます。 ダイアログにはメッセージを受信するユーザーの数が表示されます:</p>
+<p><img src="/docs/Rx/assets/en/Admin/server-message.png" alt=""></p>
+<p>クライアントマシン上でこのメッセージは警告メッセージとして表示されます。</p>
+<blockquote>
+<p><a href="https://doc.4d.com/4dv19/help/command/ja/page1632.html"><code>SEND MESSAGE TO REMOTE USER</code></a> コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="プロセス監視"></a><a href="#プロセス監視" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プロセス監視</h3>
+<p>このボタンをクリックすると、選択されたユーザーのプロセスを、管理ウィンドウの <a href="/docs/Rx/ja/ServerWindow/processes.html"><strong>プロセス</strong> ページ</a> に直接表示させることができます。 ボタンをクリックすると、4D Server はプロセスページに移動し、このページの検索/フィルターエリアに選択されたユーザー名を入力します。</p>
+<h3><a class="anchor" aria-hidden="true" id="ユーザーをドロップ"></a><a href="#ユーザーをドロップ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ユーザーをドロップ</h3>
+<p>このボタンは、選択したユーザーの接続を強制的に解除するために使用します。 このボタンをクリックすると警告ダイアログが表示され、接続解除を実行するかキャンセルするか選択できます。確認ダイアログなしに選択ユーザーの接続を解除するには、<strong>Alt</strong>キーを押しながら、<strong>ユーザーをドロップ</strong> ボタンをクリックします。</p>
+<blockquote>
+<p><a href="https://doc.4d.com/4dv19/help/command/ja/page1633.html"><code>DROP REMOTE USER</code></a> コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/ServerWindow/monitor.html"><span class="arrow-prev">← </span><span>前へ</span></a><a class="docs-next button" href="/docs/Rx/ja/ServerWindow/processes.html"><span>次へ</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ユーザーリスト">ユーザーリスト</a><ul class="toc-headings"><li><a href="#スリープ中ユーザーの管理">スリープ中ユーザーの管理</a></li></ul></li><li><a href="#検索フィルターエリア">検索/フィルターエリア</a></li><li><a href="#管理ボタン">管理ボタン</a><ul class="toc-headings"><li><a href="#メッセージ送信">メッセージ送信</a></li><li><a href="#プロセス監視">プロセス監視</a></li><li><a href="#ユーザーをドロップ">ユーザーをドロップ</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:ja","version:19 R3"]}
+              });
+            </script></body></html>
