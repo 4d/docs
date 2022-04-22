@@ -49,14 +49,12 @@ The  `Method called on error` command allows to know the name of the method inst
 
 Within the custom error method, you have access to several information that will help you identifying the error:
 
-- dedicated system variables(*):
+- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
 
   - `Error` (longint): error code
   - `Error method` (text): name of the method that triggered the error
   - `Error line` (longint): line number in the method that triggered the error
   - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error.
-
-(*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
 
 - the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application.
 - the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.

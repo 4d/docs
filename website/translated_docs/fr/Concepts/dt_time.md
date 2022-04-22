@@ -3,7 +3,7 @@ id: time
 title: Heure
 ---
 
-- Les variables, champs ou expressions de type Heure peuvent être compris entre 00:00:00 et 596,000:00:00.
+- Les variables, champs ou expressions de type Heure peuvent être compris entre 00:00:00 et 596 000:00:00.
 - Les heures sont stockées dans un format de 24 heures.
 - Une valeur de type Heure peut être utilisée en tant que numérique. Le nombre correspondant est le nombre de secondes que cette valeur représente à partir de minuit (00:00:00).
 
