@@ -124,17 +124,15 @@ Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, o
 | objeto webServer    | `debugLog`      | number      |
 | `WEB SET OPTION`    | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
 
-| Valor | Constante   | Descripción                    |
-| ----- | ----------- | ------------------------------ |
-| 0     | wdl disable | Web HTTP debug log is disabled |
-
-
-
-
-
-|1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|
+| Valor | Constante                      | Descripción                                                                           |
+| ----- | ------------------------------ | ------------------------------------------------------------------------------------- |
+| 0     | wdl disable                    | Web HTTP debug log is disabled                                                        |
+| 1     | wdl enable without body        | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
+| 3     | wdl enable with response body  | Web HTTP debug log is enabled with body part in response only                         |
+| 5     | wdl enable with request body   | Web HTTP debug log is enabled with body part in request only                          |
+| 7     | wdl enable with all body parts | Web HTTP debug log is enabled with body parts in response and request                 |
 
 
 ## Default Home page
@@ -169,7 +167,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 | `WEB SET OPTION`              | `Web CORS enabled`                                                 | 0 (disabled, default) or 1 (enabled)                |
 | Caja de diálogo de parámetros | [Página Options (II)/Activar CORS](../settings/web.md#enable-cors) | Unchecked by default                                |
 
-The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
+The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
 When disabled (default), all cross site requests sent with CORS are ignored.
 
@@ -197,7 +195,7 @@ Indicates whether or not the web server will accept non-secure connections.
 | `WEB SET OPTION`              | `Web HTTPS enabled`                                  |             |
 | Caja de diálogo de parámetros | Configuration page/Enable HTTPS                      |             |
 
-Status for communication over HTTPS. This option is described in [this section](Admin/tls.md).
+Estado de la comunicación a través de HTTPS. Esta opción se describe en [esta sección](Admin/tls.md).
 
 
 ## Activar HSTS
@@ -225,7 +223,7 @@ HSTS allows the 4D web server to declare that browsers should only interact with
 | objeto webServer    | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | number in seconds |
 | `WEB SET OPTION`    | `Web HSTS max age`                               | number in seconds |
 
-Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration. Default value is 63072000 (2 years)
+Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. Esta información se almacena del lado del cliente durante el tiempo especificado. Default value is 63072000 (2 years)
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
@@ -251,7 +249,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 | objeto webServer    | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |             |
 | `WEB SET OPTION`    | `Web HTTP compression threshold`                                             |             |
 
-In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.
 
 Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
 
@@ -288,11 +286,13 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 
 ## Puerto HTTPS
 
-| Puede ajustarse con           | Nombre                                                         | Comentarios |
-| ----------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer              | [`HTTPSPort`](API/WebServerClass.md#httpsport)                 | number      |
-| `WEB SET OPTION`              | `Web HTTPS port ID`                                            |             |
-| Caja de diálogo de parámetros | [Configuration page/HTTPS Port](../settings/web.md#https-port) |             |
+| Puede ajustarse con | Nombre                                         | Comentarios |
+| ------------------- | ---------------------------------------------- | ----------- |
+| objeto webServer    | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number      |
+
+|`WEB SET OPTION`|`Web HTTPS port ID`||
+
+|Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
 
 Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also [HTTP Port](#http-port) for information on port numbers.
 
@@ -317,7 +317,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 | objeto webServer    | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |             |
 | `WEB SET OPTION`    | `Web inactive session timeout`                                           |             |
 
-Life duration (in minutes) of inactive sessions (duration set in cookie). At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
+Life duration (in minutes) of inactive sessions (duration set in cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.
 
 Default: 480 minutes (pass 0 to restore the default value)
 
@@ -399,7 +399,7 @@ This setting allows you to select the format of this file. Available values are:
 | `WEB SET OPTION`              | `Web max concurrent processes`                                                                           |             |
 | Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#maximum-concurrent-web-processes) |             |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
+Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
 By default, the value is 100. You can set the number anywhere between 10 and 32000.
 
@@ -477,6 +477,23 @@ Version of the OpenSSL library used.
 True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forward-secrecy-pfs) section).
 
 
+## Reuse temporary contexts (in remote mode)
+
+| Puede ajustarse con           | Nombre                                                                                           | Comentarios |
+| ----------------------------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#reuse-temporary-contexts) |             |
+
+> This option is only available when **No sessions** option is checked.
+
+Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
+
+When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
+
+In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
+
+> This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
+
+
 ## Robots.txt
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
@@ -540,6 +557,17 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 > When the HTML root folder is modified, the cache is cleared so as to not store files whose access is restricted.
 
 
+## Scalable Sessions
+
+| Puede ajustarse con           | Nombre                                                                                                                     | Comentarios |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| objeto webServer              | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                 |             |
+| `WEB SET OPTION`              | `Web scalable session`                                                                                                     |             |
+| Caja de diálogo de parámetros | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |             |
+
+Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+
+
 
 ## Session Cookie Domain
 
@@ -592,6 +620,14 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 
 
+## Use preemptive processes
+
+| Puede ajustarse con           | Nombre                                                                                           | Comentarios |
+| ----------------------------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| Caja de diálogo de parámetros | [Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#use-preemptive-processes) |             |
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+
 
 
 
@@ -609,17 +645,6 @@ This option controls the support of HTTP synchronization requests containing dep
 
 IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
-
-#### Reuse temporary contexts (in remote mode)
-
-Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
-
-When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
-
-In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
-> * This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
-> 
-> * This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
 
 
 

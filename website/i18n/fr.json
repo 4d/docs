@@ -226,7 +226,7 @@
         "title": "Débogage depuis des machines distantes"
       },
       "Debugging/debugLogFiles": {
-        "title": "Description des fichiers historiques"
+        "title": "Description des fichiers d'historique"
       },
       "Desktop/building": {
         "title": "Générateur d'application"
@@ -235,7 +235,7 @@
         "title": "Client/Server Management"
       },
       "Desktop/user-settings": {
-        "title": "Paramètres utilisateur"
+        "title": "Propriétés utilisateur"
       },
       "Events/onActivate": {
         "title": "Sur activation"
@@ -634,7 +634,7 @@
         "title": "Zone 4D Write Pro"
       },
       "GettingStarted/creating": {
-        "title": "Working with a project"
+        "title": "Travailler avec des projets"
       },
       "GettingStarted/installation": {
         "title": "Installation"
@@ -919,6 +919,9 @@
       "Users/overview": {
         "title": "Présentation du contrôle des accès"
       },
+      "ViewPro/advanced-programming": {
+        "title": "Advanced programming with Javascript"
+      },
       "ViewPro/configuring": {
         "title": "Configuration des zones 4D View Pro"
       },
@@ -982,6 +985,7 @@
       "Class API Reference": "Classes API",
       "Code Editor": "Éditeur de code",
       "Debugging": "Débogage",
+      "Transformation Tags": "Transformation Tags",
       "Settings": "Settings",
       "Preferences": "Préférences",
       "4D Server Administration Window": "Fenêtre d'administration de 4D Server",
@@ -1002,7 +1006,7 @@
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
       "Menus": "Menus",
-      "User Settings": "Paramètres utilisateur",
+      "User Settings": "Propriétés utilisateur",
       "Build application": "Générateur d'application",
       "Extensions": "Extensions",
       "4D View Pro": "4D View Pro"
@@ -1038,17 +1042,18 @@
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
-    "Description of log files|no description given": "Description des fichiers historiques",
+    "Description of log files|no description given": "Description des fichiers d'historique",
     "Command Line Interface|no description given": "Interface de ligne de commande",
     "4D View Pro|no description given": "4D View Pro",
     "Preferences|no description given": "Préférences",
     "Overview|no description given": "Aperçu",
     "Developing Components|no description given": "Composants de développement",
     "Developing Plugins|no description given": "Plugins de développement",
-    "Working with a project|no description given": "Working with a project",
+    "Working with a project|no description given": "Travailler avec des projets",
     "Settings|no description given": "Settings",
-    "User Settings|no description given": "Paramètres utilisateur",
-    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
+    "Transformation Tags|no description given": "Transformation Tags",
+    "User Settings|no description given": "Propriétés utilisateur",
+    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",

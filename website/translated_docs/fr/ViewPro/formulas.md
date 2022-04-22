@@ -285,7 +285,7 @@ Des solutions alternatives sont disponibles pour déclarer des champs ou des mé
 
 > **ATTENTION :** Vous ne pouvez pas utiliser la structure virtuelle et `VP SET CUSTOM FUNCTIONS` simultanément. Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les fonctions basées sur les commandes `SET TABLE TITLES` et `SET FIELD TITLES` sont ignorées dans la zone 4D View Pro.
 
-#### Pré-requis
+#### Conditions requises
 
 *   Le champ doit appartenir à la structure virtuelle de la base de données, c'est-à-dire qu'il doit être déclaré par les commandes [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) et/ou [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) avec le paramètre \* (voir exemple),
 *   Les noms des tables et des champs doivent être conformes à la norme ECMA (voir la [norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
@@ -356,7 +356,7 @@ Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D Vi
 Vous pouvez appeler directement des méthodes du projet 4D à partir de vos formules 4D View Pro. Pour des raisons de sécurité, vous devez déclarer explicitement les méthodes qui peuvent être appelées par l'utilisateur avec la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
 
 
-#### Pré-requis
+#### Conditions requises
 
 Pour être appelée dans une formule 4D View Pro, une méthode projet doit être :
 

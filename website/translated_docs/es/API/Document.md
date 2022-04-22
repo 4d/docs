@@ -92,7 +92,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza por ".". The property returns an empty string if the file name does not have an extension.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -366,7 +366,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->el objeto carpeta padre del archivo<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->el objeto carpeta padre del archivo<!-- END REF -->. Si la ruta representa una ruta del sistema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -390,7 +390,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.path` devuelve <!-- REF #document.path.Summary -->la ruta POSIX del archivo<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+La propiedad `.path` devuelve <!-- REF #document.path.Summary -->la ruta POSIX del archivo<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -484,9 +484,9 @@ Por defecto, el archivo se copia con el nombre del archivo original. Si desea ca
 
 Si ya existe un archivo con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
-| Constante      | Valor | Comentario                          |
-| -------------- | ----- | ----------------------------------- |
-| `fk overwrite` | 4     | Overwrite existing elements, if any |
+| Constante      | Valor | Comentario                                        |
+| -------------- | ----- | ------------------------------------------------- |
+| `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
 
 **Valor devuelto**

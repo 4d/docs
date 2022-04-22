@@ -78,7 +78,7 @@ Suite cryptographique utilisée pour le protocole sécurisé. Fixe la priorité 
 | `WEB SET OPTION`         | `Web CORS settings`                                                                                                                   | Collection d'objets (Liste des hôtes et méthodes autorisées pour le service CORS)       |
 | Fenêtre de configuration | [Propriétés > Web > Options (II) > Noms de domaine et Méthodes HTTP autorisées](../settings/web.md#domain-names-HTTP-methods-allowed) | Cliquez sur le bouton [+] pour ajouter un nom de domaine autorisé et sa ou ses méthodes |
 
-List of allowed hosts and methods for the CORS service.
+Liste des hôtes et méthodes autorisées pour le service CORS.
 
 #### Noms de domaine
 
@@ -124,17 +124,15 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | objet webServer         | `debugLog`      | number       |
 | `WEB SET OPTION`        | `Web debug log` | number       |
 
-État du fichier journal des requêtes HTTP du serveur web (HTTPDebugLog_nn.txt, stocké dans le dossier "Logs" de l'application -- nn est le numéro du fichier). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent optionellement être enregistrées.
+Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent optionellement être enregistrées.
 
-| Valeur | Constante   | Description                             |
-| ------ | ----------- | --------------------------------------- |
-| 0      | wdl disable | Les debug logs Web HTTP sont désactivés |
-
-
-
-
-
-|1|wdl enable without body|Le journal de débogage de Web HTTP est activé sans le body (la taille du body est fournie dans ce cas). |3|wdl enable with response body|Le journal de débogage de Web HTTP est activé, le body est inclus uniquement dans la réponse |5|wdl enable with request body| Le journal de débogage de Web HTTP est activé, le body est inclus uniquement dans la requête |7|wdl enable with all body parts|Web HTTP debug log est activé, le body est inclus dans la réponse et la requête|
+| Valeur | Constante                      | Description                                                                           |
+| ------ | ------------------------------ | ------------------------------------------------------------------------------------- |
+| 0      | wdl disable                    | Les debug logs Web HTTP sont désactivés                                               |
+| 1      | wdl enable without body        | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
+| 3      | wdl enable with response body  | Web HTTP debug log is enabled with body part in response only                         |
+| 5      | wdl enable with request body   | Web HTTP debug log is enabled with body part in request only                          |
+| 7      | wdl enable with all body parts | Web HTTP debug log is enabled with body parts in response and request                 |
 
 
 ## Page d'accueil par défaut
@@ -288,16 +286,18 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 
 ## Port HTTPS
 
-| Peut être configuré via  | Nom                                                        | Commentaires |
-| ------------------------ | ---------------------------------------------------------- | ------------ |
-| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport)             | number       |
-| `WEB SET OPTION`         | `Web HTTPS port ID`                                        |              |
-| Fenêtre de configuration | [Configuration > Port HTTP](../settings/web.md#https-port) |              |
+| Peut être configuré via | Nom                                            | Commentaires |
+| ----------------------- | ---------------------------------------------- | ------------ |
+| objet webServer         | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number       |
+
+|`WEB SET OPTION`|`Web HTTPS port ID`||
+
+|Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
 
 Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par défaut est 443 (valeur standard). Voir aussi [HTTP Port](#http-port) pour plus d'informations sur les numéros de port.
 
 
-## Durée de vie des process inactifs
+## Conservation des process inactifs
 
 | Peut être configuré via  | Nom                                                                                            | Commentaires |
 | ------------------------ | ---------------------------------------------------------------------------------------------- | ------------ |
@@ -399,7 +399,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | `WEB SET OPTION`         | `Web max concurrent processes`                                                                   |              |
 | Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#maximum-concurrent-web-processes) |              |
 
-Nombre maximal de process Web simultanés qui peuvent être ouverts simultanément sur le serveur. Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -477,6 +477,23 @@ Version de la bibliothèque OpenSSL utilisée.
 Vrai si le PFS est disponible sur le serveur web (voir la section [TLS](Admin/tls.md#perfect-forward-secrecy-pfs)).
 
 
+## Réutiliser les contextes temporaires (en mode distant)
+
+| Peut être configuré via  | Nom                                                                                      | Commentaires |
+| ------------------------ | ---------------------------------------------------------------------------------------- | ------------ |
+| Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#reuse-temporary-contexts) |              |
+
+> This option is only available when **No sessions** option is checked.
+
+Permet d'optimiser le fonctionnement du 4D Web Server en mode distant en réutilisant les process web créés pour le traitement des demandes web précédentes. En fait, le serveur web de 4D nécessite un process web spécifique pour le traitement de chaque requête web; en mode distant, lorsque nécessaire, ce processus se connecte à la machine du 4D Server afin d'accéder au moteur de données et de base de données. Il génère ainsi un contexte temporaire en utilisant ses propres variables, sélections, etc. Une fois la demande traitée, ce process est arrêté.
+
+Lorsque l'option **Réutiliser les contextes temporaires** est cochée, en mode distant, 4D maintient les process web spécifiques et les réutilise pour les demandes suivantes. Supprimer l'étape de création du process améliore les performances du serveur web.
+
+En contrepartie, vous devez veiller à initialiser systématiquement les variables utilisées dans les méthodes 4D afin d'éviter l'obtention des résultats incorrects. De même, il est nécessaire d'effacer toutes les sélections en cours ou les enregistrements définis lors de la demande précédente.
+
+> Cette option n'a d'effet qu'avec un serveur web 4D en mode distant. Avec un 4D en mode local, tous les process Web (autres que les process de session) sont arrêtés après leur utilisation.
+
+
 ## Robots.txt
 
 Certains robots (moteurs de recherche, crawlers...) parcourent les serveurs web et les pages statiques. Si vous ne voulez pas que les robots puissent accéder à l'ensemble de votre site, vous pouvez définir les URL auxquelles ils ne sont pas autorisés à accéder.
@@ -540,6 +557,17 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 > Lorsque le dossier racine HTML est modifié, le cache est effacé afin que les fichiers dont l'accès est restreint ne soient pas stockés.
 
 
+## Scalable Sessions
+
+| Peut être configuré via  | Nom                                                                                                                        | Commentaires |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| objet webServer          | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                 |              |
+| `WEB SET OPTION`         | `Web scalable session`                                                                                                     |              |
+| Fenêtre de configuration | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |              |
+
+Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+
+
 
 ## Session Cookie Domain
 
@@ -592,6 +620,14 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 
 
 
+## Utiliser des process préemptifs
+
+| Peut être configuré via  | Nom                                                                                      | Commentaires |
+| ------------------------ | ---------------------------------------------------------------------------------------- | ------------ |
+| Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#use-preemptive-processes) |              |
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+
 
 
 
@@ -609,17 +645,6 @@ Cette option contrôle le support des requêtes de synchronisation HTTP contenan
 
 Statut de validation d'adresse IP pour les cookies de session. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. Par exemple, lorsque les appareils mobiles basculent entre les réseaux Wifi et 4G/5G, leur adresse IP change. Dans ce cas, vous devez passer 0 à cette option pour permettre aux clients de continuer à utiliser leurs sessions Web même lorsque les adresses IP changent. Note : ce paramètre réduit le niveau de sécurité de votre application. Une fois modifiée, cette option prend effet immédiatement (il n'est pas nécessaire de redémarrer le serveur HTTP).
 
-
-#### Réutiliser les contextes temporaires (en mode distant)
-
-Permet d'optimiser le fonctionnement du 4D Web Server en mode distant en réutilisant les process web créés pour le traitement des demandes web précédentes. En fait, le serveur web de 4D nécessite un process web spécifique pour le traitement de chaque requête web; en mode distant, lorsque nécessaire, ce processus se connecte à la machine du 4D Server afin d'accéder au moteur de données et de base de données. Il génère ainsi un contexte temporaire en utilisant ses propres variables, sélections, etc. Une fois la demande traitée, ce process est arrêté.
-
-Lorsque l'option **Réutiliser les contextes temporaires** est cochée, en mode distant, 4D maintient les process web spécifiques et les réutilise pour les demandes suivantes. Supprimer l'étape de création du process améliore les performances du serveur web.
-
-En contrepartie, vous devez veiller à initialiser systématiquement les variables utilisées dans les méthodes 4D afin d'éviter l'obtention des résultats incorrects. De même, il est nécessaire d'effacer toutes les sélections en cours ou les enregistrements définis lors de la demande précédente.
-> * Cette option est cochée (et verrouillée) automatiquement lorsque l'option **Gestion automatique des sessions** est cochée. En fait, le mécanisme de gestion des sessions est basé sur le principe du recyclage des process Web : chaque session utilise le même process qui est maintenu pendant la durée de vie de la session. Cependant, notez que les process de session ne peuvent pas être "partagés" entre différentes sessions : une fois la session terminée, le processus est automatiquement arrêté (et non réutilisé). Il est donc inutile de réinitialiser les sélections ou les variables dans ce cas.
-> 
-> * Cette option n'a d'effet qu'avec un serveur web 4D en mode distant. Avec un 4D en mode local, tous les process Web (autres que les process de session) sont arrêtés après leur utilisation.
 
 
 

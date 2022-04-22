@@ -121,29 +121,29 @@ Vous permet de choisir d'afficher ou non les multiples presse-papiers dans l'éd
 
 Les [raccourcis du presse-papiers](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) correspondants demeurent actifs lorsque ces presse-papiers sont masqués.
 
-#### Highlight the logical blocks
+#### Surbrillance des blocs logiques
 
-When checked, the whole code belonging to a logical block (If/End if for example) is highlighted when the mouse is placed over the expanded node:
+Lorsque vous cochez l'option, tout le code correspondant à un bloc logique (Si/Fin de si par exemple) est surligné lorsque la souris est placée au-dessus de l'icône plier/déplier :
 
 ![](assets/en/Preferences/optionsLogicalBlocks.png)
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+La couleur de surlignage peut être modifiée dans la page [Définition d'un thème](#définition-dun-thème).
 
-#### Always show block lines
+#### Toujours afficher les lignes de blocs
 
-Allows to hide vertical block lines permanently. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+Permet de cacher de façon permanente les lignes verticales de blocs. Les lignes de blocs sont conçues pour visualiser les blocs logiques. Par défaut, elles sont toujours affichées, excepté lorsque les icônes plier/déplier sont masquées (voir ci-dessous).
 
 ![](assets/en/Preferences/optionsBlockLines.png)
 
-#### Hide collapse/expand icons
+#### Masquer les icônes plier/déplier
 
-Allows you to hide all expand/collapse icons by default when displaying code. When the option is checked, node icons (as well as local block lines, see above), are displayed temporarily when the mouse is placed over a node:
+Permet de masquer, par défaut, toutes les icônes plier/déplier lorsque vous affichez le code. Lorsque cette option est cochée, les icônes plier/déplier (ainsi que les lignes de blocs locales, voir ci-dessus) sont affichées temporairement lorsque la souris survole une icône :
 
 ![](assets/en/Preferences/optionsHideIcons.png)
 
-#### Insert () and closing } ) ] "
+#### Insérer () et ajouter } ) ] " fermants
 
-Enables automatic insertion of () and closing braces while typing code. This option controls two automatic features:
+Active l'insertion automatique de () et de caractères fermants lors de la saisie du code. Cette option contrôle deux fonctionnalités automatiques :
 
 - **paire de parenthèses ()** : Ajoutée après une commande 4D, un mot-clé ou une méthode projet insérée à partir d'une liste de suggestions ou de complétion, si l'élément inséré nécessite un ou plusieurs arguments obligatoires. Par exemple, si vous tapez "C_OB" et vous appuyez sur la touche Tab, 4D écrit "C_OBJECT()" et place le point d'insertion à l'intérieur du ().
 
@@ -152,19 +152,19 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 ![](assets/en/Preferences/optionsClosing.png)  
 ![](assets/en/Preferences/optionsClosing2.png)
 
-#### Matching \[]\(){}
+#### Correspondance \[]\(){}
 
-Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. Les options suivantes sont disponibles :
+Permet de modifier la signalisation graphique des caractères d'encadrement correspondants dans le code. Cette signalisation apparaît lorsqu’un crochet, une parenthèse ou une accolade est sélectionné(e). Les options suivantes sont disponibles :
 
 - **Aucun** : Aucun signal
-- **Rectangle** (default): Braces surrounded by a black line  
+- **Rectangle** (défaut): Caractères encadrés par un filet noir  
   ![](assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces displayed in bold.
+- **Couleur de fond** : Caractères mis en surbrillance (la couleur est définie dans la page [Thème](thèmes)).
+- **Gras** : caractères affichés en gras.
 
-#### Highlighted variables and fields
+#### Surbrillance des variables et champs
 
-Allows to highlight all occurrences of the same variable or field in an open method window.
+Permet de mettre en surbrillance toutes les occurrences d'un(e) même variable ou champ dans une fenêtre de méthode ouverte.
 
 ![](assets/en/Preferences/optionsVariables.png)
 
@@ -172,15 +172,15 @@ Allows to highlight all occurrences of the same variable or field in an open met
 - **Sur curseur** : Toutes les occurrences sont mises en évidence lorsque le texte est cliqué
 - **Sur sélection** : Toutes les occurrences sont mises en évidence lorsque le texte est sélectionné
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+La couleur de surlignage peut être modifiée dans la page [Définition d'un thème](#définition-dun-thème).
 
-#### Debug (Highlight the line running)
+#### Mode trace (Surbrillance de la ligne en exécution)
 
-Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
+Permet de mettre en surbrillance la ligne en exécution dans le Débogueur, en plus de la flèche jaune.
 
 ![](assets/en/Preferences/optionsLine.png)
 
-If you deselect this option, only the yellow arrow is shown.
+Si vous désélectionnez cette option, seule la flèche jaune est affichée.
 
 ### Suggestions
 

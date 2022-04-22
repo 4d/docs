@@ -196,5 +196,5 @@ title: 4Dユーザー＆グループの管理
 - すべてのデータファイルについて同じディレクトリを使用する場合 (または 1つのデータファイルだけを使用する場合)、ユーザー設定フォルダー (["Project" フォルダーと同じ階層](Project/architecture.md#project-フォルダー) の "Settings" フォルダー) に **directory.json** ファイルをに保存します (デフォルトの場所)。
 - データファイルごとに特定のディレクトリファイルを使用する場合は、**directory.json** ファイルをデータ設定フォルダー、つまり ["Data" フォルダーの "Settings" フォルダー](Project/architecture.md#settings) に格納します。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
 
-> "Designer" ユーザーにパスワードが設定されていない場合、**directory.json** ファイルは生成されません。
+> パスワードやグループメンバーシップを運用環境において安全に変更できるようにするには、ビルド時に [対応するビルドアプリケーションオプション](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) を使用して、サーバーアプリケーションに **directory.json** ファイルを含めることができます。
 

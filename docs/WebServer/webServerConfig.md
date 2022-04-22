@@ -126,16 +126,11 @@ Separate each method with a ";" (e,g,: "post;get"). If methods is empty, null, o
 |webServer object|`debugLog`|number|
 |`WEB SET OPTION`|`Web debug log`|number|
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well. 
+Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well. 
 
 |Value|Constant|Description|
 |---|---|---|
 |0|wdl disable|Web HTTP debug log is disabled|
-
-
-
-
-
 |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)|
 |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only|
 |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only|
@@ -298,7 +293,9 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 |Can be set with|Name|Comments|
 |---|---|---|
 |webServer object|[`HTTPSPort`](API/WebServerClass.md#httpsport)|number|
+
 |`WEB SET OPTION`|`Web HTTPS port ID`||
+
 |Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
 
 Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also [HTTP Port](#http-port) for information on port numbers. 
@@ -410,7 +407,7 @@ This setting allows you to select the format of this file. Available values are:
 |`WEB SET OPTION`|`Web max concurrent processes`||
 |Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#maximum-concurrent-web-processes)||
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
+Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
 By default, the value is 100. You can set the number anywhere between 10 and 32000.
 
@@ -488,6 +485,23 @@ Version of the OpenSSL library used.
 True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forward-secrecy-pfs) section).
 
 
+## Reuse temporary contexts (in remote mode)  
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#reuse-temporary-contexts)||
+
+> This option is only available when **No sessions** option is checked. 
+
+Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
+
+When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
+
+In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
+
+> This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
+
+
 ## Robots.txt 
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
@@ -551,6 +565,17 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 > When the HTML root folder is modified, the cache is cleared so as to not store files whose access is restricted. 
 
 
+## Scalable Sessions
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|webServer object|[`scalableSession`](API/WebServerClass.md#scalablesession)||
+|`WEB SET OPTION`|`Web scalable session`||
+|Settings dialog box|[Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions)||
+
+Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+
+
 
 ## Session Cookie Domain
 
@@ -603,6 +628,14 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 
 
+## Use preemptive processes
+
+|Can be set with|Name|Comments|
+|---|---|---|
+|Settings dialog box|[Options (I) page/Maximum Concurrent Web Processes](../settings/web.md#use-preemptive-processes)||
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+
 
 
 
@@ -620,18 +653,6 @@ This option controls the support of HTTP synchronization requests containing dep
 
 IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
-
-#### Reuse temporary contexts (in remote mode)  
-
-Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
-
-When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
-
-In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
-
->*	This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
->
->*	This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
 
 
 

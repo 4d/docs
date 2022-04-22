@@ -13,13 +13,17 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |                                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->|
+| [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
@@ -42,29 +46,29 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 **ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
-| Parameter | Type         |    | Description                                |
-| --------- | ------------ | -- | ------------------------------------------ |
-| localID   | Texto        | -> | Local ID of the remote datastore to return |
-| Result    | cs.DataStore | <- | Reference to the datastore                 |
+| Parameter | Type         |    | Description                                     |
+| --------- | ------------ | -- | ----------------------------------------------- |
+| localID   | Texto        | -> | ID local del armazém de dados remoto a devolver |
+| Result    | cs.DataStore | <- | Referencia ao armazém de dados                  |
 <!-- END REF -->
 
 
 #### Description
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+O comando `ds` <!-- REF #_command_.ds.Summary -->devolve uma referência ao armazém de dados que coincide com o banco de dados 4D atual ou com o banco de dados designada por *localID*<!-- END REF -->.
 
-If you omit the *localID* parameter (or pass an empty string ""), the command returns a reference to the datastore matching the local 4D database (or the 4D Server database in case of opening a remote database on 4D Server). The datastore is opened automatically and available directly through `ds`.
+Se omitir o parâmetro *localID* (ou se passa uma string vazia ""), o comando devolve uma referência ao armazém de dados que coincide com a base de dados local de 4D (ou  a base de datos de 4D Server em caso de abrir uma base de dados remota em 4D Server). O armazém de dados se abre automaticamente e está disponível diretamente através de `ds`.
 
-You can also get a reference on an open remote datastore by passing its local id in the *localID* parameter. The datastore must have been previously opened with the [`Open datastore`](#open-datastore) command by the current database (host or component). The local id is defined when using this command.
+Também pode obter uma referencia em um datastore remoto aberto passando seu id local no parâmetro *localID*. O armazém de dados deve ter sido aberto previamente com o comando [`Open datastore`](#open-datastore) pelo banco de dados atual (local ou componente). A identificação local se define quando se utilizar este comando.
 > The scope of the local id is the database where the datastore has been opened.
 
-If no *localID* datastore is found, the command returns **Null**.
+Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Objects available in the `cs. Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
 #### Exemplo 1
 
-Using the main datastore on the 4D database:
+Usar a datastore principal do banco de dados 4D:
 
 ```4d
  $result:=ds.Employee.query("firstName = :1";"S@")
@@ -111,31 +115,31 @@ Using the main datastore on the 4D database:
 **Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parameter      | Type         |    | Description                                                               |
-| -------------- | ------------ | -- | ------------------------------------------------------------------------- |
-| connectionInfo | Objeto       | -> | Connection properties used to reach the remote datastore                  |
-| localID        | Texto        | -> | Id to assign to the opened datastore on the local application (mandatory) |
-| Result         | cs.DataStore | <- | Datastore object                                                          |
+| Parameter      | Type         |    | Description                                                                  |
+| -------------- | ------------ | -- | ---------------------------------------------------------------------------- |
+| connectionInfo | Objeto       | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
+| localID        | Texto        | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Result         | cs.DataStore | <- | Objeto do armazém de dados                                                   |
 <!-- END REF -->
 
 
 #### Description
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+O comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta a aplicação ao banco identificado por *connectionInfo* parameter<!-- END REF --> e retorna um objeto correpondente `cs.DataStore` associado com o alias local *localID*.
 
-The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
+O banco de dados *connectionInfo* 4D deve estar disponível como armazém de dados remoto, ou seja:
 
-*   its web server must be launched with http and/or https enabled,
-*   its [**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option must be checked,
-*   at least one client license is available.
+*   seu servidor web deve ser lançado com http ou https ativado,
+*   sua opção [**Expor como servidor REST**](REST/configuration.md#starting-the-rest-server) deve estar marcada,
+*   se dispõe de ao menos uma licença cliente.
 
-If no matching database is found, `Open datastore` returns **Null**.
+Se não se encontrar nenhum banco de dados coincidente, `Open datastore` devolve **Null**.
 
-*localID* is a local alias for the session opened on remote datastore. If *localID* already exists on the application, it is used. Otherwise, a new *localID* session is created when the datastore object is used.
+*localID* é um alias local para a sessão aberta no armazém de dados remoto. Se *localID* já existir na aplicação, se utiliza. Em caso contrário, se cria uma nova sessão *localID* quando se utiliza o objeto datastore.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Objects available in the `cs. Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
 
-Once the session is opened, the following statements become equivalent and return a reference on the same datastore object:
+Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma referência sobre o mesmo objeto datastore:
 
 ```4d
  $myds:=Open datastore(connectionInfo;"myLocalId")
@@ -143,7 +147,7 @@ Once the session is opened, the following statements become equivalent and retur
   //$myds and $myds2 are equivalent
 ```
 
-Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
+Passe em *connectionInfo* um objeto que desceva o armazém de dados remoto ao que quiser se conectar. Pode conter as propriedades abaixo (todas as propriedades são opcionais menos *hostname*):
 
 | Propriedade | Type          | Description                                                                                                                                                                                                                                                            |
 | ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -154,15 +158,15 @@ Pass in *connectionInfo* an object describing the remote datastore you want to c
 | tls         | Booleano      | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
 | type        | Texto         | Must be "4D Server"                                                                                                                                                                                                                                                    |
 
-(*) If tls is true, the HTTPS protocol is used if:
+(*) Se tls for true, se utiliza o protocolo HTTPS se:
 
-*   HTTPS is enabled on the remote datastore
-*   the given port is the right HTTPS port configured in the database settings
-*   a valid certificate and private encryption key are installed in the database. Otherwise, error "1610 - A remote request to host xxx has failed" is raised
+*   HTTPS for ativado no armazém de dados remoto
+*   o número de porto especificado coincide com o porto HTTPS configurado nos ajustes do banco de dados
+*   um certificado válido e uma chave privada de criptografia estão instalados no banco de dados. Senão é mostrado o erro "1610 - A remote request to host xxx has failed"
 
 #### Exemplo 1
 
-Connection to a remote datastore without user / password:
+Conexão a uma datastore remota sem usuário ou senha:
 
 ```4d
  var $connectTo : Object
@@ -174,7 +178,7 @@ Connection to a remote datastore without user / password:
 
 #### Exemplo 2
 
-Connection to a remote datastore with user / password / timeout / tls:
+Conexão a uma datastore remota com usuário/ senha/ timetou/ tls
 
 ```4d
  var $connectTo : Object
@@ -187,7 +191,7 @@ Connection to a remote datastore with user / password / timeout / tls:
 
 #### Exemplo 3
 
-Working with several remote datastores:
+Trabalhando com várias datastores remotas:
 
 ```4d
  var $connectTo : Object
@@ -202,8 +206,7 @@ Working with several remote datastores:
 
 #### Error management
 
-In case of error, the command returns **Null**. If the remote datastore cannot be reached (wrong address, web server not started, http and https not enabled...), error 1610 "A remote request to host XXX has failed" is raised. You can intercept this error with a method installed by `ON ERR CALL`.
-
+Em caso de erro, o comando devolve **Null**. Se não for possível acessar o armazem de dados remotos (endereço incorreto, servidor web não inciiado, http e https não habilitados...), se produz o erro 1610 " Uma petição remota ao host XXX falhou". Pode interceptar este erro com um método instalado por `ON ERR CALL`.
 
 
 <!-- REF DataStoreClass.dataclassName.Desc -->
@@ -221,7 +224,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 #### Description
 
-Each dataclass in a datastore is available as a property of the [DataStore object](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
+Cada classe de dados de um armazém de dados está disponível como uma propriedad de objeto [DataStore](ORDA/dsMapping.md#datastore)data. O objeto devolvido <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição da classe de dados<!-- END REF -->.
 
 
 #### Exemplo
@@ -264,21 +267,50 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 #### Description
 
-The `.cancelTransaction()` function <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancels the transaction<!-- END REF --> opened by the [`.startTransaction()`](#starttransaction) function at the corresponding level in the current process for the specified datastore.
+A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancela a transação<!-- END REF --> aberta pela função [`.startTransaction()`](#starttransaction) no nível correspondente do processo atual para o datastore especificado.
 
-The `.cancelTransaction()` function cancels any changes made to the data during the transaction.
+A função `.cancelTransaction()` cancela qualquer mudança realizado nos dados durante a transação.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using the [`.validateTransaction()`](#validatetransactions) function.
+Pode aninhar várias transações (subtransações). Se a transação principal for cancelada, todas suas subtransações também são canceladas, mesmo se validadas individualmente usando a função [`.validateTransaction()`](#validatetransactions).
 
 
 #### Exemplo
 
-See example for the [`.startTransaction()`](#starttransaction) function.
+Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 
 <!-- END REF -->
 
 
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
+## .clearAllRemoteContexts()
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->
+**.clearAllRemoteContexts()**<!-- END REF -->
+
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
+| Parameter | Type |  | Description                     |
+| --------- | ---- |::| ------------------------------- |
+|           |      |  | Does not require any parameters |
+<!-- END REF -->
+
+#### Description
+
+The `.clearAllRemoteContexts()` function<!-- REF #DataStoreClass.clearAllRemoteContexts(). Summary -->clears all the attributes for all the active contexts in the datastore<!-- END REF -->.
+
+This function is mainly used in the context of debugging. One thing to keep in mind is that when you open the debugger, it sends requests to the server and queries all the dataclass attributes to display them. This can overload your contexts with unnecessary data.
+
+In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts and keep them clean.
+
+#### See also
+
+[.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)
 
 <!-- REF DataStoreClass.encryptionStatus().Desc -->
 ## .encryptionStatus()
@@ -294,42 +326,42 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Parameter | Type   |    | Description                                                                 |
-| --------- | ------ |:--:| --------------------------------------------------------------------------- |
-| Result    | Objeto | <- | Information about the encryption of the current datastore and of each table |
+| Parameter | Type   |    | Description                                                           |
+| --------- | ------ |:--:| --------------------------------------------------------------------- |
+| Result    | Objeto | <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela |
 <!-- END REF -->
 
 
 #### Description
 
-The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().Summary -->returns an object providing the encryption status for the current data file<!-- END REF --> (i.e., the data file of the `ds` datastore). The status for each table is also provided.
+A função `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->devolve um objeto que proporciona o estado de criptografia do arquivo de datos atual<!-- END REF --> (ou seja, o arquivo de dados do `ds` datastore). Também se proporciona o estado de cada tabela.
 > Use the `Data file encryption status` command to determine the encryption status of any other data file.
 
 
 **Returned value**
 
-The returned object contains the following properties:
+O objeto retornado contém as propriedades abaixo:
 
-| Propriedade |             |               | Type     | Description                                                                        |
-| ----------- | ----------- | ------------- | -------- | ---------------------------------------------------------------------------------- |
-| isEncrypted |             |               | Booleano | True if the data file is encrypted                                                 |
-| keyProvided |             |               | Booleano | True if the encryption key matching the encrypted data file is provided(*).        |
-| tabelas     |             |               | Objeto   | Object containing as many properties as there are encryptable or encrypted tables. |
-|             | *tableName* |               | Objeto   | Encryptable or Encrypted table                                                     |
-|             |             | name          | Texto    | Name of the table                                                                  |
-|             |             | num           | Número   | Table number                                                                       |
-|             |             | isEncryptable | Booleano | True if the table is declared encryptable in the structure file                    |
-|             |             | isEncrypted   | Booleano | True if the records of the table are encrypted in the data file                    |
+| Propriedade |             |               | Type     | Description                                                                                     |
+| ----------- | ----------- | ------------- | -------- | ----------------------------------------------------------------------------------------------- |
+| isEncrypted |             |               | Booleano | True se o arquivo de dados estiver criptografado                                                |
+| keyProvided |             |               | Booleano | True se proporcionar a chave de encriptação que coincide com o arquivo de dados encriptados(*). |
+| tabelas     |             |               | Objeto   | Objeto que contém tantas propriedades como tabelas encriptadas ou codificadas.                  |
+|             | *tableName* |               | Objeto   | Tabla encriptada ou cifrada                                                                     |
+|             |             | name          | Texto    | Nombre da tabela                                                                                |
+|             |             | num           | Número   | Table number                                                                                    |
+|             |             | isEncryptable | Booleano | Verdadero se a tabela estiver declarada como encriptada no arquivo de estrutura                 |
+|             |             | isEncrypted   | Booleano | True se os registros da tabela estiverem encriptados no arquivo de dados                        |
 
-(*) The encryption key can be provided:
+(*) a chave de criptografia pode ser fornecida:
 
-*   with the `.provideDataKey()` command,
-*   at the root of a connected device before opening the datastore,
-*   with the `Discover data key` command.
+*   com o comando `.provideDataKey()`,
+*   na raíz de um dispositivo conectado antes de abrir o datastore,
+*   com o comando `Discover data key`.
 
 #### Exemplo
 
-You want to know the number of encrypted tables in the current data file:
+Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 ```4d
  var $status : Object
@@ -352,7 +384,74 @@ You want to know the number of encrypted tables in the current data file:
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
+## .getAllRemoteContexts()
 
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->
+**.getAllRemoteContexts()** : Collection<!-- END REF -->
+
+<!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
+| Parameter | Type   |    | Description                                |
+| --------- | ------ | -- | ------------------------------------------ |
+| Result    | Objeto | <- | Collection of optimization context objects |
+<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+#### Description
+
+The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->.
+
+> For more information on how contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+
+Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
+
+#### Exemplo
+
+The following code sets up two contexts and retrieves them using `.getAllRemoteContexts()`:
+
+```4d
+var $ds : 4D. DataStoreImplementation
+var $persons : cs. PersonsSelection
+var $addresses : cs. AddressSelection
+var $p : cs. PersonsEntity
+var $a : cs. AddressEntity
+var $contextA; $contextB : Object
+var $info : Collection
+var $text : Text
+
+// Open remote datastore
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+// Set context A
+$contextA:=New object("context"; "contextA")
+$persons:=$ds. Persons.all($contextA)
+$text:="" For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / " End for each 
+
+// Set context B
+$contextB:=New object("context"; "contextB")
+$addresses:=$ds. Address.all($contextB)
+$text:="" For each ($a; $addresses)
+    $text:=$a.zipCode End for each 
+
+// Get all remote contexts (in this case, contextA and contextB)
+$info:=$ds.getAllRemoteContexts()
+//$info = [{name:"contextB"; dataclass:"Address"; main:"zipCode"},
+{name:"contextA";dataclass:"Persons";main:"firstname,address.city"}]
+```
+
+> This example serves as a demonstration, it is not meant for real implementation.
+
+#### See also
+
+[.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
@@ -368,22 +467,22 @@ You want to know the number of encrypted tables in the current data file:
 **.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parameter | Type   |    | Description          |
-| --------- | ------ |:--:| -------------------- |
-| Result    | Objeto | <- | Datastore properties |
+| Parameter | Type   |    | Description              |
+| --------- | ------ |:--:| ------------------------ |
+| Result    | Objeto | <- | Propiedades de datastore |
 <!-- END REF -->
 
 #### Description
 
-The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->returns an object providing information about the datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devolve um objeto que proporciona informação sobre a datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Returned object**
 
 | Propriedade | Type     | Description                                                                                                                                                     |
 | ----------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type        | string   | <li>"4D": main datastore, available through ds </li><li>"4D Server": remote datastore, open with Open datastore</li>                                                                                                              |
-| networked   | booleano | <li>True: the datastore is reached through a network connection.</li><li>False: the datastore is not reached through a network connection (local database)</li>                                                                                                              |
-| localID     | texto    | ID of the datastore on the machine. Corresponds to the localId string given with the `Open datastore` command. Empty string ("") for main datastore.            |
+| type        | string   | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                              |
+| networked   | booleano | <li>True: a datastore se alcança através de uma conexão de rede.</li><li>False: não se alcança a datastore através de uma conexão de rede (base de dados local)</li>                                                                                                            |
+| localID     | texto    | ID do armazém de dados na máquina. Corresponde à string localId dada com o comando `Open datastore`. String vazia ("") para o datastore principal.              |
 | connection  | object   | Object describing the remote datastore connection (not returned for main datastore). Available properties:<p><table><tr><th>Propriedade</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>texto</td><td>IP address or name of the remote datastore + ":" + port number</td></tr><tr><td>tls</td><td>booleano</td><td>True if secured connection is used with the remote datastore</td></tr><tr><td>idleTimeout</td><td>number</td><td>Session inactivity timeout (in minutes)</td></tr><tr><td>user</td><td>texto</td><td>User authenticated on the remote datastore</td></tr></table> |
 
 *   If the `.getInfo()` function is executed on a 4D Server or 4D single-user, `networked` is False.
@@ -424,6 +523,53 @@ On a remote datastore:
 <!-- END REF -->
 
 
+<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+## .getRemoteContextInfo()
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->
+**.getRemoteContextInfo**(*contextName* : Text) : Object <!-- END REF -->
+
+<!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
+| Parameter   | Type   |    | Description                             |
+| ----------- | ------ | -- | --------------------------------------- |
+| contextName | Texto  | -> | Name of the context                     |
+| Result      | Objeto | <- | Description of the optimization context |
+<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+#### Description
+
+The `.setRemoteContextInfo()` function<!-- REF #DataStoreClass.setRemoteContextInfo(). Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->.
+
+For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+
+#### Returned object
+
+The returned object has the following properties:
+
+| Propriedade            | Type  | Description                                                                                                                                                                                                                                                                   |
+| ---------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                   | Texto | Name of the context                                                                                                                                                                                                                                                           |
+| main                   | Texto | Attribute(s) associated to the context (attribute names are separated by a comma)                                                                                                                                                                                             |
+| dataclass              | Texto | Dataclass name                                                                                                                                                                                                                                                                |
+| currentItem (optional) | Texto | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
+
+Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
+
+#### Exemplo
+
+See the example from the [.setRemoteContextInfo()](#example-1-3) section.
+
+#### See also
+
+[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts) <br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 <!-- REF DataStoreClass.getRequestLog().Desc -->
 ## .getRequestLog()
@@ -652,6 +798,129 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 <!-- END REF -->
 
+<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+## .setRemoteContextInfo()
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->
+**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D. DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D. DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
+
+<!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
+| Parameter       | Type         |    | Description                                                               |
+| --------------- | ------------ | -- | ------------------------------------------------------------------------- |
+| contextName     | Texto        | -> | Name of the context                                                       |
+| dataClassName   | Texto        | -> | Name of the dataclass                                                     |
+| dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                |
+| attributes      | Texto        | -> | Attribute list separated by a comma                                       |
+| attributesColl  | Coleção      | -> | Collection of attribute names (text)                                      |
+| contextType     | Texto        | -> | If provided, value must be "main" or "currentItem"                        |
+| pageLength      | Integer      | -> | Page length of the entity selection linked to the context (default is 80) |
+<!-- END REF -->
+
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+
+#### Description
+
+The `.getRemoteContextInfo()` function<!-- REF #DataStoreClass.getRemoteContextInfo(). Summary -->returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
+
+When you pass a context to the ORDA class functions, the REST request optimization is triggered immediately:
+* the first entity is not fully loaded as done in automatic mode
+* pages of 80 entities (or `pageLength` entities) are immediately asked to the server with only the attributes in the context
+
+> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
+
+In *contextName*, pass the name of the optimization context to link to the dataclass attributes.
+
+To designate the dataclass that will receive the context, you can pass a *dataClassName* or a *dataClassObject*.
+
+To designate the attributes to link to the context, pass either a list of attributes separated by a comma in *attributes* (Text), or a collection of attribute names in *attributesColl* (collection of text).
+
+If *attributes* is an empty Text, or *attributesColl* is an empty collection, all the scalar attributes of the dataclass are put in the optimization context. If you pass an attribute that does not exist in the dataclass, the function ignores it and an error is thrown.
+
+You can pass a *contextType* to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
+* If set to "main" (default), the *contextName* designates a standard context.
+* If set to "currentItem", the attributes passed are put in the context of the current item.  See  [Entity selection-based list box](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
+
+In *pageLength*, specify the number of dataclass entities to request from the server.
+
+You can pass a *pageLength* for a relation attribute which is an entity selection (one to many). The syntax is `relationAttributeName:pageLength` (e.g employees:20).
+
+#### Exemplo 1
+
+```4d
+var $ds : 4D. DataStoreImplementation
+var $persons : cs. PersonsSelection
+var $p : cs. PersonsEntity
+var $contextA : Object
+var $info : Object
+var $text : Text
+
+// Open remote datastore
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+// Set context info
+$contextA:=New object("context"; "contextA")
+$ds.setRemoteContextInfo("contextA"; $ds. Persons; "firstname, lastname")
+
+// Send requests to the server using a loop
+$persons:=$ds. Persons.all($contextA)
+$text:="" For each ($p; $persons)
+    $text:=$p.firstname + " " + $p.lastname End for each 
+
+// Check contents of the context
+$info:=$ds.getRemoteContextInfo("contextA")
+// $info = {name:"contextA";dataclass:"Persons";main:"firstname, lastname"} 
+```
+
+> This example serves as a demonstration, it is not meant for real implementation.
+
+
+#### Exemplo 2
+
+The following piece of code requests pages of 30 entities of the `Address` dataclass from the server. The returned entities only contain the `zipCode` attribute.
+
+For each `Address` entity, 20 Persons entities are returned, and they only contain the `lastname` and `firstname` attributes:
+
+```4d
+var $ds : 4D. DataStoreImplementation
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$ds.setRemoteContextInfo("contextA"; $ds. Address; "zipCode, persons:20,\
+persons.lastname, persons.firstname"; "main"; 30)
+```
+
+
+#### Example 3 - Listbox
+
+```4d
+// When the form loads Case of 
+    : (Form event code=On Load)
+
+        Form.ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+       // Set the attributes of the page context
+        Form.ds.setRemoteContextInfo("LB"; Form.ds. Persons; "age, gender,\
+        children"; "currentItem")
+
+        Form.settings:=New object("context"; "LB")
+        Form.persons:=Form.ds. Persons.all(Form.settings) 
+        // Form.persons is displayed in a list box End case 
+
+// When you get the attributes in the context of the current item: Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes()
+// Form.currentItemLearntAttributes = "age, gender, children" 
+```
+#### See also
+
+[.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
+
 
 <!-- REF DataStoreClass.startRequestLog().Desc -->
 ## .startRequestLog()
@@ -755,7 +1024,7 @@ You want to log ORDA client requests in memory:
 The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Any changes made to the datastore's entities in the transaction's process are temporarily stored until the transaction is either validated or cancelled.
 > If this method is called on the main datastore (i.e. the datastore returned by the `ds` command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.
 
-You can nest several transactions (sub-transactions). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
+Pode aninhar várias transações (subtransações). Each transaction or sub-transaction must eventually be cancelled or validated. Note that if the main transaction is cancelled, all of its sub-transactions are also cancelled even if they were validated individually using the `.validateTransaction()` function.
 
 
 #### Exemplo
@@ -859,7 +1128,7 @@ The `.validateTransaction()` function <!-- REF #DataStoreClass.validateTransacti
 
 The function saves the changes to the data on the datastore that occurred during the transaction.
 
-You can nest several transactions (sub-transactions). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
+Pode aninhar várias transações (subtransações). If the main transaction is cancelled, all of its sub-transactions are also cancelled, even if they were validated individually using this function.
 
 
 #### Exemplo
@@ -867,5 +1136,7 @@ You can nest several transactions (sub-transactions). If the main transaction is
 See example for [`.startTransaction()`](#starttransaction).
 
 <!-- END REF -->
+
+
 
 <style> h2 { background: #d9ebff;}</style>

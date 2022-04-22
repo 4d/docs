@@ -71,7 +71,7 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | `Réel`                 | Valeur réel                              |
 | `Pointeur`             | Valeur pointeur                          |
 | `Image`                | Valeur image                             |
-| `Blob`                 | Valeur BLOB                              |
+| `Blob`                 | Scalar Blob value                        |
 | `Collection`           | Valeur collection                        |
 | `Variant`              | Valeur variant                           |
 | `Object`               | Objet avec classe par défaut (4D.object) |
@@ -176,7 +176,7 @@ Le nom d’une variable locale commence toujours par le signe dollar ($) et peut
 
 Lorsque vous développez un projet d'application comportant de nombreuses méthodes et variables, il arrive souvent que vous n’ayez besoin d’utiliser une variable que dans une méthode. Vous pouvez alors créer et utiliser une variable locale, sans devoir vous soucier de l’existence d’une autre variable du même nom ailleurs dans la base.
 
-Souvent, dans une application, des informations ponctuelles sont demandées à l’utilisateur. The `Request` command can obtain this information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
+Souvent, dans une application, des informations ponctuelles sont demandées à l’utilisateur. La commande `Request` permet d'obtenir cette information. Elle affiche une boîte de dialogue comportant un message demandant à l’utilisateur de répondre et, lorsque la réponse est validée, la retourne.   Généralement, il n’est pas nécessaire de conserver cette information très longtemps dans vos méthodes. C’est l’endroit parfait pour utiliser une variable locale. Voici un exemple :
 
 ```4d
  $vsID:=Request("Saisissez votre numéro d'identification :")

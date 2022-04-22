@@ -19,7 +19,7 @@ De plus, les fichiers de projet 4D facilitent la programmation générique, la c
 
 Les projets 4D sont développés à l'aide de l'application **4D**. Elle fournit un environnement de développement intégré (IDE) pour les projets 4D ainsi qu'un serveur web, un générateur d'application mobile, une exécution d'application, permettant de développer, tester et déboguer le projet.
 
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+Le développement multi-utilisateur est géré via des outils de **source control** standard (Perforce, Git, SVN, etc.), permettant aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
 
 
 ## Application finale

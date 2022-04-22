@@ -57,6 +57,8 @@ For example, if you want to define a class named "Polygon", you need to create t
 	+ Project
 
 
+
+
 		* Sources
 			- Classes
 				+ Polygon.4dm
@@ -212,7 +214,7 @@ Function getFullname()->$fullname : Text
 	$fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
   
-For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
+For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myFunction".
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
@@ -356,7 +358,6 @@ Function set fullName( $fullName : Text )
 	$p:=Position(" "; $fullName)
 	This.firstName:=Substring($fullName; 1; $p-1)
 	This.lastName:=Substring($fullName; $p+1)
-	
 ```
 
 ```4d
@@ -396,7 +397,7 @@ In that case, when you call the [`new()`](API/ClassClass.md#new) function, the c
 
 For a class constructor function, the `Current method name` command returns: `<ClassName>:constructor`, for example "MyClass:constructor".
 
-
+  
 
 #### Example:
 
@@ -460,6 +461,8 @@ Class constructor ($side : Integer)
 	// can use 'This'
 	This.name:="Square"
 
+
+
 	Function getArea()
 		C_LONGINT($0)
 		$0:=This.height*This.width
@@ -470,7 +473,7 @@ Class constructor ($side : Integer)
 #### Syntax
 
 ```4d
-Super {( param{;...;paramN} )} {-> Object} 
+Super {( param{;...;paramN} )} {-> Object}
 ```
 
 |Parameter|Type||Description|  
@@ -520,6 +523,7 @@ Function sayName()
 // Function definition
 Function getArea()
 	var $0 : Integer
+
 	$0:=(This.height)*(This.width)
 ```
 
@@ -636,6 +640,7 @@ $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
+
 ```
 
 In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o. 
@@ -648,13 +653,13 @@ Several commands of the 4D language allows you to handle class features.
 
 ### `OB Class`
 
-#### OB Class ( object ) -> Object | Null
+#### `OB Class ( object ) -> Object | Null`
 
 `OB Class` returns the class of the object passed in parameter. 
 
 
 ### `OB Instance of`
 
-#### OB Instance of ( object ; class ) -> Boolean
+#### `OB Instance of ( object ; class ) -> Boolean`
 
 `OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.

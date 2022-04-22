@@ -83,6 +83,11 @@ Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedE
 
 La propriété `.exposed` est <!-- REF DataClassAttributeClass.exposed.Summary -->mise à "true" si l'attribut est "exposed" dans REST<!-- END REF -->.
 
+
+#### Voir aussi
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -149,7 +154,7 @@ La propriété `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -
 
 #### Voir aussi
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed

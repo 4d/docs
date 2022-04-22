@@ -1448,13 +1448,13 @@ En el parámetro `msgIDs`, puede pasar:
 
 The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
 
-| Parámetros | Tipo     | Descripción                                         |
-| ---------- | -------- | --------------------------------------------------- |
-| $draft     | Booleano | True to remove the "draft" flag from the message    |
-| $seen      | Booleano | True to remove the "seen" flag from the message     |
-| $flagged   | Booleano | True to remove the "flagged" flag from the message  |
-| $answered  | Booleano | True to remove the "answered" flag from the message |
-| $deleted   | Booleano | True to remove the "deleted" flag from the message  |
+| Parámetros | Tipo     | Descripción                                           |
+| ---------- | -------- | ----------------------------------------------------- |
+| $draft     | Booleano | True para eliminar el marcador "draft" del mensaje    |
+| $seen      | Booleano | True para eliminar el marcador "seen" del mensaje     |
+| $flagged   | Booleano | True para eliminar el marcador "flagged" del mensaje  |
+| $answered  | Booleano | True para eliminar el marcador "answered" del mensaje |
+| $deleted   | Booleano | True para eliminar el marcador "deleted" del mensaje  |
 
 Note que los valores falsos se ignoran.
 

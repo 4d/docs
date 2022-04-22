@@ -3,35 +3,36 @@ id: EntityClass
 title: Entity
 ---
 
-An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMapping.md#dataclass), like a record of the table matching the dataclass in its associated datastore. It contains the same attributes as the dataclass as well as the data values and specific properties and functions.
+Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA/dsMapping.md#dataclass), como un registro de la tabla que coincide con la dataclass en su datastore asociado. Contiene los mismos atributos que la clase de datos, así como los valores de los datos y las propiedades y funciones específicas.
 
 
 ### Resumen
 
-|                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->                   |
-| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->                                     |
-| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->                                        |
-| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->                                        |
-| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->                                     |
-| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->                      |
-| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->                |
-| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->                                  |
-| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->                |
-| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->                            |
-| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->                               |
-| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->                                     |
-| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->                                        |
-| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->                                        |
-| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->                                        |
-| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->                            |
-| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->                                  |
-| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->                                        |
-| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->                            |
-| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->                               |
-| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary --> |
-| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->                                  |
+|                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->                                              |
+| [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->                                                                |
+| [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.drop().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.first().Summary -->                                                                |
+| [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->                                                 |
+| [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->                                           |
+| [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->                                                             |
+| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary --> |
+| [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->                                           |
+| [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->                                                       |
+| [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->                                                          |
+| [<!-- INCLUDE #EntityClass.isNew().Syntax -->](#isnew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.isNew().Summary -->                                                                |
+| [<!-- INCLUDE #EntityClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.last().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.lock().Syntax -->](#lock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.lock().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.next().Syntax -->](#next)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.next().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.previous().Syntax -->](#previous)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.previous().Summary -->                                                       |
+| [<!-- INCLUDE #EntityClass.reload().Syntax -->](#reload)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.reload().Summary -->                                                             |
+| [<!-- INCLUDE #EntityClass.save().Syntax -->](#save)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.save().Summary -->                                                                   |
+| [<!-- INCLUDE #EntityClass.toObject().Syntax -->](#toobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.toObject().Summary -->                                                       |
+| [<!-- INCLUDE #EntityClass.touched().Syntax -->](#touched)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touched().Summary -->                                                          |
+| [<!-- INCLUDE #EntityClass.touchedAttributes().Syntax -->](#touchedattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.touchedAttributes().Summary -->                            |
+| [<!-- INCLUDE #EntityClass.unlock().Syntax -->](#unlock)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.unlock().Summary -->                                                             |
 
 
 <!-- REF EntityClass.attributeName.Desc -->
@@ -50,23 +51,23 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 #### Descripción
 
 Todo atributo de la dataclass está disponible como una propiedad de una entidad, que <!-- REF EntityClass.attributeName.Summary --> almacena el valor del atributo para la entidad<!-- END REF -->.
-> Dataclass attributes can also be reached using the alternate syntax with \[ ].
+> Los atributos dataclass también se pueden alcanzar utilizando la sintaxis alternativa con \[ ].
 
-The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
+El tipo de valor del atributo depende del tipo [kind](DataClassAttributeClass.md#kind) de atributo (relación o almacenamiento):
 
-*   If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
-*   If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Values of the related entity are directly available through cascading properties, for example "myEntity.employer.employees\[0].lastname".
-*   If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. Duplications are removed (an unordered entity selection is returned).
+*   Si el tipo de *attributeName* es **storage**: `.attributeName` devuelve un valor del mismo tipo que *attributeName*.
+*   Si el tipo de *attributeName* es **relatedEntity**: `.attributeName` devuelve la entidad relacionada. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
+*   Si el tipo de *attributeName* es **relatedEntities**: `.attributeName` devuelve una nueva entity selection de entidades relacionadas. Se eliminan los duplicados (se devuelve una entity selection desordenada).
 
 
 #### Ejemplo
 
 ```4d
  var $myEntity : cs.EmployeeEntity
- $myEntity:=ds.Employee.new() //Create a new entity
- $myEntity.name:="Dupont" // assign 'Dupont' to the 'name' attribute
- $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
- $myEntity.save() //save the entity
+ $myEntity:=ds.Employee.new() //Crear una nueva entidad
+ $myEntity.name:="Dupont" // asignar 'Dupont' al atributo 'name'
+ $myEntity.firstname:="John" //asignar 'John' al atributo 'firstname'
+ $myEntity.save() //guardar la entidad
 ```
 
 
@@ -97,7 +98,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 #### Descripción
 
 La función `.clone()` <!-- REF #EntityClass.clone().Summary --> crea en memoria una nueva entidad que hace referencia al mismo registro que la entidad original<!-- END REF -->. Esta función permite actualizar las entidades por separado.
-> Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
+> Tenga en cuenta que toda modificación realizada a las entidades se guardará en el registro referenciado sólo cuando se ejecute la función [`.save( )`](#save).
 
 Esta función sólo puede utilizarse con entidades ya guardadas en la base de datos. No se puede llamar a una entidad recién creada (para la que [`.isNew()`](#isnew) devuelve **True**).
 
@@ -109,7 +110,7 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
  $emp:=ds.Employee.get(672)
  $empCloned:=$emp.clone()
 
- $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
+ $emp.lastName:="Smith" //Las actualizaciones realizadas en $emp no se realizan en $empCloned
 
 ```
 
@@ -172,9 +173,9 @@ Si una de las entidades comparadas es **Null**, se produce un error.
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
+ $diff1:=$clone.diff(employee) // Se devuelven todas las diferencias
  $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+  // Sólo se devuelven las diferencias en el firstName y lastName
 ```
 
 $diff1:
@@ -375,7 +376,7 @@ El objeto devuelto por `.drop( )` contiene las siguientes propiedades:
 | errors        |                     | collection of objects |                                                                                                                               |
 |               | message             | text                  | Mensaje de error                                                                                                              |
 |               | component signature | text                  | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                         |
-|               | errCode             | number                | Error code                                                                                                                    |
+|               | errCode             | number                | Código de error                                                                                                               |
 
 (\*) Los siguientes valores pueden ser devueltos en las propiedadese *status* y *statusText* del objeto *Result* en caso de error:
 
@@ -400,7 +401,7 @@ Ejemplo sin la opción `dk force drop if stamp changed`:
  $status:=$employee.drop()
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //La entidad soltada permanece en la memoria
     :($status.status=dk status stamp has changed)
        ALERT($status.statusText)
  End case
@@ -419,7 +420,7 @@ Ejemplo con la opción `dk force drop if stamp changed`:
  $status:=$employee.drop(dk force drop if stamp changed)
  Case of
     :($status.success)
-       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //The dropped entity remains in memory
+       ALERT("You have dropped "+$employee.firstName+" "+$employee.lastName) //La entidad soltada permanece en la memoria
     :($status.status=dk status entity does not exist anymore)
        ALERT($status.statusText)
  End case
@@ -460,9 +461,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $firstEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Esta selección de entidades contiene 3 entidades
  $employee:=$employees[2]
- $firstEmployee:=$employee.first() //$firstEmployee is the first entity of the $employees entity selection
+ $firstEmployee:=$employee.first() //$firstEmployee es la primera entidad de la selección de entidades $employees
 ```
 
 
@@ -492,19 +493,19 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 #### Descripción
 
 La función `.fromObject()` <!-- REF #EntityClass.fromObject().Summary --> llena una entidad con el contenido *filler*.
-> This function modifies the original entity.
+> Esta función modifica la entidad original.
 
 El mapeo entre el objeto y la entidad se realiza sobre los nombres de los atributos:
 
-*   If a property of the object does not exist in the dataclass, it is ignored.
-*   Data types must be equivalent. If there is a type mismatch between the object and dataclass, 4D tries to convert the data whenever possible (see [`Converting data types`](Concepts/data-types.md#converting-data-types)), otherwise the attribute is left untouched.
-*   The primary key can be given as is or with a "__KEY" property (filled with the primary key value). If it does not already exist in the dataclass, the entity is created with the given value when [.save()](#save) is called. If the primary key is not given, the entity is created and the primary key value is assigned with respect to database rules. The auto-increment is only computed if the primary key is null.
+*   Si una propiedad del objeto no existe en la dataclass, se ignora.
+*   Los tipos de datos deben ser equivalentes. Si hay una diferencia de tipo entre el objeto y la dataclass, 4D intenta convertir los datos siempre que sea posible (ver [`Convertir tipos de datos`](Concepts/data-types.md#converting-data-types)), de lo contrario el atributo se deja sin tocar.
+*   La llave primaria puede darse tal cual o con una propiedad "__KEY" (llenada con el valor de la llave primaria). Si no existe ya en la dataclass, la entidad se crea con el valor dado cuando se llama a [.save()](#save). Si no se da la llave primaria, se crea la entidad y se asigna el valor de la llave primaria con respecto a las reglas de la base de datos. El autoincremento sólo se calcula si la llave primaria es nula.
 
 *filler* puede manejar una entidad relacionada bajo las siguientes condiciones:
 
-*   *filler* contains the foreign key itself, or
-*   *filler* contains a property object with the same name as the related entity, containing a single property named "\_\_KEY".
-*   if the related entity does not exist, it is ignored.
+*   *filler* contiene la propia llave foránea, o
+*   *filler* contiene un objeto de propiedad con el mismo nombre que la entidad relacionada, que contiene una única propiedad denominada "\_\_KEY".
+*   si la entidad relacionada no existe, se ignora.
 
 #### Ejemplo
 
@@ -517,8 +518,8 @@ Con el siguiente objeto $o:
     "salary": 36500,
     "birthDate": "1958-10-27T00:00:00.000Z",
     "woman": true,
-    "managerID": 411,// relatedEntity given with PK
-    "employerID": 20 // relatedEntity given with PK
+    "managerID": 411,// relatedEntity dada con PK
+    "employerID": 20 // relatedEntity dada con PK
 }
 ```
 
@@ -545,10 +546,10 @@ También puede utilizar una entidad relacionada dada como objeto:
     "salary": 68400,
     "birthDate": "1971-09-03T00:00:00.000Z",
     "woman": false,
-    "employer": {// relatedEntity given as an object
+    "employer": {// relatedEntity dada como un objeto
         "__KEY": "21"
     },
-    "manager": {// relatedEntity given as an object
+    "manager": {// relatedEntity dada como un objeto
         "__KEY": "411"
     }
 }
@@ -588,17 +589,17 @@ La función `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary --> d
 El siguiente código genérico duplica cualquier entidad:
 
 ```4d
-  //duplicate_entity method 
+  //método duplicate_entity 
   //duplicate_entity($entity) 
 
  #DECLARE($entity : 4D.Entity)  
  var $entityNew : 4D.Entity
  var $status : Object
 
- $entityNew:=$entity.getDataClass().new() //create a new entity in the parent dataclass
- $entityNew.fromObject($entity.toObject()) //get all attributes
- $entityNew[$entity.getDataClass().getInfo().primaryKey]:=Null //reset the primary key
- $status:=$entityNew.save() //save the duplicated entity
+ $entityNew:=$entity.getDataClass().new() //crea una nueva entidad en la dataclass padre 
+ $entityNew.fromObject($entity.toObject()) //obtiene todos los atributos
+ $entityNew[$entity.getDataClass().getInfo().primaryKey]:=Null //restablece la llave primaria
+ $status:=$entityNew.save() //guarda la entidad duplicada
 ```
 
 
@@ -648,6 +649,47 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 <!-- END REF -->
 
+<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+## .getRemoteContextAttributes()
+
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19R5   | Añadidos       |
+</details>
+
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Syntax --> Devuelve:<!-- END REF -->
+
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Params -->
+| Parámetros | Tipo  |    | Descripción                                                           |
+| ---------- | ----- | -- | --------------------------------------------------------------------- |
+| result     | Texto | <- | Atributos de contexto vinculados a la entidad, separados por una coma |
+
+<!-- END REF -->
+
+> **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
+
+
+#### Descripción
+
+Devuelve:
+
+Extracción de todas las propiedades de una `Entidad relacionada`:
+
+#### Ejemplo
+
+```4d
+```4d
+ var $employee : cs.EmployeeEntity
+ var $status : Object
+```
+
+#### Ver también
+
+Devuelve:
+
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
 
@@ -681,13 +723,13 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 ```4d
  var $emp : cs.EmployeeEntity
  var $employees; $employees2 : cs.EmployeeSelection
- $emp:=ds.Employee.get(672) // This entity does not belong to any entity selection
- $employees:=$emp.getSelection() // $employees is Null
+ $emp:=ds.Employee.get(672) // Esta entidad no pertenece a ninguna selección de entidades
+ $employees:=$emp.getSelection() // $employees es Null
 
- $employees2:=ds.Employee.query("lastName=:1";"Smith") //This entity selection contains 6 entities
- $emp:=$employees2[0]  // This entity belongs to an entity selection
+ $employees2:=ds.Employee.query("lastName=:1";"Smith") //Esta selección de entidades contiene 6 entidades
+ $emp:=$employees2[0]  // Esta entidad pertenece a una selección de entidades
 
- ALERT("The entity selection contains "+String($emp.getSelection().length)+" entities")
+ ALERT("La entity selection contiene "+String($emp.getSelection().length)+" entidades")
 ```
 
 
@@ -719,7 +761,7 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 La función `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> devuelve el valor actual del sello de la entidad<!-- END REF -->.
 
 El sello interno se incrementa automáticamente en 4D cada vez que se guarda la entidad. Gestiona los accesos y modificaciones concurrentes de los usuarios a las mismas entidades (ver [**Bloqueo de entidades**](ORDA/entities.md#entity-locking)).
-> For a new entity (never saved), the function returns 0. To know if an entity has just been created, it is recommended to use [.isNew()](#isnew).
+> Para una entidad nueva (nunca guardada), la función devuelve 0. Para saber si una entidad acaba de ser creada, se recomienda utilizar [.isNew()](#isnew).
 
 
 #### Ejemplo
@@ -772,8 +814,8 @@ Por defecto, si se omite el parámetro *entitySelection*, la función devuelve l
 
 El valor resultante se incluye entre 0 y la longitud de la selección de entidades -1.
 
-*   If the entity does not have an entity selection or does not belong to *entitySelection*, the function returns -1.
-*   If *entitySelection* is Null or does not belong to the same dataclass as the entity, an error is raised.
+*   Si la entidad no tiene una selección de entidad o no pertenece a *entidadSelección*, la función devuelve -1.
+*   Si *entitySelection* es Null o no pertenece a la misma clase de datos que la entidad, se produce un error.
 
 #### Ejemplo
 
@@ -781,12 +823,12 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
- $employee:=$employees[1] //This entity belongs to an entity selection
- ALERT("The index of the entity in its own entity selection is "+String($employee.indexOf())) //1
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Esta entity selection contiene 3 entidades
+ $employee:=$employees[1] //Esta entidad pertenece a una entity selection
+ ALERT("El índice de la entidad en su propia selección de entidades es "+String($employee.indexOf())) //1
 
- $employee:=ds.Employee.get(725) //This entity does not belong to an entity selection
- ALERT("The index of the entity is "+String($employee.indexOf())) // -1
+ $employee:=ds.Employee.get(725) //Esta entidad no pertenece a una selección de entidades
+ ALERT("El índice de la entidad es "+String($employee.indexOf())) // -1
 ```
 
 
@@ -807,9 +849,9 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                               |
-| ---------- | ------- |:--:| ----------------------------------------------------------------------------------------- |
-| Resultado  | Boolean | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
+| Parámetros | Tipo     |    | Descripción                                                                               |
+| ---------- | -------- |:--:| ----------------------------------------------------------------------------------------- |
+| Resultado  | Booleano | <- | True si la entidad acaba de ser creada y aún no se ha guardado. En caso contrario, False. |
 
 <!-- END REF -->
 
@@ -868,9 +910,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $lastEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Esta selección de entidades contiene 3 entidades
  $employee:=$employees[0]
- $lastEmployee:=$employee.last() //$lastEmployee is the last entity of the $employees entity selection
+ $lastEmployee:=$employee.last() //$lastEmployee es la última entidad de la selección de entidades $employees
 ```
 
 
@@ -894,7 +936,7 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 | Parámetros | Tipo    |    | Descripción                                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk reload if stamp changed`: recargar antes de bloquear si el sello ha cambiado |
-| Resultado  | Object  | <- | Resultado de la operación de bloqueo                                             |
+| Resultado  | Objeto  | <- | Resultado de la operación de bloqueo                                             |
 
 <!-- END REF -->
 
@@ -906,10 +948,10 @@ Otros procesos verán este registro como bloqueado (la propiedad `result.success
 
 El objeto devuelto por <`.unlock()<` contiene la siguiente propiedad:
 
-*   when the [`unlock()`](#unlock) function is called on a matching entity in the same process
-*   automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
+*   cuando la función [`unlock()`](#unlock) se llama en una entidad correspondiente en el mismo proceso
+*   automáticamente, cuando ya no es referenciado por ninguna entidad en la memoria. Por ejemplo, si el bloqueo se pone sólo en una referencia local de una entidad, la entidad se desbloquea cuando la función termina. Mientras haya referencias a la entidad en la memoria, el registro permanece bloqueado.
 
-> Para más información, consulte la sección [Entity locking](ORDA/entities.md#entity-locking).
+> Una entidad también puede ser [bloqueada por una sesión REST](../REST/$lock.md), en cuyo caso sólo puede ser desbloqueada por la sesión.
 
 Por defecto, si se omite el parámetro *mode*, la función devolverá un error (ver más abajo) si la misma entidad fue modificada (es decir, el sello ha cambiado) por otro proceso o usuario en el ínterin.
 
@@ -919,34 +961,34 @@ De lo contrario, puede pasar la opción `dk reload if stamp changed` en el pará
 
 El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 
-| Propiedad        |                     | Tipo                  | Descripción                                                                                                                                                 |
-| ---------------- | ------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          |                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                 |
-|                  |                     |                       | ***Disponible sólo si se utiliza la opción `dk reload if stamp changed`:***                                                                                 |
-| **wasReloaded**  |                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                        |
-|                  |                     |                       | ***Disponible sólo en caso de error:***                                                                                                                     |
-| status(\*)     |                     | number                | Código de error, ver abajo                                                                                                                                  |
-| statusText(\*) |                     | text                  | Descripción del error, ver abajo                                                                                                                            |
-|                  |                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                                                |
-| lockKindText     |                     | text                  | "Locked by record" if locked by a 4D process, "Locked by session" if locked by a REST session                                                               |
-| lockInfo         |                     | object                | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
-|                  |                     |                       | ***Available only for a 4D process lock:***                                                                                                                 |
-|                  | task_id             | number                | ID del Proceso                                                                                                                                              |
-|                  | user_name           | text                  | Nombre de usuario de la sesión en la máquina                                                                                                                |
-|                  | user4d_alias        | texto                 | Nombre o alias del usuario 4D                                                                                                                               |
-|                  | user4d_id           | number                | ID del usuario en el directorio de la base de datos 4D                                                                                                      |
-|                  | host_name           | text                  | Nombre de la máquina                                                                                                                                        |
-|                  | task_name           | text                  | Nombre del proceso                                                                                                                                          |
-|                  | client_version      | texto                 | Version of the client                                                                                                                                       |
-|                  |                     |                       | ***Available only for a REST session lock:***                                                                                                               |
-|                  | host                | text                  | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
-|                  | IPAddr              | text                  | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
-|                  | userAgent           | texto                 | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
-|                  |                     |                       | ***Disponible sólo en caso de error grave*** (la llave primaria ya existe, el disco está lleno...):                                                         |
-| errors           |                     | collection of objects |                                                                                                                                                             |
-|                  | message             | texto                 | Mensaje de error                                                                                                                                            |
-|                  | component signature | texto                 | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                       |
-|                  | errCode             | number                | Error code                                                                                                                                                  |
+| Propiedad        |                     | Tipo                  | Descripción                                                                                                                                                          |
+| ---------------- | ------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          |                     | boolean               | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en el proceso actual), false en caso contrario.                                          |
+|                  |                     |                       | ***Disponible sólo si se utiliza la opción `dk reload if stamp changed`:***                                                                                          |
+| **wasReloaded**  |                     | boolean               | true si la entidad fue recargada con éxito, false en caso contrario.                                                                                                 |
+|                  |                     |                       | ***Disponible sólo en caso de error:***                                                                                                                              |
+| status(\*)     |                     | number                | Código de error, ver abajo                                                                                                                                           |
+| statusText(\*) |                     | text                  | Descripción del error, ver abajo                                                                                                                                     |
+|                  |                     |                       | ***Disponible sólo en caso de error de bloqueo pesimista:***                                                                                                         |
+| lockKindText     |                     | text                  | "Locked by record" si está bloqueado por un proceso 4D, "Locked by session" si está bloqueado por una sesión REST                                                    |
+| lockInfo         |                     | object                | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                       |
+|                  |                     |                       | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                                |
+|                  | task_id             | number                | ID del Proceso                                                                                                                                                       |
+|                  | user_name           | text                  | Nombre de usuario de la sesión en la máquina                                                                                                                         |
+|                  | user4d_alias        | texto                 | Nombre o alias del usuario 4D                                                                                                                                        |
+|                  | user4d_id           | number                | ID del usuario en el directorio de la base de datos 4D                                                                                                               |
+|                  | host_name           | text                  | Nombre de la máquina                                                                                                                                                 |
+|                  | task_name           | text                  | Nombre del proceso                                                                                                                                                   |
+|                  | client_version      | texto                 | Versión del cliente                                                                                                                                                  |
+|                  |                     |                       | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                               |
+|                  | host                | text                  | URL que bloqueó la entidad (por ejemplo, "www.myserver.com")                                                                                                         |
+|                  | IPAddr              | text                  | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                  |
+|                  | userAgent           | texto                 | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+|                  |                     |                       | ***Disponible sólo en caso de error grave*** (la llave primaria ya existe, el disco está lleno...):                                                                  |
+| errors           |                     | collection of objects |                                                                                                                                                                      |
+|                  | message             | texto                 | Mensaje de error                                                                                                                                                     |
+|                  | component signature | texto                 | firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                                                                |
+|                  | errCode             | number                | Código de error                                                                                                                                                      |
 
 
 (\*) Los siguientes valores pueden ser devueltos en las propiedades *status* y *statusText* del objeto *Result* en caso de error:
@@ -1032,9 +1074,9 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $nextEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Esta selección de entidades contiene 3 entidades
  $employee:=$employees[0]
- $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+ $nextEmployee:=$employee.next() //$nextEmployee es la segunda entidad de la selección de entidades $employees
 
 ```
 
@@ -1076,9 +1118,9 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee; $previousEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds.Employee.query("lastName = :1";"H@") //Esta selección de entidades contiene 3 entidades
  $employee:=$employees[1]
- $previousEmployee:=$employee.previous() //$previousEmployee is the first entity of the $employees entity selection
+ $previousEmployee:=$employee.previous() //$previousEmployee es la primera entidad de la selección de entidades $employees
 ```
 
 
@@ -1101,7 +1143,7 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 <!-- REF #EntityClass.reload().Params -->
 | Parámetros | Tipo   |    | Descripción      |
 | ---------- | ------ |:--:| ---------------- |
-| Resultado  | Object | <- | Objeto de estado |
+| Resultado  | Objeto | <- | Objeto de estado |
 
 <!-- END REF -->
 
@@ -1167,7 +1209,7 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 | Parámetros | Tipo    |    | Descripción                                          |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
 | mode       | Integer | -> | `dk auto merge`: activa el modo de fusión automática |
-| Resultado  | Object  | <- | Resultado de la operación guardar                    |
+| Resultado  | Objeto  | <- | Resultado de la operación guardar                    |
 
 <!-- END REF -->
 
@@ -1209,9 +1251,9 @@ El objeto devuelto por `.save()` contiene las siguientes propiedades:
 | errors       |                    | collection of objects |                                                                                                                              |
 |              | message            | text                  | Mensaje de error                                                                                                             |
 |              | componentSignature | text                  | Firma del componente interno (por ejemplo, "dmbg" significa el componente de la base)                                        |
-|              | errCode            | number                | Error code                                                                                                                   |
+|              | errCode            | number                | Código de error                                                                                                              |
 
-##### status and statusText
+##### status y statusText
 
 Los siguientes valores pueden ser devueltos en las propiedades `status` y `statusText` del objeto Result en caso de error:
 
@@ -1302,10 +1344,10 @@ Actualización de una entidad con la opción `dk auto merge`:
 <!-- REF #EntityClass.toObject().Params -->
 | Parámetros   | Tipo       |    | Descripción                                                                                               |
 | ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Atributo(s) a extraer (cadena separada por comas)                                                         |
+| filterString | Texto      | -> | Atributo(s) a extraer (cadena separada por comas)                                                         |
 | filterCol    | Collection | -> | Colección de atributos a extraer                                                                          |
 | options      | Integer    | -> | `dk with primary key`: añade la propiedad \_KEY;<br>`dk with stamp`: añade la propiedad \_STAMP |
-| Resultado    | Object     | <- | Objeto creado a partir de la entidad                                                                      |
+| Resultado    | Objeto     | <- | Objeto creado a partir de la entidad                                                                      |
 
 <!-- END REF -->
 
@@ -1315,26 +1357,26 @@ La función `.toObject()` <!-- REF #EntityClass.toObject().Summary --> devuelve 
 
 Si no se especifica ningún filtro, o si el parámetro *filterString* contiene una cadena vacía o "*", el objeto devuelto contendrá:
 
-*   all storage entity attributes
-*   attributes of the `relatedEntity` [kind](DataClassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.
-*   attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
+*   todos los atributos de la entidad de almacenamiento
+*   atributos de la `relatedEntity` [kind](DataClassAttributeClass.md#kind): se obtiene una propiedad con el mismo nombre que la entidad relacionada (nombre del enlace muchos-a-uno). El atributo se extrae con la forma simple.
+*   atributos donde [kind](DataClassAttributeClass.md#kind) es `relatedEntities`: no se devuelve el atributo.
 
 
 En el primer parámetro, se pasa el atributo o atributos de la entidad a extraer. Puede pasar:
 
-*   *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
-*   *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
+*   *filterString*: una cadena con rutas de propiedades separadas por comas: "propertyPath1, propertyPath2, ...", o
+*   *filterCol*: una colección de cadenas: \["propertyPath1","propertyPath2";...]
 
 Si se especifica un filtro para los atributos de la relatedEntity [kind](DataClassAttributeClass.md#kind):
 
-*   propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
-*   propertyPath = "relatedEntity.*" -> all the properties are extracted
-*   propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted
+*   propertyPath = "relatedEntity" -> se extrae de forma sencilla: un objeto con la propiedad \_\_KEY (llave primaria).
+*   propertyPath = "relatedEntity.*" -> se extraen todas las propiedades
+*   propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> sólo se extraen esas propiedades
 
 Si se especifica un filtro para los atributos de las relatedEntities [kind](DataClassAttributeClass.md#kind):
 
-*   propertyPath = "relatedEntities.*" -> all the properties are extracted
-*   propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted
+*   propertyPath = "relatedEntities.*" -> se extraen todas las propiedades
+*   propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> sólo se extraen esas propiedades
 
 En el parámetro *options* se puede pasar el selector `ddk with primary key` y/o`dk with stamp` para añadir las llaves primarias de la entidad y/o los sellos en los objetos extraídos.
 
@@ -1588,9 +1630,9 @@ Devuelve:
 
 
 <!-- REF #EntityClass.touched().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                       |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------- |
-| Resultado  | Boolean | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
+| Parámetros | Tipo     |    | Descripción                                                                                       |
+| ---------- | -------- |:--:| ------------------------------------------------------------------------------------------------- |
+| Resultado  | Booleano | <- | True si se ha modificado al menos un atributo de la entidad y aún no se ha guardado, si no, False |
 
 <!-- END REF -->
 
@@ -1609,11 +1651,11 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 ```4d
  var $emp : cs.EmployeeEntity
  $emp:=ds.Employee.get(672)
- $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
+ $emp.firstName:=$emp.firstName //Aunque se actualice con el mismo valor, el atributo se marca como tocado
 
- If($emp.touched()) //if at least one of the attributes has been changed
+ If($emp.touched()) //si se ha modificado al menos uno de los atributos
     $emp.save()
- End if // otherwise, no need to save the entity
+ End if // de lo contrario, no es necesario guardar la entidad
 ```
 
 
@@ -1659,7 +1701,7 @@ Si no se ha tocado ningún atributo de entidad, el método devuelve una colecci�
 
  $touchedAttributes:=New collection
  $emp:=ds.Employee.get(725)
- $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
+ $emp.firstName:=$emp.firstName //Aunque se actualice con el mismo valor, el atributo se marca como tocado
  $emp.lastName:="Martin"
  $touchedAttributes:=$emp.touchedAttributes()
   //$touchedAttributes: ["firstName","lastName"]
@@ -1690,9 +1732,9 @@ Si no se ha tocado ningún atributo de entidad, el método devuelve una colecci�
 
 En este caso:
 
-*   firstName and lastName have a `storage` kind
-*   employer has a `relatedEntity` kind
-*   employerID is the foreign key of the employer related entity
+*   firstName y lastName tienen un tipo `storage`
+*   employer tiene un tipo `relatedEntity`
+*   employerID es la llave extranjera de la entidad relacionada con el empleador
 
 <!-- END REF -->
 
@@ -1713,7 +1755,7 @@ En este caso:
 <!-- REF #EntityClass.unlock().Params -->
 | Parámetros | Tipo   |    | Descripción      |
 | ---------- | ------ |:--:| ---------------- |
-| Resultado  | Object | <- | Objeto de estado |
+| Resultado  | Objeto | <- | Objeto de estado |
 
 <!-- END REF -->
 

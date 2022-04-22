@@ -83,6 +83,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 La propiedad `.exposed` es <!-- REF DataClassAttributeClass.exposed.Summary -->"true" si el atributo está "expuesto" en REST<!-- END REF -->.
 
+
+#### Ver también
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -149,7 +154,7 @@ La propiedad `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 #### Ver también
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -214,12 +219,12 @@ Esta propiedad no se devuelve si `.kind` = "storage". Debe ser del tipo "related
 
 
 <!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
-**.keywordIndexed** : Boolean<!-- END REF -->
+**.keywordIndexed**: Boolean<!-- END REF -->
 
 
 #### Descripción
 
-The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
+La propiedad `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contiene **True** si hay un índice de palabras clave en el atributo<!-- END REF -->.
 
 Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEntities".
 > For generic programming, you can use **Bool**(dataClassAttribute.keywordIndexed) to get a valid value (false) even if `.keywordIndexed` is not returned.

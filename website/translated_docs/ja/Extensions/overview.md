@@ -29,13 +29,13 @@ title: 概要
 
 4Dコミュニティの多くの開発者が 4Dコンポーネントを公開しています。それらをインストールしてプロジェクトで使用することができます。
 
-Browse Github to have a list of public 4D components gathered with the [`4d-component`](https://github.com/topics/4d-component) topic.
+[`4d-component`](https://github.com/topics/4d-component) のトピックで公開されている 4Dコンポーネントの一覧を Github で閲覧することができます。
 
 
 ## Plugins
 
 プラグインは、4D がネイティブにおこなっていないこと (例: 特定のプラットフォーム技術など) や、4D だけでは困難なことを実現します。 [このページ](develop-plug-ins.md) で説明しているように、独自のプラグインを開発することができます。
 
-多くの機能は、既存の 4Dプラグインでカバーされています。 Browse Github to have a list of public 4D plugins gathered with the [`4d-plugin`](https://github.com/topics/4d-plugin) topic.
+多くの機能は、既存の 4Dプラグインでカバーされています。 [`4d-plugin`](https://github.com/topics/4d-plugin) のトピックで公開されている 4Dプラグインの一覧を Github で閲覧することができます。
 
 

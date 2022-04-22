@@ -83,6 +83,11 @@ title: DataClassAttribute
 
 `.exposed` プロパティは、 <!-- REF DataClassAttributeClass.exposed.Summary -->属性が REST で公開されている場合に true<!-- END REF -->です。
 
+
+#### 参照
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -149,7 +154,7 @@ title: DataClassAttribute
 
 #### 参照
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed

@@ -634,7 +634,7 @@
         "title": "Área 4D Write Pro"
       },
       "GettingStarted/creating": {
-        "title": "Working with a project"
+        "title": "Trabajar con un proyecto"
       },
       "GettingStarted/installation": {
         "title": "Instalación"
@@ -919,6 +919,9 @@
       "Users/overview": {
         "title": "Access Control overview"
       },
+      "ViewPro/advanced-programming": {
+        "title": "Advanced programming with Javascript"
+      },
       "ViewPro/configuring": {
         "title": "Configuring 4D View Pro Areas"
       },
@@ -982,6 +985,7 @@
       "Class API Reference": "Clases API",
       "Code Editor": "Editor de código",
       "Debugging": "Depuración",
+      "Transformation Tags": "Transformation Tags",
       "Settings": "Settings",
       "Preferences": "Preferencias",
       "4D Server Administration Window": "Ventana de administración de 4D Server",
@@ -1045,10 +1049,11 @@
     "Overview|no description given": "Generalidades",
     "Developing Components|no description given": "Developing Components",
     "Developing Plugins|no description given": "Developing Plugins",
-    "Working with a project|no description given": "Working with a project",
+    "Working with a project|no description given": "Trabajar con un proyecto",
     "Settings|no description given": "Settings",
+    "Transformation Tags|no description given": "Transformation Tags",
     "User Settings|no description given": "User Settings",
-    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
+    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",
     "Administration|no description given": "Administración",

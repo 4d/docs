@@ -83,6 +83,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
 
+
+#### See also
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -149,7 +154,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 #### See also
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed

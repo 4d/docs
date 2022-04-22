@@ -135,7 +135,7 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
 
 - **Type the variables**: Passes by all the stages that make compilation possible.
-- **Process and interprocess are typed**: The pass for typing process and interprocess variables is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
 - **All variables are typed**: The pass for typing local, process and interprocess variables is not carried out. Use this option when you are certain that all the process, interprocess and local variables have been clearly typed.
 
 #### Compilation Target
@@ -241,7 +241,8 @@ The length of the error file depends on the number of errors and warnings issued
 
 The structure of the error file is as follows:
 
-- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
+- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
+- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
     - line number in the method (0 indicates general errors)
     - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
     - diagnostic describing the error
@@ -254,7 +255,9 @@ An error file may contain three types of messages:
 
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
     - The data type of a process variable could not be determined.
-    - Two different kinds of objects have the same name. General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
+    - Two different kinds of objects have the same name.
+
+General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
 - **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
@@ -301,21 +304,21 @@ Both compilers are integrated into 4D. The appropriate compiler is automatically
 
 The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata-folder) folder of the project.
+Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
 
 
 ### Silicon Compiler
 
 The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries-folder), folder of the project.
+Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
 
 
 #### Requisitos
 
 - **Apple machine**: The Silicon compiler can only be run from an Apple machine.
 - **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#two-step-incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.
+- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.
     - **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements.
     - **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.
 

@@ -64,4 +64,4 @@ La siguiente es la tabla de verdad del operador lógico OR:
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> En contextos booleanos, el lenguaje 4D también soporta los operadores [cortocircuitos](operators.md#short-circuit-operators) (`&&` y `||`) y el concepto [trusos y falsos](operators.md#truthy-and-falsy). 
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [truthy and falsy](operators.md#truthy-and-falsy) concept. 

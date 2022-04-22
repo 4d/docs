@@ -124,17 +124,15 @@ CORS を介したサーバーへのデータリクエスト送信が許可され
 | webServer オブジェクト | `debugLog`      | number |
 | `WEB SET OPTION` | `Web debug log` | number |
 
-Webサーバーの HTTPリクエストログファイル (アプリケーションの "Logs" フォルダーに格納されている HTTPDebugLog_nn.txt (nn はファイル番号)) の状態を指定します。 このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
+Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
-| 値 | 定数          | 説明                            |
-| - | ----------- | ----------------------------- |
-| 0 | wdl disable | Web HTTP debug log は無効化されています |
-
-
-
-
-
-|1|wdl enable without body|Web HTTP debug log はボディ部なしで有効化されています (この場合ボディ部のサイズは提供されます)| |3|wdl enable with response body|Web HTTP debug log はレスポンスのボディ部のみを含めた状態で有効化されています。| |5|wdl enable with request body|Web HTTP debug log はリクエストのボディ部のみ含めた状態で有効化されます| |7|wdl enable with all body parts|Web HTTP debug log はレスポンスとリクエスト両方をボディ部に含めた状態で有効化されます|
+| 値 | 定数                             | 説明                                                                                    |
+| - | ------------------------------ | ------------------------------------------------------------------------------------- |
+| 0 | wdl disable                    | Web HTTP debug log は無効化されています                                                         |
+| 1 | wdl enable without body        | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
+| 3 | wdl enable with response body  | Web HTTP debug log is enabled with body part in response only                         |
+| 5 | wdl enable with request body   | Web HTTP debug log is enabled with body part in request only                          |
+| 7 | wdl enable with all body parts | Web HTTP debug log is enabled with body parts in response and request                 |
 
 
 ## デフォルトホームページ
@@ -288,11 +286,13 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D
 
 ## HTTPS ポート
 
-| 設定できる場所          | 名称                                                | コメント   |
-| ---------------- | ------------------------------------------------- | ------ |
-| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport)    | number |
-| `WEB SET OPTION` | `Web HTTPS port ID`                               |        |
-| 設定ダイアログボックス      | [設定ページ / HTTPSポート](../settings/web.md#https-port) |        |
+| 設定できる場所          | 名称                                             | コメント   |
+| ---------------- | ---------------------------------------------- | ------ |
+| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number |
+
+|`WEB SET OPTION`|`Web HTTPS port ID`||
+
+|Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
 
 TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォルトで HTTPSポート番号は 443です。 ポート番号に関する詳細については、[HTTP ポート](#http-ポート) を参照ください。
 
@@ -399,7 +399,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 | `WEB SET OPTION` | `Web max concurrent processes`                                                     |      |
 | 設定ダイアログボックス      | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#maximum-concurrent-web-processes) |      |
 
-このオプションは、サーバー上で同時に開くことのできるすべての Webプロセスの最大同時接続数の厳格な上限を設定します。 このパラメーターは、異常な数のリクエストによる 4D Webサーバーの飽和状態を避けるために使用します。 最大Web同時接続数 (マイナス1) に達すると、4D は新しいプロセスを作成せず、HTTPステータス `503 - Service Unavailable` を新規リクエストに対して返信します。
+Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). このパラメーターは、異常な数のリクエストによる 4D Webサーバーの飽和状態を避けるために使用します。 最大Web同時接続数 (マイナス1) に達すると、4D は新しいプロセスを作成せず、HTTPステータス `503 - Service Unavailable` を新規リクエストに対して返信します。
 
 デフォルト値は 100 です。 10から32000までの値を設定できます。
 
@@ -477,6 +477,23 @@ Webサーバーアプリケーションの名称。 コンポーネントの Web
 Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-secrecy-pfs) 参照)。
 
 
+## 一時的なコンテキストを再利用する (リモートモード)
+
+| 設定できる場所     | 名称                                                                         | コメント |
+| ----------- | -------------------------------------------------------------------------- | ---- |
+| 設定ダイアログボックス | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#reuse-temporary-contexts) |      |
+
+> This option is only available when **No sessions** option is checked.
+
+前の Webリクエストを処理するために作成された Webプロセスを再利用することによって、4Dリモートモードで実行されている 4D Webサーバーの動作を最適化できます。 実際、4D Webサーバーはそれぞれの Webリクエストを処理するために専用の Webプロセスを必要とします。 リモートモードでは、このプロセスは必要に応じて、データやデータベースエンジンにアクセスするために 4D Server に接続します。 そしてプロセス独自の変数やセレクションを使用して、一時的なコンテキストを作成します。 リクエストの処理が終了すると、このプロセスは廃棄されます。
+
+**一時的なコンテキストを再利用する** オプションがチェックされていると、リモートモードの 4D は作成された固有の Webプロセスを保守し、その後のリクエストで再利用します。 プロセスの作成処理が省略されるため、Webサーバーのパフォーマンスが向上します。
+
+他方このオプションを使用する場合、不正な結果が返されることを避けるために、4Dメソッド内で使用される変数をシステマチックに初期化する必要があります。 同様に、以前のリクエストで使用されたカレントセレクションやカレントレコードをアンロードする必要があります。
+
+> このオプションはリモートモードの 4D Webサーバーでのみ効果があります。 ローカルモードの 4D では (セッション管理をおこなうプロセスを除く) すべてのWebプロセスが使用後に終了されます。
+
+
 ## Robots.txt
 
 特定のクローラー (クエリエンジン、スパイダー...) は Webサーバーやスタティックページをクロールします。 クローラーにサイトへアクセスさせたくない場合、アクセスを禁止する URL を指定できます。
@@ -540,6 +557,17 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 > HTMLルートフォルダーを変更すると、アクセスが制限されているファイルを格納しないようにするため、キャッシュがクリアされます。
 
 
+## Scalable Sessions
+
+| 設定できる場所          | 名称                                                                                                                         | コメント |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------- | ---- |
+| webServer オブジェクト | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                 |      |
+| `WEB SET OPTION` | `Web scalable session`                                                                                                     |      |
+| 設定ダイアログボックス      | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |      |
+
+Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+
+
 
 ## セッションcookieドメイン
 
@@ -592,6 +620,14 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 
 
+## プリエンプティブプロセスを使用
+
+| 設定できる場所     | 名称                                                                         | コメント |
+| ----------- | -------------------------------------------------------------------------- | ---- |
+| 設定ダイアログボックス | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#use-preemptive-processes) |      |
+
+This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+
 
 
 
@@ -609,17 +645,6 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 セッションcookie の IP アドレス検証のステータス。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して 4D Webサーバーはデフォルトで IPアドレスを検証します。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 4G/5G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可するには、このオプションに 0 を渡します。 この設定はアプリケーションのセキュリティレベルを下げることに留意が必要です。 この設定が変更された際には、その設定は直ちに反映されます (HTTPサーバーを再起動する必要はありません)。
 
-
-#### 一時的なコンテキストを再利用する (リモートモード)
-
-前の Webリクエストを処理するために作成された Webプロセスを再利用することによって、4Dリモートモードで実行されている 4D Webサーバーの動作を最適化できます。 実際、4D Webサーバーはそれぞれの Webリクエストを処理するために専用の Webプロセスを必要とします。 リモートモードでは、このプロセスは必要に応じて、データやデータベースエンジンにアクセスするために 4D Server に接続します。 そしてプロセス独自の変数やセレクションを使用して、一時的なコンテキストを作成します。 リクエストの処理が終了すると、このプロセスは廃棄されます。
-
-**一時的なコンテキストを再利用する** オプションがチェックされていると、リモートモードの 4D は作成された固有の Webプロセスを保守し、その後のリクエストで再利用します。 プロセスの作成処理が省略されるため、Webサーバーのパフォーマンスが向上します。
-
-他方このオプションを使用する場合、不正な結果が返されることを避けるために、4Dメソッド内で使用される変数をシステマチックに初期化する必要があります。 同様に、以前のリクエストで使用されたカレントセレクションやカレントレコードをアンロードする必要があります。
-> * **旧式セッション** (自動セッション管理) が有効にされると、このオプションも自動的に選択されロックされます。 実際のところ、セッション管理メカニズムは Webプロセスの再利用の原則に基づいています: 各セッションは当該セッションが有効である間、同じWebプロセスを使用して処理されます。 異なるセッションで セッションプロセスが共有されることはありません。 セッションが終了するとプロセスは破棄され、再利用されることはありません。 そのため、この場合セレクションや変数を初期化する必要はありません。
-> 
-> * このオプションはリモートモードの 4D Webサーバーでのみ効果があります。 ローカルモードの 4D では (セッション管理をおこなうプロセスを除く) すべてのWebプロセスが使用後に終了されます。
 
 
 

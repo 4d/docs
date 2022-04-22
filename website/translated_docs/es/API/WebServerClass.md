@@ -231,7 +231,7 @@ La lista de cifrado <!-- REF #WebServerClass.cipherSuite.Summary -->utilizada pa
 **.CORSEnabled** : Boolean<!-- END REF -->
 
 
-El estado del servicio <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) para el servidor web<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. Cuando está habilitado (True), las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver `CORSSettings` abajo). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
+El estado del servicio <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) para el servidor web<!-- END REF -->. Por razones de seguridad, las peticiones "cross-domain" están prohibidas por defecto a nivel del navegador. Cuando está habilitado (True), las llamadas XHR (por ejemplo, peticiones REST) de páginas web fuera del dominio pueden ser permitidas en su aplicación (necesita definir la lista de direcciones permitidas en la lista de dominios CORS, ver `CORSSettings` abajo). Cuando se desactiva (False, por defecto), se ignoran todas las peticiones cruzadas enviadas con CORS. Cuando se activa (True) y un dominio o método no permitido envía una solicitud de sitio cruzado, se rechaza con una respuesta de error "403 - prohibido".
 
 Por defecto: False (desactivado)
 
@@ -323,7 +323,7 @@ El estado <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport 
 **.HSTSMaxAge** : Number<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.HSTSMaxAge.Summary -->máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente<!-- END REF -->. This information is stored on the client side for the specified duration.
+El <!-- REF #WebServerClass.HSTSMaxAge.Summary -->máximo de tiempo (en segundos) que HSTS está activo para cada nueva conexión cliente<!-- END REF -->. Esta información se almacena del lado del cliente durante el tiempo especificado.
 
 Valor por defecto: 63072000 (2 años).
 
@@ -358,7 +358,7 @@ Por defecto = 1 (compresión más rápida).
 **.HTTPCompressionThreshold** : Number<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->umbral de tamaño (bytes) para las solicitudes por debajo del cual los intercambios no deben ser comprimidos<!-- END REF -->. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+El <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->umbral de tamaño (bytes) para las solicitudes por debajo del cual los intercambios no deben ser comprimidos<!-- END REF -->. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.
 
 Umbral de compresión por defecto = 1024 bytes
 
@@ -462,7 +462,7 @@ Por defecto = 480 minutos
 
 > This property is not returned in [scalable sessions mode](#scalablesession).
 
-La <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->duración (en minutos) de las sesiones heredadas inactivas (duración establecida en la cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
+La <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->duración (en minutos) de las sesiones heredadas inactivas (duración establecida en la cookie)<!-- END REF -->. Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.
 
 Por defecto = 480 minutos
 

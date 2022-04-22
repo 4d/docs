@@ -122,130 +122,131 @@ Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
 Active les process web préemptifs dans vos applications compilées. Lorsque l'option **Utiliser des processus préemptifs** est sélectionnée, l'éligibilité de votre code lié au Web (y compris les balises 4D et les méthodes base Web) à l'exécution préemptive sera évaluée pendant la compilation. Pour plus d'informations, voir [Utiliser des processus Web préemptifs](../WebServer/preemptiveWeb.md).
 
-**Note :** cette option ne s'applique pas aux process de service Web (serveur ou client). Preemptive mode is supported by Web service processes at method level: you just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
+> Cette option ne s'applique pas aux sessions extensibles, aux process REST (mode compilé), ni aux process Web service (serveur et client).  Voir [Activer le mode préemptif pour le serveur web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
 
 
-#### Durée de vie des process inactifs
+#### Conservation des process inactifs
 
 Non disponible avec les [sessions extensibles](../WebServer/sessions.md).
 
-Allows you to set the maximum timeout before closing for inactive Web processes on the server. See [Inactive Process Timeout](../WebServer/webServerConfig.md#inactive-process-timeout).
+Permet de définir le délai maximum avant fermeture (timeout) des process Web inactifs sur le serveur. Voir [Durée de vie des process inactifs](../WebServer/webServerConfig.md#durée-de-vie-des-process-inactifs).
 
 
 
 ### Mots de passe Web
 
-Set the authentication system that you want to apply to your Web server. Three options are proposed:
+Définit le système d'authentification que vous souhaitez utiliser pour le serveur Web. Trois options sont proposées :
 
-Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
+Personnalisé (défaut) Mots de passe protocole BASIC Mots de passe protocole DIGEST
 
-Using **Custom** authentication is recommended. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
+Il est recommandé d'utiliser l'authentification **personnalisée**. Voir le chapitre [**Authentification**](../WebServer/authentication.md) dans la section *Développement Web*.
 
 
 ## Options (II)
 
-### Text Conversion
+### Conversion texte
 
 #### Envoyer directement les caractères étendus
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#deprecated-settings).
+Voir [Propriétés obsolètes](../WebServer/webServerConfig.md#propriétés-obsolètes).
 
 #### Standard Set
 
-Define the set of characters to be used by the 4D Web server. See [Character Set](../WebServer/webServerConfig.md#character-set).
+Définit le jeu de caractères à utiliser par le serveur web 4D. Voir [Jeu de caractères](../WebServer/webServerConfig.md#jeu-de-caractères).
 
 ### Utiliser les connexions persistantes
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections).
+Voir [Propriétés obsolètes](../WebServer/webServerConfig.md#utiliser-les-connexions-persistantes).
 
 ### Paramètres CORS
 
-#### Enable CORS
+#### Activer CORS
 
-Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
+Active le service Cross-origin resource sharing (CORS). Voir [Activer Cors](../WebServer/webServerConfig.md#activer-cors).
 
-#### Domain names/HTTP methods allowed
+#### Noms de domaines/Méthodes HTTP autorisées
 
-List of allowed hosts and methods for the CORS service. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
-
-
-
-## Log (type)
+Liste des hôtes et méthodes autorisées pour le service CORS. Voir [Paramètres CORS](../WebServer/webServerConfig.md#paramètres-cors).
 
 
-### Log Format
 
-Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. See [Log Recording](../WebServer/webServerConfig.md#log-recording).
-
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
+## Journal (format)
 
 
-The log format menu provides the following options:
+### Format du journal (logweb.txt)
 
--   **No Log File**: When this option is selected, 4D will not generate a log file of requests.
+Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D dans le fichier *logweb.txt* et définit son format. Voir [Enregistrement des logs](../WebServer/webServerConfig.md#enregistrement-des-logs).
 
--   **CLF (Common Log Format)**: When this option is selected, the log of requests is generated in CLF format. With the CLF format, each line of the file represents a request, such as:\ host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\ Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+> L’activation et la désactivation du fichier d’historique des requêtes peut également être effectuée par programmation, à l’aide de la commande [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
-    -   host: IP address of the client (ex. 192.100.100.10)
-    -   rfc931: information not generated by 4D, it's always - (a minus sign)
-    -   user: user name as it is authenticated, or else it is - (a minus sign). Si le nom d'utilisateur comporte des espaces,ils seront remplacés par _ (underscore).
-    -   DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds
+
+Le menu de format du journal propose les options suivantes :
+
+-   **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
+
+-   **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête sous la forme :\
+  host rfc931 utilisateur [JJ/MMM/AAAA] "requête" statut longueur\ Chaque champ est séparé par un espace, chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
+
+    -   hôte : adresse IP du client (ex. 192.100.100.10)
+    -   rfc931 : information non gérée par 4D, c’est toujours - (signe moins)
+    -   utilisateur : nom de l’utilisateur tel qu’il s’est authentifié, sinon - (signe moins). Si le nom de l’utilisateur contient des espaces, ils sont remplacés par des _ (tiret bas).
+    -   JJ : jour, MMM : mois abrégé en 3 lettres et toujours en anglais (Jan, Feb, ...), AAAA : année, HH : heure, MM : minutes, SS : secondes
 
 > La date et heure sont locales au serveur.
 
--   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
--   state: reply given by the server.
--   length: size of the data returned (except the HTTP header) or 0.
+-   requête : requête envoyée par le client (ex. GET /index.htm HTTP/1.0)
+-   statut : réponse donnée par le serveur.
+-   longueur : taille des données renvoyées (hors en-tête HTTP) ou 0.
 
-> **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
+> **Note :** Pour des raisons de performances, les opération sont stockées dans une mémoire tampon par paquets de 1 Ko avant d'être écrites sur disque. Les opérations sont également écrites sur disque si aucune requête n'a été envoyée au bout de 5 secondes. Les valeurs possibles de statut sont : 200: OK 204: Pas de contenu 302: Redirection 304: Non modifiée 400: Mauvaise requête 401: Authentification requise 404: Non trouvé 500: Erreur interne Le format CLF ne peut pas être personnalisé.
 
--   **DLF (Combined Log Format)**: When this option is selected, the request log is generated in DLF format. DLF format is similar to CLF format and uses exactly the same structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
+-   **DLF (Combined Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format DLF. Le format DLF est semblable au format CLF dont il reprend exactement la structure. Il ajoute simplement deux champs HTTP supplémentaires à la fin de chaque requête : Referer et User-agent.
 
-    -   Referer: Contains the URL of the page pointing to the requested document.
-    -   User-agent: Contains the name and version of the browser or software of the client at the origin of the request.
+    -   Referer : contient l’URL de la page pointant vers le document demandé.
+    -   User-agent : contient le nom et la version du navigateur ou du logiciel client à l’origine de la requête.
 
-> The DLF format cannot be customized.
+> Le format DLF ne peut pas être personnalisé.
 
--   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. Il peut être utilisé pour construire des historiques sophistiqués qui répondent à des besoins spécifiques. Pour cette raison, le format ELF peut être personnalisé : il est possible de choisir les champs à enregistrer ainsi que leur ordre d'insertion dans le fichier.
+-   **ELF (Extended Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format ELF. Le format ELF est largement répandu dans le monde des serveurs HTTP. Il peut être utilisé pour construire des historiques sophistiqués qui répondent à des besoins spécifiques. Pour cette raison, le format ELF peut être personnalisé : il est possible de choisir les champs à enregistrer ainsi que leur ordre d'insertion dans le fichier.
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Like the ELF format, it can be customized.
+-   **WLF (WebStar Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format WLF. Le format WLF a été développé spécifiquement pour le serveur 4D WebSTAR. Il est semblable au format ELF, il dispose simplement de champs supplémentaires. Comme le format ELF, il est personnalisable.
 
-**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. Vous devrez sélectionner chaque champ à inclure dans le journal. Vous devrez sélectionner chaque champ à inclure dans le journal.
+**Configurer les champs** Lorsque vous choisissez le format ELF (Extended Log Format) ou WLF (WebStar Log Format), la zone “Formatage du journal” affiche les champs disponibles pour le format. Vous devrez sélectionner chaque champ à inclure dans le journal. Pour cela, utilisez les flèches de commande ou procédez par glisser-déposer.
 
-**Note**: You cannot select the same field twice.
+**Note** : Il n’est pas possible de sélectionner deux fois le même champ.
 
 Le tableau suivant répertorie les champs disponibles pour chaque format (par ordre alphabétique) et décrit leur contenu :
 
-| Champ          | ELF | WLF | Valeur                                                                     |
-| -------------- | --- | --- | -------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                       |
-| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
-| CONNECTION_ID  |     | X   | Connection ID number                                                       |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
-| CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
-| CS_SIP         | X   | X   | IP address of the server                                                   |
-| CS_URI         | X   | X   | URI on which the request is made                                           |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                   |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Reply provided by the server                                               |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
-| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
-|                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| Variable URL   |     | X   | URL requested by the client                                                |
+| Champ          | ELF | WLF | Valeur                                                                                              |
+| -------------- | --- | --- | --------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                                                |
+| BYTES_SENT     | X   | X   | Nombre d’octets envoyés par le serveur au client                                                    |
+| C_DNS          | X   | X   | Adresse IP du DNS (ELF : champ identique au champ C_IP)                                             |
+| C_IP           | X   | X   | Adresse IP du client (par exemple 192.100.100.10)                                                   |
+| CONNECTION_ID  |     | X   | Numéro unique de la connexion                                                                       |
+| CS(COOKIE)     | X   | X   | Informations sur les cookies contenus dans la requête HTTP                                          |
+| CS(HOST)       | X   | X   | Champ Host de la requête HTTP                                                                       |
+| CS(REFERER)    | X   | X   | URL de la page pointant vers le document demandé                                                    |
+| CS(USER_AGENT) | X   | X   | Informations sur le logiciel et le système d’exploitation du client                                 |
+| CS_SIP         | X   | X   | Adresse IP du serveur                                                                               |
+| CS_URI         | X   | X   | URI sur lequel la requête est effectuée                                                             |
+| CS_URI_QUERY | X   | X   | Paramètres d’interrogation de la requête                                                            |
+| CS_URI_STEM  | X   | X   | Partie de la requête sans les paramètres d’interrogation                                            |
+| DATE           | X   | X   | DD: jour, MMM: abréviation de 3 lettres pour le mois (Jan, Feb,...), YYYY: année                    |
+| METHOD         | X   | X   | Méthode HTTP utilisée pour la requête adressée au serveur                                           |
+| PATH_ARGS      |     | X   | Paramètres de la CGI : chaîne située après le caractère “$”                                         |
+| STATUS         | X   | X   | Réponse fournie par le serveur                                                                      |
+| TIME           | X   | X   | HH: heure, MM: minutes, SS: secondes                                                                |
+| TRANSFER_TIME  | X   | X   | Délai ayant été nécessaire au serveur pour générer la réponse                                       |
+| USER           | X   | X   | Nom d’utilisateur s’il s’est authentifié, sinon - (signe moins).                                    |
+|                |     |     | Si le nom d’utilisateur contient des espaces, ils sont remplacés par des _ (traits de soulignement) |
+| Variable URL   |     | X   | URL demandé par le client                                                                           |
 
 > Les dates et heures sont données au format GMT
 
-## Log (backup)
+## Journal (périodicité)
 
-Configure the automatic backup parameters for the request log. Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère de la taille limite du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
+Paramètres d’archivage automatique du journal des requêtes. Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère de la taille limite du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis du backup si nécessaire.
 
 -   **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 -   **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
@@ -256,47 +257,47 @@ Configure the automatic backup parameters for the request log. Vous devez d'abor
 -   **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 -   **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Un backup se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
 
-> In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
+> En cas de sauvegarde périodique, si le serveur Web n’était pas lancé au moment théorique de la sauvegarde, 4D considère au lancement suivant que la sauvegarde a échoué et applique les paramétrages adéquats, définis dans les Propriétés.
 
 ## Web Services
 
-You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
+Les options de cette page permettent d'activer et de configurer les services Web au sein de la base 4D, aussi bien en publication (serveur) qu'en souscription (client) .
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html) chapter.
+Pour plus d'informations sur la prise en charge des Services Web dans 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19R4/4D/19-R4/Publication-et-utilisation-de-Services-Web.200-5736722.fr.html).
 
-### Server Side
+### Serveur
 
-This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
+Cette zone affiche les options relatives à l’utilisation de 4D en tant que “serveur” de Web Services, c’est-à-dire publiant des méthodes projet sous forme de Web Services.
 
--   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
--   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService.
--   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
+-   **Autoriser requêtes Web Services** : Cette option permet d’initialiser la publication de Web Services. Si cette option n’est pas cochée, 4D refuse les requêtes SOAP et ne génère pas de WSDL — même si des méthodes disposent de l’attribut *Disponible via Web Service*. Lorsque cette option est cochée, 4D crée le fichier WSDL.
+-   **Nom Web Service**: cette zone permet de modifier le “nom générique” du Web Service. Ce nom permet de différencier les services au niveau du serveur SOAP (lorsque le serveur publie plusieurs Web Services), ainsi que dans les annuaires de Web Services. Par défaut, 4D utilise le nom A_WebService.
+-   **Espace de nommage Web Services** : cette zone permet de modifier l’espace de nommage (le namespace) des Web Services publiés par 4D. Chaque Web Service publié sur Internet doit être unique. L’unicité des noms de Web Services est assuré à l’aide des espaces de nommage XML (XML namespace). Un espace de nommage est une chaîne de caractères arbitraire permettant d’identifier de manière unique un ensemble de balises XML. Typiquement, l’espace de nommage début par l’URL de la société (http://masociete.com/monespacedenommage). Dans ce cas, il n’est pas indispensable qu’il y ait quelque chose à l’URL défini, il importe simplement que la chaîne de caractères utilisée soit unique. Par défaut, 4D utilise l’espace de nommage http://www.4d.com/namespace/default.
 
-> In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
+> Conformément à la norme XML concernant les noms de balises, la chaîne de caractères utilisée ne doit pas contenir d’espaces ni débuter par un chiffre. En outre, pour éviter tout risque d’incompatibilité, il est recommandé de ne pas utiliser de caractères étendus (tels que des caractères accentués).
 
-### Client Side
+### Client
 
-This area contains various options related to the use of 4D as a Web Services "client" i.e., subscribing to services published on the network.
+Cette zone contient une option relative à l’utilisation de 4D en tant que “client” de Web Services, c’est-à-dire souscrivant à des services publiés sur le réseau.
 
--   **Wizard Method Prefix**: This area lets you change the prefix that is added automatically by 4D to the name of proxy methods generated by the Web Services Wizard. Proxy project methods form a link between the 4D application and the Web Services server. By default, 4D uses the prefix "proxy_".
+-   **Préfixe des méthodes créées par l’assistant** : cette zone vous permet de modifier le préfixe automatiquement ajouté par 4D devant le nom des méthodes proxy générées par l’assistant Web Services. Les méthodes projet proxy font le lien entre l’application 4D et le serveur de Web Services. Par défaut, 4D utilise le préfixe “proxy_”.
 
 
-## Web Features
+## Fonctionnalités Web
 
-This page contains the options used to enable and control advanced Web features such as the REST server.
+Les options de cette page permettent d'activer et de contrôler les fonctionnalités Web avancées telles que le serveur REST.
 
-### Publishing
+### Publication
 
-#### Expose as REST server
+#### Activer le service REST
 
-Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
+Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST/configuration.md).
 
 ### Accès
 
-This option specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests. See [Configuring REST access](../REST/configuration.md#configuring-rest-access).
+Cette option vous permet de désigner un groupe d’utilisateurs 4D qui sera seul autorisé à établir la connexion à la base 4D à l'aide des requêtes REST. Voir [Configuration de l'accès REST](../REST/configuration.md#configuration-de-laccès-rest).
 
 ### Web Studio
 
-#### Enable access to the web studio
+#### Activer l'accès au studio web
 
-Enables general access to the web studio. You still need to configure it at every project level.
+Active l'accès général au studio web. Vous devez également le configurer au niveau de chaque projet.

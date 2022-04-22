@@ -20,7 +20,7 @@ Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes
 
 Component methods and forms can be used as standard elements in your 4D development.
 
-When an installed component contains methods, they appear in the **Component Methods** theme of the Explorer's Methods page.
+Cuando un componente instalado contiene métodos, éstos aparecen en el tema **Métodos componente** de la página Métodos del Explorador.
 
 You can select a component method and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
 
