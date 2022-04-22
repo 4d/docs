@@ -75,7 +75,7 @@ Certaines commandes 4D modifient le blob d'origine et ne prennent donc pas en ch
 
 ### Passer des blobs et des objets blob aux méthodes
 
-You can pass blobs and blob objects (`4D.Blob`) to methods. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
+Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
 
 ### Passer un blob scalaire par référence en utilisant un pointeur
 
@@ -158,7 +158,7 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 #### Accéder aux octets d'un blob scalaire
 
-You can access individual bytes of a scalar blob using curly brackets `{}`. Dans un blob, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB:
+Vous pouvez accéder aux octets individuels d'un blob scalaire en utilisant des accolades `{}`. Dans un blob, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB:
 
 ```4d
   // Déclarer une variable de type BLOB
@@ -175,7 +175,7 @@ Etant donné que vous pouvez adresser tous les octets d'un blob individuellement
 
 #### Accéder aux octets d'un `4D.Blob`
 
-Use square brackets `[]` to directly access a specific byte in a `4D.Blob`
+Utilisez les crochets `[]` pour accéder directement à un octet spécifique dans un `4D.Blob`
 
 ```4d
 var $myBlob: 4D.Blob

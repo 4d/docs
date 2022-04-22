@@ -1,72 +1,62 @@
 ---
 id: overview
-title: Generalidades
+title: Access Control overview
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. También es esencial ofrecer seguridad a los datos sensibles. Puede ofrecer esta protección asignando contraseñas a los usuarios y creando grupos que tengan diferentes niveles de acceso a la información en la aplicación o en las operaciones de la misma.
+If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
+
+4D access control strategy depends on your deployment configuration:
+
+- in multi-user applications, you can rely on 4D users and groups,
+- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 
 
 
 
+## Access control in multi-user applications
 
-## Asignación de acceso a grupos
+Multi-user applications are deployed with 4D Server. They include client-server, Web, or REST applications.
 
-El sistema de acceso con contraseña de 4D se basa en usuarios y grupos. Se crean usuarios y se les asignan contraseñas, se colocan los usuarios en grupos y se les asignan a cada grupo derechos de acceso apropiados a las partes de la aplicación.
+In multi-user applications, access control is done through [4D users and groups](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
 
-Los grupos pueden entonces asignar privilegios de acceso a partes específicas o funcionalidades de la aplicación (acceso al modo Diseño, servidor HTTP, servidor SQL, etc.), o a toda parte personalizada.
+You initiate the 4D password access control system with 4D Server by [assigning a password to the Designer user](handling_users_groups.md#designer-and-administrator). Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have [set up users and groups](handling_users_groups.md) (when the application opens, no ID is required). Se puede abrir cualquier parte de la aplicación.
 
-El siguiente ejemplo muestra los derechos de acceso del explorador de diseño y tiempo de ejecución asignados al grupo "Devs":
-
-![](assets/en/Users/Access1.png)
-
-
-
-## Activar el control de acceso
-
-El sistema de control de acceso por contraseña de 4D en cliente-servidor se activa mediante **la asignación de una contraseña al Diseñador**.
-
-Hasta que no le asigne una contraseña al Diseñador, todos los accesos a la aplicación se hacen con los derechos de acceso del Diseñador, incluso si ha configurado usuarios y grupos (cuando se abre la aplicación, no se requiere ninguna identificación). Se puede abrir cualquier parte de la aplicación.
-
-Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso entran en vigor. Para poder conectarse a la aplicación, los usuarios remotos deben introducir una contraseña.
+Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso entran en vigor. In order to connect to the application or to a [server with protected access](handling_users_groups.md#assigning-group-access), remote users must enter a login/password.
 
 Para desactivar el sistema de acceso por contraseña, basta con eliminar la contraseña del Diseñador.
 
 
-## Usuarios y grupos en la arquitectura proyecto
-
-En las aplicaciones proyecto (archivos .4DProject o .4dz), los usuarios y grupos 4D pueden configurarse tanto en entornos monousuario como cliente-servidor. Sin embargo, el control de acceso sólo es efectivo con 4D Server. La siguiente tabla enumera las principales funcionalidades de los usuarios y grupos y su disponibilidad:
-
-|                                                                          | 4D (monopuesto)                       | 4D Server |
-| ------------------------------------------------------------------------ | ------------------------------------- | --------- |
-| Añadir/editar usuarios y grupos                                          | sí                                    | sí        |
-| Asignar el acceso de usuarios/grupos a los servidores                    | sí                                    | sí        |
-| Identificación del usuario                                               | no (todos los usuarios son Diseñador) | sí        |
-| Control de acceso una vez que se ha asignado una contraseña al Diseñador | no (todos los accesos son Diseñador)  | sí        |
+## Access control in single-user applications
 
 
+Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume License. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
 
+### Identificación del usuario
 
+To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Thus user authentication is delegated to the OS level.
 
-## Editor de la caja de herramientas
+You can then allow or deny access within your application by using code such as:
 
-Los editores de usuarios y grupos se encuentran en la caja de herramientas de 4D. Estos editores pueden utilizarse para crear tanto usuarios como grupos, asignar contraseñas a los usuarios, colocar a los usuarios en grupos, etc.
+```4d
+If(Current system user = $user) //you can store users in a database table
+    // give access to some features
+Enf if
+```
 
-![](assets/en/Users/editor.png)
+If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
 
-> El editor de usuarios y grupos se puede mostrar en tiempo de ejecución utilizando el comando [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html). Toda la configuración de usuarios y grupos también puede editarse durante la ejecución de la aplicación utilizando los comandos del lenguaje 4D del tema [Usuarios y Grupos](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.en.html).
+```4d
+SET USER ALIAS(Current system user)
+```
 
+### Protecting access
 
+#### Privilegios
 
-## Archivo directory.json
+On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
 
-Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archivo específico del proyecto llamado **directory.json**.
+#### Encrypting data
 
-Este archivo puede almacenarse en las siguientes ubicaciones:
-
-- en la carpeta de propiedades usuario, es decir, en la carpeta "Settings" al mismo nivel que la carpeta "Project". Estas propiedades se utilizan por defecto en la aplicación.
-- en la carpeta de propiedades de los datos, es decir, en la carpeta " Settings " de la carpeta " Data ". Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta funcionalidad permite definir configuraciones Usuarios y Grupos personalizadas/locales. La configuración personalizada no se verá afectada por una actualización de la aplicación.
-
-> Si el control de acceso con contraseña 4D está inactivo, no se crea el **directory.json**.
-
+If you want to protect access to the application data, we recommend to [encrypt data](MSC/encrypt.md) and provide the encryption key to the authorized user(s). 

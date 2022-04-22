@@ -126,12 +126,15 @@ You declare the return parameter of a function by adding an arrow (->) and the p
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). Par exemple :
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
+
+
+
 
 
 ### Type de données pris en charge
@@ -209,6 +212,43 @@ You can use any [expression](quick-tour.md#expression-types) as sequential param
 - arrays
 
 Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
+
+## `return {expression}`
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajout         |
+</details>
+
+L'instruction `return` met fin à l'exécution d'une fonction ou d'une méthode et peut être utilisée pour retourner une expression à l'appelant.
+
+Par exemple, la fonction suivante retourne le carré de son argument, $x, où $x est un nombre.
+
+```4d
+Function square($x : Integer) 
+   return $x * $x
+```
+
+> En interne, `return x` exécute `$0:=x` ou (si elle est déclarée) `myReturnValue:=x`, et retourne à l'appelant. Si `return` est utilisé sans expression, la fonction ou la méthode retourne une valeur nulle du type de retour déclaré (le cas échéant), sinon elle est *indéfinie*.
+
+
+L'instruction `return` peut être utilisée avec la syntaxe standard pour les [valeurs retournées](#returned-value) (la valeur retournée doit être du type déclaré). Cependant, notez qu'elle met immédiatement fin à l'exécution du code. Par exemple :
+
+
+```4d
+Function getValue
+    $0:=10
+    return 20
+    // retourne 20
+
+Function getValue -> $v : Integer
+    return 10
+    $v:=20 // jamais exécutée
+    // retourne 10
+```
+
+
 
 ## Indirections sur les paramètres (${N})
 

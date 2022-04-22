@@ -356,7 +356,7 @@ Puede añadir una interfaz a las áreas 4D View Pro para permitir a los usuarios
 
 #### Ver también
 
-[guía de referencia 4D View Pro](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
+[guía de referencia 4D View Pro](ViewPro/overview.md)
 
 ---
 ## Barra de desplazamiento vertical

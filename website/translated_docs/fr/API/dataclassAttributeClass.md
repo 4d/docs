@@ -30,6 +30,7 @@ Les objets `DataClassAttribut` ont des propriétés que vous pouvez lire pour ob
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.path.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
@@ -82,6 +83,11 @@ Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedE
 
 La propriété `.exposed` est <!-- REF DataClassAttributeClass.exposed.Summary -->mise à "true" si l'attribut est "exposed" dans REST<!-- END REF -->.
 
+
+#### Voir aussi
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -120,6 +126,7 @@ Cette propriété n'est pas retournée si `.kind` = "relatedEntity" ou "relatedE
 <details><summary>Historique</summary>
 | Version | Modifications                       |
 | ------- | ----------------------------------- |
+| v19 R4  | Prise en charge des attributs alias |
 | v19 R3  | Prise en charge des champs calculés |
 </details>
 
@@ -140,13 +147,14 @@ La propriété `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -
 | relatedEntity           | 38 (`Is object`)                                                                                                   |
 | relatedEntities         | 42 (`Is collection`)                                                                                               |
 | calculated              | <li>scalaire : type de champ 4D correspondant, voir [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
+| alias                   | <li>scalaire : type de champ 4D correspondant, voir [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
 
 
 <!-- END REF -->
 
 #### Voir aussi
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -231,6 +239,7 @@ Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou 
 <details><summary>Historique</summary>
 | Version | Modifications         |
 | ------- | --------------------- |
+| v19 R4  | Ajout de "alias"      |
 | v19 R3  | Ajout de "calculated" |
 </details>
 
@@ -244,7 +253,8 @@ Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou 
 La propriété `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->retourne la catégorie de l'attribut<!-- END REF -->. La valeur retournée peut être l'une des chaînes suivantes :
 
 *   "storage" : attribut de stockage (ou scalaire), c'est-à-dire un attribut stockant une valeur, et non une référence à un autre attribut
-*   "calculated" : champ calculé, c'est-à-dire défini par [la fonction `get`](ORDA/ordaClasses.md#function-get-attributename).
+*   "calculated" : attribut calculé, c'est-à-dire défini par [la fonction `get`](ORDA/ordaClasses.md#function-get-attributename)
+*   "alias": attribut basé sur [un autre attribut](ORDA/ordaClasses.md#alias-attributes-1)
 *   "relatedEntity" : attribut relationnel N -> (référence vers une entité)
 *   "relatedEntities" : attribut relationnel 1 -> N (référence vers une entity selection)
 
@@ -322,6 +332,33 @@ La propriété `.name` <!-- REF DataClassAttributeClass.name.Summary -->retourne
 
 <!-- END REF -->
 
+
+<!-- REF DataClassAttributeClass.path.Desc -->
+## .path
+
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajout         |
+</details>
+
+
+<!-- REF DataClassAttributeClass.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
+
+#### Description
+
+La propriété `.path` <!-- REF DataClassAttributeClass.path.Summary -->retourne le chemin d'un attribut alias basé sur une relation<!-- END REF -->.
+
+#### Exemple
+
+```4d
+ var $path : Text
+ $path:=ds.Teacher.students.path //$path="courses.student"
+```
+
+<!-- END REF -->
 
 
 <!-- REF DataClassAttributeClass.readOnly.Desc -->

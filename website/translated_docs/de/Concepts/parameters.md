@@ -123,12 +123,15 @@ Sie deklarieren den Rückgabeparameter einer Funktion mit einem Pfeil (->) und d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-Sie können den Rückgabeparameter auch nur mit `: type` deklarieren. Er ist dann automatisch über `$0` verfügbar ([siehe unten sequentielle Syntax](#rückgabewert-1)). Beispiel:
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). Beispiel:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
+
+
+
 
 
 ### Unterstützte Datentypen
@@ -206,6 +209,43 @@ Sie können jeden [Ausdruck](schnelle-tour.md#ausdruckstypen) als sequentiellen 
 - arrays
 
 Tabellen oder Array Ausdrücke lassen sich nur [über einen Zeiger als Referenz übergeben](dt_pointer.md#zeiger-als-parameter-in-methoden).
+
+## `return {expression}`
+
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19 R4  | Added   |
+</details>
+
+The `return` statement ends function or method execution and can be used to return an expression to the caller.
+
+For example, the following function returns the square of its argument, $x, where $x is a number.
+
+```4d
+Function square($x : Integer) 
+   return $x * $x
+```
+
+> Internally, `return x` executes `$0:=x` or (if declared) `myReturnValue:=x`, and returns to the caller. If `return` is used without an expression, the function or method returns a null value of the declared return type (if any), otherwise *undefined*.
+
+
+The `return` statement can be used along with the standard syntax for [returned values](#returned-value) (the returned value must be of the declared type). However, note that it ends immediately the code execution. Beispiel:
+
+
+```4d
+Function getValue
+    $0:=10
+    return 20
+    // returns 20
+
+Function getValue -> $v : Integer
+    return 10
+    $v:=20 // never executed
+    // returns 10
+```
+
+
 
 ## Parameter indirection (${N})
 

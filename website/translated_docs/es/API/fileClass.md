@@ -91,7 +91,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 | Constante        | Valor | Comentario                                                                              |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
-| fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
+| fk posix path    | 0     | Ruta expresada con sintaxis POSIX (por defecto)                                         |
 
 **File ( fileConstant { ; \* } )**
 

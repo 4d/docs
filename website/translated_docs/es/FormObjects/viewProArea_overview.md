@@ -12,7 +12,7 @@ Una vez que utilice las áreas de 4D View Pro en sus formularios, podrá importa
 
 ## Utilizar las áreas 4D View Pro
 
-Las áreas 4D View Pro están documentadas en el manual [4D View Pro](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-View-Pro-Reference.100-4351323.en.html).
+4D View Pro areas are documented in the [4D View Pro section](ViewPro/getting-started.md).
 
 
 ## Propiedades soportadas

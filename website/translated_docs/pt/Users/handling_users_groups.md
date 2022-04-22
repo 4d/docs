@@ -4,8 +4,21 @@ title: Gestão de usuários e grupos 4D
 ---
 
 
-4D fornece aos usuários privilégios de acesso comuns e certos poderes. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
+In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
 
+
+## Users and groups in projects
+
+In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. A tabela abaixo lista as principais funcionalidades de usuários e grupos e sua disponibilidade:
+
+|                                                            | 4D (single-user)                     | 4D Server |
+| ---------------------------------------------------------- | ------------------------------------ | --------- |
+| Adicionar/editar usuários e grupos                         | sim                                  | sim       |
+| Atribuir acesso de usuário/grupo a servidores              | sim                                  | sim       |
+| Identificação de usuário                                   | não (todos os usuários são Designer) | sim       |
+| Controle de acesso quando o Designer for atribuído a senha | não (todos os acessos são Designer)  | sim       |
+
+> For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
 
 ## Designer e Administrador
 
@@ -42,6 +55,8 @@ O Designer e Administrador podem cada um criar até 16.000 grupos e 16 mil usuá
 O editor de usuários está na Barra de Ferramentas de 4D.
 
 ![](assets/en/Users/editor.png)
+
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html) command. The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.
 
 ### Adicionar e modificar usuários
 
@@ -110,6 +125,7 @@ Para criar um gurpo:
 
 ### Colocar usuários ou grupos dentro de grupos
 
+
 Pode colocar qualquer usuário ou grupo dentro de um grupo, e pode também colocar um grupo dentro de vários outros grupos. Não é obrigatório colocar um usuário em um grupo.
 
 Para colocar um usuário ou grupo em um grupo, precisa marcar a opção "Membro" para cada usuário ou grupo na área de atribuição de membros:
@@ -154,3 +170,31 @@ The groups are then nested so that privileges are correctly distributed to the u
 You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
 
 Such a hierarchical system makes it easy to remember to which group a new user should be assigned. You only have to assign each user to one group and use the hierarchy of groups to determine access.
+
+
+## Atribuir grupos de acesso
+
+Groups are assigned access privileges to specific parts or features of the application:
+
+- Design and Runtime Explorer access,
+- HTTP server,
+- REST server,
+- SQL server.
+
+These accesses are defined in the Settings dialog. O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Design sendo atribuidos ao grupo "Devs":
+
+![](assets/en/Users/Access1.png)
+
+You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). This distribution is defined in the Groups editor.
+
+## Directory.json file
+
+Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
+
+This file can be stored at the following locations, depending on your needs:
+
+- If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location).
+- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.
+
+> If no password is assigned to the "Designer" user, the **directory.json** is not created.
+

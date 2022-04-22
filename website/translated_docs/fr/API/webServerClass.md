@@ -740,8 +740,9 @@ Voir la description de [Session Cookie SameSite](WebServer/webServerConfig.md#se
 | v18 R3  | Ajout         |
 </details>
 
+<!-- REF #WebServerClass.start().Syntax -->
 
-<!-- REF #WebServerClass.start().Syntax --> **.start**() : Object<br>**.start**( *settings* : Object ) : Object<!-- END REF -->
+**.start**() : Object<br>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
 

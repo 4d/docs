@@ -12,7 +12,7 @@
         "title": "Explorateur de données Web"
       },
       "Admin/debugLogFiles": {
-        "title": "Description des fichiers historiques"
+        "title": "Description des fichiers d'historique"
       },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
@@ -728,7 +728,7 @@
         "title": "Bibliothèque des composants 4D"
       },
       "Project/creating": {
-        "title": "Working with a project"
+        "title": "Travailler avec des projets"
       },
       "Project/documentation": {
         "title": "Documenter un projet"
@@ -940,7 +940,7 @@
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
-    "Description of log files|no description given": "Description des fichiers historiques",
+    "Description of log files|no description given": "Description des fichiers d'historique",
     "Command Line Interface|no description given": "Interface de ligne de commande",
     "Preferences|no description given": "Préférences",
     "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",

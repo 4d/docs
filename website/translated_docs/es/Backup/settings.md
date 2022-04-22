@@ -3,7 +3,7 @@ id: parámetros
 title: Parámetros de la copia de seguridad
 ---
 
-Los parámetros de copia de seguridad se definen a través de tres páginas en la caja de diálogo de las Propiedades. Puede definir:
+Backup settings are defined through three pages in the [Settings dialog box](../settings/overview.md). Puede definir:
 
 - la periodicidad de las copias de seguridad automáticas
 - los archivos a incluir en cada copia de seguridad

@@ -671,14 +671,21 @@ The management of connections by client applications covers the mechanisms by wh
 
 The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
 
-- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
+1.	If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application connects to the specified server address.  
 	OR  
-	If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
-- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-- If this fails, the client application displays a connection error dialog box.
+	The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).
+
+2.	If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
+3.	If this fails, the client application displays a connection error dialog box.
 	- If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
 	- If the user clicks on the **Quit** button, the client application quits.
-- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+4. If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+
+The whole procedure is described in the following diagram:
+
+![](assets/en/Desktop/client-connect.png)
+
+
 
 ### Storing the last server path  
 

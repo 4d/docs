@@ -27,7 +27,7 @@ Multi-user development is managed via standard **source control** repository too
 Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
 
 - [web](WebServer/webServer.md) applications,
-- [mobile](https://developer.4d.com/4d-for-ios/) applications, 
+- [mobile](https://developer.4d.com/go-mobile/) applications, 
 - [desktop](Desktop/building.md) applications (client/server or single-user). 
 
-Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.
+Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](Desktop/building.md).

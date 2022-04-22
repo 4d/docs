@@ -94,7 +94,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.extension` <!-- REF #directory.extension.Summary -->devuelve la extensión del nombre de la carpeta (si la hay)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the folder name does not have an extension.
+La propiedad `.extension` <!-- REF #directory.extension.Summary -->devuelve la extensión del nombre de la carpeta (si la hay)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre de la carpeta no tiene extensión.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -238,7 +238,7 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.isPackage` devuelve <!-- REF #directory.isPackage.Summary -->true si la carpeta es un paquete en macOS (y existe en el disco)<!-- END REF -->. En caso contrario, devuelve false.
 
-On Windows, `.isPackage` always returns **false**.
+En Windows, `.isPackage` siempre devuelve **false**.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -337,7 +337,7 @@ Esta propiedad es **de sólo lectura**.
 La propiedad `.original` devuelve <!-- REF #directory.original.Summary -->el mismo objeto Folder que la carpeta<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
-> This property is available on folders to allow generic code to process folders or files.
+> Esta propiedad está disponible en las carpetas para permitir que el código genérico procese carpetas o archivos.
 
 <!-- END REF -->
 
@@ -359,9 +359,9 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.parent` devuelve <!-- REF #directory.parent.Summary -->el objeto carpeta padre de la carpeta<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+La propiedad `.parent` devuelve <!-- REF #directory.parent.Summary -->el objeto carpeta padre de la carpeta<!-- END REF -->. Si la ruta representa una ruta del sistema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
-If the folder does not have a parent (root), the null value is returned.
+Si la carpeta no tiene un padre (raíz), se devuelve el valor null.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -385,7 +385,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.path` devuelve <!-- REF #directory.path.Summary -->la ruta POSIX de la carpeta<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
+La propiedad `.path` devuelve <!-- REF #directory.path.Summary -->la ruta POSIX de la carpeta<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -453,9 +453,9 @@ Por defecto, la carpeta se copia con el nombre de la carpeta original. Si desea 
 
 Si ya existe una carpeta con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
-| Constante      | Valor | Comentario                          |
-| -------------- | ----- | ----------------------------------- |
-| `fk overwrite` | 4     | Overwrite existing elements, if any |
+| Constante      | Valor | Comentario                                        |
+| -------------- | ----- | ------------------------------------------------- |
+| `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
 
 **Valor devuelto**
@@ -539,7 +539,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 #### Descripción
 
 La función `.files()` devuelve <!-- REF #directory.files().Summary -->una colección de objetos `File` contenidos en la carpeta<!-- END REF -->.
-> Aliases or symbolic links are not resolved.
+> Los alias o enlaces simbólicos no se resuelven.
 
 Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección los archivos del primer nivel de la carpeta, así como los archivos o carpetas invisibles. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 

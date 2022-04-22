@@ -26,7 +26,7 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 - Si la structure phySique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
 
-- Par défaut, toutes les fonctions de classe de votre modèle de données (y compris [les fonctions des champs calculés](#computed-attributes)) ne sont pas exposées (**not exposed**) aux applications distantes et ne peuvent pas être appelées à partir de requêtes REST. Vous devez déclarer explicitement chaque fonction publique avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
+- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) and [alias attributes](XXX) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
@@ -66,6 +66,8 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 | Version | Modifications                                                                                      |
 | ------- | -------------------------------------------------------------------------------------------------- |
+| v19 R4  | Alias attributes in the Entity Class                                                               |
+| v19 R3  | Computed attributes in the Entity Class                                                            |
 | v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
@@ -128,6 +130,10 @@ Function GetBestOnes()
 
 Vous pouvez ensuite obtenir une sélection d'entité des "meilleures" entreprises en exécutant le code suivant :
 
+
+
+
+
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
@@ -156,7 +162,7 @@ Function getCityName()
 
     $zipcode:=$1
     $zip:=ds.ZipCode.get($zipcode)
-    $0:=""
+    $0:="" 
 
     If ($zip#Null)
         $0:=$zip.city.name
@@ -189,12 +195,12 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// classe cs.EmployeeSelection
+// Classe cs.EmployeeSelection 
 
 
-Class extends EntitySelection
+Classe extends EntitySelection
 
-//Extraire, de cette entity selection, les employés dont le salaire est supérieur à la moyenne.
+//Extrait, de cette sélection d'entité, les employés ayant un salaire supérieur à la moyenne
 
 Function withSalaryGreaterThanAverage
     C_OBJECT($0)
@@ -216,6 +222,8 @@ Chaque table exposée avec ORDA affiche une classe Entity dans le class store `c
 - **Nom de classe **: *DataClassName*Entity (où *DataClassName* est le nom de la table)
 - **Exemple ** : cs.CityEntity
 
+#### Champs calculés
+
 Les classes Entity vous permettent de définir des **champs calculés** à l'aide de mots-clés spécifiques :
 
 - `Function get` *attributeName*
@@ -223,7 +231,16 @@ Les classes Entity vous permettent de définir des **champs calculés** à l'aid
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 
-Pour plus d'informations, reportez-vous à la section [Champs calculés](#computed-attributes).
+For information, please refer to the [Computed attributes](#computed-attributes) section.
+
+#### Alias attributes
+
+Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
+
+`Alias` *attributeName* *targetPath*
+
+For information, please refer to the [Alias attributes](#alias-attributes) section.
+
 
 #### Exemple
 
@@ -236,9 +253,8 @@ Function getPopulation()
     $0:=This.zips.sum("population")
 
 
-Function isBigCity
-C_BOOLEAN($0)
-// La fonction getPopulation() peut être utilisée dans la classe
+Function isBigCity(): Boolean
+// The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
 
@@ -354,9 +370,9 @@ Function get fullName($event : Object)-> $fullName : Text
         $fullName:=This.lastName
     : (This.lastName=Null)
         $fullName:=This.firstName
-    Else
+    Else 
         $fullName:=This.firstName+" "+This.lastName
-    End case
+    End case 
 ```
 
 - Un champ calculé peut être basé sur un attribut relatif à une entité :
@@ -373,7 +389,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else
+    Else 
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -437,7 +453,7 @@ Cette fonction prend en charge trois syntaxes :
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
-> Les fonctionnalités suivantes ne sont pas prises en charge : - l'appel d'une fonction de requête `query` sur des champs calculés de type Entity ou Entity Selection - l'utilisation du mot-clé `order by` dans la chaîne de requête résultante.
+> Les fonctionnalités suivantes ne sont pas prises en charge : - l'appel d'une fonction `query` sur des champs calculés de type Entity ou Entity selection, - l'utilisation du mot clé `order by` dans la chaîne de requête résultante.
 
 Les propriétés du paramètre *$event* sont les suivantes :
 
@@ -467,30 +483,30 @@ Function query fullName($event : Object)->$result : Object
     $operator:=$event.operator
     $fullname:=$event.value
 
-    $p:=Position(" "; $fullname)
+    $p:=Position(" "; $fullname) 
     If ($p>0)
         $firstname:=Substring($fullname; 1; $p-1)+"@"
         $lastname:=Substring($fullname; $p+1)+"@"
-        $parameters:=New collection($firstname; $lastname) // two items collection
-    Else
+        $parameters:=New collection($firstname; $lastname) //collection de deux éléments
+    Else 
         $fullname:=$fullname+"@"
-        $parameters:=New collection($fullname) // single item collection
-    End if
+        $parameters:=New collection($fullname) // collection d'un seul élément
+    End if 
 
-    Case of
+    Case of 
     : ($operator="==") | ($operator="===")
         If ($p>0)
             $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else
+        Else 
             $query:="firstName = :1 or lastName = :1"
-        End if
+        End if 
     : ($operator="!=")
         If ($p>0)
             $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else
+        Else 
             $query:="firstName != :1 and lastName != :1"
-        End if
-    End case
+        End if 
+    End case 
 
     $result:=New object("query"; $query; "parameters"; $parameters)
 ```
@@ -519,14 +535,14 @@ Function query age($event : Object)->$result : Object
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
 
-    Case of
+    Case of 
 
         : ($operator="==")
-            $query:="birthday > :1 and birthday <= :2"  // après d1 et avant ou égal à d2
+            $query:="birthday > :1 and birthday <= :2"  // après jour1 et avant ou égal à jour2
 
-        : ($operator="===")
+        : ($operator="===") 
 
-            $query:="birthday = :2"  // d2 = seconde date calculée (= date d'anniversaire)
+            $query:="birthday = :2"  // d2 = deuxième date calculée (= jour anniversaire)
 
         : ($operator=">=")
             $query:="birthday <= :2"
@@ -534,7 +550,7 @@ Function query age($event : Object)->$result : Object
             //... autres opérateurs           
 
 
-    End case
+    End case 
 
 
     If (Undefined($event.result))
@@ -552,7 +568,7 @@ Code d'appel, par exemple :
 $twenty:=people.query("age = 20")  // appelle le cas "=="
 
 // personnes âgées de 20 ans aujourd'hui
-$twentyToday:=people.query("age === 20") // équivalent à people.query("age is 20")
+$twentyToday:=people.query("age === 20") // équivalent à people.query("age is 20") 
 
 ```
 
@@ -596,9 +612,9 @@ Vous pouvez saisir du code conditionnel :
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc"
-    Else
-        $result:="firstName, lastName"
+        $result:="firstName desc, lastName desc" 
+    Else 
+        $result:="firstName, lastName" 
     End if
 ```
 
@@ -615,18 +631,166 @@ Le code conditionnel est nécessaire dans certains cas :
 ```4d
 Function orderBy age($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="birthday asc"
-    Else
-        $result:="birthday desc"
+        $result:="birthday asc" 
+    Else 
+        $result:="birthday desc" 
     End if
 
 ```
 
 
+## Alias attributes
+
+### Aperçu
+
+An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. You can define as many alias attributes as you want in a dataclass.
+
+Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
+
+### How to define alias attributes
+
+You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
+
+
+### `Alias <attributeName> <targetPath>`
+
+
+#### Syntaxe
+
+```
+{exposed} Alias <attributeName> <targetPath>
+```
+
+*attributeName* must comply with [standard rules for property names](Concepts/identifiers.html#object-properties).
+
+*targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
+
+An alias can be used as a part of a path of another alias.
+
+A [computed attribute](#computed-attributes) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
+
+> ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+
+
+### Using alias attributes
+
+Alias attributes are read-only (except when based upon a scalar attribute of the same dataclass, see the last example below). They can be used instead of their target attribute path in class functions such as:
+
+| Function                                       |
+| ---------------------------------------------- |
+| `dataClass.query()`, `entitySelection.query()` |
+| `entity.toObject()`                            |
+| `entitySelection.toCollection()`               |
+| `entitySelection.extract()`                    |
+| `entitySelection.orderBy()`                    |
+| `entitySelection.orderByFormula()`             |
+| `entitySelection.average()`                    |
+| `entitySelection.count()`                      |
+| `entitySelection.distinct()`                   |
+| `entitySelection.sum()`                        |
+| `entitySelection.min()`                        |
+| `entitySelection.max()`                        |
+| `entity.diff()`                                |
+| `entity.touchedAttributes()`                   |
+
+> Keep in mind that alias attributes are calculated on the server. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
+
+### Alias properties
+
+Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
+
+An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
+
+- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
+- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+
+Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
+
+
+### Exemples
+
+Considering the following model:
+
+![](assets/en/ORDA/alias1.png)
+
+In the Teacher dataclass, an alias attribute returns all students of a teacher:
+
+```4d
+// cs.TeacherEntity class
+
+Class extends Entity
+
+Alias students courses.student //relatedEntities 
+```
+
+In the Student dataclass, an alias attribute returns all teachers of a student:
+
+```4d
+// cs.StudentEntity class
+
+Class extends Entity
+
+Alias teachers courses.teacher //relatedEntities 
+```
+
+In the Course dataclass:
+
+- an alias attribute returns another label for the "name" attribute
+- an alias attribute returns the teacher name
+- an alias attribute returns the student name
+
+
+```4d
+// cs.CourseEntity class
+
+Class extends Entity
+
+Exposed Alias courseName name //scalar 
+Exposed Alias teacherName teacher.name //scalar value
+Exposed Alias studentName student.name //scalar value
+
+```
+
+You can then execute the following queries:
+
+```4d
+// Find course named "Archaeology"
+ds.Course.query("courseName = :1";"Archaeology")
+
+// Find courses given by the professor Smith
+ds.Course.query("teacherName = :1";"Smith")
+
+// Find courses where Student "Martin" assists
+ds.Course.query("studentName = :1";"Martin")
+
+// Find students who have M. Smith as teacher 
+ds.Student.query("teachers.name = :1";"Smith")
+
+// Find teachers who have M. Martin as Student
+ds.Teacher.query("students.name = :1";"Martin")
+// Note that this very simple query string processes a complex 
+// query including a double join, as you can see in the queryPlan:   
+// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
+//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
+//  subquery:[ Student.name === Martin]]"
+```
+
+
+You can also edit the value of the *courseName* alias:
+
+```4d
+// Rename a course using its alias attribute
+$arch:=ds.Course.query("courseName = :1";"Archaeology")
+$arch.courseName:="Archaeology II"
+$arch.save() //courseName and name are "Archaeology II"
+```
+
+
+
 
 ## Fonctions exposées et non exposées
 
-Pour des raisons de sécurité, toutes vos fonctions de classe de modèle de données sont non-exposées (**not exposed**) par défaut aux requêtes distantes (c'est-à-dire qu'elles sont privées).
+For security reasons, all of your data model class functions and alias attributes are **not exposed** (i.e., private) by default to remote requests.
 
 Les requêtes à distance incluent :
 
@@ -681,7 +845,7 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
+$id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method" 
 ```
 
 
@@ -728,7 +892,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else
+Else 
     $age:=Null
 End if
 ```
@@ -748,7 +912,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing"
+        $status.statusText:="The birthdate is missing" 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
@@ -770,7 +934,7 @@ End if
 
 
 
-## Prise en charge dans les projets 4D
+## Support in 4D IDE
 
 
 ### Fichiers de classe (class files)
@@ -783,6 +947,7 @@ Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au 
 4D crée préalablement et automatiquement des classes vides en mémoire pour chaque objet de modèle de données disponible.
 
 ![](assets/en/ORDA/ORDA_Classes-3.png)
+
 
 > Par défaut, les classes ORDA vides ne sont pas affichées dans l'Explorateur. Vous devez les afficher en sélectionnant **Afficher toutes les dataclasses** dans le menu d'options de l'Explorateur : ![](assets/en/ORDA/showClass.png)
 
@@ -815,3 +980,4 @@ Pour les classes ORDA basées sur le datastore local (`ds`), vous pouvez accéde
 Dans l'éditeur de méthode de 4D, les variables saisies comme une classe ORDA bénéficient automatiquement des fonctionnalités d'auto-complétion. Exemple avec une variable de classe Entity :
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
+

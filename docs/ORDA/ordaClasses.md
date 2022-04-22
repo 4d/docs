@@ -22,16 +22,16 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 Thanks to this feature, the entire business logic of your 4D application can be stored as a independent layer so that it can be easily maintained and reused with a high level of security:
 
-- You can "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions.
+- You can "hide" the overall complexity of the underlying physical structure and only expose understandable and ready-to-use functions. 
 
-- If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently.
+- If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently. 
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) and [alias attributes](XXX) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
 
-In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object.
+In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object. 
 
 
 ## Architecture
@@ -66,6 +66,8 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 |Version|Changes|
 |---|---|
+|v19 R4|Alias attributes in the Entity Class
+|v19 R3|Computed attributes in the Entity Class
 |v18 R5|Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords.
 </details>
 
@@ -73,12 +75,12 @@ Also, object instances from ORDA data model user classes benefit from their pare
 ### DataStore Class
 
 
-A 4D database exposes its own DataStore class in the `cs` class store.
+A 4D database exposes its own DataStore class in the `cs` class store. 
 
-- **Extends**: 4D.DataStoreImplementation
+- **Extends**: 4D.DataStoreImplementation 
 - **Class name**: cs.DataStore
 
-You can create functions in the DataStore class that will be available through the `ds` object.
+You can create functions in the DataStore class that will be available through the `ds` object. 
 
 #### Example
 
@@ -104,7 +106,7 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
-- **Extends**: 4D.DataClass
+- **Extends**: 4D.DataClass 
 - **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
 - **Example name**: cs.Employee
 
@@ -126,14 +128,20 @@ Function GetBestOnes()
 	$0:=$sel
 ```
 
-Then you can get an entity selection of the "best" companies by executing:
+Then you can get an entity selection of the "best" companies by executing: 
+
+
+
+
+
+
 
 ```4d
 	var $best : cs.CompanySelection
 	$best:=ds.Company.GetBestOnes()
 ```
 
-> [Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class).
+> [Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class). 
 
 
 #### Example with a remote datastore
@@ -156,7 +164,7 @@ Function getCityName()
 
 	$zipcode:=$1
 	$zip:=ds.ZipCode.get($zipcode)
-	$0:=""
+	$0:="" 
 
 	If ($zip#Null)
 		$0:=$zip.city.name
@@ -181,7 +189,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
-- **Extends**: 4D.EntitySelection
+- **Extends**: 4D.EntitySelection 
 - **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
 - **Example name**: cs.EmployeeSelection
 
@@ -194,7 +202,7 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection
+//Extract the employees with a salary greater than the average from this entity selection 
 
 Function withSalaryGreaterThanAverage
 	C_OBJECT($0)
@@ -202,7 +210,7 @@ Function withSalaryGreaterThanAverage
 
 ```
 
-Then you can get employees with a salary greater than the average in any entity selection by executing:
+Then you can get employees with a salary greater than the average in any entity selection by executing: 
 
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
@@ -212,9 +220,11 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
-- **Extends**: 4D.Entity
+- **Extends**: 4D.Entity 
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
 - **Example name**: cs.CityEntity
+
+#### Computed attributes
 
 Entity classes allow you to define **computed attributes** using specific keywords:
 
@@ -223,7 +233,16 @@ Entity classes allow you to define **computed attributes** using specific keywor
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 
-For more information, please refer to the [Computed attributes](#computed-attributes) section.
+For information, please refer to the [Computed attributes](#computed-attributes) section. 
+
+#### Alias attributes
+
+Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
+
+`Alias` *attributeName* *targetPath*
+
+For information, please refer to the [Alias attributes](#alias-attributes) section. 
+
 
 #### Example
 
@@ -236,13 +255,12 @@ Function getPopulation()
     $0:=This.zips.sum("population")
 
 
-Function isBigCity
-C_BOOLEAN($0)
+Function isBigCity(): Boolean
 // The getPopulation() function is usable inside the class
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Then you can call this code: 
 
 ```4d
 var $cityManager; $city : Object
@@ -260,7 +278,7 @@ End if
 When creating or editing data model classes, you must pay attention to the following rules:
 
 - Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. In particular:
-	- Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
+	- Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler). 
 	- Do not use a reserved name for a 4D table (e.g., "DataClass").
 
 - When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement exactly matches the parent class name (remember that they're case sensitive). For example, `Class extends EntitySelection` for an entity selection class.
@@ -277,7 +295,7 @@ When compiled, data model class functions are executed:
 - in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
 - in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
 
-If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications).
+If your project is designed to run in client/server, make sure your data model class function code is thread-safe. If thread-unsafe code is called, an error will be thrown at runtime (no error will be thrown at compilation time since cooperative execution is supported in single-user applications). 
 
 
 ## Computed attributes
@@ -293,7 +311,7 @@ A computed attribute can also implement a `set` function, which executes wheneve
 
 Just like storage attributes, computed attributes may be included in **queries**. By default, when a computed attribute is used in a ORDA query, the attribute is calculated once per entity examined. In some cases this is sufficient. However for better performance, especially in client/server, computed attributes can implement a `query` function that relies on actual dataclass attributes and benefits from their indexes.
 
-Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance.
+Similarly, computed attributes can be included in **sorts**. When a computed attribute is used in a ORDA sort, the attribute is calculated once per entity examined. Just like in queries, computed attributes can implement an `orderBy` function that substitutes other attributes during the sort, thus increasing performance. 
 
 
 ### How to define computed attributes
@@ -302,11 +320,11 @@ You create a computed attribute by defining a `get` accessor in the [**entity cl
 
 Other computed attribute functions (`set`, `query`, and `orderBy`) can also be defined in the entity class. They are optional.
 
-Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. Computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions.
+Within computed attribute functions, [`This`](Concepts/classes.md#this) designates the entity. Computed attributes can be used and handled as any dataclass attribute, i.e. they will be processed by [entity class](API/EntityClass.md) or [entity selection class](API/EntitySelectionClass.md) functions. 
 
 > ORDA computed attributes are not [**exposed**](#exposed-vs-non-exposed-functions) by default. You expose a computed attribute by adding the `exposed` keyword to the **get function** definition.
 
-> **get and set functions** can have the [**local**](#local-functions) property to optimize client/server processing.
+> **get and set functions** can have the [**local**](#local-functions) property to optimize client/server processing. 
 
 
 ### `Function get <attributeName>`
@@ -317,9 +335,9 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 {local} {exposed} Function get <attributeName>({$event : Object}) -> $result : type
 // code
 ```
-The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value.
+The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value. 
 
-> A computed attribute can use the value of other computed attribute(s). Recursive calls generate errors.
+> A computed attribute can use the value of other computed attribute(s). Recursive calls generate errors. 
 
 The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
 
@@ -354,9 +372,9 @@ Function get fullName($event : Object)-> $fullName : Text
 		$fullName:=This.lastName
 	: (This.lastName=Null)
 		$fullName:=This.firstName
-	Else
+	Else 
 		$fullName:=This.firstName+" "+This.lastName
-	End case
+	End case 
 ```
 
 - A computed attribute can be based upon an entity related attribute:
@@ -364,7 +382,7 @@ Function get fullName($event : Object)-> $fullName : Text
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 	$result:=This.manager.manager
-
+    
 ```
 
 - A computed attribute can be based upon an entity selection related attribute:
@@ -373,11 +391,11 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else
+    Else 
         $result:=This.manager.directReports.minus(this)
     End if
 ```
-
+    
 ### `Function set <attributeName>`
 
 #### Syntax
@@ -389,7 +407,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 The *setter* function executes whenever a value is assigned to the attribute. This function usually processes the input value(s) and the result is dispatched between one or more other attributes.
 
-The *$value* parameter receives the value assigned to the attribute.
+The *$value* parameter receives the value assigned to the attribute. 
 
 The *$event* parameter contains the following properties:
 
@@ -429,7 +447,7 @@ This function supports three syntaxes:
 - With the second and third syntaxes, the function returns a value in *$result*:
 	- If *$result* is a Text, it must be a valid query string
 	- If *$result* is an Object, it must contain two properties:
-
+	
 	|Property|Type|Description|
 	|---|---|---|
 	|$result.query|Text|Valid query string with placeholders (:1, :2, etc.)|
@@ -438,7 +456,7 @@ This function supports three syntaxes:
 The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
 > The following features are not supported:
-> - calling a `query` function on computed attributes of type Entity or Entity selection,
+> - calling a `query` function on computed attributes of type Entity or Entity selection, 
 > - using the `order by` keyword in the resulting query string.
 
 The *$event* parameter contains the following properties:
@@ -452,11 +470,11 @@ The *$event* parameter contains the following properties:
 |operator|Text|Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Possible values:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contains keyword)</li>|
 |result|Variant|Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).|
 
-> If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+> If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`. 
 
 #### Examples
 
-- Query on the *fullName* computed attribute.
+- Query on the *fullName* computed attribute. 
 
 ```4d
 Function query fullName($event : Object)->$result : Object
@@ -469,30 +487,30 @@ Function query fullName($event : Object)->$result : Object
 	$operator:=$event.operator
 	$fullname:=$event.value
 
-	$p:=Position(" "; $fullname)
+	$p:=Position(" "; $fullname) 
 	If ($p>0)
 		$firstname:=Substring($fullname; 1; $p-1)+"@"
 		$lastname:=Substring($fullname; $p+1)+"@"
 		$parameters:=New collection($firstname; $lastname) // two items collection
-	Else
+	Else 
 		$fullname:=$fullname+"@"
 		$parameters:=New collection($fullname) // single item collection
-	End if
+	End if 
 
-	Case of
+	Case of 
 	: ($operator="==") | ($operator="===")
 		If ($p>0)
 			$query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-		Else
+		Else 
 			$query:="firstName = :1 or lastName = :1"
-		End if
+		End if 
 	: ($operator="!=")
 		If ($p>0)
 			$query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-		Else
+		Else 
 			$query:="firstName != :1 and lastName != :1"
-		End if
-	End case
+		End if 
+	End case 
 
 	$result:=New object("query"; $query; "parameters"; $parameters)
 ```
@@ -509,36 +527,36 @@ $emps:=ds.Employee.query("fullName = :1"; "Flora Pionsin")
 
 ```4d
 Function query age($event : Object)->$result : Object
-
+	
 	var $operator : Text
 	var $age : Integer
 	var $_ages : Collection
-
+	
 	$operator:=$event.operator
-
+			
 	$age:=Num($event.value)  // integer
 	$d1:=Add to date(Current date; -$age-1; 0; 0)
 	$d2:=Add to date($d1; 1; 0; 0)
 	$parameters:=New collection($d1; $d2)
-
-	Case of
-
+	
+	Case of 
+			
 		: ($operator="==")
 			$query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
-
-		: ($operator="===")
+			
+		: ($operator="===") 
 
 			$query:="birthday = :2"  // d2 = second calculated date (= birthday date)
 
 		: ($operator=">=")
 			$query:="birthday <= :2"
-
+			
 			//... other operators			
-
-
-	End case
-
-
+			
+			
+	End case 
+	
+	
 	If (Undefined($event.result))
 		$result:=New object
 		$result.query:=$query
@@ -554,7 +572,7 @@ Calling code, for example:
 $twenty:=people.query("age = 20")  // calls the "==" case
 
 // people aged 20 years today
-$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20")
+$twentyToday:=people.query("age === 20") // equivalent to people.query("age is 20") 
 
 ```
 
@@ -573,7 +591,7 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 The `orderBy` function executes whenever the computed attribute needs to be ordered. It allows sorting the computed attribute. For example, you can sort *fullName* on first names then last names, or conversely.
 When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
-> Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**.
+> Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**. 
 
 The *$event* parameter contains the following properties:
 
@@ -589,7 +607,7 @@ The *$event* parameter contains the following properties:
 
 > You can use either the `operator` or the `descending` property. It is essentially a matter of programming style (see examples).   
 
-You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
+You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`. 
 
 
 #### Example
@@ -599,9 +617,9 @@ You can write conditional code:
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc"
-    Else
-        $result:="firstName, lastName"
+        $result:="firstName desc, lastName desc" 
+    Else 
+        $result:="firstName, lastName" 
     End if
 ```
 
@@ -618,27 +636,175 @@ Conditional code is necessary in some cases:
 ```4d
 Function orderBy age($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="birthday asc"
-    Else
-        $result:="birthday desc"
+        $result:="birthday asc" 
+    Else 
+        $result:="birthday desc" 
     End if
 
 ```
 
 
+## Alias attributes
+
+### Overview
+
+An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. You can define as many alias attributes as you want in a dataclass. 
+
+Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
+
+### How to define alias attributes
+
+You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass. 
+
+
+### `Alias <attributeName> <targetPath>`
+
+
+#### Syntax
+
+```
+{exposed} Alias <attributeName> <targetPath>
+```
+
+*attributeName* must comply with [standard rules for property names](Concepts/identifiers.html#object-properties). 
+
+*targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name. 
+
+An alias can be used as a part of a path of another alias. 
+
+A [computed attribute](#computed-attributes) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid. 
+
+> ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+
+
+### Using alias attributes
+
+Alias attributes are read-only (except when based upon a scalar attribute of the same dataclass, see the last example below). They can be used instead of their target attribute path in class functions such as:
+
+|Function|
+|----|
+|`dataClass.query()`, `entitySelection.query()`|
+|`entity.toObject()`|
+|`entitySelection.toCollection()`|
+|`entitySelection.extract()`|
+|`entitySelection.orderBy()`|
+|`entitySelection.orderByFormula()`|
+|`entitySelection.average()`|
+|`entitySelection.count()`|
+|`entitySelection.distinct()`|
+|`entitySelection.sum()`|
+|`entitySelection.min()`|
+|`entitySelection.max()`|
+|`entity.diff()`|
+|`entity.touchedAttributes()`|
+
+> Keep in mind that alias attributes are calculated on the server. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server. 
+
+### Alias properties
+
+Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".  
+
+An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute: 
+
+- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
+- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection"). 
+
+Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property). 
+
+
+### Examples
+
+Considering the following model:
+
+![](assets/en/ORDA/alias1.png)
+
+In the Teacher dataclass, an alias attribute returns all students of a teacher:
+
+```4d
+// cs.TeacherEntity class
+
+Class extends Entity
+
+Alias students courses.student //relatedEntities 
+```
+
+In the Student dataclass, an alias attribute returns all teachers of a student:
+
+```4d
+// cs.StudentEntity class
+
+Class extends Entity
+
+Alias teachers courses.teacher //relatedEntities 
+```
+
+In the Course dataclass:
+
+- an alias attribute returns another label for the "name" attribute
+- an alias attribute returns the teacher name
+- an alias attribute returns the student name
+
+
+```4d
+// cs.CourseEntity class
+
+Class extends Entity
+
+Exposed Alias courseName name //scalar 
+Exposed Alias teacherName teacher.name //scalar value
+Exposed Alias studentName student.name //scalar value
+
+```
+
+You can then execute the following queries:
+
+```4d
+// Find course named "Archaeology"
+ds.Course.query("courseName = :1";"Archaeology")
+
+// Find courses given by the professor Smith
+ds.Course.query("teacherName = :1";"Smith")
+
+// Find courses where Student "Martin" assists
+ds.Course.query("studentName = :1";"Martin")
+
+// Find students who have M. Smith as teacher 
+ds.Student.query("teachers.name = :1";"Smith")
+
+// Find teachers who have M. Martin as Student
+ds.Teacher.query("students.name = :1";"Martin")
+// Note that this very simple query string processes a complex 
+// query including a double join, as you can see in the queryPlan:   
+// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
+//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
+//  subquery:[ Student.name === Martin]]"
+```
+
+
+You can also edit the value of the *courseName* alias:
+
+```4d
+// Rename a course using its alias attribute
+$arch:=ds.Course.query("courseName = :1";"Archaeology")
+$arch.courseName:="Archaeology II"
+$arch.save() //courseName and name are "Archaeology II"
+```
+
+
+
 
 ## Exposed vs non-exposed functions
 
-For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
+For security reasons, all of your data model class functions and alias attributes are **not exposed** (i.e., private) by default to remote requests. 
 
 Remote requests include:
 
-- Requests sent by remote 4D applications connected through `Open datastore`
+- Requests sent by remote 4D applications connected through `Open datastore` 
 - REST requests
 
-> Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.
+> Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture. 
 
-A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
+A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned. 
 
 To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. The formal syntax is:
 
@@ -649,7 +815,7 @@ exposed Function <functionName>
 
 > The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-### Example
+### Example 
 
 You want an exposed function to use a private function in a dataclass class:
 
@@ -684,13 +850,13 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method"
+$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
 
 ## Local functions
 
-By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
+By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network. 
 
 However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The formal syntax is:
 
@@ -713,7 +879,7 @@ local Function getYoungest
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 - **without** the `local` keyword, the result is given using a single request
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
+- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate. 
 
 
 ### Examples
@@ -731,7 +897,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else
+Else 
     $age:=Null
 End if
 ```
@@ -751,7 +917,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing"
+        $status.statusText:="The birthdate is missing" 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
@@ -773,12 +939,12 @@ End if
 
 
 
-## Support in 4D projects
+## Support in 4D IDE
 
 
 ### Class files
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
+An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file. 
 
 
 ### Creating classes
@@ -786,6 +952,7 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 4D automatically pre-creates empty classes in memory for each available data model object.
 
 ![](assets/en/ORDA/ORDA_Classes-3.png)
+
 
 > By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu:
 ![](assets/en/ORDA/showClass.png)
@@ -798,9 +965,9 @@ To create an ORDA class file, you just need to double-click on the corresponding
 
 ```
 Class extends Entity
-```
+``` 
 
-Once a class is defined, its name is no longer dimmed in the Explorer.
+Once a class is defined, its name is no longer dimmed in the Explorer. 
 
 
 ### Editing classes
@@ -819,3 +986,4 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
+

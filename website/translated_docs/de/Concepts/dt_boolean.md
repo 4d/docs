@@ -7,7 +7,7 @@ Ein Datenfeld, Ausdruck oder eine Variable vom Typ Boolean kann entweder WAHR od
 
 ## Boolean Funktionen
 
-4D bietet die Boolean Funktionen `True`, `False` und `Not`. Weitere Informationen dazu finden Sie in der Beschreibung dieser Befehle.
+4D bietet die Boolean Funktionen `True`, `False` und `Not`. For more information, see the descriptions of these commands.
 
 ### Beispiel
 
@@ -63,3 +63,5 @@ Für das logische ODER gilt:
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
+
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [trushy and falsy](operators.md#truthy-and-falsy) concept. 

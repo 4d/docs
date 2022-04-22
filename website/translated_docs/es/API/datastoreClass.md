@@ -3,10 +3,10 @@ id: DataStoreClass
 title: DataStore
 ---
 
-A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by ORDA to reference and access a database. `Datastore` objects are returned by the following commands:
+Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrado por ORDA para referenciar y acceder a una base de datos. Los objetos `Datastore` son devueltos por los siguientes comandos:
 
-*   [ds](#ds): a shortcut to the main datastore
-*   [Open datastore](#open-datastore): to open any remote datastore
+*   [ds](#ds): un acceso directo al almacén de datos principal
+*   [Open datastore](#open-datastore): para abrir todo almacén de datos remoto
 
 ### Resumen
 
@@ -32,10 +32,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 ## ds
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v18     | Support of localID parameter |
-| v17     | Añadidos                     |
+| Versión | Modificaciones                |
+| ------- | ----------------------------- |
+| v18     | Soporte del parámetro localID |
+| v17     | Añadidos                      |
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
@@ -56,11 +56,11 @@ El comando `ds` <!-- REF #_command_.ds.Summary -->devuelve una referencia al alm
 Si se omite el parámetro *localID* (o se pasa una cadena vacía ""), el comando devuelve una referencia al almacén de datos que coincide con la base de datos local de 4D (o la base de datos de 4D Server en caso de abrir una base de datos remota en 4D Server). El almacén de datos se abre automáticamente y está disponible directamente a través de `ds`.
 
 También puede obtener una referencia en un datastore remoto abierto pasando su id local en el parámetro *localID*. El almacén de datos debe haber sido abierto previamente con el comando [`Open datastore`](#open-datastore) por la base de datos actual (local o componente). La identificación local se define cuando se utiliza este comando.
-> The scope of the local id is the database where the datastore has been opened.
+> El alcance del id local es la base de datos en la que se ha abierto el almacén de datos.
 
 Si no se encuentra ningún almacén de datos *localID*, el comando devuelve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Objetos disponibles en `cs.Datastore` se mapean desde la base de datos de destino con respecto a las [reglas generales ORDA](Concepts/dsMapping.md#general-rules).
 
 #### Ejemplo 1
 
@@ -133,7 +133,7 @@ Si no se encuentra ninguna base de datos coincidente, `Open datastore` devuelve 
 
 *localID* es un alias local para la sesión abierta en el almacén de datos remoto. Si *localID* ya existe en la aplicación, se utiliza. En caso contrario, se crea una nueva sesión *localID* cuando se utiliza el objeto datastore.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Objetos disponibles en `cs.Datastore` se mapean desde la base de datos de destino con respecto a las [reglas generales ORDA](Concepts/dsMapping.md#general-rules).
 
 Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelven una referencia sobre el mismo objeto datastore:
 
@@ -145,14 +145,14 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
 
 Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al que desea conectarse. Puede contener las siguientes propiedades (todas las propiedades son opcionales excepto *hostname*):
 
-| Propiedad   | Tipo         | Descripción                                                                                                                                                                                                                                                            |
-| ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Texto        | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | Texto        | User name                                                                                                                                                                                                                                                              |
-| contraseña  | Texto        | User password                                                                                                                                                                                                                                                          |
-| idleTimeout | Entero largo | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Booleano     | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Texto        | Debe ser "4D Server"                                                                                                                                                                                                                                                   |
+| Propiedad   | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                      |
+| ----------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hostname    | Texto        | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                   |
+| user        | Texto        | Nombre de usuario                                                                                                                                                                                                                                                                                                                |
+| contraseña  | Texto        | Contraseña del usuario                                                                                                                                                                                                                                                                                                           |
+| idleTimeout | Entero largo | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |
+| tls         | Booleano     | Utilice una conexión segura(*). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                           |
+| type        | Texto        | Debe ser "4D Server"                                                                                                                                                                                                                                                                                                             |
 
 (*) Si tls es true, se utiliza el protocolo HTTPS si:
 
@@ -229,10 +229,10 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 ```4d
  var $emp : cs.Employee
  var $sel : cs.EmployeeSelection
- $emp:=ds.Employee //$emp contains the Employee dataclass
- $sel:=$emp.all() //gets an entity selection of all employees
+ $emp:=ds.Employee //$emp contiene la dataclass Employee 
+ $sel:=$emp.all() //obtiene una selección de entidades de todos los empleados
 
-  //you could also write directly:
+  //también puede escribir directamente:
  $sel:=ds.Employee.all()
 ```
 
@@ -303,7 +303,7 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 #### Descripción
 
 La función `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->devuelve un objeto que proporciona el estado de encriptación del archivo de datos actual<!-- END REF --> (es decir, el archivo de datos del `ds` datastore). También se proporciona el estado de cada tabla.
-> Use the `Data file encryption status` command to determine the encryption status of any other data file.
+> Utilice el comando `Data file encryption status` para determinar el estado de encriptación de cualquier otro archivo de datos.
 
 
 **Valor devuelto**
@@ -523,10 +523,10 @@ La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelections
 
 Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
-> This function does not modify entity selections created by [`.copy()`](#copy) or `OB Copy` when the explicit `ck shared` option is used.
+> Esta función no modifica las selecciones de entidades creadas por [`.copy()`](#copy) o `OB Copy` cuando se utiliza la opción explícita `ck shared`.
 
 
-> **Compatibility**: This function must only be used in projects converted from 4D versions prior to 4D v18 R5 and containing [.add()](EntitySelectionClass.md#add) calls. In this context, using `.makeSelectionsAlterable()` can save time by restoring instantaneously the previous 4D behavior in existing projects. On the other hand, using this method in new projects created in 4D v18 R5 and higher **is not recommended**, since it prevents entity selections to be shared, which provides greater performance and scalabitlity.
+> **Compatibilidad**: esta función sólo debe utilizarse en proyectos convertidos desde versiones de 4D anteriores a 4D v18 R5 y que contengan llamadas [.add()](EntitySelectionClass.md#add). En este contexto, el uso de `.makeSelectionsAlterable()` puede ahorrar tiempo al restaurar instantáneamente el comportamiento anterior de 4D en los proyectos existentes. Por otro lado, utilizar este método en proyectos nuevos creados en 4D v18 R5 y superiores **no es recomendable**, ya que impide compartir las selecciones de entidades, lo que ofrece mayor rendimiento y escalabilidad.
 
 
 <!-- END REF -->
@@ -557,8 +557,8 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 #### Descripción
 
 La función `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summary -->permite suministrar una llave de cifrado de datos para el archivo de datos actual del datastore y detecta si la llave coincide con los datos cifrados<!-- END REF -->. Esta función se puede utilizar al abrir una base encriptada, o al ejecutar cualquier operación de encriptación que requiera la llave de encriptación, como por ejemplo volver a encriptar el archivo de datos.
-> * The `.provideDataKey()` function must be called in an encrypted database. If it is called in a non-encrypted database, the error 2003 (the encryption key does not match the data.) is returned. Use the `Data file encryption status` command to determine if the database is encrypted.
-> * The `.provideDataKey()` function cannot be called from a remote 4D or an encrypted remote datastore.
+> * La función `.provideDataKey()` debe ser llamada en una base de datos encriptada. Si se llama en una base no cifrada, se devuelve el error 2003 (la llave de cifrado no coincide con los datos.). Utilice el comando `Estado de cifrado del archivo de datos` para determinar si la base de datos está cifrada.
+> * La función `.provideDataKey()` no puede ser llamada desde un 4D remoto o un datastore remoto encriptado.
 
 Si utiliza el parámetro *curPassPhrase*, pase la cadena utilizada para generar la llave de cifrado de datos. Cuando se utiliza este parámetro, se genera una llave de encriptación.
 
@@ -643,7 +643,7 @@ En este caso, puede llamar a esta función para deshabilitar el acceso a los dat
 Se crea un método proyecto *protectDataFile* para llamar antes de los despliegues, por ejemplo:
 
 ```4d
- ds.setAdminProtection(True) //Disables the Data Explorer data access
+ ds.setAdminProtection(True) //Desactiva el acceso a los datos del Explorador de Datos
 ```
 
 #### Ver también
@@ -753,7 +753,7 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 #### Descripción
 
 La función `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->inicia una transacción en el proceso actual en la base de datos que coincide con el datastore al que se aplica<!-- END REF -->. Todos los cambios realizados en las entidades del almacén de datos en el proceso de la transacción se almacenan temporalmente hasta que la transacción se valida o se cancela.
-> If this method is called on the main datastore (i.e. the datastore returned by the `ds` command), the transaction is applied to all operations performed on the main datastore and on the underlying database, thus including ORDA and classic languages.
+> Si se llama a este método en el almacén de datos principal (es decir, el almacén de datos devuelto por el comando `ds`), la transacción se aplica a todas las operaciones realizadas en el almacén de datos principal y en la base de datos subyacente, incluyendo por tanto ORDA y los lenguajes clásicos.
 
 Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-transacción debe ser eventualmente cancelada o validada. Note que si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función `.validateTransaction()`.
 

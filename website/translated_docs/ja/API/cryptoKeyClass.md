@@ -98,10 +98,7 @@ ASSERT($status.success)
 
 
 
-ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線名<!-- END REF -->。
-
-通常、ES256 (デフォルト) の場合は "prime256v1", ES384 の場合は "secp384r1", ES512 の場合は "secp521r1"。
-
+ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線名<!-- END REF -->。 通常、ES256 (デフォルト) の場合は "prime256v1", ES384 の場合は "secp384r1", ES512 の場合は "secp521r1"。
 <!-- END REF -->
 
 
@@ -121,9 +118,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.decrypt().Params -->
 | 引数      | タイプ    |    | 説明                                                |
 | ------- | ------ | -- | ------------------------------------------------- |
-| message | Text   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
-| options | Object | -> | デコーディングオプション                                      |
-| 戻り値     | Object | <- | ステータス                                             |
+| message | テキスト   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
+| options | オブジェクト | -> | デコーディングオプション                                      |
+| 戻り値     | オブジェクト | <- | ステータス                                             |
 
 <!-- END REF -->
 
@@ -172,9 +169,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.encrypt().Params -->
 | 引数      | タイプ    |    | 説明                                                  |
 | ------- | ------ | -- | --------------------------------------------------- |
-| message | Text   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
-| options | Object | -> | エンコーディングオプション                                       |
-| 戻り値     | Text   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ   |
+| message | テキスト   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列 |
+| options | オブジェクト | -> | エンコーディングオプション                                       |
+| 戻り値     | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ   |
 
 <!-- END REF -->
 
@@ -214,7 +211,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 | 引数  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
-| 戻り値 | Text | <- | PEM 形式の秘密鍵 |
+| 戻り値 | テキスト | <- | PEM 形式の秘密鍵 |
 
 <!-- END REF -->
 
@@ -242,7 +239,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.getPublicKey().Params -->
 | 引数  | タイプ  |    | 説明         |
 | --- | ---- | -- | ---------- |
-| 戻り値 | Text | <- | PEM 形式の公開鍵 |
+| 戻り値 | テキスト | <- | PEM 形式の公開鍵 |
 
 <!-- END REF -->
 
@@ -288,9 +285,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 <!-- REF #CryptoKey.sign().Params -->
 | 引数      | タイプ    |    | 説明                                              |
 | ------- | ------ | -- | ----------------------------------------------- |
-| message | Text   | -> | 署名をするメッセージ                                      |
-| options | Object | -> | 署名オプション                                         |
-| 戻り値     | Text   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
+| message | テキスト   | -> | 署名をするメッセージ                                      |
+| options | オブジェクト | -> | 署名オプション                                         |
+| 戻り値     | テキスト   | <- | "encoding" オプションに応じて Base64 または Base64URL 形式の署名 |
 
 <!-- END REF -->
 
@@ -365,10 +362,10 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 <!-- REF #CryptoKey.verify().Params -->
 | 引数        | タイプ    |    | 説明                                                          |
 | --------- | ------ | -- | ----------------------------------------------------------- |
-| message   | Text   | -> | 署名生成時に使われたメッセージ文字列                                          |
-| signature | Text   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
-| options   | Object | -> | 署名オプション                                                     |
-| 戻り値       | Object | <- | 検証ステータス                                                     |
+| message   | テキスト   | -> | 署名生成時に使われたメッセージ文字列                                          |
+| signature | テキスト   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
+| options   | オブジェクト | -> | 署名オプション                                                     |
+| 戻り値       | オブジェクト | <- | 検証ステータス                                                     |
 
 <!-- END REF -->
 

@@ -30,6 +30,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.path.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
@@ -82,6 +83,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 La propiedad `.exposed` es <!-- REF DataClassAttributeClass.exposed.Summary -->"true" si el atributo está "expuesto" en REST<!-- END REF -->.
 
+
+#### Ver también
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -120,6 +126,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 <details><summary>Histórico</summary>
 | Versión | Modificaciones               |
 | ------- | ---------------------------- |
+| v19 R4  | Soporta atributos alias      |
 | v19 R3  | Soporta atributos calculados |
 </details>
 
@@ -140,13 +147,14 @@ La propiedad `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -->
 | relatedEntity           | 38 (`Is object`)                                                                                                   |
 | relatedEntities         | 42 (`Is collection`)                                                                                               |
 | calculated              | <li>escalar: tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
+| alias                   | <li>escalar: tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)` |
 
 
 <!-- END REF -->
 
 #### Ver también
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -211,12 +219,12 @@ Esta propiedad no se devuelve si `.kind` = "storage". Debe ser del tipo "related
 
 
 <!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
-**.keywordIndexed** : Boolean<!-- END REF -->
+**.keywordIndexed**: Boolean<!-- END REF -->
 
 
 #### Descripción
 
-The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
+La propiedad `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contiene **True** si hay un índice de palabras clave en el atributo<!-- END REF -->.
 
 Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEntities".
 > For generic programming, you can use **Bool**(dataClassAttribute.keywordIndexed) to get a valid value (false) even if `.keywordIndexed` is not returned.
@@ -231,6 +239,7 @@ Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEn
 <details><summary>Histórico</summary>
 | Versión | Modificaciones          |
 | ------- | ----------------------- |
+| v19 R4  | Adición de "alias"      |
 | v19 R3  | Adición de "calculated" |
 </details>
 
@@ -244,7 +253,8 @@ Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEn
 La propiedad `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->devuelve la categoría del atributo<!-- END REF -->. El valor devuelto puede ser uno de los siguientes:
 
 *   "storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute
-*   "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename).
+*   "calculated": atributo calculado, es decir definido por [la función `get`](ORDA/ordaClasses.md#function-get-attributename)
+*   "alias": atributo basado en [otro atributo](ORDA/ordaClasses.md#alias-attributes-1)
 *   "relatedEntity": N -> 1 atributo de relación (referencia a una entidad)
 *   "relatedEntities": 1 -> N atributo de relación (referencia a una selección de entidades)
 
@@ -322,6 +332,33 @@ La propiedad `.name` <!-- REF DataClassAttributeClass.name.Summary -->devuelve e
 
 <!-- END REF -->
 
+
+<!-- REF DataClassAttributeClass.path.Desc -->
+## .path
+
+<details><summary>Histórico</summary>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
+
+
+<!-- REF DataClassAttributeClass.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
+
+#### Descripción
+
+La propiedad `.path` <!-- REF DataClassAttributeClass.path.Summary -->devuelve el nombre de un atributo alias basado en una relación<!-- END REF -->.
+
+#### Ejemplo
+
+```4d
+ var $path : Text
+ $path:=ds.Teacher.students.path //$path="courses.student"
+```
+
+<!-- END REF -->
 
 
 <!-- REF DataClassAttributeClass.readOnly.Desc -->

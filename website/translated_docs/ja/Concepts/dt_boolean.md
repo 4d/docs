@@ -63,3 +63,5 @@ myBoolean:=(myButton=1)
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
+
+> 4Dランゲージはブールのコンテキストにおいて、[短絡演算子](operators.md#短絡演算子) (`&&` と `||`) および [Truthy (真的) と Falsy (偽的)](operators.md#truthy-と-falsy) の概念もサポートしています。 

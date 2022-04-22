@@ -6,6 +6,19 @@ title: ドキュメンテーション更新情報
 このドキュメントのおもな更新内容のリストです。 4D製品の新機能についての一般的な情報は、[doc.4d.com](https://doc.4d.com) の **リリースノート** を参照ください。
 
 
+## 4D v19 R4
+
+- ORDAクラス: [エイリアス属性](ORDA/ordaClasses.md#エイリアス属性) が利用可能に。
+- ループにおける [break と continue](Concepts/cf_looping.md#break-と-continue) 文のサポート。
+- [return](Concepts/flow-control.md#return-expression) 文と、値を返すための [return {expression}](Concepts/parameters.md#return-expression) 文のサポート。
+- [複合代入演算子](Concepts/operators.md#複合代入演算子)、[短絡演算子](Concepts/operators.md#短絡演算子)、および [三項演算子](Concepts/operators.md#三項演算子) のサポート。
+- コードナビゲーションを改善するため、[コードエディター](code-editor/navigation.md) にドロップダウンツールが追加され、コードにマーカーを追加できるようになりました。
+- 新しい環境設定: 一般ページの [**Project ソースファイルにトークンを含める**](Preferences/general.md#project-ソースファイルにトークンを含める) および、メソッドページの [**クリップボードを表示**](Preferences/methods.md#クリップボードを表示)。
+- エンティティを [lock/unlock](REST/$lock.md) するための新しい REST リクエスト。
+- [4D View Pro](ViewPro/getting-started.md) の章が次の新コマンドとともに追加されました: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
+- 新しい [SystemWorker クラス](API/SystemWorkerClass.md)。
+
+
 ## 4D v19 R3
 
 - クラス: [計算プロパティ](Concepts/classes.md#function-get-と-function-set) が利用可能に。
@@ -15,10 +28,10 @@ title: ドキュメンテーション更新情報
 - [新しいビルドオプション](Desktop/building.md#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
 - macOS で [ダークモードをサポート](Preferences/general.md#アピアランス-macosのみ)。
 - [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter), および [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter): **OAuth2 トークンオブジェクト** をサポート。
-- [サーバー管理ウィンドウ](/Admin/server-admin.md#ログ設定ファイルを読み込む) のボタンを使って、[ログ設定ファイル](Admin/debugLogFiles.md#ログ設定ファイルを使用する) を読み込めるようになりました。
+- [サーバー管理ウィンドウ](ServerWindow/maintenance.md#ログ設定ファイルを読み込む) のボタンを使って、[ログ設定ファイル](Debugging/debugLogFiles.md#ログ設定ファイルを使用する) を読み込めるようになりました。
 - 4Dランゲージで [任意パラメーター](Concepts/parameters.md#任意パラメーター) をより柔軟に扱えるようになりました。
 - Webサーバーセッションのデバッグが [4D Server 上で容易になりました](WebServer/sessions.md#プリエンプティブモード)。
-- 新しい [4D NetKit](Project/components.md#list-of-4d-components) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
+- 新しい [4D NetKit](Extensions/overview.md#4dコンポーネントの一覧) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 
 
 ## 4D v19 R2
@@ -39,6 +52,7 @@ title: ドキュメンテーション更新情報
 - Apple Silicon プロセッサー用の [ネイティブコンパイル](Project/compiler.md#コンパイラーメソッド)
 - エンティティセレクション型リストボックスの列で、[変数の計算](FormObjects/properties_Object.md#変数の計算) プロパティがサポートされるようになりました。
 - 新しい包括的な [CLI](Admin/cli.md) (コマンドラインインターフェース) ページ
+
 
 
 ## 4D v18 R6

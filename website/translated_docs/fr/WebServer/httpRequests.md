@@ -33,7 +33,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | $1         | Text | <- | Variable URL                                 |
 | $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
 | $3         | Text | <- | IP address of the web client (browser)       |
-| $4         | Text | <- | IP address of the server                     |
+| $4         | Text | <- | Adresse IP du serveur                        |
 | $5         | Text | <- | Nom d'utilisateur                            |
 | $6         | Text | <- | Password                                     |
 

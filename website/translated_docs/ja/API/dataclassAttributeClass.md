@@ -30,6 +30,7 @@ title: DataClassAttribute
 | [<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+| [<!-- INCLUDE DataClassAttributeClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.path.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 | [<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
@@ -82,6 +83,11 @@ title: DataClassAttribute
 
 `.exposed` プロパティは、 <!-- REF DataClassAttributeClass.exposed.Summary -->属性が REST で公開されている場合に true<!-- END REF -->です。
 
+
+#### 参照
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
 <!-- END REF -->
 
 
@@ -118,9 +124,10 @@ title: DataClassAttribute
 ## .fieldType
 
 <details><summary>履歴</summary>
-| バージョン  | 内容        |
-| ------ | --------- |
-| v19 R3 | 計算属性をサポート |
+| バージョン  | 内容           |
+| ------ | ------------ |
+| v19 R4 | エイリアス属性をサポート |
+| v19 R3 | 計算属性をサポート    |
 </details>
 
 
@@ -140,13 +147,14 @@ title: DataClassAttribute
 | relatedEntity           | 38 (`Is object`)                                                                                               |
 | relatedEntities         | 42 (`Is collection`)                                                                                           |
 | calculated              | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>エンティティセレクション: 42 (`Is collection)` |
+| alias                   | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>エンティティセレクション: 42 (`Is collection)` |
 
 
 <!-- END REF -->
 
 #### 参照
 
-[`.type`](#type)
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
@@ -231,6 +239,7 @@ title: DataClassAttribute
 <details><summary>履歴</summary>
 | バージョン  | 内容               |
 | ------ | ---------------- |
+| v19 R4 | "alias" を追加      |
 | v19 R3 | "calculated" を追加 |
 </details>
 
@@ -244,7 +253,8 @@ title: DataClassAttribute
 `.kind` プロパティは、 <!-- REF DataClassAttributeClass.kind.Summary -->属性の種類<!-- END REF -->を格納します。 以下のいずれかの値が返されます:
 
 *   "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
-*   "calculated": 計算属性。[`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
+*   "calculated": 計算属性。 [`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
+*   "alias": [他の属性](ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。
 *   "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
 *   "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)
 
@@ -322,6 +332,33 @@ title: DataClassAttribute
 
 <!-- END REF -->
 
+
+<!-- REF DataClassAttributeClass.path.Desc -->
+## .path
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
+
+
+<!-- REF DataClassAttributeClass.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
+
+#### 説明
+
+`.path` プロパティは、 <!-- REF DataClassAttributeClass.path.Summary -->リレーション属性を指し示すエイリアス属性のパス<!-- END REF -->を返します。
+
+#### 例題
+
+```4d
+ var $path : Text
+ $path:=ds.Teacher.students.path // $path="courses.student"
+```
+
+<!-- END REF -->
 
 
 <!-- REF DataClassAttributeClass.readOnly.Desc -->

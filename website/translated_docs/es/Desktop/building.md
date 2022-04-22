@@ -42,7 +42,7 @@ Building can only be carried out once the project is compiled. If you select thi
 ### Parámetros del generador de aplicaciones
 
 
-Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the `Settings` folder of the project.
+Cada parámetro de generación de la aplicación se almacena como una llave XML en el archivo proyecto de la aplicación llamada `"buildApp.4DSettings"`, ubicado en la carpeta `Settings` del proyecto.
 
 Los parámetros por defecto se utilizan la primera vez que se utiliza la caja de diálogo del Generador de aplicaciones. El contenido del archivo proyecto se actualiza, si es necesario, al hacer clic en **Construir** o **Guardar los parámetros**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4dv19/help/command/en/page871.html) command.
 
@@ -84,7 +84,7 @@ Esta pestaña le permite generar un archivo de estructura compilado estándar y/
 
 Builds an application containing only compiled code.
 
-This feature creates a *.4dz* file within a *Compiled Database/\<project name>* folder. For example, if you have named your application “MyProject”, 4D will create:
+This feature creates a *.4dz* file within a *Compiled Database/\<project name>* folder. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
 
 *\<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
@@ -193,12 +193,12 @@ Cuando se construye una aplicación independiente, 4D copia el contenido de la c
 
 #### Ubicación de los archivos web
 
-Si su aplicación ejecutable se utiliza como servidor web, los archivos y los archivos y carpetas requeridos por el servidor deben instalarse en ubicaciones específicas. These items are the following:
+Si su aplicación ejecutable se utiliza como servidor web, los archivos y los archivos y carpetas requeridos por el servidor deben instalarse en ubicaciones específicas. Estos elementos son los siguientes:
 
 *   *cert.pem* and *key.pem* files (optional): These files are used for TLS connections and by data encryption commands,
 *   carpeta raíz web por defecto.
 
-Items must be installed:
+Los elementos deben ser instalados:
 
 - **on Windows**: in the *Final Application\MyProject\Database* subfolder.
 - **on macOS**: next to the *MyProject.app* software package.
@@ -275,7 +275,7 @@ Para más información sobre el modo de vinculación de datos, consulte la secci
 
 Checking this option generates the client part of your application during the building phase.
 
-You can check this option:
+Puede marcar esta opción:
 
 - along with the [**Build server application**](#build-server-application) option to build matching server and client parts for the current platform and (optionally) include the automatic update archive files,
 - without selecting the [**Build server application**](#build-server-application) option, usually to build the update archive file to be selected from the "concurrent" platform when building the server part.
@@ -315,10 +315,10 @@ You can check the **Allow automatic update...** option for client applications r
 
 This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
 
-| Current server platform | Archivo requerido                                            | Detalles                                                                                                                                                                   |
-| ----------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| macOS                   | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Windows                 | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| Plataforma del servidor actual | Archivo requerido                                           | Detalles                                                                                                                                                                   |
+| ------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| macOS                          | Windows 4D Volume Desktop *o* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
+| Windows                        | macOS client update archive                                 | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
@@ -374,12 +374,12 @@ If you checked the “Allow automatic update of client application” option, an
 
 #### Ubicación de los archivos web
 
-If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. These items are the following:
+If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Estos elementos son los siguientes:
 
-- *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+- archivos *cert.pem* y *key.pem* (opcional): etos archivos se utilizan para las conexiones SSL y por los comandos de encriptación de datos,
 - Default Web root folder (WebFolder).
 
-Items must be installed:
+Los elementos deben ser instalados:
 *   **en Windows**
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
@@ -449,7 +449,7 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 
 
-## Plugins & components page
+## Página Plugins y componentes
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
@@ -659,14 +659,21 @@ The management of connections by client applications covers the mechanisms by wh
 
 The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
 
-- The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
-  OR  
-  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
-- If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-- If this fails, the client application displays a connection error dialog box.
+1.  If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application connects to the specified server address.  
+   OR  
+   The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).
+
+2.  If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
+3.  If this fails, the client application displays a connection error dialog box.
     - If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
     - If the user clicks on the **Quit** button, the client application quits.
-- If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+4. If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
+
+The whole procedure is described in the following diagram:
+
+![](assets/en/Desktop/client-connect.png)
+
+
 
 ### Storing the last server path
 

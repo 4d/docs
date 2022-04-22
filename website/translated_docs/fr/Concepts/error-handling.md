@@ -34,28 +34,28 @@ Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la mét
 ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
-The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
+La commande `Method called on error` vous permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le process courant. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error
  ON ERR CALL("NewMethod")
   //Si le document ne peut pas être ouvert, une erreur est générée
  $ref:=Open document("MyDocument")
-  //Répéter la méthode précédente
+  //Rétablissement de la méthode précédente
  ON ERR CALL($methCurrent)
 
 ```
 
 ### Portée et composants
 
-Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
+Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par process.
 
 Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de l'application hôte n'est pas appelée, et inversement.
 
 
 ### Gérer les erreurs dans une méthode
 
-Within the custom error method, you have access to several pieces of information that will help you identifying the error:
+Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
 
 - Variables système (*) :
 

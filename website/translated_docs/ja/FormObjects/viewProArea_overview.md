@@ -12,7 +12,7 @@ title: 4D View Pro エリア
 
 ## 4D View Pro エリアの使用
 
-4D View Pro についての詳細は [4D View Pro リファレンス](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.ja.html) マニュアルを参照ください。
+4D View Pro についての詳細は [4D View Pro](ViewPro/getting-started.md) の章を参照ください。
 
 
 ## プロパティ一覧

@@ -6,6 +6,19 @@ title: Mises à jour de la documentation
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
 
 
+## 4D v19 R4
+
+- Les [attributs d'alias](ORDA/ordaClasses.md#alias-attributes) sont disponibles dans les classes ORDA.
+- Prise en charge des instructions [break et continue](Concepts/cf_looping.md#break-and-continue) dans les boucles.
+- Prise en charge de l'instruction [return](Concepts/flow-control.md#return-expression) et de [l'expression return](Concepts/parameters.md#return-expression) pour retourner des valeurs.
+- Prise en charge des [opérateurs d'assignation composés](Concepts/operators.md#compound-assignment-operators), des [opérateurs de court-circuit](Concepts/operators.md#short-circuit-operators) et de [l'opérateur ternaire](Concepts/operators.md#ternary-operator)
+- [L'éditeur de code](code-editor/navigation.md) inclut désormais un outil de liste déroulante et prend en charge les marqueurs pour une meilleure navigation dans le code.
+- Nouvelles préférences : [**Inclure les tokens dans les fichiers source du projet**](Preferences/general.md#include-tokens-in-project-source-files) et l'option [**Afficher les presse-papiers**](Preferences/methods.md#show-clipboards) sur la page Méthodes.
+- Nouvelle requête REST pour [verrouiller/déverrouiller](REST/$lock.md) les entités.
+- [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
+- Nouvelle [classe SystemWorker](API/SystemWorkerClass.md).
+
+
 ## 4D v19 R3
 
 - [Les propriétés calculées](Concepts/classes.md#function-get-and-function-set) sont disponibles dans les classes.
@@ -15,10 +28,10 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - Une [nouvelle option de build](Desktop/building.md#allow-connection-of-silicon-mac-clients) permet d'inclure plus facilement les clients Silicon Mac dans les applications serveur sous Windows.
 - Plus large [prise en charge du mode sombre](Preferences/general.md#appearance-macos-only) sur macOS.
 - Prise en charge de **l'objet token OAuth2** dans [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter) et [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter).
-- Les utilisateurs peuvent désormais charger un [fichier de configuration de log](Admin/debugLogFiles.md#using-a-log-configuration-file) à l'aide d'un bouton dans la [fenêtre d'administration du serveur](/Admin/server-admin.md#load-logs-configuration-file).
+- Les utilisateurs peuvent désormais charger un [fichier de configuration de journal](Debugging/debugLogFiles.md#using-a-log-configuration-file) à l'aide d'un bouton dans la [fenêtre d'administration du serveur](ServerWindow/maintenance.md#load-logs-configuration-file).
 - La gestion des [paramètres optionnels](Concepts/parameters.md#optional-parameters) est plus flexible dans le langage 4D.
 - Le débogage des sessions de serveur web [est plus facile sur 4D Server](WebServer/sessions.md#preemptive-mode).
-- Le nouveau composant [4D NetKit](Project/components.md#list-of-4d-components) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
+- Le nouveau composant [4D NetKit](Extensions/overview.md#list-of-4d-components) vous permet de vous connecter à des API tierces telles que Microsoft Graph.
 
 
 ## 4D v19 R2
@@ -39,6 +52,7 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
 - New, comprehensive [CLI](Admin/cli.md) page.
+
 
 
 ## 4D v18 R6

@@ -356,7 +356,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
 
 #### 参照
 
-[4D View Pro リファレンスガイド](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.ja.html)
+[4D View Pro リファレンスガイド](ViewPro/overview.md)
 
 ---
 ## 縦スクロールバー

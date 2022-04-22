@@ -26,7 +26,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 - 構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。
 
-- デフォルトでは、データモデルクラス関数は ([計算属性関数](#計算属性) を含め) すべて、リモートアプリケーションに対して **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数は [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
+- デフォルトでは、データモデルクラス関数 ([計算属性関数](#計算属性) 含む) および [エイリアス属性](エイリアス属性) はすべて、リモートアプリケーションに対して **非公開** に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数やエイリアスは [`exposed`](#公開vs非公開関数) キーワードによって明示的に宣言する必要があります。
 
 ![](assets/en/ORDA/api.png)
 
@@ -66,6 +66,8 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 | バージョン  | 内容                                                                   |
 | ------ | -------------------------------------------------------------------- |
+| v19 R4 | Entity クラスのエイリアス属性                                                   |
+| v19 R3 | Entity クラスの計算属性                                                      |
 | v18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
 </details>
 
@@ -128,6 +130,10 @@ Function GetBestOnes()
 
 全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
 
+
+
+
+
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
@@ -156,7 +162,7 @@ Function getCityName()
 
     $zipcode:=$1
     $zip:=ds.ZipCode.get($zipcode)
-    $0:=""
+    $0:="" 
 
     If ($zip#Null)
         $0:=$zip.city.name
@@ -216,6 +222,8 @@ ORDA で公開されるテーブル毎に、Entity クラスが `cs` クラス�
 - **クラス名**: *DataClassName*Entity (*DataClassName* はテーブル名です)
 - **例**: cs.CityEntity
 
+#### 計算属性
+
 Entity クラスでは、専用のキーワードを使用して **計算属性** を定義することができます:
 
 - `Function get` *attributeName*
@@ -224,6 +232,15 @@ Entity クラスでは、専用のキーワードを使用して **計算属性*
 - `Function orderBy` *attributeName*
 
 詳細については、[計算属性](#計算属性) を参照してください。
+
+#### エイリアス属性
+
+Entity クラスでは、`Alias` キーワードを使用して **エイリアス属性** を定義することができます (通常はリレート属性を対象に定義します):
+
+`Alias` *attributeName* *targetPath*
+
+詳細については、[エイリアス属性](#エイリアス属性) を参照してください。
+
 
 #### 例題
 
@@ -236,8 +253,7 @@ Function getPopulation()
     $0:=This.zips.sum("population")
 
 
-Function isBigCity
-C_BOOLEAN($0)
+Function isBigCity(): Boolean
 // 関数 getPopulation() をクラス内で使用することができます
 $0:=This.getPopulation()>50000
 ```
@@ -354,9 +370,9 @@ Function get fullName($event : Object)-> $fullName : Text
         $fullName:=This.lastName
     : (This.lastName=Null)
         $fullName:=This.firstName
-    Else
+    Else 
         $fullName:=This.firstName+" "+This.lastName
-    End case
+    End case 
 ```
 
 - 計算属性は、エンティティにリレートされた属性に基づいて定義することができます。
@@ -373,7 +389,7 @@ Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
 Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     If (This.manager.manager=Null)
         $result:=ds.Employee.newSelection()
-    Else
+    Else 
         $result:=This.manager.directReports.minus(this)
     End if
 ```
@@ -467,30 +483,30 @@ Function query fullName($event : Object)->$result : Object
     $operator:=$event.operator
     $fullname:=$event.value
 
-    $p:=Position(" "; $fullname)
+    $p:=Position(" "; $fullname) 
     If ($p>0)
         $firstname:=Substring($fullname; 1; $p-1)+"@"
         $lastname:=Substring($fullname; $p+1)+"@"
         $parameters:=New collection($firstname; $lastname) // 2要素のコレクション
-    Else
+    Else 
         $fullname:=$fullname+"@"
         $parameters:=New collection($fullname) // 1要素のコレクション
-    End if
+    End if 
 
-    Case of
+    Case of 
     : ($operator="==") | ($operator="===")
         If ($p>0)
             $query:="(firstName = :1 and lastName = :2) or (firstName = :2 and lastName = :1)"
-        Else
+        Else 
             $query:="firstName = :1 or lastName = :1"
-        End if
+        End if 
     : ($operator="!=")
         If ($p>0)
             $query:="firstName != :1 and lastName != :2 and firstName != :2 and lastName != :1"
-        Else
+        Else 
             $query:="firstName != :1 and lastName != :1"
-        End if
-    End case
+        End if 
+    End case 
 
     $result:=New object("query"; $query; "parameters"; $parameters)
 ```
@@ -519,12 +535,12 @@ Function query age($event : Object)->$result : Object
     $d2:=Add to date($d1; 1; 0; 0)
     $parameters:=New collection($d1; $d2)
 
-    Case of
+    Case of 
 
         : ($operator="==")
             $query:="birthday > :1 and birthday <= :2"  // d1 より大きい、かつ d2 以下
 
-        : ($operator="===")
+        : ($operator="===") 
 
             $query:="birthday = :2"  // d2 = 2つ目の算出値 (= 誕生日)
 
@@ -534,7 +550,7 @@ Function query age($event : Object)->$result : Object
             //... その他の演算子           
 
 
-    End case
+    End case 
 
 
     If (Undefined($event.result))
@@ -552,7 +568,7 @@ Function query age($event : Object)->$result : Object
 $twenty:=people.query("age = 20")  // "==" のケースを呼び出します
 
 // 本日満 20歳になった人
-$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ
+$twentyToday:=people.query("age === 20") // people.query("age is 20") と同じ 
 
 ```
 
@@ -596,9 +612,9 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="firstName desc, lastName desc"
-    Else
-        $result:="firstName, lastName"
+        $result:="firstName desc, lastName desc" 
+    Else 
+        $result:="firstName, lastName" 
     End if
 ```
 
@@ -615,18 +631,166 @@ Function orderBy fullName($event : Object)-> $result : Text
 ```4d
 Function orderBy age($event : Object)-> $result : Text
     If ($event.descending=True)
-        $result:="birthday asc"
-    Else
-        $result:="birthday desc"
+        $result:="birthday asc" 
+    Else 
+        $result:="birthday desc" 
     End if
 
 ```
 
 
+## エイリアス属性
+
+### 概要
+
+**エイリアス** 属性は、**ターゲット** 属性と呼ばれるデータモデルの別の属性を元に定義されます。 ターゲット属性には、リレートデータクラス (リレートレベルは無制限) または同じデータクラスのものを使用できます。 エイリアス属性はデータではなく、ターゲット属性へのパスを格納します。 データクラスには、必要な数だけエイリアス属性を定義することができます。
+
+エイリアス属性は、N対Nリレーションを扱うのに便利です。 実装の詳細ではなくビジネスの概念を扱ってコードやクエリを作成できるため、これらの可読性が向上します。
+
+### エイリアス属性の定義
+
+データクラス内にエイリアス属性を作成するには、データクラスの [**Entityクラス**](#entity-クラス) において `Alias` キーワードを使用します。
+
+
+### `Alias <attributeName> <targetPath>`
+
+
+#### シンタックス
+
+```
+{exposed} Alias <attributeName> <targetPath>
+```
+
+*attributeName* は、[プロパティ名の命名規則](Concepts/identifiers.html#オブジェクトプロパティ) に準拠している必要があります。
+
+*targetPath* は、"employee.company.name" のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、*targetPath* は属性名となります。
+
+エイリアスは、他のエイリアスのパスに使用することができます。
+
+[計算属性](#計算属性) もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。 そうでない場合は、エラーが返されます。 たとえば、"fullName" 計算属性がある場合、"employee.fullName" というエイリアスパスは有効です。
+
+> ORDA のエイリアス属性は、デフォルトでは **公開されません**。 リモートリクエストでエイリアスを利用するには、`Alias` キーワードの前に [`exposed`](#公開vs非公開関数) キーワードを追加する必要があります。
+
+
+### エイリアス属性の使用
+
+エイリアス属性は読み取り専用です (同じデータクラスのスカラー属性に基づく場合は例外です; 最後の例題参照)。 エイリアス属性は、次のようなクラス関数において、ターゲット属性パスの代わりに使用することができます:
+
+| Function                                       |
+| ---------------------------------------------- |
+| `dataClass.query()`, `entitySelection.query()` |
+| `entity.toObject()`                            |
+| `entitySelection.toCollection()`               |
+| `entitySelection.extract()`                    |
+| `entitySelection.orderBy()`                    |
+| `entitySelection.orderByFormula()`             |
+| `entitySelection.average()`                    |
+| `entitySelection.count()`                      |
+| `entitySelection.distinct()`                   |
+| `entitySelection.sum()`                        |
+| `entitySelection.min()`                        |
+| `entitySelection.max()`                        |
+| `entity.diff()`                                |
+| `entity.touchedAttributes()`                   |
+
+> エイリアス属性はサーバー上で計算されることに留意してください。 リモート環境において、エンティティのエイリアス属性を更新するには、エンティティをサーバーから再ロードする必要があります。
+
+### エイリアスのプロパティ
+
+エイリアス属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティ (属性の種類) は "alias" です。
+
+エイリアス属性は、ターゲット属性の [`type`](../API/DataClassAttributeClass.md#type) プロパティを継承します。
+
+- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
+- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("*classname*Entity" または "*classname*Selection") になります。
+
+リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassAttributeClass.md#path) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
+
+
+### 例題
+
+以下のモデルがあるとき:
+
+![](assets/en/ORDA/alias1.png)
+
+Teacher データクラスに、教師の生徒をすべて返すエイリアス属性を定義します:
+
+```4d
+// cs.TeacherEntity クラス
+
+Class extends Entity
+
+Alias students courses.student //relatedEntities 
+```
+
+Student データクラスには、生徒の教師をすべて返すエイリアス属性を定義します:
+
+```4d
+// cs.StudentEntity クラス
+
+Class extends Entity
+
+Alias teachers courses.teacher //relatedEntities 
+```
+
+Course データクラスには次を定義します:
+
+- "name" 属性を別名で参照するためのエイリアス属性
+- 教師の名前を返すエイリアス属性
+- 生徒の名前を返すエイリアス属性
+
+
+```4d
+// cs.CourseEntity クラス
+
+Class extends Entity
+
+Exposed Alias courseName name //スカラー値
+Exposed Alias teacherName teacher.name //スカラー値
+Exposed Alias studentName student.name //スカラー値
+
+```
+
+すると、以下のクエリを実行することができます:
+
+```4d
+// "Archaeology" の授業を検索します
+ds.Course.query("courseName = :1";"Archaeology")
+
+// Smith 教師が教えている授業を検索します
+ds.Course.query("teacherName = :1";"Smith")
+
+// 生徒 "Martin" が参加している授業を検索します
+ds.Course.query("studentName = :1";"Martin")
+
+// M. Smith 教師の生徒を検索します
+ds.Student.query("teachers.name = :1";"Smith")
+
+// M. Martin を生徒に持つ教師を検索します
+ds.Teacher.query("students.name = :1";"Martin")
+// シンプルなクエリ文字列で複雑なクエリを実行していることに注目してください
+// queryPlan は次のとおりです:   
+// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
+//  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
+//  subquery:[ Student.name === Martin]]"
+```
+
+
+*courseName* エイリアスの値は編集することができます:
+
+```4d
+// エイリアス属性を使って、授業の名称を変更します
+$arch:=ds.Course.query("courseName = :1";"Archaeology")
+$arch.courseName:="Archaeology II"
+$arch.save() //courseName と name は "Archaeology II" に変更されます
+```
+
+
+
 
 ## 公開vs非公開関数
 
-セキュリティ上の理由により、データモデルクラス関数はデフォルトですべて、リモートリクエストに対し **非公開** (つまりプライベート) に設定されています。
+セキュリティ上の理由により、データモデルクラス関数およびエイリアス属性はデフォルトですべて、リモートリクエストに対し **非公開** (つまりプライベート) に設定されています。
 
 リモートリクエストには次のものが含まれます:
 
@@ -681,7 +845,7 @@ $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
 $status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です)
+$id:=$remoteDS.Schools.computeIDNumber() // エラー (未知のメンバー機能です) 
 ```
 
 
@@ -728,7 +892,7 @@ local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
-Else
+Else 
     $age:=Null
 End if
 ```
@@ -748,7 +912,7 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="生年月日が入力されていません。"
+        $status.statusText:="生年月日が入力されていません。" 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
@@ -770,7 +934,7 @@ End if
 
 
 
-## データモデルクラスの管理
+## 4D IDE (統合開発環境) におけるサポート
 
 
 ### クラスファイル
@@ -783,6 +947,7 @@ ORDA データモデルユーザークラスは、クラスと同じ名称の .4
 各データモデルオブジェクトに関わるクラスは、4D によってあらかじめ自動的にメモリ内に作成されます。
 
 ![](assets/en/ORDA/ORDA_Classes-3.png)
+
 
 > 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](assets/en/ORDA/showClass.png)
 
@@ -815,3 +980,4 @@ Class extends Entity
 4D メソッドエディターにおいて、ORDA クラス型として定義された変数は、自動補完機能の対象となります。 Entity クラス変数の例です:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
+

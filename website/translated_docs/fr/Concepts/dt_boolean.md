@@ -63,3 +63,5 @@ Voici la "table de vérité" pour l'opérateur logique "OR" :
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
+
+> Dans les contextes booléens, le langage 4D prend également en charge les [opérateurs de court-circuit](operators.md#short-circuit-operators) (`&&` et `||`) et le concept de [truthy et falsy](operators.md#truthy-and-falsy). 

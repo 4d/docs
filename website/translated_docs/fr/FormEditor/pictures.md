@@ -34,7 +34,7 @@ Cette icône indique que l'image ne peut être ni affichée ni manipulée locale
 
 4D prend en charge des images haute résolution sur les plateformes macOS et Windows. Les images haute résolution peuvent être définies par le facteur d'échelle ou le dpi.
 
-### Facteur d'échelle (macOS uniquement)
+### Facteur d'échelle
 
 Les écrans haute résolution ont une densité de pixels plus élevée que les écrans standard traditionnels. Pour que les images s'affichent correctement sur des écrans haute résolution, le nombre de pixels de l'image doit être multiplié par le *facteur d'échelle* (c'est-à-dire deux fois plus grand, trois fois plus grand, etc.).
 
@@ -58,19 +58,19 @@ Les images haute résolution avec la convention @nx peuvent être utilisées dan
 
 
 
-4D priorise automatiquement les images avec la résolution la plus élevée. <br><br> **Exemple** : lorsque vous utilisez deux écrans (un écran haute résolution, un écran standard) et que vous déplacez un formulaire d'un écran à un autre, 4D restitue automatiquement la résolution la plus élevée possible de l'image. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
+4D priorise automatiquement les images avec la résolution la plus élevée. 4D priorise automatiquement les images avec la résolution la plus élevée. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
 > A noter que cette résolution se produit uniquement pour l'affichage des images à l'écran, aucune hiérarchisation automatique n'est effectuée lors de l'impression.
 
 
 
-### DPI (macOs et Windows)
+### DPI
 
 Si 4D donne automatiquement la priorité à la résolution la plus élevée, il existe cependant des différences de comportement en fonction de la résolution de l'écran et de l'image *(\*)* et du format de l'image :
 
 | Opération                                                                                                                                                       | Comportement                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Déposer ou Coller                                                                                                                                               | Si l'image est de :<ul><li>**72dpi ou 96dpi** - L'image est "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatée et l'objet contenant l'image contient le même nombre de pixels.</li><li>**Autre dpi** - L'image est formatée "[Mise à l'échelle](FormObjects/properties_Picture.md#scaled-to-fit)" et l'objet contenant l'image est égal à (nombre de pixels de l'image * dpi de l'écran) / (depi de l'image)</li> <li>**Pas de dpi** - L'image est formatée "[Mise à l'échelle](FormObjects/properties_Picture.md#scaled-to-fit)".</li> |
-| [Taille automatique](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (menu contextuel de l'éditeur de formulaires) | Si le format d'affichage de l'image est :<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - L'objet contenant l'image est redimensionné en fonction de (nombre de pixels de l'image * dpi écran) / (dpi de l'image) </li> <li>**Non mis à l'échelle** - L'objet contenant l'image a le même nombre de pixels que l'image.</li></ul><p>                             |
+| [Taille automatique](https://doc.4d.com/4Dv19/4D/19/Setting-object-display-properties.300-5416671.en.html#148057) (menu contextuel de l'éditeur de formulaires) | Si le format d'affichage de l'image est :<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - L'objet contenant l'image est redimensionné en fonction de (nombre de pixels de l'image * dpi écran) / (dpi de l'image) </li> <li>**Non mis à l'échelle** - L'objet contenant l'image a le même nombre de pixels que l'image.</li></ul>                                                       |
 
 *(\*) Généralement, macOS = 72 dpi, Windows = 96 dpi*
 

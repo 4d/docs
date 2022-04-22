@@ -14,7 +14,7 @@ WIC et ImageIO permettent l’utilisation de métadonnées dans les images. Deux
 
 ## Identifiants de codecs d'images
 
-4D supports natively a wide set of [picture formats](FormEditor/pictures.md#native-formats-supported), such as .jpeg, .png, or .svg.
+4D prend en charge de façon native un large ensemble de [formats d'images](FormEditor/pictures.md#formats-natifs-pris-en-charge), tels que .jpeg, .png, ou .svg.
 
 Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CODEC LIST` sous forme d'identifiants de codecs d'images.  Ces identifiants peuvent être :
 
@@ -23,7 +23,7 @@ Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CO
 
 La forme utilisée pour chaque format dépend du mode de déclaration du codec au niveau du système d’exploitation. Notez que les listes de codecs disponibles pour la lecture et pour l'écriture peuvent différer, étant donné que les codecs d'encodage peuvent nécessiter des licences spécifiques.
 
-Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. Il est donc impératif d'utiliser l'identifiant système retourné par la commande `PICTURE CODEC LIST`. Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CODEC LIST`.
+La plupart des [commandes 4D de gestion d'images](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) peuvent recevoir un Codec ID en paramètre. Il est donc impératif d'utiliser l'identifiant système retourné par la commande `PICTURE CODEC LIST`. Les formats d'images reconnus par 4D sont retournés par la commande `PICTURE CODEC LIST`.
 
 
 

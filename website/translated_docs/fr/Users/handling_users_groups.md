@@ -4,8 +4,21 @@ title: Gestion des groupes et utilisateurs 4D
 ---
 
 
-4D fournit à certains utilisateurs des privilèges d’accès standard ainsi que des prérogatives spécifiques. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.
+Dans les applications multi-utilisateurs, 4D fournit aux utilisateurs certains privilèges d'accès standard et certains pouvoirs. Une fois qu’un système d’utilisateurs et de groupes a été créé, ces privilèges standard prennent effet.
 
+
+## Utilisateurs et groupes dans les projets
+
+Dans les applications projet (fichiers .4DProject ou .4dz), les utilisateurs et groupes 4D peuvent être configurés à la fois en monoposte ou en multi-utilisateurs. Toutefois, **le contrôle des accès** est effectif uniquement avec 4D Server. Le tableau suivant liste les principales fonctionnalités des utilisateurs et groupes ainsi que leur disponibilité :
+
+|                                                                                 | 4D (monoposte)                                          | 4D Server |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------- | --------- |
+| Ajouter/modifier des utilisateurs et groupes                                    | oui                                                     | oui       |
+| Affecter l'accès des utilisateurs/groupes aux serveurs                          | oui                                                     | oui       |
+| Identification de l'utilisateur                                                 | non (tous les utilisateurs sont des Super_Utilisateur)  | oui       |
+| Contrôle d'accès une fois qu'un mot de passe a été affecté au Super_Utilisateur | non (tous les accès sont accordés au Super_Utilisateur) | oui       |
+
+> Pour obtenir des informations sur l'identification des utilisateurs et le contrôle des accès pour les déploiements monoposte, reportez-vous à [ce paragraphe](overview.md#access-control-in-single-user-applications).
 
 ## Super_Utilisateur et Administrateur
 
@@ -42,6 +55,8 @@ Le Super_Utilisateur et l’Administrateur peuvent créer chacun 16 000 groupes 
 L'éditeur des utilisateurs se trouve dans la boîte à outils de 4D.
 
 ![](assets/en/Users/editor.png)
+
+> L'éditeur des utilisateurs et des groupes peut être affiché au moment de l'exécution à l'aide de la commande [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html). Toute la configuration des utilisateurs et des groupes peut également être modifiée pendant l'exécution de l'application à l'aide des commandes du langage 4D du thème `Utilisateurs et groupes`.
 
 ### Ajouter et modifier des utilisateurs
 
@@ -110,6 +125,7 @@ Pour créer un groupe :
 
 ### Placer des utilisateurs ou des groupes dans des groupes
 
+
 Vous pouvez placer tout utilisateur ou tout groupe dans un groupe et vous pouvez aussi le placer dans plusieurs groupes. Il n’est pas obligatoire de placer un utilisateur dans un groupe.
 
 Pour placer un utilisateur ou un groupe dans un groupe, il suffit de sélectionner le groupe dans la liste puis de cocher l’option "Membre" pour chaque utilisateur ou groupe dans la zone d’attribution des membres :
@@ -154,3 +170,31 @@ Les groupes sont hiérarchisés afin que les privilèges soient correctement aff
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
 
 Un tel système hiérarchique rend aisée l’affectation d’un utilisateur à un groupe. Il suffit de placer chaque utilisateur dans un groupe et d’utiliser la hiérarchie des groupes pour déterminer les accès.
+
+
+## Définition des accès aux groupes
+
+Les groupes se voient attribuer des privilèges d'accès à des parties ou des fonctionnalités spécifiques de l'application :
+
+- Accès à l'environnement de Développement et à l'Explorateur d'exécution,
+- Serveur HTTP,
+- Serveur REST,
+- Serveur SQL.
+
+Ces accès sont définis dans la boîte de dialogue Paramètres. L'exemple suivant présente les droits d'accès à l'explorateur d'exécution et au Développement assignés au groupe "Devs" :
+
+![](assets/en/Users/Access1.png)
+
+Vous utilisez également des groupes pour [distribuer les licences disponibles](#assigning-a-group-to-a-plug-in-or-to-a-server). Cette distribution est définie dans l'éditeur Groupes.
+
+## Fichier directory.json
+
+Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans un fichier spécifique du projet nommé **directory.json**.
+
+Ce fichier peut être stocké aux emplacements suivants, en fonction de vos besoins :
+
+- Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres utilisateur, c'est-à-dire dans le dossier "Settings" [au même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
+- Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#settings). Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
+
+> Si aucun mot de passe n'est attribué au Super Utilisateur, le fichier **directory.json** n'est pas créé.
+
