@@ -991,6 +991,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>バージョン</th><th>内容</th></tr>
 </thead>
 <tbody>
+<tr><td>v19 R3</td><td>新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用</td></tr>
 <tr><td>v17 R5</td><td>追加</td></tr>
 </tbody>
 </table>
@@ -1020,7 +1021,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <blockquote>
 <p>4D によってサポートされている文字セットの一覧については、<code>CONVERT FROM TEXT</code> コマンドを参照ください。</p>
 </blockquote>
-<p>文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに &quot;-no-bom&quot; 接尾辞 (例: &quot;UTF-8-no-bom&quot;) が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで &quot;UTF-8&quot; の文字セットを使用します。</p>
+<p>文字セットにバイトオーダーマーク (BOM) が存在し、かつその文字セットに &quot;-no-bom&quot; 接尾辞 (例: &quot;UTF-8-no-bom&quot;) が含まれていない場合、4D は BOM をファイルに挿入します。 文字セットを指定しない場合、 4D はデフォルトで &quot;UTF-8&quot; の文字セットを BOMなしで使用します。</p>
 <p><em>breakMode</em> には、ファイルを保存する前に改行文字に対しておこなう処理を指定する倍長整数を渡します。 <strong>System Documents</strong> テーマ内にある、以下の定数を使用することができます:</p>
 <table>
 <thead>
