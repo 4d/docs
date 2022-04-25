@@ -12,10 +12,10 @@ Le langage 4D prend en charge les opérateurs que vous connaissez peut-être dé
 
 Le langage 4D prend en charge les opérateurs **binaires** et **ternaires** :
 
-- binary operators operate on two targets (such as `2 + 3`) and appear in between their two targets.
+- les opérateurs binaires opèrent sur deux cibles (comme `2 + 3`) et apparaissent entre leurs deux cibles.
 - les opérateurs ternaires opèrent sur trois cibles. Comme le C, 4D ne possède qu'un seul opérateur ternaire, [l'opérateur conditionnel ternaire](#ternary-operator) (`a ? b : c`).
 
-Les valeurs que les opérateurs affectent sont des opérandes. In the expression `1 + 2`, the + symbol is a binary operator and its two operands are the values 1 and 2.
+Les valeurs que les opérateurs affectent sont des opérandes. Dans l'expression `1 + 2`, le symbole + est un opérateur binaire et ses deux opérandes sont les valeurs 1 et 2.
 
 
 
