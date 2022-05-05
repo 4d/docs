@@ -80,7 +80,7 @@ With:
 | Operation  | Sintaxe           | Returns  | Expression    | Value |
 | ---------- | ----------------- | -------- | ------------- | ----- |
 | Equality   | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
-|            |                   |          | vPtrA = vPtrC | False |
+|            |                   |          | vPtrA = vPtrB | False |
 | Inequality | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
 |            |                   |          | vPtrA # vPtrB | False |
 
