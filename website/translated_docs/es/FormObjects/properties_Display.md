@@ -553,7 +553,7 @@ You can handle the Visible property for most form objects. This property simplif
 
 
 ---
-## Wordwrap
+## Ajuste de texto
 
 > For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
 
