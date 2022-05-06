@@ -777,7 +777,7 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Widget por defecto                             | Widget(s) alternativo(s)                                                                       |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| texto     | entrada de texto                               | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | booleano  | casilla de selección                           | drop-down menu (required list)                                                                 |
@@ -791,16 +791,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Value type | Formato por defecto                                        | Control de entrada      |
-| ---------- | ---------------------------------------------------------- | ----------------------- |
-| texto      | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
-|            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" y "-"             |
-|            |                                                            | "0-9" if min>=0         |
-| Booleano   | casilla de selección                                       | N/A                     |
-| color      | N/A                                                        | N/A                     |
-| evento     | N/A                                                        | N/A                     |
+| Tipo de valor | Formato por defecto                                        | Control de entrada      |
+| ------------- | ---------------------------------------------------------- | ----------------------- |
+| texto         | same as defined in object                                  | any (no control)        |
+| real          | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
+|               |                                                            | "0-9" and "." if min>=0 |
+| integer       | same as defined in object                                  | "0-9" y "-"             |
+|               |                                                            | "0-9" if min>=0         |
+| Booleano      | casilla de selección                                       | N/A                     |
+| color         | N/A                                                        | N/A                     |
+| evento        | N/A                                                        | N/A                     |
 
 ### Atributos
 

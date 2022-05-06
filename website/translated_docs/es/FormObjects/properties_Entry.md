@@ -118,7 +118,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9###-##-###                         | Número de la Seguridad Social. Display zeros in entry spaces. Permitir cualquier número.                                                              |
 | ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                         |
 | &"a-z;0-9; ;,;.;-"                     | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                  |
-| &"0-9;.;-"                             | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
+| &"0-9;.;-"                             | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
 
 
 #### Gramática JSON
