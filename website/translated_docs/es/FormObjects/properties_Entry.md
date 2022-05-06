@@ -222,7 +222,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 
 ---
-## Placeholder
+## Marcador
 
 4D can display placeholder text in the fields of your forms.
 
