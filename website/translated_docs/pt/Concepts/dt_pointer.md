@@ -15,7 +15,7 @@ You can use pointers to reference tables, fields, variables, arrays, array eleme
 
 | Type          | To Reference            | To Use                   | To Assign                |
 | ------------- | ----------------------- | ------------------------ | ------------------------ |
-| Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Tabela        | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Campo         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
@@ -68,7 +68,7 @@ $MyVar:="Goodbye"
 
 ## Pointer operators
 
-With:
+Con:
 ```4d
   ` vPtrA and vPtrB point to the same object
  vPtrA:=->anObject

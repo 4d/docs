@@ -12,7 +12,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name                    | Data Type | Possible Values                                                                                              |
+| Nome                    | Data Type | Possible Values                                                                                              |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
 | customBackgroundPicture | string    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
 
@@ -32,7 +32,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                                                                                                                                                    |
+| Nome  | Data Type | Possible Values                                                                                                                                                    |
 |:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | style |   texto   | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
@@ -59,7 +59,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                         |
+| Nome          | Data Type | Possible Values                         |
 | ------------- | --------- | --------------------------------------- |
 | customBorderX | number    | For use with "custom" style. Minimum: 0 |
 
@@ -78,7 +78,7 @@ Designates the placement of an icon in relation to the form object.
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values         |
+| Nome          | Data Type | Possible Values         |
 | ------------- | --------- | ----------------------- |
 | iconPlacement | string    | "none", "left", "right" |
 
@@ -99,7 +99,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
+| Nome         | Data Type | Possible Values |
 | ------------ | --------- | --------------- |
 | customOffset | number    | minimum: 0      |
 
@@ -127,7 +127,7 @@ The following states are represented:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
+| Nome       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
 | iconFrames | number    | minimum: 1      |
 
@@ -150,7 +150,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                              |
+| Nome | Data Type | Possible Values                              |
 | ---- | --------- | -------------------------------------------- |
 | icon | imagem    | Relative or filesystem path in POSIX syntax. |
 
@@ -178,7 +178,7 @@ Here are the results using the various options for this property:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                            |
+| Nome          | Data Type | Possible Values                            |
 | ------------- | --------- | ------------------------------------------ |
 | textPlacement | string    | "left", "top", "right", "bottom", "center" |
 
@@ -200,7 +200,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                         |
+| Nome          | Data Type | Possible Values                         |
 | ------------- | --------- | --------------------------------------- |
 | customBorderY | number    | For use with "custom" style. Minimum: 0 |
 
@@ -242,7 +242,7 @@ It is important to note that the "With Pop-up Menu" property only manages the gr
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                                                                      |
+| Nome           | Data Type | Possible Values                                                                                      |
 |:-------------- | --------- | ---------------------------------------------------------------------------------------------------- |
 | popupPlacement | string    | <li>"none"<li>"linked"<li>"separated" |
 

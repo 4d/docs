@@ -337,13 +337,13 @@ A tabela abaixo resume as convenções de nomes em 4D.
 
 | Identificador                  | Tamanho Máx | Exemplo                    |
 | ------------------------------ | ----------- | -------------------------- |
-| Table                          | 31          | [Invoices]                 |
+| Tabela                         | 31          | [Invoices]                 |
 | Campo                          | 31          | [Employees]Last Name       |
 | Variável/array interprocesso   | <> + 31     | <>vlNextProcessID          |
 | Variável/Array processo        | 31          | vsCurrentName              |
 | Variável/Array local           | $ + 31      | $vlLocalCounter            |
 | Propriedades de objetos        | 255         | $o.myAttribute             |
-| Form                           | 31          | "My Custom Web Input"      |
+| Formulário                     | 31          | "My Custom Web Input"      |
 | Objetos de formulário          | 255         | "MyButton"                 |
 | Project method                 | 31          | M_ADD_CUSTOMERS          |
 | Comando de plug-in             | 31          | PDF SET ROTATION           |

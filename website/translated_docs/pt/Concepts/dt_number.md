@@ -114,7 +114,7 @@ An expression that uses a bitwise operator returns a Long Integer value, except 
 | Bit Clear              | ?-        | Long ?- Long        | Long (see note 2)    |
 | Bit Test               | ??        | Long ?? Long        | Boolean (see note 2) |
 
-#### Notes
+#### Notas
 
 1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Therefore, this second operand should be between 0 and 31. Note however, that shifting by 0 returns an unchanged value and shifting by more than 31 bits returns 0x00000000 because all the bits are lost. If you pass another value as second operand, the result is non-significant.
 2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. Therefore, this second operand must be between 0 and 31; otherwise, the result of the expression is non-significant.

@@ -105,7 +105,7 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 4D provides various default number formats.
 
-### Placeholders
+### Marcadores
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
@@ -267,7 +267,7 @@ Picture formats control how pictures appear when displayed or printed. For data 
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
-### Scaled to fit
+### A escala para ajustarse
 
 `Gramática JSON: "scaled"`
 
