@@ -7,7 +7,7 @@ Una base de uso continuo siempre registra cambios, adiciones o supresiones. Real
 
 Además, 4D trabaja continuamente con una caché de datos en la memoria. Todos los cambios realizados en los datos de la base se almacenan temporalmente en la caché antes de escribirse en el disco duro. Todos los cambios realizados en los datos de la aplicación se almacenan temporalmente en la caché antes de escribirse en el disco duro. Si se produce un incidente en la base antes de que los datos almacenados en la caché puedan escribirse en el disco, deberá incluir el archivo de historial actual para poder restaurar la base por completo.
 
-Por último, 4D dispone de funciones que analizan el contenido del archivo de historial, permitiendo revertir las operaciones realizadas sobre los datos de la base. Estas funciones están disponibles en el CSM: consulte la página [Análisis de actividades](MSC/analysis.md) y la página [Rollback](MSC/rollback.md).
+Por último, 4D dispone de funciones que analizan el contenido del archivo de historial, permitiendo revertir las operaciones realizadas sobre los datos de la base. Estas funciones están disponibles en el CSM: consulte la página [Análisis de actividades](MSC/analysis.md) y la página [Retroceder](MSC/rollback.md).
 
 ## Funcionamiento del archivo de historial
 
@@ -58,7 +58,7 @@ Para poder crear un archivo de historial directamente, la base de datos debe est
 - El archivo de datos está en blanco,
 - Acaba de realizar una copia de seguridad de la base y aún no se han realizado cambios en los datos.
 
-En todos los demás casos, al validar el cuadro de diálogo de las Propiedades de la base, aparecerá un cuadro de diálogo de alerta para informarle que es necesario realizar una copia de seguridad. En todos los demás casos, al validar el cuadro de diálogo de las Propiedades, aparecerá un cuadro de diálogo de alerta para informarle que es necesario realizar una copia de seguridad. Si hace clic en **Cancelar**, la solicitud se guarda pero la creación del archivo de historial se pospone y en realidad sólo se creará después de la siguiente copia de seguridad de la base de datos. Esta precaución es indispensable porque, para restaurar una base de datos después de algún incidente, necesitará una copia de la base en la que se integrarán las operaciones registradas en el archivo de historial.
+En todos los demás casos, al validar el cuadro de diálogo de las Propiedades de la base, aparecerá un cuadro de diálogo de alerta para informarle que es necesario realizar una copia de seguridad. Si hace clic en **Aceptar**, la copia de seguridad comienza inmediatamente, y luego se activa el archivo de historial. Si hace clic en **Cancelar**, la solicitud se guarda pero la creación del archivo de historial se pospone y en realidad sólo se creará después de la siguiente copia de seguridad de la base de datos. Esta precaución es indispensable porque, para restaurar una base de datos después de algún incidente, necesitará una copia de la base en la que se integrarán las operaciones registradas en el archivo de historial.
 
 Sin tener que hacer nada más, todas las operaciones realizadas sobre los datos se registran en este archivo y se utilizarán en el futuro cuando se abra la base.
 

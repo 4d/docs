@@ -49,7 +49,7 @@ Negative numbers are specified with the minus sign (-). For example:
 | Exponentiation           | Number ^ Number  | Número   | 2 ^ 3      | 8     |
 | Equality                 | Number = Number  | Booleano | 10 = 10    | True  |
 |                          |                  |          | 10 = 11    | False |
-| Inequality               | Number # Number  | Booleano | 10 #11     | True  |
+| Desigualdade             | Number # Number  | Booleano | 10 #11     | True  |
 |                          |                  |          | 10 # 10    | False |
 | Greater than             | Number > Number  | Booleano | 11 > 10    | True  |
 |                          |                  |          | 10 > 11    | False |

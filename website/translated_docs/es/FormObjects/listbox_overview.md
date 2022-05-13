@@ -321,7 +321,7 @@ The typical sequence of events generated during data entry or modification is as
 
 
 
-## Managing selections
+## Gestión de selecciones
 
 La gestión de selecciones es diferente dependiendo de si el list box se basa en un array, en una selección de registros o en una selección de colecciones/entidades:
 
@@ -476,7 +476,7 @@ Priority and inheritance principles are observed when the same property is set a
 |                    | Arrays de columnas/métodos                                           |
 |                    | Arrays/métodos de Listbox                                            |
 |                    | Propiedades de la columna                                            |
-|                    | List box properties                                                  |
+|                    | Propiedades de list box                                              |
 | baja prioridad     | Meta Info expression (for collection or entity selection list boxes) |
 
 For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
@@ -521,7 +521,7 @@ Depending of the list box type, you can use different properties to customize ro
 
 
 
-## Printing list boxes
+## Imprimir list boxes
 
 Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
 

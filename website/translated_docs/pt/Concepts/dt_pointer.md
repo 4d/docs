@@ -77,12 +77,12 @@ Con:
  vPtrC:=->anotherObject
 ```
 
-| Operation  | Sintaxe           | Returns  | Expression    | Value |
-| ---------- | ----------------- | -------- | ------------- | ----- |
-| Equality   | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
-|            |                   |          | vPtrA = vPtrB | False |
-| Inequality | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
-|            |                   |          | vPtrA # vPtrB | False |
+| Operation    | Sintaxe           | Returns  | Expression    | Value |
+| ------------ | ----------------- | -------- | ------------- | ----- |
+| Equality     | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
+|              |                   |          | vPtrA = vPtrB | False |
+| Desigualdade | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
+|              |                   |          | vPtrA # vPtrB | False |
 
 ## Main usages
 ### Pointers to tables

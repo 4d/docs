@@ -96,7 +96,7 @@ $o.custom_Alert() //displays "Hello world!"
 Syntax with brackets is also supported:
 
 ```4d
-$o["custom_Alert"]() //displays "Hello world!"
+$o["custom_Alert"]() //exibe "Hello world!"
 ```
 
 You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:

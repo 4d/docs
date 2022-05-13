@@ -36,7 +36,7 @@ Uma data nula é especificada por _!00-00-00!_.
 | Day subtraction          | Date – Number  | Date     | !2017-01-20! - 9             | !2017-01-11! |
 | Equality                 | Date = Date    | Booleano | !2017-01-01! =!2017-01-01!   | True         |
 |                          |                |          | !2017-01-20! = !2017-01-01!  | False        |
-| Inequality               | Date # Date    | Booleano | !2017-01-20! # !2017-01-01!  | True         |
+| Desigualdade             | Date # Date    | Booleano | !2017-01-20! # !2017-01-01!  | True         |
 |                          |                |          | !2017-01-20! # !2017-01-20!  | False        |
 | Greater than             | Date > Date    | Booleano | !2017-01-20! > !2017-01-01!  | True         |
 |                          |                |          | !2017-01-20! > !2017-01-20!  | False        |

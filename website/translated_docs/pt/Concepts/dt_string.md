@@ -41,7 +41,7 @@ The following escape sequences can be used within strings:
 | Repetition               | String * Number  | String   | "ab" * 3                | "ababab" |
 | Equality                 | String = String  | Booleano | "abc" = "abc"           | True     |
 |                          |                  |          | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Booleano | "abc" # "abd"           | True     |
+| Desigualdade             | String # String  | Booleano | "abc" # "abd"           | True     |
 |                          |                  |          | "abc" # "abc"           | False    |
 | Greater than             | String > String  | Booleano | "abd" > "abc"           | True     |
 |                          |                  |          | "abc" > "abc"           | False    |

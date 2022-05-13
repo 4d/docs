@@ -573,7 +573,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 
 #### Unchecked for list box/No for input
-`JSON grammar: "none"`
+`Gramática JSON: "none"`
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
 
