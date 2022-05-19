@@ -49,7 +49,7 @@ The following table illustrates these default values:
 
 | Type          | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
 | ------------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen       | False                                                                               | True                    | True (varies)                |
+| Boolean       | False                                                                               | True                    | True (varies)                |
 | Date          | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
 | Inteiro longo | 0                                                                                   | 1919382119              | 909540880 (varies)           |
 | Hora          | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
@@ -60,7 +60,7 @@ The following table illustrates these default values:
 | Blob          | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
 | Objeto        | null                                                                                | null                    | null                         |
 | Coleção       | null                                                                                | null                    | null                         |
-| Variant       | undefined                                                                           | undefined               | undefined                    |
+| Variant       | indefinido                                                                          | indefinido              | indefinido                   |
 
 
 ## Converting data types
