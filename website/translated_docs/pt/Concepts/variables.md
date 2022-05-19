@@ -49,7 +49,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-O operador de atribuição é a maneira mais importante de criar uma variável e jogar dados nela. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+O operador de atribuição é a maneira mais importante de criar uma variável e jogar dados nela. You write the name of the variable that you want to create on the left side of the assignment operator. Por exemplo:
 
 ```4d
 MyNumber:=3
