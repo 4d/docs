@@ -41,7 +41,7 @@ Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pict
 | Horizontal scaling        | Picture *+ Number      | Imagem  | Resize Picture horizontally by Number ratio                                                                                                                        |
 | Vertical scaling          | Picture *&#124; Number | Imagem  | Resize Picture vertically by Number ratio                                                                                                                          |
 
-**Notes :**
+**Notas:**
 
 - In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
 - The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
