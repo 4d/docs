@@ -506,7 +506,7 @@ To restore the original appearance of the list box, you can:
 - pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
 
 
-### Using arrays and expressions
+### Uso de arrays y expresiones
 
 Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
@@ -811,7 +811,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 |                       | valueType                               | texto | real | integer | booleano | color | evento |
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ------ |
 | *Atributos*           | *Descripción*                           |       |      |         |          |       |        |
-| value                 | cell value (input or output)            | x     | x    | x       |          |       |        |
+| value                 | valor de la celda (entrada o salida)    | x     | x    | x       |          |       |        |
 | min                   | valor mínimo                            |       | x    | x       |          |       |        |
 | max                   | valor máximo                            |       | x    | x       |          |       |        |
 | behavior              | "threeStates" value                     |       |      | x       |          |       |        |
