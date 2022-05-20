@@ -304,7 +304,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Property name       | Type     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string   | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                  |
 | fill                | string   | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                            |
@@ -405,7 +405,7 @@ By default, this option is not enabled.
 
 Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
 
-| Orientation value | Result                                      |
+| Orientation value | Resultado                                   |
 | ----------------- | ------------------------------------------- |
 | 0 (default)       | ![](assets/en/FormObjects/orientation1.png) |
 | 90                | ![](assets/en/FormObjects/orientation2.png) |

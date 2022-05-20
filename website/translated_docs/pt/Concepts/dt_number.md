@@ -28,7 +28,7 @@ A numeric literal constant is written as a real number. Here are some examples o
 
 > The default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option in the Methods Page of the Preferences, you must use the separator defined in your system.
 
-Negative numbers are specified with the minus sign (-). For example:
+Negative numbers are specified with the minus sign (-). Por exemplo:
 
 ```4d
 -27
@@ -72,7 +72,7 @@ The modulo operator % divides the first number by the second number and returns 
 
 ### Precedence
 
-The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. For example:
+The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. Por exemplo:
 
 ```4d
  3+4*5
@@ -80,7 +80,7 @@ The order in which an expression is evaluated is called precedence. 4D has a str
 
 returns 35, because the expression is evaluated as 3 + 4, yielding 7, which is then multiplied by 5, with the final result of 35.
 
-To override the left-to-right precedence, you MUST use parentheses. For example:
+To override the left-to-right precedence, you MUST use parentheses. Por exemplo:
 
 ```4d
  3+(4*5)
@@ -103,16 +103,16 @@ Because each bit can equal 0 or 1, you can also think about a Long Integer value
 
 An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
 
-| Operation              | Operator  | Sintaxe             | Returns              |
-| ---------------------- | --------- | ------------------- | -------------------- |
-| Bitwise AND            | &         | Long & Long         | Long                 |
-| Bitwise OR (inclusive) | &#124;    | Long &#124; Long    | Long                 |
-| Bitwise OR (exclusive) | \^&#124; | Long \^&#124; Long | Long                 |
-| Left Bit Shift         | <<        | Long << Long        | Long (see note 1)    |
-| Right Bit Shift        | >>        | Long >> Long        | Long (see note 1)    |
-| Bit Set                | ?+        | Long ?+ Long        | Long (see note 2)    |
-| Bit Clear              | ?-        | Long ?- Long        | Long (see note 2)    |
-| Bit Test               | ??        | Long ?? Long        | Boolean (see note 2) |
+| Operation              | Operator  | Sintaxe                | Returns              |
+| ---------------------- | --------- | ---------------------- | -------------------- |
+| Bitwise AND            | &         | Long & Long            | Long                 |
+| Bitwise OR (inclusive) | &#124;    | Long &#124; Long       | Long                 |
+| Bitwise OR (exclusive) | \^&#124; | Long \^&#124; E. long | Long                 |
+| Left Bit Shift         | <<        | Long << Long           | Long (see note 1)    |
+| Right Bit Shift        | >>        | Long >> Long           | Long (see note 1)    |
+| Bit Set                | ?+        | Long ?+ Long           | Long (see note 2)    |
+| Bit Clear              | ?-        | Long ?- Long           | Long (see note 2)    |
+| Bit Test               | ??        | Long ?? Long           | Boolean (see note 2) |
 
 #### Notas
 
@@ -123,7 +123,7 @@ An expression that uses a bitwise operator returns a Long Integer value, except 
 
 The following table lists the bitwise operators and their effects:
 
-| Operation              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Operation              | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bitwise AND            | Each resulting bit is the logical AND of the bits in the two operands. <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                                           |
 | Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
@@ -136,7 +136,7 @@ The following table lists the bitwise operators and their effects:
 
 ### Exemplos
 
-| Operation              | Exemplo                         | Result     |
+| Operation              | Exemplo                         | Resultado  |
 | ---------------------- | ------------------------------- | ---------- |
 | Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
