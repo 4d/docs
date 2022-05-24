@@ -73,15 +73,15 @@ Stops method execution, and returns to the state before the method started execu
 * When tracing a form or object method executing in response to an event: Stops and returns to the form.
 * When tracing a method executing from within the Application environment: Stops and returns to the environment.
 
-#### Abort and Edit
+#### Detener y editar
 
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
+Pausa la ejecución del método. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
 #### Editar
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Method Editor.
+Pausa la ejecución del método. The method that is executing at the time you click the Edit button opens in the Method Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
@@ -89,7 +89,7 @@ If you use this button to modify a method, the modifications are only effective 
 
 #### Parámetros Guardar
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+Saves the current configuration of the debugger window  and makes it the default configuration. Esto incluye:
 * the size and position of the window
 * the position of the division lines and the contents of the area that evaluates the expressions
 
@@ -97,7 +97,7 @@ These parameters are stored in the project.
 
 This action is not available in remote debugging mode (see [Debugging from Remote Machines]()).
 
-## Watch Pane
+## Ventana de expresión
 
 The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Aquí un ejemplo:
 
@@ -111,7 +111,7 @@ The **Expression** column displays the names of the objects and expressions. The
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
-### Expression list
+### Lista de expresiones
 
 #### Line Objects
 
@@ -226,7 +226,7 @@ This theme displays information regarding the main Web server of the application
 
 The expressions contained within this theme cannot be modified.
 
-### Contextual Menu
+### Menú contextual de la ventana de expresión
 
 Additional options are available from the contextual menu of the Watch pane.
 
@@ -241,7 +241,7 @@ Additional options are available from the contextual menu of the Watch pane.
 * **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. This option displays them in hexadecimal notation. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
 * **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
 
-## Call Chain Pane
+## Panel de la cadena de llamadas
 
 A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
 
@@ -301,7 +301,7 @@ To edit an expression, click on it to select it, then click again or press **Ent
 To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
 > **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
 
-### Contextual Menu
+### Menú contextual de la ventana de expresión
 
 The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
 
@@ -379,7 +379,7 @@ Por ejemplo:
 
 Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
 
-### Contextual menu
+### Menú contextual
 
 The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
 

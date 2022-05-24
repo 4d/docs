@@ -16,7 +16,7 @@ The following information is provided for each line:
 - **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
 - **Duration** (ms): duration in milliseconds of operation in progress
 - **Information**: title of operation.
-- **Details**: this area displays detailed information which will vary according to the type of operation selected. More specifically:
+- **Details**: this area displays detailed information which will vary according to the type of operation selected. En particular:
     + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
     + **Operation Details**: Operation type and (for query operations) query plan.
     + **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
@@ -28,7 +28,7 @@ The page is active and updated permanently as soon as it is displayed. It should
 
 - clicking on the **Pause** button,
 - haciendo clic en la lista,
-- pressing the space bar.
+- presionando la barra espaciadora.
 
 When you pause the page, a "PAUSED" message appears and the button label changes to **Resume**. You can resume monitoring of the operations by performing the same action as for pausing.
 
@@ -47,7 +47,7 @@ In advanced mode (**Shift+Click** on the operation), additional information is d
 
 ![](assets/en/Admin/server-admin-monitor-adv2.png)
 
-## Snapshot button
+## Botón Instantánea
 
 The **Snapshot** button allows you to copy to the clipboard all the operations displayed in the RTM panel, as well as their related details (process and sub-operation info):
 

@@ -8,7 +8,7 @@ Signals are tools provided by the 4D language to manage interactions and avoid c
 > Semaphores can also be used to manage interactions. Semaphores allow you to make sure that two or more processes do not modify the same resource (file, record...) at the same time. Sólo el proceso que define el semáforo puede eliminarlo.
 
 
-### Signal Object
+### Objeto signal
 
 A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
 
@@ -155,7 +155,7 @@ El método ***doSomething*** puede ser:
 
 ```4d
  #DECLARE ($signal : 4D.Signal)
-  //any processing
+  //todo proceso
   //...
  Use($signal)
     $signal.myresult:=$processingResult  //return the result

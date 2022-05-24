@@ -32,7 +32,7 @@ The locks triggered by the REST API are put at the [session](authUsers.md#openin
 
 A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
 
-- other REST sessions
+- otras sesiones REST
 - 4D processes (client/server, remote datastore, standalone) running on the REST server.
 
 An entity locked by the REST API can only be unlocked:
@@ -53,7 +53,7 @@ The returned "__STATUS" object has the following properties:
 |              |                |          | ***Disponible sólo en caso de error:***                                                                                                                     |
 | status       |                | number   | Código de error, ver abajo                                                                                                                                  |
 | statusText   |                | texto    | Descripción del error, ver abajo                                                                                                                            |
-| lockKind     |                | number   | Lock code                                                                                                                                                   |
+| lockKind     |                | number   | Código de bloqueo                                                                                                                                           |
 | lockKindText |                | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
 | lockInfo     |                | objeto   | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
 |              |                |          | ***Available only for a 4D process lock:***                                                                                                                 |

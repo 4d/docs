@@ -7,7 +7,7 @@ title: Gestión de usuarios y grupos 4D
 In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
 
 
-## Users and groups in projects
+## Usuarios y grupos en los proyectos
 
 In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. La siguiente tabla enumera las principales funcionalidades de los usuarios y grupos y su disponibilidad:
 
@@ -23,7 +23,7 @@ In project applications (.4DProject or .4dz files), 4D users and groups can be c
 ## Diseñador y administrador
 
 El usuario más poderoso se llama el **Diseñador**. Ningún aspecto de la aplicación es inaccesible al Diseñador. El diseñador puede:
-- access all application servers without restriction,
+- acceder a todos los servidores de la aplicación sin restricciones,
 - crear usuarios y grupos,
 - asignar privilegios de acceso a los grupos,
 - acceder al entorno Diseño. En un entorno monopuesto, siempre se utilizan los derechos de acceso del Diseñador. En el entorno cliente/servidor, la asignación de una contraseña al Diseñador activa la visualización del diálogo de inicio de sesión del usuario 4D.  El acceso al entorno Diseño es de sólo lectura.
@@ -37,7 +37,7 @@ El administrador puede:
 
 El administrador no puede:
 - modificar el usuario Diseñador
-- by default, access to protected parts of the application. En particular, el administrador no puede acceder al modo Diseño si está restringido. The Administrator must be part of one or more groups to have access privileges in the application. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
+- por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. El Administrador debe formar parte de uno o más grupos para tener privilegios de acceso en la aplicación. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
 Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
@@ -74,7 +74,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 4D añade un nuevo usuario a la lista, llamado por defecto "Nuevo usuarioX".
 
-3. Introduzca el nombre de usuario. This name will be used by the user to open the application. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
+3. Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la aplicación. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 
@@ -95,7 +95,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 - **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences.
+- **Método de inicio**: nombre de un método asociado que se ejecutará automáticamente cuando el usuario abra la aplicación (opcional). This method can be used for example to load the user preferences.
 
 
 ## Editor de grupos
@@ -110,7 +110,7 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 
 Para crear un grupo:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the application project.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. La lista de grupos muestra todos los grupos del proyecto de aplicación.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
@@ -177,9 +177,9 @@ Such a hierarchical system makes it easy to remember to which group a new user s
 Groups are assigned access privileges to specific parts or features of the application:
 
 - Design and Runtime Explorer access,
-- HTTP server,
-- REST server,
-- SQL server.
+- Servidor HTTP,
+- Servidor REST,
+- Servidor SQL.
 
 These accesses are defined in the Settings dialog. El siguiente ejemplo muestra los derechos de acceso del explorador de diseño y tiempo de ejecución asignados al grupo "Devs":
 

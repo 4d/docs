@@ -1,9 +1,9 @@
 ---
 id: overview
-title: Access Control overview
+title: Presentación del control de acceso
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
+Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arquitectura cliente-servidor o de interfaces web, es necesario controlar el acceso u ofrecer diferentes funcionalidades según de los usuarios conectados. It is also essential to provide security for sensitive data, even in single-user applications.
 
 4D access control strategy depends on your deployment configuration:
 
@@ -51,12 +51,12 @@ If you want to use the system user name in 4D instead of "Designer" (e.g. in log
 SET USER ALIAS(Current system user)
 ```
 
-### Protecting access
+### Protección del acceso
 
 #### Privilegios
 
 On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
 
-#### Encrypting data
+#### Cifrado de datos
 
 If you want to protect access to the application data, we recommend to [encrypt data](MSC/encrypt.md) and provide the encryption key to the authorized user(s). 

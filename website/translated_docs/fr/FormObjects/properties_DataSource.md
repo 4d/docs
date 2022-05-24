@@ -37,7 +37,7 @@ Par exemple, pour une liste de choix contenant "France, Allemagne, Italie" assoc
 
 
 ---
-## Choice List
+## Enumération
 
 Associe une liste de choix à un objet. Il peut s'agir d'un nom de liste de choix (une référence de liste) ou d'une collection de valeurs par défaut.
 
@@ -59,15 +59,15 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 
 ---
-## Choice List (static list)
+## Enumération (liste statique)
 
-List of static values to use as labels for the tab control object.
+Liste de valeurs statiques à utiliser comme étiquettes pour l'objet onglet.
 
 #### Grammaire JSON
 
-| Nom    | Type de données   | Valeurs possibles                        |
-| ------ | ----------------- | ---------------------------------------- |
-| labels | liste, collection | A list of values to fill the tab control |
+| Nom    | Type de données   | Valeurs possibles                           |
+| ------ | ----------------- | ------------------------------------------- |
+| labels | liste, collection | Une liste de valeurs à saisir dans l'onglet |
 
 #### Objets pris en charge
 
@@ -76,7 +76,7 @@ List of static values to use as labels for the tab control object.
 
 ---
 ## Élément courant
-`Collection or entity selection list boxes`
+`Listbox de type collection ou entity selection`
 
 Indique une variable ou une expression qui se verra attribuer l'élément/l'entité de collection sélectionné(e) par l'utilisateur. Vous devez utiliser une variable objet ou une expression assignable qui accepte des objets. Si l'utilisateur ne sélectionne rien ou si vous avez utilisé une collection de valeurs scalaires, la valeur Null est affectée.
 > Cette propriété est en "lecture seule", elle est automatiquement mise à jour en fonction des actions de l'utilisateur dans la list box. Vous ne pouvez pas modifier sa valeur pour modifier l'état de sélection de la list box.
@@ -96,7 +96,7 @@ Indique une variable ou une expression qui se verra attribuer l'élément/l'enti
 ---
 
 ## Position élément courant
-`Collection or entity selection list boxes`
+`Listbox de type collection ou entity selection`
 
 Indique une variable ou une expression qui se verra attribuer un entier long indiquant la position de l'élément/l'entité de collection sélectionné(e) par l'utilisateur.
 
@@ -178,13 +178,13 @@ Using the **Selected item reference** option requires compliance with the follow
 
 ---
 
-## Default (list of) values
+## Valeurs par défaut
 
-List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
+List of values that will be used as default values for the list box column (array type only). Ces valeurs seront automatiquement accessibles dans la [variable tableau](properties_Object.md#variable-or-expression) associée à la colonne lors de l’exécution du formulaire. Using the language, you can manage the object by referring to this array.
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 
-You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+Vous devez saisir une liste de valeurs. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
 ![](assets/en/FormObjects/defaultValues.png)
 
@@ -306,7 +306,7 @@ Using this property requires compliance with the following principles:
 
 ---
 ## Eléments sélectionnés
-`Collection or entity selection list boxes`
+`Listbox de type collection ou entity selection`
 
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.
 

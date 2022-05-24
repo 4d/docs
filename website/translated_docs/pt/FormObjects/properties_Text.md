@@ -48,7 +48,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values    |
+| Nome      | Data Type | Possible Values    |
 | --------- | --------- | ------------------ |
 | fontStyle | string    | "normal", "italic" |
 
@@ -66,7 +66,7 @@ Sets the text to have a line running beneath it.
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values       |
+| Nome           | Data Type | Possible Values       |
 | -------------- | --------- | --------------------- |
 | textDecoration | string    | "normal", "underline" |
 
@@ -108,7 +108,7 @@ Three font themes are available:
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                |
+| Nome      | Data Type | Possible Values                |
 | --------- | --------- | ------------------------------ |
 | fontTheme | string    | "normal", "main", "additional" |
 
@@ -133,7 +133,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values      |
+| Nome       | Data Type | Possible Values      |
 | ---------- | --------- | -------------------- |
 | fontFamily | string    | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
@@ -151,7 +151,7 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                       |
+| Nome     | Data Type | Possible Values                       |
 | -------- | --------- | ------------------------------------- |
 | fontSize | integer   | Font size in points. Minimum value: 0 |
 
@@ -178,7 +178,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
+| Nome   | Data Type | Possible Values                           |
 | ------ | --------- | ----------------------------------------- |
 | stroke | string    | any css value, "transparent", "automatic" |
 
@@ -209,7 +209,7 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values       |
+| Nome            | Data Type | Possible Values       |
 | --------------- | --------- | --------------------- |
 | rowStrokeSource | string    | Font color expression |
 
@@ -238,7 +238,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                 |
+| Nome           | Data Type | Possible Values                                 |
 | -------------- | --------- | ----------------------------------------------- |
 | rowStyleSource | string    | Style expression to evaluate for each row/cell. |
 
@@ -258,7 +258,7 @@ Horizontal location of text within the area that contains it.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
+| Nome      | Data Type | Possible Values                                   |
 | --------- | --------- | ------------------------------------------------- |
 | textAlign | string    | "automatic", "right", "center", "justify", "left" |
 
@@ -281,7 +281,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                        |
+| Nome          | Data Type | Possible Values                        |
 | ------------- | --------- | -------------------------------------- |
 | verticalAlign | string    | "automatic", "top", "middle", "bottom" |
 
@@ -303,7 +303,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name       | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Property name       | Type     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | stroke              | string   | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                  |
 | fill                | string   | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                            |
@@ -358,7 +358,7 @@ O método *Color* iria conter :
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                  |
+| Nome       | Data Type | Possible Values                                  |
 | ---------- | --------- | ------------------------------------------------ |
 | metaSource | string    | Object expression to evaluate for each row/cell. |
 
@@ -384,7 +384,7 @@ By default, this option is not enabled.
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
+| Nome       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
 | styledText | booleano  | true, false     |
 
@@ -405,7 +405,7 @@ By default, this option is not enabled.
 
 Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser rodadas por incrementos de 90°. Cada valor de orientação é aplicado enquanto mantém o mesmo ponto inferior esquerdo para o objeto:
 
-| Orientation value | Result                                      |
+| Orientation value | Resultado                                   |
 | ----------------- | ------------------------------------------- |
 | 0 (default)       | ![](assets/en/FormObjects/orientation1.png) |
 | 90                | ![](assets/en/FormObjects/orientation2.png) |
@@ -419,7 +419,7 @@ Além de [áreas de texto estáticas](text.md), [input](input_overview.md) os ob
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
+| Nome      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
 | textAngle | number    | 0, 90, 180, 270 |
 
@@ -441,7 +441,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values             |
+| Nome            | Data Type | Possible Values             |
 | --------------- | --------- | --------------------------- |
 | rowStrokeSource | string    | The name of a longint array |
 
@@ -464,7 +464,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values              |
+| Nome           | Data Type | Possible Values              |
 | -------------- | --------- | ---------------------------- |
 | rowStyleSource | string    | The name of a longint array. |
 
@@ -497,7 +497,7 @@ Quando a propriedade for ativada, a área armazena todas as informações de for
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values        |
+| Nome              | Data Type | Possible Values        |
 | ----------------- | --------- | ---------------------- |
 | storeDefaultStyle | booleano  | true, false (default). |
 

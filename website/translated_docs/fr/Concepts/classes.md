@@ -226,7 +226,7 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
 
 #### Paramètres
 
-Les paramètres des fonctions sont déclarés via le nom du paramètre et son type, séparés par deux-points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Les paramètres des fonctions sont déclarés via le nom du paramètre et son type, séparés par deux-points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Les paramètres multiples (et leurs types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -247,18 +247,18 @@ Function add($x : Integer)
 
 #### Valeur retournée
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. Par exemple :
+Vous déclarez le paramètre de retour d'une fonction (optionnel) en ajoutant une flèche (`->`) et la définition du paramètre de retour après la liste des paramètres d'entrée, ou les deux points (`:`) et le tye de paramètre de retour uniquement. Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
     $result:=$x+$y
 ```
 
-You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). Par exemple :
+Vous pouvez également déclarer le paramètre de retour en ajoutant seulement `: type` et utiliser l'expression [`return`](parameters.md#return-expression) (elle mettra également fin à l'exécution de la fonction). Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
-    // some code
+    // du code
     return $x+$y
 ```
 
@@ -289,7 +289,7 @@ $area:=$rect.getArea() //5000
 
 #### Exemple 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Dans cet exemple, nous utilisons [`l'expression return`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -303,7 +303,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 
 
-### `Function get` and `Function set`
+### `Function get` et `Function set`
 
 #### Syntaxe
 
@@ -317,28 +317,28 @@ Function set <name>($parameterName : type)
 // code
 ```
 
-`Function get` and `Function set` are accessors defining **computed properties** in the class. Une propriété calculée est une propriété nommée avec un type de données qui masque un calcul. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+`Function get` et `Function set` sont des accesseurs définissant des **propriétés calculées** dans la classe. Une propriété calculée est une propriété nommée avec un type de données qui masque un calcul. Lorsqu'on accède à la valeur d'une propriété calculée, 4D substitue le code de l'accesseur correspondant :
 
-- when the property is read, the `Function get` is executed,
-- when the property is written, the `Function set` is executed.
+- lorsque la propriété est lue, `Function get` est exécutée,
+- lorsque la propriété est écrite, `Function set` est exécutée.
 
-If the property is not accessed, the code never executes.
+Si la propriété n'est pas accédée, le code n'est jamais exécuté.
 
-Computed properties are designed to handle data that do not necessary need to be kept in memory. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
-
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
+Les propriétés calculées sont conçues pour gérer les données qui n'ont pas besoin d'être conservées en mémoire. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
 
 Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
 
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
+Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
 
-`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété. Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
-When both functions are defined, the computed property is **read-write**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
+`Function get` retourne une valeur du type de la propriété et `Function set` prend un paramètre du type de la propriété. Les deux arguments doivent être conformes aux [paramètres de fonction](#parameters) standard.
 
-The type of the computed property is defined by the `$return` type declaration of the *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
+Lorsque les deux fonctions sont définies, la propriété calculée est en **lecture-écriture**. Si seule une `Function get` est définie, la propriété calculée est en **lecture seule**. Dans ce cas, une erreur est retournée si le code tente de modifier la propriété. Si seule une `Function set` est définie, 4D retourne *undefined* lorsque la propriété est lue.
 
-> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+Le type de la propriété calculée est défini par la déclaration de type `$return` du *getter*. Il peut s'agir de n'importe quel [type de propriété valide](dt_object.md).
+
+> Assigner *undefined* à une propriété d'objet efface sa valeur tout en préservant son type. Pour ce faire, la `Function get` est d'abord appelée pour récupérer le type de valeur, puis `Function set` est appelée avec une valeur vide de ce type.
 
 #### Exemple 1
 
@@ -360,9 +360,9 @@ Function set fullName( $fullName : Text )
 ```
 
 ```4d
-//in a project method
-$fullName:=$person.fullName // Function get fullName() is called
-$person.fullName:="John Smith" // Function set fullName() is called
+//dans une méthode projet
+$fullName:=$person.fullName // Function get fullName() est appelée
+$person.fullName:="John Smith" // Function set fullName() est appelée
 ```
 
 #### Exemple 2
@@ -394,7 +394,7 @@ Une fonction class constructor, qui accepte des [paramètres](#parameters), peut
 
 Dans ce cas, lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new), le class constructor est appelé avec les paramètres optionnellement passés à la fonction `new()`.
 
-For a class constructor function, the `Current method name` command returns: `<ClassName>:constructor`, for example "MyClass:constructor".
+Pour une fonction class constructor, la commande `Current method name` retourne : `<ClassName>:constructor`, par exemple "MyClass.constructor".
 
 
 

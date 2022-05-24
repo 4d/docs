@@ -7,7 +7,7 @@ Un [datastore](dsMapping.md#datastore) exposé sur une application 4D Server est
 
 - Les applications 4D distantes utilisant ORDA pour accéder au datastore principal à l’aide de la commande `ds`. A noter que l'application 4D distante peut toujours accéder à la base de données en mode classique. Ces accès sont gérés par le **serveur d'applications 4D**.
 - D'autres applications 4D (4D Remote, 4D Server) ouvrant une session sur le datastore distant via la commande `Open datastore`. Ces accès sont transmis par le **serveur HTTP REST**.
-- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. Ces accès sont remis par le **serveur HTTP**.
+- Les requêtes [4D for iOS ou 4D for Android](https://developer.4d.com/go-mobile/) pour la mise à jour des applications mobiles. Ces accès sont remis par le **serveur HTTP**.
 
 
 
@@ -15,7 +15,7 @@ Un [datastore](dsMapping.md#datastore) exposé sur une application 4D Server est
 
 Lorsque vous travaillez avec un datastore distant référencé par des appels à la commande `Open datastore`, la connexion entre les process qui effectuent la requête et le datastore distant est gérée par des sessions.
 
-A session in created on the remote datastore to handle the connection. Cette session est identifiée à l'aide d'un ID de session interne, associé au `localID` de l'application 4D. Cette session gère automatiquement l'accès aux données, aux sélections d'entités ou aux entités.
+Une session est créée sur le datastore distant pour gérer la connexion. Cette session est identifiée à l'aide d'un ID de session interne, associé au `localID` de l'application 4D. Cette session gère automatiquement l'accès aux données, aux sélections d'entités ou aux entités.
 
 Le `localID` est local à la machine qui se connecte au datastore distant, ce qui signifie :
 
@@ -55,13 +55,13 @@ Les fonctionnalités ORDA relatives au verrouillage d'entité et aux transaction
 
 ### Fermeture des sessions
 
-Une session est automatiquement fermée par 4D lorsqu'il n'y a pas eu d'activité durant son timeout. The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the `Open datastore` command.
+Une session est automatiquement fermée par 4D lorsqu'il n'y a pas eu d'activité durant son timeout. Le timeout par défaut est de 60 mn mais cette valeur peut être paramétrée à l'aide du paramètre *connectionInfo* de la commande `Open datastore`.
 
 Si une demande est envoyée au datastore distant après la fermeture de la session, elle est automatiquement recréée si possible (licence disponible, serveur non arrêté, etc.). A noter cependant que le contexte de la session des verrous et des transactions est perdu (voir ci-dessus).
 
 ## Optimisation client/serveur
 
-4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). Cette optimisation accélère l'exécution de votre application 4D en réduisant drastiquement le volume d'informations transmises sur le réseau.
+4D optimise automatiquement les requêtes ORDA qui utilisent des entity selections ou qui chargent des entités dans des configurations client/serveur (datastore accessible à distance à l'aide de `ds` ou de `Open datastore`). Cette optimisation accélère l'exécution de votre application 4D en réduisant drastiquement le volume d'informations transmises sur le réseau.
 
 Les mécanismes d'optimisation suivants sont mis en œuvre :
 

@@ -65,7 +65,7 @@ This is illustrated by the following graphic:
 
 Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. For example:
+In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Por exemplo:
 
 ```4d
  For each($entity;$selection)
@@ -140,7 +140,7 @@ Let's look at the following (simplified) structure:
 In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
 > In ORDA, the Automatic or Manual property of relations has no effect.
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. For example:
+To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Por exemplo:
 
 ```4d
  $emp:=ds.Employee.new() // create an employee
@@ -149,7 +149,7 @@ To assign a value directly to the "employer" attribute, you must pass an existin
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. For example:
+4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. Por exemplo:
 
 ```4d
  $emp:=ds.Employee.new()
@@ -307,7 +307,7 @@ The `sendMails` method:
 
 ### Entity selections and Storage attributes
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. For example:
+All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Por exemplo:
 
 ```4d
  $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people

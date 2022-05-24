@@ -26,7 +26,7 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - If the physical structure evolves, you can simply adapt function code and client applications will continue to call them transparently.
 
-- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes)) and [alias attributes](XXX) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
+- By default, all of your data model class functions (including [computed attribute functions](#computed-attributes-1)) and [alias attributes](#alias-attributes-1) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
 ![](assets/en/ORDA/api.png)
 
@@ -134,6 +134,7 @@ Then you can get an entity selection of the "best" companies by executing:
 
 
 
+
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
@@ -231,7 +232,7 @@ Entity classes allow you to define **computed attributes** using specific keywor
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 
-For information, please refer to the [Computed attributes](#computed-attributes) section.
+For information, please refer to the [Computed attributes](#computed-attributes-1) section.
 
 #### Alias attributes
 
@@ -239,7 +240,7 @@ Entity classes allow you to define **alias attributes**, usually over related at
 
 `Alias` *attributeName* *targetPath*
 
-For information, please refer to the [Alias attributes](#alias-attributes) section.
+For information, please refer to the [Alias attributes](#alias-attributes-1) section.
 
 
 #### Exemplo
@@ -341,7 +342,7 @@ The *getter* function defines the data type of the computed attribute thanks to 
 
 The *$event* parameter contains the following properties:
 
-| Propriedade   | Type    | Description                                                                               |
+| Propriedade   | Type    | Descrição                                                                                 |
 | ------------- | ------- | ----------------------------------------------------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                                                                   |
 | dataClassName | Texto   | Dataclass name                                                                            |
@@ -392,6 +393,7 @@ Function get coWorkers($event : Object)-> $result: cs. EmployeeSelection
 #### Sintaxe
 
 ```4d
+
 {local} Function set <attributeName>($value : type {; $event : Object})
 // code
 ```
@@ -402,7 +404,7 @@ The *$value* parameter receives the value assigned to the attribute.
 
 The *$event* parameter contains the following properties:
 
-| Propriedade   | Type    | Description                                   |
+| Propriedade   | Type    | Descrição                                     |
 | ------------- | ------- | --------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                       |
 | dataClassName | Texto   | Dataclass name                                |
@@ -438,7 +440,7 @@ This function supports three syntaxes:
     - If *$result* is a Text, it must be a valid query string
     - If *$result* is an Object, it must contain two properties:
 
-    | Propriedade        | Type    | Description                                         |
+    | Propriedade        | Type    | Descrição                                           |
     | ------------------ | ------- | --------------------------------------------------- |
     | $result.query      | Texto   | Valid query string with placeholders (:1, :2, etc.) |
     | $result.parameters | Coleção | values for placeholders                             |
@@ -449,7 +451,7 @@ The `query` function executes whenever a query using the computed attribute is l
 
 The *$event* parameter contains the following properties:
 
-| Propriedade   | Type    | Description                                                                                                                                                                                                                                                                                                                                                      |
+| Propriedade   | Type    | Descrição                                                                                                                                                                                                                                                                                                                                                        |
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attributeName | Texto   | Computed attribute name                                                                                                                                                                                                                                                                                                                                          |
 | dataClassName | Texto   | Dataclass name                                                                                                                                                                                                                                                                                                                                                   |
@@ -582,7 +584,7 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 The *$event* parameter contains the following properties:
 
-| Propriedade   | Type     | Description                                                                                                |
+| Propriedade   | Type     | Descrição                                                                                                  |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
 | attributeName | Texto    | Computed attribute name                                                                                    |
 | dataClassName | Texto    | Dataclass name                                                                                             |
@@ -659,7 +661,7 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 
 An alias can be used as a part of a path of another alias.
 
-A [computed attribute](#computed-attributes) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
+A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
 
 > ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
 

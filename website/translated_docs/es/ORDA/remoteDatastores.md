@@ -11,7 +11,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 
 
-## Opening sessions
+## Apertura de las sesiones
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
@@ -29,7 +29,7 @@ These principles are illustrated in the following graphics:
 
 > For sessions opened by REST requests, please refer to [Users and sessions](REST/authUsers.md).
 
-### Viewing sessions
+### Visualización de las sesiones
 
 Processes that manage sessions for datastore access are shown in the 4D Server administration window:
 
@@ -41,7 +41,7 @@ In the following example, two processes are running for the same session:
 
 ![](assets/en/ORDA/sessionAdmin.png)
 
-### Locking and transactions
+### Bloqueo y transacciones
 
 ORDA features related to entity locking and transaction are managed at process level in remote datastores, just like in ORDA client/server mode:
 
@@ -53,13 +53,13 @@ ORDA features related to entity locking and transaction are managed at process l
     *   when the session is closed on the server
     *   when the session is killed from the server administration window.
 
-### Closing sessions
+### Cierre de las sesiones
 
 A session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the *connectionInfo* parameter of the `Open datastore` command.
 
 If a request is sent to the remote datastore after the session has been closed, it is automatically re-created if possible (license available, server not stopped...). However, keep in mind that the context of the session regarding locks and transactions is lost (see above).
 
-## Client/server optimization
+## Optimización cliente/servidor
 
 4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
 
@@ -97,7 +97,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 
 
-### Using the context property
+### Uso de la propiedad context
 
 You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
 

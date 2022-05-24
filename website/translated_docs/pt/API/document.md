@@ -3,7 +3,7 @@ id: Document
 title: Document Class
 ---
 
-## Description
+## Descrição
 
 
 <!-- REF document.creationDate.Desc -->
@@ -19,7 +19,7 @@ title: Document Class
 **.creationDate** : Date<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
 
@@ -41,7 +41,7 @@ Essa propriedade é**apenas leitura**.
 **.creationTime** : Time<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
@@ -65,7 +65,7 @@ Essa propriedade é**apenas leitura**.
 **.exists** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
@@ -90,7 +90,7 @@ Essa propriedade é**apenas leitura**.
 <!-- REF #document.extension.Syntax -->
 **.extension** : Text<!-- END REF -->
 
-#### Description
+#### Descrição
 
 The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
 
@@ -114,7 +114,7 @@ Essa propriedade é**apenas leitura**.
 <!-- REF #document.fullName.Syntax -->
 **.fullName** : Text<!-- END REF -->
 
-#### Description
+#### Descrição
 
 The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
@@ -138,7 +138,7 @@ Essa propriedade é**apenas leitura**.
 **.hidden** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
@@ -162,7 +162,7 @@ Essa propriedade é**apenas leitura**.
 **.isAlias** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
@@ -185,7 +185,7 @@ Essa propriedade é**apenas leitura**.
 **.isFile** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.isFile` property returns <!-- REF #document.isFile.Summary -->always true for a file<!-- END REF -->.
 
@@ -208,7 +208,7 @@ Essa propriedade é**apenas leitura**.
 **.isFolder** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always false for a file<!-- END REF -->.
 
@@ -232,7 +232,7 @@ Essa propriedade é**apenas leitura**.
 **.isWritable** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
@@ -266,7 +266,7 @@ Essa propriedade é**apenas leitura**.
 **.modificationDate** : Date<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->the date of the file's last modification<!-- END REF -->.
 
@@ -290,7 +290,7 @@ Essa propriedade é**apenas leitura**.
 **.modificationTime** : Time<!-- END REF -->
 
 
-##### Description
+##### Descrição
 
 The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->the time of the file's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
@@ -313,7 +313,7 @@ Essa propriedade é**apenas leitura**.
 **.name** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
@@ -335,7 +335,7 @@ Essa propriedade é**apenas leitura**.
 **.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. The target element can be:
 
@@ -364,7 +364,7 @@ Essa propriedade é**apenas leitura**.
 **.parent** : 4D.Folder<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.parent` property returns <!-- REF #document.parent.Summary -->the parent folder object of the file<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
 
@@ -388,7 +388,7 @@ Essa propriedade é**apenas leitura**.
 **.path** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.path` property returns <!-- REF #document.path.Summary -->the POSIX path of the file<!-- END REF -->. If the path represents a filesystem (e.g., "/DATA/"), the filesystem is returned.
 
@@ -411,7 +411,7 @@ Essa propriedade é**apenas leitura**.
 **.platformPath** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->the path of the file expressed with the current platform syntax<!-- END REF -->.
 
@@ -435,7 +435,7 @@ Essa propriedade é**apenas leitura**.
 **.size** : Real<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
 
@@ -465,24 +465,24 @@ Essa propriedade é**apenas leitura**.
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Parameter         | Type      |    | Description                                 |
-| ----------------- | --------- |:--:| ------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder                          |
-| newName           | Texto     | -> | Name for the copy                           |
-| overwrite         | Integer   | -> | `fk overwrite` to replace existing elements |
-| Result            | 4D.File   | <- | Copied file                                 |
+| Parameter         | Type      |    | Descrição                                              |
+| ----------------- | --------- |:--:| ------------------------------------------------------ |
+| destinationFolder | 4D.Folder | -> | Pasta de destino                                       |
+| newName           | Texto     | -> | Nome para a copia                                      |
+| overwrite         | Integer   | -> | `fk overwrite` para substituir os elementos existentes |
+| Resultado         | 4D.File   | <- | Copied file                                            |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.copyTo()` function <!-- REF #document.copyTo().Summary -->copies the `File` object into the specified *destinationFolder* <!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the file is copied with the name of the original file. If you want to rename the copy, pass the new name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the file is copied with the name of the original file. Se quiser renomear a cópia, passe o novo nome no parâmetro *newName* . O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
-If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. You can pass the `fk overwrite` constant in the *overwrite* parameter to ignore and overwrite the existing file
+If a file with the same name already exists in the *destinationFolder*, by default 4D generates an error. Pode passar a constante `fk overwrite` no parâmetro *overwrite* para ignorar e sobrescriber o arquivo existente
 
 | Constant       | Value | Comment                             |
 | -------------- | ----- | ----------------------------------- |
@@ -521,13 +521,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 **.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Parameter | Type    |    | Description  |
+| Parameter | Type    |    | Descrição    |
 | --------- | ------- | -- | ------------ |
-| Result    | 4D.Blob | <- | File content |
+| Resultado | 4D.Blob | <- | File content |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
@@ -564,18 +564,18 @@ To save a document's contents in a `BLOB` field:
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Parameter | Type    |    | Description                                   |
-| --------- | ------- | -- | --------------------------------------------- |
-| size      | Integer | -> | Side length for the returned picture (pixels) |
-| Result    | Imagem  | <- | Icon                                          |
+| Parameter | Type    |    | Descrição                                       |
+| --------- | ------- | -- | ----------------------------------------------- |
+| size      | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
+| Resultado | Imagem  | <- | Icon                                            |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
-The optional *size* parameter specifies the dimensions in pixels of the returned icon. This value actually represents the length of the side of the square containing the icon. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). If you pass 0 or omit this parameter, the "large icon" version is returned.
+O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icons are usually defined in 32x32 pixels (“large icons”) or 16x16 pixels (“small icons”). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
 If the file does not exist on disk, a default blank icon is returned.
 
@@ -603,16 +603,16 @@ File icon [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parameter   | Type    |    | Description                     |
+| Parameter   | Type    |    | Descrição                       |
 | ----------- | ------- | -- | ------------------------------- |
 | charSetName | Texto   | -> | Name of character set           |
 | charSetNum  | Integer | -> | Number of character set         |
 | breakMode   | Integer | -> | Processing mode for line breaks |
-| Result      | Texto   | <- | Text from the document          |
+| Resultado   | Texto   | <- | Text from the document          |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
 Optionally, you can designate the character set to be used for reading the contents. You can pass either:

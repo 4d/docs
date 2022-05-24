@@ -223,9 +223,9 @@ Aquí están las propiedades de cada atributo expuesto que se devuelven:
 | indexed     | Cadena   | Si se seleccionó algún **tipo de índice**, esta propiedad devolverá true. En caso contrario, esta propiedad no aparece.                                               |
 | type        | Cadena   | Tipo de atributo (booleano, blob, byte, fecha, duración, imagen, long, long64, número, cadena, uuid o palabra) o la clase de datos para un atributo de relación N->1. |
 | identifying | Booleano | Esta propiedad devuelve True si el atributo es la llave primaria. En caso contrario, esta propiedad no aparece.                                                       |
-| path        | Cadena   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                         |
-| foreignKey  | Cadena   | For a relatedEntity attribute, name of the related attribute.                                                                                                         |
-| inverseName | Cadena   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                        |
+| path        | Cadena   | Nombre de la clase de datos para un atributo relatedEntity, o nombre de la relación para un atributo relatedEntities.                                                 |
+| foreignKey  | Cadena   | Para un atributo relatedEntity, nombre del atributo relacionado.                                                                                                      |
+| inverseName | Cadena   | Nombre de la relación opuesta para un atributo relatedEntity o relateEntities.                                                                                        |
 
 
 ### Llave primaria

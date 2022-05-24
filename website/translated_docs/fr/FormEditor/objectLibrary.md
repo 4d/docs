@@ -55,7 +55,7 @@ Vous pouvez créer autant de bibliothèques que vous voulez par projet. Une bibl
 
 ### Ouvrir une bibliothèque d’objets
 
-A given object library can only be opened by one project at a time. However, several different libraries can be opened in the same project.
+Une même bibliothèque d’objets ne peut être ouverte que par un seul projet à la fois. En revanche, il est possible d’ouvrir plusieurs bibliothèques différentes dans le même projet.
 
 Pour ouvrir une bibliothèque d’objets personnalisée, sélectionnez la commande **Ouvrir>Bibliothèque d’objets...** dans le menu **Fichier** ou la barre d’outils de 4D. Une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la bibliothèque d’objets à ouvrir. Vous pouvez sélectionner les types de fichier suivants :
 - **.4dproject**

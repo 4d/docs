@@ -103,7 +103,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
+> Las constantes predefinidas aparecen <u>subrayadas</u> por defecto en el editor de métodos 4D.
 
 ## Métodos
 
@@ -322,7 +322,7 @@ Se hace referencia a una expresión por el tipo de datos que devuelve. Hay vario
 
 ### Expresiones asignables y no asignables
 
-Una expresión puede ser simplemente una constante literal, como el número 4 o la cadena "Hello", o una variable como `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. En todos los casos, estas expresiones son **no asignables**, lo que significa que no se les puede asignar un valor. En 4D, las expresiones pueden ser **asignables**. An expression is assignable when it can be used on the left side of an assignation. Por ejemplo:
+Una expresión puede ser simplemente una constante literal, como el número 4 o la cadena "Hello", o una variable como `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. En todos los casos, estas expresiones son **no asignables**, lo que significa que no se les puede asignar un valor. En 4D, las expresiones pueden ser **asignables**. Una expresión es asignable cuando puede utilizarse a la izquierda del operador de asignación. Por ejemplo:
 
 ```4d  
 //La variable $myVar es asignable, puede escribir:  

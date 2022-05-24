@@ -73,7 +73,7 @@ To be used by the 4D web server, the **key.pem** and **cert.pem** files must be 
 - with 4D in local mode or 4D Server, next to the [project folder](Project/architecture.md#project-folder)
 - with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
 
-You must copy these files manually on the remote machine.
+Debe copiar estos archivos manualmente en la máquina remota.
 
 #### With the application server (client-server desktop applications)
 

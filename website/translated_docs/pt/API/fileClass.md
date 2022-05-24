@@ -66,17 +66,17 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parameter    | Type    |    | Description                                     |
+| Parameter    | Type    |    | Descrição                                       |
 | ------------ | ------- |:--:| ----------------------------------------------- |
 | path         | Texto   | -> | File path                                       |
 | fileConstant | Integer | -> | 4D file constant                                |
 | pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
 | *            |         | -> | * to return file of host database               |
-| Result       | 4D.File | <- | New file object                                 |
+| Resultado    | 4D.File | <- | New file object                                 |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -138,7 +138,7 @@ If the command is called from a component, pass the optional * parameter to get 
 <!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
@@ -166,12 +166,12 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter | Type     |    | Description                                                |
+| Parameter | Type     |    | Descrição                                                  |
 | --------- | -------- | -- | ---------------------------------------------------------- |
-| Result    | Booleano | <- | True if the file was created successfully, false otherwise |
+| Resultado | Booleano | <- | True if the file was created successfully, false otherwise |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
 The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
 
@@ -210,16 +210,16 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parameter         | Type      |    | Description                                  |
+| Parameter         | Type      |    | Descrição                                    |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
 | aliasType         | Integer   | -> | Type of the alias link                       |
-| Result            | 4D.File   | <- | Alias or shortcut file reference             |
+| Resultado         | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
@@ -276,13 +276,13 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parameter | Type |  | Description                     |
+| Parameter | Type |  | Descrição                       |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
@@ -333,13 +333,13 @@ You want to delete a specific file in the database folder:
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parameter | Type   |    | Description                                           |
+| Parameter | Type   |    | Descrição                                             |
 | --------- | ------ | -- | ----------------------------------------------------- |
-| Result    | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
+| Resultado | Objeto | <- | Contents of .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
@@ -453,21 +453,21 @@ ALERT($info.Copyright)
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parameter         | Type      |    | Description                  |
+| Parameter         | Type      |    | Descrição                    |
 | ----------------- | --------- | -- | ---------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder           |
+| destinationFolder | 4D.Folder | -> | Pasta de destino             |
 | newName           | Texto     | -> | Full name for the moved file |
-| Result            | 4D.File   | <- | Moved file                   |
+| Resultado         | 4D.File   | <- | Moved file                   |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 
 **Returned object**
@@ -521,13 +521,13 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| Parameter | Type    |    | Description                |
+| Parameter | Type    |    | Descrição                  |
 | --------- | ------- | -- | -------------------------- |
 | newName   | Texto   | -> | New full name for the file |
-| Result    | 4D.File | <- | Renamed file               |
+| Resultado | 4D.File | <- | Renamed file               |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
 The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
@@ -564,13 +564,13 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parameter | Type   |    | Description                                                      |
+| Parameter | Type   |    | Descrição                                                        |
 | --------- | ------ | -- | ---------------------------------------------------------------- |
 | info      | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
@@ -649,13 +649,13 @@ $infoPlistFile.setAppInfo($info)
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| Parameter | Type |    | Description               |
+| Parameter | Type |    | Descrição                 |
 | --------- | ---- | -- | ------------------------- |
 | content   | BLOB | -> | New contents for the file |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
 
@@ -677,9 +677,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Versão | Mudanças                                                |
+| ------ | ------------------------------------------------------- |
+| v19 R3 | Default for new projects: no BOM and (macOS) LF for EOL |
+| v17 R5 | Adicionado                                              |
 </details>
 
 
@@ -688,7 +689,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parameter   | Type    |    | Description                                                |
+| Parameter   | Type    |    | Descrição                                                  |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
 | texto       | Texto   | -> | Text to store in the file                                  |
 | charSetName | Texto   | -> | Name of character set                                      |
@@ -697,7 +698,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 |
 
-#### Description
+#### Descrição
 
 The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 
@@ -707,26 +708,26 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 
 Optionally, you can designate the character set to be used for writing the contents. You can pass either:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
-| Constant                      | Value | Comment                                                                                                                                                        |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | No processing                                                                                                                                                  |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
-| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
-| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
+| Constant                      | Value | Comment                                                                                                                                                  |
+| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | No processing                                                                                                                                            |
+| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
+| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
+| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
+| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 
-> **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Exemplo
 

@@ -32,7 +32,7 @@ When a form is opened in the editor, interface elements are displayed or hidden 
     - Markers and marker labels are always displayed by default on list forms
     - Paper is displayed by default on "for printing" forms.
 
-#### Display/Hide elements
+#### Mostrar/Ocultar elementos
 
 You can display or hide elements at any moment in the Form editor’s current window by selecting **Display** from the **Form** menu or the Form editor's context menu:
 
@@ -71,7 +71,7 @@ La barra de herramientas contiene los siguientes elementos:
 | ![](assets/en/FormEditor/library.png)         | [Librería de objetos preconfigurada](objectLibrary.html)                       | Este botón muestra la librería de objetos preconfigurada que ofrece numerosos objetos con ciertas propiedades que han sido predefinidas.                                                                                                                                                                                                                                  |
 | ![](assets/en/FormEditor/listBoxBuilder1.png) | [Creación de list box](#list-box-builder)                                      | Este botón crea nuevos list box de tipo selección de entidades.                                                                                                                                                                                                                                                                                                           |
 
-### Object bar
+### Barra de objetos
 
 The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
 

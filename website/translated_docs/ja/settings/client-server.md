@@ -42,7 +42,9 @@ TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリ�
 
 -   **SQLサーバー**: デフォルトで 19812 (設定の "SQL" ページで変更可)。
 -   **アプリケーションサーバー**: デフォルトで 19813 (設定の "クライアント-サーバー" ページで変更可)。
--   **DB4Dサーバー** (データベースサーバー): デフォルトで 19814。 このポート番号は直接変更できませんが、常にアプリケーションサーバのポート番号+1 です。 <br/> 4Dクライアントが 4D Server に接続するとき、アプリケーションサーバのポート番号 (19813 または接続ダイアログボックスの IPアドレス欄でコロンの後ろに指定された番号) を使用して接続します。 その後の、それぞれ対応するポートを介した他のサーバーへの接続は自動です。 再度ポート番号を指定する必要はありません。 <br/> ルーターやファイアウォール越しに接続する場合には、この 3つのポートを明示的に開く必要があります。
+-   **DB4Dサーバー** (データベースサーバー): デフォルトで 19814。 This port number cannot be modified directly but it always consists of the application server port number + 1.\
+  When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
+  Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 
 #### ドメインサーバーによるユーザーの認証
 
@@ -74,7 +76,8 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 -   **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 **ローカルリソースを更新** アクションメニューコマンド [(リソースエクスプローラーを使用する](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.ja.html) 参照) を使用すれば、ローカルの **Resources**フォルダーを手動で更新することができます。
 -   **常に**: セッション中にサーバーから通知が送信されると、ローカルの **Resources** フォルダーは自動で同期されます。
--   **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 ユーザーはローカルの **Resources** フォルダーの同期を受け入れ、あるいは拒否できます。 <br/><br/> **Resources** フォルダーは、データベースインタフェースで使用されるカスタムファイルを格納しています (翻訳ファイルやピクチャーなど)。 このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 詳細については、[リソースフォルダの管理](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.ja.html) を参照ください。
+-   **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 The user can then accept or refuse the synchronization of the local **Resources** folder.\
+  The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 詳細については、[リソースフォルダの管理](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.ja.html) を参照ください。
 
 
 ## IP設定ページ

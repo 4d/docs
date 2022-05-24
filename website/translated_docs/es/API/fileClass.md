@@ -14,7 +14,7 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-### File object
+### Objeto File
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -68,7 +68,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <!-- REF #_command_.File.Params -->
 | Parámetros   | Tipo    |    | Descripción                                        |
 | ------------ | ------- |:--:| -------------------------------------------------- |
-| path         | Texto   | -> | File path                                          |
+| path         | Texto   | -> | Ruta del archivo                                   |
 | fileConstant | Integer | -> | Constante del archivo 4D                           |
 | pathType     | Integer | -> | `fk posix path` (por defecto) o `fk platform path` |
 | *            |         | -> | * para devolver el archivo de la base local        |
@@ -100,27 +100,27 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 | Constante                         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19    | Archivo de historial de copias de seguridad (ver Archivos de configuración y rastreo). Se almacena en la carpeta de destino de la copia de seguridad.                                                                                                                                                                                                                                                    |
-| Backup log file                   | 13    | Archivo historial de copias de seguridad actual. Stored in the application Logs folder.                                                                                                                                                                                                                                                                                                                  |
-| Backup settings file              | 1     | Default backup.4DSettings file (xml format), stored in the Settings folder of the project                                                                                                                                                                                                                                                                                                                |
-| Backup settings file for data     | 17    | backup.4DSettings file (xml format) for the data file, stored in the Settings folder of the data folder                                                                                                                                                                                                                                                                                                  |
-| Build application log file        | 14    | Current log file in xml format of the application builder. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                                    |
+| Backup log file                   | 13    | Archivo historial de copias de seguridad actual. Almacenado en la carpeta Logs de la aplicación.                                                                                                                                                                                                                                                                                                         |
+| Backup settings file              | 1     | Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto                                                                                                                                                                                                                                                                                                      |
+| Backup settings file for data     | 17    | archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data                                                                                                                                                                                                                                                                                       |
+| Build application log file        | 14    | Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                 |
 | Build application settings file   | 20    | Default settings file of the application builder ("buildApp.4DSettings"). Stored in the Settings folder of the project.                                                                                                                                                                                                                                                                                  |
-| Compacting log file               | 6     | Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Stored in the Logs folder.                                                                                                                                                                                                                                                        |
+| Compacting log file               | 6     | Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                    |
 | Current backup settings file      | 18    | backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file                                                                                                                                                                                                                                   |
-| Debug log file                    | 12    | Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                |
-| Diagnostic log file               | 11    | Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                           |
+| Debug log file                    | 12    | Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                            |
+| Diagnostic log file               | 11    | Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                       |
 | Directory file                    | 16    | directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file).                                                                                                                                               |
-| HTTP debug log file               | 9     | Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                              |
-| HTTP log file                     | 8     | Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.                                                                                                                                                                                                                                                                                                              |
-| IMAP Log file                     | 23    | Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                           |
+| HTTP debug log file               | 9     | Log file created by the `WEB SET OPTION(Web debug log)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                          |
+| HTTP log file                     | 8     | Log file created by the `WEB SET OPTION(Web log recording)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                      |
+| IMAP Log file                     | 23    | Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                       |
 | Last backup file                  | 2     | Last backup file, named \<applicationName>[bkpNum].4BK, stored at a custom location.                                                                                                                                                                                                                                                                                                                    |
 | Last journal integration log file | 22    | Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred                                                                                                                                                                                            |
-| Repair log file                   | 7     | Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                                                               |
+| Repair log file                   | 7     | Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                           |
 | Request log file                  | 10    | Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
-| SMTP log file                     | 15    | Log file created by the `SET DATABASE PARAMETER(SMTP Log)` command. Stored in the Logs folder.                                                                                                                                                                                                                                                                                                           |
+| SMTP log file                     | 15    | Log file created by the `SET DATABASE PARAMETER(SMTP Log)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                       |
 | User settings file                | 3     | settings.4DSettings file for all data files, stored in Preferences folder next to structure file if enabled.                                                                                                                                                                                                                                                                                             |
 | User settings file for data       | 4     | settings.4DSettings file for current data file, stored in Preferences folder next to the data file.                                                                                                                                                                                                                                                                                                      |
-| Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Stored in the Logs folder.                                                                                                                                                                                                                                             |
+| Verification log file             | 5     | Log files created by the `VERIFY CURRENT DATA FILE` and `VERIFY DATA FILE` commands or the Maintenance and Security Center (MSC). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                         |
 
 If the target *fileConstant* does not exist, a null object is returned. No se produce ningún error.
 
@@ -140,7 +140,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 #### Descripción
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
+La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.File`<!-- END REF -->. Es idéntico al comando [`File`](#file) (acceso directo).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
@@ -166,9 +166,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parámetros | Tipo     |    | Descripción                                                |
-| ---------- | -------- | -- | ---------------------------------------------------------- |
-| Resultado  | Booleano | <- | True if the file was created successfully, false otherwise |
+| Parámetros | Tipo     |    | Descripción                                                        |
+| ---------- | -------- | -- | ------------------------------------------------------------------ |
+| Resultado  | Booleano | <- | True si el archivo se ha creado con éxito, false en caso contrario |
 <!-- END REF -->
 
 #### Descripción
@@ -214,7 +214,7 @@ Creation of a preferences file in the database folder:
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Type of the alias link                       |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                     |
 | Resultado         | 4D.File   | <- | Alias or shortcut file reference             |
 <!-- END REF -->
 
@@ -677,9 +677,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Versión | Modificaciones                                          |
+| ------- | ------------------------------------------------------- |
+| v19 R3  | Default for new projects: no BOM and (macOS) LF for EOL |
+| v17 R5  | Añadidos                                                |
 </details>
 
 
@@ -707,26 +708,26 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 
 Optionally, you can designate the character set to be used for writing the contents. Puede pasar:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+- en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
 
 In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
-| Constante                     | Valor | Comentario                                                                                                                                                     |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                   |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (carriage return) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
-| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
-| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
+| Constante                     | Valor | Comentario                                                                                                                                               |
+| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                             |
+| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
+| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
+| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
+| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
-> **Compatibility Note**: compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Ejemplo
 

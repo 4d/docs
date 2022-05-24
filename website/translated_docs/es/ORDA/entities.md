@@ -173,7 +173,7 @@ You can assign or modify the value of a "1" related entity attribute from the "N
   //the related entity is updated
 ```
 
-## Creating an entity selection
+## Crear una entity selection
 
 You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
 
@@ -340,7 +340,7 @@ ORDA provides you with two entity locking modes:
 - an automatic "optimistic" mode, suitable for most applications,
 - a "pessimistic" mode allowing you to lock entities prior to their access.
 
-### Automatic optimistic lock
+### Bloqueo automático optimista
 
 This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
 

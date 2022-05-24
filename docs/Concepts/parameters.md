@@ -83,7 +83,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 The following rules apply:
 
 - The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](dt_object.md#object-property-identifiers). 
+- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties). 
 - Multiple parameters (and types) are separated by semicolons (;). 
 - Multiline syntaxes are supported (using "\\" character).
 

@@ -43,7 +43,7 @@ L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux 
 
 - En utilisant la commande `PROCESS 4D TAGS` ; cette commande accepte un *template*en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
 
-- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées au moyen d'une URL. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed.
+- En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées au moyen d'une URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed.
 
 
 ### Traitement récursif

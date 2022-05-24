@@ -20,7 +20,7 @@ La sintaxis de la estructura condicional `While...End while` es:
 
 Un bucle `While...End while` ejecuta las instrucciones dentro del bucle mientras la expresión booleana sea TRUE. Comprueba la expresión booleana al inicio del bucle y no entra en el bucle si la expresión es FALSE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 Es común inicializar el valor probado en la expresión booleana inmediatamente antes de entrar en el bucle `While...End while`. Inicializar el valor significa asignarle un contenido adecuado, normalmente para que la expresión booleana sea TRUE y `While...End while` ejecute el bucle.
 
@@ -36,7 +36,7 @@ Si se encuentra en una situación de este tipo, en la que un método se ejecuta 
 ### Ejemplo
 
 ```4d
- CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro? CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro? //¿El usuario quiere añadir un registro?
+ CONFIRM("¿Añadir un nuevo registro?") //¿El usuario quiere añadir un registro?
  While(OK=1) //Bucle mientras el usuario quiera
     ADD RECORD([aTable]) /Añadir un nuevo registro
  End while //El bucle siempre termina con End while
@@ -59,7 +59,7 @@ Un bucle `Repeat...Until` es similar a un bucle [While...End while](flow-control
 
 La otra diferencia con un bucle `Repeat...Until` es que el bucle continúa hasta que la expresión booleana sea TRUE.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 ### Ejemplo
 
@@ -97,7 +97,7 @@ El bucle `For...End for` es un bucle controlado por un contador:
 - Si *Start_Expression* y *End_Expression* son iguales, el bucle se ejecutará sólo una vez.
 - Si *Start_Expression* es mayor que *End_Expression*, el bucle no se ejecutará en absoluto a menos que se especifique una *Increment_Expression* negativa. Ver los ejemplos.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 ### Ejemplos básicos
 
@@ -313,17 +313,17 @@ La siguiente tabla compara los tres tipos de `For each... End for each`:
 | Soporte de parámetros begin / end | Sí                                                        | Sí                                    | No                               |
 
 - El número de bucles se evalúa al inicio y no cambiará durante el proceso. La adición o eliminación de elementos durante el bucle no suele ser recomendable, ya que puede resultar en redundancia o perdidas de iteraciones.
-- Por defecto, la(s) _instrucciónes_ adjuntas se ejecutan para cada valor de *Expresión*. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
+- Por defecto, la(s) _instrucciones_ adjuntas se ejecutan para cada valor de *Expresión*. Sin embargo, es posible salir del bucle comprobando una condición al principio del bucle ( `While`) o al final del bucle (`Until`).
 - Los parámetros opcionales *begin* y *end* pueden utilizarse con colecciones y selecciones de entidades para definir los límites del bucle.
 - El bucle `For each... End for each` puede utilizarse en una **colección compartida** o en un **objeto compartido**. Si su código necesita modificar uno o más elementos de la colección o de las propiedades del objeto, debe utilizar las palabras clave `Use...End use`. Dependiendo de sus necesidades, puede llamar a las palabras clave `Use...End use`:
     - antes de entrar en el bucle, si los elementos deben modificarse juntos por razones de integridad, o
     - dentro del bucle cuando sólo hay que modificar algunos elementos/propiedades y no es necesario gestionar la integridad.
 
-The `break` and `continue` statements are [described below](#break-and-continue).
+Las instrucciones `break` y `continue` se [describen a continuación](#break-and-continue).
 
 ### Bucle en las colecciones
 
-La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+Cuando `For each...End for each` se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 
 La colección debe contener sólo elementos del mismo tipo, de lo contrario se devolverá un error en cuanto a la variable _Current_Item_ se le asigne el primer tipo de valor diferente.
 
@@ -423,7 +423,7 @@ Puede definir los límites de la iteración utilizando los parámetros opcionale
 - En el parámetro *begin*, pase la posición del elemento en *Expression* en la que se iniciará la iteración (se incluye *begin*).
 - En el parámetro *end*, también se puede pasar la posición del elemento en *Expression* en la que se debe detener la iteración (se excluye *end*).
 
-Si se omite *fin* o si es mayor que el número de elementos de <em x-id="3" <Expression</em>, se iteran los elementos desde *inicio* hasta el último (incluido). Si los parámetros *inicio* y *fin* son valores positivos, representan posiciones reales de elementos en *Expression*. Si *comienzo* es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de *Expression*). Si el valor calculado es negativo, *inicio* toma el valor 0. **Nota:** aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar. Si *fin* es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
+Si se omite *fin* o si *fin*es mayor que el número de elementos de *Expression*, se iteran los elementos desde *inicio* hasta el último (incluido). Si los parámetros *inicio* y *fin* son valores positivos, representan posiciones reales de elementos en *Expression*. Si *comienzo* es un valor negativo, se recalcula como `comienzo:=comienzo+tamaño de la expresión` (se considera como el desplazamiento desde el final de *Expression*). Si el valor calculado es negativo, *inicio* toma el valor 0. **Nota:** aunque inicio sea negativo, la iteración se sigue realizando en el orden estándar. Si *fin* es un valor negativo, se recalcula como `fin:=fin+tamaño de la expresión`
 
 Por ejemplo:
 - una colección contiene 10 elementos (numerados de 0 a 9)
@@ -474,22 +474,22 @@ Puede pasar cualquiera de las dos palabras clave en función de sus necesidades:
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## `break` and `continue`
+## `break` y `continue`
 
-All looping structures above support both `break` and `continue` statements. These statements give you more control over the loops by allowing to exit the loop and to bypass the current iteration at any moment.
+Todas las estructuras de bucle anteriores soportan las instrucciones `break` y `continue`. Estas instrucciones le dan más control sobre los bucles al permitir salir del bucle y pasar por alto la iteración actual en cualquier momento.
 
 ### break
 
-The `break` statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop.
+La instrucción `break` termina el bucle que la contiene. El control del programa fluye hacia la instrucción inmediatamente posterior al cuerpo del bucle.
 
-If the `break` statement is inside a [nested loop](#nested-forend-for-looping-structures) (loop inside another loop), the `break` statement will terminate the innermost loop.
+Si la instrucción `break` está dentro de un bucle al interior de un [bucle anidado](#nested-forend-for-looping-structures) (bucle dentro de otro bucle), la instrucción `break` terminará el bucle más interno.
 
 
 #### Ejemplo
 
 ```4d
 For (vCounter;1;100)
-    If ($tab{vCounter}="") //if a condition becomes true
+    If ($tab{vCounter}="") //si una condición es verdadera
         break //end of the for loop
     End if
 End for
@@ -497,13 +497,13 @@ End for
 
 ### continue
 
-The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
+La instrucción `continue` termina la ejecución de las instrucciones en la iteración actual del bucle actual, y continúa la ejecución del bucle con la siguiente iteración.
 
 ```4d
 var $text : Text
 For ($i; 0; 9)
     If ($i=3)
-        continue //go directly to the next iteration
+        continue //pasar directamente a la siguiente iteración
     End if
     $text:=$text+String($i)
 End for

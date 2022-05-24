@@ -16,7 +16,7 @@ No es necesaria la activación para los siguientes usos:
 - 4D used in local mode with an interpreted application project with no access to the Design environment.
 
 
-## First activation
+## Primera activación
 
 With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. Aparece la caja de diálogo para elegir el [modo de activación](#activation-mode).
 

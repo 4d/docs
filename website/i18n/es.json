@@ -11,20 +11,14 @@
       "Admin/dataExplorer": {
         "title": "Explorador de datos Web"
       },
-      "Admin/debugLogFiles": {
-        "title": "Description of log files"
-      },
       "Admin/licenses": {
         "title": "Gestión de licencias 4D"
-      },
-      "Admin/server-admin": {
-        "title": "Ventana de administración de 4D Server"
       },
       "Admin/tls": {
         "title": "Protocolo TLS (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Administración Web"
+        "title": "WebAdmin"
       },
       "API/BlobClass": {
         "title": "Blob"
@@ -92,6 +86,9 @@
       "API/SMTPTransporterClass": {
         "title": "SMTPTransporter"
       },
+      "API/SystemWorkerClass": {
+        "title": "SystemWorker"
+      },
       "API/Transporter": {
         "title": "Clase Transporter"
       },
@@ -122,7 +119,7 @@
       "Backup/settings": {
         "title": "Parámetros de la copia de seguridad"
       },
-      "code-editor/dropdown": {
+      "code-editor/navigation": {
         "title": "Navigation dropdown"
       },
       "Concepts/about": {
@@ -197,6 +194,9 @@
       "Concepts/methods": {
         "title": "Métodos"
       },
+      "Concepts/operators": {
+        "title": "Operadores"
+      },
       "Concepts/parameters": {
         "title": "Parámetros"
       },
@@ -225,11 +225,17 @@
       "Debugging/debugging-remote": {
         "title": "Debugging from remote machines"
       },
+      "Debugging/debugLogFiles": {
+        "title": "Descripción de los archivos de historial"
+      },
       "Desktop/building": {
         "title": "Generador de aplicaciones"
       },
       "Desktop/clientServer": {
-        "title": "Client/Server Management"
+        "title": "Gestión Cliente/Servidor"
+      },
+      "Desktop/user-settings": {
+        "title": "Propiedades usuario"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -412,6 +418,15 @@
         "title": "On Window Opening Denied"
       },
       "Events/overview": {
+        "title": "Generalidades"
+      },
+      "Extensions/develop-components": {
+        "title": "Componentes de desarrollo"
+      },
+      "Extensions/develop-plug-ins": {
+        "title": "Developing Plug-ins"
+      },
+      "Extensions/overview": {
         "title": "Generalidades"
       },
       "FormEditor/stylesheets": {
@@ -618,6 +633,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "Área 4D Write Pro"
       },
+      "GettingStarted/creating": {
+        "title": "Trabajar con un proyecto"
+      },
       "GettingStarted/installation": {
         "title": "Instalación"
       },
@@ -707,28 +725,22 @@
         "title": "Página general"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "Página Métodos"
       },
       "Preferences/overview": {
         "title": "Generalidades"
       },
       "Preferences/shortcuts": {
-        "title": "Shortcuts Page"
+        "title": "Página Atajos"
       },
       "Preferences/structure": {
-        "title": "Structure Page"
+        "title": "Página Estructura"
       },
       "Project/architecture": {
         "title": "Arquitectura de un proyecto"
       },
       "Project/compiler": {
         "title": "Compilación"
-      },
-      "Project/components": {
-        "title": "Librería de componentes 4D"
-      },
-      "Project/creating": {
-        "title": "Trabajar con un proyecto"
       },
       "Project/documentation": {
         "title": "Documentar un proyecto"
@@ -777,6 +789,9 @@
       },
       "REST/info": {
         "title": "$info"
+      },
+      "REST/lock": {
+        "title": "$lock"
       },
       "REST/method": {
         "title": "$method"
@@ -832,6 +847,69 @@
       "REST/REST_requests": {
         "title": "Acerca de las peticiones REST"
       },
+      "ServerWindow/application-server": {
+        "title": "Página Servidor de aplicación"
+      },
+      "ServerWindow/http-server": {
+        "title": "Página del servidor HTTP"
+      },
+      "ServerWindow/maintenance": {
+        "title": "Página Mantenimiento"
+      },
+      "ServerWindow/monitor": {
+        "title": "Página Monitor"
+      },
+      "ServerWindow/overview": {
+        "title": "Generalidades"
+      },
+      "ServerWindow/processes": {
+        "title": "Página Procesos"
+      },
+      "ServerWindow/real-time-monitor": {
+        "title": "Página de seguimiento en tiempo real"
+      },
+      "ServerWindow/sql-server": {
+        "title": "Página servidor SQL"
+      },
+      "ServerWindow/users": {
+        "title": "Página Usuarios"
+      },
+      "settings/backup": {
+        "title": "Página de respaldo"
+      },
+      "settings/client-server": {
+        "title": "Página Cliente/Servidor"
+      },
+      "settings/compatibility": {
+        "title": "Página de compatibilidad"
+      },
+      "settings/compiler": {
+        "title": "Página Compilador"
+      },
+      "settings/database": {
+        "title": "Página Base de datos"
+      },
+      "settings/general": {
+        "title": "Página General"
+      },
+      "settings/interface": {
+        "title": "Página interfaz"
+      },
+      "settings/overview": {
+        "title": "Generalidades"
+      },
+      "settings/php": {
+        "title": "Págin PHP"
+      },
+      "settings/security": {
+        "title": "Página seguridad"
+      },
+      "settings/sql": {
+        "title": "Página SQL"
+      },
+      "settings/web": {
+        "title": "Página Web"
+      },
       "Tags/tags": {
         "title": "Etiquetas de transformación"
       },
@@ -839,7 +917,19 @@
         "title": "Gestión de usuarios y grupos 4D"
       },
       "Users/overview": {
-        "title": "Generalidades"
+        "title": "Presentación del control de acceso"
+      },
+      "ViewPro/configuring": {
+        "title": "Configuring 4D View Pro Areas"
+      },
+      "ViewPro/formulas": {
+        "title": "Formulas and Functions"
+      },
+      "ViewPro/getting-started": {
+        "title": "Comencemos"
+      },
+      "ViewPro/method-list": {
+        "title": "Lista de los métodos"
       },
       "WebServer/allowProject": {
         "title": "Permitir métodos proyecto"
@@ -848,16 +938,16 @@
         "title": "Autenticación"
       },
       "WebServer/errorPages": {
-        "title": "Custom HTTP Error Pages"
+        "title": "Páginas de error HTTP personalizadas"
       },
       "WebServer/gettingStarted": {
         "title": "Comencemos"
       },
       "WebServer/httpRequests": {
-        "title": "Processing HTTP requests"
+        "title": "Procesamiento de peticiones HTTP"
       },
       "WebServer/preemptiveWeb": {
-        "title": "Using preemptive web processes"
+        "title": "Uso de procesos web apropiativos"
       },
       "WebServer/sessions": {
         "title": "Sesiones usuario"
@@ -892,8 +982,13 @@
       "Class API Reference": "Clases API",
       "Code Editor": "Editor de código",
       "Debugging": "Depuración",
+      "Settings": "Settings",
       "Preferences": "Preferencias",
-      "Administration": "Administración",
+      "4D Server Administration Window": "Ventana de administración de 4D Server",
+      "Web Administration": "Administración Web",
+      "Command Line Interface": "Interfaz de línea de comando",
+      "TLS Protocol": "Protocolo TLS",
+      "License Management": "Gestión de licencias",
       "Access Rights": "Derechos de acceso",
       "MSC": "CSM",
       "Backup and Restore": "Copia de seguridad y restauración",
@@ -907,7 +1002,10 @@
       "Form Object Properties": "Propiedades de los objetos formulario",
       "Form Events": "Eventos formulario",
       "Menus": "Menús",
-      "Build Application": "Generador de aplicaciones"
+      "User Settings": "Propiedades usuario",
+      "Build application": "Generador de aplicación",
+      "Extensions": "Extensions",
+      "4D View Pro": "4D View Pro"
     }
   },
   "pages-strings": {
@@ -934,15 +1032,22 @@
     "4D Server Administration Window|no description given": "Ventana de administración de 4D Server",
     "4D Components Library|no description given": "Librería de componentes 4D",
     "Client/Server|no description given": "Cliente/Servidor",
-    "TLS Protocol (HTTPS)|no description given": "Protocolo TLS (HTTPS)",
+    "TLS Protocol|no description given": "Protocolo TLS",
     "Debugging|no description given": "Depuración",
     "Code Editor|no description given": "Editor de código",
     "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
-    "Description of log files|no description given": "Description of log files",
+    "Description of log files|no description given": "Descripción de los archivos de historial",
     "Command Line Interface|no description given": "Interfaz de línea de comando",
+    "4D View Pro|no description given": "4D View Pro",
     "Preferences|no description given": "Preferencias",
+    "Overview|no description given": "Generalidades",
+    "Developing Components|no description given": "Componentes de desarrollo",
+    "Developing Plugins|no description given": "Plugins de desarrollo",
+    "Working with a project|no description given": "Trabajar con un proyecto",
+    "Settings|no description given": "Settings",
+    "User Settings|no description given": "Propiedades usuario",
     "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",
@@ -950,6 +1055,7 @@
     "Web applications|no description given": "Aplicaciones Web",
     "Mobile applications|no description given": "Aplicaciones móbiles",
     "Desktop applications|no description given": "Aplicaciones de escritorio",
+    "Extensions|no description given": "Extensions",
     "Documentation updates|no description given": "Actualizaciones de la documentación",
     "Help Translate|recruit community translators for your project": "Ayúdenos a traducir",
     "Edit this Doc|recruitment message asking to edit the doc source": "Editar",

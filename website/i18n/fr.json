@@ -11,20 +11,14 @@
       "Admin/dataExplorer": {
         "title": "Explorateur de données Web"
       },
-      "Admin/debugLogFiles": {
-        "title": "Description des fichiers d'historique"
-      },
       "Admin/licenses": {
         "title": "Gestion des licences 4D"
-      },
-      "Admin/server-admin": {
-        "title": "Fenêtre d'administration de 4D Server"
       },
       "Admin/tls": {
         "title": "Protocole TLS (HTTPS)"
       },
       "Admin/webAdmin": {
-        "title": "Administration Web"
+        "title": "WebAdmin"
       },
       "API/BlobClass": {
         "title": "Blob"
@@ -92,6 +86,9 @@
       "API/SMTPTransporterClass": {
         "title": "SMTPTransporter"
       },
+      "API/SystemWorkerClass": {
+        "title": "SystemWorker"
+      },
       "API/Transporter": {
         "title": "Classe Transporter"
       },
@@ -122,7 +119,7 @@
       "Backup/settings": {
         "title": "Paramètres de sauvegarde"
       },
-      "code-editor/dropdown": {
+      "code-editor/navigation": {
         "title": "Navigation dropdown"
       },
       "Concepts/about": {
@@ -197,6 +194,9 @@
       "Concepts/methods": {
         "title": "Méthodes"
       },
+      "Concepts/operators": {
+        "title": "Opérateurs"
+      },
       "Concepts/parameters": {
         "title": "Paramètres"
       },
@@ -214,7 +214,7 @@
         "title": "Variables"
       },
       "Debugging/basics": {
-        "title": "Basics"
+        "title": "Principes de base"
       },
       "Debugging/breakpoints": {
         "title": "Points d'arrêt et points d'arrêt sur commande"
@@ -225,11 +225,17 @@
       "Debugging/debugging-remote": {
         "title": "Débogage depuis des machines distantes"
       },
+      "Debugging/debugLogFiles": {
+        "title": "Description des fichiers d'historique"
+      },
       "Desktop/building": {
         "title": "Générateur d'application"
       },
       "Desktop/clientServer": {
         "title": "Client/Server Management"
+      },
+      "Desktop/user-settings": {
+        "title": "Propriétés utilisateur"
       },
       "Events/onActivate": {
         "title": "Sur activation"
@@ -412,6 +418,15 @@
         "title": "On Window Opening Denied"
       },
       "Events/overview": {
+        "title": "Aperçu"
+      },
+      "Extensions/develop-components": {
+        "title": "Composants de développement"
+      },
+      "Extensions/develop-plug-ins": {
+        "title": "Plug-ins de développement"
+      },
+      "Extensions/overview": {
         "title": "Aperçu"
       },
       "FormEditor/stylesheets": {
@@ -618,6 +633,9 @@
       "FormObjects/writeProAreaOverview": {
         "title": "Zone 4D Write Pro"
       },
+      "GettingStarted/creating": {
+        "title": "Travailler avec des projets"
+      },
       "GettingStarted/installation": {
         "title": "Installation"
       },
@@ -724,12 +742,6 @@
       "Project/compiler": {
         "title": "Compilation"
       },
-      "Project/components": {
-        "title": "Bibliothèque des composants 4D"
-      },
-      "Project/creating": {
-        "title": "Travailler avec des projets"
-      },
       "Project/documentation": {
         "title": "Documenter un projet"
       },
@@ -777,6 +789,9 @@
       },
       "REST/info": {
         "title": "$info"
+      },
+      "REST/lock": {
+        "title": "$lock"
       },
       "REST/method": {
         "title": "$method"
@@ -832,6 +847,69 @@
       "REST/REST_requests": {
         "title": "A propos des requêtes REST"
       },
+      "ServerWindow/application-server": {
+        "title": "Page Serveur d’application"
+      },
+      "ServerWindow/http-server": {
+        "title": "Page Serveur HTTP"
+      },
+      "ServerWindow/maintenance": {
+        "title": "Page maintenance"
+      },
+      "ServerWindow/monitor": {
+        "title": "Page Moniteur"
+      },
+      "ServerWindow/overview": {
+        "title": "Aperçu"
+      },
+      "ServerWindow/processes": {
+        "title": "Page Process"
+      },
+      "ServerWindow/real-time-monitor": {
+        "title": "Page Moniteur temps réel"
+      },
+      "ServerWindow/sql-server": {
+        "title": "Page Serveur SQL"
+      },
+      "ServerWindow/users": {
+        "title": "Page Utilisateurs"
+      },
+      "settings/backup": {
+        "title": "Page Sauvegarde"
+      },
+      "settings/client-server": {
+        "title": "Page Client/Serveur"
+      },
+      "settings/compatibility": {
+        "title": "Page de compatibilité"
+      },
+      "settings/compiler": {
+        "title": "Page Compilateur"
+      },
+      "settings/database": {
+        "title": "Page Base de données"
+      },
+      "settings/general": {
+        "title": "Page Général"
+      },
+      "settings/interface": {
+        "title": "Page Interface"
+      },
+      "settings/overview": {
+        "title": "Aperçu"
+      },
+      "settings/php": {
+        "title": "Page PHP"
+      },
+      "settings/security": {
+        "title": "Page sécurité"
+      },
+      "settings/sql": {
+        "title": "Page SQL"
+      },
+      "settings/web": {
+        "title": "Page Web"
+      },
       "Tags/tags": {
         "title": "Balises de transformation"
       },
@@ -839,7 +917,19 @@
         "title": "Gestion des groupes et utilisateurs 4D"
       },
       "Users/overview": {
-        "title": "Aperçu"
+        "title": "Présentation du contrôle des accès"
+      },
+      "ViewPro/configuring": {
+        "title": "Configuration des zones 4D View Pro"
+      },
+      "ViewPro/formulas": {
+        "title": "Formules et fonctions"
+      },
+      "ViewPro/getting-started": {
+        "title": "Prise en main"
+      },
+      "ViewPro/method-list": {
+        "title": "Liste des méthodes"
       },
       "WebServer/allowProject": {
         "title": "Allowing project methods"
@@ -848,19 +938,19 @@
         "title": "Authentification"
       },
       "WebServer/errorPages": {
-        "title": "Custom HTTP Error Pages"
+        "title": "Pages d'erreur HTTP personnalisées"
       },
       "WebServer/gettingStarted": {
         "title": "Prise en main"
       },
       "WebServer/httpRequests": {
-        "title": "Processing HTTP requests"
+        "title": "Traitement des requêtes HTTP"
       },
       "WebServer/preemptiveWeb": {
         "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
-        "title": "User sessions"
+        "title": "Sessions utilisateur"
       },
       "WebServer/templates": {
         "title": "Template pages"
@@ -892,8 +982,13 @@
       "Class API Reference": "Classes API",
       "Code Editor": "Éditeur de code",
       "Debugging": "Débogage",
+      "Settings": "Settings",
       "Preferences": "Préférences",
-      "Administration": "Administration",
+      "4D Server Administration Window": "Fenêtre d'administration de 4D Server",
+      "Web Administration": "Administration Web",
+      "Command Line Interface": "Interface de ligne de commande",
+      "TLS Protocol": "Protocole TLS",
+      "License Management": "Gestion des licences",
       "Access Rights": "Droits d'accès",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
@@ -907,7 +1002,10 @@
       "Form Object Properties": "Propriétés des objets formulaire",
       "Form Events": "Evénements formulaire",
       "Menus": "Menus",
-      "Build Application": "Générateur d'application"
+      "User Settings": "Propriétés utilisateur",
+      "Build application": "Générateur d'application",
+      "Extensions": "Extensions",
+      "4D View Pro": "4D View Pro"
     }
   },
   "pages-strings": {
@@ -934,7 +1032,7 @@
     "4D Server Administration Window|no description given": "Fenêtre d'administration de 4D Server",
     "4D Components Library|no description given": "Bibliothèque des composants 4D",
     "Client/Server|no description given": "Client/Server",
-    "TLS Protocol (HTTPS)|no description given": "Protocole TLS (HTTPS)",
+    "TLS Protocol|no description given": "Protocole TLS",
     "Debugging|no description given": "Débogage",
     "Code Editor|no description given": "Éditeur de code",
     "Web Data Explorer|no description given": "Explorateur de données Web",
@@ -942,7 +1040,14 @@
     "Access Rights|no description given": "Droits d'accès",
     "Description of log files|no description given": "Description des fichiers d'historique",
     "Command Line Interface|no description given": "Interface de ligne de commande",
+    "4D View Pro|no description given": "4D View Pro",
     "Preferences|no description given": "Préférences",
+    "Overview|no description given": "Aperçu",
+    "Developing Components|no description given": "Composants de développement",
+    "Developing Plugins|no description given": "Plugins de développement",
+    "Working with a project|no description given": "Travailler avec des projets",
+    "Settings|no description given": "Settings",
+    "User Settings|no description given": "Propriétés utilisateur",
     "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
@@ -950,6 +1055,7 @@
     "Web applications|no description given": "Applications Web",
     "Mobile applications|no description given": "Applications Mobile",
     "Desktop applications|no description given": "Applications Desktop",
+    "Extensions|no description given": "Extensions",
     "Documentation updates|no description given": "Mises à jour de la documentation",
     "Help Translate|recruit community translators for your project": "Aidez-nous à traduire",
     "Edit this Doc|recruitment message asking to edit the doc source": "Modifier",

@@ -5,7 +5,7 @@ title: Visão Geral
 
 Form events are events that can lead to the execution of the form method and/or form object method(s). Form events allow you to control the flow of your application and to write code that is executed only when a specific event occurs.
 
-In your code, you control the events using the `FORM Event` command, that returns the triggered event. For example:
+In your code, you control the events using the `FORM Event` command, that returns the triggered event. Por exemplo:
 
 ```4d  
 //code of a button
@@ -21,9 +21,9 @@ End if
 
 Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
 
-| Propriedade | Type | Description |
-| ----------- | ---- | ----------- |
-|             |      |             |
+| Propriedade | Type | Descrição |
+| ----------- | ---- | --------- |
+|             |      |           |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
 
 `Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
@@ -63,10 +63,10 @@ The following table summarizes how object and form methods are called for each e
 | On After Edit            | Sim                                 | Sim         | Involved object only   |
 | On Getting Focus         | Sim                                 | Sim         | Involved object only   |
 | On Losing Focus          | Sim                                 | Sim         | Involved object only   |
-| On Activate              | Never                               | Sim         | None                   |
-| On Deactivate            | Never                               | Sim         | None                   |
-| On Outside Call          | Never                               | Sim         | None                   |
-| On Page Change           | Never                               | Sim         | None                   |
+| On Activate              | Never                               | Sim         | Nenhum                 |
+| On Deactivate            | Never                               | Sim         | Nenhum                 |
+| On Outside Call          | Never                               | Sim         | Nenhum                 |
+| On Page Change           | Never                               | Sim         | Nenhum                 |
 | On Begin Drag Over       | Sim                                 | Sim         | Involved object only   |
 | On Drop                  | Sim                                 | Sim         | Involved object only   |
 | On Drag Over             | Sim                                 | Never       | Involved object only   |
@@ -74,22 +74,22 @@ The following table summarizes how object and form methods are called for each e
 | On Mouse Move            | Sim                                 | Sim         | All objects            |
 | On Mouse Leave           | Sim                                 | Sim         | All objects            |
 | On Mouse Up              | Sim                                 | Never       | Involved object only   |
-| On Menu Selected         | Never                               | Sim         | None                   |
-| On Bound variable change | Never                               | Sim         | None                   |
+| On Menu Selected         | Never                               | Sim         | Nenhum                 |
+| On Bound variable change | Never                               | Sim         | Nenhum                 |
 | On Data Change           | Sim                                 | Sim         | Involved object only   |
 | On Plug in Area          | Sim                                 | Sim         | Involved object only   |
 | On Header                | Sim                                 | Sim         | All objects            |
 | On Printing Detail       | Sim                                 | Sim         | All objects            |
 | On Printing Break        | Sim                                 | Sim         | All objects            |
 | On Printing Footer       | Sim                                 | Sim         | All objects            |
-| On Close Box             | Never                               | Sim         | None                   |
+| On Close Box             | Never                               | Sim         | Nenhum                 |
 | On Display Detail        | Sim                                 | Sim         | All objects            |
 | On Open Detail           | Yes (List box)                      | Sim         | None except List boxes |
 | On Close Detail          | Yes (List box)                      | Sim         | None except List boxes |
-| On Resize                | Never                               | Sim         | None                   |
+| On Resize                | Never                               | Sim         | Nenhum                 |
 | On Selection Change      | Sim                                 | Sim         | Involved object only   |
-| On Load Record           | Never                               | Sim         | None                   |
-| On Timer                 | Never                               | Sim         | None                   |
+| On Load Record           | Never                               | Sim         | Nenhum                 |
+| On Timer                 | Never                               | Sim         | Nenhum                 |
 | On Scroll                | Sim                                 | Never       | Involved object only   |
 | On Before Data Entry     | Yes (List box)                      | Never       | Involved object only   |
 | On Column Moved          | Yes (List box)                      | Never       | Involved object only   |

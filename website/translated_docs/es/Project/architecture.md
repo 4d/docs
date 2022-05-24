@@ -3,7 +3,7 @@ id: architecture
 title: Arquitectura de un proyecto
 ---
 
-A 4D project is made of several folders and files, stored within a single parent application folder (package folder). Por ejemplo:
+Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una única carpeta padre de la apliación (carpeta paquete). Por ejemplo:
 
 - MyProject
     - `Componentes`
@@ -28,7 +28,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 La carpeta Project suele contener la siguiente jerarquía:
 
-- `<applicationName>.4DProject` file
+- archivo `<applicationName>.4DProject`
 - `Sources`
     + `Clases`
     + `DatabaseMethods`
@@ -37,17 +37,17 @@ La carpeta Project suele contener la siguiente jerarquía:
     + `TableForms`
     + `Triggers`
 - `DerivedData`
-- `Trash` (if any)
+- `Trash` (si hay)
 
 
-### `<applicationName>.4DProject` file
+### archivo `<applicationName>.4DProject`
 
 El archivo de desarrollo de proyecto, utilizado para designar y lanzar el proyecto. Este archivo puede ser abierto por:
 
 - 4D
-- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
+- 4D Server (sólo lectura, ver [Abrir un proyecto remoto](Desktop/clientServer.md#opening-a-remote-project))
 
-> In 4D projects, development is done with 4D and multi-user development is managed through source control tools. 4D Server puede abrir archivos .4DProject para realizar pruebas.
+> En los proyectos 4D, el desarrollo se realiza con 4D y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server puede abrir archivos .4DProject para realizar pruebas.
 
 This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
 
@@ -69,15 +69,15 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `DatabaseMethods`
 
-| Contenido                | Descripción                                                         | Formato |
-| ------------------------ | ------------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Database methods defined in the project. Un archivo por método base | texto   |
+| Contenido                | Descripción                                                       | Formato |
+| ------------------------ | ----------------------------------------------------------------- | ------- |
+| *databaseMethodName*.4dm | Métodos base definidos en el proyecto. Un archivo por método base | texto   |
 
 #### `Métodos`
 
-| Contenido        | Descripción                                                   | Formato |
-| ---------------- | ------------------------------------------------------------- | ------- |
-| *methodName*.4dm | Project methods defined in the project. Un archivo por método | texto   |
+| Contenido        | Descripción                                                      | Formato |
+| ---------------- | ---------------------------------------------------------------- | ------- |
+| *methodName*.4dm | Métodos proyecto definidos en el proyecto. Un archivo por método | texto   |
 
 #### `Clases`
 
@@ -110,9 +110,9 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `Triggers`
 
-| Contenido     | Descripción                                                                                          | Formato |
-| ------------- | ---------------------------------------------------------------------------------------------------- | ------- |
-| table_*n*.4dm | Trigger methods defined in the project. Un archivo de activación por tabla (n es el número de tabla) | texto   |
+| Contenido     | Descripción                                                                                            | Formato |
+| ------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+| table_*n*.4dm | Métodos trigger definidos en el proyecto. Un archivo de activación por tabla (n es el número de tabla) | texto   |
 
 **Nota:** La extensión de archivo .4dm es un formato de archivo texto, que contiene el código de un método 4D. Es compatible con las herramientas de control de versión.
 
@@ -134,7 +134,7 @@ La carpeta DerivedData contiene datos en caché utilizados internamente por 4D p
 
 ## `Libraries`
 
-> This folder is used on macOS only.
+> Esta carpeta se utiliza sólo en macOS.
 
 La carpeta Librairies contiene el archivo resultante de una compilación con el [compilador Silicon](compiler.md#silicon-compiler) en macOS.
 
@@ -144,7 +144,7 @@ La carpeta Resources contiene todos los archivos y carpetas de recursos personal
 
 | Contenido             | Descripción                                                                                                                                                                                | Formato |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| *item*                | Project resource files and folders                                                                                                                                                         | varios  |
+| *item*                | Archivos y carpetas de recursos del proyecto                                                                                                                                               | varios  |
 | Images/Library/*item* | Imágenes de la librería de imágenes como archivos separados(*). Los nombres de estos elementos se convierten en nombres de archivos. Si existe un duplicado, se añade un número al nombre. | imagen  |
 
 (*) sólo si el proyecto fue exportado desde una base binaria .4db.
@@ -168,11 +168,11 @@ Esta carpeta contiene **archivos de configuración de datos** utilizados para la
 
 > These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
 
-| Contenido           | Descripción                                                                                                                                                                                                                                            | Formato |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                                                              | JSON    |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Las llaves relativas a la configuración de la copia de seguridad se describen en el manual *Backup de las llaves XML 4D*. | XML     |
-| settings.4DSettings | Custom database settings for this data file.                                                                                                                                                                                                           | XML     |
+| Contenido           | Descripción                                                                                                                                                                                                                                                                                                         | Formato |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| directory.json      | Descripción de los grupos y usuarios de 4D y sus derechos de acceso cuando la aplicación se lanza con este archivo de datos.                                                                                                                                                                                        | JSON    |
+| Backup.4DSettings   | Parámetros de copia de seguridad de la base de datos, utilizados para definir las [opciones de copia de seguridad](Backup/settings.md) cuando la base se lanza con este archivo de datos. Las llaves relativas a la configuración de la copia de seguridad se describen en el manual *Backup de las llaves XML 4D*. | XML     |
+| settings.4DSettings | Propiedades de la base personalizadas para este archivo de datos.                                                                                                                                                                                                                                                   | XML     |
 
 
 ### `Logs`
@@ -185,7 +185,7 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 - depuración de comandos,
 - Peticiones 4D Server (generadas en en los equipos cliente y en el servidor).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) command) for maintenance log files and in cases where data folder is read-only.
+> Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html)) para los archivos de registro de mantenimiento y en los casos en que la carpeta de datos es de sólo lectura.
 
 ## `Settings`
 
@@ -195,7 +195,7 @@ Esta carpeta contiene **archivos de propiedades usuario** utilizados para la adm
 
 | Contenido           | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Formato |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                                                                                                                                                          | JSON    |
+| directory.json      | Descripción de los grupos y usuarios de 4D para la aplicacion, así como sus derechos de acceso                                                                                                                                                                                                                                                                                                                                                                  | JSON    |
 | Backup.4DSettings   | Parámetros de copia de seguridad de la base de datos, utilizados para definir las [opciones de copia de seguridad](Backup/settings.md)) cuando se lanza cada copia de seguridad. Este archivo también puede utilizarse para leer o definir opciones adicionales, como la cantidad de información almacenada en el *diario de backup*. Las llaves relativas a la configuración de la copia de seguridad se describen en el manual *Backup de las llaves XML 4D*. | XML     |
 | BuildApp.4DSettings | Archivo de parámetros de generación, creado automáticamente cuando se utiliza la caja de diálogo del generador de aplicaciones o del comando `BUILD APPLICATION`                                                                                                                                                                                                                                                                                                | XML     |
 | settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                                                                                                                                               | XML     |
@@ -214,14 +214,14 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 | debuggerCatches.json       | Llamadas a los comandos                                                   | JSON    |
 | recentTables.json          | Lista ordenada de tablas                                                  | JSON    |
 | preferences.4DPreferences  | Ruta de datos actual y posiciones de la ventana principal                 | XML     |
-| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation               | Folder  |
+| CompilerIntermediateFiles  | Archivos intermedios resultantes de la compilación Apple Silicon          | Folder  |
 
 
 ## `Componentes`
 
 Esta carpeta contiene los componentes que deben estar disponibles en el proyecto aplicación. Debe almacenarse en el mismo nivel que la carpeta Project.
 
-> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> Una aplicación proyecto puede ser utilizada por sí misma como un componente: - para el desarrollo: inserte un alias del archivo .4dproject en la carpeta Components del proyecto local. - para el despliegue: [cree el componente](Desktop/building.md#build-component) y coloque el archivo .4dz resultante en una carpeta .4dbase en la carpeta Components de la aplicación local.
 
 
 ## `Plugins`
@@ -239,6 +239,6 @@ Para más información, consulte [Documentar un proyecto](Project/documentation.
 
 Define la carpeta raíz por defecto del servidor web 4D para las páginas, las imágenes, etc. Se crea automáticamente cuando se lanza el servidor web por primera vez.
 
-## `.gitignore` file (optional)
+## Archivo `.gitignore` (opcional)
 
 File that specifies which files will be ignored by git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).

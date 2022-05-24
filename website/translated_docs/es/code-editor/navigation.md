@@ -9,11 +9,11 @@ The navigation dropdown helps you organize your code and navigate more easily in
 
 Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
 
-## Code navigation
+## Navegación en el código
 
 Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
 
-## Automatic tagging
+## Etiquetado automático
 
 Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
 
@@ -23,21 +23,21 @@ The following items are added automatically:
 
 | Icono                                                                    | Elemento                                         |
 | ------------------------------------------------------------------------ | ------------------------------------------------ |
-| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | No tag                                           |
+| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | Sin etiqueta                                     |
 | ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
 | ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](assets/en/code-editor/function.png)                     | Class function name                              |
+| ![function-icon](assets/en/code-editor/function.png)                     | Nombre de la función de clase                    |
 
 
-## Manual tagging
+## Etiquetado manual
 
 By adding markers in your code, you can add the following tags to the dropdown:
 
-| Icono                                                | Elemento   |
-| ---------------------------------------------------- | ---------- |
-| ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK: tag  |
-| ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: tag  |
-| ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME: tag |
+| Icono                                                | Elemento       |
+| ---------------------------------------------------- | -------------- |
+| ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK: etiqueta |
+| ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: etiqueta |
+| ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME: tag     |
 
 You declare them by adding comments such as:
 
@@ -47,7 +47,7 @@ You declare them by adding comments such as:
 
 Declarations are not case-sensitive; writing `fixme:` has the same effect.
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
+Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. Así que escribiendo esto:
 
 ![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
 
@@ -57,7 +57,7 @@ Results in this:
 
 All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
 
-## Display order
+## Orden de visualización
 
 Tags are displayed in their appearing order inside the method/class.
 

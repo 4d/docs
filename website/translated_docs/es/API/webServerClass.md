@@ -189,7 +189,7 @@ Ruta de la carpeta <!-- REF #WebServerClass.certificateFolder.Summary -->donde s
 **.characterSet** : Number<br>**.characterSet** : Text<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.characterSet.Summary -->conjunto de caracteres que el Servidor Web 4D debe utilizar para comunicarse con los navegadores que se conectan a la aplicación<!-- END REF -->. The default value actually depends on the language of the OS. Puede ser un entero MIBEnum o una cadena Name, identificadores [definidos por IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Aquí está la lista de identificadores correspondientes a los conjuntos de caracteres soportados por el servidor web 4D:
+El <!-- REF #WebServerClass.characterSet.Summary -->conjunto de caracteres que el Servidor Web 4D debe utilizar para comunicarse con los navegadores que se conectan a la aplicación<!-- END REF -->. El valor por defecto depende del lenguaje del sistema operativo. Puede ser un entero MIBEnum o una cadena Name, identificadores [definidos por IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Aquí está la lista de identificadores correspondientes a los conjuntos de caracteres soportados por el servidor web 4D:
 
 *   4 = ISO-8859-1
 *   12 = ISO-8859-9
@@ -217,7 +217,7 @@ El <!-- REF #WebServerClass.characterSet.Summary -->conjunto de caracteres que e
 **.cipherSuite** : Text<!-- END REF -->
 
 
-La lista de cifrado <!-- REF #WebServerClass.cipherSuite.Summary -->utilizada para el protocolo seguro<!-- END REF -->. Define la prioridad de los algoritmos de cifrado implementados por el servidor web de 4D. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
+La lista de cifrado <!-- REF #WebServerClass.cipherSuite.Summary -->utilizada para el protocolo seguro<!-- END REF -->. Define la prioridad de los algoritmos de cifrado implementados por el servidor web de 4D. Puede ser una secuencia de cadenas separadas por dos puntos (por ejemplo "ECDHE-RSA-AES128-..."). Ver la [página de cifrados](https://www.openssl.org/docs/manmaster/man1/ciphers.html) en el sitio OpenSSL.
 
 <!-- END REF -->
 
@@ -528,10 +528,10 @@ El <!-- REF #WebServerClass.isRunning.Summary -->estado de ejecución del servid
 El valor de registro <!-- REF #WebServerClass.logRecording.Summary -->log (logweb.txt)<!-- END REF -->.
 
 *   0 = Do not record (default)
-*   1 = Record in CLF format
-*   2 = Record in DLF format
-*   3 = Record in ELF format
-*   4 = Record in WLF format
+*   1 = Registro en formato CLF
+*   2 = Registro en formato DLF
+*   3 = Registro en formato ELF
+*   4 = Registro en formato WLF
 
 <!-- END REF -->
 
@@ -758,7 +758,7 @@ Ver la descripción de [Session Cookie SameSite](WebServer/webServerConfig.md#se
 <!-- REF #WebServerClass.sessionIPAddressValidation.Syntax -->
 **.sessionIPAddressValidation** : Boolean<!-- END REF -->
 
-> This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
+> Esta propiedad no se utiliza en el modo [sesiones escalables](#scalablesession) (no hay validación de la dirección IP).
 
 La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de la dirección IP para las cookies de sesión<!-- END REF -->. Por razones de seguridad, por defecto el servidor web comprueba la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. Por ejemplo, cuando los dispositivos móviles cambian entre las redes WiFi y 3G/4G, su dirección IP cambiará. En este caso, puede permitir que los clientes puedan seguir utilizando sus sesiones web incluso cuando las direcciones IP cambien (esta configuración reduce el nivel de seguridad de su aplicación).
 
@@ -794,7 +794,7 @@ La función `.start()` <!-- REF #WebServerClass.start().Summary -->inicia el ser
 
 El servidor web se inicia con la configuración por defecto definida en el archivo de configuración del proyecto o (sólo en la base host) utilizando el comando `WEB SET OPTION`. Sin embargo, utilizando el parámetro *settings*, se pueden definir propiedades personalizadas para la sesión del servidor web.
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
+Todas las configuraciones de los [objetos del Servidor Web](#web-server-object) pueden personalizarse, excepto las propiedades de sólo lectura ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy) y [.sessionCookieName(#sessioncookiename)]).
 
 La configuración de la sesión personalizada se restablecerá cuando se llame a la función [`.stop()`](#stop).
 
@@ -810,7 +810,7 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 |           | \[].errCode            | Número     | Código de error 4D                                                   |
 |           | \[].message            | Texto      | Description of the 4D error                                          |
 |           | \[].componentSignature | Texto      | Firma del componente interno que ha devuelto el error                |
-> If the Web server was already launched, an error is returned.
+> Si el servidor web ya fue lanzado, se devuelve un error.
 
 #### Ejemplo
 
@@ -854,7 +854,7 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 La función `.stop()` <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web sobre el que se aplica<!-- END REF -->.
 
 Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.
-> This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
+> Esta función reinicia los parámetros web personalizados definidos para la sesión mediante el parámetro *settings* de la función [`.start()`](#start), si la hubiera.
 
 
 #### Ejemplo

@@ -39,7 +39,7 @@ The default value depends on the variable type:
 
 | Type          | Default value  |
 | ------------- | -------------- |
-| Booleen       | False          |
+| Boolean       | False          |
 | Date          | 00-00-00       |
 | Inteiro longo | 0              |
 | Hora          | 00:00:00       |
@@ -50,7 +50,7 @@ The default value depends on the variable type:
 | Blob          | Blob size=0    |
 | Objeto        | null           |
 | Coleção       | null           |
-| Variant       | undefined      |
+| Variant       | indefinido     |
 
 
 ## Converting data types

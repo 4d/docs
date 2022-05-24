@@ -49,15 +49,15 @@ Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 - una lista de selección
 - un array
 
-### Using an object
+### Utilizar un objeto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
 
-| Propiedad      | Tipo       | Descripción                                                                                                                           |
-| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
-| `currentValue` | Texto      | Currently selected value                                                                                                              |
+| Propiedad      | Tipo       | Descripción                                                                                                                                |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `values`       | Collection | Obligatorio - Colección de valores escalares. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
+| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                        |
+| `currentValue` | Texto      | Valor actual seleccionado                                                                                                                  |
 
 The initialization code must be executed before the form is presented to the user.
 
@@ -87,7 +87,7 @@ Puede crear un array Texto que contenga los nombres de cada página del formular
 > You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
 
 
-## Goto page features
+## Funcionalidades de Goto page
 
 ### Comando FORM GOTO PAGE
 

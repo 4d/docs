@@ -35,7 +35,7 @@ Attachment objects provide the following read-only properties and functions:
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| Parameter   | Type              |    | Description                                                          |
+| Parameter   | Type              |    | Descrição                                                            |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | file        | 4D.File           | -> | Attachment file                                                      |
 | zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
@@ -45,11 +45,11 @@ Attachment objects provide the following read-only properties and functions:
 | cid         | Texto             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
 | type        | Texto             | -> | Value of the content-type header                                     |
 | disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Result      | 4D.MailAttachment | <- | Attachment object                                                    |
+| Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 O comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
 
@@ -180,7 +180,7 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Parameter   | Type              |    | Description                                                          |
+| Parameter   | Type              |    | Descrição                                                            |
 | ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
 | file        | 4D.File           | -> | Attachment file                                                      |
 | zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
@@ -190,11 +190,11 @@ $transporter.send($email)
 | cid         | Texto             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
 | type        | Texto             | -> | Value of the content-type header                                     |
 | disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Result      | 4D.MailAttachment | <- | Attachment object                                                    |
+| Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e retorna um novo objeto do tipo `4D.MailAttachment`<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
 
@@ -205,7 +205,7 @@ A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -
 **.cid** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> a ID do anexo<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
 
@@ -216,7 +216,7 @@ A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> a ID 
 **.disposition** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho `Content-Disposition`<!-- END REF -->. Two values are available:
 
@@ -230,13 +230,13 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 **.getContent()** : 4D.Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parameter | Type    |    | Description       |
+| Parameter | Type    |    | Descrição         |
 | --------- | ------- |:--:| ----------------- |
-| Result    | 4D.Blob | <- | Conteúdo do anexo |
+| Resultado | 4D.Blob | <- | Conteúdo do anexo |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Pode usar esse método com objetos anexos recebidos pelo comando [`MAIL Convert from MIME`](#mail-convert-from-mime).
 
@@ -248,7 +248,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 **.name** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade`.name` contém <!-- REF #MailAttachmentClass.name.Summary -->o nome e extensão do anexo<!-- END REF -->.  Como padrão, é o nome do arquivo, a não ser que outro nome tenha sido especificado no comando [`MAIL New attachment`](#mail-new-attachment).
 
@@ -258,7 +258,7 @@ A propriedade`.name` contém <!-- REF #MailAttachmentClass.name.Summary -->o nom
 **.path** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->a rota POSIX do arquivo anexo, se existir<!-- END REF -->.
 
@@ -275,7 +275,7 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->a ro
 **.platformPath** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade`.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath.Summary -->a rota do arquivo anexo expresso na sintaxe da plataforma atual<!-- END REF -->.
 
@@ -286,7 +286,7 @@ A propriedade`.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath.
 **.type** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se o tipo não for passado explicitamente ao comando [`MAIL New attachment`](#mail-new-attachment), o `content-type` é baseado na sua extensão de arquivo.
 

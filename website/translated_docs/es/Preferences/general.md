@@ -18,7 +18,7 @@ This option allows you to configure the default 4D display at startup, when the 
 *   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
 > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
-### Automatic form creation
+### Creación de formularios automática
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
@@ -49,7 +49,7 @@ Hay tres opciones disponibles:
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
 *   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
-### Appearance (macOS only)
+### Apariencia (sólo para macOS)
 
 This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
 
@@ -86,7 +86,7 @@ These items allow you to create binary databases (see [Creating a new database](
 
 When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
 
-### Create package
+### Crear un paquete
 
 When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
 
@@ -134,7 +134,7 @@ A 4D database can thus operate in a language different from that of the system. 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
-## Documentation Location
+## Ubicación de la documentation
 
 This area configures access to the 4D HTML documentation displayed in your current browser:
 

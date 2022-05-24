@@ -26,7 +26,7 @@ To unlock the entity for other sessions and 4D processes:
 The [`lockKindText` property](../API/EntityClass.html#lock) is "Locked by session".
 
 
-### Description
+### Descrição
 
 The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
 
@@ -46,7 +46,7 @@ A `?$lock` request returns a JSON object with `"result"=true` if the lock operat
 
 The returned "__STATUS" object has the following properties:
 
-| Propriedade  |                | Type     | Description                                                                                                                                                 |
+| Propriedade  |                | Type     | Descrição                                                                                                                                                   |
 | ------------ | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |                |          | ***Available only in case of success:***                                                                                                                    |
 | success      |                | booleano | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).             |

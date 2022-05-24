@@ -1,6 +1,6 @@
 ---
 id: sql-server
-title: SQL Server Page
+title: Página servidor SQL
 ---
 
 
@@ -15,7 +15,7 @@ The upper part of the page provides information about the current status of the 
 - **Starting time**: Date and time the SQL server was last launched.
 - **Uptime**: Time elapsed since last startup of the SQL server.
 
-## Start / Stop SQL Server
+## Iniciar/detener el servidor SQL
 
 This button toggles and can be used to control the activation of the 4D Server SQL server.
 
@@ -36,6 +36,6 @@ These parameters can be modified via the 4D Settings.
 
 Number of SQL connections currently open on 4D Server.
 
-### Maximum Connections
+### Conexiones máximas
 
 Maximum number of simultaneous SQL connections allowed. This value depends on the license installed on the server machine.

@@ -1,13 +1,13 @@
 ---
 id: database
-title: Database page
+title: Página Base de datos
 ---
 
-## Data storage page
+## Página Almacenamiento de datos
 
 You use this page to configure data storage on disk for the 4D database.
 
-### General Settings
+### Parámetros generales
 
 
 #### Allow Read Only Data file Use
@@ -18,7 +18,7 @@ This option allows configuration of the application operation when opening a loc
 
 Unless this option is checked, it is not possible to open a database when its data file is locked (default operation for 4D databases).
 
-#### About locked files
+#### Sobre el bloqueo de archivos
 
 Locked files can be read but their contents cannot be modified. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
 
@@ -38,7 +38,7 @@ Three location options are provided:
 
 > This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
 
-### Text comparison
+### Comparación de texto
 
 > If you change one of these options, you have to quit and reopen the database to make the change effective. Once the database is reopened, all of the database's indexes are automatically re-indexed.
 
@@ -80,7 +80,7 @@ To disable *Mecab*, just check the **Consider only non-alphanumeric chars for ke
 
 > **Note:** You can also disable the use of Mecab by deleting or renaming the Resources/mecab folder of your 4D Japanese application.
 
-## Memory page
+## Página Memoria
 
 You use the settings on this tab to configure the cache memory for the database.
 
@@ -89,7 +89,8 @@ You use the settings on this tab to configure the cache memory for the database.
 -   **Calculation of adaptive cache**: When this option is checked, management of the memory cache is done dynamically by the system --- respecting limits that you set. This allows configuration of a high performance memory cache adapted to most configurations. The size of the memory cache is then calculated dynamically depending on set parameters. The values offered by default correspond to standard 4D usage.
 
     -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
-    -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\ To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. You can set limits using the following two options:
+    -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
+      To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. You can set limits using the following two options:
     -   **Minimum Size**: Minimum amount of memory that must be reserved for the cache. This value cannot be less than 100 MB.
     -   **Maximum Size**: Maximum amount of memory that can be used by the cache. This value is virtually unlimited.\  
       Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. In this case, the limits set let you guarantee a minimum performance in all cases. The following diagram illustrates this behavior:

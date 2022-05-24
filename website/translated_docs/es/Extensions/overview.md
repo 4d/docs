@@ -6,12 +6,12 @@ title: Generalidades
 The 4D [project architecture](Project/architecture) is modular. You can provide additional functionalities to your 4D projects by installing [**components**](Concepts/components.md) and [**plug-ins**](Concepts/plug-ins). Components are made of 4D code, while plug-ins can be built using any language.
 
 
-## Preinstalled 4D components
+## Componentes 4D preinstalados
 
 4D includes by default a set of built-in 4D components, that you can see in the **Component Methods** theme of the Explorer's Methods page.
 
 
-| Nombre del componente                                                         | Descripción                                                                                                       | Main Features                                                                                            |
+| Nombre del componente                                                         | Descripción                                                                                                       | Principales funcionalidades                                                                              |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | 4D Labels                                                                     | Internal component required to build label templates                                                              |                                                                                                          |
 | [4D Mobile App Server](https://github.com/4d-go-mobile/4D-Mobile-App-Server)  | Conjunto de clases y funciones utilitarias para autenticar, gestionar sesiones y desarrollar aplicaciones móviles | `.Action`, `.Authentication`, `.PushNotification`, `.WebHandler`, Authentication with email confirmation |

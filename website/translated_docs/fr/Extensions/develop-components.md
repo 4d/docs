@@ -14,7 +14,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
 - **Composant** : Projet utilisé comme matrice, pouvant être compilé ou [généré](Desktop/building.md#build-component), copié dans le dossier [`Components`](Project/architecture.md) de l'application hôte et dont le contenu est utilisé dans l'application hôte.
 
-## Basics
+## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
@@ -138,13 +138,13 @@ component_method($input_t)
 
 L’utilisation de pointeurs pour faire communiquer les composants et le projet hôte nécessite de prendre en compte les spécificités suivantes :
 
-- The `Get pointer` command will not return a pointer to a variable of the host project if it is called from a component and vice versa.
+- La commande `Get pointer` ne retournera pas un pointeur vers une variable du projet hôte si elle est appelée depuis un composant et inversement.
 
-- L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host project.
+- L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. L’usage de pointeurs dans ce cas doit respecter le principe suivant : l’interpréteur peut dépointer un pointeur construit en mode compilé mais à l’inverse, en mode compilé, il n’est pas possible de dépointer un pointeur construit en mode interprété. Illustrons ce principe par l’exemple suivant : soient deux composants, C (compilé) et I (interprété) installés dans le même projet hôte.
  - Si le composant C définit la variable `mavarC`, le composant I peut accéder à la valeur de cette variable en utilisant le pointeur `->mavarC`.
  - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
+- La comparaison de pointeurs via la commande `RESOLVE POINTER` est déconseillée avec les composants car le principe de cloisonnement des variables autorise la coexistence de variables de même nom mais au contenu radicalement différent dans un composant et le projet hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
 ```4d
      RESOLVE POINTER(monptr1;vNomVar1;vnumtable1;vnumchamp1)

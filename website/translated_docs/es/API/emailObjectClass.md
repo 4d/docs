@@ -66,7 +66,7 @@ An object with two properties:
 | Propiedad | Tipo  | Descripción                |
 | --------- | ----- | -------------------------- |
 | name      | Texto | Display name (can be null) |
-| email     | Texto | Email address              |
+| email     | Texto | Correo electrónico         |
 
 #### Collection
 
@@ -151,17 +151,17 @@ La propiedad `.bodyStructure` contiene el objeto <!-- REF #EmailObjectClass.body
 
 The `.bodyStructure` object contains the following properties:
 
-| Propiedad   | Tipo                  | Valor                                                                                                                                                   |
-| ----------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| partID      | Texto                 | Identifies the part uniquely within the email                                                                                                           |
-| type        | Texto                 | (mandatory) Value of the Content-Type header field of the part                                                                                          |
-| charset     | Texto                 | Value of the charset parameter of the Content-Type header field                                                                                         |
-| encoding    | Texto                 | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
-| disposition | Texto                 | Value of the Content-Disposition header field of the part                                                                                               |
-| lenguaje    | Colección de textos   | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
-| location    | Texto                 | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
-| subParts    | Collection of objects | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
-| headers     | Collection of objects | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
+| Propiedad   | Tipo                 | Valor                                                                                                                                                   |
+| ----------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| partID      | Texto                | Identifies the part uniquely within the email                                                                                                           |
+| type        | Texto                | (mandatory) Value of the Content-Type header field of the part                                                                                          |
+| charset     | Texto                | Value of the charset parameter of the Content-Type header field                                                                                         |
+| encoding    | Texto                | If `isEncodingProblem=true`, the Content-Transfer-Encoding value is added (by default undefined)                                                        |
+| disposition | Texto                | Value of the Content-Disposition header field of the part                                                                                               |
+| lenguaje    | Colección de textos  | List of language tags, as defined in [RFC3282](https://tools.ietf.org/html/rfc3282), in the Content-Language header field of the part, if present.      |
+| location    | Texto                | URI, as defined in [RFC2557](https://tools.ietf.org/html/rfc2557), in the Content-Location header field of the part, if present.                        |
+| subParts    | Colección de objetos | Body parts of each child (collection of *EmailBodyPart* objects)                                                                                        |
+| headers     | Colección de objetos | List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property) |
 
 
 

@@ -42,7 +42,7 @@ This option must be selected at the 4D structure level for each table and each f
 
 ### Actualización del modelo de datos
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificaciones incluyen:
 
 *   adding or removing a table, a field, or a relation
 *   renaming of a table, a field, or a relation
@@ -56,7 +56,7 @@ However, the updated ORDA model layer is not automatically available in the foll
 *   a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
 
 
-## Object definition
+## Definiciones de los objetos
 
 ### Datastore
 

@@ -1159,7 +1159,8 @@ El código del método ***LengthLessThan*** es:
 Quiere encontrar el nombre de una ciudad dentro de una colección:
 
 ```4d
- var $c; $c2 : Collection
+ var $c : Collection
+ var $c2 : Object
  $c:=New collection
  $c.push(New object("name";"Cleveland";"zc";35049))
  $c.push(New object("name";"Blountsville";"zc";35031))
@@ -1302,6 +1303,7 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 *   Si *startFrom* = 0, se busca en toda la colección (por defecto).
 
 #### Ejemplo
+
 
 
 
@@ -2237,6 +2239,7 @@ Puede pasar el valor para inicializar el acumulador en *initValue*. Si se omite,
  $c:=New collection(5;3;5;1;3;4;4;6;2;2)
  $r:=$c.reduce("Multiply";1) //devuelve 86400
 ```
+
 
 Con el siguiente método ***Multiply***:
 

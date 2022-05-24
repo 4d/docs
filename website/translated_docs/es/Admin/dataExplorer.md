@@ -21,7 +21,7 @@ The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component f
 > The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) function.
 
 
-## Opening the Data Explorer
+## Apertura del Explorador de datos
 
 The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
 
@@ -43,7 +43,7 @@ To connect to the Data Explorer web page:
 
 
 
-## Using the Data Explorer
+## Uso del explorador de datos
 
 In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
 
@@ -87,12 +87,12 @@ The page contains several areas:
 
 
 
-### Updating contents
+### Actualizar los contenidos
 
 When the ORDA model or data is modified on the database side (table added, record edited or deleted, etc.), you just need to refresh the Data Explorer page in the browser (using the F5 key, for example).
 
 
-### Ordering entities
+### Ordenar las entidades
 
 You can reorder the displayed entity list according to attribute values. All types of attributes can be used for a sort, except picture and object.
 
@@ -119,7 +119,7 @@ Different operators and query options are available, depending on the data type 
 
 > You cannot filter on picture or object attributes.
 
-#### Numeric operators
+#### Operadores numéricos
 
 With numeric, date, and time attributes, the "=" operator is selected by default. However, you can select another operator from the operator list (click on the "=" icon to display the list):
 
@@ -148,7 +148,7 @@ The filter is of the "starts with" type. For example, entering "Jim" will show "
 
 You can also use the wildcard character (@) to replace one or more starting characters. Por ejemplo:
 
-| Un filtro con | Finds                                              |
+| Un filtro con | Resultados                                         |
 | ------------- | -------------------------------------------------- |
 | Bel           | All values beginning with “Bel”                    |
 | @do           | Todos los valores que contienen "do"               |

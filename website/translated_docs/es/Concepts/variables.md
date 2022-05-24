@@ -49,15 +49,15 @@ var $myFile : 4D.File  //una variable objeto clase archivo
 var $myVar //una variable variant
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName`es el nombre de la variable, debe cumplir con las [reglas 4D](Concepts/identifiers.md) sobre identificadores.   
+Esta sintaxis sólo admite declaraciones de [variables locales y proceso](#local-process-and-interprocess-variables), por lo que se excluyen las [variables interprocesos](#interprocess-variables) y los [arrays](Concepts/arrays.md).
 
 `varType` puede ser:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- un [tipo básico](Concepts/data-types.md), en cuyo caso la variable contiene un valor del tipo declarado,
+- una [referencia de clase](Concepts/classes.md) (clase 4D o clase usuario), en cuyo caso la variable contiene una referencia a un objeto de la clase definida.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Si `varType` se omite, una variable de tipo **variant** se crea.
 
 La siguiente tabla enumera todos los valores `varType` soportados:
 
@@ -92,14 +92,14 @@ var $o : 4D.Object
 //también equivalente a C_OBJECT($o)
 ```
 
-- To declare object variables of 4D class:
+- Para declarar las variables objeto de la clase 4D:
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- To declare object variables of user class:
+- Para declarar las variables objeto de la clase usuario:
 
 ```4d
 var $myClass : cs.MyClass
@@ -112,7 +112,7 @@ var $entity : cs.EmployeeEntity
 
 > **Nota:** los parámetros $1, $2... pasados a los métodos son variables locales. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+Las directivas del tema "Compilador" permiten declarar variables de tipos básicos.
 
 Por ejemplo, si se quiere definir una variable de tipo texto, se escribe:
 

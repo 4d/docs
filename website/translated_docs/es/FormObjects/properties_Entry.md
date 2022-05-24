@@ -109,7 +109,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | ~a##                                   | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                                  |
 | !0&9##/##/##                           | Standard date entry format. Display zeros in entry spaces. Permitir cualquier número.                                                                 |
 | !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Display zeros in entry spaces. Permitir cualquier número. Limited to hours and minutes.                                   |
-| !0&9##:##                              | Formato de entrada de hora. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
+| !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                  |
 | !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
 | !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
 | !0&9##-##-##-##                        | Local telephone number format. Display zeros in entry spaces. Permitir cualquier número. Three entries, hyphen, four entries.                         |
@@ -118,7 +118,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9###-##-###                         | Número de la Seguridad Social. Display zeros in entry spaces. Permitir cualquier número.                                                              |
 | ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                         |
 | &"a-z;0-9; ;,;.;-"                     | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                  |
-| &"0-9;.;-"                             | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
+| &"0-9;.;-"                             | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
 
 
 #### Gramática JSON
@@ -224,7 +224,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 
 
 ---
-## Placeholder
+## Marcador
 
 4D can display placeholder text in the fields of your forms.
 

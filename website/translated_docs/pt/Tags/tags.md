@@ -344,7 +344,7 @@ Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| myvar Value          | Tags                         | Result              |
+| myvar Value          | Tags                         | Resultado           |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |

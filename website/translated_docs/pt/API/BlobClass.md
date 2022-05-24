@@ -26,13 +26,13 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Parameter | Type            |    | Description  |
+| Parameter | Type            |    | Descrição    |
 | --------- | --------------- |:--:| ------------ |
 | blob      | Blob or 4D.Blob | -> | Blob to copy |
-| Result    | 4D.Blob         | <- | New 4D.Blob  |
+| Resultado | 4D.Blob         | <- | New 4D.Blob  |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
 `4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`).<!-- END REF -->
 
@@ -43,7 +43,7 @@ If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
 <!-- REF #Blob.size.Syntax -->
 **.size** : Real<!-- END REF -->
 
-#### Description
+#### Descrição
 The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
 
 ## .slice()
@@ -58,15 +58,15 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 **.slice()** : 4D.Blob<br/>**.slice**( *start* : Real ) : 4D.Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #Blob.slice().Params -->
-| Parameter | Type    |    | Description                                                            |
+| Parameter | Type    |    | Descrição                                                              |
 | --------- | ------- |:--:| ---------------------------------------------------------------------- |
 | start     | Real    | -> | index of the first byte to include in the new `4D.Blob`.               |
 | end       | Real    | -> | index of the first byte that will not be included in the new `4D.Blob` |
-| Result    | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
+| Resultado | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrição
 
 `.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF -->
 

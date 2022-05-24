@@ -55,7 +55,7 @@ The break point list is stored locally. In remote debugging mode, if the attache
 
 The server break point list is automatically restored if it becomes again the attached debugger.
 
-### Break List
+### Lista de rupturas
 
 The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Method Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 

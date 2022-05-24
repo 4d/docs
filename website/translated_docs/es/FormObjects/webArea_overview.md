@@ -6,10 +6,10 @@ title: Área Web
 
 Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-areas-rules).
+It is possible to create several web areas in the same form. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-areas-rules).
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
-> The use of web plugins and Java applets is not recommended in web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
+> No se recomienda el uso de plugins web ni de applets de Java en las áreas web porque pueden provocar inestabilidad en el funcionamiento de 4D, especialmente a nivel de gestión de eventos.
 
 
 ## Propiedades específicas
@@ -24,7 +24,7 @@ Two specific variables can be associated with each web area:
 
 You can choose between [two rendering engines](properties_WebArea.md#use-embedded-web-rendering-engine) for the web area, depending on the specifics of your application.
 
-Selecting the embedded web rendering engine allows you to call 4D methods from the web area.
+La selección del motor de renderizado web anidado le permite llamar a los métodos 4D desde el área web.
 
 ### Acceder a los métodos 4D
 
@@ -154,7 +154,7 @@ When the form is executed, standard browser interface functions are available to
 
 - **Edit menu commands**: When the web area has the focus, the **Edit** menu commands can be used to carry out actions such as copy, paste, select all, etc., according to the selection.
 - **Context menu**: It is possible to use the standard [context menu](properties_Entry.md#context-menu) of the system with the web area. La visualización del menú contextual se puede controlar con el comando `WA SET PREFERENCE`.
-- **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE` command to explicitly allow the dropping of URLs or files in the web area.
+- **Drag and drop**: The user can drag and drop text, pictures and documents within the web area or between a web area and the 4D form objects, according to the 4D object properties. For security reasons, changing the contents of a web area by means of dragging and dropping a file or URL is not allowed by default. In this case, the cursor displays a "forbidden" icon ![](assets/en/FormObjects/forbidden.png). Tiene que utilizar el comando `WA SET PREFERENCE` para permitir explícitamente soltar URLs o archivos en el área web.
 
 ### Subformularios
 
@@ -163,7 +163,7 @@ For reasons related to window redrawing mechanisms, the insertion of a web area 
 - El subformulario no debe poder desplazarse
 - The limits of the web area must not exceed the size of the subform
 
-> Superimposing a web area on top of or beneath other form objects is not supported.
+> No se soporta la superposición de un área web sobre o debajo de otros objetos formulario.
 
 
 ### Conflicto entre el área web y el servidor web (Windows)
@@ -176,18 +176,18 @@ The URLs handled by programming in web areas in macOS must begin with the protoc
 
 ## Acceso al inspector web
 
-You can view and use a web inspector within web areas in your forms or in offscreen web areas. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
+You can view and use a web inspector within web areas in your forms or in offscreen web areas. El inspector web es un depurador que ofrece el motor web integrado. Permite analizar el código y el flujo de información de las páginas web.
 
-### Displaying the web inspector
+### Mostrar el inspector web
 
-To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area.
+Para mostrar el inspector web, puede ejecutar el comando `WA OPEN WEB INSPECTOR` o utilizar el menú contextual del área web.
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br> This command can be used directly with onscreen (form object) and offscreen web areas. In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the web inspector is only available with this configuration).
+- **Ejecute el comando `WA OPEN WEB INSPECTOR` **<br> Este comando se puede utilizar directamente con áreas web en pantalla (objeto formulario) y fuera de ella. En el caso de un área web en pantalla, debe haber [seleccionado el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área (el inspector web sólo está disponible con esta configuración).
 
-- **Use the web area context menu**<br> This feature can only be used with onscreen web areas and requires that the following conditions are met:
-    - the embedded web rendering engine is selected for the area
-    - the [context menu](properties_Entry.md#context-menu) for the web area is enabled
-    - the use of the inspector is expressly enabled in the area by means of the following statement:
+- **Utilice el menú contextual del área web**<br> Esta funcionalidad sólo puede utilizarse con áreas web en pantalla y requiere que se cumplan las siguientes condiciones:
+    - se selecciona el motor de renderizado web integrado para el área
+    - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
+    - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
 
 ```4d
     WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
@@ -199,7 +199,7 @@ For more information, refer to the description of the `WA SET PREFERENCE` comman
 
 Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces tendrá nuevas opciones como **Inspeccionar elemento** en el menú contextual del área. When you select this option, the web inspector window is displayed.
 
-> The web inspector is included in the embedded web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the web rendering engine.
+> El inspector web está incluido en el motor de renderizado web integrado. Para una descripción detallada de las funcionalidades de este depurador, consulte la documentación que ofrece el motor de renderizado web.
 
 
 

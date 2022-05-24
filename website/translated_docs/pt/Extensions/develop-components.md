@@ -79,7 +79,7 @@ Conversely, for security reasons, by default a component cannot execute project 
 
 ![](assets/en/Concepts/pict516563.en.png)
 
-Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. For example:
+Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Por exemplo:
 
 ```4d 
 // Host Method

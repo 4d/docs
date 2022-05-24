@@ -3,7 +3,7 @@ id: parámetros
 title: Parámetros de la copia de seguridad
 ---
 
-Backup settings are defined through three pages in the [Settings dialog box](../settings/overview.md). Puede definir:
+Los parámetros de copia de seguridad se definen a través de tres páginas en el [cuadro de diálogo de los parámetros](../settings/overview.md). Puede definir:
 
 - la periodicidad de las copias de seguridad automáticas
 - los archivos a incluir en cada copia de seguridad
@@ -63,7 +63,7 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 
 Esta área le permite visualizar y cambiar la ubicación en la que se almacenarán los archivos de copia de seguridad, así como los archivos de copia de seguridad del archivo historial (si procede).
 
-Para ver la ubicación de los archivos, haga clic en la área para que aparezca su ruta de acceso en un menú emergente.
+Para ver la ubicación de los archivos, haga clic en el área para que aparezca su ruta de acceso en un menú emergente.
 
 Para modificar la ubicación donde se almacenan estos archivos, haga clic en el botón **...**. Aparece una caja de diálogo de selección, que permite seleccionar la carpeta o el disco donde se colocarán las copias de seguridad. Las áreas "Espacio utilizado" y "Espacio libre" se actualizan automáticamente e indican el espacio restante en el disco de la carpeta seleccionada.
 

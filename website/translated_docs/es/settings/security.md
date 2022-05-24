@@ -1,6 +1,6 @@
 ---
-id: security
-title: Security page
+id: seguridad
+title: Página seguridad
 ---
 
 This page contains options related to data access and protection for your desktop applications.
@@ -42,7 +42,7 @@ This page contains options related to data access and protection for your deskto
 
 -   **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](https://doc.4d.com/4D-Language-Reference-19-R4/Database-Methods/On-Host-Database-Event-database-method.301-5739713.en.html) facilitates the initialization and backup phases for 4D components. For security reasons, you must explicitly authorize the execution of this method in each host database. To do this, you must check this option. By default, it is not checked.
 
-    When this option is checked:
+    Cuando esta opción está seleccionada:
     * 4D components are loaded,
     * each [On Host Database Event database method](https://doc.4d.com/4Dv19/4D/19.1/On-Host-Database-Event-database-method.301-5653908.en.html) of the component (if any) is called by the host database,
     * the code of the method is executed.

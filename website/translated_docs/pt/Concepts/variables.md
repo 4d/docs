@@ -40,7 +40,7 @@ To declare a variable of any type with the `var` keyword, use the following synt
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
-For example:
+Por exemplo:
 
 ```4d
 var $myText : Text  //a text variable
@@ -137,7 +137,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. Por exemplo:
 
 ```4d
 MyNumber:=3

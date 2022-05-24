@@ -15,7 +15,7 @@ As estrutyuras abaixo são compatíveis com petições REST:
 
 While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
 
-Como com todas as URIs, o primeiro parâmetro é definido por um “?” e todos os parâmetros subsequentes por “&”. For example:
+Como com todas as URIs, o primeiro parâmetro é definido por um “?” e todos os parâmetros subsequentes por “&”. Por exemplo:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > Pode colocar todos os valores entre aspas para evitar ambiguidades. Por exemplo, no exemplo anterior, poderíamos colocar o valor para o último nome em aspas simples: "lastName!='Jones'".
@@ -31,7 +31,7 @@ Com cada petição REST, o servidor retorna o estado e uma resposta (com ou sem 
 ### Estado da petição
 Com cada petição REST, se obtém o estado junto com a resposta. Abaixo estão alguns estados que podem surgir:
 
-| Estado                    | Description                                                                       |
+| Estado                    | Descrição                                                                         |
 | ------------------------- | --------------------------------------------------------------------------------- |
 | 0                         | Petição não processada (servidor pode não ter iniciado).                          |
 | 200 OK                    | Petição processada sem erro.                                                      |

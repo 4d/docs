@@ -447,7 +447,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 #### Descripción
 
-The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+La función `.getDataStore()`<!-- REF #DataClass.getDataStore().Summary -->devuelve el datastore para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -484,10 +484,10 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 ## .getInfo()
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones         |
-| ------- | ---------------------- |
-| v19 R3  | Added exposed property |
-| v17 R5  | Añadidos               |
+| Versión | Modificaciones                     |
+| ------- | ---------------------------------- |
+| v19 R3  | Se ha añadido la propiedad exposed |
+| v17 R5  | Añadidos                           |
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -502,7 +502,7 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 #### Descripción
 
-The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve un objeto que proporciona información sobre la clase de datos<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -711,7 +711,7 @@ donde:
 
 *   **comparator**: symbol that compares *attributePath* and *value*. The following symbols are supported:
 
-    | Comparison                           | Símbolo(s)  | Comentario                                                                                                     |
+    | Comparación                          | Símbolo(s)  | Comentario                                                                                                     |
     | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
     | Igual a                              | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
     |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
