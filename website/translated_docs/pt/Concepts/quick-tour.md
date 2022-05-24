@@ -269,7 +269,7 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
-## Comments
+## Comentários
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
 
