@@ -122,7 +122,7 @@
 <p>Shared project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). These methods are <strong>entry points</strong> of the component.</p>
 <p>Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the <strong>Shared by components and host project</strong> box).</p>
 <p><img src="/docs/assets/en/Concepts/pict516563.en.png" alt=""></p>
-<p>Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the <code>EXECUTE FORMULA</code> or <code>EXECUTE METHOD</code> commands. For example:</p>
+<p>Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the <code>EXECUTE FORMULA</code> or <code>EXECUTE METHOD</code> commands. Por exemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Host Method</span>
 <span class="hljs-function">component_method</span>(<span class="hljs-string">"host_method_name"</span>)
 </code></pre>

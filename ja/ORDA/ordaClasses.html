@@ -78,7 +78,7 @@ Form.comp.city:=<span class="hljs-variable">$cityManager</span>.City.<span class
 <ul>
 <li><p>わかりやすく使いやすい関数のみを公開し、その裏にある構造の複雑性を &quot;隠す&quot; ことができます。</p></li>
 <li><p>構造が発展した場合には影響を受ける関数を適応させるだけで、クライアントアプリケーションは引き続き透過的にそれらを呼び出すことができます。</p></li>
-<li><p>デフォルトでは、データモデルクラス関数 (<a href="#計算属性">計算属性関数</a> 含む) および <a href="エイリアス属性">エイリアス属性</a> はすべて、リモートアプリケーションに対して <strong>非公開</strong> に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数やエイリアスは <a href="#公開vs非公開関数"><code>exposed</code></a> キーワードによって明示的に宣言する必要があります。</p></li>
+<li><p>デフォルトでは、データモデルクラス関数 (<a href="#計算属性-1">計算属性関数</a> 含む) および <a href="エイリアス属性-1">エイリアス属性</a> はすべて、リモートアプリケーションに対して <strong>非公開</strong> に設定されており、RESTリクエストで呼び出すことはできません。 公開する関数やエイリアスは <a href="#公開vs非公開関数"><code>exposed</code></a> キーワードによって明示的に宣言する必要があります。</p></li>
 </ul>
 <p><img src="/docs/assets/en/ORDA/api.png" alt=""></p>
 <p>各データモデルオブジェクトに関わるクラスは、4D によって <a href="#クラスの作成">あらかじめ自動的に作成</a> されます。</p>
@@ -231,11 +231,11 @@ Function</span> withSalaryGreaterThanAverage
 <li><code>Function query</code> <em>attributeName</em></li>
 <li><code>Function orderBy</code> <em>attributeName</em></li>
 </ul>
-<p>詳細については、<a href="#計算属性">計算属性</a> を参照してください。</p>
+<p>詳細については、<a href="#計算属性-1">計算属性</a> を参照してください。</p>
 <h4><a class="anchor" aria-hidden="true" id="エイリアス属性"></a><a href="#エイリアス属性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>エイリアス属性</h4>
 <p>Entity クラスでは、<code>Alias</code> キーワードを使用して <strong>エイリアス属性</strong> を定義することができます (通常はリレート属性を対象に定義します):</p>
 <p><code>Alias</code> <em>attributeName</em> <em>targetPath</em></p>
-<p>詳細については、<a href="#エイリアス属性">エイリアス属性</a> を参照してください。</p>
+<p>詳細については、<a href="#エイリアス属性-1">エイリアス属性</a> を参照してください。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-3"></a><a href="#例題-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.CityEntity クラス</span><span class="hljs-keyword">
 
@@ -361,7 +361,8 @@ End if</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="function-set-attributename"></a><a href="#function-set-attributename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Function set &lt;attributeName&gt;</code></h3>
 <h4><a class="anchor" aria-hidden="true" id="シンタックス-1"></a><a href="#シンタックス-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>シンタックス</h4>
-<pre><code class="hljs css language-4d">{local}<span class="hljs-keyword"> Function</span> set &lt;attributeName&gt;(<span class="hljs-variable">$value </span>: type {; <span class="hljs-variable">$event </span>: Object})
+<pre><code class="hljs css language-4d">
+{local}<span class="hljs-keyword"> Function</span> set &lt;attributeName&gt;(<span class="hljs-variable">$value </span>: type {; <span class="hljs-variable">$event </span>: Object})
 <span class="hljs-comment">// コード</span>
 </code></pre>
 <p><em>セッター</em> 関数は、属性に値が割り当てられたときに実行されます。 この関数は通常、入力値を処理し、その結果を 1つ以上の他の属性に転送します。</p>
@@ -594,7 +595,7 @@ Function</span> orderBy &lt;attributeName&gt;(<span class="hljs-variable">$event
 <p><em>attributeName</em> は、<a href="Concepts/identifiers.html#オブジェクトプロパティ">プロパティ名の命名規則</a> に準拠している必要があります。</p>
 <p><em>targetPath</em> は、&quot;employee.company.name&quot; のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、<em>targetPath</em> は属性名となります。</p>
 <p>エイリアスは、他のエイリアスのパスに使用することができます。</p>
-<p><a href="#計算属性">計算属性</a> もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。 そうでない場合は、エラーが返されます。 たとえば、&quot;fullName&quot; 計算属性がある場合、&quot;employee.fullName&quot; というエイリアスパスは有効です。</p>
+<p><a href="#計算属性-1">計算属性</a> もエイリアスパスに使用することができますが、パスの最後のレベルとしてのみ使用できます。 そうでない場合は、エラーが返されます。 たとえば、&quot;fullName&quot; 計算属性がある場合、&quot;employee.fullName&quot; というエイリアスパスは有効です。</p>
 <blockquote>
 <p>ORDA のエイリアス属性は、デフォルトでは <strong>公開されません</strong>。 リモートリクエストでエイリアスを利用するには、<code>Alias</code> キーワードの前に <a href="#公開vs非公開関数"><code>exposed</code></a> キーワードを追加する必要があります。</p>
 </blockquote>

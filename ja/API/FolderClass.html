@@ -86,6 +86,10 @@
 <tr><td><a href="#delete"><strong>.delete</strong>( { <em>option</em> : Integer } )</a><p>    フォルダーを削除します</td></tr>
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    ディスク上にフォルダーが存在する場合は true</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    フォルダー名の拡張子</td></tr>
+<tr><td><a href="#file"><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</a><p>    <code>Folder</code> オブジェクト内に <code>File</code> オブジェクトを作成し、その参照を返します</td></tr>
+<tr><td><a href="#files"><strong>.files</strong>( { <em>options</em> : Integer } ) : Collection</a><p>    フォルダーに格納されている <code>File</code> オブジェクトのコレクションを返します</td></tr>
+<tr><td><a href="#folder"><strong>.folder</strong>( <em>path</em> : Text ) : 4D.Folder</a><p>    親の <code>Folder</code> オブジェクト内に新しい <code>Folder</code> オブジェクトを作成し、その参照を返します</td></tr>
+<tr><td><a href="#folders"><strong>.folders</strong>( { <em>options</em> : Integer } ) : Collection</a><p>    親フォルダーに格納されている <code>Folder</code> オブジェクトのコレクションを返します</td></tr>
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    拡張子 (あれば) を含めたフォルダーの完全な名称</td></tr>
 <tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    フォルダーのアイコンを返します</td></tr>
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>     フォルダーがシステムレベルで &quot;非表示&quot; に設定されていれば true</td></tr>
@@ -480,8 +484,8 @@ End if</span>
 <tr><th>定数</th><th>値</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td><code>fk recursive</code></td><td>1</td><td>コレクションには、指定フォルダーとそのサブフォルダーのファイル/フォルダーが含まれます</td></tr>
-<tr><td><code>fk ignore invisible</code></td><td>8</td><td>非表示設定のファイルやフォルダーは表示されません</td></tr>
+<tr><td><code>fk recursive</code></td><td>1</td><td>コレクションには、指定フォルダーとそのサブフォルダーのファイルが含まれます</td></tr>
+<tr><td><code>fk ignore invisible</code></td><td>8</td><td>非表示設定のファイルは表示されません</td></tr>
 </tbody>
 </table>
 <p><strong>戻り値</strong></p>
@@ -559,8 +563,8 @@ End if</span>
 <tr><th>定数</th><th>値</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td><code>fk recursive</code></td><td>1</td><td>コレクションには、指定フォルダーとそのサブフォルダーのファイル/フォルダーが含まれます</td></tr>
-<tr><td><code>fk ignore invisible</code></td><td>8</td><td>非表示設定のファイルやフォルダーは表示されません</td></tr>
+<tr><td><code>fk recursive</code></td><td>1</td><td>コレクションには、指定フォルダーとそのサブフォルダーのフォルダーが含まれます</td></tr>
+<tr><td><code>fk ignore invisible</code></td><td>8</td><td>非表示設定のフォルダーは表示されません</td></tr>
 </tbody>
 </table>
 <p><strong>戻り値</strong></p>

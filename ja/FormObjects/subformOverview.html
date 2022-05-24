@@ -92,24 +92,26 @@
 <p>4Dウィジェットは、ページサブフォームに基づいた定義済みの複合オブジェクトです。 詳細は専用のドキュメント <a href="https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.ja.html">4D Widgets (ウィジェット)</a> を参照してください。</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="バインドされた変数あるいは式の管理"></a><a href="#バインドされた変数あるいは式の管理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>バインドされた変数あるいは式の管理</h3>
-<p>サブフォームのコンテナーオブジェクトには、<a href="/docs/ja/FormObjects/propertiesObject.html#変数あるいは式">変数あるいは式</a> をバインドすることができます。 これは、親フォームとサブフォームの値を同期するのに便利です。</p>
-<p>デフォルトでは、4D はサブフォームコンテナーごとに <a href="/docs/ja/FormObjects/propertiesObject.html#expression-type">オブジェクト型</a> の変数あるいは式をバインドします。 このオブジェクトの内容は、親フォームおよびサブフォームから読み取り・変更が可能なため、両者間で複数の値を共有することができます。</p>
+<p>サブフォームコンテナーオブジェクトには、<a href="/docs/ja/FormObjects/propertiesObject.html#変数あるいは式">変数あるいは式</a> をバインドすることができます。 これは、親フォームとサブフォーム間で値を同期するのに便利です。</p>
+<p>デフォルトで、4D はサブフォームコンテナーに <a href="/docs/ja/FormObjects/propertiesObject.html#式の型式タイプ">オブジェクト型</a> の変数あるいは式をバインドし、<code>Form</code> コマンドを使ってサブフォームのコンテキストで値を共有できるようにします。 しかし、単一の値のみを共有したい場合は、任意のスカラー型 (時間、整数など) の変数や式を使用することもできます。</p>
 <ul>
-<li>まず、バインドされたスカラー型の変数あるいは式を定義し、<a href="/docs/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a> や <a href="/docs/ja/Events/onDataChange.html">On Data Change</a> フォームイベントが発生したときに、<code>OBJECT Get subform container value</code> や <code>OBJECT SET SUBFORM CONTAINER VALUE</code> コマンドを呼び出して値を共有します。 この方法は、単一の値を同期させるのに推奨されます。</li>
+<li>バインドするスカラー型の変数あるいは式を定義し、<a href="/docs/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a> や <a href="/docs/ja/Events/onDataChange.html">On Data Change</a> フォームイベントが発生したときに、<code>OBJECT Get subform container value</code> や <code>OBJECT SET SUBFORM CONTAINER VALUE</code> コマンドを呼び出して値を共有します。 この方法は、単一の値を同期させるのに推奨されます。</li>
 <li>または、バインドされた <strong>オブジェクト</strong> 型の変数あるいは式を定義し、<code>Form</code> コマンドを使用してサブフォームからそのプロパティにアクセスします。 この方法は、複数の値を同期させるのに推奨されます。</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="親フォームとサブフォームの同期-単一値"></a><a href="#親フォームとサブフォームの同期-単一値" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>親フォームとサブフォームの同期 (単一値)</h3>
-<p>親フォームの他のオブジェクトとサブフォームコンテナーとに同じ変数あるいは式をバインドすることで、親フォームとサブフォームのコンテキストをリンクし、洗練されたインターフェースを作成することができます。 たとえば、時計を提供するサブフォームを置くとします。このサブフォームが置かれる親フォームには入力可の時間型変数が置かれています:</p>
+<p>親フォームにおいて、他のオブジェクトとサブフォームコンテナーとに同じ &quot;変数あるいは式&quot; を設定することで、親フォームとサブフォームのコンテキストをリンクし、洗練されたインターフェースを作成することができます。 たとえば、入力可の時間型変数が置かれている親フォームに、アナログ時計を表示するサブフォームを置くとします:</p>
 <p><img src="/docs/assets/en/FormObjects/subforms1.png" alt=""></p>
-<p>親フォームでは、両方のオブジェクト (時間変数とサブフォームコンテナー) の******変数あるいは式<strong><em>として同じ値を持ちます</em></strong>。 変数 (例: <code>parisTime</code>)、あるいは式 (例: <code>Form.parisTime</code>) の使用が可能です。</p>
-<p>サブフォームでは、時計オブジェクトは <code>Form.clockValue</code> プロパティで管理されます。</p>
+<p>親フォームにおいて、両オブジェクト (時間変数とサブフォームコンテナー) の <strong><em>変数あるいは式</em> プロパティは同じ設定にされています</strong>。 変数 (例: <code>parisTime</code>)、あるいは式 (例: <code>Form.parisTime</code>) を設定することができます。</p>
+<p>サブフォームにおいては、時計オブジェクトの同プロパティとして <code>Form.clockValue</code> が設定されています。</p>
 <h4><a class="anchor" aria-hidden="true" id="サブフォームの内容を更新する"></a><a href="#サブフォームの内容を更新する" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>サブフォームの内容を更新する</h4>
 <p>ケース1: 親フォームの変数あるいは式の値が更新され、この更新をサブフォームに反映させる必要があります。</p>
-<p>この例では、親フォームにおいて <code>Form.parisTime</code> の値がユーザー入力、あるいは動的に (たとえば <code>Current time</code> コマンドで) 12:15:00 に変更されました。 これは、サブフォームのフォームメソッドの <a href="/docs/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a> イベントをトリガーします。</p>
+<p>この例では、親フォームにおいて <code>Form.parisTime</code> の値がユーザー入力、あるいは動的に (たとえば <code>Current time</code> コマンドで) 12:15:00 に変更されました。 これは、サブフォームのフォームメソッドで <a href="/docs/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a> イベントをトリガーします。</p>
 <p>以下のコードが実行されます:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// サブフォームメソッド</span><span class="hljs-keyword">
-If</span> (Form event code=On Bound Variable Change) <span class="hljs-comment">// 親フォーム内でバインドされた変数あるいは式が変更されました</span>
-    Form.clockValue:=OBJECT Get subform container value <span class="hljs-comment">// ローカルの値を同期させます</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// サブフォームのフォームメソッド</span><span class="hljs-keyword">
+If</span> (Form event code=On Bound Variable Change) 
+<span class="hljs-comment">// 親フォーム内でバインドされた変数あるいは式が変更されました</span>
+    Form.clockValue:=OBJECT Get subform container value 
+    <span class="hljs-comment">// 親フォームのサブフォームコンテナー値を取得し、ローカルの値を同期させます</span><span class="hljs-keyword">
 End if</span>
 </code></pre>
 <p>上のコードは、サブフォームの <code>Form.clockValue</code> の値を更新します:</p>
@@ -119,19 +121,21 @@ End if</span>
 <li>親フォームの変数/式に値が割り当てられたとき (同じ値が再代入された場合でも) で、</li>
 <li>サブフォームが 0ページまたはカレントフォームページに置かれているとき。</li>
 </ul>
-<p>先の例のとおり、式を直接使用するのではなく、サブフォームコンテナーの式の値を返す <code>OBJECT Get subform container value</code> コマンドの利用が推奨されます。親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。</p>
+<p>先の例のとおり、式を直接使用するのではなく、親フォームのサブフォームコンテナーの式の値を取得する <code>OBJECT Get subform container value</code> コマンドの利用が推奨されます。親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。</p>
 <p>バインドされた変数あるいは式を変更すると、フォームイベントが発生し、親フォームとサブフォームの値を同期させることができます:</p>
 <ul>
-<li>親フォームで変数あるいは式が変更されたことをサブフォーム (のフォームメソッド) に通知するには、<a href="/docs/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a> フォームイベントを使用します。</li>
-<li>サブフォーム内で変数あるいは式の値が変更されたことをサブフォームコンテナーに通知するには、<a href="/docs/ja/Events/onDataChange.html">On Data Change</a> フォームイベントを使用します。</li>
+<li>親フォームのサブフォームコンテナーの変数あるいは式が変更されたことをサブフォーム (のフォームメソッド) に通知するには、サブフォームの <a href="/docs/ja/Events/onBoundVariableChange.html">On Bound Variable Change</a> フォームイベントを使用します。</li>
+<li>同様に、サブフォーム内で変数あるいは式の値が変更されたことを親フォームのサブフォームコンテナーに通知するには、サブフォームの <a href="/docs/ja/Events/onDataChange.html">On Data Change</a> フォームイベントを使用します。</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="親フォームの内容を更新する"></a><a href="#親フォームの内容を更新する" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>親フォームの内容を更新する</h4>
 <p>ケース2: サブフォームの内容が更新され、その更新を親フォームに反映させる必要があります。</p>
-<p>サブフォーム内では、時計オブジェクトに紐づいた <code>Form.clockValue</code> 式 (時間型) の値がボタンによって変更されます。 これにより、時計オブジェクトの内部で <a href="/docs/ja/Events/onDataChange.html">On Data Change</a> フォームイベント (当該イベントがオブジェクトに対して選択されている必要があります) がトリガーされ、メインフォームの <code>Form.parisTime</code> 値を更新します。</p>
+<p>サブフォーム内で、時計オブジェクトに紐づいた <code>Form.clockValue</code> 式 (時間型) の値がボタンによって変更されます。 これにより、時計オブジェクトの内部で <a href="/docs/ja/Events/onDataChange.html">On Data Change</a> フォームイベント (当該イベントがオブジェクトに対して選択されている必要があります) がトリガーされ、親フォームの <code>Form.parisTime</code> 値を更新します。</p>
 <p>以下のコードが実行されます:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// サブフォームの時計オブジェクトのメソッド</span><span class="hljs-keyword">
-If</span> (Form event code=On Data Change) <span class="hljs-comment">// 値が変化したときに</span>
-<span class="hljs-function">    OBJECT SET SUBFORM CONTAINER VALUE</span>(Form.clockValue) <span class="hljs-comment">// コンテナーに値をプッシュします</span><span class="hljs-keyword">
+If</span> (Form event code=On Data Change) 
+<span class="hljs-comment">// 値が変化したときに</span>
+<span class="hljs-function">    OBJECT SET SUBFORM CONTAINER VALUE</span>(Form.clockValue) 
+    <span class="hljs-comment">// 親フォームのサブフォームコンテナーに値をプッシュします</span><span class="hljs-keyword">
 End if</span>
 </code></pre>
 <p><img src="/docs/assets/en/FormObjects/update-main-form.png" alt=""></p>
@@ -141,17 +145,17 @@ End if</span>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="親フォームとサブフォームの同期-複数値"></a><a href="#親フォームとサブフォームの同期-複数値" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>親フォームとサブフォームの同期 (複数値)</h3>
 <p>デフォルトで、4D は各サブフォームコンテナーに <a href="/docs/ja/FormObjects/propertiesObject.html#式の型式タイプ">オブジェクト型</a> の変数あるいは式を作成します。 このオブジェクトの中身は親フォームおよびサブフォームから読み書き可能なため、ローカルなコンテキストにおいて複数の値を共有することができます。</p>
-<p>サブフォームコンテナーにバインドされている場合、このオブジェクトは <code>Form</code> コマンドによって直接サブフォーム内に返されます。 オブジェクトは常に参照によって渡されるため、ユーザーがサブフォーム内でプロパティ値を変更した場合には、その値は自動的にオブジェクト自身に保存され、親フォームでも利用できるようになります。 一方、ユーザーによって、あるいはプログラミングによってオブジェクトのプロパティが親フォーム内で変更された場合も、その値はサブフォーム内で自動更新されます。 つまり、イベント管理は必要ありません。</p>
+<p>親フォームのサブフォームコンテナーにバインドされたオブジェクトは、サブフォーム内では直接 <code>Form</code> コマンドによって返されます。 オブジェクトは常に参照によって渡されるため、ユーザーがサブフォーム内でプロパティ値を変更した場合には、その値は自動的にオブジェクト自身に保存され、親フォームでも利用できるようになります。 一方、ユーザーによって、あるいはプログラミングによってオブジェクトのプロパティが親フォーム内で変更された場合も、その値はサブフォーム内で自動更新されます。 つまり、イベント管理は必要ありません。</p>
 <p>たとえば、サブフォームでは、入力は (サブフォームの) <code>Form</code> オブジェクトプロパティにバインドされています。</p>
 <p><img src="/docs/assets/en/FormObjects/subnew1.png" alt=""></p>
-<p>親フォームでは、サブフォームを 2回表示するとします。 各サブフォームコンテナーは、(親フォームの) <code>Form</code> オブジェクトのプロパティである式にバインドされています。</p>
+<p>親フォームで、このサブフォームを 2回表示するとします。 各サブフォームコンテナーは、(親フォームの) <code>Form</code> オブジェクトのプロパティである式にバインドされています。</p>
 <p><img src="/docs/assets/en/FormObjects/subnew2.png" alt=""></p>
-<p>ボタンは、親の <code>Form</code> オブジェクトに <code>mother</code> と <code>father</code> プロパティを作成するだけです。</p>
+<p>下のボタンは、親フォームの <code>Form</code> オブジェクトに <code>mother</code> と <code>father</code> プロパティを作成します。</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Add values ボタンのオブジェクトメソッド</span>
 Form.mother:=<span class="hljs-function">New object</span>(<span class="hljs-string">"lastname"</span>; <span class="hljs-string">"Hotel"</span>; <span class="hljs-string">"firstname"</span>; <span class="hljs-string">"Anne"</span>)
 Form.father:=<span class="hljs-function">New object</span>(<span class="hljs-string">"lastname"</span>; <span class="hljs-string">"Golf"</span>; <span class="hljs-string">"firstname"</span>; <span class="hljs-string">"Félix"</span>)
 </code></pre>
-<p>フォームを実行し、ボタンをクリックすると、すべての値が正しく表示されていることがわかります:</p>
+<p>フォームを実行してボタンをクリックすると、サブフォームを含め、すべての値が正しく表示されていることがわかります:</p>
 <p><img src="/docs/assets/en/FormObjects/subnew3.png" alt=""></p>
 <p>同じオブジェクトが使用されているため、親フォームまたはサブフォームで値を変更すると、もう一方のフォームでも値が自動更新されます:</p>
 <p><img src="/docs/assets/en/FormObjects/subnew4.png" alt=""> <img src="/docs/assets/en/FormObjects/subnew5.png" alt=""></p>
@@ -163,7 +167,7 @@ If</span> (Form event code=On Bound Variable Change)
     clockValue:=ptr-&gt;<span class="hljs-keyword"> 
 End if</span>
 </code></pre>
-<p>**この方法は互換性のために引き続きサポートされますが、サブフォームに式をバインドすることができないため、廃止予定となります。今後の開発では、この原則は使うべきではありません。 すべての場合において、フォームとサブフォームの値を同期させるには、<a href="#親フォームとサブフォームの同期-複数値"><code>Form</code> コマンド</a> か <a href="#親フォームとサブフォームの同期-単一値"><code>OBJECT Get subform container value`` と &lt;code&gt;OBJECT SET SUBFORM CONTAINER VALUE</code> コマンド</a> を使用することが推奨されます。 </p></p>
+<p>**この方法は互換性のために引き続きサポートされますが、サブフォームに式をバインドすることができないため、廃止予定となります。今後の開発では、この原則は使うべきではありません。 すべての場合において、フォームとサブフォームの値を同期させるには、<a href="#親フォームとサブフォームの同期-複数値"><code>Form</code> コマンド</a> か <a href="#親フォームとサブフォームの同期-単一値"><code>OBJECT Get subform container value</code> と <code>OBJECT SET SUBFORM CONTAINER VALUE</code> コマンド</a> を使用することが推奨されます。 </p></p>
 <h3><a class="anchor" aria-hidden="true" id="高度なフォーム間通信プログラム"></a><a href="#高度なフォーム間通信プログラム" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>高度なフォーム間通信プログラム</h3>
 <p>親フォームとサブフォームインスタンス間の通信では、バインドした変数を通して値を交換する以上のことをおこなう必要がある場合があります。 実際、親フォームでおこなわれたアクションに基づきサブフォーム中の変数を更新したり、その逆の処理をしたい場合があるでしょう。 先の &quot;動的な時計&quot; タイプのサブフォームの例で言えば、各時計ごとにアラーム時刻を複数設定したい場合が考えられます。</p>
 <p>このようなニーズにこたえるため、4Dは以下のメカニズムを実装しています:</p>

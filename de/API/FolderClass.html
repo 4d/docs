@@ -86,6 +86,10 @@
 <tr><td><a href="#delete"><strong>.delete</strong>( { <em>option</em> : Integer } )</a><p>    deletes the folder</td></tr>
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    true if the folder exists on disk</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    returns the extension of the folder name (if any)</td></tr>
+<tr><td><a href="#file"><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</a><p>    a <code>File</code> object inside the <code>Folder</code> object and returns its reference</td></tr>
+<tr><td><a href="#files"><strong>.files</strong>( { <em>options</em> : Integer } ) : Collection</a><p>    a collection of <code>File</code> objects contained in the folder</td></tr>
+<tr><td><a href="#folder"><strong>.folder</strong>( <em>path</em> : Text ) : 4D.Folder</a><p>    creates a <code>Folder</code> object inside the parent <code>Folder</code> object and returns its reference</td></tr>
+<tr><td><a href="#folders"><strong>.folders</strong>( { <em>options</em> : Integer } ) : Collection</a><p>    returns a collection of <code>Folder</code> objects contained in the parent folder</td></tr>
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    returns the full name of the folder, including its extension (if any)</td></tr>
 <tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    returns the icon of the folder</td></tr>
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>     true if the folder is set as &quot;hidden&quot; at the system level</td></tr>
@@ -480,8 +484,8 @@ End if</span>
 <tr><th>Constant</th><th>Wert</th><th>Kommentar</th></tr>
 </thead>
 <tbody>
-<tr><td><code>fk recursive</code></td><td>1</td><td>The collection contains files or folders of the specified folder and its subfolders</td></tr>
-<tr><td><code>fk ignore invisible</code></td><td>8</td><td>Invisible files or folders are not listed</td></tr>
+<tr><td><code>fk recursive</code></td><td>1</td><td>The collection contains files of the specified folder and its subfolders</td></tr>
+<tr><td><code>fk ignore invisible</code></td><td>8</td><td>Invisible files are not listed</td></tr>
 </tbody>
 </table>
 <p><strong>Rückgabewert</strong></p>
@@ -559,8 +563,8 @@ End if</span>
 <tr><th>Constant</th><th>Wert</th><th>Kommentar</th></tr>
 </thead>
 <tbody>
-<tr><td><code>fk recursive</code></td><td>1</td><td>The collection contains files or folders of the specified folder and its subfolders</td></tr>
-<tr><td><code>fk ignore invisible</code></td><td>8</td><td>Invisible files or folders are not listed</td></tr>
+<tr><td><code>fk recursive</code></td><td>1</td><td>The collection contains folders of the specified folder and its subfolders</td></tr>
+<tr><td><code>fk ignore invisible</code></td><td>8</td><td>Invisible folders are not listed</td></tr>
 </tbody>
 </table>
 <p><strong>Rückgabewert</strong></p>
