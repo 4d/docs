@@ -64,7 +64,7 @@ Ou usando a função[.call()](#call):
 
 #### Parâmetros a um único método
 
-Para mais conveniência, quando a fórmula é feita de um único método de projeto, parâmetros podem ser omitidos na inicialização do objeto fórmula. Pode ser passado quando a fórmula for chamada. For example:
+Para mais conveniência, quando a fórmula é feita de um único método de projeto, parâmetros podem ser omitidos na inicialização do objeto fórmula. Pode ser passado quando a fórmula for chamada. Por exemplo:
 
 ```4d
  var $f : 4D.Function
@@ -120,14 +120,14 @@ Um objeto`4D.Function` contém um pedaço de código que pode ser executado de u
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
-| Parameter  | Type        |    | Description                          |
+| Parameter  | Type        |    | Descrição                            |
 | ---------- | ----------- |:--:| ------------------------------------ |
 | formulaExp | Expression  | -> | Fórmula a ser retornada como objeto  |
-| Result     | 4D.Function | <- | Função nativa encapsulando a fórmula |
+| Resultado  | 4D.Function | <- | Função nativa encapsulando a fórmula |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 O comando `Formula` <!-- REF #_command_.Formula.Summary -->cria um objeto `4D Function` baseado na expressão *formulaExp*<!-- END REF -->. *formulaExp* pode ser tão simples quanto um único valor ou tão complexo quanto um método projeto com parâmetros.
 
@@ -255,14 +255,14 @@ Chamar uma fórmula usando notação de objeto:
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
-| Parameter     | Type        |    | Description                               |
+| Parameter     | Type        |    | Descrição                                 |
 | ------------- | ----------- |:--:| ----------------------------------------- |
 | formulaString | Texto       | -> | Fórmula texto a ser retornada como objeto |
-| Result        | 4D.Function | <- | Objeto nativo encapsulando a fórmula      |
+| Resultado     | 4D.Function | <- | Objeto nativo encapsulando a fórmula      |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 O comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->cria um objeto 4D.Function baseado em *formulaString*<!-- END REF -->.  *formulaString* pode ser tão simples quanto um único valor ou tão complexo quanto um método projeto com parâmetros.
 
@@ -310,15 +310,15 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 **.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
-| Parameter     | Type    |    | Description                                                                     |
+| Parameter     | Type    |    | Descrição                                                                       |
 | ------------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | thisObj       | Objeto  | -> | Objeto a ser retornado pelo comando This na fórmula                             |
 | formulaParams | Coleção | -> | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
-| Result        | any     | <- | Valores de execução de fórmula                                                  |
+| Resultado     | any     | <- | Valores de execução de fórmula                                                  |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A função`.apply()` <!-- REF #FunctionClass.apply().Summary -->executa o objeto `formula` ao qual é aplicada é retorna o valor resultante<!-- END REF -->. O objeto fórmula pode ser criado usando os comandos `Formula` or `Formula from string`.
 
@@ -371,15 +371,15 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 **.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
-| Parameter | Type   |    | Description                                                          |
+| Parameter | Type   |    | Descrição                                                            |
 | --------- | ------ | -- | -------------------------------------------------------------------- |
 | thisObj   | Objeto | -> | Objeto a ser retornado pelo comando This na fórmula                  |
 | params    | any    | -> | Valores a serem passados como $1...$n quando a fórmula for executada |
-| Result    | any    | <- | Valores de execução de fórmula                                       |
+| Resultado | any    | <- | Valores de execução de fórmula                                       |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A função `.call()` <!-- REF #FunctionClass.call().Summary -->executa o objeto `formula` ao qual é aplicado e retorna o valor resultante<!-- END REF -->. O objeto fórmula pode ser criado usando os comandos `Formula` or `Formula from string`.
 
@@ -422,7 +422,7 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
 **.source** : Text <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.source` <!-- REF #FunctionClass.source.Summary -->contém a expressão fonte da `fórmula` como texto<!-- END REF -->.
 

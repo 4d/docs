@@ -37,6 +37,6 @@ The following code undoes the last action in the spreadsheet:
 WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 ```
 
-## 4D View Pro Tips repository
+## Repositorio 4D View Pro Tips
 
 [4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Feel free to clone it and experiment with the project. 

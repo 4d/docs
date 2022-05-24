@@ -6,7 +6,7 @@ title: Zone Web
 
 Les zones Web (Web Areas) peuvent afficher tout type de contenu Web à l’intérieur de vos formulaires : pages HTML au contenu statique ou dynamique, fichiers, images, JavaScript, etc. Le moteur de rendu de la zone web dépend de la plate-forme d’exécution de l’application et de [l'option de moteur de rendu](properties_WebArea.md#use-embedded-web-rendering-engine) sélectionnée.
 
-Il est possible de créer plusieurs zones web dans un même formulaire. Note, however, that the use of web areas must follow [several rules](#web-area-rules).
+Il est possible de créer plusieurs zones web dans un même formulaire. A noter cependant que l'utilisation de zones web est soumise à [quelques limitations](#web-area-rules).
 
 Plusieurs [actions standard](#standard-actions), de nombreuses [commandes de langage](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) et [événements formulaires](#form-events) génériques et dédiés permettent au développeur de contrôler le fonctionnement des zones web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
 
@@ -19,13 +19,13 @@ Deux variables spécifiques sont automatiquement associées à chaque zone web :
 - [`URL`](properties_WebArea.md#url) -- pour contrôler l’URL affiché par la zone web
 - [`Progression`](properties_WebArea.md#progression) -- pour contrôler le pourcentage de chargement de la page affichée dans la zone web.
 
-> As of 4D v19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
+> À partir de 4D v19 R5, la variable de Progression n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu du système Windows](./webArea_overview.md#web-rendering-engine).
 
 ### Moteur de rendu Web
 
 Vous pouvez choisir entre [deux moteurs de rendus](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone web, en fonction des spécificités de votre application.
 
-Selecting the embedded web rendering engine allows you to call 4D methods from the web area and to make sure features on macOS and Windows are similar. Selecting the system rendering engine is recommended when the web area is connected to the Internet because it always benefits from the latest security updates.
+La sélection du moteur de rendu Web intégré vous permet d'appeler des méthodes 4D à partir de la zone Web et de vous assurer que les fonctionnalités sur macOS et Windows sont similaires. La sélection du moteur de rendu système est recommandée lorsque la zone web est connectée à Internet car elle bénéficie toujours des dernières mises à jour de sécurité.
 
 ### Accéder aux méthodes 4D
 
@@ -155,9 +155,9 @@ Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’
 
 - **Commandes Edit menu** : lorsque la zone web a le focus, les commandes du menu **Edit** permettent d’effectuer les actions de copier, coller, tout sélectionner, etc., en fonction de la sélection.
 - **Le menu contextuel** : il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. L’affichage de ce menu peut également être contrôlé via la commande `WA SET PREFERENCE`.
-- **Glisser-déposer** : l’utilisateur peut effectuer des glisser-déposer de textes, d’images ou de documents à l’intérieur d’une zone web ou entre une zone web et les objets des formulaires 4D, en fonction des propriétés des objets 4D. Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). You have to use the `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` statement to display a "drop" icon and generate the [`On Window Opening Denied`](Events/onWindowOpeningDenied.md) event. In this event, you can call the [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) command or set the [URL variable](properties_WebArea.md#url) in response to a user drop.
+- **Glisser-déposer** : l’utilisateur peut effectuer des glisser-déposer de textes, d’images ou de documents à l’intérieur d’une zone web ou entre une zone web et les objets des formulaires 4D, en fonction des propriétés des objets 4D. Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Dans cet événement, vous pouvez appeler la commande [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) ou définir la [variable URL](properties_WebArea.md#url) en réponse à un dépôt utilisateur.
 
-> Drag and drop features described above are not supported in web areas using the [macOS system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> Les fonctions de glisser-déposer décrites ci-dessus ne sont pas prises en charge dans les zones Web utilisant le [moteur de rendu du système macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 
 ### Sous-formulaires
@@ -194,7 +194,7 @@ Pour afficher l'inspecteur web, vous pouvez soit exécuter la commande `WA OPEN 
         WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
     ```
 
-> With [Windows system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine), a change in this preference requires a navigation action in the area (for example, a page refresh) to be taken into account.
+> Avec le [moteur de rendu du système Windows](properties_WebArea.md#use-embedded-web-rendering-engine), une modification de cette préférence nécessite une action de navigation dans la zone (par exemple, un rafraîchissement de la page) pour être prise en compte.
 
 Pour plus d'informations, reportez-vous à la description de la commande `WA SET PREFERENCE`.
 
@@ -207,7 +207,7 @@ Lorsque les paramétrages décrits ci-dessus sont effectués, vous disposez de n
 
 ## Propriétés prises en charge
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+[Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Menu contextuel](properties_Entry.md#context-menu) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Méthode](properties_Action.md#method) - [Nom](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Utiliser le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width) 
 
 
 

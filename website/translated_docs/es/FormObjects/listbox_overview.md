@@ -112,7 +112,7 @@ When the data source is an entity selection, any modifications made on the list 
 When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por ejemplo:
 
 ```4d
-myCol:=myCol.push("new value") //display new value in list box
+myCol:=myCol.push("new value") //mostrar el nuevo valor en el list box
 ```
 
 
@@ -256,7 +256,7 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 | newSize          | entero largo | New size (in pixels) of the column or row                             |
 | oldPosition      | entero largo | Previous position of the column or row                                |
 | oldSize          | entero largo | Previous size (in pixels) of the column or row                        |
-| row              | entero largo | Row number                                                            |
+| row              | entero largo | Número de línea                                                       |
 | verticalScroll   | entero largo | Positive if scroll is towards the bottom, negative if towards the top |
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
 
@@ -412,7 +412,7 @@ The typical sequence of events generated during data entry or modification is as
 
 
 
-## Managing selections
+## Gestión de selecciones
 
 La gestión de selecciones es diferente dependiendo de si el list box se basa en un array, en una selección de registros o en una selección de colecciones/entidades:
 
@@ -510,7 +510,7 @@ You can write in the *UI_SetColor* method:
 
 ```4d
  If(Is in set("$SampleSet"))
-    $color:=0x0080C080 // green background
+    $color:=0x0080C080 // fondo verde
  Else
     $color:=lk inherited
  End if
@@ -525,7 +525,7 @@ You can write in the *UI_SetColor* method:
 
 A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.
 
-### Standard sort
+### Ordenación estándar
 
 By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
 
@@ -533,14 +533,14 @@ You can enable or disable standard user sorts by disabling the [Sortable](proper
 
 Standard sort support depends on the list box type:
 
-| List box type               | Support of standard sort | Comentarios                                                                                                  |
-| --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Collection of objects       | Sí                       | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection of scalar values | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Entity selection            | Sí                       | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
-| Current selection           | Sí                       | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
-| Named selection             | No                       |                                                                                                              |
-| Arrays                      | Sí                       | Columns bound to picture and pointer arrays are not sortable                                                 |
+| List box type                  | Support of standard sort | Comentarios                                                                                                  |
+| ------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Colección de objetos           | Sí                       | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Colección de valores escalares | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
+| Entity selection               | Sí                       | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Selección actual               | Sí                       | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
+| Named selection                | No                       |                                                                                                              |
+| Arrays                         | Sí                       | Columns bound to picture and pointer arrays are not sortable                                                 |
 
 
 
@@ -564,9 +564,9 @@ You design a list box of the entity selection type, bound to the `Form.child` ex
 
 You display two columns:
 
-| Child name  | Parent's nickname            |
-| ----------- | ---------------------------- |
-| `This.name` | `This.parent.extra.nickname` |
+| Nombre del hijo | Parent's nickname            |
+| --------------- | ---------------------------- |
+| `This.name`     | `This.parent.extra.nickname` |
 
 If you want to sort the list box using the values of the second column, you have to write:
 
@@ -614,7 +614,7 @@ Priority and inheritance principles are observed when the same property is set a
 |                    | Arrays de columnas/métodos                                           |
 |                    | Arrays/métodos de Listbox                                            |
 |                    | Propiedades de la columna                                            |
-|                    | List box properties                                                  |
+|                    | Propiedades de list box                                              |
 | baja prioridad     | Meta Info expression (for collection or entity selection list boxes) |
 
 For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
@@ -644,7 +644,7 @@ To restore the original appearance of the list box, you can:
 - pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
 
 
-### Using arrays and expressions
+### Uso de arrays y expresiones
 
 Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
@@ -659,7 +659,7 @@ Depending of the list box type, you can use different properties to customize ro
 
 
 
-## Printing list boxes
+## Imprimir list boxes
 
 Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
 
@@ -916,7 +916,7 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Widget por defecto                             | Widget(s) alternativo(s)                                                                       |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| texto     | entrada de texto                               | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | booleano  | casilla de selección                           | drop-down menu (required list)                                                                 |
@@ -930,16 +930,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Value type | Formato por defecto                                        | Control de entrada      |
-| ---------- | ---------------------------------------------------------- | ----------------------- |
-| texto      | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
-|            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" y "-"             |
-|            |                                                            | "0-9" if min>=0         |
-| Booleano   | casilla de selección                                       | N/A                     |
-| color      | N/A                                                        | N/A                     |
-| evento     | N/A                                                        | N/A                     |
+| Tipo de valor | Formato por defecto                                        | Control de entrada      |
+| ------------- | ---------------------------------------------------------- | ----------------------- |
+| texto         | same as defined in object                                  | any (no control)        |
+| real          | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
+|               |                                                            | "0-9" and "." if min>=0 |
+| integer       | same as defined in object                                  | "0-9" y "-"             |
+|               |                                                            | "0-9" if min>=0         |
+| Booleano      | casilla de selección                                       | N/A                     |
+| color         | N/A                                                        | N/A                     |
+| evento        | N/A                                                        | N/A                     |
 
 ### Atributos
 
@@ -950,7 +950,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 |                       | valueType                               | texto | real | integer | booleano | color | evento |
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ------ |
 | *Atributos*           | *Descripción*                           |       |      |         |          |       |        |
-| value                 | cell value (input or output)            | x     | x    | x       |          |       |        |
+| value                 | valor de la celda (entrada o salida)    | x     | x    | x       |          |       |        |
 | min                   | valor mínimo                            |       | x    | x       |          |       |        |
 | max                   | valor máximo                            |       | x    | x       |          |       |        |
 | behavior              | "threeStates" value                     |       |      | x       |          |       |        |
@@ -1059,9 +1059,9 @@ El atributo behavior ofrece variaciones a la representación estándar de los va
 Cuando un atributo "choiceList" o "requiredList" está presente dentro del objeto, la entrada de texto se sustituye por una lista desplegable o un combo box, dependiendo del atributo:
 
 *   Si el atributo es "choiceList", la celda se muestra como un combo box. Esto significa que el usuario puede seleccionar o escribir un valor.
-*   If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
+*   Si el atributo es "requiredList", la celda se muestra como una lista desplegable y el usuario sólo puede seleccionar uno de los valores de la lista.
 
-In both cases, a "value" attribute can be used to preselect a value in the widget.
+En ambos casos, se puede utilizar un atributo "valor" para preseleccionar un valor en el widget.
 > Los valores del widget se definen a través de un array. Si quiere asociar el widget a una lista 4D existente, debe utilizar los atributos "requiredListReference", "requiredListName", "choiceListReference" o "choiceListName".
 
 Ejemplos:
@@ -1099,7 +1099,7 @@ Ejemplos:
 
 Los atributos "requiredListName" y "requiredListReference" permiten utilizar, en una celda de list box, una lista definida en 4D, ya sea en modo Diseño (en el editor de Listas de la Caja de Herramientas) o por programación (utilizando el comando New list). La celda se mostrará entonces como una lista desplegable. Esto significa que el usuario sólo puede seleccionar uno de los valores proporcionados en la lista.
 
-Utilice "requiredListName" o "requiredListReference" en función del origen de la lista: si la lista procede de la caja de herramientas, pase un nombre; en caso contrario, si la lista se ha definido por programación, pase una referencia. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Utilice "requiredListName" o "requiredListReference" en función del origen de la lista: si la lista procede de la caja de herramientas, pase un nombre; en caso contrario, si la lista se ha definido por programación, pase una referencia. En ambos casos, se puede utilizar un atributo "valor" para preseleccionar un valor en el widget.
 > * Si desea definir estos valores a través de un simple array, debe utilizar el atributo "requiredList".
 > * Si la lista contiene elementos de texto que representan valores reales, el separador decimal debe ser un punto ("."), independientemente de la configuración local, por ejemplo "17.6" "1234.456".
 
@@ -1140,7 +1140,7 @@ Ejemplos:
 
 Los atributos "choiceListName" and "choiceListReference" permiten utilizar, en una celda de list box, una lista definida en 4D, ya sea en modo Diseño (en el editor de Listas de la Caja de Herramientas) o por programación (utilizando el comando New list). La celda se muestra entonces como un combo box, lo que significa que el usuario puede seleccionar o escribir un valor.
 
-Utilice "choiceListName" o "choiceListReference" en función del origen de la lista: si la lista procede de la caja de herramientas, pase un nombre; en caso contrario, si la lista se ha definido por programación, pase una referencia. In both cases, a "value" attribute can be used to preselect a value in the widget.
+Utilice "choiceListName" o "choiceListReference" en función del origen de la lista: si la lista procede de la caja de herramientas, pase un nombre; en caso contrario, si la lista se ha definido por programación, pase una referencia. En ambos casos, se puede utilizar un atributo "valor" para preseleccionar un valor en el widget.
 > * Si desea definir estos valores a través de un simple array, debe utilizar el atributo "choiceList".
 > * Si la lista contiene elementos de texto que representan valores reales, el separador decimal debe ser un punto ("."), independientemente de la configuración local, por ejemplo "17.6" "1234.456".
 
@@ -1236,14 +1236,14 @@ El atributo valueType de valor "color" permite mostrar un color o un texto.
 ![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
 
-*   If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
+*   Si el valor es un texto, entonces se muestra el texto (*por ejemplo*: "valor"; "Automatic").
 
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+El "event" valueType muestra un botón que genera un evento `On Clicked` al ser presionado. No se puede pasar ni devolver ningún dato o valor.
 
-Optionally, you can pass a "label" attribute.
+Opcionalmente, se puede pasar un atributo "label".
 
 Ejemplo:
 
@@ -1257,16 +1257,16 @@ OB SET($ob;"label";"Edit...")
 
 
 ### Gestión de eventos
-Several events can be handled while using an object list box array:
+Se pueden manejar varios eventos mientras se utiliza un array list box de objetos:
 
-*   **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
+*   **On Data Change**: un evento `On Data Change` se dispara cuando se ha modificado algún valor:
     *   en un área de entrada de texto
     *   en una lista desplegable
     *   en un área combo box
-    *   in a unit button (switch from value x to value x+1)
-    *   in a check box (switch between checked/unchecked)
-*   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. This event is managed by the programmer.
-*   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. This event is managed by the programmer.
+    *   botón de unidad (pasa de valor x a valor x+1)
+    *   en una casilla de selección ( cambia entre marcado/desmarcado)
+*   **On Clicked**: cuando el usuario haga clic en un botón instalado con el "event" atributo *valueType*, se generará un evento `On Clicked`. Este evento es gestionado por el programador.
+*   **On Alternative Click**: cuando el usuario haga clic en un botón de elipsis (atributo "alternateButton"), se generará un evento `On Alternative Click`. Este evento es gestionado por el programador.
 
 
 

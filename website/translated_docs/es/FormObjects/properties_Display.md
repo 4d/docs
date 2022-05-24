@@ -105,16 +105,16 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 4D provides various default number formats.
 
-### Placeholders
+### Marcadores
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| Placeholder | Effect for leading or trailing zero |
-| ----------- | ----------------------------------- |
-| #           | No muestra nada                     |
-| 0           | Muestra 0                           |
-| ^           | Displays a space (1)                |
-| *           | Displays an asterisk                |
+| Marcador | Effect for leading or trailing zero |
+| -------- | ----------------------------------- |
+| #        | No muestra nada                     |
+| 0        | Muestra 0                           |
+| ^        | Displays a space (1)                |
+| *        | Displays an asterisk                |
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
@@ -177,11 +177,11 @@ En este caso, la visualización del cero sería $0.00.
 
 ### Notación científica
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
+If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. Por ejemplo, el formato:
 
     &3
 
-would display 759.62 as:
+mostrará 759.62 como:
 
     7.60e+2
 
@@ -199,11 +199,11 @@ You can display a number in hexadecimal using the following display formats:
 
 The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
 
-### Displaying a number as a time
+### Mostrar un número como una hora
 
 You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
 
-For example, the format:
+Por ejemplo, el formato:
 
     &/5
 
@@ -267,7 +267,7 @@ Picture formats control how pictures appear when displayed or printed. For data 
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
-### Scaled to fit
+### A escala para ajustarse
 
 `Gramática JSON: "scaled"`
 
@@ -331,19 +331,19 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                      | Ejemplo para 04:30:25         |
-| ---------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm           |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM           |                                                                                                                                                  | 4 horas 30 minutos            |
-| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss           | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS           | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutos 25 Segundos       |
-| ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (por defecto) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
-| System time long             | systemLong      | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
+| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                      | Ejemplo para 04:30:25          |
+| ---------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
+| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                  | 04:30:25                       |
+| HH:MM                        | hh_mm           |                                                                                                                                                  | 04:30                          |
+| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                  | 4 horas 30 minutos 25 segundos |
+| Hour Min                     | HH_MM           |                                                                                                                                                  | 4 horas 30 minutos             |
+| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                  | 4:30 a.m.                      |
+| MM SS                        | mm_ss           | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                         |
+| Min Sec                      | MM_SS           | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutos 25 Segundos        |
+| ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
+| System time short            | - (por defecto) | Standard time format defined in the system                                                                                                       | 04:30:25                       |
+| System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                     |
+| System time long             | systemLong      | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
@@ -553,7 +553,7 @@ You can handle the Visible property for most form objects. This property simplif
 
 
 ---
-## Wordwrap
+## Ajuste de texto
 
 > For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
 
@@ -573,7 +573,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 
 #### Unchecked for list box/No for input
-`JSON grammar: "none"`
+`Gramática JSON: "none"`
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
 

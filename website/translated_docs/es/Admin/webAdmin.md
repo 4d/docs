@@ -16,7 +16,7 @@ This feature can be used in 4D applications running headless as well as 4D appli
 By default, the `WebAdmin` web server is not launched. You need to configure the launch at startup, or (in versions with interface) launch it manually using a menu item.
 
 
-### Launch at startup
+### Lanzamiento al inicio
 
 You can configure the `WebAdmin` web server to be launched at 4D or 4D Server application startup (before any project is loaded).
 
@@ -50,7 +50,7 @@ The menu item becomes **Stop Server** when the server is launched; select **Stop
 
 
 
-## WebAdmin Settings
+## Propiedades WebAdmin
 
 Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via a URL is not allowed.
 
@@ -96,7 +96,7 @@ When this option is checked, you will be able to connect to the `WebAdmin` web s
 Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. El valor por defecto es 7443.
 
 
-#### Certificate folder path
+#### Ruta de la carpeta de certificados
 
 Path of the folder where the TLS certificate files are located. By default, the certificate folder path is empty and 4D or 4D Server uses the certificate files embedded in the 4D application (custom certificates must be stored next to the project folder).
 
@@ -110,7 +110,7 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 - **With request body** - enabled with body part in request only
 - **With response body** - enabled with body part in response only
 
-#### Access Key
+#### Llave de acceso
 
 Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
 

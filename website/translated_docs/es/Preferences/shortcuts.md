@@ -1,6 +1,6 @@
 ---
 id: shortcuts
-title: Shortcuts Page
+title: Página Atajos
 ---
 
 This page lists all the shortcuts used in the 4D Design environment (except for standard "system" shortcuts, such as Ctrl+C/Command+C for the Copy command).

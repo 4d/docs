@@ -41,7 +41,7 @@ The following escape sequences can be used within strings:
 | Repetition               | String * Number  | String   | "ab" * 3                | "ababab" |
 | Equality                 | String = String  | Booleano | "abc" = "abc"           | True     |
 |                          |                  |          | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Booleano | "abc" # "abd"           | True     |
+| Desigualdade             | String # String  | Booleano | "abc" # "abd"           | True     |
 |                          |                  |          | "abc" # "abc"           | False    |
 | Greater than             | String > String  | Booleano | "abd" > "abc"           | True     |
 |                          |                  |          | "abc" > "abc"           | False    |
@@ -152,7 +152,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Por exemplo:
 
 ```4d
 //The following example tests if the last character of vtText is an At sign "@"

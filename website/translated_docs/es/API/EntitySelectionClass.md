@@ -46,7 +46,7 @@ Entity selections can be created from existing selections using various function
 
 
 
-## Create entity selection
+## Crear una entity selection
 
 
 <!-- REF #_command_.Create entity selection.Syntax --> **Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->

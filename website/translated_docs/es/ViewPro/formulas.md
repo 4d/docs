@@ -3,11 +3,11 @@ id: formulas
 title: Formulas and Functions
 ---
    
-## Using formulas
+## Utilización de las fórmulas
 
 A spreadsheet formula is an expression that calculates the value of a cell.
 
-### Entering formulas
+### Entrada de las fórmulas
 
 To enter a formula in a 4D View Pro area:
 
@@ -42,23 +42,23 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Data types                         | Values                                             | Operadores                                                                                                                                                                                                                                        |
+| Tipos de datos                     | Valores                                            | Operadores                                                                                                                                                                                                                                        |
 | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Número](Concepts/dt_number.md)    | 1.2<br>1.2 E3<br>1.2E-3<br>10.3x | + (addition)<br>- (subtraction)<br>* (multiplication)<br>/ (division)<br>^ (exponent, the number of times to multiply a number by itself)<br>% (percentage -- divide the number before the operator by one hundred) |
 | [Fecha](Concepts/dt_date.md)       | 10/24/2017                                         | + (date + number of days -> date)<br>+ (date + time -> date + time of day)<br>- (date - number of days -> date)<br>- (date - date -> number of days between the two)                                                            |
 | [Hora](Concepts/dt_time.md)        | 10:12:10                                           | Duration operators:<p>+ (addition)<br>- (subtraction)<br>* (duration * number -> duration)<br>/ (duration / number -> duration)                                                                        |
-| [Cadena](Concepts/dt_string.md)    | 'Sophie' or "Sophie"                               | & (concatenation)                                                                                                                                                                                                                                 |
-| [Booleano](Concepts/dt_boolean.md) | TRUE or FALSE                                      | -                                                                                                                                                                                                                                                 |
+| [Cadena](Concepts/dt_string.md)    | 'Sophie' or "Sophie"                               | & (concatenación)                                                                                                                                                                                                                                 |
+| [Booleano](Concepts/dt_boolean.md) | TRUE o FALSE                                       | -                                                                                                                                                                                                                                                 |
 
 
 ### Comparison operators
 
 The following operators can be used with two operands of the same type:
 
-| Operador | Comparison        |
+| Operador | Comparación       |
 | -------- | ----------------- |
-| =        | equal to          |
-| <>       | different than    |
+| =        | igual a           |
+| <>       | es diferente de   |
 | >        | mayor que         |
 | <        | menor que         |
 | >=       | mayor o igual que |
@@ -69,22 +69,22 @@ The following operators can be used with two operands of the same type:
 
 List of operators from most to least important:
 
-| Operador        | Descripción                |
-| --------------- | -------------------------- |
-| ()              | Parenthesis (for grouping) |
-| -               | Negate                     |
-| +               | Más                        |
-| %               | Porcentaje                 |
-| ^               | Exponent                   |
-| * y /           | Multiply and divide        |
-| + y -           | Add and Subtract           |
-| &               | Concatenate                |
-| =  > < >= <= <> | Comparar                   |
+| Operador        | Descripción               |
+| --------------- | ------------------------- |
+| ()              | Paréntesis (para agrupar) |
+| -               | Negativo                  |
+| +               | Más                       |
+| %               | Porcentaje                |
+| ^               | Exponente                 |
+| * y /           | Multiply and divide       |
+| + y -           | Add and Subtract          |
+| &               | Concatenar                |
+| =  > < >= <= <> | Comparar                  |
 
 
 
 
-## Cell references
+## Referencias de celdas
 
 Formulas often refer to other cells by cell addresses. You can copy these formulas into other cells. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
 
@@ -102,7 +102,7 @@ When you copy or move these formulas to new locations, each cell address in that
 
 
 
-### Reference Notation
+### Notación de las referencias
 
 If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
 
@@ -112,17 +112,17 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Ejemplo   | Type of reference | Descripción                                                                                                                                    |
-| --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5        | Relative          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5      | Absolute          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
-| $C5       | Mixed             | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
-| C$5       | Mixed             | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Cell name | Absolute          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                    |
+| ------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
+| $C$5               | Absoluto           | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
+| C$5                | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
+| Nombre de la celda | Absoluto           | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 
-## Built-in functions
+## Funciones integradas
 
 Spreadsheet functions are preset formulas used to calculate cell values. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
 
@@ -131,16 +131,16 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) for details and examples.
 
 
-## 4D functions
+## Funciones 4D
 
 4D View Pro allows you to define and call **4D custom functions**, which execute [4D formulas](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
 
 4D custom functions provide access, from within your 4D View Pro formulas, to:
 
-- 4D process variables,
+- variables proceso 4D,
 - campos,
 - project methods,
-- 4D language commands,
+- comandos del lenguaje 4D,
 - or any valid 4D expression.
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
@@ -243,10 +243,10 @@ For more information on supported incoming parameter types, please refer to the 
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 * [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
-    | Propiedad | Tipo  | Descripción     |
-    | --------- | ----- | --------------- |
-    | value     | Fecha | Valor fecha     |
-    | time      | Real  | Time in seconds |
+    | Propiedad | Tipo  | Descripción      |
+    | --------- | ----- | ---------------- |
+    | value     | Fecha | Valor fecha      |
+    | time      | Real  | Hora en segundos |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
@@ -274,7 +274,7 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ![](assets/en/ViewPro/params.PNG)
 
 
-## Compatibility
+## Compatibilidad
 
 Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
 

@@ -38,6 +38,6 @@ Un plug-in puede ser muy sencillo, con una sola rutina que realice una tarea muy
 - [**El Asistente de plug-in 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) es una herramienta esencial que simplifica la tarea de desarrollar plugins 4D. Escribe el código que 4D necesita para cargar e interactuar correctamente con un plug-in, permitiéndole concentrarse en su propio código.
 
 
-## Sharing plug-ins
+## Compartir los plug-ins
 
 We encourage you to support the 4D developer community by sharing your plug-ins, preferably on the [GitHub platform](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.  

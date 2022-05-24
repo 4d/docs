@@ -23,7 +23,7 @@ Other "unpredictable" errors include disk write error, network failure, or in ge
 
 In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
 
-Este método projeto se instala para o processo atual e será chamado automaticamente para qualquer erro que se produza no processo, em modo interpretado ou compilado. Para *instalar* este método projeto, basta com chamar ao comando `ON ERR CALL` com o nome do método projeto como parâmetro. For example:
+Este método projeto se instala para o processo atual e será chamado automaticamente para qualquer erro que se produza no processo, em modo interpretado ou compilado. Para *instalar* este método projeto, basta com chamar ao comando `ON ERR CALL` com o nome do método projeto como parâmetro. Por exemplo:
 
 ```4d
 ON ERR CALL("IO_ERRORS") //Instala o método de gestão de erros

@@ -44,7 +44,7 @@ Uma hora nula se escreve ?00:00:00?
 | Modulo                   | Hora % Número  | Número   | ?02:03:04? % 2          | 0          |
 | Equality                 | Hora = Hora    | Booleano | ?01:02:03? = ?01:02:03? | True       |
 |                          |                |          | ?01:02:03? = ?01:02:04? | False      |
-| Inequality               | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |
+| Desigualdade             | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |
 |                          |                |          | ?01:02:03? # ?01:02:03? | False      |
 | Greater than             | Hora > Hora    | Booleano | ?01:02:04? > ?01:02:03? | True       |
 |                          |                |          | ?01:02:03? > ?01:02:03? | False      |

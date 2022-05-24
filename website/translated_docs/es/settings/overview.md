@@ -23,7 +23,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 -   **User Settings...** gives you access to settings that can be stored externally in a user file. If these are modified, they are used instead of structure settings.
 -   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. If they are modified, they are used instead of user or structure settings.
 
-### Locking information
+### Información sobre el bloqueo
 
 Locking can occur in both Project and Client/server modes when:
 

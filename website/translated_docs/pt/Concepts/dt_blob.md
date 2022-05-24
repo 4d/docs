@@ -125,7 +125,7 @@ You can assign a Blob variable to another:
 
 ## Automatic conversion of blob type
 
-4D automatically converts scalar blobs to blob objects, and vice versa, when they're assigned to each other. For example:
+4D automatically converts scalar blobs to blob objects, and vice versa, when they're assigned to each other. Por exemplo:
 
 ```4d
 // Create a variable of type Blob and an object variable
@@ -147,7 +147,7 @@ $type:= Value type($myBlob) // Blob
 
 ## Modifying a scalar blob
 
-Unlike blob objects, scalar blobs can be altered. For example:
+Unlike blob objects, scalar blobs can be altered. Por exemplo:
 
 ```4d
 var $myBlob : Blob

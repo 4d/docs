@@ -1,6 +1,6 @@
 ---
 id: clientServer
-title: Client/Server Management
+title: Gestión Cliente/Servidor
 ---
 
 
@@ -26,7 +26,7 @@ A merged client/server application is customized and its starting is simplified:
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
 
 
-## Opening a remote project
+## Abrir un proyecto remoto
 
 The first time you connect to a 4D Server project via a remote 4D, you will usually use the standard connection dialog. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file.
 
@@ -62,7 +62,7 @@ Once a connection to the server has been established, the remote project will be
 
 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the *.4DProject* project file (not compressed) in interpreted mode.
 
-- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. The project is reloaded:
+- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. El proyecto se recarga:
     - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
     - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 

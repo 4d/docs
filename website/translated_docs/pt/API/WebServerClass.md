@@ -72,10 +72,10 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter | Type         |    | Description                                                    |
+| Parameter | Type         |    | Descrição                                                      |
 | --------- | ------------ | -- | -------------------------------------------------------------- |
 | option    | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
-| Result    | 4D.WebServer | <- | Web server object                                              |
+| Resultado | 4D.WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
 
@@ -118,9 +118,9 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter | Type    |    | Description                                    |
+| Parameter | Type    |    | Descrição                                      |
 | --------- | ------- | -- | ---------------------------------------------- |
-| Result    | Coleção | <- | Collection of the available Web server objects |
+| Resultado | Coleção | <- | Collection of the available Web server objects |
 
 <!-- END REF -->
 
@@ -739,7 +739,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
 
-| Constant            | Value    | Description                                                                                                                         |
+| Constant            | Value    | Descrição                                                                                                                           |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
 | Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
@@ -783,10 +783,10 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parameter | Type   |    | Description                           |
+| Parameter | Type   |    | Descrição                             |
 | --------- | ------ | -- | ------------------------------------- |
 | settings  | Objeto | -> | Web server settings to set at startup |
-| Result    | Objeto | <- | Status of the web server startup      |
+| Resultado | Objeto | <- | Status of the web server startup      |
 
 <!-- END REF -->
 
@@ -803,7 +803,7 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Propriedade |                         | Type     | Description                                                          |
+| Propriedade |                         | Type     | Descrição                                                            |
 | ----------- | ----------------------- | -------- | -------------------------------------------------------------------- |
 | success     |                         | Booleano | True if the web server was correctly started, False otherwise        |
 | errors      |                         | Coleção  | 4D error stack (not returned if the web server started successfully) |
@@ -845,7 +845,7 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| Parameter | Type |  | Description                     |
+| Parameter | Type |  | Descrição                       |
 | --------- | ---- |  | ------------------------------- |
 |           |      |  | Does not require any parameters |
 

@@ -4,7 +4,9 @@ title: Seite Verschlüsseln
 sidebar_label: Seite Verschlüsseln
 ---
 
-Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann. Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln" des 4D Handbuchs *Designmodus*.
+Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann.
+
+> Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln" des 4D Handbuchs *Designmodus*. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post.
 
 Bei jeder Operation Verschlüsselung/Entschlüsselung wird ein neuer Ordner angelegt. Er lautet "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> oder "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 > Verschlüsselung ist nur im [Wartungsmodus](overview.md#anzeige-im-wartungsmodus) verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erhalten Sie die Meldung, dass die Anwendung geschlossen und im Wartungsmodus neu gestartet wird

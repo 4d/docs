@@ -6,7 +6,7 @@ title: IMAPTransporter
 The `IMAPTransporter` class allows you to retrieve messages from a IMAP email server.
 
 
-### IMAP Transporter object
+### Objeto IMAP Transporter
 
 IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-new-transporter) command. They provide the following properties and functions:
 
@@ -70,16 +70,16 @@ El comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summa
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor por defecto (si se omite)                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                 | Valor por defecto (si se omite)                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | ninguno                                                             |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Cadena de texto u objeto token que representan las credenciales de autorización OAuth 2. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[IMAP transporter](#imap-transporter-object)* object. | ninguno                                                             |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                 |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatorio*                                                       |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                             |
-| .**password** : Text<p>Contraseña del usuario para la autenticación en el servidor. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                         | ninguno                                                             |
+| .**password** : Text<p>Contraseña del usuario para la autenticación en el servidor. Not returned in *[IMAP transporter](#imap-transporter-object)* object.                                                                                                                                                                                                                                                       | ninguno                                                             |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                             |
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
@@ -236,7 +236,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 | mailObj        | Objeto | -> | Objeto Email                                |
 | destinationBox | Texto  | -> | Buzón para recibir el objeto Email          |
 | options        | Objeto | -> | Objeto que contiene información del charset |
-| Resultado      | Objeto | <- | Status of the append operation              |
+| Resultado      | Objeto | <- | Estado de la operación                      |
 <!-- END REF -->
 
 
@@ -244,7 +244,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 La función `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->añade el objeto `mailObj` a la caja `destinationBox`<!-- END REF -->.
 
-En el parámetro `mailObj`, pase un objeto Email. For a comprehensive description of mail properties, see [Email object](EmailObjectClass.md#email-object). La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
+En el parámetro `mailObj`, pase un objeto Email. Para una descripción completa de las propiedades del correo, ver [objeto Email](EmailObjectClass.md#email-object). La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
 
 El parámetro opcional `destinationBox` permite pasar el nombre del buzón donde se añadirá el objeto `mailObj`. Si se omite, se utiliza el buzón actual.
 
@@ -862,7 +862,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 | Parámetros | Tipo       |    | Descripción                  |
 | ---------- | ---------- |:--:| ---------------------------- |
-| parameters | Objeto     | -> | Parameter object             |
+| parameters | Objeto     | -> | Objeto de parámetro          |
 | Resultado  | Collection | <- | Colección de objetos mailbox |
 <!-- END REF -->
 
@@ -1064,13 +1064,13 @@ You want to get the message with ID = 1:
 **.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parámetros | Tipo       |    | Descripción                                            |
-| ---------- | ---------- |:--:| ------------------------------------------------------ |
-| ids        | Collection | -> | Collection of message ID                               |
-| startMsg   | Integer    | -> | Sequence number of the first message                   |
-| endMsg     | Integer    | -> | Sequence number of the last message                    |
-| options    | Objeto     | -> | Message handling instructions                          |
-| Resultado  | Objeto     | <- | Object containing:<br><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul> |
+| Parámetros | Tipo       |    | Descripción                                              |
+| ---------- | ---------- |:--:| -------------------------------------------------------- |
+| ids        | Collection | -> | Collection of message ID                                 |
+| startMsg   | Integer    | -> | Sequence number of the first message                     |
+| endMsg     | Integer    | -> | Sequence number of the last message                      |
+| options    | Objeto     | -> | Message handling instructions                            |
+| Resultado  | Objeto     | <- | Objeto que contiene:<br><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul> |
 <!-- END REF -->
 
 
@@ -1118,7 +1118,7 @@ The optional *options* parameter allows you to define the parts of the messages 
 | Propiedad | Tipo       | Descripción                                                                                                                           |
 | --------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | lista     | Collection | Colección de objetos [`Email`](EmailObjectClass.md#email-object). Si no se encuentran objetos Email, se devuelve una colección vacía. |
-| notFound  | Collection | Collection of:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                          |
+| notFound  | Collection | Colección de:<br><ul><li>first syntax - previously passed message IDs that do not exist</li><li>second syntax - sequence numbers of messages between startMsg and endMsg that do not exist</li></ul>An empty collection is returned if all messages are found.                           |
 
 
 #### Ejemplo
@@ -1259,7 +1259,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 | msgsIDs        | Collection | -> | Colección de identificadores únicos de mensajes (cadenas) |
 | allMsgs        | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado     |
 | destinationBox | Texto      | -> | Mailbox to receive moved messages                         |
-| Resultado      | Objeto     | <- | Status of the move operation                              |
+| Resultado      | Objeto     | <- | Estado de la operación de desplazamiento                  |
 <!-- END REF -->
 
 
@@ -1622,14 +1622,14 @@ SearchKey3 = FLAGGED DRAFT
 
 > Matching is usually not case-sensitive
 
-- If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
-- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+- Si el *searchCriteria* es una cadena null, la búsqueda será equivalente a un "seleccionar todo".
+- Si *searchCriteria* incluye varias llaves de búsqueda, el resultado es la intersección (función AND) de todos los mensajes que coinciden con esas llaves.
 
 ```
 searchCriteria = FLAGGED FROM "SMITH"
 ```
 ... returns all messages with \Flagged flag set AND sent by Smith.
-- You can use the **OR** or **NOT** operators as follows:
+- Puede utilizar los operadores **OR** o **NOT** de la siguiente manera:
 
 ```
 searchCriteria = OR SEEN FLAGGED
@@ -1661,7 +1661,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
 
 
-#### Search value types
+#### Tipos de valores de búsqueda
 
 Search-keys may request the value to search for:
 

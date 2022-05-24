@@ -103,16 +103,16 @@ Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor 
 
 Una expresión que utiliza un operador bitwise devuelve un valor Entero largo, excepto para el operador Bit Test, donde la expresión devuelve un valor Booleano. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 
-| Operación         | Operador  | Sintaxis                        | Devuelve              |
-| ----------------- | --------- | ------------------------------- | --------------------- |
-| Y                 | &         | Long & Long                     | Largo                 |
-| O (inclusive)     | &#124;    | Long &#124; Long                | Largo                 |
-| O (exclusivo)     | \^&#124; | Long \^&#124; Long             | Largo                 |
-| Left Bit Shift    | <<        | Long << Long                    | Long (ver nota 1)     |
-| Right Bit Shift   | >>        | Long >> Long                    | Long (ver nota 1)     |
-| Bit Set           | ?+        | Long ?+ Long                    | Long (ver nota 2)     |
-| Poner el bit en 0 | ?-        | Long ?- Long                    | Long (ver nota 2)     |
-| Probar bit        | ??        | Largo?? Largo Largo Largo Largo | Booleano (ver nota 2) |
+| Operación         | Operador  | Sintaxis            | Devuelve             |
+| ----------------- | --------- | ------------------- | -------------------- |
+| Y                 | &         | Long & Long         | Long                 |
+| O (inclusive)     | &#124;    | Long &#124; Long    | Long                 |
+| O (exclusivo)     | \^&#124; | Long \^&#124; Long | Long                 |
+| Left Bit Shift    | <<        | Long << Long        | Long (ver nota 1)    |
+| Right Bit Shift   | >>        | Long >> Long        | Long (ver nota 1)    |
+| Bit Set           | ?+        | Long ?+ Long        | Long (ver nota 2)    |
+| Poner el bit en 0 | ?-        | Long ?- Long        | Long (ver nota 2)    |
+| Probar bit        | ??        | Long ?? Long        | Boolean (ver nota 2) |
 
 #### Notas
 

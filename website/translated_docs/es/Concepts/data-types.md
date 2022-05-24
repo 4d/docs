@@ -35,7 +35,7 @@ Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no
 
 Cuando las variables se introducen mediante una directiva del compilador, reciben un valor por defecto, que mantendrán durante la sesión mientras no hayan sido asignadas.
 
-The default value depends on the variable type:
+El valor por defecto depende del tipo de variable:
 
 | Tipo         | Valor por defecto |
 | ------------ | ----------------- |

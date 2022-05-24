@@ -214,7 +214,7 @@
         "title": "Variables"
       },
       "Debugging/basics": {
-        "title": "Basics"
+        "title": "Principes de base"
       },
       "Debugging/breakpoints": {
         "title": "Points d'arrêt et points d'arrêt sur commande"
@@ -920,7 +920,7 @@
         "title": "Présentation du contrôle des accès"
       },
       "ViewPro/advanced-programming": {
-        "title": "Advanced programming with Javascript"
+        "title": "Programmation avancée avec Javascript"
       },
       "ViewPro/configuring": {
         "title": "Configuration des zones 4D View Pro"
@@ -941,19 +941,19 @@
         "title": "Authentification"
       },
       "WebServer/errorPages": {
-        "title": "Custom HTTP Error Pages"
+        "title": "Pages d'erreur HTTP personnalisées"
       },
       "WebServer/gettingStarted": {
         "title": "Prise en main"
       },
       "WebServer/httpRequests": {
-        "title": "Processing HTTP requests"
+        "title": "Traitement des requêtes HTTP"
       },
       "WebServer/preemptiveWeb": {
         "title": "Using preemptive web processes"
       },
       "WebServer/sessions": {
-        "title": "User sessions"
+        "title": "Sessions utilisateur"
       },
       "WebServer/templates": {
         "title": "Template pages"

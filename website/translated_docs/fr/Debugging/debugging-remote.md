@@ -5,7 +5,7 @@ title: Débogage depuis des machines distantes
 
 ## Aperçu
 
-When a 4D database is running on 4D Server in interpreted mode, you can debug the 4D code running on the server from a remote 4D client logged to the project. Il suffit d'associer le débogueur à une machine distante spécifique, et l'exécution du code peut être surveillée dans le débogueur directement sur la machine distante.
+Lorsqu'une base de données 4D est exécutée sur 4D Server en mode interprété, vous pouvez déboguer le code 4D exécuté sur le serveur à partir d'un client 4D distant connecté au projet. Il suffit d'associer le débogueur à une machine distante spécifique, et l'exécution du code peut être surveillée dans le débogueur directement sur la machine distante.
 
 Sur une machine distante, la [fenêtre du débogueur](debugger.md) affiche une icône de serveur spécifique et une couleur de fond bleue pour indiquer que vous déboguez du code serveur :
 
@@ -34,12 +34,12 @@ A noter que :
 * Si aucun débogueur n'est associé, le code en cours d'exécution n'est pas arrêté par les commandes de débogage
 
 
-## Attaching the debugger
+## Associer le débogueur
 
 By default when you start an interpreted application:
 
-* if 4D Server is not running headless, the debugger is attached to the server,
-* if 4D Server is running headless, no debugger is attached.
+* si 4D Server ne fonctionne pas en mode "headless", le débogueur est associé au serveur,
+* si 4D Server fonctionne en mode "headless", aucun débogueur n'est associé.
 
 Vous pouvez associer le débogueur à tout client 4D distant autorisé à se connecter à l'application 4D Server.
 

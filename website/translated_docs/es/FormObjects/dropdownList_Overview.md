@@ -3,7 +3,7 @@ id: dropdownListOverview
 title: Lista desplegable
 ---
 
-Drop-down lists are form objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an object, an array, a choice list, or a standard action.
+Las listas desplegables son objetos de formulario que permiten al usuario seleccionar de una lista. Los elementos mostrados en la lista desplegable se gestionan mediante un objeto, array, una lista de selección o una acción estándar.
 
 En macOS, las listas desplegables también se denominan a veces "menú emergente". Ambos nombres se refieren a los mismos objetos. Como muestra el siguiente ejemplo, el aspecto de estos objetos puede variar ligeramente según la plataforma:
 
@@ -16,28 +16,28 @@ You can create different types of drop-down lists with different features. To de
 
 | Tipo                           | Funcionalidades                                  | Tipo de expresión | Tipos de datos                  | Definición JSON                                                                                                                                               |
 | ------------------------------ | ------------------------------------------------ | ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objeto                         | Built upon a collection                          | Objeto            | Numeric, Text, Date, or Time    | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
-| Array                          | Basado en un array                               | Array             | Numeric, Text, Date, or Time    | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
+| Objeto                         | Built upon a collection                          | Objeto            | Numeric, Text, Date o Time      | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
+| Array                          | Basado en un array                               | Array             | Numeric, Text, Date o Time      | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
 | Choice list saved as value     | Built upon a choice list (standard)              | Lista             | Valor del elemento seleccionado | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
 | Choice list saved as reference | Built upon a choice list. Item position is saved | Lista             | Selected item reference         | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Hierarchical choice list       | Can display hierarchical contents                | Lista             | List reference                  | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Lista de selección jerárquica  | Can display hierarchical contents                | Lista             | List reference                  | `dataSourceTypeHint: integer`                                                                                                                                 |
 | Acción estándar                | Automatically built by the action                | *any*             | *any except List reference*     | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 
 
-## Handling drop-down lists
+## Gestión de listas desplegables
 
-### Using an object
+### Utilizar un objeto
 
-> This feature is only available in 4D projects.
+> Esta funcionalidad sólo está disponible en los proyectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. El objeto debe contener las siguientes propiedades:
 
-| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                             |
-| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection           | Mandatory - Collection of scalar values. All values must be of the same type. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>times</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number               | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                    |
-| `currentValue` | igual que Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                      |
+| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                         |
+| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>horas</li>If empty or not defined, the drop-down list is empty |
+| `index`        | number               | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                                |
+| `currentValue` | igual que Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                                  |
 
 If the object contains other properties, they are ignored.
 
@@ -76,7 +76,7 @@ Form.myDrop.index //3
 
 Un [array](Concepts/arrays.md) es una lista de valores en memoria a la que se hace referencia por el nombre del array. Una lista desplegable puede mostrar un array como una lista de valores cuando se hace clic en ella.
 
-To initialize the array associated to the drop-down list, you can:
+Para inicializar el array asociado a la lista desplegable, puede:
 
 * Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. Los valores por defecto se cargan en un array automáticamente. Puede referirse al array utilizando el nombre de la variable asociada al objeto.
 
@@ -92,15 +92,15 @@ To initialize the array associated to the drop-down list, you can:
   aCities{6}:="Green Bay" 
 ```
 
-In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
+En este caso, el nombre de la [variable](properties_Object.md#variable-or-expression) asociada al objeto en el formulario debe ser `aCities`. Este código podría colocarse en el método formulario y ejecutarse cuando se ejecute el evento formulario `On Load`.
 
-*  Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. Por ejemplo:
+*  Antes de que se muestre el objeto, cargue los valores de una lista en el array utilizando el comando [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html). Por ejemplo:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
 ```
 
-In this case also, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. Este código puede ejecutarse en lugar de las sentencias de asignación mostradas anteriormente.
+En este caso también, el nombre de la [variable](properties_Object.md#variable-or-expression) asociada al objeto en el formulario debe ser `aCities`. Este código puede ejecutarse en lugar de las sentencias de asignación mostradas anteriormente.
 
 Si necesita guardar la elección del usuario en un campo, deberá utilizar una sentencia de asignación que se ejecute después de aceptar el registro. El código podría ser así:
 
@@ -122,7 +122,7 @@ Si necesita guardar la elección del usuario en un campo, deberá utilizar una s
  End case
 ```
 
-You must select each event that you test for in your Case statement. Los arrays siempre contienen un número finito de elementos. La lista de elementos es dinámica y puede ser modificada por un método. Los elementos de un array pueden modificarse, ordenarse y añadirse.
+Debe seleccionar cada evento que pruebe en sus sentencia Case. Los arrays siempre contienen un número finito de elementos. La lista de elementos es dinámica y puede ser modificada por un método. Los elementos de un array pueden modificarse, ordenarse y añadirse.
 
 
 ### Utilizar una lista de selección

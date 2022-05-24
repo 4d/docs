@@ -292,7 +292,7 @@ The following values are **falsy**:
 
 * false
 * Null
-* undefined
+* indefinido
 * Null object
 * Null collection
 * Null pointer

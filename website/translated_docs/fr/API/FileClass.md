@@ -677,10 +677,10 @@ La fonction `.setContent( )` <!-- REF #FileClass.setContent().Summary -->réécr
 
 
 <details><summary>Historique</summary>
-| Version | Modifications                                           |
-| ------- | ------------------------------------------------------- |
-| v19 R3  | Default for new projects: no BOM and (macOS) LF for EOL |
-| v17 R5  | Ajout                                                   |
+| Version | Modifications                                                                       |
+| ------- | ----------------------------------------------------------------------------------- |
+| v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
+| v17 R5  | Ajout                                                                               |
 </details>
 
 
@@ -713,21 +713,21 @@ Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour l'�
 
 > Pour consulter la liste des jeux de caractères pris en charge par 4D, veuillez vous reporter à la description de la commande `CONVERT FROM TEXT`.
 
-Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'insère dans le fichier, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (par exemple "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
+Si une marque d'ordre d'octet (BOM) existe pour le jeu de caractères, 4D l'insère dans le fichier, sauf si le jeu de caractères utilisé contient le suffixe "-no-bom" (par exemple "UTF-8-no-bom"). Si vous n'indiquez pas un jeu de caractères, 4D utilise par défaut le jeu de caractères "UTF-8" sans BOM.
 
 Dans le paramètre *breakMode*, vous pouvez passer une valeur numérique indiquant le traitement à appliquer aux caractères de fin de ligne avant de les stocker dans le fichier. Les constantes suivantes du thème **Documents système** sont disponibles :
 
-| Constante                     | Valeur | Commentaire                                                                                                                                                                |
-| ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0      | Aucun traitement                                                                                                                                                           |
-| `Document with native format` | 1      | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (carriage return) sous MACos, CRLF (carriage return + line feed) sous Windows |
-| `Document with CRLF`          | 2      | Les sauts de ligne sont convertis en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                                |
-| `Document with CR`            | 3      | Les sauts de ligne sont convertis en CR (retour chariot), le format MacOS classique par défaut                                                                             |
-| `Document with LF`            | 4      | Les sauts de ligne sont convertis en LF (line feed), le format Unix et macOS par défaut                                                                                    |
+| Constante                     | Valeur | Commentaire                                                                                                                                                          |
+| ----------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0      | Aucun traitement                                                                                                                                                     |
+| `Document with native format` | 1      | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
+| `Document with CRLF`          | 2      | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                          |
+| `Document with CR`            | 3      | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                       |
+| `Document with LF`            | 4      | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                              |
 
 Par défaut, lorsque vous omettez le paramètre *breakMode* les retours à la ligne sont traités en mode natif (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. Voir la [page Compatibilité](https://doc.4d.com/4dv19R/help/title/en/page3239.html) sur doc.4d.com.
+> **Note de compatibilité** : Des options de compatibilité sont disponibles pour la gestion des fins de ligne et des BOM. Voir la [page Compatibilité](https://doc.4d.com/4dv19R/help/title/en/page3239.html) sur doc.4d.com.
 
 #### Exemple
 

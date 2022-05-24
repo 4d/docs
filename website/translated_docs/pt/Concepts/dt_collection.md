@@ -64,7 +64,7 @@ Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/
 
 4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
 
-For example:
+Por exemplo:
 
 ```4d
 $newCol:=$col.copy() //cópia de $col a $newCol

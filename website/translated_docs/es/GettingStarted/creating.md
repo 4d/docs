@@ -49,7 +49,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 - **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
 
-## Project opening shortcuts
+## Atajos de apertura de los proyectos
 
 4D offers several ways to open projects directly and bypass the Open dialog:
 

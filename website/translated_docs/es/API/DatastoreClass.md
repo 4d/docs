@@ -451,7 +451,7 @@ $info:=$ds.getAllRemoteContexts()
 {name:"contextA";dataclass:"Persons";main:"firstname,address.city"}]
 ```
 
-> This example serves as a demonstration, it is not meant for real implementation.
+> Este ejemplo sirve como demostración, no está pensado para una implementación real.
 
 #### Ver también
 
@@ -540,10 +540,10 @@ En un almacén de datos remoto:
 **.getRemoteContextInfo**(*contextName* : Text): Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Parámetros  | Tipo   |    | Descripción                             |
-| ----------- | ------ | -- | --------------------------------------- |
-| contextName | Texto  | -> | Nombre del contexto                     |
-| Resultado   | Objeto | <- | Description of the optimization context |
+| Parámetros  | Tipo   |    | Descripción              |
+| ----------- | ------ | -- | ------------------------ |
+| contextName | Texto  | -> | Nombre del contexto      |
+| Resultado   | Objeto | <- | Descripción del contexto |
 <!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -563,13 +563,13 @@ El objeto devuelto tiene las siguientes propiedades:
 | name                   | Texto | Nombre del contexto                                                                                                                                                                                                                                                           |
 | main                   | Texto | Attribute(s) associated to the context (attribute names are separated by a comma)                                                                                                                                                                                             |
 | dataclass              | Texto | Nombre de la clase de datos                                                                                                                                                                                                                                                   |
-| currentItem (optional) | Texto | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
+| currentItem (opcional) | Texto | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
 
 Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
 
 #### Ejemplo
 
-See the example from the [.setRemoteContextInfo()](#example-1-3) section.
+Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 #### Ver también
 
@@ -885,7 +885,7 @@ $info:=$ds.getRemoteContextInfo("contextA")
 // $info = {name:"contextA";dataclass:"Persons";main:"firstname, lastname"} 
 ```
 
-> This example serves as a demonstration, it is not meant for real implementation.
+> Este ejemplo sirve como demostración, no está pensado para una implementación real.
 
 
 #### Ejemplo 2
@@ -904,7 +904,7 @@ persons.lastname, persons.firstname"; "main"; 30)
 ```
 
 
-#### Example 3 - Listbox
+#### Ejemplo 3 - Listbox
 
 ```4d
 // When the form loads
@@ -946,7 +946,7 @@ End case
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 | Parámetros | Tipo    |    | Descripción                                |
 | ---------- | ------- | -- | ------------------------------------------ |
-| file       | 4D.File | -> | File object                                |
+| file       | 4D.File | -> | Objeto File                                |
 | reqNum     | Integer | -> | Número de peticiones a mantener en memoria |
 <!-- END REF -->
 

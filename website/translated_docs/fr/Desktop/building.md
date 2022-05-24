@@ -244,27 +244,27 @@ Cliquez sur le bouton **[...]** et utilisez la boîte de dialogue *Rechercher un
 
 #### Version courante
 
-Utilisée pour indiquer le numéro de version courante de l'application générée. Vous pourrez par la suite accepter ou refuser les connexions des applications clientes en fonction de leur numéro de version. The interval of compatibility for client and server applications is set using specific [XML keys](#buildapp4dsettings)).
+Utilisée pour indiquer le numéro de version courante de l'application générée. Vous pourrez par la suite accepter ou refuser les connexions des applications clientes en fonction de leur numéro de version. L'intervalle de compatibilité pour les applications client/serveur est défini à l'aide de [clés XML](#buildapp4dsettings) spécifiques).
 
-#### Embed the project Users and Groups in built server application
+#### Intégrer le projet Groupe et Utilisateurs dans une application serveur
 
-**Preliminary Note:** The following terms are used in this section:
+**Note préliminaire :** Les termes suivants sont utilisés dans cette section :
 
-| Nom                        | Définition                                                                                                                                                                 |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project directory file     | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the project         |
-| Application directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the built 4D Server |
-| Data directory file        | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings)                           |
+| Nom                                    | Définition                                                                                                                                                           |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fichier de répertoire du projet        | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le [dossier Settings](../Project/architecture.md#settings-1) du projet     |
+| Fichier de répertoire de l'application | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le [dossier Settings](../Project/architecture.md#settings-1) du serveur 4D |
+| Fichier de répertoire des données      | fichier [directory.json](../Users/handling_users_groups.md#directoryjson-file) situé dans le dossier [Data > Settings](../Project/architecture.md#settings)          |
 
-When you check this option, the project directory file is copied to the application directory file at build time.
+Lorsque vous cochez cette option, le fichier du répertoire du projet est copié dans le fichier du répertoire de l'application au moment de la génération.
 
-When you execute a built 4D Server application:
-* If the server has a data directory file, it is loaded.
-* If the server does not have a data directory file, the application directory file is loaded.
+Lorsque vous exécutez une application 4D Server générée :
+* Si le serveur possède un fichier de répertoire de données, il est chargé.
+* Si le serveur ne possède pas de fichier de répertoire de données, le fichier de répertoire de l'application est chargé.
 
-The application directory file is read-only. Modifications made to users, groups and permissions during server execution are stored in the data directory file. If no data directory file already exists, it is automatically created. If the application directory file was embedded, it is duplicated as data directory file.
+Le fichier du répertoire d'application est en lecture seule. Les modifications apportées aux utilisateurs, aux groupes et aux autorisations pendant l'exécution du serveur sont sauvegardées dans le fichier du répertoire des données. Si aucun fichier de répertoire de données n'existe déjà, il est automatiquement créé. Si le fichier de répertoire de l'application a été incorporé, il est dupliqué en tant que fichier de répertoire des données.
 
-Embedding the project directory file allows you to deploy a client/server application with a basic security user and group configuration. Subsequent modifications are added to the data directory file.
+L'incorporation du fichier de répertoire du projet vous permet de déployer une application client/serveur avec une configuration de base de la sécurité des utilisateurs et des groupes. Les modifications ultérieures sont ajoutées au fichier de répertoire des données.
 
 #### Autoriser la connexion des clients Silicon Mac
 
@@ -362,12 +362,12 @@ Dans certains cas, vous pourrez souhaiter que les applications clientes ne puiss
 
 Pour forcer la mise à jour, il vous suffit d’exclure les versions courantes des applications clientes (N-1 et précédentes) de l’intervalle des numéros de version compatibles avec l’application serveur. Dans ce cas, le mécanisme de mise à jour n’autorisera pas la connexion des applications clientes non mises à jour. Par exemple, si la nouvelle version de l’application client-serveur est 6, vous pouvez stipuler que toute application cliente ayant un numéro de version strictement inférieur à 6 ne sera pas autorisé à se connecter.
 
-Le [numéro de version courante](#current_version) est défini dans la page Client/Serveur du générateur d’application. The intervals of authorized numbers are set in the application project using specific [XML keys](#buildapp4dsettings).
+Le [numéro de version courante](#current_version) est défini dans la page Client/Serveur du générateur d’application. Les intervalles de numéros autorisés sont définis dans le projet d’application via des [clés XML](#buildapp4dsettings) spécifiques.
 
 
 #### En cas d’erreur
 
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: "The update of the client application failed. The application is now going to quit."
+Si 4D ne peut pas effectuer la mise à jour de l’application cliente, le poste client affiche le message d’erreur suivant : “La mise à jour de l’application cliente a échoué. L’application va maintenant quitter."
 
 Les causes possibles de cette erreur sont multiples. Lorsque vous rencontrez ce message, il est conseillé de contrôler en premier lieu les paramètres suivants :
 
@@ -403,8 +403,8 @@ Si la partie serveur et/ou la partie cliente de votre application exécutable es
 
 Des éléments doivent être installée :
 *   **Sous Windows**
-    *   **Server application** - in the *Client Server executable\/\<ApplicationName>Server/Server Database* subfolder.
-    *   **Client application** - in the *Client Server executable\/\<ApplicationName>Client* subfolder.
+    *   **Application serveur** : dans le sous-dossier *Client Server executable\/\<ApplicationName>Server\Server Database*.
+    *   **Application cliente** : dans le sous-dossier *Client Server executable\/\<ApplicationName>Client*.
 
 *   **sous macOS**
     *   **Application serveur** : à côté du progiciel *\<ApplicationName>Server*.

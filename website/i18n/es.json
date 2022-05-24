@@ -226,16 +226,16 @@
         "title": "Debugging from remote machines"
       },
       "Debugging/debugLogFiles": {
-        "title": "Description of log files"
+        "title": "Descripción de los archivos de historial"
       },
       "Desktop/building": {
         "title": "Generador de aplicaciones"
       },
       "Desktop/clientServer": {
-        "title": "Client/Server Management"
+        "title": "Gestión Cliente/Servidor"
       },
       "Desktop/user-settings": {
-        "title": "User Settings"
+        "title": "Propiedades usuario"
       },
       "Events/onActivate": {
         "title": "On Activate"
@@ -421,7 +421,7 @@
         "title": "Generalidades"
       },
       "Extensions/develop-components": {
-        "title": "Developing Components"
+        "title": "Componentes de desarrollo"
       },
       "Extensions/develop-plug-ins": {
         "title": "Developing Plug-ins"
@@ -725,16 +725,16 @@
         "title": "Página general"
       },
       "Preferences/methods": {
-        "title": "Methods Page"
+        "title": "Página Métodos"
       },
       "Preferences/overview": {
         "title": "Generalidades"
       },
       "Preferences/shortcuts": {
-        "title": "Shortcuts Page"
+        "title": "Página Atajos"
       },
       "Preferences/structure": {
-        "title": "Structure Page"
+        "title": "Página Estructura"
       },
       "Project/architecture": {
         "title": "Arquitectura de un proyecto"
@@ -848,7 +848,7 @@
         "title": "Acerca de las peticiones REST"
       },
       "ServerWindow/application-server": {
-        "title": "Application Server Page"
+        "title": "Página Servidor de aplicación"
       },
       "ServerWindow/http-server": {
         "title": "Página del servidor HTTP"
@@ -857,7 +857,7 @@
         "title": "Página Mantenimiento"
       },
       "ServerWindow/monitor": {
-        "title": "Monitor Page"
+        "title": "Página Monitor"
       },
       "ServerWindow/overview": {
         "title": "Generalidades"
@@ -869,46 +869,46 @@
         "title": "Página de seguimiento en tiempo real"
       },
       "ServerWindow/sql-server": {
-        "title": "SQL Server Page"
+        "title": "Página servidor SQL"
       },
       "ServerWindow/users": {
         "title": "Página Usuarios"
       },
       "settings/backup": {
-        "title": "Backup page"
+        "title": "Página de respaldo"
       },
       "settings/client-server": {
-        "title": "Client-server page"
+        "title": "Página Cliente/Servidor"
       },
       "settings/compatibility": {
-        "title": "Compatibility page"
+        "title": "Página de compatibilidad"
       },
       "settings/compiler": {
-        "title": "Compiler page"
+        "title": "Página Compilador"
       },
       "settings/database": {
-        "title": "Database page"
+        "title": "Página Base de datos"
       },
       "settings/general": {
-        "title": "General page"
+        "title": "Página General"
       },
       "settings/interface": {
-        "title": "Interface page"
+        "title": "Página interfaz"
       },
       "settings/overview": {
         "title": "Generalidades"
       },
       "settings/php": {
-        "title": "PHP page"
+        "title": "Págin PHP"
       },
       "settings/security": {
-        "title": "Security page"
+        "title": "Página seguridad"
       },
       "settings/sql": {
-        "title": "SQL page"
+        "title": "Página SQL"
       },
       "settings/web": {
-        "title": "Web page"
+        "title": "Página Web"
       },
       "Tags/tags": {
         "title": "Etiquetas de transformación"
@@ -917,7 +917,7 @@
         "title": "Gestión de usuarios y grupos 4D"
       },
       "Users/overview": {
-        "title": "Access Control overview"
+        "title": "Presentación del control de acceso"
       },
       "ViewPro/advanced-programming": {
         "title": "Advanced programming with Javascript"
@@ -932,7 +932,7 @@
         "title": "Comencemos"
       },
       "ViewPro/method-list": {
-        "title": "Method List"
+        "title": "Lista de los métodos"
       },
       "WebServer/allowProject": {
         "title": "Permitir métodos proyecto"
@@ -941,16 +941,16 @@
         "title": "Autenticación"
       },
       "WebServer/errorPages": {
-        "title": "Custom HTTP Error Pages"
+        "title": "Páginas de error HTTP personalizadas"
       },
       "WebServer/gettingStarted": {
         "title": "Comencemos"
       },
       "WebServer/httpRequests": {
-        "title": "Processing HTTP requests"
+        "title": "Procesamiento de peticiones HTTP"
       },
       "WebServer/preemptiveWeb": {
-        "title": "Using preemptive web processes"
+        "title": "Uso de procesos web apropiativos"
       },
       "WebServer/sessions": {
         "title": "Sesiones usuario"
@@ -985,13 +985,13 @@
       "Class API Reference": "Clases API",
       "Code Editor": "Editor de código",
       "Debugging": "Depuración",
-      "Transformation Tags": "Transformation Tags",
+      "Transformation Tags": "Etiquetas Transformación",
       "Settings": "Settings",
       "Preferences": "Preferencias",
       "4D Server Administration Window": "Ventana de administración de 4D Server",
       "Web Administration": "Administración Web",
       "Command Line Interface": "Interfaz de línea de comando",
-      "TLS Protocol": "TLS Protocol",
+      "TLS Protocol": "Protocolo TLS",
       "License Management": "Gestión de licencias",
       "Access Rights": "Derechos de acceso",
       "MSC": "CSM",
@@ -1006,8 +1006,8 @@
       "Form Object Properties": "Propiedades de los objetos formulario",
       "Form Events": "Eventos formulario",
       "Menus": "Menús",
-      "User Settings": "User Settings",
-      "Build application": "Build application",
+      "User Settings": "Propiedades usuario",
+      "Build application": "Generador de aplicación",
       "Extensions": "Extensions",
       "4D View Pro": "4D View Pro"
     }
@@ -1036,23 +1036,23 @@
     "4D Server Administration Window|no description given": "Ventana de administración de 4D Server",
     "4D Components Library|no description given": "Librería de componentes 4D",
     "Client/Server|no description given": "Cliente/Servidor",
-    "TLS Protocol|no description given": "TLS Protocol",
+    "TLS Protocol|no description given": "Protocolo TLS",
     "Debugging|no description given": "Depuración",
     "Code Editor|no description given": "Editor de código",
     "Web Data Explorer|no description given": "Explorador de datos Web",
     "Language Reference (4D Doc Center)|no description given": "Lenguaje (4D Doc Center)",
     "Access Rights|no description given": "Derechos de acceso",
-    "Description of log files|no description given": "Description of log files",
+    "Description of log files|no description given": "Descripción de los archivos de historial",
     "Command Line Interface|no description given": "Interfaz de línea de comando",
     "4D View Pro|no description given": "4D View Pro",
     "Preferences|no description given": "Preferencias",
     "Overview|no description given": "Generalidades",
-    "Developing Components|no description given": "Developing Components",
-    "Developing Plugins|no description given": "Developing Plugins",
+    "Developing Components|no description given": "Componentes de desarrollo",
+    "Developing Plugins|no description given": "Plugins de desarrollo",
     "Working with a project|no description given": "Trabajar con un proyecto",
     "Settings|no description given": "Settings",
-    "Transformation Tags|no description given": "Transformation Tags",
-    "User Settings|no description given": "User Settings",
+    "Transformation Tags|no description given": "Etiquetas Transformación",
+    "User Settings|no description given": "Propiedades usuario",
     "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",

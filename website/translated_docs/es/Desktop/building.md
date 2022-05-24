@@ -55,7 +55,7 @@ When an application is built, 4D generates a log file named *BuildApp.log.xml* i
 - El inicio y el fin de la generación de objetivos,
 - El nombre y la ruta de acceso completa de los archivos generados,
 - La fecha y la hora de la generación,
-- Any errors that occurred,
+- Todos los errores que se han producido,
 - Any signing issues (e.g. a non-signed plug-in).
 
 Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
@@ -115,7 +115,7 @@ La carpeta *MyComponent.4dbase* contiene:
 -   A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
 
-## Application page
+## Página Application
 
 Esta pestaña le permite crear una versión autónoma y monopuesto de su aplicación:
 
@@ -150,7 +150,7 @@ Una vez seleccionada la carpeta, se muestra su ruta completa y, si realmente con
 
 > El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. Por ejemplo, si utiliza 4D Developer v18, debe seleccionar un 4D Volume Desktop v18.
 
-#### Data linking mode
+#### Modo de enlace de datos
 
 Esta opción permite elegir el modo de enlace entre la aplicación fusionada y el archivo de datos local. Hay dos modos de enlazar disponibles:
 
@@ -217,7 +217,7 @@ On this tab, you can build customized client-server applications that are homoge
 
 A client/server application comes from the combination of three items:
 
-- A compiled 4D project,
+- Un proyecto 4D compilado,
 - The 4D Server application,
 - The 4D Volume Desktop application (macOS and/or Windows).
 
@@ -234,7 +234,7 @@ Also, the client/server application is customized and its handling simplified:
 
 
 
-### Build server application
+### Construir aplicación servidor
 
 Check this option to generate the server part of your application during the building phase. Debe designar la ubicación en su disco de la aplicación 4D Server que va a utilizar. This 4D Server must correspond to the current platform (which will also be the platform of the server application).
 
@@ -250,11 +250,11 @@ Used to indicate the current version number for the application generated. A con
 
 **Preliminary Note:** The following terms are used in this section:
 
-| Nombre                     | Definición                                                                                                                                                                 |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project directory file     | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the project         |
-| Application directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the built 4D Server |
-| Data directory file        | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings)                           |
+| Nombre                         | Definición                                                                                                                                                                 |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Project directory file         | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the project         |
+| Application directory file     | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the built 4D Server |
+| Archivo de directorio de datos | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file in the [Data > Settings folder](../Project/architecture.md#settings)                           |
 
 When you check this option, the project directory file is copied to the application directory file at build time.
 
@@ -280,7 +280,7 @@ Then, you can copy that structure to your Windows machine, and use it to build t
 
 Path to compiled structure of the Apple Silicon/Intel client application used to build a Windows Server (see [Allow connection of Silicon Mac clients](#allow-connection-of-silicon-mac-clients).
 
-#### Data linking mode
+#### Modo de enlace de datos
 
 Esta opción permite elegir el modo de enlace entre la aplicación fusionada y el archivo de datos local. Hay dos modos de enlazar disponibles:
 
@@ -418,7 +418,7 @@ To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `Datab
 - If a default data folder exists in the single-user application, a licence is embedded.
 - If no default data folder exists in the single-user application, it will be executed without data file and without licence.
 
-The basic scenario is:
+El escenario básico es:
 
 1. In the Build application dialog box, select the "Build compiled structure" option to produce a .4DZ or .4DC for the application to be used in single-user mode.
 2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
@@ -494,7 +494,7 @@ If there is a conflict between two different versions of the same plug-in (one l
 > The use of plug-ins and/or components in a deployment version may require license numbers.
 
 
-### Deselecting modules
+### Desmarcar módulos
 
 A module is a built-in code library used by 4D to control specific features. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
 
@@ -546,7 +546,7 @@ You can designate as many valid files as you want. When building an executable a
 After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
 
 
-### OS X signing certificate
+### Certificación de las aplicaciones en OS X
 
 El generador de aplicaciones puede firmar aplicaciones 4D fusionadas bajo macOS (aplicaciones monopuesto, componentes, 4D Server y partes cliente bajo macOS). Signing an application authorizes it to be executed using the Gatekeeper functionality of macOS when the "Mac App Store and identified Developers" option is selected (see "About Gatekeeper" below).
 
@@ -611,10 +611,10 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 
 
 
-## Management of data file(s)
+## Gestión de archivos de datos
 
 
-### Opening the data file
+### Apertura del archivo de datos
 
 When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
 
@@ -626,9 +626,9 @@ The opening sequence for launching a merged application is:
 4. If not found, 4D displays a standard "Open data file" dialog box.
 
 
-### Last data file opened
+### Último archivo de datos abierto
 
-#### Path of last data file
+#### Ruta del último archivo de datos
 Any standalone or server applications built with 4D stores the path of the last data file opened in the application's user preferences folder.
 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:

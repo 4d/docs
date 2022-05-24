@@ -109,7 +109,7 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-| Attribute |                     |                          | Type   | Description                                            |
+| Attribute |                     |                          | Type   | Descrição                                              |
 | --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
 | macros    |                     |                          | object | list of defined macros                                 |
 |           | `<macroName>` |                          | object | macro definition                                       |
@@ -160,7 +160,7 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : Object)
 
-| Parameter | Type   | Description                                              |
+| Parameter | Type   | Descrição                                                |
 | --------- | ------ | -------------------------------------------------------- |
 | $macro    | Objeto | Macro declaration object (in the `formMacros.json` file) |
 
@@ -201,7 +201,7 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Parameter | Type   | Description                                                                          |
+| Parameter | Type   | Descrição                                                                            |
 | --------- | ------ | ------------------------------------------------------------------------------------ |
 | $editor   | Objeto | Form Editor Macro Proxy object containing the form properties                        |
 | $result   | Objeto | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
@@ -214,7 +214,7 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties returned in the *$editor* parameter:
 
-| Propriedade                      | Type    | Description                                                                       |
+| Propriedade                      | Type    | Descrição                                                                         |
 | -------------------------------- | ------- | --------------------------------------------------------------------------------- |
 | $editor.editor.form              | Objeto  | The entire form                                                                   |
 | $editor.editor.file              | File    | File object of the form file                                                      |
@@ -228,7 +228,7 @@ Here are the properties returned in the *$editor* parameter:
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Propriedade       | Type    | Description                                                 |
+| Propriedade       | Type    | Descrição                                                   |
 | ----------------- | ------- | ----------------------------------------------------------- |
 | currentPage       | Objeto  | currentPage including objects modified by the macro, if any |
 | currentSelection  | Coleção | currentSelection if modified by the macro                   |
@@ -255,9 +255,9 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Propriedade | Type | Description |
-| ----------- | ---- | ----------- |
-|             |      |             |
+| Propriedade | Type | Descrição |
+| ----------- | ---- | --------- |
+|             |      |           |
  source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
@@ -300,7 +300,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Type    | Description                              |
+| Parameter    |                       | Type    | Descrição                                |
 | ------------ | --------------------- | ------- | ---------------------------------------- |
 | $editor      |                       | Objeto  | Object send to [onInvoke](#oninvoke)     |
 | $resultMacro |                       | Objeto  | Object returned by [onInvoke](#oninvoke) |

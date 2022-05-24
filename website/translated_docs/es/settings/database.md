@@ -1,16 +1,16 @@
 ---
 id: database
-title: Database page
+title: Página Base de datos
 ---
 
-## Data storage page
+## Página Almacenamiento de datos
 
-You use this page to configure data storage on disk for the 4D database.
+Esta página permite configurar el almacenamiento de datos de la base 4D en el disco.
 
-### General Settings
+### Parámetros generales
 
 
-#### Allow Read Only Data file Use
+#### Autorizar el uso de archivos de datos de sólo lectura
 
 This option allows configuration of the application operation when opening a locked data file at the operating system level. 4D includes a mechanism that automatically prevents the opening of a database when its data file, or one of its segments, is locked. In this case, when this detection option is activated, 4D displays a warning message and does not open the database:
 
@@ -18,7 +18,7 @@ This option allows configuration of the application operation when opening a loc
 
 Unless this option is checked, it is not possible to open a database when its data file is locked (default operation for 4D databases).
 
-#### About locked files
+#### Sobre el bloqueo de archivos
 
 Locked files can be read but their contents cannot be modified. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
 
@@ -38,7 +38,7 @@ Three location options are provided:
 
 > This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv19/4D/19/Exporting-and-importing-structure-definitions.300-5416829.en.html)).
 
-### Text comparison
+### Comparación de texto
 
 > If you change one of these options, you have to quit and reopen the database to make the change effective. Once the database is reopened, all of the database's indexes are automatically re-indexed.
 
@@ -65,7 +65,7 @@ Three location options are provided:
 
 -   **Sorting order appropriate for searching**: This option is only displayed when the Japanese language is selected. Modifies the interpretation of characters such as the "Katakana-Hiragana Prolonged Sound Mark" or "長音記号" or the "Japanese Iteration Marks" such as "ゝ" or "ゞ". Typical Japanese speaker is likely to prefer the results when the setting is enabled.
 
-#### Support of MeCab (Japanese version)
+#### Soporte de Mecab (versión japonesa)
 
 On Japanese systems, 4D supports the *MeCab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
 
@@ -77,7 +77,7 @@ To disable *MeCab*, just check the **Consider only non-alphanumeric chars for ke
 ![](assets/en/settings/non-alphanumeric-chars.png)
 
 
-## Memory page
+## Página Memoria
 
 You use the settings on this tab to configure the cache memory for the database.
 

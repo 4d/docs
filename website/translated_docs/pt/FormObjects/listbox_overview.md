@@ -109,7 +109,7 @@ Each element of the collection or each entity is available as an object that can
 
 Quando a fonte de dados for uma seleção de entidades, qualquer modificação feita no lado da list box são salvas automaticamente na database. Do outro lado, modificações feitas na database são visíveis na list box depois que as entidades tocadas foram recarregadas.
 
-Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
+Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por exemplo:
 
 ```4d
 myCol:=myCol.push("new value") //exibir novo valor na list box
@@ -242,7 +242,7 @@ Propriedades compatíveis dependem do tipo de list box.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Propriedade      | Type     | Description                                                           |
+| Propriedade      | Type     | Descrição                                                             |
 | ---------------- | -------- | --------------------------------------------------------------------- |
 | area             | texto    | List box object area ("header", "footer", "cell")                     |
 | areaName         | texto    | Name of the area                                                      |
@@ -955,7 +955,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 |                       | valueType                               | texto | real | integer | booleano | color | event |
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ----- |
-| *Attributes*          | *Description*                           |       |      |         |          |       |       |
+| *Attributes*          | *Descrição*                             |       |      |         |          |       |       |
 | value                 | cell value (input or output)            | x     | x    | x       |          |       |       |
 | min                   | minimum value                           |       | x    | x       |          |       |       |
 | max                   | maximum value                           |       | x    | x       |          |       |       |
@@ -1009,7 +1009,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                                  |
+| Attribute | Available value(s) | valueType(s) | Descrição                                                                                                                                                                                    |
 | --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
@@ -1079,7 +1079,7 @@ Exemplos:
 
 *   You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 
-![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
     C_OBJECT($ob)
@@ -1120,7 +1120,7 @@ Exemplo:
 
 You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
 
-![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_colors.png)
 
 ````4d
  C_OBJECT($ob)

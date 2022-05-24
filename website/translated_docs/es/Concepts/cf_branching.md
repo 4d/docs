@@ -35,7 +35,7 @@ Tenga en cuenta que la expresión booleana siempre se evalúa completamente. Con
  End if
 ```
 
-The expression is TRUE only if both methods are TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo inútil. En este caso, es más interesante utilizar una estructura como:
+La expresión es TRUE sólo si los dos métodos son TRUE. Sin embargo, incluso si _MethodA_ devuelve FALSE, 4D seguirá evaluando _MethodB_, lo que supone una pérdida de tiempo inútil. En este caso, es más interesante utilizar una estructura como:
 
 ```4d
  If(MethodA)
@@ -83,7 +83,7 @@ o:
 
 ## Case of... Else...End case
 
-A diferencia de la estructura `If...Else...End`, la estructura `Case of...
+La sintaxis de la estructura condicional `Case of...Else...End case` es:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -116,7 +116,7 @@ Tenga en cuenta que la parte `Else` es opcional; puede escribir:
        statement(s)
  End case
 ```
-La sintaxis de la estructura condicional `Case of... Else...End case` es:
+Al igual que la estructura `If...Else...End if`, la estructura `Case of...Else...End case` también permite a su método elegir entre acciones alternativas. A diferencia de la estructura `If...Else...End`, la estructura `Case of...Else...End case` puede probar un número razonablemente ilimitado de expresiones booleanas y realizar una acción dependiendo de cuál sea TRUE.
 
 Cada expresión booleana va precedida de dos puntos (`:`). Esta combinación de los dos puntos y la expresión booleana se llama un caso. Por ejemplo, la siguiente línea es un caso:
 
@@ -153,20 +153,11 @@ Este ejemplo comprueba una variable numérica y muestra un cuadro de alerta con 
  //statement(s)
  End case //Si es 1, mostrar una alerta
     :(vResult=2) //Probar si el número es 2
-       ALERT("Two.") Case of
-    :(vResult=1) //Probar si el número es 1
-       ALERT("One.") //Si es 1, mostrar una alerta
-    :(vResult=2) //Probar si el número es 2
        ALERT("Two.") //Si es 2, mostrar una alerta
     :(vResult=3) //Probar si el número es 3
        ALERT("Three.") //Si es 3, mostrar una alerta
     Else //Si no es 1, 2 o 3, mostrar una alerta
        ALERT("It was not one, two, or three.")
- //statement(s)
- End case //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
- //statement(s)
  End case
 ```
 
@@ -174,28 +165,10 @@ Para comparar, aquí está la versión `If...Else...End if` del mismo método:
 
 ```4d
  If(vResult=1) //Probar si el número es 1
-    ALERT("One.") If(vResult=1) //Probar si el número es 1
-    ALERT("One.") If(vResult=1) //Probar si el número es 1
     ALERT("One.") //Si es 1, mostrar una alerta
  Else
     If(vResult=2) //Probar si el número es 2
        ALERT("Two.") //Si es 2, mostrar una alerta
-    Else
-       If(vResult=3) //Probar si el número es 3
-          ALERT("Three.") //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si es 2, mostrar una alerta
-    Else
-       If(vResult=3) //Probar si el número es 3
-          ALERT("Three.") //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si es 2, mostrar una alerta
     Else
        If(vResult=3) //Probar si el número es 3
           ALERT("Three.") //Si es 3, mostrar una alerta
@@ -212,33 +185,22 @@ En consecuencia, cuando quiera implementar pruebas jerárquicas, debe asegurarse
 
 ```4d
  Case of
-    :(vResult=1) //Probar si el número es 1
-       ALERT("One.") //Si es 1, mostrar una alerta
-    :(vResult=2) //Probar si el número es 2
-       ALERT("Two.") //Si es 2, mostrar una alerta
-    :(vResult=3) //Probar si el número es 3
-       ALERT("Three.") //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
+    :(vResult=1)
+       ... //statement(s)
+    :((vResult=1) & (vCondition#2)) //este caso nunca será detectado
+       ... //statement(s)
  End case
 ```
 
 En el código anterior, la presencia de la segunda condición no se detecta, ya que la prueba "vResult=1" ramifica el código antes de cualquier otra prueba. Para que el código funcione correctamente, puedes escribirlo así:
 
 ```4d
- If(vResult=1) //Probar si el número es 1
-    ALERT("One.") //Si es 1, mostrar una alerta
- Else
-    If(vResult=2) //Probar si el número es 2
-       ALERT("Two.") //Si es 2, mostrar una alerta
-    Else
-       If(vResult=3) //Probar si el número es 3
-          ALERT("Three.") //Si es 3, mostrar una alerta
-    Else //Si no es 1, 2 o 3, mostrar una alerta
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if
+ Case of
+    :((vResult=1) & (vCondition#2)) //este caso será detectado primero
+       ... //statement(s)
+    :(vResult=1)
+       ... //statement(s)
+ End case
 ```
 
 Además, si quiere implementar pruebas jerárquicas, puede considerar el uso de código jerárquico.

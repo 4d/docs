@@ -250,7 +250,7 @@ Used to indicate the current version number for the application generated. You m
 
 **Preliminary Note:** The following terms are used in this section:
 
-| Name                       | Definition                                                                                                                                                                 |
+| Nome                       | Definition                                                                                                                                                                 |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Project directory file     | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the project         |
 | Application directory file | [directory.json](../Users/handling_users_groups.md#directoryjson-file) file located in the [Settings folder](../Project/architecture.md#settings-1) of the built 4D Server |

@@ -40,7 +40,7 @@ The number of errors found during your first compilations may be daunting, but d
 
 > Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
 
-## Run Compiled
+## Ejecutar la compilación
 
 Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](GettingStarted/creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
 
@@ -48,17 +48,17 @@ When you switch from one mode to the other, 4D closes the current mode and opens
 
 If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
 
-## Compiler window features
+## Características de la ventana del compilador
 
 In addition to the [**Compile** button](#compile), the Compiler window provides additional features that are useful during the project development phase.
 
-### Check Syntax
+### Verificar la sintaxis
 
 The **Check Syntax** button starts the execution of the syntax-checking phase. At the end of the checking process, any errors detected are listed in the information area. You can double–click on an error line in order to display the corresponding method.
 
 Syntax checking can also be launched directly using the **Check Syntax** command associated with the **Compiler** toolbar button. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
 
-### Generate Typing
+### Generar definiciones de variables
 
 The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
 
@@ -84,7 +84,7 @@ Depending on circumstances and the programming style used, these warnings may be
 
 ![](assets/en/Project/compilerWin4.png)
 
-When this option is checked, the warnings (if any) are displayed in the window, after the other error types. They appear in italics:
+When this option is checked, the warnings (if any) are displayed in the window, after the other error types. Aparecen en itálica:
 
 ![](assets/en/Project/compilerWin5.png)
 
@@ -110,7 +110,7 @@ Only warnings with numbers can be disabled. Warning numbers are specified at the
 
 
 
-## Compiler Settings
+## Parámetros del compilador
 
 The "Compiler" page of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window) by clicking on the **Compiler Settings** button:
 
@@ -121,7 +121,7 @@ The "Compiler" page of the Settings dialog box lets you set parameters related t
 
 This area groups the generic options used during the compilation process.
 
-#### Generate the symbol file
+#### Generar el archivo de símbolos
 
 Used to generate the symbol file (see [symbol file](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
 
@@ -148,15 +148,15 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
 
-- **Intel/AMD** processors (all machines),
-- **Apple Silicon** processors.
+- Los procesadores **Intel/AMD** (todas las máquinas),
+- los procesadores **Apple Silicon**.
 
 Two target options are proposed. The result depends on the processor of the machine on which 4D is running.
 
 | *Option*                                         | *en Windows Intel/AMD*                                                                    | *macOS Intel*                                                                               | *macOS Silicon*                                                                             |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* |
-| **My processor (processor)**                     | Código para Intel/AMD                                                                     | Código para Intel/AMD                                                                       | Code for Apple Silicon                                                                      |
+| **Mi procesador (procesador)**                   | Código para Intel/AMD                                                                     | Código para Intel/AMD                                                                       | Código para Apple Silicon                                                                   |
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
@@ -167,7 +167,7 @@ Use this area to set the default type for ambiguous database objects.
 - **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. You can optimize the running of your database by choosing the Longint type.
 - **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
 
-### Compiler Methods for...
+### Métodos Compilador para...
 
 This area lets you rename the Compiler methods that are generated automatically by the compiler when you click [Generate Typing](#generate-typing).
 
@@ -182,13 +182,13 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
 
 
-## Compilation tools
+## Herramientas de compilación
 
 ### Archivo Symbol
 
 If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
 
-#### List of process and interprocess variables
+#### Lista de las variables proceso e interproceso
 
 These two lists contain four columns:
 
@@ -205,7 +205,7 @@ These two lists contain four columns:
 
 > When compiling, the compiler cannot determine in which process a given process variable is used. A process variable can have a different value in each process. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
 
-#### List of local variables
+#### Lista de las variables locales
 
 The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
 
@@ -215,7 +215,7 @@ This list is divided into three columns:
 - tipo de la variable;
 - number of dimensions if the variable is an array.
 
-#### Complete list of methods
+#### Lista completa de los métodos
 
 A complete list of your database and project methods is given at the end of the file with:
 
@@ -264,7 +264,7 @@ General errors are so named because they cannot be linked to any specific method
 
 
 
-### Range checking
+### Control de ejecución
 
 The code generated by the 4D compiler automatically checks that every access to an array element or a character reference is done within the actual range of array elements or string characters. Out of range accesses will provoke runtime execution errors.
 
@@ -280,20 +280,20 @@ To do this, you must surround the code to be excluded from range checking with t
   // %R+   to enable range checking again for the rest
 ```
 
-## About Compilers
+## Acerca de los compiladores
 
-4D contains two compilers:
+4D incluye dos compiladores:
 
 - a "classic" compiler, used to compile native code for Intel/AMD processors;
 - a Silicon compiler, used to compile native code for Apple Silicon processors.
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 
-|             | Compilar para Windows | Compilación para Intel Mac | Compile for Silicon Mac |
-| ----------- |:---------------------:|:--------------------------:|:-----------------------:|
-| En Windows  |       &#10003;        |          &#10003;          |        &#10007;         |
-| Intel Mac   |       &#10003;        |          &#10003;          |        &#10003;         |
-| Silicon Mac |       &#10003;        |          &#10003;          |        &#10003;         |
+|             | Compilar para Windows | Compilación para Intel Mac | Compilación para Mac Silicon |
+| ----------- |:---------------------:|:--------------------------:|:----------------------------:|
+| En Windows  |       &#10003;        |          &#10003;          |           &#10007;           |
+| Intel Mac   |       &#10003;        |          &#10003;          |           &#10003;           |
+| Silicon Mac |       &#10003;        |          &#10003;          |           &#10003;           |
 
 
 Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.

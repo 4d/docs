@@ -11,7 +11,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 ## Available syntaxes
 
-| Sintaxe                                                                            | Exemplo                                  | Description                                                                                 |
+| Sintaxe                                                                            | Exemplo                                  | Descrição                                                                                   |
 | ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass            |
 | [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados |
@@ -28,13 +28,13 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 Retorna todos os dados (como padrão as primeiras 100 entidades) para uma classe de dados específica (*por exemplo *, `Company`)
 
-### Description
+### Descrição
 
 Quando chamar este parâmetro em sua petição REST, as primeiras 100 entidades são retornadas a menos que tenha especificado um valor usando [`$top/$limit`]($top_$limit.md).
 
 Aqui está uma descrição dos dados retornados:
 
-| Propriedade   | Type    | Description                                                                                                                                                                                            |
+| Propriedade   | Type    | Descrição                                                                                                                                                                                              |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | __entityModel | String  | Name of the dataclass.                                                                                                                                                                                 |
 | __COUNT       | Número  | Número de entidades na classe de dados.                                                                                                                                                                |
@@ -44,13 +44,13 @@ Aqui está uma descrição dos dados retornados:
 
 Cada entidade contém as propriedades abaixo:
 
-| Propriedade | Type   | Description                                                                                                   |
+| Propriedade | Type   | Descrição                                                                                                     |
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |
 | __KEY       | String | Valor da chave primária definida para a classe de dados.                                                      |
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                            |
 | __STAMP     | Número | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
-Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). For example:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company/name,address`
 
@@ -146,13 +146,13 @@ Retorna todas as datas para uma classe de dados específica.
 
 Retorna os dados para a entidade específica definida pela chave primária da classe de dados, *e.g.*, `Company(22) ou Company("IT0911AB2200")`
 
-### Description
+### Descrição
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
 Para saber mais sobre os dados retornados, veja [{DataStoreClass}](#datastoreclass).
 
-Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). For example:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company(1)/name,address`
 
@@ -195,13 +195,13 @@ A petição abaixo retorna todos os dados públicos na dataclass Company cuja ch
 
 Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
-### Description
+### Descrição
 
 Passando *dataClass* e um *atributo* junto com o valor, pode recuperar toda a informação pública para essa entidade. O valor é um valor único para o atributo, mas não é a chave primária.
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). For example:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{atributo1, atributo2, ...}](manData.md##selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

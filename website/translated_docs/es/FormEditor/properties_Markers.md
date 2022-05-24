@@ -104,7 +104,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 
 | Etiqueta | Descripción        | Prints after groups created by: |
 | -------- | ------------------ | ------------------------------- |
-| B1       | Break at level 1   | Primer campo ordenado           |
+| B1       | Nivel de ruptura 1 | Primer campo ordenado           |
 | B2       | Nivel de ruptura 2 | Segundo campo ordenado          |
 | B3       | Nivel de ruptura 3 | Tercer campo ordenado           |
 

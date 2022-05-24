@@ -16,7 +16,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### JSON Grammar
 
-| Name                 | Data Type | Possible Values         |
+| Nome                 | Data Type | Possible Values         |
 | -------------------- | --------- | ----------------------- |
 | methodsAccessibility | string    | "none" (default), "all" |
 
@@ -34,7 +34,7 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values            |
+| Nome           | Data Type | Possible Values            |
 | -------------- | --------- | -------------------------- |
 | progressSource | string    | Name of a Longint variable |
 
@@ -65,7 +65,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
+| Nome      | Data Type | Possible Values |
 | --------- | --------- | --------------- |
 | urlSource | string    | A URL.          |
 
@@ -96,7 +96,7 @@ The CEF engine has the following limitations:
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values      |
+| Nome      | Data Type | Possible Values      |
 | --------- | --------- | -------------------- |
 | webEngine | string    | "embedded", "system" |
 

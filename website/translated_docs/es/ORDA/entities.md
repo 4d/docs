@@ -59,7 +59,7 @@ Ahora, si se ejecuta:
   //$e2.name contains "smith"
 ```
 
-This is illustrated by the following graphic:
+Esto es ilustrado por el siguiente gráfico:
 
 ![](assets/en/ORDA/entityRef2.png)
 
@@ -96,10 +96,10 @@ Entity attributes store data and map corresponding fields in the corresponding t
 For example, to set a storage attribute:
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
- $entity.save() //save the modifications
+ $entity:=ds.Employee.get(1) //obtener el atributo de Employee con ID 1
+ $name:=$entity.lastname //obtener el nombre del empleado, por ejemplo "Smith"
+$entity.lastname:="Jones" //definir el nombr del empleado
+$entity.save() //guardar los cambios
 ```
 
 > Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
@@ -173,7 +173,7 @@ You can assign or modify the value of a "1" related entity attribute from the "N
   //the related entity is updated
 ```
 
-## Creating an entity selection
+## Crear una entity selection
 
 You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
 
@@ -318,7 +318,7 @@ Este código devuelve en *$localEmails* una colección de direcciones de correo 
 
 ### Entity selections and Relation attributes
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Por ejemplo, consideremos la siguiente estructura:
 
 ![](assets/en/ORDA/entitySelectionRelationAttributes.png)
 
@@ -340,7 +340,7 @@ ORDA provides you with two entity locking modes:
 - an automatic "optimistic" mode, suitable for most applications,
 - a "pessimistic" mode allowing you to lock entities prior to their access.
 
-### Automatic optimistic lock
+### Bloqueo automático optimista
 
 This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
 
@@ -356,7 +356,7 @@ The following diagram illustrates optimistic locking:
 
 2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/ORDA/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](assets/en/ORDA/optimisticLock3.png)
+3. The second process also modifies the loaded entity and validates its changes. Se llama al método `entity.save( )`. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](assets/en/ORDA/optimisticLock3.png)
 
 
 This can also be illustrated by the following code:
@@ -380,12 +380,12 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
-This feature is based upon two functions of the `Entity` class:
+Esta funcionalidad se basa en dos funciones de la clase `Entity`:
 
 *   [`entity.lock()`](../API/EntityClass.md#lock)
 *   [`entity.unlock()`](../API/EntityClass.md#unlock)
 
-For more information, please refer to the descriptions for these functions.
+Para más información, consulte las descripciones de estas funciones.
 
 > Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
 

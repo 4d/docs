@@ -28,7 +28,7 @@ For each user connected to the server, the list provides the following informati
 - **CPU Time**: CPU time consumed by this user since connecting.
 - **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
 
-### Managing sleeping users
+### Gestión de usuarios dormidos
 
 4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
 
@@ -63,11 +63,11 @@ The message will be displayed as an alert on the remote machines.
 > You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
 
 
-### Watch Processes
+### Visualizar procesos
 
 This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
 
-### Drop user
+### Desconectar
 
 This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 

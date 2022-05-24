@@ -1,23 +1,23 @@
 ---
 id: overview
-title: Access Control overview
+title: Presentación del control de acceso
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
+Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arquitectura cliente-servidor o de interfaces web, es necesario controlar el acceso u ofrecer diferentes funcionalidades según de los usuarios conectados. También es esencial ofrecer la seguridad de los datos sensibles, incluso en las aplicaciones monopuesto.
 
-4D access control strategy depends on your deployment configuration:
+La estrategia de control de acceso 4D depende de la configuración de su despliegue:
 
-- in multi-user applications, you can rely on 4D users and groups,
-- in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
+- en las aplicaciones multiusuario, puede confiar en los usuarios y grupos 4D,
+- en las aplicaciones monopuesto, el acceso de los usuarios se controla a través de la sesión del sistema, mediante comandos como [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 
 
 
 
-## Access control in multi-user applications
+## Control de acceso en las aplicaciones multiusuario
 
-Multi-user applications are deployed with 4D Server. They include client-server, Web, or REST applications.
+Las aplicaciones multiusuario se despliegan con 4D Server. Incluyen aplicaciones cliente-servidor, web o REST.
 
 In multi-user applications, access control is done through [4D users and groups](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
 
@@ -28,7 +28,7 @@ Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso 
 Para desactivar el sistema de acceso por contraseña, basta con eliminar la contraseña del Diseñador.
 
 
-## Access control in single-user applications
+## Control de acceso en las aplicaciones monopuesto
 
 
 Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume License. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
@@ -40,8 +40,8 @@ To identify the current user in a 4D single-user application, you can rely on th
 You can then allow or deny access within your application by using code such as:
 
 ```4d
-If(Current system user = $user) //you can store users in a database table
-    // give access to some features
+If(Current system user = $user) //vous pouvez stocker les utilisateurs dans une table de base de données
+    // conceder el acceso a determinadas funcionalidades
 Enf if
 ```
 
@@ -51,12 +51,12 @@ If you want to use the system user name in 4D instead of "Designer" (e.g. in log
 SET USER ALIAS(Current system user)
 ```
 
-### Protecting access
+### Protección del acceso
 
 #### Privilegios
 
 On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
 
-#### Encrypting data
+#### Cifrado de datos
 
-If you want to protect access to the application data, we recommend to [encrypt data](MSC/encrypt.md) and provide the encryption key to the authorized user(s). 
+Si desea proteger el acceso a los datos de la aplicación, se recomienda [encriptar los datos](MSC/encrypt.md) y proveer la clave de encriptación al usuario o usuarios autorizados. 

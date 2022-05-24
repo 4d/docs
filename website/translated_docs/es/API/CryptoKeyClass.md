@@ -75,7 +75,7 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary --> crea u
 | --------------- | ------- | ---------------------------------------------- |
 | [curve](#curve) | texto   | Nombre de la curva ECDSA                       |
 | [pem](#pem)     | texto   | PEM definition of an encryption key to load    |
-| [size](#size)   | integer | Size of RSA key in bits                        |
+| [size](#size)   | integer | Tamaño de la llave RSA en bits                 |
 | [type](#type)   | texto   | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
 
 

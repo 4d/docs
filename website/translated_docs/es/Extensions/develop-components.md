@@ -1,6 +1,6 @@
 ---
 id: develop-components
-title: Developing Components
+title: Componentes de desarrollo
 ---
 
 A 4D component is a set of 4D functions, methods, and forms representing one or more functionalities that can be [installed and used in 4D applications](Concepts/components.md). Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D.
@@ -126,7 +126,7 @@ Of course, it is recommended to use a distinguished name to avoid any conflict. 
 
 A component's ORDA classes are not available in its host project. For example, if there is a dataclass called Employees in your component, you will not be able to use a "cs.Mycomponent.Employee" class in the host project.
 
-### Hidden classes
+### Clases ocultas
 
 Just like in any project, you can create hidden classes and functions in the component by prefixing names with an underscore ("_"). When a [component namespace is defined](#declaring-the-component-namespace), hidden classes and functions of the component will not appear as suggestions when using code completion.
 
@@ -366,6 +366,6 @@ To protect the code of a component effectively, simply [compile and build](Deskt
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
 
-## Sharing components
+## Compartir componentes
 
 We encourage you to support the 4D developer community by sharing your components, preferably on the [GitHub platform](https://github.com/topics/4d-component). We recommend that you use the **`4d-component`** topic to be correctly referenced.  

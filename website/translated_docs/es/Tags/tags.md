@@ -35,7 +35,7 @@ It is possible to mix several types of tags. For example, the following HTML str
 
 
 
-## Principles for using tags
+## Principios de uso de las etiquetas
 
 ### Parsing
 
@@ -46,7 +46,7 @@ Parsing the contents of a *template* source is done in two contexts:
 - Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, http://www.server.com/dir/page.shtm).
 
 
-### Recursive processing
+### Tratamiento recursivo
 
 4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
 
@@ -59,7 +59,7 @@ If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4
 This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 
-### Identifiers with tokens
+### Identificadores con tokens
 
 To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time:C178`.
 
@@ -250,7 +250,7 @@ The *entity* parameter is an object variable of the entity selection class.
 
 The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
 
-#### Example with a html table
+#### Ejemplo con una tabla html
 
 ```html
     <table class="table">     
@@ -320,7 +320,7 @@ The properties of the object are processed according to their creation order. Du
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
-For example, you can execute:
+Por ejemplo, puede ejecutar:
 
 ```
  $input:="<!--#4DEVAL a:=42-->" //assignment

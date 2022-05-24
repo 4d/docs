@@ -156,7 +156,7 @@ Especifique o tipo de atributo entre colchetes, depois entre chaves, declare os 
 
 #### Sintaxes compatíveis
 
-| Sintaxe                   | Description                                                                                                                |
+| Sintaxe                   | Descrição                                                                                                                  |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | [attribute]               | coincide com objetos com o `attribute`                                                                                     |
 | [attribute="value"]       | coincide com objetos cujo valor do `attribute` conteha exatamente o "valor" especificado                                   |
@@ -293,7 +293,7 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
     - Hexa value: `fill: #FF0000;`
     - función `rgb()`: `fill:rgb(255,0,0)`
 
-- Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. For example:
+- Se uma string utilizar caracteres proibidos em CSS, pode rodear a string com aspas simples ou duplas. Por exemplo:
     - uma referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
     - um datasource com a expressão de campo: `dataSource: "[Table_1:1]ID:1";`
 

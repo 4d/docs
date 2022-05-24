@@ -334,17 +334,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo               | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
-| --------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
-| Mínimo                | X   | X     | X     | X    | X    |          | Same as column type                 |
-| Máximo                | X   | X     | X     | X    | X    |          | Same as column type                 |
-| Suma                  | X   |       |       | X    | X    |          | Same as column type                 |
-| Conteo                | X   | X     | X     | X    | X    | X        | Entero largo                        |
-| Promedio              | X   |       |       | X    |      |          | Real                                |
-| Standard deviation(*) | X   |       |       | X    |      |          | Real                                |
-| Varianza(*)           | X   |       |       | X    |      |          | Real                                |
-| Suma de cuadrados(*)  | X   |       |       | X    |      |          | Real                                |
-| Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera                          |
+| Cálculo                | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| ---------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
+| Mínimo                 | X   | X     | X     | X    | X    |          | Same as column type                 |
+| Máximo                 | X   | X     | X     | X    | X    |          | Same as column type                 |
+| Suma                   | X   |       |       | X    | X    |          | Same as column type                 |
+| Conteo                 | X   | X     | X     | X    | X    | X        | Entero largo                        |
+| Promedio               | X   |       |       | X    |      |          | Real                                |
+| Desviación estándar(*) | X   |       |       | X    |      |          | Real                                |
+| Varianza(*)            | X   |       |       | X    |      |          | Real                                |
+| Suma de cuadrados(*)   | X   |       |       | X    |      |          | Real                                |
+| Custom ("none")        | X   | X     | X     | X    | X    | X        | Cualquiera                          |
 
 (*) Only for array type list boxes.
 

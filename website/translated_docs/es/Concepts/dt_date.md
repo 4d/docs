@@ -46,7 +46,7 @@ Una fecha nula es especificada por _!00-00-00!_.
 | Desigualdad       | Fecha # Fecha    | Booleano | !2017-01-20! !2017-01-20! !2017-01-20! # !2017-01-01! | True         |
 |                   |                  |          | !2017-01-20! !2017-01-20! # !2017-01-20!              | False        |
 | Mayor que         | Fecha > Fecha    | Booleano | !2017-01-20! !2017-01-20! > !2017-01-01!              | True         |
-|                   |                  |          | !2017-01-20! !2017-01-20! < !2017-01-20!              | False        |
+|                   |                  |          | !2017-01-20! > !2017-01-20!                           | False        |
 | Menor que         | Fecha < Fecha    | Booleano | !2017-01-20! - !2017-01-01! < !2017-01-20!            | True         |
 |                   |                  |          | !2017-01-20! < !2017-01-20!                           | False        |
 | Mayor o igual que | Fecha >= Fecha   | Booleano | !2017-01-20! !2017-01-20! >=!2017-01-01!              | True         |

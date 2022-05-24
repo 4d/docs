@@ -52,7 +52,7 @@ Los valores de entrada y salida son [evaluados](#values-or-references) en el mom
 - [variables numeradas secuencialmente](#sequential-parameters).
 
 
-Both [named](#named-parameters) and [sequential](#sequential-parameters) syntaxes can be mixed with no restriction to declare parameters. Por ejemplo:
+Las sintaxis [nombradas](#named-parameters) y [secuenciales](#sequential-parameters) se pueden combinar sin restricción para declarar los parámetros. Por ejemplo:
 
 ```4d
 ```4d
@@ -83,10 +83,10 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
 
 
-The following rules apply:
+Se aplican las siguientes reglas:
 
 - La línea de declaración debe ser la primera línea del código del método o de la función, de lo contrario se mostrará un error (sólo los comentarios o los saltos de línea pueden preceder la declaración).
-- Los nombres de los parámetros deben comenzar con un carácter `$` y cumplir con [reglas de denominación de las propiedades](dt_object.md#object-property-identifiers).
+- Los nombres de los parámetros deben comenzar con un carácter `$` y cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
 - Múltiples parámetros (y tipos) están separados por punto y coma (;).
 - Las sintaxis multilínea están soportadas (utilizando el carácter "\\").
 
@@ -104,7 +104,7 @@ En el código de la función clase, el valor de cada parámetro se copia en el p
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
-> If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
+> Si no se define el tipo, el parámetro se definirá como [`Variant`](dt_variant.md).
 
 Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluidos los métodos base. Por ejemplo, en el método base `On Web Authentication`, puede declarar parámetros temporales:
 
@@ -126,7 +126,7 @@ El parámetro de retorno de una función se declara añadiendo una flecha (->) y
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). Por ejemplo:
+También se puede declarar el parámetro de retorno sólo añadiendo `: tipo`, en cuyo caso se puede manejar mediante una [instrucción de retorno](#return-expression) o a través de `$0` en la [sintaxis secuencial](#returned-value-1)). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -139,7 +139,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 ### Tipos de datos soportados
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  Por ejemplo:
+Con los parámetros con nombre, puede utilizar los mismos tipos de datos [soportados por la palabra clave `var`](variables.md#using-the-var-keyword), incluidos los objetos de las clases.  Por ejemplo:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -151,9 +151,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 ## Parámetros secuenciales
 
-As an alternative to [named parameters](#named-parameters) syntax, you can declare parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. La numeración de las variables locales representa el orden de los parámetros.
+Como alternativa a la sintaxis [parámetros nombrados](#named-parameters), puede declarar los parámetros utilizando variables numeradas secuencialmente: **$1**, **$2**, **$3**, etc. La numeración de las variables locales representa el orden de los parámetros.
 
-> Although this syntax is supported by class functions, it is recommended to use [named parameters](#named-parameters) syntax in this case.
+> Aunque esta sintaxis es soportada por las funciones clase, se recomienda utilizar la sintaxis [parámetros nombrados](#named-parameters) en este caso.
 
 Por ejemplo, cuando se llama a un método proyecto `DO_SOMETHING` con tres parámetros:
 
@@ -240,12 +240,12 @@ The `return` statement can be used along with the standard syntax for [returned 
 Function getValue
     $0:=10
     return 20
-    // returns 20
+    // devuelve 20
 
 Function getValue -> $v : Integer
     return 10
-    $v:=20 // never executed
-    // returns 10
+    $v:=20 // nunca se ejecuta
+    // devuelve 10
 ```
 
 
@@ -256,7 +256,7 @@ Los métodos proyecto 4D aceptan un número variable de parámetros. Puede dirig
 
 
 
-### Using generic parameters
+### Utilización de los parámetros genéricos
 
 Por ejemplo, considere un método que suma valores y devuelve la suma formateada según un formato que se pasa como parámetro. Cada vez que se llama a este método, el número de valores a sumar puede variar. Debemos pasar los valores como parámetros al método y el formato en forma de cadena de caracteres. El número de valores puede variar de una llamada a otra.
 
@@ -412,10 +412,10 @@ method1(42) //tipo incorrecto, texto esperado
 
 Este caso es tratado por 4D en función del contexto:
 
-- in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
-- in interpreted projects:
-    + if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
-    + if the parameter was declared using the [sequential syntax](#sequential-parameters) (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+- en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. En caso contrario, se genera un error cuando se llama al método.
+- en los proyectos interpretados:
+    + si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
+    + si el parámetro fue declarado utilizando [la sintaxis secuencial ](#sequential-parameters)(`C_XXX`), no se genera ningún error, el método llamado recibe un valor vacío del tipo esperado.
 
 
 
@@ -498,10 +498,10 @@ ALERT("Are you sure?";"Yes I am") //2 parámetros
 ALERT("Time is over") //1 parámetro
 ```
 
-4D methods and functions also accept such optional parameters. Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros en el método, siempre puede pasar el número de parámetros que desee. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). Por ejemplo:
+Los métodos y las funciones 4D también aceptan estos parámetros opcionales. Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros en el método, siempre puede pasar el número de parámetros que desee. Si llama a un método o función con menos parámetros que los declarados, los parámetros que faltan se procesan como valores por defecto en el código llamado, [según su tipo](data-types.md#default-values). Por ejemplo:
 
 ```4d
-// "concate" function of myClass
+// función "concate" de myClass
 Function concate ($param1 : Text ; $param2 : Text)->$result : Text
 $result:=$param1+" "+$param2
 ```
@@ -512,7 +512,7 @@ $result:=$param1+" "+$param2
  $class.concate() // Displays " "
 ```
 
-> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
+> También puede llamar a un método o función con más parámetros de los declarados. Estarán disponibles en el código llamado a través de la sintaxis [${N}](#parameter-indirection-n).
 
 Utilizando el comando `Count parameters` desde dentro del método llamado, puede detectar el número real de parámetros y realizar diferentes operaciones dependiendo de lo que haya recibido.
 

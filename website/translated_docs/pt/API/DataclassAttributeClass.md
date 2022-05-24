@@ -3,7 +3,7 @@ id: DataClassAttributeClass
 title: DataClassAttribute
 ---
 
-Dataclass attributes are available as properties of their respective classes. For example:
+Dataclass attributes are available as properties of their respective classes. Por exemplo:
 
 ```4d
  nameAttribute:=ds.Company.name //reference to class attribute
@@ -52,7 +52,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 **.autoFilled** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 La propiedad `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contém True se o valor de atributo for preenchido automaticamente por 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
 
@@ -79,7 +79,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 **.exposed** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
 
@@ -107,7 +107,7 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 **.size** : Integer<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.fieldNumber` <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contém o número de campo 4D interno do atributo<!-- END REF -->.
 
@@ -135,7 +135,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 **.fieldType** : Integer<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -->contém o tipo 4D banco de dados do atributo<!-- END REF -->. Depende do tipo de atributo (ver [`.kind`](#kind)).
 
@@ -170,7 +170,7 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 **.indexed** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.indexed` <!-- REF DataClassAttributeClass.indexed.Summary -->contiene **True** se houver um índice B-tree ou Cluster B-tree no atributo<!-- END REF -->.
 
@@ -196,7 +196,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 **.inverseName** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.inverseName` <!-- REF DataClassAttributeClass.inverseName.Summary -->devolve o nome do atributo que está do outro lado da relação<!-- END REF -->.
 
@@ -222,7 +222,7 @@ Esta propriedade não se devolve si `.kind` = "storage". Deve ser do tipo "relat
 **.keywordIndexed** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contém **True** se houver um índice de palavras chaves no atributo<!-- END REF -->.
 
@@ -248,7 +248,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 **.kind** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->devolve a categoria do atributo<!-- END REF -->. O valor retornado pode ser um dos abaixo:
 
@@ -292,7 +292,7 @@ Dada a seguinte tabela e relação:
 **.mandatory** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.mandatory` <!-- REF DataClassAttributeClass.mandatory.Summary -->contém True se reusar a entrada de valores Null para o atributo<!-- END REF -->.
 
@@ -319,7 +319,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 **.name** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->retorna o nome do objeto `dataClassAttribute` como uma string<!-- END REF -->.
 
@@ -347,7 +347,7 @@ A propriedade `.name` <!-- REF DataClassAttributeClass.name.Summary -->retorna o
 **.path** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.path` property<!-- REF DataClassAttributeClass.path. Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
 
@@ -377,7 +377,7 @@ The `.path` property<!-- REF DataClassAttributeClass.path. Summary -->returns th
 **.readOnly** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 The `.readOnly` property is<!-- REF DataClassAttributeClass.readOnly. Summary -->true if the attribute is read-only<!-- END REF -->.
 
@@ -403,7 +403,7 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 **.relatedDataClass** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 > This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
 
 A propriedade `.relatedDataClass` <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->retorna o nome da classe de dados relacionada ao atributo<!-- END REF -->.
@@ -439,7 +439,7 @@ Dada a seguinte tabela e relação:
 **.type** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.type` <!-- REF DataClassAttributeClass.type.Summary -->contém o tipo de valor conceitual do atributo<!-- END REF -->, útil para a programação genérica.
 
@@ -475,7 +475,7 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 **.unique** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
 A propriedade `.unique` <!-- REF DataClassAttributeClass.unique.Summary -->contém True se o valor do atributo dever ser único<!-- END REF -->. Essa propriedade corresponde a propriedade de campo 4D "Unique".
 

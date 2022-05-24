@@ -158,7 +158,7 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtheme     | Description                                                  | Can the values be modified? |
+| Subtheme     | Descrição                                                    | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
 | Interprocess | List of interprocess variables being used at this point      | Sim                         |
 | Processo     | List of process variables used by the current process        | Sim                         |
@@ -365,7 +365,7 @@ For debugging purposes, you can move the program counter for the method at the t
 
 This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. All current settings, fields, variables, etc. are not impacted.
 
-For example:
+Por exemplo:
 
 ```4d
   // ...

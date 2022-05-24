@@ -11,7 +11,7 @@ Les images statiques sont des [objets statiques](formObjects_overview.md#active-
 
 Les images statiques sont stockées à l’extérieur des formulaires et insérées par référence. Dans l'éditeur de formules, les objets image statique sont créées par copier-coller ou par glisser-déposer.
 
-> Si vous placez une image statique dans la page 0 d’un formulaire multi-pages, elle apparaîtra comme élément d’arrière-plan de toutes les pages. Vous pouvez également l’inclure dans un formulaire hérité, qui s'applique à l'arrière-plan de différents autres formulaires. Either way, your application will run faster than if the picture was pasted into each page.
+> Si vous placez une image statique dans la page 0 d’un formulaire multi-pages, elle apparaîtra comme élément d’arrière-plan de toutes les pages. Vous pouvez également l’inclure dans un formulaire hérité, qui s'applique à l'arrière-plan de différents autres formulaires. Dans les deux cas, votre application s’exécutera plus rapidement.
 
 
 
