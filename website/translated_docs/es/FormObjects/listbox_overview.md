@@ -300,18 +300,18 @@ In order to preserve data consistency for selection type and entity selection ty
 
 The typical sequence of events generated during data entry or modification is as follows:
 
-| Acción                                                                          | Tipo(s) de Listbox          | Secuencia de eventos                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Todos                       | On Before Data Entry                                                                                                                                                                                           |
-|                                                                                 | Todos                       | On Getting Focus                                                                                                                                                                                               |
-| Cuando se ha editado el valor de una celda                                      | Todos                       | On Before Keystroke                                                                                                                                                                                            |
-|                                                                                 | Todos                       | On After Keystroke                                                                                                                                                                                             |
-|                                                                                 | Todos                       | On After Edit                                                                                                                                                                                                  |
-| A user validates and leaves the cell                                            | List box de tipo selección  | Guardar                                                                                                                                                                                                        |
-|                                                                                 | Record selection list boxes | On saving an existing record trigger (if set)                                                                                                                                                                  |
-|                                                                                 | List box de tipo selección  | On Data Change(*)                                                                                                                                                                                              |
-|                                                                                 | Entity selection list boxes | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
-|                                                                                 | Todos                       | On Losing Focus                                                                                                                                                                                                |
+| Acción                                                                          | Tipo(s) de Listbox                      | Secuencia de eventos                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Todos                                   | On Before Data Entry                                                                                                                                                                                           |
+|                                                                                 | Todos                                   | On Getting Focus                                                                                                                                                                                               |
+| Cuando se ha editado el valor de una celda                                      | Todos                                   | On Before Keystroke                                                                                                                                                                                            |
+|                                                                                 | Todos                                   | On After Keystroke                                                                                                                                                                                             |
+|                                                                                 | Todos                                   | On After Edit                                                                                                                                                                                                  |
+| A user validates and leaves the cell                                            | List box de tipo selección              | Guardar                                                                                                                                                                                                        |
+|                                                                                 | List box de tipo selección de registro  | On saving an existing record trigger (if set)                                                                                                                                                                  |
+|                                                                                 | List box de tipo selección              | On Data Change(*)                                                                                                                                                                                              |
+|                                                                                 | List box de tipo selección de entidades | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
+|                                                                                 | Todos                                   | On Losing Focus                                                                                                                                                                                                |
 
 (*) With entity selection list boxes, in the On Data Change event:
 - the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
@@ -470,7 +470,7 @@ There are several different ways to set background colors, font colors and font 
 
 Priority and inheritance principles are observed when the same property is set at more than one level.
 
-| Nivel de prioridad | Setting location                                                     |
+| Nivel de prioridad | Ubicación del parámetro                                              |
 | ------------------ | -------------------------------------------------------------------- |
 | alta prioridad     | Cell (if multi-style text)                                           |
 |                    | Arrays de columnas/métodos                                           |
@@ -793,10 +793,10 @@ You cannot set display formats or entry filters for columns of object-type list 
 
 | Tipo de valor | Formato por defecto                                        | Control de entrada      |
 | ------------- | ---------------------------------------------------------- | ----------------------- |
-| texto         | same as defined in object                                  | any (no control)        |
+| texto         | lo mismo que se define en el objeto                        | any (no control)        |
 | real          | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
 |               |                                                            | "0-9" and "." if min>=0 |
-| integer       | same as defined in object                                  | "0-9" y "-"             |
+| integer       | lo mismo que se define en el objeto                        | "0-9" y "-"             |
 |               |                                                            | "0-9" if min>=0         |
 | Booleano      | casilla de selección                                       | N/A                     |
 | color         | N/A                                                        | N/A                     |
@@ -816,14 +816,14 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | max                   | valor máximo                            |       | x    | x       |          |       |        |
 | behavior              | "threeStates" value                     |       |      | x       |          |       |        |
 | requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |        |
-| choiceList            | combo box defined in object             | x     | x    | x       |          |       |        |
+| choiceList            | combo box definido en objeto            | x     | x    | x       |          |       |        |
 | requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |          |       |        |
 | requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |          |       |        |
 | saveAs                | "reference" o "value"                   | x     | x    | x       |          |       |        |
 | choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |          |       |        |
 | choiceListName        | 4D list name, display combo box         | x     | x    | x       |          |       |        |
 | unitList              | array de X elementos                    | x     | x    | x       |          |       |        |
-| unitReference         | index of selected element               | x     | x    | x       |          |       |        |
+| unitReference         | índice del elemento seleccionado        | x     | x    | x       |          |       |        |
 | unitsListReference    | Ver lista de unidades 4D                | x     | x    | x       |          |       |        |
 | unitsListName         | 4D lista nombre de la unidad            | x     | x    | x       |          |       |        |
 | alternateButton       | añadir un botón alternativo             | x     | x    | x       | x        | x     |        |
