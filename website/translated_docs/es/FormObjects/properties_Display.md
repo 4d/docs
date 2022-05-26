@@ -589,7 +589,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 
 #### Automatic for input (default option)
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 - In single-line areas, words located at the end of lines are truncated and there are no line returns.
 - In multiline areas, 4D carries out automatic line returns.
