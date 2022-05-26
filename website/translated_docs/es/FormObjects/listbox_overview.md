@@ -791,16 +791,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Tipo de valor | Formato por defecto                                        | Control de entrada      |
-| ------------- | ---------------------------------------------------------- | ----------------------- |
-| texto         | lo mismo que se define en el objeto                        | any (no control)        |
-| real          | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
-|               |                                                            | "0-9" and "." if min>=0 |
-| integer       | lo mismo que se define en el objeto                        | "0-9" y "-"             |
-|               |                                                            | "0-9" if min>=0         |
-| Booleano      | casilla de selección                                       | N/A                     |
-| color         | N/A                                                        | N/A                     |
-| evento        | N/A                                                        | N/A                     |
+| Tipo de valor | Formato por defecto                                        | Control de entrada    |
+| ------------- | ---------------------------------------------------------- | --------------------- |
+| texto         | lo mismo que se define en el objeto                        | any (no control)      |
+| real          | same as defined in object (using system decimal separator) | "0-9" y "." y "-"     |
+|               |                                                            | "0-9" y "." si min>=0 |
+| integer       | lo mismo que se define en el objeto                        | "0-9" y "-"           |
+|               |                                                            | "0-9" if min>=0       |
+| Booleano      | casilla de selección                                       | N/A                   |
+| color         | N/A                                                        | N/A                   |
+| evento        | N/A                                                        | N/A                   |
 
 ### Atributos
 
