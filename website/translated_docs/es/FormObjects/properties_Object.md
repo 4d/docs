@@ -246,9 +246,9 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles |
-| ---------- | -------------- | ---------------- |
-| radioGroup | cadena         | Radio group name |
+| Nombre     | Tipos de datos | Valores posibles       |
+| ---------- | -------------- | ---------------------- |
+| radioGroup | cadena         | Nombre del grupo radio |
 
 
 #### Objetos soportados
