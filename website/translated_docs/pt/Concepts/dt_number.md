@@ -47,7 +47,7 @@ Negative numbers are specified with the minus sign (-). Por exemplo:
 | Longint division         | Number \ Number | Número   | 5 \ 2     | 2     |
 | Modulo                   | Number % Number  | Número   | 5 % 2      | 1     |
 | Exponentiation           | Number ^ Number  | Número   | 2 ^ 3      | 8     |
-| Equality                 | Number = Number  | Booleano | 10 = 10    | True  |
+| Igual                    | Number = Number  | Booleano | 10 = 10    | True  |
 |                          |                  |          | 10 = 11    | False |
 | Desigualdade             | Number # Number  | Booleano | 10 #11     | True  |
 |                          |                  |          | 10 # 10    | False |
