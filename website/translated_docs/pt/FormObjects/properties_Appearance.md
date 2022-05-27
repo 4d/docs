@@ -102,7 +102,7 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Veja também
 [Vertical scroll bar](#vertical-scroll-bar)
 
 ---
@@ -353,7 +353,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 [4D View Pro area](viewProArea_overview.md)
 
 
-#### See also
+#### Veja também
 
 [4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
@@ -386,7 +386,7 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Veja também
 
 [Horizontal scroll bar](#horizontal-scroll-bar)
 
