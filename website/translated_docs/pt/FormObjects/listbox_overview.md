@@ -655,9 +655,9 @@ Regardless of how the data are displayed in the list box (hierarchically or not)
 
 This principle is implemented for internal arrays that can be used to manage:
 
-- colors
+- cores
 - background colors
-- styles
+- estilos
 - hidden rows
 - selections
 
