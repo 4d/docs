@@ -196,7 +196,7 @@ The collection or the entity selection must be available to the form when it is 
 ---
 ## Fuente de datos
 
-Specify the type of list box.
+Especifique el tipo de list box.
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
