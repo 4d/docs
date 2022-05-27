@@ -79,7 +79,7 @@ Con:
 
 | Operation    | Sintaxe           | Returns  | Expression    | Value |
 | ------------ | ----------------- | -------- | ------------- | ----- |
-| Equality     | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
+| Igual        | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
 |              |                   |          | vPtrA = vPtrB | False |
 | Desigualdade | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
 |              |                   |          | vPtrA # vPtrB | False |
