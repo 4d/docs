@@ -138,7 +138,7 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 
 ---
-## Height
+## Alto
 
 This property designates an object's vertical size.
 > Some objects may have a predefined height that cannot be altered.
@@ -241,7 +241,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 [List Box](listbox_overview.md#overview)
 
 
-#### See also
+#### Veja também
 [Array altura linha](#row-height-array)
 
 
@@ -276,5 +276,5 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 [List Box](listbox_overview.md#overview)
 
 
-#### See also
+#### Veja também
 [Altura linha](#row-height)
