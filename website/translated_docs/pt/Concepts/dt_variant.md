@@ -11,7 +11,7 @@ A variant type variable can contain a value of the following data types:
 - booleano
 - collection
 - date
-- longint
+- inteiro longo
 - object
 - imagem
 - pointer
