@@ -39,7 +39,7 @@ The following escape sequences can be used within strings:
 | ------------------------ | ---------------- | -------- | ----------------------- | -------- |
 | Concatenation            | String + String  | String   | "abc" + "def"           | "abcdef" |
 | Repetition               | String * Number  | String   | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Booleano | "abc" = "abc"           | True     |
+| Igual                    | String = String  | Booleano | "abc" = "abc"           | True     |
 |                          |                  |          | "abc" = "abd"           | False    |
 | Desigualdade             | String # String  | Booleano | "abc" # "abd"           | True     |
 |                          |                  |          | "abc" # "abc"           | False    |
