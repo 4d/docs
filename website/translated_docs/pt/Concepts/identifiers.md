@@ -365,7 +365,7 @@ Tenha certeza de usar nomes únicos para os diferentes elementos de seu banco de
 4D identifica os nomes utilizados nos métodos em função na seguinte ordem de ordem de prioridade:
 
 1. Campos
-2. Commands
+2. Comandos
 3. Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
