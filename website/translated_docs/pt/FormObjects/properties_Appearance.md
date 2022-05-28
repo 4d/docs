@@ -176,7 +176,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 ## Show headers
@@ -350,7 +350,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 
 #### Veja também
