@@ -20,7 +20,7 @@ Specifies if the user can delete subrecords in a list subform.
 
 
 ---
-## Detail Form
+## Formulário detalhado
 
 You use this property to declare the detail form to use in the subform. It can be:
 
