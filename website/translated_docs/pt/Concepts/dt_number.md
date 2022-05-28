@@ -38,27 +38,27 @@ Negative numbers are specified with the minus sign (-). Por exemplo:
 
 ## Number operators
 
-| Operation                | Sintaxe          | Returns  | Expression | Value |
-| ------------------------ | ---------------- | -------- | ---------- | ----- |
-| Addition                 | Number + Number  | Número   | 2 + 3      | 5     |
-| Subtraction              | Number - Number  | Número   | 3 – 2      | 1     |
-| Multiplication           | Number * Number  | Número   | 5 * 2      | 10    |
-| Division                 | Number / Number  | Número   | 5 / 2      | 2.5   |
-| Longint division         | Number \ Number | Número   | 5 \ 2     | 2     |
-| Modulo                   | Number % Number  | Número   | 5 % 2      | 1     |
-| Exponentiation           | Number ^ Number  | Número   | 2 ^ 3      | 8     |
-| Igual                    | Number = Number  | Booleano | 10 = 10    | True  |
-|                          |                  |          | 10 = 11    | False |
-| Desigualdade             | Number # Number  | Booleano | 10 #11     | True  |
-|                          |                  |          | 10 # 10    | False |
-| Greater than             | Number > Number  | Booleano | 11 > 10    | True  |
-|                          |                  |          | 10 > 11    | False |
-| Less than                | Number < Number  | Booleano | 10 < 11    | True  |
-|                          |                  |          | 11 < 10    | False |
-| Greater than or equal to | Number >= Number | Booleano | 11 >= 10   | True  |
-|                          |                  |          | 10 >= 11   | False |
-| Less than or equal to    | Number <= Number | Booleano | 10 <= 11   | True  |
-|                          |                  |          | 11 <= 10   | False |
+| Operation                | Sintaxe          | Returns  | Expressão | Value |
+| ------------------------ | ---------------- | -------- | --------- | ----- |
+| Addition                 | Number + Number  | Número   | 2 + 3     | 5     |
+| Subtraction              | Number - Number  | Número   | 3 – 2     | 1     |
+| Multiplication           | Number * Number  | Número   | 5 * 2     | 10    |
+| Division                 | Number / Number  | Número   | 5 / 2     | 2.5   |
+| Longint division         | Number \ Number | Número   | 5 \ 2    | 2     |
+| Modulo                   | Number % Number  | Número   | 5 % 2     | 1     |
+| Exponentiation           | Number ^ Number  | Número   | 2 ^ 3     | 8     |
+| Igual                    | Number = Number  | Booleano | 10 = 10   | True  |
+|                          |                  |          | 10 = 11   | False |
+| Desigualdade             | Number # Number  | Booleano | 10 #11    | True  |
+|                          |                  |          | 10 # 10   | False |
+| Greater than             | Number > Number  | Booleano | 11 > 10   | True  |
+|                          |                  |          | 10 > 11   | False |
+| Less than                | Number < Number  | Booleano | 10 < 11   | True  |
+|                          |                  |          | 11 < 10   | False |
+| Greater than or equal to | Number >= Number | Booleano | 11 >= 10  | True  |
+|                          |                  |          | 10 >= 11  | False |
+| Less than or equal to    | Number <= Number | Booleano | 10 <= 11  | True  |
+|                          |                  |          | 11 <= 10  | False |
 
 The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
 
