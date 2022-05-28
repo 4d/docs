@@ -35,7 +35,7 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Sintaxe          | Returns  | Expression              | Value    |
+| Operation                | Sintaxe          | Returns  | Expressão               | Value    |
 | ------------------------ | ---------------- | -------- | ----------------------- | -------- |
 | Concatenation            | String + String  | String   | "abc" + "def"           | "abcdef" |
 | Repetition               | String * Number  | String   | "ab" * 3                | "ababab" |
