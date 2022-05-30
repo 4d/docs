@@ -1,6 +1,6 @@
 ---
-id: pictures
-title: Pictures
+id: imagens
+title: Imagens
 ---
 
 ## Native Formats Supported

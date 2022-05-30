@@ -37,7 +37,7 @@ The page lists all the tables of the database (including invisible tables) as we
 
 
 
-## Data
+## Dados
 
 The **Data** page provides information about the available and used storage space in the data file.
 > This page cannot be accessed in maintenance mode

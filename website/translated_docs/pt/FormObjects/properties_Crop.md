@@ -4,7 +4,7 @@ title: Crop
 ---
 
 ---
-## Columns
+## Colunas
 
 Sets the number of columns in a thumbnail table.
 

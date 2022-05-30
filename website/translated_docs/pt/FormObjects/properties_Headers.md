@@ -1,6 +1,6 @@
 ---
 id: propertiesHeaders
-title: Headers
+title: Cabeçalhos
 ---
 
 ---
@@ -22,7 +22,7 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 
 ---
-## Height
+## Alto
 
 This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
 
@@ -64,6 +64,6 @@ Note that converting back and forth may lead to an end result that is different 
 [List Box](listbox_overview.md)
 
 
-#### See also
+#### Veja também
 
 [Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)

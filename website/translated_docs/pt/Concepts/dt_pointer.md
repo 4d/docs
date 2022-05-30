@@ -77,9 +77,9 @@ Con:
  vPtrC:=->anotherObject
 ```
 
-| Operation    | Sintaxe           | Returns  | Expression    | Value |
+| Operation    | Sintaxe           | Returns  | Expressão     | Value |
 | ------------ | ----------------- | -------- | ------------- | ----- |
-| Equality     | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
+| Igual        | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
 |              |                   |          | vPtrA = vPtrB | False |
 | Desigualdade | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
 |              |                   |          | vPtrA # vPtrB | False |

@@ -221,7 +221,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 ### Expression types
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Type               | Descrição                                                                                                                                                                       |
+| Expressão                | Type               | Descrição                                                                                                                                                                       |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
@@ -269,7 +269,7 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
-## Comments
+## Comentários
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
 

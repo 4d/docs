@@ -196,7 +196,7 @@ The collection or the entity selection must be available to the form when it is 
 ---
 ## Fuente de datos
 
-Specify the type of list box.
+Especifique el tipo de list box.
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
@@ -246,9 +246,9 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles |
-| ---------- | -------------- | ---------------- |
-| radioGroup | cadena         | Radio group name |
+| Nombre     | Tipos de datos | Valores posibles       |
+| ---------- | -------------- | ---------------------- |
+| radioGroup | cadena         | Nombre del grupo radio |
 
 
 #### Objetos soportados

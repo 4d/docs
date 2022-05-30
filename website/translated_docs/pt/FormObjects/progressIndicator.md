@@ -62,6 +62,6 @@ When the form is executed, the object is not animated. You manage the animation 
 [Barber shop](properties_Scale.md#barber-shop) - [Negrito](properties_Text.md#bold) - \[Estilo da linha de borda\](properties_BackgroundAndBorder. md#border-line-style) -[Abaixo](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - \[Digitável\](properties_Entry. md#enterable) - [Executar método objeto](properties_Action.md#execute-object-method) - \[Tipo de expressão\](properties_Object. md#expression-type) (só "inteiro", "número", "data" ou "hora") - [Altura](properties_CoordinatesAndSizing.md#height) - \[Conselho de ajuda\](properties_Help. md#help-tip) - [Tamanho horizontal](properties_ResizingOptions.md#horizontal-sizing) - \[Izquierda\](properties_CoordinatesAndSizing. md#left) - [Nome de objeto](properties_Object.md#object-name) - [Direita](properties_CoordinatesAndSizing.md#right) - \[Acima\](properties_CoordinatesAndSizing. md#top) - [Tipo](properties_Object.md#type) - [Variável ou Expressão](properties_Object.md#variable-or-expression) - \[Tamanho vertical\](properties_ResizingOptions. md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 
-## See also
-- [rulers](ruler.md)
+## Veja também
+- [regras](ruler.md)
 - [steppers](stepper.md)
