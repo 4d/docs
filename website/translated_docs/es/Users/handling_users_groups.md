@@ -59,7 +59,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 3. Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la base. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
+4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
 
 > Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command.
 
@@ -92,7 +92,7 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 
 Para crear un grupo:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the database.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D muestra la ventana del editor de grupos. The list of groups displays all the groups of the database.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
