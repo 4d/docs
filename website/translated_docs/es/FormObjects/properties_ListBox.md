@@ -106,7 +106,7 @@ Locked columns and static columns are two separate and independent functionaliti
 *   Static columns cannot be moved by drag and drop within the list box.
 > > > > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
 
-These properties interact as follows:
+Estas propiedades interactúan de la siguiente manera:
 
 *   If you set columns that are only static, they cannot be moved.
 
