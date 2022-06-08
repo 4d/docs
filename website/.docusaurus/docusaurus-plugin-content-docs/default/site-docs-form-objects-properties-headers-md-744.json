@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesHeaders",
+  "id": "FormObjects/propertiesHeaders",
+  "title": "Headers",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_Headers.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesHeaders",
+  "permalink": "/docs/18/docs/FormObjects/propertiesHeaders",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesHeaders",
+    "title": "Headers"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Gridlines",
+    "permalink": "/docs/18/docs/FormObjects/propertiesGridlines"
+  },
+  "next": {
+    "title": "Help",
+    "permalink": "/docs/18/docs/FormObjects/propertiesHelp"
+  }
+}

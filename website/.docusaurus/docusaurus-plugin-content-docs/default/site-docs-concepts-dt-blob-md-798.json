@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/blob",
+  "id": "Concepts/blob",
+  "title": "BLOB",
+  "description": "- A BLOB (Binary Large OBjects) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. A BLOB can be empty (null length) or contain up to 2147483647 bytes (2 GB).",
+  "source": "@site/../docs/Concepts/dt_blob.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/blob",
+  "permalink": "/docs/18/docs/Concepts/blob",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "blob",
+    "title": "BLOB"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Data types overview",
+    "permalink": "/docs/18/docs/Concepts/data-types"
+  },
+  "next": {
+    "title": "Boolean",
+    "permalink": "/docs/18/docs/Concepts/boolean"
+  }
+}

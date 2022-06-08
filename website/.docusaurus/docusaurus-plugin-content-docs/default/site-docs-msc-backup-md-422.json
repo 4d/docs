@@ -1,0 +1,27 @@
+{
+  "unversionedId": "MSC/backup",
+  "id": "MSC/backup",
+  "title": "Backup Page",
+  "description": "You can use the Backup page to view some backup parameters of the database and to launch a manual backup:",
+  "source": "@site/docs/MSC/backup.md",
+  "sourceDirName": "MSC",
+  "slug": "/MSC/backup",
+  "permalink": "/docs/18/docs/MSC/backup",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "backup",
+    "title": "Backup Page",
+    "sidebar_label": "Backup Page"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Verify Page",
+    "permalink": "/docs/18/docs/MSC/verify"
+  },
+  "next": {
+    "title": "Compact Page",
+    "permalink": "/docs/18/docs/MSC/compact"
+  }
+}

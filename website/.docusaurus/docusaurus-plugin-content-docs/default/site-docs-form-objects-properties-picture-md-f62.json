@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesPicture",
+  "id": "FormObjects/propertiesPicture",
+  "title": "Picture",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_Picture.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesPicture",
+  "permalink": "/docs/18/docs/FormObjects/propertiesPicture",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesPicture",
+    "title": "Picture"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Objects",
+    "permalink": "/docs/18/docs/FormObjects/propertiesObject"
+  },
+  "next": {
+    "title": "Plug-ins",
+    "permalink": "/docs/18/docs/FormObjects/propertiesPlugIns"
+  }
+}

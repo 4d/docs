@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesCoordinatesAndSizing",
+  "id": "FormObjects/propertiesCoordinatesAndSizing",
+  "title": "Coordinates & Sizing",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_CoordinatesAndSizing.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesCoordinatesAndSizing",
+  "permalink": "/docs/18/docs/FormObjects/propertiesCoordinatesAndSizing",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesCoordinatesAndSizing",
+    "title": "Coordinates & Sizing"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Background and Border",
+    "permalink": "/docs/18/docs/FormObjects/propertiesBackgroundAndBorder"
+  },
+  "next": {
+    "title": "Crop",
+    "permalink": "/docs/18/docs/FormObjects/propertiesCrop"
+  }
+}

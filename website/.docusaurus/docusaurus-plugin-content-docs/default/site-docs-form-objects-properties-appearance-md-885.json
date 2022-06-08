@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesAppearance",
+  "id": "FormObjects/propertiesAppearance",
+  "title": "Appearance",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_Appearance.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesAppearance",
+  "permalink": "/docs/18/docs/FormObjects/propertiesAppearance",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesAppearance",
+    "title": "Appearance"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Animation",
+    "permalink": "/docs/18/docs/FormObjects/propertiesAnimation"
+  },
+  "next": {
+    "title": "Background and Border",
+    "permalink": "/docs/18/docs/FormObjects/propertiesBackgroundAndBorder"
+  }
+}

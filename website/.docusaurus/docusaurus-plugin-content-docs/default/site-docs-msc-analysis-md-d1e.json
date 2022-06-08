@@ -1,0 +1,27 @@
+{
+  "unversionedId": "MSC/analysis",
+  "id": "MSC/analysis",
+  "title": "Activity analysis Page",
+  "description": "The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.",
+  "source": "@site/docs/MSC/analysis.md",
+  "sourceDirName": "MSC",
+  "slug": "/MSC/analysis",
+  "permalink": "/docs/18/docs/MSC/analysis",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "analysis",
+    "title": "Activity analysis Page",
+    "sidebar_label": "Activity analysis Page"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Information Page",
+    "permalink": "/docs/18/docs/MSC/information"
+  },
+  "next": {
+    "title": "Verify Page",
+    "permalink": "/docs/18/docs/MSC/verify"
+  }
+}

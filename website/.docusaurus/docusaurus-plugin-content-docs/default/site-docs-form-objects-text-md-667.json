@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/text",
+  "id": "FormObjects/text",
+  "title": "Text",
+  "description": "Overview",
+  "source": "@site/docs/FormObjects/text.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/text",
+  "permalink": "/docs/18/docs/FormObjects/text",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "text",
+    "title": "Text"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Tab Controls",
+    "permalink": "/docs/18/docs/FormObjects/tabControl"
+  },
+  "next": {
+    "title": "Web Area",
+    "permalink": "/docs/18/docs/FormObjects/webAreaOverview"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/radiobuttonOverview",
+  "id": "FormObjects/radiobuttonOverview",
+  "title": "Radio Button",
+  "description": "Overview",
+  "source": "@site/docs/FormObjects/radio_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/radiobuttonOverview",
+  "permalink": "/docs/18/docs/FormObjects/radiobuttonOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "radiobuttonOverview",
+    "title": "Radio Button"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Progress Indicator",
+    "permalink": "/docs/18/docs/FormObjects/progressIndicator"
+  },
+  "next": {
+    "title": "Ruler",
+    "permalink": "/docs/18/docs/FormObjects/ruler"
+  }
+}

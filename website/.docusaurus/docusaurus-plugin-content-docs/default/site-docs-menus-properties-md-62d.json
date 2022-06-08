@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Menus/properties",
+  "id": "Menus/properties",
+  "title": "Menu item properties",
+  "description": "You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.",
+  "source": "@site/docs/Menus/properties.md",
+  "sourceDirName": "Menus",
+  "slug": "/Menus/properties",
+  "permalink": "/docs/18/docs/Menus/properties",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "properties",
+    "title": "Menu item properties"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Creating menus and menu bars",
+    "permalink": "/docs/18/docs/Menus/creating"
+  },
+  "next": {
+    "title": "Menu bar features",
+    "permalink": "/docs/18/docs/Menus/bars"
+  }
+}

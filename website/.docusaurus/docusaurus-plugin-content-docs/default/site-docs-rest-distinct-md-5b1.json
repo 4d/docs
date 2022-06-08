@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/distinct",
+  "id": "REST/distinct",
+  "title": "$distinct",
+  "description": "Returns the distinct values for a specific attribute in a collection (e.g., Company/name?$filter=\"name=a*\"&$distinct=true)",
+  "source": "@site/../docs/REST/$distinct.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/distinct",
+  "permalink": "/docs/18/docs/REST/distinct",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "distinct",
+    "title": "$distinct"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$compute",
+    "permalink": "/docs/18/docs/REST/compute"
+  },
+  "next": {
+    "title": "$entityset",
+    "permalink": "/docs/18/docs/REST/entityset"
+  }
+}

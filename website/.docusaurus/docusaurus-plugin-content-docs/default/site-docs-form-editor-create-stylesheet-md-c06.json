@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormEditor/stylesheets",
+  "id": "FormEditor/stylesheets",
+  "title": "Style sheets",
+  "description": "Overview",
+  "source": "@site/docs/FormEditor/createStylesheet.md",
+  "sourceDirName": "FormEditor",
+  "slug": "/FormEditor/stylesheets",
+  "permalink": "/docs/18/docs/FormEditor/stylesheets",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "stylesheets",
+    "title": "Style sheets"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Object libraries",
+    "permalink": "/docs/18/docs/FormEditor/objectLibrary"
+  },
+  "next": {
+    "title": "Pictures",
+    "permalink": "/docs/18/docs/FormEditor/pictures"
+  }
+}

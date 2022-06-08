@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/inputOverview",
+  "id": "FormObjects/inputOverview",
+  "title": "Input",
+  "description": "Overview",
+  "source": "@site/docs/FormObjects/input_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/inputOverview",
+  "permalink": "/docs/18/docs/FormObjects/inputOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "inputOverview",
+    "title": "Input"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Group Box",
+    "permalink": "/docs/18/docs/FormObjects/groupBox"
+  },
+  "next": {
+    "title": "Hierarchical List",
+    "permalink": "/docs/18/docs/FormObjects/listOverview"
+  }
+}

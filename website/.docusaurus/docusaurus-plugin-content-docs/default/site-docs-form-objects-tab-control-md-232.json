@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/tabControl",
+  "id": "FormObjects/tabControl",
+  "title": "Tab Controls",
+  "description": "A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.",
+  "source": "@site/../docs/FormObjects/tabControl.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/tabControl",
+  "permalink": "/docs/18/docs/FormObjects/tabControl",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "tabControl",
+    "title": "Tab Controls"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Subform",
+    "permalink": "/docs/18/docs/FormObjects/subformOverview"
+  },
+  "next": {
+    "title": "Text",
+    "permalink": "/docs/18/docs/FormObjects/text"
+  }
+}

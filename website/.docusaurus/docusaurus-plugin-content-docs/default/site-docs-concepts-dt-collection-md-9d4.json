@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/collection",
+  "id": "Concepts/collection",
+  "title": "Collection",
+  "description": "Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null).",
+  "source": "@site/../docs/Concepts/dt_collection.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/collection",
+  "permalink": "/docs/18/docs/Concepts/collection",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "collection",
+    "title": "Collection"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Boolean",
+    "permalink": "/docs/18/docs/Concepts/boolean"
+  },
+  "next": {
+    "title": "Date",
+    "permalink": "/docs/18/docs/Concepts/date"
+  }
+}

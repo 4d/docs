@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/entityset",
+  "id": "REST/entityset",
+  "title": "$entityset",
+  "description": "After creating an entity set by using $method=entityset, you can then use it subsequently.",
+  "source": "@site/../docs/REST/$entityset.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/entityset",
+  "permalink": "/docs/18/docs/REST/entityset",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "entityset",
+    "title": "$entityset"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$distinct",
+    "permalink": "/docs/18/docs/REST/distinct"
+  },
+  "next": {
+    "title": "$expand",
+    "permalink": "/docs/18/docs/REST/expand"
+  }
+}

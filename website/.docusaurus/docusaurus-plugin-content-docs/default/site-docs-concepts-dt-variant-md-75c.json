@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/variant",
+  "id": "Concepts/variant",
+  "title": "Variant",
+  "description": "Variant is a variable type which allows encapsulating data of any valid regular type in a variable. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.",
+  "source": "@site/../docs/Concepts/dt_variant.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/variant",
+  "permalink": "/docs/18/docs/Concepts/variant",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "variant",
+    "title": "Variant"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Time",
+    "permalink": "/docs/18/docs/Concepts/time"
+  },
+  "next": {
+    "title": "Variables",
+    "permalink": "/docs/18/docs/Concepts/variables"
+  }
+}

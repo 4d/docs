@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesText",
+  "id": "FormObjects/propertiesText",
+  "title": "Text",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_Text.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesText",
+  "permalink": "/docs/18/docs/FormObjects/propertiesText",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesText",
+    "title": "Text"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Subform",
+    "permalink": "/docs/18/docs/FormObjects/propertiesSubform"
+  },
+  "next": {
+    "title": "Text and Picture",
+    "permalink": "/docs/18/docs/FormObjects/propertiesTextAndPicture"
+  }
+}

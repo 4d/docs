@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/branching",
+  "id": "Concepts/branching",
+  "title": "Branching structures",
+  "description": "If...Else...End if",
+  "source": "@site/../docs/Concepts/cf_branching.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/branching",
+  "permalink": "/docs/18/docs/Concepts/branching",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "branching",
+    "title": "Branching structures"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Control flow overview",
+    "permalink": "/docs/18/docs/Concepts/control-flow"
+  },
+  "next": {
+    "title": "Looping structures",
+    "permalink": "/docs/18/docs/Concepts/looping"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/authUsers",
+  "id": "REST/authUsers",
+  "title": "Users and sessions",
+  "description": "Authenticating users",
+  "source": "@site/docs/REST/authUsers.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/authUsers",
+  "permalink": "/docs/18/docs/REST/authUsers",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "authUsers",
+    "title": "Users and sessions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Server Configuration",
+    "permalink": "/docs/18/docs/REST/configuration"
+  },
+  "next": {
+    "title": "Getting Server Information",
+    "permalink": "/docs/18/docs/REST/genInfo"
+  }
+}

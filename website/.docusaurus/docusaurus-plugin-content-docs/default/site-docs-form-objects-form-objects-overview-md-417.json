@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/formObjectsOverview",
+  "id": "FormObjects/formObjectsOverview",
+  "title": "About 4D Form Objects",
+  "description": "You build and customize your application forms by manipulating the objects on them. You can add objects, reposition objects, set object properties, enforce business rules by specifying data entry constraints, or write object methods that run automatically when the object is used.",
+  "source": "@site/../docs/FormObjects/formObjects_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/formObjectsOverview",
+  "permalink": "/docs/18/docs/FormObjects/formObjectsOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "formObjectsOverview",
+    "title": "About 4D Form Objects"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Pictures",
+    "permalink": "/docs/18/docs/FormEditor/pictures"
+  },
+  "next": {
+    "title": "Button",
+    "permalink": "/docs/18/docs/FormObjects/buttonOverview"
+  }
+}

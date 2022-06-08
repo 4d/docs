@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesPlugIns",
+  "id": "FormObjects/propertiesPlugIns",
+  "title": "Plug-ins",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_Plugins.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesPlugIns",
+  "permalink": "/docs/18/docs/FormObjects/propertiesPlugIns",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesPlugIns",
+    "title": "Plug-ins"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Picture",
+    "permalink": "/docs/18/docs/FormObjects/propertiesPicture"
+  },
+  "next": {
+    "title": "Print",
+    "permalink": "/docs/18/docs/FormObjects/propertiesPrint"
+  }
+}

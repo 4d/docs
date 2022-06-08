@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormEditor/pictures",
+  "id": "FormEditor/pictures",
+  "title": "Pictures",
+  "description": "Native Formats Supported",
+  "source": "@site/../docs/FormEditor/pictures.md",
+  "sourceDirName": "FormEditor",
+  "slug": "/FormEditor/pictures",
+  "permalink": "/docs/18/docs/FormEditor/pictures",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "pictures",
+    "title": "Pictures"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Style sheets",
+    "permalink": "/docs/18/docs/FormEditor/stylesheets"
+  },
+  "next": {
+    "title": "About 4D Form Objects",
+    "permalink": "/docs/18/docs/FormObjects/formObjectsOverview"
+  }
+}

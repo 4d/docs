@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Project/developing",
+  "id": "Project/developing",
+  "title": "Developing a project",
+  "description": "Development tools",
+  "source": "@site/docs/Project/developing.md",
+  "sourceDirName": "Project",
+  "slug": "/Project/developing",
+  "permalink": "/docs/18/docs/Project/developing",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "developing",
+    "title": "Developing a project"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Architecture of a 4D project",
+    "permalink": "/docs/18/docs/Project/architecture"
+  },
+  "next": {
+    "title": "Building a project package",
+    "permalink": "/docs/18/docs/Project/building"
+  }
+}

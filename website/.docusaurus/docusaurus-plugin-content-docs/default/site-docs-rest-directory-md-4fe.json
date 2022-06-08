@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/directory",
+  "id": "REST/directory",
+  "title": "$directory",
+  "description": "The directory handles user access through REST requests.",
+  "source": "@site/docs/REST/$directory.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/directory",
+  "permalink": "/docs/18/docs/REST/directory",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "directory",
+    "title": "$directory"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$catalog",
+    "permalink": "/docs/18/docs/REST/catalog"
+  },
+  "next": {
+    "title": "$info",
+    "permalink": "/docs/18/docs/REST/info"
+  }
+}

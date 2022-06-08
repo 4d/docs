@@ -1,0 +1,27 @@
+{
+  "unversionedId": "MSC/compact",
+  "id": "MSC/compact",
+  "title": "Compact Page",
+  "description": "You use this page to access the data file compacting functions.",
+  "source": "@site/../docs/MSC/compact.md",
+  "sourceDirName": "MSC",
+  "slug": "/MSC/compact",
+  "permalink": "/docs/18/docs/MSC/compact",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "compact",
+    "title": "Compact Page",
+    "sidebar_label": "Compact Page"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Backup Page",
+    "permalink": "/docs/18/docs/MSC/backup"
+  },
+  "next": {
+    "title": "Rollback Page",
+    "permalink": "/docs/18/docs/MSC/rollback"
+  }
+}

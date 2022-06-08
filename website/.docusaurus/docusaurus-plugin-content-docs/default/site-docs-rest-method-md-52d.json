@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/method",
+  "id": "REST/method",
+  "title": "$method",
+  "description": "This parameter allows you to define the operation to execute with the returned entity or entity selection.",
+  "source": "@site/docs/REST/$method.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/method",
+  "permalink": "/docs/18/docs/REST/method",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "method",
+    "title": "$method"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$imageformat",
+    "permalink": "/docs/18/docs/REST/imageformat"
+  },
+  "next": {
+    "title": "$orderby",
+    "permalink": "/docs/18/docs/REST/orderby"
+  }
+}

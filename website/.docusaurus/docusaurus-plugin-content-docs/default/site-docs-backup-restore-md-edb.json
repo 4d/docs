@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Backup/restore",
+  "id": "Backup/restore",
+  "title": "Restore",
+  "description": "4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:",
+  "source": "@site/../docs/Backup/restore.md",
+  "sourceDirName": "Backup",
+  "slug": "/Backup/restore",
+  "permalink": "/docs/18/docs/Backup/restore",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "restore",
+    "title": "Restore"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Log file (.journal)",
+    "permalink": "/docs/18/docs/Backup/log"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/18/docs/Users/overview"
+  }
+}

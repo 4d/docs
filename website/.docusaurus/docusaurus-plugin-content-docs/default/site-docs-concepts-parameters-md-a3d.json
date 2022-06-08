@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/parameters",
+  "id": "Concepts/parameters",
+  "title": "Parameters",
+  "description": "Using parameters",
+  "source": "@site/docs/Concepts/parameters.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/parameters",
+  "permalink": "/docs/18/docs/Concepts/parameters",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "parameters",
+    "title": "Parameters"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Methods",
+    "permalink": "/docs/18/docs/Concepts/methods"
+  },
+  "next": {
+    "title": "Shared objects and collections",
+    "permalink": "/docs/18/docs/Concepts/shared"
+  }
+}

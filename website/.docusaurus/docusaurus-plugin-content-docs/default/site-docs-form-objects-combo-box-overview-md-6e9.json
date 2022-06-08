@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/comboBoxOverview",
+  "id": "FormObjects/comboBoxOverview",
+  "title": "Combo Box",
+  "description": "Overview",
+  "source": "@site/docs/FormObjects/comboBox_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/comboBoxOverview",
+  "permalink": "/docs/18/docs/FormObjects/comboBoxOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "comboBoxOverview",
+    "title": "Combo Box"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Check Box",
+    "permalink": "/docs/18/docs/FormObjects/checkboxOverview"
+  },
+  "next": {
+    "title": "Drop-down List",
+    "permalink": "/docs/18/docs/FormObjects/dropdownListOverview"
+  }
+}

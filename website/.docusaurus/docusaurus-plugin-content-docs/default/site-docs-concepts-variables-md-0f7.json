@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/variables",
+  "id": "Concepts/variables",
+  "title": "Variables",
+  "description": "Data in 4D is stored in two fundamentally different ways. Fields store data permanently on disk; variables store data temporarily in memory.",
+  "source": "@site/../docs/Concepts/variables.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/variables",
+  "permalink": "/docs/18/docs/Concepts/variables",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "variables",
+    "title": "Variables"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Variant",
+    "permalink": "/docs/18/docs/Concepts/variant"
+  },
+  "next": {
+    "title": "Arrays",
+    "permalink": "/docs/18/docs/Concepts/arrays"
+  }
+}

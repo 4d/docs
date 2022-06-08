@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/control-flow",
+  "id": "Concepts/control-flow",
+  "title": "Control flow overview",
+  "description": "Regardless of the simplicity or complexity of a method, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. There are three types of structures:",
+  "source": "@site/docs/Concepts/flow-control.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/control-flow",
+  "permalink": "/docs/18/docs/Concepts/control-flow",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "control-flow",
+    "title": "Control flow overview"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Shared objects and collections",
+    "permalink": "/docs/18/docs/Concepts/shared"
+  },
+  "next": {
+    "title": "Branching structures",
+    "permalink": "/docs/18/docs/Concepts/branching"
+  }
+}

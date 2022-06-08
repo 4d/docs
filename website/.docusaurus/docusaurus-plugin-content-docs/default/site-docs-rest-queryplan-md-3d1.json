@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/queryplan",
+  "id": "REST/queryplan",
+  "title": "$queryplan",
+  "description": "Returns the query as it was passed to 4D Server (e.g., $queryplan=true)",
+  "source": "@site/docs/REST/$queryplan.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/queryplan",
+  "permalink": "/docs/18/docs/REST/queryplan",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "queryplan",
+    "title": "$queryplan"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$querypath",
+    "permalink": "/docs/18/docs/REST/querypath"
+  },
+  "next": {
+    "title": "$savedfilter",
+    "permalink": "/docs/18/docs/REST/savedfilter"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/plug-ins",
+  "id": "Concepts/plug-ins",
+  "title": "Plug-ins",
+  "description": "As you develop a 4D application, you will discover many capabilities that you did not notice when you started. You can even augment the standard version of 4D by adding plug-ins to your 4D development environment.",
+  "source": "@site/../docs/Concepts/plug-ins.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/plug-ins",
+  "permalink": "/docs/18/docs/Concepts/plug-ins",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "plug-ins",
+    "title": "Plug-ins"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Components",
+    "permalink": "/docs/18/docs/Concepts/components"
+  },
+  "next": {
+    "title": "Identifiers",
+    "permalink": "/docs/18/docs/Concepts/identifiers"
+  }
+}

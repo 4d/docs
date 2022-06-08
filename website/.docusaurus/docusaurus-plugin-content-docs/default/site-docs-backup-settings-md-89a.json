@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Backup/settings",
+  "id": "Backup/settings",
+  "title": "Backup Settings",
+  "description": "Backup settings are defined through three pages in the Database Settings dialog box. You can set:",
+  "source": "@site/docs/Backup/settings.md",
+  "sourceDirName": "Backup",
+  "slug": "/Backup/settings",
+  "permalink": "/docs/18/docs/Backup/settings",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "settings",
+    "title": "Backup Settings"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Backup",
+    "permalink": "/docs/18/docs/Backup/"
+  },
+  "next": {
+    "title": "Log file (.journal)",
+    "permalink": "/docs/18/docs/Backup/log"
+  }
+}

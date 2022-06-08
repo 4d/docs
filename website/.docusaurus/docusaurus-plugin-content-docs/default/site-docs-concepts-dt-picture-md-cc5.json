@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/picture",
+  "id": "Concepts/picture",
+  "title": "Picture",
+  "description": "A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D commands such as READ PICTURE FILE.",
+  "source": "@site/docs/Concepts/dt_picture.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/picture",
+  "permalink": "/docs/18/docs/Concepts/picture",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "picture",
+    "title": "Picture"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Objects",
+    "permalink": "/docs/18/docs/Concepts/object"
+  },
+  "next": {
+    "title": "Pointer",
+    "permalink": "/docs/18/docs/Concepts/pointer"
+  }
+}

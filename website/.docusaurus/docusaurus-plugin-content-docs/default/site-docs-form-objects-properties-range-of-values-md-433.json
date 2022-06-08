@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesRangeOfValues",
+  "id": "FormObjects/propertiesRangeOfValues",
+  "title": "Range of Values",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_RangeOfValues.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesRangeOfValues",
+  "permalink": "/docs/18/docs/FormObjects/propertiesRangeOfValues",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesRangeOfValues",
+    "title": "Range of Values"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Print",
+    "permalink": "/docs/18/docs/FormObjects/propertiesPrint"
+  },
+  "next": {
+    "title": "Resizing Options",
+    "permalink": "/docs/18/docs/FormObjects/propertiesResizingOptions"
+  }
+}

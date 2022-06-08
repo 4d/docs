@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/picturePopupMenuOverview",
+  "id": "FormObjects/picturePopupMenuOverview",
+  "title": "Picture Pop-up Menu",
+  "description": "Overview",
+  "source": "@site/../docs/FormObjects/picturePopupMenu_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/picturePopupMenuOverview",
+  "permalink": "/docs/18/docs/FormObjects/picturePopupMenuOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "picturePopupMenuOverview",
+    "title": "Picture Pop-up Menu"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Picture Button",
+    "permalink": "/docs/18/docs/FormObjects/pictureButtonOverview"
+  },
+  "next": {
+    "title": "Plug-in Area",
+    "permalink": "/docs/18/docs/FormObjects/pluginAreaOverview"
+  }
+}

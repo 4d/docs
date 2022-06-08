@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/savedfilter",
+  "id": "REST/savedfilter",
+  "title": "$savedfilter",
+  "description": "Saves the filter defined by $filter when creating an entity set (e.g., $savedfilter=\"\")",
+  "source": "@site/../docs/REST/$savedfilter.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/savedfilter",
+  "permalink": "/docs/18/docs/REST/savedfilter",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "savedfilter",
+    "title": "$savedfilter"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$queryplan",
+    "permalink": "/docs/18/docs/REST/queryplan"
+  },
+  "next": {
+    "title": "$savedorderby",
+    "permalink": "/docs/18/docs/REST/savedorderby"
+  }
+}

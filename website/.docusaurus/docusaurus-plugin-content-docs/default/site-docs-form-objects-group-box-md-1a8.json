@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/groupBox",
+  "id": "FormObjects/groupBox",
+  "title": "Group Box",
+  "description": "A group box is a static object that allows you to visually assemble multiple form objects:",
+  "source": "@site/../docs/FormObjects/groupBox.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/groupBox",
+  "permalink": "/docs/18/docs/FormObjects/groupBox",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "groupBox",
+    "title": "Group Box"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Drop-down List",
+    "permalink": "/docs/18/docs/FormObjects/dropdownListOverview"
+  },
+  "next": {
+    "title": "Input",
+    "permalink": "/docs/18/docs/FormObjects/inputOverview"
+  }
+}

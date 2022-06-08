@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Project/creating",
+  "id": "Project/creating",
+  "title": "Creating a 4D project",
+  "description": "Requirements",
+  "source": "@site/../docs/Project/creating.md",
+  "sourceDirName": "Project",
+  "slug": "/Project/creating",
+  "permalink": "/docs/18/docs/Project/creating",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "creating",
+    "title": "Creating a 4D project"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/18/docs/Project/overview"
+  },
+  "next": {
+    "title": "Architecture of a 4D project",
+    "permalink": "/docs/18/docs/Project/architecture"
+  }
+}

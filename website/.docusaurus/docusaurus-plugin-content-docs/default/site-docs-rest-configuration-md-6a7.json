@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/configuration",
+  "id": "REST/configuration",
+  "title": "Server Configuration",
+  "description": "Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your database directly, i.e. to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.",
+  "source": "@site/../docs/REST/configuration.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/configuration",
+  "permalink": "/docs/18/docs/REST/configuration",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "configuration",
+    "title": "Server Configuration"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/18/docs/REST/gettingStarted"
+  },
+  "next": {
+    "title": "Users and sessions",
+    "permalink": "/docs/18/docs/REST/authUsers"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/viewProAreaOverview",
+  "id": "FormObjects/viewProAreaOverview",
+  "title": "4D View Pro area",
+  "description": "4D View Pro allows you to insert and display a spreadsheet area in your 4D forms. A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures.",
+  "source": "@site/docs/FormObjects/viewProArea_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/viewProAreaOverview",
+  "permalink": "/docs/18/docs/FormObjects/viewProAreaOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "viewProAreaOverview",
+    "title": "4D View Pro area"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Web Area",
+    "permalink": "/docs/18/docs/FormObjects/webAreaOverview"
+  },
+  "next": {
+    "title": "4D Write Pro area",
+    "permalink": "/docs/18/docs/FormObjects/writeProAreaOverview"
+  }
+}

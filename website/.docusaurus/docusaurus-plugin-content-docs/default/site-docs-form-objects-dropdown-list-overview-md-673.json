@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/dropdownListOverview",
+  "id": "FormObjects/dropdownListOverview",
+  "title": "Drop-down List",
+  "description": "Overview",
+  "source": "@site/../docs/FormObjects/dropdownList_Overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/dropdownListOverview",
+  "permalink": "/docs/18/docs/FormObjects/dropdownListOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "dropdownListOverview",
+    "title": "Drop-down List"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Combo Box",
+    "permalink": "/docs/18/docs/FormObjects/comboBoxOverview"
+  },
+  "next": {
+    "title": "Group Box",
+    "permalink": "/docs/18/docs/FormObjects/groupBox"
+  }
+}

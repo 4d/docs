@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/REST_requests",
+  "id": "REST/REST_requests",
+  "title": "About REST Requests",
+  "description": "The following structures are supported for REST requests:",
+  "source": "@site/../docs/REST/REST_requests.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/REST_requests",
+  "permalink": "/docs/18/docs/REST/REST_requests",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "REST_requests",
+    "title": "About REST Requests"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Manipulating Data",
+    "permalink": "/docs/18/docs/REST/manData"
+  },
+  "next": {
+    "title": "$catalog",
+    "permalink": "/docs/18/docs/REST/catalog"
+  }
+}

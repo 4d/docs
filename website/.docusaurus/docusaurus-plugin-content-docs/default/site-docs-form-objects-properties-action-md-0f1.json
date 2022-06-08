@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesAction",
+  "id": "FormObjects/propertiesAction",
+  "title": "Action",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_Action.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesAction",
+  "permalink": "/docs/18/docs/FormObjects/propertiesAction",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesAction",
+    "title": "Action"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "JSON property list",
+    "permalink": "/docs/18/docs/FormObjects/propertiesReference"
+  },
+  "next": {
+    "title": "Animation",
+    "permalink": "/docs/18/docs/FormObjects/propertiesAnimation"
+  }
+}

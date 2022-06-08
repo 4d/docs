@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/genInfo",
+  "id": "REST/genInfo",
+  "title": "Getting Server Information",
+  "description": "You can get several information from the REST server:",
+  "source": "@site/docs/REST/genInfo.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/genInfo",
+  "permalink": "/docs/18/docs/REST/genInfo",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "genInfo",
+    "title": "Getting Server Information"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Users and sessions",
+    "permalink": "/docs/18/docs/REST/authUsers"
+  },
+  "next": {
+    "title": "Manipulating Data",
+    "permalink": "/docs/18/docs/REST/manData"
+  }
+}

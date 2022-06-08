@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesDisplay",
+  "id": "FormObjects/propertiesDisplay",
+  "title": "Display",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_Display.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesDisplay",
+  "permalink": "/docs/18/docs/FormObjects/propertiesDisplay",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesDisplay",
+    "title": "Display"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Data Source",
+    "permalink": "/docs/18/docs/FormObjects/propertiesDataSource"
+  },
+  "next": {
+    "title": "Entry",
+    "permalink": "/docs/18/docs/FormObjects/propertiesEntry"
+  }
+}

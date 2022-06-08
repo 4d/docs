@@ -1,0 +1,22 @@
+{
+  "unversionedId": "GettingStarted/installation",
+  "id": "GettingStarted/installation",
+  "title": "Installation and activation",
+  "description": "Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.",
+  "source": "@site/docs/GettingStarted/Installation.md",
+  "sourceDirName": "GettingStarted",
+  "slug": "/GettingStarted/installation",
+  "permalink": "/docs/18/docs/GettingStarted/installation",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "installation",
+    "title": "Installation and activation"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "About the 4D Language",
+    "permalink": "/docs/18/docs/Concepts/about"
+  }
+}

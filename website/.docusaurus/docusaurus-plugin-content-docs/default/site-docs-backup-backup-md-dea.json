@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Backup/backup",
+  "id": "Backup/backup",
+  "title": "Backup",
+  "description": "Starting a backup",
+  "source": "@site/docs/Backup/backup.md",
+  "sourceDirName": "Backup",
+  "slug": "/Backup/",
+  "permalink": "/docs/18/docs/Backup/",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "backup",
+    "title": "Backup"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/18/docs/Backup/overview"
+  },
+  "next": {
+    "title": "Backup Settings",
+    "permalink": "/docs/18/docs/Backup/settings"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesGridlines",
+  "id": "FormObjects/propertiesGridlines",
+  "title": "Gridlines",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_Gridlines.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesGridlines",
+  "permalink": "/docs/18/docs/FormObjects/propertiesGridlines",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesGridlines",
+    "title": "Gridlines"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Footers",
+    "permalink": "/docs/18/docs/FormObjects/propertiesFooters"
+  },
+  "next": {
+    "title": "Headers",
+    "permalink": "/docs/18/docs/FormObjects/propertiesHeaders"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/buttonOverview",
+  "id": "FormObjects/buttonOverview",
+  "title": "Button",
+  "description": "A button is an active object that can be assigned an action (e.g., a database task or an interface function) to perform when a user clicks on it.",
+  "source": "@site/docs/FormObjects/button_overview.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/buttonOverview",
+  "permalink": "/docs/18/docs/FormObjects/buttonOverview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "buttonOverview",
+    "title": "Button"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "About 4D Form Objects",
+    "permalink": "/docs/18/docs/FormObjects/formObjectsOverview"
+  },
+  "next": {
+    "title": "Button Grid",
+    "permalink": "/docs/18/docs/FormObjects/buttonGridOverview"
+  }
+}

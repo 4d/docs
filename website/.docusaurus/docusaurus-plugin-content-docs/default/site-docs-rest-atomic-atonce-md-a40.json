@@ -1,0 +1,26 @@
+{
+  "unversionedId": "REST/atomic_$atonce",
+  "id": "REST/atomic_$atonce",
+  "title": "$atomic/$atonce",
+  "description": "Allows the actions in the REST request to be in a transaction. If there are no errors, the transaction is validated. Otherwise, the transaction is cancelled.",
+  "source": "@site/../docs/REST/$atomic_$atonce.md",
+  "sourceDirName": "REST",
+  "slug": "/REST/atomic_$atonce",
+  "permalink": "/docs/18/docs/REST/atomic_$atonce",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "atomic_$atonce",
+    "title": "$atomic/$atonce"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "$asArray",
+    "permalink": "/docs/18/docs/REST/asArray"
+  },
+  "next": {
+    "title": "$attributes",
+    "permalink": "/docs/18/docs/REST/attributes"
+  }
+}

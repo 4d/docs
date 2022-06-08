@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesListBox",
+  "id": "FormObjects/propertiesListBox",
+  "title": "List Box",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_ListBox.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesListBox",
+  "permalink": "/docs/18/docs/FormObjects/propertiesListBox",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesListBox",
+    "title": "List Box"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Hierarchy",
+    "permalink": "/docs/18/docs/FormObjects/propertiesHierarchy"
+  },
+  "next": {
+    "title": "Objects",
+    "permalink": "/docs/18/docs/FormObjects/propertiesObject"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Backup/overview",
+  "id": "Backup/overview",
+  "title": "Overview",
+  "description": "4D includes a full database backup and restore module.",
+  "source": "@site/docs/Backup/overview.md",
+  "sourceDirName": "Backup",
+  "slug": "/Backup/overview",
+  "permalink": "/docs/18/docs/Backup/overview",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "overview",
+    "title": "Overview"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Encrypt Page",
+    "permalink": "/docs/18/docs/MSC/encrypt"
+  },
+  "next": {
+    "title": "Backup",
+    "permalink": "/docs/18/docs/Backup/"
+  }
+}

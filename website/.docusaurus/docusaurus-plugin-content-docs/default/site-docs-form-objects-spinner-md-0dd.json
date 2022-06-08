@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/spinner",
+  "id": "FormObjects/spinner",
+  "title": "Spinner",
+  "description": "Overview",
+  "source": "@site/../docs/FormObjects/spinner.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/spinner",
+  "permalink": "/docs/18/docs/FormObjects/spinner",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "spinner",
+    "title": "Spinner"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Shapes",
+    "permalink": "/docs/18/docs/FormObjects/shapesOverview"
+  },
+  "next": {
+    "title": "Splitter",
+    "permalink": "/docs/18/docs/FormObjects/splitters"
+  }
+}

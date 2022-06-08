@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Concepts/object",
+  "id": "Concepts/object",
+  "title": "Objects",
+  "description": "Variables, fields or expressions of the Object type can contain various types of data. The structure of \"native\" 4D objects is based on the classic principle of \"property/value\" pairs. The syntax of these objects is based on JSON notation:",
+  "source": "@site/../docs/Concepts/dt_object.md",
+  "sourceDirName": "Concepts",
+  "slug": "/Concepts/object",
+  "permalink": "/docs/18/docs/Concepts/object",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "object",
+    "title": "Objects"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Number (Real, Longint, Integer)",
+    "permalink": "/docs/18/docs/Concepts/number"
+  },
+  "next": {
+    "title": "Picture",
+    "permalink": "/docs/18/docs/Concepts/picture"
+  }
+}

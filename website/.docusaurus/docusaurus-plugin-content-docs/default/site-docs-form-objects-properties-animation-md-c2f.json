@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesAnimation",
+  "id": "FormObjects/propertiesAnimation",
+  "title": "Animation",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_Animation.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesAnimation",
+  "permalink": "/docs/18/docs/FormObjects/propertiesAnimation",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesAnimation",
+    "title": "Animation"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Action",
+    "permalink": "/docs/18/docs/FormObjects/propertiesAction"
+  },
+  "next": {
+    "title": "Appearance",
+    "permalink": "/docs/18/docs/FormObjects/propertiesAppearance"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesCrop",
+  "id": "FormObjects/propertiesCrop",
+  "title": "Crop",
+  "description": "---",
+  "source": "@site/docs/FormObjects/properties_Crop.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesCrop",
+  "permalink": "/docs/18/docs/FormObjects/propertiesCrop",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesCrop",
+    "title": "Crop"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Coordinates & Sizing",
+    "permalink": "/docs/18/docs/FormObjects/propertiesCoordinatesAndSizing"
+  },
+  "next": {
+    "title": "Data Source",
+    "permalink": "/docs/18/docs/FormObjects/propertiesDataSource"
+  }
+}

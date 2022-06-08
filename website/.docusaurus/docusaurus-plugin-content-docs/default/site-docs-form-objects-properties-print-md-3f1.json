@@ -1,0 +1,26 @@
+{
+  "unversionedId": "FormObjects/propertiesPrint",
+  "id": "FormObjects/propertiesPrint",
+  "title": "Print",
+  "description": "---",
+  "source": "@site/../docs/FormObjects/properties_Print.md",
+  "sourceDirName": "FormObjects",
+  "slug": "/FormObjects/propertiesPrint",
+  "permalink": "/docs/18/docs/FormObjects/propertiesPrint",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "propertiesPrint",
+    "title": "Print"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Plug-ins",
+    "permalink": "/docs/18/docs/FormObjects/propertiesPlugIns"
+  },
+  "next": {
+    "title": "Range of Values",
+    "permalink": "/docs/18/docs/FormObjects/propertiesRangeOfValues"
+  }
+}
