@@ -1,8 +1,8 @@
-module.exports={
+module.exports = {
   "title": "4D Documentation",
   "tagline": "Documentation for 4D Developers",
   "url": "https://4d.github.io/",
-  "baseUrl": "/docs/18/",
+  "baseUrl": "/",
   "organizationName": "4D",
   "projectName": "docs",
   "scripts": [
