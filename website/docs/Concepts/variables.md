@@ -9,7 +9,7 @@ When you set up your 4D database, you specify the names and types of fields that
 
 Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Creating Variables   
+## Creating Variables
 
 You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
 
@@ -124,6 +124,6 @@ Interprocess variables are available throughout the database and are shared acro
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.  
 
-The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+The name of an interprocess variable always begins with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.

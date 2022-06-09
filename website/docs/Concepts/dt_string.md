@@ -21,6 +21,7 @@ A string literal is enclosed in double, straight quotation marks ("..."). Here a
 An empty string is specified by two quotation marks with nothing between them ("").
 
 ### Escape sequences
+
 The following escape sequences can be used within strings:
 
 |Escape sequence|Character replaced|
@@ -35,25 +36,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-|Operation	|Syntax	|Returns	|Expression	|Value|
+|Operation |Syntax |Returns |Expression |Value|
 |---|---|---|---|---|
-|Concatenation	|String + String	|String	|"abc" + "def"	|"abcdef"|
-|Repetition	|String * Number	|String 	|"ab" * 3	|"ababab"|
-|Equality	|String = String	|Boolean	|"abc" = "abc"	|True|
-|		|	||"abc" = "abd"	|False|
-|Inequality	|String # String	|Boolean	|"abc" # "abd"	|True|
-|			|||"abc" # "abc"	|False|
-|Greater than	|String > String	|Boolean 	|"abd" > "abc"	|True
-|			|||"abc" > "abc"	|False|
-|Less than	|String < String	|Boolean	|"abc" < "abd"	|True|
-|			|||"abc" < "abc"	|False|
-|Greater than or equal to	|String >= String	|Boolean 	|"abd" >= "abc"	|True|
-|			|||"abc" >= "abd"	|False|
-|Less than or equal to	|String <= String	|Boolean 	|"abc" <= "abd"	|True|
-|			|||"abd" <= "abc"	|False|
-|Contains keyword	|String % String	|Boolean 	|"Alpha Bravo" % "Bravo"	|True|
-|			|||"Alpha Bravo" % "ravo"	|False|
-|	|Picture % String	|Boolean	|Picture_expr % "Mer"	|True (*)|
+|Concatenation |String + String |String |"abc" + "def" |"abcdef"|
+|Repetition |String * Number |String  |"ab" * 3 |"ababab"|
+|Equality |String = String |Boolean |"abc" = "abc" |True|
+|  | ||"abc" = "abd" |False|
+|Inequality |String # String |Boolean |"abc" # "abd" |True|
+|   |||"abc" # "abc" |False|
+|Greater than |String > String |Boolean  |"abd" > "abc" |True
+|   |||"abc" > "abc" |False|
+|Less than |String < String |Boolean |"abc" < "abd" |True|
+|   |||"abc" < "abc" |False|
+|Greater than or equal to |String >= String |Boolean  |"abd" >= "abc" |True|
+|   |||"abc" >= "abd" |False|
+|Less than or equal to |String <= String |Boolean  |"abc" <= "abd" |True|
+|   |||"abd" <= "abc" |False|
+|Contains keyword |String % String |Boolean  |"Alpha Bravo" % "Bravo" |True|
+|   |||"Alpha Bravo" % "ravo" |False|
+| |Picture % String |Boolean |Picture_expr % "Mer" |True (*)|
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -65,6 +66,7 @@ The following escape sequences can be used within strings:
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
+
 - When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
 
 ```4d
@@ -124,6 +126,7 @@ The following expression will be evaluated correctly:
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
+
 **Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
 
 ### Keywords
@@ -138,11 +141,14 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Software and Computers"%"comput@" // Returns True
 ```
 
->**Notes:**
->- 4D uses the ICU library for comparing strings (using <>=# operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: http://www.unicode.org/reports/tr29/#Word_Boundaries.
->- In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+**Notes:**
+
+- 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+
+- In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
 
 ## Character Reference Symbols  
+
 The character reference symbols: [[...]]
 
 These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
@@ -192,7 +198,6 @@ will trigger the Runtime Error shown here:
 ![alt-text](../assets/img/Concepts/Syntax_Error.en.png)
 
 ### Example
-
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 

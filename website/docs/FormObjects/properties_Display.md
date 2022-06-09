@@ -4,6 +4,7 @@ title: Display
 ---
 
 ---
+
 ## Alpha Format
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
@@ -19,21 +20,21 @@ For example, consider a part number with a format such as "RB-1762-1".
 
 The alpha format would be:
 
-	##-####-#
+ ##-####-#
 
 When the user enters "RB17621," the field displays:
 
-	RB-1762-1
+ RB-1762-1
 
 The field actually contains "RB17621".
 
 If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
 
-	(#######)
+ (#######)
 
 and the user enters "proportion", the field displays:
 
-	(portion)
+ (portion)
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
@@ -47,16 +48,6 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
-
-
-
-
-
-
-
-
-
-
 ---
 
 ## Date Format
@@ -69,15 +60,15 @@ The table below shows choices available:
 
 |Format name|JSON String|Example (US system)|
 |---|---|---|
-|System date short|- (default)|03/25/20					|
-|System date abbreviated *(1)*|systemMedium|Wed, Mar 25, 2020		|
-|System date long|systemLong|Wednesday, March 25, 2020	|
-|RFC 822|rfc822|Tue, 25 Mar 2020 22:00:00 GMT	|
-|Short Century|shortCentury	|03/25/20 but 04/25/2032 *(2)*|
-|Internal date long|long		|March 25, 2020	|
+|System date short|- (default)|03/25/20     |
+|System date abbreviated *(1)*|systemMedium|Wed, Mar 25, 2020  |
+|System date long|systemLong|Wednesday, March 25, 2020 |
+|RFC 822|rfc822|Tue, 25 Mar 2020 22:00:00 GMT |
+|Short Century|shortCentury |03/25/20 but 04/25/2032 *(2)*|
+|Internal date long|long  |March 25, 2020 |
 |Internal date abbreviated *(1)*|abbreviated|Mar 25, 2020|
-|Internal date short|short		|03/25/2020	|
-|ISO Date Time *(3)*|iso8601	|2020-03-25T00:00:00|
+|Internal date short|short  |03/25/2020 |
+|ISO Date Time *(3)*|iso8601 |2020-03-25T00:00:00|
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
@@ -86,7 +77,6 @@ The table below shows choices available:
 *(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
 
 >Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
-
 
 #### JSON Grammar
 
@@ -98,9 +88,8 @@ The table below shows choices available:
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
-
-
 ---
+
 ## Number Format
 
 >Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
@@ -113,18 +102,16 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-|Placeholder	|Effect for leading or trailing zero|
+|Placeholder |Effect for leading or trailing zero|
 |---|---|
-|#	|Displays nothing|
-|0|	Displays 0|
-|^|	Displays a space (1)|
-|*|	Displays an asterisk|
+|# |Displays nothing|
+|0| Displays 0|
+|^| Displays a space (1)|
+|*| Displays an asterisk|
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
-
 For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
-
 
 If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
 
@@ -134,15 +121,14 @@ Each placeholder character has a different effect on the display of leading or t
 
 Suppose you use the format ##0 to display three digits. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
 
-
 ### Separator characters  
 
 The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
 
 >On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located:
->	*	in a Real type field, using this key will insert the decimal separator defined in the system,
->	*	in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
-
+>
+> * in a Real type field, using this key will insert the decimal separator defined in the system,
+> * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
 
 ### Decimal points and other display characters
 
@@ -150,13 +136,13 @@ You can use a decimal point in a number display format. If you want the decimal 
 
 You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format:
 
-	$##0
+ $##0
 
 a dollar sign always appears because it is placed before the placeholders.
 
 If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
 
-	###.##0
+ ###.##0
 
 the point appears only if the user enters at least four digits.
 
@@ -166,7 +152,7 @@ Spaces are treated as characters in number display formats.
 
 A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
 
-	Positive;Negative;Zero
+ Positive;Negative;Zero
 
 You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
@@ -176,11 +162,11 @@ If you use two parts, 4D uses the first part for positive numbers and zero and t
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
-	$###,##0.00;($###,##0.00);
+ $###,##0.00;($###,##0.00);
 
 Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
 
-	$###,##0.00;($###,##0.00)
+ $###,##0.00;($###,##0.00)
 
 In this case, the display for zero would be $0.00.
 
@@ -188,12 +174,11 @@ In this case, the display for zero would be $0.00.
 
 If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
 
-	&3
+ &3
 
 would display 759.62 as:
 
-	7.60e+2
-
+ 7.60e+2
 
 The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
 
@@ -201,8 +186,8 @@ The scientific notation format is the only format that will automatically round 
 
 You can display a number in hexadecimal using the following display formats:
 
-*	`&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-*	`&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+* `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
+* `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
 
 ### XML notation  
 
@@ -214,45 +199,45 @@ You can display a number as a time (with a time format) by using `&/` followed b
 
 For example, the format:
 
-	&/5
+ &/5
 
 corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. A number field with this format would display 25000 as:
 
-	6:56 AM
+ 6:56 AM
 
 ### Examples
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
-|Format Entered	|Positive|	Negative	|Zero|
+|Format Entered |Positive| Negative |Zero|
 |---|---|---|---|
-|###			|	<<<		|	<<<		| 		|
-|####			|	1234	|<<<<		|		|
-|#######		|	1234	|-1234		|		|
-|#####.##		|	1234.5	|-1234.5	|		|
-|####0.00		|1234.50	|-1234.50	|0.00	|
-|#####0			|1234		|-1234		|	0	|
-|+#####0;–#####0;0|	+1234	|-1234		|0		|
-|#####0DB;#####0CR;0|1234DB	|1234CR		|0		|
-|#####0;(#####0)|	1234	|(1234)		|0		|
-|###,##0		|	1,234	|-1,234		|0		|
-|##,##0.00		|	1,234.50|-1,234.50	|0.00	|
-|\^\^\^\^\^\^\^	|	1234	|-1234		|		|   
-|\^\^\^\^\^\^0	|	1234	|-1234		|0		|
-|\^\^\^,\^\^0	|1,234		|-1,234		|0		|
-|\^\^,\^\^0.00	|	1,234.50|-1,234.50	|0.00	|
-|\*\*\*\*\*\*\*	|\*\*\*1234	|\*\*-1234	|\*\*\*\*\*\*\*|
-|\*\*\**\*\*0	|\*\*\*1234	|\*\*-1234	|\*\*\*\*\*\*0|
-|\*\*\*,*\*0	|\*\*1,234	|\*-1,234	|\*\*\*\*\*\*0|
-|\*\*,\*\*0.00	|\*1,234.50	|-1,234.50	|\*\*\*\*\*0.00|
+|###   | <<<  | <<<  |   |
+|####   | 1234 |<<<<  |  |
+|#######  | 1234 |-1234  |  |
+|#####.##  | 1234.5 |-1234.5 |  |
+|####0.00  |1234.50 |-1234.50 |0.00 |
+|#####0   |1234  |-1234  | 0 |
+|+#####0;–#####0;0| +1234 |-1234  |0  |
+|#####0DB;#####0CR;0|1234DB |1234CR  |0  |
+|#####0;(#####0)| 1234 |(1234)  |0  |
+|###,##0  | 1,234 |-1,234  |0  |
+|##,##0.00  | 1,234.50|-1,234.50 |0.00 |
+|\^\^\^\^\^\^\^ | 1234 |-1234  |  |
+|\^\^\^\^\^\^0 | 1234 |-1234  |0  |
+|\^\^\^,\^\^0 |1,234  |-1,234  |0  |
+|\^\^,\^\^0.00 | 1,234.50|-1,234.50 |0.00 |
+|\*\*\*\*\*\*\* |\*\*\*1234 |\*\*-1234 |\*\*\*\*\*\*\*|
+|\*\*\**\*\*0 |\*\*\*1234 |\*\*-1234 |\*\*\*\*\*\*0|
+|\*\*\*,*\*0 |\*\*1,234 |\*-1,234 |\*\*\*\*\*\*0|
+|\*\*,\*\*0.00 |\*1,234.50 |-1,234.50 |\*\*\*\*\*0.00|
 |$\*,\*\*0.00;–$\*,\*\*0.00|$1,234.50|-$1,234.50|$\*\*\*\*0.00|
-|$\^\^\^\^0		|	$ 1234	|$–1234		|$    0	|
-|$\^\^\^0;–$\^\^\^0|$1234	|–$1234		|$   0	|
-|$\^\^\^0 ;($\^\^\^0)|$1234	|($1234)	|$   0	|
-|$\^,\^\^0.00 ;($\^,\^\^0.00)|$1,234.50	|	($1,234.50)|$    0.00|
-|&2				|1.2e+3		|-1.2e+3	|0.0e+0	|
-|&5				|1.23450e+3	|-1.23450e+3|0.00000|
-|&xml			|	1234.5	|-1234.5	|	0	|
+|$\^\^\^\^0  | $ 1234 |$–1234  |$    0 |
+|$\^\^\^0;–$\^\^\^0|$1234 |–$1234  |$   0 |
+|$\^\^\^0 ;($\^\^\^0)|$1234 |($1234) |$   0 |
+|$\^,\^\^0.00 ;($\^,\^\^0.00)|$1,234.50 | ($1,234.50)|$    0.00|
+|&2    |1.2e+3  |-1.2e+3 |0.0e+0 |
+|&5    |1.23450e+3 |-1.23450e+3|0.00000|
+|&xml   | 1234.5 |-1234.5 | 0 |
 
 #### JSON Grammar
 
@@ -264,12 +249,8 @@ The following table shows how different formats affect the display of numbers. T
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
-
-
-
-
-
 ---
+
 ## Picture Format
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
@@ -308,7 +289,6 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 ![](../assets/img/FormObjects/property_pictureFormat_ScaledProportional.png)
 
-
 ### Replicated  
 
 `JSON grammar: "tiled"`
@@ -329,11 +309,8 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
-
-
-
-
 ---
+
 ## Time Format
 
 Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
@@ -342,19 +319,19 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-|Format name|JSON string|	Comments|Example for 04:30:25|
+|Format name|JSON string| Comments|Example for 04:30:25|
 |---|---|---|---|
-|HH:MM:SS|hh_mm_ss| 			|04:30:25						|
-|HH:MM|hh_mm|			|04:30							|
-|Hour Min Sec|HH_MM_SS|			|4 hours 30 minutes 25 seconds	|
-|Hour Min|HH_MM|			|4 hours 30 minutes	|
-|HH:MM AM/PM|hh_mm_am|			|4:30 a.m.	|
-|MM SS|mm_ss			|Time expressed as a duration from 00:00:00	|270:25|
-|Min Sec|MM_SS|Time expressed as a duration from 00:00:00	|270 Minutes 25 Seconds|
-|ISO Date Time|iso8601|Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format|	0000-00-00T04:30:25|
-|System time short|- (default)|	Standard time format defined in the system|04:30:25|
-|System time long abbreviated|systemMedium |macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format|	4•30•25 AM|
-|System time long|systemLong|	macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format	|4:30:25 AM HNEC|
+|HH:MM:SS|hh_mm_ss|    |04:30:25      |
+|HH:MM|hh_mm|   |04:30       |
+|Hour Min Sec|HH_MM_SS|   |4 hours 30 minutes 25 seconds |
+|Hour Min|HH_MM|   |4 hours 30 minutes |
+|HH:MM AM/PM|hh_mm_am|   |4:30 a.m. |
+|MM SS|mm_ss   |Time expressed as a duration from 00:00:00 |270:25|
+|Min Sec|MM_SS|Time expressed as a duration from 00:00:00 |270 Minutes 25 Seconds|
+|ISO Date Time|iso8601|Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format| 0000-00-00T04:30:25|
+|System time short|- (default)| Standard time format defined in the system|04:30:25|
+|System time long abbreviated|systemMedium |macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format| 4•30•25 AM|
+|System time long|systemLong| macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format |4:30:25 AM HNEC|
 
 #### JSON Grammar
 
@@ -366,19 +343,19 @@ The table below shows the Time field display formats and gives examples:
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
-
-
-
 ---
+
 ## Text when False/Text when True
 
 When a [boolean expression](properties_Object.md#expression-type) is displayed as:
-- a text in an [input object](input_overview.md)
-- a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+
+* a text in an [input object](input_overview.md)
+* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
 
 ... you can select the text to display for each value:
-- **Text when True** - the text to be displayed when the value is "true"
-- **Text when False** - the text to be displayed when the value is "false"
+
+* **Text when True** - the text to be displayed when the value is "true"
+* **Text when False** - the text to be displayed when the value is "false"
 
 #### JSON Grammar
 
@@ -386,15 +363,12 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 |---|---|---|
 |booleanFormat|string|"\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned"|
 
-
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
-
-
-
 ---
+
 ## Display Type
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
@@ -407,23 +381,19 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|controlType|string|<li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup"|
+|controlType|string|**number columns**: "automatic" (default) or "checkbox"<br/>**boolean columns**: "checkbox" (default) or "popup"|
 
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
-
-
-
-
 ---
+
 ## Not rendered
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
 In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.  
-
 
 #### JSON Grammar
 
@@ -435,30 +405,23 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 [Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
 
-
-
-
-
-
-
 ---
+
 ## Three-States
 
-
-
 Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
-
 
 #### Three-states check boxes in list box columns
 
 List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
-*	0 = unchecked box,
-*	1 = checked box,
-*	2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
-*	-1 = invisible check box,
-*	-2 = unchecked box, not enterable,
-*	-3 = checked box, not enterable,
-*	-4 = semi-checked box, not enterable
+
+* 0 = unchecked box,
+* 1 = checked box,
+* 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
+* -1 = invisible check box,
+* -2 = unchecked box, not enterable,
+* -3 = checked box, not enterable,
+* -4 = semi-checked box, not enterable
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.  
 
@@ -472,15 +435,14 @@ In this case as well, the [Title](#title) property is also available so that the
 
 [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
-
-
-
 ---
+
 ## Title
 
 This property is available for a list box column if:
-- the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
-- the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+
+* the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
+* the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
 
 In that cases, the title of the check box can be entered using this property.  
 
@@ -494,9 +456,6 @@ In that cases, the title of the check box can be entered using this property.
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
-
-
-
 ---
 
 ## Truncate with ellipsis
@@ -505,24 +464,24 @@ Controls the display of values when list box columns are too narrow to show thei
 
 This option is available for columns with any type of contents, except pictures and objects.
 
-*	When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
+* When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
-	![](../assets/img/FormObjects/property_truncate1.png)
+ ![](../assets/img/FormObjects/property_truncate1.png)
 
 >The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
 
-*	When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
+* When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
-	![](../assets/img/FormObjects/property_truncate2.png)
+ ![](../assets/img/FormObjects/property_truncate2.png)
 
 The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
-
 
 > When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
 
 The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
-- For Pop-up type Boolean formats, labels are truncated with an ellipsis,
-- For Check box type Boolean formats, labels are always clipped.
+
+* For Pop-up type Boolean formats, labels are truncated with an ellipsis,
+* For Check box type Boolean formats, labels are always clipped.
 
 #### JSON Grammar
 
@@ -530,17 +489,12 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 |---|---|---|
 |truncateMode | string|"withEllipsis", "none" |
 
-
-
 #### Objects Supported
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
 
-
-
-
-
 ---
+
 ## Visibility
 
 This property allows hiding the object in the Application environment.
@@ -551,15 +505,14 @@ You can handle the Visibility property for most form objects. This property is m
 
 In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
 
-- **If record selected** (JSON name: "selectedRows")
-- **If record not selected** (JSON name: "unselectedRows")
+* **If record selected** (JSON name: "selectedRows")
+* **If record not selected** (JSON name: "unselectedRows")
 
 This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
 
 ![](../assets/img/FormObjects/select-row.png)
 
 4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
-
 
 #### JSON Grammar
 
@@ -571,12 +524,8 @@ This property is only used when drawing objects located in the body of a list fo
 
 [4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
-
-
-
-
-
 ---
+
 ## Wordwrap
 
 > For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
@@ -584,19 +533,19 @@ This property is only used when drawing objects located in the body of a list fo
 Manages the display of contents when it exceeds the width of the object.
 
 #### Checked for list box/Yes for input
+
 `JSON grammar: "normal"`
 
 When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 
-- In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+* In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
 
-- In multiline columns/areas, 4D carries out automatic line returns.
+* In multiline columns/areas, 4D carries out automatic line returns.
 
 ![](../assets/img/FormObjects/wordwrap2.png)
 
-
-
 #### Unchecked for list box/No for input
+
 `JSON grammar: "none"`
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
@@ -611,15 +560,14 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 ![](../assets/img/FormObjects/property_wordwrap2.png)
 
-
 #### Automatic for input (default option)
+
 `JSON grammar: "automatic"`
 
-- In single-line areas, words located at the end of lines are truncated and there are no line returns.
-- In multiline areas, 4D carries out automatic line returns.
+* In single-line areas, words located at the end of lines are truncated and there are no line returns.
+* In multiline areas, 4D carries out automatic line returns.
 
 ![](../assets/img/FormObjects/wordwrap1.png)
-
 
 #### JSON Grammar
 
