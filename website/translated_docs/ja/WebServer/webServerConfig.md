@@ -20,10 +20,10 @@ title: 設定
 
 ## キャッシュ
 
-| 設定できる場所     | 名称                                                                          | コメント |
-| ----------- | --------------------------------------------------------------------------- | ---- |
-| 設定ダイアログボックス | [オプション (I) ページ / 4D Webキャッシュを使用する](../settings/web.md#use-the-4d-web-cache) |      |
-| 設定ダイアログボックス | [オプション (I) ページ / ページキャッシュサイズ](../settings/web.md#page-cache-size)           |      |
+| 設定できる場所     | 名称                                                                      | コメント |
+| ----------- | ----------------------------------------------------------------------- | ---- |
+| 設定ダイアログボックス | [オプション (I) ページ / 4D Webキャッシュを使用する](../settings/web.md#4d-webキャッシュを使用する) |      |
+| 設定ダイアログボックス | [オプション (I) ページ / ページキャッシュサイズ](../settings/web.md#ページキャッシュサイズ)           |      |
 
 Webページキャッシュの有効化と設定をおこないます。
 
@@ -50,11 +50,11 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 
 ## 文字コード
 
-| 設定できる場所          | 名称                                                        | コメント                 |
-| ---------------- | --------------------------------------------------------- | -------------------- |
-| webServer オブジェクト | `characterSet`                                            | MIBEnum 整数、または名称の文字列 |
-| `WEB SET OPTION` | `Web character set`                                       | MIBEnum 整数、または名称の文字列 |
-| 設定ダイアログボックス      | [オプション (II) ページ / 文字コード](../settings/web.md#standard-set) | ポップアップメニュー           |
+| 設定できる場所          | 名称                                                 | コメント                 |
+| ---------------- | -------------------------------------------------- | -------------------- |
+| webServer オブジェクト | `characterSet`                                     | MIBEnum 整数、または名称の文字列 |
+| `WEB SET OPTION` | `Web character set`                                | MIBEnum 整数、または名称の文字列 |
+| 設定ダイアログボックス      | [オプション (II) ページ / 文字コード](../settings/web.md#文字コード) | ポップアップメニュー           |
 
 4D Webサーバーが使用する文字セットを定義します。 デフォルト値は OS の言語に依存します。
 > この設定は、クイックレポートを HTMLフォーマットで書き出す際にも使用されます。
@@ -72,11 +72,11 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 
 ## CORS設定
 
-| 設定できる場所          | 名称                                                                                               | コメント                                      |
-| ---------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| webServer オブジェクト | [`CORSSettings`](API/WebServerClass.md#corssettings)                                             | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
-| `WEB SET OPTION` | `Web CORS settings`                                                                              | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
-| 設定ダイアログボックス      | [オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド](../settings/web.md#domain-names-HTTP-methods-allowed) | 新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。  |
+| 設定できる場所          | 名称                                                                                | コメント                                      |
+| ---------------- | --------------------------------------------------------------------------------- | ----------------------------------------- |
+| webServer オブジェクト | [`CORSSettings`](API/WebServerClass.md#corssettings)                              | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
+| `WEB SET OPTION` | `Web CORS settings`                                                               | オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧) |
+| 設定ダイアログボックス      | [オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド](../settings/web.md#ドメイン名許可されたhttpメソッド) | 新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。  |
 
 CORSサービスで許可されたホストとメソッドの一覧。
 
@@ -124,24 +124,24 @@ CORS を介したサーバーへのデータリクエスト送信が許可され
 | webServer オブジェクト | `debugLog`      | number |
 | `WEB SET OPTION` | `Web debug log` | number |
 
-Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
+Webサーバーの HTTPリクエストログファイル (アプリケーションの "Logs" フォルダーに格納されている [*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt) (nn はファイル番号)) の状態を指定します。 このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
-| 値 | 定数                             | 説明                                                                                    |
-| - | ------------------------------ | ------------------------------------------------------------------------------------- |
-| 0 | wdl disable                    | Web HTTP debug log は無効化されています                                                         |
-| 1 | wdl enable without body        | Web HTTP debug log is enabled without body parts (body size is provided in this case) |
-| 3 | wdl enable with response body  | Web HTTP debug log is enabled with body part in response only                         |
-| 5 | wdl enable with request body   | Web HTTP debug log is enabled with body part in request only                          |
-| 7 | wdl enable with all body parts | Web HTTP debug log is enabled with body parts in response and request                 |
+| 値 | 定数                             | 説明                                        |
+| - | ------------------------------ | ----------------------------------------- |
+| 0 | wdl disable                    | Web HTTP debug log は無効化されています             |
+| 1 | wdl enable without body        | Web HTTP debug log 有効、リクエスト本文なし (本文サイズあり) |
+| 3 | wdl enable with response body  | Web HTTP debug log 有効、レスポンスの本文のみ          |
+| 5 | wdl enable with request body   | Web HTTP debug log 有効、リクエストの本文のみ          |
+| 7 | wdl enable with all body parts | Web HTTP debug log 有効、リクエストおよびレスポンスの本文あり  |
 
 
 ## デフォルトホームページ
 
-| 設定できる場所             | 名称                                                          | コメント              |
-| ------------------- | ----------------------------------------------------------- | ----------------- |
-| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)  | テキスト              |
-| `WEB SET HOME PAGE` |                                                             | Webプロセス毎に異なる設定が可能 |
-| 設定ダイアログボックス         | [設定ページ / デフォルトホームページ](../settings/web.md#default-home-page) |                   |
+| 設定できる場所             | 名称                                                         | コメント              |
+| ------------------- | ---------------------------------------------------------- | ----------------- |
+| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | テキスト              |
+| `WEB SET HOME PAGE` |                                                            | Webプロセス毎に異なる設定が可能 |
+| 設定ダイアログボックス         | [設定ページ / デフォルトホームページ](../settings/web.md#デフォルトホームページ)      |                   |
 
 Webサーバーのデフォルトホームページを指定します。 このページはスタティックでもセミダイナミックでも可能です。
 
@@ -161,13 +161,13 @@ Webサーバーの初回起動時には、4D はデフォルトで "index.html" 
 
 ## CORSを有効化
 
-| 設定できる場所          | 名称                                                          | コメント                                   |
-| ---------------- | ----------------------------------------------------------- | -------------------------------------- |
-| webServer オブジェクト | [`CORSEnabled`](API/WebServerClass.md#corsenabled)          | ブール; CORSを有効化するには true (デフォルト値は false) |
-| `WEB SET OPTION` | `Web CORS enabled`                                          | 0 (デフォルト値; 無効) または 1 (有効)              |
-| 設定ダイアログボックス      | [オプション (II) ページ / CORSを有効化](../settings/web.md#enable-cors) | デフォルトではチェックなし                          |
+| 設定できる場所          | 名称                                                       | コメント                                   |
+| ---------------- | -------------------------------------------------------- | -------------------------------------- |
+| webServer オブジェクト | [`CORSEnabled`](API/WebServerClass.md#corsenabled)       | ブール; CORSを有効化するには true (デフォルト値は false) |
+| `WEB SET OPTION` | `Web CORS enabled`                                       | 0 (デフォルト値; 無効) または 1 (有効)              |
+| 設定ダイアログボックス      | [オプション (II) ページ / CORSを有効化](../settings/web.md#corsを有効化) | デフォルトではチェックなし                          |
 
-4D Webサーバーは、クロスオリジンリソースシェアリング (CORS) を実装しており、これによって別ドメインにて提供されている特定の Webページが、REST などを使用した XHRコールを介してカレントWebアプリケーションのリソースにアクセスできるようにすることが可能です。 セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。[CORS設定](#cors設定) 参照)。 有効時に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
+4D Webサーバーは、クロスオリジンリソースシェアリング (CORS) を実装しており、これによって別ドメインにて提供されている特定の Webページが、REST などを使用した XHRコールを介してカレントWebアプリケーションのリソースにアクセスできるようにすることが可能です。 セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。 有効時に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
 
 無効化されている場合 (デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。
 
@@ -182,7 +182,7 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 | ---------------- | -------------------------------------------------- | ------- |
 | webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
 | `WEB SET OPTION` | `Web HTTP enabled`                                 |         |
-| 設定ダイアログボックス      | [設定ページ / HTTPを有効化](../settings/web.md#enable-http) |         |
+| 設定ダイアログボックス      | [設定ページ / HTTPを有効化](../settings/web.md#httpを有効化)    |         |
 
 安全でない接続を Webサーバーが受け入れるかどうかを示します。
 
@@ -249,18 +249,18 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 | webServer オブジェクト | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |      |
 | `WEB SET OPTION` | `Web HTTP compression threshold`                                             |      |
 
-最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
+最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。 このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
 
 サイズを数値 (バイト単位) で指定します。 デフォルトのしきい値は 1024 バイトに設定されています。
 
 
 ## HTTP ポート
 
-| 設定できる場所          | 名称                                              | コメント   |
-| ---------------- | ----------------------------------------------- | ------ |
-| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport)    | number |
-| `WEB SET OPTION` | `Web port ID`                                   |        |
-| 設定ダイアログボックス      | [設定ページ / HTTPポート](../settings/web.md#http-port) |        |
+| 設定できる場所          | 名称                                             | コメント   |
+| ---------------- | ---------------------------------------------- | ------ |
+| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport)   | number |
+| `WEB SET OPTION` | `Web port ID`                                  |        |
+| 設定ダイアログボックス      | [設定ページ / HTTPポート](../settings/web.md#http-ポート) |        |
 
 HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D は通常の Web HTTPポート (TCPポート) 番号である 80番を使用して Webアプリケーションを公開します。 他の Webサービスによってこのポート番号が既に使用されている場合、4D が使用する HTTPポート番号を変更する必要があります。
 
@@ -299,13 +299,13 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 ## 非動作プロセスのタイムアウト
 
-| 設定できる場所          | 名称                                                                            | コメント  |
-| ---------------- | ----------------------------------------------------------------------------- | ----- |
-| webServer オブジェクト | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout)      |       |
-| `WEB SET OPTION` | `Web inactive process timeout`                                                |       |
-| 設定ダイアログボックス      | [オプション (I) ページ / 非動作プロセスのタイムアウト](../settings/web.md#inactive-process-timeout) | スライダー |
+| 設定できる場所          | 名称                                                                       | コメント  |
+| ---------------- | ------------------------------------------------------------------------ | ----- |
+| webServer オブジェクト | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |       |
+| `WEB SET OPTION` | `Web inactive process timeout`                                           |       |
+| 設定ダイアログボックス      | [オプション (I) ページ / 非動作プロセスのタイムアウト](../settings/web.md#非動作プロセスのタイムアウト)      | スライダー |
 
-セッションと紐づいた非アクティブWebプロセスのタイムアウト時間 (分単位) を設定します。 タイムアウト時間が経過すると、サーバーはプロセスを終了します。すると、`On Web Close Process` データベースメソッドが呼び出され、セッションのコンテキストは削除されます。
+セッションと紐づいた非アクティブWebプロセスのタイムアウト時間 (分単位) を設定します。 すると、`On Web Close Process` データベースメソッドが呼び出され、セッションのコンテキストは削除されます。
 
 デフォルト値: 480分 (デフォルト値に戻すには 0 を指定します)
 
@@ -328,7 +328,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 | ---------------- | -------------------------------------------------------------- | ---------- |
 | webServer オブジェクト | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |            |
 | `WEB SET OPTION` | `Web IP address to listen`                                     |            |
-| 設定ダイアログボックス      | [設定ページ / IPアドレス](../settings/web.md#ip-address)                | ポップアップメニュー |
+| 設定ダイアログボックス      | [設定ページ / IPアドレス](../settings/web.md#ipアドレス)                    | ポップアップメニュー |
 
 4D Webサーバーが HTTPリクエストを受け付ける IPアドレスを指定できます (4Dローカルおよび 4D Server)。
 
@@ -357,11 +357,11 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 ## 旧式セッション (自動セッション管理)
 
-| 設定できる場所          | 名称                                                                                                    | コメント          |
-| ---------------- | ----------------------------------------------------------------------------------------------------- | ------------- |
-| webServer オブジェクト | [`keepSession`](API/WebServerClass.md#keepsession)                                                    |               |
-| `WEB SET OPTION` | `Web keep session`                                                                                    |               |
-| 設定ダイアログボックス      | [オプション (I) ページ / 旧式セッション (シングルプロセスセッション)](../settings/web.md#legacy-sessions-single-process-sessions) | 変換されたプロジェクトのみ |
+| 設定できる場所          | 名称                                                                                  | コメント          |
+| ---------------- | ----------------------------------------------------------------------------------- | ------------- |
+| webServer オブジェクト | [`keepSession`](API/WebServerClass.md#keepsession)                                  |               |
+| `WEB SET OPTION` | `Web keep session`                                                                  |               |
+| 設定ダイアログボックス      | [オプション (I) ページ / 旧式セッション (シングルプロセスセッション)](../settings/web.md#旧式セッション-シングルプロセスセッション) | 変換されたプロジェクトのみ |
 
 4D Webサーバーによる旧式セッション管理を有効/無効にします (廃止予定)。
 
@@ -374,9 +374,9 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 | ---------------- | ---------------------------------------------------- | ---------- |
 | webServer オブジェクト | [`logRecording`](API/WebServerClass.md#logrecording) |            |
 | `WEB SET OPTION` | `Web log recording`                                  |            |
-| 設定ダイアログボックス      | [ログ (タイプ) ページ](../settings/web.md#log-format)        | ポップアップメニュー |
+| 設定ダイアログボックス      | [ログ (タイプ) ページ](../settings/web.md#ログフォーマット)          | ポップアップメニュー |
 
-4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 デフォルトでは、リクエストは規則されません (0 / ログファイルなし)。 有効化されると、*logweb.txt* ファイルが Logs フォルダー内に自動で保存されます。
+4D Web サーバーが受け取るリクエストのログを開始/停止します。 ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 デフォルトでは、リクエストは規則されません (0 / ログファイルなし)。 有効化されると、*logweb.txt* ファイルが Logs フォルダー内に自動で保存されます。
 
 このファイルのフォーマットを指定することができます。 使用可能な値:
 
@@ -393,13 +393,13 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 ## 最大同時Webプロセス
 
-| 設定できる場所          | 名称                                                                                 | コメント |
-| ---------------- | ---------------------------------------------------------------------------------- | ---- |
-| webServer オブジェクト | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses)           |      |
-| `WEB SET OPTION` | `Web max concurrent processes`                                                     |      |
-| 設定ダイアログボックス      | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#maximum-concurrent-web-processes) |      |
+| 設定できる場所          | 名称                                                                       | コメント |
+| ---------------- | ------------------------------------------------------------------------ | ---- |
+| webServer オブジェクト | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |      |
+| `WEB SET OPTION` | `Web max concurrent processes`                                           |      |
+| 設定ダイアログボックス      | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#最大同時webプロセス)            |      |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). このパラメーターは、異常な数のリクエストによる 4D Webサーバーの飽和状態を避けるために使用します。 最大Web同時接続数 (マイナス1) に達すると、4D は新しいプロセスを作成せず、HTTPステータス `503 - Service Unavailable` を新規リクエストに対して返信します。
+**セッションなし** または **旧式セッション** が使用されているときの、サーバー上で同時に開くことのできるすべての Webプロセスの最大同時接続数の厳格な上限を設定します (**スケーラブルセッション** では、[数の制限なく](sessions.md) プリエンプティブプロセスがサポートされています)。 このパラメーターは、異常な数のリクエストによる 4D Webサーバーの飽和状態を避けるために使用します。 最大Web同時接続数 (マイナス1) に達すると、4D は新しいプロセスを作成せず、HTTPステータス `503 - Service Unavailable` を新規リクエストに対して返信します。
 
 デフォルト値は 100 です。 10から32000までの値を設定できます。
 
@@ -413,7 +413,7 @@ Strictly high limit of concurrent web processes that can be simultaneously open 
 
 Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サイズ (バイト単位)。 デフォルト値は 2,000,000 (2MBより、すこし少ない値) です。 最大値 (2,147,483,648) に設定した場合、実際には制限無しということになります。
 
-制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、4D Webサーバーによって拒否されます。
+制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。
 
 とりうる値: 500,000 - 2,147,483,648。
 
@@ -479,11 +479,11 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 ## 一時的なコンテキストを再利用する (リモートモード)
 
-| 設定できる場所     | 名称                                                                         | コメント |
-| ----------- | -------------------------------------------------------------------------- | ---- |
-| 設定ダイアログボックス | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#reuse-temporary-contexts) |      |
+| 設定できる場所     | 名称                                                                 | コメント |
+| ----------- | ------------------------------------------------------------------ | ---- |
+| 設定ダイアログボックス | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#一時的なコンテキストを再利用する) |      |
 
-> This option is only available when **No sessions** option is checked.
+> このオプションは、**セッションなし** オプションがチェックされている場合にのみ利用できます。
 
 前の Webリクエストを処理するために作成された Webプロセスを再利用することによって、4Dリモートモードで実行されている 4D Webサーバーの動作を最適化できます。 実際、4D Webサーバーはそれぞれの Webリクエストを処理するために専用の Webプロセスを必要とします。 リモートモードでは、このプロセスは必要に応じて、データやデータベースエンジンにアクセスするために 4D Server に接続します。 そしてプロセス独自の変数やセレクションを使用して、一時的なコンテキストを作成します。 リクエストの処理が終了すると、このプロセスは廃棄されます。
 
@@ -531,13 +531,13 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 
 ## ルートフォルダー
 
-| 設定できる場所               | 名称                                                           | コメント                                                                                              |
-| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| webServer オブジェクト      | [`rootFolder`](API/WebServerClass.md#rootfolder)             | テキストプロパティ (`start()` 関数の *settings* パラメーターと使用する場合は、[`4D.Folder`](API/FolderClass.md) オブジェクトも使用可能) |
-| `WEB SET ROOT FOLDER` |                                                              |                                                                                                   |
-| 設定ダイアログボックス           | [設定ページ / デフォルトHTMLルート](../settings/web.md#default-html-root) |                                                                                                   |
+| 設定できる場所               | 名称                                                      | コメント                                                                                              |
+| --------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| webServer オブジェクト      | [`rootFolder`](API/WebServerClass.md#rootfolder)        | テキストプロパティ (`start()` 関数の *settings* パラメーターと使用する場合は、[`4D.Folder`](API/FolderClass.md) オブジェクトも使用可能) |
+| `WEB SET ROOT FOLDER` |                                                         |                                                                                                   |
+| 設定ダイアログボックス           | [設定ページ / デフォルトHTMLルート](../settings/web.md#デフォルトhtmlルート) |                                                                                                   |
 
-4D がブラウザーに送信するスタティック/セミダイナミックな HTMLページ、ピクチャーなどを検索するフォルダーを指定します。これが、Webサーバーのルートフォルダーです。 パスは、POSIXフルパスの形式です。 ルートフォルダーの変更を反映するには、Webサーバーを再起動する必要があります。
+4D がブラウザーに送信するスタティック/セミダイナミックな HTMLページ、ピクチャーなどを検索するフォルダーを指定します。 これが、Webサーバーのルートフォルダーです。 パスは、POSIXフルパスの形式です。 ルートフォルダーの変更を反映するには、Webサーバーを再起動する必要があります。
 
 さらに HTMLルートフォルダーは、Webサーバーのディスク上で、ファイルに対するアクセスができない階層を定義することにもなります。 ブラウザーから送られた URL や 4Dコマンドが、HTMLルートフォルダーよりも上の階層にアクセスしようとすると、ファイルが存在しないことを示すエラーが返されます。
 
@@ -557,15 +557,15 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 > HTMLルートフォルダーを変更すると、アクセスが制限されているファイルを格納しないようにするため、キャッシュがクリアされます。
 
 
-## Scalable Sessions
+## スケーラブルセッション
 
-| 設定できる場所          | 名称                                                                                                                         | コメント |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------- | ---- |
-| webServer オブジェクト | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                 |      |
-| `WEB SET OPTION` | `Web scalable session`                                                                                                     |      |
-| 設定ダイアログボックス      | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |      |
+| 設定できる場所          | 名称                                                                                        | コメント |
+| ---------------- | ----------------------------------------------------------------------------------------- | ---- |
+| webServer オブジェクト | [`scalableSession`](API/WebServerClass.md#scalablesession)                                |      |
+| `WEB SET OPTION` | `Web スケーラブルセッション`                                                                         |      |
+| 設定ダイアログボックス      | [オプション (I) ページ / スケーラブルセッション (マルチプロセスセッション)](../settings/web.md#スケーラブルセッション-マルチプロセスセッション) |      |
 
-Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+4D Webサーバーでのスケーラブルセッション管理を有効/無効にします。 Webサーバーセッションの詳細については、[ユーザーセッション](sessions.md) のページを参照ください。
 
 
 
@@ -576,7 +576,7 @@ Scalable session management enabling status for the 4D web server. Web server se
 | webServer オブジェクト | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |      |
 | `WEB SET OPTION` | `Web session cookie domain`                                        |      |
 
-セッションcookie の "domain" フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
+セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 
 ## セッションcookie名
@@ -596,7 +596,7 @@ Scalable session management enabling status for the 4D web server. Web server se
 | webServer オブジェクト | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |      |
 | `WEB SET OPTION` | `Web session cookie path`                                      |      |
 
-セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
+セッションcookie の "domain" フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
 
 ## セッションcookie SameSite
 
@@ -622,11 +622,11 @@ Scalable session management enabling status for the 4D web server. Web server se
 
 ## プリエンプティブプロセスを使用
 
-| 設定できる場所     | 名称                                                                         | コメント |
-| ----------- | -------------------------------------------------------------------------- | ---- |
-| 設定ダイアログボックス | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#use-preemptive-processes) |      |
+| 設定できる場所     | 名称                                                                | コメント |
+| ----------- | ----------------------------------------------------------------- | ---- |
+| 設定ダイアログボックス | [オプション (I) ページ / 最大同時Webプロセス](../settings/web.md#プリエンプティブプロセスを使用) |      |
 
-This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+このオプションは、**セッションなし** オプションが選択されている場合に、アプリケーションの Webサーバーコードのプリエンプティブモードを有効にします (**スケーラブルセッション** では、プリエンプティブモードは常に有効です)。 このコンテキストにおいて当該オプションがチェックされているとき、4Dコンパイラは [Web関連のコード](preemptiveWeb.md#4d-webコードのスレッドセーフティ) それぞれのスレッドセーフプロパティを自動的に評価し、違反があった場合にはエラーを返します。
 
 
 

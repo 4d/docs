@@ -1,6 +1,6 @@
 ---
 id: debugging-remote
-title: Debugging from remote machines
+title: Depuración desde máquinas remotas
 ---
 
 ## Generalidades
@@ -16,14 +16,14 @@ This feature is particularly useful when 4D Server runs in headless mode (see [C
 
 ## Depuradores adjuntos
 
-Only one debugger can debug a 4D Server application at a given time. It is called the **attached debugger**. The attached debugger can be:
+Only one debugger can debug a 4D Server application at a given time. It is called the **attached debugger**. El depurador asociado puede ser:
 
 * the local 4D Server debugger (default) - if the server is not running headless.
 * the debugger of a remote 4D client - if the remote session has access to Design mode.
 
 The attached debugger is called whenever a 4D Server encounters:
 * un punto de ruptura
-* a `TRACE` command
+* un comando `TRACE`
 * un comando de captura
 * un error
 
@@ -34,7 +34,7 @@ Note que:
 * If no debugger is attached, the running code is not stopped by debugging commands
 
 
-## Attaching the debugger
+## Asociar al depurador
 
 By default when you start an interpreted application:
 
@@ -77,7 +77,7 @@ To attach the debugger back to the server:
 
 > This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
-## Rejected attachment requests
+## Peticiones de adjuntos rechazadas
 
 While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
 

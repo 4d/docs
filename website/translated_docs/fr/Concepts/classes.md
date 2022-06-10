@@ -389,6 +389,7 @@ Function get fullAddress()->$result : Object
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
 ```
 
 Une fonction class constructor, qui accepte des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
@@ -481,7 +482,7 @@ Super {( param{;...;paramN} )} {-> Object}
 | param      | mixte  | -> | Paramètre(s) à passer au constructeur de la classe parente |
 | Résultat   | object | <- | Parent de l'objet                                          |
 
-Le mot-clé `Super` permet d'appeler la `superclass`, i.e. la classe parente.
+Le mot-clé `Super` permet d'appeler la `superclass`, i.e.
 
 `Super` peut être utilisé de deux différentes manières :
 
@@ -519,6 +520,11 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
+
+// Définition de fonction
+Function getArea()
+    var $0 : Integer
+    $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

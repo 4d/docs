@@ -29,11 +29,11 @@ En esta lista sólo se muestran las clases de datos expuestas para el almacén d
 A continuación se describen las propiedades devueltas para cada clase de datos en el almacén de datos de su proyecto:
 
 
-| Propiedad | Tipo   | Descripción                                                                      |
-| --------- | ------ | -------------------------------------------------------------------------------- |
-| name      | Cadena | Nombre de la dataclass.                                                          |
-| uri       | Cadena | Un URI que permite obtener información sobre la |clase de datos y sus atributos. |
-| dataURI   | Cadena | Un URI que permite ver los datos en la clase de datos.                           |
+| Propiedad | Tipo   | Descripción                                                                     |
+| --------- | ------ | ------------------------------------------------------------------------------- |
+| name      | Cadena | Nombre de la dataclass.                                                         |
+| uri       | Cadena | Un URI que permite obtener información sobre la clase de datos y sus atributos. |
+| dataURI   | Cadena | Un URI que permite ver los datos en la clase de datos.                          |
 
 
 ### Ejemplo

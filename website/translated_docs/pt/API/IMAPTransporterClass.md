@@ -161,9 +161,9 @@ In the `msgIDs` parameter, you can pass either:
 *   the unique ID (*text*) of a single message or
 *   the following constant (*longint*) for all messages in the selected mailbox:
 
-    | Constant | Value | Comment                                     |
-    | -------- | ----- | ------------------------------------------- |
-    | IMAP all | 1     | Select all messages in the selected mailbox |
+    | Constante | Value | Comentário                                  |
+    | --------- | ----- | ------------------------------------------- |
+    | IMAP all  | 1     | Select all messages in the selected mailbox |
 
 The `keywords` parameter lets you pass an object with keyword values for specific flags to add to `msgIDs`. You can pass any of the following keywords:
 
@@ -257,7 +257,7 @@ In the optional `options` parameter, you can pass an object to define the charse
 
 Possible charsets:
 
-| Constant                 | Value                          | Comment                                                                                                   |
+| Constante                | Value                          | Comentário                                                                                                |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                 |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                 |
@@ -1192,7 +1192,7 @@ In the first parameter, you can pass either:
 The optional *updateSeen* parameter allows you to specify if the message is marked as "seen" in the mailbox. Pode passar:
 
 *   **True** - to mark the message as "seen" (indicating the message has been read)
-*   **False** - to leave the message's "seen" status untouched
+*   **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
 > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
 > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
@@ -1442,9 +1442,9 @@ In the `msgIDs` parameter, you can pass either:
 *   the unique ID (*text*) of a single message or
 *   the following constant (*longint*) for all messages in the selected mailbox:
 
-    | Constant | Value | Comment                                     |
-    | -------- | ----- | ------------------------------------------- |
-    | IMAP all | 1     | Select all messages in the selected mailbox |
+    | Constante | Value | Comentário                                  |
+    | --------- | ----- | ------------------------------------------- |
+    | IMAP all  | 1     | Select all messages in the selected mailbox |
 
 The `keywords` parameter lets you pass an object with keyword values for specific flags to remove from `msgIDs`. You can pass any of the following keywords:
 
@@ -1748,7 +1748,7 @@ In the *name* parameter, pass the name of the mailbox to access. The name repres
 
 The optional *state* parameter defines the type of access to the mailbox. The possible values are:
 
-| Constant              | Value | Comment                                                                                                                                                               |
+| Constante             | Value | Comentário                                                                                                                                                            |
 | --------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1     | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                 |
 | IMAP read write state | 0     | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Default value) |

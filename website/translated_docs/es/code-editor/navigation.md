@@ -24,7 +24,7 @@ The following items are added automatically:
 | Icono                                                                    | Elemento                                         |
 | ------------------------------------------------------------------------ | ------------------------------------------------ |
 | ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | Sin etiqueta                                     |
-| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
+| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor o declaración de método        |
 | ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
 | ![function-icon](assets/en/code-editor/function.png)                     | Nombre de la función de clase                    |
 
@@ -51,7 +51,7 @@ Adding a hyphen after the `MARK:` tag draws a separating line in the code editor
 
 ![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
 
-Results in this:
+Esto es lo que resulta:
 
 ![mark-hyphen-image](assets/en/code-editor/dropdown-organize.png)
 

@@ -51,7 +51,7 @@ You can pass an object with additional properties for the named formula in *opti
 VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 ```
 
-#### See also
+#### Veja também
 
 [Cell references](formulas.md#cell-references)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)
 
@@ -97,7 +97,7 @@ $range:=VP Cell("ViewProArea";2;10)
 VP ADD RANGE NAME($range;"Total1")
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Get names](#vp-get-names)<br/>[VP Name](#vp-name)
 
@@ -138,7 +138,7 @@ Resultado:
 
 ![](assets/en/ViewPro/cmd_vpAddSelection2.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -181,7 +181,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 ![vp-add-sheet](assets/en/ViewPro/vp-add-sheet.png)
 
-#### See also
+#### Veja também
 
 [VP REMOVE SHEET](#vp-remove-sheet)
 
@@ -227,7 +227,7 @@ To span the First quarter and Second quarter cells across the two cells beside t
 
 ![vp-add-span-result](assets/en/ViewPro/vp-add-span-2.png)
 
-#### See also
+#### Veja também
 
 [4D View Pro Range Object Properties](getting-started.md#using-range-objects)<br/>[VP Get spans](#vp-get-spans)<br/>[VP REMOVE SPAN](#vp-remove-span)
 
@@ -301,7 +301,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 }
 ```
 
-#### See also
+#### Veja também
 
 [4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>[VP Get stylesheet](#vp-get-stylesheet)<br/>[VP Get stylesheets](#vp-get-stylesheets)<br/>[VP REMOVE STYLESHEET](#vp-remove-stylesheet)<br/>[VP SET CELL STYLE](#vp-set-cell-style)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
 
@@ -337,7 +337,7 @@ You want to define a range object for all of the cells of the current spreadshee
 $all:=VP All("ViewProArea") // all cells of the current sheet
 ```
 
-#### See also
+#### Veja também
 
 [VP Cell](#vp-cell)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)
 
@@ -387,7 +387,7 @@ The code would be:
 $cell:=VP Cell("ViewProArea";2;4) // C5
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)
 
@@ -445,7 +445,7 @@ The code would be:
 $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)
 
@@ -490,7 +490,7 @@ The code would be:
  $column:=VP Column("ViewProArea";3) // column D
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)<br/>[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes)
 
@@ -531,7 +531,7 @@ Selecting the columns and running this code:
 ![](assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
 
-#### See also
+#### Veja também
 
 [VP ROW AUTOFIT](#vp-row-autofit)
 
@@ -572,7 +572,7 @@ You want to combine cell, column, and row range objects in a new, distinct range
  $combine:=VP Combine ranges($cell;$column;$row)
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)<br/>[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes)
 
@@ -646,7 +646,7 @@ Document contents are converted with respect to their viewing attributes, includ
 *   Cell background : color / image
 *   Cell borders : thickness / color / style
 *   Cell merge
-*   Pictures
+*   Imagens
 *   Row height
 *   Column width
 *   Hidden columns / rows.
@@ -669,7 +669,7 @@ $vpAreaObj:=VP Export to object("ViewProArea")
 $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ```
 
-#### See also
+#### Veja também
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP SET PRINT INFO](#vp-set-print-info)
 
@@ -728,7 +728,7 @@ $targetRange:=VP Cell("ViewProArea"; 4; 0)
 VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ```
 
-#### See also
+#### Veja também
 
 [VP PASTE FROM OBJECT](#vp-paste-from-object)<br/>[VP MOVE CELLS](#vp-move-cells)<br/>[VP Get workbook options](#vp-get-workbook-options)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
@@ -768,7 +768,7 @@ use the following code:
 VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-delete-rows)<br/>[VP Cells](#vp-insert-columns)<br/>[VP Column](#vp-insert-rows)
 
@@ -807,7 +807,7 @@ use the following code:
  VP DELETE ROWS(VP Get selection("ViewProArea"))
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-delete-columns)<br/>[VP Cells](#vp-insert-columns)<br/>[VP Column](#vp-insert-rows)
 
@@ -967,7 +967,7 @@ Here's the result:
 
 ![example-export-csv](assets/en/ViewPro/vp-export-document-csv-result.png)
 
-#### See also
+#### Veja também
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
 
@@ -1023,7 +1023,7 @@ var $vpObj : Object
 $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 ```
 
-#### See also
+#### Veja também
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP IMPORT FROM OBJECT](#vp-import-from-object)
 
@@ -1189,7 +1189,7 @@ size:16pt
 See example for [`VP Object to font`](#vp-object-to-font).
 
 
-#### See also
+#### Veja também
 
 [4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>[VP Object to font](#vp-object-to-font)<br/>[VP SET CELL STYLE](#vp-set-cell-style)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
 
@@ -1235,7 +1235,7 @@ $activeCell:=VP Get active cell("myVPArea")
   //$activeCell.ranges[0].sheet=0
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD SELECTION](#vp-add-selection)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -1281,7 +1281,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 ```
 
-#### See also
+#### Veja também
 
 [VP SET BINDING PATH](#vp-set-binding-path)<br/>[VP Get data context](#vp-get-data-context)<br/>[VP SET DATA CONTEXT](#vp-get-data-context)
 
@@ -1339,7 +1339,7 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 }
 ```
 
-#### See also
+#### Veja também
 
 [VP GET DEFAULT STYLE](#vp-get-default-style)<br/>[VP SET CELL STYLE](#vp-set-cell-style)
 
@@ -1380,7 +1380,7 @@ $attr:=VP Get column attributes($range)
 
 ![](assets/en/ViewPro/cmd_vpGetColumnAttributes.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get row attributes](#vp-get-row-attributes)<br/>[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes)<br/>[VP SET ROW ATTRIBUTES](#vp-set-row-attributes)
 
@@ -1415,7 +1415,7 @@ C_Integer($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
-#### See also
+#### Veja também
 
 [VP Get row count](#vp-get-row-count)<br/>[VP SET COLUMN COUNT](#vp-set-column-count)<br/>[VP SET ROW COUNT](#vp-set-row-count)
 
@@ -1453,7 +1453,7 @@ The command returns 2:
 $index:=VP Get current sheet("ViewProArea")
 ```
 
-#### See also
+#### Veja também
 
 [VP SET CURRENT SHEET](#vp-set-current-sheet)
 
@@ -1498,7 +1498,7 @@ var $dataContext : Object
 $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
 ```
 
-#### See also
+#### Veja também
 
 [VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP Get binding path](#vp-get-binding-path)<br/>[VP SET BINDING PATH](#vp-set-binding-path)
 
@@ -1547,7 +1547,7 @@ will return this information in the *$defaultStyle* object:
 }
 ```
 
-#### See also
+#### Veja também
 
 [VP Get cell style](#vp-get-cell-style)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
 
@@ -1579,7 +1579,7 @@ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 
 $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 ```
-#### See also
+#### Veja também
 
 [VP Get formulas](#vp-get-formulas)<br/>[VP SET FORMULA](#vp-set-formula)<br/>[VP SET ROW COUNT](#vp-set-row-count)
 
@@ -1633,7 +1633,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
   //$formula=null (if not existing)
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD FORMULA NAME](#vp-add-formula-name)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get names](#vp-get-names)
 
@@ -1676,7 +1676,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[2]=[Sum(B4:D4),Average(C4:D4)]
 ```
 
-#### See also
+#### Veja também
 
 [VP Get formula](#vp-get-formula)<br/>[VP Get values](#vp-get-values)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUES](#vp-set-values)
 
@@ -1729,7 +1729,7 @@ The returned object contains, for example:
 
 ![](assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
-#### See also
+#### Veja também
 
 [VP SET FROZEN PANES](#vp-set-frozen-panes)
 
@@ -1776,7 +1776,7 @@ var $list : Collection
 $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD FORMULA NAME](#vp-get-formula)<br/>[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP Get formula by name](#vp-get-formula-by-name)<br/>[VP Name](#vp-name)
 
@@ -1859,7 +1859,7 @@ zoomFactor:1
 }
 ```
 
-#### See also
+#### Veja também
 
 [4D View Pro Print Attributes](configuring.md#print-attributes)<br/>[VP SET PRINT INFO](#vp-set-print-info)
 
@@ -1900,7 +1900,7 @@ $attr:=VP Get row attributes($range)
 
 ![](assets/en/ViewPro/cmd_vpGetRowAttributes.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get column attributes](#vp-get-column-attributes)<br/>[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes)<br/>[VP SET ROW ATTRIBUTES](#vp-set-row-attributes)
 
@@ -1936,7 +1936,7 @@ var $rowCount : Integer
 $rowCount:=VP Get row count("ViewProarea")
 ```
 
-#### See also
+#### Veja também
 
 [VP Get column count](#vp-get-column-count)<br/>[VP SET COLUMN COUNT](#vp-set-column-count)<br/>[VP SET ROW COUNT](#vp-set-row-count)
 
@@ -1980,7 +1980,7 @@ $currentSelection:=VP Get selection("myVPArea")
 //$currentSelection.ranges[0].rowCount=6
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD SELECTION](#vp-add-selection)<br/>[VP Get active cell](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -2020,7 +2020,7 @@ Get the sheet count and set the current sheet to the last sheet:
 
 ![](assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### See also
+#### Veja também
 
 [VP Get sheet index](#vp-get-sheet-index)<br/>[VP SET SHEET COUNT](#vp-set-sheet-count)
 
@@ -2060,7 +2060,7 @@ Get the index of the sheet called "Total first quarter":
 $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 ```
 
-#### See also
+#### Veja também
 
 [VP Get sheet count](#vp-get-sheet-count)<br/>[VP Get sheet name](#vp-get-sheet-name)
 
@@ -2099,7 +2099,7 @@ Get the name of the third sheet in the document:
 $sheetName:=VP Get sheet name("ViewProArea";2)
 ```
 
-#### See also
+#### Veja também
 
 [VP Get sheet index](#vp-get-sheet-index)
 
@@ -2140,7 +2140,7 @@ If($options.colHeaderVisible) //column headers are visible
 End if
 ```
 
-#### See also
+#### Veja também
 
 [4D VIEW PRO SHEET OPTIONS](configuring.md#sheet-options)<br/>[VP SET SHEET OPTIONS](#vp-set-sheet-options)
 
@@ -2178,7 +2178,7 @@ The following code checks if preview lines are displayed or hidden in the docume
  $result:=VP Get show print lines("ViewProArea";1)
 ```
 
-#### See also
+#### Veja também
 
 [VP SET SHOW PRINT LINES](#vp-set-show-print-lines)
 
@@ -2216,7 +2216,7 @@ $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal alig
 VP SET CELL STYLE($range;$style)
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD SPAN](configuring.md#sheet-options)<br/>[VP REMOVE SPAN](#vp-remove-span)
 
@@ -2267,7 +2267,7 @@ borderTop:{color:green,style:10}
 }
 ```
 
-#### See also
+#### Veja também
 
 [4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>[VP ADD STYLESHEET](#vp-set-sheet-options)<br/>[VP Get stylesheets](#vp-get-stylesheets)<br/>[VP REMOVE STYLESHEET](#vp-remove-stylesheet)
 
@@ -2323,7 +2323,7 @@ In this case, the current sheet uses two style objects:
    }
 ]
 ```
-#### See also
+#### Veja também
 
 [VP ADD STYLESHEET](#vp-add-stylesheet)<br/>[VP Get stylesheet](#vp-get-stylesheet)<br/>[VP REMOVE STYLESHEET](#vp-remove-stylesheet)
 
@@ -2373,7 +2373,7 @@ If(Value type($value.value)=Is text)
 End if
 ```
 
-#### See also
+#### Veja também
 
 [VP Get values](#vp-get-values)<br/>[VP SET VALUE](#vp-set-value)<br/>[VP SET VALUES](#vp-set-values)
 
@@ -2425,7 +2425,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 // $result[2]=[null,{time:42,value:2019-05-29T00:00:00.000Z},null,null,null]
 ```
 
-#### See also
+#### Veja também
 
 [VP Get formulas](#vp-get-formulas)<br/>[VP Get value](#vp-get-value)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUES](#vp-set-values)
 
@@ -2460,7 +2460,7 @@ var $workbookOptions : Object
 $workbookOptions:=VP Get workbook options("ViewProArea")
 ```
 
-#### See also
+#### Veja também
 
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
@@ -2551,7 +2551,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 Here's the result: ![example-import-csv](assets/en/ViewPro/vp-import-document-csv-result.png)
 
 
-#### See also
+#### Veja também
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
 
@@ -2590,7 +2590,7 @@ QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
 VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 ```
 
-#### See also
+#### Veja também
 
 [VP Export to object](#vp-export-to-object)
 
@@ -2628,7 +2628,7 @@ The results is:
 
 ![](assets/en/ViewPro/cmd_vpInsertColumns.PNG)
 
-#### See also
+#### Veja também
 
 [VP DELETE COLUMNS](#vp-delete-columns)<br/>[VP DELETE ROWS](#vp-delete-rows)<br/>[VP INSERT ROWS](#vp-insert-rows)
 
@@ -2666,7 +2666,7 @@ The results is:
 
 ![](assets/en/ViewPro/cmd_vpInsertRows.PNG)
 
-#### See also
+#### Veja também
 
 [VP DELETE COLUMNS](#vp-delete-columns)<br/>[VP DELETE ROWS](#vp-delete-rows)<br/>[VP INSERT COLUMNS](#vp-insert-columns)
 
@@ -2728,7 +2728,7 @@ $options.pasteOptions:=vk clipboard options all
 
 VP MOVE CELLS($originRange; $targetRange; $options)
 ```
-#### See also
+#### Veja também
 
 [VP Copy to object](#vp-copy-to-object)<br/>[VP PASTE FROM OBJECT](#vp-paste-from-object)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
@@ -2774,7 +2774,7 @@ $name:=VP Name("ViewProArea";" Total")
 VP SET NUM VALUE($name;285;"$#,###.00")
 ```
 
-#### See also
+#### Veja também
 
 
 
@@ -2808,7 +2808,7 @@ You want to display an empty document in the "myVPArea" form object:
 VP NEW DOCUMENT("myVPArea")
 ```
 
-#### See also
+#### Veja também
 
 [VP IMPORT DOCUMENT](#vp-import-document)
 
@@ -2835,13 +2835,13 @@ The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->
 
 In *fontObj*, pass an object containing the font properties. The following properties are supported:
 
-| Propriedade | Type  | Descrição                                                                                                                                                                | Possible values                                                                                                                                                                                                                                                                                                                                                   | Mandatory |
-| ----------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| family      | texto | Specifies the font.                                                                                                                                                      | any standard or generic font family. Ex. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                                                        | Sim       |
-| size        | texto | Defines the size of the font.<p><p>The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | a number with one of the following units: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li><p><p>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li> | Sim       |
-| style       | texto | The style of the font.                                                                                                                                                   | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                                                              | No        |
-| variant     | texto | Specifies font in small capital letters.                                                                                                                                 | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                        | No        |
-| weight      | texto | Defines the thickness of the font.                                                                                                                                       | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                          | No        |
+| Propriedade | Type  | Descrição                                                                                                                                                                | Possible values                                                                                                                                                                                                                                                                                                                                                   | Obrigatório |
+| ----------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| family      | texto | Specifies the font.                                                                                                                                                      | any standard or generic font family. Ex. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                                                        | Sim         |
+| size        | texto | Defines the size of the font.<p><p>The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | a number with one of the following units: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li><p><p>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li> | Sim         |
+| style       | texto | The style of the font.                                                                                                                                                   | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                                                              | No          |
+| variant     | texto | Specifies font in small capital letters.                                                                                                                                 | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                        | No          |
+| weight      | texto | Defines the thickness of the font.                                                                                                                                       | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                          | No          |
 
 
 This object can be created with the [VP Font to object](#vp-font-to-object) command.
@@ -2863,7 +2863,7 @@ $cellStyle.font:=VP Object to font($font)
 //$cellStyle.font contains "bolder oblique small-caps 16pt arial"
 ```
 
-#### See also
+#### Veja também
 
 [4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>[VP Font to object](#vp-font-to-object)<br/>[VP SET CELL STYLE](#vp-set-cell-style)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
 
@@ -2901,7 +2901,7 @@ In *dataObject*, pass the object that contains the cell data, formatting, and fo
 
 In the optional *options* parameter, you can specify what to paste in the cell range. Possible values:
 
-| Constant                                       | Descrição                                                            |
+| Constante                                      | Descrição                                                            |
 | ---------------------------------------------- | -------------------------------------------------------------------- |
 | `vk clipboard options all`                     | Pastes all data objects, including values, formatting, and formulas. |
 | `vk clipboard options formatting`              | Pastes only the formatting.                                          |
@@ -2918,7 +2918,7 @@ If *options* refers to a paste option not present in the copied object (e.g. for
 
 See example the example from [VP Copy to object](#vp-copy-to-object)
 
-#### See also
+#### Veja também
 
 [VP Copy to object](#vp-copy-to-object)<br/>[VP MOVE CELLS](#vp-move-cells)<br/>[VP Get workbook options](#vp-get-workbook-options)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
@@ -2965,7 +2965,7 @@ The following code:
 
 ![](assets/en/ViewPro/cmd_vpPrint.PNG)
 
-#### See also
+#### Veja também
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP SET PRINT INFO](#vp-set-print-info)
 
@@ -3000,7 +3000,7 @@ To refresh all formulas in the workbook:
 VP RECOMPUTE FORMULAS("ViewProArea")
 ```
 
-#### See also
+#### Veja também
 
 [VP RESUME COMPUTING](#vp-resume-computing)<br/>[VP SUSPEND COMPUTING](#vp-suspend-computing)
 
@@ -3046,7 +3046,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 //$formula=null
 ```
 
-#### See also
+#### Veja também
 
 [VP Name](#vp-name)
 
@@ -3063,7 +3063,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 | index      | Integer | -> | Index of the sheet to remove      |
 <!-- END REF -->
 
-#### See also
+#### Veja também
 
 [VP ADD SHEET](#vp-add-sheet)
 
@@ -3127,7 +3127,7 @@ Resultado:
 
 ![](assets/en/ViewPro/cmd_vpRemoveSpan2.PNG)
 
-#### See also
+#### Veja também
 
 [VP ADD SPAN](#vp-add-span)<br/>[VP Get spans](#vp-get-spans)
 
@@ -3165,7 +3165,7 @@ To remove the *GreenDashDotStyle* style object from the current sheet:
 ```4d
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 ```
-#### See also
+#### Veja também
 
 [VP ADD STYLESHEET](#vp-add-stylesheet)<br/>[VP Get stylesheet](#vp-get-stylesheet)<br/>[VP Get stylesheets](#vp-get-stylesheets)
 
@@ -3204,7 +3204,7 @@ You want to deselect all cells (the active cell and any selected cells):
 VP RESET SELECTION("myVPArea")
 ```
 
-#### See also
+#### Veja também
 
 [VP ADD SELECTION](#vp-add-selection)<br/>[VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -3235,7 +3235,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
-#### See also
+#### Veja também
 
 [VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP SUSPEND COMPUTING](#vp-suspend-computing)
 
@@ -3282,7 +3282,7 @@ You can write:
 $row:=VP Row("ViewProArea";9) // row 10
 ```
 
-#### See also
+#### Veja também
 
 [VP All](#vp-all)<br/>[VP Cell](#vp-cell)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)
 
@@ -3321,7 +3321,7 @@ Resultado:
 
 ![](assets/en/ViewPro/cmd_vpRowAutoFit2.PNG)
 
-#### See also
+#### Veja também
 
 [VP Column autofit](#vp-column-autofit)
 
@@ -3350,8 +3350,8 @@ In *parameters* object, pass any of the following optional properties. These pro
 | onEvent            | object (formula) | A callback method that will be launched when the offscreen area is ready. It can be either:<p><p><li>an `onEvent` function of a class, or</li><li>a `Formula` object</li><p><p>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. <p><p>The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
 | autoQuit           | booleano         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.<p><p>If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | timeout            | number           | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. If set to 0, no limitation is applied. Default value: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| result             | mixed            | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| \<customProperty> | mixed            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| result             | misto            | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| \<customProperty> | misto            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
 The following property is automatically added by the command if necessary:
@@ -3455,7 +3455,7 @@ $o:=cs.OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-#### See also
+#### Veja também
 
 [Blog post: End of document loading](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
 
@@ -3491,7 +3491,7 @@ VP SET ACTIVE CELL($activeCell)
 
 ![](assets/en/ViewPro/cmd_vpSetActiveCell.PNG)
 
-#### See also
+#### Veja também
 
 [VP ADD SELECTION](#vp-add-selection)<br/>[VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -3567,7 +3567,7 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 > In 4D View Pro formulas, function names are automatically displayed in uppercase.
 
-#### See also
+#### Veja também
 
 [4D functions](formulas.md#4d-functions)<br/>[VP SET CUSTOM FUNCTIONS](#vp-set-custom-functions)
 
@@ -3617,7 +3617,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### See also
+#### Veja também
 
 [VP Get binding path](#vp-get-binding-path)<br/>[VP Get data context](#vp-get-data-context)<br/>[VP SET DATA CONTEXT](#vp-get-data-context)
 
@@ -3649,7 +3649,7 @@ The *boolValue* parameter allows you to pass the boolean value (**True** or **Fa
 //Set the cell value as False
 VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 ```
-#### See also
+#### Veja também
 
 [VP SET VALUE](#vp-set-value)
 
@@ -3732,7 +3732,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 
 ![](assets/en/ViewPro/cmd_vpSETBORDER2.PNG)
 
-#### See also
+#### Veja também
 
 [VP SET CELL STYLE](#vp-set-cell-style)
 
@@ -3785,7 +3785,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 ![](assets/en/ViewPro/cmd_vpSetCellStyle.PNG)
 
-#### See also
+#### Veja também
 
 [VP ADD STYLESHEET](#vp-add-stylesheet)<br/>[VP Font to object](#vp-font-to-object)<br/>[VP Get cell style](#vp-get-cell-style)<br/>[VP Object to font](#vp-object-to-font)<br/>[VP SET BORDER](#vp-set-border)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
 
@@ -3837,7 +3837,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 ![](assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG)
 
-#### See also
+#### Veja também
 
 [VP Column](#vp-column)<br/>[VP Get column attributes](#vp-get-column-attributes)<br/>[VP Get row attributes](#vp-get-row-attributes)<br/>[VP SET ROW ATTRIBUTES](#vp-set-row-attributes)
 
@@ -3877,7 +3877,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 ![](assets/en/ViewPro/cmd_vpSetColumnCount.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get column count](#vp-get-column-count)<br/>[VP Get row count](#vp-get-row-count)<br/>[VP SET ROW COUNT](#vp-set-row-count)
 
@@ -3918,7 +3918,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 ![](assets/en/ViewPro/vp-sheet-3-select.png)
 
-#### See also
+#### Veja também
 
 [VP Get current sheet](#vp-get-current-sheet)
 ### VP SET CUSTOM FUNCTIONS
@@ -3999,7 +3999,7 @@ Case of
 End case
 ```
 
-#### See also
+#### Veja também
 
 [VP SET ALLOWED METHODS](#vp-set-allowed-methods)
 
@@ -4127,7 +4127,7 @@ Here's the result once the columns are generated:
 
 ![](assets/en/ViewPro/vp-set-data-context-date-time.png)
 
-#### See also
+#### Veja também
 
 [VP SET BINDING PATH](#vp-set-binding-path)<br/>[VP Get binding path](#vp-get-binding-path)<br/>[VP Get data context](#vp-get-data-context)
 
@@ -4169,7 +4169,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk p
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
-#### See also
+#### Veja também
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -4198,7 +4198,7 @@ The *dateValue* parameter specifies a date value to be assigned to the *rangeObj
 
 The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pass any custom format or you can use one of the following constants:
 
-| Constant                | Descrição                                | Default US pattern   |
+| Constante               | Descrição                                | Default US pattern   |
 | ----------------------- | ---------------------------------------- | -------------------- |
 | `vk pattern long date`  | ISO 8601 format for the full date        | "dddd, dd MMMM yyyy" |
 | `vk pattern month day`  | ISO 8601 format for the month and day    | "MMMM dd"            |
@@ -4220,7 +4220,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
 VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 ```
 
-#### See also
+#### Veja também
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE TIME VALUE](#vp-set-date-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -4264,7 +4264,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 ![](assets/en/ViewPro/cmd_vpSetDefaultStyle.PNG)
 
-#### See also
+#### Veja também
 
 [VP ADD STYLESHEET](#vp-add-stylesheet)<br/>[VP Font to object](#vp-font-to-object)<br/>[VP Get default style](#vp-get-default-style)<br/>[VP Object to font](#vp-object-to-font)<br/>[VP SET BORDER](#vp-set-border)<br/>[VP SET CELL STYLE](#vp-set-cell-style)
 
@@ -4277,7 +4277,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 | Parameter     | Type     |    | Descrição                               |
 | ------------- | -------- | -- | --------------------------------------- |
 | rangeObj      | Objeto   | -> | Range object                            |
-| field         | Ponteiro | -> | Reference to field in virtual structure |
+| campo         | Ponteiro | -> | Reference to field in virtual structure |
 | formatPattern | Texto    | -> | Format of field                         |
 
 <!-- END REF -->  
@@ -4297,7 +4297,7 @@ The optional *formatPattern* defines a pattern for the *field* parameter. You ca
 ```4d
 VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 ```
-#### See also
+#### Veja também
 
 [VP SET VALUE](#vp-set-value)
 
@@ -4341,7 +4341,7 @@ To remove the formula:
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"")
 ```
 
-#### See also
+#### Veja também
 
 [Cell format](configuring.md#cell-format)<br/>[VP Get Formula](#vp-get-formula)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -4403,7 +4403,7 @@ $formulas.push(New collection("";"")) // second collection
 VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 ```
 
-#### See also
+#### Veja também
 
 [VP Get Formulas](#vp-get-formulas)<br/>[VP GET VALUES](#vp-get-values)[VP SET FORMULA](#vp-set-formula)<br/>[VP SET VALUES](#vp-set-values)
 
@@ -4462,7 +4462,7 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 
 ![](assets/en/ViewPro/cmd_vpSetFrozenPanes.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get frozen panes](#vp-get-frozen-panes)
 
@@ -4500,7 +4500,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);2)
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 ```
 
-#### See also
+#### Veja também
 
 [Cell format](configuring.md#cell-format)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -4573,7 +4573,7 @@ The PDF:
 
 ![](assets/en/ViewPro/cmd_vpSetPrintInfo.PNG)
 
-#### See also
+#### Veja também
 
 [4D View Pro print attributes](configuring.md#print-attributes)<br/>[VP Convert to picture](#vp-convert-to-picture)<br/>[VP Get print info](#vp-get-print-info)<br/>[VP PRINT](#vp-print)
 
@@ -4622,7 +4622,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ![](assets/en/ViewPro/cmd_vpSetRowAttributes.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get row attributes](#vp-get-row-attributes)<br/>[VP get column attributes](#vp-get-column-attributes)<br/>[VP SET ROW ATTRIBUTES](#vp-set-row-attributes)
 
@@ -4663,7 +4663,7 @@ VP SET ROW COUNT("ViewProArea";5)
 
 ![](assets/en/ViewPro/cmd_vpSetRowCount.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get column count](#vp-get-column-count)<br/>[VP get row-count](#vp-get-row-count)<br/>[VP SET COLUMN COUNT](#vp-set-column-count)
 
@@ -4694,7 +4694,7 @@ VP SET SELECTION($currentSelection)
 
 ![](assets/en/ViewPro/cmd_vpSetSelection.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP ADD SELECTION](#vp-add-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
@@ -4732,7 +4732,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 ![](assets/en/ViewPro/vp-sheet-3.png)
 
-#### See also
+#### Veja também
 
 [VP Get sheet count](#vp-get-sheet-count)
 
@@ -4903,7 +4903,7 @@ Resultado:
 
 ![](assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
-#### See also
+#### Veja também
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
@@ -4952,7 +4952,7 @@ With a page break:
 
 ![set-show-print-lines-with-page-break](assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
 
-#### See also
+#### Veja também
 
 [4D Get show print lines](#vp-get-show-print-lines)
 
@@ -4987,7 +4987,7 @@ The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for
 VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 ```
 
-#### See also
+#### Veja também
 
 [Cell Format](configuring.md#cell-format)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -5025,7 +5025,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);Current time)
 VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 ```
 
-#### See also
+#### Veja também
 
 [Cell Format](configuring.md#cell-format)<br/>[VP SET DATE TIME VALUE](#vp-set-date-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -5088,7 +5088,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 //Erase cell content
 VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 ```
-#### See also
+#### Veja também
 
 [Cell Format](configuring.md#cell-format)<br/>[VP Get values](#vp-get-value)<br/>[VP SET VALUE](#vp-set-value)<br/>[VP SET BOOLEAN VALUE](#vp-set-boolean-value)<br/>[VP SET DATE TIME VALUE](#vp-set-date-time-value)<br/>[VP SET FIELD](#vp-set-field)<br/>[VP SET FORMULA](#vp-set-formula)<br/>[VP SET NUM VALUE](#vp-set-num-value)<br/>[VP SET TEXT VALUE](#vp-set-text-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)
 
@@ -5138,7 +5138,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 ![](assets/en/ViewPro/cmd_vpSetValues.PNG)
 
-#### See also
+#### Veja também
 
 [VP Get formulas](configuring.md#vp-get-formulas)<br/>[VP Get value](#vp-get-value)<br/>[VP Get Values](#vp-get-values)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUE](#vp-set-value)
 
@@ -5184,17 +5184,17 @@ The following table lists the available workbook options:
 | allowUserEditFormula                  | booleano                | Formulas can be entered in cells                                                                                                                                                                                                                       |
 | allowUserResize                       | booleano                | Columns and rows can be resized                                                                                                                                                                                                                        |
 | allowUserZoom                         | booleano                | Zooming (ctrl + mouse wheel) is allowed                                                                                                                                                                                                                |
-| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                                |
+| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                                |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
 | backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |
-| backgroundImageLayout                 | number                  | How the background image is displayed. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                     |
+| backgroundImageLayout                 | number                  | How the background image is displayed. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                     |
 | calcOnDemand                          | booleano                | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
-| columnResizeMode                      | number                  | Resize mode for columns. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                   |
-| copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                       |
+| columnResizeMode                      | number                  | Resize mode for columns. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                   |
+| copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                       |
 | customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).         |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | booleano                | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                        |
-| defaultDragFillType                   | number                  | The default drag fill type. Available values : <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Clears cell values.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table>                                                                                                                                                                               |
+| defaultDragFillType                   | number                  | The default drag fill type. Available values : <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Clears cell values.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table>                                                                                                                                                                               |
 | enableAccessibility                   | booleano                | Accessibility support is enabled in the spreadsheet.                                                                                                                                                                                                   |
 | enableFormulaTextbox                  | booleano                | The formula text box is enabled.                                                                                                                                                                                                                       |
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
@@ -5203,12 +5203,12 @@ The following table lists the available workbook options:
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
 | iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | booleano                | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
-| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                              |
+| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                              |
 | pasteSkipInvisibleRange               | booleano                | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                     |
-| referenceStyle                        | number                  | Style for cell and range references in cell formulas. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                      |
-| resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                                  |
+| referenceStyle                        | number                  | Style for cell and range references in cell formulas. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                      |
+| resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                                  |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
-| scrollbarAppearance                   | number                  | Scrollbar appearance. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                      |
+| scrollbarAppearance                   | number                  | Scrollbar appearance. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>                                                                                                                                                                                      |
 | scrollbarMaxAlign                     | booleano                | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                |
 | scrollbarShowMax                      | booleano                | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                             |
 | scrollByPixel                         | booleano                | Enable precision scrolling by pixel.                                                                                                                                                                                                                   |
@@ -5218,12 +5218,12 @@ The following table lists the available workbook options:
 | showDragFillSmartTag                  | booleano                | Display the drag fill dialog.                                                                                                                                                                                                                          |
 | showDragFillTip                       | booleano                | Display the drag-fill tip.                                                                                                                                                                                                                             |
 | showHorizontalScrollbar               | booleano                | Display the horizontal scroll bar.                                                                                                                                                                                                                     |
-| showResizeTip                         | number                  | How to display the resize tip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                             |
-| showScrollTip                         | number                  | How to display the scroll tip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                             |
+| showResizeTip                         | number                  | How to display the resize tip. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                             |
+| showScrollTip                         | number                  | How to display the scroll tip. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                             |
 | showVerticalScrollbar                 | booleano                | Display the vertical scroll bar.                                                                                                                                                                                                                       |
 | tabEditable                           | booleano                | The sheet tab strip can be edited.                                                                                                                                                                                                                     |
 | tabNavigationVisible                  | booleano                | Display the sheet tab navigation.                                                                                                                                                                                                                      |
-| tabStripPosition                      | number                  | Position of the tab strip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Descrição</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table>                                                                                                                                                                                 |
+| tabStripPosition                      | number                  | Position of the tab strip. Available values: <table><tr><th>Constante</th><th>Value</th><th>Descrição</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table>                                                                                                                                                                                 |
 | tabStripRatio                         | number                  | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.                                                       |
 | tabStripVisible                       | booleano                | Display the sheet tab strip.                                                                                                                                                                                                                           |
 | tabStripWidth                         | number                  | Width of the tab strip when position is left or right. Default and minimum is 80.                                                                                                                                                                      |
@@ -5242,7 +5242,7 @@ $workbookOptions.allowExtendPasteRange:=True
 VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 ```
 
-#### See also
+#### Veja também
 
 [VP Get workbook options](#vp-get-workbook-options)
 
@@ -5304,7 +5304,7 @@ Resultado:
 
 ![](assets/en/ViewPro/cmd_vpShowCell2.PNG)
 
-#### See also
+#### Veja também
 
 [VP ADD CELL](#vp-add-cell)<br/>[VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)
 
@@ -5354,7 +5354,7 @@ If(FORM Event.code=On Clicked)
 
 End if
 ```
-#### See also
+#### Veja também
 
 [VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 

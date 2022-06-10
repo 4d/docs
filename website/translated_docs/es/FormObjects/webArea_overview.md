@@ -112,7 +112,7 @@ Código 4D del método `calcSum`:
  End for
 ```
 
-The JavaScript code run in the web area is:
+El código JavaScript que se ejecuta en el área web es el siguiente:
 
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)

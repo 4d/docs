@@ -26,5 +26,5 @@ The `On Drag Over` event is the means by which you control the first phase of a 
 The code handling an `On Drag Over` event should be short and execute quickly, because that event is sent repeatedly to the current destination object, due to the movements of the mouse.
 
 
-#### See also
+#### Veja também
 [`On Begin Drag Over`](onBeginDragOver.md)

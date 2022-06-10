@@ -31,7 +31,7 @@ Se aplican las siguientes reglas para todas las conversiones:
 > - la opción "Invisible" para tablas o campos, - la estructura virtual definida mediante `SET TABLE TITLES` o `SET FIELD TITLES`, - la propiedad "Manual" o "Automática" de las relaciones.
 
 
-### Rules for remote access control
+### Normas de control de acceso remoto
 
 When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
 
@@ -45,7 +45,7 @@ This option must be selected at the 4D structure level for each table and each f
 Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificaciones incluyen:
 
 *   adding or removing a table, a field, or a relation
-*   renaming of a table, a field, or a relation
+*   el cambio de nombre de una tabla, de un campo o de una relación
 *   changing a core property of a field (type, unique, index, autoincrement, null value support)
 
 When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
@@ -96,7 +96,7 @@ The main (default) datastore is always available through the `ds` command, but t
 
 ### Dataclass
 
-A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+Una dataclass es el equivalente de una tabla. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
 
 All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
 
@@ -111,7 +111,7 @@ var $compClass : cs.Company //declares a $compClass object variable of the Compa
 $compClass:=ds.Company //assigns the Company dataclass reference to $compClass
 ```
 
-A dataclass object can contain:
+Un objeto dataclass puede contener:
 
 *   attributes
 *   atributos relacionales
@@ -142,12 +142,12 @@ Dataclass properties are attribute objects describing the underlying fields or r
  $revenuesAttribute:=ds.Company["revenues"] //alternate way
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
+This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. Esta sintaxis NO devuelve los valores mantenidos dentro del atributo, sino que devuelve referencias a los propios atributos. To handle values, you need to go through [Entities](#entity).
 
 All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
 
 
-#### Storage and Relation attributes
+#### Atributos de almacenamiento y relacionales
 
 Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support all the standard 4D data types (integer, text, object, etc.).
 
@@ -203,7 +203,7 @@ The entity properties are however enumerable:
 
 ### Entity selection
 
-An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
+An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. Una entity selection puede contener 0, 1 o X entidades de la dataclass -- donde X puede representar el número total de entidades contenidas en la dataclass.
 
 Ejemplo:
 
@@ -232,7 +232,7 @@ The entity selection properties are however enumerable:
 ```
 
 
-#### Ordered or unordered entity selection
+#### Entity selections ordenadas o no ordenadas
 
 For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
 

@@ -305,7 +305,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 | Property name       | Type     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke              | string   | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                  |
+| stroke              | string   | Cor de fundo. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                |
 | fill                | string   | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                            |
 | fontStyle           | string   | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                      |
 | fontWeight          | string   | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -374,7 +374,7 @@ O método *Color* iria conter :
 
 
 ---
-## Multi-style
+## Multistyle
 
 Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
 

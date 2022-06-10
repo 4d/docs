@@ -14,5 +14,5 @@ title: On Collapse
 - [Hierarchical list boxes](FormObjects/listbox_overview.md#hierarchical-list-boxes): This event is generated when a row of the hierarchical list box is collapsed.
 
 
-### See also
+### Veja também
 [On Expand](onExpand.md)

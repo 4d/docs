@@ -31,5 +31,5 @@ End if
 ```
 
 
-### See also
+### Veja também
 [`On Open External Link`](onOpenExternalLink.md)

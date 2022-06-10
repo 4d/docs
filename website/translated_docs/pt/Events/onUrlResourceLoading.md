@@ -15,5 +15,5 @@ This event is generated each time a new resource (picture, frame, etc.) is loade
 The [Progression](FormObjects/properties_WebArea.md#progression) variable associated with the area lets you find out the current state of the loading.
 
 
-### See also
+### Veja também
 [`On Open External Link`](onOpenExternalLink.md)

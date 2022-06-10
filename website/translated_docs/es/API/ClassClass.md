@@ -4,7 +4,7 @@ title: Class
 ---
 
 
-When a user class is [defined](Concepts/classes.md#class-definition) in the project, it is loaded in the 4D language environment. A class is an object itself, of "Class" class, which has properties and a function.
+Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en el proyecto, se carga en el entorno del lenguaje 4D. Una clase es un objeto en sí mismo, de la clase "Class", que tiene propiedades y una función.
 
 
 
@@ -76,8 +76,8 @@ Para crear una nueva instancia de la clase Person:
 
 ```4d
 var $person : cs.Person  
-$person:=cs.Person.new() //create the new instance  
-//$person contains functions of the class
+$person:=cs.Person.new() //crear la nueva instancia  
+//$person contiene las funciones de la clase
 ```
 
 Para crear una nueva instancia de la clase Person con parámetros:
@@ -91,7 +91,7 @@ Class constructor($firstname : Text; $lastname : Text; $age : Integer)
 ```
 
 ```4d
-//In a method
+//En un método
 var $person : cs.Person  
 $person:=cs.Person.new("John";"Doe";40)  
 //$person.firstName = "John"
@@ -132,7 +132,7 @@ $sup:=4D.File.superclass //Document
 $sup:=4D.Document.superclass //Object
 $sup:=4D.Object.superclass //null
 
-// If you created a MyFile class  
+// Si creó una clase MyFile
 // with `Class extends File`
 $sup:=cs.MyFile.superclass //File 
 

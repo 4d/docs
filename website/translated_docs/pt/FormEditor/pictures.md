@@ -1,6 +1,6 @@
 ---
-id: pictures
-title: Pictures
+id: imagens
+title: Imagens
 ---
 
 4D includes specific support for pictures used in your forms.

@@ -13,7 +13,7 @@ Picture buttons can be used in two ways:
   | Propriedade                | JSON name              | Value |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
-  | Columns                    | columnCount            | 4     |
+  | Colunas                    | columnCount            | 4     |
   | Switch back when Released  | switchBackWhenReleased | true  |
   | Switch when Roll Over      | switchWhenRollover     | true  |
   | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |

@@ -393,6 +393,7 @@ Function get fullAddress()->$result : Object
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
@@ -527,6 +528,11 @@ Function sayName()
 // Function definition
 Function getArea()
     var $0 : Integer
+    $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+    var $0 : Integer
 
     $0:=(This.height)*(This.width)
 ```
@@ -625,7 +631,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este ejemplo](#example-1).
 
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.

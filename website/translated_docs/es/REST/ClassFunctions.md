@@ -4,9 +4,9 @@ title: Llamar a las funciones de clase ORDA
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Puede llamar a [funciones de clase de modelos de datos](ORDA/ordaClasses.md) definidas para el modelo de datos ORDA a través de sus peticiones REST, para poder beneficiarse de la API expuesta de la aplicación 4D objetivo.
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Las funciones se llaman simplemente en peticiones POST en la interfaz ORDA apropiada, sin (). Por ejemplo, si ha definido una función `getCity()` en la dataclass City, podría llamarla utilizando la siguiente petición:
 
 `/rest/City/getCity`
 
@@ -18,7 +18,7 @@ En el lenguaje 4D, esta llamada equivale a:
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Sólo las funciones con la palabra clave `exposed` pueden ser llamadas directamente desde las peticiones REST. Ver la sección [Funciones expuestas vs. no expuestas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ## Llamadas de las funciones
 
@@ -38,8 +38,8 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).   
-> The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
+> `/rest/{dataClass}/Function` puede utilizarse para llamar a una función de dataclass o de selección de entidades (`/rest/{dataClass}` devuelve todas las entidades de la DataClass como una selección de entidades).   
+> La función se busca primero en la clase de selección de entidades. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
@@ -49,21 +49,21 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 
 
-You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
+Puede enviar los parámetros a las funciones definidas en las clases usuarios ORDA. Del lado del servidor, se recibirán en las funciones de clase en los parámetros normales $1, $2, etc.
 
 Se aplican las siguientes reglas:
 
 - Los parámetros deben pasarse en el **cuerpo de la petición POST**
 - Los parámetros deben estar incluidos en una colección (formato JSON)
-- All scalar data types supported in JSON collections can be passed as parameters.
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
+- Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
+- La selección de entidades y la entidad se pueden pasar como parámetros. El objeto JSON debe contener atributos específicos utilizados por el servidor REST para asignar datos a los objetos ORDA correspondientes: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
 
-See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
+Ver [este ejemplo](#request-receiving-an-entity-as-parameter) y [este ejemplo](#request-receiving-an-entity-selection-as-parameter).
 
 
 ### Parámetro de valor escalar
 
-El(los) parámetros deben estar simplemente incluirse en una colección definida en el cuerpo. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+El(los) parámetros deben estar simplemente incluirse en una colección definida en el cuerpo. Por ejemplo, con una función de dataclass `getCities()` que recibe parámetros de tipo texto: `/rest/City/getCities`
 
 **Parámetros en el cuerpo:** ["Aguada","Paris"]
 
@@ -77,39 +77,39 @@ Entities passed in parameters are referenced on the server through their key (*i
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
 
-| Propiedades             | Tipo                                 | Descripción                                                                |
-| ----------------------- | ------------------------------------ | -------------------------------------------------------------------------- |
-| Atributos de la entidad | mixto                                | Opcional - Valores a modificar                                             |
-| __DATACLASS             | Cadena                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                   | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
+| Propiedades             | Tipo                                     | Descripción                                                                 |
+| ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------- |
+| Atributos de la entidad | mixto                                    | Opcional - Valores a modificar                                              |
+| __DATACLASS             | Cadena                                   | Obligatorio - Indica la Dataclass de la entidad                             |
+| __ENTITY                | Booleano                                 | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
+| __KEY                   | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
 - If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
+Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
 
 #### Parámetro de entidad asociado
 
 Same properties as for an [entity parameter](#entity-parameter). In addition, the related entity must exist and is referenced by __KEY containing its primary key.
 
-See examples for [creating](#creating-an-entity-with-a-related-entity) or [updating](#updating-an-entity-with-a-related-entity) entities with related entities.
+Ver los ejemplos para [creación](#creating-an-entity-with-a-related-entity) o [actualización](#updating-an-entity-with-a-related-entity) de las entidades con las entidades relacionadas.
 
 
 ### Parámetro de selección de entidad
 
-The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset).
+La selección de entidades debe haber sido definida previamente utilizando [$method=entityset]($method.md#methodentityset).
 
-> If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
+> Si la petición envía una selección de entidades modificada al servidor, la función del modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con la selección de entidades modificada.
 
 
-| Propiedades             | Tipo     | Descripción                                                                          |
-| ----------------------- | -------- | ------------------------------------------------------------------------------------ |
-| Atributos de la entidad | mixto    | Opcional - Valores a modificar                                                       |
-| __DATASET               | Cadena   | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES              | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Propiedades             | Tipo     | Descripción                                                                                |
+| ----------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Atributos de la entidad | mixto    | Opcional - Valores a modificar                                                             |
+| __DATASET               | Cadena   | Obligatorio - entitySetID (UUID) de la selección de entidades                              |
+| __ENTITIES              | Booleano | Obligatorio - True para indicar al servidor que el parámetro es una selección de entidades |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
+Ver ejemplo para [recibir una selección de entidades](#receiving-an-entity-selection-as-parameter).
 
 
 ## Ejemplos de peticiones

@@ -101,7 +101,7 @@ component_method("host_method_name")
 > Tenga en cuenta que un método interpretado puede llamar a un método compilado, pero no a la inversa, salvo mediante el uso de los comandos  `EXECUTE METHOD` y `EXECUTE FORMULA`.
 
 
-## Sharing of classes and functions
+## Compartir las clases y las funciones
 
 By default, component classes and functions cannot be called from the 4D method editor of the host project. If you want your component classes and functions to be exposed in the host projects, you need to declare a component namespace. Additionally, you can control how component classes and functions are suggested in the host method editor.
 
@@ -139,7 +139,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 > Non-hidden functions inside a hidden class appear as suggestions when you use code completion with a class that [inherits](../Concepts/classes.md#inheritance) from it. For example, if a component has a `Teacher` class that inherits from a `_Person` class, code completion for `Teacher` suggests non-hidden functions from `_Person`.
 
 
-## Code completion for compiled components
+## Completar el código de los componentes compilados
 
 To make your component easier to use for developers, you can check the [**Generate syntax file for code completion when compiled** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings.
 
@@ -158,8 +158,7 @@ Las variables locales, proceso e interproceso no se comparten entre los componen
 Ejemplo utilizando un array:
 
 ```4d
-//En el proyecto local:
-     ARRAY INTEGER( MyArray;10)
+//En el proyecto local: ARRAY INTEGER( MyArray;10)
      AMethod(-> MyArray)
 
 //En el componente, el método proyecto AMethod contiene:
@@ -243,7 +242,7 @@ SAVE RECORD($tablepointer->)
 
 ## Uso de tablas y campos
 
-Un componente no puede utilizar las tablas y campos definidos en la estructura 4D del proyecto matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Una base externa es un proyecto 4D independiente del proyecto 4D principal, pero con la que se puede trabajar desde el proyecto 4D principal. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
+Un componente no puede utilizar las tablas y campos definidos en la estructura 4D del proyecto matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
 
 ### Ejemplo
 
@@ -324,7 +323,7 @@ Lectura en una base de datos externa:
 
 ## Utilización de formularios
 
-- Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Todos los formularios proyecto presentes en el proyecto matriz pueden ser utilizados por el componente.
+- Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente.
 - Un componente puede llamar a formularios tabla del proyecto local. Tenga en cuenta que en este caso es necesario utilizar punteros en lugar de nombres de tablas entre paréntesis [] para especificar los formularios en el código del componente.
 
 > Si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual del proyecto local, en el contexto del proyecto local. Consequently, if the form includes variables, the component will not have access to them.

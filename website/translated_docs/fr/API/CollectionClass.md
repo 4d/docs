@@ -875,7 +875,7 @@ End if
 </details>
 
 <!-- REF #collection.extract().Syntax -->
-**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+Paramètre(s) à passer à *methodName*<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -1119,7 +1119,7 @@ Le code de ***TypeLookUp*** est :
 La fonction `.find()` <!-- REF #collection.find().Summary -->retourne la première valeur dans la collection pour laquelle *methodName* retourne **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. La méthode reçoit un paramètre de type `Object` dans $1 et doit passer **true** dans *$1.result* pour chaque élément ayant satisfait aux conditions du test.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1219,7 +1219,7 @@ Le code de la méthode ***FindCity*** est :
 La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->retourne le numéro, dans la collection, du premier élément pour lequel *methodName* retourne **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. La méthode reçoit un paramètre de type `Object` dans $1 et doit passer **true** dans *$1.result* pour le premier élément ayant satisfait aux conditions du test.
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1464,7 +1464,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en chaînes et les concatène en utilisant la chaîne *delimiter* spécifiée comme séparateur<!-- END REF -->. La fonction retourne la chaîne résultante.
+La fonction `.unshift()`<!-- REF #collection.unshift().Summary -->insère la ou les *valeur(s)* données au début de la collection<!-- END REF -->et retourne la collection modifiée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1517,7 +1517,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 *   la valeur null,
 *   une référence d'objet ou de collection.
 
-*toSearch* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
+Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
 
@@ -1605,7 +1605,7 @@ La propriété `.length` <!-- REF #collection.length.Summary -->retourne le nomb
 La fonction `.map()` <!-- REF #collection.map().Summary -->crée une nouvelle collection basée sur le résultat de l'exécution de la méthode *methodName* sur chaque élément de la collection d'origine<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à *methodName* via le paramètre *param*. `.map()` retourne toujours une collection de taille égale à celle de la collection d'origine.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1629,7 +1629,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
   //$c2=[2.27,9.09,20.45,22.73,45.45]
 ```
 
-Voici la méthode ***Percentage***:
+Avec la méthode *NumberGreaterThan0* suivante :
 
 ```4d
  var $1 : Object
@@ -1666,14 +1666,14 @@ Voici la méthode ***Percentage***:
 
 #### Description
 
-La fonction `.max()` <!-- REF #collection.max().Summary -->retourne l'élément ayant la plus grande valeur dans la collection<!-- END REF --> (équivaut au dernier élément de la collection après un tri croissant effectué par la fonction [`.sort()`](#sort)).
-> Cette fonction ne modifie pas la collection d'origine.
-
 Si la collection contient différents types de valeurs, la fonction `.max()` retournera la plus grande valeur du premier type d'élément dans l'ordre de la liste de types (cf. description de [`.sort()`](#sort)).
+> Cette fonction ne modifie pas la collection d'origine.
 
 Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur maximale.
 
 Si la collection est vide, `.max()` retourne *Undefined*.
+
+La fonction `.some()`<!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
 #### Exemple
 
@@ -1799,7 +1799,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
     Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
+Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si *attributePath* est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.
 
 1.  null
 2.  booléens
@@ -2680,7 +2680,7 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
 *methodName* doit fixer le paramètre suivant :
     *   *$1.result* (booléen): **vrai** si *$1.value < $1.value2*, **faux** sinon
 
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
+Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si *attributePath* est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.
 
 1.  null
 2.  booléens

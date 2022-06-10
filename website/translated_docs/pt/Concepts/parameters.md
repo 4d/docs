@@ -247,7 +247,7 @@ Function getValue
 
 ## Indireção dos parâmetros (${N})
 
-4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` se denomina un **parâmetro genérico**.
+4D project methods accept a variable number of parameters. You can address those parameters with a `For... End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` se denomina un **parâmetro genérico**.
 
 
 
@@ -277,8 +277,7 @@ Note that even if you declared 0, 1, or more parameters in the method, you can a
 
 ```4d
 //foo method
-#DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
-For($i;1;Count parameters)
+#DECLARE($p1: Text;$p2 : Text; $p3 : Date) For($i;1;Count parameters)
     ALERT("param "+String($i)+" = "+String(${$i}))
 End for
 ```
@@ -286,7 +285,7 @@ End for
 This method can be called:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //extra parameters are passed
 ```
 
 > A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
@@ -304,7 +303,7 @@ Para declarar parâmetros genéricos, se utiliza uma diretriz do compilador à q
 
 > Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
+This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 e $3 podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 e $3 podem ser de qualquer tipo de dados.
 
 > The number in the declaration has to be a constant and not a variable.
 
@@ -431,7 +430,7 @@ Por exemplo, utilizando o método `CreatePerson`:
  var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
- ALERT(String($person.Age))  
+ ALERT(String($person.  
 ```
 
 No método `ChangeAge` pode escrever:
@@ -455,8 +454,8 @@ No método `ChangeAge` anterior, as propriedades Age e Name são obrigatórias e
   //ChangeAge
  var $1; $para : Object
  $para:=$1  
- $para.Age:=Num($para.Age)+10
- ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ $para. Age:=Num($para. Age)+10
+ ALERT(String($para. Name)+" is "+String($para. Age)+" years old.")
 ```
 Ambos parâmetros são opcionais: se não forem preenchidos, o resultado será "é 10 anos de idade", mas nenhum erro será gerado.
 
@@ -468,12 +467,9 @@ ChangeAge($person)
 
 //ChangeAge
 var $1;$para : Object
-$para:=$1  
-If ($para.toAdd=Null)
-    $para.toAdd:=10
-End if
-$para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+$para:=$1 If ($para.toAdd=Null)
+    $para.toAdd:=10 End if
+$para. Age:=Num($para. Age)+$para.toAdd ALERT(String($para. Name)+" is "+String($para.
 ```
 
 Não precisará mudar seu código existente. Sempre funcionará como na versão anterior, mas se for necessário, é possível usar outro valor diferente de 10 anos.
@@ -537,7 +533,7 @@ APPEND TEXT(vtSomeText) //Só mostrará a mensagem APPEND TEXT(vtSomeText;$path)
 
 ## Valores ou referências
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. Por exemplo:
+When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. As variáveis locais/parâmetros não são os campos, variáveis ou expressões realmente passadas pelo método chamada; eles apenas contém os valores que foram passados. Por exemplo:
 
 ```4d
     //Esta é uma parte do código do método MY_METHOD DO_SOMETHING([People]Name) //Suponha que o valor [People]Name seja "williams" ALERT([People]Name)
@@ -577,7 +573,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). This is described in the [Returning values](#returning-values) paragraph.
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions).
 
 
 ### Casos particulares: objetos e coleções
@@ -593,7 +589,7 @@ Por exemplo, considere o método `CreatePerson` que cria um objeto e o envia com
  var $person : Object
  $person:=New object("Name";"Smith";"Age";40)
  ChangeAge($person)
- ALERT(String($person.Age))  
+ ALERT(String($person.  
 ```
 
 O método `ChangeAge` adiciona 10 ao atributo Age do objeto recebido
@@ -601,8 +597,8 @@ O método `ChangeAge` adiciona 10 ao atributo Age do objeto recebido
 ```4d
   //ChangeAge
  #DECLARE ($person : Object)
- $person.Age:=$person.Age+10
- ALERT(String($person.Age))
+ $person. Age:=$person. Age+10
+ ALERT(String($person.
 ```
 
 Quando executar o método `CreatePerson`, as duas caixas de alerta dirão "50" já que a mesma referência de objeto é manejada por ambos métodos.

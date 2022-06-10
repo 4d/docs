@@ -56,16 +56,15 @@ ASSERT($status.success)
 </details>
 
 
+
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+
 
 <!-- REF #4D.CryptoKey.new().Params -->
 | Paramètres | Type         |    | Description                                                                 |
 | ---------- | ------------ | -- | --------------------------------------------------------------------------- |
 | settings   | Object       | -> | Paramètres pour générer ou charger une paire de clés                        |
-| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF -->
-
-
-|
+| result     | 4D.CryptoKey | <- | Objet contenant une paire de clés de chiffrement|<!-- END REF --> |
 
 
 La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée un nouvel objet `4D.CryptoKey`encapsulant une paire de clés de chiffrement<!-- END REF -->, en fonction du paramètre d'objet *settings*. Elle permet de générer une nouvelle clé RSA ou ECDSA, ou de charger une paire de clés existante à partir de la définition PEM.
@@ -84,8 +83,6 @@ La fonction `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crée u
 
 L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est un objet partagé et peut être alors utilisé par de multiples traitements 4D simultanés.
 
-
-
 <!-- REF CryptoKey.curve -->
 ## .curve
 
@@ -94,6 +91,7 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 | ------- | ------------- |
 | v18 R4  | Ajout         |
 </details>
+
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
 
@@ -113,7 +111,9 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 </details>
 
 
+
 <!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+
 
 <!-- REF #CryptoKey.decrypt().Params -->
 | Paramètres | Type   |    | Description                                                                       |
@@ -121,6 +121,7 @@ Défini uniquement pour les clés ECDSA : le <!-- REF #CryptoKey.curve.Summary -
 | message    | Text   | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
 | options    | Object | -> | Options de décodage                                                               |
 | Résultat   | Object | <- | Statut                                                                            |
+
 <!-- END REF -->
 
 
@@ -140,7 +141,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### *Résultat*
 
-La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
+La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
@@ -149,8 +150,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
 
-Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
-
+La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
 
 <!-- REF CryptoKey.encrypt().Desc -->
 ## .encrypt()
@@ -162,7 +162,9 @@ Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec 
 </details>
 
 
+
 <!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+
 
 <!-- REF #CryptoKey.encrypt().Params -->
 | Paramètres | Type   |    | Description                                                                     |
@@ -170,6 +172,7 @@ Si le *message* n'a pas pu être déchiffré car il n'a pas été chiffré avec 
 | message    | Text   | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted. |
 | options    | Object | -> | Options de chiffrement                                                          |
 | Résultat   | Text   | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`               |
+
 <!-- END REF -->
 
 La fonction `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->crypte le paramètre *message* à l'aide de la clé **publique**<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
@@ -187,11 +190,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### *Résultat*
 
-La valeur retournée est un message chiffré.
-<!-- END REF -->
-
-
-
+La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).<!-- END REF -->
 
 <!-- REF CryptoKey.getPrivateKey().Desc -->
 ## .getPrivateKey()
@@ -203,23 +202,23 @@ La valeur retournée est un message chiffré.
 </details>
 
 
+
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
+
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 | Paramètres | Type |    | Description                |
 | ---------- | ---- | -- | -------------------------- |
 | Résultat   | Text | <- | Clé primaire au format PEM |
+
 <!-- END REF -->
 
-La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->retourne la clé privée de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.
+La fonction `.getPrivateKey()` <!-- REF #CryptoKey.getPrivateKey().Summary -->retourne la clé privée de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.
 
 #### *Résultat*
 
-La valeur retournée est la clé privée.
-<!-- END REF -->
-
-
+La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->retourne la clé privée de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.<!-- END REF -->
 
 <!-- REF CryptoKey.getPublicKey().Desc -->
 ## .getPublicKey()
@@ -231,12 +230,15 @@ La valeur retournée est la clé privée.
 </details>
 
 
+
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
+
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 | Paramètres | Type |    | Description                |
 | ---------- | ---- | -- | -------------------------- |
 | Résultat   | Text | <- | Clé publique au format PEM |
+
 <!-- END REF -->
 
 
@@ -244,11 +246,9 @@ La fonction `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->reto
 
 #### *Résultat*
 
-La valeur retournée est la clé publique.
-<!-- END REF -->
+La fonction `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->retourne la clé publique de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.<!-- END REF -->
 
----
-<!-- REF CryptoKey.pem.Desc -->
+---<!-- REF CryptoKey.pem.Desc -->
 ## .pem
 
 <details><summary>Historique</summary>
@@ -258,13 +258,13 @@ La valeur retournée est la clé publique.
 </details>
 
 
+
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
+
 
 
 <!-- REF #CryptoKey.pem.Summary -->Définition PEM d'une clé de chiffrement à charger<!-- END REF -->. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite.
 <!-- END REF -->
-
-
 
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
@@ -275,7 +275,9 @@ La valeur retournée est la clé publique.
 | v18 R4  | Ajout         |
 </details>
 
+
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+
 
 <!-- REF #CryptoKey.sign().Params -->
 | Paramètres | Type   |    | Description                                                                |
@@ -283,11 +285,12 @@ La valeur retournée est la clé publique.
 | message    | Text   | -> | Chaîne message à signer                                                    |
 | options    | Object | -> | Options de signature                                                       |
 | Résultat   | Text   | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
+
 <!-- END REF -->
 
 La fonction `.sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
-`CryptoKey` doit contenir une clé **privée** valide.
+**.type** : Texte
 
 #### *options*
 
@@ -301,12 +304,12 @@ La fonction `.sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représenta
 
 #### *Résultat*
 
-Représentation utf8 de la chaîne *message*.
+`CryptoKey` doit contenir une clé **privée** valide.
 <!-- END REF -->
-
 
 <!-- REF CryptoKey.size -->
 ## .size
+
 <!-- END REF -->
 
 <details><summary>Historique</summary>
@@ -314,15 +317,16 @@ Représentation utf8 de la chaîne *message*.
 | ------- | ------------- |
 | v18 R4  | Ajout         |
 </details>
+
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
 Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. Habituellement 2048 (par défaut).
 
-
 <!-- REF CryptoKey.type -->
 ## .type
+
 <!-- END REF -->
 
 <details><summary>Historique</summary>
@@ -332,11 +336,12 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 </details>
 
 
+
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Texte<!-- END REF -->
 
 
-<!-- REF #CryptoKey.type.Summary -->Type de clé : "RSA", "ECDSA" ou "PEM"<!-- END REF --><li>"RSA" : paire de clés RSA, utilise `settings.size` pour la taille [.size](#size).</li><li>"ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété curve [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM" : Définition de paire de clés au format PEM format, utilise `settings.pem` pour la propriété [.pem](#pem).
 
+<!-- REF #CryptoKey.type.Summary -->Type de clé : "RSA", "ECDSA" ou "PEM"<!-- END REF --><li>"RSA" : paire de clés RSA, utilise `settings.size` pour la taille [.size](#size).</li><li>"ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété curve [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM" : Définition de paire de clés au format PEM format, utilise `settings.pem` pour la propriété [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
@@ -347,7 +352,9 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 | v18 R4  | Ajout         |
 </details>
 
+
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+
 
 <!-- REF #CryptoKey.verify().Params -->
 | Paramètres | Type   |    | Description                                                                                     |
@@ -356,11 +363,12 @@ Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la t
 | signature  | Text   | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
 | options    | Object | -> | Options de signature                                                                            |
 | Résultat   | Object | <- | Statut de la vérification                                                                       |
+
 <!-- END REF -->
 
-La fonction `.verify()` <!-- REF #CryptoKey.verify().Summary -->vérifie la signature base64 par rapport à la représentation utf8 du *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies.
+Si la signature n'a pas pu être vérifiée car elle n'a pas été signée avec le même *message*, la clé ou l'algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
 
-`CryptoKey` doit contenir une clé **publique** valide.
+La fonction `.verify()` <!-- REF #CryptoKey.verify().Summary -->vérifie la signature base64 par rapport à la représentation utf8 du *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies.
 
 
 #### *options*
@@ -374,14 +382,15 @@ La fonction `.verify()` <!-- REF #CryptoKey.verify().Summary -->vérifie la sign
 
 #### *Résultat*
 
-La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
+`CryptoKey` doit contenir une clé **publique** valide.
 
-Si la signature n'a pas pu être vérifiée car elle n'a pas été signée avec le même *message*, la clé ou l'algorithme, l'objet `status` retourné contient une collection d'erreurs dans `status.errors`.
+La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
 | success   | boolean    | True si la signature correspond au message                                  |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
+
 <!-- END REF -->
 
 <style> h2 { background: #d9ebff;}</style>

@@ -63,8 +63,8 @@ The returned "__STATUS" object has the following properties:
 |              | user4d_id      | number   | ID del usuario en el directorio de la base de datos 4D                                                                                                      |
 |              | host_name      | texto    | Nombre de la máquina                                                                                                                                        |
 |              | task_name      | texto    | Nombre del proceso                                                                                                                                          |
-|              | client_version | texto    | Version of the client                                                                                                                                       |
-|              |                |          | ***Available only for a REST session lock:***                                                                                                               |
+|              | client_version | texto    | Versión del cliente                                                                                                                                         |
+|              |                |          | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                      |
 |              | host           | texto    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
 |              | IPAddr         | texto    | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
 |              | recordNumber   | number   | Record number of the locked record                                                                                                                          |

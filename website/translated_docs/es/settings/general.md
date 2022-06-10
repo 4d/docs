@@ -22,7 +22,7 @@ You use this menu to select the default startup mode for the database: **Design*
 
 This area allows [component developers](../Extensions/develop-components.md) to configure how their component classes and functions will be exposed in the 4D method editor once the component is installed.
 
-### Component namespace in the class store
+### Namespace del componente en la class store
 
 Use this area to declare a namespace for the component classes and functions in the code on host projects. See [Declaring the component namespace](../Extensions/develop-components.md#declaring-the-component-namespace).
 

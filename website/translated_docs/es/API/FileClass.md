@@ -3,11 +3,11 @@ id: FileClass
 title: File
 ---
 
-`File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
+Los objetos `File` se crean con el comando [`File`](#file). Contienen referencias a archivos de disco que pueden o no existir realmente en el disco. Por ejemplo, cuando se ejecuta el comando `File` para crear un nuevo archivo, se crea un objeto `File` válido, pero en realidad no se almacena nada en el disco hasta que se llama a la función [`file.create( )`](#create).
 
 ### Ejemplo
 
-The following example creates a preferences file in the project folder:
+El siguiente ejemplo crea un archivo de preferencias en la carpeta del proyecto:
 
 ```code4d
 var $created : Boolean
@@ -84,7 +84,7 @@ El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo o
 
 En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena personalizada o un filesystem (por ejemplo, "/DATA/myfile.txt").
 
-> Only absolute pathnames are supported with the `File` command.
+> Sólo se admiten nombres de ruta absolutos con el comando `File`.
 
 Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro *pathType*. Las siguientes constantes están disponibles:
 
@@ -113,7 +113,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 | HTTP debug log file               | 9     | Log file created by the `WEB SET OPTION(Web debug log)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                          |
 | HTTP log file                     | 8     | Log file created by the `WEB SET OPTION(Web log recording)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                      |
 | IMAP Log file                     | 23    | Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                       |
-| Last backup file                  | 2     | Last backup file, named \<applicationName>[bkpNum].4BK, stored at a custom location.                                                                                                                                                                                                                                                                                                                    |
+| Last backup file                  | 2     | Último archivo de copia de seguridad, llamado \<applicationName>[bkpNum].4BK, almacenado en una ubicación personalizada.                                                                                                                                                                                                                                                                                |
 | Last journal integration log file | 22    | Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred                                                                                                                                                                                            |
 | Repair log file                   | 7     | Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                           |
 | Request log file                  | 10    | Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
@@ -210,12 +210,12 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parámetros        | Tipo      |    | Descripción                                  |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Tipo de enlace del alias                     |
-| Resultado         | 4D.File   | <- | Alias or shortcut file reference             |
+| Parámetros        | Tipo      |    | Descripción                                          |
+| ----------------- | --------- | -- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Texto     | -> | Nombre del alias o del atajo                         |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                             |
+| Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
 <!-- END REF -->
 
 
@@ -301,6 +301,7 @@ You want to delete a specific file in the database folder:
     $tempo.delete()
     ALERT("Archivo de preferencias del usuario borrado.")
  End if
+ End if
 ```
 <!-- END REF -->
 
@@ -351,7 +352,7 @@ The function must be used with an existing .exe, .dll or .plist file. If the fil
 
 > Reading a .exe or .dll is only possible on Windows.
 
-All property values are Text.
+Todos los valores de propiedades son de tipo Texto.
 
 | Propiedad        | Tipo  |
 | ---------------- | ----- |
@@ -574,7 +575,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
 
@@ -600,7 +601,7 @@ If you pass a null or empty text as value, an empty string is written in the pro
 
 ***info* parameter object with a .plist file**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Value types are preserved when possible.
 
 If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
 
@@ -709,9 +710,9 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 Optionally, you can designate the character set to be used for writing the contents. Puede pasar:
 
 - en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- o en *charSetNum*, el ID MIBEnum (número) del nombre del conjunto estándar.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando `CONVERT FROM TEXT`.
 
 If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
 

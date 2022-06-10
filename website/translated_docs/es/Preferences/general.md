@@ -22,7 +22,7 @@ This option allows you to configure the default 4D display at startup, when the 
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
-### Window tabbing (macOS only)
+### Ventana con pestañas (sólo en macOS)
 
 Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
 
@@ -69,12 +69,12 @@ Hay tres opciones disponibles:
 If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
 
 
-### Enable binary database creation
+### Activar la creación de bases de datos binarias
 
 If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
 
 *   **Database...**
-*   **Database from Structure Definition...**
+*   **Base de datos a partir de una definición de estructura...**
 
 ![](assets/en/Preferences/general5.png)
 
@@ -92,7 +92,7 @@ When this option is checked, 4D databases are automatically created in a folder 
 
 Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
 
-### Include tokens in project source files
+### Incluir los tokens en los archivos fuente del proyecto
 
 When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
 
@@ -125,7 +125,7 @@ You can define the default contents of the `.gitignore` file by clicking the pen
 
 The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
 
-### Language of text comparison
+### Lenguaje de comparación de texte
 
 This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
 
@@ -146,7 +146,7 @@ This area configures access to the 4D HTML documentation displayed in your curre
 
 Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
 
-### Look in the local folder first
+### Primero buscar en la carpeta local
 
 > This option is only taken into account for command documentation access (excluding class functions).
 

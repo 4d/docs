@@ -31,6 +31,7 @@ Para desactivar el sistema de acceso por contraseña, basta con eliminar la cont
 ## Control de acceso en las aplicaciones monopuesto
 
 
+
 Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume License. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
 
 ### Identificación del usuario
@@ -40,9 +41,9 @@ To identify the current user in a 4D single-user application, you can rely on th
 You can then allow or deny access within your application by using code such as:
 
 ```4d
-If(Current system user = $user) //vous pouvez stocker les utilisateurs dans une table de base de données
-    // conceder el acceso a determinadas funcionalidades
-Enf if
+If(Current system user = $user) //you can store users in a database table
+    // give access to some features
+End if
 ```
 
 If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:

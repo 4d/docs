@@ -152,17 +152,13 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 The `City Class` provides an API:
 
 ```4d  
-// cs.City class
-
-Class extends DataClass
-
-Function getCityName()
+// cs. City class Class extends DataClass Function getCityName()
     var $1; $zipcode : Integer
-    var $zip : 4D.Entity
+    var $zip : 4D. Entity
     var $0 : Text
 
     $zipcode:=$1
-    $zip:=ds.ZipCode.get($zipcode)
+    $zip:=ds. ZipCode.get($zipcode)
     $0:="" 
 
     If ($zip#Null)
@@ -196,14 +192,9 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 #### Exemplo
 
 ```4d
-// cs.EmployeeSelection class
+// cs. EmployeeSelection class Class extends EntitySelection
 
-
-Class extends EntitySelection
-
-//Extract the employees with a salary greater than the average from this entity selection 
-
-Function withSalaryGreaterThanAverage
+//Extract the employees with a salary greater than the average from this entity selection Function withSalaryGreaterThanAverage
     C_OBJECT($0)
     $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
 
@@ -335,7 +326,7 @@ The *getter* function defines the data type of the computed attribute thanks to 
 
 - Scalar (text, boolean, date, time, number)
 - Objeto
-- Image
+- Imagem
 - BLOB
 - Entity (i.e. cs. EmployeeEntity)
 - Entity selection (i.e. cs. EmployeeSelection)
@@ -800,16 +791,15 @@ Class extends DataClass
 //Public function
 exposed Function registerNewStudent($student : Object) -> $status : Object
 
-var $entity : cs.StudentsEntity
+var $entity : cs. StudentsEntity
 
-$entity:=ds.Students.new()
+$entity:=ds. Students.new()
 $entity.fromObject($student)
 $entity.school:=This.query("name=:1"; $student.schoolName).first()
 $entity.serialNumber:=This.computeSerialNumber()
 $status:=$entity.save()
 
-//Not exposed (private) function
-Function computeIDNumber()-> $id : Integer
+//Not exposed (private) function Function computeIDNumber()-> $id : Integer
 //compute a new ID number
 $id:=...
 
@@ -824,8 +814,8 @@ var $id : Integer
 $remoteDS:=Open datastore(New object("hostname"; "127.0.0.1:8044"); "students")
 $student:=New object("firstname"; "Mary"; "lastname"; "Smith"; "schoolName"; "Math school")
 
-$status:=$remoteDS.Schools.registerNewStudent($student) // OK
-$id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
+$status:=$remoteDS. Schools.registerNewStudent($student) // OK
+$id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
 
@@ -871,10 +861,10 @@ Class extends Entity
 local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
+    If (This.birthDate#!00-00-00!)
     $age:=Year of(Current date)-Year of(This.birthDate)
 Else 
-    $age:=Null
-End if
+    $age:=Null End if
 ```
 
 #### Checking attributes
@@ -908,8 +898,7 @@ var $status : Object
 //Form.student is loaded with all its attributes and updated on a Form
 $status:=Form.student.checkData()
 If ($status.success)
-    $status:=Form.student.save() // call the server
-End if
+    $status:=Form.student.save() // call the server End if
 ```
 
 

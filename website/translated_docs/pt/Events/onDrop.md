@@ -16,5 +16,5 @@ This event is not sent to the object if the drag was not accepted during the [`O
 
 
 
-#### See also
+#### Veja também
 [`On Begin Drag Over`](onBeginDragOver.md)

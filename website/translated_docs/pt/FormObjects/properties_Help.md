@@ -45,7 +45,7 @@ When different tips are associated with the same object in several locations, th
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
 
-#### See also
+#### Veja também
 
 [Placeholder](properties_Entry.md#placeholder)
 

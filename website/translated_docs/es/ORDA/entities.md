@@ -104,7 +104,7 @@ $entity.save() //guardar los cambios
 
 > Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+Accessing a related attribute depends on the attribute kind. Por ejemplo, con la siguiente estructura:
 
 ![](assets/en/ORDA/entityAttributes.png)
 
@@ -316,7 +316,7 @@ All storage attributes (text, number, boolean, date) are available as properties
 
 Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
 
-### Entity selections and Relation attributes
+### Selecciones de entidades y atributos de relación
 
 In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Por ejemplo, consideremos la siguiente estructura:
 
@@ -352,7 +352,7 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 
 The following diagram illustrates optimistic locking:
 
-1. Two processes load the same entity.<br><br>![](assets/en/ORDA/optimisticLock1.png)
+1. Dos procesos cargan la misma entidad.<br><br>![](assets/en/ORDA/optimisticLock1.png)
 
 2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/ORDA/optimisticLock2.png)
 

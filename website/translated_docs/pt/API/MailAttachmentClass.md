@@ -13,13 +13,13 @@ Attachment objects provide the following read-only properties and functions:
 
 |                                                                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->                            |
+| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->    |
+| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->   |
+| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary --> |
+| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->                         |
 
 
 ## MAIL New attachment
@@ -30,8 +30,8 @@ Attachment objects provide the following read-only properties and functions:
 | v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #_command_.MAIL_New_attachment.Syntax --> **MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -46,12 +46,13 @@ Attachment objects provide the following read-only properties and functions:
 | type        | Texto             | -> | Value of the content-type header                                     |
 | disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
 | Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
+
 <!-- END REF -->
 
 
 #### Descrição
 
-O comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
+MailAttachment.new()</code> <!-- REF #4D. MailAttachment.new(). Summary -->cria e retorna um novo objeto do tipo `4D. MailAttachment`<!-- END REF -->. Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 To define the attachment, you can use:
 
@@ -88,11 +89,11 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 | xml       | application/xml               |
 | htm, html | text/html                     |
 | mp3       | audio/mpeg                    |
-| *other*   | application/octet-stream      |
+| *outro*   | application/octet-stream      |
 
 The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
 
-| Constant                    | Value        | Comment                                                                                                                                                                                              |
+| Constante                   | Value        | Comentário                                                                                                                                                                                           |
 | --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                            |
 | mail disposition inline     | "inline"     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. The rendering depends on the mail client. |
@@ -175,8 +176,8 @@ $transporter.send($email)
 | v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
-<!-- REF #4D.MailAttachment.new().Syntax -->
-**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #4D.MailAttachment.new().Syntax --> **4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
@@ -191,34 +192,35 @@ $transporter.send($email)
 | type        | Texto             | -> | Value of the content-type header                                     |
 | disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
 | Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
+
 <!-- END REF -->
 
 
 #### Descrição
 
-A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e retorna um novo objeto do tipo `4D.MailAttachment`<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+Objetos anexo permite referenciar arquivos dentro de um objeto[`Email`](EmailObjectClass.md). It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
 
 
 ## .cid
 
-<!-- REF #MailAttachmentClass.cid.Syntax -->
-**.cid** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.cid.Syntax --> **.cid** : Text<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> a ID do anexo<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
+A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid. Summary --> a ID do anexo<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
 
 
 ## .disposition
 
-<!-- REF #MailAttachmentClass.disposition.Syntax -->
-**.disposition** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.disposition.Syntax --> **.disposition** : Text<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho `Content-Disposition`<!-- END REF -->. Two values are available:
+A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition. Summary -->o valor do cabeçalho `Content-Disposition`<!-- END REF -->. Two values are available:
 
 *   "inline": the attachment is rendered within the message contents, at the "cid" location. The rendering depends on the mail client.
 *   "attachment": the attachment is provided as a link in the message.
@@ -226,41 +228,43 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 ## .getContent()
 
-<!-- REF #MailAttachmentClass.getContent().Syntax -->
-**.getContent()** : 4D.Blob<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.getContent().Syntax --> **.getContent()** : 4D.Blob<!-- END REF -->
+
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 | Parameter | Type    |    | Descrição         |
 | --------- | ------- |:--:| ----------------- |
 | Resultado | 4D.Blob | <- | Conteúdo do anexo |
+
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Pode usar esse método com objetos anexos recebidos pelo comando [`MAIL Convert from MIME`](#mail-convert-from-mime).
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 
 
 ## .name
 
-<!-- REF #MailAttachmentClass.name.Syntax -->
-**.name** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.name.Syntax --> **.name** : Text<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade`.name` contém <!-- REF #MailAttachmentClass.name.Summary -->o nome e extensão do anexo<!-- END REF -->.  Como padrão, é o nome do arquivo, a não ser que outro nome tenha sido especificado no comando [`MAIL New attachment`](#mail-new-attachment).
+A propriedade`.name` contém <!-- REF #MailAttachmentClass.name. Summary -->o nome e extensão do anexo<!-- END REF -->.  Como padrão, é o nome do arquivo, a não ser que outro nome tenha sido especificado no comando [`MAIL New attachment`](#mail-new-attachment).
 
 ## .path
 
-<!-- REF #MailAttachmentClass.path.Syntax -->
-**.path** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.path.Syntax --> **.path** : Text<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->a rota POSIX do arquivo anexo, se existir<!-- END REF -->.
+A propriedade `.path` contém <!-- REF #MailAttachmentClass.path. Summary -->a rota POSIX do arquivo anexo, se existir<!-- END REF -->.
 
 
 ## .platformPath
@@ -271,24 +275,24 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->a ro
 | v19    | Adicionado |
 </details>
 
-<!-- REF #MailAttachmentClass.platformPath.Syntax -->
-**.platformPath** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.platformPath.Syntax --> **.platformPath** : Text<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade`.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath.Summary -->a rota do arquivo anexo expresso na sintaxe da plataforma atual<!-- END REF -->.
+A propriedade`.platformPath` retorna <!-- REF #MailAttachmentClass.platformPath. Summary -->a rota do arquivo anexo expresso na sintaxe da plataforma atual<!-- END REF -->.
 
 
 ## .type
 
-<!-- REF #MailAttachmentClass.type.Syntax -->
-**.type** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.type.Syntax --> **.type** : Text<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.type` contém <!-- REF #MailAttachmentClass.type.Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se o tipo não for passado explicitamente ao comando [`MAIL New attachment`](#mail-new-attachment), o `content-type` é baseado na sua extensão de arquivo.
+A propriedade `.type` contém <!-- REF #MailAttachmentClass.type. Summary -->o `content-type` do arquivo anexo<!-- END REF -->. Se o tipo não for passado explicitamente ao comando [`MAIL New attachment`](#mail-new-attachment), o `content-type` é baseado na sua extensão de arquivo.
 
 
 

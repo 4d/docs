@@ -21,7 +21,7 @@ When there is no tag in the class/method, the tool displays "No tag".
 
 The following items are added automatically:
 
-| Icon                                                                     | Item                                             |
+| Ícone                                                                    | Elemento                                         |
 | ------------------------------------------------------------------------ | ------------------------------------------------ |
 | ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | No tag                                           |
 | ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
@@ -33,7 +33,7 @@ The following items are added automatically:
 
 By adding markers in your code, you can add the following tags to the dropdown:
 
-| Icon                                                 | Item       |
+| Ícone                                                | Elemento   |
 | ---------------------------------------------------- | ---------- |
 | ![mark-tag-icon](assets/en/code-editor/mark-tag.png) | MARK: tag  |
 | ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: tag  |

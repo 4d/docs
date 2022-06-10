@@ -69,7 +69,7 @@ Case 1: The value of the parent form variable or expression is modified and this
 
 `Form.parisTime` changes to 12:15:00 in the parent form, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example). This triggers the [On Bound Variable Change](../Events/onBoundVariableChange.md) event in the subform's Form method.
 
-The following code is executed:
+Se ejecuta el siguiente código:
 
 ```4d  
 // Subform form method
@@ -102,7 +102,7 @@ Caso 2: se modifica el contenido del subformulario y esta modificación debe pas
 
 Inside the subform, the button changes the value of the `Form.clockValue` expression of type Time attached to the clock object. This triggers the [On Data Change](../Events/onDataChange.md) form event inside the clock object (this event must be selected for the object), which updates the `Form.parisTime` value in the main form.
 
-The following code is executed:
+Se ejecuta el siguiente código:
 
 ```4d  
 // subform clock object method

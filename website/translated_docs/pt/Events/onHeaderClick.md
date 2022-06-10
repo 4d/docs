@@ -25,14 +25,14 @@ If the [Sortable](FormObjects/properties_Action.md#sortable) property is not sel
 
 This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Propriedade | Type    | Descrição                                                                                                                           |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| code        | longint | 42                                                                                                                                  |
-| description | texto   | "On Header Click"                                                                                                                   |
-| objectName  | texto   | 4D View Pro area name                                                                                                               |
-| sheetName   | texto   | Name of the sheet of the event                                                                                                      |
-| range       | object  | Cell range                                                                                                                          |
-| sheetArea   | longint | The sheet location where the event took place:<br><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
+| Propriedade | Type          | Descrição                                                                                                                           |
+| ----------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| code        | inteiro longo | 42                                                                                                                                  |
+| description | texto         | "On Header Click"                                                                                                                   |
+| objectName  | texto         | 4D View Pro area name                                                                                                               |
+| sheetName   | texto         | Name of the sheet of the event                                                                                                      |
+| range       | object        | Cell range                                                                                                                          |
+| sheetArea   | inteiro longo | The sheet location where the event took place:<br><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
 #### Exemplo
 

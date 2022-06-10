@@ -98,7 +98,7 @@ The optimization context is based upon the following implementations:
 Given the following code:
 
 ```4d
- $sel:=$ds.Employee.query("firstname = ab@")
+ $sel:=$ds. Employee.query("firstname = ab@")
  For each($e;$sel)
     $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
  End for each

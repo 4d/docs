@@ -46,7 +46,7 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 ```
 > Esta declaração também começa um arquivo de histórico [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
 
-#### Headers
+#### Cabeçalhos
 
 Este arquivo começa com os cabeçalhos abaixo:
 
@@ -96,7 +96,7 @@ SET DATABASE PARAMETER(Client Log Recording;1) //lado remoto
 ```
 > Esta declaração também começa o arquivo de histórico [4DRequestsLog.txt](#4drequestslogtxt).
 
-#### Headers
+#### Cabeçalhos
 
 Este arquivo começa com os cabeçalhos abaixo:
 
@@ -157,9 +157,7 @@ Como iniciar esse log:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2)  
-//padrão, todos os processos
-
-SET DATABASE PARAMETER(Current process debug log recording;2)  
+//padrão, todos os processos SET DATABASE PARAMETER(Current process debug log recording;2)  
 //padrão, apenas processos atuais
 ```
 
@@ -182,9 +180,7 @@ Como iniciar esse log:
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2+4)  
-//formato tabulado estendido, todos os processos
-
-SET DATABASE PARAMETER(Current process debug log recording;2+4)  
+//formato tabulado estendido, todos os processos SET DATABASE PARAMETER(Current process debug log recording;2+4)  
 //estendido, processos atuais apenas
 ```
 
@@ -321,15 +317,11 @@ ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 Se quiser usar esse número de sequência único em histórico de petições ORDA, necessita ativá-lo:
 
 ```4d
-//para ser executado em uma máquina remota
-
-SET DATABASE PARAMETER(Client Log Recording;1)  
+//para ser executado em uma máquina remota SET DATABASE PARAMETER(Client Log Recording;1)  
 //para ativar número de histórico em sequência
 
 ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))  
-//também pode ser enviado à memória
-
-SET DATABASE PARAMETER(Client Log Recording;0)  
+//também pode ser enviado à memória SET DATABASE PARAMETER(Client Log Recording;0)  
 //desativa números em sequeência
 ```
 

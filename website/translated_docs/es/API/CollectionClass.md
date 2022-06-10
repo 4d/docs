@@ -1020,7 +1020,7 @@ En caso de incoherencia, se aplican las siguientes reglas:
 La función `.filter()` <!-- REF #collection.filter().Summary -->devuelve una nueva colección que contiene los elementos de la colección original para los cuales el resultado del método *methodName* es **true**<!-- END REF -->. Esta función devuelve una ***copia superficial***, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
-En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. Este método recibe un `Object` en el primer parámetro ($1) y debe definir *$1.result* como **true** para cada elemento que cumpla la condición y así, agregar a la nueva colección.
+En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional).
 
 *methodName* recibe los siguientes parámetros:
 
@@ -1114,7 +1114,7 @@ El código de ***TypeLookUp*** es:
 La función `.find()` <!-- REF #collection.find().Summary -->devuelve el primer valor de la colección para el que *methodName*, aplicado a cada elemento, devuelve **true**<!-- END REF -->.
 > Esta función no modifica la colección original.
 
-En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. Este método recibe un `Object` como primer parámetro ($1) y debe definir *$1.result* en **true** para el primer elemento que cumpla la condición.
+En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional).
 
 *methodName* recibe los siguientes parámetros:
 
@@ -1213,7 +1213,7 @@ El código para ***FindCity*** es:
 La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->devuelve el índice, en la colección, del primer valor para el que *methodName*, aplicado a cada elemento, devuelve **true**<!-- END REF -->.
 > Esta función no modifica la colección original.
 
-En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, utilizando o no los parámetros. Este método recibe un `Object` como primer parámetro ($1) y debe definir *$1.result* como **true** para el primer elemento que cumpla la condición.
+En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros.
 
 *methodName* recibe los siguientes parámetros:
 
@@ -1595,7 +1595,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 La función `.map()` <!-- REF #collection.map().Summary --> crea una nueva colección basada en el resultado de la llamada al método *methodName* sobre cada elemento de la colección original<!-- END REF -->. Opcionalmente, puede pasar parámetros a *methodName* utilizando el(los) parámetro(s) *param*. `.map()` siempre devuelve una colección con el mismo tamaño que la colección original.
 > Esta función no modifica la colección original.
 
-En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier operación, con o sin los parámetros.
+En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional).
 
 *methodName* recibe los siguientes parámetros:
 
@@ -1787,7 +1787,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
     Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
-Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Los tipos se devuelven en el siguiente orden:
+Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1.  null
 2.  booleanos
@@ -2643,7 +2643,7 @@ Si desea ordenar los elementos de la colección en otro orden o clasificar cualq
 *methodName* define el siguiente parámetro:
     *   *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario
 
-Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Los tipos se devuelven en el siguiente orden:
+Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1.  null
 2.  booleanos

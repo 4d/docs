@@ -92,7 +92,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza por ".". The property returns an empty string if the file name does not have an extension.
+La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad devuelve una cadena vacía si el nombre del archivo no tiene extensión.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -235,7 +235,7 @@ Esta propiedad es **de sólo lectura**.
 #### Descripción
 
 La propiedad `.isWritable` devuelve <!-- REF #document.isWritable.Summary -->true si el archivo existe en el disco y es escribible<!-- END REF -->.
-> The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the *writable* attribute of the file.
+> La propiedad verifica la capacidad de la aplicación 4D a escribir en el disco (derechos de acceso), no se basa únicamente en el atributo *writable* del archivo.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -342,7 +342,7 @@ La propiedad `.original` devuelve<!-- REF #documento.original.Resumen -->el elem
 *   un objeto File
 *   un objeto de la carpeta
 
-For non-alias files, the property returns the same file object as the file.
+Para los archivos sin alias, la propiedad devuelve el mismo objeto File que el archivo.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -437,7 +437,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.size` devuelve <!-- REF #document.size.Summary -->el tamaño del archivo expresado en bytes<!-- END REF -->. If the file does not exist on disk, the size is 0.
+La propiedad `.size` devuelve <!-- REF #document.size.Summary -->el tamaño del archivo expresado en bytes<!-- END REF -->. Si el archivo no existe en el disco, el tamaño es 0.
 
 Esta propiedad es **de sólo lectura**. 
 
@@ -529,11 +529,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descripción
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. Para obtener información sobre los BLOB, consulte la sección [BLOB](Conceptos/dt_blob.md).
+La función `.getContent()`  <!-- REF #document.getContent().Summary -->devuelve un objeto `4D.Blob` que contiene todo el contenido de un archivo<!-- END REF -->. Para obtener información sobre los BLOB, consulte la sección [BLOB](Conceptos/dt_blob.md).
 
 **Valor devuelto**
 
-A `4D.Blob` object.
+Un objeto `4D.Blob`.
 
 #### Ejemplo
 
@@ -618,9 +618,9 @@ La función `.getText()` <!-- REF #document.getText().Summary -->devuelve el con
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:
 
 - en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+- o en *charSetNum*, el ID MIBEnum (número) del nombre del conjunto estándar.
 
-> For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
+> Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando `CONVERT FROM TEXT`.
 
 Si el documento contiene una marca de orden de bytes (BOM), 4D utiliza el conjunto de caracteres que ha establecido en lugar del especificado en *charSetName* o *charSetNum* (este parámetro se ignora entonces). Si el documento no contiene una BOM y si *charSetName* o *charSetNum* se omite, por defecto 4D utiliza el conjunto de caracteres "UTF-8".
 
@@ -661,7 +661,7 @@ Cuando se ejecuta este código:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+con `\t` (tab) como separador y `\r\n` (CRLF) como delimitador de línea.
 
 Aquí hay otro ejemplo con el mismo archivo, pero con un delimitador de línea diferente:
 
@@ -672,7 +672,7 @@ En este caso, el contenido de `$txt` es el siguiente:
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-This time `\n` (LF) is used as line delimiter.
+Esta vez se utiliza `\n` (LF) como delimitador de línea.
 
 
 

@@ -143,7 +143,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 ![](assets/en/FormObjects/checkbox_disclosure.png)
 
 
-### Custom
+### Personalizado
 
 The Custom radio button style accepts a personalized background picture and allows managing additional parameters such as [icon offset](properties_TextAndPicture.md#icon-offset) and [margins](properties_TextAndPicture.md#horizontalMargin).
 

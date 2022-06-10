@@ -15,7 +15,7 @@ Variables, fields or expressions of the Object type can contain various types of
     - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
     - date (date type or ISO date format string)
     - object(1) (objects can be nested on several levels)
-    - picture(2)
+    - imagem(2)
     - collection
 
 (1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory.

@@ -31,6 +31,7 @@ Pour désactiver le système de restriction d’accès, il suffit de supprimer (
 ## Contrôle d'accès dans les applications monoposte
 
 
+
 Les applications monoposte sont des applications de bureau, déployées avec 4D ou fusionnées avec 4D Volume License. Dans les applications monoposte, tous les utilisateurs qui ouvrent l'application sont des [Super utilisateurs](handling_users_groups.md#designer-and-administrator); ils possèdent tous les privilèges et leur nom est "Super utilisateur". Le contrôle des accès n'est pas basé sur les utilisateurs et les groupes 4D, mais sur les **sessions utilisateur**.
 
 ### Identification de l'utilisateur
@@ -40,9 +41,9 @@ Pour identifier l'utilisateur courant dans une application 4D monoposte, vous po
 Vous pouvez alors autoriser ou refuser les accès à votre application en utilisant un code suivant :
 
 ```4d
-If(Current system user = $user) //vous pouvez stocker les utilisateurs dans une table de base de données
-    // accorder les accès à certaines fonctionnalités
-Enf if
+If(Current system user = $user) //you can store users in a database table
+    // give access to some features
+End if
 ```
 
 Si vous souhaitez utiliser le nom d'utilisateur du système dans 4D au lieu du "Super utilisatur" (par exemple dans les fichiers journaux), vous pouvez appeler la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html), par exemple :

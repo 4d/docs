@@ -3,7 +3,7 @@ id: operators
 title: Operadores
 ---
 
-An operator is a symbol or a group of symbols that you use to check, modify, or combine values. Usted ya conoce a la mayoría de los operadores. For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or >, let you compare two or more values.
+An operator is a symbol or a group of symbols that you use to check, modify, or combine values. Usted ya conoce a la mayoría de los operadores. Por ejemplo, `1 + 2` utiliza el operador de adición (o signo más) para sumar dos números, y el resultado es 3. Comparison operators, like = or >, let you compare two or more values.
 
 The 4D language supports the operators you may already know from other languages like C or JavaScript. However, the assignment operator is `:=` to prevent it from being mistakenly used when the equal to operator (`=`) is intended. [Basic operators](#basic-operators) such as arithmetic operators (+, -, *, /, %...) and comparison operators (=, >, >=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Like JavaScript, the 4D language supports the concept of [truthy and falsy values](#truthy-and-falsy), which in use in [short-cicrcuit operators](#short-circuit-operators).
 
@@ -41,11 +41,11 @@ $col:=New collection //$col is initialized with an empty collection
 
 Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
 
-- [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
+- [**Operadores lógicos**](dt_boolean.md#logical-operators) (en las expresiones **booleanas**)
 - [**Operadores de fechas**](dt_date.md#date-operators)
 - [**Operadores de horas**](dt_time.md#time-operators)
 - [**Operadores numéricos**](dt_number.md#number-operators)
-- [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
+- [**Operadores binarios**](dt_number.md#bitwise-operators) (en las expresiones **de enteros largos**)
 - [**Operadores de imágenes**](dt_picture.md#picture-operators)
 - [**Operadores en punteros**](dt_pointer.md#pointer-operators)
 - [**Operadores de cadenas**](dt_string.md#string-operators)
@@ -63,30 +63,30 @@ $a+=2 // $a=3
 
 The following compound assignment operators are supported:
 
-| Operador       | Sintaxis           | Asigna | Ejemplo                                                             |
-| -------------- | ------------------ | ------ | ------------------------------------------------------------------- |
-| Adición        | Text += Text       | Texto  | `$t+=" World"  //$t:=$t+" World"`                                   |
-|                | Number += Number   | Número | `$n+=5 //$n:=$n+5`                                                  |
-|                | Date += Number     | Fecha  | `$d+=5 //$d:=$d+5`                                                  |
-|                | Time += Time       | Hora   | `$t1+=$t2 //$t1:=$t1+$t2`                                           |
-|                | Time += Number     | Número | `$t1+=5 //$t1:=$t1+5`                                               |
-|                | Picture += Picture | Imagen | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`             |
-|                | Picture += Number  | Imagen | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)` |
-| Resta          | Number -= Number   | Número | `$n-=5 //$n:=$n-5`                                                  |
-|                | Date -= Number     | Fecha  | `$d-=5 //$d:=$d-5`                                                  |
-|                | Time -= Time       | Hora   | `$t1-=$t2 //$t1:=$t1-$t2`                                           |
-|                | Time -= Number     | Número | `$t1-=5 //$t1:=$t1-5`                                               |
-|                | Picture -= Number  | Imagen | `$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)`  |
-| División       | Number /= Number   | Número | `$n/=5 //$n:=$n/5`                                                  |
-|                | Time /= Time       | Hora   | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
-|                | Time /= Number     | Número | `$t1/=5 //$t1:=$t1/5`                                               |
-|                | Picture /= Picture | Imagen | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
-|                | Picture /= Number  | Imagen | `$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)`                |
-| Multiplicación | Text *= Number     | Texto  | `$t*="abc"  //$t:=$t*"abc"`                                         |
-|                | Number *= Number   | Número | `$n*=5 //$n:=$n*5`                                                  |
-|                | Time *= Time       | Hora   | `$t1*=$t2 //$t1:=$t1*$t2`                                           |
-|                | Time *= Number     | Número | `$t1*=5 //$t1:=$t1*5`                                               |
-|                | Picture *= Number  | Imagen | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                      |
+| Operador       | Sintaxis           | Asigna | Ejemplo                                                                        |
+| -------------- | ------------------ | ------ | ------------------------------------------------------------------------------ |
+| Adición        | Text += Text       | Texto  | `$t+=" World"  //$t:=$t+" World"`                                              |
+|                | Number += Number   | Número | `$n+=5 //$n:=$n+5`                                                             |
+|                | Date += Number     | Fecha  | `$d+=5 //$d:=$d+5`                                                             |
+|                | Time += Time       | Hora   | `$t1+=$t2 //$t1:=$t1+$t2`                                                      |
+|                | Time += Number     | Número | `$t1+=5 //$t1:=$t1+5`                                                          |
+|                | Picture += Picture | Imagen | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                        |
+|                | Picture += Number  | Imagen | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`            |
+| Resta          | Number -= Number   | Número | `$n-=5 //$n:=$n-5`                                                             |
+|                | Date -= Number     | Fecha  | `$d-=5 //$d:=$d-5`                                                             |
+|                | Time -= Time       | Hora   | `$t1-=$t2 //$t1:=$t1-$t2`                                                      |
+|                | Time -= Number     | Número | `$t1-=5 //$t1:=$t1-5`                                                          |
+|                | Picture -= Number  | Imagen | `$p1-=5 //$p1:=$p1-5 (mover horizontalemente $p1 de 5 píxeles a la izquierda)` |
+| División       | Number /= Number   | Número | `$n/=5 //$n:=$n/5`                                                             |
+|                | Time /= Time       | Hora   | `$t1/=$t2 //$t1:=$t1/$t2`                                                      |
+|                | Time /= Number     | Número | `$t1/=5 //$t1:=$t1/5`                                                          |
+|                | Picture /= Picture | Imagen | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                           |
+|                | Picture /= Number  | Imagen | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`               |
+| Multiplicación | Text *= Number     | Texto  | `$t*="abc"  //$t:=$t*"abc"`                                                    |
+|                | Number *= Number   | Número | `$n*=5 //$n:=$n*5`                                                             |
+|                | Time *= Time       | Hora   | `$t1*=$t2 //$t1:=$t1*$t2`                                                      |
+|                | Time *= Number     | Número | `$t1*=5 //$t1:=$t1*5`                                                          |
+|                | Picture *= Number  | Imagen | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
 
 These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
 
@@ -178,7 +178,7 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 ### Short-circuit AND operator (&&)
 
-The rule is as follows:
+La regla es la siguiente:
 
 Given `Expr1 && Expr2`:
 
@@ -256,7 +256,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Ejemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. Pero puede escribir lo siguiente:
 
 ```4d
 var $phone : Text
@@ -305,7 +305,7 @@ La sintaxis es la siguiente:
 
 ### Ejemplos
 
-#### A simple example
+#### Un ejemplo sencillo
 
 ```4d
 var $age : Integer
@@ -354,7 +354,7 @@ The following values are **falsy**:
 
 All other values are considered **truthy**, including:
 
-* 0 - numeric zero (Integer or otherwise)
+* 0 - cero numérico (Entero u otro)
 
 In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
