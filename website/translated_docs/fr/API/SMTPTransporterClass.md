@@ -260,7 +260,7 @@ La connexion SMTP est automatiquement fermée :
 La fonction `.send()` <!-- REF #SMTPTransporterClass.send().Summary -->envoie l'objet [*mail* object](EmailObjectClass.md#email-object) au serveur SMTP défini dans l'objet `transporter` et retourne un objet statut<!-- END REF -->.
 > L'objet `transporter` doit avoir déjà été créé à l'aide de la commande `SMTP New transporter`.
 
-La fonction établit la connexion SMTP si cette dernière n'est pas déjà active. Si la propriété `.keepAlive` de l'objet `transporter` est à **false**, la connexion SMTP est automatiquement fermée après l'exécution de la commande `.send()`. Sinon, elle reste active jusqu'à la suppression de l'objet `transporter`. Pour plus d'informations, voir la description de la commande [`SMTP New transporter`](#smtp-new-transporter).
+La fonction établit la connexion SMTP si cette dernière n'est pas déjà active. Si la propriété `.keepAlive` de l'objet `transporter` est à **false**, la connexion SMTP est automatiquement fermée après l'exécution de la commande `.send()`. Pour plus d'informations, voir la description de la commande [`SMTP New transporter`](#smtp-new-transporter).
 
 Dans *mail*, passez un objet [`Email`](EmailObjectClass.md#email-object) valide à envoyer. Les propriétés origine (la provenance de l'Email) et destination (un ou plusieurs destinataires) de l'Email doivent être incluses, les autres propriétés sont optionnelles.
 

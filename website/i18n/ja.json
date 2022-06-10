@@ -588,13 +588,13 @@
       "FormObjects/text": {
         "title": "テキスト"
       },
-      "FormObjects/viewProAreaOverview": {
+      "FormObjects/viewProArea_overview": {
         "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
         "title": "Webエリア"
       },
-      "FormObjects/writeProAreaOverview": {
+      "FormObjects/writeProArea_overview": {
         "title": "4D Write Pro エリア"
       },
       "GettingStarted/installation": {

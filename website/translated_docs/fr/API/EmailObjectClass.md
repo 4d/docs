@@ -147,7 +147,7 @@ La propriété `.bcc` contient la <!-- REF #EmailObjectClass.bcc.Summary -->copi
 
 #### Description
 
-La propriété `.bodyStructure` contient l'objet <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart*, i.e. la structure MIME complète du corps du message (optionnel)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyValues` stocke l'objet<!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* contenant un objet pour chaque \<partID\> de `bodyStructure` (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyStructure` contient les propriété suivantes :
 
@@ -174,7 +174,7 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 
 #### Description
 
-La propriété `.bodyValues` stocke l'objet <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* contenant un objet pour chaque \<partID\> de `bodyStructure` (facultatif)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.htmlBody` contient la<!-- REF #EmailObjectClass.htmlBody.Summary -->représentation HTML de l'email (l'encodage par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyValues` contient les propriété suivantes :
 
@@ -272,7 +272,7 @@ Chaque objet de la collection de headers peut contenir les propriétés suivante
 
 #### Description
 
-La propriété `.htmlBody` contient la <!-- REF #EmailObjectClass.htmlBody.Summary -->représentation HTML de l'email (l'encodage par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.textBody` contient la<!-- REF #EmailObjectClass.textBody.Summary -->représentation en texte brut de l'email (l'encodage par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 
 
@@ -478,7 +478,7 @@ La propriété `.subject` contient la <!-- REF #EmailObjectClass.subject.Summary
 
 #### Description
 
-La propriété `.textBody` contient la <!-- REF #EmailObjectClass.textBody.Summary -->représentation en texte brut de l'email (l'encodage par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyStructure` contient l'objet<!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart*, i.e. la structure MIME complète du corps du message (optionnel)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 
 

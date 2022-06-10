@@ -53,7 +53,7 @@ The returned "__STATUS" object has the following properties:
 |              |  |          | ***Disponible sólo en caso de error:***                                                                                                         |
 | status       |  | number   | Código de error, ver abajo                                                                                                                      |
 | statusText   |  | texto    | Descripción del error, ver abajo                                                                                                                |
-| lockKind     |  | number   | Lock code                                                                                                                                       |
+| lockKind     |  | number   | Código de bloqueo                                                                                                                               |
 | lockKindText |  | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                   |
 
 

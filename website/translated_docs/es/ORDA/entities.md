@@ -102,7 +102,7 @@ For example, to set a storage attribute:
 ```
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+Accessing a related attribute depends on the attribute kind. Por ejemplo, con la siguiente estructura:
 
 ![](assets/en/ORDA/entityAttributes.png)
 
@@ -171,7 +171,7 @@ You can assign or modify the value of a "1" related entity attribute from the "N
   //the related entity is updated
 ```
 
-## Creating an entity selection
+## Crear una entity selection
 
 You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
 
@@ -313,7 +313,7 @@ All storage attributes (text, number, boolean, date) are available as properties
 
 Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
 
-### Entity selections and Relation attributes
+### Selecciones de entidades y atributos de relación
 
 In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
 
@@ -337,7 +337,7 @@ ORDA provides you with two entity locking modes:
 - an automatic "optimistic" mode, suitable for most applications,
 - a "pessimistic" mode allowing you to lock entities prior to their access.
 
-### Automatic optimistic lock
+### Bloqueo automático optimista
 
 This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
 
@@ -349,7 +349,7 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 
 The following diagram illustrates optimistic locking:
 
-1. Two processes load the same entity.<br><br>![](assets/en/ORDA/optimisticLock1.png)
+1. Dos procesos cargan la misma entidad.<br><br>![](assets/en/ORDA/optimisticLock1.png)
 
 2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/ORDA/optimisticLock2.png)
 
@@ -406,7 +406,7 @@ These principles are shown in the following diagram:
 
 
 
-## Client/server optimization
+## Optimización cliente/servidor
 
 4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
 
@@ -431,7 +431,7 @@ The following methods automatically associate the optimization context of the so
 
 **Ejemplo**
 
-Given the following code:
+Dado el siguiente código:
 
 ```4d
  $sel:=$ds.Employee.query("firstname = ab@")
@@ -444,7 +444,7 @@ Thanks to the optimization, this request will only get data from used attributes
 
 
 
-### Using the context property
+### Uso de la propiedad context
 
 You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
 
@@ -474,7 +474,7 @@ A same optimization context property can be passed to unlimited number of entity
  $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
 ```
 
-### Entity selection-based list box
+### List box basado en una selección de entidades
 
 Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
 

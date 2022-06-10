@@ -32,7 +32,7 @@ Las copias de seguridad se realizan automáticamente a las horas definidas en es
 
 ## Comando BACKUP
 
-Puede utilizar los métodos base `On Backup Startup` and `On Backup Shutdown` para controlar el proceso de copia de seguridad (consulte el manual *Lenguaje de 4D*). Cuando el comando `BACKUP` del lenguaje 4D se ejecuta desde un método, la copia de seguridad se inicia utilizando los parámetros actuales definidos en las propiedades.
+Puede utilizar los métodos base `On Backup Startup` and `On Backup Shutdown` para controlar el proceso de copia de seguridad (consulte el manual *Lenguaje de 4D*). Puede utilizar el método base `On Backup Startup` y `On Backup Shutdown`, para controlar el proceso de backup (ver el manual *Lenguaje de 4D*).
 
 
 ## Cómo funciona la copia de seguridad

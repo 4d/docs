@@ -83,7 +83,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Es gelten folgende Regeln:
 
 - Die Zeile zum Deklarieren muss die erste Zeile des Methoden- oder Function-Code sein, sonst erscheint ein Fehler (davor können nur Kommentare oder Zeilenumbrüche stehen).
-- Parameternamen müssen mit einem `$` Zeichen beginnen und mit den [Schreibregeln für Eigenschaftsnamen](dt_object.md#identifier-für-objekteigenschaft) konform sein.
+- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties).
 - Mehrere Parameter (und Typen) werden durch Strichpunkte (;) voneinander getrennt.
 - Eine Syntax über mehrere Zeilen wird unterstützt (mit den Zeichen "\\").
 
@@ -248,7 +248,7 @@ End for
 This method can be called:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //extra parameters are passed
 ```
 
 > Die Indirektion von Parametern funktioniert am besten, wenn Sie die folgende Regel beachten: Werden nur einige der Parameter durch Indirektion angesprochen, sollten sie nach den anderen übergeben werden.
@@ -266,7 +266,7 @@ To declare generic parameters, you use a compiler directive to which you pass ${
 
 > Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 und $3 können einen beliebigen Datentyp haben. Nutzen Sie jedoch $2 per Indirektion, wird als Datentyp der generische Typ verwendet. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
+This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 und $3 können einen beliebigen Datentyp haben. Nutzen Sie jedoch $2 per Indirektion, wird als Datentyp der generische Typ verwendet. $1, $2 und $3 können einen beliebigen Datentyp haben.
 
 > Die Nummer in der Deklaration muss eine Konstante und keine Variable sein.
 

@@ -51,9 +51,9 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 ***.attributeName*** : any<!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
+Any dataclass attribute is available as a property of an entity, which<!-- REF EntityClass.attributeName. Summary -->stores the attribute value for the entity<!-- END REF -->.
 > Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
 The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
@@ -89,18 +89,18 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 
 
 <!-- REF #EntityClass.clone().Syntax -->
-**.clone()** : 4D.Entity<!-- END REF -->
+If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
-| Parameter | Type      |    | Description                       |
-| --------- | --------- |:--:| --------------------------------- |
-| Result    | 4D.Entity | <- | New entity referencing the record |
+| Parameter | Type       |    | Descrição                         |
+| --------- | ---------- |:--:| --------------------------------- |
+| Resultado | 4D. Entity | <- | New entity referencing the record |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
+The `.clone()` function<!-- REF #EntityClass.clone(). Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
 > Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
 This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
@@ -133,21 +133,21 @@ This function can only be used with entities already saved in the database. It c
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
-**.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
+**.diff**( *entityToCompare* : 4D. Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parameter           | Type      |    | Description                                    |
-| ------------------- | --------- |:--:| ---------------------------------------------- |
-| entityToCompare     | 4D.Entity | -> | Entity to be compared with the original entity |
-| attributesToCompare | Coleção   | -> | Name of attributes to be compared              |
-| Result              | Coleção   | <- | Differences between the entities               |
+| Parameter           | Type       |    | Descrição                                      |
+| ------------------- | ---------- |:--:| ---------------------------------------------- |
+| entityToCompare     | 4D. Entity | -> | Entity to be compared with the original entity |
+| attributesToCompare | Coleção    | -> | Name of attributes to be compared              |
+| Resultado           | Coleção    | <- | Differences between the entities               |
 <!-- END REF -->
 
 
-#### Description
+#### Descrição
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+The `.diff()` function<!-- REF #EntityClass.diff(). Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
 In *entityToCompare*, pass the entity to be compared to the original entity.
 
@@ -155,7 +155,7 @@ In *attributesToCompare*, you can designate specific attributes to compare. If p
 
 The differences are returned as a collection of objects whose properties are:
 
-| Property name | Type                            | Description                                 |
+| Property name | Type                            | Descrição                                   |
 | ------------- | ------------------------------- | ------------------------------------------- |
 | attributeName | String                          | Name of the attribute                       |
 | value         | any - Depends on attribute type | Value of the attribute in the entity        |
@@ -341,15 +341,15 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.drop().Params -->
-| Parameter | Type    |    | Description                                                                     |
+| Parameter | Type    |    | Descrição                                                                       |
 | --------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk force drop if stamp changed`: Forces the drop even if the stamp has changed |
-| Result    | Objeto  | <- | Result of drop operation                                                        |
+| Resultado | Objeto  | <- | Result of drop operation                                                        |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note that the entity remains in memory.
+The `.drop()` function<!-- REF #EntityClass.drop(). Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note that the entity remains in memory.
 
 In a multi-user or multi-process application, the `.drop()` function is executed under an ["optimistic lock"](ORDA/entities.md#entity-locking) mechanism, wherein an internal locking stamp is automatically incremented each time the record is saved.
 
@@ -357,11 +357,11 @@ By default, if the *mode* parameter is omitted, the function will return an erro
 
 Otherwise, you can pass the `dk force drop if stamp changed` option in the *mode* parameter: in this case, the entity is dropped even if the stamp has changed (and the primary key is still the same).
 
-**Result**
+**Resultado**
 
 The object returned by `.drop( )` contains the following properties:
 
-| Propriedade   |                     | Type                  | Description                                                                                                           |
+| Propriedade   |                     | Type                  | Descrição                                                                                                             |
 | ------------- | ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | success       |                     | booleano              | true if the drop action is successful, false otherwise.                                                               |
 |               |                     |                       | ***Available only in case of error:***                                                                                |
@@ -378,13 +378,13 @@ The object returned by `.drop( )` contains the following properties:
 |               | client_version      | texto                 |                                                                                                                       |
 |               |                     |                       | ***Available only in case of serious error (serious error can be trying to duplicate a primary key, disk full...):*** |
 | errors        |                     | collection of objects |                                                                                                                       |
-|               | message             | texto                 | Error message                                                                                                         |
+|               | message             | texto                 | Mensagem de erro                                                                                                      |
 |               | component signature | texto                 | internal component signature (e.g. "dmbg" stands for the database component)                                          |
 |               | errCode             | number                | Error code                                                                                                            |
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                                |
+| Constante                                 | Value | Comentário                                                                                                                                                                                                                             |
 | ----------------------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li><p>**Associated statusText**: "Entity does not exist anymore" |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<br>**Associated statusText**: "Already locked"                                                                                                                                       |
@@ -446,17 +446,17 @@ Example with `dk force drop if stamp changed` option:
 </details>
 
 <!-- REF #EntityClass.first().Syntax -->
-**.first()**: 4D.Entity<!-- END REF -->
+**.first()**: 4D. Entity<!-- END REF -->
 
 <!-- REF #EntityClass.first().Params -->
-| Parameter | Type      |    | Description                                                          |
-| --------- | --------- |:--:| -------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found) |
+| Parameter | Type       |    | Descrição                                                            |
+| --------- | ---------- |:--:| -------------------------------------------------------------------- |
+| Resultado | 4D. Entity | <- | Reference to first entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
+The `.first()` function<!-- REF #EntityClass.first(). Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
@@ -488,14 +488,14 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Parameter | Type   |    | Description                          |
+| Parameter | Type   |    | Descrição                            |
 | --------- | ------ |:--:| ------------------------------------ |
 | filler    | Objeto | -> | Object from which to fill the entity |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+The `.fromObject()` function<!-- REF #EntityClass.fromObject(). Summary -->fills an entity with the *filler* content<!-- END REF -->.
 > This function modifies the original entity.
 
 The mapping between the object and the entity is done on the attribute names:
@@ -575,17 +575,17 @@ You could also use a related entity given as an object:
 </details>
 
 <!-- REF #EntityClass.getDataClass().Syntax -->
-**.getDataClass()** : 4D.DataClass<!-- END REF -->
+**.getDataClass()** : 4D. DataClass<!-- END REF -->
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parameter | Type         |    | Description                                  |
-| --------- | ------------ |:--:| -------------------------------------------- |
-| Result    | 4D.DataClass | <- | DataClass object to which the entity belongs |
+| Parameter | Type          |    | Descrição                                    |
+| --------- | ------------- |:--:| -------------------------------------------- |
+| Resultado | 4D. DataClass | <- | DataClass object to which the entity belongs |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
+The `.getDataClass()` function<!-- REF #EntityClass.getDataClass(). Summary -->returns the dataclass of the entity<!-- END REF -->. This function is useful when writing generic code.
 
 
 #### Exemplo
@@ -625,17 +625,17 @@ The following generic code duplicates any entity:
 **.getKey**( { *mode* : Integer } ) : Text<br>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
-| Parameter | Type    |    | Description                                                                             |
+| Parameter | Type    |    | Descrição                                                                               |
 | --------- | ------- |:--:| --------------------------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk key as string`: primary key is returned as a string, no matter the primary key type |
-| Result    | Texto   | <- | Value of the text primary key of the entity                                             |
-| Result    | Integer | <- | Value of the numeric primary key of the entity                                          |
+| Resultado | Texto   | <- | Value of the text primary key of the entity                                             |
+| Resultado | Integer | <- | Value of the numeric primary key of the entity                                          |
 
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+The `.getKey()` function<!-- REF #EntityClass.getKey(). Summary -->returns the primary key value of the entity<!-- END REF -->.
 
 Primary keys can be numbers (Integer) or strings. You can "force" the returned primary key value to be a string, no matter the actual primary key type, by passing the `dk key as string` option in the *mode* parameter.
 
@@ -666,17 +666,17 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 </details>
 
 <!-- REF #EntityClass.getSelection().Syntax -->
-**.getSelection()**: 4D.EntitySelection<!-- END REF -->
+**.getSelection()**: 4D. EntitySelection<!-- END REF -->
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parameter | Type               |    | Description                                                      |
-| --------- | ------------------ |:--:| ---------------------------------------------------------------- |
-| Result    | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
+| Parameter | Type                |    | Descrição                                                        |
+| --------- | ------------------- |:--:| ---------------------------------------------------------------- |
+| Resultado | 4D. EntitySelection | <- | Entity selection to which the entity belongs (Null if not found) |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
+The `.getSelection()` function<!-- REF #EntityClass.getSelection(). Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to an entity selection, the function returns Null.
 
@@ -684,12 +684,12 @@ If the entity does not belong to an entity selection, the function returns Null.
 
 
 ```4d
- var $emp : cs.EmployeeEntity
- var $employees; $employees2 : cs.EmployeeSelection
- $emp:=ds.Employee.get(672) // This entity does not belong to any entity selection
+ var $emp : cs. EmployeeEntity
+ var $employees; $employees2 : cs. EmployeeSelection
+ $emp:=ds. Employee.get(672) // This entity does not belong to any entity selection
  $employees:=$emp.getSelection() // $employees is Null
 
- $employees2:=ds.Employee.query("lastName=:1";"Smith") //This entity selection contains 6 entities
+ $employees2:=ds. Employee.query("lastName=:1";"Smith") //This entity selection contains 6 entities
  $emp:=$employees2[0]  // This entity belongs to an entity selection
 
  ALERT("The entity selection contains "+String($emp.getSelection().length)+" entities")
@@ -713,14 +713,14 @@ If the entity does not belong to an entity selection, the function returns Null.
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Parameter | Type    |    | Description                                             |
+| Parameter | Type    |    | Descrição                                               |
 | --------- | ------- |:--:| ------------------------------------------------------- |
-| Result    | Integer | <- | Stamp of the entity (0 if entity has just been created) |
+| Resultado | Integer | <- | Stamp of the entity (0 if entity has just been created) |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+The `.getStamp()` function<!-- REF #EntityClass.getStamp(). Summary -->returns the current value of the stamp of the entity<!-- END REF -->.
 
 The internal stamp is automatically incremented by 4D each time the entity is saved. It manages concurrent user access and modifications to the same entities (see [**Entity locking**](ORDA/entities.md#entity-locking)).
 > For a new entity (never saved), the function returns 0. To know if an entity has just been created, it is recommended to use [.isNew()](#isnew).
@@ -730,10 +730,10 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 
 
 ```4d
- var $entity : cs.EmployeeEntity
+ var $entity : cs. EmployeeEntity
  var $stamp : Integer
 
- $entity:=ds.Employee.new()
+ $entity:=ds. Employee.new()
  $entity.lastname:="Smith"
  $entity.save()
  $stamp:=$entity.getStamp() //$stamp=1
@@ -759,18 +759,18 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 </details>
 
 <!-- REF #EntityClass.indexOf().Syntax -->
-**.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
+**.indexOf**( { *entitySelection* : 4D. EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parameter       | Type               |    | Description                                                        |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
-| entitySelection | 4D.EntitySelection | -> | Position of the entity is given according to this entity selection |
-| Result          | Integer            | <- | Position of the entity in an entity selection                      |
+| Parameter       | Type                |    | Descrição                                                          |
+| --------------- | ------------------- |:--:| ------------------------------------------------------------------ |
+| entitySelection | 4D. EntitySelection | -> | Position of the entity is given according to this entity selection |
+| Resultado       | Integer             | <- | Position of the entity in an entity selection                      |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+The `.indexOf()` function<!-- REF #EntityClass.indexOf(). Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
 By default if the *entitySelection* parameter is omitted, the function returns the entity's position within its own entity selection. Otherwise, it returns the position of the entity within the specified *entitySelection*.
 
@@ -783,13 +783,13 @@ The resulting value is included between 0 and the length of the entity selection
 
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs. EmployeeSelection
+ var $employee : cs. EmployeeEntity
+ $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[1] //This entity belongs to an entity selection
  ALERT("The index of the entity in its own entity selection is "+String($employee.indexOf())) //1
 
- $employee:=ds.Employee.get(725) //This entity does not belong to an entity selection
+ $employee:=ds. Employee.get(725) //This entity does not belong to an entity selection
  ALERT("The index of the entity is "+String($employee.indexOf())) // -1
 ```
 
@@ -812,23 +812,23 @@ The resulting value is included between 0 and the length of the entity selection
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parameter | Type     |    | Description                                                               |
+| Parameter | Type     |    | Descrição                                                                 |
 | --------- | -------- |:--:| ------------------------------------------------------------------------- |
-| Result    | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
+| Resultado | Booleano | <- | True if entity has just been created and not yet saved. Otherwise, False. |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
+The `.isNew()` function<!-- REF #EntityClass.isNew(). Summary -->returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. Otherwise, it returns False.
 
 
 #### Exemplo
 
 
 ```4d
- var $emp : cs.EmployeeEntity
+ var $emp : cs. EmployeeEntity
 
- $emp:=ds.Employee.new()
+ $emp:=ds. Employee.new()
 
  If($emp.isNew())
     ALERT("This is a new entity")
@@ -850,17 +850,17 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 </details>
 
 <!-- REF #EntityClass.last().Syntax -->
-**.last()** : 4D.Entity<!-- END REF -->
+**.last()** : 4D. Entity<!-- END REF -->
 
 <!-- REF #EntityClass.last().Params -->
-| Parameter | Type      |    | Description                                                         |
-| --------- | --------- |:--:| ------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to last entity of an entity selection (Null if not found) |
+| Parameter | Type       |    | Descrição                                                           |
+| --------- | ---------- |:--:| ------------------------------------------------------------------- |
+| Resultado | 4D. Entity | <- | Reference to last entity of an entity selection (Null if not found) |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
+The `.last()` function<!-- REF #EntityClass.last(). Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection( )](#getselection) returns Null), the function returns a Null value.
 
@@ -869,9 +869,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee; $lastEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs. EmployeeSelection
+ var $employee; $lastEmployee : cs. EmployeeEntity
+ $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $lastEmployee:=$employee.last() //$lastEmployee is the last entity of the $employees entity selection
 ```
@@ -894,15 +894,15 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.lock().Params -->
-| Parameter | Type    |    | Description                                                          |
+| Parameter | Type    |    | Descrição                                                            |
 | --------- | ------- |:--:| -------------------------------------------------------------------- |
 | mode      | Integer | -> | `dk reload if stamp changed`: Reload before locking if stamp changed |
-| Result    | Objeto  | <- | Result of lock operation                                             |
+| Resultado | Objeto  | <- | Result of lock operation                                             |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. The [lock is set](ORDA/entities.md#entity-locking) for a record and all the references of the entity in the current process.
+The `.unlock()` function<!-- REF #EntityClass.unlock(). Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF -->in the datastore and table related to its dataclass.
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Only functions executed in the "locking" session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.
 
@@ -915,11 +915,11 @@ By default, if the *mode* parameter is omitted, the function will return an erro
 
 Otherwise, you can pass the `dk reload if stamp changed` option in the *mode* parameter: in this case, no error is returned and the entity is reloaded when the stamp has changed (if the entity still exists and the primary key is still the same).
 
-**Result**
+**Resultado**
 
 The object returned by `.lock( )` contains the following properties:
 
-| Propriedade      |                     | Type                  | Description                                                                                                         |
+| Propriedade      |                     | Type                  | Descrição                                                                                                           |
 | ---------------- | ------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | success          |                     | booleano              | true if the lock action is successful (or if the entity is already locked in the current process), false otherwise. |
 |                  |                     |                       | ***Available only if `dk reload if stamp changed` option is used:***                                                |
@@ -939,14 +939,14 @@ The object returned by `.lock( )` contains the following properties:
 |                  | client_version      | texto                 |                                                                                                                     |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                           |
 | errors           |                     | collection of objects |                                                                                                                     |
-|                  | message             | texto                 | Error message                                                                                                       |
+|                  | message             | texto                 | Mensagem de erro                                                                                                    |
 |                  | component signature | texto                 | internal component signature (e.g. "dmbg" stands for the database component)                                        |
 |                  | errCode             | number                | Error code                                                                                                          |
 
 
 (\*) The following values can be returned in the *status* and *statusText* properties of the *Result* object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                                                 |
+| Constante                                 | Value | Comentário                                                                                                                                                                                                                                              |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when dk force drop if stamp changed option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity does not exist anymore"                                           |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<p><p>**Associated statusText**: "Already locked"                                                                                                            |
@@ -959,9 +959,9 @@ The object returned by `.lock( )` contains the following properties:
 Example with error:
 
 ```4d
- var $employee : cs.EmployeeEntity
+ var $employee : cs. EmployeeEntity
  var $status : Object
- $employee:=ds.Employee.get(716)
+ $employee:=ds. Employee.get(716)
  $status:=$employee.lock()
  Case of
     :($status.success)
@@ -977,9 +977,9 @@ Example with error:
 Example with `dk reload if stamp changed` option:
 
 ```4d
- var $employee : cs.EmployeeEntity
+ var $employee : cs. EmployeeEntity
  var $status : Object
- $employee:=ds.Employee.get(717)
+ $employee:=ds. Employee.get(717)
  $status:=$employee.lock(dk reload if stamp changed)
  Case of
     :($status.success)
@@ -1004,17 +1004,17 @@ Example with `dk reload if stamp changed` option:
 </details>
 
 <!-- REF #EntityClass.next().Syntax -->
-**.next()** : 4D.Entity<!-- END REF -->
+**.next()** : 4D. Entity<!-- END REF -->
 
 <!-- REF #EntityClass.next().Params -->
-| Parameter | Type      |    | Description                                                          |
-| --------- | --------- |:--:| -------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to next entity in the entity selection (Null if not found) |
+| Parameter | Type       |    | Descrição                                                            |
+| --------- | ---------- |:--:| -------------------------------------------------------------------- |
+| Resultado | 4D. Entity | <- | Reference to next entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
+The `.next()` function<!-- REF #EntityClass.next(). Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
@@ -1024,9 +1024,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 #### Exemplo
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee; $nextEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs. EmployeeSelection
+ var $employee; $nextEmployee : cs. EmployeeEntity
+ $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[0]
  $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
 
@@ -1046,17 +1046,17 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 </details>
 
 <!-- REF #EntityClass.previous().Syntax -->
-**.previous()**  : 4D.Entity<!-- END REF -->
+**.previous()**  : 4D. Entity<!-- END REF -->
 
 <!-- REF #EntityClass.previous().Params -->
-| Parameter | Type      |    | Description                                                              |
-| --------- | --------- |:--:| ------------------------------------------------------------------------ |
-| Result    | 4D.Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
+| Parameter | Type       |    | Descrição                                                                |
+| --------- | ---------- |:--:| ------------------------------------------------------------------------ |
+| Resultado | 4D. Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+The `.previous()` function<!-- REF #EntityClass.previous(). Summary -->returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
 
@@ -1066,9 +1066,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 #### Exemplo
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee; $previousEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs. EmployeeSelection
+ var $employee; $previousEmployee : cs. EmployeeEntity
+ $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[1]
  $previousEmployee:=$employee.previous() //$previousEmployee is the first entity of the $employees entity selection
 ```
@@ -1091,20 +1091,20 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.reload().Params -->
-| Parameter | Type   |    | Description   |
+| Parameter | Type   |    | Descrição     |
 | --------- | ------ |:--:| ------------- |
-| Result    | Objeto | <- | Status object |
+| Resultado | Objeto | <- | Status object |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
+The `.reload()` function<!-- REF #EntityClass.reload(). Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
 
-**Result**
+**Resultado**
 
 The object returned by `.reload( )` contains the following properties:
 
-| Propriedade      | Type     | Description                                                                                                                                           |
+| Propriedade      | Type     | Descrição                                                                                                                                             |
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
 | status(\*)     | number   | Error code, see below                                                                                                                                 |
@@ -1112,20 +1112,20 @@ The object returned by `.reload( )` contains the following properties:
 
 (\*) The following values can be returned in the *status* and *statusText* properties of *Result* object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                   |
+| Constante                                 | Value | Comentário                                                                                                                                                                                                                |
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>***Associated statusText***: "Entity does not exist anymore" |
+| `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>***Associated statusText***: "Entity does not exist anymore" |
 | `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br>***Associated statusText***: "Other error"                                                                           |
 
 
 #### Exemplo
 
 ```4d
- var $employee : cs.EmployeeEntity
- var $employees : cs.EmployeeSelection
+ var $employee : cs. EmployeeEntity
+ var $employees : cs. EmployeeSelection
  var $result : Object
 
- $employees:=ds.Employee.query("lastName=:1";"Hollis")
+ $employees:=ds. Employee.query("lastName=:1";"Hollis")
  $employee:=$employees[0]
  $employee.firstName:="Mary"
  $result:=$employee.reload()
@@ -1154,15 +1154,15 @@ The object returned by `.reload( )` contains the following properties:
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
-| Parameter | Type    |    | Description                                       |
+| Parameter | Type    |    | Descrição                                         |
 | --------- | ------- |:--:| ------------------------------------------------- |
 | mode      | Integer | -> | `dk auto merge`: Enables the automatic merge mode |
-| Result    | Objeto  | <- | Result of save operation                          |
+| Resultado | Objeto  | <- | Result of save operation                          |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
+The `.save()` function<!-- REF #EntityClass.save(). Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Otherwise, the function does nothing (the trigger is not called).
 
@@ -1173,11 +1173,11 @@ By default, if the *mode* parameter is omitted, the method will return an error 
 Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when the automatic merge mode is enabled, a modification done concurrently by another process/user on the same entity but on a different attribute will not result in an error. The resulting data saved in the entity will be the combination (the "merge") of all non-concurrent modifications (if modifications were applied to the same attribute, the save fails and an error is returned, even with the auto merge mode).
 > The automatic merge mode is not available for attributes of Picture, Object, and Text type when stored outside of the record. Concurrent changes in these attributes will result in a `dk status stamp has changed` error.
 
-**Result**
+**Resultado**
 
 The object returned by `.save()` contains the following properties:
 
-| Propriedade  |                    | Type                  | Description                                                                                                             |
+| Propriedade  |                    | Type                  | Descrição                                                                                                               |
 | ------------ | ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | success      |                    | booleano              | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                       | ***Available only if `dk auto merge` option is used***:                                                                 |
@@ -1196,7 +1196,7 @@ The object returned by `.save()` contains the following properties:
 |              | client_version     | texto                 |                                                                                                                         |
 |              |                    |                       | ***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...): |
 | errors       |                    | collection of objects |                                                                                                                         |
-|              | message            | texto                 | Error message                                                                                                           |
+|              | message            | texto                 | Mensagem de erro                                                                                                        |
 |              | componentSignature | texto                 | Internal component signature (e.g. "dmbg" stands for the database component)                                            |
 |              | errCode            | number                | Error code                                                                                                              |
 
@@ -1204,10 +1204,10 @@ The object returned by `.save()` contains the following properties:
 
 The following values can be returned in the `status` and `statusText` properties of Result object in case of error:
 
-| Constant                                  | Value | Comment                                                                                                                                                                                                                                                           |
+| Constante                                 | Value | Comentário                                                                                                                                                                                                                                                        |
 | ----------------------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status automerge failed`              | 6     | (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.<p><p>**Associated statusText**: "Auto merge failed"                                                        |
-| `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity doesnot exist anymore"                                            |
+| `dk status entity does not exist anymore` | 5     | The entity no longer exists in the data. This error can occur in the following cases:<br><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br>**Associated statusText**: "Entity doesnot exist anymore"                                            |
 | `dk status locked`                        | 3     | The entity is locked by a pessimistic lock.<p><p>**Associated statusText**: "Already locked"                                                                                                                      |
 | `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<p><p>**Associated statusText**: "Other error"                                                                         |
 | `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br>**Associated statusText**: "Stamp has changed" |
@@ -1219,8 +1219,8 @@ Creating a new entity:
 
 ```4d
  var $status : Object
- var $employee : cs.EmployeeEntity
- $employee:=ds.Employee.new()
+ var $employee : cs. EmployeeEntity
+ $employee:=ds. Employee.new()
  $employee.firstName:="Mary"
  $employee.lastName:="Smith"
  $status:=$employee.save()
@@ -1235,9 +1235,9 @@ Updating an entity without `dk auto merge` option:
 
 ```4d
  var $status : Object
- var $employee : cs.EmployeeEntity
- var $employees : cs.EmployeeSelection
- $employees:=ds.Employee.query("lastName=:1";"Smith")
+ var $employee : cs. EmployeeEntity
+ var $employees : cs. EmployeeSelection
+ $employees:=ds. Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $employee.lastName:="Mac Arthur"
  $status:=$employee.save()
@@ -1256,10 +1256,10 @@ Updating an entity with `dk auto merge` option:
 ```4d
  var $status : Object
 
- var $employee : cs.EmployeeEntity
- var $employees : cs.EmployeeSelection
+ var $employee : cs. EmployeeEntity
+ var $employees : cs. EmployeeSelection
 
- $employees:=ds.Employee.query("lastName=:1";"Smith")
+ $employees:=ds. Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $employee.lastName:="Mac Arthur"
  $status:=$employee.save(dk auto merge)
@@ -1289,17 +1289,17 @@ Updating an entity with `dk auto merge` option:
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parameter    | Type    |    | Description                                                                                             |
+| Parameter    | Type    |    | Descrição                                                                                               |
 | ------------ | ------- |:--:| ------------------------------------------------------------------------------------------------------- |
 | filterString | Texto   | -> | Attribute(s) to extract (comma-separated string)                                                        |
 | filterCol    | Coleção | -> | Collection of attribute(s) to extract                                                                   |
 | options      | Integer | -> | `dk with primary key`: adds the \_KEY property;<br>`dk with stamp`: adds the \_STAMP property |
-| Result       | Objeto  | <- | Object built from the entity                                                                            |
+| Resultado    | Objeto  | <- | Object built from the entity                                                                            |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Property names in the object match attribute names of the entity.
+The `.touchedAttributes()` function<!-- REF #EntityClass.touchedAttributes(). Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
 
@@ -1340,7 +1340,7 @@ Without filter parameter:
 employeeObject:=employeeSelected.toObject()
 ```
 
-Returns:
+Retorna:
 
 ```4d
 {
@@ -1373,7 +1373,7 @@ Extracting the primary key and the stamp:
 employeeObject:=employeeSelected.toObject("";dk with primary key+dk with stamp)
 ```
 
-Returns:
+Retorna:
 
 ```4d
 {
@@ -1475,7 +1475,7 @@ Extracting some properties of `relatedEntities`:
  employeeObject:=employeeSelected.toObject("firstName, directReports.lastName")
 ```
 
-Returns:
+Retorna:
 
 ```4d
 {
@@ -1503,7 +1503,7 @@ Extracting a `relatedEntity` with simple form:
  employeeObject:=employeeSelected.toObject($coll)
 ```
 
-Returns:
+Retorna:
 
 ```4d
 {
@@ -1522,7 +1522,7 @@ Extracting all the properties of a `relatedEntity`:
  employeeObject:=employeeSelected.toObject("employer.*")
 ```
 
-Returns:
+Retorna:
 
 ```4d
 {
@@ -1536,7 +1536,7 @@ Returns:
 }
 ```
 
-#### Example 7
+#### Exemplo 7
 
 Extracting some properties of a `relatedEntity`:
 
@@ -1547,7 +1547,7 @@ Extracting some properties of a `relatedEntity`:
  employeeObject:=employeeSelected.toObject($col)
 ```
 
-Returns:
+Retorna:
 
 ```4d
 {
@@ -1576,14 +1576,14 @@ Returns:
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| Parameter | Type     |    | Description                                                                           |
+| Parameter | Type     |    | Descrição                                                                             |
 | --------- | -------- |:--:| ------------------------------------------------------------------------------------- |
-| Result    | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
+| Resultado | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+The `.touched()` function<!-- REF #EntityClass.touched(). Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
 If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
 
@@ -1594,8 +1594,8 @@ This function returns False for a new entity that has just been created (with [`
 In this example, we check to see if it is necessary to save the entity:
 
 ```4d
- var $emp : cs.EmployeeEntity
- $emp:=ds.Employee.get(672)
+ var $emp : cs. EmployeeEntity
+ $emp:=ds. Employee.get(672)
  $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
 
  If($emp.touched()) //if at least one of the attributes has been changed
@@ -1620,12 +1620,12 @@ In this example, we check to see if it is necessary to save the entity:
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parameter | Type    |    | Description                                      |
+| Parameter | Type    |    | Descrição                                        |
 | --------- | ------- |:--:| ------------------------------------------------ |
-| Result    | Coleção | <- | Names of touched attributes, or empty collection |
+| Resultado | Coleção | <- | Names of touched attributes, or empty collection |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
 The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
@@ -1640,10 +1640,10 @@ If no entity attribute has been touched, the method returns an empty collection.
 
 ```4d
  var $touchedAttributes : Collection
- var $emp : cs.EmployeeEntity
+ var $emp : cs. EmployeeEntity
 
  $touchedAttributes:=New collection
- $emp:=ds.Employee.get(725)
+ $emp:=ds. Employee.get(725)
  $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
  $emp.lastName:="Martin"
  $touchedAttributes:=$emp.touchedAttributes()
@@ -1656,16 +1656,16 @@ If no entity attribute has been touched, the method returns an empty collection.
 
 ```4d
  var $touchedAttributes : Collection
- var $emp : cs.EmployeeEntity
- var $company : cs.CompanyEntity
+ var $emp : cs. EmployeeEntity
+ var $company : cs. CompanyEntity
 
  $touchedAttributes:=New collection
 
- $emp:=ds.Employee.get(672)
+ $emp:=ds. Employee.get(672)
  $emp.firstName:=$emp.firstName
  $emp.lastName:="Martin"
 
- $company:=ds.Company.get(121)
+ $company:=ds. Company.get(121)
  $emp.employer:=$company
 
  $touchedAttributes:=$emp.touchedAttributes()
@@ -1696,43 +1696,43 @@ Nesse modo:
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parameter | Type   |    | Description   |
+| Parameter | Type   |    | Descrição     |
 | --------- | ------ |:--:| ------------- |
-| Result    | Objeto | <- | Status object |
+| Resultado | Objeto | <- | Status object |
 <!-- END REF -->
 
-#### Description
+#### Descrição
 
-The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
+The `.lock()` function<!-- REF #EntityClass.lock(). Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF --> .
 
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
 A record is automatically unlocked when it is no longer referenced by any entities in the locking process (for example: if the lock is put only on one local reference of an entity, the entity and thus the record is unlocked when the process ends).
-> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. For example:
+> When a record is locked, it must be unlocked from the locking process and on the entity reference which put the lock. Por exemplo:
 
 ```4d
- $e1:=ds.Emp.all()[0]
- $e2:=ds.Emp.all()[0]
+ $e1:=ds. Emp.all()[0]
+ $e2:=ds. Emp.all()[0]
  $res:=$e1.lock() //$res.success=true
  $res:=$e2.unlock() //$res.success=false
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Result**
+**Resultado**
 
 The object returned by `.unlock()` contains the following property:
 
-| Propriedade | Type     | Description                                                                                                                                                                                        |
+| Propriedade | Type     | Descrição                                                                                                                                                                                          |
 | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success     | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
 #### Exemplo
 
 ```4d
- var $employee : cs.EmployeeEntity
+ var $employee : cs. EmployeeEntity
  var $status : Object
 
- $employee:=ds.Employee.get(725)
+ $employee:=ds. Employee.get(725)
  $status:=$employee.lock()
  ... //processing
  $status:=$employee.unlock()

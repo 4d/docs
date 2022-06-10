@@ -28,6 +28,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | [<!-- INCLUDE #FolderClass.delete().Syntax -->](#delete)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FolderClass.delete().Summary -->|
 | [<!-- INCLUDE #directory.exists.Syntax -->](#exists)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.exists.Summary -->|
 | [<!-- INCLUDE #directory.extension.Syntax -->](#extension)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.extension.Summary -->|
+| [<!-- INCLUDE #directory.file().Syntax -->](#file)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.file().Summary -->|
+| [<!-- INCLUDE #directory.files().Syntax -->](#files)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.files().Summary -->|
+| [<!-- INCLUDE #directory.folder().Syntax -->](#folder)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folder().Summary -->|
+| [<!-- INCLUDE #directory.folders().Syntax -->](#folders)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.folders().Summary -->|
 | [<!-- INCLUDE #directory.fullName.Syntax -->](#fullname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.fullName.Summary -->|
 | [<!-- INCLUDE #directory.getIcon().Syntax -->](#geticon)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.getIcon().Summary -->|
 | [<!-- INCLUDE #directory.hidden.Syntax -->](#hidden)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #directory.hidden.Summary -->|
@@ -72,13 +76,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### Descripción
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. El comando acepta dos sintaxis:
+El comando `Folder` <!-- REF #_command_.Folder.Summary -->crea y devuelve un nuevo objeto de tipo `4D.Folder`<!-- END REF -->. El comando acepta dos sintaxis:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
+En el parámetro *path*, pase una ruta de carpeta. Puede utilizar una cadena personalizada o un filesystem (por ejemplo, "/DATA").
 
-> Only absolute pathnames are supported with the `Folder` command.
+> Sólo se admiten nombres de ruta absolutos con el comando `Folder`.
 
 Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro *pathType*. Las siguientes constantes están disponibles:
 
@@ -89,7 +93,7 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con 
 
 **Folder ( folderConstant { ; \* } )**
 
-In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utilizando una de las siguientes constantes:
 
 | Constante                  | Valor | Comentario                                                                                          |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
@@ -99,10 +103,10 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 | fk desktop folder          | 115   |                                                                                                     |
 | fk documents folder        | 117   | Carpeta Documentos del usuario                                                                      |
 | fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
-| fk logs folder             | 7     | Associated filesystem: "/LOGS"                                                                      |
+| fk logs folder             | 7     | Filesystem asociado: "/LOGS"                                                                        |
 | fk mobileApps folder       | 10    |                                                                                                     |
 | fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
-| fk resources folder        | 6     | Associated filesystem: "/RESOURCES"                                                                 |
+| fk resources folder        | 6     | Filesystem asociado: "/RESOURCES"                                                                   |
 | fk system folder           | 100   |                                                                                                     |
 | fk user preferences folder | 0     | 4D folder that stores user preference files within the \<userName> directory.                      |
 | fk web root folder         | 8     | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
@@ -185,6 +189,9 @@ If($newFolder.create())
 Else
     ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
+Else
+    ALERT("Impossible to create a "+$newFolder.name+" folder.")
+End if
 ```
 
 <!-- END REF -->
@@ -211,9 +218,9 @@ End if
 | Parámetros        | Tipo      |    | Descripción                                  |
 | ----------------- | --------- | -- | -------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Type of the alias link                       |
-| Resultado         | 4D.File   | <- | Alias or shortcut reference                  |
+| aliasName         | Texto     | -> | Nombre del alias o del atajo                 |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                     |
+| Resultado         | 4D.File   | <- | Referencia de alias o de acceso directo      |
 <!-- END REF -->
 
 

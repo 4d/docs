@@ -109,7 +109,7 @@ Each element of the collection or each entity is available as an object that can
 
 Quando a fonte de dados for uma seleção de entidades, qualquer modificação feita no lado da list box são salvas automaticamente na database. Do outro lado, modificações feitas na database são visíveis na list box depois que as entidades tocadas foram recarregadas.
 
-Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
+Quando a fonte de dados for uma coleção, qualquer modificação feita nos valores da list box são refletidas na coleção. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por exemplo:
 
 ```4d
 myCol:=myCol.push("new value") //exibir novo valor na list box
@@ -202,7 +202,7 @@ Propriedades compatíveis dependem do tipo de list box.
 ### Supported Form Events
 
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties) | Comments                                                                               |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties) | Comentários                                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                        |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                        |
@@ -242,22 +242,22 @@ Propriedades compatíveis dependem do tipo de list box.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Propriedade      | Type     | Description                                                           |
-| ---------------- | -------- | --------------------------------------------------------------------- |
-| area             | texto    | List box object area ("header", "footer", "cell")                     |
-| areaName         | texto    | Name of the area                                                      |
-| column           | longint  | Column number                                                         |
-| columnName       | texto    | Name of the column                                                    |
-| footerName       | texto    | Name of the footer                                                    |
-| headerName       | texto    | Name of the header                                                    |
-| horizontalScroll | longint  | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected    | booleano | True if row is selected, else False                                   |
-| newPosition      | longint  | New position of the column or row                                     |
-| newSize          | longint  | New size (in pixels) of the column or row                             |
-| oldPosition      | longint  | Previous position of the column or row                                |
-| oldSize          | longint  | Previous size (in pixels) of the column or row                        |
-| row              | longint  | Row number                                                            |
-| verticalScroll   | longint  | Positive if scroll is towards the bottom, negative if towards the top |
+| Propriedade      | Type          | Descrição                                                             |
+| ---------------- | ------------- | --------------------------------------------------------------------- |
+| area             | texto         | List box object area ("header", "footer", "cell")                     |
+| areaName         | texto         | Name of the area                                                      |
+| column           | inteiro longo | Column number                                                         |
+| columnName       | texto         | Name of the column                                                    |
+| footerName       | texto         | Name of the footer                                                    |
+| headerName       | texto         | Name of the header                                                    |
+| horizontalScroll | inteiro longo | Positive if scroll is towards the right, negative if towards the left |
+| isRowSelected    | booleano      | True if row is selected, else False                                   |
+| newPosition      | inteiro longo | New position of the column or row                                     |
+| newSize          | inteiro longo | New size (in pixels) of the column or row                             |
+| oldPosition      | inteiro longo | Previous position of the column or row                                |
+| oldSize          | inteiro longo | Previous size (in pixels) of the column or row                        |
+| row              | inteiro longo | Row number                                                            |
+| verticalScroll   | inteiro longo | Positive if scroll is towards the bottom, negative if towards the top |
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
 
 
@@ -281,7 +281,7 @@ Pode estabelecer propriedades padrão (texto, cor de fundo, etc) para cada colun
 
 ### Supported Form Events
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)    | Comments                                                                               |
+| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)    | Comentários                                                                            |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                        |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                        |
@@ -533,11 +533,11 @@ You can enable or disable standard user sorts by disabling the [Sortable](proper
 
 Standard sort support depends on the list box type:
 
-| List box type               | Support of standard sort | Comments                                                                                                     |
+| List box type               | Support of standard sort | Comentários                                                                                                  |
 | --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Collection of objects       | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](propertiesObject.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Collection of objects       | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
 | Collection of scalar values | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Seleção de entidades        | Sim                      | <li>The [list box source property](propertiesObject.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Seleção de entidades        | Sim                      | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Current selection           | Sim                      | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
 | Named selection             | No                       |                                                                                                              |
 | Arrays                      | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
@@ -794,9 +794,9 @@ Regardless of how the data are displayed in the list box (hierarchically or not)
 
 This principle is implemented for internal arrays that can be used to manage:
 
-- colors
+- cores
 - background colors
-- styles
+- estilos
 - hidden rows
 - selections
 
@@ -955,7 +955,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 |                       | valueType                               | texto | real | integer | booleano | color | event |
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ----- |
-| *Attributes*          | *Description*                           |       |      |         |          |       |       |
+| *Attributes*          | *Descrição*                             |       |      |         |          |       |       |
 | value                 | cell value (input or output)            | x     | x    | x       |          |       |       |
 | min                   | minimum value                           |       | x    | x       |          |       |       |
 | max                   | maximum value                           |       | x    | x       |          |       |       |
@@ -1009,13 +1009,14 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                                  |
+| Attribute | Available value(s) | valueType(s) | Descrição                                                                                                                                                                                    |
 | --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
+
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
  OB SET($ob4;"valueType";"integer")
@@ -1078,7 +1079,7 @@ Exemplos:
 
 *   You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 
-![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
     C_OBJECT($ob)
@@ -1119,7 +1120,7 @@ Exemplo:
 
 You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
 
-![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/fr/FormObjects/listbox_column_objectArray_colors.png)
 
 ````4d
  C_OBJECT($ob)

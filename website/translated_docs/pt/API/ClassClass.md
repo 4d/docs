@@ -34,7 +34,7 @@ Quando uma classe de usuário for [definida](Concepts/classes.md#class-definitio
 
 #### Descrição
 
-A propriedade `.name` property <!-- REF #ClassClass.name.Summary -->contém o nome do objeto `4D.Class`<!-- END REF -->. Nomes de classe diferenciam minúsculas de maiúsculas.
+A propriedade `.name` property<!-- REF #ClassClass.name. Summary -->contém o nome do objeto `4D. Class`<!-- END REF -->. Nomes de classe diferenciam minúsculas de maiúsculas.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -52,19 +52,19 @@ Essa propriedade é**apenas leitura**.
 </details>
 
 <!-- REF #ClassClass.new().Syntax -->
-**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
+**.new**( *param* : any { *;...paramN* } ) : 4D. Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
-| Parâmetros | Tipo     |    | Descrição                                |
-| ---------- | -------- |:--:| ---------------------------------------- |
-| param      | any      | -> | Parâmetros a passar à função constructor |
-| Resultado  | 4D.Class | <- | Novo objeto da classe                    |
+| Parâmetros | Tipo      |    | Descrição                                |
+| ---------- | --------- |:--:| ---------------------------------------- |
+| param      | any       | -> | Parâmetros a passar à função constructor |
+| Resultado  | 4D. Class | <- | Novo objeto da classe                    |
 <!-- END REF -->
 
 
 #### Descrição
 
-A função `.new()` <!-- REF #ClassClass.new().Summary -->cria e retorna um objeto `cs.className` que é uma nova instância da classe da qual é chamada<!-- END REF -->. Essa função está disponível automaticamente para todas as classes da classe store [`cs`](Concepts/classes.md#cs).
+A função `.new()`<!-- REF #ClassClass.new(). Summary -->cria e retorna um objeto `cs.className` que é uma nova instância da classe da qual é chamada<!-- END REF -->. Essa função está disponível automaticamente para todas as classes da classe store [`cs`](Concepts/classes.md#cs).
 
 Pode passar um ou mais parâmetros opcionais *param*, que serão passados para a função [class constructor](Concepts/classes.md#class-constructor)  (se houver) na definição de classe className. Dentro da função constructor, [`This`](Concepts/classes.md#this) é conectado ao novo objeto sendo construído.
 
@@ -115,11 +115,11 @@ $person:=cs.Person.new("John";"Doe";40)
 </details>
 
 <!-- REF #ClassClass.superclass.Syntax -->
-**.superclass** : 4D.Class<!-- END REF -->
+**.superclass** : 4D. Class<!-- END REF -->
 
 #### Descrição
 
-A propriedade `.superclass` <!-- REF #ClassClass.superclass.Summary -->retorna a classe pai da classe<!-- END REF -->. Uma superclasse pode ser um `4D.Class` objeto ou um objeto `cs.className`. Se a classe não tiver uma classe pai, a propriedade retorna **null**.
+A propriedade `.superclass`<!-- REF #ClassClass.superclass. Summary -->retorna a classe pai da classe<!-- END REF -->. Uma superclasse pode ser um `4D. Class` objeto ou um objeto `cs.className`. Se a classe não tiver uma classe pai, a propriedade retorna **null**.
 
 Uma superclasse de uma classe de usuário é declarada em uma classe usando a palavra chave [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname).
 

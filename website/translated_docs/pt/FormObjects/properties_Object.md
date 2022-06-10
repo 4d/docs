@@ -1,19 +1,19 @@
 ---
 id: propertiesObject
-title: Objects
+title: Objetos
 ---
 
 ---
 ## Type
 
- `MANDATORY SETTING`
+ `CONFIGURAÇÃO OBRIGATÓRIA`
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
+| Nome | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
 | ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
@@ -37,7 +37,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                                                      |
+| Nome | Data Type | Possible Values                                                      |
 | ---- | --------- | -------------------------------------------------------------------- |
 | name | string    | Any allowed name which does not belong to an already existing object |
 
@@ -65,7 +65,7 @@ Here is the list of objects whose value can be saved:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
+| Nome          | Data Type | Possible Values |
 | ------------- | --------- | --------------- |
 | memorizeValue | booleano  | true, false     |
 
@@ -91,7 +91,7 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 #### JSON Grammar
 
-| Name       | Data Type               | Possible Values                                                                                                                                                                                                                                                                                                |
+| Nome       | Data Type               | Possible Values                                                                                                                                                                                                                                                                                                |
 | ---------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSource | string, or string array | <li>4D variable, field name, or any expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
@@ -122,7 +122,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por exemplo:
 
 ```4d
   // assign the time 12:00:00 to the variable for the "tstart" object
@@ -174,7 +174,7 @@ However, this property has a typing function in the following specific cases:
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
+| Nome               | Data Type | Possible Values                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------ | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataSourceTypeHint | string    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"<li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object" |
 
@@ -191,7 +191,7 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values                                           |
+| Nome  | Data Type | Possible Values                                           |
 | ----- | --------- | --------------------------------------------------------- |
 | class | string    | One string with CSS name(s) separated by space characters |
 
@@ -217,7 +217,7 @@ The collection or the entity selection must be available to the form when it is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                              |
+| Nome       | Data Type | Possible Values                                              |
 | ---------- | --------- | ------------------------------------------------------------ |
 | dataSource | string    | Expression that returns a collection or an entity selection. |
 
@@ -244,7 +244,7 @@ Specify the type of list box.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                             |
+| Nome        | Data Type | Possible Values                                             |
 | ----------- | --------- | ----------------------------------------------------------- |
 | listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
 
@@ -265,7 +265,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                               |
+| Nome           | Data Type | Possible Values                                               |
 | -------------- | --------- | ------------------------------------------------------------- |
 | pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
 
@@ -283,7 +283,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values  |
+| Nome       | Data Type | Possible Values  |
 | ---------- | --------- | ---------------- |
 | radioGroup | string    | Radio group name |
 
@@ -312,7 +312,7 @@ For application translation purposes, you can enter an XLIFF reference in the ti
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
+| Nome  | Data Type | Possible Values |
 | ----- | --------- | --------------- |
 | texto | string    | any text        |
 
@@ -370,7 +370,7 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values                                                                                       |
+| Nome                | Data Type | Possible Values                                                                                       |
 | ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
 | variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 

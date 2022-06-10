@@ -8,7 +8,7 @@ title: On Long Click
 | 39   | [Button](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
 
 
-## Description
+## Descrição
 
 This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
 
@@ -22,9 +22,9 @@ This event can be generated for the following button styles:
 - [Office XP](FormObjects/button_overview.md#office-xp)
 - [Help](FormObjects/button_overview.md#help)
 - [Circle](FormObjects/button_overview.md#circle)
-- [Custom](FormObjects/button_overview.md#custom)
+- [Personalizado](FormObjects/button_overview.md#custom)
 
 This event is generally used to display pop-up menus in case of long button clicks. The [`On Clicked`](onClicked.md) event, if enabled, is generated if the user releases the mouse button before the "long click" time limit.
 
-### See also
+### Veja também
 [`On Alternative Click`](onAlternativeClick.md)

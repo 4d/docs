@@ -18,14 +18,14 @@ Para crear un nuevo proyecto:
 2. Seleccione **Nuevo > Proyecto** desde el menú **Archivo**: <p>![](assets/en/getStart/projectCreate1.png)<p>O<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Introduzca el nombre de su carpeta de proyecto y haga clic en **Guardar**.<p> Este nombre se utilizará:
-    - as the name of the entire project folder,
+    - como nombre de la carpeta del proyecto,
     - como nombre del archivo .4DProject en el primer nivel de la carpeta "Project".
 
     Puedes elegir cualquier nombre permitido por su sistema operativo. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
 
 When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. Para más información, consulte [Arquitectura de un proyecto 4D](Project/architecture.md).
 
-You can then start developing your project.
+A continuación, puede empezar a desarrollar su proyecto.
 
 ## Abrir un proyecto
 
@@ -33,7 +33,7 @@ Para abrir un proyecto existente desde 4D:
 
 1. Select **Open a local application project** in the Welcome Wizard dialog, <p>O<p> Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.<p> The standard Open dialog appears.
 
-2. Select the project's `.4dproject` file and click **Open**.<p> By default, the project is opened with its current data file. Other file types are suggested:
+2. Select the project's `.4dproject` file and click **Open**.<p> By default, the project is opened with its current data file. Se sugieren otros tipos de archivos:
 
     - *Packed project files*: `.4dz` extension  - deployment projects
     - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
@@ -49,7 +49,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 - **Data file** - specifies the data file to be used with the project. By default, the **Current data file** option is selected.
 
-## Project opening shortcuts
+## Atajos de apertura de los proyectos
 
 4D offers several ways to open projects directly and bypass the Open dialog:
 
@@ -87,7 +87,7 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 
 XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
 
-That folder is divided into two subfolders:
+Esa carpeta está dividida en dos subcarpetas:
 - the **Local** folder contains the `.4DLink` files that can be used to open local projects
 - the **Remote** folder contains the `.4DLink` files of recent remote projects
 

@@ -15,7 +15,7 @@ title: On After Keystroke
 </details>
 
 
-## Description
+## Descrição
 
 > The `On After Keystroke` event can generally be replaced by the [`On After Edit`](onAfterEdit.md) event (see below).
 
@@ -37,5 +37,5 @@ When an entry requires a sequence of keystrokes, the [`On Before Keystroke`](onB
 - when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
 
 
-### See also
+### Veja também
 [On Before Keystroke](onBeforeKeystroke.md).

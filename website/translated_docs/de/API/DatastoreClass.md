@@ -62,7 +62,7 @@ If no *localID* datastore is found, the command returns **Null**.
 
 Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. The following rules are applied:
 
-*   A datastore only references tables with a single primary key. Tables without a primary key or with composite primary keys are not referenced.
+*   A datastore only references tables with a single primary key. A datastore only references tables with a single primary key.
 *   BLOB type attributes are not managed in the datastore.
 
 
@@ -787,6 +787,12 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
     $status:=$person.save()
  End if
  ...
+ ...
+ If($error)
+    $ds.cancelTransaction()
+ Else
+    $ds.validateTransaction()
+ End if
  ...
  If($error)
     $ds.cancelTransaction()

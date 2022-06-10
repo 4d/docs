@@ -134,7 +134,7 @@ Webサーバーの HTTPリクエストログファイル (アプリケーショ�
 
 
 
-|1|wdl enable without body|Web HTTP debug log はボディ部なしで有効化されています (この場合ボディ部のサイズは提供されます)| |3|wdl enable with response body|Web HTTP debug log はレスポンスのボディ部のみを含めた状態で有効化されています。| |5|wdl enable with request body|Web HTTP debug log はリクエストのボディ部のみ含めた状態で有効化されます| |7|wdl enable with all body parts|Web HTTP debug log はレスポンスとリクエスト両方をボディ部に含めた状態で有効化されます|
+|1|wdl enable without body|Web HTTP debug log はボディ部なしで有効化されています (この場合ボディ部のサイズは提供されます)| |3|wdl enable with response body|Web HTTP debug log はレスポンスのボディ部のみを含めた状態で有効化されています。 | |5|wdl enable with request body|Web HTTP debug log はリクエストのボディ部のみ含めた状態で有効化されます| |7|wdl enable with all body parts|Web HTTP debug log はレスポンスとリクエスト両方をボディ部に含めた状態で有効化されます|
 
 
 ## デフォルトホームページ
@@ -169,7 +169,7 @@ Webサーバーの初回起動時には、4D はデフォルトで "index.html" 
 | `WEB SET OPTION` | `Web CORS enabled`                                 | 0 (デフォルト値; 無効) または 1 (有効)              |
 | 設定ダイアログボックス      | オプション (II) ページ / CORSを有効化                          | デフォルトではチェックなし                          |
 
-4D Webサーバーは、クロスオリジンリソースシェアリング (CORS) を実装しており、これによって別ドメインにて提供されている特定の Webページが、REST などを使用した XHRコールを介してカレントWebアプリケーションのリソースにアクセスできるようにすることが可能です。 セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。[CORS設定](#cors設定) 参照)。 有効時に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
+4D Webサーバーは、クロスオリジンリソースシェアリング (CORS) を実装しており、これによって別ドメインにて提供されている特定の Webページが、REST などを使用した XHRコールを介してカレントWebアプリケーションのリソースにアクセスできるようにすることが可能です。 セキュリティ上の理由により、"ドメイン間" のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。 有効時に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、"403 - forbidden" エラーレスポンスによって拒否されます。
 
 無効化されている場合 (デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。
 
@@ -251,7 +251,7 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 | webServer オブジェクト | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |      |
 | `WEB SET OPTION` | `Web HTTP compression threshold`                                             |      |
 
-最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
+最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。 このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。
 
 サイズを数値 (バイト単位) で指定します。 デフォルトのしきい値は 1024 バイトに設定されています。
 
@@ -305,7 +305,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 | `WEB SET OPTION` | `Web inactive process timeout`                                           |       |
 | 設定ダイアログボックス      | オプション (I) ページ / 非動作プロセスのタイムアウト                                           | スライダー |
 
-セッションと紐づいた非アクティブWebプロセスのタイムアウト時間 (分単位) を設定します。 タイムアウト時間が経過すると、サーバーはプロセスを終了します。すると、`On Web Close Process` データベースメソッドが呼び出され、セッションのコンテキストは削除されます。
+セッションと紐づいた非アクティブWebプロセスのタイムアウト時間 (分単位) を設定します。 すると、`On Web Close Process` データベースメソッドが呼び出され、セッションのコンテキストは削除されます。
 
 デフォルト値: 480分 (デフォルト値に戻すには 0 を指定します)
 
@@ -378,7 +378,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 | `WEB SET OPTION` | `Web log recording`                                  |            |
 | 設定ダイアログボックス      | ログ (タイプ) ページ / ログフォーマット                              | ポップアップメニュー |
 
-4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 デフォルトでは、リクエストは規則されません (0 / ログファイルなし)。 有効化されると、*logweb.txt* ファイルが Logs フォルダー内に自動で保存されます。
+4D Web サーバーが受け取るリクエストのログを開始/停止します。 ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 デフォルトでは、リクエストは規則されません (0 / ログファイルなし)。 有効化されると、*logweb.txt* ファイルが Logs フォルダー内に自動で保存されます。
 
 このファイルのフォーマットを指定することができます。 使用可能な値:
 
@@ -415,7 +415,7 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 
 Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サイズ (バイト単位)。 デフォルト値は 2,000,000 (2MBより、すこし少ない値) です。 最大値 (2,147,483,648) に設定した場合、実際には制限無しということになります。
 
-制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、4D Webサーバーによって拒否されます。
+制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。
 
 とりうる値: 500,000 - 2,147,483,648。
 
@@ -522,7 +522,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | `WEB SET ROOT FOLDER` |                                                  |                                                                                                   |
 | 設定ダイアログボックス           | 設定ページ / デフォルトHTMLルート                             |                                                                                                   |
 
-4D がブラウザーに送信するスタティック/セミダイナミックな HTMLページ、ピクチャーなどを検索するフォルダーを指定します。これが、Webサーバーのルートフォルダーです。 パスは、POSIXフルパスの形式です。 ルートフォルダーの変更を反映するには、Webサーバーを再起動する必要があります。
+4D がブラウザーに送信するスタティック/セミダイナミックな HTMLページ、ピクチャーなどを検索するフォルダーを指定します。 これが、Webサーバーのルートフォルダーです。 パスは、POSIXフルパスの形式です。 ルートフォルダーの変更を反映するには、Webサーバーを再起動する必要があります。
 
 さらに HTMLルートフォルダーは、Webサーバーのディスク上で、ファイルに対するアクセスができない階層を定義することにもなります。 ブラウザーから送られた URL や 4Dコマンドが、HTMLルートフォルダーよりも上の階層にアクセスしようとすると、ファイルが存在しないことを示すエラーが返されます。
 
@@ -550,7 +550,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | webServer オブジェクト | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |      |
 | `WEB SET OPTION` | `Web session cookie domain`                                        |      |
 
-セッションcookie の "domain" フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。
+セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
 
 
 ## セッションcookie名
@@ -570,7 +570,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | webServer オブジェクト | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |      |
 | `WEB SET OPTION` | `Web session cookie path`                                      |      |
 
-セッションcookie の "path" フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/4DACTION" という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。
+セッションcookie の "domain" フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに "/*.4d.fr" の値を設定した場合、リクエストの宛先が ".4d.fr" のドメインに限り、クライアントは cookie を送信します。
 
 ## セッションcookie SameSite
 
@@ -600,7 +600,7 @@ Webサーバーの PFS利用可否状況 ([TLS](Admin/tls.md#perfect-forward-sec
 | ----------- | --------------------------- | ---- |
 | 設定ダイアログボックス | オプション (I) ページ / 最大同時Webプロセス |      |
 
-This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+このオプションは、**セッションなし** オプションが選択されている場合に、アプリケーションの Webサーバーコードのプリエンプティブモードを有効にします (**スケーラブルセッション** では、プリエンプティブモードは常に有効です)。 このコンテキストにおいて当該オプションがチェックされているとき、4Dコンパイラは [Web関連のコード](preemptiveWeb.md#4d-webコードのスレッドセーフティ) それぞれのスレッドセーフプロパティを自動的に評価し、違反があった場合にはエラーを返します。
 
 
 

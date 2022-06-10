@@ -143,13 +143,8 @@ http://localhost:8044/authenticate.shtml
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer
 var $password : Text
-var $userTop3; $sales; $info : Object
-
-
-ARRAY TEXT($anames; 0)
-ARRAY TEXT($avalues; 0)
-
-WEB GET VARIABLES($anames; $avalues)
+var $userTop3; $sales; $info : Object ARRAY TEXT($anames; 0)
+ARRAY TEXT($avalues; 0) WEB GET VARIABLES($anames; $avalues)
 
 $indexUserId:=Find in array($anames; "userId")
 $userId:=Num($avalues{$indexUserId})
@@ -157,9 +152,7 @@ $userId:=Num($avalues{$indexUserId})
 $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
-$sales:=ds.SalesPersons.query("userId = :1"; $userId).first()
-
-If ($sales#Null)
+$sales:=ds. SalesPersons.query("userId = :1"; $userId).first() If ($sales#Null)
     If (Verify password hash($password; $sales.password))
         $info:=New object()
         $info.userName:=$sales.firstname+" "+$sales.lastname
@@ -173,8 +166,7 @@ If ($sales#Null)
         WEB SEND HTTP REDIRECT("/authenticationOK.shtml")
     Else 
         WEB SEND TEXT("This password is wrong")
-    End if 
-Else 
+    End if Else 
     WEB SEND TEXT("This userId is unknown")
 End if 
 ```

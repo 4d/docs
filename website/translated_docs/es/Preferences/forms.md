@@ -14,7 +14,7 @@ This group of options sets parameters for moving objects using the keyboard or t
 
 This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
 
-### When moving beyond window limits
+### Cuando se mueve más allá de los límites de la ventana
 
 This option allows setting the behavior of the Form editor when moving an object using the mouse beyond window limits.
 
@@ -27,7 +27,7 @@ You can configure this option depending on your work habits and development need
 
 This option activates auto alignment by default in each new window of the Form editor. It is possible to modify this option individually in each window (refer to [Using the magnetic grid](FormEditor/formEditor.md#using-the-magnetic-grid)).
 
-## New form default display
+## Nueva visualización por defecto del formulario
 
 - **Limits**, **Rulers**, ...: check items that must be displayed by default in each new window of the Form editor. It is possible to modify the display of each window individually using the **Display** hierarchical menu of the Form editor.
 - **Color for marker lines**: modifies the color of the marker lines used in the Form editor to define the different areas (header, breaks, detail and footer, etc.). For more information about markers, refer to [Using output control lines](https://doc.4d.com/4Dv18R6/4D/18-R6/Using-output-control-lines.300-5217678.en.html).

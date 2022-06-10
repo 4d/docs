@@ -5,10 +5,10 @@ title: Propiedades de los formularios
 
 ---
 
-## Color Scheme
+## Esquema de colores
 > Color scheme property is only applied on macOS.
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
 *   dark - light text on a dark background
 *   light - dark text on a light background
@@ -41,7 +41,7 @@ Para más información, consulte [Páginas formulario](forms.md#form-pages).
 ---
 
 
-## Form Name
+## Nombre del formulario
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
@@ -52,7 +52,7 @@ The form name is defined by the name of the folder that contains the form.4Dform
 
 ---
 
-## Form Type
+## Tipo de formulario
 
 The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
@@ -66,13 +66,13 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Form Type                      | Gramática JSON   | Descripción                                                   | Soportado con               |
-| ------------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Formulario detallado           | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing       | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| Formulario listado             | listScreen       | A form for listing records on the screen                      | Formularios tabla           |
-| Formulario de lista imprimible | listPrinter      | A printed report that list records                            | Formularios tabla           |
-| Ninguno                        | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Tipo de formulario              | Gramática JSON   | Descripción                                                   | Soportado con                            |
+| ------------------------------- | ---------------- | ------------------------------------------------------------- | ---------------------------------------- |
+| Formulario detallado            | detailScreen     | A display form for data entry and modification                | Formularios proyecto - Formularios tabla |
+| Formulario detallado imprimible | detailPrinter    | A printed report with one page per record, such as an invoice | Formularios proyecto - Formularios tabla |
+| Formulario listado              | listScreen       | A form for listing records on the screen                      | Formularios tabla                        |
+| Formulario de lista imprimible  | listPrinter      | A printed report that list records                            | Formularios tabla                        |
+| Ninguno                         | *no destination* | A form with no specific feature                               | Formularios proyecto - Formularios tabla |
 
 
 #### Gramática JSON

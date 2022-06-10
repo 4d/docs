@@ -103,7 +103,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abrir el documento en modo de sólo lectura
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
+> Las constantes predefinidas aparecen <u>subrayadas</u> por defecto en el editor de métodos 4D.
 
 ## Métodos
 
@@ -203,14 +203,14 @@ myColl[3]  //acceso al 4º elemento de la colección
 
 El lenguaje 4D soporta las clases de objetos. Añade un archivo `myClass.4dm` en la carpeta Project/Sources/Classes de un proyecto para crear una clase llamada "myClass".
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. Se pueden pasar parámetros.
+Para instanciar un objeto de la clase en un método, llame la clase usuario desde el *class store* (`cs`) y utilice la función miembro `new()`. Se pueden pasar parámetros.
 
 ```4d  
 // en un método 4D
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. Un método miembro de clase puede recibir y devolver parámetros como cualquier método, y utilizar `This` como instancia del objeto.
+En el método de clase `myClass`, utilice la instrucción `Function <methodName>` para definir el método miembro de clase *methodName*. Un método miembro de clase puede recibir y devolver parámetros como cualquier método, y utilizar `This` como instancia del objeto.
 
 ```4d  
 //en el archivo myClass.4dm
@@ -228,7 +228,7 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+Opcionalmente, utilice la palabra clave `Class constructor` para declarar las propiedades del objeto.
 
 ```4d  
 //en el archivo Rectangle.4dm
@@ -239,17 +239,17 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. Por ejemplo:
+Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por ejemplo:
 
 ```4d  
-//in the Square.4dm file
+//en el archivo Square.4dm
 Class extends rectangle
 
 Class constructor
 C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  //Llama al constructor de la clase padre con las dimensiones 
+  // suministradas para el ancho y el alto del Rectángulo
 Super($1;$1)
 
 This.name:="Square"
@@ -322,7 +322,7 @@ Se hace referencia a una expresión por el tipo de datos que devuelve. Hay vario
 
 ### Expresiones asignables y no asignables
 
-Una expresión puede ser simplemente una constante literal, como el número 4 o la cadena "Hello", o una variable como `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. En todos los casos, estas expresiones son **no asignables**, lo que significa que no se les puede asignar un valor. En 4D, las expresiones pueden ser **asignables**. An expression is assignable when it can be used on the left side of an assignation. Por ejemplo:
+Una expresión puede ser simplemente una constante literal, como el número 4 o la cadena "Hello", o una variable como `$myButton`. También puede utilizar los operadores. Por ejemplo, 4 + 2 es una expresión que utiliza el operador de adición para sumar dos números y devolver el resultado 6. En todos los casos, estas expresiones son **no asignables**, lo que significa que no se les puede asignar un valor. En 4D, las expresiones pueden ser **asignables**. Una expresión es asignable cuando puede utilizarse a la izquierda del operador de asignación. Por ejemplo:
 
 ```4d  
 //La variable $myVar es asignable, puede escribir:  

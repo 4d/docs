@@ -26,7 +26,7 @@ To unlock the entity for other sessions and 4D processes:
 The [`lockKindText` property](../API/EntityClass.html#lock) is "Locked by session".
 
 
-### Description
+### Descrição
 
 The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
 
@@ -46,7 +46,7 @@ A `?$lock` request returns a JSON object with `"result"=true` if the lock operat
 
 The returned "__STATUS" object has the following properties:
 
-| Propriedade  |  | Type     | Description                                                                                                                                     |
+| Propriedade  |  | Type     | Descrição                                                                                                                                       |
 | ------------ |  | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |  |          | ***Available only in case of success:***                                                                                                        |
 | success      |  | booleano | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case). |
@@ -59,7 +59,7 @@ The returned "__STATUS" object has the following properties:
 
 The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
 
-| status | statusText                      | Comment                                                                                                           |
+| status | statusText                      | Comentário                                                                                                        |
 | ------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | 2      | "Stamp has changed"             | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock). |
 | 3      | "Already locked"                | The entity is locked by a pessimistic lock.                                                                       |

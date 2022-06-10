@@ -82,7 +82,7 @@ Here is the list of objects whose value can be saved:
 
 
 This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
-> Variable name size is limited to 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
+> El tamaño del nombre de la variable está limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
 The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
 
@@ -91,9 +91,9 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                                               |
-| ---------- | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | cadena o array de cadenas | <li>4D variable, field name, or any expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
+| Nombre     | Tipos de datos            | Valores posibles                                                                                                                                                                                                                                                                                                       |
+| ---------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column] |
 
 
 
@@ -233,7 +233,7 @@ The collection or the entity selection must be available to the form when it is 
 ---
 ## Fuente de datos
 
-Specify the type of list box.
+Especifique el tipo de list box.
 
 ![](assets/en/FormObjects/listbox_dataSource.png)
 
@@ -283,9 +283,9 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles |
-| ---------- | -------------- | ---------------- |
-| radioGroup | cadena         | Radio group name |
+| Nombre     | Tipos de datos | Valores posibles       |
+| ---------- | -------------- | ---------------------- |
+| radioGroup | cadena         | Nombre del grupo radio |
 
 
 #### Objetos soportados
@@ -334,17 +334,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo               | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
-| --------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
-| Mínimo                | X   | X     | X     | X    | X    |          | Same as column type                 |
-| Máximo                | X   | X     | X     | X    | X    |          | Same as column type                 |
-| Suma                  | X   |       |       | X    | X    |          | Same as column type                 |
-| Conteo                | X   | X     | X     | X    | X    | X        | Entero largo                        |
-| Promedio              | X   |       |       | X    |      |          | Real                                |
-| Standard deviation(*) | X   |       |       | X    |      |          | Real                                |
-| Varianza(*)           | X   |       |       | X    |      |          | Real                                |
-| Suma de cuadrados(*)  | X   |       |       | X    |      |          | Real                                |
-| Custom ("none")       | X   | X     | X     | X    | X    | X        | Cualquiera                          |
+| Cálculo                | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| ---------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
+| Mínimo                 | X   | X     | X     | X    | X    |          | Same as column type                 |
+| Máximo                 | X   | X     | X     | X    | X    |          | Same as column type                 |
+| Suma                   | X   |       |       | X    | X    |          | Same as column type                 |
+| Conteo                 | X   | X     | X     | X    | X    | X        | Entero largo                        |
+| Promedio               | X   |       |       | X    |      |          | Real                                |
+| Desviación estándar(*) | X   |       |       | X    |      |          | Real                                |
+| Varianza(*)            | X   |       |       | X    |      |          | Real                                |
+| Suma de cuadrados(*)   | X   |       |       | X    |      |          | Real                                |
+| Custom ("none")        | X   | X     | X     | X    | X    | X        | Cualquiera                          |
 
 (*) Only for array type list boxes.
 

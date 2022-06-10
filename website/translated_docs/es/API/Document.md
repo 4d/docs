@@ -660,7 +660,7 @@ Cuando se ejecuta este código:
 
 "id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6"
 
-with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
+con `\t` (tab) como separador y `\r\n` (CRLF) como delimitador de línea.
 
 Aquí hay otro ejemplo con el mismo archivo, pero con un delimitador de línea diferente:
 
@@ -671,7 +671,7 @@ En este caso, el contenido de `$txt` es el siguiente:
 
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
-This time `\n` (LF) is used as line delimiter.
+Esta vez se utiliza `\n` (LF) como delimitador de línea.
 
 
 

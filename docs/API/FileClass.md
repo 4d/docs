@@ -1,6 +1,6 @@
 ---
 id: FileClass
-title: File 
+title: File
 ---
 
 `File` objects are created with the [`File`](#file) command. They contain references to disk files that may or may not actually exist on disk. For example, when you execute the `File` command to create a new file, a valid `File` object is created but nothing is actually stored on disk until you call the [`file.create( )`](#create) function.
@@ -342,7 +342,7 @@ You want to delete a specific file in the database folder:
 
 The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated). 
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.  
 
@@ -716,10 +716,10 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 |Constant|Value|Comment|
 |--------|-----|-------|
 |`Document unchanged`|0|No processing|
-|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows|
-|`Document with CRLF`|2|Line breaks are converted to Windows format: CRLF (carriage return + line feed)|
-|`Document with CR`|3|Line breaks are converted to OS X format: CR (carriage return)|
-|`Document with LF`|4|Line breaks are converted to Unix format: LF (line feed)|
+|`Document with native format`|1|(Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows|
+|`Document with CRLF`|2|Line breaks are converted to CRLF (carriage return + line feed), the default Windows format|
+|`Document with CR`|3|Line breaks are converted to CR (carriage return), the default Classic Mac OS format|
+|`Document with LF`|4|Line breaks are converted to LF (line feed), the default Unix and macOS format|
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
 

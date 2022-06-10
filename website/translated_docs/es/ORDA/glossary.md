@@ -36,7 +36,7 @@ Database objects available through the ORDA concept, i.e. datastore, dataclasses
 
 ## Data model function
 
-Function of an ORDA data model class.
+Función de una clase de modelo de datos ORDA.
 
 ## Dataclass
 
@@ -53,9 +53,9 @@ Class for specific dataclass objects, in which you can add custom functions.
 
 A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
 
-A datastore provides:
+Un datastore ofrece:
 
-*   a connection to the 4D database
+*   una conexión a la base de datos 4D
 *   a set of dataclasses to work with the database
 
 The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
@@ -85,13 +85,13 @@ An entity is an object that corresponds to a dataclass model. An entity contains
 
 An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
 
-For more information, see Entities.
+Para más información, consulte Entidades.
 
 ## Entity selection
 
 An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
 
-An entity selection contains:
+Una selección de entidades contiene:
 
 *   a set of 0 to X entity references,
 *   a length property (always),
@@ -140,11 +140,11 @@ In this documentation, "Mixed" data type is used to designate the various type o
 
 ## Bloqueo optimista
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
+In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. Ver también " Bloqueo pesimista ".
 
-## Pessimistic Lock
+## Bloqueo pesimista
 
-A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
+A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. Ver "Bloqueo optimista".
 
 ## Propiedad
 
@@ -157,7 +157,7 @@ A propertyPath is the path to a property in a given object. If the property is n
 
 ## Regular class
 
-User class not related to an ORDA object.
+Clase usuario no relacionada a un objeto ORDA.
 
 ## Related dataclass
 

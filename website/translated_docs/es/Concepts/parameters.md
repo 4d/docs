@@ -86,7 +86,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Se aplican las siguientes reglas:
 
 - La línea de declaración debe ser la primera línea del código del método o de la función, de lo contrario se mostrará un error (sólo los comentarios o los saltos de línea pueden preceder la declaración).
-- Los nombres de los parámetros deben comenzar con un carácter `$` y cumplir con [reglas de denominación de las propiedades](dt_object.md#object-property-identifiers).
+- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties).
 - Múltiples parámetros (y tipos) están separados por punto y coma (;).
 - Las sintaxis multilínea están soportadas (utilizando el carácter "\\").
 
@@ -212,7 +212,7 @@ Las expresiones de tablas o arrays sólo pueden pasarse [como referencia utiliza
 
 ## Indirección de parámetros (${N})
 
-Los métodos proyecto 4D aceptan un número variable de parámetros. Puede dirigirse a esos parámetros con un bucle `For...End for`, el comando [`Count parameters `](https://doc.4d.com/4dv19/help/command/en/page259.html)y **la sintaxis de indirección de parámetros**. Dentro del método, una dirección de indirección tiene el formato `${N}`, donde `N` es una expresión numérica. `${N}` se denomina **parámetro genérico**.
+Los métodos proyecto 4D aceptan un número variable de parámetros. Puede dirigirse a esos parámetros con un bucle `For...End for`, el comando [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html)y **la sintaxis de indirección de parámetros**. Dentro del método, una dirección de indirección tiene el formato `${N}`, donde `N` es una expresión numérica. `${N}` se denomina **parámetro genérico**.
 
 
 
@@ -251,7 +251,7 @@ End for
 Este método se puede llamar:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //se pasan parámetros adicionales
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //se pasan parámetros adicionales //se pasan parámetros adicionales
 ```
 
 > La indirección de parámetros se gestiona mejor si se respeta la siguiente convención: si sólo algunos de los parámetros se dirigen por indirección, deben pasarse después de los demás.
@@ -493,7 +493,7 @@ APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 
 ## Valores o referencias
 
-Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales en la función de clase o la subrutina. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Como su alcance es local, si el valor de un parámetro se modifica en la función/subrutina de la clase, no cambia el valor en el método que lo llama. Por ejemplo:
+Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales en la función de clase o la subrutina. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Por ejemplo:
 
 ```4d
     //Esta es una parte del código del método MY_METHOD

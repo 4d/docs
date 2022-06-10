@@ -62,7 +62,7 @@ Si aucun datastore nommé *localID* n'est trouvé, la commande renvoie **Null**.
 
 L'utilisation de `ds` nécessite que la base de données cible soit conforme à ORDA. Les règles suivantes s'appliquent :
 
-*   Un datastore ne référence que les tables avec une seule clé primaire. Les tables sans clé primaire ou avec une clé primaire composite ne sont pas référencées.
+*   Un datastore ne référence que les tables avec une seule clé primaire. Un datastore ne référence que les tables avec une seule clé primaire.
 *   Les attributs de type BLOB ne sont pas gérés via le datastore.
 
 

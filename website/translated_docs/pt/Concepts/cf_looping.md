@@ -401,7 +401,7 @@ Pode definir limites para a iteração usando os parâmetros opcionais inicio e 
 
 Se omitir *end* ou se *fim* for maior que o número de elementos em *Expression*, os elementos são iteragids de *begin* até o último elemento (incluído). Se os parâmetros *inicio* e*fim* forem valores positivos, representam posições reais de elementos em *Expression*. Se *begin* for um valor negativo, é recalculado como `begin:=begin+Expression size` (é considerado como o deslocamento offset desde o final de *Expression*). Se o valor calculado for negativo, *inicio* toma o valor 0. **Nota:** mesmo se inicio for negativo, a iteração continua sendo realizada na ordem normal. Se *fim* for um  valor negativo, se recalcula como `fim:=fim+tamanho da expressão`
 
-For example:
+Por exemplo:
 - a collection contains 10 elements (numbered from 0 to 9)
 - begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
 - end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.

@@ -24,7 +24,7 @@ In addition, ORDA objects such as entity selections or entities can be easily bo
 
 ## ¿Cómo utilizar ORDA?
 
-Basically, ORDA handles objects. In ORDA, all main concepts, including the datastore itself, are available through objects. The datastore is automatically [mapped upon the 4D structure](dsMapping.md).
+Fundamentalmente, ORDA gestiona objetos. In ORDA, all main concepts, including the datastore itself, are available through objects. The datastore is automatically [mapped upon the 4D structure](dsMapping.md).
 
 ORDA objects can be handled like 4D standard objects, but they automatically benefit from specific properties and methods.
 

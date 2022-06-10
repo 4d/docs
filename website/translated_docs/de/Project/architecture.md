@@ -235,4 +235,4 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 ## WebFolder
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. It is automatically created when the Web server is launched for the first time. 

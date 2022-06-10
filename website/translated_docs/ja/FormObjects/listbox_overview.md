@@ -535,9 +535,9 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 | リストボックスタイプ          | 標準ソートのサポート | コメント                                                                                                         |
 | ------------------- | ---------- | ------------------------------------------------------------------------------------------------------------ |
-| Object の Collection | ◯          | <li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](propertiesObject.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li>                                                       |
+| Object の Collection | ◯          | <li>"This.a" や "This.a.b" 列はソート可能です。</li><li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li>                                                       |
 | スカラー値のコレクション        | ×          | [`orderBy()`](..\API\CollectionClass.md#orderby) 関数を使ったカスタムソートを使用します。                                      |
-| エンティティセレクション        | ◯          | <li>[リストボックス列の式プロパティ](propertiesObject.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li><li>ソート可: オブジェクト属性プロパティのソート (例: "data" がオブジェクト属性の場合の "This.data.city")</li><li>ソート可: リレート属性のソート (例: "This.company.name")</li><li>ソート不可: リレート属性を介したオブジェクト属性プロパティのソート (例: "This.company.data.city")。 この場合には、[`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li> |
+| エンティティセレクション        | ◯          | <li>[リストボックス列の式プロパティ](properties_Object.md#変数あるいは式) は [代入可能な式](../Concepts/quick-tour.md#代入可-vs-代入不可の式) でなくてはなりません。</li><li>ソート可: オブジェクト属性プロパティのソート (例: "data" がオブジェクト属性の場合の "This.data.city")</li><li>ソート可: リレート属性のソート (例: "This.company.name")</li><li>ソート不可: リレート属性を介したオブジェクト属性プロパティのソート (例: "This.company.data.city")。 この場合には、[`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) 関数を使ったカスタムソートを使用します (後述の例題参照)</li> |
 | カレントセレクション          | ◯          | 単純な式のみソート可能です (例: `[Table_1]Field_2`)                                                                        |
 | 命名セレクション            | ×          |                                                                                                              |
 | 配列                  | ◯          | ピクチャー配列やポインター配列と紐づけられた列はソートできません                                                                             |

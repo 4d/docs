@@ -112,7 +112,7 @@ When the data source is an entity selection, any modifications made on the list 
 When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Por ejemplo:
 
 ```4d
-myCol:=myCol.push("new value") //display new value in list box
+myCol:=myCol.push("new value") //mostrar el nuevo valor en el list box
 ```
 
 
@@ -253,10 +253,10 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 | horizontalScroll | entero largo | Positive if scroll is towards the right, negative if towards the left |
 | isRowSelected    | booleano     | True if row is selected, else False                                   |
 | newPosition      | entero largo | New position of the column or row                                     |
-| newSize          | entero largo | New size (in pixels) of the column or row                             |
+| newSize          | entero largo | Nuevo tamaño (en píxeles) de la columna o línea                       |
 | oldPosition      | entero largo | Previous position of the column or row                                |
 | oldSize          | entero largo | Previous size (in pixels) of the column or row                        |
-| row              | entero largo | Row number                                                            |
+| row              | entero largo | Número de línea                                                       |
 | verticalScroll   | entero largo | Positive if scroll is towards the bottom, negative if towards the top |
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
 
@@ -391,18 +391,18 @@ In order to preserve data consistency for selection type and entity selection ty
 
 The typical sequence of events generated during data entry or modification is as follows:
 
-| Acción                                                                          | Tipo(s) de Listbox          | Secuencia de eventos                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Todos                       | On Before Data Entry                                                                                                                                                                                           |
-|                                                                                 | Todos                       | On Getting Focus                                                                                                                                                                                               |
-| Cuando se ha editado el valor de una celda                                      | Todos                       | On Before Keystroke                                                                                                                                                                                            |
-|                                                                                 | Todos                       | On After Keystroke                                                                                                                                                                                             |
-|                                                                                 | Todos                       | On After Edit                                                                                                                                                                                                  |
-| A user validates and leaves the cell                                            | List box de tipo selección  | Guardar                                                                                                                                                                                                        |
-|                                                                                 | Record selection list boxes | On saving an existing record trigger (if set)                                                                                                                                                                  |
-|                                                                                 | List box de tipo selección  | On Data Change(*)                                                                                                                                                                                              |
-|                                                                                 | Entity selection list boxes | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
-|                                                                                 | Todos                       | On Losing Focus                                                                                                                                                                                                |
+| Acción                                                                          | Tipo(s) de Listbox                      | Secuencia de eventos                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Todos                                   | On Before Data Entry                                                                                                                                                                                           |
+|                                                                                 | Todos                                   | On Getting Focus                                                                                                                                                                                               |
+| Cuando se ha editado el valor de una celda                                      | Todos                                   | On Before Keystroke                                                                                                                                                                                            |
+|                                                                                 | Todos                                   | On After Keystroke                                                                                                                                                                                             |
+|                                                                                 | Todos                                   | On After Edit                                                                                                                                                                                                  |
+| Un usuario valida y abandona la celda                                           | List box de tipo selección              | Guardar                                                                                                                                                                                                        |
+|                                                                                 | List box de tipo selección de registro  | On saving an existing record trigger (if set)                                                                                                                                                                  |
+|                                                                                 | List box de tipo selección              | On Data Change(*)                                                                                                                                                                                              |
+|                                                                                 | List box de tipo selección de entidades | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed |
+|                                                                                 | Todos                                   | On Losing Focus                                                                                                                                                                                                |
 
 (*) With entity selection list boxes, in the On Data Change event:
 - the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
@@ -412,7 +412,7 @@ The typical sequence of events generated during data entry or modification is as
 
 
 
-## Managing selections
+## Gestión de selecciones
 
 La gestión de selecciones es diferente dependiendo de si el list box se basa en un array, en una selección de registros o en una selección de colecciones/entidades:
 
@@ -437,7 +437,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
 > The `OBJECT SET SCROLL POSITION` command scrolls the list box rows so that the first selected row or a specified row is displayed.
 
 
-### Customizing appearance of selected rows
+### Personalizar la apariencia de las líneas seleccionadas
 
 When the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is selected, you need to make list box selections visible using available interface options. Since selections are still fully managed by 4D, this means:
 
@@ -525,7 +525,7 @@ You can write in the *UI_SetColor* method:
 
 A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.
 
-### Standard sort
+### Ordenación estándar
 
 By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
 
@@ -533,19 +533,19 @@ You can enable or disable standard user sorts by disabling the [Sortable](proper
 
 Standard sort support depends on the list box type:
 
-| List box type               | Support of standard sort | Comentarios                                                                                                  |
-| --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Collection of objects       | Sí                       | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](propertiesObject.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection of scalar values | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Entity selection            | Sí                       | <li>The [list box source property](propertiesObject.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
-| Current selection           | Sí                       | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
-| Named selection             | No                       |                                                                                                              |
-| Arrays                      | Sí                       | Columns bound to picture and pointer arrays are not sortable                                                 |
+| List box type                  | Support of standard sort | Comentarios                                                                                                  |
+| ------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Colección de objetos           | Sí                       | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Colección de valores escalares | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
+| Entity selection               | Sí                       | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Selección actual               | Sí                       | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
+| Named selection                | No                       |                                                                                                              |
+| Arrays                         | Sí                       | Columns bound to picture and pointer arrays are not sortable                                                 |
 
 
 
 
-### Custom sort
+### Ordenación personalizada
 
 The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
@@ -564,9 +564,9 @@ You design a list box of the entity selection type, bound to the `Form.child` ex
 
 You display two columns:
 
-| Child name  | Parent's nickname            |
-| ----------- | ---------------------------- |
-| `This.name` | `This.parent.extra.nickname` |
+| Nombre del hijo | Parent's nickname            |
+| --------------- | ---------------------------- |
+| `This.name`     | `This.parent.extra.nickname` |
 
 If you want to sort the list box using the values of the second column, you have to write:
 
@@ -608,13 +608,13 @@ There are several different ways to set background colors, font colors and font 
 
 Priority and inheritance principles are observed when the same property is set at more than one level.
 
-| Nivel de prioridad | Setting location                                                     |
+| Nivel de prioridad | Ubicación del parámetro                                              |
 | ------------------ | -------------------------------------------------------------------- |
 | alta prioridad     | Cell (if multi-style text)                                           |
 |                    | Arrays de columnas/métodos                                           |
 |                    | Arrays/métodos de Listbox                                            |
 |                    | Propiedades de la columna                                            |
-|                    | List box properties                                                  |
+|                    | Propiedades de list box                                              |
 | baja prioridad     | Meta Info expression (for collection or entity selection list boxes) |
 
 For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.
@@ -644,7 +644,7 @@ To restore the original appearance of the list box, you can:
 - pass the `lk inherited` constant in element 2 of the background color array for the list box in order to restore the original alternating color of the list box.
 
 
-### Using arrays and expressions
+### Uso de arrays y expresiones
 
 Depending of the list box type, you can use different properties to customize row colors, styles and display:
 
@@ -659,7 +659,7 @@ Depending of the list box type, you can use different properties to customize ro
 
 
 
-## Printing list boxes
+## Imprimir list boxes
 
 Two printing modes are available: **preview mode** - which can be used to print a list box like a form object, and **advanced mode** - which lets you control the printing of the list box object itself within the form. Note that the "Printing" appearance is available for list box objects in the Form editor.
 
@@ -703,9 +703,9 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Up to 10 variables can be specified. These variables set the hierarchical levels to be displayed in the first column.
+Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
 
-The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. For example: counties, cities, and so on. A maximum of ten hierarchical levels can be specified. If you remove a value, the whole hierarchy moves up a level.
+The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. A maximum of ten hierarchical levels can be specified. If you remove a value, the whole hierarchy moves up a level.
 
 The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
 
@@ -715,7 +715,7 @@ This principle is not applied when only one variable is specified in the hierarc
 > If you specify a hierarchy based on the first columns of an existing list box, you must then remove or hide these columns (except for the first), otherwise they will appear in duplicate in the list box. If you specify the hierarchy via the pop-up menu of the editor (see below), the unnecessary columns are automatically removed from the list box.
 
 
-#### Create hierarchy using the contextual menu
+#### Crear una jerarquía mediante el menú contextual
 
 When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
 
@@ -881,7 +881,7 @@ To assign an object array to a list box column, you just need to set the object 
 
 ![](assets/en/FormObjects/listbox_column_objectArray_config.png)
 
-Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. These types of columns can also be hidden.
+Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. Estos tipos de columnas también se pueden ocultar.
 
 However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:
 
@@ -910,13 +910,13 @@ When a list box column is associated with an object array, the way a cell is dis
 *   "integer": para un valor entero
 *   "boolean": for a True/False value
 *   "color": para definir un color de fondo
-*   "event": to display a button with a label.
+*   "event": para mostrar un botón con una etiqueta.
 
 4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
 
 | valueType | Widget por defecto                             | Widget(s) alternativo(s)                                                                       |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| texto     | entrada de texto                               | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | booleano  | casilla de selección                           | drop-down menu (required list)                                                                 |
@@ -930,16 +930,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Value type | Formato por defecto                                        | Control de entrada      |
-| ---------- | ---------------------------------------------------------- | ----------------------- |
-| texto      | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" y "." y "-"       |
-|            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" y "-"             |
-|            |                                                            | "0-9" if min>=0         |
-| Booleano   | casilla de selección                                       | N/A                     |
-| color      | N/A                                                        | N/A                     |
-| evento     | N/A                                                        | N/A                     |
+| Tipo de valor | Formato por defecto                                        | Control de entrada    |
+| ------------- | ---------------------------------------------------------- | --------------------- |
+| texto         | lo mismo que se define en el objeto                        | any (no control)      |
+| real          | same as defined in object (using system decimal separator) | "0-9" y "." y "-"     |
+|               |                                                            | "0-9" y "." si min>=0 |
+| integer       | lo mismo que se define en el objeto                        | "0-9" y "-"           |
+|               |                                                            | "0-9" if min>=0       |
+| Booleano      | casilla de selección                                       | N/A                   |
+| color         | N/A                                                        | N/A                   |
+| evento        | N/A                                                        | N/A                   |
 
 ### Atributos
 
@@ -950,19 +950,19 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 |                       | valueType                               | texto | real | integer | booleano | color | evento |
 | --------------------- | --------------------------------------- | ----- | ---- | ------- | -------- | ----- | ------ |
 | *Atributos*           | *Descripción*                           |       |      |         |          |       |        |
-| value                 | cell value (input or output)            | x     | x    | x       |          |       |        |
+| value                 | valor de la celda (entrada o salida)    | x     | x    | x       |          |       |        |
 | min                   | valor mínimo                            |       | x    | x       |          |       |        |
 | max                   | valor máximo                            |       | x    | x       |          |       |        |
 | behavior              | "threeStates" value                     |       |      | x       |          |       |        |
 | requiredList          | drop-down list defined in object        | x     | x    | x       |          |       |        |
-| choiceList            | combo box defined in object             | x     | x    | x       |          |       |        |
+| choiceList            | combo box definido en objeto            | x     | x    | x       |          |       |        |
 | requiredListReference | 4D list ref, depends on "saveAs" value  | x     | x    | x       |          |       |        |
 | requiredListName      | 4D list name, depends on "saveAs" value | x     | x    | x       |          |       |        |
 | saveAs                | "reference" o "value"                   | x     | x    | x       |          |       |        |
 | choiceListReference   | 4D list ref, display combo box          | x     | x    | x       |          |       |        |
 | choiceListName        | 4D list name, display combo box         | x     | x    | x       |          |       |        |
 | unitList              | array de X elementos                    | x     | x    | x       |          |       |        |
-| unitReference         | index of selected element               | x     | x    | x       |          |       |        |
+| unitReference         | índice del elemento seleccionado        | x     | x    | x       |          |       |        |
 | unitsListReference    | Ver lista de unidades 4D                | x     | x    | x       |          |       |        |
 | unitsListName         | 4D lista nombre de la unidad            | x     | x    | x       |          |       |        |
 | alternateButton       | añadir un botón alternativo             | x     | x    | x       | x        | x     |        |
@@ -1044,6 +1044,7 @@ El atributo behavior ofrece variaciones a la representación estándar de los va
 ```4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
+
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
  OB SET($ob4;"valueType";"integer")
@@ -1240,7 +1241,7 @@ El atributo valueType de valor "color" permite mostrar un color o un texto.
 
 #### event valueType
 
-The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No data or value can be passed or returned.
+The "event" valueType displays a simple button that generates an `On Clicked` event when clicked. No se puede pasar ni devolver ningún dato o valor.
 
 Optionally, you can pass a "label" attribute.
 

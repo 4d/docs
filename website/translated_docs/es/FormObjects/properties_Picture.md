@@ -31,7 +31,7 @@ The following locations can be used for static pictures:
 ## Visualización
 
 
-### Scaled to fit
+### A escala para ajustarse
 
 `Gramática JSON: "scaled"`
 

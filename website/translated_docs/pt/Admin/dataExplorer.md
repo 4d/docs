@@ -125,7 +125,7 @@ With numeric, date, and time attributes, the "=" operator is selected by default
 
 ![alt-text](assets/en/Admin/DEFilter1.png)
 
-#### Dates
+#### Datas
 
 With date attributes, you can enter the date to use through a datepicker widget (click on the date area to display the calendar):
 
@@ -146,9 +146,9 @@ Text filters are not diacritic (a = A).
 
 The filter is of the "starts with" type. For example, entering "Jim" will show "Jim" and "Jimmy" values.
 
-You can also use the wildcard character (@) to replace one or more starting characters. For example:
+You can also use the wildcard character (@) to replace one or more starting characters. Por exemplo:
 
-| A filter with | Finds                                              |
+| A filter with | Resultados                                         |
 | ------------- | -------------------------------------------------- |
 | Bel           | All values beginning with “Bel”                    |
 | @do           | All values containing “do”                         |

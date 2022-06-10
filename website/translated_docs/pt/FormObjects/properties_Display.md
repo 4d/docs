@@ -38,7 +38,7 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                      |
+| Nome       | Data Type | Possible Values                                                                      |
 | ---------- | --------- | ------------------------------------------------------------------------------------ |
 | textFormat | string    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
@@ -87,7 +87,7 @@ The table below shows choices available:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                  |
+| Nome       | Data Type | Possible Values                                                                                                                                                                  |
 | ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dateFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
@@ -247,7 +247,7 @@ The following table shows how different formats affect the display of numbers. T
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                                                |
+| Nome         | Data Type | Possible Values                                                |
 | ------------ | --------- | -------------------------------------------------------------- |
 | numberFormat | string    | Numbers (including a decimal point or minus sign if necessary) |
 
@@ -311,7 +311,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                                                       |
+| Nome          | Data Type | Possible Values                                                                                       |
 | ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
 | pictureFormat | string    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
@@ -331,7 +331,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comments                                                                                                                                         | Example for 04:30:25          |
+| Format name                  | JSON string  | Comentários                                                                                                                                      | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -347,7 +347,7 @@ The table below shows the Time field display formats and gives examples:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                                          |
+| Nome       | Data Type | Possible Values                                                                                                                                                                                          |
 | ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | timeFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
@@ -371,7 +371,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                          |
+| Nome          | Data Type | Possible Values                                                          |
 | ------------- | --------- | ------------------------------------------------------------------------ |
 | booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
@@ -394,7 +394,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                                                                                                                 |
+| Nome        | Data Type | Possible Values                                                                                                                                                 |
 | ----------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | controlType | string    | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
 
@@ -416,7 +416,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values |
+| Nome    | Data Type | Possible Values |
 | ------- | --------- | --------------- |
 | display | booleano  | true, false     |
 
@@ -453,7 +453,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
+| Nome       | Data Type | Possible Values |
 | ---------- | --------- | --------------- |
 | threeState | booleano  | true, false     |
 
@@ -475,7 +475,7 @@ In that cases, the title of the check box can be entered using this property.
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                    |
+| Nome         | Data Type | Possible Values                    |
 | ------------ | --------- | ---------------------------------- |
 | controlTitle | string    | Any custom label for the check box |
 
@@ -514,7 +514,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values        |
+| Nome         | Data Type | Possible Values        |
 | ------------ | --------- | ---------------------- |
 | truncateMode | string    | "withEllipsis", "none" |
 
@@ -531,21 +531,33 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 ---
 ## Visibilidade
 
-This property allows hiding by default the object in the Application environment.
+This property allows hiding the object in the Application environment.
 
-You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context.
+You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
 
+#### Automatic visibility in list forms
+
+In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
+
+- **If record selected** (JSON name: "selectedRows")
+- **If record not selected** (JSON name: "unselectedRows")
+
+This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
+
+![](assets/en/FormObjects/select-row.png)
+
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values     |
-| ---------- | --------- | ------------------- |
-| visibility | string    | "visible", "hidden" |
+| Nome       | Data Type | Possible Values                                                                         |
+| ---------- | --------- | --------------------------------------------------------------------------------------- |
+| visibility | string    | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 
 
@@ -599,7 +611,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                    |
+| Nome     | Data Type | Possible Values                                    |
 | -------- | --------- | -------------------------------------------------- |
 | wordwrap | string    | "automatic" (excluding list box), "normal", "none" |
 

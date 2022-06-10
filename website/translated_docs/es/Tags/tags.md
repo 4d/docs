@@ -35,7 +35,7 @@ It is possible to mix several types of tags. For example, the following HTML str
 
 
 
-## Principles for using tags
+## Principios de uso de las etiquetas
 
 ### Parsing
 
@@ -46,9 +46,9 @@ Parsing the contents of a *template* source is done in two contexts:
 - Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, http://www.server.com/dir/page.shtm).
 
 
-### Recursive processing
+### Tratamiento recursivo
 
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. For example, given the following statement:
+4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. Por ejemplo, dada la siguiente instrucción:
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
@@ -59,13 +59,13 @@ If the `[Mail]Letter_type` text field itself contains a tag, for example `<!--#4
 This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, [which can be avoided](WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 
-### Identifiers with tokens
+### Identificadores con tokens
 
 To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time:C178`.
 
 ### Using the "." as decimal separator
 
-4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Regional settings are ignored. This feature facilitates code maintenance and compatibility between 4D languages and versions.
+4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Los parámetros regionales se ignoran. This feature facilitates code maintenance and compatibility between 4D languages and versions.
 
 
 ## 4DBASE
@@ -138,7 +138,7 @@ The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
 
 When a `<!--#4DCODE` sequence is detected that is followed by a space, a CR or a LF character, 4D interprets all the lines of code up to the next `-->` sequence. The code block itself can contain carriage returns, line feeds, or both; it will be interpreted sequentially by 4D.
 
-For example, you can write in a template:
+Por ejemplo, puede escribir en una plantilla:
 
 ```html
 <!--#4DCODE
@@ -250,7 +250,7 @@ The *entity* parameter is an object variable of the entity selection class.
 
 The number of loops is based on the number of entities of the entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
 
-#### Example with a html table
+#### Ejemplo con una tabla html
 
 ```html
     <table class="table">     
@@ -267,7 +267,7 @@ The number of loops is based on the number of entities of the entity selection. 
     </table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### Ejemplo con `PROCESS 4D TAGS`
 
 ```4d
 var customers : cs.CustomersSelection
@@ -319,7 +319,7 @@ The properties of the object are processed according to their creation order. Du
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
-For example, you can execute:
+Por ejemplo, puede ejecutar:
 
 ```4d
  $input:="<!--#4DEVAL a:=42-->" //assignment
@@ -468,7 +468,7 @@ This comment allows repetition of a portion of code as long as the condition is 
 
 The `<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` blocks can be nested. Like in 4D, each `<!--#4DLOOP condition-->` must match a `<!--#4DENDLOOP-->`.
 
-There are five kinds of conditions:
+Hay cinco tipos de condiciones:
 
 ### `<!--#4DLOOP [table]-->`
 
@@ -569,7 +569,7 @@ The `my_method` method can be as follows:
 
 With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
 
-For example, the following code:
+Por ejemplo, el siguiente código:
 
 ```html
 <!--#4DEVAL $i:=0-->
@@ -626,7 +626,7 @@ The following messages can be displayed:
 
 The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string in `$1`.
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). If it returns True, 4D executes the method.
+> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). Si devuelve True, 4D ejecuta el método.
 
 El método debe devolver el texto en `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
@@ -660,16 +660,16 @@ The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D var
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
-You can also insert 4D expressions. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). The expression conversion follows the same rules as the variable ones. Moreover, the expression must comply with 4D syntax rules.
+También puede insertar expresiones 4D. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). The expression conversion follows the same rules as the variable ones. Moreover, the expression must comply with 4D syntax rules.
 
 > For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
 In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
 
-- You must use process variables.
+- Debe utilizar las variables proceso.
 - You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
 - It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
-- You will usually work with Text variables. However, you can also use BLOB variables. You just need to generate BLOBs in `Text without length` mode.
+- Normalmente se trabaja con variables de tipo texto. Sin embargo, también se pueden utilizar las variables BLOB. You just need to generate BLOBs in `Text without length` mode.
 
 
 

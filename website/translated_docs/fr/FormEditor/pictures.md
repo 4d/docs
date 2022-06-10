@@ -58,7 +58,7 @@ Les images haute résolution avec la convention @nx peuvent être utilisées dan
 
 
 
-4D priorise automatiquement les images avec la résolution la plus élevée. <br><br> **Exemple** : lorsque vous utilisez deux écrans (un écran haute résolution, un écran standard) et que vous déplacez un formulaire d'un écran à un autre, 4D restitue automatiquement la résolution la plus élevée possible de l'image. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
+4D priorise automatiquement les images avec la résolution la plus élevée. 4D priorise automatiquement les images avec la résolution la plus élevée. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
 > A noter que cette résolution se produit uniquement pour l'affichage des images à l'écran, aucune hiérarchisation automatique n'est effectuée lors de l'impression.
 
 

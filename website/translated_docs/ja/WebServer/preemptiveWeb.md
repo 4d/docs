@@ -12,28 +12,28 @@ title: プリエンプティブWebプロセスの使用
 
 実行コンテキストによって、プリエンプティブモードが使用される、または使用可能かを次の表に示します:
 
-| 4D Server   | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | コンパイル済みコード |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ---------- |
-| REST サーバー   | コオペラティブ                                                                                                                  | プリエンプティブ                                                     | プリエンプティブ   |
-| Web サーバー    | コオペラティブ                                                                                                                  | *Web設定*                                                      | *Web設定*    |
-| Webサービスサーバー | コオペラティブ                                                                                                                  | *Web設定*                                                      | *Web設定*    |
-| Legacy REST | コオペラティブ                                                                                                                  | *Web設定*                                                      | *Web設定*    |
+| 4D Server   | インタープリター ([ローカルクライアント接続](../Desktop/clientServer.md#4d-と4d-server-の同じマシン上での使用)) | インタープリター (プロジェクト (ローカルクライアント接続なし) またはバイナリ) | コンパイル済みコード |
+| ----------- | ------------------------------------------------------------------------------- | ------------------------------------------ | ---------- |
+| REST サーバー   | コオペラティブ                                                                         | プリエンプティブ                                   | プリエンプティブ   |
+| Web サーバー    | コオペラティブ                                                                         | *Web設定*                                    | *Web設定*    |
+| Webサービスサーバー | コオペラティブ                                                                         | *Web設定*                                    | *Web設定*    |
+| 旧式REST      | コオペラティブ                                                                         | *Web設定*                                    | *Web設定*    |
 
 | 4Dリモート/シングルユーザー | インタープリターコード | コンパイル済みコード |
 | --------------- | ----------- | ---------- |
 | REST サーバー       | コオペラティブ     | プリエンプティブ   |
 | Web サーバー        | コオペラティブ     | *Web設定*    |
 | Webサービスサーバー     | コオペラティブ     | *Web設定*    |
-| Legacy REST     | コオペラティブ     | *Web設定*    |
+| 旧式REST          | コオペラティブ     | *Web設定*    |
 
 - REST サーバー: REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md) を処理します
 - Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
 - Web サービスサーバー: SOAPリクエストを処理します
-- Legacy REST: direct requests to 4D methods (`/rest/{table}/{methodName}`)
+- 旧式REST: 4D メソッドへの直りクエスト (`/rest/{table}/{methodName}`)
 - ***Web設定*** とは、プリエンプティブモード実行が設定によることを表します:
     - [**スケーラブルセッション**](sessions.md#セッションの有効化) が選択されている場合、Webプロセスにおいて [プリエンプティブモードが自動的に使用されます](sessions.md#プリエンプティブモード)。
-    - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-    - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
+    - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
+    - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。 公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
 
 
 
@@ -58,7 +58,7 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
 
 *   REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
 
-*   Project methods with "REST Server" property checked (legacy REST calls)
+*   "REST サーバー" プロパティを選択されたプロジェクトメソッド (旧式RESTコール)
 
 これらそれぞれのメソッドとコードの部分について、スレッドセーフのルールが遵守されているかをコンパイラーがチェックし、問題があった場合にはエラーを返します。 スレッドセーフルールについての詳細は、[4Dランゲージリファレンス](https://doc.4d.com) マニュアルの *プロセス* の章の *スレッドセーフなメソッドの書き方* の段落を参照ください。
 

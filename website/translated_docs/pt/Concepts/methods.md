@@ -12,7 +12,7 @@ The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
-| Type                             | Calling context                                                                                             | Accepts parameters | Description                                                                                                                                                          |
+| Type                             | Calling context                                                                                             | Accepts parameters | Descrição                                                                                                                                                            |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Project method**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
 | **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached                                | No                 | Property of a form object (also called widget)                                                                                                                       |
@@ -88,7 +88,7 @@ You can encapsulate your project methods in **formula** objects and call them fr
 
 The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. For example:
+To execute a method stored in an object property, use the **( )** operator after the property name. Por exemplo:
 
 ```4d
 //myAlert
@@ -106,7 +106,7 @@ $o.custom_Alert() //displays "Hello world!"
 Syntax with brackets is also supported:
 
 ```4d
-$o["custom_Alert"]() //displays "Hello world!"
+$o["custom_Alert"]() //exibe "Hello world!"
 ```
 
 You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:
@@ -127,7 +127,7 @@ $result:=$o.full_name("John";"Smith")
 // equivalent to $result:=fullName("param1";"param2")
 ```
 
-Combined with the `This`function, such object methods allow writing powerful generic code. For example:
+Combined with the `This`function, such object methods allow writing powerful generic code. Por exemplo:
 
 ```4d
 //fullName2 method
@@ -173,7 +173,7 @@ An **error catching method** is an interrupt-based project method. Each time an 
 
 ## Métodos projeto recursivos
 
-Project methods can call themselves. For example:
+Project methods can call themselves. Por exemplo:
 
 - The method A may call the method B which may call A, so A will call B again and so on.
 - A method can call itself.

@@ -13,7 +13,7 @@ Se soportan las siguientes estructuras para las peticiones REST:
 |                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)                                             | [$attributes]($attributes.md)                                                                         |
 |                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                      |                                                                                                       |
 
-While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
+Mientras que todas las solicitudes REST deben contener los parámetros URI y Resource, los filtros de salida (que filtran los datos devueltos) son opcionales.
 
 Como en todos los URI, el primer parámetro está delimitado por un "?" y todos los siguientes por un "&". Por ejemplo:
 

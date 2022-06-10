@@ -8,7 +8,7 @@ title: Form Properties
 ## Color Scheme
 > Color scheme property is only applied on macOS.
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
 *   dark - light text on a dark background
 *   light - dark text on a light background
@@ -16,7 +16,7 @@ This property defines the color scheme for the form. By default when the propert
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
+| Nome        | Data Type | Possible Values |
 | ----------- | --------- | --------------- |
 | colorScheme | string    | "dark", "light" |
 
@@ -34,7 +34,7 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON Grammar
 
-| Name  | Data Type  | Possible Values                                                          |
+| Nome  | Data Type  | Possible Values                                                          |
 | ----- | ---------- | ------------------------------------------------------------------------ |
 | pages | collection | Collection of pages (each page is an object, page 0 is the first element |
 
@@ -66,18 +66,18 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Form Type                | JSON grammar     | Description                                                   | Supported with              |
+| Form Type                | JSON grammar     | Descrição                                                     | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
+| Formulário detalhado     | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
 | List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| None                     | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Nenhum                   | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                              |
+| Nome        | Data Type | Possible Values                                              |
 | ----------- | --------- | ------------------------------------------------------------ |
 | destination | string    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
@@ -94,7 +94,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                                                                    |
+| Nome          | Data Type | Possible Values                                                                                                    |
 | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
 | inheritedForm | string    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
@@ -110,7 +110,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 #### JSON Grammar
 
-| Name               | Data Type        | Possible Values            |
+| Nome               | Data Type        | Possible Values            |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
 
@@ -127,7 +127,7 @@ Only project forms can be specified as published subforms.
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values |
+| Nome   | Data Type | Possible Values |
 | ------ | --------- | --------------- |
 | shared | booleano  | true, false     |
 
@@ -146,11 +146,11 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 #### JSON Grammar
 
-| Name             | Data Type | Possible Values |
+| Nome             | Data Type | Possible Values |
 | ---------------- | --------- | --------------- |
 | memorizeGeometry | booleano  | true, false     |
 
-#### See also
+#### Veja também
 [**Save Value**](FormObjects/properties_Object.md#save-value)
 
 
@@ -172,7 +172,7 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                        |
+| Nome        | Data Type | Possible Values                                        |
 | ----------- | --------- | ------------------------------------------------------ |
 | windowTitle | string    | The name of the window as plain text or as a reference |
 

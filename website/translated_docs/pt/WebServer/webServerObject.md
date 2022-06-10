@@ -66,7 +66,7 @@ webServer:=WEB Server(Web server receiving request)
 
 A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
 
-| Funções                                  | Parameter         | Return value    | Description           |
+| Funções                                  | Parameter         | Return value    | Descrição             |
 | ---------------------------------------- | ----------------- | --------------- | --------------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (object) | status (object) | Starts the web server |
 | [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Stops the web server  |

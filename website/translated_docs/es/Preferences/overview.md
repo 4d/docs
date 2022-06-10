@@ -25,7 +25,7 @@ Settings made in the Preferences dialog box are saved in an XML format preferenc
 *   Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
 *   macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
 
-## Customizing parameters and reset settings
+## Personalización de los parámetros y reinicialización de los parámetros
 
 In settings dialog boxes, parameters whose values have been modified appear in bold:
 

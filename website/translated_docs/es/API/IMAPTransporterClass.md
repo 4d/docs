@@ -1194,7 +1194,7 @@ En el primer parámetro, puede pasar:
 El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado como "visto" en el buzón. Puede pasar:
 
 *   **True** - para marcar el mensaje como "visto" (indicando que el mensaje ha sido leído)
-*   **False** - para dejar intacto el estado "visto" del mensaje
+*   **False** - para dejar intacto el estado "visto" del mensaje > * La función devuelve un BLOB vacío si *msgNumber* o msgID* designa un mensaje inexistente, > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error, > * Si no hay ninguna conexión abierta, `.getMIMEAsBlob()` abrirá una conexión con el último buzón especificado por `.selectBox()`.
 > * La función devuelve un BLOB vacío si *msgNumber* o msgID* designa un mensaje inexistente,
 > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error,
 > * Si no hay ninguna conexión abierta, `.getMIMEAsBlob()` abrirá una conexión con el último buzón especificado por `.selectBox()`.
@@ -1612,7 +1612,7 @@ End if
 
 La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coincidan con el *searchCriteria* en el buzón actual<!-- END REF -->. El parámetro *searchCriteria* contiene una o varias palabras clave de búsqueda.
 
-*searchCriteria* is a text parameter listing one or more search keys (see [Authorized search-keys](#authorized-search-keys) below) associated or not with values to look for. A search key may be a single or multiple items. Por ejemplo:
+*searchCriteria* es un parámetro texto que enumera una o varias llaves de búsqueda (ver [llaves-de-búsqueda-autorizadas](#authorized-search-keys) más abajo) asociadas o no a valores a buscar. Una llave de búsqueda puede ser uno o varios elementos. Por ejemplo:
 
 ```
 SearchKey1 = FLAGGED
@@ -1622,36 +1622,36 @@ SearchKey3 = FLAGGED DRAFT
 
 > Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
 
-- If the *searchCriteria* is a null string, the search will be equivalent to a “select all”.
-- If the *searchCriteria* includes multiple search keys, the result is the intersection (AND function) of all the messages that match those keys.
+- Si el *searchCriteria* es una cadena null, la búsqueda será equivalente a un "seleccionar todo".
+- Si *searchCriteria* incluye varias llaves de búsqueda, el resultado es la intersección (función AND) de todos los mensajes que coinciden con esas llaves.
 
 ```
 searchCriteria = FLAGGED FROM "SMITH"
 ```
-... returns all messages with \Flagged flag set AND sent by Smith.
-- You can use the **OR** or **NOT** operators as follows:
+... devuelve todos los mensajes con el marcador \Flagged AND activado y enviados por Smith.
+- Puede utilizar los operadores **OR** o **NOT** de la siguiente manera:
 
 ```
 searchCriteria = OR SEEN FLAGGED
 ```
-... returns all messages with \Seen flag set OR \Flagged flag set
+... devuelve todos los mensajes con el marcador \Seen O \Flagged
 
 ```
 searchCriteria = NOT SEEN
 ```
-... returns all messages with \Seen flag not set.
+... devuelve todos los mensajes con el marcador \Seen.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
-... returns message whose content-type header contains “Mixed” and does not contain “Text”.
+... devuelve los mensajes cuyo encabezado content-type contiene "Mixed" y no contiene "Text".
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
-... returns message whose content-type header contains “ e ” and whose Subject header does not contain “ o ” and whose content-type header is not “ Mixed ”.
+... devuelve los mensajes cuyo encabezado content-type contiene " e " y cuyo encabezado Subject no contiene " o " y cuyo encabezado content-type no es " Mixed ".
 
-As concerns the last two examples, notice that the result of the search is different when you remove the parentheses of the first search key list.
+En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.
 
 - The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
 
@@ -1661,13 +1661,13 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
 
 
-#### Search value types
+#### Tipos de valores de búsqueda
 
 Search-keys may request the value to search for:
 
 - **Search-keys with a field-name value**: the field-name is the name of a header field. Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
 
-- **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Matching is not case-sensitive.
+- **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
 
 - **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
@@ -1741,10 +1741,10 @@ Search-keys may request the value to search for:
 
 #### Descripción
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
+La función `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona el buzón *name* como el buzón actual<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 > To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
 
-In the *name* parameter, pass the name of the mailbox to access. The name represents an unambiguous left-to-right hierarchy with levels separated by a specific delimiter character. The delimiter can be found with the [`.getDelimiter()`](#getdelimiter) function.
+En el parámetro *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).
 
 The optional *state* parameter defines the type of access to the mailbox. Los valores posibles son:
 
@@ -1752,9 +1752,9 @@ The optional *state* parameter defines the type of access to the mailbox. Los va
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1     | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                     |
 | IMAP read write state | 0     | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor por defecto) |
-> * The function generates an error and returns **Null** if *name* designates a non-existing mailbox.
-> * If there is no open connection, `.selectBox()` will open a connection.
-> * If the connection has not been used since the designated connection delay (see `IMAP New transporter`), the [`.checkConnection()`](#checkconnection) function is automatically called.
+> * La función genera un error y devuelve **Null** si *name* designa un buzón inexistente.
+> * Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.
+> * Si la conexión no se ha utilizado desde el retraso de conexión designado (ver `IMAP New transporter`), se llama automáticamente a la función [`.checkConnection()`](#checkconnection).
 
 **Objeto devuelto**
 
@@ -1881,9 +1881,9 @@ End if
 
 #### Descripción
 
-The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->removes a mailbox from a set of subscribed mailboxes<!-- END REF -->. This allows you reduce the number of mailboxes you usually see.
+La función `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->elimina un buzón de un conjunto de buzones suscritos<!-- END REF -->. Esto le permite reducir el número de buzones que suele ver.
 
-In the `name` parameter, pass the name of the mailbox to remove (unsubscribe) from your active mailboxes.
+En el parámetro `name`, pase el nombre del buzón a eliminar (darse de baja) de sus buzones activos.
 
 **Objeto devuelto**
 

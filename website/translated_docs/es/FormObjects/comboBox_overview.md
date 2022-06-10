@@ -7,24 +7,24 @@ Un combo box es similar a una [lista desplegable](dropdownList_Overview.md#overv
 
 ![](assets/en/FormObjects/combo_box.png)
 
-Fundamentally, you treat a combo box as an enterable area that uses its object, array or a choice list as the set of default values.
+Fundamentalmente, debe considerar un combo box como un área editable que utiliza su objeto, array o una lista de selección como el conjunto de valores por defecto.
 
 ## Gestión de combo boxes
 
-Use the [`On Data Change`](Events/onDataChange.md) event to manage entries into the enterable area, as you would for any input form object.
+Utilice el evento [`On Data Change`](Events/onDataChange.md) para gestionar las entradas en el área editable, como lo haría con cualquier objeto del formulario de entrada.
 
-You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
+Un combo box se inicializa exactamente igual que una [lista desplegable](dropdownList_Overview.md#overview): utilizando un objeto, un array o una lista de selección.
 
-### Using an object
+### Utilizar un objeto
 
 > This feature is only available in 4D projects.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
+Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection) puede utilizarse como fuente de datos de un combo box. El objeto debe contener las siguientes propiedades:
 
-| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                        |
-| -------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection           | Mandatory - Collection of scalar values. All values must be of the same type. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>times</li>If empty or not defined, the combo box is empty |
-| `currentValue` | igual que Collection | Text entered by the user                                                                                                                                                                                                                           |
+| Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                              |
+| -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío |
+| `currentValue` | igual que Collection | Texto introducido por el usuario                                                                                                                                                                                                                                         |
 
 If the object contains other properties, they are ignored.
 

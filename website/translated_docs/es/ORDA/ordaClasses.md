@@ -40,7 +40,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 ![](assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+All ORDA data model classes are exposed as properties of the **`cs`** class store. Las clases ORDA siguientes están disponibles:
 
 | Class                       | Nombre del ejemplo   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -134,7 +134,7 @@ Then you can get an entity selection of the "best" companies by executing:
 ```
 
 
-#### Example with a remote datastore
+#### Ejemplo con un datastore remoto
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
@@ -175,7 +175,7 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
 
-### EntitySelection Class
+### Clase EntitySelection
 
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
@@ -231,7 +231,7 @@ C_BOOLEAN($0)
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Luego puede llamar este código:
 
 ```4d
 var $cityManager; $city : Object
@@ -260,11 +260,11 @@ When creating or editing data model classes, you must pay attention to the follo
 
 
 
-## Exposed vs non-exposed functions
+## Funciones expuestas y no expuestas
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-Remote requests include:
+Las peticiones remotas incluyen:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
 - Peticiones REST
@@ -307,7 +307,7 @@ $id:=...
 
 ```
 
-When the code is called:
+Cuando se llama al código:
 
 ```4d
 var $remoteDS; $student; $status : Object
@@ -367,6 +367,10 @@ If (This.birthDate#!00-00-00!)
 Else 
     $age:=Null
 End if
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null
+End if
 ```
 
 #### Verificación de los atributos
@@ -406,7 +410,7 @@ End if
 
 
 
-## Support in 4D projects
+## Soporte en proyectos 4D
 
 
 ### Archivos de clase (class files)
@@ -422,7 +426,7 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 
 > By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
-ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+ORDA user classes have a different icon from regular classes. Las clases vacías se atenúan:
 
 ![](assets/en/ORDA/classORDA2.png)
 

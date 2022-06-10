@@ -58,7 +58,7 @@ Las imágenes de alta resolución con la convención @nx pueden utilizarse en lo
 
 
 
-4D prioriza automáticamente las imágenes con mayor resolución. <br><br> **Ejemplo**: cuando se utilizan dos pantallas (una de alta resolución y otra estándar) y se mueve un formulario de una pantalla a otra, 4D renderiza automáticamente la mayor resolución posible de la imagen. Incluso si un comando o propiedad especifica *circle.png*, se utilizará *circle@3x.png* (si existe).
+4D prioriza automáticamente las imágenes con mayor resolución. 4D prioriza automáticamente las imágenes con mayor resolución. Incluso si un comando o propiedad especifica *circle.png*, se utilizará *circle@3x.png* (si existe).
 > Tenga en cuenta que la priorización de la resolución sólo se produce para la visualización de imágenes en pantalla, no se realiza una priorización automática al imprimir.
 
 

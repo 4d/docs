@@ -128,14 +128,14 @@ The dataclass properties are however enumerable:
 
 ```code4d 
 ARRAY TEXT($prop;0)
-OB GET PROPERTY NAMES(ds.Employee;$prop)
+OB GET PROPERTY NAMES(ds. Employee;$prop)
 //$prop contains the names of all the dataclasse attributes
 ```
 
 
 ### Attribute
 
-Dataclass properties are attribute objects describing the underlying fields or relations. For example:
+Dataclass properties are attribute objects describing the underlying fields or relations. Por exemplo:
 
 ```4d 
  $nameAttribute:=ds.Company.name //reference to class attribute

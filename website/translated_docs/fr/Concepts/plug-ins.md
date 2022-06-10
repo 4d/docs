@@ -49,8 +49,8 @@ Vous pouvez placer les dossiers Plugins et Components à deux endroits :
 
 - Au niveau de l’application 4D exécutable, c'est-à-dire .:
   - Sous Windows : à côté du fichier .exe
-  - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
-- At the same level as the Project folder. Dans ce cas, les plug-ins et les composants sont disponibles dans cette application uniquement.
+  - Sous macOS : au premier niveau du dossier Contents à l'intérieur du package de l'application. Dans ce cas, les plug-ins sont disponibles dans chaque projet ouvert par l'application.
+- Au même niveau que le dossier Project. Dans ce cas, les plug-ins et les composants sont disponibles dans cette application uniquement.
 
 Le choix de l’emplacement dépend de votre mode d’utilisation du plug-in ou du composant.
 

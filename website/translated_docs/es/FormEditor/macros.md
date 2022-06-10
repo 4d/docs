@@ -4,15 +4,15 @@ title: Macros del editor de formularios
 ---
 
 
-The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+El editor de formularios 4D soporta macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
-*   Create and execute 4D code
+*   Crear y ejecutar código 4D
 *   Mostrar las cajas de diálogo
 *   Seleccione los objetos de formulario
 *   Add / delete / modify forms, form objects as well as their properties
-*   Modify project files (update, delete)
+*   Modificar los archivos del proyecto (actualizar, eliminar)
 
 Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
 
@@ -82,7 +82,7 @@ This menu can be called in an empty area or a selection in the form. Selected ob
 
 A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
 
-## Location of macro file
+## Ubicación del archivo de macro
 
 All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
 
@@ -111,7 +111,7 @@ Here is the description of the JSON file contents:
 
 | Atributo |                     |                          | Tipo   | Descripción                                            |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
-| macros   |                     |                          | objeto | list of defined macros                                 |
+| macros   |                     |                          | objeto | lista de macros definidas                              |
 |          | `<macroName>` |                          | objeto | definición de la macro                                 |
 |          |                     | class                    | cadena | nombre de clase de la macro                            |
 |          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
@@ -174,7 +174,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 #### Ejemplo
 
-In the `formMacros.json` file:
+En el archivo `formMacros.json`:
 
 ```js
 {
@@ -231,7 +231,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | Propiedad         | Tipo       | Descripción                                                 |
 | ----------------- | ---------- | ----------------------------------------------------------- |
 | currentPage       | Objeto     | currentPage including objects modified by the macro, if any |
-| currentSelection  | Collection | currentSelection if modified by the macro                   |
+| currentSelection  | Collection | currentSelection si es modificada por la macro              |
 | formProperties    | Objeto     | formProperties if modified by the macro                     |
 | editor.groups     | Objeto     | group info, if groups are modified by the macro             |
 | editor.views      | Objeto     | view info, if views are modified by the macro               |
@@ -247,7 +247,7 @@ For example, if objects of the current page and groups have been modified, you c
 ```
 
 
-#### `method` attribute
+#### atributo `method`
 
 When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 
@@ -258,7 +258,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 | Propiedad | Tipo | Descripción |
 | --------- | ---- | ----------- |
 |           |      |             |
- source|String|method code|
+ source|Cadena|Código del método|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
 
@@ -306,8 +306,8 @@ Function onInvoke($editor : Object)->$result : Object
 | $resultMacro |                       | Objeto     | Object returned by [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Error stack                              |
 |              | [].errCode            | Número     | Código de error                          |
-|              | [].message            | Texto      | Description of the error                 |
-|              | [].componentSignature | Texto      | Internal component signature             |
+|              | [].message            | Texto      | Descripción del error                    |
+|              | [].componentSignature | Texto      | Firma del componente interno             |
 
 The `onError` function is executed when the macros processor encounters an error.
 

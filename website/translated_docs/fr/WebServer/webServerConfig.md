@@ -169,7 +169,7 @@ Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base `On We
 | `WEB SET OPTION`         | `Web CORS enabled`                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
 | Fenêtre de configuration | Page Options (II) > Activer CORS                   | Décoché par défaut                         |
 
-Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisée envoie une demande cross-site, celle-ci est rejetée et une erreur "403 - forbidden" est renvoyée.
+Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous).
 
 Lorsqu'elle est désactivée (par défaut), toutes les demandes intersites envoyées avec CORS sont ignorées.
 
@@ -382,7 +382,7 @@ Démarre ou arrête l'enregistrement des requêtes reçues par le serveur Web 4D
 
 Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs possibles :
 
-| Valeur | Format name    | Description                                                                                                                                                                                                                                       |
+| Valeur | Nom du format  | Description                                                                                                                                                                                                                                       |
 | ------ | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0      | Pas de journal | Par défaut                                                                                                                                                                                                                                        |
 | 1      | CLF            | Format de journal commun - Chaque ligne du fichier représente une requête, telle que : `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF. |
@@ -415,7 +415,7 @@ La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
 Taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter. Par défaut, la valeur est de 2 000 000, c'est-à-dire un peu moins de 2 Mo. Le dépassement de la valeur maximale (2 147 483 648) indique, en pratique, qu'aucune limite n'est fixée.
 
-Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.
+Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses.
 
 Valeurs possibles: 500 000 - 2147483648.
 

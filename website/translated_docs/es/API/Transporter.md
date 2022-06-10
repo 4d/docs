@@ -89,7 +89,7 @@ Los valores posibles son:
 
 La propiedad `.authenticationMode` contiene el modo de autenticación utilizado para abrir la sesión en el servidor de correo.
 
-By default, the most secured mode supported by the server is used.
+Por defecto, se utiliza el modo más seguro soportado por el servidor.
 
 Los valores posibles son:
 
@@ -140,10 +140,10 @@ Los valores posibles son:
 ## .bodyCharset
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones          |
-| ------- | ----------------------- |
-| v18     | Support for UTF8 base64 |
-| v17 R5  | Añadidos                |
+| Versión | Modificaciones         |
+| ------- | ---------------------- |
+| v18     | Soporte de UTF8 base64 |
+| v17 R5  | Añadidos               |
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->

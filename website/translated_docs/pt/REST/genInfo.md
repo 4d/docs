@@ -25,7 +25,7 @@ Use o parâmetro [`$info`]($info.md) para obter informações sobre as seleçõe
 
 As seleções de entidade que são geradas através de pesquisas podem ter duas propriedades : `queryPlan` e `queryPath`. Para calcular e retornar essas propriedades, precisa apenas adicionar um [`$queryPlan`]($queryplan.md) ou [`$queryPath`]($querypath.md) na petição REST.
 
-For example:
+Por exemplo:
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 

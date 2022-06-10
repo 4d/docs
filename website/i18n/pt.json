@@ -132,7 +132,7 @@
         "title": "Classes"
       },
       "Concepts/components": {
-        "title": "Components"
+        "title": "Componentes"
       },
       "Concepts/data-types": {
         "title": "Tipos de dados"
@@ -289,7 +289,7 @@
         "title": "On Footer Click"
       },
       "Events/onGettingFocus": {
-        "title": "On Getting focus"
+        "title": "On getting focus"
       },
       "Events/onHeader": {
         "title": "On Header"
@@ -409,7 +409,7 @@
         "title": "Object libraries"
       },
       "FormEditor/pictures": {
-        "title": "Pictures"
+        "title": "Imagens"
       },
       "FormEditor/action": {
         "title": "Action"
@@ -427,7 +427,7 @@
         "title": "Markers"
       },
       "FormEditor/menu": {
-        "title": "Menu"
+        "title": "Menú"
       },
       "FormEditor/print": {
         "title": "Print"
@@ -511,7 +511,7 @@
         "title": "Gridlines"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "Cabeçalhos"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -523,7 +523,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "Objetos"
       },
       "FormObjects/propertiesPicture": {
         "title": "Imagem"
@@ -588,13 +588,13 @@
       "FormObjects/text": {
         "title": "Texto"
       },
-      "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+      "FormObjects/viewProArea_overview": {
+        "title": "Área 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Web Area"
       },
-      "FormObjects/writeProAreaOverview": {
+      "FormObjects/writeProArea_overview": {
         "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
@@ -925,7 +925,7 @@
     "Desktop applications|no description given": "Desktop applications",
     "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Help Translate",
-    "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
-    "Translate this Doc|recruitment message asking to translate the docs": "Translate"
+    "Edit this Doc|recruitment message asking to edit the doc source": "Editar",
+    "Translate this Doc|recruitment message asking to translate the docs": "Traduzir"
   }
 }

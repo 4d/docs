@@ -62,7 +62,7 @@ Si no se encuentra ningún almacén de datos *localID*, el comando devuelve **Nu
 
 El uso de `ds` requiere que la base de datos de destino sea compatible con ORDA, como se especifica en la sección **Requisitos previos de ORDA**. Se aplican las siguientes reglas:
 
-*   Un datastore sólo hace referencia a las tablas con una sola llave primaria. Las tablas sin llave primaria o con llaves primarias compuestas no se referencian.
+*   Un datastore sólo hace referencia a las tablas con una sola llave primaria. Un datastore sólo hace referencia a las tablas con una sola llave primaria.
 *   Los atributos de tipo BLOB no se gestionan en el almacén de datos.
 
 
@@ -126,7 +126,7 @@ Utilizando el almacén de datos principal de la base 4D:
 
 #### Descripción
 
-El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
+El comando `Open datastore`<!-- REF #_command_.Open datastore. Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
 
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 

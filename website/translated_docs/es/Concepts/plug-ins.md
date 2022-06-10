@@ -56,4 +56,4 @@ La elección de la ubicación depende de cómo quiera utilizar el plug-in.
 
 Si se coloca el mismo plug-in en ambas ubicaciones, 4D sólo cargará el que esté situado junto a la estructura. En una aplicación compilada y fusionada con 4D Volume Desktop, si hay varias instancias del mismo plug-in presentes, esto impedirá que la aplicación se abra.
 
-Los plug-ins son cargados por 4D cuando se lanza la aplicación, por lo que tendrá que salir de su aplicación 4D antes de instalarlos. A continuación, abra su proyecto con 4D. Si algún plug-in requiere una licencia específica, se cargará pero no estará disponible para su uso.
+Los plug-ins son cargados por 4D cuando se lanza la aplicación, por lo que tendrá que salir de su aplicación 4D antes de instalarlos. Los plug-ins son cargados por 4D cuando se lanza la aplicación, por lo que tendrá que salir de su aplicación 4D antes de instalarlos. Si algún plug-in requiere una licencia específica, se cargará pero no estará disponible para su uso.

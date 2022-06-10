@@ -218,7 +218,7 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
 
 #### Paramètres
 
-Les paramètres des fonctions sont déclarés via le nom du paramètre et son type, séparés par deux-points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Plusieurs paramètres (et types) sont séparés par des points-virgules (;).
+Les paramètres des fonctions sont déclarés via le nom du paramètre et son type, séparés par deux-points. Le nom du paramètre doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties). Les paramètres multiples (et leurs types) sont séparés par des points-virgules (;).
 
 ```4d  
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
@@ -284,6 +284,7 @@ $area:=$rect.getArea() //5000
 ```4d
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
+// code
 // code
 ```
 
@@ -375,7 +376,7 @@ Super {( param{;...;paramN} )} {-> Object}
 | param      | mixte  | -> | Paramètre(s) à passer au constructeur de la classe parente |
 | Résultat   | object | <- | Parent de l'objet                                          |
 
-Le mot-clé `Super` permet d'appeler la `superclass`, i.e. la classe parente.
+Le mot-clé `Super` permet d'appeler la `superclass`, i.e.
 
 `Super` peut être utilisé de deux différentes manières :
 
@@ -413,6 +414,11 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
+
+// Définition de fonction
+Function getArea()
+    var $0 : Integer
+    $0:=(This.height)*(This.width)
 
 // Définition de fonction
 Function getArea()

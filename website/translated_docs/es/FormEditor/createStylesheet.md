@@ -211,7 +211,7 @@ Available media feature expressions:
 
 ##### Ejemplo
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+Este CSS define una combinación de colores para el texto y el fondo del texto en el esquema claro (por defecto) y otra combinación cuando se selecciona el esquema oscuro:
 
 ```
 @media (prefers-color-scheme: light) {

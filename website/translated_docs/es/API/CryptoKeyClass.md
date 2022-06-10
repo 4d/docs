@@ -307,7 +307,7 @@ La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representac
 
 #### *Resultado*
 
-Representación utf8 de la cadena *message*.
+`CryptoKey` debe contener una llave válida **privada**.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -369,9 +369,9 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño d
 
 <!-- END REF -->
 
-La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* proporcionadas.
+Representación utf8 de la cadena *message*.
 
-La `CryptoKey` debe contener una llave **pública** válida.
+La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* proporcionadas.
 
 
 #### *options*
@@ -385,9 +385,9 @@ La `CryptoKey` debe contener una llave **pública** válida.
 
 #### *Resultado*
 
-La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
+La `CryptoKey` debe contener una llave **pública** válida.
 
-En caso de que la firma no haya podido ser verificada por no haber sido firmada con el mismo *message*, llave o algoritmo, el objeto `status` que se devuelve contiene una colección de errores en `status.errors`.
+La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 
 | Propiedad | Tipo      | Descripción                                                      |
 | --------- | --------- | ---------------------------------------------------------------- |

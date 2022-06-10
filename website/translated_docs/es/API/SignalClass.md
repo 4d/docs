@@ -116,7 +116,7 @@ Método ***OpenForm***:
 
 #### Descripción
 
-El comando `New signal` <!-- REF #_command_.New signal.Summary -->crea un objeto `4D.Signal`<!-- END REF -->.
+El comando `New signal` <!-- REF #_command_.New signal. Summary -->crea un objeto `4D.Signal`<!-- END REF -->.
 
 Una señal es un objeto compartido que puede ser pasado como parámetro de un worker o proceso a otro worker o proceso, de manera que:
 

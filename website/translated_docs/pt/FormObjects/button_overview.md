@@ -322,7 +322,7 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
 
 
 
-### Custom
+### Personalizado
 
 The Custom button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offset.
 

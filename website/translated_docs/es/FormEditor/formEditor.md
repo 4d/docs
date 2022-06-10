@@ -32,7 +32,7 @@ When a form is opened in the editor, interface elements are displayed or hidden 
     - Markers and marker labels are always displayed by default on list forms
     - Paper is displayed by default on "for printing" forms.
 
-#### Display/Hide elements
+#### Mostrar/Ocultar elementos
 
 You can display or hide elements at any moment in the Form editor’s current window by selecting **Display** from the **Form** menu or the Form editor's context menu:
 
@@ -71,7 +71,7 @@ La barra de herramientas contiene los siguientes elementos:
 | ![](assets/en/FormEditor/library.png)         | [Librería de objetos preconfigurada](objectLibrary.html)                       | Este botón muestra la librería de objetos preconfigurada que ofrece numerosos objetos con ciertas propiedades que han sido predefinidas.                                                                                                                                                                                                                                  |
 | ![](assets/en/FormEditor/listBoxBuilder1.png) | [Creación de list box](#list-box-builder)                                      | Este botón crea nuevos list box de tipo selección de entidades.                                                                                                                                                                                                                                                                                                           |
 
-### Object bar
+### Barra de objetos
 
 The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
 
@@ -313,7 +313,7 @@ Para distribuir objetos utilizando la caja de diálogo Alinear y Distribuir:
 
 3.  En las áreas Alineación izquierda/derecha y/o Alineación superior/inferior, haga clic en el icono de distribución estándar: ![](assets/en/FormEditor/horizontalDistribution.png)<p>(Icono de distribución horizontal estándar)<p>El área de ejemplo muestra los resultados de su selección.
 
-4.  Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>En este caso, 4D realizará una distribución estándar, de modo que los objetos se dispongan con la misma cantidad de espacio entre ellos.<p>O:<p>Para efectuar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). This option acts like a switch. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:
+4.  Para efectuar una repartición estándar que utilice el esquema estándar, haga clic en **Previsualización** o *Aplicar*.<p>En este caso, 4D realizará una distribución estándar, de modo que los objetos se dispongan con la misma cantidad de espacio entre ellos.<p>O:<p>Para efectuar una distribución específica, seleccione la opción **Distribuir** (por ejemplo, si desea distribuir los objetos en función de la distancia a su lado derecho). Esta opción actúa como un interruptor. Si la casilla de selección Distribuir está seleccionada, los iconos situados debajo de ella realizan una función diferente:
 
     *   Horizontalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los lados izquierdo, central (hor.) y derecho de los objetos seleccionados.
     *   Verticalmente, los iconos corresponden a las siguientes distribuciones: uniformemente con respecto a los bordes superiores, centros (vert.) y bordes inferiores de los objetos seleccionados.
