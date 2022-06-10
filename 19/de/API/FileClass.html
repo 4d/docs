@@ -383,6 +383,7 @@
  If</span>(<span class="hljs-variable">$tempo</span>.exists)
     <span class="hljs-variable">$tempo</span>.<span class="hljs-function">delete</span>()
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"User preference file deleted."</span>)<span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="exists"></a><a href="#exists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.exists</h2>
@@ -904,7 +905,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </table>
 <h4><a class="anchor" aria-hidden="true" id="beschreibung-29"></a><a href="#beschreibung-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beschreibung</h4>
 <p>The <code>.setAppInfo()</code> function writes the <em>info</em> properties as information contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file.</p>
-<p>The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).</p>
+<p>The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.</p>
 <blockquote>
 <p>The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.</p>
 </blockquote>
@@ -1027,10 +1028,10 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </thead>
 <tbody>
 <tr><td><code>Document unchanged</code></td><td>0</td><td>No processing</td></tr>
-<tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows</td></tr>
-<tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to Windows format: CRLF (carriage return + line feed)</td></tr>
-<tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to OS X format: CR (carriage return)</td></tr>
-<tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to Unix format: LF (line feed)</td></tr>
+<tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows</td></tr>
+<tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to CRLF (carriage return + line feed), the default Windows format</td></tr>
+<tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to CR (carriage return), the default Classic Mac OS format</td></tr>
+<tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to LF (line feed), the default Unix and macOS format</td></tr>
 </tbody>
 </table>
 <p>By default, when you omit the <em>breakMode</em> parameter, line breaks are processed in native mode (1).</p>

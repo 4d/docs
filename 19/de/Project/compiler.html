@@ -237,7 +237,7 @@
 <p>The length of the error file depends on the number of errors and warnings issued by the compiler.</p>
 <p>The structure of the error file is as follows:</p>
 <ul>
-<li>At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the <strong><em>General errors</em></strong> section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
+<li>At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the <strong><em>General errors</em></strong> section, all the typing impossibilities and identity ambiguities are grouped together. In the <strong><em>General errors</em></strong> section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
 <ul>
 <li>line number in the method (0 indicates general errors)</li>
 <li>warning attribute indicating whether the detected anomaly is a warning (warning=&quot;true&quot;) or an error (warning=&quot;false&quot;)</li>
@@ -282,7 +282,7 @@
 <tr><td>On Silicon Mac</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td><td style="text-align:center">✓</td></tr>
 </tbody>
 </table>
-<p>Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the <a href="#compilation-target">compilation target</a> option.</p>
+<p>Both compilers are integrated into 4D. Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the <a href="#compilation-target">compilation target</a> option.</p>
 <h3><a class="anchor" aria-hidden="true" id="classic-compiler"></a><a href="#classic-compiler" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classic Compiler</h3>
 <p>The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration.</p>
 <p>Resulting compiled code is stored in the <a href="/docs/19/de/Project/architecture.html#deriveddata">DerivedData</a> folder of the project.</p>
@@ -293,7 +293,7 @@
 <ul>
 <li><strong>Apple machine</strong>: The Silicon compiler can only be run from an Apple machine.</li>
 <li><strong>4D Project architecture</strong>: The Silicon compiler is only available for 4D developments using <a href="/docs/19/de/Project/architecture.html">project architecture</a>.</li>
-<li><strong>Xcode or Developer Tools</strong>: The Silicon compiler calls the <strong>Clang</strong> open-source macOS compiler to compile the project from C++ code at the <a href="#incremental-compiler">second step</a> of compilation. <em>clang</em> requires Apple native libraries, which are provided by either the <strong>Xcode</strong> or <strong>Developer Tools</strong> package.
+<li><strong>Xcode or Developer Tools</strong>: The Silicon compiler calls the <strong>Clang</strong> open-source macOS compiler to compile the project from C++ code at the <a href="#incremental-compiler">second step</a> of compilation. <strong>Xcode or Developer Tools</strong>: The Silicon compiler calls the <strong>Clang</strong> open-source macOS compiler to compile the project from C++ code at the <a href="#incremental-compiler">second step</a> of compilation.
 <ul>
 <li><strong>If you already have</strong> Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements.</li>
 <li><strong>If you do not have</strong> any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.</li>

@@ -775,7 +775,9 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
 <li>if the <code>Formula</code> object is <strong>null</strong>, the errror 1626 (&quot;Expecting a text or formula&quot;) is generated, that you call intercept using a method installed with <code>ON ERR CALL</code>.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>For security reasons, formula calls within <code>query(</code>) member methods can be disallowed. See <em>querySettings</em> parameter description.</p>
+</blockquote>
 </blockquote>
 <p><strong>Passing parameters to formulas</strong></p>
 <p>Any <em>formula</em> called by the <code>query()</code> class function can receive parameters:</p>
@@ -806,7 +808,7 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
 </tbody>
 </table>
 <p><strong>About queryPlan and queryPath</strong></p>
-<p>The information recorded in <code>queryPlan</code>/<code>queryPath</code> include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.</p>
+<p>The information recorded in <code>queryPlan</code>/<code>queryPath</code> include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. Query paths also contain the number of entities found and the time required to execute each search criterion. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.</p>
 <p>For example, if you execute the following query:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &lt; :1 and employer.name = :2 or employer.revenues &gt; :3"</span>;\  
  <span class="hljs-number">50000</span>;<span class="hljs-string">"Lima West Kilo"</span>;<span class="hljs-number">10000000</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"queryPath"</span>;<span class="hljs-literal">True</span>;<span class="hljs-string">"queryPlan"</span>;<span class="hljs-literal">True</span>))

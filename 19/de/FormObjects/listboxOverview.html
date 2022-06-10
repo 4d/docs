@@ -501,9 +501,9 @@
 <tr><th>List box type</th><th>Support of standard sort</th><th>Kommentare</th></tr>
 </thead>
 <tbody>
-<tr><td>Collection of objects</td><td>Ja</td><td><li>&quot;This.a&quot; or &quot;This.a.b&quot; columns are sortable.</li><li>The <a href="propertiesObject.md#variable-or-expression">list box source property</a> must be an <a href="/docs/19/de/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li></td></tr>
+<tr><td>Collection of objects</td><td>Ja</td><td><li>&quot;This.a&quot; or &quot;This.a.b&quot; columns are sortable.</li><li>The <a href="/docs/19/de/FormObjects/propertiesObject.html#variable-or-expression">list box source property</a> must be an <a href="/docs/19/de/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li></td></tr>
 <tr><td>Collection of scalar values</td><td>Nein</td><td>Use custom sort with <a href="/docs/19/de/API/CollectionClass.html#orderby"><code>orderBy()</code></a> function</td></tr>
-<tr><td>Entity-Selection</td><td>Ja</td><td><li>The <a href="propertiesObject.md#variable-or-expression">list box source property</a> must be an <a href="/docs/19/de/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li><li>Supported: sorts on object attribute properties (e.g. &quot;This.data.city&quot; when &quot;data&quot; is an object attribute)</li><li>Supported: sorts on related attributes (e.g. &quot;This.company.name&quot;)</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. &quot;This.company.data.city&quot;). For this, you need to use custom sort with <a href="/docs/19/de/API/EntitySelectionClass.html#orderbyformula"><code>orderByFormula()</code></a> function (see example below)</li></td></tr>
+<tr><td>Entity-Selection</td><td>Ja</td><td><li>The <a href="/docs/19/de/FormObjects/propertiesObject.html#variable-or-expression">list box source property</a> must be an <a href="/docs/19/de/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li><li>Supported: sorts on object attribute properties (e.g. &quot;This.data.city&quot; when &quot;data&quot; is an object attribute)</li><li>Supported: sorts on related attributes (e.g. &quot;This.company.name&quot;)</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. &quot;This.company.data.city&quot;). For this, you need to use custom sort with <a href="/docs/19/de/API/EntitySelectionClass.html#orderbyformula"><code>orderByFormula()</code></a> function (see example below)</li></td></tr>
 <tr><td>Current selection</td><td>Ja</td><td>Only simple expressions are sortable (e.g. <code>[Table_1]Field_2</code>)</td></tr>
 <tr><td>Named selection</td><td>Nein</td><td></td></tr>
 <tr><td>Arrays</td><td>Ja</td><td>Columns bound to picture and pointer arrays are not sortable</td></tr>
@@ -862,6 +862,7 @@ End if</span>
 </table>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob3</span>)
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"integer"</span>)
+
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob3</span>;<span class="hljs-string">"value"</span>;<span class="hljs-number">-3</span>)
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob4</span>)
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob4</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"integer"</span>)

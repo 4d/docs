@@ -1217,7 +1217,7 @@ var</span> <span class="hljs-variable">$ids </span>: Collection
 <p>The optional <em>updateSeen</em> parameter allows you to specify if the message is marked as &quot;seen&quot; in the mailbox. You can pass:</p>
 <ul>
 <li><strong>True</strong> - to mark the message as &quot;seen&quot; (indicating the message has been read)</li>
-<li><strong>False</strong> - to leave the message's &quot;seen&quot; status untouched</li>
+<li><strong>False</strong> - to leave the message's &quot;seen&quot; status untouched &gt; * The function returns an empty BLOB if <em>msgNumber</em> or msgID* designates a non-existing message, &gt; * If no mailbox is selected with the <a href="#selectbox"><code>.selectBox()</code></a> command, an error is generated, &gt; * If there is no open connection, <code>.getMIMEAsBlob()</code> will open a connection the last mailbox specified with <code>.selectBox()</code>.</li>
 </ul>
 <blockquote>
 <ul>

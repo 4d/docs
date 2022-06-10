@@ -1031,10 +1031,10 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </thead>
 <tbody>
 <tr><td><code>Document unchanged</code></td><td>0</td><td>No processing</td></tr>
-<tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: CR (carriage return) in macOS, CRLF (carriage return + line feed) in Windows</td></tr>
-<tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to Windows format: CRLF (carriage return + line feed)</td></tr>
-<tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to OS X format: CR (carriage return)</td></tr>
-<tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to Unix format: LF (line feed)</td></tr>
+<tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows</td></tr>
+<tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to CRLF (carriage return + line feed), the default Windows format</td></tr>
+<tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to CR (carriage return), the default Classic Mac OS format</td></tr>
+<tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to LF (line feed), the default Unix and macOS format</td></tr>
 </tbody>
 </table>
 <p>By default, when you omit the <em>breakMode</em> parameter, line breaks are processed in native mode (1).</p>
