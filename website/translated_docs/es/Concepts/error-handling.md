@@ -48,7 +48,7 @@ El comando `Method called on error` permite conocer el nombre del método instal
 
 Dentro del método de error personalizado, tiene acceso a varias informaciones que le ayudarán a identificar el error:
 
-- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
+- 4D mantiene automáticamente un cierto número de variables denominadas **variables sistema**, que responden a diferentes necesidades (ver el *manual de referencia del Lenguaje 4D*):
 
   - `Error` (entero largo): código de error
   - `Error method`(texto): nombre del método que ha provocado el error

@@ -34,7 +34,7 @@ and the user enters "proportion", the field displays:
 
     (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No se pierde ninguna información.
+El campo contiene realmente "proportion". 4D accepts and stores the entire entry no matter what the display format. No se pierde ninguna información.
 
 #### Gramática JSON
 
@@ -103,18 +103,18 @@ The table below shows choices available:
 
 Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
 
-4D provides various default number formats.
+4D ofrece varios formatos de números por defecto.
 
-### Placeholders
+### Marcadores
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| Placeholder | Effect for leading or trailing zero |
-| ----------- | ----------------------------------- |
-| #           | No muestra nada                     |
-| 0           | Muestra 0                           |
-| ^           | Displays a space (1)                |
-| *           | Displays an asterisk                |
+| Marcador | Effect for leading or trailing zero |
+| -------- | ----------------------------------- |
+| #        | No muestra nada                     |
+| 0        | Muestra 0                           |
+| ^        | Displays a space (1)                |
+| *        | Displays an asterisk                |
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
@@ -136,7 +136,7 @@ The numeric display formats (except for scientific notations) are automatically 
 > En Windows, al utilizar la tecla del separador decimal del teclado numérico, 4D hace una distinción según el tipo de campo donde se encuentre el cursor: * en un campo de tipo Real, al utilizar esta tecla se inserta el separador decimal definido en el sistema, * en cualquier otro tipo de campo, esta tecla inserta el carácter asociado a la tecla, normalmente un punto (.) o una coma (,).
 
 
-### Decimal points and other display characters
+### Puntos decimales y otros caracteres de visualización
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
@@ -177,11 +177,11 @@ En este caso, la visualización del cero sería $0.00.
 
 ### Notación científica
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
+If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. Por ejemplo, el formato:
 
     &3
 
-would display 759.62 as:
+mostrará 759.62 como:
 
     7.60e+2
 
@@ -199,11 +199,11 @@ You can display a number in hexadecimal using the following display formats:
 
 The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
 
-### Displaying a number as a time
+### Mostrar un número como una hora
 
 You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
 
-For example, the format:
+Por ejemplo, el formato:
 
     &/5
 
@@ -267,7 +267,7 @@ Picture formats control how pictures appear when displayed or printed. For data 
 
 The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
 
-### Scaled to fit
+### A escala para ajustarse
 
 `Gramática JSON: "scaled"`
 
@@ -275,7 +275,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ![](assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Truncated (centered and non-centered)
+### Truncado (centrado y no centrado)
 
 `JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
 
@@ -331,19 +331,19 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                      | Ejemplo para 04:30:25         |
-| ---------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm           |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM           |                                                                                                                                                  | 4 horas 30 minutos            |
-| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss           | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS           | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutos 25 Segundos       |
-| ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (por defecto) | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                    |
-| System time long             | systemLong      | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC               |
+| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                      | Ejemplo para 04:30:25          |
+| ---------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
+| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                  | 04:30:25                       |
+| HH:MM                        | hh_mm           |                                                                                                                                                  | 04:30                          |
+| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                  | 4 horas 30 minutos 25 segundos |
+| Hour Min                     | HH_MM           |                                                                                                                                                  | 4 horas 30 minutos             |
+| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                  | 4:30 a.m.                      |
+| MM SS                        | mm_ss           | Hora expresada como duración a partir de las 00:00:00                                                                                            | 270:25                         |
+| Min Sec                      | MM_SS           | Hora expresada como duración a partir de las 00:00:00                                                                                            | 270 Minutos 25 Segundos        |
+| ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
+| System time short            | - (por defecto) | Formato de hora estándar definido en el sistema                                                                                                  | 04:30:25                       |
+| System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                     |
+| System time long             | systemLong      | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
@@ -531,21 +531,33 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 ---
 ## Visibilidad
 
-This property allows hiding by default the object in the Application environment.
+This property allows hiding the object in the Application environment.
 
-You can handle the Visible property for most form objects. This property simplifies dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visible property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the `OBJECT SET VISIBLE` command depending on the context.
+You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
 
+#### Automatic visibility in list forms
+
+In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
+
+- **If record selected** (JSON name: "selectedRows")
+- **If record not selected** (JSON name: "unselectedRows")
+
+This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
+
+![](assets/en/FormObjects/select-row.png)
+
+4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles    |
-| ---------- | -------------- | ------------------- |
-| visibility | cadena         | "visible", "hidden" |
+| Nombre     | Tipos de datos | Valores posibles                                                                        |
+| ---------- | -------------- | --------------------------------------------------------------------------------------- |
+| visibility | cadena         | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
 
 
@@ -553,11 +565,11 @@ You can handle the Visible property for most form objects. This property simplif
 
 
 ---
-## Wordwrap
+## Ajuste de texto
 
 > For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
 
-Manages the display of contents when it exceeds the width of the object.
+Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
 #### Checked for list box/Yes for input
 `Gramática JSON: "normal"`
@@ -573,7 +585,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 
 #### Unchecked for list box/No for input
-`JSON grammar: "none"`
+`Gramática JSON: "none"`
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
 
@@ -589,7 +601,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 
 #### Automatic for input (default option)
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 - In single-line areas, words located at the end of lines are truncated and there are no line returns.
 - In multiline areas, 4D carries out automatic line returns.

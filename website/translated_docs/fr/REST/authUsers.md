@@ -6,13 +6,13 @@ title: Sessions et utilisateurs
 
 ## Authentification des utilisateurs
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+La première étape à suivre pour ouvrir une session REST sur le serveur 4D, consiste à authentifier l'utilisateur qui envoie la requête.
 
 Connectez un utilisateur à votre application en passant le nom et le mot de passe de l'utilisateur dans [`$directory/login`]($directory.md#directorylogin).
 
-Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+Une fois qu'un utilisateur est connecté, une session est ouverte. Voir ci-dessous pour savoir comment traiter le cookie de session dans les requêtes ultérieures du client, si nécessaire.
 
-The session will automatically be closed once the timeout is reached.
+La session est automatiquement fermée lorsque le timeout est écoulé.
 
 ## Cookie de session
 

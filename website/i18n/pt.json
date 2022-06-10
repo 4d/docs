@@ -190,7 +190,7 @@
         "title": "Gridlines"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "Cabeçalhos"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -202,7 +202,7 @@
         "title": "List Box"
       },
       "FormObjects/propertiesObject": {
-        "title": "Objects"
+        "title": "Objetos"
       },
       "FormObjects/propertiesPicture": {
         "title": "Imagem"
@@ -267,14 +267,14 @@
       "FormObjects/text": {
         "title": "Texto"
       },
-      "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+      "FormObjects/viewProArea_overview": {
+        "title": "Área 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Área Web"
       },
-      "FormObjects/writeProAreaOverview": {
-        "title": "Área 4D Write Pro"
+      "FormObjects/writeProArea_overview": {
+        "title": "4D Write Pro area"
       },
       "GettingStarted/installation": {
         "title": "Instalação e ativação"
@@ -491,7 +491,7 @@
     "Developing a Mobile application|no description given": "Desenvolver uma aplicação Móvel",
     "Administration|no description given": "Administration",
     "Help Translate|recruit community translators for your project": "Help Translate",
-    "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
-    "Translate this Doc|recruitment message asking to translate the docs": "Translate"
+    "Edit this Doc|recruitment message asking to edit the doc source": "Editar",
+    "Translate this Doc|recruitment message asking to translate the docs": "Traduzir"
   }
 }

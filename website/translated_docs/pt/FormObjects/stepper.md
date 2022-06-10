@@ -28,9 +28,9 @@ For more information, please refer to [Using indicators](progressIndicator.md#us
 [Negrita](properties_Text.md#bold) - [Estilo da borda](properties_BackgroundAndBorder.md#Border-line-style) - [Fundo](properties_CoordinatesAndSizing.md#bottom) - \[Classe\](properties_Object. md#css-class) - [Colunas](properties_Crop.md#columns) - [Executar método objeto](properties_Action.md#execute-object-method) - \[Tipo de expressão\](properties_Object. md#expression-type) (só "inteiro", "número", "data" ou "hora") - [Altura](properties_CoordinatesAndSizing.md#height) - \[Conselho de ajuda\](properties_Help. md#help-tip) - [Tamanho horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - \[Máximo\](properties_Scale. md#maximum) - [Mínimo](properties_Scale.md#minimum) - [Nome de objeto](properties_Object.md#object-name) - \[Nome de objeto\](properties_Picture. md#pathname) - [Direita](properties_CoordinatesAndSizing.md#right) - [Linhas](properties_Crop.md#rows) - [Passo](properties_Scale.md#step) - \[Ação padrão\](properties_Action. md#standard-action) - [Acima](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - \[Variável ou expressão\](properties_Object. md#variable-or-expression) - [Tamanho vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
 
 
-## See also
+## Veja também
 - [progress indicators](progressIndicator.md)
-- [rulers](ruler.md)
+- [regras](ruler.md)
 
 
 

@@ -1,6 +1,6 @@
 ---
 id: components
-title: Components
+title: Componentes
 ---
 
 Um componente 4D é um conjunto de métodos e formulários 4D que representam uma ou várias funcionalidades que possam ser instaladas em diferentes bancos de dados. Por exemplo, pode desenvolver um componente 4D de correio eletrônico que gerencie todos os aspectos do envio, a recepção e o armazenamento de correios eletrônicos em bancos de dados 4D.

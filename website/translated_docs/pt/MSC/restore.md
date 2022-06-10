@@ -41,7 +41,7 @@ When restoring a backup and integrating the current log file in a encrypted data
 The following sequence illustrates the principles of a multi-key backup/restore operation:
 
 
-| Operation                   | Generated files                                   | Comment                                                                                                                                                                                                                      |
+| Operation                   | Generated files                                   | Comentário                                                                                                                                                                                                                   |
 | --------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Novo banco de dados         |                                                   |                                                                                                                                                                                                                              |
 | Add data (record # 1)       |                                                   |                                                                                                                                                                                                                              |

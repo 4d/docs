@@ -35,7 +35,7 @@ Las copias de seguridad se realizan automáticamente a las horas definidas en es
 
 ### Comando BACKUP
 
-Cuando el comando `BACKUP` del lenguaje 4D se ejecuta desde un método, la copia de seguridad se inicia utilizando los parámetros actuales definidos en las propiedades de la base. Cuando el comando `BACKUP` del lenguaje 4D se ejecuta desde un método, la copia de seguridad se inicia utilizando los parámetros actuales definidos en las propiedades.
+Cuando el comando `BACKUP` del lenguaje 4D se ejecuta desde un método, la copia de seguridad se inicia utilizando los parámetros actuales definidos en las propiedades de la base. Puede utilizar el método base `On Backup Startup` y `On Backup Shutdown`, para controlar el proceso de backup (ver el manual *Lenguaje de 4D*).
 
 
 ## Cómo funciona la copia de seguridad
@@ -67,7 +67,7 @@ En todos los casos, tenga en cuenta que el estado de la última copia de segurid
 
 - **Interrupción del usuario**: el botón **Parar** de la caja de diálogo de progreso permite a los usuarios interrumpir la copia de seguridad en cualquier momento. En este caso, la copia de elementos se detiene y se genera el error 1406. Puedes interceptar este error en el método base `On Backup Shutdown`.
 - **Archivo adjunto no encontrado**: cuando no se encuentra un archivo adjunto, 4D realiza una copia de seguridad parcial (copia de seguridad de los archivos de la base y de los archivos adjuntos accesibles) y devuelve un error.
-- **Copia de seguridad imposible** (disco lleno o protegido contra escritura, disco ausente, fallo de disco, transacción incompleta, base no lanzada en el momento de la copia de seguridad automática programada, etc.): si se trata de un primer error, 4D hará un segundo intento de realizar la copia de seguridad. La espera entre los dos intentos se define en la página **Backup/Backup y Restauración** de las Propiedades de la base. Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
+- **Copia de seguridad imposible** (disco lleno o protegido contra escritura, disco ausente, fallo de disco, transacción incompleta, base no lanzada en el momento de la copia de seguridad automática programada, etc.): si se trata de un primer error, 4D hará un segundo intento de realizar la copia de seguridad. La espera entre los dos intentos se define en la página **Backup/Backup& y Restauración** de las Propiedades de la base. Si el segundo intento falla, se muestra una caja de diálogo de alerta del sistema y se genera un error. Puedes interceptar este error en el método base `On Backup Shutdown`.
 
 ## Historial de copias de seguridad (Backup Journal)
 

@@ -61,7 +61,7 @@ Esta área le permite determinar qué archivos y/o carpetas deben copiarse duran
 
 Esta área le permite visualizar y cambiar la ubicación en la que se almacenarán los archivos de copia de seguridad, así como los archivos de copia de seguridad del archivo historial (si procede).
 
-Para ver la ubicación de los archivos, haga clic en la área para que aparezca su ruta de acceso en un menú emergente.
+Para ver la ubicación de los archivos, haga clic en el área para que aparezca su ruta de acceso en un menú emergente.
 
 Para modificar la ubicación donde se almacenan estos archivos, haga clic en el botón **...**. Aparece una caja de diálogo de selección, que permite seleccionar la carpeta o el disco donde se colocarán las copias de seguridad. Las áreas "Espacio utilizado" y "Espacio libre" se actualizan automáticamente e indican el espacio restante en el disco de la carpeta seleccionada.
 
@@ -100,7 +100,7 @@ La modificación de las opciones de copia de seguridad y restauración es opcion
 ### Archivo
 Estas opciones se aplican a los archivos de copia de seguridad principales y a los archivos de copia de seguridad del historial.
 
-- **Tamaño del segmento (Mb)** 4D le permite segmentar los archivos, es decir, cortarlos en tamaños más pequeños. Este funcionamiento permite, por ejemplo, almacenar una copia de seguridad en varios discos diferentes (DVD, dispositivos usb, etc.). Durante la restauración, 4D fusionará automáticamente los segmentos. **Tamaño del segmento (Mb)** 4D le permite segmentar los archivos, es decir, cortarlos en tamaños más pequeños. Este funcionamiento permite, por ejemplo, almacenar una copia de seguridad en varios discos diferentes (DVD, dispositivos usb, etc.). El menú **Tamaño del segmento** es un combo box que permite establecer el tamaño en MB de cada segmento de la copia de seguridad. Puede elegir uno de los tamaños preestablecidos o introducir un tamaño específico entre 0 y 2048. Si se pasa 0, no se produce ninguna segmentación (esto equivale a pasar **Ninguna**).
+- **Tamaño del segmento (Mb)** 4D le permite segmentar los archivos, es decir, cortarlos en tamaños más pequeños. Este funcionamiento permite, por ejemplo, almacenar una copia de seguridad en varios discos diferentes (DVD, dispositivos usb, etc.). Durante la restauración, 4D fusionará automáticamente los segmentos. Cada segmento se llama MyApplication[xxxx-yyyy].4BK, donde xxxx es el número de copia de seguridad e yyyy es el número de segmento. Por ejemplo, los tres segmentos de la copia de seguridad de la base MyDatabase se llaman MyDatabase[0006-0001].4BK, MyDatabase[0006-0002].4BK y MyDatabase[0006-0003].4BK. El menú **Tamaño del segmento** es un combo box que permite establecer el tamaño en MB de cada segmento de la copia de seguridad. Puede elegir uno de los tamaños preestablecidos o introducir un tamaño específico entre 0 y 2048. Si se pasa 0, no se produce ninguna segmentación (esto equivale a pasar **Ninguna**).
 
 - **Tasa de compresión** Por defecto, 4D comprime las copias de seguridad para ayudar a ahorrar espacio en el disco. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. La opción **Tasa de compresión** permite ajustar la compresión de los archivos:
     - **Ninguna:** no se aplica ninguna compresión de archivos. La copia de seguridad es más rápida, pero los archivos son considerablemente más grandes.

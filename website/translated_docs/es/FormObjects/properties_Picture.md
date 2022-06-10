@@ -30,7 +30,7 @@ Se pueden utilizar dos ubicaciones principales para la trayectoria de la imagen 
 ## Visualización
 
 
-### Scaled to fit
+### A escala para ajustarse
 
 `Gramática JSON: "scaled"`
 
