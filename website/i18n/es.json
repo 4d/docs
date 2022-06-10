@@ -223,7 +223,7 @@
         "title": "Depurador"
       },
       "Debugging/debugging-remote": {
-        "title": "Debugging from remote machines"
+        "title": "Depuración desde máquinas remotas"
       },
       "Debugging/debugLogFiles": {
         "title": "Descripción de los archivos de historial"
@@ -424,7 +424,7 @@
         "title": "Componentes de desarrollo"
       },
       "Extensions/develop-plug-ins": {
-        "title": "Developing Plug-ins"
+        "title": "Plugins de desarrollo"
       },
       "Extensions/overview": {
         "title": "Generalidades"
@@ -624,13 +624,13 @@
       "FormObjects/text": {
         "title": "Texto"
       },
-      "FormObjects/viewProAreaOverview": {
+      "FormObjects/viewProArea_overview": {
         "title": "Área 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Área Web"
       },
-      "FormObjects/writeProAreaOverview": {
+      "FormObjects/writeProArea_overview": {
         "title": "Área 4D Write Pro"
       },
       "GettingStarted/creating": {
@@ -923,7 +923,7 @@
         "title": "Configuring 4D View Pro Areas"
       },
       "ViewPro/formulas": {
-        "title": "Formulas and Functions"
+        "title": "Fórmulas y funciones"
       },
       "ViewPro/getting-started": {
         "title": "Comencemos"

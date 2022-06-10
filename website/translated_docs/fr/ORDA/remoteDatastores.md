@@ -35,7 +35,7 @@ Les process qui gèrent les sessions d'accès aux datastore apparaissent dans la
 
 *   <process name\>nom : "Gestionnaire REST : < nom du process > "
 *   type : type Worker Server HTTP
-*   session: session name is the user name passed to the `Open datastore` command.
+*   session : le nom de session est le nom d'utilisateur passé à la commande `Open datastore`.
 
 Dans l'exemple suivant, deux process sont en cours d'exécution pour la même session :
 

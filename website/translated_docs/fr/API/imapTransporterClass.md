@@ -1662,7 +1662,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.
 
-#### Types de valeurs de recherche
+#### Mots-clés de recherche autorisés
 
 Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 

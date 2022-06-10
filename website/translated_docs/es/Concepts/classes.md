@@ -213,7 +213,7 @@ Function getFullname()->$fullname : Text
 
 For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Se soportan las siguientes sintaxis:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
 - use of a "4D.Function" class member method:
@@ -247,7 +247,7 @@ Function add($x : Integer)
 
 #### Valor devuelto
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. Por ejemplo:
+Se declara el parámetro de retorno (opcional) añadiendo una flecha (`->`) y la definición del parámetro de retorno después de la lista de parámetros de entrada, o dos puntos (`:`) y el tipo de parámetro de retorno únicamente. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
@@ -392,6 +392,7 @@ Function get fullAddress()->$result : Object
 // Class: MyClass
 Class Constructor({$parameterName : type; ...})
 // code
+// code
 ```
 
 A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
@@ -525,6 +526,11 @@ Function sayName()
 Function getArea()
     var $0 : Integer
     $0:=(This.height)*(This.width)
+
+// Function definition
+Function getArea()
+    var $0 : Integer
+    $0:=(This.height)*(This.width)
 ```
 
 ```4d
@@ -621,7 +627,7 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. See [this example](#example-1).
+> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este ejemplo](#example-1).
 
 
 In any cases, `This` refers to the object the method was called on, as if the method were on the object.

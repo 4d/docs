@@ -9,7 +9,7 @@ The General page contains options to configure generic parameters for the 4D pro
 
 This area contains the **Display toolbar** option. When it is checked, the 4D toolbar is displayed in the Design environment.
 
-## General
+## Geral
 
 You use this area to set options concerning project startup and operation.
 

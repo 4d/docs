@@ -48,7 +48,7 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
 You make the Footer area smaller or larger.<p>
 
-You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Active objects are accepted.
+You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Se aceptan los objetos activos.
 
 #### Gramática JSON
 
@@ -68,7 +68,7 @@ You can also place and use active objects in the Header area of output forms dis
 
 - Buttons, picture buttons,
 - Combo boxes, drop-down lists,  picture pop-up menus,
-- hierarchical lists, list boxes
+- listas jerárquicas, list boxes
 - Radio buttons, check boxes, 3D check boxes,
 - Progress indicators, rulers, steppers, spinners.
 

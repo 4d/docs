@@ -31,6 +31,7 @@ Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 ## Access control in single-user applications
 
 
+
 Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume License. In single-user applications all users opening the application are [Designers](handling_users_groups.md#designer-and-administrator), they have all privileges and their name is "Designer". Access control is not based upon 4D users and groups, but upon **user sessions**.
 
 ### Identificação de usuário
@@ -41,7 +42,8 @@ You can then allow or deny access within your application by using code such as:
 
 ```4d
 If(Current system user = $user) //you can store users in a database table
-    // give access to some features Enf if
+    // give access to some features
+End if
 ```
 
 If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:

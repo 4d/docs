@@ -4,23 +4,23 @@ title: CryptoKey
 ---
 
 
-The `CryptoKey` class in the 4D language encapsulates an asymmetric encryption key pair.
+La clase `CryptoKey` del lenguaje 4D contiene un par de llaves de cifrado asimétrico.
 
-This class is available from the `4D` class store.
+Esta clase está disponible en el almacén de clases de `4D`.
 
 ### Ejemplo
 
-The following sample code signs and verifies a message using a new ECDSA key pair, for example in order to make a ES256 JSON Web token.
+El siguiente código de ejemplo firma y verifica un mensaje utilizando un nuevo par de llaves ECDSA, por ejemplo para hacer un token web JSON ES256.
 
 ```4d
- // Generate a new ECDSA key pair
+ // Generar un nuevo par de llaves ECDSA
 $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
-  // Get signature as base64
+  // Obtener la firma como base64
 $message:="hello world"
 $signature:=$key.sign($message;New object("hash";"SHA256"))
 
-  // Verify signature
+  // Verificar firma
 $status:=$key.verify($message;$signature;New object("hash";"SHA256"))
 ASSERT($status.success)
 ```
@@ -71,12 +71,12 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary --> crea u
 
 #### *parámetros*
 
-| Propiedad       | Tipo    | Descripción                                    |
-| --------------- | ------- | ---------------------------------------------- |
-| [curve](#curve) | texto   | Nombre de la curva ECDSA                       |
-| [pem](#pem)     | texto   | PEM definition of an encryption key to load    |
-| [size](#size)   | integer | Tamaño de la llave RSA en bits                 |
-| [type](#type)   | texto   | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
+| Propiedad       | Tipo    | Descripción                                     |
+| --------------- | ------- | ----------------------------------------------- |
+| [curve](#curve) | texto   | Nombre de la curva ECDSA                        |
+| [pem](#pem)     | texto   | Definición PEM de una llave de cifrado a cargar |
+| [size](#size)   | integer | Tamaño de la llave RSA en bits                  |
+| [type](#type)   | texto   | Tipo de la llave: "RSA", "ECDSA" o "PEM"</li>   |
 
 
 #### *CryptoKey*
@@ -136,18 +136,18 @@ La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https:
 | ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | hash              | texto | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512".                                                                                           |
 | encodingEncrypted | texto | Codificación utilizada para convertir el parámetro `mensaje` en la representación binaria a descifrar. Puede ser "Base64", o "Base64URL". Por defecto es "Base64". |
-| encodingDecrypted | texto | Encoding used to convert the binary decrypted message into the result string. Can be "UTF-8", "Base64", or "Base64URL". Por defecto es "UTF-8".                    |
+| encodingDecrypted | texto | Codificación utilizada para convertir el mensaje binario descifrado en la cadena de resultados. Puede ser "UTF-8", "Base64" o "Base64URL". Por defecto es "UTF-8". |
 
 
 #### *Resultado*
 
 La función devuelve un objeto "status" con la propiedad `success` definida como `true` si el *message* pudo ser descifrado con éxito.
 
-| Propiedad | Tipo      | Descripción                                                         |
-| --------- | --------- | ------------------------------------------------------------------- |
-| success   | booleano  | True if the message has been successfully decrypted                 |
-| result    | texto     | Message decrypted and decoded using the `options.encodingDecrypted` |
-| errors    | colección | If `success` is `false`, may contain a collection of errors         |
+| Propiedad | Tipo      | Descripción                                                              |
+| --------- | --------- | ------------------------------------------------------------------------ |
+| success   | booleano  | True si el mensaje ha sido descifrado con éxito                          |
+| result    | texto     | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
+| errors    | colección | Si `success` es `false`, puede contener una colección de errores         |
 
 
 En caso de que el *message* no haya podido ser descifrado por no haber sido encriptado con la misma llave o algoritmo, el objeto `status` que se devuelve contiene una colección de errores en `status.errors`.
@@ -181,11 +181,11 @@ La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https:
 
 ##### *options*
 
-| Propiedad         | Tipo  | Descripción                                                                                                                                                   |
-| ----------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hash              | texto | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512".                                                                                      |
-| encodingEncrypted | texto | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por defecto es "Base64".                       |
-| encodingDecrypted | texto | Encoding used to convert the `message` parameter into the binary representation to encrypt. Can be "UTF-8", "Base64", or "Base64URL". Por defecto es "UTF-8". |
+| Propiedad         | Tipo  | Descripción                                                                                                                                                            |
+| ----------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hash              | texto | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512".                                                                                               |
+| encodingEncrypted | texto | Codificación utilizada para convertir el mensaje binario encriptado en la cadena de resultados. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".            |
+| encodingDecrypted | texto | Codificación utilizada para convertir el parámetro `mensaje` en la representación binaria a cifrar. Puede ser "UTF-8", "Base64" o "Base64URL". Por defecto es "UTF-8". |
 
 
 #### *Resultado*
@@ -300,14 +300,14 @@ La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representac
 | Propiedad         | Tipo     | Descripción                                                                                                                                                                                        |
 | ----------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | texto    | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
-| encodingEncrypted | texto    | Encoding used to convert the binary encrypted message into the result string. Can be "Base64", or "Base64URL". Por defecto es "Base64".                                                            |
+| encodingEncrypted | texto    | Codificación utilizada para convertir el mensaje binario encriptado en la cadena de resultados. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".                                        |
 | pss               | booleano | Utilice el Probabilistic Signature Scheme (PSS). Se ignora si la llave no es una llave RSA. Pase `true` al producir un JWT para el algoritmo PS@                                                   |
 | encoding          | texto    | Representación que se utilizará para la firma de resultados. Los valores posibles son "Base64" o "Base64URL". Por defecto es "Base64".                                                             |
 
 
 #### *Resultado*
 
-Representación utf8 de la cadena *message*.
+`CryptoKey` debe contener una llave válida **privada**.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -369,9 +369,9 @@ Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño d
 
 <!-- END REF -->
 
-La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* proporcionadas.
+Representación utf8 de la cadena *message*.
 
-La `CryptoKey` debe contener una llave **pública** válida.
+La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* proporcionadas.
 
 
 #### *options*
@@ -385,14 +385,14 @@ La `CryptoKey` debe contener una llave **pública** válida.
 
 #### *Resultado*
 
+La `CryptoKey` debe contener una llave **pública** válida.
+
 La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 
-En caso de que la firma no haya podido ser verificada por no haber sido firmada con el mismo *message*, llave o algoritmo, el objeto `status` que se devuelve contiene una colección de errores en `status.errors`.
-
-| Propiedad | Tipo      | Descripción                                                 |
-| --------- | --------- | ----------------------------------------------------------- |
-| success   | booleano  | True si la firma coincide con el mensaje                    |
-| errors    | colección | If `success` is `false`, may contain a collection of errors |
+| Propiedad | Tipo      | Descripción                                                      |
+| --------- | --------- | ---------------------------------------------------------------- |
+| success   | booleano  | True si la firma coincide con el mensaje                         |
+| errors    | colección | Si `success` es `false`, puede contener una colección de errores |
 
 <!-- END REF -->
 

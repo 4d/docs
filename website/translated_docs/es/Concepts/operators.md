@@ -178,7 +178,7 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 ### Short-circuit AND operator (&&)
 
-The rule is as follows:
+La regla es la siguiente:
 
 Given `Expr1 && Expr2`:
 
@@ -256,7 +256,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Ejemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. Pero puede escribir lo siguiente:
 
 ```4d
 var $phone : Text
@@ -305,7 +305,7 @@ La sintaxis es la siguiente:
 
 ### Ejemplos
 
-#### A simple example
+#### Un ejemplo sencillo
 
 ```4d
 var $age : Integer
@@ -354,7 +354,7 @@ The following values are **falsy**:
 
 All other values are considered **truthy**, including:
 
-* 0 - numeric zero (Integer or otherwise)
+* 0 - cero numérico (Entero u otro)
 
 In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
 

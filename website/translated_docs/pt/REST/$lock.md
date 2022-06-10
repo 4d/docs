@@ -73,7 +73,7 @@ The returned "__STATUS" object has the following properties:
 
 The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
 
-| status | statusText                      | Comment                                                                                                           |
+| status | statusText                      | Comentário                                                                                                        |
 | ------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | 2      | "Stamp has changed"             | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock). |
 | 3      | "Already locked"                | The entity is locked by a pessimistic lock.                                                                       |

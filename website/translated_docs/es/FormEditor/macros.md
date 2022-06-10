@@ -4,15 +4,15 @@ title: Macros del editor de formularios
 ---
 
 
-The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+El editor de formularios 4D soporta macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
-*   Create and execute 4D code
+*   Crear y ejecutar código 4D
 *   Mostrar las cajas de diálogo
 *   Seleccione los objetos de formulario
 *   Add / delete / modify forms, form objects as well as their properties
-*   Modify project files (update, delete)
+*   Modificar los archivos del proyecto (actualizar, eliminar)
 
 Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
 
@@ -140,7 +140,7 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 
 
 
-## Instantiating macros in 4D
+## Instanciar las macros en 4D
 
 Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
 
@@ -174,7 +174,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 #### Ejemplo
 
-In the `formMacros.json` file:
+En el archivo `formMacros.json`:
 
 ```js
 {
@@ -231,7 +231,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | Propiedad         | Tipo       | Descripción                                                 |
 | ----------------- | ---------- | ----------------------------------------------------------- |
 | currentPage       | Objeto     | currentPage including objects modified by the macro, if any |
-| currentSelection  | Collection | currentSelection if modified by the macro                   |
+| currentSelection  | Collection | currentSelection si es modificada por la macro              |
 | formProperties    | Objeto     | formProperties if modified by the macro                     |
 | editor.groups     | Objeto     | group info, if groups are modified by the macro             |
 | editor.views      | Objeto     | view info, if views are modified by the macro               |
@@ -307,7 +307,7 @@ Function onInvoke($editor : Object)->$result : Object
 | $error       |                       | Collection | Error stack                              |
 |              | [].errCode            | Número     | Código de error                          |
 |              | [].message            | Texto      | Descripción del error                    |
-|              | [].componentSignature | Texto      | Internal component signature             |
+|              | [].componentSignature | Texto      | Firma del componente interno             |
 
 The `onError` function is executed when the macros processor encounters an error.
 

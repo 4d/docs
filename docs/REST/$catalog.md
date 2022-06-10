@@ -32,7 +32,7 @@ Here is a description of the properties returned for each dataclass in your proj
 |Property|	Type|	Description|
 |---|---|---|
 |name|	String|	Name of the dataclass.|
-|uri|	String|	A URI allowing you to obtain information about the |dataclass and its attributes.|
+|uri|	String|	A URI allowing you to obtain information about the dataclass and its attributes.|
 |dataURI|	String|	A URI that allows you to view the data in the dataclass.|
 
 

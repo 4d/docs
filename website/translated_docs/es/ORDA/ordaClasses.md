@@ -40,7 +40,7 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 ![](assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+All ORDA data model classes are exposed as properties of the **`cs`** class store. Las clases ORDA siguientes están disponibles:
 
 | Class                       | Nombre del ejemplo   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,7 +67,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 | Versión | Modificaciones                                                                                     |
 | ------- | -------------------------------------------------------------------------------------------------- |
 | v19 R4  | Alias attributes in the Entity Class                                                               |
-| v19 R3  | Computed attributes in the Entity Class                                                            |
+| v19 R3  | Atributos calculados en la Entity Class                                                            |
 | v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
@@ -143,7 +143,7 @@ Then you can get an entity selection of the "best" companies by executing:
 > [Computed attributes](#computed-attributes) are defined in the [Entity Class](#entity-class).
 
 
-#### Example with a remote datastore
+#### Ejemplo con un datastore remoto
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
@@ -259,7 +259,7 @@ Function isBigCity(): Boolean
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Luego puede llamar este código:
 
 ```4d
 var $cityManager; $city : Object
@@ -287,7 +287,7 @@ When creating or editing data model classes, you must pay attention to the follo
 - You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
 
-### Preemptive execution
+### Ejecución apropiativa
 
 When compiled, data model class functions are executed:
 
@@ -336,7 +336,7 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 ```
 The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value.
 
-> A computed attribute can use the value of other computed attribute(s). Recursive calls generate errors.
+> A computed attribute can use the value of other computed attribute(s). Las llamadas recursivas generan errores.
 
 The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
 
@@ -441,7 +441,7 @@ Function query <attributeName>($event : Object) -> $result : Object
 // code
 ```
 
-This function supports three syntaxes:
+Esta función soporta tres sintaxis:
 
 - With the first syntax, you handle the whole query through the `$event.result` object property.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en *$result*:
@@ -465,7 +465,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Texto   | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                       |
 | kind          | Texto   | "query"                                                                                                                                                                                                                                                                                                                                                           |
 | value         | Variant | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                     |
-| operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (greater than or equal to)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
+| operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (greater than or equal to)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
 | result        | Variant | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                          |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
@@ -593,7 +593,7 @@ Function orderBy fullName($event : Object)-> $result : Text
     End if
 ```
 
-You can also write compact code:
+También puede escribir un código compacto:
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
@@ -622,7 +622,7 @@ An **alias** attribute is built above another attribute of the data model, named
 
 Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
 
-### How to define alias attributes
+### Cómo definir los atributos alias
 
 You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
 
@@ -684,7 +684,7 @@ Alias attributes based upon relations have a specific [`path`](../API/DataClassA
 
 ### Ejemplos
 
-Considering the following model:
+Considerando el siguiente modelo:
 
 ![](assets/en/ORDA/alias1.png)
 
@@ -708,7 +708,7 @@ Class extends Entity
 Alias teachers courses.teacher //relatedEntities 
 ```
 
-In the Course dataclass:
+En la dataclass Course:
 
 - an alias attribute returns another label for the "name" attribute
 - an alias attribute returns the teacher name
@@ -763,7 +763,7 @@ $arch.save() //courseName and name are "Archaeology II"
 
 
 
-## Exposed vs non-exposed functions
+## Funciones expuestas y no expuestas
 
 For security reasons, all of your data model class functions and alias attributes are **not exposed** (i.e., private) by default to remote requests.
 
@@ -870,6 +870,10 @@ If (This.birthDate#!00-00-00!)
 Else 
     $age:=Null
 End if
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null
+End if
 ```
 
 #### Verificación de los atributos
@@ -909,7 +913,7 @@ End if
 
 
 
-## Support in 4D IDE
+## Soporte en 4D IDE
 
 
 ### Archivos de clase (class files)
@@ -926,7 +930,7 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 
 > By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
-ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+ORDA user classes have a different icon from regular classes. Las clases vacías se atenúan:
 
 ![](assets/en/ORDA/classORDA2.png)
 

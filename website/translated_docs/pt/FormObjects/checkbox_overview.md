@@ -370,7 +370,7 @@ In macOS and Windows, a check box with the "Disclosure" button style appears as 
 ```
 
 
-### Custom
+### Personalizado
 
 The Custom button style accepts a personalized background picture and allows managing specific properties:
 

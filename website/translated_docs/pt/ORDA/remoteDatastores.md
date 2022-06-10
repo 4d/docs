@@ -87,7 +87,7 @@ The following methods automatically associate the optimization context of the so
 Given the following code:
 
 ```4d
- $sel:=$ds.Employee.query("firstname = ab@")
+ $sel:=$ds. Employee.query("firstname = ab@")
  For each($e;$sel)
     $s:=$e.firstname+" "+$e.lastname+" works for "+$e.employer.name // $e.employer refers to Company table
  End for each
@@ -114,16 +114,16 @@ A same optimization context property can be passed to unlimited number of entity
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
 
- $sel1:=ds.Employee.query("lastname = S@";$querysettings)
+ $sel1:=ds. Employee.query("lastname = S@";$querysettings)
  $data:=extractData($sel1) // In extractData method an optimization is triggered and associated to context "shortList"
 
- $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
+ $sel2:=ds. Employee.query("lastname = Sm@";$querysettings)
  $data:=extractData($sel2) // In extractData method the optimization associated to context "shortList" is applied
 
- $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
+ $sel3:=ds. Employee.query("lastname = Smith";$querysettings2)
  $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization is triggered and associated to context "longList"
 
- $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
+ $sel4:=ds. Employee.query("lastname = Brown";$querysettings2)
  $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
 ```
 

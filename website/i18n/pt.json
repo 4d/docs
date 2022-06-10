@@ -316,7 +316,7 @@
         "title": "On Footer Click"
       },
       "Events/onGettingFocus": {
-        "title": "On Getting focus"
+        "title": "On getting focus"
       },
       "Events/onHeader": {
         "title": "On Header"
@@ -445,7 +445,7 @@
         "title": "Object libraries"
       },
       "FormEditor/pictures": {
-        "title": "Pictures"
+        "title": "Imagens"
       },
       "FormEditor/action": {
         "title": "Action"
@@ -463,7 +463,7 @@
         "title": "Markers"
       },
       "FormEditor/menu": {
-        "title": "Menu"
+        "title": "Menú"
       },
       "FormEditor/print": {
         "title": "Print"
@@ -547,7 +547,7 @@
         "title": "Gridlines"
       },
       "FormObjects/propertiesHeaders": {
-        "title": "Headers"
+        "title": "Cabeçalhos"
       },
       "FormObjects/propertiesHelp": {
         "title": "Help"
@@ -624,13 +624,13 @@
       "FormObjects/text": {
         "title": "Texto"
       },
-      "FormObjects/viewProAreaOverview": {
-        "title": "4D View Pro area"
+      "FormObjects/viewProArea_overview": {
+        "title": "Área 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Web Area"
       },
-      "FormObjects/writeProAreaOverview": {
+      "FormObjects/writeProArea_overview": {
         "title": "4D Write Pro area"
       },
       "GettingStarted/creating": {
@@ -905,7 +905,7 @@
         "title": "Security page"
       },
       "settings/sql": {
-        "title": "SQL page"
+        "title": "Página SQL"
       },
       "settings/web": {
         "title": "Web page"
@@ -1058,7 +1058,7 @@
     "Extensions|no description given": "Extensions",
     "Documentation updates|no description given": "Documentation updates",
     "Help Translate|recruit community translators for your project": "Help Translate",
-    "Edit this Doc|recruitment message asking to edit the doc source": "Edit",
-    "Translate this Doc|recruitment message asking to translate the docs": "Translate"
+    "Edit this Doc|recruitment message asking to edit the doc source": "Editar",
+    "Translate this Doc|recruitment message asking to translate the docs": "Traduzir"
   }
 }

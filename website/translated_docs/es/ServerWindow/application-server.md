@@ -26,7 +26,7 @@ By default, when the project is published:
 
 If you click on the **Reject new connections** button:
 - The button title changes to "Accept new connections."
-- No new desktop client can then connect. Clients attempting to connect will receive the following message:
+- Ningún nuevo cliente puede entonces conectarse. Clients attempting to connect will receive the following message:
 
 ![](assets/en/Admin/server-error.png)
 
@@ -54,7 +54,7 @@ The lower part of the area indicates the server configuration parameters (launch
 This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
 
 
-### Application Server Connections
+### Conexiones aplicación servidor
 
 - **Maximum**: maximum number of simultaneous client connections allowed for the application server. This value depends on the license installed on the server machine.
 - **Used**: actual number of connections currently being used.

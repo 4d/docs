@@ -20,14 +20,14 @@ This event is generated when the width of a column in the list box is modified b
 
 This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Propriedade | Type     | Descrição                                                           |
-| ----------- | -------- | ------------------------------------------------------------------- |
-| code        | longint  | On Column Resize                                                    |
-| description | texto    | "On Column Resize"                                                  |
-| objectName  | texto    | 4D View Pro area name                                               |
-| sheetName   | texto    | Name of the sheet of the event                                      |
-| range       | object   | Cell range of the columns whose widths have changed                 |
-| header      | booleano | True if the row header column (first column) is resized, else false |
+| Propriedade | Type          | Descrição                                                           |
+| ----------- | ------------- | ------------------------------------------------------------------- |
+| code        | inteiro longo | On Column Resize                                                    |
+| description | texto         | "On Column Resize"                                                  |
+| objectName  | texto         | 4D View Pro area name                                               |
+| sheetName   | texto         | Name of the sheet of the event                                      |
+| range       | object        | Cell range of the columns whose widths have changed                 |
+| header      | booleano      | True if the row header column (first column) is resized, else false |
 
 #### Exemplo
 

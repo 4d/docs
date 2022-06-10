@@ -30,7 +30,7 @@ Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode o
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
 
-The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
+La fenêtre du débogueur est généralement affichée sur la machine où le code est exécuté. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
 
 - on the remote 4D for code running locally
 - on the server machine for code running on the server (for example, a method with the **execute on server** option).

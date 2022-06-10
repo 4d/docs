@@ -51,7 +51,7 @@ Here is a description of the properties:
 
 ### Breakpoints in remote debugging
 
-The break point list is stored locally. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
+La lista de puntos de interrupción se almacena localmente. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
 
 The server break point list is automatically restored if it becomes again the attached debugger.
 
@@ -59,7 +59,7 @@ The server break point list is automatically restored if it becomes again the at
 
 The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Method Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
-To open the Break list page:
+Para abrir la página de la lista de puntos de ruptura:
 
 1. From the **Run menu**, click **Runtime Explorer...**
 
@@ -67,7 +67,7 @@ To open the Break list page:
 
 ![break-list-runtime-explorer](assets/en/Debugging/break-list.png)
 
-Using this window, you can:
+Utilizando esta ventana, puede:
 
 * Set conditions for breakpoints in the **Conditions** column
 * Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
@@ -93,12 +93,12 @@ To open the Caught Commands page:
 
 ![runtime-explorer-window](assets/en/Debugging/catch-command.png)
 
-This page lists the commands to be caught during execution. It is composed of two columns:
+This page lists the commands to be caught during execution. Se compone de dos columnas:
 
 * The left column displays the Enable/Disable status of the caught command, followed by the name of the command
 * The right column displays the condition associated with the caught command, if any
 
-To add a command to be caught:
+Para añadir un punto de interrupción en el comando:
 
 1. Click on the **Add New Catch** button (in the shape of a +) located below the list. A new entry is added to the list with the `ALERT` command as default
 2. Click the **ALERT** label, type the name of the command you want to catch, then press **Enter**.
@@ -107,9 +107,9 @@ To enable or disable a caught command, click on the bullet (•) in front of the
 
 > Disabling a caught command has almost the same effect as deleting it. During execution, the debugger spends almost no time on the entry. The advantage of disabling an entry is that you do not have to recreate it when you need it again.
 
-To delete a caught command:
+Para eliminar un punto de interrupción en el comando:
 
-1. Select a command in the list.
+1. Seleccione un comando en la lista.
 2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
 
 ### Setting a Condition for catching a command

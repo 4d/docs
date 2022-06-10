@@ -25,7 +25,7 @@ The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component f
 
 The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
 
-To connect to the Data Explorer web page:
+Para conectarse a la página web del Explorador de datos:
 
 - if you use a 4D application with interface, select **Data Explorer...** command from:
     - the **Records** menu (in 4D stand-alone)
@@ -56,7 +56,7 @@ The Data Explorer supports the following web browsers:
 - Edge
 - FireFox
 
-The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
+The minimum resolution to use the Data Explorer is 1280x720. La resolución recomendada es de 1920x1080.
 
 ### Básicos
 
@@ -68,7 +68,7 @@ You can switch to the **dark mode** display theme using the selector at the bott
 
 ![alt-text](assets/en/Admin/dataExplorer2.png)
 
-The page contains several areas:
+La página contiene varias áreas:
 
 - On the left side are the **Dataclasses area** and **Attributes area**, allowing you can select the dataclasses and attributes to display. Attributes are ordered according to the underlying structure creation order. Primary key and indexed attributes have a specific icon. You can filter the list of proposed dataclass names and attribute names using the respective search areas. ![alt-text](assets/en/Admin/dataExplorer3.png)
 
@@ -96,11 +96,11 @@ When the ORDA model or data is modified on the database side (table added, recor
 
 You can reorder the displayed entity list according to attribute values. All types of attributes can be used for a sort, except picture and object.
 
-- Click on a column header to order entities according to the corresponding attribute values. By default, the sort is ascending. Click twice for a descending sort. A column used to sort entities is displayed with a small icon and its name is in *italics*.
+- Click on a column header to order entities according to the corresponding attribute values. Por defecto, la ordenación es ascendente. Haga clic dos veces para una ordenación descendente. Una columna utilizada para ordenar las entidades se muestra con un pequeño icono y su nombre está en *itálica*.
 
 ![alt-text](assets/en/Admin/dataExplorer7.png)
 
-- You can sort attributes on several levels. For example, you can sort employees by city and then by salary. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
+- Puede ordenar los atributos en varios niveles. For example, you can sort employees by city and then by salary. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
 
 
 ### Consultas basadas en atributos
@@ -150,14 +150,14 @@ You can also use the wildcard character (@) to replace one or more starting char
 
 | Un filtro con | Resultados                                         |
 | ------------- | -------------------------------------------------- |
-| Bel           | All values beginning with “Bel”                    |
+| Bel           | Todos los valores que empiezan por "Bel"           |
 | @do           | Todos los valores que contienen "do"               |
 | Bel@do        | All values starting with “Bel” and containing “do” |
 
 If you want to create more specific queries, such as "is exactly", you may need to use the advanced queries feature.
 
 
-### Advanced queries with expression
+### Consultas avanzadas con expresión
 
 When you select this option, a query area is displayed above the entity list, allowing you to enter any expression to use to filter the contents:
 

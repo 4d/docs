@@ -24,14 +24,14 @@ You can modify the following print settings:
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                     |
-| ----------- | -------------- | ------------------------------------------------------------------------------------ |
-| pageFormat  | objeto         | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
-| paperName   | cadena         | "A4", "US Letter"...                                                                 |
-| paperWidth  | cadena         | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| paperHeight | cadena         | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | cadena         | "landscape" (por defecto es "portrait")                                              |
-| scale       | number         | mínimo: 0                                                                            |
+| Nombre      | Tipos de datos | Valores posibles                                                                          |
+| ----------- | -------------- | ----------------------------------------------------------------------------------------- |
+| pageFormat  | objeto         | Available print properties: paperName, paperWidth, paperHeight, orientation, scale        |
+| paperName   | cadena         | "A4", "US Letter"...                                                                      |
+| paperWidth  | cadena         | Used if a paper named paperName was not found. Requiere sufijo de unidad: pt, in, mm, cm. |
+| paperHeight | cadena         | Used if a paper named paperName was not found. Requiere sufijo de unidad: pt, in, mm, cm. |
+| orientation | cadena         | "landscape" (por defecto es "portrait")                                                   |
+| scale       | number         | mínimo: 0                                                                                 |
 
 
 ---

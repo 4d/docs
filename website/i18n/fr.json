@@ -624,13 +624,13 @@
       "FormObjects/text": {
         "title": "Text"
       },
-      "FormObjects/viewProAreaOverview": {
+      "FormObjects/viewProArea_overview": {
         "title": "Zone 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Zone Web"
       },
-      "FormObjects/writeProAreaOverview": {
+      "FormObjects/writeProArea_overview": {
         "title": "Zone 4D Write Pro"
       },
       "GettingStarted/creating": {

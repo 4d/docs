@@ -78,7 +78,7 @@ The syntax error window proposes several options:
     - If a form method or object method is executing in response to an event, it is stopped and you return to the form.
     - If the method is executing from within the Application environment, you return to that environment.
 
-- **Copy**: Copies the debugging information into the clipboard. The info describes the internal environment of the error (number, internal component, etc.). It is formatted as tabbed text.
+- **Copy**: Copies the debugging information into the clipboard. The info describes the internal environment of the error (number, internal component, etc.). Está formateado como texto tabulado.
 
 - **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
 

@@ -64,19 +64,19 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF FolderClass.Folder.Params -->
-| Parameter      | Type      |    | Descrição                                       |
-| -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Texto     | -> | Folder path                                     |
-| folderConstant | Integer   | -> | 4D folder constant                              |
-| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | * to return folder of host database             |
-| Resultado      | 4D.Folder | <- | New folder object                               |
+| Parameter      | Type       |    | Descrição                                       |
+| -------------- | ---------- |:--:| ----------------------------------------------- |
+| path           | Texto      | -> | Folder path                                     |
+| folderConstant | Integer    | -> | 4D folder constant                              |
+| pathType       | Integer    | -> | `fk posix path` (default) or `fk platform path` |
+| *              |            | -> | * to return folder of host database             |
+| Resultado      | 4D. Folder | <- | New folder object                               |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+The `Folder` command<!-- REF #_command_. Folder. Summary -->creates and returns a new object of the `4D. Folder` type<!-- END REF -->. The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -86,7 +86,7 @@ In the *path* parameter, pass a folder path string. You can use a custom string 
 
 By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
 
-| Constant         | Value | Comment                                                                                 |
+| Constante        | Value | Comentário                                                                              |
 | ---------------- | ----- | --------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
 | fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
@@ -95,7 +95,7 @@ By default, 4D expects a path expressed with the POSIX syntax. If you work with 
 
 In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
 
-| Constant                   | Value | Comment                                                                                             |
+| Constante                  | Value | Comentário                                                                                          |
 | -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
 | fk applications folder     | 116   |                                                                                                     |
 | fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
@@ -122,12 +122,12 @@ If the command is called from a component, pass the optional * parameter to get 
 | v18 R6 | Adicionado |
 </details>
 
-<!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #4D.Folder.new().Syntax -->**4D. Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. Folder<br>**4D. Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D. Folder<!-- END REF -->
 
 
 #### Descrição
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+The `.rename()` function<!-- REF #FolderClass.rename(). Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
 > It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
 
@@ -160,7 +160,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 #### Descrição
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+The `.create()` function<!-- REF #FolderClass.create(). Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
 
 If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
 
@@ -189,6 +189,9 @@ If($newFolder.create())
 Else
     ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
+Else
+    ALERT("Impossible to create a "+$newFolder.name+" folder.")
+End if
 ```
 
 <!-- END REF -->
@@ -208,28 +211,28 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Syntax -->
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parameter         | Type      |    | Descrição                                    |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Type of the alias link                       |
-| Resultado         | 4D.File   | <- | Alias or shortcut reference                  |
+| Parameter         | Type       |    | Descrição                                    |
+| ----------------- | ---------- | -- | -------------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut |
+| aliasName         | Texto      | -> | Name of the alias or shortcut                |
+| aliasType         | Integer    | -> | Type of the alias link                       |
+| Resultado         | 4D.File    | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+The `.createAlias()` function<!-- REF #FolderClass.createAlias(). Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
 By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
 
-| Constant           | Value | Comment                    |
+| Constante          | Value | Comentário                 |
 | ------------------ | ----- | -------------------------- |
 | `fk alias link`    | 0     | Alias link (default)       |
 | `fk symbolic link` | 1     | Symbolic link (macOS only) |
@@ -238,7 +241,7 @@ On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter 
 
 **Returned object**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+A `4D. File` object with the `isAlias` property set to **true**.
 
 #### Exemplo
 
@@ -283,11 +286,11 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### Descrição
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+The `.delete()` function<!-- REF #FolderClass.delete(). Summary -->deletes the folder<!-- END REF -->.
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| Constant               | Value | Comment                                          |
+| Constante              | Value | Comentário                                       |
 | ---------------------- | ----- | ------------------------------------------------ |
 | `Delete only if empty` | 0     | Deletes folder only when it is empty             |
 | `Delete with contents` | 1     | Deletes folder along with everything it contains |
@@ -385,20 +388,20 @@ When `Delete with contents` is passed:
 
 
 <!--REF #FolderClass.moveTo().Syntax -->
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
+**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parameter         | Type      |    | Descrição                      |
-| ----------------- | --------- | -- | ------------------------------ |
-| destinationFolder | 4D.Folder | -> | Pasta de destino               |
-| newName           | Texto     | -> | Full name for the moved folder |
-| Resultado         | 4D.Folder | <- | Moved folder                   |
+| Parameter         | Type       |    | Descrição                      |
+| ----------------- | ---------- | -- | ------------------------------ |
+| destinationFolder | 4D. Folder | -> | Pasta de destino               |
+| newName           | Texto      | -> | Full name for the moved folder |
+| Resultado         | 4D. Folder | <- | Moved folder                   |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` function<!-- REF #FolderClass.moveTo(). Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -454,14 +457,14 @@ You want to move and rename a folder:
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->
-**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+**.rename**( *newName* : Text ) : 4D. Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parameter | Type      |    | Descrição                    |
-| --------- | --------- | -- | ---------------------------- |
-| newName   | Texto     | -> | New full name for the folder |
-| Resultado | 4D.Folder | <- | Renamed folder               |
+| Parameter | Type       |    | Descrição                    |
+| --------- | ---------- | -- | ---------------------------- |
+| newName   | Texto      | -> | New full name for the folder |
+| Resultado | 4D. Folder | <- | Renamed folder               |
 <!-- END REF -->
 
 
@@ -481,7 +484,7 @@ The renamed `Folder` object.
 
 
 ```4d
- var $toRename : 4D.Folder
+ var $toRename : 4D. Folder
  $toRename:=Folder("/RESOURCES/Pictures").rename("Images")
 ```
 <!-- END REF -->

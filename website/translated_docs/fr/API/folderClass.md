@@ -189,6 +189,9 @@ If($newFolder.create())
 Else
     ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
+Else
+    ALERT("Impossible to create a "+$newFolder.name+" folder.")
+End if
 ```
 
 <!-- END REF -->

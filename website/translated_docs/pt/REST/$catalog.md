@@ -29,11 +29,11 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Propriedade | Type   | Descrição                                                                         |
-| ----------- | ------ | --------------------------------------------------------------------------------- |
-| name        | String | Name of the dataclass.                                                            |
-| uri         | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
-| dataURI     | String | A URI that allows you to view the data in the dataclass.                          |
+| Propriedade | Type   | Descrição                                                                        |
+| ----------- | ------ | -------------------------------------------------------------------------------- |
+| name        | String | Name of the dataclass.                                                           |
+| uri         | String | A URI allowing you to obtain information about the dataclass and its attributes. |
+| dataURI     | String | A URI that allows you to view the data in the dataclass.                         |
 
 
 ### Exemplo

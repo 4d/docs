@@ -65,7 +65,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Params -->
 | Parámetros  | Tipo            |    | Descripción                                                   |
 | ----------- | --------------- |:--:| ------------------------------------------------------------- |
-| commandLine | Texto           | -> | Command line to execute                                       |
+| commandLine | Texto           | -> | Línea de comando a ejecutar                                   |
 | options     | Objeto          | -> | Parámetros worker                                             |
 | result      | 4D.SystemWorker | <- | New asynchronous System worker or null if process not started |  
 <!-- END REF -->
@@ -110,7 +110,7 @@ All callback functions receive two object parameters. Their contents depend on t
 | $param2.type | Texto       | "response"   | "data"        | "error"       | "error"      | "termination" |
 | $param2.data | Text o Blob |              | received data | error data    |              |               |
 
-Here is the sequence of callback calls:
+Esta es la secuencia de llamadas de retorno:
 
 1. `onData` and `onDataError` are executed one or several times
 2. if called, `onError` is executed once (stops the system worker processing)
@@ -390,7 +390,7 @@ Each element of the collection is an object with the following properties:
 | Propiedad              | Tipo   | Descripción                                           |
 | ---------------------- | ------ | ----------------------------------------------------- |
 | [].errorCode           | number | Código de error 4D                                    |
-| [].message             | texto  | Description of the 4D error                           |
+| [].message             | texto  | Descripción del error 4D                              |
 | [ ].componentSignature | texto  | Firma del componente interno que ha devuelto el error |
 
 If no error occured, `.errors` contains an empty collection. 

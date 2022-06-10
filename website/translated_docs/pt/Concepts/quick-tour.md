@@ -57,7 +57,7 @@ MyOtherDate:=Current date+30
 
 A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
 
-## Commands
+## Comandos
 
 Os comandos 4D são métodos integrados para realizar uma ação. Todos os comandos 4D, como `CREATE RECORD`, o `ALERT`, se descrevem no manual _Linguagem de 4D_, agrupados por temas. Comandos são frequentemente usados com parâmetros, que são passados em parênteses () e separados por ponto e vírgula (;). Exemplo:
 
@@ -288,7 +288,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 ### Expression types
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Type               | Descrição                                                                                                                                                                       |
+| Expressão                | Type               | Descrição                                                                                                                                                                       |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
@@ -336,7 +336,7 @@ A pointer to an element is created by adding a "->" symbol before the element na
 MyVar:="Hello" MyPointer:=->MyVar ALERT(MyPointer->)
 ```
 
-## Comments
+## Comentários
 
 Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
 

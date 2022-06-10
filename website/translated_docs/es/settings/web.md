@@ -59,13 +59,13 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 ### Caché
 
 
-#### Use the 4D Web cache
+#### Utilizar la caché Web de 4D
 
-Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
+Activa la caché de la página web. See [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Tamaño de la caché de las páginas
 
-Sets the cache size. See [Cache](../WebServer/webServerConfig.md#cache).
+Define el tamaño de la caché. See [Cache](../WebServer/webServerConfig.md#cache).
 
 
 #### Vaciar la caché
@@ -91,9 +91,9 @@ When this option is selected, the web server does not provide any specific suppo
 
 In this mode, you can configure additional web server setttings:
 
--   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
+-   [Procesos Web simultáneos maximos](#maximum-concurrent-web-processes)
 -   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
--   [Use preemptive processes](#use-preemptive-web-processes)
+-   [Utilizar los procesos apropiativos](#use-preemptive-web-processes)
 
 #### Legacy sessions (single process sessions)
 
@@ -103,20 +103,20 @@ This option enables the handling of legacy user sessions by the 4D HTTP server. 
 
 When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
 
-#### Maximum Concurrent Web Processes
+#### Procesos Web simultáneos maximos
 
 Not available with [scalable sessions](../WebServer/sessions.md).
 
 Strictly high limit of concurrent web processes. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 
-#### Reuse Temporary Contexts
+#### Reutilización de los contextos temporales
 
 Not available with [scalable sessions](../WebServer/sessions.md).
 
 Allows you to optimize the operation of the 4D Web server in remote mode. See [Reuse temporary contexts in remote mode)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
 
-#### Use preemptive processes
+#### Utilizar los procesos apropiativos
 
 Not available with [scalable sessions](../WebServer/sessions.md).
 
@@ -156,7 +156,7 @@ Define the set of characters to be used by the 4D Web server. See [Character Set
 
 ### Conexiones Keep-Alive
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections).
+Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#keep-alive-connections).
 
 ### Parámetros CORS
 
@@ -206,7 +206,7 @@ The log format menu provides the following options:
     -   Referer: Contains the URL of the page pointing to the requested document.
     -   User-agent: Contains the name and version of the browser or software of the client at the origin of the request.
 
-> The DLF format cannot be customized.
+> El formato DLF no se puede personalizar.
 
 -   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
@@ -214,7 +214,7 @@ The log format menu provides the following options:
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. You will need to select each field to be included in the log.
 
-**Note**: You cannot select the same field twice.
+**Nota**: no puede seleccionar el mismo campo dos veces.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
@@ -224,14 +224,14 @@ The following table lists the fields available for each format (in alphabetical 
 | BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
-| CONNECTION_ID  |     | X   | Connection ID number                                                       |
+| CONNECTION_ID  |     | X   | Número de identificación de la conexión                                    |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
-| CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
+| CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                             |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
 | CS_SIP         | X   | X   | Dirección IP del servidor                                                  |
-| CS_URI         | X   | X   | URI on which the request is made                                           |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                   |
+| CS_URI         | X   | X   | URI sobre el que se realiza la petición                                    |
+| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                      |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
@@ -241,21 +241,21 @@ The following table lists the fields available for each format (in alphabetical 
 | TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| URL            |     | X   | URL requested by the client                                                |
+| URL            |     | X   | URL solicitado por el cliente                                              |
 
 > Las fechas y horas se indican en GMT.
 
 ## Historial (periodicidad)
 
-Configure the automatic backup parameters for the request log. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de los archivos haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
+Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de los archivos haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 -   **No Backup**: The scheduled backup function is deactivated.
 -   **Every X hour(s)**: This option is used to program backups on an hourly basis. You can enter a value between 1 and 24 .
 
     -   **starting at**: Used to set the time at which the first back up will begin.
 -   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
--   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired. For example, you can use this option to set two weekly backups: one on Wednesdays and one on Fridays.
--   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. When this option is checked, you must indicate the day of the month and the time when the backup must be started.
+-   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+-   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. Introduzca 1 si desea realizar una copia de seguridad mensual.
 -   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
 
 > In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.

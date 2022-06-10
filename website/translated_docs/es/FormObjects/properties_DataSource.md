@@ -10,7 +10,7 @@ When this option is selected, if a user enters a value that is not found in the 
 
 When the **automatic insertion** option is not set (default), the value entered is stored in the form object but not in the list in memory.
 
-This property is supported by:
+Esta propiedad es soportada por:
 
 - [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) form objects associated to a choice list.
 - [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
@@ -184,7 +184,7 @@ List of values that will be used as default values for the list box column (arra
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 
-You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+Debe introducir una lista de valores. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
 ![](assets/en/FormObjects/defaultValues.png)
 
@@ -212,7 +212,7 @@ A 4D expression to be associated with a column. Puede introducir:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
+- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
     *   Cadena
     *   Numeric
     *   Fecha
@@ -328,7 +328,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 ## Selección de nombres
 `Named selection list boxes`
 
-Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica la selección con nombre que se utilizará. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

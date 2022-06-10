@@ -76,7 +76,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 3. Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la aplicación. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
+4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
 
 > Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
 
@@ -110,7 +110,7 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 
 Para crear un grupo:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. La lista de grupos muestra todos los grupos del proyecto de aplicación.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
@@ -120,7 +120,7 @@ Para crear un grupo:
 
 4D adds a new group to the list, named "New groupX" by default.
 
-3. Enter the name of the new group. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Introduzca el nombre del nuevo grupo. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 
 ### Placing users or groups into groups
@@ -176,7 +176,7 @@ Such a hierarchical system makes it easy to remember to which group a new user s
 
 Groups are assigned access privileges to specific parts or features of the application:
 
-- Design and Runtime Explorer access,
+- Acceso al entorno Diseño y al Explorador de ejecución,
 - Servidor HTTP,
 - Servidor REST,
 - Servidor SQL.

@@ -121,7 +121,7 @@ Utilizando el almacén de datos principal de la base 4D:
 
 #### Descripción
 
-El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
+El comando `Open datastore`<!-- REF #_command_.Open datastore. Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` asociado al alias local *localID*.
 
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 

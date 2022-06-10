@@ -12,7 +12,7 @@ title: On Display Detail
 
 The `On Display Detail` event can be used in the following contexts:
 
-### Output form
+### Formulário de saída
 
 A record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
 

@@ -14,13 +14,13 @@ Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes
 
 You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
-| Type                           | Features                                         | Expression Type | Data Type                    | JSON definition                                                                                                                                               |
+| Type                           | Funcionalidades                                  | Expression Type | Data Type                    | JSON definition                                                                                                                                               |
 | ------------------------------ | ------------------------------------------------ | --------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Objeto                         | Built upon a collection                          | Objeto          | Numeric, Text, Date, or Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
 | Array                          | Built upon an array                              | Array           | Numeric, Text, Date, or Time | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
-| Choice list saved as value     | Built upon a choice list (standard)              | List            | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Choice list saved as reference | Built upon a choice list. Item position is saved | List            | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Hierarchical choice list       | Can display hierarchical contents                | List            | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Choice list saved as value     | Built upon a choice list (standard)              | Lista           | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Choice list saved as reference | Built upon a choice list. Item position is saved | Lista           | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Hierarchical choice list       | Can display hierarchical contents                | Lista           | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
 | Ação padrão                    | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 
@@ -35,7 +35,7 @@ An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_coll
 
 | Propriedade    | Type               | Descrição                                                                                                                                                                                                                                              |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `values`       | Coleção            | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the drop-down list is empty |
+| `values`       | Coleção            | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>datas</li><li>horas</li>If empty or not defined, the drop-down list is empty |
 | `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                   |
 | `currentValue` | same as Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                     |
 
@@ -130,7 +130,7 @@ You must select each event that you test for in your Case statement. Os arrays s
 If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). Isso facilita gerenciar variáveis/campos listados.
 
 For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D então se encarrega automaticamente de gerenciar o input e exibir os valores atuais no formulário.
-> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. If you want to display hierarchical contents, you need to use a [hierarchical choice list](#using-a-hierarchical-choice-list).
+> Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado. Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 > It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.

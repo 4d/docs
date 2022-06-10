@@ -68,7 +68,7 @@ Supported types depend on the form category:
 
 | Form Type                | JSON grammar     | Descrição                                                     | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
+| Formulário detalhado     | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
 | List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
@@ -150,7 +150,7 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 | ---------------- | --------- | --------------- |
 | memorizeGeometry | booleano  | true, false     |
 
-#### See also
+#### Veja também
 [**Save Value**](FormObjects/properties_Object.md#save-value)
 
 

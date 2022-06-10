@@ -103,7 +103,7 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Veja também
 [Vertical scroll bar](#vertical-scroll-bar)
 
 ---
@@ -177,7 +177,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 ## Show headers
@@ -351,10 +351,10 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 
-#### See also
+#### Veja também
 
 [4D View Pro reference guide](ViewPro/overview.md)
 
@@ -387,7 +387,7 @@ Available values:
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Veja também
 
 [Horizontal scroll bar](#horizontal-scroll-bar)
 

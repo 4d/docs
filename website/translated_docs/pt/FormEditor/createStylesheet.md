@@ -359,6 +359,6 @@ Durante a execução, 4D prioriza automaticamente as folhas de estilo na seguint
 > As rotas dos arquivos pedem ser relativas ou absolutas. * As rotas relativas se resolvem em relação com o arquivo de descrição do formulário JSON. * Por razões de segurança, só se aceitam as rotas do sistema de arquivos para as rotas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
 
 
-## See also
+## Veja também
 
 See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.

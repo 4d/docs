@@ -5,11 +5,11 @@ title: Página Cliente/Servidor
 
 The Client-server pages group together parameters related to the use of the database in client-server mode. Naturally, these settings are only taken into account when the database is used in remote mode.
 
-## Network options page
+## Página Opciones red
 
 ### Red
 
-#### Publish database at startup
+#### Publicar la base al inicio
 
 This option lets you indicate whether or not the 4D Server database will appear in the list of published databases.
 
@@ -20,7 +20,7 @@ This option lets you indicate whether or not the 4D Server database will appear 
 
 #### Nombre de publicación
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). By default, 4D Server uses the name of the project file. Puede introducir cualquier nombre personalizado que desee.
 
 > This parameter is not taken into account in custom client-server applications. In theory, the client application connects directly to the server application, without passing by the connection dialog box. However, in the event of an error, this dialog box can appear; in this case, the publication name of the server application is the name of the compiled project.
 
@@ -60,7 +60,7 @@ This device is used to set the timeout (period of inactivity beyond which the co
 
 When a timeout is selected, the server will close the connection of a client if it does not receive any requests from the latter during the specified time limit.
 
-### Client-Server Communication
+### Comunicación cliente-servidor
 
 #### Register Clients at Startup For Execute On Client
 
@@ -82,7 +82,7 @@ This setting can be used to globally set the updating mode for the local instanc
 
 ## Página Configuración IP
 
-### Allow-Deny Configuration Table
+### Tabla de configuración Autorizar-Rechazar
 
 This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
 
@@ -90,11 +90,11 @@ This table allows you to set access control rules for the database depending on 
 
 The behavior of the configuration table is as follows:
 
-- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. To add a rule, click on the Add button. A new row appears in the table. The **Delete** button lets you remove the current row.
+- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. Para añadir una regla, haga clic en el botón Añadir. A new row appears in the table. The **Delete** button lets you remove the current row.
 - The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
 - The application of rules is based on the display order of the table. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). You can also move rows using drag and drop.
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. Por ejemplo:
     - Deny 192.168.* (deny all addresses beginning with 192.168)
-    - Allow * (but allow all other addresses)
+    - Autorizar * (y permitir todas las demás direcciones)
 
 By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.

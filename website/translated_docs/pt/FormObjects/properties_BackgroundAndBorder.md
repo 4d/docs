@@ -37,7 +37,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
-#### See also
+#### Veja também
 [Transparente](#transparent)
 
 
@@ -228,5 +228,5 @@ Sets the list box background to "Transparent". When set, any [alternate backgrou
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
 
-#### See also
+#### Veja também
 [Background Color / Fill Color](#background-color-fill-color)

@@ -42,7 +42,7 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Data types                         | Values                                             | Operators                                                                                                                                                                                                                                         |
+| Tipos de dados                     | Values                                             | Operators                                                                                                                                                                                                                                         |
 | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Número](Concepts/dt_number.md)    | 1.2<br>1.2 E3<br>1.2E-3<br>10.3x | + (addition)<br>- (subtraction)<br>* (multiplication)<br>/ (division)<br>^ (exponent, the number of times to multiply a number by itself)<br>% (percentage -- divide the number before the operator by one hundred) |
 | [Date](Concepts/dt_date.md)        | 10/24/2017                                         | + (date + number of days -> date)<br>+ (date + time -> date + time of day)<br>- (date - number of days -> date)<br>- (date - date -> number of days between the two)                                                            |
@@ -55,9 +55,9 @@ All formulas have operands and operators:
 
 The following operators can be used with two operands of the same type:
 
-| Operator | Comparison               |
+| Operator | Comparação               |
 | -------- | ------------------------ |
-| =        | equal to                 |
+| =        | igual a                  |
 | <>       | different than           |
 | >        | greater than             |
 | <        | less than                |
@@ -138,7 +138,7 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 4D custom functions provide access, from within your 4D View Pro formulas, to:
 
 - 4D process variables,
-- fields,
+- campos,
 - project methods,
 - 4D language commands,
 - or any valid 4D expression.

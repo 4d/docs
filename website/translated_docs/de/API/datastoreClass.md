@@ -790,6 +790,12 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
  Else
     $ds.validateTransaction()
  End if
+ ...
+ If($error)
+    $ds.cancelTransaction()
+ Else
+    $ds.validateTransaction()
+ End if
 ```
 
 

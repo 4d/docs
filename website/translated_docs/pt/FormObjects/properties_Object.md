@@ -6,7 +6,7 @@ title: Objetos
 ---
 ## Type
 
- `MANDATORY SETTING`
+ `CONFIGURAÇÃO OBRIGATÓRIA`
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 

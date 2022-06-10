@@ -40,6 +40,6 @@ When an entry requires a sequence of keystrokes, the `On Before Keystroke` and [
 - when an IME (Input method editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
 
 
-### See also
+### Veja também
 
 [On After Keystroke](onAfterKeystroke.md).

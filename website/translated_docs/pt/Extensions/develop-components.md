@@ -128,8 +128,7 @@ $p:=component_method2(...)
 Without a pointer, a component can still access the value of a host database variable (but not the variable itself) and vice versa:
 
 ```4d
-//In the host database
-C_TEXT($input_t)
+//In the host database C_TEXT($input_t)
 $input_t:="DoSomething"
 component_method($input_t)
 // component_method gets "DoSomething" in $1 (but not the $input_t variable)
@@ -140,7 +139,7 @@ When you use pointers to allow components and the host project to communicate, y
 
 - The `Get pointer` command will not return a pointer to a variable of the host project if it is called from a component and vice versa.
 
-- The component architecture allows the coexistence, within the same interpreted project, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled project). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Let’s illustrate this principle with the following example: given two components, C (compiled) and I (interpreted), installed in the same host project.
+- The component architecture allows the coexistence, within the same interpreted project, of both interpreted and compiled components (conversely, only compiled components can be used in a compiled project). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode.
  - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
  - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
 
@@ -174,23 +173,19 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 Dentro do componente, o código do método `methCreateRec`:
 
 ```4d
-C_POINTER($1) //Pointer on a table in host project
-C_POINTER($2) //Pointer on a field in host project
-C_TEXT($3) // Value to insert
+C_POINTER($1) //Pointer on a table in host project C_POINTER($2) //Pointer on a field in host project C_TEXT($3) // Value to insert
 
 $tablepointer:=$1
-$fieldpointer:=$2
-CREATE RECORD($tablepointer->)
+$fieldpointer:=$2 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
-SAVE RECORD($tablepointer->)
+$fieldpointer->:=$3 SAVE RECORD($tablepointer->)
 ```
 
 > In the context of a component, 4D assumes that a reference to a table form is a reference to the host table form (as components can't have tables.)
 
 ## Uso de tabelas e campos
 
-A component cannot use the tables and fields defined in the 4D structure of the matrix project. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. An external database is a 4D project that is independent from the main 4D project, but that you can work with from the main 4D project. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
+A component cannot use the tables and fields defined in the 4D structure of the matrix project. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Pode criar bancos externos usando o comando SQL `CREATE DATABASE`.
 
 ### Exemplo
 
@@ -270,7 +265,7 @@ Lendo de um banco externo:
 
 ## Uso de formulários
 
-- Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Any project forms present in the matrix project can be used by the component.
+- Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente.
 - A component can call table forms of the host project. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
 
 > If a component uses the `ADD RECORD` command, the current Input form of the host project will be displayed, in the context of the host project. Por isso se o formulário incluir variáveis, o componente não terá acesso ao formulário.

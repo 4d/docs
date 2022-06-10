@@ -14,5 +14,5 @@ title: On Expand
 - [Hierarchical list boxes](FormObjects/listbox_overview.md#hierarchical-list-boxes): This event is generated when a row of the hierarchical list box is expanded.
 
 
-### See also
+### Veja também
 [On Collapse](onCollapse.md)

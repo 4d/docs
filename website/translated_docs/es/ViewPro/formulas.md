@@ -1,6 +1,6 @@
 ---
 id: formulas
-title: Formulas and Functions
+title: Fórmulas y funciones
 ---
    
 ## Utilización de las fórmulas
@@ -12,7 +12,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 To enter a formula in a 4D View Pro area:
 
 1.  Select the cell into which you will enter the formula or function.
-2.  Enter = (the equal sign).
+2.  Introduzca = (el signo igual).
 3.  Type the formula and hit the **Enter** key.
 
 When writing a formula, you can use different shortcuts:
@@ -27,7 +27,7 @@ When writing a formula, you can use different shortcuts:
 
 You can also create named formulas that can be called via their name. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
 
-### Operators and Operands
+### Operadores y operandos
 
 All formulas have operands and operators:
 
@@ -35,10 +35,10 @@ All formulas have operands and operators:
 *   **Operands** include several categories:
     *   [values](#values-and-operators) (5 data types are supported)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
-    *   [standard spreadsheet functions](#using-functions)
+    *   [funciones estándar de hoja de cálculo](#using-functions)
     *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
 
-## Values and operators
+## Valores y operadores
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
@@ -46,12 +46,12 @@ All formulas have operands and operators:
 | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Número](Concepts/dt_number.md)    | 1.2<br>1.2 E3<br>1.2E-3<br>10.3x | + (addition)<br>- (subtraction)<br>* (multiplication)<br>/ (division)<br>^ (exponent, the number of times to multiply a number by itself)<br>% (percentage -- divide the number before the operator by one hundred) |
 | [Fecha](Concepts/dt_date.md)       | 10/24/2017                                         | + (date + number of days -> date)<br>+ (date + time -> date + time of day)<br>- (date - number of days -> date)<br>- (date - date -> number of days between the two)                                                            |
-| [Hora](Concepts/dt_time.md)        | 10:12:10                                           | Duration operators:<p>+ (addition)<br>- (subtraction)<br>* (duration * number -> duration)<br>/ (duration / number -> duration)                                                                        |
-| [Cadena](Concepts/dt_string.md)    | 'Sophie' or "Sophie"                               | & (concatenación)                                                                                                                                                                                                                                 |
+| [Hora](Concepts/dt_time.md)        | 10:12:10                                           | Operadores de duración:<p>+ (addition)<br>- (subtraction)<br>* (duration * number -> duration)<br>/ (duration / number -> duration)                                                                    |
+| [Cadena](Concepts/dt_string.md)    | 'Sophie' o "Sophie"                                | & (concatenación)                                                                                                                                                                                                                                 |
 | [Booleano](Concepts/dt_boolean.md) | TRUE o FALSE                                       | -                                                                                                                                                                                                                                                 |
 
 
-### Comparison operators
+### Operadores de comparación
 
 The following operators can be used with two operands of the same type:
 
@@ -65,7 +65,7 @@ The following operators can be used with two operands of the same type:
 | <=       | menor o igual que |
 
 
-### Operator precedence
+### Presedencia de los operadores
 
 List of operators from most to least important:
 
@@ -76,7 +76,7 @@ List of operators from most to least important:
 | +               | Más                       |
 | %               | Porcentaje                |
 | ^               | Exponente                 |
-| * y /           | Multiply and divide       |
+| * y /           | Multiplicar y dividar     |
 | + y -           | Add and Subtract          |
 | &               | Concatenar                |
 | =  > < >= <= <> | Comparar                  |
@@ -92,7 +92,7 @@ Formulas often refer to other cells by cell addresses. You can copy these formul
 = C6 + C7
 ```
 
-This formula refers to cells C6 and C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+Esta fórmula se refiere a las celdas C6 y C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
 
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
@@ -112,13 +112,13 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                    |
-| ------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5               | Absoluto           | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
-| $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
-| C$5                | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Nombre de la celda | Absoluto           | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                        |
+| ------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                       |
+| $C$5               | Absoluto           | La referencia es absoluta. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.               |
+| C$5                | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                |
+| Nombre de la celda | Absoluto           | La referencia es absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 
@@ -141,7 +141,7 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 - campos,
 - project methods,
 - comandos del lenguaje 4D,
-- or any valid 4D expression.
+- o cualquier expresión válida de 4D.
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
@@ -174,7 +174,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 > **See also** [4D View Pro: Use 4D formulas in your spreadsheet (blog post)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/)
 
 
-### Hello World example
+### Ejemplo con Hello World
 
 We want to print "Hello World" in a 4D View Pro area cell using a 4D project method:
 
@@ -351,7 +351,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 > The \[Employee] table must have a current record.
 
 
-### Declaring allowed methods
+### Declarar los métodos autorizados
 
 You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 
