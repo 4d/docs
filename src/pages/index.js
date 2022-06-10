@@ -18,7 +18,7 @@ function HeroBanner() {
       <div className={styles.heroInner}>
       <h1 className={styles.heroProjectTagline}>
           <img
-            alt={translate({message: 'Docusaurus with Keytar'})}
+            alt={translate({message: '4D banner logo'})}
             className={styles.heroLogo}
             src={useBaseUrl('/img/banner-object.png')}
             width="350"
