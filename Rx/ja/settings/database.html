@@ -101,7 +101,7 @@
 <li>このオプションは object引数に &quot;@&quot; ワイルドキャラクターを受け入れる <a href="https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.ja.html">オブジェクト(フォーム)</a> テーマのコマンドの動作にも影響を与えます。</li>
 <li>セキュリティの理由で、データベースの Administrator または Designer のみがこのパラメーターを変更できます。</li>
 </ul></li>
-<li><p><strong>現在のデータ言語</strong>: 文字列の処理と比較に使用する言語を設定します。 言語の選択は、テキストの並べ替えや検索、文字の大小などの比較ルール等に直接影響を与えます。ただし、テキストの翻訳や日付・時刻・通貨のフォーマットはシステムの言語設定が使用され、この設定には影響されません。 デフォルトで 4D はシステム言語を使用します。</p>
+<li><p><strong>現在のデータ言語</strong>: 文字列の処理と比較に使用する言語を設定します。 言語の選択は、テキストの並べ替えや検索、文字の大小などの比較ルール等に直接影響を与えます。 ただし、テキストの翻訳や日付・時刻・通貨のフォーマットはシステムの言語設定が使用され、この設定には影響されません。 デフォルトで 4D はシステム言語を使用します。</p>
 <p>つまり、4Dプロジェクトはシステム言語とは異なる言語で動作することができます。 プロジェクトが開かれるとき、4Dエンジンはデータファイルに使用されている言語を検知し、(インタープリターやコンパイルモードの) ランゲージに提供します。 データベースエンジン、あるいはランゲージのいずれがテキスト比較をおこなうかに関わらず、同じ言語が使用されます。</p>
 <blockquote>
 <p>4D環境設定でも言語を設定できます (<a href="/docs/Rx/ja/Preferences/general.html">一般ページ</a> 参照)。 この場合、その設定は新規に作成されるデータベースに適用されます。</p>
@@ -111,14 +111,14 @@
 <p>このオプションが選択されている場合、4D は簡易的なアルゴリズムを使用します。 この設定では、文字でも数字でもない文字がキーワード区切り文字として扱われます。 この設定は日本語など特定の言語の要求に沿うものです。</p></li>
 <li><p><strong>テキスト検索用の文字列比較を使用する</strong>: このオプションは日本語が選択されている場合にのみ表示されます。 このオプションは &quot;カタカナ-ひらがなでの長音記号&quot; および、&quot;ゝ&quot; または &quot;ゞ&quot; などの繰り返し記号 (踊り字) などの文字の解釈を変更します。 一般的には、この設定が有効化されている方が日本語話者にとって望ましい結果が得られます。</p></li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="support-of-mecab-japanese-version"></a><a href="#support-of-mecab-japanese-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Support of Mecab (Japanese version)</h4>
-<p>On Japanese systems, 4D supports the <em>Mecab</em> library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.</p>
-<p>日本語版の 4D ではこのアルゴリズムがデフォルトで使用されています。 The files required for the <em>Mecab</em> library are installed in the <strong>mecab</strong> folder of the <strong>Resources</strong> folder for 4D applications (Japanese versions only).</p>
-<p>If needed, you can disable the use of the <em>Mecab</em> algorithm and use the conventional <em>ICU</em> library.</p>
-<p>To disable <em>Mecab</em>, just check the <strong>Consider only non-alphanumeric chars for keywords</strong> option:</p>
+<h4><a class="anchor" aria-hidden="true" id="mecab-のサポート-日本語版"></a><a href="#mecab-のサポート-日本語版" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mecab のサポート (日本語版)</h4>
+<p>日本語版の 4D では、 <em>Mecab</em> ライブラリーがサポートされており、日本語用に調整されたキーワードのインデックスアルゴリズムを兼ね備えています。</p>
+<p>日本語版の 4D ではこのアルゴリズムがデフォルトで使用されています。 <em>Mecab</em> ライブラリーを使用するために必要なファイルはすべて 4Dアプリケーションの <strong>Resources</strong> フォルダー内の <strong>mecab</strong> フォルダー内にインストールされています (日本語版のみ)。</p>
+<p>必要であれば <em>Mecab</em> アルゴリズムを無効にして、以前と同じ <em>ICU</em> ライブラリーを使用することもできます。</p>
+<p><em>Mecab</em> を無効化するには、<strong>非文字・非数字のみをキーワード区切り文字とする</strong> のオプションにチェックを入れます:</p>
 <p><img src="/docs/Rx/assets/en/settings/non-alphanumeric-chars.png" alt=""></p>
 <blockquote>
-<p><strong>Note:</strong> You can also disable the use of Mecab by deleting or renaming the Resources/mecab folder of your 4D Japanese application.</p>
+<p><strong>注:</strong> 日本語版 4D の、 Resources/mecab フォルダーを削除または改名することによっても Mecab を無効化することができます。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="メモリページ"></a><a href="#メモリページ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>メモリページ</h2>
 <p>このページでは、データベースのキャッシュメモリに関する設定をおこないます。</p>
@@ -127,8 +127,8 @@
 <li><p><strong>起動時にキャッシュサイズを計算</strong>: このオプションが選択されている場合、キャッシュメモリの管理は、設定された制限に基づき、4D起動時にキャッシュサイズが計算されます。 これにより、ほとんどのケースで高パフォーマンスのメモリ設定がおこなわれます。 キャッシュメモリのサイズは設定されたパラメーターに基づき動的に計算されます。 デフォルトで提案される値は標準の 4D の使用状況に対応します。</p>
 <ul>
 <li><strong>他のアプリケーションとシステムのために予約するメモリ</strong>: システムや他のアプリケーションが使用するために取り置く RAMメモリ量。 4D が実行されるマシン上で他のアプリケーションも実行する場合、必要に応じてこの値を増やします。</li>
-<li><strong>Percentage of available memory used for cache</strong>: Percentage of the remaining memory allocated to the cache by default.<br>
-To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. 動的に計算するモードの場合、キャッシュメモリのサイズはアプリケーションやシステムのニーズに応じて動的に変化します。 以下のオプションを使用して上限と下限を設定できます:</li>
+<li><strong>利用可能なメモリからキャッシュに使用する率</strong>: 残りのメモリからキャッシュに割り当てる量の率。<br>
+デフォルトでキャッシュに割り当てるサイズを取得するためには、以下の計算式を適用します: (物理メモリ – 予約したメモリ) X キャッシュに使用するメモリのパーセンテージ。 動的に計算するモードの場合、キャッシュメモリのサイズはアプリケーションやシステムのニーズに応じて動的に変化します。 以下のオプションを使用して上限と下限を設定できます:</li>
 <li><strong>最小サイズ</strong>: キャッシュ用に予約するメモリの最小量。 この値は 100MB以上でなければなりません。</li>
 <li><strong>最大サイズ</strong>: キャッシュが使用することのできるメモリの最大量。 この値は実質的には無制限です。\<br>
 制限の設定は、メモリ搭載量が不明であるマシン用にアプリケーションを配布する際に便利です。 この場合、制限を設定することで最低限のパフォーマンスを保証できます。 この動作を図示すると以下のようになります:</li>
@@ -137,7 +137,7 @@ To obtain the size allocated by default to the cache, simply perform the followi
 <p><img src="/docs/Rx/assets/en/settings/memory-maximum-size.png" alt=""></p></li>
 <li><p><strong>起動時にキャッシュサイズを計算オプションがチェックされていない場合</strong>: このモードでは、データベースのキャッシュメモリサイズを開発者が決定します。 4D はキャッシュメモリを設定する入力エリアと、物理メモリに関する情報 (マシンに実装されたRAM)、現在のキャッシュ、そして再起動後のキャッシュサイズを表示します。</p>
 <p>入力されたキャッシュサイズは、マシンのリソース状況にかかわらず、4Dデータベース用に予約されます。 この設定は、メモリ搭載量が分かっているなど、特定の状況で使用できます。 ほとんどのケースで起動時計算モードのキャッシュで良いパフォーマンスが提供されます。</p></li>
-<li><p><strong>Flush Cache every...Seconds/Minutes</strong>: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D はキャッシュ中のデータを定期的に保存します。 この間隔を 1秒から 500分の範囲で設定できます。 デフォルトの設定値は 20秒です。 この保存は、キャッシュがいっぱいになった場合や、アプリケーションを終了する際にもおこなわれます。 また <a href="https://doc.4d.com/4dv19R/help/command/ja/page297.html">FLUSH CACHE</a> コマンドを使って、いつでもフラッシュをトリガーできます。</p>
+<li><p><strong>キャッシュをディスクに保存...秒/分</strong>: キャッシュ中のデータを自動的に保存する間隔を設定します。 4D はキャッシュ中のデータを定期的に保存します。 この間隔を 1秒から 500分の範囲で設定できます。 デフォルトの設定値は 20秒です。 この保存は、キャッシュがいっぱいになった場合や、アプリケーションを終了する際にもおこなわれます。 また <a href="https://doc.4d.com/4dv19R/help/command/ja/page297.html">FLUSH CACHE</a> コマンドを使って、いつでもフラッシュをトリガーできます。</p>
 <p>大量のデータ入力が予期される場合は、この間隔を短くすることを検討してください。 停電などの理由でマシンが停止すると、前回の保存以降に入力されたデータが失われてしまいます (データログファイルをとっていれば復旧可能です)。</p>
 <p>キャッシュがフラッシュされるたびにデータベースの動作が遅くなる場合、周期を調整する必要があります。 動作が遅くなるのは、大量のレコードがディスクにフラッシュされるためです。 フラッシュ周期を短くすることで、各フラッシュ時に保存されるレコード数を減らすことができ、動作も速くなります。</p>
 <p>デフォルトで 4D はキャッシュがフラッシュされていることを示す小さなウィンドウを表示します。 このウィンドウを表示したくない場合、<a href="/docs/Rx/ja/settings/interface.html">インターフェースページ</a> の <strong>フラッシュの進捗状況</strong> オプションの選択を解除します。</p></li>

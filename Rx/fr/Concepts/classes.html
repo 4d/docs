@@ -345,6 +345,7 @@ Function</span><span class="hljs-function"> set fullName</span>( <span class="hl
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Class: MyClass</span>
 <span class="hljs-function">Class Constructor</span>({<span class="hljs-variable">$parameterName </span>: type; ...})
 <span class="hljs-comment">// code</span>
+<span class="hljs-comment">// code</span>
 </code></pre>
 <p>Une fonction class constructor, qui accepte des <a href="#parameters">paramètres</a>, peut être utilisée pour définir une classe utilisateur.</p>
 <p>Dans ce cas, lorsque vous appelez la fonction <a href="/docs/Rx/fr/API/ClassClass.html#new"><code>new()</code></a>, le class constructor est appelé avec les paramètres optionnellement passés à la fonction <code>new()</code>.</p>
@@ -410,7 +411,7 @@ Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
 <tr><td>Résultat</td><td>object</td><td>&lt;-</td><td>Parent de l'objet</td></tr>
 </tbody>
 </table>
-<p>Le mot-clé <code>Super</code> permet d'appeler la <code>superclass</code>, i.e. la classe parente.</p>
+<p>Le mot-clé <code>Super</code> permet d'appeler la <code>superclass</code>, i.e.</p>
 <p><code>Super</code> peut être utilisé de deux différentes manières :</p>
 <ol>
 <li>A l'intérieur du code de la fonction <a href="#class-constructor">constructeur</a>, <code>Super</code> est une commande qui permet d'appeler le constructeur de la superclass. Lorsqu'elle est utilisée dans une fonction constructeur, la commande <code>Super</code> est seule et doit être appelée avant que le mot-clé <code>This</code> soit utilisé.</li>
@@ -442,6 +443,11 @@ Class constructor</span>(<span class="hljs-variable">$width </span>: Integer; <s
 
 Function</span><span class="hljs-function"> sayName</span>()
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"Hi, I am a "</span>+<span class="hljs-literal">This</span>.name+<span class="hljs-string">"."</span>)
+
+<span class="hljs-comment">// Définition de fonction</span><span class="hljs-keyword">
+Function</span><span class="hljs-function"> getArea</span>()<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$0 </span>: Integer
+    <span class="hljs-variable">$0</span>:=(<span class="hljs-literal">This</span>.height)*(<span class="hljs-literal">This</span>.width)
 
 <span class="hljs-comment">// Définition de fonction</span><span class="hljs-keyword">
 Function</span><span class="hljs-function"> getArea</span>()<span class="hljs-keyword">

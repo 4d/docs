@@ -219,7 +219,7 @@ Function</span> getValue -&gt; <span class="hljs-variable">$v </span>: Integer
     <span class="hljs-comment">// 10 が返されます</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="引数の間接参照-n"></a><a href="#引数の間接参照-n" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>引数の間接参照 (${N})</h2>
-<p>4Dプロジェクトメソッドは、可変個の引数を受け取ることができます。 <code>For...End for</code> ループや <a href="https://doc.4d.com/4dv19/help/command/ja/page259.html"><code>Count parameters</code></a> コマンド、<strong>引数の間接参照シンタックス</strong> を使って、これらの引数を扱うことができます。 メソッド内で、間接参照は <code>${N}</code> のように表示します。ここの <code>N</code> は数値式です。 <code>${N}</code> を <strong>ジェネリックパラメーター</strong> (generic parameter) と呼びます。</p>
+<p>4Dプロジェクトメソッドは、可変個の引数を受け取ることができます。 <code>For...End for</code> ループや <a href="https://doc.4d.com/4dv19/help/command/ja/page259.html"><code>Count parameters</code></a> コマンド、<strong>引数の間接参照シンタックス</strong> を使って、これらの引数を扱うことができます。 メソッド内で、間接参照は <code>${N}</code> のように表示します。 ここの <code>N</code> は数値式です。 <code>${N}</code> を <strong>ジェネリックパラメーター</strong> (generic parameter) と呼びます。</p>
 <h3><a class="anchor" aria-hidden="true" id="ジェネリックパラメーターの使い方"></a><a href="#ジェネリックパラメーターの使い方" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ジェネリックパラメーターの使い方</h3>
 <p>以下は間接参照の例です。引数の数値を合計した結果を、引数として渡された表示形式で返すようなメソッドを考えてみましょう。 合計される数値の数は、メソッドが呼ばれるたびに変わります。 このメソッドでは数値と表示形式を引数としてメソッドに渡さなければなりません。</p>
 <p>以下は <code>MySum</code> メソッドです:</p>
@@ -230,7 +230,7 @@ Function</span> getValue -&gt; <span class="hljs-variable">$v </span>: Integer
  End for</span>
  <span class="hljs-variable">$result</span>:=<span class="hljs-function">String</span>(<span class="hljs-variable">$sum</span>;<span class="hljs-variable">$format</span>)
 </code></pre>
-<p>このメソッドの引数は正しい順序で渡す必要があります。最初に表示形式、次に可変個の数値引数です。</p>
+<p>このメソッドの引数は正しい順序で渡す必要があります。 最初に表示形式、次に可変個の数値引数です。</p>
 <pre><code class="hljs css language-4d"> Result:=<span class="hljs-function">MySum</span>(<span class="hljs-string">"##0.00"</span>;<span class="hljs-number">125</span>,<span class="hljs-number">2</span>;<span class="hljs-number">33</span>,<span class="hljs-number">5</span>;<span class="hljs-number">24</span>) <span class="hljs-comment">// "182.70"</span>
  Result:=<span class="hljs-function">MySum</span>(<span class="hljs-string">"000"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">200</span>) <span class="hljs-comment">// "203"</span>
 </code></pre>
@@ -324,7 +324,7 @@ End for</span>
 #<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$value </span>: Text)
 </code></pre>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// メソッド2</span>
-<span class="hljs-function">method1</span>(<span class="hljs-number">42</span>) <span class="hljs-comment">// 型間違い。期待されるのはテキスト</span>
+<span class="hljs-function">method1</span>(<span class="hljs-number">42</span>) <span class="hljs-comment">// 型間違い。 期待されるのはテキスト</span>
 </code></pre>
 <p>このケースは、コンテキストに応じて 4D で処理されます。</p>
 <ul>

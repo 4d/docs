@@ -79,36 +79,35 @@
 </thead>
 <tbody>
 <tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><p>    copie l'objet <code>File</code> (fichier source) vers le <em>destinationFolder</em> spécifié</td></tr>
-<tr><td><a href="#create"><strong>.create()</strong> : Boolean </a><p>    crée un fichier sur disque en fonction des propriétés de l'objet <code>File</code></td></tr>
-<tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    crée un alias (macOS) ou un raccourci (Windows)</td></tr>
+<tr><td><a href="#create"> <strong>.create()</strong> : Boolean </a><p>    crée un fichier sur disque en fonction des propriétés de l'objet <code>File</code></td></tr>
+<tr><td><a href="#createalias"> <strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    crée un alias (macOS) ou un raccourci (Windows)</td></tr>
 <tr><td><a href="#creationdate"><strong>.creationDate</strong> : Date</a><p>    la date de création du fichier</td></tr>
 <tr><td><a href="#creationtime"><strong>.creationTime</strong> : Time</a><p>    l'heure de création du fichier</td></tr>
-<tr><td><a href="#delete"><strong>.delete( )</strong></a><p>    supprime le fichier</td></tr>
+<tr><td><a href="#delete"> <strong>.delete( )</strong></a><p>    supprime le fichier</td></tr>
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    vrai si le fichier existe sur le disque</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    l'extension du nom de fichier (le cas échéant)</td></tr>
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    le nom complet du fichier, extension comprise (le cas échéant)</td></tr>
-<tr><td><a href="#getappinfo"><strong>.getAppInfo</strong>() : Object</a><p>    retourne le contenu d'un fichier d'information <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong> sous forme d'objet</td></tr>
+<tr><td><a href="#getappinfo"> <strong>.getAppInfo</strong>() : Object</a><p>    retourne le contenu d'un fichier d'information <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong> sous forme d'objet</td></tr>
 <tr><td><a href="#getcontent"><strong>.getContent( )</strong> : 4D.Blob</a><p>retourne un objet <code>4D.Blob</code> contenant l'intégralité du contenu d'un fichier</td></tr>
 <tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    l'icône du fichier</td></tr>
 <tr><td><a href="#gettext"><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</a><p>    retourne le contenu du fichier en tant que texte</td></tr>
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>    vrai si le fichier est identifié comme &quot;caché&quot; au niveau du système</td></tr>
 <tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    vrai si le fichier est un alias, un raccourci ou un lien symbolique</td></tr>
-<tr><td></td></tr>
 <tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    toujours vrai pour un fichier</td></tr>
 <tr><td><a href="#isfolder"><strong>.isFolder</strong> : Boolean</a><p>    toujours faux pour un fichier</td></tr>
 <tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    vrai si le fichier existe sur disque et s'il est modifiable</td></tr>
 <tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    la date de la dernière modification apportée au fichier</td></tr>
 <tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    l'heure de la dernière modification du fichier</td></tr>
-<tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><p>    déplace ou renomme l'objet <code>File</code> vers le dossier <em>destinationFolder</em></td></tr>
+<tr><td><a href="#moveto"> <strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><p>    déplace ou renomme l'objet <code>File</code> vers le dossier <em>destinationFolder</em></td></tr>
 <tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    le nom du fichier, sans l'extension (le cas échéant)</td></tr>
 <tr><td><a href="#original"><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</a><p>    l'élément cible d'un alias, d'un raccourci ou d'un lien symbolique</td></tr>
 <tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    l'objet dossier parent du fichier</td></tr>
 <tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    le chemin POSIX du fichier</td></tr>
 <tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    le chemin du fichier exprimé dans la syntaxe de la plate-forme</td></tr>
-<tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    renomme le fichier avec le nom que vous avez passé dans le paramètre <em>newName</em> et retourne l'objet <code>File</code> renommé</td></tr>
-<tr><td><a href="#setappinfo"><strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    écrit les propriétés <em>info</em> sous forme de contenu d'information d'un fichier <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong></td></tr>
-<tr><td><a href="#setcontent"><strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>    réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB <em>content</em></td></tr>
-<tr><td><a href="#settext"><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>    écrit <em>text</em> comme nouveau contenu du fichier</td></tr>
+<tr><td><a href="#rename"> <strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    renomme le fichier avec le nom que vous avez passé dans le paramètre <em>newName</em> et retourne l'objet <code>File</code> renommé</td></tr>
+<tr><td><a href="#setappinfo"> <strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    écrit les propriétés <em>info</em> sous forme de contenu d'information d'un fichier <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong></td></tr>
+<tr><td><a href="#setcontent"> <strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>    réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB <em>content</em></td></tr>
+<tr><td><a href="#settext"> <strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>    </td></tr>
 <tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    la taille du fichier exprimée en octets</td></tr>
 </tbody>
 </table>
@@ -171,8 +170,8 @@
 <tr><td>Debug log file</td><td>12</td><td>Fichier d'enregistrement des événements pour le débogage créé par la commande <code>SET DATABASE PARAMETER(Debug log recording)</code>. Stocké dans le dossier Logs.</td></tr>
 <tr><td>Diagnostic log file</td><td>11</td><td>Fichier de diagnostic de 4D, créé par la commande <code>SET DATABASE PARAMETER(Diagnostic log recording)</code>. Stocké dans le dossier Logs.</td></tr>
 <tr><td>Directory file</td><td>16</td><td>fichier directory.json, contenant la description des groupes et utilisateurs (le cas échéant) du projet. Il se situe soit dans le dossier Settings de l'utilisateur (par défaut, s'applique à tout le projet), soit dans le dossier Settings du data (spécifique à un fichier de données).</td></tr>
-<tr><td>HTTP debug log file</td><td>9</td><td>Fichier de débogage des requêtes HTTP, créé par la commande <code>WEB SET OPTION(Web debug log)</code>. Stocké dans le dossier Logs.</td></tr>
-<tr><td>HTTP log file</td><td>8</td><td>Fichier d'enregistrement des requêtes Web créé par la commande <code>WEB SET OPTION(Web log recording)</code>. Stocké dans le dossier Logs.</td></tr>
+<tr><td>HTTP debug log file</td><td>9</td><td>Fichier d'enregistrement des requêtes Web créé par la commande <code>WEB SET OPTION(Web log recording)</code>. Stocké dans le dossier Logs.</td></tr>
+<tr><td>HTTP log file</td><td>8</td><td>Fichier de débogage des requêtes HTTP, créé par la commande <code>WEB SET OPTION(Web debug log)</code>. Stocké dans le dossier Logs.</td></tr>
 <tr><td>IMAP Log file</td><td>23</td><td>Fichier d'historique créé par la commande <code>SET DATABASE PARAMETER(IMAP Log)</code>. Stocké dans le dossier Logs.</td></tr>
 <tr><td>Last backup file</td><td>2</td><td>Dernier fichier de sauvegarde généré, nommé &lt;applicationName&gt;[bkpNum].4BK, stocké à un emplacement personnalisé.</td></tr>
 <tr><td>Last journal integration log file</td><td>22</td><td>Chemin complet du dernier fichier journal d'intégration de l'historique (stocké dans le dossier Logs de l'application restaurée), le cas échéant. Ce fichier est créé en mode auto-repair, dès qu'une intégration de fichier d'historique a lieu</td></tr>
@@ -383,6 +382,7 @@
  If</span>(<span class="hljs-variable">$tempo</span>.exists)
     <span class="hljs-variable">$tempo</span>.<span class="hljs-function">delete</span>()
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"User preference file deleted."</span>)<span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="exists"></a><a href="#exists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.exists</h2>
@@ -905,7 +905,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-29"></a><a href="#description-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.setAppInfo()</code> écrit les propriétés <em>info</em> sous forme de contenu d'information d'un fichier <strong>.exe</strong>, <strong>.dll</strong> ou <strong>.plist</strong>.</p>
-<p>Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).</p>
+<p>Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant.</p>
 <blockquote>
 <p>Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.</p>
 </blockquote>
@@ -1006,11 +1006,10 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><td>charSetName</td><td>Text</td><td>-&gt;</td><td>Nom du jeu de caractères</td></tr>
 <tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Numéro du jeu de caractères</td></tr>
 <tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Mode de traitement des retours à la ligne</td></tr>
-<tr><td></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-31"></a><a href="#description-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>La fonction <code>.setText()</code> écrit <em>text</em> comme nouveau contenu du fichier.</p>
+<p>|</p>
 <p>Si le fichier référencé dans l'objet <code>File</code> n'existe pas sur disque, il est créé par la fonction. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.</p>
 <p>Dans le paramètre <em>text</em>, passez le texte à écrire dans le fichier. Cela peut être un texte littéral (&quot;my text&quot;), ou un champ / variable texte 4D.</p>
 <p>Optionnellement, vous pouvez indiquer le jeu de caractères à utiliser pour l'écriture du contenu. Vous pouvez passer soit :</p>

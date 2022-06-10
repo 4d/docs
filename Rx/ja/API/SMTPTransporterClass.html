@@ -113,7 +113,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>SMTP New transporter</code> コマンドは、<em>server</em> 引数の指定に応じて 新規の SMTP接続を設定します 。戻り値は、新しい <em><a href="#smtp-transporter-オブジェクト">SMTP transporter</a></em> オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。</p>
+<p><code>SMTP New transporter</code> コマンドは、<em>server</em> 引数の指定に応じて 新規の SMTP接続を設定します 。 戻り値は、新しい <em><a href="#smtp-transporter-オブジェクト">SMTP transporter</a></em> オブジェクトです。 返された transporter オブジェクトは、通常メールの送信に使用されます。</p>
 <blockquote>
 <p>このコマンドは SMTPサーバーとの接続を開始しません。 SMTP接続は、実際には <a href="#send"><code>.send()</code></a> 関数が実行された時に開かれます。</p>
 <p>SMTP接続は、以下の場合に自動的に閉じられます:<br /> * <a href="#keepalive"><code>keepAlive</code></a> プロパティが true (デフォルト) の場合には、transporter オブジェクトが消去された時。 * <a href="#keepalive"><code>keepAlive</code></a> プロパティが false の場合には、各 <a href="#send"><code>.send( )</code></a> 関数が実行された後。</p>
@@ -292,7 +292,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.checkConnection()</code> 関数は、  transporter オブジェクトが保存する情報を使用して接続をチェックします。必要なら再接続をし、そのステータスを返します。 この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。</p>
+<p><code>.checkConnection()</code> 関数は、  transporter オブジェクトが保存する情報を使用して接続をチェックします。 必要なら再接続をし、そのステータスを返します。 この関数を使用して、ユーザーから提供された値が有効かどうかを検証することができます。</p>
 <h4><a class="anchor" aria-hidden="true" id="返されるオブジェクト"></a><a href="#返されるオブジェクト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>返されるオブジェクト</h4>
 <p>この関数はメールサーバーにリクエストを送信し、メールステータスを表すオブジェクトを返します。 このオブジェクトには、次のプロパティが格納されることがあります:</p>
 <table>
@@ -475,7 +475,7 @@
 <blockquote>
 <p><code>transporter</code> オブジェクトは、事前に <code>SMTP New transporter</code> コマンドによって作成されている必要があります。</p>
 </blockquote>
-<p>この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 <code>transporter</code> オブジェクトの <code>.keepAlive</code> プロパティが false であった場合、SMTP接続は <code>.send()</code> 実行後に自動的に閉じられます。そ例外の場合には、接続は <code>transporter</code> オブジェクトが消去されるまで開いたままになります。 詳細については、<a href="#smtp-new-transporter"><code>SMTP New transporter</code></a> コマンドの説明を参照してください。</p>
+<p>この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 <code>transporter</code> オブジェクトの <code>.keepAlive</code> プロパティが false であった場合、SMTP接続は <code>.send()</code> 実行後に自動的に閉じられます。 詳細については、<a href="#smtp-new-transporter"><code>SMTP New transporter</code></a> コマンドの説明を参照してください。</p>
 <p><em>mail</em>には、送信する有効な <a href="/docs/Rx/ja/API/EmailObjectClass.html#email-オブジェクト"><code>Email</code> オブジェクト</a> を渡します。 メールには送信元 (メールがどこから送られるか) と送信先 (一名以上の受信者) プロパティが含まれている必要がありますが、その他のプロパティは任意です。</p>
 <h4><a class="anchor" aria-hidden="true" id="返されるオブジェクト-1"></a><a href="#返されるオブジェクト-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>返されるオブジェクト</h4>
 <p>この関数は、SMTP ステータスを表すオブジェクトを返します. このオブジェクトには、次のプロパティが格納されることがあります:</p>
@@ -489,7 +489,7 @@
 <tr><td>statusText</td><td>テキスト</td><td>SMTPから返されるステータスメッセージ</td></tr>
 </tbody>
 </table>
-<p>SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。これは、<code>ON ERR CALL</code> コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、<code>GET LAST ERROR STACK</code> コマンドを使用します。</p>
+<p>SMTP 処理とは関係のない問題 (例: 必須プロパティがメールにない) が発生した場合、4D はエラーを生成します。 これは、<code>ON ERR CALL</code> コマンドでインストールしたメソッドでインターセプトできます。 エラー情報を取得するには、<code>GET LAST ERROR STACK</code> コマンドを使用します。</p>
 <p>この場合、結果のステータスオブジェクトには以下の値が含まれます:</p>
 <table>
 <thead>

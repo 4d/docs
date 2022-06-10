@@ -238,7 +238,7 @@
 <tr><td>Fenêtre de configuration</td><td><a href="/docs/Rx/fr/settings/web.html#enable-cors">Page Options (II) &gt; Activer CORS</a></td><td>Décoché par défaut</td></tr>
 </tbody>
 </table>
-<p>Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes &quot;cross-domain&quot; sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisée envoie une demande cross-site, celle-ci est rejetée et une erreur &quot;403 - forbidden&quot; est renvoyée.</p>
+<p>Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes &quot;cross-domain&quot; sont interdites par défaut au niveau du navigateur. Pour des raisons de sécurité, les requêtes &quot;cross-domain&quot; sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous).</p>
 <p>Lorsqu'elle est désactivée (par défaut), toutes les demandes intersites envoyées avec CORS sont ignorées.</p>
 <p>Pour plus d'informations sur CORS, veuillez consulter la <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">page de partage de ressources cross-origin</a> sur Wikipedia.</p>
 <h4><a class="anchor" aria-hidden="true" id="voir-aussi-1"></a><a href="#voir-aussi-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
@@ -448,7 +448,7 @@
 <p>Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs possibles :</p>
 <table>
 <thead>
-<tr><th>Valeur</th><th>Format name</th><th>Description</th></tr>
+<tr><th>Valeur</th><th>Nom du format</th><th>Description</th></tr>
 </thead>
 <tbody>
 <tr><td>0</td><td>Pas de journal</td><td>Par défaut</td></tr>
@@ -485,7 +485,7 @@
 </tbody>
 </table>
 <p>Taille maximale (en octets) des requêtes HTTP entrantes (POST) que le serveur Web est autorisé à traiter. Par défaut, la valeur est de 2 000 000, c'est-à-dire un peu moins de 2 Mo. Le dépassement de la valeur maximale (2 147 483 648) indique, en pratique, qu'aucune limite n'est fixée.</p>
-<p>Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Si une requête atteint cette limite, le serveur Web la rejette.</p>
+<p>Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses. Cette limite est utilisée pour éviter la saturation du serveur Web en raison de requêtes entrantes trop volumineuses.</p>
 <p>Valeurs possibles: 500 000 - 2147483648.</p>
 <h2><a class="anchor" aria-hidden="true" id="nombre-maximal-de-sessions"></a><a href="#nombre-maximal-de-sessions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nombre maximal de sessions</h2>
 <table>

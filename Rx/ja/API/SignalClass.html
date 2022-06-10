@@ -160,7 +160,7 @@
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>New signal</code> コマンドは、 <code>4D.Signal</code> オブジェクトを作成します。</p>
-<p>シグナルは、ワーカー/プロセスから他のワーカー/プロセスへと引数のように渡せる共有オブジェクトです。そのため、以下のようなことが可能になります:</p>
+<p>シグナルは、ワーカー/プロセスから他のワーカー/プロセスへと引数のように渡せる共有オブジェクトです。 そのため、以下のようなことが可能になります:</p>
 <ul>
 <li>呼び出されたワーカー/プロセスは特定の処理が完了した後に Signal オブジェクトを更新することができます。</li>
 <li>呼び出し元のワーカー/プロセスは CPUリソースを消費することなく、実行を停止してシグナルが更新されるまで待つことができます。</li>
@@ -239,7 +239,7 @@
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.trigger( )</code> 関数は、 シグナルオブジェクトの <code>signaled</code> プロパティを <strong>true</strong> に設定します 。すると、このシグナルを待機していたワーカーやプロセスが開始されます。</p>
+<p><code>.trigger( )</code> 関数は、 シグナルオブジェクトの <code>signaled</code> プロパティを <strong>true</strong> に設定します 。 すると、このシグナルを待機していたワーカーやプロセスが開始されます。</p>
 <p>Signal がすでにシグナルされている (つまり <code>signaled</code> プロパティが <strong>true</strong> になっている) 状態であった場合、この関数は何もしません。</p>
 <h2><a class="anchor" aria-hidden="true" id="wait"></a><a href="#wait" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.wait()</h2>
 <p><details><summary>履歴</summary></p>

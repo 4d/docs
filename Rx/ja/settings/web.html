@@ -152,16 +152,16 @@
 <p>CORSサービスで許可されたホストとメソッドの一覧。 <a href="/docs/Rx/ja/WebServer/webServerConfig.html#cors設定">CORS設定</a> 参照。</p>
 <h2><a class="anchor" aria-hidden="true" id="ログ-タイプ"></a><a href="#ログ-タイプ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ログ (タイプ)</h2>
 <h3><a class="anchor" aria-hidden="true" id="ログフォーマット"></a><a href="#ログフォーマット" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ログフォーマット</h3>
-<p>4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、<em>logweb.txt</em> ファイルに記録され、そのフォーマットを指定することができます。 <a href="/docs/Rx/ja/WebServer/webServerConfig.html#ログの記録">ログの記録</a> 参照。</p>
+<p>4D Web サーバーが受け取るリクエストのログを開始/停止します。 ログは、<em>logweb.txt</em> ファイルに記録され、そのフォーマットを指定することができます。 <a href="/docs/Rx/ja/WebServer/webServerConfig.html#ログの記録">ログの記録</a> 参照。</p>
 <blockquote>
 <p>リクエストのログファイルの有効/無効は <a href="https://doc.4d.com/4dv19R/help/command/ja/page1210.html">WEB SET OPTION</a> コマンドを使用したプログラミングでも切り替えられます。</p>
 </blockquote>
 <p>ログフォーマットメニューでは、次のオプションを提供します。</p>
 <ul>
 <li><p><strong>ログファイルなし</strong>: このオプションが選択されると、4D はリクエストのログファイルを作成しません。</p></li>
-<li><p><strong>CLF (Common Log Format)</strong>: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 With the CLF format, each line of the file represents a request, such as:<br>
+<li><p><strong>CLF (Common Log Format)</strong>: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 CLFフォーマットでは、それぞれのリクエストが行単位でファイル内に表示されます: <br>
 host rfc931 user [DD/MMM/YYYY:HH:MM:SS] &quot;request&quot; state length<br>
-Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).</p>
+各フィールドはスペースによって区切られ、各行は CR/LF シーケンス (character 13、character 10) で終わります。</p>
 <ul>
 <li>host: クライアントの IPアドレス (例: 192.100.100.10)</li>
 <li>rfc931: 4Dによって作成されない情報。 常に - (マイナス記号) です。</li>
@@ -191,7 +191,7 @@ Each field is separated by a space and each line ends by the CR/LF sequence (cha
 <p>DLFフォーマットはカスタマイズされません。</p>
 </blockquote>
 <ul>
-<li><p><strong>ELF (Extended Log Format)</strong>: このオプションが選択されると、リクエストログが ELFフォーマットで作成されます。 ELFフォーマットは HTTPブラウザー界で広く普及しています。 そして、特別なニーズに応える洗練されたログを構築します。 この理由により、ELFフォーマットはカスタマイズされます。記録するフィールドやそのフィールドをファイルへ挿入する順番を選択することが可能です。</p></li>
+<li><p><strong>ELF (Extended Log Format)</strong>: このオプションが選択されると、リクエストログが ELFフォーマットで作成されます。 ELFフォーマットは HTTPブラウザー界で広く普及しています。 そして、特別なニーズに応える洗練されたログを構築します。 この理由により、ELFフォーマットはカスタマイズされます。 記録するフィールドやそのフィールドをファイルへ挿入する順番を選択することが可能です。</p></li>
 <li><p><strong>WLF (WebStar Log Format)</strong>: このオプションが選択されると、リクエストログが WLFフォーマットで作成されます。 WLFフォーマットは 4D WebSTAR サーバー用として特別に開発されました。 いくつかの追加フィールドを持つ以外、EFLフォーマットと似ています。 EFLフォーマットと同様、 カスタマイズされます。</p></li>
 </ul>
 <p><strong>フィールドの設定</strong><br/> ELF (Extended Log Format) または WLF (WebStar Log Format) を選択すると、選択されたフォーマットに対して利用可能なフィールドが表示されます。 ログに含む各フィールドを選択する必要があります。 ログに含む各フィールドを選択する必要があります。</p>
@@ -238,8 +238,8 @@ Each field is separated by a space and each line ends by the CR/LF sequence (cha
 <li><strong>開始時刻</strong>: 最初のバックアップ開始時間の設定に使用します。</li>
 </ul></li>
 <li><p><strong>X 日ごと</strong>: 1日単位でバックアップをプログラムする際、このオプションを使用します。 バックアップを毎日実行するには、1を入力します。 このオプションをチェックすると、バックアップの開始時間を指定しなければなりません。</p></li>
-<li><p><strong>X 週ごと</strong>: 1週間単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップを開始する曜日と時間を指定しなければなりません。 複数の曜日を選択することもできます。 たとえば、水曜日と金曜日を 選択し、2つのバックアップを設定することができます。</p></li>
-<li><p><strong>X 月ごと</strong>: 1ヶ月単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎月バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップ開始月の日時を指定しなければなりません。</p></li>
+<li><p><strong>X 週ごと</strong>: 1週間単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎週バックアップをおこなうには 1 と設定します。 たとえば、毎週バックアップをおこなうには 1 と設定します。 このオプションをチェックすると、バックアップを開始する曜日と時間を指定しなければなりません。 複数の曜日を選択することもできます。</p></li>
+<li><p><strong>X 月ごと</strong>: 1ヶ月単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎月バックアップをおこなうには 1 と設定します。 たとえば、毎月バックアップをおこなうには 1 と設定します。</p></li>
 <li><p><strong>X MB</strong> (サイズ指定): カレントのリクエストログのファイルサイズに基づいてバックアップをプログラムする際、このオプションを使用します。 ファイルが指定サイズに達すると、バックアップが自動的に起動します。 サイズ制限は 1、10、100 または 1000MB ごとに設定可能です。</p></li>
 </ul>
 <blockquote>
