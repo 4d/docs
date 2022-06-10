@@ -87,7 +87,8 @@
 <p>To identify the current user in a 4D single-user application, you can rely on the <a href="https://doc.4d.com/4dv19R/help/command/en/page484.html"><code>Current system user</code></a> command, which returns the user who opened the system session. Thus user authentication is delegated to the OS level.</p>
 <p>You can then allow or deny access within your application by using code such as:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span>(Current system user = <span class="hljs-variable">$user</span>) <span class="hljs-comment">//you can store users in a database table</span>
-    <span class="hljs-comment">// give access to some features Enf if</span>
+    <span class="hljs-comment">// give access to some features</span><span class="hljs-keyword">
+End if</span>
 </code></pre>
 <p>If you want to use the system user name in 4D instead of &quot;Designer&quot; (e.g. in log files), you can call the <a href="https://doc.4d.com/4dv19R/help/command/en/page1666.html"><code>SET USER ALIAS</code></a> command, for example:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">SET USER ALIAS</span>(Current system user)

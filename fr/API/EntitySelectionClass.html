@@ -185,7 +185,9 @@
 <li>Si <em>index</em> correspond à une entité supprimée, la valeur Null est retournée.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p><strong>Attention</strong> : <code>EntitySelection[index]</code> est une expression non assignable, ce qui signifie qu'elle ne peut pas être utilisée comme référence modifiable de l'entité avec des fonctions telles que <a href="/docs/fr/API/EntityClass.html#lock"><code>.lock()</code></a> ou <a href="/docs/fr/API/EntityClass.html#save"><code>.save()</code></a>. Pour travailler avec l'entité correspondante, vous devez assigner l'expression retournée à une expression assignable, comme une variable. Voici quelques exemples :</p>
+</blockquote>
 </blockquote>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$sel</span>:=ds.Employee.<span class="hljs-function">all</span>() <span class="hljs-comment">//creation de l'entity selection</span>
   <span class="hljs-comment">//code invalide:</span>
@@ -222,7 +224,7 @@
 <li>Si le &quot;kind&quot; de <em>attributeName</em> est <code>relatedEntity</code> : <code>.attributeName</code> retourne une nouvelle entity selection de valeurs liées du même type que <em>attributeName</em>. Les doublons sont supprimés (une entity selection non ordonnée est retournée).</li>
 <li>Si le &quot;kind&quot; de <em>attributeName</em> est <code>relatedEntities</code> : <code>.attributeName</code> retourne une nouvelle entity selection de valeurs liées du même type que <em>attributeName</em>. Les doublons sont supprimés (une entity selection non ordonnée est retournée).</li>
 </ul>
-<p>Lorsqu'un attribut de relation est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Dans ce cas, si aucune entité n'est retournée, le résultat est une entity selection vide.</p>
+<p>Lorsqu'un attribut de relation est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut de relation est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée.</p>
 <p>Si l'attribut n'existe pas dans l'entity selection, une erreur est retournée.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Projection de valeurs de stockage :</p>
@@ -275,7 +277,7 @@
 <h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.add()</code> ajoute l'<em>entity</em> spécifiée à l'entity selection et retourne l'entity selection modifiée.</p>
 <blockquote>
-<p>Cette fonction modifie l'entity selection d'origine.</p>
+<p>Les valeurs de type Date sont converties en valeurs numériques (secondes) et utilisées pour calculer la moyenne.</p>
 </blockquote>
 <p><strong>Attention :</strong> L'entity selection doit être <em>altérable</em>, c'est-à-dire qu'elle a été créée par exemple par <a href="/docs/fr/API/DataClassClass.html#newselection"><code>.newSelection()</code></a> ou <code>Create entity selection</code>, sinon <code>.add()</code> retournera une erreur. Les entity selections partageables n'acceptent pas l'ajout d'entités. Pour plus d'informations, reportez-vous au paragraphe <a href="/docs/fr/ORDA/entities.html#shareable-or-alterable-entity-selections">Entity selections partageables ou altérables</a>.</p>
 <ul>
@@ -336,7 +338,9 @@
 <li>Si vous passez <em>entitySelection</em> comme paramètre, vous combinez les deux entity selections. Une nouvelle entity selection contenant uniquement les entités qui sont référencées dans les deux sélections est retournée. S'il n'y a pas d'entité intersectée, une entity selection vide est retournée.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>Vous pouvez comparer des <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">entity selections ordonnées et/ou non ordonnées</a>. La sélection résultante est toujours non ordonnée.</p>
+</blockquote>
 </blockquote>
 <p>Si l'entity selection initiale ou celle du paramètre <em>entitySelection</em> est vide, ou si <em>entity</em> est Null, une entity selection vide est retournée.</p>
 <p>Si l'entity selection initiale et le paramètre ne sont pas liés à la même dataclass, une erreur est retournée.</p>
@@ -502,11 +506,11 @@
 <h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.copy()</code> retourne une copie de l'entity selection d'origine.</p>
 <blockquote>
-<p>Cette fonction ne modifie pas l'entity selection d'origine.</p>
+<p>Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.</p>
 </blockquote>
 <p>Par défaut, si le paramètre <em>option</em> est omis, la fonction retourne une nouvelle entity selection non partageable (même si la fonction est appliquée à une entity selection partageable). Passez la constante <code>ck shared</code> dans le paramètre <em>option</em> si vous souhaitez créer une entity selection partageable.</p>
 <blockquote>
-<p>Pour plus d'informations, reportez-vous au paragraphe <a href="/docs/fr/ORDA/entities.html#entity-selections-partageables-ou-alterables">Entity selections partageables ou altérables</a>.</p>
+<p>Cette fonction retourne toujours vrai lorsque l'entity selection provient d'un datastore distant.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>Vous créez une nouvelle entity selection de produits, vide lorsque le formulaire est chargé :</p>
@@ -556,7 +560,7 @@
 <h4><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.distinct()</code> renvoie une collection contenant uniquement les valeurs distinctes (différentes) de <em>attributePath</em> dans l'entity selection.</p>
 <p>La collection retournée est automatiquement triée. Les valeurs <strong>Null</strong> ne sont pas renvoyées.</p>
-<p>Dans le paramètre <em>attributePath</em> passez l'attribut d'entité dont vous voulez obtenir les valeurs distinctes. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Si <em>attributePath</em> est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite. Les types sont renvoyés dans l'ordre suivant :</p>
+<p>Dans le paramètre <em>attributePath</em> passez l'attribut d'entité dont vous voulez obtenir les valeurs distinctes. Seules les valeurs scalaires (texte, nombre, booléen ou date) peuvent être gérées. Les types sont renvoyés dans l'ordre suivant : Si <em>attributePath</em> est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.</p>
 <ol>
 <li>booléens</li>
 <li>chaînes</li>
@@ -645,7 +649,7 @@
 <tbody>
 <tr><td>attributePath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin d'attribut dont les valeurs doivent être extraites dans la nouvelle collection</td></tr>
 <tr><td>targetPath</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Chemin ou nom d'attribut cible</td></tr>
-<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code> : inclure les attributs null dans la collection retournée (ignorés par défaut). Paramètre ignoré si targetPath est passé</td></tr>
+<tr><td>option</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>ck keep null</code> : inclure les attributs null dans la collection retournée (ignorés par défaut).</td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection contenant les valeurs extraites</td></tr>
 </tbody>
 </table>
@@ -674,7 +678,7 @@
 <li>Les attributs dataclass avec <a href="/docs/fr/API/DataClassAttributeClass.html#kind">.kind</a> = &quot;relatedEntities&quot; sont extraits sous forme d'entity selection.</li>
 </ul>
 <blockquote>
-<p>Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.</p>
+<p>Les valeurs Null sont évaluées comme inférieures aux autres valeurs.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple-9"></a><a href="#exemple-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>Considérons les tables et relations suivantes :</p>
@@ -893,7 +897,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <h4><a class="anchor" aria-hidden="true" id="description-17"></a><a href="#description-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.isOrdered()</code> retourne Vrai si l'entity selection est triée, et Faux si elle est non triée.</p>
 <blockquote>
-<p>Cette fonction retourne toujours vrai lorsque l'entity selection provient d'un datastore distant.</p>
+<p>Cette fonction ne modifie pas l'entity selection d'origine.</p>
 </blockquote>
 <p>Pour plus d'informations, voir <a href="/docs/fr/ORDA/dsmapping.html#entity-selections-triees-vs-entity-selections-non-triees">Entity selections triées vs Entity selections non-triées</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-14"></a><a href="#exemple-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
@@ -1075,7 +1079,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <li>Si vous passez <em>entitySelection</em> en paramètre, la fonction retourne une entity selection contenant les entités appartenant à l&quot;entity selection d'origine, sans les entités appartenant à <em>entitySelection</em>.</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>Vous pouvez comparer des <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">entity selections ordonnées et/ou non ordonnées</a>. La sélection résultante est toujours non ordonnée.</p>
+</blockquote>
 </blockquote>
 <p>Si l'entity selection initiale ou l'entity selection initiale et celle du paramètre <em>entitySelection</em> sont vides, une entity selection vide est retournée.</p>
 <p>Si <em>entitySelection</em> est vide ou si <em>entity</em> est Null, une nouvelle référence à l'entity selection d'origine est renvoyée.</p>
@@ -1128,7 +1134,9 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <li>Si vous passez <em>entitySelection</em> comme paramètre, vous comparez les deux entity selections. Une nouvelle entity selection contenant les entités appartenant à la sélection d'entités d'origine ou à <em>entitySelection</em> est renvoyée (OU n'est pas exclusif, les entités référencées dans les deux sélections ne sont pas dupliquées dans la sélection résultante).</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>Vous pouvez comparer des <a href="/docs/fr/ORDA/dsmapping.html#ordered-or-unordered-entity-selection">entity selections ordonnées et/ou non ordonnées</a>. La sélection résultante est toujours non ordonnée.</p>
+</blockquote>
 </blockquote>
 <p>Si l'entity selection initiale et celle du paramètre <em>entitySelection</em> sont vides, une entity selection vide est retournée. Si l'entity selection d'origine est vide, une référence à <em>entitySelection</em> ou une entity selection contenant uniquement <em>entity</em> est retournée.</p>
 <p>Si <em>entitySelection</em> est vide ou si <em>entity</em> est Null, une nouvelle référence à l'entity selection d'origine est renvoyée.</p>
@@ -1198,7 +1206,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <p>Par défaut, les attributs sont triés par ordre croissant (&quot;descending&quot; est false).</p>
 <p>Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.</p>
 <blockquote>
-<p>Les valeurs Null sont évaluées comme inférieures aux autres valeurs.</p>
+<p>Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion <code>Open datastore</code>).</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple-19"></a><a href="#exemple-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// tri avec formule</span>
@@ -1243,7 +1251,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <h4><a class="anchor" aria-hidden="true" id="description-25"></a><a href="#description-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.orderByFormula()</code> renvoie une nouvelle entity selection triée contenant toutes les entités de l'entity selection dans l'ordre spécifié par le paramètre <em>formulaString</em> ou <em>formulaObj</em> et, éventuellement, les paramètres <em>sortOrder</em> et <em>settings</em>.</p>
 <blockquote>
-<p>Cette fonction ne modifie pas l'entity selection d'origine.</p>
+<p>Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.</p>
 </blockquote>
 <p>Vous pouvez utiliser soit le paramètre <em>formulaString</em>, soit le paramètre <em>formulaObj</em> :</p>
 <ul>
@@ -1350,7 +1358,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <h4><a class="anchor" aria-hidden="true" id="description-26"></a><a href="#description-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.query()</code> recherche les entités répondant aux critères de recherche spécifiés dans <em>queryString</em> ou <em>formula</em> et (optionnellement) dans <em>value</em>toutes les entités de l'entity selection, et renvoie un nouvel objet de type <code>EntitySelection</code> contenant toutes les entités trouvées. Le mode lazy loading est appliqué.</p>
 <blockquote>
-<p>Cette fonction ne modifie pas l'entity selection d'origine.</p>
+<p>Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.</p>
 </blockquote>
 <p>Si aucune entité correspondante n'est trouvée, une <code>EntitySelection</code> vide est retournée.</p>
 <p>Si aucune entité correspondante n'est trouvée, une <code>EntitySelection</code> vide est retournée.</p>
@@ -1481,7 +1489,7 @@ Form.products.<span class="hljs-function">add</span>(Form.product)
 <h4><a class="anchor" aria-hidden="true" id="description-30"></a><a href="#description-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.selected()</code> retourne un objet décrivant la ou les positions de <em>selectedEntities</em> dans l'entity selection d'origine.</p>
 <blockquote>
-<p>Cette fonction ne modifie pas l'entity selection d'origine.</p>
+<p>Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.</p>
 </blockquote>
 <p>Passez, dans le paramètre <em>selectedEntities</em> une entity selection contenant des entités dont vous souhaitez connaître la position dans l'entity selection d'origine. <em>selectedEntities</em> doit être une entity selection appartenant à la même dataclass que l'entity selection d'origine, sinon une erreur 1587 - &quot;La sélection d'entités provient d'une dataclass incompatible&quot; est générée.</p>
 <h4><a class="anchor" aria-hidden="true" id="résultat"></a><a href="#résultat" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Résultat</h4>
@@ -1539,7 +1547,7 @@ var</span> <span class="hljs-variable">$result1</span>; <span class="hljs-variab
 <h4><a class="anchor" aria-hidden="true" id="description-31"></a><a href="#description-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.slice()</code> retourne une partie d'une entity selection dans une nouvelle entity selection, sélectionnée de l'index <em>startFrom</em> à l'index de <em>fin</em> (<em>fin</em> non incluse) ou à la dernière entité de l'entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).</p>
 <blockquote>
-<p>Cette fonction ne modifie pas l'entity selection d'origine.</p>
+<p>Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.</p>
 </blockquote>
 <p>L'entity selection retournée contient les entités comprises entre l'entité désignée par <em>startFrom</em> et, sans la contenir, celle désignée par <em>end</em>. Si seul le paramètre <em>startFrom</em> est spécifié, l'entity selection retournée contient toutes les entités entre <em>startFrom</em> et la dernière entité de l'entity selection d'origine.</p>
 <ul>

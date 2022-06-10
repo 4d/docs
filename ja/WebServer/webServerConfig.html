@@ -88,8 +88,8 @@
 <tr><th>設定できる場所</th><th>名称</th><th>コメント</th></tr>
 </thead>
 <tbody>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#use-the-4d-web-cache">オプション (I) ページ / 4D Webキャッシュを使用する</a></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#page-cache-size">オプション (I) ページ / ページキャッシュサイズ</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#4d-webキャッシュを使用する">オプション (I) ページ / 4D Webキャッシュを使用する</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#ページキャッシュサイズ">オプション (I) ページ / ページキャッシュサイズ</a></td><td></td></tr>
 </tbody>
 </table>
 <p>Webページキャッシュの有効化と設定をおこないます。</p>
@@ -121,7 +121,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><code>characterSet</code></td><td>MIBEnum 整数、または名称の文字列</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web character set</code></td><td>MIBEnum 整数、または名称の文字列</td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#standard-set">オプション (II) ページ / 文字コード</a></td><td>ポップアップメニュー</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#文字コード">オプション (II) ページ / 文字コード</a></td><td>ポップアップメニュー</td></tr>
 </tbody>
 </table>
 <p>4D Webサーバーが使用する文字セットを定義します。 デフォルト値は OS の言語に依存します。</p>
@@ -149,7 +149,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#corssettings"><code>CORSSettings</code></a></td><td>オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧)</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web CORS settings</code></td><td>オブジェクトのコレクション (CORSサービスで許可されたホストとメソッドの一覧)</td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#domain-names-HTTP-methods-allowed">オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド</a></td><td>新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#ドメイン名許可されたhttpメソッド">オプション (II) ページ / ドメイン名 および 許可されたHTTPメソッド</a></td><td>新しいドメインとメソッドを許可するには [+] ボタンをクリックして追加します。</td></tr>
 </tbody>
 </table>
 <p>CORSサービスで許可されたホストとメソッドの一覧。</p>
@@ -192,17 +192,17 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web debug log</code></td><td>number</td></tr>
 </tbody>
 </table>
-<p>Status of the HTTP request log file of the web server (<a href="/docs/ja/Debugging/debugLogFiles.html#httpdebuglogtxt"><em>HTTPDebugLog_nn.txt</em></a>, stored in the &quot;Logs&quot; folder of the application -- nn is the file number). このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。</p>
+<p>Webサーバーの HTTPリクエストログファイル (アプリケーションの &quot;Logs&quot; フォルダーに格納されている <a href="/docs/ja/Debugging/debugLogFiles.html#httpdebuglogtxt"><em>HTTPDebugLog_nn.txt</em></a> (nn はファイル番号)) の状態を指定します。 このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。</p>
 <table>
 <thead>
 <tr><th>値</th><th>定数</th><th>説明</th></tr>
 </thead>
 <tbody>
 <tr><td>0</td><td>wdl disable</td><td>Web HTTP debug log は無効化されています</td></tr>
-<tr><td>1</td><td>wdl enable without body</td><td>Web HTTP debug log is enabled without body parts (body size is provided in this case)</td></tr>
-<tr><td>3</td><td>wdl enable with response body</td><td>Web HTTP debug log is enabled with body part in response only</td></tr>
-<tr><td>5</td><td>wdl enable with request body</td><td>Web HTTP debug log is enabled with body part in request only</td></tr>
-<tr><td>7</td><td>wdl enable with all body parts</td><td>Web HTTP debug log is enabled with body parts in response and request</td></tr>
+<tr><td>1</td><td>wdl enable without body</td><td>Web HTTP debug log 有効、リクエスト本文なし (本文サイズあり)</td></tr>
+<tr><td>3</td><td>wdl enable with response body</td><td>Web HTTP debug log 有効、レスポンスの本文のみ</td></tr>
+<tr><td>5</td><td>wdl enable with request body</td><td>Web HTTP debug log 有効、リクエストの本文のみ</td></tr>
+<tr><td>7</td><td>wdl enable with all body parts</td><td>Web HTTP debug log 有効、リクエストおよびレスポンスの本文あり</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="デフォルトホームページ"></a><a href="#デフォルトホームページ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>デフォルトホームページ</h2>
@@ -213,7 +213,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#defaulthomepage"><code>defaultHomepage</code></a></td><td>テキスト</td></tr>
 <tr><td><code>WEB SET HOME PAGE</code></td><td></td><td>Webプロセス毎に異なる設定が可能</td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#default-home-page">設定ページ / デフォルトホームページ</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#デフォルトホームページ">設定ページ / デフォルトホームページ</a></td><td></td></tr>
 </tbody>
 </table>
 <p>Webサーバーのデフォルトホームページを指定します。 このページはスタティックでもセミダイナミックでも可能です。</p>
@@ -235,10 +235,10 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#corsenabled"><code>CORSEnabled</code></a></td><td>ブール; CORSを有効化するには true (デフォルト値は false)</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web CORS enabled</code></td><td>0 (デフォルト値; 無効) または 1 (有効)</td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#enable-cors">オプション (II) ページ / CORSを有効化</a></td><td>デフォルトではチェックなし</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#corsを有効化">オプション (II) ページ / CORSを有効化</a></td><td>デフォルトではチェックなし</td></tr>
 </tbody>
 </table>
-<p>4D Webサーバーは、クロスオリジンリソースシェアリング (CORS) を実装しており、これによって別ドメインにて提供されている特定の Webページが、REST などを使用した XHRコールを介してカレントWebアプリケーションのリソースにアクセスできるようにすることが可能です。 セキュリティ上の理由により、&quot;ドメイン間&quot; のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。<a href="#cors設定">CORS設定</a> 参照)。 有効時に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、&quot;403 - forbidden&quot; エラーレスポンスによって拒否されます。</p>
+<p>4D Webサーバーは、クロスオリジンリソースシェアリング (CORS) を実装しており、これによって別ドメインにて提供されている特定の Webページが、REST などを使用した XHRコールを介してカレントWebアプリケーションのリソースにアクセスできるようにすることが可能です。 セキュリティ上の理由により、&quot;ドメイン間&quot; のリクエストはブラウザーレベルでデフォルトで禁止されています。 有効化されている場合、ドメイン外 Webページからの XHRコール (RESTリクエストなど) をアプリケーションにおいて許可することができます (CORSドメインリストに許可されたアドレスのリストを定義する必要があります。 有効時に、許可されていないドメインやメソッドがサイト間リクエストを送信した場合、&quot;403 - forbidden&quot; エラーレスポンスによって拒否されます。</p>
 <p>無効化されている場合 (デフォルト) には、CORS で送信されたサイト間リクエストはすべて無視されます。</p>
 <p>CORS についての詳細は、Wikipedia の<a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing</a> ページを参照ください。</p>
 <h4><a class="anchor" aria-hidden="true" id="参照-1"></a><a href="#参照-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
@@ -251,7 +251,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#httpenabled"><code>HTTPEnabled</code></a></td><td>boolean</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP enabled</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#enable-http">設定ページ / HTTPを有効化</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#httpを有効化">設定ページ / HTTPを有効化</a></td><td></td></tr>
 </tbody>
 </table>
 <p>安全でない接続を Webサーバーが受け入れるかどうかを示します。</p>
@@ -322,7 +322,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP compression threshold</code></td><td></td></tr>
 </tbody>
 </table>
-<p>最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。</p>
+<p>最適化されたHTTP通信のフレームワークにおける、HTTP圧縮のしきい値 (バイト単位)。 このサイズ未満のリクエストについては、通信が圧縮されません。 この設定は、通信サイズが小さい場合、圧縮に処理時間が費やされるのを避けるのに有用です。</p>
 <p>サイズを数値 (バイト単位) で指定します。 デフォルトのしきい値は 1024 バイトに設定されています。</p>
 <h2><a class="anchor" aria-hidden="true" id="http-ポート"></a><a href="#http-ポート" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTP ポート</h2>
 <table>
@@ -332,7 +332,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#httpport"><code>HTTPPort</code></a></td><td>number</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web port ID</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#http-port">設定ページ / HTTPポート</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#http-ポート">設定ページ / HTTPポート</a></td><td></td></tr>
 </tbody>
 </table>
 <p>HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D は通常の Web HTTPポート (TCPポート) 番号である 80番を使用して Webアプリケーションを公開します。 他の Webサービスによってこのポート番号が既に使用されている場合、4D が使用する HTTPポート番号を変更する必要があります。</p>
@@ -375,10 +375,10 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#inactiveprocesstimeout"><code>inactiveProcessTimeout</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web inactive process timeout</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#inactive-process-timeout">オプション (I) ページ / 非動作プロセスのタイムアウト</a></td><td>スライダー</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#非動作プロセスのタイムアウト">オプション (I) ページ / 非動作プロセスのタイムアウト</a></td><td>スライダー</td></tr>
 </tbody>
 </table>
-<p>セッションと紐づいた非アクティブWebプロセスのタイムアウト時間 (分単位) を設定します。 タイムアウト時間が経過すると、サーバーはプロセスを終了します。すると、<code>On Web Close Process</code> データベースメソッドが呼び出され、セッションのコンテキストは削除されます。</p>
+<p>セッションと紐づいた非アクティブWebプロセスのタイムアウト時間 (分単位) を設定します。 すると、<code>On Web Close Process</code> データベースメソッドが呼び出され、セッションのコンテキストは削除されます。</p>
 <p>デフォルト値: 480分 (デフォルト値に戻すには 0 を指定します)</p>
 <h2><a class="anchor" aria-hidden="true" id="非アクティブセッションタイムアウト"></a><a href="#非アクティブセッションタイムアウト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>非アクティブセッションタイムアウト</h2>
 <table>
@@ -400,7 +400,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#ipaddresstolisten"><code>IPAddressToListen</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web IP address to listen</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#ip-address">設定ページ / IPアドレス</a></td><td>ポップアップメニュー</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#ipアドレス">設定ページ / IPアドレス</a></td><td>ポップアップメニュー</td></tr>
 </tbody>
 </table>
 <p>4D Webサーバーが HTTPリクエストを受け付ける IPアドレスを指定できます (4Dローカルおよび 4D Server)。</p>
@@ -426,7 +426,7 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#keepsession"><code>keepSession</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web keep session</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#legacy-sessions-single-process-sessions">オプション (I) ページ / 旧式セッション (シングルプロセスセッション)</a></td><td>変換されたプロジェクトのみ</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#旧式セッション-シングルプロセスセッション">オプション (I) ページ / 旧式セッション (シングルプロセスセッション)</a></td><td>変換されたプロジェクトのみ</td></tr>
 </tbody>
 </table>
 <p>4D Webサーバーによる旧式セッション管理を有効/無効にします (廃止予定)。</p>
@@ -441,10 +441,10 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#logrecording"><code>logRecording</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web log recording</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#log-format">ログ (タイプ) ページ</a></td><td>ポップアップメニュー</td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#ログフォーマット">ログ (タイプ) ページ</a></td><td>ポップアップメニュー</td></tr>
 </tbody>
 </table>
-<p>4D Web サーバーが受け取るリクエストのログを開始/停止します。ログは、<em>logweb.txt</em> ファイルに記録され、そのフォーマットを指定することができます。 デフォルトでは、リクエストは規則されません (0 / ログファイルなし)。 有効化されると、<em>logweb.txt</em> ファイルが Logs フォルダー内に自動で保存されます。</p>
+<p>4D Web サーバーが受け取るリクエストのログを開始/停止します。 ログは、<em>logweb.txt</em> ファイルに記録され、そのフォーマットを指定することができます。 デフォルトでは、リクエストは規則されません (0 / ログファイルなし)。 有効化されると、<em>logweb.txt</em> ファイルが Logs フォルダー内に自動で保存されます。</p>
 <p>このファイルのフォーマットを指定することができます。 使用可能な値:</p>
 <table>
 <thead>
@@ -469,10 +469,10 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#maxconcurrentprocesses"><code>maxConcurrentProcesses</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web max concurrent processes</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#maximum-concurrent-web-processes">オプション (I) ページ / 最大同時Webプロセス</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#最大同時webプロセス">オプション (I) ページ / 最大同時Webプロセス</a></td><td></td></tr>
 </tbody>
 </table>
-<p>Strictly high limit of concurrent web processes that can be simultaneously open on the server when <strong>no sessions</strong> or <strong>legacy sessions</strong> are used (<strong>scalable sessions</strong> support an <a href="/docs/ja/WebServer/sessions.html">unlimited number</a> of preemptive processes). このパラメーターは、異常な数のリクエストによる 4D Webサーバーの飽和状態を避けるために使用します。 最大Web同時接続数 (マイナス1) に達すると、4D は新しいプロセスを作成せず、HTTPステータス <code>503 - Service Unavailable</code> を新規リクエストに対して返信します。</p>
+<p><strong>セッションなし</strong> または <strong>旧式セッション</strong> が使用されているときの、サーバー上で同時に開くことのできるすべての Webプロセスの最大同時接続数の厳格な上限を設定します (<strong>スケーラブルセッション</strong> では、<a href="/docs/ja/WebServer/sessions.html">数の制限なく</a> プリエンプティブプロセスがサポートされています)。 このパラメーターは、異常な数のリクエストによる 4D Webサーバーの飽和状態を避けるために使用します。 最大Web同時接続数 (マイナス1) に達すると、4D は新しいプロセスを作成せず、HTTPステータス <code>503 - Service Unavailable</code> を新規リクエストに対して返信します。</p>
 <p>デフォルト値は 100 です。 10から32000までの値を設定できます。</p>
 <h2><a class="anchor" aria-hidden="true" id="最大リクエストサイズ"></a><a href="#最大リクエストサイズ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最大リクエストサイズ</h2>
 <table>
@@ -485,7 +485,7 @@
 </tbody>
 </table>
 <p>Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サイズ (バイト単位)。 デフォルト値は 2,000,000 (2MBより、すこし少ない値) です。 最大値 (2,147,483,648) に設定した場合、実際には制限無しということになります。</p>
-<p>制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 リクエストのサイズが制限に達していると、4D Webサーバーによって拒否されます。</p>
+<p>制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。 制限を設けることで、サイズが非常に大きいリクエストによって Webサーバーが過負荷状態に陥ることを防ぎます。</p>
 <p>とりうる値: 500,000 - 2,147,483,648。</p>
 <h2><a class="anchor" aria-hidden="true" id="最大同時セッション数"></a><a href="#最大同時セッション数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>最大同時セッション数</h2>
 <table>
@@ -556,11 +556,11 @@
 <tr><th>設定できる場所</th><th>名称</th><th>コメント</th></tr>
 </thead>
 <tbody>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#reuse-temporary-contexts">オプション (I) ページ / 最大同時Webプロセス</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#一時的なコンテキストを再利用する">オプション (I) ページ / 最大同時Webプロセス</a></td><td></td></tr>
 </tbody>
 </table>
 <blockquote>
-<p>This option is only available when <strong>No sessions</strong> option is checked.</p>
+<p>このオプションは、<strong>セッションなし</strong> オプションがチェックされている場合にのみ利用できます。</p>
 </blockquote>
 <p>前の Webリクエストを処理するために作成された Webプロセスを再利用することによって、4Dリモートモードで実行されている 4D Webサーバーの動作を最適化できます。 実際、4D Webサーバーはそれぞれの Webリクエストを処理するために専用の Webプロセスを必要とします。 リモートモードでは、このプロセスは必要に応じて、データやデータベースエンジンにアクセスするために 4D Server に接続します。 そしてプロセス独自の変数やセレクションを使用して、一時的なコンテキストを作成します。 リクエストの処理が終了すると、このプロセスは廃棄されます。</p>
 <p><strong>一時的なコンテキストを再利用する</strong> オプションがチェックされていると、リモートモードの 4D は作成された固有の Webプロセスを保守し、その後のリクエストで再利用します。 プロセスの作成処理が省略されるため、Webサーバーのパフォーマンスが向上します。</p>
@@ -599,10 +599,10 @@
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#rootfolder"><code>rootFolder</code></a></td><td>テキストプロパティ (<code>start()</code> 関数の <em>settings</em> パラメーターと使用する場合は、<a href="/docs/ja/API/FolderClass.html"><code>4D.Folder</code></a> オブジェクトも使用可能)</td></tr>
 <tr><td><code>WEB SET ROOT FOLDER</code></td><td></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#default-html-root">設定ページ / デフォルトHTMLルート</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#デフォルトhtmlルート">設定ページ / デフォルトHTMLルート</a></td><td></td></tr>
 </tbody>
 </table>
-<p>4D がブラウザーに送信するスタティック/セミダイナミックな HTMLページ、ピクチャーなどを検索するフォルダーを指定します。これが、Webサーバーのルートフォルダーです。 パスは、POSIXフルパスの形式です。 ルートフォルダーの変更を反映するには、Webサーバーを再起動する必要があります。</p>
+<p>4D がブラウザーに送信するスタティック/セミダイナミックな HTMLページ、ピクチャーなどを検索するフォルダーを指定します。 これが、Webサーバーのルートフォルダーです。 パスは、POSIXフルパスの形式です。 ルートフォルダーの変更を反映するには、Webサーバーを再起動する必要があります。</p>
 <p>さらに HTMLルートフォルダーは、Webサーバーのディスク上で、ファイルに対するアクセスができない階層を定義することにもなります。 ブラウザーから送られた URL や 4Dコマンドが、HTMLルートフォルダーよりも上の階層にアクセスしようとすると、ファイルが存在しないことを示すエラーが返されます。</p>
 <p>デフォルトで、4D は <strong>WebFolder</strong> という名前のデフォルトHTMLルートフォルダーを定義します。 Webサーバーの初回起動時にこのフォルダーが存在しなければ、HTMLルートフォルダーは物理的にディスク上に作成されます。 ルートフォルダーは以下の場所に作成されます:</p>
 <ul>
@@ -620,18 +620,18 @@
 <blockquote>
 <p>HTMLルートフォルダーを変更すると、アクセスが制限されているファイルを格納しないようにするため、キャッシュがクリアされます。</p>
 </blockquote>
-<h2><a class="anchor" aria-hidden="true" id="scalable-sessions"></a><a href="#scalable-sessions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scalable Sessions</h2>
+<h2><a class="anchor" aria-hidden="true" id="スケーラブルセッション"></a><a href="#スケーラブルセッション" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スケーラブルセッション</h2>
 <table>
 <thead>
 <tr><th>設定できる場所</th><th>名称</th><th>コメント</th></tr>
 </thead>
 <tbody>
 <tr><td>webServer オブジェクト</td><td><a href="/docs/ja/API/WebServerClass.html#scalablesession"><code>scalableSession</code></a></td><td></td></tr>
-<tr><td><code>WEB SET OPTION</code></td><td><code>Web scalable session</code></td><td></td></tr>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#scalable-sessions-multi-process-sessions">Options (I) page/Scalable sessions (multi-process sessions)</a></td><td></td></tr>
+<tr><td><code>WEB SET OPTION</code></td><td><code>Web スケーラブルセッション</code></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#スケーラブルセッション-マルチプロセスセッション">オプション (I) ページ / スケーラブルセッション (マルチプロセスセッション)</a></td><td></td></tr>
 </tbody>
 </table>
-<p>Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the <a href="/docs/ja/WebServer/sessions.html">User sessions</a> page.</p>
+<p>4D Webサーバーでのスケーラブルセッション管理を有効/無効にします。 Webサーバーセッションの詳細については、<a href="/docs/ja/WebServer/sessions.html">ユーザーセッション</a> のページを参照ください。</p>
 <h2><a class="anchor" aria-hidden="true" id="セッションcookieドメイン"></a><a href="#セッションcookieドメイン" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>セッションcookieドメイン</h2>
 <table>
 <thead>
@@ -642,7 +642,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie domain</code></td><td></td></tr>
 </tbody>
 </table>
-<p>セッションcookie の &quot;domain&quot; フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに &quot;/*.4d.fr&quot; の値を設定した場合、リクエストの宛先が &quot;.4d.fr&quot; のドメインに限り、クライアントは cookie を送信します。つまり、外部の静的データをホストするサーバーは除外されます。</p>
+<p>セッションcookie の &quot;path&quot; フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに &quot;/4DACTION&quot; という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。</p>
 <h2><a class="anchor" aria-hidden="true" id="セッションcookie名"></a><a href="#セッションcookie名" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>セッションcookie名</h2>
 <table>
 <thead>
@@ -664,7 +664,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie path</code></td><td></td></tr>
 </tbody>
 </table>
-<p>セッションcookie の &quot;path&quot; フィールド。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに &quot;/4DACTION&quot; という値を設定した場合、4DACTION で始まる動的リクエストの場合にのみクライアントは cookie を送信し、ピクチャーや静的ページへのリクエストは除外されます。</p>
+<p>セッションcookie の &quot;domain&quot; フィールドの値。 セッションcookie のスコープを制御するのに使用されます。 たとえば、このセレクターに &quot;/*.4d.fr&quot; の値を設定した場合、リクエストの宛先が &quot;.4d.fr&quot; のドメインに限り、クライアントは cookie を送信します。</p>
 <h2><a class="anchor" aria-hidden="true" id="セッションcookie-samesite"></a><a href="#セッションcookie-samesite" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>セッションcookie SameSite</h2>
 <table>
 <thead>
@@ -694,10 +694,10 @@
 <tr><th>設定できる場所</th><th>名称</th><th>コメント</th></tr>
 </thead>
 <tbody>
-<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#use-preemptive-processes">オプション (I) ページ / 最大同時Webプロセス</a></td><td></td></tr>
+<tr><td>設定ダイアログボックス</td><td><a href="/docs/ja/settings/web.html#プリエンプティブプロセスを使用">オプション (I) ページ / 最大同時Webプロセス</a></td><td></td></tr>
 </tbody>
 </table>
-<p>This option enables the preemptive mode for your application's web server code when <strong>No sessions</strong> option is selected (the preemptive mode is always enabled with <strong>scalable sessions</strong>). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of <a href="/docs/ja/WebServer/preemptiveWeb.html#thread-safety-of-4d-web-code">web-related code</a> and return errors in case of incompatibility.</p>
+<p>このオプションは、<strong>セッションなし</strong> オプションが選択されている場合に、アプリケーションの Webサーバーコードのプリエンプティブモードを有効にします (<strong>スケーラブルセッション</strong> では、プリエンプティブモードは常に有効です)。 このコンテキストにおいて当該オプションがチェックされているとき、4Dコンパイラは <a href="/docs/ja/WebServer/preemptiveWeb.html#4d-webコードのスレッドセーフティ">Web関連のコード</a> それぞれのスレッドセーフプロパティを自動的に評価し、違反があった場合にはエラーを返します。</p>
 <h2><a class="anchor" aria-hidden="true" id="廃止予定の設定"></a><a href="#廃止予定の設定" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>廃止予定の設定</h2>
 <p>以下の設定は現在もサポートされていますが、廃止予定の機能や技術に依存しています。 通常はデフォルト値のままにしておくことが推奨されます。</p>
 <h4><a class="anchor" aria-hidden="true" id="4dsync-urlを使用したデータベースアクセスを許可"></a><a href="#4dsync-urlを使用したデータベースアクセスを許可" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>&quot;4DSYNC&quot; URLを使用したデータベースアクセスを許可</h4>
@@ -719,7 +719,7 @@
 <li><p><strong>接続毎のリクエスト数</strong>: ひとつの Keep-Alive接続におけるリクエストとレスポンスの最大数を設定します。 接続あたりのリクエスト数を制限することで、サーバーのリクエスト過多を避けることができます (攻撃者が使用するテクニック)。<p> 4D Webサーバーをホストするマシンのリソースに応じて、デフォルト値 (100) を増減できます。</p></li>
 <li><p><strong>タイムアウト</strong>: この値を使用して、Webブラウザーからリクエストがおこなわれない状態で、Webサーバーが開かれた接続を保守する最大の待ち秒数を設定します。 この秒数が経過すると、サーバーは接続を閉じます。<p> 接続が閉じられた後に Webブラウザーがリクエストを送信すると、新しい TCP接続が作成されます。 この動作はユーザーからは見えません。</p></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/WebServer/webServer.html"><span class="arrow-prev">← </span><span>概要</span></a><a class="docs-next button" href="/docs/ja/WebServer/webServerAdmin.html"><span>管理</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#設定をおこなう場所">設定をおこなう場所</a></li><li><a href="#キャッシュ">キャッシュ</a></li><li><a href="#証明書フォルダー">証明書フォルダー</a></li><li><a href="#文字コード">文字コード</a></li><li><a href="#暗号リスト">暗号リスト</a></li><li><a href="#cors設定">CORS設定</a></li><li><a href="#デバッグログ">デバッグログ</a></li><li><a href="#デフォルトホームページ">デフォルトホームページ</a></li><li><a href="#corsを有効化">CORSを有効化</a></li><li><a href="#httpを有効化">HTTPを有効化</a></li><li><a href="#httpsを有効にする">HTTPSを有効にする</a></li><li><a href="#hstsを有効にする">HSTSを有効にする</a></li><li><a href="#hsts-max-age">HSTS Max Age</a></li><li><a href="#http圧縮レベル">HTTP圧縮レベル</a></li><li><a href="#http圧縮のしきい値">HTTP圧縮のしきい値</a></li><li><a href="#http-ポート">HTTP ポート</a></li><li><a href="#http-trace">HTTP Trace</a></li><li><a href="#https-ポート">HTTPS ポート</a></li><li><a href="#非動作プロセスのタイムアウト">非動作プロセスのタイムアウト</a></li><li><a href="#非アクティブセッションタイムアウト">非アクティブセッションタイムアウト</a></li><li><a href="#リクエストを受け付ける-ipアドレス">リクエストを受け付ける IPアドレス</a></li><li><a href="#旧式セッション-自動セッション管理">旧式セッション (自動セッション管理)</a></li><li><a href="#ログの記録">ログの記録</a></li><li><a href="#最大同時webプロセス">最大同時Webプロセス</a></li><li><a href="#最大リクエストサイズ">最大リクエストサイズ</a></li><li><a href="#最大同時セッション数">最大同時セッション数</a></li><li><a href="#最低tlsバージョン">最低TLSバージョン</a></li><li><a href="#名称">名称</a></li><li><a href="#openssl-バージョン">OpenSSL バージョン</a></li><li><a href="#perfect-forward-secrecy-pfs">Perfect Forward Secrecy (PFS)</a></li><li><a href="#一時的なコンテキストを再利用する-リモートモード">一時的なコンテキストを再利用する (リモートモード)</a></li><li><a href="#robotstxt">Robots.txt</a></li><li><a href="#ルートフォルダー">ルートフォルダー</a></li><li><a href="#scalable-sessions">Scalable Sessions</a></li><li><a href="#セッションcookieドメイン">セッションcookieドメイン</a></li><li><a href="#セッションcookie名">セッションcookie名</a></li><li><a href="#セッションcookieパス">セッションcookieパス</a></li><li><a href="#セッションcookie-samesite">セッションcookie SameSite</a></li><li><a href="#プリエンプティブプロセスを使用">プリエンプティブプロセスを使用</a></li><li><a href="#廃止予定の設定">廃止予定の設定</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/ja/WebServer/webServer.html"><span class="arrow-prev">← </span><span>概要</span></a><a class="docs-next button" href="/docs/ja/WebServer/webServerAdmin.html"><span>管理</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#設定をおこなう場所">設定をおこなう場所</a></li><li><a href="#キャッシュ">キャッシュ</a></li><li><a href="#証明書フォルダー">証明書フォルダー</a></li><li><a href="#文字コード">文字コード</a></li><li><a href="#暗号リスト">暗号リスト</a></li><li><a href="#cors設定">CORS設定</a></li><li><a href="#デバッグログ">デバッグログ</a></li><li><a href="#デフォルトホームページ">デフォルトホームページ</a></li><li><a href="#corsを有効化">CORSを有効化</a></li><li><a href="#httpを有効化">HTTPを有効化</a></li><li><a href="#httpsを有効にする">HTTPSを有効にする</a></li><li><a href="#hstsを有効にする">HSTSを有効にする</a></li><li><a href="#hsts-max-age">HSTS Max Age</a></li><li><a href="#http圧縮レベル">HTTP圧縮レベル</a></li><li><a href="#http圧縮のしきい値">HTTP圧縮のしきい値</a></li><li><a href="#http-ポート">HTTP ポート</a></li><li><a href="#http-trace">HTTP Trace</a></li><li><a href="#https-ポート">HTTPS ポート</a></li><li><a href="#非動作プロセスのタイムアウト">非動作プロセスのタイムアウト</a></li><li><a href="#非アクティブセッションタイムアウト">非アクティブセッションタイムアウト</a></li><li><a href="#リクエストを受け付ける-ipアドレス">リクエストを受け付ける IPアドレス</a></li><li><a href="#旧式セッション-自動セッション管理">旧式セッション (自動セッション管理)</a></li><li><a href="#ログの記録">ログの記録</a></li><li><a href="#最大同時webプロセス">最大同時Webプロセス</a></li><li><a href="#最大リクエストサイズ">最大リクエストサイズ</a></li><li><a href="#最大同時セッション数">最大同時セッション数</a></li><li><a href="#最低tlsバージョン">最低TLSバージョン</a></li><li><a href="#名称">名称</a></li><li><a href="#openssl-バージョン">OpenSSL バージョン</a></li><li><a href="#perfect-forward-secrecy-pfs">Perfect Forward Secrecy (PFS)</a></li><li><a href="#一時的なコンテキストを再利用する-リモートモード">一時的なコンテキストを再利用する (リモートモード)</a></li><li><a href="#robotstxt">Robots.txt</a></li><li><a href="#ルートフォルダー">ルートフォルダー</a></li><li><a href="#スケーラブルセッション">スケーラブルセッション</a></li><li><a href="#セッションcookieドメイン">セッションcookieドメイン</a></li><li><a href="#セッションcookie名">セッションcookie名</a></li><li><a href="#セッションcookieパス">セッションcookieパス</a></li><li><a href="#セッションcookie-samesite">セッションcookie SameSite</a></li><li><a href="#プリエンプティブプロセスを使用">プリエンプティブプロセスを使用</a></li><li><a href="#廃止予定の設定">廃止予定の設定</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

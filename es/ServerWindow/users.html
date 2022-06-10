@@ -87,7 +87,7 @@
 <p>4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a <strong>Sleeping</strong> activity status:</p>
 <p><img src="/docs/assets/en/Admin/server-sleeping.png" alt=""></p>
 <p>This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.</p>
-<p>The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. The machine switches to sleep mode. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.</p>
+<p>The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. La máquina pasa al modo reposo. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.</p>
 <blockquote>
 <p>A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the <a href="https://doc.4d.com/4dv19/help/command/en/page642.html"><code>SET DATABASE PARAMETER</code></a> command with the <code>Remote connection sleep timeout</code> selector.</p>
 </blockquote>

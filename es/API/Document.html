@@ -69,7 +69,7 @@
 <p></details></p>
 <p><strong>.extension</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La propiedad <code>.extension</code> devuelve la extensión del nombre del archivo (si lo hay). Una extensión siempre comienza por &quot;.&quot;. The property returns an empty string if the file name does not have an extension.</p>
+<p>La propiedad <code>.extension</code> devuelve la extensión del nombre del archivo (si lo hay). Una extensión siempre comienza por &quot;.&quot;. La propiedad devuelve una cadena vacía si el nombre del archivo no tiene extensión.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="fullname"></a><a href="#fullname" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.fullName</h2>
 <p><details><summary>Histórico</summary></p>
@@ -161,7 +161,7 @@
 <h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>La propiedad <code>.isWritable</code> devuelve true si el archivo existe en el disco y es escribible.</p>
 <blockquote>
-<p>The property checks the ability of the 4D application to write on the disk (access rights), it does not solely rely on the <em>writable</em> attribute of the file.</p>
+<p>La propiedad verifica la capacidad de la aplicación 4D a escribir en el disco (derechos de acceso), no se basa únicamente en el atributo <em>writable</em> del archivo.</p>
 </blockquote>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <p><strong>Ejemplo</strong></p>
@@ -233,7 +233,7 @@
 <li>un objeto File</li>
 <li>un objeto de la carpeta</li>
 </ul>
-<p>For non-alias files, the property returns the same file object as the file.</p>
+<p>Para los archivos sin alias, la propiedad devuelve el mismo objeto File que el archivo.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="parent"></a><a href="#parent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.parent</h2>
 <p><details><summary>Histórico</summary></p>
@@ -293,7 +293,7 @@
 <p></details></p>
 <p><strong>.size</strong> : Real</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-18"></a><a href="#descripción-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La propiedad <code>.size</code> devuelve el tamaño del archivo expresado en bytes. If the file does not exist on disk, the size is 0.</p>
+<p>La propiedad <code>.size</code> devuelve el tamaño del archivo expresado en bytes. Si el archivo no existe en el disco, el tamaño es 0.</p>
 <p>Esta propiedad es <strong>de sólo lectura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="copyto"></a><a href="#copyto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.copyTo()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -361,9 +361,9 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-20"></a><a href="#descripción-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.getContent()</code> function  returns a <code>4D.Blob</code> object containing the entire content of a file. Para obtener información sobre los BLOB, consulte la sección <a href="Conceptos/dt_blob.md">BLOB</a>.</p>
+<p>La función <code>.getContent()</code>  devuelve un objeto <code>4D.Blob</code> que contiene todo el contenido de un archivo. Para obtener información sobre los BLOB, consulte la sección <a href="Conceptos/dt_blob.md">BLOB</a>.</p>
 <p><strong>Valor devuelto</strong></p>
-<p>A <code>4D.Blob</code> object.</p>
+<p>Un objeto <code>4D.Blob</code>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>Para guardar el contenido de un documento en un campo <code>BLOB</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$vPath </span>: Text
@@ -427,10 +427,10 @@
 <p>Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:</p>
 <ul>
 <li>en <em>charSetName</em>, una cadena que contiene el nombre del conjunto estándar (por ejemplo &quot;ISO-8859-1&quot; o &quot;UTF-8&quot;),</li>
-<li>or in <em>charSetNum</em>, the MIBEnum ID (number) of the standard set name.</li>
+<li>o en <em>charSetNum</em>, el ID MIBEnum (número) del nombre del conjunto estándar.</li>
 </ul>
 <blockquote>
-<p>For the list of character sets supported by 4D, refer to the description of the <code>CONVERT FROM TEXT</code> command.</p>
+<p>Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando <code>CONVERT FROM TEXT</code>.</p>
 </blockquote>
 <p>Si el documento contiene una marca de orden de bytes (BOM), 4D utiliza el conjunto de caracteres que ha establecido en lugar del especificado en <em>charSetName</em> o <em>charSetNum</em> (este parámetro se ignora entonces). Si el documento no contiene una BOM y si <em>charSetName</em> o <em>charSetNum</em> se omite, por defecto 4D utiliza el conjunto de caracteres &quot;UTF-8&quot;.</p>
 <p>En <em>breakMode</em>, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea en el documento. Las siguientes constantes del tema &quot;Documentos del sistema&quot; están disponibles:</p>
@@ -461,13 +461,13 @@
 </code></pre>
 <p>... obtiene para <code>$txt</code>:</p>
 <p>&quot;id\tname\tprice\tvat\r\n3\tthé\t1.06€\t19.6\r\n2\tcafé\t1.05€\t19.6&quot;</p>
-<p>with <code>\t</code> (tab) as separator and <code>\r\n</code> (CRLF) as line delimiter.</p>
+<p>con <code>\t</code> (tab) como separador y <code>\r\n</code> (CRLF) como delimitador de línea.</p>
 <p>Aquí hay otro ejemplo con el mismo archivo, pero con un delimitador de línea diferente:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$txt</span>:=<span class="hljs-variable">$myFile</span>.<span class="hljs-function">getText</span>(<span class="hljs-string">"UTF-8"</span>, Document with LF)
 </code></pre>
 <p>En este caso, el contenido de <code>$txt</code> es el siguiente:</p>
 <p>&quot;id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6&quot;</p>
-<p>This time <code>\n</code> (LF) is used as line delimiter.</p>
+<p>Esta vez se utiliza <code>\n</code> (LF) como delimitador de línea.</p>
 </span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#descripción">Descripción</a></li><li><a href="#creationdate">.creationDate</a></li><li><a href="#creationtime">.creationTime</a></li><li><a href="#exists">.exists</a></li><li><a href="#extension">.extension</a></li><li><a href="#fullname">.fullName</a></li><li><a href="#hidden">.hidden</a></li><li><a href="#isalias">.isAlias</a></li><li><a href="#isfile">.isFile</a></li><li><a href="#isfolder">.isFolder</a></li><li><a href="#iswritable">.isWritable</a></li><li><a href="#modificationdate">.modificationDate</a></li><li><a href="#modificationtime">.modificationTime</a></li><li><a href="#name">.name</a></li><li><a href="#original">.original</a></li><li><a href="#parent">.parent</a></li><li><a href="#path">.path</a></li><li><a href="#platformpath">.platformPath</a></li><li><a href="#size">.size</a></li><li><a href="#copyto">.copyTo()</a></li><li><a href="#getcontent">.getContent()</a></li><li><a href="#geticon">.getIcon()</a></li><li><a href="#gettext">.getText()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
