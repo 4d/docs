@@ -1,56 +1,104 @@
-/* stylelint-disable docusaurus/copyright-header */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.section {
+  padding: 72px 0;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.sectionAlt {
+  background-color: var(--ifm-color-emphasis-100);
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.features {
-  display: flex;
-  align-items: center;
- text-align: center;
-  padding: 2rem 0;
-  width: 100%;
+.sectionInner {
+  margin: 0 auto;
 }
 
 .featureImage {
-  height: 200px;
-  width: 200px;
+  width: auto;
+  max-height: 128px;
+  margin: 0 auto;
 }
 
-.announcement {
+.featureHeading {
+  font-size: var(--ifm-h3-font-size);
+  padding-top: 1rem;
+}
+
+.banner {
   font-weight: bold;
-  font-size: 24px;
-  padding: 48px;
+  font-size: 20px;
+  padding: 20px;
+  max-width: 768px;
   margin: 0 auto;
   text-align: center;
 }
 
-.announcementDark {
-  background-color: #20232a;
-  color: #fff;
+.hero {
+  background-color: #2b3137;
+  padding: 48px;
 }
 
-.announcementInner {
+.heroInner {
   margin: 0 auto;
-  max-width: 768px;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.heroProjectTagline {
+  color: #fff;
+  font-size: 60px;
+  margin: 0;
+}
+
+.heroTitleTextHtml b {
+  color: var(--ifm-color-primary);
+}
+
+@keyframes jack-in-the-box {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroLogo {
+  animation-duration: 2s;
+  animation-name: jack-in-the-box;
+  float: right;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .heroInner {
+    padding: 0;
+  }
+
+  .heroProjectTagline {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .heroLogo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
 }

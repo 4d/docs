@@ -1,6 +1,6 @@
 module.exports = {
-  "title": "4D Documentation",
-  "tagline": "Documentation for 4D Developers",
+  "title": "4D Docs",
+  "tagline": "Documentation for 4D developers",
   "url": "https://4d.github.io/",
   "baseUrl": "/",
   "organizationName": "4D",
