@@ -17,5 +17,5 @@ GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt
 
 You will be asked where to save the BLOB to disk:
 
-![](../assets/img/REST/binary.png)
+![](../assets/img/en/REST/binary.png)
 

@@ -68,15 +68,15 @@ Below is a representation of the logical operators based on two entity sets. The
 
 **AND**
 
-![](../assets/img/REST/and.png)
+![](../assets/img/en/REST/and.png)
 
 **OR**
 
-![](../assets/img/REST/or.png)
+![](../assets/img/en/REST/or.png)
 
 **EXCEPT**
 
-![](../assets/img/REST/except.png)
+![](../assets/img/en/REST/except.png)
 
 
 The syntax is as follows:

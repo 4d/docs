@@ -32,7 +32,7 @@ A standard Open file dialog box appears.
 2. Select a backup file (.4bk) or a log backup file (.4bl) to be restored and click **Open**.
 A dialog box appears, which allows you to specify the location where files will be restored. By default, 4D restores the files in a folder named *Archivename* (no extension) located next to the archive. You can display the path:
 
-![](../assets/img/Backup/backup07.png)
+![](../assets/img/en/Backup/backup07.png)
 
 You can also click on the **[...]** button to specify a different location.
 3. Click on the **Restore** button.
@@ -52,7 +52,7 @@ You can manually restore an archive of the current database using the [Restore p
 
 If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-intergration-of-several-data-log-files)), a warning dialog box appears during the opening of the database when 4D notices that the log file contains more operations than have been carried out in the database.
 
-![](../assets/img/Backup/backup08.png)
+![](../assets/img/en/Backup/backup08.png)
 
 > In order for this mechanism to work, 4D must be able to access the log file in its current location.
 

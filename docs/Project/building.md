@@ -23,11 +23,11 @@ Building a project package can be carried out using:
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
 
-![](../assets/img/Project/buildappProj.png)
+![](../assets/img/en/Project/buildappProj.png)
 
 The Build Application dialog includes several pages that can be accessed using tabs:
 
-![](../assets/img/Project/appbuilderProj.png)
+![](../assets/img/en/Project/appbuilderProj.png)
 
 Building can only be carried out once the database is compiled. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.
 
@@ -50,7 +50,7 @@ When an application is built, 4D generates a log file in the **Logs** folder. Th
 
 ## Application name and destination folder
 
-![](../assets/img/Project/buidappstructureProj.png)
+![](../assets/img/en/Project/buidappstructureProj.png)
 
 Enter the name of the application in **Application Name**.
 
@@ -60,7 +60,7 @@ Specify the folder for the built application in **Destination Folder**. If the s
 
 This tab allows you to build a standard compiled structure file and/or a compiled component:
 
-![](../assets/img/Project/appbuilderProj.png)
+![](../assets/img/en/Project/appbuilderProj.png)
 
 ### Build compiled structure
 
@@ -95,7 +95,7 @@ The *MyComponent.4dbase* folder contains:
 
 This tab allows you can build a stand-alone, single-user version of your application:
 
-![](../assets/img/Project/standaloneProj.png)
+![](../assets/img/en/Project/standaloneProj.png)
 
 ### Build stand-alone Application
 
@@ -183,7 +183,7 @@ Items must be installed:
 
 On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
 
-![](../assets/img/Project/buildappCSProj.png)
+![](../assets/img/en/Project/buildappCSProj.png)
 
 ### What is a Client/Server application?  
 
@@ -327,7 +327,7 @@ On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](C
 
 The page lists the elements loaded by the current 4D application:
 
-![](../assets/img/Project/buildapppluginsProj.png)
+![](../assets/img/en/Project/buildapppluginsProj.png)
 
 * **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
 
@@ -350,7 +350,7 @@ The Licences & Certificate page can be used to:
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
 * sign the application by means of a certificate in macOS.
 
-![](../assets/img/Project/buildapplicenseProj.png)
+![](../assets/img/en/Project/buildapplicenseProj.png)
 
 ### Licenses
 
@@ -383,13 +383,13 @@ The application builder can sign merged 4D applications under macOS (single-user
 
 * Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
 
-![](../assets/img/Project/buildapposxcertProj.png)
+![](../assets/img/en/Project/buildapposxcertProj.png)
 
 This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
 * **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. The certificate name is usually the name of the certificate in the Keychain Access utility (part in red in the following example):
 
-![](../assets/img/Project/certificate.png)
+![](../assets/img/en/Project/certificate.png)
 
 To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 
@@ -476,10 +476,10 @@ This may be unsuitable if you want to duplicate a merged application intended to
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
 *Duplication when data linked by application name:*
-![](../assets/img/Project/datalinking1.png)
+![](../assets/img/en/Project/datalinking1.png)
 
 *Duplication when data linked by application path:*
-![](../assets/img/Project/datalinking2.png)
+![](../assets/img/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. You can either:
 
@@ -502,7 +502,7 @@ To define and use a default data file:
 
 The following graphic illustrates this feature:
 
-![](../assets/img/Project/DefaultData.png)
+![](../assets/img/en/Project/DefaultData.png)
 
 When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
 
@@ -542,9 +542,9 @@ You can choose whether or not to display the standard server selection dialog bo
 
 * **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
 `ServerSelectionAllowed`: **False** or key omitted
-![](../assets/img/Project/connect1.png)
+![](../assets/img/en/Project/connect1.png)
 
 * **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.
 `ServerSelectionAllowed`: **True**
-![](../assets/img/Project/connect2.png)
-![](../assets/img/Project/connect3.png)
+![](../assets/img/en/Project/connect2.png)
+![](../assets/img/en/Project/connect3.png)

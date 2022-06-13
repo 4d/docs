@@ -19,7 +19,7 @@ Groups can then be assigned access privileges to specific parts or features of t
 
 The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
 
-![](../assets/img/Users/Access1.png)
+![](../assets/img/en/Users/Access1.png)
 
 
 
@@ -53,7 +53,7 @@ In project databases (.4DProject or .4dz files), 4D users and groups can be conf
 
 The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
 
-![](../assets/img/Users/editor.png)
+![](../assets/img/en/Users/editor.png)
 
 > Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command.
 

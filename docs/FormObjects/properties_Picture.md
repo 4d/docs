@@ -35,7 +35,7 @@ Two main locations can be used for static picture path:
 
 The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
-![](../assets/img/FormObjects/property_pictureFormat_ScaledToFit.png)
+![](../assets/img/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
 ### Replicated  
 
@@ -43,7 +43,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
-![](../assets/img/FormObjects/property_pictureFormat_Replicated.png)
+![](../assets/img/en/FormObjects/property_pictureFormat_Replicated.png)
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
@@ -59,7 +59,7 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 >When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
 
-![](../assets/img/FormObjects/property_pictureFormat_Truncated.png)
+![](../assets/img/en/FormObjects/property_pictureFormat_Truncated.png)
 
 
 #### JSON Grammar

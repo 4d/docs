@@ -7,7 +7,7 @@ title: Check Box
 
 A check box is a type of button used to enter or display binary (true-false) data. Basically, it is either checked or unchecked, but a third state can be defined (see below).
 
-![](../assets/img/FormObjects/checkbox.png)
+![](../assets/img/en/FormObjects/checkbox.png)
 
 Check boxes are controlled by methods. Like all buttons, a check box variable is set to 0 when the form is first opened. The method associated with it executes when the check box is selected.
 
@@ -28,7 +28,7 @@ Any or all check boxes in a form can be checked or unchecked. Multiple check box
 
 Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) accept a third state. This third state is an intermediate status, which is generally used for display purposes. For example, it allows indicating that a property is present in a selection of objects, but not in each object of the selection.
 
-![](../assets/img/FormObjects/checkbox_3states.png)
+![](../assets/img/en/FormObjects/checkbox_3states.png)
 
 To enable this third state, you must select the [Three-States](properties_Display.md#three-states) property.
 
@@ -90,7 +90,7 @@ With the exception of the [available properties](#supported-properties), many ch
 
 The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
 
-![](../assets/img/FormObjects/checkbox_regular.png)
+![](../assets/img/en/FormObjects/checkbox_regular.png)
 
 #### JSON Example:    
 
@@ -114,7 +114,7 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 The Flat check box style is a minimalist appearance. The Flat style's graphic nature is particularly useful for forms that will be printed.
 
-![](../assets/img/FormObjects/checkbox_flat.png)
+![](../assets/img/en/FormObjects/checkbox_flat.png)
 
 #### JSON Example:  
 
@@ -141,7 +141,7 @@ The Toolbar style has a transparent background with a title. It is usually assoc
 
 Example with states unchecked / checked / highlighted:
 
-![](../assets/img/FormObjects/checkbox_toolbar.png)
+![](../assets/img/en/FormObjects/checkbox_toolbar.png)
 
 
 #### JSON Example:    
@@ -170,7 +170,7 @@ The Bevel style has a light gray background with a title. It is usually associat
 
 Example with states unchecked / checked / highlighted:
 
-![](../assets/img/FormObjects/checkbox_bevel.png)
+![](../assets/img/en/FormObjects/checkbox_bevel.png)
 
 
 #### JSON Example:    
@@ -199,7 +199,7 @@ The Rounded Bevel style has a light gray background with a title. It is usually 
 
 Example on macOS:
 
-  ![](../assets/img/FormObjects/checkbox_roundedbevel_mac.png)
+  ![](../assets/img/en/FormObjects/checkbox_roundedbevel_mac.png)
 
 > on Windows, the Rounded Bevel style is identical to the [Bevel](#bevel) style.
 
@@ -228,7 +228,7 @@ The OS X Gradient check box style is nearly identical to the [Bevel](#bevel) sty
 
 The OS X Gradient style has a light gray background with a title and is displayed as a two-tone system button on macOS. It is usually associated with a [4-state picture](properties_TextAndPicture.md#number-of-states).  
 
-  ![](../assets/img/FormObjects/checkbox_osxgradient_mac.png)
+  ![](../assets/img/en/FormObjects/checkbox_osxgradient_mac.png)
 
 > On Windows, this style is identical to the [Bevel](#bevel) style.
 
@@ -260,11 +260,11 @@ By default, the OS X Textured style appears as:
 
  - *Windows* - a standard system button with a light blue background with a title in the center.
 
-  ![](../assets/img/FormObjects/checkbox_osxtextured.png)
+  ![](../assets/img/en/FormObjects/checkbox_osxtextured.png)
 
  - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
 
-  ![](../assets/img/FormObjects/checkbox_osxtextured_mac.png)
+  ![](../assets/img/en/FormObjects/checkbox_osxtextured_mac.png)
 
 #### JSON Example:    
 
@@ -291,11 +291,11 @@ The colors (highlight and background) of a button with the Office XP style are b
 
  - *Windows* - its background only appears when the mouse rolls over it. Example with states unchecked / checked / highlighted:
 
-  ![](../assets/img/FormObjects/checkbox_officexp.png)
+  ![](../assets/img/en/FormObjects/checkbox_officexp.png)
 
  - *macOS* - its background is always displayed. Example with states unchecked / checked:
 
-  ![](../assets/img/FormObjects/checkbox_officexp_mac.png)
+  ![](../assets/img/en/FormObjects/checkbox_officexp_mac.png)
 
 #### JSON Example:    
 
@@ -322,11 +322,11 @@ This check box style can be used to add a standard collapse/expand icon. These b
 
  - *Windows* - the button looks like a [+] or a [-]
 
-  ![](../assets/img/FormObjects/checkbox_collapse.png)
+  ![](../assets/img/en/FormObjects/checkbox_collapse.png)
 
  - *macOS* - it looks like a triangle pointing right or down.
 
-  ![](../assets/img/FormObjects/checkbox_collapse_mac.png)
+  ![](../assets/img/en/FormObjects/checkbox_collapse_mac.png)
 
 
 #### JSON Example:    
@@ -351,11 +351,11 @@ In macOS and Windows, a check box with the "Disclosure" style appears as a stand
 
  - *Windows*
 
-	![](../assets/img/FormObjects/checkbox_disclosure.png)
+	![](../assets/img/en/FormObjects/checkbox_disclosure.png)
 
  - *macOS*
 
-	![](../assets/img/FormObjects/checkbox_disclosure_mac.png)
+	![](../assets/img/en/FormObjects/checkbox_disclosure_mac.png)
 
 
 #### JSON Example:    

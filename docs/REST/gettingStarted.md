@@ -24,13 +24,13 @@ To keep the example simple, we’re going to use a 4D application and a browser 
 	- Firstname (Alpha)
 	- Salary (Longint)
 
-![](../assets/img/REST/getstarted1.png) 
+![](../assets/img/en/REST/getstarted1.png) 
 
 > The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
 
 3. Create forms, then create a few employees:
 
-![](../assets/img/REST/getstarted2.png) 
+![](../assets/img/en/REST/getstarted2.png) 
 
 4. Display the **Web/REST resource** page of the Database Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option. 
 

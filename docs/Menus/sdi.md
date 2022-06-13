@@ -34,7 +34,7 @@ In SDI mode, the process menu bar is automatically displayed in every document t
 
 Menus are added above windows without modifiying their contents size:
 
-![](../assets/img/Menus/sdi1.png)
+![](../assets/img/en/Menus/sdi1.png)
 
 Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
 

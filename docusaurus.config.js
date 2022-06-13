@@ -12,13 +12,13 @@ module.exports = {
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
     "/docs/18/js/code-blocks-buttons.js"
   ],
-  "favicon": "../assets/img/4d.gif",
+  "favicon": "../assets/img/en/4d.gif",
   "customFields": {
     "docsUrl": "",
     "users": [
       {
         "caption": "User1",
-        "image": "/../assets/img/4DLogo.gif",
+        "image": "/../assets/img/en/4DLogo.gif",
         "infoLink": "https://www.facebook.com",
         "pinned": true
       }
@@ -79,12 +79,12 @@ module.exports = {
         }
       ]
     },
-    "image": "../assets/img/logohome.png",
+    "image": "../assets/img/en/logohome.png",
     "footer": {
       "links": [],
       "copyright": "© 2022 4D SAS - All rights reserved",
       "logo": {
-        "src": "../assets/img/logohome.png"
+        "src": "../assets/img/en/logohome.png"
       }
     },
   }

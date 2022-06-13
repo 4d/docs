@@ -1,68 +1,62 @@
 import React from 'react';
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 
 const Features = [
   {
     title: translate({
-      message: 'Powered by MDX',
+      message: 'Getting started',
       id: 'homepage.features.powered-by-mdx.title',
     }),
     image: {
-      src: '/img/undraw_typewriter.svg',
+      src: '/img/illu_GettingStarted.png',
       width: 1009.54,
       height: 717.96,
     },
     text: (
       <Translate id="homepage.features.powered-by-mdx.text">
-        Save time and focus on text documents. Simply write docs and blog posts
-        with MDX, and Docusaurus builds them into static HTML files ready to be
-        served. You can even embed React components in your Markdown thanks to
-        MDX.
+        Getting started links
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Built Using React',
+      message: 'Desktop applications',
       id: 'homepage.features.built-using-react.title',
     }),
     image: {
-      src: '/img/undraw_react.svg',
+      src: '/img/illu_DesktopApplication.png',
       width: 1108,
       height: 731.18,
     },
     text: (
       <Translate id="homepage.features.built-using-react.text">
-        Extend and customize your project&apos;s layout by writing React
-        components. Leverage the pluggable architecture, and design your own
-        site while reusing the same data created by Docusaurus plugins.
+        Core development links
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Ready for Translations',
+      message: 'Web applications',
       id: 'homepage.features.ready-for-translations.title',
     }),
     image: {
-      src: '/img/undraw_around_the_world.svg',
+      src: '/img/illu_WebApplication.png',
       width: 1137,
       height: 776.59,
     },
     text: (
       <Translate id="homepage.features.ready-for-translations.text">
-        Localization comes out-of-the-box. Use git, Crowdin, or any other
-        translation manager to translate your docs and deploy them individually.
+        Ready for translation links
       </Translate>
     ),
   },
   {
     title: translate({
-      message: 'Document Versioning',
+      message: 'Mobile applications',
       id: 'homepage.features.document-versioning.title',
     }),
     image: {
-      src: '/img/undraw_version_control.svg',
+      src: '/img/illu_MobileApplication.png',
       width: 1038.23,
       height: 693.31,
     },
@@ -75,11 +69,11 @@ const Features = [
   },
   {
     title: translate({
-      message: 'Content Search',
+      message: 'Administration',
       id: 'homepage.features.content-search.title',
     }),
     image: {
-      src: '/img/undraw_algolia.svg',
+      src: '/img/illu_Administration.png',
       width: 1137.97,
       height: 736.21,
     },

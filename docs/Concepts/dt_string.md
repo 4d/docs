@@ -195,7 +195,7 @@ When you use the character reference symbols, you must address existing characte
 
 will trigger the Runtime Error shown here:
 
-![alt-text](../assets/img/Concepts/Syntax_Error.en.png)
+![alt-text](../assets/img/en/Concepts/Syntax_Error.en.png)
 
 ### Example
 
@@ -226,4 +226,4 @@ ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!
 
 displays the alert shown here:
 
-![alt-text](../assets/img/Concepts/Jane_doe.en.png)
+![alt-text](../assets/img/en/Concepts/Jane_doe.en.png)

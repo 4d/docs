@@ -18,7 +18,7 @@ A static rectangle is a decorative object for forms. Rectangles are constrained 
 
 The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined. 
 
-![](../assets/img/FormObjects/shapes_rectangle2.png)
+![](../assets/img/en/FormObjects/shapes_rectangle2.png)
 
 #### JSON Example:    
 
@@ -65,7 +65,7 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
 		}
 ``` 
 Result:
-![](../assets/img/FormObjects/shape_line1.png)
+![](../assets/img/en/FormObjects/shape_line1.png)
 
 
 ```
@@ -80,7 +80,7 @@ Result:
 		}
 ``` 
 Result:
-![](../assets/img/FormObjects/shape_line2.png)
+![](../assets/img/en/FormObjects/shape_line2.png)
 
 
 
@@ -91,7 +91,7 @@ Result:
 
 A static oval is a decorative object for forms. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal). 
 
-![](../assets/img/FormObjects/shape_oval.png)
+![](../assets/img/en/FormObjects/shape_oval.png)
 
 #### JSON Example:    
 

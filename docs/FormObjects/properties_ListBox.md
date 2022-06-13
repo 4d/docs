@@ -112,11 +112,11 @@ These properties interact as follows:
 
 * If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.
 
-![](../assets/img/FormObjects/property_lockedStaticColumns1.png)
+![](../assets/img/en/FormObjects/property_lockedStaticColumns1.png)
 
 * If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
 
-![](../assets/img/FormObjects/property_lockedStaticColumns2.png)
+![](../assets/img/en/FormObjects/property_lockedStaticColumns2.png)
 
 * You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
@@ -190,7 +190,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
  aLControlArr{10}:=lk row is not selectable
 ```
 
-![](../assets/img/FormObjects/listbox_styles5.png)
+![](../assets/img/en/FormObjects/listbox_styles5.png)
 
 You can define several interface properties at once:
 
@@ -198,7 +198,7 @@ You can define several interface properties at once:
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
 ```
 
-![](../assets/img/FormObjects/listbox_styles6.png)
+![](../assets/img/en/FormObjects/listbox_styles6.png)
 
 Note that setting properties for an element overrides any other values for this element (if not reset). For example:
 

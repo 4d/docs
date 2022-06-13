@@ -11,13 +11,13 @@ There can only be one default button per form page.
 
 In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
 
-![](../assets/img/FormObjects/property_defaultButtonmacOS.en.png)
+![](../assets/img/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > Button must have a standard height to get the default button appearance.
 
 On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline: 
 
-![](../assets/img/FormObjects/property_defaultButtonWindows.en.png) 
+![](../assets/img/en/FormObjects/property_defaultButtonWindows.en.png) 
 
 #### JSON Grammar
 
@@ -268,11 +268,11 @@ Displays all 4D expressions inserted in the 4D Write Pro document as *references
 
 For example, you have inserted the current date along with a format, the date is displayed:
 
-![](../assets/img/FormObjects/writePro1.png)
+![](../assets/img/en/FormObjects/writePro1.png)
 
 With the Show references property on, the reference is displayed:
 
-![](../assets/img/FormObjects/writeProExpr.png)
+![](../assets/img/en/FormObjects/writeProExpr.png)
 
 > 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
 

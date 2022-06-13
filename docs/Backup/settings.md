@@ -19,7 +19,7 @@ If this application was not launched at the theoretical moment of the backup, th
 
 The scheduler backup settings are defined on the **Backup/Scheduler** page of the Database Settings:
 
-![](../assets/img/Backup/backup02.png)
+![](../assets/img/en/Backup/backup02.png)
 
 The options found on this tab let you set and configure scheduled automatic backups of the database. You can choose a standard quick configuration or you can completely customize it. Various options appear depending on the choice made in the **Automatic Backup** menu:
 
@@ -41,7 +41,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 The Backup/Configuration page of the Database Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each database opened by the 4D application.
 
-![](../assets/img/Backup/backup03.png)
+![](../assets/img/en/Backup/backup03.png)
 
 > **4D Server:** These parameters can only be set from the 4D Server machine.
 
@@ -78,7 +78,7 @@ By default, any database created with 4D uses a log file (option checked in the 
 
 Modifying backup and restore options is optional. Their default values correspond to a standard use of the function.
 
-![](../assets/img/Backup/backup04.png)
+![](../assets/img/en/Backup/backup04.png)
 
 ### General settings
 

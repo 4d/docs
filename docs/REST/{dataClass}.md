@@ -237,7 +237,7 @@ To be called in a REST request, a method must:
 		- **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax. 
 		- **Current selection** -for methods applied to the current selection
 
-![alt-text](../assets/img/REST/MethodProp.png)
+![alt-text](../assets/img/en/REST/MethodProp.png)
 
 
 ### Passing Parameters to a Method  

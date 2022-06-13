@@ -6,7 +6,7 @@ title: Button Grid
 
 A button grid is a transparent object that is placed on top of a graphic. The graphic should depict a row-by-column array. When one of the graphics is clicked on, it will have a sunken or pressed appearance:
 
-![](../assets/img/FormObjects/buttonGrid_smileys.png)
+![](../assets/img/en/FormObjects/buttonGrid_smileys.png)
 
 You can use a button grid object to determine where the user clicks on the graphic. The object method would use the `On Clicked` event and take appropriate action depending on the location of the click.
 
@@ -17,7 +17,7 @@ To create the button grid, add a background graphic to the form and place a butt
 
 In 4D, a button grid is used as a color palette:
 
-![](../assets/img/FormObjects/button_buttonGrid.png)
+![](../assets/img/en/FormObjects/button_buttonGrid.png)
 
 ## Using button grids
 

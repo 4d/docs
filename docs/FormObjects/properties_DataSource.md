@@ -12,7 +12,7 @@ When this option is selected, if a user enters a value that is not found in the 
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
 
-![](../assets/img/FormObjects/comboBox_AutomaticInsertion_example.png)
+![](../assets/img/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
 Naturally, the value entered must not belong to the list of [excluded values](properties_RangeOfValues.md#excluded-list) associated with the object, if one has been set.
 
@@ -139,7 +139,7 @@ List of values that will be used as default values for the list box column (arra
 
 You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
-![](../assets/img/FormObjects/defaultValues.png)
+![](../assets/img/en/FormObjects/defaultValues.png)
 
 > You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
 

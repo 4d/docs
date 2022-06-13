@@ -8,7 +8,7 @@ Radio buttons are objects that allow the user to select one of a group of button
 
 Usually, a radio button shows a small bullseye with text. However, radio buttons can have [various appearances](#button-styles).
 
-![](../assets/img/FormObjects/radio1.png)
+![](../assets/img/en/FormObjects/radio1.png)
 
 A radio button is selected:
 - when the user clicks on it
@@ -22,7 +22,7 @@ Radio buttons are used in coordinated sets: only one button at a time can be sel
 
 Radio buttons are controlled with methods. Like all buttons, a radio button is set to 0 when the form is first opened. A method associated with a radio button executes when the button is selected. The following is an example of a group of radio buttons used in a video collection database to enter the speed of the recording (SP, LP, or EP):
 
-![](../assets/img/FormObjects/radio2.png)
+![](../assets/img/en/FormObjects/radio2.png)
 
 Selecting one radio button in a group sets that button to 1 and all of the others in the group to 0. Only one radio button can be selected at a time.
 
@@ -44,7 +44,7 @@ Radio [button styles](properties_TextAndPicture.md#button-style) control radio b
 
 The Regular radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
-![](../assets/img/FormObjects/radio_regular.png)
+![](../assets/img/en/FormObjects/radio_regular.png)
 
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
@@ -53,7 +53,7 @@ In addition to initiating code execution, the Regular radio button style changes
 
 The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 
-![](../assets/img/FormObjects/radio_flat.png)
+![](../assets/img/en/FormObjects/radio_flat.png)
 
 By default, the Flat style has a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
@@ -66,7 +66,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
  - *Windows* - the button is highlighted.
 
-![](../assets/img/FormObjects/radio_toolbar.png)
+![](../assets/img/en/FormObjects/radio_toolbar.png)
 
  - *macOS* - the highlight of the button never appears.
 
@@ -78,7 +78,7 @@ The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behav
 
  - *Windows* - the button is highlighted.
 
-  ![](../assets/img/FormObjects/radio_bevel.png)
+  ![](../assets/img/en/FormObjects/radio_bevel.png)
 
  - *macOS* - the highlight of the button never appears.
 
@@ -90,7 +90,7 @@ The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style 
  - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
  - *macOS* - the corners of the button are rounded.
-  ![](../assets/img/FormObjects/roundedBevel.png)
+  ![](../assets/img/en/FormObjects/roundedBevel.png)
 
 
 ### OS X Gradient
@@ -113,7 +113,7 @@ By default, the OS X Textured style appears as:
 
  - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
 
-  ![](../assets/img/FormObjects/OSXTextured.png)
+  ![](../assets/img/en/FormObjects/OSXTextured.png)
 
 
 
@@ -125,7 +125,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
  - *Windows* - its background only appears when the mouse rolls over it.
 
-  ![](../assets/img/FormObjects/radio_xp.png)
+  ![](../assets/img/en/FormObjects/radio_xp.png)
 
  - *macOS* - its background is always displayed.
 
@@ -135,7 +135,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 This button style can be used to add a standard collapse/expand icon. These buttons are used natively in hierarchical lists. In Windows, the button looks like a [+] or a [-]; in macOS, it looks like a triangle pointing right or down.
 
-![](../assets/img/FormObjects/checkbox_collapse.png)
+![](../assets/img/en/FormObjects/checkbox_collapse.png)
 
 
 
@@ -143,7 +143,7 @@ This button style can be used to add a standard collapse/expand icon. These butt
 
 The disclosure radio button style displays the radio button as a standard disclosure button, usually used to show/hide additional information. The button symbol points downwards with value 0 and upwards with value 1.
 
-![](../assets/img/FormObjects/checkbox_disclosure.png)
+![](../assets/img/en/FormObjects/checkbox_disclosure.png)
 
 
 ### Custom

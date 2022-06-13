@@ -182,7 +182,7 @@ Note: For information about entity selections, please refer to the [ORDA](https:
 
 Specify the type of list box.
 
-![](../assets/img/FormObjects/listbox_dataSource.png)
+![](../assets/img/en/FormObjects/listbox_dataSource.png)
 
 - **Arrays**(default): use array elements as the rows of the list box.
 - **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
@@ -239,7 +239,7 @@ Allows inserting a label on an object. The font and the style of this label can 
 
 You can force a carriage return in the label by using the \ character (backslash).
 
-![](../assets/img/FormObjects/property_title.png)
+![](../assets/img/en/FormObjects/property_title.png)
 
 To insert a \ in the label, enter "&#92;&#92;".
 

@@ -6,7 +6,7 @@ title: Ruler
 
 The ruler is a standard interface object used to set or get values using a cursor moved along its graduations.
 
-![](../assets/img/FormObjects/indicator_ruler.png)
+![](../assets/img/en/FormObjects/indicator_ruler.png)
 
 You can assign its [associated variable or expression](properties_Object.md#expression-type) to an enterable area (field or variable) to store or modify the current value of the object.
 
