@@ -6,7 +6,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 
-import Features from '@site/src/data/features';
+import Tiles from '@site/src/data/homepageTiles';
 
 import styles from './styles.module.css';
 
@@ -41,8 +41,8 @@ function HeroBanner() {
   );
 }
 
-function Feature({
-  feature,
+function Tile({
+  tile,
   className,
 }) {
   const { withBaseUrl } = useBaseUrlUtils();
@@ -50,34 +50,34 @@ function Feature({
   return (
     <div className={clsx('col', className)}>
       <img
-        className={styles.featureImage}
-        alt={feature.title}
-        width={Math.floor(feature.image.width)}
-        height={Math.floor(feature.image.height)}
-        src={withBaseUrl(feature.image.src)}
+        className={styles.tilesImage}
+        alt={tile.title}
+        width={Math.floor(tile.image.width)}
+        height={Math.floor(tile.image.height)}
+        src={withBaseUrl(tile.image.src)}
         loading="lazy"
       />
-      <h3 className={clsx(styles.featureHeading)}>{feature.title}</h3>
-      <p className="padding-horiz--md">{feature.text}</p>
+      <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
+      <p className="padding-horiz--md">{tile.links}</p>
     </div>
   );
 }
 
-function FeaturesContainer() {
-  const firstRow = Features.slice(0, 3);
-  const secondRow = Features.slice(3);
+function TilesContainer() {
+  const firstRow = Tiles.slice(0, 3);
+  const secondRow = Tiles.slice(3);
 
   return (
     <div className="container text--center">
       <div className="row margin-bottom--lg">
-        {firstRow.map((feature, idx) => (
-          <Feature feature={feature} key={idx} />
+        {firstRow.map((tile, idx) => (
+          <Tile tile={tile} key={idx} />
         ))}
       </div>
       <div className="row">
-        {secondRow.map((feature, idx) => (
-          <Feature
-            feature={feature}
+        {secondRow.map((tile, idx) => (
+          <Tile
+            tile={tile}
             key={idx}
             className={clsx('col--4', idx === 0 && 'col--offset-2')}
           />
@@ -92,7 +92,7 @@ export default function Home() {
     <Layout>
       <main>
         <HeroBanner />
-        <FeaturesContainer />
+        <TilesContainer />
       </main>
     </Layout>
   );

@@ -1,22 +1,10 @@
-.section {
-  padding: 72px 0;
-}
-
-.sectionAlt {
-  background-color: var(--ifm-color-emphasis-100);
-}
-
-.sectionInner {
-  margin: 0 auto;
-}
-
-.featureImage {
+.tilesImage {
   width: auto;
   max-height: 128px;
   margin: 0 auto;
 }
 
-.featureHeading {
+.tilesHeading {
   font-size: var(--ifm-h3-font-size);
   padding-top: 1rem;
 }

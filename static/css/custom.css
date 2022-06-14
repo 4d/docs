@@ -1,45 +1,43 @@
 /* your custom css */
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (max-width: 1023px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1500px) {}
+
+em,
+i {
+  font-style: italic
 }
-
-@media only screen and (min-width: 1024px) {
-}
-
-@media only screen and (max-width: 1023px) {
-}
-
-@media only screen and (min-width: 1400px) {
-}
-
-@media only screen and (min-width: 1500px) {
-}
-
-em,i {font-style:italic}
-
-
 
 a {
-text-decoration: none; /* Les liens ne seront plus soulign�s */
-color: #1E90FF; /* Les liens seront en rouge au lieu de bleu */
+  text-decoration: none;
+  /* Les liens ne seront plus soulign�s */
+  color: #1E90FF;
+  /* Les liens seront en rouge au lieu de bleu */
 }
 
 
 
 
-.copyright{
-font-size: 12px;
-text-align: center;
-/*color: green;*/
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  /*color: green;*/
 }
 
 a.cp2 {
-text-decoration: underline;
-color: grey;
+  text-decoration: underline;
+  color: grey;
 }
 
-a.cp2:hover{
-color: #fff;
+a.cp2:hover {
+  color: #fff;
 }
 
 .blockImage {
@@ -132,7 +130,7 @@ color: #fff;
   margin-top: 0;
   padding: 0px;
   padding-right: 0;
-  width:350px;
+  width: 350px;
 }
 
 .index-ctas {
@@ -187,24 +185,24 @@ color: #fff;
   }
 
 
- {
-  .gridBlock .blockElement.imageAlignTop {
-    margin-bottom: 80px;
+    {
+    .gridBlock .blockElement.imageAlignTop {
+      margin-bottom: 80px;
+    }
+
   }
 
-}
+  .docImage {
+    margin: 3rem auto;
 
-.docImage {
-  margin: 3rem auto;
+    max-width: 400px;
 
-  max-width: 400px;
-
-}
+  }
 }
 
 /* custom interface numbers */
 ol.interface-numbers {
-counter-reset: orderedlist;
+  counter-reset: orderedlist;
   margin: 20px 10px;
   padding: 0;
   list-style: none;
@@ -213,33 +211,36 @@ counter-reset: orderedlist;
 }
 
 li.interface-item {
-    display: grid;
-    grid-template-columns: 0 1fr;
-    grid-gap: 1.5em;
-    align-items: start;
-    line-height: 1;
+  display: grid;
+  grid-template-columns: 0 1fr;
+  grid-gap: 1.5em;
+  align-items: start;
+  line-height: 1;
 }
 
 ol.interface-numbers li::before {
-counter-increment: orderedlist;
-content: counter(orderedlist);
-width:1rem;
-text-align: center;
-color: #fff;
-background-color:#E02626;
-padding: 1px;
-border-radius: 0.50em;
+  counter-increment: orderedlist;
+  content: counter(orderedlist);
+  width: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: #E02626;
+  padding: 1px;
+  border-radius: 0.50em;
 }
 
 body {
   font-size: 14px;
 }
+
 blockquote {
   font-size: 14px;
 }
+
 code {
   font-size: 95%;
 }
+
 pre code {
   font-size: 95%;
 }
