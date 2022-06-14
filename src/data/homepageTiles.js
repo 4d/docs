@@ -21,6 +21,14 @@ const Sections = [
         <Link to="/docs/GettingStarted/creating">
           <Translate>Working with a project</Translate>
         </Link>
+       </Link>
+         <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
+           <Translate>Language Reference (4D Doc Center)</Translate>
+         </Link>
+        </Link>
+        <Link to="/docs/Project/overview" >
+           <Translate>Language Reference (4D Doc Center)</Translate>
+        </Link>
       </div>
     ),
   },
@@ -36,15 +44,11 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/Project/overview" >
+        <Link to="/docs/FormEditor/objectLibrary" >
           <Translate>Project Management</Translate>
         </Link>
-        <Link to="/docs/Concepts/about" >
+        <Link to="/docs/FormObjects/formObjectsOverview" >
           <Translate>Language Concepts</Translate>
-        </Link>
-        <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
-          <Translate>Language Reference (4D Doc Center)</Translate>
-        </Link>
       </div>
     ),
   },
