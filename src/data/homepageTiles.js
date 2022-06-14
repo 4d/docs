@@ -27,7 +27,7 @@ const Sections = [
          </Link>
         </Link>
         <Link to="/docs/Project/overview" >
-           <Translate>Language Reference (4D Doc Center)</Translate>
+           <Translate>Project Databases</Translate>
         </Link>
       </div>
     ),
@@ -45,10 +45,10 @@ const Sections = [
     links: (
       <div className="homepageLinks">
         <Link to="/docs/FormEditor/objectLibrary" >
-          <Translate>Project Management</Translate>
+          <Translate>Form Editor</Translate>
         </Link>
         <Link to="/docs/FormObjects/formObjectsOverview" >
-          <Translate>Language Concepts</Translate>
+          <Translate>Form Objects</Translate>
       </div>
     ),
   },
