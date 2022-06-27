@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 const Sections = [
   {
     title: translate({
-      message: 'Getting started',
+      message: 'Getting Started',
       id: 'homepage.sections.getting-started.title',
     }),
     image: {
@@ -18,14 +18,12 @@ const Sections = [
         <Link to="/docs/GettingStarted/installation" >
           <Translate>Installation</Translate>
         </Link>
-        <Link to="/docs/GettingStarted/creating">
-          <Translate>Working with a project</Translate>
+        <Link to="/docs/Concepts/about">
+          <Translate>Language Concepts</Translate>
         </Link>
-       </Link>
          <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
            <Translate>Language Reference (4D Doc Center)</Translate>
          </Link>
-        </Link>
         <Link to="/docs/Project/overview" >
            <Translate>Project Databases</Translate>
         </Link>
@@ -34,7 +32,7 @@ const Sections = [
   },
   {
     title: translate({
-      message: 'Desktop applications',
+      message: 'Desktop Applications',
       id: 'homepage.sections.desktop-applications.title',
     }),
     image: {
@@ -49,12 +47,19 @@ const Sections = [
         </Link>
         <Link to="/docs/FormObjects/formObjectsOverview" >
           <Translate>Form Objects</Translate>
+          </Link>
+        <Link to="/docs/FormObjects/propertiesReference" >
+          <Translate>Form Object Properties</Translate>
+        </Link>
+        <Link to="/docs/Menus/overview" >
+          <Translate>Menus</Translate>
+        </Link>
       </div>
     ),
   },
   {
     title: translate({
-      message: 'Web applications',
+      message: 'Web Applications',
       id: 'homepage.sections.web-applications.title',
     }),
     image: {
@@ -63,14 +68,19 @@ const Sections = [
       height: 776.59,
     },
     links: (
-      <Link to="/docs/GettingStarted/installation" className="homepageLink">
-        <Translate>Installation</Translate>
+      <div className="homepageLinks">
+      <Link to="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">
+        <Translate>Web Server</Translate>
       </Link>
+      <Link to="/docs/REST/gettingStarted">
+        <Translate>REST Server</Translate>
+      </Link>
+      </div>
     ),
   },
   {
     title: translate({
-      message: 'Mobile applications',
+      message: 'Mobile Applications',
       id: 'homepage.sections.mobile-applications.title',
     }),
     image: {
@@ -79,9 +89,11 @@ const Sections = [
       height: 693.31,
     },
     links: (
-      <Link to="/docs/GettingStarted/installation" className="homepageLink">
-        <Translate>Installation</Translate>
+      <div className="homepageLinks">
+      <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
+        <Translate>4D for iOS</Translate>
       </Link>
+      </div>
     ),
   },
   {
@@ -95,9 +107,17 @@ const Sections = [
       height: 736.21,
     },
     links: (
-      <Link to="/docs/GettingStarted/installation" className="homepageLink">
-        <Translate>Installation</Translate>
+      <div className="homepageLinks">
+      <Link to="docs/MSC/overview">
+        <Translate>Maintenance and Security Center</Translate>
       </Link>
+      <Link to="docs/Backup/overview">
+        <Translate>Backup and Restore</Translate>
+      </Link>
+      <Link to="docs/Users/overview">
+        <Translate>Users and Groups</Translate>
+      </Link>
+      </div>
     ),
   },
 ];

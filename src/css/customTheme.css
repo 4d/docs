@@ -10,6 +10,17 @@
   --ifm-link-color: #1e90ff;
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.tile {
+  display: block;
+  text-align: left;
+}
+
 .homepageLinks {
   display: flex;
   flex-direction: column;
@@ -18,4 +29,11 @@
 .homepageLinks a:hover {
   color: #004289;
   text-decoration: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .tile {
+    text-align: center;
+  }
 }

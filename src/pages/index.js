@@ -48,7 +48,8 @@ function Tile({
   const { withBaseUrl } = useBaseUrlUtils();
 
   return (
-    <div className={clsx('col', className)}>
+    <div className= {clsx('col', className)} >
+      <div className="tile">
       <img
         className={styles.tilesImage}
         alt={tile.title}
@@ -58,7 +59,8 @@ function Tile({
         loading="lazy"
       />
       <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
-      <p className="padding-horiz--md">{tile.links}</p>
+      <p>{tile.links}</p>
+      </div>
     </div>
   );
 }
