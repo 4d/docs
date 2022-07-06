@@ -16,16 +16,16 @@ const Sections = [
     links: (
       <div className="homepageLinks">
         <Link to="/docs/GettingStarted/installation" >
-          <Translate>Installation</Translate>
+          <Translate>Installation and Activation</Translate>
         </Link>
         <Link to="/docs/Concepts/about">
           <Translate>Language Concepts</Translate>
         </Link>
-         <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
-           <Translate>Language Reference (4D Doc Center)</Translate>
-         </Link>
+        <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
+          <Translate>Language Reference (4D Doc Center)</Translate>
+        </Link>
         <Link to="/docs/Project/overview" >
-           <Translate>Project Databases</Translate>
+          <Translate>Project Databases</Translate>
         </Link>
       </div>
     ),
@@ -47,7 +47,7 @@ const Sections = [
         </Link>
         <Link to="/docs/FormObjects/formObjectsOverview" >
           <Translate>Form Objects</Translate>
-          </Link>
+        </Link>
         <Link to="/docs/FormObjects/propertiesReference" >
           <Translate>Form Object Properties</Translate>
         </Link>
@@ -69,12 +69,12 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-      <Link to="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">
-        <Translate>Web Server</Translate>
-      </Link>
-      <Link to="/docs/REST/gettingStarted">
-        <Translate>REST Server</Translate>
-      </Link>
+        <Link to="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">
+          <Translate>Web Server</Translate>
+        </Link>
+        <Link to="/docs/REST/gettingStarted">
+          <Translate>REST Server</Translate>
+        </Link>
       </div>
     ),
   },
@@ -90,9 +90,9 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-      <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
-        <Translate>4D for iOS</Translate>
-      </Link>
+        <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
+          <Translate>4D for iOS</Translate>
+        </Link>
       </div>
     ),
   },
@@ -108,15 +108,15 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-      <Link to="docs/MSC/overview">
-        <Translate>Maintenance and Security Center</Translate>
-      </Link>
-      <Link to="docs/Backup/overview">
-        <Translate>Backup and Restore</Translate>
-      </Link>
-      <Link to="docs/Users/overview">
-        <Translate>Users and Groups</Translate>
-      </Link>
+        <Link to="docs/MSC/overview">
+          <Translate>Maintenance and Security Center</Translate>
+        </Link>
+        <Link to="docs/Backup/overview">
+          <Translate>Backup and Restore</Translate>
+        </Link>
+        <Link to="docs/Users/overview">
+          <Translate>Users and Groups</Translate>
+        </Link>
       </div>
     ),
   },
