@@ -17,7 +17,7 @@ The form menu bar will operate for both input and output forms.
 
 #### JSON Grammar
 
-| Nome    | Data Type | Possible Values    |
-| ------- | --------- | ------------------ |
-| menuBar | string    | Name of a menu bar |
+| Nome    | Tipo de dados | Possible Values    |
+| ------- | ------------- | ------------------ |
+| menuBar | string        | Name of a menu bar |
 

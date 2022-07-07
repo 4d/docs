@@ -58,7 +58,7 @@ The Data Explorer supports the following web browsers:
 
 The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
 
-### Basics
+### Básicos
 
 The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
 

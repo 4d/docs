@@ -19,7 +19,7 @@ El modo SDI sólo está disponible en el siguiente entorno de ejecución:
 
 La activación y el uso del modo SDI en su aplicación requieren los siguientes pasos:
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
+1. Seleccione la opción **Utilizar el modo SDI en Windows** en la página "Interfaz" de la caja de diálogo de las Propiedades.
 2. Crear una aplicación fusionada (monopuesto y/o aplicación cliente).
 
 Entonces, cuando se ejecute en un contexto soportado (ver arriba), la aplicación fusionada funcionará automáticamente en modo SDI.
@@ -40,7 +40,7 @@ Así, las ventanas pueden utilizarse en los modos MDI o SDI sin tener que recalc
 
 #### Sobre la pantalla de inicio
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Tenga en cuenta también que al cerrar la ventana de la pantalla de inicio se saldrá de la aplicación, al igual que en el modo MDI.
+- Si se seleccionó la opción de interfaz **Pantalla de bienvenida** en las Propiedades, la ventana de bienvenida contendrá los menús que se habrían mostrado en la ventana MDI. Tenga en cuenta también que al cerrar la ventana de la pantalla de inicio se saldrá de la aplicación, al igual que en el modo MDI.
 - Si no se ha seleccionado la opción de pantalla de bienvenida, los menús se mostrarán sólo en las ventanas abiertas, según las elecciones del desarrollador.
 
 ### Salida automática

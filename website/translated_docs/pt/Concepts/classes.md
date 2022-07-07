@@ -71,7 +71,7 @@ You can create a new class file for the project by selecting **New > Class...** 
 
 You can also use the **Ctrl+Shift+Alt+k** shortcut.
 
-#### Explorer
+#### Explorador
 
 In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
 

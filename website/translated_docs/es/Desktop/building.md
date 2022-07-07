@@ -207,13 +207,13 @@ On this tab, you can build customized client-server applications that are homoge
 
 ![](assets/en/Project/buildappCSProj.png)
 
-### What is a Client/Server application?
+### ¿Qué es una aplicación cliente/servidor?
 
 A client/server application comes from the combination of three items:
 
 - Un proyecto 4D compilado,
 - La aplicación 4D Server,
-- The 4D Volume Desktop application (macOS and/or Windows).
+- La aplicación 4D Volumen Desktop (macOS y/o Windows).
 
 Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).
 
@@ -221,10 +221,10 @@ Once built, a client/server application is composed of two customized parts: the
 
 Also, the client/server application is customized and its handling simplified:
 
-- To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. You do not need to choose a server in a connection dialog box. El cliente se dirige al servidor usando su nombre, cuando el cliente y el servidor están en la misma subred, o utilizando su dirección IP, que se define utilizando la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, \[se pueden implementar mecanismos alternativos específicos\](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente. Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
-- A client/server application can be set so that the client portion [can be updated automatically over the network](#copy-of-client-applications-in-the-server-application). You only need to create and distribute an initial version of the client application, subsequent updates are handled using the automatic update mechanism.
-- It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D]((https://doc.4d.com/4dv19/help/command/en/page1292.html)).
+- Para lanzar la parte del servidor, el usuario simplemente hace doble clic en la aplicación servidor. No es necesario seleccionar el archivo proyecto.
+- Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. No es necesario elegir un servidor en una caja de diálogo de conexión. El cliente se dirige al servidor usando su nombre, cuando el cliente y el servidor están en la misma subred, o utilizando su dirección IP, que se define utilizando la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, \[se pueden implementar mecanismos alternativos específicos\](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente. Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
+- Una aplicación cliente/servidor puede configurarse para que la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-in-the-server-application). Sólo es necesario crear y distribuir una versión inicial de la aplicación cliente, las actualizaciones posteriores se gestionan mediante el mecanismo de actualización automática.
+- También es posible automatizar la actualización de la parte del servidor mediante el uso de una secuencia de comandos del lenguaje ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) y [RESTART 4D]((https://doc.4d.com/4dv19/help/command/en/page1292.html)).
 
 
 
@@ -325,9 +325,9 @@ The [current version number](#current_version) is set on the Client/Server page 
 
 #### En caso de error
 
-If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. The application is now going to quit.”
+If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. La aplicación va a cerrar ahora.”
 
-There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
+Hay muchas causas posibles para este error. When you get this message, it is advisable to check the following parameters first off:
 
 *   **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
 *   **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
@@ -355,7 +355,7 @@ If you checked the “Allow automatic update of client application” option, an
 If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Estos elementos son los siguientes:
 
 - archivos *cert.pem* y *key.pem* (opcional): etos archivos se utilizan para las conexiones SSL y por los comandos de encriptación de datos,
-- Default Web root folder (WebFolder).
+- Carpeta raíz web por defecto (WebFolder).
 
 Los elementos deben ser instalados:
 *   **en Windows**
@@ -367,7 +367,7 @@ Los elementos deben ser instalados:
     *   **Client application** - next to the *\<ApplicationName>Client* software package.
 
 
-### Embedding a single-user client application
+### Integrar una aplicación cliente monopuesto
 
 4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
 
@@ -382,7 +382,7 @@ El escenario básico es:
 2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
     - `DatabaseToEmbedInClientWinFolder`
     - `DatabaseToEmbedInClientMacFolder`
-3. Build the client-server application. This will have following effects:
+3. Genere la aplicación cliente-servidor. This will have following effects:
     - the whole folder of the single user application is copied inside the "Database" folder of the merged client
     - the *EnginedServer.4Dlink* file of the "Database" folder is not generated
     - the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
@@ -477,11 +477,11 @@ Once you have selected a file, the list will indicate the characteristics of the
 *   **License #** - Product license number
 *   **License** - Name of the product
 *   **Expiration date** - Expiration date of the license (if any)
-*   **Path** -  Location on disk
+*   **Ruta de acceso** - Ubicación en el disco
 
 If a license is not valid, a message will warn you.
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
+Puede designar tantos archivos válidos como desee. When building an executable application, 4D will use the most appropriate license available.
 > Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
 
 After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
@@ -573,7 +573,7 @@ Any standalone or server applications built with 4D stores the path of the last 
 The location of the application's user preferences folder corresponds to the path returned by the following statement:
 
 ```4d
-userPrefs:=Get 4D folder(Active 4D Folder)
+userPrefs:=Get 4D folder(Carpeta 4D activa)
 ```
 
 The data file path is stored in a dedicated file, named *lastDataPath.xml*.
@@ -613,12 +613,12 @@ More specifically, the following cases are covered:
 - Allowing the distribution of merged applications with read-only data (for demo applications, for instance).
 
 
-To define and use a default data file:
+Para definir y utilizar un archivo de datos por defecto:
 
 - You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the application project folder. This file must be provided along with all other necessary files, depending on the project configuration: index (.4DIndx), external Blobs, journal, etc. Es su responsabilidad proveer un archivo de datos válido por defecto. Es su responsabilidad proveer un archivo de datos válido por defecto.
 - When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
 
-The following graphic illustrates this feature:
+El siguiente gráfico ilustra esta funcionalidad:
 
 ![](assets/en/Project/DefaultData.png)
 
@@ -644,7 +644,7 @@ The connection procedure for merged client applications supports cases where the
 
 ### Storing the last server path
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. Esta carpeta se guarda en la siguiente ubicación:
 
 ```4d
 prefsUsuario:=Get 4D folder(Carpeta 4D activa)

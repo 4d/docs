@@ -169,7 +169,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 | `WEB SET OPTION`    | `Web CORS enabled`                                 | 0 (disabled, default) or 1 (enabled)                |
 | Settings dialog box | Options (II) page/Enable CORS                      | Unchecked by default                                |
 
-The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
+The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
 When disabled (default), all cross site requests sent with CORS are ignored.
 
@@ -225,7 +225,7 @@ HSTS allows the 4D web server to declare that browsers should only interact with
 | webServer object | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | number in seconds |
 | `WEB SET OPTION` | `Web HSTS max age`                               | number in seconds |
 
-Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration. Default value is 63072000 (2 years)
+Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. Esta informação é armazenada no lado do Cliente durante a duração especificada. Default value is 63072000 (2 years)
 
 > **Warning:** Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.
 
@@ -251,7 +251,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 | webServer object | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |             |
 | `WEB SET OPTION` | `Web HTTP compression threshold`                                             |             |
 
-In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
 Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
 
@@ -463,9 +463,9 @@ Name of the web server application. Useful when component web servers are starte
 
 ## OpenSSL Version
 
-| Can be set with  | Nome                                                     | Comentários |
-| ---------------- | -------------------------------------------------------- | ----------- |
-| webServer object | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Read-only   |
+| Can be set with  | Nome                                                     | Comentários     |
+| ---------------- | -------------------------------------------------------- | --------------- |
+| webServer object | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Somente leitura |
 
 Version of the OpenSSL library used.
 

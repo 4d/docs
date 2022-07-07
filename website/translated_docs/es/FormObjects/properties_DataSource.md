@@ -6,9 +6,9 @@ title: Fuente de datos
 ---
 ## Inserción automática
 
-When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
+Cuando se selecciona esta opción, si un usuario introduce un valor que no se encuentra en la lista asociada al objeto, este valor se añade automáticamente a la lista almacenada en memoria.
 
-When the **automatic insertion** option is not set (default), the value entered is stored in the form object but not in the list in memory.
+Cuando la opción **inserción automática** no está definida (por defecto), el valor introducido se almacena en el objeto formulario pero no en la lista en memoria.
 
 Esta propiedad es soportada por:
 
@@ -54,7 +54,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### Objetos soportados
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[Lista desplegable](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Lista jerárquica](list_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 
 
@@ -208,7 +208,7 @@ Debe introducir una lista de valores. In the Form editor, a specific dialog box 
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
-A 4D expression to be associated with a column. Puede introducir:
+Una expresión 4D que se asociará a una columna. Puede introducir:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
@@ -221,7 +221,7 @@ A 4D expression to be associated with a column. Puede introducir:
     *   Boolean  
       Puede utilizar campos de la tabla maestra o de otras tablas.
 
--   A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
+-   A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results.   
   The following expression types are supported:
     *   Cadena
     *   Numeric
@@ -330,7 +330,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 Especifica la selección con nombre que se utilizará. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
-> Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
+> Las selecciones con nombre son listas ordenadas de registros. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 
 #### Gramática JSON
 

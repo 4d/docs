@@ -76,7 +76,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 A 4D database exposes its own DataStore class in the `cs` class store.
 
 - **Extends**: 4D.DataStoreImplementation
-- **Class name**: cs.DataStore
+- **Nombre de clase**: cs.DataStore
 
 You can create functions in the DataStore class that will be available through the `ds` object.
 
@@ -140,7 +140,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+La clase `City` ofrece una API:
 
 ```4d  
 // cs.City class
@@ -452,7 +452,7 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
 

@@ -107,7 +107,7 @@ The Regular check box button style is a standard system check box (*i.e.*, a rec
 
 
 
-### Flat
+### Plano
 
 The Flat check box button style is a minimalist appearance. A natureza gráfica do estilo Flat é especialmente útil para os formulários que vão ser impressos.
 

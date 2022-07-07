@@ -206,8 +206,8 @@ For a class function, the `Current method name` command returns: `<ClassName>.<F
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Se soportan las siguientes sintaxis:
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method:
+- utilización del operador `()`. For example, `myObject.methodName("hello")`
+- utilización de un método miembro de la clase "4D.Function":
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
@@ -327,11 +327,11 @@ Class extends <ParentClass>
 
 The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
 
-Class extension must respect the following rules:
+La extensión de clase debe respetar las siguientes reglas:
 
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
 - A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
+- Una clase usuario no puede extenderse a sí misma.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
@@ -371,18 +371,18 @@ Class constructor ($side : Integer)
 Super {( param{;...;paramN} )} {-> Object} 
 ```
 
-| Parámetros | Tipo   |    | Descripción                                    |
-| ---------- | ------ | -- | ---------------------------------------------- |
-| param      | mixto  | -> | Parameter(s) to pass to the parent constructor |
-| Resultado  | objeto | <- | Padre del objeto                               |
+| Parámetros | Tipo   |    | Descripción                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| param      | mixto  | -> | Parámetro(s) a pasar al constructor de la clase padre |
+| Resultado  | objeto | <- | Padre del objeto                                      |
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
-`Super` serves two different purposes:
+`Super` tiene dos propósitos diferentes:
 
 1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
 
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
+- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
 
@@ -469,7 +469,7 @@ Function description()
     $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+Entonces puede escribir en un método proyecto:
 
 ```4d
 var $square : Object
@@ -531,7 +531,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Entonces puede escribir en un método proyecto:
 
 ```4d
 $o:=cs.ob.new()

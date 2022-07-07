@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Área Web
 ---
 
 ---
@@ -16,13 +16,13 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 #### JSON Grammar
 
-| Nome                 | Data Type | Possible Values         |
-| -------------------- | --------- | ----------------------- |
-| methodsAccessibility | string    | "none" (default), "all" |
+| Nome                 | Tipo de dados | Possible Values         |
+| -------------------- | ------------- | ----------------------- |
+| methodsAccessibility | string        | "none" (default), "all" |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 ---
@@ -32,13 +32,13 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### JSON Grammar
 
-| Nome           | Data Type | Possible Values            |
-| -------------- | --------- | -------------------------- |
-| progressSource | string    | Name of a Longint variable |
+| Nome           | Tipo de dados | Possible Values            |
+| -------------- | ------------- | -------------------------- |
+| progressSource | string        | Name of a Longint variable |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 
@@ -63,13 +63,13 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 #### JSON Grammar
 
-| Nome      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| urlSource | string    | A URL.          |
+| Nome      | Tipo de dados | Possible Values |
+| --------- | ------------- | --------------- |
+| urlSource | string        | A URL.          |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)
 
 
 
@@ -91,10 +91,10 @@ The Blink engine has the following limitations:
 
 #### JSON Grammar
 
-| Nome      | Data Type | Possible Values      |
-| --------- | --------- | -------------------- |
-| webEngine | string    | "embedded", "system" |
+| Nome      | Tipo de dados | Possible Values      |
+| --------- | ------------- | -------------------- |
+| webEngine | string        | "embedded", "system" |
 
 #### Objects Supported
 
-[Web Area](webArea_overview.md)
+[Área Web](webArea_overview.md)

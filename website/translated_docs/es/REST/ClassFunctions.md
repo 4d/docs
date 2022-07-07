@@ -39,10 +39,10 @@ Las funciones son llamadas en el objeto correspondiente en el almacén de datos 
 
 
 > `/rest/{dataClass}/Function` puede utilizarse para llamar a una función de dataclass o de selección de entidades (`/rest/{dataClass}` devuelve todas las entidades de la DataClass como una selección de entidades).   
-> La función se busca primero en la clase de selección de entidades. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
+> La función se busca primero en la clase de selección de entidades. Si no se encuentra, se busca en la dataclass. En otras palabras, si una función con el mismo nombre se define tanto en la clase DataClass como en la clase EntitySelection, la función de clase de DataClass nunca se ejecutará.
 
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> Todo el código 4D llamado desde las peticiones REST **debe ser hilo seguro** si el proyecto se ejecuta en modo compilado, porque el Servidor REST siempre utiliza procesos apropiativos en este caso (el valor de la propiedad [*Utilizar proceso apropiativo*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) es ignorado por el Servidor REST).
 
 
 ## Parámetros
@@ -67,14 +67,14 @@ El(los) parámetros deben estar simplemente incluirse en una colección definida
 
 **Parámetros en el cuerpo:** ["Aguada","Paris"]
 
-All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
+Todos los tipos de datos JSON son soportados en los parámetros, incluidos los punteros JSON. Las fechas se pueden pasar como cadenas en formato de fecha ISO 8601 (por ejemplo, "2020-08-22T22:00:000Z").
 
 
 ### Parámetro de entidad
 
-Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
+Las entidades pasadas en los parámetros son referenciadas en el servidor a través de su llave (*es decir,* propiedad __KEY). Si el parámetro llave se omite en una petición, una nueva entidad se carga en memoria del servidor. También puede pasar valores para todos los atributos de la entidad. Estos valores se utilizarán automáticamente para la entidad manejada en el servidor.
 
-> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
+> Si la petición envía los valores de atributo modificados para una entidad existente en el servidor, la función de modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con los valores modificados. Esta funcionalidad le permite, por ejemplo, verificar el resultado de una operación en una entidad, tras aplicar todas las reglas de negocio, desde la aplicación cliente. A continuación, puede decidir guardar o no la entidad en el servidor.
 
 
 | Propiedades             | Tipo                                     | Descripción                                                                 |
@@ -84,14 +84,14 @@ Entities passed in parameters are referenced on the server through their key (*i
 | __ENTITY                | Booleano                                 | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY                   | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
-- If __KEY is not provided, a new entity is created on the server with the given attributes.
-- If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
+- Si no se proporciona __KEY, se crea una nueva entidad en el servidor con los atributos dados.
+- Si se proporciona __KEY, la entidad correspondiente a __KEY se carga en el servidor con los atributos dados
 
 Ver los ejemplos de [creación](#creating-an-entity) o de [actualización](#updating-an-entity) de las entidades.
 
 #### Parámetro de entidad asociado
 
-Same properties as for an [entity parameter](#entity-parameter). In addition, the related entity must exist and is referenced by __KEY containing its primary key.
+Las mismas propiedades que para un [parámetro de entidad](#entity-parameter). Además, la entidad relacionada debe existir y ser referenciada por __KEY, que contiene su llave primaria.
 
 Ver los ejemplos para [creación](#creating-an-entity-with-a-related-entity) o [actualización](#updating-an-entity-with-a-related-entity) de las entidades con las entidades relacionadas.
 

@@ -34,11 +34,11 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 ## SMTP New transporter
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                               |
-| ------- | -------------------------------------------- |
-| v18     | Nueva propiedad logFile                      |
-| v17 R5  | New bodyCharset and headerCharset properties |
-| v17 R4  | Añadidos                                     |
+| Versión | Modificaciones                                 |
+| ------- | ---------------------------------------------- |
+| v18     | Nueva propiedad logFile                        |
+| v17 R5  | Nuevas propiedades bodyCharset y headerCharset |
+| v17 R4  | Añadidos                                       |
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->

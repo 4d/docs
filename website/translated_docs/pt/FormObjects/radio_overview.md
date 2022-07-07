@@ -47,7 +47,7 @@ The Regular radio button style is a standard system button (*i.e.*, a small bull
 In addition to initiating code execution, the Regular radio button style changes bullsey color when being hovered.
 
 
-### Flat
+### Plano
 
 The Flat radio button style is a standard system button (*i.e.*, a small bullseye with text) which executes code when a user clicks on it.
 

@@ -1205,7 +1205,7 @@ In this example, we want to find the lowest salary among all the female employee
 </details>
 
 
-<!-- REF #EntitySelectionClass.minus().Syntax --> **.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.minus().Syntax --> **.minus**( *entity* : 4D. Entity ) : 4D. EntitySelection<br>**.minus**( *entitySelection* : 4D. EntitySelection ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
@@ -1219,7 +1219,7 @@ In this example, we want to find the lowest salary among all the female employee
 
 #### Descrição
 
-The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
+The `.slice()` function <!-- REF #EntitySelectionClass.slice(). Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection.
 
 *   If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
 *   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
@@ -1271,7 +1271,7 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 </details>
 
 
-<!-- REF #EntitySelectionClass.or().Syntax --> **.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.or().Syntax --> **.or**( *entity* : 4D. Entity ) : 4D. EntitySelection<br>**.or**( *entitySelection* : 4D. EntitySelection ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
@@ -1409,7 +1409,7 @@ You can add as many objects in the criteria collection as necessary.
 </details>
 
 
-<!-- REF #EntitySelectionClass.orderByFormula().Syntax --> **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.orderByFormula().Syntax --> **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D. EntitySelection<br>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
@@ -1425,7 +1425,7 @@ You can add as many objects in the criteria collection as necessary.
 
 #### Descrição
 
-The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
+The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula(). Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
 > Esta função não modifica a entity selection original.
 
 You can use either a *formulaString* or a *formulaObj* parameter:
@@ -1547,7 +1547,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 #### Descrição
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+The `.query()` function <!-- REF #EntitySelectionClass.query(). Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 > Esta função não modifica a entity selection original.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
@@ -1591,7 +1591,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 #### Descrição
 
-The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A função `.extract()` <!-- REF #EntitySelectionClass.extract(). Summary -->retorna una coleção que contenha os valores de *attributePath* extraídos da entity selection<!-- END REF -->.
 
 For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
@@ -1613,7 +1613,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 #### Descrição
 
-The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan. Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
 For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
@@ -1643,7 +1643,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 #### Descrição
 > This function only works with a remote datastore (client / server or `Open datastore` connection).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh(). Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
@@ -1710,7 +1710,7 @@ A list box displays the Form.students entity selection and several clients work 
 </details>
 
 
-<!-- REF #EntitySelectionClass.slice().Syntax --> **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.slice().Syntax --> **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.slice().Params -->
@@ -1724,7 +1724,7 @@ A list box displays the Form.students entity selection and several clients work 
 
 #### Descrição
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
+A função `.copy()` <!-- REF #EntitySelectionClass.copy(). Summary --> devolve uma cópia da entity selection original<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
@@ -1749,7 +1749,7 @@ $sliced:=$sel.slice(0;9) //
 
 #### Exemplo 2
 
-Assuming we have ds.Employee.all().length = 10
+Assuming we have ds. Employee.all().length = 10
 
 ```4d
 var $slice : cs. EmployeeSelection
@@ -1786,7 +1786,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 #### Descrição
 
 
-The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+The `.sum()` function <!-- REF #EntitySelectionClass.sum(). Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
 
 `.sum()` returns 0 if the entity selection is empty.
 
@@ -1841,7 +1841,7 @@ $sum:=$sel.sum("salary")
 
 #### Descrição
 
-The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
+The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection(). Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
 
 If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Attributes with [kind](DataClassAttributeClass.md#kind) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with kind property as "relatedEntities" are not extracted.
 

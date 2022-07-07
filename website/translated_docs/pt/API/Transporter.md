@@ -1,6 +1,6 @@
 ---
 id: Transporter
-title: Transporter Class
+title: Classe Transporter
 ---
 
 ## Descrição
@@ -20,23 +20,23 @@ title: Transporter Class
 
 #### Descrição
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection. Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+A propriedade `.acceptUnsecureConnection` contém <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** se 4D tiver a permissão de estabelecer uma conexão não criptografada<!-- END REF --> quando a conexão cifrada não for possível.
 
-It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
+Contém **False** se conexões cifradas não forem permitidas, neste caso um erro é retornado quando a conexão criptografada não for possível.
 
-Available secured ports are:
+Estão disponíveis portos seguros:
 
 - SMTP
     - 465: SMTPS
-    - 587 or 25: SMTP with STARTTLS upgrade if supported by the server.
+    - 587 ou 25: SMTP com atualização STARTTLS se for compat[ivel com o servidor.
 
 - IMAP
     - 143: IMAP non-encrypted port
-    - 993: IMAP with STARTTLS upgrade if supported by the server
+    - 993: IMAP com atualização STARTTLS se for compatível com o servidor
 
 - POP3
-    - 110: POP3 non-encrypted port
-    - 995: POP3 with STARTTLS upgrade if supported by the server.
+    - 110: Porta não criptografada POP3
+    - 995: POP3 com atualização STARTTLS se suportado pelo servidor.
 <!-- END REF -->
 
 ---
@@ -56,18 +56,18 @@ Available secured ports are:
 
 #### Descrição
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode. Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+A propriedade `.authenticationMode` contém <!-- REF #transporter.authenticationMode.Summary -->o modo de autenticação usado para abrir a sessão no servidor de correio <!-- END REF -->.
 
-By default, the most secured mode supported by the server is used.
+Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
-Possible values are:
+Valores possíveis:
 
-| Value    | Constantes                     | Comentário                             |
-| -------- | ------------------------------ | -------------------------------------- |
-| CRAM-MD5 | `IMAP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
-| LOGIN    | `IMAP authentication login`    | Authentication using LOGIN protocol    |
-| OAUTH2   | `IMAP authentication OAUTH2`   | Authentication using OAuth2 protocol   |
-| PLAIN    | `IMAP authentication plain`    | Authentication using PLAIN protocol    |
+| Value    | Constantes                     | Comentário                               |
+| -------- | ------------------------------ | ---------------------------------------- |
+| CRAM-MD5 | `IMAP authentication CRAM MD5` | Autenticação usando o protocolo CRAM-MD5 |
+| LOGIN    | `Autenticação do login/acesso` | Autenticação usando o protocolo LOGIN    |
+| OAUTH2   | `Autenticação IMAP OAUTH2`     | Autenticação usando o protocolo OAuth2   |
+| PLAIN    | `IMAP authentication plain`    | Autenticação usando o protocolo PLAIN    |
 
 
 <!-- END REF -->
@@ -85,23 +85,23 @@ Possible values are:
 </details>
 
 
-**.authenticationMode** : Text
+**.authenticationMode** : Texto
 
 #### Descrição
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+A propriedade `.authenticationMode` contém o modo de autenticação utilizado para abrir a sessão no servidor de correio.
 
-By default, the most secured mode supported by the server is used.
+Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
-Possible values are:
+Valores possíveis:
 
-| Value    | Constantes                     | Comentário                                     |
-| -------- | ------------------------------ | ---------------------------------------------- |
-| APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
-| CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentication using CRAM-MD5 protocol         |
-| LOGIN    | `POP3 authentication login`    | Authentication using LOGIN protocol            |
-| OAUTH2   | `POP3 authentication OAUTH2`   | Authentication using OAuth2 protocol           |
-| PLAIN    | `POP3 authentication plain`    | Authentication using PLAIN protocol            |
+| Valor    | Constantes                   | Comentário                                         |
+| -------- | ---------------------------- | -------------------------------------------------- |
+| APOP     | `Autenticação POP3 APOP`     | Autenticação usando o protocolo APOP (POP3 apenas) |
+| CRAM-MD5 | `Autenticação POP3 CRAM-MD5` | Autenticação usando o protocolo CRAM-MD5           |
+| LOGIN    | `POP3 authentication login`  | Autenticação usando o protocolo LOGIN              |
+| OAUTH2   | `POP3 authentication OAUTH2` | Autenticação usando o protocolo OAuth2             |
+| PLAIN    | `Autenticação POP3 simples`  | Autenticação usando protocolo PLAIN                |
 
 
 <!-- END REF -->
@@ -123,18 +123,18 @@ Possible values are:
 
 #### Descrição
 
-The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
+A propriedade `.authenticationMode` contém o modo de autenticação utilizado para abrir a sessão no servidor de correio.
 
-By default, the most secured mode supported by the server is used.
+Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
-Possible values are:
+Valores possíveis:
 
-| Value    | Constantes                     | Comentário                             |
-| -------- | ------------------------------ | -------------------------------------- |
-| CRAM-MD5 | `SMTP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
-| LOGIN    | `SMTP authentication login`    | Authentication using LOGIN protocol    |
-| OAUTH2   | `SMTP authentication OAUTH2`   | Authentication using OAuth2 protocol   |
-| PLAIN    | `SMTP authentication plain`    | Authentication using PLAIN protocol    |
+| Value    | Constantes                     | Comentário                               |
+| -------- | ------------------------------ | ---------------------------------------- |
+| CRAM-MD5 | `SMTP authentication CRAM MD5` | Autenticação usando o protocolo CRAM-MD5 |
+| LOGIN    | `SMTP authentication login`    | Autenticação usando o protocolo LOGIN    |
+| OAUTH2   | `SMTP authentication OAUTH2`   | Autenticação usando o protocolo OAuth2   |
+| PLAIN    | `SMTP authentication plain`    | Autenticação usando o protocolo PLAIN    |
 
 
 <!-- END REF -->
@@ -143,10 +143,10 @@ Possible values are:
 ## .bodyCharset
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                |
-| ------ | ----------------------- |
-| v18    | Support for UTF8 base64 |
-| v17 R5 | Adicionado              |
+| Versão | Mudanças               |
+| ------ | ---------------------- |
+| v18    | Suporte de UTF8 base64 |
+| v17 R5 | Adicionado             |
 </details>
 
 
@@ -155,20 +155,20 @@ Possible values are:
 
 #### Descrição
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset. Summary --> the charset and encoding used for the email header<!-- END REF -->.
+A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -->  o conjunto de caracteres e a codificação utilizados para a parte do corpo do correio eletrônico<!-- END REF -->.
 
 *   subject,
-*   attachment filename(s),
+*   nome(s) de arquivo anexo,
 *   email name.
 
-**Possible values:**
+**Valores possíveis:**
 
-| Constante                | Value                          | Comentário                                                                                                    |
-| ------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                     |
-| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                     |
-| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**) |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64                               |
+| Constante                      | Valor                          | Comentário                                                                                                             |
+| ------------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| mail mode ISO2022JP            | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII se for possível, japonês (ISO-2022-JP) & Quoted-printable se for possível, do contrário UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII se possível, japonês (ISO-2022-JP) e 7 bits se for possível, do contrário UTF-8 & Quoted-printable</li></ul>                                                                                              |
+| mail mode ISO88591             | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                              |
+| mail mode UTF8                 | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: US-ASCII se possível, caso contrário UTF-8 & Quoted-printable (**valor por defeito**) |
+| modo de correio UTF8 na base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII se possível, senão UTF-8 & base64                                            |
 
 
 <!-- END REF -->

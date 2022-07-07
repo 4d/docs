@@ -546,7 +546,7 @@ title: 表示
 
 ![](assets/en/FormObjects/select-row.png)
 
-オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
+オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。 つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
 
 
 #### JSON 文法

@@ -412,31 +412,31 @@
         "title": "Imagens"
       },
       "FormEditor/action": {
-        "title": "Action"
+        "title": "Ação"
       },
       "FormEditor/propertiesForm": {
         "title": "Form Properties"
       },
       "FormEditor/formSize": {
-        "title": "Form Size"
+        "title": "Tamanho formulário"
       },
       "FormEditor/jsonReference": {
         "title": "JSON property list"
       },
       "FormEditor/markers": {
-        "title": "Markers"
+        "title": "Marcadores"
       },
       "FormEditor/menu": {
         "title": "Menú"
       },
       "FormEditor/print": {
-        "title": "Print"
+        "title": "Imprimir"
       },
       "FormEditor/windowSize": {
         "title": "Window Size"
       },
       "FormObjects/buttonOverview": {
-        "title": "Button"
+        "title": "Botão"
       },
       "FormObjects/buttonGridOverview": {
         "title": "Button Grid"
@@ -454,7 +454,7 @@
         "title": "About 4D Form Objects"
       },
       "FormObjects/groupBox": {
-        "title": "Group Box"
+        "title": "Área de grupo"
       },
       "FormObjects/inputOverview": {
         "title": "Entrada"
@@ -478,13 +478,13 @@
         "title": "Progress Indicator"
       },
       "FormObjects/propertiesAction": {
-        "title": "Action"
+        "title": "Ação"
       },
       "FormObjects/propertiesAnimation": {
-        "title": "Animation"
+        "title": "Animação"
       },
       "FormObjects/propertiesAppearance": {
-        "title": "Appearance"
+        "title": "Aparência"
       },
       "FormObjects/propertiesBackgroundAndBorder": {
         "title": "Background and Border"
@@ -499,10 +499,10 @@
         "title": "Fonte de dados"
       },
       "FormObjects/propertiesDisplay": {
-        "title": "Display"
+        "title": "Visualização"
       },
       "FormObjects/propertiesEntry": {
-        "title": "Entry"
+        "title": "Entrada"
       },
       "FormObjects/propertiesFooters": {
         "title": "Footers"
@@ -514,7 +514,7 @@
         "title": "Cabeçalhos"
       },
       "FormObjects/propertiesHelp": {
-        "title": "Help"
+        "title": "Ajuda"
       },
       "FormObjects/propertiesHierarchy": {
         "title": "Hierarchy"
@@ -532,7 +532,7 @@
         "title": "Plug-ins"
       },
       "FormObjects/propertiesPrint": {
-        "title": "Print"
+        "title": "Imprimir"
       },
       "FormObjects/propertiesRangeOfValues": {
         "title": "Range of Values"
@@ -544,7 +544,7 @@
         "title": "Resizing Options"
       },
       "FormObjects/propertiesScale": {
-        "title": "Scale"
+        "title": "Escala"
       },
       "FormObjects/propertiesSubform": {
         "title": "Subform"
@@ -556,7 +556,7 @@
         "title": "Text and Picture"
       },
       "FormObjects/propertiesWebArea": {
-        "title": "Web Area"
+        "title": "Área Web"
       },
       "FormObjects/radiobuttonOverview": {
         "title": "Radio Button"
@@ -565,13 +565,13 @@
         "title": "Ruler"
       },
       "FormObjects/shapesOverview": {
-        "title": "Shapes"
+        "title": "Formas"
       },
       "FormObjects/spinner": {
         "title": "Spinner"
       },
       "FormObjects/splitters": {
-        "title": "Splitter"
+        "title": "Separador"
       },
       "FormObjects/staticPicture": {
         "title": "Static picture"
@@ -592,7 +592,7 @@
         "title": "Área 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
-        "title": "Web Area"
+        "title": "Área Web"
       },
       "FormObjects/writeProArea_overview": {
         "title": "4D Write Pro area"
@@ -872,7 +872,7 @@
       "Preferences": "Preferences",
       "Administration": "Administration",
       "Access Rights": "Access Rights",
-      "MSC": "MSC",
+      "MSC": "CSM",
       "Backup and Restore": "Backup and Restore",
       "Web Server": "Web Server",
       "Web Development": "Web Development",

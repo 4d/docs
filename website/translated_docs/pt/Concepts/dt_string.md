@@ -15,7 +15,7 @@ A string literal is enclosed in double, straight quotation marks ("..."). Here a
 ```4d
 "Add Records"
 "No records found."
-"Invoice"
+"Fatura "
 ```
 
 An empty string is specified by two quotation marks with nothing between them ("").
@@ -35,17 +35,17 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Sintaxe          | Returns  | Expressão               | Value    |
+| Operação                 | Sintaxe          | Retorna  | Expressão               | Value    |
 | ------------------------ | ---------------- | -------- | ----------------------- | -------- |
 | Concatenation            | String + String  | String   | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String   | "ab" * 3                | "ababab" |
+| Repetição                | String * Number  | String   | "ab" * 3                | "ababab" |
 | Igual                    | String = String  | Booleano | "abc" = "abc"           | True     |
 |                          |                  |          | "abc" = "abd"           | False    |
 | Desigualdade             | String # String  | Booleano | "abc" # "abd"           | True     |
 |                          |                  |          | "abc" # "abc"           | False    |
 | Greater than             | String > String  | Booleano | "abd" > "abc"           | True     |
 |                          |                  |          | "abc" > "abc"           | False    |
-| Less than                | String < String  | Booleano | "abc" < "abd"           | True     |
+| Menor que                | String < String  | Booleano | "abc" < "abd"           | True     |
 |                          |                  |          | "abc" < "abc"           | False    |
 | Greater than or equal to | String >= String | Booleano | "abd" >= "abc"          | True     |
 |                          |                  |          | "abc" >= "abd"          | False    |

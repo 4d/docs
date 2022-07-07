@@ -26,7 +26,7 @@ Execute the method -- it simply calls the debugger window. In the Expression are
 It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:
 
 ```code4d
-ds.Company.city //returns the name of the city
+ds.Company.city // devuelve el nombre de la ciudad
 ```
 
 > In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
@@ -40,7 +40,7 @@ You have also noticed the extra `hires` property in the ds.Company dataclass. It
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 
 ```code4d
-ds.Company.hires //returns the list of employees
+ds.Company.hires //devuelve la lista de empleados
 ```
 
 Pero no vaya tan rápido. Let's see now how to record data in ORDA dataclasses.
@@ -65,7 +65,7 @@ $entity.city:="London"
 //$entity.ID se llena automáticamente
 ```
 
-Right now, the entity only exists in memory. To store it in the data file, you need to save it using the `save()` member method:
+Por el momento, la entidad sólo existe en la memoria. To store it in the data file, you need to save it using the `save()` member method:
 
 ```code4d
 $status:=$entity.save()
@@ -143,12 +143,12 @@ Para crear un grupo:
 
 4D adds a new group to the list, named "New groupX" by default.
 
-3. Introduzca el nombre del nuevo grupo. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Introduzca el nombre del nuevo grupo. El nombre del grupo puede tener hasta 15 caracteres. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 
-### Placing users or groups into groups
+### Colocar los usuarios o los grupos en grupos
 
-You can place any user or group into a group, and you can also place the group itself into several other groups. It is not mandatory to place a user in a group.
+You can place any user or group into a group, and you can also place the group itself into several other groups. No es obligatorio colocar a un usuario en un grupo.
 
 To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
 
@@ -160,7 +160,7 @@ Placing groups into other groups lets you create a user hierarchy. The users of 
 
 To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
 
-### Assigning a group to a plug-in or to a server
+### Asignar un grupo a un plug-in o a un servidor
 
 You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins.
 

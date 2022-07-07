@@ -26,7 +26,7 @@ Por defecto, el archivo de datos original se duplicará antes de la operación d
 
 Se debe elegir la reparación estándar cuando sólo están dañados unos pocos registros o índices (las tablas de direcciones están intactas). Los datos se compactan y se reparan. Este tipo de reparación sólo puede realizarse cuando los datos y el archivo de estructura coinciden.
 
-Una vez finalizado el procedimiento de reparación, aparece la página "Reparación" del CSM. Un mensaje indica si la reparación fue exitosa. If so, you can open the application immediately. ![](assets/en/MSC/MSC_RepairOK.png)
+Una vez finalizado el procedimiento de reparación, aparece la página "Reparación" del CSM. Un mensaje indica si la reparación fue exitosa. Si es así, puede abrir la aplicación inmediatamente. ![](assets/en/MSC/MSC_RepairOK.png)
 
 ## Reparación por encabezados de registros
 Utilice esta opción de reparación de bajo nivel sólo cuando el archivo de datos esté gravemente dañado y después de que todas las demás soluciones (restitución desde una copia de seguridad, reparación estándar) hayan resultado ineficaces.
