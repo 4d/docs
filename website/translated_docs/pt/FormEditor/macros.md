@@ -109,12 +109,12 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-| Attribute |                     |                          | Type   | Descrição                                              |
-| --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
-| macros    |                     |                          | object | list of defined macros                                 |
-|           | `<macroName>` |                          | object | macro definition                                       |
-|           |                     | class                    | string | macro class name                                       |
-|           |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
+| Atributo |                     |                          | Type   | Descrição                                              |
+| -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
+| macros   |                     |                          | object | list of defined macros                                 |
+|          | `<macroName>` |                          | object | macro definition                                       |
+|          |                     | class                    | string | macro class name                                       |
+|          |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 

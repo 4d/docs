@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Debugger
+title: Depurador
 ---
 
 The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
@@ -158,7 +158,7 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtheme     | Descrição                                                    | Can the values be modified? |
+| Subtema      | Descrição                                                    | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
 | Interprocess | List of interprocess variables being used at this point      | Sim                         |
 | Processo     | List of process variables used by the current process        | Sim                         |
@@ -275,7 +275,7 @@ You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/p
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
 * campo
-* variable
+* variável
 * pointer
 * calculation
 * 4D command
@@ -330,7 +330,7 @@ The Source Code Pane shows the source code of the method or function currently b
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
 
-### Tool tip
+### Tips
 
 Hover your pointer over any expression to display a tool tip that indicates:
 

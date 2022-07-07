@@ -256,7 +256,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
     $result:=$x+$y
 ```
 
-You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). Por ejemplo:
+También puede declarar el parámetro de retorno añadiendo sólo`: type` y utilizar la expresión [`retorno`](parameters.md#return-expression) (también terminará la ejecución de la función). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -291,7 +291,7 @@ $area:=$rect.getArea() //5000
 
 #### Ejemplo 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Este ejemplo utiliza la [`expresión retorno`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -319,32 +319,32 @@ Function set <name>($parameterName : type)
 // código
 ```
 
-`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+`Function get` y `Function set` son accesos que definen las **propiedades calculadas** en la clase. Una propiedad calculada es una propiedad nombradas con un tipo de datos que enmascara un cálculo. Cuando se accede a un valor de propiedad calculado, 4D sustituye el código del accesor correspondiente:
 
-- when the property is read, the `Function get` is executed,
-- when the property is written, the `Function set` is executed.
+- cuando se lee la propiedad, `Function get` se ejecuta,
+- cuando se escribe la propiedad, `Function get` se ejecuta.
 
-If the property is not accessed, the code never executes.
+Si no se accede a la propiedad, el código nunca se ejecuta.
 
-Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
-
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
+Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
 In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
 
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
 
-`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
-When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
+`Función get` devuelve un valor del tipo de la propiedad y `Function set` toma un parámetro del tipo de la propiedad. Ambos argumentos deben cumplir con los [parámetros de función](#parameters) estándar.
+
+Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
 
 The type of the computed property is defined by the `$return` type declaration of the *getter*.
 
 The type of the computed property is defined by the `$return` type declaration of the *getter*.
 
-The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md).
+El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del *getter *. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
-> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+> Asignar *undefined* a una propiedad de objeto limpia su valor mientras se preserva su tipo. Para ello, la `Function get` es llamada primero para recuperar el tipo de valor, luego `Function set` es llamado con un valor vacío de ese tipo.
 
 #### Ejemplo 1
 
@@ -396,11 +396,11 @@ Class Constructor({$parameterName : type; ...})
 // code
 ```
 
-A class constructor function, which can accept [parameters](#parameters), can be used to define a user class.
+Una función class constructor, que puede aceptar los [parámetros](#parameters), puede ser utilizada para definir una clase usuario.
 
-In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
+En ese caso, cuando se llama a la función [`new()`](API/ClassClass.md#new), el class constructor es llamado con los parámetros opcionalmente pasados a la función `new()`.
 
-For a class constructor function, the `Current method name` command returns: `<ClassName>:constructor`, for example "MyClass:constructor".
+Para una función class constructor, el comando `Current method name` devuelve: `<ClassName>:constructor`, por ejemplo "MyClass:constructor".
 
 
 
@@ -433,37 +433,37 @@ $o:=cs.MyClass.new("HelloWorld")
 Class extends <ParentClass>
 ```
 
-The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
+La palabra clave `Class extends` se utiliza en la declaración de clase para crear una clase usuario que es hijo de otra clase usuario. La clase hijo hereda todas las funciones de la clase padre.
 
-Class extension must respect the following rules:
+La extensión de clase debe respetar las siguientes reglas:
 
-- A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
-- A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
-- It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- Una clase usuario no puede extender una clase integrada (excepto 4D.Object que se extiende por defecto para las clases usuario)
+- Una clase usuario no puede extender una clase usuario de otro proyecto o componente.
+- Una clase usuario no puede extenderse a sí misma.
+- No es posible extender las clases de una manera circular (es decir, "a" extiende "b" que extiende "a").
 
-Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
+La ruptura de tal regla no es detectada por el editor de código o el intérprete, solo el compilador y `comprobar sintaxis` arrojará un error en este caso.
 
-An extended class can call the constructor of its parent class using the [`Super`](#super) command.
+Una clase extendida puede llamar al constructor de su clase padre utilizando el comando [`Super`](#super).
 
 #### Ejemplo
 
-This example creates a class called `Square` from a class called `Polygon`.
+Este ejemplo crea una clase llamada `Square` de una clase llamada `Polygon`.
 
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm 
+//path: Clases/Square. dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
-    // It calls the parent class's constructor with lengths
-    // provided for the Polygon's width and height
+    // Llama al constructor de la clase padre con las longitudes
+    // proporcionados para el ancho y alto del polígono
     Super($side;$side)
-    // In derived classes, Super must be called before you
-    // can use 'This'
+    // En las clases derivadas, Super debe ser llamado antes de 
+    // utilizar 'This'
     This.name:="Square"
 
 
@@ -486,33 +486,33 @@ Super {( param{;...;paramN} )} {-> Object}
 | param      | mixto  | -> | Parámetro(s) a pasar al constructor de la clase padre |
 | Resultado  | objeto | <- | Padre del objeto                                      |
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+La palabra clave `Super` permite llamadas a la `superclass`, es decir, a la clase padre.
 
-`Super` serves two different purposes:
+`Super` tiene dos propósitos diferentes:
 
-1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
+1. Dentro de un [código de constructor](#class-constructor), `Super` es un comando que permite llamar al constructor de la superclase. Cuando se utiliza en un constructor, el comando `Super` aparece solo y debe ser usado antes de usar la palabra clave `This`.
 
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
-- If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
-- If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
+- Si todos los constructores de clases en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que todas las llamadas son válidas.
+- Si el comando `This` es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.
+- Si se llama a `Super` fuera de un contexto de objeto, o en un objeto cuyo constructor de superclase ya ha sido llamado, se genera el error -10746.
 
 ```4d
-// inside myClass constructor
-var $text1; $text2 : Text
-Super($text1) //calls superclass constructor with a text param
-This.param:=$text2 // use second param
+// dentro del constructor myClass
+var $text1; $text2 : Texto
+Super($text1) //llamada del constructor de la superclase con un parámetro texto
+Este. aram:=$text2 // usar un segundo parámetro
 ```
 
-2. Inside a [class member function](#class-function), `Super` designates the prototype of the superclass and allows to call a function of the superclass hierarchy.
+2. Dentro de una [función de clase](#class-function), `Super` designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.
 
 ```4d
-Super.doSomething(42) //calls "doSomething" function  
-//declared in superclasses
+Super.doSomething(42) //llama a la función "doSomething"  
+//declarada en superclases
 ```
 
 #### Ejemplo 1
 
-This example illustrates the use of `Super` in a class constructor. The command is called to avoid duplicating the constructor parts that are common between `Rectangle` and `Square` classes.
+Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
 // Class: Rectangle
@@ -544,12 +544,12 @@ Class extends Rectangle
 
 Class constructor ($side : Integer)
 
-    // It calls the parent class's constructor with lengths
-    // provided for the Rectangle's width and height
+    // Llama al class constructor de la clase padre con longitudes
+    // proporcionados para el ancho y alto del rectángulo
     Super($side;$side)
-    // In derived classes, Super must be called before you
-    // can use 'This'
-    This.name:="Square"
+    // En las clases derivadas, Super debe ser llamado antes de que 
+    // pueda utilizar 'This'
+    This. ame:="Square"
 
 Function getArea()
     C_LONGINT($0)
@@ -558,7 +558,7 @@ Function getArea()
 
 #### Ejemplo 2
 
-This example illustrates the use of `Super` in a class member method. You created the `Rectangle` class with a function:
+Este ejemplo ilustra el uso de `Super` en un método miembro clase. Ha creado la clase `Rectangle` con una función:
 
 ```4d
 //Class: Rectangle
@@ -569,7 +569,7 @@ Function nbSides()
 ```
 
 
-You also created the `Square` class with a function calling the superclass function:
+También creó la clase `Square` con una función que llama a la función superclase:
 
 ```4d
 //Class: Square
@@ -581,13 +581,13 @@ Function description()
     $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+Entonces puede escribir en un método proyecto:
 
 ```4d
-var $square : Object
-var $message : Text
+var $square : Objeto
+var $message : Texto
 $square:=cs.Square.new()
-$message:=$square.description() //I have 4 sides which are all equal
+$message:=$square.description() //tengo 4 lados iguales
 ```
 
 ### `This`
@@ -602,26 +602,26 @@ This -> Object
 | ---------- | ------ | -- | ------------- |
 | Resultado  | objeto | <- | Objeto actual |
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
+La palabra clave `This` devuelve una referencia al objeto procesado actualmente. En 4D, se puede utilizar en [contextos diferentes](https://doc.4d.com/4Dv19/help/command/page1470.html).
 
-In most cases, the value of `This` is determined by how a function is called. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
+En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. Por ejemplo:
+Cuando una fórmula es llamada como un método miembro de un objeto, su `This` está definido en el objeto en el que se llama el método. Por ejemplo:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
 $val:=$o.f() //42
 ```
 
-When a [class constructor](#class-constructor) function is used (with the [`new()`](API/ClassClass.md#new) function), its `This` is bound to the new object being constructed.
+Cuando se utiliza una función [class constructor](#class-constructor) (con la función [`new()`](API/ClassClass.md#new)), su `This` está vinculado al nuevo objeto que se está construyendo.
 
 ```4d
 //Class: ob
 
 Class Constructor  
 
-    // Create properties on This as
-    // desired by assigning to them
+    // Crear las propiedades en This 
+    // asignándolas
     This.a:=42 
 ```
 
@@ -631,10 +631,10 @@ $o:=cs.ob.new()
 $val:=$o.a //42
 ```
 
-> When calling the superclass constructor in a constructor using the [Super](#super) keyword, keep in mind that `This` must not be called before the superclass constructor, otherwise an error is generated. Ver [este ejemplo](#example-1).
+> Al llamar a la superclase del constructor en un constructor utilizando la palabra clave [Super](#super), tenga en cuenta que `This` no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver [este ejemplo](#example-1).
 
 
-In any cases, `This` refers to the object the method was called on, as if the method were on the object.
+En todos los casos, `This` se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.
 
 ```4d
 //Class: ob
@@ -643,7 +643,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Entonces puede escribir en un método proyecto:
 
 ```4d
 $o:=cs.ob.new()
@@ -653,7 +653,7 @@ $val:=$o.f() //8
 
 ```
 
-In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad *f*, la hereda de su clase. Como *f* es llamado como un método de $o, su `This` se refiere a $o.
 
 
 ## Comandos de clases

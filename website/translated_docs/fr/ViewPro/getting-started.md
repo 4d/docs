@@ -4,7 +4,7 @@ title: Prise en main
 ---
 
 
-4D View Pro est un [composant 4D](Concepts/components.md) qui comprend une [zone de formulaire 4D](FormObjects/viewProArea_overview.md) et des [méthodes](method-list.md) spécifiques. Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
 
 
 ![](assets/en/ViewPro/vpSpreadsheet.png)

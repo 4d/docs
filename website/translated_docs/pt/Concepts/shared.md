@@ -48,7 +48,7 @@ Please refer to example 2 for an illustration of shared group rules.
 
 **Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
 
-### Read
+### Leitura
 
 Reading properties or elements of a shared object/collection is allowed without having to call the `Use... End use` structure, even if the shared object/collection is in use by another process.
 

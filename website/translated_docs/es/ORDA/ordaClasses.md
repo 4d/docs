@@ -78,7 +78,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 A 4D database exposes its own DataStore class in the `cs` class store.
 
 - **Extends**: 4D.DataStoreImplementation
-- **Class name**: cs.DataStore
+- **Nombre de clase**: cs.DataStore
 
 You can create functions in the DataStore class that will be available through the `ds` object.
 
@@ -149,7 +149,7 @@ The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+La clase `City` ofrece una API:
 
 ```4d  
 // cs.City class
@@ -338,14 +338,14 @@ The *getter* function is mandatory to declare the *attributeName* computed attri
 
 > A computed attribute can use the value of other computed attribute(s). Las llamadas recursivas generan errores.
 
-The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. The following resulting types are allowed:
+The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. Se permiten los siguientes tipos resultantes:
 
 - Scalar (text, boolean, date, time, number)
 - Objeto
 - Imagen
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- Entity selection (p.e. cs.EmployeeeSelection)
 
 The *$event* parameter contains the following properties:
 
@@ -359,7 +359,7 @@ The *$event* parameter contains the following properties:
 
 #### Ejemplos
 
-- *fullName* computed attribute:
+- El campo calculado *fullName*:
 
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
@@ -411,12 +411,12 @@ The *$value* parameter receives the value assigned to the attribute.
 
 The *$event* parameter contains the following properties:
 
-| Propiedad     | Tipo    | Descripción                                   |
-| ------------- | ------- | --------------------------------------------- |
-| attributeName | Texto   | Nombre de atributo calculado                  |
-| dataClassName | Texto   | Nombre de la clase de datos                   |
-| kind          | Texto   | "set"                                         |
-| value         | Variant | Value to be handled by the computed attribute |
+| Propiedad     | Tipo    | Descripción                              |
+| ------------- | ------- | ---------------------------------------- |
+| attributeName | Texto   | Nombre de atributo calculado             |
+| dataClassName | Texto   | Nombre de la clase de datos              |
+| kind          | Texto   | "set"                                    |
+| value         | Variant | Valor a tratar por el atributo calculado |
 
 #### Ejemplo
 
@@ -464,9 +464,9 @@ The *$event* parameter contains the following properties:
 | attributeName | Texto   | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                      |
 | dataClassName | Texto   | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                       |
 | kind          | Texto   | "query"                                                                                                                                                                                                                                                                                                                                                           |
-| value         | Variant | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                     |
+| value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                          |
 | operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (greater than or equal to)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
-| result        | Variant | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                          |
+| result        | Variant | Valor a tratar por el atributo calculado. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                               |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
@@ -559,21 +559,21 @@ Function orderBy <attributeName>($event : Object)-> $result : Text
 // code
 ```
 
-The `orderBy` function executes whenever the computed attribute needs to be ordered. It allows sorting the computed attribute. For example, you can sort *fullName* on first names then last names, or conversely. When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
+The `orderBy` function executes whenever the computed attribute needs to be ordered. Permite ordenar el atributo calculado. For example, you can sort *fullName* on first names then last names, or conversely. When the `orderBy` function is not implemented for a computed attribute, the sort is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
 > Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**.
 
 The *$event* parameter contains the following properties:
 
-| Propiedad     | Tipo     | Descripción                                                                                                |
-| ------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
-| attributeName | Texto    | Nombre de atributo calculado                                                                               |
-| dataClassName | Texto    | Nombre de la clase de datos                                                                                |
-| kind          | Texto    | "orderBy"                                                                                                  |
-| value         | Variant  | Value to be handled by the computed attribute                                                              |
-| operator      | Texto    | "desc" o "asc" (por defecto)                                                                               |
-| descending    | Booleano | `true` for descending order, `false` for ascending order                                                   |
-| result        | Variant  | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
+| Propiedad     | Tipo     | Descripción                                                                                           |
+| ------------- | -------- | ----------------------------------------------------------------------------------------------------- |
+| attributeName | Texto    | Nombre de atributo calculado                                                                          |
+| dataClassName | Texto    | Nombre de la clase de datos                                                                           |
+| kind          | Texto    | "orderBy"                                                                                             |
+| value         | Variant  | Valor a tratar por el atributo calculado                                                              |
+| operator      | Texto    | "desc" o "asc" (por defecto)                                                                          |
+| descending    | Booleano | `true` for descending order, `false` for ascending order                                              |
+| result        | Variant  | Valor a tratar por el atributo calculado. Pass `Null` if you want to let 4D execute the default sort. |
 
 > You can use either the `operator` or the `descending` property. It is essentially a matter of programming style (see examples).
 
@@ -601,7 +601,7 @@ Function orderBy fullName($event : Object)-> $result : Text
 
 ```
 
-Conditional code is necessary in some cases:
+El código condicional es necesario en algunos casos:
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text
@@ -711,8 +711,8 @@ Alias teachers courses.teacher //relatedEntities
 En la dataclass Course:
 
 - an alias attribute returns another label for the "name" attribute
-- an alias attribute returns the teacher name
-- an alias attribute returns the student name
+- un atributo alias devuelve el nombre del profesor
+- un atributo alias devuelve el nombre del estudiante
 
 
 ```4d
@@ -726,7 +726,7 @@ Exposed Alias studentName student.name //scalar value
 
 ```
 
-You can then execute the following queries:
+Luego puede ejecutar las siguientes consultas:
 
 ```4d
 // Find course named "Archaeology"
@@ -956,7 +956,7 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
 

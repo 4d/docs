@@ -3,7 +3,7 @@ id: onDeactivate
 title: On Deactivate
 ---
 
-| Code | Can be called by | Definition                                          |
+| Code | Can be called by | Definição                                           |
 | ---- | ---------------- | --------------------------------------------------- |
 | 12   | Formulário       | The form’s window ceases to be the frontmost window |
 

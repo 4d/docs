@@ -620,7 +620,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descrição
 
-The `.setContent( )` function <!-- REF #FileClass.setContent(). Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
+The `.setContent( )` function <!-- REF #FileClass.setContent(). Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 
 #### Exemplo
@@ -654,8 +654,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent(). Summary -->rewri
 | Parameter   | Type    |    | Descrição                                                  |
 | ----------- | ------- | -- | ---------------------------------------------------------- |
 | texto       | Texto   | -> | Text to store in the file                                  |
-| charSetName | Texto   | -> | Name of character set                                      |
-| charSetNum  | Integer | -> | Number of character set                                    |
+| charSetName | Texto   | -> | Nome do conjunto de caracteres                             |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres                          |
 | breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF --> |
 
 #### Descrição
@@ -666,7 +666,7 @@ If the file referenced in the `File` object does not exist on the disk, it is cr
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Optionally, you can designate the character set to be used for writing the contents. You can pass either:
+Optionally, you can designate the character set to be used for writing the contents. Você pode passar também:
 
 - in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
 - or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
@@ -679,13 +679,13 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 | Constante                     | Value | Comentário                                                                                                                                               |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | No processing                                                                                                                                            |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
-| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
-| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
+| `Documento com CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
+| `Documento com CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
+| `Documento com LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
 
-By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 
 > **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 

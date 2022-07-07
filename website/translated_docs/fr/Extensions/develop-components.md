@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Partage des classes et des fonctions
 
-Par défaut, les classes et fonctions des composants ne peuvent pas être appelées à partir de l'éditeur de méthodes 4D du projet hôte. Si vous souhaitez que les classes et fonctions de vos composants soient exposées dans les projets hôtes, vous devez déclarer un namespace. En outre, vous pouvez contrôler la manière dont les classes et les fonctions des composants sont suggérées dans l'éditeur de méthodes de l'hôte.
+Par défaut, les classes et fonctions des composants ne peuvent pas être appelées à partir de l'éditeur de méthodes 4D du projet hôte. By default, component classes and functions cannot be called from the 4D Code Editor of the host project. En outre, vous pouvez contrôler la manière dont les classes et les fonctions des composants sont suggérées dans l'éditeur de méthodes de l'hôte.
 
 ### Déclaration du namespace
 

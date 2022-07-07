@@ -46,7 +46,7 @@ Cada comando de menú puede tener un método proyecto o una acción estándar ad
 
 Si no asigna un método o una acción estándar a un comando de menú, la elección de ese comando de menú hace que 4D salga del entorno de Aplicación y pase al entorno de Diseño. Si sólo está disponible el entorno de la Aplicación, esto significa salir al Escritorio.
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the database (add record, select all, etc.).
+Las acciones estándar permiten realizar diversas operaciones cotidianas vinculadas a las funciones sistema (copiar, salir, etc.) o a las de la base (añadir registro, seleccionar todo, etc.).
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto a un comando de menú. En este caso, la acción estándar no se ejecuta nunca; sin embargo, 4D utiliza esta acción para habilitar/deshabilitar el comando de menú según el contexto actual y para asociar una operación específica según la plataforma. Cuando se desactiva un comando de menú, no se puede ejecutar el método proyecto asociado.
 
@@ -167,7 +167,7 @@ Puede asociar un icono a un elemento del menú. Aparecerá directamente en el me
 
 ![](assets/en/Menus/iconMenu.png)
 
-Para definir el icono en el editor de menús, haga clic en el área "Icono del elemento" y seleccione **Abrir** para abrir una imagen del disco. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Una vez definido, el icono del elemento aparece en el área de vista previa:
+Para definir el icono en el editor de menús, haga clic en el área "Icono del elemento" y seleccione **Abrir** para abrir una imagen del disco. Si selecciona un archivo imagen que no está almacenado en la carpeta Recursos del proyecto, se copiará automáticamente en esa carpeta. Una vez definido, el icono del elemento aparece en el área de vista previa:
 
 ![](assets/en/Menus/iconpreview.png)
 

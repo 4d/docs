@@ -62,7 +62,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 - using a `.4DLink` file.
 
-### Opening a Project with a 4DLink file
+### Abrir un proyecto con un archivo 4DLink
 
 You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. There are two ways to do this:
 
@@ -85,7 +85,7 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 - Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
 - OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
+XX represents the version number of the application. Por ejemplo, "Favoritos v19" para 4D v19.
 
 Esa carpeta está dividida en dos subcarpetas:
 - the **Local** folder contains the `.4DLink` files that can be used to open local projects

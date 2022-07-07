@@ -1168,7 +1168,7 @@ La propiedad `.length` <!-- REF #EntitySelectionClass.length.Summary --> devuelv
 
 Las entity selections siempre tienen una propiedad `.length`.
 
-> Para conocer el número total de entidades de una clase de datos, se recomienda utilizar la función [`getCount()`](DataClassClass.md#getcount) más optimizada que la expresión `ds.myClass.all().length`.
+> Las entidades de una colección de entidades a las que se accede por medio de \[ ] no se recargan desde la base de datos.
 
 #### Ejemplo
 

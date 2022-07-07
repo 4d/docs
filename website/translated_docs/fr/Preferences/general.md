@@ -132,7 +132,7 @@ Ce paramètre permet de définir la langue utilisée par défaut pour le traitem
 Une base 4D peut donc fonctionner dans une langue différente de celle du système. A l’ouverture d’une base, le moteur de 4D détecte la langue utilisée par le fichier de données et la fournit au langage (interpréteur ou mode compilé). Les comparaisons de texte, qu’elles soient effectuées par le moteur de base de données ou par le langage, sont donc toujours effectuées dans la même langue.
 
 Lors de la création d’un nouveau fichier de données, 4D utilise la langue définie dans ce menu. En cas d’ouverture d’un fichier de données qui n’est pas dans la même langue que la structure, la langue du fichier de données est utilisée et le code de langue est recopié dans la structure.
-> Il est possible de modifier ce paramètre pour la base ouverte via les Propriétés de la base (voir [Comparaison de texte](../settings/database.md#comparison-de-texte)).
+> Cette option n'est prise en compte que pour l'accès à la documentation des commandes (à l'exclusion des fonctions de classe).
 
 ## Emplacement de la documentation
 
@@ -152,7 +152,7 @@ Langue de la documentation HTML à afficher. Vous pouvez sélectionner une docum
 
 Définit l'emplacement des pages de documentation recherchées par 4D.
 
-*   Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. If it is found, 4D displays the page in the current browser. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
+*   Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
 *   If it is not found, 4D displays an error message in the browser. Si elle n'est pas trouvée, 4D affiche un message d'erreur dans le navigateur.
 
 ### Dossier local

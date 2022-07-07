@@ -25,7 +25,7 @@ title: ドキュメンテーション更新情報
 
 ## 4D v19 R4
 
-- ORDAクラス: [エイリアス属性](ORDA/ordaClasses.md#エイリアス属性) が利用可能に。
+- ORDAクラス: [エイリアス属性](ORDA/ordaClasses.md#エイリアス属性-1) が利用可能に。
 
 - ループにおける [break と continue](Concepts/cf_looping.md#break-と-continue) 文のサポート。
 - [return](Concepts/flow-control.md#return-expression) 文と、値を返すための [return {expression}](Concepts/parameters.md#return-expression) 文のサポート。

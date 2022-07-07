@@ -266,7 +266,7 @@ Le fichier du répertoire d'application est en lecture seule. Les modifications 
 
 L'incorporation du fichier de répertoire du projet vous permet de déployer une application client/serveur avec une configuration de base de la sécurité des utilisateurs et des groupes. Les modifications ultérieures sont ajoutées au fichier de répertoire des données.
 
-#### Autoriser la connexion des clients Silicon Mac
+#### Chemin d'accès à la structure compilée de l'application cliente Apple Silicon/Intel utilisée pour créer un serveur Windows (voir [Autoriser la connexion des clients Silicon Mac](#allow-connection-of-silicon-mac-clients)).
 
 Lorsque vous créez un serveur sous Windows, cochez cette option pour permettre aux clients Apple Silicon de se connecter à votre application serveur. Vous pouvez alors spécifier un chemin d'accès à la structure compilée pour Apple Silicon/Intel.
 
@@ -276,9 +276,9 @@ Vous pouvez ensuite copier cette structure sur votre machine Windows, et l'utili
 
 ![](assets/en/Desktop/allow-mac-clients.png)
 
-#### Emplacement de la structure compilée
+#### Autoriser la connexion des clients Silicon Mac
 
-Chemin d'accès à la structure compilée de l'application cliente Apple Silicon/Intel utilisée pour créer un serveur Windows (voir [Autoriser la connexion des clients Silicon Mac](#allow-connection-of-silicon-mac-clients)).
+Si vous voulez déployer une application client/server dans un environnement hétérogène (applications clientes exécutées sur des machines Intel/AMD et Apple Silicon), il est recommandé de [compiler le projet pour tous les processeurs](Project/compiler.md#compilation-target) sur une machine macOS, afin que toutes les applications clientes s'exécutent en code natif.
 
 #### Mode de liaison des données
 

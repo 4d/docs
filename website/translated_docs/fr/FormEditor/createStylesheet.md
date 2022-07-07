@@ -18,7 +18,7 @@ Outre l’harmonisation de l’interface de vos applications, l’usage de feuil
 
 Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension ".css" dans le dossier "/SOURCES" du projet.
 
-La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plateforme.
+La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.
 
 1.  Ouvrez la page **Styles** en choisissant la **Boîte à outils > Styles ** dans le menu Développement ou en cliquant sur l'icône **Boîte à outils** dans la barre d'outils de l'éditeur de formulaire.
 
@@ -34,7 +34,7 @@ La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccour
 
 4D accepte trois fichiers feuilles de style spécifiques :
 
-| Feuille de style        | Plateforme                                                              |
+| Feuille de style        | Plate-forme                                                             |
 | ----------------------- | ----------------------------------------------------------------------- |
 | styleSheets.css         | Feuille de style globale par défaut pour macOS et Windows               |
 | styleSheets_mac.css     | Pour définir des styles d'attributs spécifiques de macOS uniquement     |
@@ -62,9 +62,9 @@ Chaque règle de style d'une feuille de style contient deux parties :
 
 Le type d'objet définit le type d'objet à styler et correspond au sélecteur d'élément CSS.
 
-Specify the object type, then in curly braces, declare the style(s) to apply.
+Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.
 
-> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
+> Le type d'objet correspond à la propriété JSON [ type](FormObjects/properties_Object.md#type) des objets de formulaire.
 
 Dans l'exemple suivant, tous les objets du type *bouton* afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :
 
@@ -75,7 +75,7 @@ button {
 }
 ```
 
-To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
+Pour appliquer le même style à plusieurs types d’objets, spécifiez les types d'objets séparés par une "," puis, entre accolades, déclarez le(s) style(s) à appliquer :
 
 ```
 text, input {
@@ -156,12 +156,12 @@ Spécifiez l'attribut entre parenthèses, puis entre accolades, déclarez le(s) 
 
 #### Syntaxes prises en charge
 
-| Syntaxe                    | Description                                                                                                                 |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]                | les objets ayant un `attribute`                                                                                             |
-| [attribute="valeur"]       | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                                |
-| [attribute~="valeur"]      | les objets dont la valeur de l'`attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
-| [attribute&#124;="valeur"] | les objets dont l'`attribute` contient une valeur qui commence par celle de "valeur"                                        |
+| Syntaxe                    | Description                                                                                                               |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]                | les objets ayant un `attribute`                                                                                           |
+| [attribute="valeur"]       | les objets dont la valeur de l'`attribute` correspond à la "valeur" indiquée                                              |
+| [attribute~="valeur"]      | les objets dont la valeur de `attribute` correspond à la "valeur" présente dans une liste de mots séparés par des espaces |
+| [attribute&#124;="valeur"] | les objets dont `attribute` contient une valeur qui commence par celle de "valeur"                                        |
 
 #### Exemples
 
@@ -332,13 +332,13 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
 2.  Il chargera ensuite le fichier CSS pour la plate-forme courante `/SOURCES/styleSheets__mac.css` ou `/SOURCES/styleSheets_windows.css`.
 3.  S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :
 
-    *   un fichier pour les deux plateformes :
+    *   un fichier pour les deux plates-formes :
 
     ```
     "css": "<path>" 
     ```
 
-    *   ou une liste de fichiers pour les deux plateformes :
+    *   ou une liste de fichiers pour les deux plates-formes :
 
     ```
     "css": [
@@ -347,7 +347,7 @@ A l'exécution, 4D hiérarchise automatiquement les feuilles de style dans l'ord
           ],
     ```
 
-    *   ou une liste de fichiers par plateforme :
+    *   ou une liste de fichiers par plate-forme :
 
     ```
      "css": [

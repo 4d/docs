@@ -695,7 +695,7 @@ El objeto `data` de cada entrada contiene las siguientes propiedades:
 | Propiedad              | Tipo         | Descripción                                                                                                                  |
 | ---------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 | __KEY                  | Cadena       | Llave primaria de la entidad                                                                                                 |
-| __STAMP                | Entero largo | Timestamp of the entity in the database                                                                                      |
+| __STAMP                | Entero largo | Timestamp de la entidad en la base de datos                                                                                  |
 | __TIMESTAMP            | Cadena       | Stamp of the entity in the database (format is YYYY-MM-DDTHH:MM:SS:ms:Z)                                                     |
 | dataClassAttributeName | Variant      | If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database. |
 
@@ -1004,16 +1004,16 @@ Por ejemplo, con las dos entidades siguientes:
 
 ```
 Entity 1:
-ds.People.name: "martin"
-ds.People.places:
+ds. People.name: "martin"
+ds. People.places:
     { "locations" : [ {
                 "kind":"home",
                 "city":"paris"
             } ] }
 
 Entity 2:
-ds.People.name: "smith"
-ds.People.places:
+ds. People.name: "smith"
+ds. People.places:
     { "locations" : [ {
                 "kind":"home",
                 "city":"lyon"

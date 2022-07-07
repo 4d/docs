@@ -232,7 +232,7 @@ In addition to the special characters and codes described in the previous sectio
 | --------- | ------------------------------------------------------------------ | -------------------- |
 | + and -   | Plus and minus signs                                               | ### + ### = ###,### |
 | ( )       | Left and right parenthesis                                         | (-###.##)            |
-| :         | Colon                                                              | hh:mm:ss             |
+| :         | Dois pontos                                                        | hh:mm:ss             |
 | ^         | Caret                                                              | #\^#                |
 | '         | Apostrophe                                                         | '######              |
 | { }       | Curly brackets                                                     | {###,###,###}        |
@@ -320,15 +320,15 @@ The following special characters allow the automatic addition or formatting of i
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
 
-| Propriedade |        | Type          | Descrição                                                   |
-| ----------- | ------ | ------------- | ----------------------------------------------------------- |
-| margin      |        | object        | The print margins                                           |
-|             | top    | inteiro longo | Top margin, in hundredths of an inch. Default value = 75    |
-|             | bottom | inteiro longo | Bottom margin, in hundredths of an inch. Default value = 75 |
-|             | left   | inteiro longo | Left margin, in hundredths of an inch. Default value = 70   |
-|             | right  | inteiro longo | Right margin, in hundredths of an inch. Default value = 70  |
-|             | header | inteiro longo | Header offset, in hundredths of an inch. Default value = 30 |
-|             | footer | inteiro longo | Footer offset, in hundredths of an inch. Default value = 30 |
+| Propriedade |         | Type          | Descrição                                                   |
+| ----------- | ------- | ------------- | ----------------------------------------------------------- |
+| margin      |         | object        | The print margins                                           |
+|             | top     | inteiro longo | Top margin, in hundredths of an inch. Default value = 75    |
+|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Default value = 75 |
+|             | left    | inteiro longo | Left margin, in hundredths of an inch. Default value = 70   |
+|             | direita | inteiro longo | Right margin, in hundredths of an inch. Default value = 70  |
+|             | header  | inteiro longo | Header offset, in hundredths of an inch. Default value = 30 |
+|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Default value = 30 |
 
 ### Orientation
 
@@ -368,7 +368,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 |             | width  | inteiro longo | Width of the paper, in hundredths of an inch.                                                                    |
 |             | kind   | texto         | Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Default value = "letter" |
 
-### Scale
+### Escala
 
 Scale attributes are used to specify printing optimization and adjustments.
 
@@ -499,7 +499,7 @@ The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet con
 
 It contains the following properties:
 
-| Propriedade  | Value type    | Descrição                                    |
+| Propriedade  | Tipo de valor | Descrição                                    |
 | ------------ | ------------- | -------------------------------------------- |
 | version      | Inteiro longo | Internal component version                   |
 | dateCreation | Timestamp     | Creation date                                |
@@ -515,14 +515,14 @@ The 4D View Pro form object variable is the [object](Concepts/dt_object.md) vari
 
 It contains the following properties:
 
-| Propriedade            | Value type | Descrição                                                                                                                                                                                                                                                                                                                    |
-| ---------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ViewPro.area           | Texto      | 4D View Pro area name                                                                                                                                                                                                                                                                                                        |
-| ViewPro.callbacks      | Objeto     | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
-| ViewPro.commandBuffers | Coleção    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
-| ViewPro.events         | Objeto     | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
-| ViewPro.formulaBar     | Booleano   | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
-| ViewPro.inited         | Booleano   | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
-| ViewPro.interface      | Texto      | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |
+| Propriedade            | Tipo de valor | Descrição                                                                                                                                                                                                                                                                                                                    |
+| ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ViewPro.area           | Texto         | 4D View Pro area name                                                                                                                                                                                                                                                                                                        |
+| ViewPro.callbacks      | Objeto        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
+| ViewPro.commandBuffers | Coleção       | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
+| ViewPro.events         | Objeto        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
+| ViewPro.formulaBar     | Booleano      | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
+| ViewPro.inited         | Booleano      | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
+| ViewPro.interface      | Texto         | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |
 
 

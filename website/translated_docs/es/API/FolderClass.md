@@ -95,23 +95,23 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con 
 
 En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utilizando una de las siguientes constantes:
 
-| Constante                  | Valor | Comentario                                                                                          |
-| -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                                     |
-| fk data folder             | 9     | Filesystem asociado: "/DATA"                                                                        |
-| fk database folder         | 4     | Filesystem asociado: "/PACKAGE"                                                                     |
-| fk desktop folder          | 115   |                                                                                                     |
-| fk documents folder        | 117   | Carpeta Documentos del usuario                                                                      |
-| fk licenses folder         | 1     | Carpeta que contiene los archivos de licencia 4D de la máquina                                      |
-| fk logs folder             | 7     | Filesystem asociado: "/LOGS"                                                                        |
-| fk mobileApps folder       | 10    |                                                                                                     |
-| fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
-| fk resources folder        | 6     | Filesystem asociado: "/RESOURCES"                                                                   |
-| fk system folder           | 100   |                                                                                                     |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the \<userName> directory.                      |
-| fk web root folder         | 8     | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
+| Constante                  | Valor | Comentario                                                                                                   |
+| -------------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
+| fk applications folder     | 116   |                                                                                                              |
+| fk data folder             | 9     | Filesystem asociado: "/DATA"                                                                                 |
+| fk database folder         | 4     | Filesystem asociado: "/PACKAGE"                                                                              |
+| fk desktop folder          | 115   |                                                                                                              |
+| fk documents folder        | 117   | Carpeta Documentos del usuario                                                                               |
+| fk licenses folder         | 1     | Carpeta que contiene los archivos de licencia 4D de la máquina                                               |
+| fk logs folder             | 7     | Filesystem asociado: "/LOGS"                                                                                 |
+| fk mobileApps folder       | 10    |                                                                                                              |
+| fk remote database folder  | 3     | Carpeta de la base de datos 4D creada en cada máquina 4D remota                                              |
+| fk resources folder        | 6     | Filesystem asociado: "/RESOURCES"                                                                            |
+| fk system folder           | 100   |                                                                                                              |
+| fk user preferences folder | 0     | Carpeta 4D que almacena los archivos de preferencias del usuario en el \N<userName> directorio.             |
+| fk web root folder         | 8     | Carpeta raíz web actual de la base de datos: si está dentro del paquete "/PACKAGE/path", si no ruta completa |
 
-If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
+Si el comando se llama desde un componente, pase el parámetro opcional * para obtener la ruta de la base local. De lo contrario, si omite el parámetro *, siempre se devuelve un objeto null.
 
 
 ## 4D.Folder.new()
@@ -127,9 +127,9 @@ If the command is called from a component, pass the optional * parameter to get 
 
 #### Descripción
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.Folder`<!-- END REF -->. Es idéntico al comando [`Folder`](#folder) (acceso directo).
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
+> Se recomienda utilizar el comando de acceso directo[`Folder<`](#folder) en lugar de `4D.Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
@@ -160,14 +160,14 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 #### Descripción
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+La función `.create()` <!-- REF #FolderClass.create().Summary -->crea una carpeta en el disco según las propiedades del objeto `Folder`<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades [platformPath](#platformpath) o [path](#path). Si la carpeta ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.
 
 **Valor devuelto**
 
-*   **True** if the folder is created successfully;
-*   **False** if a folder with the same name already exists or if an error occured.
+*   **True** si la carpeta se crea con éxito;
+*   **False** si ya existe una carpeta con el mismo nombre o si ha ocurrido un error.
 
 #### Ejemplo 1
 
@@ -180,7 +180,7 @@ $created:=Folder("/PACKAGE/SpecialPrefs").create()
 
 #### Ejemplo 2
 
-Creation of the "/Archives2019/January/" folder in the database folder:
+Creación de la carpeta "/Archives2019/January/" en la carpeta de la base:
 
 ```4d
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
@@ -226,26 +226,26 @@ End if
 
 #### Descripción
 
-The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+La función `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->crea un alias (macOS) o un acceso directo (Windows)<!-- END REF --> para la carpeta con el nombre *aliasName* especificado en la carpeta designada por el objeto *destinationFolder*.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+Pase el nombre del alias o del acceso directo a crear en el parámetro *aliasName*.
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. Las siguientes constantes están disponibles:
+Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro *aliasType*. Las siguientes constantes están disponibles:
 
 | Constante          | Valor | Comentario                         |
 | ------------------ | ----- | ---------------------------------- |
 | `fk alias link`    | 0     | Enlace de alias (por defecto)      |
 | `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+En Windows, siempre se crea un acceso directo (archivo.lnk) (el parámetro *aliasType* es ignorado).
 
 **Objeto devuelto**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+Un objeto `4D.File` con la propiedad `isAlias` definida en **true**.
 
 #### Ejemplo
 
-You want to create an alias to an archive folder in your database folder:
+Quiere crear un alias para una carpeta de archivos en su carpeta de base:
 
 ```4d
 $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
@@ -286,25 +286,25 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### Descripción
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+La función `.delete()` <!-- REF #FolderClass.delete().Summary -->borra el archivo<!-- END REF -->.
 
-By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
+Por defecto, por razones de seguridad, si se omite el parámetro option, `.delete( )` sólo permite borrar las carpetas vacías. Si desea que el comando pueda eliminar carpetas que no están vacías, debe utilizar el parámetro option con una de las siguientes constantes:
 
-| Constante              | Valor | Comentario                                       |
-| ---------------------- | ----- | ------------------------------------------------ |
-| `Delete only if empty` | 0     | Deletes folder only when it is empty             |
-| `Delete with contents` | 1     | Deletes folder along with everything it contains |
+| Constante              | Valor | Comentario                                        |
+| ---------------------- | ----- | ------------------------------------------------- |
+| `Delete only if empty` | 0     | Elimina la carpeta sólo cuando está vacía         |
+| `Delete with contents` | 1     | Elimina la carpeta junto con todo lo que contiene |
 
-When `Delete only if empty` is passed or if you omit the option parameter:
+Cuando `Delete only if empty` se pasa o si se omite el parámetro option:
 
-*   The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.
-*   If the folder does not exist, the error -120 is generated.
+*   La carpeta sólo se elimina si está vacía; en caso contrario, el comando no hace nada y se genera un error -47.
+*   Si la carpeta no existe, se genera el error -120.
 
-When `Delete with contents` is passed:
+Cuando se pasa `Delete with contents`:
 
-*   The folder, along with all of its contents, is deleted. **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-*   If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
-*   If the folder does not exist, the command does nothing and no error is returned. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+*   La carpeta, junto con todo su contenido, se elimina. **Advertencia**: incluso esta carpeta y/o su contenido estén bloqueados o definidos como de sólo lectura, si el usuario actual tiene los derechos de acceso adecuados, la carpeta (y su contenido) aún se elimina.
+*   Si esta carpeta, o cualquiera de los archivos que contiene, no puede ser eliminada, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible y se devuelve un error(*). En este caso, la carpeta puede ser eliminada sólo parcialmente. Cuando se interrumpe el borrado, puede utilizar el comando `GET LAST ERROR STACK` para recuperar el nombre y la ruta de acceso del archivo infractor.
+*   Si la carpeta no existe, el comando no hace nada y no devuelve ningún error. (*) Windows: -54 (Intento de abrir un archivo bloqueado para escribir) macOS: -45 (El archivo está bloqueado o la ruta no es correcta)
 
 <!-- END REF -->
  
@@ -401,11 +401,11 @@ When `Delete with contents` is passed:
 
 #### Descripción
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+La función `.moveTo( )` <!-- REF #FolderClass.moveTo().Summary -->mueve o renombra el objeto `Folder` (carpeta fuente) a la *carpeta de destino*<!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta conserva su nombre cuando se mueve. Si desea cambiar renombrar la carpeta desplazada, pase el nombre completo en el parámetro *newName*. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 
@@ -471,9 +471,9 @@ Quiere mover y renombrar una carpeta:
 
 #### Descripción
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+La función `.rename()` <!-- REF #FolderClass.rename().Summary -->renombra el archivo con el nombre que se ha pasado en *newName* y devuelve el objeto `Folder` renombrado<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
 
 **Objeto devuelto**

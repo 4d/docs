@@ -38,7 +38,7 @@ Use the **Previous Error** / **Next Error** commands of the **Method** menu to n
 
 The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-files) of the errors in order to help you correct them.
 
-> Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
+> La compilación requiere una licencia apropiada. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
 
 ## Ejecutar la compilación
 
@@ -98,7 +98,7 @@ You can selectively disable certain warnings during compilation by inserting the
   //%W-<warning number>
 ```
 
-Sólo se pueden desactivar los avisos con números. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
+Sólo se pueden desactivar los avisos con números. Warning numbers are specified at the end of each message in the list of compilation errors. Por ejemplo, para desactivar la siguiente advertencia:
 
 *1: Puntero en una declaración de array (518.5)*
 
@@ -153,12 +153,12 @@ This setting allows you to select the processor family for which your 4D project
 
 Se proponen dos opciones de objetivo. The result depends on the processor of the machine on which 4D is running.
 
-| *Option*                                         | *en Windows Intel/AMD*                                                                    | *macOS Intel*                                                                               | *macOS Silicon*                                                                             |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| **All processors (Intel/AMD and Apple Silicon)** | Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* |
-| **Mi procesador (procesador)**                   | Código para Intel/AMD                                                                     | Código para Intel/AMD                                                                       | Código para Apple Silicon                                                                   |
+| *Option*                                               | *en Windows Intel/AMD*                                                                    | *macOS Intel*                                                                               | *macOS Silicon*                                                                             |
+| ------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Todos los procesadores (Intel/AMD y Apple Silicon)** | Code for Intel/AMD<br>*It is not possible to produce Apple Silicon code on Windows* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* | Code for Apple Silicon + Code for Intel/AMD<br>*Two compiled codes will be available* |
+| **Mi procesador (procesador)**                         | Código para Intel/AMD                                                                     | Código para Intel/AMD                                                                       | Código para Apple Silicon                                                                   |
 
-> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang comes with the latest version of Xcode. See the [Silicon compiler requirements](#requirements) for more information.
+> Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang viene con la última versión de Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
 ### Default typing
 
@@ -192,9 +192,9 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 
 Estas dos listas contienen cuatro columnas:
 
-- Names of process and interprocess variables and arrays used in your project. These variables are listed in alphabetical order.
+- Names of process and interprocess variables and arrays used in your project. Estas variables están listadas en orden alfabético.
 - Tipo de la variable. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
-- Number of dimensions if the variable is an array.
+- Número de dimensiones si la variable es un array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
     - If the variable was found in a project method, the method is identified as it has been defined in 4D, preceded by (M).
@@ -209,11 +209,11 @@ Estas dos listas contienen cuatro columnas:
 
 The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
 
-This list is divided into three columns:
+Esta lista está dividida en tres columnas:
 
 - la lista de las variables locales utilizadas en el método;
 - tipo de la variable;
-- number of dimensions if the variable is an array.
+- número de dimensiones si la variable es un array.
 
 #### Lista completa de los métodos
 
@@ -224,7 +224,7 @@ A complete list of your database and project methods is given at the end of the 
 - el número de llamadas
 - la propiedad Thread Safe o Thread Unsafe.
 
-This information appears as follows:
+Esta información aparece así:
 
 ```
 Procedure or Function <Method name>(parameter data types):
@@ -239,7 +239,7 @@ Although the errors can be accessed directly via the [compiler window](#compile)
 
 The length of the error file depends on the number of errors and warnings issued by the compiler.
 
-The structure of the error file is as follows:
+La estructura del archivo de errores es la siguiente:
 
 - At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
 - In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
@@ -249,13 +249,13 @@ The structure of the error file is as follows:
 
 If your project does not have any general errors, the file will not have a *General errors* section.
 
-An error file may contain three types of messages:
+Un archivo de error puede contener tres tipos de mensajes:
 
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
     - The data type of a process variable could not be determined.
-    - Two different kinds of objects have the same name.
+    - Dos tipos diferentes de objetos tienen el mismo nombre.
 
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
@@ -296,13 +296,13 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 | Silicon Mac |       &#10003;        |          &#10003;          |           &#10003;           |
 
 
-Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+Ambos compiladores están integrados en 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
 
 
 
 ### Compilador clásico
 
-The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration.
+The classic compiler generates native compiled code for Intel/AMD processors on any machines. No requiere ninguna configuración específica.
 
 Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
 
@@ -331,5 +331,5 @@ In any cases, the 4D Silicon compiler will warn you if your configuration does n
 
 The Silicon compiler is incremental, which means that:
 
-- During the very first compilation, **all 4D methods** are compiled. This step could take a certain time. Sin embargo, sólo ocurre una vez.
+- During the very first compilation, **all 4D methods** are compiled. Este paso podría tomar un cierto tiempo. Sin embargo, sólo ocurre una vez.
 - During all subsequent compilations, only **new or modified methods** are processed, thus reducing drastically the compilation time. 

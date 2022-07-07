@@ -1,6 +1,6 @@
 ---
 id: splitters
-title: Splitter
+title: Separador
 ---
 
 
@@ -47,7 +47,7 @@ In a form, splitters interact with the objects that are around them according to
 | ---------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Nenhum                             | Remain as is                                                                        | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. No stop is applied (see the next paragraph) |
 | Resize                             | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
-| Move                               | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
+| Mover                              | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
 
 *(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
 > An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.

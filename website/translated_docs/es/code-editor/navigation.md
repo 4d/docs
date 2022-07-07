@@ -1,37 +1,37 @@
 ---
 id: navigation
-title: Navigation dropdown
+title: Despliegue de navegación
 ---
 
-The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+La lista desplegable de navegación le ayuda a organizar su código y a navegar más fácilmente dentro de sus clases y métodos:
 
 ![dropdown-list](assets/en/code-editor/dropdown-list.png)
 
-Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+Algunas etiquetas se añaden automáticamente y puede complementar la lista desplegable utilizando los [marcadores ](#manual-tagging).
 
 ## Navegación en el código
 
-Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+Haga clic en un elemento de la lista desplegable para acceder a su primera línea en el código. También puede navegar con las teclas de flecha y presionar **Intro**.
 
 ## Etiquetado automático
 
-Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+Los constructores, las declaraciones de métodos, las funciones y los atributos calculados se etiquetan automáticamente y se añaden a la lista desplegable.
 
-When there is no tag in the class/method, the tool displays "No tag".
+Cuando no hay ninguna etiqueta en la clase/método, la herramienta muestra "Sin etiqueta".
 
-The following items are added automatically:
+Los siguientes elementos se añaden automáticamente:
 
-| Icono                                                                    | Elemento                                         |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | Sin etiqueta                                     |
-| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor o declaración de método        |
-| ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](assets/en/code-editor/function.png)                     | Nombre de la función de clase                    |
+| Icono                                                                    | Elemento                                       |
+| ------------------------------------------------------------------------ | ---------------------------------------------- |
+| ![no-tag-icon](assets/en/code-editor/no-tag.png)                         | Sin etiqueta                                   |
+| ![constructor-icon](assets/en/code-editor/constructor.png)               | Class constructor o declaración de método      |
+| ![computed-attribute-icon](assets/en/code-editor/computed-attribute.png) | Atributo calculado (get, set, orderBy y query) |
+| ![function-icon](assets/en/code-editor/function.png)                     | Nombre de la función de clase                  |
 
 
 ## Etiquetado manual
 
-By adding markers in your code, you can add the following tags to the dropdown:
+Añadiendo marcadores en su código, puede añadir las siguientes etiquetas a la lista desplegable:
 
 | Icono                                                | Elemento       |
 | ---------------------------------------------------- | -------------- |
@@ -39,15 +39,15 @@ By adding markers in your code, you can add the following tags to the dropdown:
 | ![todo-tag-icon](assets/en/code-editor/todo-tag.png) | TODO: etiqueta |
 | ![fixme-icon](assets/en/code-editor/fixme-tag.png)   | FIXME: tag     |
 
-You declare them by adding comments such as:
+Se declaran añadiendo comentarios como:
 
 ```4d 
-// FIXME: Fix following items
+// FIXME: Corrige los siguientes elementos
 ```
 
-Declarations are not case-sensitive; writing `fixme:` has the same effect.
+Las declaraciones no distinguen entre mayúsculas y minúsculas; escribir `fixme:` tiene el mismo efecto.
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. Así que escribiendo esto:
+Añadir un guión después de la etiqueta `MARK:` dibuja una línea de separación en el editor de código y en el menú desplegable. Así que escribiendo esto:
 
 ![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
 
@@ -55,17 +55,17 @@ Esto es lo que resulta:
 
 ![mark-hyphen-image](assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+Todos los marcadores situados dentro de las funciones tienen sangría en la lista desplegable, excepto las etiquetas `MARK:` situadas al final de las funciones y no seguidas de instrucciones. Estos aparecerán en el primer nivel.
 
 ## Orden de visualización
 
-Tags are displayed in their appearing order inside the method/class.
+Las etiquetas se muestran en su orden de aparición dentro del método/clase.
 
-To display the tags of a method or class in alphabetical order, do one of the following:
-* **right-click** the dropdown tool
-* hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
+Para mostrar las etiquetas de un método o de una clase en orden alfabético, realice una de las siguientes acciones:
+* **haga clic derecho** en la herramienta desplegable
+* mantenga **Cmd** en macOS o **Alt** en Windows, y haga clic en la herramienta de lista desplegable
 
-> Tags inside functions move with their parent items.
+> Las etiquetas dentro de las funciones se mueven con sus elementos padres.
 
 
 

@@ -59,9 +59,9 @@ Hay tres opciones disponibles:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
 *   **Light**: Use the Light Theme
-*   **Dark**: Use the Dark Theme
+*   **Sombra**: utilizar el tema Sombra
 
-> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
+> Esta preferencia sólo es compatible en macOS. En Windows, se utiliza siempre el esquema "Light".
 
 
 ### Exit Design when going to Application Environment
@@ -90,7 +90,7 @@ When this option is checked, a log file is automatically started and used when a
 
 When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
+Thanks to this principle, under macOS the database folders appear as packages having specific properties. En Windows, este funcionamiento no tiene ningún impacto particular.
 
 ### Incluir los tokens en los archivos fuente del proyecto
 
@@ -102,7 +102,7 @@ If you intend to use VCS or external code editors with your new projects, you mi
 
 > You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
 
-#### Excluding tokens in existing projects
+#### Exclusión de los tokens en los proyectos existentes
 
 You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
 
@@ -113,7 +113,7 @@ You can configure your existing projects to save code **without tokens** by inse
 > This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
 
 
-### Create `.gitignore` file
+### Crear el archivo `.gitignore`
 
 You might need or want git to ignore some files in your new projects.
 
@@ -144,7 +144,7 @@ This area configures access to the 4D HTML documentation displayed in your curre
 
 ### Lenguaje de la documentación
 
-Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
+Lenguaje de la documentación HTML a mostrar. You can select a documentation in a different language from the application language.
 
 ### Primero buscar en la carpeta local
 

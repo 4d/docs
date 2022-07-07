@@ -19,7 +19,7 @@ La partie supérieure de la page fournit des informations sur le statut courant 
 
 ## Démarrer / Arrêter le serveur HTTP
 
-Ce bouton fonctionne en bascule. Il permet de contrôler l’activation du serveur HTTP de 4D Server.
+Il permet de contrôler l’activation du serveur HTTP de 4D Server.
 
 - Lorsque l’état du serveur HTTP est "Démarré", le bouton est libellé **Arrêter le serveur HTTP**. Si vous cliquez sur ce bouton, le serveur HTTP de 4D Server est immédiatement stoppé, le serveur Web et le serveur SOAP n’acceptent plus aucune requête.
 - Lorsque l’état du serveur HTTP est "Arrêté", le bouton est libellé **Démarrer le serveur HTTP**. Si vous cliquez sur ce bouton, le serveur HTTP de 4D Server est immédiatement démarré : les requêtes Web, REST et SOAP sont acceptées.

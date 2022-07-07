@@ -6,12 +6,12 @@ title: Propiedades de los formularios
 ---
 
 ## Esquema de colores
-> Color scheme property is only applied on macOS.
+> La propiedad de esquema de color sólo se aplica en macOS.
 
 This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
-*   dark - light text on a dark background
-*   light - dark text on a light background
+*   dark -- texto claro sobre fondo oscuro
+*   light - texto oscuro en un fondo claro
 > A defined color scheme can not be overridden by a CSS.
 
 #### Gramática JSON
@@ -63,16 +63,16 @@ Each table in a database generally has at least two table forms. One for listing
 - Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](assets/en/FormObjects/formInput.png)
 
 
-Supported types depend on the form category:
+Los tipos soportados dependen de la categoría de formulario:
 
 
-| Tipo de formulario              | Gramática JSON   | Descripción                                                   | Soportado con                            |
-| ------------------------------- | ---------------- | ------------------------------------------------------------- | ---------------------------------------- |
-| Formulario detallado            | detailScreen     | A display form for data entry and modification                | Formularios proyecto - Formularios tabla |
-| Formulario detallado imprimible | detailPrinter    | A printed report with one page per record, such as an invoice | Formularios proyecto - Formularios tabla |
-| Formulario listado              | listScreen       | A form for listing records on the screen                      | Formularios tabla                        |
-| Formulario de lista imprimible  | listPrinter      | A printed report that list records                            | Formularios tabla                        |
-| Ninguno                         | *no destination* | A form with no specific feature                               | Formularios proyecto - Formularios tabla |
+| Tipo de formulario              | Gramática JSON   | Descripción                                                      | Soportado con                            |
+| ------------------------------- | ---------------- | ---------------------------------------------------------------- | ---------------------------------------- |
+| Formulario detallado            | detailScreen     | Un formulario de visualización para introducir y modificar datos | Formularios proyecto - Formularios tabla |
+| Formulario detallado imprimible | detailPrinter    | A printed report with one page per record, such as an invoice    | Formularios proyecto - Formularios tabla |
+| Formulario listado              | listScreen       | Un formulario para listar los registros en la pantalla           | Formularios tabla                        |
+| Formulario de lista imprimible  | listPrinter      | A printed report that list records                               | Formularios tabla                        |
+| Ninguno                         | *no destination* | A form with no specific feature                                  | Formularios proyecto - Formularios tabla |
 
 
 #### Gramática JSON

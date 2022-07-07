@@ -176,24 +176,22 @@ The `.clearRemoteCache()` function<!-- REF #DataClassClass.clearRemoteCache(). S
 #### Exemplo
 
 ```4d
-var $ds : 4D.DataStoreImplementation
-var $persons : cs.PersonsSelection
-var $p : cs.PersonsEntity
+var $ds : 4D. DataStoreImplementation
+var $persons : cs. PersonsSelection
+var $p : cs. PersonsEntity
 var $cache : Object
 var $info : Collection
 var $text : Text
 
 $ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
 
-$persons:=$ds.Persons.all()
-$text:=""
-For each ($p; $persons)
-    $text:=$p.firstname+" lives in "+$p.address.city+" / "
-End for each
+$persons:=$ds. Persons.all()
+$text:="" For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / " End for each
 
-$cache:=$ds.Persons.getRemoteCache()
+$cache:=$ds. Persons.getRemoteCache()
 
-$ds.Persons.clearRemoteCache()
+$ds. Persons.clearRemoteCache()
 // Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
@@ -497,7 +495,7 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 #### Descrição
 
-The `.getCount()` function <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->.
+The `.getCount()` function<!-- REF #DataClassClass.getCount(). Summary -->returns the number of entities in a dataclass<!-- END REF -->.
 
 If this function is used within a transaction, entities created during the transaction will be taken into account.
 
@@ -536,7 +534,7 @@ $number:=$ds. Persons.getCount()
 
 #### Descrição
 
-The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+The `.getDataStore()` function<!-- REF #DataClassClass.getDataStore(). Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -591,7 +589,7 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 #### Descrição
 
-The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
+The `.getInfo()` function<!-- REF #DataClassClass.getInfo(). Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Returned object**
 
@@ -668,7 +666,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 #### Descrição
 
-The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->.
+The `.getRemoteCache()` function<!-- REF #DataClassClass.getRemoteCache(). Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->.
 
 Calling this function from a 4D single-user application returns `Null`.
 
@@ -701,30 +699,28 @@ Data concerning related entities is stored in the cache of the data object.
 
 #### Exemplo
 
-In the following example, `$ds.Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
+In the following example, `$ds. Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
 
 Note that `address.city` is loaded in the cache of the `Persons` dataclass.
 
 Only the first entity of the `Address` dataclass is stored in the cache. It is loaded during the first iteration of the loop.
 
 ```4d
-var $ds : 4D.DataStoreImplementation
-var $persons : cs.PersonsSelection
-var $p : cs.PersonsEntity
+var $ds : 4D. DataStoreImplementation
+var $persons : cs. PersonsSelection
+var $p : cs. PersonsEntity
 var $cachePersons; $cacheAddress : Object
 var $text : Text
 
 $ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
 
-$persons:=$ds.Persons.all()
+$persons:=$ds. Persons.all()
 
-$text:=""
-For each ($p; $persons)
-    $text:=$p.firstname+" lives in "+$p.address.city+" / "
-End for each
+$text:="" For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / " End for each
 
-$cachePersons:=$ds.Persons.getRemoteCache()
-$cacheAddress:=$ds.Adress.getRemoteCache()
+$cachePersons:=$ds. Persons.getRemoteCache()
+$cacheAddress:=$ds. Adress.getRemoteCache()
 ```
 
 #### Veja também
@@ -754,7 +750,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 #### Descrição
 
-The `.new()` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+The `.new()` function<!-- REF #DataClassClass.new(). Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
 
 O objeto entidade se cria em memória e não se guarda no banco de dados até que se chama a função [`.save( )`](EntityClass.md#save). Se a entidade for apagada antes de ser salva, não se pode recuperar.
 
@@ -802,7 +798,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 #### Descrição
 
-The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection()` function<!-- REF #DataClassClass.newSelection(). Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
 > Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -853,7 +849,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 #### Descrição
 
-The `.query()` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+The `.query()` function<!-- REF #DataClassClass.query(). Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
@@ -887,11 +883,11 @@ onde:
 
     | Comparação                           | Symbol(s)   | Comentário                                                                                                     |
     | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
-    | Equal to                             | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
+    | Igual a                              | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
     |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
     | Not equal to                         | #, !=       | Supports the wildcard (@)                                                                                      |
     |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
-    | Less than                            | <           |                                                                                                                |
+    | Menor que                            | <           |                                                                                                                |
     | Greater than                         | >           |                                                                                                                |
     | Less than or equal to                | <=          |                                                                                                                |
     | Greater than or equal to             | >=          |                                                                                                                |
@@ -940,10 +936,10 @@ Pode usar parêntesis na pesquisa para dar prioridade ao cálculo Por exemplo, p
 
 Dois tipos de marcadores podem ser usados: **placeholders indexados ** e **placeholders nomeados**:
 
-|            | Marcadores de posição indexados                                                                                                                                                                                 | Placeholders nomeados                                                                                                                                                     |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Definition | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). You can use up to 128 *value* parameters | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
-| Exemplo    | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                     | `$o.attributes:=New object("att";"city")`<br> `$o.parameters:=New object("name";"Chicago")`<br> `$r:=class.query(":att=:name";$o)`                            |
+|           | Marcadores de posição indexados                                                                                                                                                                                 | Placeholders nomeados                                                                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Definição | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). You can use up to 128 *value* parameters | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
+| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                     | `$o.attributes:=New object("att";"city")`<br> `$o.parameters:=New object("name";"Chicago")`<br> `$r:=class.query(":att=:name";$o)`                            |
 
 Pode misturar os tipos de argumentos em *queryString*. Um *queryString* pode conter, para os parâmetros *attributePath*, *formula* e *value* :
 
@@ -1002,16 +998,14 @@ Por exemplo, com as duas entidades abaixo:
 
 ```
 Entity 1:
-ds.People.name: "martin"
-ds.People.places:
+ds. People.name: "martin"
+ds. People.places:
     { "locations" : [ {
                 "kind":"home",
                 "city":"paris"
-            } ] }
-
-Entity 2:
-ds.People.name: "smith"
-ds.People.places:
+            } ] } Entity 2:
+ds. People.name: "smith"
+ds. People.places:
     { "locations" : [ {
                 "kind":"home",
                 "city":"lyon"
@@ -1456,7 +1450,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuario introduz sua 
 
 #### Descrição
 
-The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
+The `.setRemoteCacheSettings()` function<!-- REF #DataClassClass.setRemoteCacheSettings(). Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
 
 In the *settings* parameter, pass an object with the following properties:
 

@@ -24,7 +24,7 @@ Grâce à cette fonctionnalité, toute la logique métier de votre application 4
 
 - Elle vous permet de «masquer» la complexité globale de la structure physique sous-jacente et d'exposer uniquement des fonctions compréhensibles et prêtes à l'emploi.
 
-- Si la structure phySique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
+- Si la structure physique évolue, il vous suffit d'adapter le code de la fonction et les applications clientes continueront de les appeler de manière transparente.
 
 - By default, all of your data model class functions (including [computed attribute functions](#computed-attributes-1)) and [alias attributes](#alias-attributes-1) are **not exposed** to remote applications and cannot be called from REST requests. Vous devez déclarer explicitement chaque fonction publique et alias avec le mot-clé [`exposed`](#exposed-vs-non-exposed-functions).
 
@@ -234,7 +234,7 @@ Les classes Entity vous permettent de définir des **champs calculés** à l'aid
 
 For information, please refer to the [Computed attributes](#computed-attributes-1) section.
 
-#### Attributs des alias
+#### Attributs de type alias
 
 Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
 
@@ -641,7 +641,7 @@ Function orderBy age($event : Object)-> $result : Text
 ```
 
 
-## Attributs des alias
+## Attributs de type alias
 
 ### Aperçu
 

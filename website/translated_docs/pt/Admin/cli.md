@@ -21,7 +21,7 @@ You can execute command lines for 4D applications using the macOS Terminal or th
 
 Here is a description of command lines and the arguments supported to launch 4D applications.
 
-Syntax:
+Sintaxe:
 ```
 <applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
 [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]
@@ -43,7 +43,7 @@ Syntax:
 | `--webadmin-access-key`                                                                                                                                                                      | String                                           | Access key for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `--webadmin-auto-start`                                                                                                                                                                      | Booleano                                         | Status of the automatic startup for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--webadmin-store-settings`                                                                                                                                                                  |                                                  | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary                                                                                                                                                                                                                                                           |
- (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the 
+
 
 [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 

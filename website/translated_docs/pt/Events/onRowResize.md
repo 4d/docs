@@ -3,7 +3,7 @@ id: onRowResize
 title: On Row Resize
 ---
 
-| Code | Can be called by                                        | Definition                                               |
+| Code | Can be called by                                        | Definição                                                |
 | ---- | ------------------------------------------------------- | -------------------------------------------------------- |
 | 60   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | The height of a row is modified by a user with the mouse |
 

@@ -397,9 +397,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 **.getAllRemoteContexts()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parámetros | Tipo   |    | Descripción                                |
-| ---------- | ------ | -- | ------------------------------------------ |
-| Resultado  | Objeto | <- | Collection of optimization context objects |
+| Parámetros | Tipo   |    | Descripción                                    |
+| ---------- | ------ | -- | ---------------------------------------------- |
+| Resultado  | Objeto | <- | Colección de objetos contextos de optimización |
 <!-- END REF -->
 
 > **Modo avanzado:** esta función está pensada para los desarrolladores que necesitan personalizar las funcionalidades por defecto de ORDA para configuraciones específicas. En la mayoría de los casos, no será necesario utilizarla.
@@ -820,8 +820,8 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 | contextName     | Texto        | -> | Nombre del contexto                                                       |
 | dataClassName   | Texto        | -> | Nombre de la dataclass                                                    |
 | dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                |
-| attributes      | Texto        | -> | Attribute list separated by a comma                                       |
-| attributesColl  | Collection   | -> | Collection of attribute names (text)                                      |
+| attributes      | Texto        | -> | Lista de atributos separados por comas                                    |
+| attributesColl  | Collection   | -> | Colección de nombres de atributos (text)                                  |
 | contextType     | Texto        | -> | If provided, value must be "main" or "currentItem"                        |
 | pageLength      | Integer      | -> | Page length of the entity selection linked to the context (default is 80) |
 <!-- END REF -->

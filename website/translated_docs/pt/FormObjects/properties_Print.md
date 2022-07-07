@@ -1,6 +1,6 @@
 ---
 id: propertiesPrint
-title: Print
+title: Imprimir
 ---
 
 ---
@@ -26,9 +26,9 @@ The print options are:
 
 #### JSON Grammar
 
-|    Nome    | Data Type | Possible Values                                     |
-|:----------:|:---------:| --------------------------------------------------- |
-| printFrame |  string   | "fixed", "variable", (subform only) "fixedMultiple" |
+|    Nome    | Tipo de dados | Possible Values                                     |
+|:----------:|:-------------:| --------------------------------------------------- |
+| printFrame |    string     | "fixed", "variable", (subform only) "fixedMultiple" |
 
 
 #### Objects Supported

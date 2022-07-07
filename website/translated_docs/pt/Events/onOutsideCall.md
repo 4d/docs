@@ -3,7 +3,7 @@ id: onOutsideCall
 title: On Outside Call
 ---
 
-| Code | Can be called by | Definition                                   |
+| Code | Can be called by | Definição                                    |
 | ---- | ---------------- | -------------------------------------------- |
 | 10   | Formulário       | The form received a `POST OUTSIDE CALL` call |
 

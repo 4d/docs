@@ -25,7 +25,7 @@ La imagen de la pantalla de inicio sólo puede definirse en el editor de menús:
 
 Puede ver el resultado final probando la barra de menús (ver la sección siguiente). En el modo Aplicación, la imagen se muestra en la pantalla de inicio con el formato de tipo "Truncado (Centrado)".
 
-> You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
+> Puede elegir si desea mostrar u ocultar esta ventana mediante la opción **Mostrar la barra de herramientas** en las Propiedades.
 
 Para eliminar la imagen personalizada y mostrar la predeterminada en su lugar, haga clic en el botón **Borrar** o seleccione **Borrar** en el menú emergente del área.
 

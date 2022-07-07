@@ -9,7 +9,7 @@ This principle is used in particular by the 4D Web server to build [web template
 
 These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
 
-It is possible to mix several types of tags. For example, the following HTML structure is entirely feasible:
+Es posible mezclar varios tipos de etiquetas. For example, the following HTML structure is entirely feasible:
 
 ```html
 <HTML>
@@ -102,7 +102,7 @@ The following code, which must specify a relative path for each call:
 <!--#4DBASE WEBFOLDER-->
 ```
 
-For example, to set a directory for the home page:
+Por ejemplo, para definir un directorio para la página de inicio:
 
 ```html
 /* Index.html */
@@ -219,7 +219,7 @@ The number of loops is based on the number of elements of the collection. At eac
     </table>
 ```
 
-#### Example with a collection of objects
+#### Ejemplo con una colección de objetos
 
 *getSalesPersons* returns a collection of objects.
 
@@ -289,7 +289,7 @@ The *property* parameter is a text variable automatically filled with the name o
 
 The properties of the object are processed according to their creation order. Durante el bucle, se pueden añadir o eliminar propiedades en el objeto, sin modificar el número de bucles que quedarán en función del número original de propiedades del objeto.
 
-#### Example with the properties of an object
+#### Ejemplo con las propiedades de un objeto
 
 *getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
 
@@ -368,7 +368,7 @@ In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boole
 
 Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.
 
-The two following codes are equivalent.
+Los dos códigos siguientes son equivalentes.
 
 Code using 4DELSE only:
 
@@ -388,7 +388,7 @@ Code using 4DELSE only:
 <!--#4DENDIF-->
 ```
 
-Similar code using the `4DELSEIF` tag:
+Código similar utilizando la etiqueta `4DELSEIF`:
 
 ```
 <!--#4DIF Condition1-->
@@ -433,7 +433,7 @@ This example inserts different pages depending on which user is connected:
 
 ## 4DINCLUDE
 
-#### Syntax: `<!--#4DINCLUDE path-->`
+#### Sintaxis: `<!--#4DINCLUDE path-->`
 
 This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). This lets you avoid conflicts related to meta tags present in the headers.
 
@@ -497,7 +497,7 @@ El código siguiente:
 
 ### `<!--#4DLOOP array-->`
 
-This syntax makes a loop for each array item. The array current item is increased when each code portion is repeated.
+Esta sintaxis hace un bucle para cada elemento del array. The array current item is increased when each code portion is repeated.
 
 > This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
 
@@ -520,7 +520,7 @@ The following code example:
 
 ### `<!--#4DLOOP method-->`
 
-This syntax makes a loop as long as the method returns `True`. The method takes a Long Integer parameter type. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns `True`.
+This syntax makes a loop as long as the method returns `True`. El método toma un tipo de parámetro Long Integer. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns `True`.
 
 For security reasons, within a Web process, the `On Web Authentication` database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.
 
@@ -611,13 +611,13 @@ Ejemplo:
 
 In case of an interpretation error, the text "`<!--#4DLOOP expression-->`: description" is inserted instead of the contents located between `<!--#4DLOOP -->` and `<!--#4DENDLOOP-->`.
 
-The following messages can be displayed:
+Se pueden mostrar los siguientes mensajes:
 
-- Unexpected expression type (standard error);
-- Incorrect table name (error on the table name);
+- Tipo de expresión inesperado (error estándar);
+- Nombre de tabla incorrecto (error en el nombre de la tabla);
 - An array was expected (the variable is not an array or is a two dimension array);
 - The method does not exist;
-- Syntax error (when the method is executing);
+- Error de sintaxis (cuando el método se está ejecutando);
 - Access error (you do not have the appropriate access privileges to access the table or the method).
 - 4DENDLOOP expected (the `<!--#4DENDLOOP-->` number does not match the `<!--#4DLOOP -->`).
 
@@ -633,7 +633,7 @@ El método debe devolver el texto en `$0`. If the string starts with the code ch
 
 For example, let’s say that you insert the following comment `“Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
-The `MYMETH` method is as follows:
+El método `MYMETH` es el siguiente:
 
 ```4d
   //MYMETH
@@ -653,7 +653,7 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 #### Alternative syntax: `$4DTEXT(expression)`
 
 
-The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
+The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. Por ejemplo, si se escribe (en una página HTML):
 
 ```html
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
@@ -668,7 +668,7 @@ También puede insertar expresiones 4D. You can for example directly insert the 
 In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
 
 - Debe utilizar las variables proceso.
-- You can display the content of a picture field. However, it is not possible to display the content of a picture array item.
+- Puede mostrar el contenido de un campo imagen. However, it is not possible to display the content of a picture array item.
 - It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
 - Normalmente se trabaja con variables de tipo texto. Sin embargo, también se pueden utilizar las variables BLOB. You just need to generate BLOBs in `Text without length` mode.
 
@@ -677,7 +677,7 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 
 
 
-## Alternative syntax for 4DTEXT, 4DHTML, 4DEVAL
+## Sintaxis alternativa para 4DTEXT, 4DHTML, 4DEVAL
 
 Several existing 4D transformation tags can be expressed using a $-based syntax:
 

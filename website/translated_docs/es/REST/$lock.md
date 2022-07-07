@@ -56,7 +56,7 @@ The returned "__STATUS" object has the following properties:
 | lockKind     |                | number   | Código de bloqueo                                                                                                                                           |
 | lockKindText |                | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
 | lockInfo     |                | objeto   | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
-|              |                |          | ***Available only for a 4D process lock:***                                                                                                                 |
+|              |                |          | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                       |
 |              | task_id        | number   | ID del Proceso                                                                                                                                              |
 |              | user_name      | texto    | Nombre de usuario de la sesión en la máquina                                                                                                                |
 |              | user4d_alias   | texto    | Nombre o alias del usuario 4D                                                                                                                               |
@@ -65,8 +65,8 @@ The returned "__STATUS" object has the following properties:
 |              | task_name      | texto    | Nombre del proceso                                                                                                                                          |
 |              | client_version | texto    | Versión del cliente                                                                                                                                         |
 |              |                |          | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                      |
-|              | host           | texto    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
-|              | IPAddr         | texto    | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
+|              | host           | texto    | URL que bloqueó la entidad (por ejemplo, "127.0.0.1:8043")                                                                                                  |
+|              | IPAddr         | texto    | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                         |
 |              | recordNumber   | number   | Record number of the locked record                                                                                                                          |
 |              | userAgent      | texto    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
@@ -86,7 +86,7 @@ The following values can be returned in the *status* and *statusText* properties
 ## Ejemplo
 
 
-We lock an entity in a first browser:
+Bloqueamos una entidad en un primer navegador:
 
 ```
 GET /rest/Customers(1)/?$lock=true

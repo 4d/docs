@@ -10,9 +10,9 @@ Permite definir un color de fondo diferente para las líneas o columnas impares 
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                                |
-| ------------- | -------------- | --------------------------------------------------------------- |
-| alternateFill | cadena         | any css value; "transparent"; "automatic"; "automaticAlternate" |
+| Nombre        | Tipos de datos | Valores posibles                                                        |
+| ------------- | -------------- | ----------------------------------------------------------------------- |
+| alternateFill | cadena         | todos los valores css; "transparent"; "automatic"; "automaticAlternate" |
 
 #### Objetos soportados
 [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns)

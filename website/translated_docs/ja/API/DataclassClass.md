@@ -855,7 +855,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 #### 説明
 
-`.query()` 関数は、データクラスの全エンティティから、 <!-- REF #DataClassClass.query().Summary -->*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
+`.query()` 関数は、データクラスの全エンティティから、 <!-- REF #DataClassClass.query().Summary -->*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。 戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
@@ -1059,9 +1059,9 @@ ORDA は、N対Nリレーションにおけるクエリを容易にするため�
 $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"Hanks";"Ryan")  
 // $es is empty
 ```
-基本的に、この問題はクエリの内部ロジックに関連しています。値が "A" と "B" の両方である属性を検索することはできません。
+基本的に、この問題はクエリの内部ロジックに関連しています。 値が "A" と "B" の両方である属性を検索することはできません。
 
-このようなクエリを実行するために、ORDA では特別な構文を用意しています。具体的には、文字列内で使用される追加のリレート属性ずべてにおいて、**{}** の間に *クラスインデックス* を追加します。
+**比較演算子**: *attributePath* 引数と *value* 引数の比較に使用する記号 以下の記号がサポートされます:
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"

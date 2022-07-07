@@ -1,6 +1,6 @@
 ---
 id: webAreaOverview
-title: Web Area
+title: Área Web
 ---
 
 
@@ -160,7 +160,7 @@ When the form is executed, standard browser interface functions are available to
 > Drag and drop features described above are not supported in web areas using the [macOS system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 
-### Subforms
+### Subformulários
 
 For reasons related to window redrawing mechanisms, the insertion of a web area into a subform is subject to the following constraints:
 

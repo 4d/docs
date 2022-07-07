@@ -225,7 +225,7 @@ Available media feature expressions:
 *   **light**<br>For using a light scheme
 *   **dark**<br>For using a dark scheme
 
-> Color schemes are only supported on macOS.
+> Los esquemas de color sólo son soportados en macOS.
 
 ##### Ejemplo
 
@@ -361,4 +361,4 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 ## Ver también
 
-See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.
+Ver la presentación en video [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ).

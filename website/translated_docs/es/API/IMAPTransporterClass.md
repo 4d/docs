@@ -244,7 +244,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 La función `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->añade el objeto `mailObj` a la caja `destinationBox`<!-- END REF -->.
 
-En el parámetro `mailObj`, pase un objeto Email. Para una descripción completa de las propiedades del correo, ver [objeto Email](EmailObjectClass.md#email-object). La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
+En el parámetro `mailObj`, pase un objeto Email. En el parámetro `mailObj`, pase un objeto Email. La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
 
 El parámetro opcional `destinationBox` permite pasar el nombre del buzón donde se añadirá el objeto `mailObj`. Si se omite, se utiliza el buzón actual.
 
@@ -1653,66 +1653,66 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.
 
-- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
+- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*. Por lo tanto, debe convertir la cadena *searchCriteria* en el conjunto de caracteres especificado si utiliza la instrucción \[CHARSET] (ver los comandos `CONVERT FROM TEXT` o `Convert to text`). Por defecto, 4D codifica la cadena de criterios searchCriteria en Quotable Printable si contiene los caracteres extendidos.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
-... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.
+... significa que los criterios de búsqueda utilizan el conjunto de caracteres iso-8859 y el servidor tendrá que convertir los criterios de búsqueda antes de buscar, si es necesario.
 
 
 #### Tipos de valores de búsqueda
 
-Search-keys may request the value to search for:
+Las claves de búsqueda pueden solicitar el valor a buscar:
 
-- **Search-keys with a field-name value**: the field-name is the name of a header field. Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
+- **Valores de tipo fecha**: los valores de tipo fecha se colocan en cadenas con el siguiente formato: *date-day+"-"+date-month+"-"+date-year* donde date-day indica la fecha del día del mes (2 caracteres como máximo), date-month indica el mes (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) y date-year indica el año (4 dígitos). Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
 
-- **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
+- **Valores de tipo cadena**: la cadena puede contener cualquier caracter y debe ir entre comillas. Si la cadena no contiene ningún caracter especial, como el espacio, por ejemplo, no es necesario colocarla entre comillas. Al colocar entre comillas estas cadenas se garantiza que su valor se interpretará correctamente. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
 
 - **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
-- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
+- **Marcadores**: los valores de tipo marcador (flags) aceptan una o varias palabras claves (incluyendo marcadores estándar) separados por espacios. Ejemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+- **Conjunto de mensajes**: identifica un conjunto de mensajes. En el caso de los números de secuencia de los mensajes, se trata de números consecutivos desde el 1 hasta el número total de mensajes en el buzón. Los números son separados por coma; un dos puntos (:) delimita entre dos números inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` busca en la selección de mensajes 1 a 5, los mensajes que tienen el marcador \Answered. `searchCriteria= 2,4 ANSWERED` busca en la selección de mensajes (números de mensaje 2 y 4) los mensajes que tienen el marcador \Answered.
 
 
 #### Teclas de búsqueda disponibles
 
-**ALL**: All messages in the mailbox.  
-**ANSWERED**: Messages with the \Answered flag set.  
-**UNANSWERED**: Messages that do not have the \Answered flag set.  
-**DELETED**: Messages with the \Deleted flag set.  
-**UNDELETED**: Messages that do not have the \Deleted flag set.  
-**DRAFT**: Messages with the \Draft flag set.  
-**UNDRAFT**: Messages that do not have the \Draft flag set.  
-**FLAGGED**: Messages with the \Flagged flag set.  
-**UNFLAGGED**: Messages that do not have the \Flagged flag set.  
-**RECENT**: Messages that have the \Recent flag set.  
-**OLD**: Messages that do not have the \Recent flag set.  
-**SEEN**: Messages that have the \Seen flag set.  
-**UNSEEN**: Messages that do not have the \Seen flag set.  
-**NEW**: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to “(RECENT UNSEEN)”.  
-***KEYWORD ***flag******: Messages with the specified keyword set.  
-***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.  
-***BEFORE ***date******: Messages whose internal date is earlier than the specified date.  
-***ON ***date******: Messages whose internal date is within the specified date.  
-***SINCE ***date******: Messages whose internal date is within or later than the specified date.  
-***SENTBEFORE ***date******: Messages whose Date header is earlier than the specified date.  
-***SENTON ***date******: Messages whose Date header is within the specified date.  
-***SENTSINCE ***date******: Messages whose Date header is within or later than the specified date.  
-***TO ***string******: Messages that contain the specified string in the TO header.  
-***FROM ***string******: Messages that contain the specified string in the FROM header.  
-***CC ***string******: Messages that contain the specified string in the CC header.  
-***BCC ***string******: Messages that contain the specified string in the BCC header.  
-***SUBJECT ***string******: Messages that contain the specified string in the Subject header.  
-***BODY ***string******: Messages that contain the specified string in the message body.  
-***TEXT ***string******: Messages that contain the specified string in the header or in the message body.  
-***HEADER *field-name* ***string******: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
-***UID ***message-UID******: Messages with unique identifiers corresponding to the specified unique identifier set.  
-***LARGER ***n******: Messages with a size larger than the specified number of bytes.  
-***SMALLER ***n******: Messages with a size smaller than the specified number of bytes.  
-***NOT ***search-key******: Messages that do not match the specified search key.  
-***OR *search-key1* ***search-key2******: Messages that match either search key.  
+**ALL**: todos los mensajes del buzón.  
+**ANSWERED**: mensajes con el marcador \Answered.  
+**UNANSWERED**: mensajes que no tienen el marcador \Answered.  
+**DELETED**: mensajes con el marcador \Deleted.  
+**UNDELETED**: mensajes que no tienen el marcador \Deleted.  
+**DRAFT**: mensajes con el marcador \Draft.  
+**UNDRAFT**: mensajes que no tienen el marcador \Draft.  
+**FLAGGED**: mensajes con el marcador \Flagged.  
+**UNFLAGGED**: mensajes que no tienen el marcador \Flagged.  
+**RECENT**: mensajes que tienen el marcador \Recent.  
+**OLD**: mensajes que no tienen el marcador \Recent.  
+**SEEN**: mensajes que tienen el marcador \Seen.  
+**UNSEEN**: Mensajes que no tienen el marcador \Seen.  
+**NEW**: mensajes que tienen el marcador \Recent pero no el marcador \Seen. Esto es equivalente a "(RECENT UNSEEN)".  
+***KEYWORD ***flag******: mensajes con el conjunto de palabras clave especificado.  
+***UNKEYWORD ***flag******: mensajes que no tienen la palabra clave especificada.  
+***BEFORE ***date******: mensajes cuya fecha interna es anterior a la fecha especificada.  
+***ON ***date******: mensajes cuya fecha interna está dentro de la fecha especificada.  
+***SINCE ***date******: mensajes cuya fecha interna está dentro o es posterior a la fecha especificada.  
+***SENTBEFORE ***date******: mensajes cuyo encabezado Date es anterior a la fecha especificada.  
+***SENTON ***date******: mensajes cuyo encabezado Date está dentro de la fecha especificada.  
+***SENTSINCE ***date******: mensajes cuyo encabezado Date está dentro o es posterior a la fecha especificada.  
+***TO ***string******: mensajes que contienen la cadena especificada en el encabezado TO.  
+***FROM ***string******: mensajes que contienen la cadena especificada en el encabezado FROM.  
+***CC ***string******: mensajes que contienen la cadena especificada en en el encabezado CC.  
+***BCC ***string******: mensajes que contienen la cadena especificada en en el encabezado BCC.  
+***SUBJECT ***string******: mensajes que contienen la cadena especificada en en el encabezado Asunto.  
+***BODY ***string******: mensajes que contienen la cadena especificada en el cuerpo del mensaje.  
+***TEXT ***string******: mensajes que contienen la cadena especificada en el encabezado o en el cuerpo del mensaje.  
+***HEADER *field-name* ***string******: mensajes que tienen un encabezado con el field-name especificado y que contienen la cadena especificada en el field-body.  
+***UID ***message-UID******: mensajes con identificadores únicos correspondientes al conjunto de identificadores únicos especificado.  
+***LARGER ***n******: mensajes con un tamaño superior al número de bytes especificado.  
+***SMALLER ***n******: mensajes con un tamaño inferior al número de bytes especificado.  
+***NOT ***search-key******: mensajes que no coinciden con al criterio de búsqueda especificado.  
+***OR *search-key1* ***search-key2******: mensajes que coinciden con cualquiera de las dos criterios de búsqueda.  
 
 
 <!-- END REF -->
@@ -1742,16 +1742,16 @@ Search-keys may request the value to search for:
 #### Descripción
 
 La función `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona el buzón *name* como el buzón actual<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
-> To get the information from a mailbox without changing the current mailbox, use [`.getBoxInfo()`](#getboxinfo).
+> Para obtener la información de un buzón sin cambiar el buzón actual, utilice [`.getBoxInfo()`](#getboxinfo).
 
 En el parámetro *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).
 
-The optional *state* parameter defines the type of access to the mailbox. Los valores posibles son:
+El parámetro opcional *state* define el tipo de acceso al buzón. Los valores posibles son:
 
-| Constante             | Valor | Comentario                                                                                                                                                                |
-| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | The selected mailbox is accessed with read only privileges. Messages with a "recent" flag (indicating new messages) remain unchanged.                                     |
-| IMAP read write state | 0     | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). (Valor por defecto) |
+| Constante             | Valor | Comentario                                                                                                                                                                                            |
+| --------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                                  |
+| IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). (Valor por defecto) |
 > * La función genera un error y devuelve **Null** si *name* designa un buzón inexistente.
 > * Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.
 > * Si la conexión no se ha utilizado desde el retraso de conexión designado (ver `IMAP New transporter`), se llama automáticamente a la función [`.checkConnection()`](#checkconnection).
@@ -1808,9 +1808,9 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 #### Descripción
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.
+La función `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->permite añadir o eliminar el buzón especificado del conjunto de buzones "suscritos" en el servidor IMAP<!-- END REF -->. De este modo, puede optar por acotar una gran lista de buzones disponibles suscribiéndose a los que habitualmente consulta.
 
-In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
+En el parámetro `name`, pase el nombre del buzón a añadir (suscribir) a sus buzones "suscritos".
 
 **Objeto devuelto**
 

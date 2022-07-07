@@ -1170,7 +1170,7 @@ Form.products.add(Form.product)
 
 エンティティセレクションは、常に `.length` プロパティを持っています。
 
-> データクラス内の総エンティティ数を知るには、`ds.myClass.all().length` 式よりも最適化された [`getCount()`](DataClassClass.md#getcount) 関数を使用することが推奨されます。
+> この関数は、元のエンティティセレクションを変更しません。
 
 #### 例題
 

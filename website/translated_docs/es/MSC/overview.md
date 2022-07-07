@@ -8,7 +8,7 @@ La ventana del Centro de Mantenimiento y Seguridad (CSM) contiene todas las herr
 
 **Nota:** la ventana del CSM no está disponible desde una conexión remota 4D.
 
-Hay varias formas de abrir la ventana del CSM. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. In standard mode, the project is opened by 4D.
+Hay varias formas de abrir la ventana del CSM. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. En modo estándar, el proyecto es abierto por 4D.
 
 
 ## Acceso en modo de mantenimiento

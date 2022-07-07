@@ -3,13 +3,13 @@ id: overview
 title: Generalidades
 ---
 
-You can create menu bars and menus for your 4D applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users.
+Puede crear barras de menús y menús para sus aplicaciones 4D. Dado que los menús desplegables son una funcionalidad estándar de toda aplicación de escritorio, su adición facilitará el uso de sus aplicaciones y hará que los usuarios las sientan familiares.
 
 ![](assets/en/Menus/menubar.png)
 
 Una **barra de menús** es un grupo de menús que pueden aparecer juntos en una misma pantalla. Cada **menú** de una barra de menús puede tener varios comandos de menú en ella, incluyendo algunos que llaman a submenús en cascada (o submenús jerárquicos). Cuando el usuario elige un comando de menú o submenú, llama a un método proyecto o a una acción estándar que realiza una operación.
 
-You can have many separate menu bars for each application. For example, you can use one menu bar that contains menus for standard operations on the database and another that becomes active only for reporting. Una barra de menús puede contener un menú con comandos de menú para introducir registros. La barra de menús que aparece con el formulario de entrada puede contener el mismo menú, pero los comandos del menú están desactivados porque el usuario no los necesita durante la entrada de datos.
+Puede tener varias barras de menús separadas para cada aplicación. Por ejemplo, puede utilizar una barra de menús que contenga menús para las operaciones estándar de la base de datos y otra que se active sólo para los informes. Una barra de menús puede contener un menú con comandos de menú para introducir registros. La barra de menús que aparece con el formulario de entrada puede contener el mismo menú, pero los comandos del menú están desactivados porque el usuario no los necesita durante la entrada de datos.
 
 Puede utilizar el mismo menú en varias barras de menús o en otros menús, o puede dejarlo suelto y gestionarlo sólo por programación (en este caso, se conoce como menú independiente).
 

@@ -3,9 +3,9 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Can be called by                            | Definition                       |
+| Code | Can be called by                            | Definição                        |
 | ---- | ------------------------------------------- | -------------------------------- |
-| 53   | [Web Area](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| 53   | [Área Web](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças          |
@@ -22,12 +22,10 @@ You can find out the blocked URL using the `WA Get last filtered URL` command.
 This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](FormObjects/webArea_Overview.md#user-interface) option is also enabled for the area. You can accept the drop by calling:
 
 ```4d
-//web area object method
-If (FORM Event.code=On Window Opening Denied)
+//web area object method If (FORM Event.code=On Window Opening Denied)
     WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
     // or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-    // where UrlVariable is the URL variable associated to the web area
-End if 
+    // where UrlVariable is the URL variable associated to the web area End if 
 ```
 
 

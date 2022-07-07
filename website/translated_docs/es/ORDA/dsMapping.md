@@ -11,7 +11,7 @@ The ORDA technology is based upon an automatic mapping of an underlying database
 When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
 *   Tables are mapped to dataclasses.
-*   Fields are mapped to storage attributes.
+*   Los campos corresponden a los atributos de almacenamiento.
 *   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
 ![](assets/en/ORDA/datastoreMapping.png)
@@ -44,7 +44,7 @@ This option must be selected at the 4D structure level for each table and each f
 
 Any modifications applied at the level of the database structure invalidate the current ORDA model layer. Estas modificaciones incluyen:
 
-*   adding or removing a table, a field, or a relation
+*   la adición o la eliminación de una tabla, de un campo, o de una relación
 *   el cambio de nombre de una tabla, de un campo o de una relación
 *   changing a core property of a field (type, unique, index, autoincrement, null value support)
 
@@ -67,7 +67,7 @@ The datastore is the interface object to a database. It builds a representation 
 
 When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
 
-4D allows you to handle the following datastores:
+4D le permite gestionar los siguientes datastores:
 
 - the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
 - one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
@@ -81,7 +81,7 @@ $mydatastore:=OB Copy(ds) //devuelve null
 ```
 
 
-The datastore properties are however enumerable:
+Las propiedades del datastore son sin embargo enumerables:
 
 
 ```4d 
@@ -116,7 +116,7 @@ Un objeto dataclass puede contener:
 *   attributes
 *   atributos relacionales
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. A query is done from a single dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
+The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. Una consulta se hace desde una única dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
 
 The dataclass object itself cannot be copied as an object:
 
@@ -124,7 +124,7 @@ The dataclass object itself cannot be copied as an object:
 $mydataclass:=OB Copy(ds.Employee) //devuelve null
 ```
 
-The dataclass properties are however enumerable:
+Las propiedades de la dataclass son sin embargo enumerables:
 
 ```code4d 
 ARRAY TEXT($prop;0)
@@ -182,7 +182,7 @@ Keep in mind that these objects describe attributes, but do not give access to d
 
 ### Entity
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+Una entidad es el equivalente a un registro. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
 
 The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
 
@@ -192,7 +192,7 @@ The entity object itself cannot be copied as an object:
  $myentity:=OB Copy(ds.Employee.get(1)) //returns null
 ```
 
-The entity properties are however enumerable:
+Sin embargo, las propiedades de la entidad son enumerables:
 
 ```4d
  ARRAY TEXT($prop;0)
@@ -246,9 +246,9 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> > > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
-> * entity selections built upon remote datastores.
+> * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> * selecciones de entidades basadas en datastores remotos.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

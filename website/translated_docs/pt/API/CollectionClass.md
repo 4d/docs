@@ -1705,7 +1705,7 @@ Se *end* < 0 , é recalculado como sendo *end:=end+length*.
 
 #### Descrição
 
-A função `.min()` <!-- REF #collection.min().Summary -->retorna o elemento com o menor valor na coleção<!-- END REF --> (o primeiro elemento da coleção como seria ordenado de forma ascendente usando a função [`.sort()`](#sort)).
+A função `.min()` <!-- REF #collection.min(). Summary -->retorna o elemento com o menor valor na coleção<!-- END REF --> (o primeiro elemento da coleção como seria ordenado de forma ascendente usando a função [`.sort()`](#sort)).
 > This function does not modify the original collection.
 
 Se a coleção conter diferentes tipos de valores, a função `.min()` devolverá o valor mínimo dentro do primeiro tipo de elemento na ordem da lista de tipos (ver a descrição de [`.sort()`](#sort)).
@@ -1758,7 +1758,7 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 #### Descrição
 
-A função `.orderBy()` <!-- REF #collection.orderBy().Summary --> devolve uma nova coleção que contém todos os elementos da coleção na ordem especificado<!-- END REF -->.
+A função `.orderBy()` <!-- REF #collection.orderBy(). Summary --> devolve uma nova coleção que contém todos os elementos da coleção na ordem especificado<!-- END REF -->.
 
 Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
@@ -1895,7 +1895,7 @@ Ordenar com uma rota de propriedade:
 
 #### Descrição
 
-A função `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary --> devolve uma nova coleção que contém todos os elementos da coleção na ordem definida através do método *methodName*.
+A função `.orderByMethod()` <!-- REF #collection.orderByMethod(). Summary --> devolve uma nova coleção que contém todos os elementos da coleção na ordem definida através do método *methodName*.
 
 Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
@@ -2001,7 +2001,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 #### Descrição
 
-A função `.pop()` <!-- REF #colección.pop().Resumen --> elimina o último elemento da coleção e o devolve como resultado da função<!-- END REF -->.
+A função `.pop()` <!-- REF #colección.pop(). Resumen --> elimina o último elemento da coleção e o devolve como resultado da função<!-- END REF -->.
 > This function modifies the original collection.
 
 Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
@@ -2047,7 +2047,7 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 
 #### Descrição
 
-A função `.push()` <!-- REF #collection.push().Summary -->adiciona um ou mais *elementos* ao final da instância da coleção e devolve a coleção editada<!-- END REF -->.
+A função `.push()` <!-- REF #collection.push(). Summary -->adiciona um ou mais *elementos* ao final da instância da coleção e devolve a coleção editada<!-- END REF -->.
 > This function modifies the original collection.
 
 
@@ -2106,7 +2106,7 @@ Se quiser ordenar a coleção resultante:
 
 #### Descrição
 
-A função `.query()` <!-- REF #collection.query().Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+Esta função devolve uma *cópia superficial*, o que significa que os objetos ou coleções de ambas coleções compartem a mesma referência. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -2212,7 +2212,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 #### Descrição
 
 
-A função `.reduce()` <!-- REF #collection.reduce().Summar --> aplica o método de retrochamada *methodName* contra um acumulador e cada elemento da coleção (de esquerda a direita) para reduzi-lo a um único valor<!-- END REF -->.
+A função `.reduce()` <!-- REF #collection.reduce(). Summar --> aplica o método de retrochamada *methodName* contra um acumulador e cada elemento da coleção (de esquerda a direita) para reduzi-lo a um único valor<!-- END REF -->.
 > This function does not modify the original collection.
 
 Em *methodName*, passe o nome do método para usar para avaliar elementos de coleção, junto com os parâmetros em param (opcional). *methodName* toma cada elemento da coleção e realiza todas as operações desejadas para acumular o resultado em *$1.accumulator*, que se devolve em *$1.value*.
@@ -2301,7 +2301,7 @@ Com o método ***Flatten***:
 
 #### Descrição
 
-The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+The `.remove()` function <!-- REF #collection.remove(). Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
 
 In *index*, pass the position where you want the element to be removed from the collection.
@@ -2361,7 +2361,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 #### Descrição
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+The `.resize()` function <!-- REF #collection.resize(). Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
 > This function modifies the original collection.
 
 *   If *size* < collection length, exceeding elements are removed from the collection.
@@ -2414,7 +2414,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 #### Descrição
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+The `.sort()` function <!-- REF #collection.sort(). Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.</p>
 > This function does not modify the original collection.
 
 #### Exemplo
@@ -2452,7 +2452,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descrição
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+The `.shift()` function <!-- REF #collection.shift(). Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
 > This function modifies the original collection.
 
 If the collection is empty, this method does nothing.
@@ -2497,7 +2497,7 @@ If the collection is empty, this method does nothing.
 
 #### Descrição
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.query()` <!-- REF #collection.query(). Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > This function does not modify the original collection.
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
@@ -2549,10 +2549,10 @@ The returned collection contains the element specified by *startFrom* and all su
 
 #### Descrição
 
-The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
+The `.some()` function <!-- REF #collection.some(). Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
 
 
-Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. This method receives an `Object` as first parameter ($1) and must set *$1.result* to **True** for every element fulfilling the test.
+Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional). *methodName* pode realizar qualquer teste, com ou sem os parâmetros. Em *methodName*, passe o nome do método para usar para avliar elementos collection, junto com os parâmetros em *param* (opcional).
 
 *methodName* recebe os parâmetros abaixo:
 
@@ -2713,7 +2713,7 @@ Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por
 
 #### Descrição
 
-The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+The `.sum()` function <!-- REF #collection.sum(). Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
 
 Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).
 
@@ -2774,7 +2774,7 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 #### Descrição
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+The `.unshift()` function <!-- REF #collection.unshift(). Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
 > This function modifies the original collection.
 
 If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
