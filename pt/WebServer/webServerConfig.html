@@ -238,7 +238,7 @@
 <tr><td>Settings dialog box</td><td><a href="/docs/pt/settings/web.html#enable-cors">Options (II) page/Enable CORS</a></td><td>Unchecked by default</td></tr>
 </tbody>
 </table>
-<p>The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. For security reasons, &quot;cross-domain&quot; requests are forbidden at the browser level by default. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a &quot;403 - forbidden&quot; error response.</p>
+<p>The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razões de segurança, solicitações de &quot;cross-domain&quot; são proibidas no nível do navegador por padrão. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a &quot;403 - forbidden&quot; error response.</p>
 <p>When disabled (default), all cross site requests sent with CORS are ignored.</p>
 <p>For more information about CORS, please refer to the <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">Cross-origin resource sharing page</a> on Wikipedia.</p>
 <h4><a class="anchor" aria-hidden="true" id="veja-também-1"></a><a href="#veja-também-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Veja também</h4>
@@ -296,7 +296,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HSTS max age</code></td><td>number in seconds</td></tr>
 </tbody>
 </table>
-<p>Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. This information is stored on the client side for the specified duration. Default value is 63072000 (2 years)</p>
+<p>Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. Esta informação é armazenada no lado do Cliente durante a duração especificada. Default value is 63072000 (2 years)</p>
 <blockquote>
 <p><strong>Warning:</strong> Once HSTS is enabled, client connections will continue to use this mechanism for the specified duration. When you are testing your applications, it is recommended to set a short duration to be able to switch between secured and non-secured connection modes if necessary.</p>
 </blockquote>
@@ -322,7 +322,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web HTTP compression threshold</code></td><td></td></tr>
 </tbody>
 </table>
-<p>In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. This setting is useful in order to avoid losing machine time by compressing small exchanges.</p>
+<p>In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.</p>
 <p>Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.</p>
 <h2><a class="anchor" aria-hidden="true" id="http-port"></a><a href="#http-port" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTP Port</h2>
 <table>
@@ -536,7 +536,7 @@
 <tr><th>Can be set with</th><th>Nome</th><th>Comentários</th></tr>
 </thead>
 <tbody>
-<tr><td>webServer object</td><td><a href="/docs/pt/API/WebServerClass.html#opensslversion"><code>openSSLVersion</code></a></td><td>Read-only</td></tr>
+<tr><td>webServer object</td><td><a href="/docs/pt/API/WebServerClass.html#opensslversion"><code>openSSLVersion</code></a></td><td>Somente leitura</td></tr>
 </tbody>
 </table>
 <p>Version of the OpenSSL library used.</p>

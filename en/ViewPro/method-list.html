@@ -200,8 +200,8 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>VP ADD SHEET</code> command inserts a sheet in the document loaded in <em>vpAreaName</em>.</p>
-<p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
+<p>The <code>VP ADD SHEET</code> command inserts a sheet in the document loaded in <em>vpAreaName</em>.
+In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>In <em>index</em>, you can pass an index for the new sheet. If the passed <em>index</em> is inferior to or equal to 0, the command inserts the new sheet at the beginning. If <em>index</em> exceeds the number of sheets, the command inserts the new sheet after the existing ones.</p>
 <blockquote>
 <p>Indexing starts at 0.</p>
@@ -240,13 +240,13 @@
 <p><img src="/docs/assets/en/ViewPro/vp-add-span.png" alt="initial-document"></p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">// First quarter range</span>
  <span class="hljs-variable">$q1</span>:=<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>;<span class="hljs-number">3</span>;<span class="hljs-number">1</span>)
- 
+
   <span class="hljs-comment">// Second quarter range</span>
  <span class="hljs-variable">$q2</span>:=<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">3</span>;<span class="hljs-number">1</span>)
- 
+
   <span class="hljs-comment">// South area range</span>
  <span class="hljs-variable">$south</span>:=<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">0</span>;<span class="hljs-number">5</span>;<span class="hljs-number">1</span>;<span class="hljs-number">3</span>)
- 
+
 <span class="hljs-function"> VP ADD SPAN</span>(<span class="hljs-function">VP Combine ranges</span>(<span class="hljs-variable">$q1</span>;<span class="hljs-variable">$q2</span>;<span class="hljs-variable">$south</span>))
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/vp-add-span-2.png" alt="vp-add-span-result"></p>
@@ -284,17 +284,17 @@
 <p>The following code:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$styles</span>:=New object
 <span class="hljs-variable">$styles</span>.backColor:=<span class="hljs-string">"green"</span>
- 
+
 <span class="hljs-comment">//Line Border Object</span>
 <span class="hljs-variable">$borders</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"green"</span>;<span class="hljs-string">"style"</span>;vk line style medium dash dot)
- 
+
 <span class="hljs-variable">$styles</span>.borderBottom:=<span class="hljs-variable">$borders</span>
 <span class="hljs-variable">$styles</span>.borderLeft:=<span class="hljs-variable">$borders</span>
 <span class="hljs-variable">$styles</span>.borderRight:=<span class="hljs-variable">$borders</span>
 <span class="hljs-variable">$styles</span>.borderTop:=<span class="hljs-variable">$borders</span>
- 
+
 <span class="hljs-function">VP ADD STYLESHEET</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"GreenDashDotStyle"</span>;<span class="hljs-variable">$styles</span>)
- 
+
 <span class="hljs-comment">//To apply the style</span>
 <span class="hljs-function">VP SET CELL STYLE</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"GreenDashDotStyle"</span>))
 </code></pre>
@@ -483,7 +483,7 @@
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$cell</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>) <span class="hljs-comment">// C5</span>
  <span class="hljs-variable">$column</span>:=<span class="hljs-function">VP Column</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>) <span class="hljs-comment">// column D</span>
  <span class="hljs-variable">$row</span>:=<span class="hljs-function">VP Row</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">9</span>) <span class="hljs-comment">// row 10</span>
- 
+
  <span class="hljs-variable">$combine</span>:=<span class="hljs-function">VP Combine ranges</span>(<span class="hljs-variable">$cell</span>;<span class="hljs-variable">$column</span>;<span class="hljs-variable">$row</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-11"></a><a href="#see-also-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -748,7 +748,7 @@
 <h4><a class="anchor" aria-hidden="true" id="example-1-1"></a><a href="#example-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <p>You want to export the contents of the &quot;VPArea&quot; area to a 4D View Pro document on disk:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$docPath</span>: Text
- 
+
 <span class="hljs-variable">$docPath</span>:=<span class="hljs-string">"C:\\Bases\\ViewProDocs\\MyExport.4VP"</span>
 <span class="hljs-function">VP EXPORT DOCUMENT</span>(<span class="hljs-string">"VPArea"</span>;<span class="hljs-variable">$docPath</span>)
 <span class="hljs-comment">//MyExport.4VP is saved on your disk</span>
@@ -768,7 +768,7 @@
  <span class="hljs-variable">$params</span>.formula:=<span class="hljs-function">Formula</span>(AfterExport)
  <span class="hljs-variable">$params</span>.format:=vp MS Excel format <span class="hljs-comment">//".xlsx"</span>
  <span class="hljs-variable">$params</span>.valuesOnly:=<span class="hljs-literal">True</span>
- 
+
 <span class="hljs-function"> VP EXPORT DOCUMENT</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"c:\\tmp\\convertedfile"</span>;<span class="hljs-variable">$params</span>)
 </code></pre>
 <p><strong><em>AfterExport</em></strong> method:</p>
@@ -778,7 +778,7 @@
  <span class="hljs-variable">$filePath</span>:=<span class="hljs-variable">$2</span>
  <span class="hljs-variable">$params</span>:=<span class="hljs-variable">$3</span>
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$4</span><span class="hljs-keyword">
- 
+
  If</span>(<span class="hljs-variable">$status</span>.success=<span class="hljs-literal">False</span>)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-variable">$status</span>.errorMessage)<span class="hljs-keyword">
  Else</span>
@@ -879,26 +879,26 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 <h4><a class="anchor" aria-hidden="true" id="example-1-3"></a><a href="#example-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <p>To find the first cell containing the word &quot;Total&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$range</span>;<span class="hljs-variable">$result </span>: Object
- 
+
 <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>)
- 
+
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Find</span>(<span class="hljs-variable">$range</span>;<span class="hljs-string">"Total"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-2-3"></a><a href="#example-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <p>To find &quot;Total&quot; and replace it with &quot;Grand Total&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$range</span>;<span class="hljs-variable">$condition</span>;<span class="hljs-variable">$result </span>: Object
- 
+
 <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>)
- 
+
 <span class="hljs-variable">$condition</span>:=New object
 <span class="hljs-variable">$condition</span>.target:=vk find target text
 <span class="hljs-variable">$condition</span>.all:=<span class="hljs-literal">True</span> <span class="hljs-comment">//Search entire document</span>
 <span class="hljs-variable">$condition</span>.flags:=vk find flag exact match
- 
+
   <span class="hljs-comment">// Replace the cells containing only 'Total' in the current sheet with "Grand Total"</span>
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Find</span>(<span class="hljs-variable">$range</span>;<span class="hljs-string">"Total"</span>;<span class="hljs-variable">$condition</span>;<span class="hljs-string">"Grand Total"</span>)
- 
-  <span class="hljs-comment">// Check for empty range object </span><span class="hljs-keyword">
+
+  <span class="hljs-comment">// Check for empty range object</span><span class="hljs-keyword">
 If</span>(<span class="hljs-variable">$result</span>.ranges.length=<span class="hljs-number">0</span>)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"No result found"</span>)<span class="hljs-keyword">
 Else</span>
@@ -924,7 +924,7 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> VP SET TEXT VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea1"</span>;<span class="hljs-number">10</span>;<span class="hljs-number">1</span>);<span class="hljs-string">"INVOICE"</span>)
 <span class="hljs-function"> VP SET TEXT VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea1"</span>;<span class="hljs-number">10</span>;<span class="hljs-number">2</span>);<span class="hljs-string">"Invoice date: "</span>)
 <span class="hljs-function"> VP SET TEXT VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea1"</span>;<span class="hljs-number">10</span>;<span class="hljs-number">3</span>);<span class="hljs-string">"Due date: "</span>)
- 
+
 <span class="hljs-function"> VP FLUSH COMMANDS</span>((<span class="hljs-string">"ViewProArea1"</span>)
  TRACE
 </code></pre>
@@ -978,8 +978,8 @@ size:<span class="hljs-number">16</span>pt
 <p><img src="/docs/assets/en/ViewPro/cmd_vpGetActiveCell.PNG" alt=""></p>
 <p>The following code will retrieve the coordinates of the active cell:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$activeCell</span>:=<span class="hljs-function">VP Get active cell</span>(<span class="hljs-string">"myVPArea"</span>)
- 
-  <span class="hljs-comment">//returns a range object containing: </span>
+
+  <span class="hljs-comment">//returns a range object containing:</span>
   <span class="hljs-comment">//$activeCell.ranges[0].column=3</span>
   <span class="hljs-comment">//$activeCell.ranges[0].row=4</span>
   <span class="hljs-comment">//$activeCell.ranges[0].sheet=0</span>
@@ -1092,7 +1092,7 @@ var</span> <span class="hljs-variable">$myAttribute </span>: Text
 <p>The following code:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$range</span>)
 <span class="hljs-function">C_COLLECTION</span>(<span class="hljs-variable">$attr</span>)
- 
+
 <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Column</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
 <span class="hljs-variable">$attr</span>:=<span class="hljs-function">VP Get column attributes</span>(<span class="hljs-variable">$range</span>)
 </code></pre>
@@ -1232,7 +1232,7 @@ var</span> <span class="hljs-variable">$myAttribute </span>: Text
 <h4><a class="anchor" aria-hidden="true" id="example-26"></a><a href="#example-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//set a formula</span>
 <span class="hljs-function">VP SET FORMULA</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-string">"SUM($A$1:$C$10)"</span>)
- 
+
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Get formula</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>)) <span class="hljs-comment">// $result="SUM($A$1:$C$10)"</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-27"></a><a href="#see-also-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -1273,10 +1273,10 @@ var</span> <span class="hljs-variable">$myAttribute </span>: Text
 <h4><a class="anchor" aria-hidden="true" id="example-27"></a><a href="#example-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">0</span>;<span class="hljs-number">0</span>)
 <span class="hljs-function">VP ADD RANGE NAME</span>(<span class="hljs-string">"Total1"</span>;<span class="hljs-variable">$range</span>)
- 
+
 <span class="hljs-variable">$formula</span>:=<span class="hljs-function">VP Get formula by name</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"Total1"</span>)
   <span class="hljs-comment">//$formula.formula=Sheet1!$A$1</span>
- 
+
 <span class="hljs-variable">$formula</span>:=<span class="hljs-function">VP Get formula by name</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"Total"</span>)
   <span class="hljs-comment">//$formula=null (if not existing)</span>
 </code></pre>
@@ -1344,7 +1344,7 @@ var</span> <span class="hljs-variable">$myAttribute </span>: Text
 <h4><a class="anchor" aria-hidden="true" id="example-29"></a><a href="#example-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>You want to retrieve information about the number of frozen columns and rows:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$panesObj </span>: Object
- 
+
 <span class="hljs-variable">$panesObj</span>:=<span class="hljs-function">VP Get frozen panes</span>(<span class="hljs-string">"ViewProArea"</span>)
 </code></pre>
 <p>The returned object contains, for example:</p>
@@ -1475,7 +1475,7 @@ zoomFactor:<span class="hljs-number">1</span>
 <p>The following code returns a collection of the attributes within the given range:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$range </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$attr </span>: Collection
- 
+
 <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Column</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
 <span class="hljs-variable">$attr</span>:=<span class="hljs-function">VP Get row attributes</span>(<span class="hljs-variable">$range</span>)
 </code></pre>
@@ -1525,7 +1525,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <p><img src="/docs/assets/en/ViewPro/cmd_vpGetSelection.PNG" alt=""></p>
 <p>The following code will retrieve the coordinates of all the cells in the current selection:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$currentSelection</span>:=<span class="hljs-function">VP Get selection</span>(<span class="hljs-string">"myVPArea"</span>)
- 
+
 <span class="hljs-comment">//returns a range object containing:  </span>
 <span class="hljs-comment">//$currentSelection.ranges[0].column=5</span>
 <span class="hljs-comment">//$currentSelection.ranges[0].columnCount=2</span>
@@ -1682,9 +1682,9 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="example-40"></a><a href="#example-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>You want to center the text for the spanned cells in this document:</p>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpGetSpans.PNG" alt=""></p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// Search for all cell spans </span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Search for all cell spans</span>
 <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Get spans</span>(<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>))
- 
+
 <span class="hljs-comment">//center text</span>
 <span class="hljs-variable">$style</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"vAlign"</span>;vk vertical align center;<span class="hljs-string">"hAlign"</span>;vk horizontal align center)
 <span class="hljs-function">VP SET CELL STYLE</span>(<span class="hljs-variable">$range</span>;<span class="hljs-variable">$style</span>)
@@ -1756,10 +1756,10 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 <pre><code class="hljs css language-4d">[
    {
      backColor:green,
-     borderLeft:{color:green,style:<span class="hljs-number">10</span>}, 
-     borderTop:{color:green,style:<span class="hljs-number">10</span>}, 
-     borderRight:{color:green,style:<span class="hljs-number">10</span>}, 
-     borderBottom:{color:green,style:<span class="hljs-number">10</span>}, 
+     borderLeft:{color:green,style:<span class="hljs-number">10</span>},
+     borderTop:{color:green,style:<span class="hljs-number">10</span>},
+     borderRight:{color:green,style:<span class="hljs-number">10</span>},
+     borderBottom:{color:green,style:<span class="hljs-number">10</span>},
      name:GreenDashDotStyle
    },
    {
@@ -1934,7 +1934,7 @@ End if</span>
 <p>You want to import a password protected Microsoft Excel document into a 4D View Pro area:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=New object
 <span class="hljs-variable">$o</span>.password:=<span class="hljs-string">"excel123"</span>
- 
+
 <span class="hljs-function">VP IMPORT DOCUMENT</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"c:\\tmp\\excelfilefile.xlsx"</span>;<span class="hljs-variable">$o</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-3-2"></a><a href="#example-3-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
@@ -2153,12 +2153,12 @@ End if</span>
 <p>The returned shorthand string can be assigned to the &quot;font&quot; property of a cell with the <a href="#vp-set-cell-style">VP SET CELL STYLE</a>, for example.</p>
 <h4><a class="anchor" aria-hidden="true" id="example-52"></a><a href="#example-52" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$cellStyle</span>:=<span class="hljs-function">VP Get cell style</span>(<span class="hljs-variable">$range</span>)
- 
+
 <span class="hljs-variable">$font</span>:=<span class="hljs-function">VP Font to object</span>(<span class="hljs-variable">$cellStyle</span>.font)
 <span class="hljs-variable">$font</span>.style:=vk font style oblique
 <span class="hljs-variable">$font</span>.variant:=vk font variant small caps
 <span class="hljs-variable">$font</span>.weight:=vk font weight bolder
- 
+
 <span class="hljs-variable">$cellStyle</span>.font:=<span class="hljs-function">VP Object to font</span>(<span class="hljs-variable">$font</span>)
 <span class="hljs-comment">//$cellStyle.font contains "bolder oblique small-caps 16pt arial"</span>
 </code></pre>
@@ -2290,7 +2290,7 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="example-56"></a><a href="#example-56" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">0</span>;<span class="hljs-number">0</span>)
 <span class="hljs-function">VP ADD RANGE NAME</span>(<span class="hljs-string">"Total1"</span>;<span class="hljs-variable">$range</span>)
- 
+
 <span class="hljs-function">VP REMOVE NAME</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"Total1"</span>)
 <span class="hljs-variable">$formula</span>:=<span class="hljs-function">VP Get formula by name</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"Total1"</span>)
 <span class="hljs-comment">//$formula=null</span>
@@ -2343,7 +2343,7 @@ End if</span>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//find all cell spans</span>
  <span class="hljs-variable">$span</span>:=<span class="hljs-function">VP Get spans</span>(<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>))
 
- 
+
   <span class="hljs-comment">//remove the cell spans</span>
 <span class="hljs-function"> VP REMOVE SPAN</span>(<span class="hljs-variable">$span</span>)
 </code></pre>
@@ -2528,17 +2528,17 @@ End if</span>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="example-1-6"></a><a href="#example-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <p>You want to create an offscreen 4D View Pro area and get the value of a cell:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.OffscreenArea class declaration </span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.OffscreenArea class declaration</span><span class="hljs-keyword">
 Class constructor</span> (<span class="hljs-variable">$path </span>: Text)
     <span class="hljs-literal">This</span>.filePath:=<span class="hljs-variable">$path</span>
- 
-<span class="hljs-comment">// This function will be called on each event of the offscreen area </span><span class="hljs-keyword">
+
+<span class="hljs-comment">// This function will be called on each event of the offscreen area</span><span class="hljs-keyword">
 Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-keyword">
     Case of</span>
         :(FORM Event.code=On VP Ready)
 <span class="hljs-function">            VP IMPORT DOCUMENT</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-literal">This</span>.filePath)
             <span class="hljs-literal">This</span>.result:=<span class="hljs-function">VP Get value</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-number">6</span>;<span class="hljs-number">22</span>))
- 
+
 <span class="hljs-function">            ALERT</span>(<span class="hljs-string">"The G23 cell contains the value: "</span>+<span class="hljs-function">String</span>(<span class="hljs-literal">This</span>.result))<span class="hljs-keyword">
     End case</span>
 </code></pre>
@@ -2553,42 +2553,42 @@ Class constructor</span>(<span class="hljs-variable">$pdfPath </span>: Text)
     <span class="hljs-literal">This</span>.pdfPath:=<span class="hljs-variable">$pdfPath</span>
     <span class="hljs-literal">This</span>.autoQuit:=<span class="hljs-literal">False</span>
     <span class="hljs-literal">This</span>.isWaiting:=<span class="hljs-literal">False</span><span class="hljs-keyword">
- 
+
 Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-keyword">
     Case of</span>
         :(FORM Event.code=On VP Ready)
     <span class="hljs-comment">// Document import</span>
 <span class="hljs-function">            VP IMPORT DOCUMENT</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-variable">$largeDocument4VP</span>)
             <span class="hljs-literal">This</span>.isWaiting:=<span class="hljs-literal">True</span>
- 
+
     <span class="hljs-comment">// Start a timer to verify if all calculations are finished.</span>
     <span class="hljs-comment">// If during this period the "On VP Range Changed" is thrown, the timer will be restarted</span>
     <span class="hljs-comment">// The time must be defined according to the computer configuration.</span>
 <span class="hljs-function">            SET TIMER</span>(<span class="hljs-number">60</span>)
- 
+
         :(FORM Event.code=On VP Range Changed)
     <span class="hljs-comment">// End of calculation detected. Restarts the timer</span><span class="hljs-keyword">
             If</span>(<span class="hljs-literal">This</span>.isWaiting)
 <span class="hljs-function">                SET TIMER</span>(<span class="hljs-number">60</span>)<span class="hljs-keyword">
             End if</span>
- 
+
         :(FORM Event.code=On Timer)
     <span class="hljs-comment">// To be sure to not restart the timer if you call others 4D View command after this point</span>
             <span class="hljs-literal">This</span>.isWaiting:=<span class="hljs-literal">False</span>
- 
+
     <span class="hljs-comment">// Stop the timer</span>
 <span class="hljs-function">            SET TIMER</span>(<span class="hljs-number">0</span>)
- 
+
     <span class="hljs-comment">// Start the PDF export</span>
 <span class="hljs-function">            VP EXPORT DOCUMENT</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-literal">This</span>.pdfPath;<span class="hljs-function">New object</span>(<span class="hljs-string">"formula"</span>;<span class="hljs-function">Formula</span>(ACCEPT)))
- 
+
         :(FORM Event.code=On URL Loading Error)
-            CANCEL<span class="hljs-keyword"> 
+            CANCEL<span class="hljs-keyword">
     End case</span>
 </code></pre>
 <p>The <em>OffscreenArea</em> callback method:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=cs.OffscreenArea.<span class="hljs-function">new</span>()
- 
+
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Run offscreen area</span>(<span class="hljs-variable">$o</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-66"></a><a href="#see-also-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -2652,11 +2652,11 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>You want to allow two methods in your 4D View Pro areas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$allowed</span>)
 <span class="hljs-variable">$allowed</span>:=New object <span class="hljs-comment">//parameter for the command</span>
- 
+
 <span class="hljs-variable">$allowed</span>.Hello:=New object <span class="hljs-comment">//create a first simple function named "Hello"</span>
 <span class="hljs-variable">$allowed</span>.Hello.method:=<span class="hljs-string">"My_Hello_Method"</span> <span class="hljs-comment">//sets the 4D method</span>
 <span class="hljs-variable">$allowed</span>.Hello.summary:=<span class="hljs-string">"Hello prints hello world"</span>
- 
+
 <span class="hljs-variable">$allowed</span>.Byebye:=New object <span class="hljs-comment">//create a second function with parameters named "Byebye"</span>
 <span class="hljs-variable">$allowed</span>.Byebye.method:=<span class="hljs-string">"My_ByeBye_Method"</span>
 <span class="hljs-variable">$allowed</span>.Byebye.parameters:=New collection
@@ -2666,7 +2666,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <span class="hljs-variable">$allowed</span>.Byebye.summary:=<span class="hljs-string">"Byebye prints a custom timestamp"</span>
 <span class="hljs-variable">$allowed</span>.Byebye.minParams:=<span class="hljs-number">3</span>
 <span class="hljs-variable">$allowed</span>.Byebye.maxParams:=<span class="hljs-number">3</span>
- 
+
 <span class="hljs-function">VP SET ALLOWED METHODS</span>(<span class="hljs-variable">$allowed</span>)
 </code></pre>
 <p>After this code is executed, the defined functions can be used in 4D View Pro formulas:</p>
@@ -2800,7 +2800,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <span class="hljs-variable">$border</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"red"</span>;<span class="hljs-string">"style"</span>;vk line style thick)
 <span class="hljs-variable">$option</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"outline"</span>;<span class="hljs-literal">True</span>)
 <span class="hljs-function">VP SET BORDER</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">3</span>);<span class="hljs-variable">$border</span>;<span class="hljs-variable">$option</span>)
- 
+
 <span class="hljs-comment">// // Set borders using VP SET CELL STYLE</span>
 <span class="hljs-variable">$cellStyle</span>:=New object
 <span class="hljs-variable">$cellStyle</span>.borderBottom:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"blue"</span>;<span class="hljs-string">"style"</span>;vk line style thick)
@@ -2843,7 +2843,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <span class="hljs-variable">$style</span>.isVerticalText:=<span class="hljs-literal">True</span>
 <span class="hljs-variable">$style</span>.borderBottom:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"#800080"</span>;<span class="hljs-string">"style"</span>;vk line style thick)
 <span class="hljs-variable">$style</span>.backgroundImage:=<span class="hljs-literal">Null</span> <span class="hljs-comment">//remove a specific attribute</span>
- 
+
 <span class="hljs-function">VP SET CELL STYLE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>);<span class="hljs-variable">$style</span>)
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetCellStyle.PNG" alt=""></p>
@@ -2879,10 +2879,10 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <h4><a class="anchor" aria-hidden="true" id="example-69"></a><a href="#example-69" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>To change the size of the second column and set the header, you write:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$column</span>;<span class="hljs-variable">$properties</span>)
- 
+
 <span class="hljs-variable">$column</span>:=<span class="hljs-function">VP Column</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>) <span class="hljs-comment">//column B</span>
 <span class="hljs-variable">$properties</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"width"</span>;<span class="hljs-number">100</span>;<span class="hljs-string">"header"</span>;<span class="hljs-string">"Hello World"</span>)
- 
+
 <span class="hljs-function">VP SET COLUMN ATTRIBUTES</span>(<span class="hljs-variable">$column</span>;<span class="hljs-variable">$properties</span>)
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetColumnAttributes.PNG" alt=""></p>
@@ -2987,34 +2987,34 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>You want to use formula objects in a 4D View Pro area to add numbers, retrieve a customer's last name and gender:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Case of</span>
     :(FORM Event.code=On Load)<span class="hljs-keyword">
- 
+
        var</span> <span class="hljs-variable">$o </span>: Object
        <span class="hljs-variable">$o</span>:=New object
- 
+
 <span class="hljs-comment">// Define "addnum" function from a method named "addnum"</span>
        <span class="hljs-variable">$o</span>.addnum:=New object
        <span class="hljs-variable">$o</span>.addnum.formula:=<span class="hljs-function">Formula</span>(addnum)
        <span class="hljs-variable">$o</span>.addnum.parameters:=New collection
        <span class="hljs-variable">$o</span>.addnum.parameters.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"num1"</span>;<span class="hljs-string">"type"</span>;Is Integer))
        <span class="hljs-variable">$o</span>.addnum.parameters.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"num2"</span>;<span class="hljs-string">"type"</span>;Is Integer))
- 
+
 <span class="hljs-comment">// Define "ClientLastName" function from a database field</span>
        <span class="hljs-variable">$o</span>.ClientLastName:=New object
        <span class="hljs-variable">$o</span>.ClientLastName.formula:=<span class="hljs-function">Formula</span>([Customers]lastname)
        <span class="hljs-variable">$o</span>.ClientLastName.summary:=<span class="hljs-string">"Lastname of the current client"</span>
- 
+
 <span class="hljs-comment">// Define "label" function from a 4D expression with one parameter</span>
        <span class="hljs-variable">$o</span>.label:=New object
        <span class="hljs-variable">$o</span>.label.formula:=<span class="hljs-function">Formula</span>(ds.Customers.<span class="hljs-function">get</span>(<span class="hljs-variable">$1</span>).label)
        <span class="hljs-variable">$o</span>.label.parameters:=New collection
        <span class="hljs-variable">$o</span>.label.parameters.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"ID"</span>;<span class="hljs-string">"type"</span>;Is Integer))
- 
+
 <span class="hljs-comment">// Define "Title" function from a variable named "Title"</span>
        <span class="hljs-variable">$o</span>.Title:=New object
        <span class="hljs-variable">$o</span>.Title.formula:=<span class="hljs-function">Formula</span>(Title)
- 
+
 <span class="hljs-function">       VP SET CUSTOM FUNCTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$o</span>)<span class="hljs-keyword">
- 
+
 End case</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-76"></a><a href="#see-also-76" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -3120,13 +3120,13 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$data</span>:=<span class="hljs-function"> New collection</span>()
 
 <span class="hljs-comment">// Dates can be passed as scalar values</span>
-<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date"</span>; Current date)) 
+<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date"</span>; Current date))
 
 <span class="hljs-comment">// Time values must be passed as object attributes</span>
 <span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Time"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"time"</span>; <span class="hljs-number">5140</span>)))
 
 <span class="hljs-comment">// Date + time example</span>
-<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date + Time"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"value"</span>; Current date; <span class="hljs-string">"time"</span>; <span class="hljs-number">5140</span>))) 
+<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date + Time"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"value"</span>; Current date; <span class="hljs-string">"time"</span>; <span class="hljs-number">5140</span>)))
 
 <span class="hljs-variable">$options</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"autoGenerateColumns"</span>; <span class="hljs-literal">True</span>)
 
@@ -3158,7 +3158,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-74"></a><a href="#example-74" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value as the current date and time</span>
 <span class="hljs-function">VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>);Current time;Current date;vk pattern full date time)
- 
+
 <span class="hljs-comment">//Set the cell value as the 18th of December</span>
 <span class="hljs-function">VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-literal">!2024-12-18!</span>;<span class="hljs-literal">?14:30:10?</span>;vk pattern sortable date time)
 </code></pre>
@@ -3196,7 +3196,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-75"></a><a href="#example-75" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value to the current date</span>
 <span class="hljs-function">VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>);Current date))
- 
+
 <span class="hljs-comment">//Set the cell value to a specific date with a designated format</span>
 <span class="hljs-function">VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">4</span>);<span class="hljs-function">Date</span>(<span class="hljs-string">"12/25/94"</span>);<span class="hljs-string">"d/m/yy "</span>)
 <span class="hljs-function">VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>);<span class="hljs-literal">!2005-01-15!</span>;vk pattern month day)
@@ -3228,7 +3228,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$style</span>.hAlign:=vk horizontal align left
 <span class="hljs-variable">$style</span>.font:=<span class="hljs-string">"12pt papyrus"</span>
 <span class="hljs-variable">$style</span>.backColor:=<span class="hljs-string">"#E6E6FA"</span> <span class="hljs-comment">//light purple color</span>
- 
+
 <span class="hljs-function">VP SET DEFAULT STYLE</span>(<span class="hljs-string">"myDoc"</span>;<span class="hljs-variable">$style</span>)
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetDefaultStyle.PNG" alt=""></p>
@@ -3271,7 +3271,11 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="description-85"></a><a href="#description-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>The <code>VP SET FORMULA</code> command assigns a specified formula or 4D method to a designated cell range.</p>
 <p>In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify. If <em>rangeObj</em> includes multiple cells, the formula specified will be linked in each cell.</p>
-<p>The <em>formula</em> parameter specifies a formula or 4D method name to be assigned to the <em>rangeObj</em>. If a 4D method is used, it must be allowed with the <a href="#vp-set-allowed-method"><code>VP SET ALLOWED METHODS</code></a> command.</p>
+<p>The <em>formula</em> parameter specifies a formula or 4D method name to be assigned to the <em>rangeObj</em>.</p>
+<blockquote>
+<p>If the <em>formula</em> is a string, use the period <code>.</code> as numerical separator and the comma <code>,</code> as parameter separator.
+If a 4D method is used, it must be allowed with the <a href="#vp-set-allowed-method"><code>VP SET ALLOWED METHODS</code></a> command.</p>
+</blockquote>
 <p>The optional <em>formatPattern</em> defines a <a href="/docs/en/ViewPro/configuring.html#cell-format">pattern</a> for the <em>formula</em>.</p>
 <p>You remove the formula in <em>rangeObj</em> by replacing it with an empty string (&quot;&quot;).</p>
 <h4><a class="anchor" aria-hidden="true" id="example-1-8"></a><a href="#example-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
@@ -3280,6 +3284,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-2-9"></a><a href="#example-2-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <p>To remove the formula:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">VP SET FORMULA</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-string">""</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="example-3-4"></a><a href="#example-3-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-function">VP SET FORMULA</span>(<span class="hljs-variable">$range</span>;<span class="hljs-string">"SUM(A1,B7,C11)"</span>) <span class="hljs-comment">//"," to separate parameters</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-82"></a><a href="#see-also-82" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
 <p><a href="/docs/en/ViewPro/configuring.html#cell-format">Cell format</a><br/><a href="#vp-get-formula">VP Get Formula</a><br/><a href="#vp-set-formulas">VP SET FORMULAS</a><br/><a href="#vp-set-value">VP SET VALUE</a></p>
@@ -3300,17 +3307,18 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>The <em>formulasCol</em> is a two-dimensional collection:</p>
 <ul>
 <li>The first-level collection contains subcollections of formulas. Each subcollection defines a row.</li>
-<li>Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells.
-<blockquote>
-<p>If a 4D method is used, it must be allowed with the <a href="#vp-set-allowed-methods"><code>VP SET ALLOWED METHODS</code></a> command.</p>
-</blockquote></li>
+<li>Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells.</li>
 </ul>
+<blockquote>
+<p>If the formula is a string, use the period <code>.</code> as numerical separator and the comma <code>,</code> as parameter separator.
+If a 4D method is used, it must be allowed with the <a href="#vp-set-allowed-method"><code>VP SET ALLOWED METHODS</code></a> command.</p>
+</blockquote>
 <p>You remove the formulas in <em>rangeObj</em> by replacing them with an empty string (&quot;&quot;).</p>
 <h4><a class="anchor" aria-hidden="true" id="example-1-9"></a><a href="#example-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$formulas</span>:=New collection
 <span class="hljs-variable">$formulas</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"MAX(B11,C11,D11)"</span>;<span class="hljs-string">"myMethod(G4)"</span>)) <span class="hljs-comment">// First row</span>
 <span class="hljs-variable">$formulas</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"SUM(B11:D11)"</span>;<span class="hljs-string">"AVERAGE(B11:D11)"</span>)) <span class="hljs-comment">// Second row</span>
- 
+
 <span class="hljs-function">VP SET FORMULAS</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">6</span>;<span class="hljs-number">3</span>);<span class="hljs-variable">$formulas</span>) <span class="hljs-comment">// Set the cells with the formulas</span>
 </code></pre>
 <p><em>myMethod</em>:</p>
@@ -3322,7 +3330,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$formulas</span>:=New collection
 <span class="hljs-variable">$formulas</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">""</span>;<span class="hljs-string">""</span>)) <span class="hljs-comment">// first collection</span>
 <span class="hljs-variable">$formulas</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">""</span>;<span class="hljs-string">""</span>)) <span class="hljs-comment">// second collection</span>
- 
+
 <span class="hljs-function">VP SET FORMULAS</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">0</span>;<span class="hljs-number">0</span>);<span class="hljs-variable">$formulas</span>) <span class="hljs-comment">// Assign to cells</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-83"></a><a href="#see-also-83" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -3365,12 +3373,12 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-78"></a><a href="#example-78" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>You want to freeze the first three columns on the left, two columns on the right, and the first row:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$panes</span>)
- 
+
 <span class="hljs-variable">$panes</span>:=New object
 <span class="hljs-variable">$panes</span>.columnCount:=<span class="hljs-number">3</span>
 <span class="hljs-variable">$panes</span>.trailingColumnCount:=<span class="hljs-number">2</span>
 <span class="hljs-variable">$panes</span>.rowCount:=<span class="hljs-number">1</span>
- 
+
 <span class="hljs-function">VP SET FROZEN PANES</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$panes</span>)
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetFrozenPanes.PNG" alt=""></p>
@@ -3396,7 +3404,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-79"></a><a href="#example-79" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value to 2</span>
 <span class="hljs-function">VP SET NUM VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-number">2</span>)
- 
+
 <span class="hljs-comment">//Set the cell value and format it in dollars</span>
 <span class="hljs-function">VP SET NUM VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-number">12.356</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>)
 </code></pre>
@@ -3491,10 +3499,10 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-81"></a><a href="#example-81" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <p>You want to change the size of the second row and set the header:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$row</span>; <span class="hljs-variable">$properties </span>: Object
- 
+
 <span class="hljs-variable">$row</span>:=<span class="hljs-function">VP Row</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>)
 <span class="hljs-variable">$properties</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"height"</span>;<span class="hljs-number">75</span>;<span class="hljs-string">"header"</span>;<span class="hljs-string">"June"</span>)
- 
+
 <span class="hljs-function">VP SET ROW ATTRIBUTES</span>(<span class="hljs-variable">$row</span>;<span class="hljs-variable">$properties</span>)
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetRowAttributes.PNG" alt=""></p>
@@ -3631,18 +3639,18 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>You want to protect all cells except the range C5:D10:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Activate protection on the current sheet</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options </span>: Object
-  
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-variable">$options</span>.isProtected:=<span class="hljs-literal">True</span>
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>)
-  
+
 <span class="hljs-comment">// mark cells C5:D10 as 'unlocked'</span>
 <span class="hljs-function">VP SET CELL STYLE</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">2</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>;<span class="hljs-number">6</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"locked"</span>;<span class="hljs-literal">False</span>))
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="example-2-11"></a><a href="#example-2-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 2</h4>
 <p>You need to protect your document while your users can resize rows and columns:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options </span>: Object
-  
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-comment">// Activate protection</span>
 <span class="hljs-variable">$options</span>.isProtected:=<span class="hljs-literal">True</span>
@@ -3651,14 +3659,14 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$options</span>.protectionOptions.allowResizeRows=<span class="hljs-literal">True</span>;
 <span class="hljs-comment">// Allow user to resize columns</span>
 <span class="hljs-variable">$options</span>.protectionOptions.allowResizeColumns=<span class="hljs-literal">True</span>;
-    
+
 <span class="hljs-comment">// Apply protection on the current sheet</span>
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>)
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="example-3-4"></a><a href="#example-3-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
+<h4><a class="anchor" aria-hidden="true" id="example-3-5"></a><a href="#example-3-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 3</h4>
 <p>You want to customize the colors of your sheet tabs, frozen lines, grid lines, selection background and selection border:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options </span>: Object
-   
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-comment">// Customize color of Sheet 1 tab</span>
 <span class="hljs-variable">$options</span>.sheetTabColor:=<span class="hljs-string">"Black"</span>
@@ -3666,17 +3674,17 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$options</span>.selectionBackColor:=<span class="hljs-string">"rgb(255,128,0,0.4)"</span>
 <span class="hljs-variable">$options</span>.selectionBorderColor:=<span class="hljs-string">"Yellow"</span>
 <span class="hljs-variable">$options</span>.frozenlineColor:=<span class="hljs-string">"Gold"</span>
-   
+
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>;<span class="hljs-number">0</span>)
- 
+
 <span class="hljs-comment">// Customize color of Sheet 2 tab</span>
 <span class="hljs-variable">$options</span>.sheetTabColor:=<span class="hljs-string">"red"</span>
-   
+
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>;<span class="hljs-number">1</span>)
- 
+
 <span class="hljs-comment">// Customize color of Sheet 3 tab</span>
 <span class="hljs-variable">$options</span>.sheetTabColor:=<span class="hljs-string">"blue"</span>
-  
+
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>;<span class="hljs-number">2</span>)
 </code></pre>
 <p>Result:</p>
@@ -3684,14 +3692,14 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-4-2"></a><a href="#example-4-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example 4</h4>
 <p>You want to hide the grid lines as well as the row and column headers.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options </span>: Object
-  
+
 <span class="hljs-variable">$options</span>:=New object
 <span class="hljs-variable">$options</span>.gridline:=<span class="hljs-function">New object</span>()
 <span class="hljs-variable">$options</span>.gridline.showVerticalGridline:=<span class="hljs-literal">False</span>
 <span class="hljs-variable">$options</span>.gridline.showHorizontalGridline:=<span class="hljs-literal">False</span>
 <span class="hljs-variable">$options</span>.rowHeaderVisible:=<span class="hljs-literal">False</span>
 <span class="hljs-variable">$options</span>.colHeaderVisible:=<span class="hljs-literal">False</span>
-  
+
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>)
 </code></pre>
 <p>Result:</p>
@@ -3771,7 +3779,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-88"></a><a href="#example-88" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the value to the current time</span>
 <span class="hljs-function">VP SET TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);Current time)
- 
+
 <span class="hljs-comment">//Set the value to a specific time with a designated format</span>
 <span class="hljs-function">VP SET TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-literal">?12:15:06?</span>;vk pattern long time)
 </code></pre>
@@ -3806,25 +3814,25 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="example-89"></a><a href="#example-89" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Set the cell value as False</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">False</span>))
- 
+
 <span class="hljs-comment">//Set the cell value as 2</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">2</span>))
- 
+
 <span class="hljs-comment">//Set the cell value as $125,571.35</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">125571.35</span>;<span class="hljs-string">"format"</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>))
- 
+
 <span class="hljs-comment">//Set the cell value as Hello World!</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
- 
+
 <span class="hljs-comment">//Set the cell value as current date</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;Current date))
- 
+
 <span class="hljs-comment">//Set the cell value as current hour</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"time"</span>;Current hour))
- 
+
 <span class="hljs-comment">//Set the cell value as specific date and time</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">!2024-12-18!</span>);<span class="hljs-string">"time"</span>;<span class="hljs-literal">?14:30:10?</span>;<span class="hljs-string">"format"</span>;vk pattern full date time))
- 
+
 <span class="hljs-comment">//Erase cell content</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">Null</span>))
 </code></pre>
@@ -3872,7 +3880,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$param</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-number">4</span>;<span class="hljs-number">5</span>;<span class="hljs-literal">Null</span>;<span class="hljs-string">"hello"</span>;<span class="hljs-string">"world"</span>)) <span class="hljs-comment">// third row, 5 values</span>
 <span class="hljs-variable">$param</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-number">6</span>;<span class="hljs-number">7</span>;<span class="hljs-number">8</span>;<span class="hljs-number">9</span>)) <span class="hljs-comment">// fourth row, 4 values</span>
 <span class="hljs-variable">$param</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-literal">Null</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;Current date;<span class="hljs-string">"time"</span>;<span class="hljs-number">42</span>))) <span class="hljs-comment">//fifth row, 1 value</span>
-   
+
 <span class="hljs-function">VP SET VALUES</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">2</span>;<span class="hljs-number">1</span>);<span class="hljs-variable">$param</span>)
 </code></pre>
 <p><img src="/docs/assets/en/ViewPro/cmd_vpSetValues.PNG" alt=""></p>
@@ -4044,15 +4052,15 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>The Suspend Computing button code:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//pause calculations while users enter information</span><span class="hljs-keyword">
  If</span>(FORM Event.code=On Clicked)
- 
+
 <span class="hljs-function">    VP SUSPEND COMPUTING</span>(<span class="hljs-string">"ViewProArea"</span>)<span class="hljs-keyword">
- 
+
  End if</span>
 </code></pre>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span>(FORM Event.code=On Clicked)
- 
+
 <span class="hljs-function">    VP RESUME COMPUTING</span>(<span class="hljs-string">"ViewProArea"</span>)<span class="hljs-keyword">
- 
+
 End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-99"></a><a href="#see-also-99" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>

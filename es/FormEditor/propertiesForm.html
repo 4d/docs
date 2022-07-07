@@ -69,12 +69,12 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/FormEditor/properties_FormProperties.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Propiedades de los formularios</h1></header><article><div><span><hr>
 <h2><a class="anchor" aria-hidden="true" id="esquema-de-colores"></a><a href="#esquema-de-colores" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Esquema de colores</h2>
 <blockquote>
-<p>Color scheme property is only applied on macOS.</p>
+<p>La propiedad de esquema de color sólo se aplica en macOS.</p>
 </blockquote>
 <p>This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:</p>
 <ul>
-<li>dark - light text on a dark background</li>
-<li>light - dark text on a light background</li>
+<li>dark -- texto claro sobre fondo oscuro</li>
+<li>light - texto oscuro en un fondo claro</li>
 </ul>
 <blockquote>
 <p>A defined color scheme can not be overridden by a CSS.</p>
@@ -118,15 +118,15 @@
 <li><p>Output form - the <em>output form</em> or <em>list form</em> displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. <img src="/docs/assets/en/FormObjects/formOutput.png" alt=""></p></li>
 <li><p>Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (<em>i.e.</em>, First Record, Last Record, Previous Record, Next Record). <img src="/docs/assets/en/FormObjects/formInput.png" alt=""></p></li>
 </ul>
-<p>Supported types depend on the form category:</p>
+<p>Los tipos soportados dependen de la categoría de formulario:</p>
 <table>
 <thead>
 <tr><th>Tipo de formulario</th><th>Gramática JSON</th><th>Descripción</th><th>Soportado con</th></tr>
 </thead>
 <tbody>
-<tr><td>Formulario detallado</td><td>detailScreen</td><td>A display form for data entry and modification</td><td>Formularios proyecto - Formularios tabla</td></tr>
+<tr><td>Formulario detallado</td><td>detailScreen</td><td>Un formulario de visualización para introducir y modificar datos</td><td>Formularios proyecto - Formularios tabla</td></tr>
 <tr><td>Formulario detallado imprimible</td><td>detailPrinter</td><td>A printed report with one page per record, such as an invoice</td><td>Formularios proyecto - Formularios tabla</td></tr>
-<tr><td>Formulario listado</td><td>listScreen</td><td>A form for listing records on the screen</td><td>Formularios tabla</td></tr>
+<tr><td>Formulario listado</td><td>listScreen</td><td>Un formulario para listar los registros en la pantalla</td><td>Formularios tabla</td></tr>
 <tr><td>Formulario de lista imprimible</td><td>listPrinter</td><td>A printed report that list records</td><td>Formularios tabla</td></tr>
 <tr><td>Ninguno</td><td><em>no destination</em></td><td>A form with no specific feature</td><td>Formularios proyecto - Formularios tabla</td></tr>
 </tbody>

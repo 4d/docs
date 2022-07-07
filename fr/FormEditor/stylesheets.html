@@ -75,7 +75,7 @@
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="création-ou-modification-dune-feuille-de-style"></a><a href="#création-ou-modification-dune-feuille-de-style" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Création ou modification d'une feuille de style</h2>
 <p>Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles de votre choix, en sauvegardant le fichier sous une extension &quot;.css&quot; dans le dossier &quot;/SOURCES&quot; du projet.</p>
-<p>La Boîte à Outils fournit une page <strong>Feuilles de style</strong> sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plateforme.</p>
+<p>La Boîte à Outils fournit une page <strong>Feuilles de style</strong> sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.</p>
 <ol>
 <li><p>Ouvrez la page <strong>Styles</strong> en choisissant la **Boîte à outils &gt; Styles ** dans le menu Développement ou en cliquant sur l'icône <strong>Boîte à outils</strong> dans la barre d'outils de l'éditeur de formulaire.</p>
 <p><img src="/docs/assets/en/FormEditor/stylesheets.png" alt=""></p></li>
@@ -86,7 +86,7 @@
 <p>4D accepte trois fichiers feuilles de style spécifiques :</p>
 <table>
 <thead>
-<tr><th>Feuille de style</th><th>Plateforme</th></tr>
+<tr><th>Feuille de style</th><th>Plate-forme</th></tr>
 </thead>
 <tbody>
 <tr><td>styleSheets.css</td><td>Feuille de style globale par défaut pour macOS et Windows</td></tr>
@@ -105,9 +105,9 @@
 <h2><a class="anchor" aria-hidden="true" id="sélecteurs-de-feuilles-de-style"></a><a href="#sélecteurs-de-feuilles-de-style" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sélecteurs de feuilles de style</h2>
 <h3><a class="anchor" aria-hidden="true" id="type-dobjet"></a><a href="#type-dobjet" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type d'objet</h3>
 <p>Le type d'objet définit le type d'objet à styler et correspond au sélecteur d'élément CSS.</p>
-<p>Specify the object type, then in curly braces, declare the style(s) to apply.</p>
+<p>Spécifiez le type d'objet, puis entre accolades, déclarez le(s) style(s) à appliquer.</p>
 <blockquote>
-<p>The object type corresponds to the JSON <a href="/docs/fr/FormObjects/propertiesObject.html#type">type</a> property of form objects.</p>
+<p>Le type d'objet correspond à la propriété JSON <a href="/docs/fr/FormObjects/propertiesObject.html#type"> type</a> des objets de formulaire.</p>
 </blockquote>
 <p>Dans l'exemple suivant, tous les objets du type <em>bouton</em> afficheront du texte dans la police Helvetica Neue, d'une taille de 20 pixels :</p>
 <pre><code class="hljs"><span class="hljs-selector-tag">button</span> {
@@ -115,7 +115,7 @@
     <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
 }
 </code></pre>
-<p>To apply the same style to multiple types of objects, specify the object types separated by a &quot;,&quot; then in curly braces, declare the style(s) to apply:</p>
+<p>Pour appliquer le même style à plusieurs types d’objets, spécifiez les types d'objets séparés par une &quot;,&quot; puis, entre accolades, déclarez le(s) style(s) à appliquer :</p>
 <pre><code class="hljs"><span class="hljs-selector-tag">text</span>, <span class="hljs-selector-tag">input</span> {
   <span class="hljs-attribute">text-align</span>: left;
   <span class="hljs-attribute">stroke</span>: grey;
@@ -168,8 +168,8 @@
 <tbody>
 <tr><td>[attribute]</td><td>les objets ayant un <code>attribute</code></td></tr>
 <tr><td>[attribute=&quot;valeur&quot;]</td><td>les objets dont la valeur de l'<code>attribute</code> correspond à la &quot;valeur&quot; indiquée</td></tr>
-<tr><td>[attribute~=&quot;valeur&quot;]</td><td>les objets dont la valeur de l'<code>attribute</code> correspond à la &quot;valeur&quot; présente dans une liste de mots séparés par des espaces</td></tr>
-<tr><td>[attribute|=&quot;valeur&quot;]</td><td>les objets dont l'<code>attribute</code> contient une valeur qui commence par celle de &quot;valeur&quot;</td></tr>
+<tr><td>[attribute~=&quot;valeur&quot;]</td><td>les objets dont la valeur de <code>attribute</code> correspond à la &quot;valeur&quot; présente dans une liste de mots séparés par des espaces</td></tr>
+<tr><td>[attribute|=&quot;valeur&quot;]</td><td>les objets dont <code>attribute</code> contient une valeur qui commence par celle de &quot;valeur&quot;</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="exemples"></a><a href="#exemples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemples</h4>
@@ -312,12 +312,12 @@
 <li><p>Il chargera ensuite le fichier CSS pour la plate-forme courante <code>/SOURCES/styleSheets__mac.css</code> ou <code>/SOURCES/styleSheets_windows.css</code>.</p></li>
 <li><p>S'il existe, il chargera alors un fichier CSS spécifique défini dans le formulaire JSON :</p>
 <ul>
-<li>un fichier pour les deux plateformes :</li>
+<li>un fichier pour les deux plates-formes :</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-string">"css"</span>: <span class="hljs-string">"&lt;path&gt;"</span> 
 </code></pre>
 <ul>
-<li>ou une liste de fichiers pour les deux plateformes :</li>
+<li>ou une liste de fichiers pour les deux plates-formes :</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-string">"css"</span>: [
      <span class="hljs-string">"&lt;path1&gt;"</span>,
@@ -325,7 +325,7 @@
       ],
 </code></pre>
 <ul>
-<li>ou une liste de fichiers par plateforme :</li>
+<li>ou une liste de fichiers par plate-forme :</li>
 </ul>
 <pre><code class="hljs"> <span class="hljs-string">"css"</span>: [
         {<span class="hljs-string">"path"</span>: <span class="hljs-string">"&lt;path&gt;"</span>, <span class="hljs-string">"media"</span>: <span class="hljs-string">"mac"</span>},

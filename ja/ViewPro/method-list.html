@@ -188,8 +188,8 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>VP ADD SHEET</code> コマンドは、 <em>vpAreaName</em> にロードされているドキュメントにシートを挿入します。</p>
-<p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。</p>
+<p><code>VP ADD SHEET</code> コマンドは、 <em>vpAreaName</em> にロードされているドキュメントにシートを挿入します。
+<em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。</p>
 <p><em>index</em> 引数として、新しいシートのインデックスを渡します。 渡した <em>index</em> 引数が 0以下だった場合、コマンドは新しいシートを先頭に挿入します。 <em>index</em> 引数がシートの総数より多い場合、コマンドは既存のシートの後に新しいシートを挿入します。</p>
 <blockquote>
 <p>インデックスは 0 起点です。</p>
@@ -696,8 +696,8 @@
 <tr><td>includeFormatInfo</td><td>boolean</td><td>フォーマット (書式) 情報を含めるには true、それ以外の場合には false (デフォルトは true)。 フォーマット情報は特定の場合 (例: SVGへの書き出しなど) において有用です。 一方で、このプロパティを <strong>false</strong> に設定することで書き出し時間を短縮することもできます。</td></tr>
 <tr><td>includeBindingSource</td><td>ブール</td><td>4DVP のみ。 true (デフォルト) の場合、カレントデータコンテキストの値を、書き出したドキュメントのセルの値としてエクスポートします (データコンテキスト自体はエクスポートされません)。 それ以外は false。 セルバインドは常にエクスポートされます。 データコンテキストおよびセルバインドの管理については、<a href="#vp-set-data-context">VP SET DATA CONTEXT</a> および <a href="#vp-set-binding-path">VP SET BINDING PATH</a> を参照ください。</td></tr>
 <tr><td>sheetIndex</td><td>number</td><td>PDF のみ (任意) - 書き出すシートのインデックス (0 起点)。 -2 = 表示されている全シート (デフォルト)、-1 = カレントシートのみ</td></tr>
-<tr><td>pdfOptions</td><td>object</td><td>PDFのみ (任意) - pdf 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</yh><th>説明</th></tr><tr><td>creator</td><td>テキスト</td><td>変換されたドキュメントの変換元を作成したアプリケーション名。</td></tr><tr><td>title</td><td>text</td><td>ドキュメント名。</td></tr><tr><td>author</td><td>text</td><td>ドキュメントの作成者の名前。</td></tr><tr><td>keywords</td><td>テキスト</td><td>ドキュメントに割り当てられたキーワード。</td></tr><tr><td>subject</td><td>テキスト</td><td>ドキュメントの題名。</td></tr></table></p></td></tr>
-<tr><td>csvOptions</td><td>object</td><td>CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>テキスト</td><td>行の区切り文字。 デフォルト: &quot;\r\n&quot;</td></tr><tr><td>columnDelimiter</td><td>テキスト</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr></table></p></td></tr>
+<tr><td>pdfOptions</td><td>object</td><td>PDFのみ (任意) - pdf 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</yh><th>説明</th></tr><tr><td>creator</td><td>text</td><td>変換されたドキュメントの変換元を作成したアプリケーション名。</td></tr><tr><td>title</td><td>text</td><td>ドキュメント名。</td></tr><tr><td>author</td><td>text</td><td>ドキュメントの作成者の名前。</td></tr><tr><td>keywords</td><td>text</td><td>ドキュメントに割り当てられたキーワード。</td></tr><tr><td>subject</td><td>text</td><td>ドキュメントの題名。</td></tr></table></p></td></tr>
+<tr><td>csvOptions</td><td>object</td><td>CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 デフォルト: &quot;\r\n&quot;</td></tr><tr><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr></table></p></td></tr>
 <tr><td>&lt;customProperty&gt;</td><td>any</td><td>コールバックメソッドの $3 引数を通して利用可能な任意のプロパティ。</td></tr>
 </tbody>
 </table>
@@ -1744,10 +1744,10 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 <pre><code class="hljs css language-4d">[
    {
      backColor:green,
-     borderLeft:{color:green,style:<span class="hljs-number">10</span>}, 
-     borderTop:{color:green,style:<span class="hljs-number">10</span>}, 
-     borderRight:{color:green,style:<span class="hljs-number">10</span>}, 
-     borderBottom:{color:green,style:<span class="hljs-number">10</span>}, 
+     borderLeft:{color:green,style:<span class="hljs-number">10</span>},
+     borderTop:{color:green,style:<span class="hljs-number">10</span>},
+     borderRight:{color:green,style:<span class="hljs-number">10</span>},
+     borderBottom:{color:green,style:<span class="hljs-number">10</span>},
      name:GreenDashDotStyle
    },
    {
@@ -1822,7 +1822,7 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>value</td><td>日付</td><td>セルの値 (時間部分を除く)</td></tr>
+<tr><td>value</td><td>Date</td><td>セルの値 (時間部分を除く)</td></tr>
 <tr><td>time</td><td>実数</td><td>値が js 日付型の場合、時間値 (秒単位)</td></tr>
 </tbody>
 </table>
@@ -1900,11 +1900,11 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>formula</td><td></td><td>object</td><td>書き出し終了時に実行させるコールバックメソッド名。 メソッドは <a href="https://doc.4d.com/4dv19/help/command/en/page1597.html"><code>Formula</code></a> コマンドと組み合わせて使用する必要があります。 <a href="#コールバックメソッド-フォーミュラ-の渡し方">コールバックメソッドの渡し方</a> を参照ください。</td></tr>
-<tr><td>password</td><td></td><td>テキスト</td><td>Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。</td></tr>
+<tr><td>password</td><td></td><td>text</td><td>Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。</td></tr>
 <tr><td>csvOptions</td><td></td><td>object</td><td>CSV読み込みのオプション</td></tr>
 <tr><td></td><td>range</td><td>object</td><td>書き出されるデータの、最初のセルを格納しているセルレンジ。 指定されたレンジがセルレンジではない場合、レンジの最初のセルが使用されます。</td></tr>
-<tr><td></td><td>rowDelimiter</td><td>テキスト</td><td>行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。</td></tr>
-<tr><td></td><td>columnDelimiter</td><td>テキスト</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr>
+<tr><td></td><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。</td></tr>
+<tr><td></td><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -2129,11 +2129,11 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th><th>とりうる値</th><th>必須</th></tr>
 </thead>
 <tbody>
-<tr><td>family</td><td>テキスト</td><td>フォントを指定します。</td><td>標準の、あるいは一般的なフォントファミリー。 例:  &quot;Arial&quot;, &quot;Helvetica&quot;, &quot;serif&quot;, &quot;arial,sans-serif&quot;</td><td>◯</td></tr>
-<tr><td>size</td><td>テキスト</td><td>フォントのサイズを定義します。<p><p>&quot;font-size/line-height&quot; の形で line-height をfont-size に追加することもできます: 例: &quot;15pt/20pt&quot;</td><td>以下のいずれかの単位を伴う数値: <li>&quot;em&quot;, &quot;ex&quot;, &quot;%&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;in&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ch&quot;, &quot;rem&quot;, &quot;vh&quot;, &quot;vw&quot;, &quot;vmin&quot;, &quot;vmax&quot;</li><p><p>あるいは、以下の定数のいずれか 1つ:<li><code>vk font size large</code></li><li><code>vk font size larger</code></li><li><code>vk font size x large</code></li><li><code>vk font size xx large</code></li><li><code>vk font size small</code></li><li><code>vk font size smaller</code></li><li><code>vk font size x small</code></li><li><code>vk font size xx small</code></li></td><td>◯</td></tr>
-<tr><td>style</td><td>テキスト</td><td>フォントのスタイル。</td><td><li><code>vk font style italic</code></li><li><code>vk font style oblique</code></li></td><td>×</td></tr>
-<tr><td>variant</td><td>テキスト</td><td>スモールキャピタルのフォントを定義します。</td><td><li><code>vk font variant small caps</code></li></td><td>×</td></tr>
-<tr><td>weight</td><td>テキスト</td><td>フォントの太さを定義します。</td><td><li><code>vk font weight 100</code></li><li><code>vk font weight 200</code></li><li><code>vk font weight 300</code></li><li><code>vk font weight 400</code></li><li><code>vk font weight 500</code></li><li><code>vk font weight 600</code></li><li><code>vk font weight 700</code></li><li><code>vk font weight 800</code></li><li><code>vk font weight 900</code></li><li><code>vk font weight bold</code></li><li><code>vk font weight bolder</code></li><li><code>vk font weight lighter</code></li></td><td>×</td></tr>
+<tr><td>family</td><td>text</td><td>フォントを指定します。</td><td>標準の、あるいは一般的なフォントファミリー。 例:  &quot;Arial&quot;, &quot;Helvetica&quot;, &quot;serif&quot;, &quot;arial,sans-serif&quot;</td><td>◯</td></tr>
+<tr><td>size</td><td>text</td><td>フォントのサイズを定義します。<p><p>&quot;font-size/line-height&quot; の形で line-height をfont-size に追加することもできます: 例: &quot;15pt/20pt&quot;</td><td>以下のいずれかの単位を伴う数値: <li>&quot;em&quot;, &quot;ex&quot;, &quot;%&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;in&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ch&quot;, &quot;rem&quot;, &quot;vh&quot;, &quot;vw&quot;, &quot;vmin&quot;, &quot;vmax&quot;</li><p><p>あるいは、以下の定数のいずれか 1つ:<li><code>vk font size large</code></li><li><code>vk font size larger</code></li><li><code>vk font size x large</code></li><li><code>vk font size xx large</code></li><li><code>vk font size small</code></li><li><code>vk font size smaller</code></li><li><code>vk font size x small</code></li><li><code>vk font size xx small</code></li></td><td>◯</td></tr>
+<tr><td>style</td><td>text</td><td>フォントのスタイル。</td><td><li><code>vk font style italic</code></li><li><code>vk font style oblique</code></li></td><td>×</td></tr>
+<tr><td>variant</td><td>text</td><td>スモールキャピタルのフォントを定義します。</td><td><li><code>vk font variant small caps</code></li></td><td>×</td></tr>
+<tr><td>weight</td><td>text</td><td>フォントの太さを定義します。</td><td><li><code>vk font weight 100</code></li><li><code>vk font weight 200</code></li><li><code>vk font weight 300</code></li><li><code>vk font weight 400</code></li><li><code>vk font weight 500</code></li><li><code>vk font weight 600</code></li><li><code>vk font weight 700</code></li><li><code>vk font weight 800</code></li><li><code>vk font weight 900</code></li><li><code>vk font weight bold</code></li><li><code>vk font weight bolder</code></li><li><code>vk font weight lighter</code></li></td><td>×</td></tr>
 </tbody>
 </table>
 <p>このオブジェクトは <a href="#vp-font-to-object">VP Font to object</a> コマンドで作成することができます。</p>
@@ -2490,7 +2490,7 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>area</td><td>テキスト</td><td>オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: &quot;OffscreenArea1&quot;) が割り当てられます。</td></tr>
+<tr><td>area</td><td>text</td><td>オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: &quot;OffscreenArea1&quot;) が割り当てられます。</td></tr>
 <tr><td>onEvent</td><td>object (フォーミュラ)</td><td>オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<p><p><li>クラスの <code>onEvent</code> 関数</li><li><code>Formula</code> オブジェクト</li><p><p>デフォルトでは、コールバックメソッドは、<a href="/docs/ja/Events/onVpReady.html"><code>On VP Ready</code></a>, <a href="/docs/ja/Events/onLoad.html"><code>On Load</code></a>, <a href="/docs/ja/Events/onUnload.html"><code>On Unload</code></a>, <a href="/docs/ja/Events/onEndUrlLoading.html"><code>On End URL Loading</code></a>, <a href="/docs/ja/Events/onUrlLoadingError.html"><code>On URL Loading Error</code></a>, <a href="/docs/ja/Events/onVpRangeChanged.html"><code>On VP Range Changed</code></a>, または <a href="/docs/ja/Events/onTimer.html"><code>On Timer</code></a> イベントで呼び出されます。 <p><p>コールバックメソッドを使用して <a href="/docs/ja/ViewPro/configuring.html#4d-view-pro-フォームオブジェクト変数">4D View Pro フォームオブジェクト変数</a> にアクセスすることができます。</td></tr>
 <tr><td>autoQuit</td><td>boolean</td><td>True (デフォルト値) の場合、<a href="/docs/ja/Events/onEndUrlLoading.html"><code>On End URL Loading</code></a> または <a href="/docs/ja/Events/onUrlLoadingError.html"><code>On URL Loading Error</code></a> イベントが起きた際にはコマンドがフォーミュラの実行を中止します。<p><p>False の場合、<em>onEvent</em> コールバックメソッド内で <code>CANCEL</code> あるいは <code>ACCEPT</code> コマンドを使用する必要があります。</td></tr>
 <tr><td>timeout</td><td>number</td><td>イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60</td></tr>
@@ -2758,7 +2758,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th><th>とりうる値</th></tr>
 </thead>
 <tbody>
-<tr><td>color</td><td>テキスト</td><td>境界線のカラーを定義します。 デフォルト = black</td><td>CSSカラー &quot;#rrggbb&quot; シンタックス (推奨シンタックス)、CSSカラー &quot;rgb(r,g,b)&quot; シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)</td></tr>
+<tr><td>color</td><td>text</td><td>境界線のカラーを定義します。 デフォルト = black</td><td>CSSカラー &quot;#rrggbb&quot; シンタックス (推奨シンタックス)、CSSカラー &quot;rgb(r,g,b)&quot; シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)</td></tr>
 <tr><td>style</td><td>整数</td><td>境界線のスタイルを定義します。 デフォルト = empty。</td><td><li><code>vk line style dash dot</code></li><li><code>vk line style dash dot dot</code></li><li><code>vk line style dashed</code></li> <li><code>vk line style dotted</code></li><li><code>vk line style double</code></li><li><code>vk line style empty</code></li><li><code>vk line style hair</code></li> <li><code>vk line style medium</code></li><li><code>vk line style medium dash dot</code></li><li><code>vk line style medium dash dot dot</code></li><li><code>vk line style medium dashed</code></li><li><code>vk line style slanted dash dot</code></li><li><code>vk line style thick</code></li><li><code>vk line style thin</code></li></td></tr>
 </tbody>
 </table>
@@ -2865,7 +2865,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><td>pageBreak</td><td>boolean</td><td>レンジ内の先頭カラムの前に改ページを挿入する場合には true、それ以外は false</td></tr>
 <tr><td>visible</td><td>boolean</td><td>カラムが表示状態であれば true、それ以外は false</td></tr>
 <tr><td>resizable</td><td>boolean</td><td>カラムがリサイズ可能であれば true、それ以外は false</td></tr>
-<tr><td>headers</td><td>テキスト</td><td>カラムヘッダーのテキスト</td></tr>
+<tr><td>headers</td><td>text</td><td>カラムヘッダーのテキスト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-69"></a><a href="#例題-69" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -3112,13 +3112,13 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$data</span>:=<span class="hljs-function"> New collection</span>()
 
 <span class="hljs-comment">// 日付はスカラー値として渡すことができます</span>
-<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date"</span>; Current date)) 
+<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date"</span>; Current date))
 
 <span class="hljs-comment">// 時間はオブジェクト属性として渡す必要があります</span>
 <span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Time"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"time"</span>; <span class="hljs-number">5140</span>)))
 
 <span class="hljs-comment">// 日付 + 時間の例</span>
-<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date + Time"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"value"</span>; Current date; <span class="hljs-string">"time"</span>; <span class="hljs-number">5140</span>))) 
+<span class="hljs-variable">$data</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New collection</span>(<span class="hljs-string">"Date + Time"</span>;<span class="hljs-function"> New object</span>(<span class="hljs-string">"value"</span>; Current date; <span class="hljs-string">"time"</span>; <span class="hljs-number">5140</span>)))
 
 <span class="hljs-variable">$options</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"autoGenerateColumns"</span>; <span class="hljs-literal">True</span>)
 
@@ -3136,8 +3136,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>dateValue</td><td>日付</td><td>-&gt;</td><td>設定する日付値</td></tr>
-<tr><td>timeValue</td><td>時間</td><td>-&gt;</td><td>設定する時間値</td></tr>
+<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>設定する日付値</td></tr>
+<tr><td>timeValue</td><td>Time</td><td>-&gt;</td><td>設定する時間値</td></tr>
 <tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
@@ -3164,7 +3164,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>dateValue</td><td>日付</td><td>-&gt;</td><td>設定する日付値</td></tr>
+<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>設定する日付値</td></tr>
 <tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
@@ -3234,7 +3234,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>フィールド</td><td>ポインター</td><td>-&gt;</td><td>仮想ストラクチャーのフィールドへの参照</td></tr>
+<tr><td>フィールド</td><td>Pointer</td><td>-&gt;</td><td>仮想ストラクチャーのフィールドへの参照</td></tr>
 <tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
 </tbody>
 </table>
@@ -3256,14 +3256,17 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>formula</td><td>テキスト</td><td>-&gt;</td><td>フォーミュラまたは 4Dメソッド</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
+<tr><td>formula</td><td>Text</td><td>-&gt;</td><td>フォーミュラまたは 4Dメソッド</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-85"></a><a href="#説明-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET FORMULA</code> コマンドは、 指定されたセルレンジにフォーミュラまたは 4Dメソッドを割り当てます。</p>
 <p><em>rangeObj</em> には、値を割り当てたいセルのレンジ (たとえば <a href="#vp-cell"><code>VP Cell</code></a> あるいは <a href="#vp-column"><code>VP Column</code></a> で作成されたレンジ) を渡します。 <em>rangeObj</em> 引数に複数のセルが含まれる場合、指定されたフォーミュラはそれぞれのセルに対して繰り返し割り当てられます。</p>
-<p><em>formula</em> 引数に、<em>rangeObj</em> 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。 4Dメソッドを使用する場合、そのメソッドは <a href="#vp-set-allowed-method"><code>SET ALLOWED METHODS</code></a> コマンドで許可されている必要があります。</p>
+<p><em>formula</em> 引数に、<em>rangeObj</em> 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。</p>
+<blockquote>
+<p><em>formula</em> が文字列の場合、数値の区切り文字にピリオド <code>.</code> そして引数の区切り文字にカンマ <code>,</code> を使用します。 4Dメソッドを使用する場合、そのメソッドは <a href="#vp-set-allowed-method"><code>SET ALLOWED METHODS</code></a> コマンドで許可されている必要があります。</p>
+</blockquote>
 <p>任意の <em>formatPattern</em> 引数は、<em>formula</em> に対する <a href="/docs/ja/ViewPro/configuring.html#セルフォーマット">パターン</a> を定義します。</p>
 <p><em>rangeObj</em> 内のフォーミュラは、空の文字列 (&quot;&quot;) で置き換えることで削除することができます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-8"></a><a href="#例題-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
@@ -3272,6 +3275,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="例題-2-9"></a><a href="#例題-2-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <p>フォーミュラを削除します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">VP SET FORMULA</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-string">""</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="例題-3-4"></a><a href="#例題-3-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 3</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-function">VP SET FORMULA</span>(<span class="hljs-variable">$range</span>;<span class="hljs-string">"SUM(A1,B7,C11)"</span>) <span class="hljs-comment">// 引数の区切り文字に ","</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="参照-82"></a><a href="#参照-82" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
 <p><a href="/docs/ja/ViewPro/configuring.html#cell-format">Cell format</a><br/><a href="#vp-get-formula">VP Get Formula</a><br/><a href="#vp-set-formulas">VP SET FORMULAS</a><br/><a href="#vp-set-value">VP SET VALUE</a></p>
@@ -3292,8 +3298,11 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p><em>formulasCol</em> 引数は 2次元構造のコレクションです:</p>
 <ul>
 <li>第1レベルのコレクションは、フォーミュラのサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。</li>
-<li>それぞれのサブコレクションは行におけるセルの値を定義します。 値は、セルに割り当てるフォーミュラを格納したテキスト要素でなくてはなりません。 &gt; 4Dメソッドを使用する場合、そのメソッドは <a href="#vp-set-allowed-methods"><code>SET ALLOWED METHODS</code></a> コマンドで許可されている必要があります。</li>
+<li>それぞれのサブコレクションは行におけるセルの値を定義します。 値は、セルに割り当てるフォーミュラを格納したテキスト要素でなくてはなりません。</li>
 </ul>
+<blockquote>
+<p>フォーミュラが文字列の場合、数値の区切り文字にピリオド <code>.</code> そして引数の区切り文字にカンマ <code>,</code> を使用します。 4Dメソッドを使用する場合、そのメソッドは <a href="#vp-set-allowed-method"><code>SET ALLOWED METHODS</code></a> コマンドで許可されている必要があります。</p>
+</blockquote>
 <p><em>rangeObj</em> 内のフォーミュラは、空の文字列 (&quot;&quot;) で置き換えることで削除することができます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-9"></a><a href="#例題-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$formulas</span>:=New collection
@@ -3474,7 +3483,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><td>pageBreak</td><td>boolean</td><td>レンジ内の先頭行の前に改ページを挿入する場合には true、それ以外は false</td></tr>
 <tr><td>visible</td><td>boolean</td><td>行が表示状態であれば true、それ以外は false</td></tr>
 <tr><td>resizable</td><td>boolean</td><td>行がリサイズ可能であれば true、それ以外は false</td></tr>
-<tr><td>headers</td><td>テキスト</td><td>行ヘッダーのテキスト</td></tr>
+<tr><td>headers</td><td>text</td><td>行ヘッダーのテキスト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-81"></a><a href="#例題-81" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -3644,7 +3653,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-comment">// カレントシートに上記の設定での保護を適用します</span>
 <span class="hljs-function">VP SET SHEET OPTIONS</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-variable">$options</span>)
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="例題-3-4"></a><a href="#例題-3-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 3</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-3-5"></a><a href="#例題-3-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 3</h4>
 <p>シートのタブ、固定化された線、枠線、選択範囲の背景と選択範囲の境界線のカラーをカスタマイズします:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$options </span>: Object
 
