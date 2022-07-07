@@ -1,6 +1,6 @@
 ---
 id: webAreaOverview
-title: Web Area
+title: Área Web
 ---
 
 ## Visão Geral
@@ -154,7 +154,7 @@ Quando o formulário for executado, as funções da interface de navegador padr�
 - **O menu contextual**: é possível utilizar o [menu contextual](properties_Entry.md#context-menu) padrão do sistema com a área web. Display of the context menu can be controlled using the `WA SET PREFERENCE` command.
 - **Arrastar e soltar**: o usuário pode arrastar e soltar texto, imagens e documentos dentro da área web ou entre uma área web e os objetos dos formulários 4D, segundo as propriedades dos objetos 4D. Por razões de segurança, não é permitido mudar os conteúdos da área Web arrastando e soltando seja um arquivo ou URL. Nesse caso, o cursor do mouse mostra um ícone "proibido" ![ mark=](assets/es/FormObjects/forbidden.png). Precisa utilizar o comando `WA SET PREFERENCE` para permitir explicitamente soltar URLs ou arquivos na área.
 
-### Subforms
+### Subformulários
 Por razões relacionadas com os mecanismos de redesenho de janelas, a inserção de uma área web em um subformulário está sujeita às restrições abaixo:
 
 - The subform must not be able to scroll

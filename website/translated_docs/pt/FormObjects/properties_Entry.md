@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entry
+title: Entrada
 ---
 
 ---
@@ -13,9 +13,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON Grammar
 
-| Nome       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| spellcheck | booleano  | true, false     |
+| Nome       | Tipo de dados | Possible Values |
+| ---------- | ------------- | --------------- |
+| spellcheck | booleano      | true, false     |
 
 
 #### Objects Supported
@@ -40,9 +40,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### JSON Grammar
 
-| Nome        | Data Type | Possible Values                       |
-| ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
+| Nome        | Tipo de dados | Possible Values                       |
+| ----------- | ------------- | ------------------------------------- |
+| contextMenu | string        | "automatic" (used if missing), "none" |
 
 #### Objects Supported
 
@@ -65,9 +65,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON Grammar
 
-| Nome      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| enterable | booleano  | true, false     |
+| Nome      | Tipo de dados | Possible Values |
+| --------- | ------------- | --------------- |
+| enterable | booleano      | true, false     |
 
 #### Objects Supported
 
@@ -118,14 +118,14 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9###-##-####                 | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
 | ~"A-Z;0-9; ;,;.;-"              | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
 | &"a-z;0-9; ;,;.;-"              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
-| &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
+| &"0-9;.;-"                      | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
 
 
 #### JSON Grammar
 
-| Nome        | Data Type | Possible Values                                                                                                              |
-| ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | string    | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
+| Nome        | Tipo de dados | Possible Values                                                                                                              |
+| ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string        | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
 
 
 #### Objects Supported
@@ -155,9 +155,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### JSON Grammar
 
-| Nome      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| focusable | booleano  | true, false     |
+| Nome      | Tipo de dados | Possible Values |
+| --------- | ------------- | --------------- |
+| focusable | booleano      | true, false     |
 
 
 #### Objects Supported
@@ -178,9 +178,9 @@ By default, the object uses the current keyboard layout.
 
 #### JSON Grammar
 
-| Nome            | Data Type | Possible Values                                                             |
-| --------------- | --------- | --------------------------------------------------------------------------- |
-| keyboardDialect | texto     | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| Nome            | Tipo de dados | Possible Values                                                             |
+| --------------- | ------------- | --------------------------------------------------------------------------- |
+| keyboardDialect | texto         | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 
 #### Objects Supported
@@ -194,7 +194,7 @@ By default, the object uses the current keyboard layout.
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 
-#### Automatic
+#### Automático
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - In multiline inputs, 4D carries out automatic line returns:  
   ![](assets/en/FormObjects/multilineAuto.png)
@@ -210,9 +210,9 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### JSON Grammar
 
-| Nome      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| multiline | texto     | "yes", "no", "automatic" (default if not defined) |
+| Nome      | Tipo de dados | Possible Values                                   |
+| --------- | ------------- | ------------------------------------------------- |
+| multiline | texto         | "yes", "no", "automatic" (default if not defined) |
 
 
 #### Objects Supported
@@ -246,9 +246,9 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### JSON Grammar
 
-| Nome        | Data Type | Possible Values                                                              |
-| ----------- | --------- | ---------------------------------------------------------------------------- |
-| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+| Nome        | Tipo de dados | Possible Values                                                              |
+| ----------- | ------------- | ---------------------------------------------------------------------------- |
+| placeholder | string        | Text to be displayed (grayed out) when the object does not contain any value |
 
 #### Objects Supported
 
@@ -257,7 +257,7 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### Veja também
 
-[Help tip](properties_Help.md)
+[Dica de ajuda](properties_Help.md)
 
 
 
@@ -269,9 +269,9 @@ This property keeps the selection visible within the object after it has lost th
 
 #### JSON Grammar
 
-| Nome          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| showSelection | booleano  | true, false     |
+| Nome          | Tipo de dados | Possible Values |
+| ------------- | ------------- | --------------- |
+| showSelection | booleano      | true, false     |
 
 
 #### Objects Supported
@@ -281,7 +281,7 @@ This property keeps the selection visible within the object after it has lost th
 
 
 ---
-## Shortcut
+## Atalho
 
 This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
 
@@ -295,15 +295,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### JSON Grammar
 
-| Nome            | Data Type | Possible Values                                                                                                                                                                                                                                                                             |
-| --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | booleano  | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
-| shortcutAlt     | booleano  | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | booleano  | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | booleano  | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
-| shortcutShift   | booleano  | true, false                                                                                                                                                                                                                                                                                 |
-|                 |           |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | string    | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| Nome            | Tipo de dados | Possible Values                                                                                                                                                                                                                                                                             |
+| --------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | booleano      | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                                                                    |
+| shortcutAlt     | booleano      | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutCommand | booleano      | true, false                                                                                                                                                                                                                                                                                 |
+| shortcutControl | booleano      | true, false (macOS Control)                                                                                                                                                                                                                                                                 |
+| shortcutShift   | booleano      | true, false                                                                                                                                                                                                                                                                                 |
+|                 |               |                                                                                                                                                                                                                                                                                             |
+| shortcutKey     | string        | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### Objects Supported
@@ -325,9 +325,9 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### JSON Grammar
 
-| Nome            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| singleClickEdit | booleano  | true, false     |
+| Nome            | Tipo de dados | Possible Values |
+| --------------- | ------------- | --------------- |
+| singleClickEdit | booleano      | true, false     |
 
 #### Objects Supported
 

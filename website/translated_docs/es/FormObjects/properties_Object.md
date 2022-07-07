@@ -27,7 +27,7 @@ Esta propiedad designa el tipo del [objeto formulario activo o inactivo](formObj
 ## Nombre del objeto
 
 Each active form object is associated with an object name. Each object name must be unique.
-> Object names are limited to a size of 255 bytes.
+> Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
 
@@ -53,7 +53,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
 
-This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
+Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 > El tamaño del nombre de la variable está limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
 The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
@@ -93,7 +93,7 @@ In the 4D code, dynamic variables can be accessed using a pointer obtained with 
  $p->:=?12:00:00?
 ```
 
-There are two advantages with this mechanism:
+Este mecanismo tiene dos ventajas:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
 - Por otra parte, puede utilizarse para limitar el uso de la memoria. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
@@ -126,12 +126,12 @@ For an array list box, the **Variable or Expression** property usually holds the
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema `Compilador`.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. En realidad, no escribe la variable en sí. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema `Compilador`.
 
 However, this property has a typing function in the following specific cases:
 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
-- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
+- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Todos los formatos personalizados existentes también están disponibles.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 
@@ -261,13 +261,13 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Título
 
-Allows inserting a label on an object. The font and the style of this label can be specified.
+Permite insertar una etiqueta en un objeto. The font and the style of this label can be specified.
 
 You can force a carriage return in the label by using the \ character (backslash).
 
 ![](assets/en/FormObjects/property_title.png)
 
-To insert a \ in the label, enter "&#92;&#92;".
+Para insertar un \ en la etiqueta, ingrese "&#92;&#92;".
 
 By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
@@ -295,7 +295,7 @@ Para la traducción de la base de datos, puede introducir una referencia XLIFF e
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > El cálculo de los pies de página también puede definirse con el comando 4D `LISTBOX SET FOOTER CALCULATION`.
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+Hay varios tipos de cálculos disponibles. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
 | Cálculo                | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
 | ---------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
@@ -309,7 +309,7 @@ There are several types of calculations available. The following table shows whi
 | Suma de cuadrados(*)   | X   |       |       | X    |      |          | Real                                |
 | Custom ("none")        | X   | X     | X     | X    | X    | X        | Cualquiera                          |
 
-(*) Only for array type list boxes.
+(*) Sólo para list boxes de tipo array.
 
 When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 

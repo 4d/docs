@@ -1,6 +1,6 @@
 ---
 id: propertiesAnimation
-title: Animation
+title: Animação
 ---
 
 ---
@@ -11,9 +11,9 @@ Pictures are displayed in a continuous loop. When the user reaches the last pict
 
 #### JSON Grammar
 
-| Nome                 | Data Type | Possible Values |
-| -------------------- | --------- | --------------- |
-| loopBackToFirstFrame | booleano  | true, false     |
+| Nome                 | Tipo de dados | Possible Values |
+| -------------------- | ------------- | --------------- |
+| loopBackToFirstFrame | booleano      | true, false     |
 
 #### Objects Supported
 
@@ -29,9 +29,9 @@ Displays the first picture all the time except when the user clicks the button. 
 
 #### JSON Grammar
 
-| Nome                   | Data Type | Possible Values |
-| ---------------------- | --------- | --------------- |
-| switchBackWhenReleased | booleano  | true, false     |
+| Nome                   | Tipo de dados | Possible Values |
+| ---------------------- | ------------- | --------------- |
+| switchBackWhenReleased | booleano      | true, false     |
 
 #### Objects Supported
 
@@ -48,9 +48,9 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 #### JSON Grammar
 
-| Nome               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| switchContinuously | booleano  | true, false     |
+| Nome               | Tipo de dados | Possible Values |
+| ------------------ | ------------- | --------------- |
+| switchContinuously | booleano      | true, false     |
 
 #### Objects Supported
 
@@ -66,9 +66,9 @@ Enables cycling through the contents of the picture button at the specified spee
 
 #### JSON Grammar
 
-| Nome       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| frameDelay | integer   | minimum: 0      |
+| Nome       | Tipo de dados | Possible Values |
+| ---------- | ------------- | --------------- |
+| frameDelay | integer       | mínimo: 0       |
 
 #### Objects Supported
 
@@ -85,9 +85,9 @@ Modifies the contents of the picture button when the mouse cursor passes over it
 
 #### JSON Grammar
 
-| Nome               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| switchWhenRollover | booleano  | true, false     |
+| Nome               | Tipo de dados | Possible Values |
+| ------------------ | ------------- | --------------- |
+| switchWhenRollover | booleano      | true, false     |
 
 #### Objects Supported
 
@@ -106,9 +106,9 @@ Enables setting the last thumbnail as the one to display when the button is disa
 
 #### JSON Grammar
 
-| Nome                   | Data Type | Possible Values |
-|:---------------------- | --------- | --------------- |
-| useLastFrameAsDisabled | booleano  | true, false     |
+| Nome                   | Tipo de dados | Possible Values |
+|:---------------------- | ------------- | --------------- |
+| useLastFrameAsDisabled | booleano      | true, false     |
 
 
 #### Objects Supported

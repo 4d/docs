@@ -22,9 +22,9 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### JSON Grammar
 
-| Nome               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| automaticInsertion | booleano  | true, false     |
+| Nome               | Tipo de dados | Possible Values |
+| ------------------ | ------------- | --------------- |
+| automaticInsertion | booleano      | true, false     |
 
 #### Objects Supported
 
@@ -40,10 +40,10 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 #### JSON Grammar
 
-| Nome       | Data Type        | Possible Values                                     |
+| Nome       | Tipo de dados    | Possible Values                                     |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
-| list       | list, collection | A list of possible values (hierarchical lists only) |
+| lista      | list, collection | A list of possible values (hierarchical lists only) |
 
 
 #### Objects Supported
@@ -59,7 +59,7 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Nome   | Data Type        | Possible Values                          |
+| Nome   | Tipo de dados    | Possible Values                          |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
@@ -77,9 +77,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### JSON Grammar
 
-| Nome              | Data Type | Possible Values   |
-| ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| Nome              | Tipo de dados | Possible Values   |
+| ----------------- | ------------- | ----------------- |
+| currentItemSource | string        | Object expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -101,9 +101,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### JSON Grammar
 
-| Nome                      | Data Type | Possible Values   |
-| ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| Nome                      | Tipo de dados | Possible Values   |
+| ------------------------- | ------------- | ----------------- |
+| currentItemPositionSource | string        | Number expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md)
@@ -113,7 +113,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 
 ---
-## Data Type
+## Tipo de dados
 
 Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
@@ -142,9 +142,9 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Nome   | Data Type  | Possible Values                                                  |
-| ------ | ---------- | ---------------------------------------------------------------- |
-| values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| Nome   | Tipo de dados | Possible Values                                                  |
+| ------ | ------------- | ---------------------------------------------------------------- |
+| values | collection    | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
 #### Objects Supported
 
@@ -190,9 +190,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### JSON Grammar
 
-| Nome       | Data Type | Possible Values                                                         |
-| ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| Nome       | Tipo de dados | Possible Values                                                         |
+| ---------- | ------------- | ----------------------------------------------------------------------- |
+| dataSource | string        | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -212,9 +212,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### JSON Grammar
 
-| Nome  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| table | number    | Table number    |
+| Nome   | Tipo de dados | Possible Values |
+| ------ | ------------- | --------------- |
+| tabela | number        | Table number    |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)
@@ -247,9 +247,9 @@ Using this property requires compliance with the following principles:
 
 #### JSON Grammar
 
-| Nome   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Nome   | Tipo de dados | Possible Values      |
+| ------ | ------------- | -------------------- |
+| saveAs | string        | "value", "reference" |
 
 #### Objects Supported
 [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
@@ -268,9 +268,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### JSON Grammar
 
-| Nome                | Data Type | Possible Values       |
-| ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| Nome                | Tipo de dados | Possible Values       |
+| ------------------- | ------------- | --------------------- |
+| selectedItemsSource | string        | Collection expression |
 
 #### Objects Supported
 [List Box ](listbox_overview.md#overview)
@@ -286,9 +286,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### JSON Grammar
 
-| Nome           | Data Type | Possible Values      |
-| -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| Nome           | Tipo de dados | Possible Values      |
+| -------------- | ------------- | -------------------- |
+| namedSelection | string        | Named selection name |
 
 #### Objects Supported
 [List Box](listbox_overview.md#overview)

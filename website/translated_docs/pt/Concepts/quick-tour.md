@@ -182,10 +182,10 @@ myColl:=New collection("A";"B";1;2;Current time)
 myColl[3]  //access to 4th element of the collection
 ```
 
-## Operators
+## Operadores
 When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
 
-| Operator | Operation      | Exemplo            |
+| Operator | Operação       | Exemplo            |
 | -------- | -------------- | ------------------ |
 | +        | Addition       | 1 + 2 results in 3 |
 | –        | Subtraction    | 3 – 2 results in 1 |
@@ -196,7 +196,7 @@ Numeric operators are just one type of operator available to you. 4D supports ma
 
 The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
 
-| Data Type       | Operation     | Exemplo                                                                                              |
+| Tipo de dados   | Operação      | Exemplo                                                                                              |
 | --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
 | Número          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
 | String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
@@ -239,7 +239,7 @@ You refer to an expression by the data type it returns. There are several expres
 | “ABC” = “XYZ”            | Booleano           | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
 | My Picture + 50          | Imagem             | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
 | ->[People]Name           | Ponteiro           | This expression returns a pointer to the field called [People]Name.                                                                                                             |
-| Table (1)                | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
+| Table(1)                 | Ponteiro           | This is a command that returns a pointer to the first table.                                                                                                                    |
 | JSON Parse (MyString)    | Objeto             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
 | JSON Parse (MyJSONArray) | Coleção            | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
 | Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |

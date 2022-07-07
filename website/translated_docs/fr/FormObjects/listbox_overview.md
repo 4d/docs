@@ -50,7 +50,7 @@ La méthode objet de colonne obtient les événements qui se produisent dans son
 
 ### Types de list box
 
-Il existe différents types de list box avec leurs propres comportements et propriétés spécifiques. The list box type depends on its [Data Source property](properties_Object.md#data-source):
+Il existe différents types de list box avec leurs propres comportements et propriétés spécifiques. Le type de list box dépend de sa propriété [Data Source](properties_Object.md#data-source) :
 
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.

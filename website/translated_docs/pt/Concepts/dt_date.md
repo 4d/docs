@@ -29,7 +29,7 @@ Uma data nula é especificada por _!00-00-00!_.
 
 ## Date operators
 
-| Operation                | Sintaxe        | Returns  | Expressão                    | Value        |
+| Operação                 | Sintaxe        | Retorna  | Expressão                    | Value        |
 | ------------------------ | -------------- | -------- | ---------------------------- | ------------ |
 | Date difference          | Date - Date    | Número   | !2017-01-20! - !2017-01-01!  | 19           |
 | Day addition             | Date + Number  | Date     | !2017-01-20! + 9             | !2017-01-29! |
@@ -40,7 +40,7 @@ Uma data nula é especificada por _!00-00-00!_.
 |                          |                |          | !2017-01-20! # !2017-01-20!  | False        |
 | Greater than             | Date > Date    | Booleano | !2017-01-20! > !2017-01-01!  | True         |
 |                          |                |          | !2017-01-20! > !2017-01-20!  | False        |
-| Less than                | Date < Date    | Booleano | !2017-01-01! < !2017-01-20!  | True         |
+| Menor que                | Date < Date    | Booleano | !2017-01-01! < !2017-01-20!  | True         |
 |                          |                |          | !2017-01-20! < !2017-01-20!  | False        |
 | Greater than or equal to | Date >= Date   | Booleano | !2017-01-20! >=!2017-01-01!  | True         |
 |                          |                |          | !2017-01-01!>=!2017-01-20!   | False        |

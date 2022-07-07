@@ -659,7 +659,7 @@ This principle is implemented for internal arrays that can be used to manage:
 - background colors
 - estilos
 - hidden rows
-- selections
+- seleções
 
 For example, if you want to select the row containing Rennes, you must pass:
 
@@ -772,7 +772,7 @@ ARRAY OBJECT(obColumn;0) //column array
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
 *   "text": for a text value
-*   "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
+*   "real": for a numeric value that can include separators like a \<space>, <.>, ou <,>
 *   "integer": for an integer value
 *   "boolean": for a True/False value
 *   "color": to define a background color
@@ -785,7 +785,7 @@ When a list box column is associated with an object array, the way a cell is dis
 | texto     | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| booleano  | check box                                      | drop-down menu (required list)                                                                 |
+| booleano  | caixa de verificação                           | drop-down menu (required list)                                                                 |
 | color     | background color                               | texto                                                                                          |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
@@ -796,16 +796,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Value type | Default format                                             | Entry control           |
-| ---------- | ---------------------------------------------------------- | ----------------------- |
-| texto      | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
-|            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" and "-"           |
-|            |                                                            | "0-9" if min>=0         |
-| Booleano   | check box                                                  | N/A                     |
-| color      | N/A                                                        | N/A                     |
-| event      | N/A                                                        | N/A                     |
+| Tipo de valor | Default format                                             | Entry control           |
+| ------------- | ---------------------------------------------------------- | ----------------------- |
+| texto         | same as defined in object                                  | any (no control)        |
+| real          | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
+|               |                                                            | "0-9" and "." if min>=0 |
+| integer       | same as defined in object                                  | "0-9" and "-"           |
+|               |                                                            | "0-9" if min>=0         |
+| Booleano      | caixa de verificação                                       | N/A                     |
+| color         | N/A                                                        | N/A                     |
+| event         | N/A                                                        | N/A                     |
 
 ### Attributes
 
@@ -869,9 +869,9 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | Descrição                                                                                                                                                                                    |
-| --------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| Atributo | Available value(s) | valueType(s) | Descrição                                                                                                                                                                                    |
+| -------- | ------------------ | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates        | integer      | Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)
