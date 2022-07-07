@@ -48,18 +48,18 @@ function Tile({
   const { withBaseUrl } = useBaseUrlUtils();
 
   return (
-    <div className= {clsx('col', className)} >
+    <div className={clsx('col', className)} >
       <div className="tile">
-      <img
-        className={styles.tilesImage}
-        alt={tile.title}
-        width={Math.floor(tile.image.width)}
-        height={Math.floor(tile.image.height)}
-        src={withBaseUrl(tile.image.src)}
-        loading="lazy"
-      />
-      <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
-      <p>{tile.links}</p>
+        <img
+          className={styles.tilesImage}
+          alt={tile.title}
+          width={Math.floor(tile.image.width)}
+          height={Math.floor(tile.image.height)}
+          src={withBaseUrl(tile.image.src)}
+          loading="lazy"
+        />
+        <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
+        <p>{tile.links}</p>
       </div>
     </div>
   );

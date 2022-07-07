@@ -58,29 +58,7 @@ module.exports = {
   ],
   "themeConfig": {
     "navbar": {
-      "title": "4D Documentation",
-      "items": [
-        {
-          "href": "https://developer.4d.com/docs",
-          "label": "v19 R5 BETA",
-          "position": "left"
-        },
-        {
-          "href": "https://developer.4d.com/docs/Rx",
-          "label": "v19 R4",
-          "position": "left"
-        },
-        {
-          "href": "https://developer.4d.com/docs/19",
-          "label": "v19",
-          "position": "left"
-        },
-        {
-          "href": "https://developer.4d.com/docs/18",
-          "label": "v18",
-          "position": "left"
-        }
-      ]
+      "title": "4D Documentation"
     },
     "image": "../assets/img/en/logohome.png",
     "footer": {
