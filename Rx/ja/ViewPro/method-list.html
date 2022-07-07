@@ -78,10 +78,10 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>vpFormula</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォーミュラ</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>フォーミュラの名称</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>命名フォーミュラのオプション</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpFormula</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォーミュラ</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>フォーミュラの名称</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>命名フォーミュラのオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -98,8 +98,8 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>scope</td><td>数値</td><td>フォーミュラのスコープ。 シートのインデックス (0起点) を渡すか、あるいは以下の定数を使用することができます: <p><li><code>vk current sheet</code></li><li><code>vk workbook</code></li><p><p>スコープは、フォーミュラ名が特定のワークシートに限定されたローカル (<em>scope</em> = シートのインデックス または <code>vk current sheet</code>) なものか、あるいはワークブック全体で使用できるグローバル (<em>scope</em> = <code>vk workbook</code>) なものかを決定します。</td></tr>
-<tr><td>comment</td><td>テキスト</td><td>命名フォーミュラに割り当てられたコメント</td></tr>
+<tr><td>scope</td><td>Number</td><td>フォーミュラのスコープ。 シートのインデックス (0起点) を渡すか、あるいは以下の定数を使用することができます: <p><li><code>vk current sheet</code></li><li><code>vk workbook</code></li><p><p>スコープは、フォーミュラ名が特定のワークシートに限定されたローカル (<em>scope</em> = シートのインデックス または <code>vk current sheet</code>) なものか、あるいはワークブック全体で使用できるグローバル (<em>scope</em> = <code>vk workbook</code>) なものかを決定します。</td></tr>
+<tr><td>comment</td><td>Text</td><td>命名フォーミュラに割り当てられたコメント</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -114,9 +114,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>テキスト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>フォーミュラの名称</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>命名フォーミュラのオプション</td></tr>
+<tr><td>rangeObj</td><td>Text</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>フォーミュラの名称</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>命名フォーミュラのオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-1"></a><a href="#説明-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -131,8 +131,8 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>scope</td><td>数値</td><td>レンジのスコープ。 シートのインデックス (0起点) を渡すか、あるいは以下の定数を使用することができます: <p><li><code>vk current sheet</code></li><li><code>vk workbook</code></li><p><p>スコープは、レンジ名が特定のワークシートに限定されたローカル (<em>scope</em> = シートのインデックス または <code>vk current sheet</code>) なものか、あるいはワークブック全体で使用できるグローバル (<em>scope</em> = <code>vk workbook</code>) なものかを決定します。</td></tr>
-<tr><td>comment</td><td>テキスト</td><td>命名レンジに割り当てられたコメント</td></tr>
+<tr><td>scope</td><td>Number</td><td>レンジのスコープ。 シートのインデックス (0起点) を渡すか、あるいは以下の定数を使用することができます: <p><li><code>vk current sheet</code></li><li><code>vk workbook</code></li><p><p>スコープは、レンジ名が特定のワークシートに限定されたローカル (<em>scope</em> = シートのインデックス または <code>vk current sheet</code>) なものか、あるいはワークブック全体で使用できるグローバル (<em>scope</em> = <code>vk workbook</code>) なものかを決定します。</td></tr>
+<tr><td>comment</td><td>Text</td><td>命名レンジに割り当てられたコメント</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -155,7 +155,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>テキスト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Text</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-2"></a><a href="#説明-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -182,9 +182,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>index</td><td>整数</td><td>-&gt;</td><td>新しいシートのインデックス</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>シート名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>index</td><td>Integer</td><td>-&gt;</td><td>新しいシートのインデックス</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>シート名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -211,7 +211,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -247,10 +247,10 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>styleName</td><td>テキスト</td><td>-&gt;</td><td>スタイルの名前</td></tr>
-<tr><td>styleObj</td><td>オブジェクト</td><td>-&gt;</td><td>属性設定を定義するオブジェクト</td></tr>
-<tr><td>scope</td><td>整数</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>styleName</td><td>Text</td><td>-&gt;</td><td>スタイルの名前</td></tr>
+<tr><td>styleObj</td><td>Object</td><td>-&gt;</td><td>属性設定を定義するオブジェクト</td></tr>
+<tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -304,9 +304,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>すべてのセルのレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>すべてのセルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -327,11 +327,11 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>column</td><td>倍長整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>row</td><td>倍長整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>すべてのセルのレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>column</td><td>Longint</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>row</td><td>Longint</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>すべてのセルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -371,13 +371,13 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>column</td><td>整数</td><td>-&gt;</td><td>カラムのインデックス</td></tr>
-<tr><td>row</td><td>整数</td><td>-&gt;</td><td>行のインデックス</td></tr>
-<tr><td>columnCount</td><td>整数</td><td>-&gt;</td><td>カラム数</td></tr>
-<tr><td>rowCount</td><td>整数</td><td>-&gt;</td><td>行数</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>複数セルのレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>column</td><td>Integer</td><td>-&gt;</td><td>カラムのインデックス</td></tr>
+<tr><td>row</td><td>Integer</td><td>-&gt;</td><td>行のインデックス</td></tr>
+<tr><td>columnCount</td><td>Integer</td><td>-&gt;</td><td>カラム数</td></tr>
+<tr><td>rowCount</td><td>Integer</td><td>-&gt;</td><td>行数</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>複数セルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-8"></a><a href="#説明-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -403,11 +403,11 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>column</td><td>整数</td><td>-&gt;</td><td>カラムのインデックス</td></tr>
-<tr><td>columnCount</td><td>整数</td><td>-&gt;</td><td>カラム数</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>複数セルのレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>column</td><td>Integer</td><td>-&gt;</td><td>カラムのインデックス</td></tr>
+<tr><td>columnCount</td><td>Integer</td><td>-&gt;</td><td>カラム数</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>複数セルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -431,7 +431,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -454,9 +454,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>otherRangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>統合されたレンジを格納したオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>otherRangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>統合されたレンジを格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -484,7 +484,7 @@
 </thead>
 <tbody>
 <tr><td>4DViewDocument</td><td>BLOB</td><td>-&gt;</td><td>4D View ドキュメント</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>4D View Pro オブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>4D View Pro オブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -505,9 +505,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpObject</td><td>オブジェクト</td><td>-&gt;</td><td>変換するエリアを格納した 4D View Pro オブジェクト</td></tr>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>エリアの SVGピクチャー</td></tr>
+<tr><td>vpObject</td><td>Object</td><td>-&gt;</td><td>変換するエリアを格納した 4D View Pro オブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>エリアの SVGピクチャー</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -564,9 +564,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>追加のオプション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>返されるオブジェクト。 コピーされたデータが格納されています。</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>追加のオプション</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>返されるオブジェクト。 コピーされたデータが格納されています。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -578,8 +578,8 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>copy</td><td>ブール</td><td>コマンド実行後もコピーされた値、書式、数式が保持するには <em>true</em> (デフォルト)。 削除するには <em>false</em>。</td></tr>
-<tr><td>copyOptions</td><td>倍長整数</td><td>コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td><code>vk clipboard options all</code> (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td><code>vk clipboard options formatting</code></td><td>フォーマットだけをコピーします。</td></tr><tr><td><code>vk clipboard options formulas</code></td><td>フォーミュラだけをコピーします。</td></tr><tr><td><code>vk clipboard options formulas and formatting</code></td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td><code>vk clipboard options values</code></td><td>値だけをコピーします。</td></tr><tr><td><code>vk clipboard options value and formatting</code></td><td>値とフォーマットをコピーします。</td></tr></table></p></td></tr>
+<tr><td>copy</td><td>Boolean</td><td>コマンド実行後もコピーされた値、書式、数式が保持するには <em>true</em> (デフォルト)。 削除するには <em>false</em>。</td></tr>
+<tr><td>copyOptions</td><td>Longint</td><td>コピーまたは移動する内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td><code>vk clipboard options all</code> (デフォルト)</td><td>値、フォーマット、フォーミュラを含むすべてのデータオブジェクトをコピーします。</td></tr><tr><td><code>vk clipboard options formatting</code></td><td>フォーマットだけをコピーします。</td></tr><tr><td><code>vk clipboard options formulas</code></td><td>フォーミュラだけをコピーします。</td></tr><tr><td><code>vk clipboard options formulas and formatting</code></td><td>フォーミュラとフォーマットをコピーします。</td></tr><tr><td><code>vk clipboard options values</code></td><td>値だけをコピーします。</td></tr><tr><td><code>vk clipboard options value and formatting</code></td><td>値とフォーマットをコピーします。</td></tr></table></p></td></tr>
 </tbody>
 </table>
 <p><a href="#vp-set-workbook-options">ワークブックオプション</a> で定義されている貼り付けオプションが考慮されます。</p>
@@ -609,7 +609,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -637,7 +637,7 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-16"></a><a href="#説明-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -666,9 +666,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>filePath</td><td>テキスト</td><td>-&gt;</td><td>ドキュメントのパス名</td></tr>
-<tr><td>paramObj</td><td>オブジェクト</td><td>-&gt;</td><td>書き出しのオプション</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>filePath</td><td>Text</td><td>-&gt;</td><td>ドキュメントのパス名</td></tr>
+<tr><td>paramObj</td><td>Object</td><td>-&gt;</td><td>書き出しのオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -689,14 +689,14 @@
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>format</td><td>テキスト</td><td>(任意) 渡した場合、書き出されるファイルの形式を指定します: &quot;.4VP&quot; (デフォルト)、 &quot;.csv&quot;、&quot;.xlsx&quot;、または &quot;.pdf&quot;。 次の定数が利用できます:<li><code>vk 4D View Pro format</code></li><li><code>vk csv format</code></li><li><code>vk MS Excel format</code></li><li><code>vk pdf format</code></li>4D は必要に応じて適切な拡張子をファイル名に追加します。 指定した形式が <em>filePath</em> 引数として渡された拡張子と合致しない場合、指定形式の拡張子は <em>filePath</em> 引数の後ろに追加されます。 形式が指定されず、<em>filePath</em> 引数にも拡張子がなかった場合には、デフォルトのファイル形式が使用されます。</td></tr>
-<tr><td>password</td><td>テキスト</td><td>Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されるパスワード。</td></tr>
+<tr><td>format</td><td>text</td><td>(任意) 渡した場合、書き出されるファイルの形式を指定します: &quot;.4VP&quot; (デフォルト)、 &quot;.csv&quot;、&quot;.xlsx&quot;、または &quot;.pdf&quot;。 次の定数が利用できます:<li><code>vk 4D View Pro format</code></li><li><code>vk csv format</code></li><li><code>vk MS Excel format</code></li><li><code>vk pdf format</code></li>4D は必要に応じて適切な拡張子をファイル名に追加します。 指定した形式が <em>filePath</em> 引数として渡された拡張子と合致しない場合、指定形式の拡張子は <em>filePath</em> 引数の後ろに追加されます。 形式が指定されず、<em>filePath</em> 引数にも拡張子がなかった場合には、デフォルトのファイル形式が使用されます。</td></tr>
+<tr><td>password</td><td>text</td><td>Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されるパスワード。</td></tr>
 <tr><td>formula</td><td>object</td><td>書き出しが完了した際に呼び出されるコールバックメソッド名。 書き出しが非同期でおこなわれる (PDF および Excel 形式での書き出しが該当します) 場合かつ、書き出し後にコードを実行したい場合には、コールバックメソッドが必要です。 コールバックメソッドは <a href="https://doc.4d.com/4dv19/help/command/ja/page1597.html"><code>Formula</code></a> コマンドと使用する必要があります (詳細は以下を参照ください)。</td></tr>
 <tr><td>valuesOnly</td><td>boolean</td><td>フォーミュラ (あれば) の値のみを書き出すかどうかを指定します。</td></tr>
 <tr><td>includeFormatInfo</td><td>boolean</td><td>フォーマット (書式) 情報を含めるには true、それ以外の場合には false (デフォルトは true)。 フォーマット情報は特定の場合 (例: SVGへの書き出しなど) において有用です。 一方で、このプロパティを <strong>false</strong> に設定することで書き出し時間を短縮することもできます。</td></tr>
 <tr><td>sheetIndex</td><td>number</td><td>PDF のみ (任意) - 書き出すシートのインデックス (0 起点)。 -2 = 表示されている全シート (デフォルト)、-1 = カレントシートのみ</td></tr>
-<tr><td>pdfOptions</td><td>object</td><td>PDFのみ (任意) - pdf 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</yh><th>説明</th></tr><tr><td>creator</td><td>テキスト</td><td>変換されたドキュメントの変換元を作成したアプリケーション名。</td></tr><tr><td>title</td><td>テキスト</td><td>ドキュメント名。</td></tr><tr><td>author</td><td>テキスト</td><td>ドキュメントの作成者の名前。</td></tr><tr><td>keywords</td><td>テキスト</td><td>ドキュメントに割り当てられたキーワード。</td></tr><tr><td>subject</td><td>テキスト</td><td>ドキュメントの題名。</td></tr></table></p></td></tr>
-<tr><td>csvOptions</td><td>object</td><td>CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>テキスト</td><td>行の区切り文字。 デフォルト: &quot;\r\n&quot;</td></tr><tr><td>columnDelimiter</td><td>テキスト</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr></table></p></td></tr>
+<tr><td>pdfOptions</td><td>object</td><td>PDFのみ (任意) - pdf 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</yh><th>説明</th></tr><tr><td>creator</td><td>text</td><td>変換されたドキュメントの変換元を作成したアプリケーション名。</td></tr><tr><td>title</td><td>text</td><td>ドキュメント名。</td></tr><tr><td>author</td><td>text</td><td>ドキュメントの作成者の名前。</td></tr><tr><td>keywords</td><td>text</td><td>ドキュメントに割り当てられたキーワード。</td></tr><tr><td>subject</td><td>text</td><td>ドキュメントの題名。</td></tr></table></p></td></tr>
+<tr><td>csvOptions</td><td>object</td><td>CSVのみ (任意) - csv 書き出しのオプション <p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>range</td><td>object</td><td>複数セルのレンジオブジェクト</td></tr><tr><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 デフォルト: &quot;\r\n&quot;</td></tr><tr><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr></table></p></td></tr>
 <tr><td>&lt;customProperty&gt;</td><td>any</td><td>コールバックメソッドの $3 引数を通して利用可能な任意のプロパティ。</td></tr>
 </tbody>
 </table>
@@ -723,13 +723,13 @@
 <tr><th>変数</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>$1</td><td></td><td>テキスト</td><td>4D View Pro オブジェクト名</td></tr>
-<tr><td>$2</td><td></td><td>テキスト</td><td>書き出された 4D View Pro オブジェクトのファイルパス</td></tr>
+<tr><td>$1</td><td></td><td>text</td><td>4D View Pro オブジェクト名</td></tr>
+<tr><td>$2</td><td></td><td>text</td><td>書き出された 4D View Pro オブジェクトのファイルパス</td></tr>
 <tr><td>$3</td><td></td><td>object</td><td>コマンドの <em>paramObj</em> 引数への参照</td></tr>
 <tr><td>$4</td><td></td><td>object</td><td>メソッドから返されるステータスメッセージを格納したオブジェクト</td></tr>
 <tr><td></td><td>.success</td><td>boolean</td><td>書き出しに成功した場合は true 、それ以外の場合は false</td></tr>
 <tr><td></td><td>.errorCode</td><td>integer</td><td>エラーコード。 4D あるいは JavaScript から返されます。</td></tr>
-<tr><td></td><td>.errorMessage</td><td>テキスト</td><td>エラーメッセージ。 4D あるいは JavaScript から返されます。</td></tr>
+<tr><td></td><td>.errorMessage</td><td>text</td><td>エラーメッセージ。 4D あるいは JavaScript から返されます。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-1-1"></a><a href="#例題-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
@@ -793,9 +793,9 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>option</td><td>オブジェクト</td><td>-&gt;</td><td>書き出しのオプション</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>4D View Pro オブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>option</td><td>Object</td><td>-&gt;</td><td>書き出しのオプション</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>4D View Pro オブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -834,11 +834,11 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>searchValue</td><td>テキスト</td><td>-&gt;</td><td>検索値</td></tr>
-<tr><td>searchCondition</td><td>オブジェクト</td><td>-&gt;</td><td>検索条件を格納したオブジェクト</td></tr>
-<tr><td>replaceValue</td><td>テキスト</td><td>-&gt;</td><td>置き換え値</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>searchValue</td><td>Text</td><td>-&gt;</td><td>検索値</td></tr>
+<tr><td>searchCondition</td><td>Object</td><td>-&gt;</td><td>検索条件を格納したオブジェクト</td></tr>
+<tr><td>replaceValue</td><td>Text</td><td>-&gt;</td><td>置き換え値</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -851,12 +851,12 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>afterColumn</td><td>整数</td><td>検索を開始するカラムの直前のカラムの番号。 <em>rangeObj</em> 引数が統合されたレンジの場合、渡されるカラムの番号は最初のレンジのものでなければなりません。 デフォルト値: -1 (<em>rangeObj</em> の最初)</td></tr>
-<tr><td>afterRow</td><td>整数</td><td>検索を開始する行の直前の行番号。 <em>rangeObj</em> 引数が統合されたレンジの場合、渡される行番号は最初のレンジのものでなければなりません。 デフォルト値: -1 (<em>rangeObj</em> の最初)</td></tr>
-<tr><td>all</td><td>ブール</td><td><li>true - <em>rangeObj</em> 内で <em>searchValue</em> の値に合致するセルはすべて返されます。</li><li>false - (デフォルト値) <em>rangeObj</em> 内で <em>searchValue</em> の値に合致する最初のセルのみが返されます。</li></td></tr>
-<tr><td>flags</td><td>整数</td><td><table><tr><td><code>vk find flag exact match</code></td><td>セルの中身全体が検索値と完全に一致する必要があります</td></tr><tr><td><code>vk find flag ignore case</code></td><td>文字の大小は区別されません。 例: &quot;a&quot; と &quot;A&quot; は同じとみなされます。</td></tr><tr><td><code>vk find flag none</code></td><td>検索フラグは指定されていません (デフォルト)。</td></tr><tr><td><code>vk find flag use wild cards</code></td><td>検索文字列においてワイルドカード文字 (*,?) を使用できます。 ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません:<li>* は 0 から複数文字に使用可能です (例: &quot;bl*&quot; を検索した場合、&quot;bl&quot;、&quot;black&quot;、&quot;blob&quot; などが合致します)。</li><li>? は単一文字に使用可能です (例: &quot;h?t&quot; を検索した場合、&quot;hot&quot;、&quot;hit&quot; などが合致します)。</li></td></tr></table><p>フラグは組み合わせることができます。 たとえば:<p> <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code></p></td></tr>
-<tr><td>order</td><td>整数</td><td><table><tr><td><code>vk find order by columns</code></td><td>検索がカラムごとに実行されます。 カラムの各行が検索されたあとに次のカラムへと移動します。</td></tr><tr><td><code>vk find order by rows</code></td><td>検索が行ごとに実行されます。 行の各カラムが検索されたあとに次の行へと移動します (デフォルト)。</td></tr></table></td></tr>
-<tr><td>target</td><td>整数</td><td><table><tr><td><code>vk find target formula</code></td><td>セルフォーミュラ内で検索がおこなわれます。</td></tr><tr><td><code>vk find target tag</code></td><td>セルタグ内で検索がおこなわれます。</td></tr><tr><td><code>vk find target text</code></td><td>セルテキスト内で検索がおこなわれます (デフォルト)。</td></tr></table><p>フラグは組み合わせることができます。 たとえば:<p> <code>$search.target:=vk find target formula+vk find target text</code></p></td></tr>
+<tr><td>afterColumn</td><td>Integer</td><td>検索を開始するカラムの直前のカラムの番号。 <em>rangeObj</em> 引数が統合されたレンジの場合、渡されるカラムの番号は最初のレンジのものでなければなりません。 デフォルト値: -1 (<em>rangeObj</em> の最初)</td></tr>
+<tr><td>afterRow</td><td>Integer</td><td>検索を開始する行の直前の行番号。 <em>rangeObj</em> 引数が統合されたレンジの場合、渡される行番号は最初のレンジのものでなければなりません。 デフォルト値: -1 (<em>rangeObj</em> の最初)</td></tr>
+<tr><td>all</td><td>Boolean</td><td><li>true - <em>rangeObj</em> 内で <em>searchValue</em> の値に合致するセルはすべて返されます。</li><li>false - (デフォルト値) <em>rangeObj</em> 内で <em>searchValue</em> の値に合致する最初のセルのみが返されます。</li></td></tr>
+<tr><td>flags</td><td>Integer</td><td><table><tr><td><code>vk find flag exact match</code></td><td>セルの中身全体が検索値と完全に一致する必要があります</td></tr><tr><td><code>vk find flag ignore case</code></td><td>文字の大小は区別されません。 例: &quot;a&quot; と &quot;A&quot; は同じとみなされます。</td></tr><tr><td><code>vk find flag none</code></td><td>検索フラグは指定されていません (デフォルト)。</td></tr><tr><td><code>vk find flag use wild cards</code></td><td>検索文字列においてワイルドカード文字 (*,?) を使用できます。 ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません:<li>* は 0 から複数文字に使用可能です (例: &quot;bl*&quot; を検索した場合、&quot;bl&quot;、&quot;black&quot;、&quot;blob&quot; などが合致します)。</li><li>? は単一文字に使用可能です (例: &quot;h?t&quot; を検索した場合、&quot;hot&quot;、&quot;hit&quot; などが合致します)。</li></td></tr></table><p>フラグは組み合わせることができます。 たとえば:<p> <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code></p></td></tr>
+<tr><td>order</td><td>Integer</td><td><table><tr><td><code>vk find order by columns</code></td><td>検索がカラムごとに実行されます。 カラムの各行が検索されたあとに次のカラムへと移動します。</td></tr><tr><td><code>vk find order by rows</code></td><td>検索が行ごとに実行されます。 行の各カラムが検索されたあとに次の行へと移動します (デフォルト)。</td></tr></table></td></tr>
+<tr><td>target</td><td>Integer</td><td><table><tr><td><code>vk find target formula</code></td><td>セルフォーミュラ内で検索がおこなわれます。</td></tr><tr><td><code>vk find target tag</code></td><td>セルタグ内で検索がおこなわれます。</td></tr><tr><td><code>vk find target text</code></td><td>セルテキスト内で検索がおこなわれます (デフォルト)。</td></tr></table><p>フラグは組み合わせることができます。 たとえば:<p> <code>$search.target:=vk find target formula+vk find target text</code></p></td></tr>
 </tbody>
 </table>
 <p>任意の <em>replaceValue</em> 引数として、<em>rangeObj</em> 内で見つかった <em>searchValue</em> の値のテキストを置換するテキストを渡すことができます。</p>
@@ -898,7 +898,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -921,7 +921,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>font</td><td>テキスト</td><td>-&gt;</td><td>フォントのショートハンド文字列</td></tr>
+<tr><td>font</td><td>Text</td><td>-&gt;</td><td>フォントのショートハンド文字列</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-21"></a><a href="#説明-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -951,9 +951,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>単一セルのレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>単一セルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -979,8 +979,8 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>スタイルオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>スタイルオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-23"></a><a href="#説明-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1021,8 +1021,8 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td>&lt;-</td><td>カラムプロパティのコレクション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td>&lt;-</td><td>カラムプロパティのコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-24"></a><a href="#説明-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1048,9 +1048,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>整数</td><td>&lt;-</td><td>カラムの総数</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Integer</td><td>&lt;-</td><td>カラムの総数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1071,8 +1071,8 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>ファンクションの戻り値</td><td>整数</td><td>&lt;-</td><td>カレントシートのインデックス</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>ファンクションの戻り値</td><td>Integer</td><td>&lt;-</td><td>カレントシートのインデックス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1096,9 +1096,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>整数</td><td>&lt;-</td><td>カラムの総数</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Integer</td><td>&lt;-</td><td>カラムの総数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-27"></a><a href="#説明-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1128,8 +1128,8 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>Formula</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>Formula</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1150,14 +1150,14 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>命名レンジの名前</td></tr>
-<tr><td>scope</td><td>数値</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト=カレントシート)</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>命名フォーミュラ、または命名レンジの定義</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>命名レンジの名前</td></tr>
+<tr><td>scope</td><td>Number</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト=カレントシート)</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>命名フォーミュラ、または命名レンジの定義</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>VP Get formula by name</code> コマンドは、  <em>name</em> 引数で指定された名前の命名フォーミュラ、あるいは命名レンジに対応したフォーミュラとコメントを返します。定義されたスコープにそれらが存在しない場合には <strong>null</strong> が返されます。</p>
+<p><code>VP Get formula by name</code> コマンドは、  <em>name</em> 引数で指定された名前の命名フォーミュラ、あるいは命名レンジに対応したフォーミュラとコメントを返します。 定義されたスコープにそれらが存在しない場合には <strong>null</strong> が返されます。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <p><em>name</em> には、取得したい命名レンジあるいは命名フォーミュラの名前を渡します。 命名レンジは、絶対セル参照を格納したフォーミュラとして返されるという点に注意してください。</p>
 <p><em>scope</em> 引数を使用することで、フォーミュラを取得するスコープを定義できます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:</p>
@@ -1172,8 +1172,8 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>formula</td><td>テキスト</td><td>命名フォーミュラまたは命名レンジに対応したフォーミュラのテキスト。 命名レンジの場合、フォーミュラは連続した絶対セル参照として返されます。</td></tr>
-<tr><td>comment</td><td>テキスト</td><td>命名フォーミュラまたは命名レンジに対応したコメント</td></tr>
+<tr><td>formula</td><td>Text</td><td>命名フォーミュラまたは命名レンジに対応したフォーミュラのテキスト。 命名レンジの場合、フォーミュラは連続した絶対セル参照として返されます。</td></tr>
+<tr><td>comment</td><td>Text</td><td>命名フォーミュラまたは命名レンジに対応したコメント</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-25"></a><a href="#例題-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -1195,8 +1195,8 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td>&lt;-</td><td>フォーミュラ値のコレクション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td>&lt;-</td><td>フォーミュラ値のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1225,9 +1225,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>固定化されたカラムと行についての情報を格納したオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>固定化されたカラムと行についての情報を格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-31"></a><a href="#説明-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1241,10 +1241,10 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>columnCount</td><td>整数</td><td>シートの左側にある固定化されたカラム</td></tr>
-<tr><td>trailingColumnCount</td><td>整数</td><td>シートの右側にある固定化されたカラム</td></tr>
-<tr><td>rowCount</td><td>整数</td><td>シートの上側にある固定化された行</td></tr>
-<tr><td>trailingRowCount</td><td>整数</td><td>シートの下側にある固定化された行</td></tr>
+<tr><td>columnCount</td><td>Integer</td><td>シートの左側にある固定化されたカラム</td></tr>
+<tr><td>trailingColumnCount</td><td>Integer</td><td>シートの右側にある固定化されたカラム</td></tr>
+<tr><td>rowCount</td><td>Integer</td><td>シートの上側にある固定化された行</td></tr>
+<tr><td>trailingRowCount</td><td>Integer</td><td>シートの下側にある固定化された行</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-27"></a><a href="#例題-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -1264,15 +1264,15 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>scope</td><td>数値</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td>&lt;-</td><td>定義されたスコープ内に存在する名前</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>scope</td><td>Number</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td>&lt;-</td><td>定義されたスコープ内に存在する名前</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-32"></a><a href="#説明-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP Get names</code> コマンドは、 カレントシートまたは <em>scope</em> 引数で指定されたスコープ内において定義されているすべての &quot;名前&quot; のコレクションを返します。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
-<p><em>scope</em> 引数を使用することで、名前を取得するスコープを定義できます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:</p>
+<p><em>scope</em> 引数を使用することで、名前を取得するスコープを定義できます。 その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:</p>
 <ul>
 <li><code>vk current sheet</code></li>
 <li><code>vk workbook</code></li>
@@ -1284,9 +1284,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>result[ ].name</td><td>テキスト</td><td>セルまたはレンジ名</td></tr>
-<tr><td>result[ ].formula</td><td>テキスト</td><td>formula</td></tr>
-<tr><td>result[ ].comment</td><td>テキスト</td><td>名前に割り当てられたコメント</td></tr>
+<tr><td>result[ ].name</td><td>Text</td><td>セルまたはレンジ名</td></tr>
+<tr><td>result[ ].formula</td><td>Text</td><td>formula</td></tr>
+<tr><td>result[ ].comment</td><td>Text</td><td>名前に割り当てられたコメント</td></tr>
 </tbody>
 </table>
 <p>返されるプロパティは、命名された要素のタイプ (命名セル、命名レンジ、または命名フォーミュラ) に応じて異なります。</p>
@@ -1303,9 +1303,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>印刷情報のオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>印刷情報のオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-33"></a><a href="#説明-33" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1369,8 +1369,8 @@ zoomFactor:<span class="hljs-number">1</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td>&lt;-</td><td>行プロパティのコレクション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td>&lt;-</td><td>行プロパティのコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-34"></a><a href="#説明-34" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1395,9 +1395,9 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>整数</td><td>&lt;-</td><td>行の総数</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Integer</td><td>&lt;-</td><td>行の総数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-35"></a><a href="#説明-35" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1418,9 +1418,9 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>複数セルのレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>複数セルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-36"></a><a href="#説明-36" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1447,8 +1447,8 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>ファンクションの戻り値</td><td>整数</td><td>&lt;-</td><td>シートの数</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>ファンクションの戻り値</td><td>Integer</td><td>&lt;-</td><td>シートの数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-37"></a><a href="#説明-37" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1472,9 +1472,9 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>シート名</td></tr>
-<tr><td>ファンクションの戻り値</td><td>整数</td><td>&lt;-</td><td>シートのインデックス</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>シート名</td></tr>
+<tr><td>ファンクションの戻り値</td><td>Integer</td><td>&lt;-</td><td>シートのインデックス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-38"></a><a href="#説明-38" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1499,9 +1499,9 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス</td></tr>
-<tr><td>ファンクションの戻り値</td><td>テキスト</td><td>&lt;-</td><td>シート名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス</td></tr>
+<tr><td>ファンクションの戻り値</td><td>Text</td><td>&lt;-</td><td>シート名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-39"></a><a href="#説明-39" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1525,9 +1525,9 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>シートオプションのブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro エリアフォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>シートオプションのブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-40"></a><a href="#説明-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1552,9 +1552,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>&lt;-</td><td>シートのインデックス</td></tr>
-<tr><td>ファンクションの戻り値</td><td>ブール</td><td>&lt;-</td><td>印刷線が表示状態であれば true、それ以外は false</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>&lt;-</td><td>シートのインデックス</td></tr>
+<tr><td>ファンクションの戻り値</td><td>Boolean</td><td>&lt;-</td><td>印刷線が表示状態であれば true、それ以外は false</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-41"></a><a href="#説明-41" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1578,8 +1578,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>指定レンジ内にあるセル結合のオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>指定レンジ内にあるセル結合のオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-42"></a><a href="#説明-42" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1604,10 +1604,10 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>styleName</td><td>テキスト</td><td>-&gt;</td><td>スタイルの名前</td></tr>
-<tr><td>scope</td><td>整数</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>スタイルシートオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>styleName</td><td>Text</td><td>-&gt;</td><td>スタイルの名前</td></tr>
+<tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>スタイルシートオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-43"></a><a href="#説明-43" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1641,15 +1641,15 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>scope</td><td>整数</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td>&lt;-</td><td>スタイルシートオブジェクトのコレクション</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td>&lt;-</td><td>スタイルシートオブジェクトのコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-44"></a><a href="#説明-44" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP Get stylesheets</code> コマンドは、 <em>scope</em> で指定されたスコープにおいて定義されているスタイルシートのコレクションを返します。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
-<p>任意の <em>scope</em> 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:</p>
+<p>任意の <em>scope</em> 引数を使用することで、スタイルシートをどこに定義するかを指定することができます。 シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:</p>
 <ul>
 <li><code>vk current sheet</code></li>
 <li><code>vk workbook</code></li>
@@ -1684,8 +1684,8 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>セルの値を格納したオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>セルの値を格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-45"></a><a href="#説明-45" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1699,7 +1699,7 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 </thead>
 <tbody>
 <tr><td>value</td><td>Integer, Real, Boolean, Text, Date</td><td><em>rangeObj</em> レンジの値 (ただし時間型を除く)</td></tr>
-<tr><td>time</td><td>実数</td><td>値が js 日付型の場合、時間値 (秒単位)</td></tr>
+<tr><td>time</td><td>Real</td><td>値が js 日付型の場合、時間値 (秒単位)</td></tr>
 </tbody>
 </table>
 <p>返されるオブジェクトに日付または時間が含まれている場合、これは &quot;日付時間&quot;として扱われ、以下のように補完されます:</p>
@@ -1724,8 +1724,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>戻り値</td><td>コレクション</td><td>&lt;-</td><td>値のコレクション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Collection</td><td>&lt;-</td><td>値のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-46"></a><a href="#説明-46" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1740,8 +1740,8 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>value</td><td>日付</td><td>セルの値 (時間部分を除く)</td></tr>
-<tr><td>time</td><td>実数</td><td>値が js 日付型の場合、時間値 (秒単位)</td></tr>
+<tr><td>value</td><td>Date</td><td>セルの値 (時間部分を除く)</td></tr>
+<tr><td>time</td><td>Real</td><td>値が js 日付型の場合、時間値 (秒単位)</td></tr>
 </tbody>
 </table>
 </li>
@@ -1768,8 +1768,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>ワークブックオプションを格納したオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>ワークブックオプションを格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-47"></a><a href="#説明-47" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1792,9 +1792,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>filePath</td><td>テキスト</td><td>-&gt;</td><td>ドキュメントのパス名</td></tr>
-<tr><td>paramObj</td><td>オブジェクト</td><td>-&gt;</td><td>読み込みのオプション</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>filePath</td><td>Text</td><td>-&gt;</td><td>ドキュメントのパス名</td></tr>
+<tr><td>paramObj</td><td>Object</td><td>-&gt;</td><td>読み込みのオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-48"></a><a href="#説明-48" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1818,11 +1818,11 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>formula</td><td></td><td>object</td><td>書き出し終了時に実行させるコールバックメソッド名。 メソッドは <a href="https://doc.4d.com/4dv19/help/command/en/page1597.html"><code>Formula</code></a> コマンドと組み合わせて使用する必要があります。 <a href="#コールバックメソッド-フォーミュラ-の渡し方">コールバックメソッドの渡し方</a> を参照ください。</td></tr>
-<tr><td>password</td><td></td><td>テキスト</td><td>Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。</td></tr>
+<tr><td>password</td><td></td><td>text</td><td>Microsoft Excel のみ (任意) - MS Excel ドキュメントの保護に使用されているパスワード。</td></tr>
 <tr><td>csvOptions</td><td></td><td>object</td><td>CSV読み込みのオプション</td></tr>
 <tr><td></td><td>range</td><td>object</td><td>書き出されるデータの、最初のセルを格納しているセルレンジ。 指定されたレンジがセルレンジではない場合、レンジの最初のセルが使用されます。</td></tr>
-<tr><td></td><td>rowDelimiter</td><td>テキスト</td><td>行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。</td></tr>
-<tr><td></td><td>columnDelimiter</td><td>テキスト</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr>
+<tr><td></td><td>rowDelimiter</td><td>text</td><td>行の区切り文字。 渡されなかった場合、区切り文字は 4D によって自動的に定義されます。</td></tr>
+<tr><td></td><td>columnDelimiter</td><td>text</td><td>カラムの区切り文字。 デフォルト: &quot;,&quot;</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -1860,8 +1860,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>viewPro</td><td>オブジェクト</td><td>-&gt;</td><td>4D View Pro オブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>viewPro</td><td>Object</td><td>-&gt;</td><td>4D View Pro オブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-49"></a><a href="#説明-49" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1883,7 +1883,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-50"></a><a href="#説明-50" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1905,7 +1905,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-51"></a><a href="#説明-51" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1938,9 +1938,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>originRange</td><td>オブジェクト</td><td>-&gt;</td><td>移動 (コピー) 元のセルレンジ</td></tr>
-<tr><td>targetRange</td><td>オブジェクト</td><td>-&gt;</td><td>値・書式・フォーミュラの移動 (コピー) 先レンジ</td></tr>
-<tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>追加のオプション</td></tr>
+<tr><td>originRange</td><td>Object</td><td>-&gt;</td><td>移動 (コピー) 元のセルレンジ</td></tr>
+<tr><td>targetRange</td><td>Object</td><td>-&gt;</td><td>値・書式・フォーミュラの移動 (コピー) 先レンジ</td></tr>
+<tr><td>options</td><td>Object</td><td>-&gt;</td><td>追加のオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-52"></a><a href="#説明-52" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -1954,8 +1954,8 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>copy</td><td>ブール</td><td><em>originRange</em> のセルの値・書式・フォーミュラをコマンド実行後に削除するかどうかを指定します:<ul><li>削除するには false (デフォルト)。</li><li>保持するには true。</li></td></tr>
-<tr><td>pasteOptions</td><td>倍長整数</td><td>ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td><code>vk clipboard options all</code> (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td><code>vk clipboard options formatting</code></td><td>フォーマットだけをペーストします。</td></tr><tr><td><code>vk clipboard options formulas</code></td><td>フォーミュラだけをペーストします。</td></tr><tr><td><code>vk clipboard options formulas and formatting</code></td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td><code>vk clipboard options values</code></td><td>値だけをペーストします。</td></tr><tr><td><code>vk clipboard options value and formatting</code></td><td>値とフォーマットをペーストします。</td></tr></table></p></td></tr>
+<tr><td>copy</td><td>Boolean</td><td><em>originRange</em> のセルの値・書式・フォーミュラをコマンド実行後に削除するかどうかを指定します:<ul><li>削除するには false (デフォルト)。</li><li>保持するには true。</li></td></tr>
+<tr><td>pasteOptions</td><td>Longint</td><td>ペーストする内容を指定します。 とりうる値: <p><table><tr><th>値</th><th>説明</th></tr><tr><td><code>vk clipboard options all</code> (デフォルト)</td><td>値・フォーマット・フォーミュラを含むすべてのデータオブジェクトをペーストします。</td></tr><tr><td><code>vk clipboard options formatting</code></td><td>フォーマットだけをペーストします。</td></tr><tr><td><code>vk clipboard options formulas</code></td><td>フォーミュラだけをペーストします。</td></tr><tr><td><code>vk clipboard options formulas and formatting</code></td><td>フォーミュラとフォーマットをペーストします。</td></tr><tr><td><code>vk clipboard options values</code></td><td>値だけをペーストします。</td></tr><tr><td><code>vk clipboard options value and formatting</code></td><td>値とフォーマットをペーストします。</td></tr></table></p></td></tr>
 </tbody>
 </table>
 <p><a href="#vp-set-workbook-options">ワークブックオプション</a> で定義されている貼り付けオプションが考慮されます。</p>
@@ -1983,10 +1983,10 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>rangeName</td><td>テキスト</td><td>-&gt;</td><td>既存のレンジ名</td></tr>
-<tr><td>scope</td><td>整数</td><td>-&gt;</td><td>レンジの場所 (省略時はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>rangeName のレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>rangeName</td><td>Text</td><td>-&gt;</td><td>既存のレンジ名</td></tr>
+<tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>レンジの場所 (省略時はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>rangeName のレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-53"></a><a href="#説明-53" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2014,7 +2014,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-54"></a><a href="#説明-54" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2035,8 +2035,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>fontObj</td><td>オブジェクト</td><td>-&gt;</td><td>フォントオブジェクト</td></tr>
-<tr><td>戻り値</td><td>テキスト</td><td>&lt;-</td><td>フォントのショートハンド文字列</td></tr>
+<tr><td>fontObj</td><td>Object</td><td>-&gt;</td><td>フォントオブジェクト</td></tr>
+<tr><td>戻り値</td><td>Text</td><td>&lt;-</td><td>フォントのショートハンド文字列</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-55"></a><a href="#説明-55" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2047,11 +2047,11 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th><th>とりうる値</th><th>必須</th></tr>
 </thead>
 <tbody>
-<tr><td>family</td><td>テキスト</td><td>フォントを指定します。</td><td>標準の、あるいは一般的なフォントファミリー。 例:  &quot;Arial&quot;, &quot;Helvetica&quot;, &quot;serif&quot;, &quot;arial,sans-serif&quot;</td><td>◯</td></tr>
-<tr><td>size</td><td>テキスト</td><td>フォントのサイズを定義します。<p><p>&quot;font-size/line-height&quot; の形で line-height をfont-size に追加することもできます: 例: &quot;15pt/20pt&quot;</td><td>以下のいずれかの単位を伴う数値: <li>&quot;em&quot;, &quot;ex&quot;, &quot;%&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;in&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ch&quot;, &quot;rem&quot;, &quot;vh&quot;, &quot;vw&quot;, &quot;vmin&quot;, &quot;vmax&quot;</li><p><p>あるいは、以下の定数のいずれか 1つ:<li><code>vk font size large</code></li><li><code>vk font size larger</code></li><li><code>vk font size x large</code></li><li><code>vk font size xx large</code></li><li><code>vk font size small</code></li><li><code>vk font size smaller</code></li><li><code>vk font size x small</code></li><li><code>vk font size xx small</code></li></td><td>◯</td></tr>
-<tr><td>style</td><td>テキスト</td><td>フォントのスタイル。</td><td><li><code>vk font style italic</code></li><li><code>vk font style oblique</code></li></td><td>×</td></tr>
-<tr><td>variant</td><td>テキスト</td><td>スモールキャピタルのフォントを定義します。</td><td><li><code>vk font variant small caps</code></li></td><td>×</td></tr>
-<tr><td>weight</td><td>テキスト</td><td>フォントの太さを定義します。</td><td><li><code>vk font weight 100</code></li><li><code>vk font weight 200</code></li><li><code>vk font weight 300</code></li><li><code>vk font weight 400</code></li><li><code>vk font weight 500</code></li><li><code>vk font weight 600</code></li><li><code>vk font weight 700</code></li><li><code>vk font weight 800</code></li><li><code>vk font weight 900</code></li><li><code>vk font weight bold</code></li><li><code>vk font weight bolder</code></li><li><code>vk font weight lighter</code></li></td><td>×</td></tr>
+<tr><td>family</td><td>text</td><td>フォントを指定します。</td><td>標準の、あるいは一般的なフォントファミリー。 例:  例:  &quot;Arial&quot;, &quot;Helvetica&quot;, &quot;serif&quot;, &quot;arial,sans-serif&quot;</td><td>◯</td></tr>
+<tr><td>size</td><td>text</td><td>フォントのサイズを定義します。<p><p>&quot;font-size/line-height&quot; の形で line-height をfont-size に追加することもできます: 例: &quot;15pt/20pt&quot;</td><td>以下のいずれかの単位を伴う数値: <li>&quot;em&quot;, &quot;ex&quot;, &quot;%&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;in&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ch&quot;, &quot;rem&quot;, &quot;vh&quot;, &quot;vw&quot;, &quot;vmin&quot;, &quot;vmax&quot;</li><p><p>あるいは、以下の定数のいずれか 1つ:<li><code>vk font size large</code></li><li><code>vk font size larger</code></li><li><code>vk font size x large</code></li><li><code>vk font size xx large</code></li><li><code>vk font size small</code></li><li><code>vk font size smaller</code></li><li><code>vk font size x small</code></li><li><code>vk font size xx small</code></li></td><td>◯</td></tr>
+<tr><td>style</td><td>text</td><td>フォントのスタイル。</td><td><li><code>vk font style italic</code></li><li><code>vk font style oblique</code></li></td><td>×</td></tr>
+<tr><td>variant</td><td>text</td><td>スモールキャピタルのフォントを定義します。</td><td><li><code>vk font variant small caps</code></li></td><td>×</td></tr>
+<tr><td>weight</td><td>text</td><td>フォントの太さを定義します。</td><td><li><code>vk font weight 100</code></li><li><code>vk font weight 200</code></li><li><code>vk font weight 300</code></li><li><code>vk font weight 400</code></li><li><code>vk font weight 500</code></li><li><code>vk font weight 600</code></li><li><code>vk font weight 700</code></li><li><code>vk font weight 800</code></li><li><code>vk font weight 900</code></li><li><code>vk font weight bold</code></li><li><code>vk font weight bolder</code></li><li><code>vk font weight lighter</code></li></td><td>×</td></tr>
 </tbody>
 </table>
 <p>このオブジェクトは <a href="#vp-font-to-object">VP Font to object</a> コマンドで作成することができます。</p>
@@ -2087,9 +2087,9 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>セルレンジオブジェクト</td></tr>
-<tr><td>dataObject</td><td>オブジェクト</td><td>-&gt;</td><td>ペーストするデータを格納したオブジェクト</td></tr>
-<tr><td>options</td><td>倍長整数</td><td>-&gt;</td><td>ペーストする内容を指定します</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>セルレンジオブジェクト</td></tr>
+<tr><td>dataObject</td><td>Object</td><td>-&gt;</td><td>ペーストするデータを格納したオブジェクト</td></tr>
+<tr><td>options</td><td>Longint</td><td>-&gt;</td><td>ペーストする内容を指定します</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-56"></a><a href="#説明-56" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2123,8 +2123,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-57"></a><a href="#説明-57" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2161,11 +2161,11 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-58"></a><a href="#説明-58" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>VP RECOMPUTE FORMULAS</code> コマンドは、 <em>vpAreaName</em> 引数で指定したエリアの全フォーミュラを即座に評価します。 デフォルトでは、4D はフォーミュラを挿入時、読み込み時、そして書き出し時のタイミングで自動計算します。 <code>VP RECOMPUTE FORMULAS</code> コマンドを使用すると、任意のタイミングで強制的に計算を実行することができます(例: フォーミュラに変更が加えられた場合、またはフォーミュラがデータベースへの呼び出しを格納している場合など)。 コマンドは <a href="#vp-flush-commands">VP FLUSH COMMANDS</a> コマンドを実行することで、実行保留されていたコマンドをすべて実行し、コマンドバッファをクリアします。そしてワークブック内の全フォーミュラを計算します。</p>
+<p><code>VP RECOMPUTE FORMULAS</code> コマンドは、 <em>vpAreaName</em> 引数で指定したエリアの全フォーミュラを即座に評価します。 デフォルトでは、4D はフォーミュラを挿入時、読み込み時、そして書き出し時のタイミングで自動計算します。 <code>VP RECOMPUTE FORMULAS</code> コマンドを使用すると、任意のタイミングで強制的に計算を実行することができます(例: フォーミュラに変更が加えられた場合、またはフォーミュラがデータベースへの呼び出しを格納している場合など)。 コマンドは <a href="#vp-flush-commands">VP FLUSH COMMANDS</a> コマンドを実行することで、実行保留されていたコマンドをすべて実行し、コマンドバッファをクリアします。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <blockquote>
 <p><code>VP RECOMPUTE FORMULAS</code> コマンドを使用する前に <a href="#vp-suspend-computing">VP SUSPEND COMPUTING</a>コマンドが実行されていないようにしてください。</p>
@@ -2183,16 +2183,16 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>削除する命名レンジまたは命名フォーミュラの名前</td></tr>
-<tr><td>scope</td><td>整数</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト=カレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>削除する命名レンジまたは命名フォーミュラの名前</td></tr>
+<tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト=カレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-59"></a><a href="#説明-59" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP REMOVE NAME</code> コマンドは、 <em>name</em> の命名レンジまたは命名フォーミュラを、定義された <em>scope</em> のスコープから削除します。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <p><em>name</em> には、削除したい命名レンジあるいは命名フォーミュラの名前を渡します。</p>
-<p><em>scope</em> 引数を使用することで、命名レンジまたは命名フォーミュラをどこから削除するのか、指定することができます。その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:</p>
+<p><em>scope</em> 引数を使用することで、命名レンジまたは命名フォーミュラをどこから削除するのか、指定することができます。 その際、シートのインデックス (0 起点) を渡すか、以下の定数のいずれかを渡します:</p>
 <ul>
 <li><code>vk current sheet</code></li>
 <li><code>vk workbook</code></li>
@@ -2214,8 +2214,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>index</td><td>整数</td><td>-&gt;</td><td>削除するシートのインデックス</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>index</td><td>Integer</td><td>-&gt;</td><td>削除するシートのインデックス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="参照-57"></a><a href="#参照-57" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
@@ -2241,7 +2241,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-61"></a><a href="#説明-61" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2268,16 +2268,16 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>styleName</td><td>テキスト</td><td>-&gt;</td><td>削除するスタイルの名前</td></tr>
-<tr><td>scope</td><td>整数</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>styleName</td><td>Text</td><td>-&gt;</td><td>削除するスタイルの名前</td></tr>
+<tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>ターゲットのスコープ (デフォルト = カレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-62"></a><a href="#説明-62" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP REMOVE STYLESHEET</code> コマンドは、 <em>vpAreaName</em> 引数で指定したエリアから、<em>styleName</em> で指定したスタイルシートを削除します。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <p><em>styleName</em> 引数には、削除するスタイルシートの名前を渡します。</p>
-<p>任意の <em>scope</em> 引数を使用することで、スタイルシートをどこから削除するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:</p>
+<p>任意の <em>scope</em> 引数を使用することで、スタイルシートをどこから削除するかを指定することができます。 シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:</p>
 <ul>
 <li><code>vk current sheet</code></li>
 <li><code>vk workbook</code></li>
@@ -2295,8 +2295,8 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-63"></a><a href="#説明-63" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2322,7 +2322,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-64"></a><a href="#説明-64" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2343,18 +2343,18 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>row</td><td>整数</td><td>-&gt;</td><td>行のインデックス</td></tr>
-<tr><td>rowCount</td><td>整数</td><td>-&gt;</td><td>行数</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
-<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>行のレンジオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>row</td><td>Integer</td><td>-&gt;</td><td>行のインデックス</td></tr>
+<tr><td>rowCount</td><td>Integer</td><td>-&gt;</td><td>行数</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>行のレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-65"></a><a href="#説明-65" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP Row</code> コマンドは、 特定行、あるいは複数行を参照する新しいレンジオブジェクトを返します。</p>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
-<p><em>row</em> 引数で、セルレンジの先頭行を指定します。 この引数として行のインデックス (0 起点) を渡します。 レンジが複数行にわたる場合には、任意の <em>rowCount</em> 引数も併せて使用します。</p>
-<p>任意の <em>rowCount</em> には、レンジに含まれる行数を指定することができます。 <em>rowCount</em> 引数は 0 より大きい値でなくてはなりません。 省略時、デフォルトで値は 1 に設定されます。</p>
+<p>任意の <em>columnCount</em> には、レンジに含まれるカラム数を指定することができます。 この引数として行のインデックス (0 起点) を渡します。 <em>columnCount</em> 引数は 0 より大きい値でなくてはなりません。</p>
+<p>レンジが複数行にわたる場合には、任意の <em>rowCount</em> 引数も併せて使用します。 <em>rowCount</em> 引数は 0 より大きい値でなくてはなりません。 省略時、デフォルトで値は 1 に設定されます。</p>
 <p>任意の <em>sheet</em> 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:</p>
 <ul>
 <li><code>vk current sheet</code></li>
@@ -2374,7 +2374,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-66"></a><a href="#説明-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2396,7 +2396,7 @@ End if</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>parameters</td><td>オブジェクト</td><td>-&gt;</td><td>オフスクリーンエリアの属性を格納するオブジェクト</td></tr>
+<tr><td>parameters</td><td>Object</td><td>-&gt;</td><td>オフスクリーンエリアの属性を格納するオブジェクト</td></tr>
 <tr><td>戻り値</td><td>Mixed</td><td>&lt;-</td><td><code>.onEvent</code> オブジェクトの <code>.result</code> プロパティ、または値を返さない場合には Null</td></tr>
 </tbody>
 </table>
@@ -2408,7 +2408,7 @@ End if</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>area</td><td>テキスト</td><td>オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: &quot;OffscreenArea1&quot;) が割り当てられます。</td></tr>
+<tr><td>area</td><td>text</td><td>オフスクリーンエリアの名前。 省略時あるいは null の場合、一般的な名前 (例: &quot;OffscreenArea1&quot;) が割り当てられます。</td></tr>
 <tr><td>onEvent</td><td>object (フォーミュラ)</td><td>オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<p><p><li>クラスの <code>onEvent</code> 関数</li><li><code>Formula</code> オブジェクト</li><p><p>デフォルトでは、コールバックメソッドは、<a href="/docs/Rx/ja/Events/onVpReady.html"><code>On VP Ready</code></a>, <a href="/docs/Rx/ja/Events/onLoad.html"><code>On Load</code></a>, <a href="/docs/Rx/ja/Events/onUnload.html"><code>On Unload</code></a>, <a href="/docs/Rx/ja/Events/onEndUrlLoading.html"><code>On End URL Loading</code></a>, <a href="/docs/Rx/ja/Events/onUrlLoadingError.html"><code>On URL Loading Error</code></a>, <a href="/docs/Rx/ja/Events/onVpRangeChanged.html"><code>On VP Range Changed</code></a>, または <a href="/docs/Rx/ja/Events/onTimer.html"><code>On Timer</code></a> イベントで呼び出されます。 <p><p>コールバックメソッドを使用して <a href="/docs/Rx/ja/ViewPro/configuring.html#4d-view-pro-フォームオブジェクト変数">4D View Pro フォームオブジェクト変数</a> にアクセスすることができます。</td></tr>
 <tr><td>autoQuit</td><td>boolean</td><td>True (デフォルト値) の場合、<a href="/docs/Rx/ja/Events/onEndUrlLoading.html"><code>On End URL Loading</code></a> または <a href="/docs/Rx/ja/Events/onUrlLoadingError.html"><code>On URL Loading Error</code></a> イベントが起きた際にはコマンドがフォーミュラの実行を中止します。<p><p>False の場合、<em>onEvent</em> コールバックメソッド内で <code>CANCEL</code> あるいは <code>ACCEPT</code> コマンドを使用する必要があります。</td></tr>
 <tr><td>timeout</td><td>number</td><td>イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60</td></tr>
@@ -2495,6 +2495,29 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
         :(FORM Event.code=On URL Loading Error)
             CANCEL<span class="hljs-keyword"> 
     End case</span>
+    <span class="hljs-comment">// この間に "On VP Range Changed" イベントが発生した場合、タイマーはリスタートされます</span>
+  <span class="hljs-comment">// 時間はコンピューターの設定に応じて定義されなければなりません</span>
+<span class="hljs-function">            SET TIMER</span>(<span class="hljs-number">60</span>)
+
+        :(FORM Event.code=On VP Range Changed)
+    <span class="hljs-comment">// 計算の完了を感知し、 タイマーを再スタートさせます</span><span class="hljs-keyword">
+            If</span>(<span class="hljs-literal">This</span>.isWaiting)
+<span class="hljs-function">                SET TIMER</span>(<span class="hljs-number">60</span>)<span class="hljs-keyword">
+            End if</span>
+
+        :(FORM Event.code=On Timer)
+    <span class="hljs-comment">// この時点以降、他の 4D View コマンドを呼び出してもタイマーが再スタートしないようにします</span>
+            <span class="hljs-literal">This</span>.isWaiting:=<span class="hljs-literal">False</span>
+
+    <span class="hljs-comment">// タイマーを停止します</span>
+<span class="hljs-function">            SET TIMER</span>(<span class="hljs-number">0</span>)
+
+    <span class="hljs-comment">// PDF 書き出しを開始します</span>
+<span class="hljs-function">            VP EXPORT DOCUMENT</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-literal">This</span>.pdfPath;<span class="hljs-function">New object</span>(<span class="hljs-string">"formula"</span>;<span class="hljs-function">Formula</span>(ACCEPT)))
+
+        :(FORM Event.code=On URL Loading Error)
+            CANCEL<span class="hljs-keyword"> 
+    End case</span>
 </code></pre>
 <p><em>OffscreenArea</em> コールバックメソッドの内容は以下の通りです:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=cs.OffscreenArea.<span class="hljs-function">new</span>()
@@ -2511,7 +2534,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-68"></a><a href="#説明-68" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2532,7 +2555,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>methodObj</td><td>オブジェクト</td><td>-&gt;</td><td>4D View Pro エリアでの実行を許可するメソッド</td></tr>
+<tr><td>methodObj</td><td>Object</td><td>-&gt;</td><td>4D View Pro エリアでの実行を許可するメソッド</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -2541,21 +2564,21 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="説明-69"></a><a href="#説明-69" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET ALLOWED METHODS</code> コマンドは、 4D View Pro フォーミュラから呼び出し可能なプロジェクトメソッドを指定します。 このコマンドは、呼び出し後のセッション中に初期化される 4D View Pro エリアすべてに対して適用されます。 同じセッション中において異なる設定で初期化をするために、複数回呼び出すこともできます。</p>
-<p>セキュリティ上の理由により、 <code>VP SET ALLOWED METHODS</code> コマンドを実行していない場合のデフォルトでは、4D View Pro エリアにおいてはメソッドの呼び出しは許可されません (ただし、4D の汎用的な <code>SET ALLOWED METHODS</code> コマンドが呼び出されていた場合を除きます。前述の互換性に関する注記参照)。 許可されていないのメソッドをフォーミュラ内で使用した場合には、4D View Pro エリアに #NAME? エラーが表示されます。</p>
+<p>セキュリティ上の理由により、 <code>VP SET ALLOWED METHODS</code> コマンドを実行していない場合のデフォルトでは、4D View Pro エリアにおいてはメソッドの呼び出しは許可されません (ただし、4D の汎用的な <code>SET ALLOWED METHODS</code> コマンドが呼び出されていた場合を除きます。 許可されていないのメソッドをフォーミュラ内で使用した場合には、4D View Pro エリアに #NAME? 許可されていないのメソッドをフォーミュラ内で使用した場合には、4D View Pro エリアに #NAME? エラーが表示されます。</p>
 <p><em>methodObj</em> には、4D View Pro エリア内で定義したいファンクションの名前をプロパティとして格納しているオブジェクトを渡します:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th></th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&lt;functionName&gt;</code></td><td></td><td></td><td>オブジェクト</td><td>カスタムファンクションの名前。 <code>&lt;functionName&gt;</code> プロパティ名は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)</td></tr>
-<tr><td></td><td>method</td><td></td><td>テキスト</td><td>(必須) 許可する既存の 4D プロジェクトメソッドの名前</td></tr>
+<tr><td><code>&lt;functionName&gt;</code></td><td></td><td></td><td>Object</td><td>カスタムファンクションの名前。 <code>&lt;customFunction&gt;</code> は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)</td></tr>
+<tr><td></td><td>method</td><td></td><td>Text</td><td>(必須) 許可する既存の 4D プロジェクトメソッドの名前</td></tr>
 <tr><td></td><td>parameters</td><td></td><td>Object の Collection</td><td>引数のコレクション (メソッド内で定義されている順)</td></tr>
-<tr><td></td><td></td><td>[ ].name</td><td>テキスト</td><td><code>&lt;functionName&gt;</code> 用に表示する引数の名前。<p><p><strong>注</strong>: 引数の名前にスペースを含めることはできません。</td></tr>
-<tr><td></td><td></td><td>[ ].type</td><td>数値</td><td>引数の型。 サポートされている型:<li><code>Is Boolean</code></li><li><code>Is date</code></li><li><code>Is Integer</code></li><li><code>Is object</code></li><li><code>Is real</code></li><li><code>Is text</code></li><li><code>Is time</code></li>省略時のデフォルトでは、値は型と一緒に渡されますが、日付と時間の値に関してはオブジェクトとして送られます (<a href="/docs/Rx/ja/ViewPro/formulas.html#引数">引数</a> の章を参照ください)。 type が <code>Is object</code> の場合、そのオブジェクトは <a href="#vp-get-value"><code>VP Get value</code></a> によって返されるオブジェクトと同じ構造を持ちます。</td></tr>
-<tr><td></td><td>summary</td><td></td><td>テキスト</td><td>4D View Pro に表示するファンクションの説明</td></tr>
-<tr><td></td><td>minParams</td><td></td><td>数値</td><td>引数の最小の数</td></tr>
-<tr><td></td><td>maxParams</td><td></td><td>数値</td><td>引数の最大の数。 ここに parameters の length より大きな値を渡すことによって、デフォルトの型を持つ &quot;任意の&quot; 引数を宣言することができるようになります。</td></tr>
+<tr><td></td><td></td><td>[ ].name</td><td>Text</td><td><code>&lt;functionName&gt;</code> 用に表示する引数の名前。<p><p><strong>注</strong>: 引数の名前にスペースを含めることはできません。</td></tr>
+<tr><td></td><td></td><td>[ ].type</td><td>Number</td><td>引数の型。 サポートされている型:<li><code>Is Boolean</code></li><li><code>Is date</code></li><li><code>Is Integer</code></li><li><code>Is object</code></li><li><code>Is real</code></li><li><code>Is text</code></li><li><code>Is time</code></li>省略時のデフォルトでは、値は型と一緒に渡されますが、日付と時間の値に関してはオブジェクトとして送られます (<a href="/docs/Rx/ja/ViewPro/formulas.html#引数">引数</a> の章を参照ください)。 type が <code>Is object</code> の場合、そのオブジェクトは <a href="#vp-get-value"><code>VP Get value</code></a> によって返されるオブジェクトと同じ構造を持ちます。</td></tr>
+<tr><td></td><td>summary</td><td></td><td>Text</td><td>4D View Pro に表示するファンクションの説明</td></tr>
+<tr><td></td><td>minParams</td><td></td><td>Number</td><td>引数の最小の数</td></tr>
+<tr><td></td><td>maxParams</td><td></td><td>Number</td><td>引数の最大の数。 ここに parameters の length より大きな値を渡すことによって、デフォルトの型を持つ &quot;任意の&quot; 引数を宣言することができるようになります。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-63"></a><a href="#例題-63" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -2593,8 +2616,8 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>boolValue</td><td>ブール</td><td>-&gt;</td><td>設定するブール値</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>boolValue</td><td>Boolean</td><td>-&gt;</td><td>設定するブール値</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-70"></a><a href="#説明-70" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2614,9 +2637,9 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>borderStyleObj</td><td>オブジェクト</td><td>-&gt;</td><td>境界線スタイルを格納したオブジェクト</td></tr>
-<tr><td>borderPosObj</td><td>オブジェクト</td><td>-&gt;</td><td>境界線の位置を格納したオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>borderStyleObj</td><td>Object</td><td>-&gt;</td><td>境界線スタイルを格納したオブジェクト</td></tr>
+<tr><td>borderPosObj</td><td>Object</td><td>-&gt;</td><td>境界線の位置を格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-71"></a><a href="#説明-71" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2628,8 +2651,8 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th><th>とりうる値</th></tr>
 </thead>
 <tbody>
-<tr><td>color</td><td>テキスト</td><td>境界線のカラーを定義します。 デフォルト = black</td><td>CSSカラー &quot;#rrggbb&quot; シンタックス (推奨シンタックス)、CSSカラー &quot;rgb(r,g,b)&quot; シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)</td></tr>
-<tr><td>style</td><td>整数</td><td>境界線のスタイルを定義します。 デフォルト = empty。</td><td><li><code>vk line style dash dot</code></li><li><code>vk line style dash dot dot</code></li><li><code>vk line style dashed</code></li> <li><code>vk line style dotted</code></li><li><code>vk line style double</code></li><li><code>vk line style empty</code></li><li><code>vk line style hair</code></li> <li><code>vk line style medium</code></li><li><code>vk line style medium dash dot</code></li><li><code>vk line style medium dash dot dot</code></li><li><code>vk line style medium dashed</code></li><li><code>vk line style slanted dash dot</code></li><li><code>vk line style thick</code></li><li><code>vk line style thin</code></li></td></tr>
+<tr><td>color</td><td>text</td><td>境界線のカラーを定義します。 デフォルト = black</td><td>CSSカラー &quot;#rrggbb&quot; シンタックス (推奨シンタックス)、CSSカラー &quot;rgb(r,g,b)&quot; シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)</td></tr>
+<tr><td>style</td><td>Integer</td><td>境界線のスタイルを定義します。 デフォルト = empty。</td><td><li><code>vk line style dash dot</code></li><li><code>vk line style dash dot dot</code></li><li><code>vk line style dashed</code></li> <li><code>vk line style dotted</code></li><li><code>vk line style double</code></li><li><code>vk line style empty</code></li><li><code>vk line style hair</code></li> <li><code>vk line style medium</code></li><li><code>vk line style medium dash dot</code></li><li><code>vk line style medium dash dot dot</code></li><li><code>vk line style medium dashed</code></li><li><code>vk line style slanted dash dot</code></li><li><code>vk line style thick</code></li><li><code>vk line style thin</code></li></td></tr>
 </tbody>
 </table>
 <p><em>borderStyleObj</em> の境界線スタイルの位置 (どこに境界線を引くか) は <em>borderPosObj</em> 引数で定義します:</p>
@@ -2679,15 +2702,15 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>styleObj</td><td>オブジェクト</td><td>-&gt;</td><td>スタイルオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>styleObj</td><td>Object</td><td>-&gt;</td><td>スタイルオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-72"></a><a href="#説明-72" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET CELL STYLE</code> コマンドは、 <em>styleObj</em> に定義されているスタイルを、<em>rangeObj</em> で定義されたセルに適用します。</p>
 <p><em>rangeObj</em> 引数には、スタイルを適用したいセルのレンジを渡します。 <em>rangeObj</em> に複数のセルが含まれる場合、スタイルはそれぞれのセルに割り当てられます。</p>
 <blockquote>
-<p><code>VP SET CELL STYLE</code> で適用された境界線は、<em>rangeObj</em> の各セルに対して適用されます。これに対して <a href="#vp-set-border">VP SET BORDER</a> コマンドは境界線を <em>rangeObj</em> のレンジ全体に対して適用されます。</p>
+<p><em>rangeObj</em> がセルレンジではない場合、レンジの最初のセルが使用されます。</p>
 </blockquote>
 <p><em>styleObj</em> にはスタイル設定を格納したオブジェクトを渡します。 既存のスタイルシートを使用することもできますし、新しいスタイルを作成することも可能です。 <em>styleObj</em> に既存のスタイルシートと、追加のスタイル設定の両方が格納されている場合、既存のスタイルシートが先に適用され、そのあとに追加の設定が適用されます。</p>
 <p>スタイルを削除してデフォルトのスタイル設定 (あれば) に戻すには、NULL値を渡します:</p>
@@ -2718,13 +2741,13 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>propertyObj</td><td>オブジェクト</td><td>-&gt;</td><td>カラムプロパティを格納したオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>propertyObj</td><td>Object</td><td>-&gt;</td><td>カラムプロパティを格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-73"></a><a href="#説明-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET COLUMN ATTRIBUTES</code> コマンドは、  <em>rangeObj</em> 引数で指定したカラムに対して<em>propertyObj</em> 引数で定義されている属性を適用します。</p>
-<p><em>rangeObj</em> 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性はカラムに対してのみ適用されます。</p>
+<p><em>rangeObj</em> 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性は行に対してのみ適用されます。</p>
 <p><em>propertyObj</em> 引数は、<em>rangeObj</em> 引数のレンジ内のカラムに対して適用する属性を指定します。 指定できる属性は以下の通りです:</p>
 <table>
 <thead>
@@ -2735,7 +2758,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><td>pageBreak</td><td>boolean</td><td>レンジ内の先頭カラムの前に改ページを挿入する場合には true、それ以外は false</td></tr>
 <tr><td>visible</td><td>boolean</td><td>カラムが表示状態であれば true、それ以外は false</td></tr>
 <tr><td>resizable</td><td>boolean</td><td>カラムがリサイズ可能であれば true、それ以外は false</td></tr>
-<tr><td>headers</td><td>テキスト</td><td>カラムヘッダーのテキスト</td></tr>
+<tr><td>headers</td><td>text</td><td>カラムヘッダーのテキスト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-66"></a><a href="#例題-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -2757,9 +2780,9 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>columnCount</td><td>整数</td><td>-&gt;</td><td>カラム数</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>columnCount</td><td>Integer</td><td>-&gt;</td><td>カラム数</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-74"></a><a href="#説明-74" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2784,8 +2807,8 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>index</td><td>整数</td><td>&lt;-</td><td>新しいカレントシートのインデックス</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>index</td><td>Integer</td><td>&lt;-</td><td>新しいカレントシートのインデックス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-75"></a><a href="#説明-75" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2811,15 +2834,15 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>formulaObj</td><td>オブジェクト</td><td>-&gt;</td><td>フォーミュラオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>formulaObj</td><td>Object</td><td>-&gt;</td><td>フォーミュラオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-76"></a><a href="#説明-76" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET CUSTOM FUNCTIONS</code> コマンドは、 4D View Pro フォーミュラから直接呼び出し可能な 4Dフォーミュラを指定します。 カスタムのファンクションはドキュメント内に保存されていないので、<code>VP SET CUSTOM FUNCTIONS</code> は <code>On Load</code> フォームイベント内で呼び出される必要があります。</p>
 <p><code>VP SET CUSTOM FUNCTIONS</code> で指定されたフォーミュラは、最初の文字が入力されるとポップアップメニューに表示されます。 詳細については <a href="/docs/Rx/ja/ViewPro/formulas.html">式と関数</a> を参照ください。</p>
 <blockquote>
-<p><code>VP SET CUSTOM FUNCTIONS</code> が同一セッション中に同じエリアに対して複数回呼び出された場合、最後の呼び出しのみが有効になります。</p>
+<p>インデックスは 0 起点です。</p>
 </blockquote>
 <p><em>vpAreaName</em> には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。</p>
 <p><em>formulaObj</em> 引数として、4D View Pro フォーミュラから呼び出し可能な 4Dフォーミュラと、その追加のプロパティを格納したオブジェクトを渡します。 <em>formulaObj</em> 引数の各 <code>customFunction</code> プロパティが 4D View Pro エリア内でのファンクション名になります。</p>
@@ -2828,14 +2851,14 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>プロパティ</th><th></th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td><code>&lt;customFunction&gt;</code></td><td></td><td></td><td>オブジェクト</td><td>カスタムファンクションの名前。 <code>&lt;customFunction&gt;</code> は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)</td></tr>
-<tr><td></td><td>formula</td><td></td><td>オブジェクト</td><td>4Dフォーミュラオブジェクト (必須)。 <code>Formula</code> コマンド参照。</td></tr>
+<tr><td><code>&lt;customFunction&gt;</code></td><td></td><td></td><td>Object</td><td>カスタムファンクションの名前。 カスタムファンクションの名前。 <code>&lt;functionName&gt;</code> プロパティ名は、4D View Pro フォーミュラで表示するカスタムファンクションの名前を定義します (スペースは使用できません)</td></tr>
+<tr><td></td><td>formula</td><td></td><td>Object</td><td>4Dフォーミュラオブジェクト (必須)。 <code>Formula</code> コマンド参照。</td></tr>
 <tr><td></td><td>parameters</td><td></td><td>Object の Collection</td><td>引数のコレクション (フォーミュラ内で定義されている順)</td></tr>
-<tr><td></td><td></td><td>[ ].name</td><td>テキスト</td><td>4D View Pro に表示する引数の名前。</td></tr>
-<tr><td></td><td></td><td>[ ].type</td><td>数値</td><td>引数の型。 サポートされている型:<li><code>Is Boolean</code></li><li><code>Is date</code></li><li><code>Is Integer</code></li><li><code>Is object</code></li><li><code>Is real</code></li><li><code>Is text</code></li><li><code>Is time</code></li><em>type</em> 省略時、またはデフォルト値 (-1) が渡された場合、値は型と一緒に渡されますが、日付と時間の値に関してはオブジェクトとして送られます (<a href="/docs/Rx/ja/ViewPro/formulas.html#引数">引数</a> の章を参照ください)。<p><p><em>type</em> が <code>Is object</code> の場合、そのオブジェクトは <a href="#vp-get-value"><code>VP Get value</code></a> によって返されるオブジェクトと同じ構造を持ちます。</td></tr>
-<tr><td></td><td>summary</td><td></td><td>テキスト</td><td>4D View Pro に表示するフォーミュラの説明</td></tr>
-<tr><td></td><td>minParams</td><td></td><td>数値</td><td>引数の最小の数</td></tr>
-<tr><td></td><td>maxParams</td><td></td><td>数値</td><td>引数の最大の数。 ここに <em>parameters</em> の length より大きな値を渡すことによって、デフォルトの型を持つ &quot;任意の&quot; 引数を宣言できるようになります。</td></tr>
+<tr><td></td><td></td><td>[ ].name</td><td>Text</td><td>4D View Pro に表示する引数の名前。</td></tr>
+<tr><td></td><td></td><td>[ ].type</td><td>Number</td><td>引数の型。 サポートされている型:<li><code>Is Boolean</code></li><li><code>Is date</code></li><li><code>Is Integer</code></li><li><code>Is object</code></li><li><code>Is real</code></li><li><code>Is text</code></li><li><code>Is time</code></li><em>type</em> 省略時、またはデフォルト値 (-1) が渡された場合、値は型と一緒に渡されますが、日付と時間の値に関してはオブジェクトとして送られます (<a href="/docs/Rx/ja/ViewPro/formulas.html#引数">引数</a> の章を参照ください)。<p><p><em>type</em> が <code>Is object</code> の場合、そのオブジェクトは <a href="#vp-get-value"><code>VP Get value</code></a> によって返されるオブジェクトと同じ構造を持ちます。</td></tr>
+<tr><td></td><td>summary</td><td></td><td>Text</td><td>4D View Pro に表示するフォーミュラの説明</td></tr>
+<tr><td></td><td>minParams</td><td></td><td>Number</td><td>引数の最小の数</td></tr>
+<tr><td></td><td>maxParams</td><td></td><td>Number</td><td>引数の最大の数。 ここに <em>parameters</em> の length より大きな値を渡すことによって、デフォルトの型を持つ &quot;任意の&quot; 引数を宣言できるようになります。</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -2888,10 +2911,10 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>dateValue</td><td>日付</td><td>-&gt;</td><td>設定する日付値</td></tr>
-<tr><td>timeValue</td><td>時間</td><td>-&gt;</td><td>設定する時間値</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>設定する日付値</td></tr>
+<tr><td>timeValue</td><td>Time</td><td>-&gt;</td><td>設定する時間値</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-77"></a><a href="#説明-77" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2916,9 +2939,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>dateValue</td><td>日付</td><td>-&gt;</td><td>設定する日付値</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>dateValue</td><td>Date</td><td>-&gt;</td><td>設定する日付値</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-78"></a><a href="#説明-78" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2955,9 +2978,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>styleObj</td><td>オブジェクト</td><td>-&gt;</td><td>スタイルオブジェクト</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートインデックス (デフォルト=カレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>styleObj</td><td>Object</td><td>-&gt;</td><td>スタイルオブジェクト</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートインデックス (デフォルト=カレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-79"></a><a href="#説明-79" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -2986,14 +3009,14 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>フィールド</td><td>ポインター</td><td>-&gt;</td><td>仮想ストラクチャーのフィールドへの参照</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>フィールド</td><td>Pointer</td><td>-&gt;</td><td>仮想ストラクチャーのフィールドへの参照</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-80"></a><a href="#説明-80" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET FIELD</code> コマンドは、 指定されたセルレンジに、4Dデータベースの仮想フィールドを割り当てます。</p>
-<p><em>rangeObj</em> には、値を割り当てたいセルのレンジを渡します。 <em>rangeObj</em> 引数に複数のセルが含まれる場合、指定されたフィールドはそれぞれのセルに対して繰り返し割り当てられます。</p>
+<p><em>rangeObj</em> には、値を割り当てたいセルのレンジを渡します。 <em>rangeObj</em> には、値を割り当てたいセルのレンジ (<a href="#vp-cell"><code>VP Cell</code></a> で作成されたレンジ) を渡します。</p>
 <p><em>field</em> 引数は、<em>rangeObj</em> のレンジに対して割り当てられる 4Dデータベースの <a href="/docs/Rx/ja/ViewPro/formulas.html#仮想ストラクチャーを使ったフィールド参照">仮想フィールド</a> を指定します。 フォーミュラバーには、<em>field</em> の仮想ストラクチャー名が表示されます。 <em>rangeObj</em> に含まれるセルに既存のコンテンツがあった場合、そのコンテンツは <em>field</em> で上書きされます。</p>
 <p>任意の <em>formatPattern</em> 引数は、<em>field</em> 引数に対するパターンを定義します。 有効な <a href="/docs/Rx/ja/ViewPro/configuring.html#セルフォーマット">カスタムフォーマット</a> を渡すことができます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-73"></a><a href="#例題-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -3008,14 +3031,14 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>formula</td><td>テキスト</td><td>-&gt;</td><td>フォーミュラまたは 4Dメソッド</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>formula</td><td>Text</td><td>-&gt;</td><td>フォーミュラまたは 4Dメソッド</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>フィールドのフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-81"></a><a href="#説明-81" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET FORMULA</code> コマンドは、 指定されたセルレンジにフォーミュラまたは 4Dメソッドを割り当てます。</p>
-<p><em>rangeObj</em> には、値を割り当てたいセルのレンジ (たとえば <a href="#vp-cell"><code>VP Cell</code></a> あるいは <a href="#vp-column"><code>VP Column</code></a> で作成されたレンジ) を渡します。 <em>rangeObj</em> 引数に複数のセルが含まれる場合、指定されたフォーミュラはそれぞれのセルに対して繰り返し割り当てられます。</p>
+<p><em>rangeObj</em> には、値を割り当てたいセルのレンジ (たとえば <a href="#vp-cell"><code>VP Cell</code></a> あるいは <a href="#vp-column"><code>VP Column</code></a> で作成されたレンジ) を渡します。 <em>rangeObj</em> には、値を割り当てたいセルのレンジを渡します。</p>
 <p><em>formula</em> 引数に、<em>rangeObj</em> 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。 4Dメソッドを使用する場合、そのメソッドは <a href="#vp-set-allowed-method"><code>SET ALLOWED METHODS</code></a> コマンドで許可されている必要があります。</p>
 <p>任意の <em>formatPattern</em> 引数は、<em>formula</em> に対する <a href="/docs/Rx/ja/ViewPro/configuring.html#セルフォーマット">パターン</a> を定義します。</p>
 <p><em>rangeObj</em> 内のフォーミュラは、空の文字列 (&quot;&quot;) で置き換えることで削除することができます。</p>
@@ -3035,8 +3058,8 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>セルレンジオブジェクト</td></tr>
-<tr><td>formulasCol</td><td>コレクション</td><td>-&gt;</td><td>フォーミュラのコレクション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>セルレンジオブジェクト</td></tr>
+<tr><td>formulasCol</td><td>Collection</td><td>-&gt;</td><td>フォーミュラのコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-82"></a><a href="#説明-82" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3076,9 +3099,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>paneObj</td><td>オブジェクト</td><td>-&gt;</td><td>固定化されたカラムと行についての情報を格納したオブジェクト</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>paneObj</td><td>Object</td><td>-&gt;</td><td>固定化されたカラムと行についての情報を格納したオブジェクト</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-83"></a><a href="#説明-83" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3094,10 +3117,10 @@ End case</span>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>columnCount</td><td>整数</td><td>シートの左側にある固定化されたカラム</td></tr>
-<tr><td>trailingColumnCount</td><td>整数</td><td>シートの右側にある固定化されたカラム</td></tr>
-<tr><td>rowCount</td><td>整数</td><td>シートの上側にある固定化された行</td></tr>
-<tr><td>trailingRowCount</td><td>整数</td><td>シートの下側にある固定化された行</td></tr>
+<tr><td>columnCount</td><td>Integer</td><td>シートの左側にある固定化されたカラム</td></tr>
+<tr><td>trailingColumnCount</td><td>Integer</td><td>シートの右側にある固定化されたカラム</td></tr>
+<tr><td>rowCount</td><td>Integer</td><td>シートの上側にある固定化された行</td></tr>
+<tr><td>trailingRowCount</td><td>Integer</td><td>シートの下側にある固定化された行</td></tr>
 </tbody>
 </table>
 <p>任意の <em>sheet</em> 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:</p>
@@ -3125,9 +3148,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>numberValue</td><td>数値</td><td>-&gt;</td><td>設定する数値</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>numberValue</td><td>Number</td><td>-&gt;</td><td>設定する数値</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-84"></a><a href="#説明-84" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3151,9 +3174,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリア名</td></tr>
-<tr><td>printInfo</td><td>オブジェクト</td><td>-&gt;</td><td>印刷属性を格納するオブジェクト</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro エリア名</td></tr>
+<tr><td>printInfo</td><td>Object</td><td>-&gt;</td><td>印刷属性を格納するオブジェクト</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-85"></a><a href="#説明-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3210,13 +3233,13 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>行レンジ</td></tr>
-<tr><td>propertyObj</td><td>オブジェクト</td><td>-&gt;</td><td>行のプロパティを格納したオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>行レンジ</td></tr>
+<tr><td>propertyObj</td><td>Object</td><td>-&gt;</td><td>行のプロパティを格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-86"></a><a href="#説明-86" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET ROW ATTRIBUTES</code> コマンドは、 <em>rangeObj</em> で指定した行に対して、<em>propertyObj</em> に定義された属性を適用します。</p>
-<p><em>rangeObj</em> 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性は行に対してのみ適用されます。</p>
+<p><em>rangeObj</em> 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性はカラムに対してのみ適用されます。</p>
 <p><em>propertyObj</em> 引数は、<em>rangeObj</em> 引数のレンジ内の行に対して適用する属性を指定します。 指定できる属性は以下の通りです:</p>
 <table>
 <thead>
@@ -3227,7 +3250,7 @@ End case</span>
 <tr><td>pageBreak</td><td>boolean</td><td>レンジ内の先頭行の前に改ページを挿入する場合には true、それ以外は false</td></tr>
 <tr><td>visible</td><td>boolean</td><td>行が表示状態であれば true、それ以外は false</td></tr>
 <tr><td>resizable</td><td>boolean</td><td>行がリサイズ可能であれば true、それ以外は false</td></tr>
-<tr><td>headers</td><td>テキスト</td><td>行ヘッダーのテキスト</td></tr>
+<tr><td>headers</td><td>text</td><td>行ヘッダーのテキスト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-77"></a><a href="#例題-77" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -3249,9 +3272,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>rowCount</td><td>整数</td><td>-&gt;</td><td>行数</td></tr>
-<tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>rowCount</td><td>Integer</td><td>-&gt;</td><td>行数</td></tr>
+<tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-87"></a><a href="#説明-87" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3276,7 +3299,7 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>複数セルのレンジオブジェクト</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>複数セルのレンジオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-88"></a><a href="#説明-88" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3296,8 +3319,8 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>number</td><td>整数</td><td>-&gt;</td><td>シートの数</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>number</td><td>Integer</td><td>-&gt;</td><td>シートの数</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-89"></a><a href="#説明-89" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3322,9 +3345,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>name</td><td>テキスト</td><td>-&gt;</td><td>シートの新しい名称</td></tr>
-<tr><td>index</td><td>整数</td><td>-&gt;</td><td>名称変更するシートのインデックス</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>name</td><td>Text</td><td>-&gt;</td><td>シートの新しい名称</td></tr>
+<tr><td>index</td><td>Integer</td><td>-&gt;</td><td>名称変更するシートのインデックス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-90"></a><a href="#説明-90" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3356,9 +3379,9 @@ End case</span>
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>オブジェクト</td><td>-&gt;</td><td>4D View Pro エリア名</td></tr>
-<tr><td>sheetOptions</td><td>オブジェクト</td><td>-&gt;</td><td>設定するシートオプション</td></tr>
-<tr><td>sheet</td><td>オブジェクト</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
+<tr><td>vpAreaName</td><td>Object</td><td>-&gt;</td><td>4D View Pro エリア名</td></tr>
+<tr><td>sheetOptions</td><td>Object</td><td>-&gt;</td><td>設定するシートオプション</td></tr>
+<tr><td>sheet</td><td>Object</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-91"></a><a href="#説明-91" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3447,9 +3470,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>visible</td><td>ブール</td><td>-&gt;</td><td>印刷線を表示する場合は true (デフォルト)、非表示の場合は false</td></tr>
-<tr><td>index</td><td>整数</td><td>-&gt;</td><td>シートのインデックス</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>visible</td><td>Boolean</td><td>-&gt;</td><td>印刷線を表示する場合は true (デフォルト)、非表示の場合は false</td></tr>
+<tr><td>index</td><td>Integer</td><td>-&gt;</td><td>シートのインデックス</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-92"></a><a href="#説明-92" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3478,9 +3501,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>textValue</td><td>テキスト</td><td>-&gt;</td><td>設定するテキスト値</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>textValue</td><td>Text</td><td>-&gt;</td><td>設定するテキスト値</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-93"></a><a href="#説明-93" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3500,9 +3523,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>timeValue</td><td>テキスト</td><td>-&gt;</td><td>設定する時間値</td></tr>
-<tr><td>formatPattern</td><td>テキスト</td><td>-&gt;</td><td>値のフォーマット</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>timeValue</td><td>Text</td><td>-&gt;</td><td>設定する時間値</td></tr>
+<tr><td>formatPattern</td><td>Text</td><td>-&gt;</td><td>値のフォーマット</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-94"></a><a href="#説明-94" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3526,13 +3549,13 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>valueObj</td><td>オブジェクト</td><td>-&gt;</td><td>セルの値とフォーマットオプション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>valueObj</td><td>Object</td><td>-&gt;</td><td>セルの値とフォーマットオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-95"></a><a href="#説明-95" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET VALUE</code> コマンドは、 指定されたセルレンジに値を割り当てます。</p>
-<p>このコマンドを使用すると、汎用的なコードで <em>rangeObj</em> のレンジに様々な型の値とそのフォーマットを設定できます。それに対して <a href="#vp-set-text-value"><code>VP SET TEXT VALUE</code></a> や <a href="#vp-set-num-value"><code>VP SET NUM VALUE</code></a> などの他のコマンドは、設定する値の型が限定されています。</p>
+<p>このコマンドを使用すると、汎用的なコードで <em>rangeObj</em> のレンジに様々な型の値とそのフォーマットを設定できます。 それに対して <a href="#vp-set-text-value"><code>VP SET TEXT VALUE</code></a> や <a href="#vp-set-num-value"><code>VP SET NUM VALUE</code></a> などの他のコマンドは、設定する値の型が限定されています。</p>
 <p><em>rangeObj</em> には、値を割り当てたいセルのレンジ (たとえば <a href="#vp-cell"><code>VP Cell</code></a> あるいは <a href="#vp-column"><code>VP Column</code></a> で作成されたレンジ) を渡します。 <em>rangeObj</em> 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。</p>
 <p><em>valueObj</em> 引数は、<em>rangeObj</em> のレンジに対して割り当てたい値と<a href="/docs/Rx/ja/ViewPro/configuring.html#セルフォーマット">フォーマット</a> のプロパティを格納しているオブジェクトです。 このオブジェクトには以下のプロパティを含めることができます:</p>
 <table>
@@ -3541,8 +3564,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>value</td><td>Integer, Real, Boolean, Text, Date, Null</td><td><em>rangeObj</em> のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。</td></tr>
-<tr><td>time</td><td>実数</td><td><em>rangeObj</em> のレンジに対して割り当てる時間 (秒単位)</td></tr>
-<tr><td>format</td><td>テキスト</td><td>値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、<a href="/docs/Rx/ja/ViewPro/configuring.html#セルフォーマット">セルフォーマット</a> の章を参照してください。</td></tr>
+<tr><td>time</td><td>Real</td><td><em>rangeObj</em> のレンジに対して割り当てる時間 (秒単位)</td></tr>
+<tr><td>format</td><td>Text</td><td>値や日時に対するパターン 値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、<a href="/docs/Rx/ja/ViewPro/configuring.html#セルフォーマット">セルフォーマット</a> の章を参照してください。</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="例題-85"></a><a href="#例題-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
@@ -3555,7 +3578,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-comment">// セルの値を $125,571.35 に設定します</span>
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">125571.35</span>;<span class="hljs-string">"format"</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>))
 
-<span class="hljs-comment">// セルの値を Hello World! に設定します</span>
+<span class="hljs-comment">// セルの値を Hello World!</span>
+に設定します
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
 
 <span class="hljs-comment">// セルの値を現在の日付に設定します</span>
@@ -3579,22 +3603,22 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>valuesCol</td><td>コレクション</td><td>-&gt;</td><td>値のコレクション</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>valuesCol</td><td>Collection</td><td>-&gt;</td><td>値のコレクション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-96"></a><a href="#説明-96" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>VP SET VALUES</code> コマンドは、 指定のセルレンジから開始して値のコレクションを割り当てていきます。</p>
-<p><em>rangeObj</em> には、値を割り当てたいセルのレンジ (<a href="#vp-cell"><code>VP Cell</code></a> で作成されたレンジ) を渡します。 <em>rangeObj</em> 引数で定義されたセルは、開始ポイントを決定します。</p>
+<p><em>rangeObj</em> には、値を割り当てたいセルのレンジ (たとえば <a href="#vp-cell"><code>VP Cell</code></a> あるいは <a href="#vp-column"><code>VP Column</code></a> で作成されたレンジ) を渡します。 <em>rangeObj</em> 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。</p>
 <blockquote>
 <ul>
-<li><em>rangeObj</em> がセルレンジではない場合、レンジの最初のセルが使用されます。</li>
+<li><em>rangeObj</em> のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。</li>
 <li><em>rangeObj</em> のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。</li>
 </ul>
 </blockquote>
 <p><em>valuesCol</em> 引数は 2次元構造のコレクションです:</p>
 <ul>
-<li><p>第1レベルのコレクションは、値のサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。 行をスキップするには空のコレクションを渡します。</p></li>
+<li><p>第1レベルのコレクションは、値のサブコレクションを格納しています。 それぞれのサブコレクションは行を定義します。 それぞれのサブコレクションは行を定義します。</p></li>
 <li><p>それぞれのサブコレクションは行におけるセルの値を定義します。 値は整数、実数、ブール、テキスト、日付、Null、オブジェクトのいずれかです。 値がオブジェクトの場合、以下のプロパティを持つことができます:</p>
 <table>
 <thead>
@@ -3602,7 +3626,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>value</td><td>Integer, Real, Boolean, Text, Date, Null</td><td>セルの値 (時間部分を除く)</td></tr>
-<tr><td>time</td><td>実数</td><td>時間値 (秒単位)</td></tr>
+<tr><td>time</td><td>Real</td><td>時間値 (秒単位)</td></tr>
 </tbody>
 </table>
 </li>
@@ -3627,8 +3651,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
-<tr><td>optionObj</td><td>オブジェクト</td><td>-&gt;</td><td>設定するワークブックオプションを格納したオブジェクト</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>optionObj</td><td>Object</td><td>-&gt;</td><td>設定するワークブックオプションを格納したオブジェクト</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-97"></a><a href="#説明-97" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3663,7 +3687,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><td>backgroundImageLayout</td><td>number</td><td>背景画像のレイアウト。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk image layout center </td><td>1</td><td> エリアの中央に表示。</td></tr><tr><td> vk image layout none </td><td>3</td><td> エリアの左上に元のサイズで表示。</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> エリアを埋めるように拡大表示。</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> アスペクト比を維持して表示。</td></tr></table></td></tr>
 <tr><td>calcOnDemand</td><td>boolean</td><td>要求されたときのみフォーミュラを計算します。</td></tr>
 <tr><td>columnResizeMode</td><td>number</td><td>カラムのリサイズモード。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> 通常のリサイズモード (残りのカラムに影響します)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> split モード (残りのカラムに影響しません)</td></tr></table></td></tr>
-<tr><td>copyPasteHeaderOptions</td><td>number</td><td>データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。データのペースト時: 選択ヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。データのペースト時: 選択されたカラムヘッダーを上書きします。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   データのコピー時: 選択された行ヘッダーを含めます。データのペースト時: 選択された行ヘッダーを上書きします。</td></tr></table></td></tr>
+<tr><td>copyPasteHeaderOptions</td><td>number</td><td>データのコピー/ペースト時に含めるヘッダーについて指定します。 使用可能な値: <table><tr><th>定数</th><th>値</th><th>説明</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> データのコピー時: 選択ヘッダーを含めます。</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> データのコピー時: 選択されたカラムヘッダーを含めます。</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> データのコピー時: ヘッダーを含めません。データのペースト時: ヘッダーを上書きしません。</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   データのコピー時: 選択された行ヘッダーを含めます。</td></tr></table></td></tr>
 <tr><td>customList</td><td>collection</td><td>ドラッグ＆フィルをカスタマイズするためのリストです。フィルの際には、このリストに合致する値が入力されます。 各コレクション要素は、文字列のコレクションです。 <a href="https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b">GrapeCity の Webサイト</a> 参照。</td></tr>
 <tr><td>cutCopyIndicatorBorderColor</td><td>string</td><td>ユーザーが選択をカットまたはコピーしたときの領域の境界色。</td></tr>
 <tr><td>cutCopyIndicatorVisible</td><td>boolean</td><td>コピーまたはカットされた際の領域を表示します。</td></tr>
@@ -3721,9 +3745,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>rangeObj</td><td>オブジェクト</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>vPos</td><td>整数</td><td>-&gt;</td><td>セルあるいは行の縦方向の表示位置</td></tr>
-<tr><td>hPos</td><td>整数</td><td>-&gt;</td><td>セルあるいはカラムの横方向の表示位置</td></tr>
+<tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
+<tr><td>vPos</td><td>Integer</td><td>-&gt;</td><td>セルあるいは行の縦方向の表示位置</td></tr>
+<tr><td>hPos</td><td>Integer</td><td>-&gt;</td><td>セルあるいはカラムの横方向の表示位置</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-98"></a><a href="#説明-98" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
@@ -3770,7 +3794,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
+<tr><td>vpAreaName</td><td>Text</td><td>-&gt;</td><td>4D View Pro フォームオブジェクト名</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-99"></a><a href="#説明-99" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>

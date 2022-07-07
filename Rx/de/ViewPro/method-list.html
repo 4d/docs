@@ -1401,6 +1401,37 @@ showRowHeader:0,
 useMax:true,
 watermark:[],
 zoomFactor:1
+} &amp;A Sales Per Region",
+footerCenterImage:,
+footerLeft:,
+footerLeftImage:,
+footerRight:"page &amp;P of &amp;N",
+footerRightImage:,
+headerCenter:,
+headerCenterImage:,
+headerLeft:"&amp;G",
+headerLeftImage:logo.png,
+headerRight:,
+headerRightImage:,
+margin:{top:75,bottom:75,left:70,right:70,header:30,footer:30},
+orientation:2,
+pageOrder:0,
+pageRange:,
+paperSize:{width:850,height:1100,kind:1},
+qualityFactor:2,
+repeatColumnEnd:-1,
+repeatColumnStart:-1,
+repeatRowEnd:-1,
+repeatRowStart:-1,
+rowEnd:24,
+rowStart:0,
+showBorder:false,
+showColumnHeader:0,
+showGridLine:false,
+showRowHeader:0,
+useMax:true,
+watermark:[],
+zoomFactor:1
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="see-also-30"></a><a href="#see-also-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>See also</h4>
@@ -2396,8 +2427,8 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="beschreibung-65"></a><a href="#beschreibung-65" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beschreibung</h4>
 <p>The <code>VP Row</code> command returns a new range object referencing a specific row or rows.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
-<p>The <em>row</em> parameter defines the first row of the row range. Pass the row index (counting begins at 0) in this parameter. Pass the row index (counting begins at 0) in this parameter.</p>
-<p>The optional <em>rowCount</em> parameter allows you to define the total number of rows of the range. <em>rowCount</em> must be greater than 0. If omitted, the value will be set to 1 by default.</p>
+<p>The <em>column</em> parameter defines the first column of the column range. Pass the row index (counting begins at 0) in this parameter. Pass the column index (counting begins at 0)  in this parameter.</p>
+<p>In the <em>row</em> parameter, you can define the row(s) of the cell range's position. <em>rowCount</em> must be greater than 0. Pass the row index (counting begins at 0) in this parameter.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If not specified, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
 <ul>
 <li><code>vk current sheet</code></li>
@@ -3036,7 +3067,7 @@ End case</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="beschreibung-80"></a><a href="#beschreibung-80" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beschreibung</h4>
 <p>The <code>VP SET FIELD</code> command assigns a 4D database virtual field to a designated cell range.</p>
-<p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify.</p>
+<p>In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify. In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify.</p>
 <p>The <em>field</em> parameter specifies a 4D database <a href="/docs/Rx/de/ViewPro/formulas.html#referencing-fields-using-the-virtual-structure">virtual field</a> to be assigned to the <em>rangeObj</em>. The virtual structure name for <em>field</em> can be viewed in the formula bar. If any of the cells in <em>rangeObj</em> have existing content, it will be replaced by <em>field</em>.</p>
 <p>The optional <em>formatPattern</em> defines a pattern for the <em>field</em> parameter. You can pass any valid <a href="/docs/Rx/de/ViewPro/configuring.html#cell-format">custom format</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="beispiel-73"></a><a href="#beispiel-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beispiel</h4>
@@ -3216,6 +3247,37 @@ $printInfo:=New object
 
 //define print attributes
 $printInfo.headerCenter:="&amp;BS.H.I.E.L.D. var $printInfo : Object
+
+//declare print attributes object
+$printInfo:=New object
+
+//define print attributes
+$printInfo.headerCenter:="&amp;BS.H.I.E.L.D. &amp;A Sales Per Region"
+$printInfo.firstPageNumber:=1
+$printInfo.footerRight:="page &amp;P of &amp;N"
+$printInfo.orientation:=vk print page orientation landscape
+$printInfo.centering:=vk print centering horizontal
+$printInfo.columnStart:=0
+$printInfo.columnEnd:=8
+$printInfo.rowStart:=0
+$printInfo.rowEnd:=24
+
+$printInfo.showGridLine:=True
+
+//Add corporate logo
+$printInfo.headerLeftImage:=logo.png
+$printInfo.headerLeft:="&amp;G"
+
+$printInfo.showRowHeader:=vk print visibility hide
+$printInfo.showColumnHeader:=vk print visibility hide
+$printInfo.fitPagesWide:=1
+$printInfo.fitPagesTall:=1
+
+//print PDF document
+VP SET PRINT INFO ("ViewProArea";$printInfo)
+
+//export the PDF
+VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(ALERT("PDF ready!")))) var $printInfo : Object
 
 //declare print attributes object
 $printInfo:=New object
@@ -3605,6 +3667,8 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">125571.35</span>;<span class="hljs-string">"format"</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>))
 
 <span class="hljs-comment">//Set the cell value as Hello World!</span>
+<span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
+
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
 
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))

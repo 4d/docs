@@ -190,7 +190,7 @@
 <h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La commande <code>VP ADD SHEET</code> insère une feuille dans le document chargé dans <em>vpAreaName</em>.</p>
 <p>Dans <em>vpAreaName</em>, passez le nom de la zone 4D View Pro.</p>
-<p>Dans <em>index</em>, vous pouvez passer un numéro pour la nouvelle feuille. Si l'<em>index</em> passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. Si l'<em>index</em> est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.</p>
+<p>Dans <em>index</em>, vous pouvez passer un numéro pour la nouvelle feuille. In <em>sheet</em>, you can pass an index for the new sheet. Si l'<em>index</em> passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début.</p>
 <blockquote>
 <p>La numérotation démarre à 0.</p>
 </blockquote>
@@ -1138,7 +1138,7 @@ size:<span class="hljs-number">16</span>pt
 <h4><a class="anchor" aria-hidden="true" id="exemple-24"></a><a href="#exemple-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">//fixer une formule</span>
 <span class="hljs-function"> VP SET FORMULA</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-string">"SUM($A$1:$C$10)"</span>)
- 
+
  <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Get formula</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>)) <span class="hljs-comment">// $result="SUM($A$1:$C$10)"</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="voir-aussi-25"></a><a href="#voir-aussi-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
@@ -1316,7 +1316,7 @@ size:<span class="hljs-number">16</span>pt
 <p>Le code suivant :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$pinfo</span>:=<span class="hljs-function">VP Get print info</span>(<span class="hljs-string">"ViewProArea"</span>)
 </code></pre>
-<p>... retourne les attributs d'impression de la zone 4D View Pro dans la commande <a href="#vp-set-print-info">VP SET PRINT INFO</a> :</p>
+<p>Dès que la commande <code>VP SET CUSTOM FUNCTIONS</code> est appelée, les méthodes autorisées par <a href="#vp-set-allowed-methods">SET ALLOWED METHODS</a> sont ignorées dans la zone 4D View Pro.</p>
 <pre><code class="hljs css language-4d">{
 bestFitColumns:false,
 bestFitRows:false,
@@ -1403,7 +1403,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <h4><a class="anchor" aria-hidden="true" id="description-35"></a><a href="#description-35" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La commande <code>VP Get row count</code> retourne le nombre total de lignes de la feuille (<em>sheet</em>) désignée.</p>
 <p>Dans <em>vpAreaName</em>, passez la propriété du nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.</p>
-<p>Vous pouvez définir l'emplacement du nombre de lignes dans le paramère optionnel <em>sheet</em> à l'aide de l'indice de la feuille (la numérotation démarre à zéro). Si le paramètre est omis ou si vous passez <code>vk current sheet</code>, la feuille courante est utilisée.</p>
+<p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis ou si vous passez <code>vk current sheet</code>, la feuille courante est utilisée.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-31"></a><a href="#exemple-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>Le code suivant retourne le nombre de lignes dans la zone 4D View Pro :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$rowCount </span>: Integer
@@ -1532,7 +1532,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <h4><a class="anchor" aria-hidden="true" id="description-40"></a><a href="#description-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La commande <code>VP Get sheet options</code> retourne un objet contenant les options relatives à la feuille courante de la zone <em>vpAreaName</em>.</p>
 <p>Passez le nom de la zone 4D View Pro dans <em>vpAreaName</em>. Si vous passez un nom inexistant, une erreur est retournée.</p>
-<p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis ou si vous passez <code>vk current sheet</code>, la feuille courante est utilisée.</p>
+<p>Dans le paramètre optionnel <em>sheet</em>, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez <code>vk current sheet</code>, la feuille courante est utilisée.</p>
 <h4><a class="anchor" aria-hidden="true" id="objet-retourné-3"></a><a href="#objet-retourné-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objet retourné</h4>
 <p>La commande retourne un objet contenant les valeurs courantes pour toutes les options de feuille disponibles. La valeur d'une option peut avoir été modifiée par l'utilisateur ou par la méthode <a href="#vp-set-sheet-options">VP SET SHEET OPTIONS</a>.</p>
 <p>Pour visualiser la liste complète des options, voir <a href="/docs/Rx/fr/ViewPro/configuring.html#sheet-options">Options feuille</a>.</p>
@@ -1589,7 +1589,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <p><img src="/docs/Rx/assets/en/ViewPro/cmd_vpGetSpans.PNG" alt=""></p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Rechercher toutes les cellules fusionnées</span>
  <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Get spans</span>(<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>))
- 
+
  <span class="hljs-comment">//centrer le texte</span>
  <span class="hljs-variable">$style</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"vAlign"</span>;vk vertical align center;<span class="hljs-string">"hAlign"</span>;vk horizontal align center)
 <span class="hljs-function"> VP SET CELL STYLE</span>(<span class="hljs-variable">$range</span>;<span class="hljs-variable">$style</span>)
@@ -2251,7 +2251,7 @@ End if</span>
 <p><img src="/docs/Rx/assets/en/ViewPro/cmd_vpRemoveSpan1.PNG" alt=""></p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//identifier toutes les cellules fusionnées </span>
  <span class="hljs-variable">$span</span>:=<span class="hljs-function">VP Get spans</span>(<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>))
- 
+
   <span class="hljs-comment">//retirer les fusions</span>
 <span class="hljs-function"> VP REMOVE SPAN</span>(<span class="hljs-variable">$span</span>)
 </code></pre>
@@ -2351,8 +2351,8 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="description-65"></a><a href="#description-65" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La commande <code>VP Row</code> retourne une nouvelle plage référençant une ou plusieurs lignes spécifiques.</p>
 <p>Dans <em>vpAreaName</em>, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.</p>
-<p>Le paramètre <em>row</em> définit la première ligne de la plage. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Pass the row index (counting begins at 0) in this parameter.</p>
-<p>Le paramètre optionnel <em>rowCount</em> vous permet de définir le nombre total de lignes comprises dans la plage. <em>rowCount</em> doit être supérieur à 0. Si le paramètre est omis, la valeur 1 sera définie par défaut.</p>
+<p>Le paramètre <em>row</em> définit la première ligne de la plage. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre.</p>
+<p>Dans le paramètre <em>row</em>, vous pouvez définir l'emplacement de la ou des lignes de la plage de cellules. <em>rowCount</em> doit être supérieur à 0. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre.</p>
 <p>Dans le paramètre optionnel <em>sheet</em>, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :</p>
 <ul>
 <li><code>vk current sheet</code></li>
@@ -2439,14 +2439,14 @@ End if</span>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Déclaration de la classe OffscreenArea</span><span class="hljs-keyword">
  Class constructor</span> (<span class="hljs-variable">$path </span>: Text)
     <span class="hljs-literal">This</span>.filePath:=<span class="hljs-variable">$path</span>
- 
+
   <span class="hljs-comment">//  Cette fonction sera appelée sur chaque événement de la zone hors écran</span>
  Fonction onEvent<span class="hljs-keyword">
      Case of</span>
         :(FORM Event.code=On VP Ready)
 <span class="hljs-function">            VP IMPORT DOCUMENT</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-literal">This</span>.filePath)
             <span class="hljs-literal">This</span>.result:=<span class="hljs-function">VP Get value</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-literal">This</span>.area;<span class="hljs-number">6</span>;<span class="hljs-number">22</span>))
- 
+
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"La cellule G23 contient la valeur : "</span>+<span class="hljs-function">String</span>(<span class="hljs-literal">This</span>.result))<span class="hljs-keyword">
  End case</span>
 </code></pre>
@@ -2560,11 +2560,11 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$allowed</span>)
  <span class="hljs-variable">$allowed</span>:=New object <span class="hljs-comment">//paramètre pour la commande</span>
- 
+
  <span class="hljs-variable">$allowed</span>.Hello:=New object <span class="hljs-comment">//crée une première fonction simple nommée "Hello"</span>
  <span class="hljs-variable">$allowed</span>.Hello.method:=<span class="hljs-string">"My_Hello_Method"</span> <span class="hljs-comment">//définit la méthode 4D</span>
  <span class="hljs-variable">$allowed</span>.Hello.summary:=<span class="hljs-string">"Hello prints hello world"</span> 
- 
+
  <span class="hljs-variable">$allowed</span>.Byebye:=New object <span class="hljs-comment">//crée une deuxième fonction avec des paramètres nommée "Byebye" </span>
  <span class="hljs-variable">$allowed</span>.Byebye.method:=<span class="hljs-string">"My_ByeBye_Method"</span>
  <span class="hljs-variable">$allowed</span>.Byebye.parameters:=New collection
@@ -2574,13 +2574,13 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
  <span class="hljs-variable">$allowed</span>.Byebye.summary:=<span class="hljs-string">"Byebye prints a custom timestamp"</span> 
  <span class="hljs-variable">$allowed</span>.Byebye.minParams:=<span class="hljs-number">3</span>
  <span class="hljs-variable">$allowed</span>.Byebye.maxParams:=<span class="hljs-number">3</span>
- 
+
 <span class="hljs-function"> VP SET ALLOWED METHODS</span>(<span class="hljs-variable">$allowed</span>)
 </code></pre>
 <p>Une fois ce code exécuté, les fonctions définies peuvent être utilisées dans des formules 4D View Pro :</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG" alt=""></p>
 <blockquote>
-<p>Les noms de fonctions 4D View Pro s'affichement automatiquement en majuscules.</p>
+<p>La numérotation démarre à 0.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="voir-aussi-66"></a><a href="#voir-aussi-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="/docs/Rx/fr/ViewPro/formulas.html#4d-functions">4D functions</a><br/><a href="#vp-set-custom-functions">VP SET CUSTOM FUNCTIONS</a></p>
@@ -2630,7 +2630,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><td>style</td><td>Integer</td><td>Defines the style of the border. Default = empty.</td><td><li><code>vk line style dash dot</code></li><li><code>vk line style dash dot dot</code></li><li><code>vk line style dashed</code></li> <li><code>vk line style dotted</code></li><li><code>vk line style double</code></li><li><code>vk line style empty</code></li><li><code>vk line style hair</code></li> <li><code>vk line style medium</code></li><li><code>vk line style medium dash dot</code></li><li><code>vk line style medium dash dot dot</code></li><li><code>vk line style medium dashed</code></li><li><code>vk line style slanted dash dot</code></li><li><code>vk line style thick</code></li><li><code>vk line style thin</code></li></td></tr>
 </tbody>
 </table>
-<p>Vous pouvez définir la position de <em>borderStyleObj</em> (i.e. là où la ligne est appliquée) à l'aide de <em>borderPosObj</em> :</p>
+<p>Les bordures appliquées à l'aide de <code>VP SET CELL STYLE</code> seront appliquées à chaque cellule de <em>rangeObj</em>, contrairement à la commande <a href="#vp-set-border">VP SET BORDER</a> qui applique les bordures à l'ensemble de <em>rangeObj</em>.</p>
 <table>
 <thead>
 <tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
@@ -2660,7 +2660,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
  <span class="hljs-variable">$border</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"red"</span>;<span class="hljs-string">"style"</span>;vk line style thick)
  <span class="hljs-variable">$option</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"outline"</span>;<span class="hljs-literal">True</span>)
 <span class="hljs-function"> VP SET BORDER</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">3</span>);<span class="hljs-variable">$border</span>;<span class="hljs-variable">$option</span>)
- 
+
  <span class="hljs-comment">// // Appliquer des bordures à l'aide de VP SET CELL STYLE</span>
  <span class="hljs-variable">$cellStyle</span>:=New object
  <span class="hljs-variable">$cellStyle</span>.borderBottom:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"blue"</span>;<span class="hljs-string">"style"</span>;vk line style thick)
@@ -2685,7 +2685,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>La commande <code>VP SET CELL STYLE</code> applique le(s) style(s) défini(s) dans <em>styleObj</em> aux cellules définies dans <em>rangeObj</em>.</p>
 <p>Dans <em>rangeObj</em>, passez une plage de cellules à laquelle s'appliquera le style. Si <em>rangeObj</em> contient plusieurs cellules, le style s'applique à chaque cellule.</p>
 <blockquote>
-<p>Les bordures appliquées à l'aide de <code>VP SET CELL STYLE</code> seront appliquées à chaque cellule de <em>rangeObj</em>, contrairement à la commande <a href="#vp-set-border">VP SET BORDER</a> qui applique les bordures à l'ensemble de <em>rangeObj</em>.</p>
+<p>Si <em>rangeObj</em> n'est pas une plage cellule, seule la première cellule de la plage est utilisée.</p>
 </blockquote>
 <p>Le paramètre <em>styleObj</em> vous permet de passer un objet contenant des propriétés de style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Si <em>styleObj</em> contient à la fois une feuille de style existante et des propriétés de style supplémentaires, la feuille de style existante s'applique, suivie des propriétés supplémentaires.</p>
 <p>Attribuez la valeur NULL pour supprimer un style et rétablir les paramètres de style par défaut (le cas échéant) :</p>
@@ -2817,7 +2817,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <p>La commande <code>VP SET CUSTOM FUNCTIONS</code> désigne les formules 4D qui peuvent être appelées directement à partir de formules 4D View Pro. Les fonctions personnalisées n'étant pas stockées dans le document, la commande <code>VP SET CUSTOM FUNCTIONS</code> doit être exécutée dans l'événement formulaire <code>On Load</code>.</p>
 <p>Les formules spécifiées par <code>VP SET CUSTOM FUNCTIONS</code> apparaissent dans un menu pop-up lorsque la première lettre de leur nom est saisie. Voir la page <a href="/docs/Rx/fr/ViewPro/formulas.html">Formules et Fonctions</a>.</p>
 <blockquote>
-<p>Si <code>VP SET CUSTOM FUNCTIONS</code> est appelée plusieurs fois dans la même zone et la même session, seul le dernier appel est pris en compte.</p>
+<p>La numérotation démarre à 0.</p>
 </blockquote>
 <p>Passez le nom de la zone 4D View Pro dans <em>vpAreaName</em>. Si vous passez un nom inexistant, une erreur est retournée.</p>
 <p>Dans le paramètre <em>formulaObj</em>, passez un objet contenant les formules 4D pouvant être appelées par des formules 4D View Pro et des propriétés supplémentaires. Chaque propriété <code>customFunction</code> passée dans <em>formulaObj</em> devient le nom d'une fonction dans la zone 4D View Pro.</p>
@@ -2839,7 +2839,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <blockquote>
 <p><strong>ATTENTION</strong></p>
 <ul>
-<li>Dès que la commande <code>VP SET CUSTOM FUNCTIONS</code> est appelée, les méthodes autorisées par <a href="#vp-set-allowed-methods">SET ALLOWED METHODS</a> sont ignorées dans la zone 4D View Pro.</li>
+<li>Dès que <code>VP SET CUSTOM FUNCTIONS</code> est appelé, les fonctions basées sur les commandes <code>SET TABLE TITLES</code> et <code>SET FIELD TITLES</code> sont ignorées dans la zone 4D View Pro.</li>
 <li>Dès que <code>VP SET CUSTOM FUNCTIONS</code> est appelé, les fonctions basées sur les commandes <code>SET TABLE TITLES</code> et <code>SET FIELD TITLES</code> sont ignorées dans la zone 4D View Pro.</li>
 </ul>
 </blockquote>
@@ -2901,7 +2901,7 @@ End case</span>
 <h4><a class="anchor" aria-hidden="true" id="exemple-70"></a><a href="#exemple-70" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Attribuer la date et l'heure locales à la valeur de la cellule </span>
 <span class="hljs-function"> VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>);Current time;Current date;vk pattern full date time)
- 
+
  <span class="hljs-comment">//Attribuer le 18 décembre à la valeur de la cellule</span>
 <span class="hljs-function"> VP SET DATE TIME VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-literal">!2024-12-18!</span>;<span class="hljs-literal">?14:30:10?</span>;vk pattern sortable date time)
 </code></pre>
@@ -2939,7 +2939,7 @@ End case</span>
 <h4><a class="anchor" aria-hidden="true" id="exemple-71"></a><a href="#exemple-71" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Définir la valeur de la cellule à la date du jour</span>
 <span class="hljs-function"> VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>);Current date))
- 
+
  <span class="hljs-comment">//Définir la valeur de la cellule à une date spécifique avec un format désigné</span>
 <span class="hljs-function"> VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">4</span>);<span class="hljs-function">Date</span>(<span class="hljs-string">"12/25/94"</span>);<span class="hljs-string">"d/m/yy "</span>)
 <span class="hljs-function"> VP SET DATE VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>);<span class="hljs-literal">!2005-01-15!</span>;vk pattern month day)
@@ -2991,7 +2991,7 @@ End case</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-80"></a><a href="#description-80" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La commande <code>VP SET FIELD</code> assigne un champ spécifique de la base 4D à une plage de cellules désignée.</p>
-<p>Dans <em>rangeObj</em>, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. In <em>rangeObj</em>, pass a range of the cell(s) whose value you want to specify.</p>
+<p>Dans <em>rangeObj</em>, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. Dans <em>rangeObj</em>, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur.</p>
 <p>Le paramètre <em>field</em> indique un <a href="/docs/Rx/fr/ViewPro/formulas.html#referencing-fields-using-the-virtual-structure">champ virtuel</a> de la base 4D à assigner à <em>rangeObj</em>. Le nom de la structure virtuelle pour le <em>field</em> peut être visualisé dans la barre de formule. Si du contenu est déjà présent dans l'une des cellules de <em>rangeObj</em>, il sera remplacé par <em>rangeObj</em>.</p>
 <p>Le paramètre optionnel <em>formatPattern</em> définit un modèle pour le paramètre <em>field</em>. You can pass any valid <a href="/docs/Rx/fr/ViewPro/configuring.html#cell-format">custom format</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemple-73"></a><a href="#exemple-73" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
@@ -3013,7 +3013,7 @@ End case</span>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-81"></a><a href="#description-81" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La commande <code>VP SET FORMULA</code> assigne une formule spécifique ou une méthode 4D à une plage de cellules désignée.</p>
-<p>Dans <em>rangeObj</em>, passez la plage de cellule(s) (créée par exemple avec <a href="#vp-cell"><code>VP Cell</code></a> ou <a href="#vp-column"><code>VP Column</code></a>) dont vous souhaitez indiquer la valeur. In <em>rangeObj</em>, pass a range of the cell(s) (created for example with <a href="#vp-cell"><code>VP Cell</code></a> or <a href="#vp-column"><code>VP Column</code></a>) whose value you want to specify.</p>
+<p>Dans <em>rangeObj</em>, passez la plage de cellule(s) (créée par exemple avec <a href="#vp-cell"><code>VP Cell</code></a> ou <a href="#vp-column"><code>VP Column</code></a>) dont vous souhaitez indiquer la valeur. Dans <em>rangeObj</em>, passez la plage de cellule(s) (créée par exemple avec <a href="#vp-cell"><code>VP Cell</code></a> ou <a href="#vp-column"><code>VP Column</code></a>) dont vous souhaitez indiquer la valeur.</p>
 <p>Le paramètre <em>formula</em> indique un nom de formule ou de méthode 4D à assigner à <em>rangeObj</em>. Si une méthode 4D est utilisée, elle doit être autorisée à l'aide de la commande <a href="#vp-set-allowed-method"><code>VP SET ALLOWED METHODS</code></a>.</p>
 <p>Le paramètre optionnel <em>formatPattern</em> définit un <a href="/docs/Rx/fr/ViewPro/configuring.html#cell-format">pattern</a> (modèle) pour le paramètre <em>formula</em>.</p>
 <p>Vous pouvez supprimer la formule de <em>rangeObj</em> en la remplaçant par une chaîne vide (&quot;&quot;).</p>
@@ -3363,7 +3363,7 @@ End case</span>
 <p>La commande <code>VP SET SHEET OPTIONS</code> permet de définir plusieurs options appliquées à une feuille de la zone <em>vpAreaName</em>.</p>
 <p>Passez le nom de la zone 4D View Pro dans <em>vpAreaName</em>. Si vous passez un nom inexistant, une erreur est retournée.</p>
 <p>Passez un objet contenant les défintions des options à définir dans le paramètre <em>sheetOptions</em>. Pour visualiser la liste complète des options disponibles, veuillez vous reporter aux <a href="/docs/Rx/fr/ViewPro/configuring.html#sheet-options">Sheet Options</a> de 4D View Pro.</p>
-<p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :</p>
+<p>Dans le paramètre optionnel <em>sheet</em>, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :</p>
 <ul>
 <li><code>vk current sheet</code></li>
 </ul>
@@ -3546,27 +3546,28 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="exemple-85"></a><a href="#exemple-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Fixer la valeur de la cellule à Faux</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">False</span>))
- 
+
  <span class="hljs-comment">//Fixer la valeur de la cellule à 2</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">2</span>))
- 
+
  <span class="hljs-comment">//Fixer la valeur de la cellule à $125,571.35</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-number">125571.35</span>;<span class="hljs-string">"format"</span>;<span class="hljs-string">"_($* #,##0.00_)"</span>))
- 
+
  <span class="hljs-comment">//Fixer la valeur de la cellule à Hello World!</span>
-<span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
- 
+<span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
+
  <span class="hljs-comment">//Fixer la valeur de la cellule à date du jour</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;Current date))
- 
+
  <span class="hljs-comment">//Fixer la valeur de la cellule à heure courante</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">5</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"time"</span>;Current time))
- 
+
  <span class="hljs-comment">//Fixer la valeur de la cellule à une date et une heure spécifiques</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">!2024-12-18!</span>);<span class="hljs-string">"time"</span>;<span class="hljs-literal">?14:30:10?</span>;<span class="hljs-string">"format"</span>;vk pattern full date time))
- 
+
  <span class="hljs-comment">//Effacer le contenu de la cellule</span>
 <span class="hljs-function"> VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-literal">Null</span>))!
+
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
 
 <span class="hljs-function">VP SET VALUE</span>(<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">2</span>);<span class="hljs-function">New object</span>(<span class="hljs-string">"value"</span>;<span class="hljs-string">"Hello World!"</span>))
@@ -3603,13 +3604,13 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>Dans <em>rangeObj</em>, passez une plage de cellule (créée via <a href="#vp-cell"><code>VP Cell</code></a>) dont vous souhaitez indiquer la valeur. La cellule définie dans <em>rangeObj</em> est utilisée pour déterminer le point de départ.</p>
 <blockquote>
 <ul>
-<li>Si <em>rangeObj</em> n'est pas une plage cellule, seule la première cellule de la plage est utilisée.</li>
+<li>Si <em>rangeObj</em> comprend plusieurs plages, seule la première cellule de la première plage est utilisée.</li>
 <li>Si <em>rangeObj</em> comprend plusieurs plages, seule la première cellule de la première plage est utilisée.</li>
 </ul>
 </blockquote>
 <p>Le paramètre <em>valuesCol</em> est bidimensionnel :</p>
 <ul>
-<li><p>La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne.</p></li>
+<li><p>La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Chaque sous-collection définit une ligne.</p></li>
 <li><p>Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, date, null ou objet. Si la valeur est un objet, elle peut avoir les propriétés suivantes :</p>
 <table>
 <thead>
@@ -3746,7 +3747,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>Les sélecteurs suivants sont disponibles :</p>
 <table>
 <thead>
-<tr><th>Sélecteur</th><th>Description</th><th>Disponible avec <em>vPos</em></th><th><em>hPos</em></th></tr>
+<tr><th>Sélecteur</th><th>Description</th><th>Disponible avec <em>vPos</em></th><th>là où la ligne est appliquée) à l'aide de <em>borderPosObj</em> :</th></tr>
 </thead>
 <tbody>
 <tr><td><code>vk position bottom</code></td><td>Alignement vertical vers le bas de la cellule ou de la ligne.</td><td>X</td><td></td></tr>
@@ -3761,7 +3762,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>Cette commande n'est efficace que si le repositionnement de la vue est possible. Par example, si <em>rangeObj</em> est contenu dans la cellule A1 (la première colonne et la première ligne) de la feuille courante, le repositionnement de la vue n'apportera aucun changement, étant donné que les limites verticales et horizontales ont déjà été atteintes (i.e., il n'est pas possible de faire dérouler davantage vers le haut ou vers la gauche). De même si <em>rangeObj</em> est contenu dans la cellule C3 et que la vue est repositionnée au centre ou en bas à droite. La vue demeure inchangée.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple-88"></a><a href="#exemple-88" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>Vous souhaitez visualiser la cellule dans la colonne AY, ligne 51, au centre de la zone 4D View Pro. Le code suivant :</p>
+<p>Vous souhaitez visualiser la cellule dans la colonne AY, ligne 51, au centre de la zone 4D View Pro.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$displayCell</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"myVPArea"</span>;<span class="hljs-number">50</span>;<span class="hljs-number">50</span>)
  <span class="hljs-comment">// Déplacez la vue pour afficher la cellule</span>
 <span class="hljs-function"> VP SHOW CELL</span>(<span class="hljs-variable">$displayCell</span>;vk position center;vk position center)
@@ -3800,9 +3801,9 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <p>Le code du bouton Suspend Computing :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-comment">//mettre les calculs sur pause pendant que les utilisateurs saisissent les informations</span><span class="hljs-keyword">
  If</span>(FORM Event.code=On Clicked)
- 
+
 <span class="hljs-function">    VP SUSPEND COMPUTING</span>(<span class="hljs-string">"ViewProArea"</span>)<span class="hljs-keyword">
- 
+
  End if</span>
 </code></pre>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">If</span>(FORM Event.code=On Clicked)

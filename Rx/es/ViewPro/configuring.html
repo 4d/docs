@@ -104,7 +104,7 @@
 <p>Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. Some standard form events provide extended information in the object returned by the <a href="https://doc.4d.com/4dv19/help/command/en/page1606.html"><code>FORM Event</code></a> command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific or provide additional information to 4D View Pro areas:</p>
 <table>
 <thead>
-<tr><th>Evento 4D estándar</th><th>Specific and extended 4D View Pro events</th></tr>
+<tr><th>Evento 4D estándar</th><th>Eventos 4D View Pro específicos y extendidos</th></tr>
 </thead>
 <tbody>
 <tr><td><a href="/docs/Rx/es/Events/onLoad.html">On Load</a></td><td><a href="/docs/Rx/es/Events/onVpReady.html">On VP Ready</a></td></tr>
@@ -138,12 +138,12 @@
 <tr><td></td><td>color</td><td>cadena</td><td>A color string used to represent the grid line color, such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
 <tr><td></td><td>showVerticalGridline</td><td>booleano</td><td>Specifies whether to show the vertical grid line.</td></tr>
 <tr><td></td><td>showHorizontalGridline</td><td>booleano</td><td>Specifies whether to show the horizontal grid line.</td></tr>
-<tr><td>rowHeaderVisible</td><td></td><td>booleano</td><td>Specifies whether the row header is visible.</td></tr>
-<tr><td>colHeaderVisible</td><td></td><td>booleano</td><td>Specifies whether the column header is visible.</td></tr>
+<tr><td>rowHeaderVisible</td><td></td><td>booleano</td><td>Especifica si el encabezado de la línea es visible.</td></tr>
+<tr><td>colHeaderVisible</td><td></td><td>booleano</td><td>Especifica si el encabezado de la columna es visible.</td></tr>
 <tr><td>rowHeaderAutoText</td><td></td><td>entero largo</td><td>Specifies whether the row header displays letters or numbers or is blank. Valores disponibles: <code>vk header auto text blank</code>, <code>vk header auto text letters</code>, <code>vk header auto text numbers</code></td></tr>
 <tr><td>colHeaderAutoText</td><td></td><td>entero largo</td><td>Specifies whether the column header displays letters or numbers or is blank. Valores disponibles: <code>vk header auto text blank</code>, <code>vk header auto text letters</code>, <code>vk header auto text numbers</code></td></tr>
-<tr><td>selectionBackColor</td><td></td><td>cadena</td><td>The selection's background color for the sheet. (preferred RGBA format)</td></tr>
-<tr><td>selectionBorderColor</td><td></td><td>cadena</td><td>The selection's border color for the sheet.</td></tr>
+<tr><td>selectionBackColor</td><td></td><td>cadena</td><td>El color de fondo de la selección para la hoja. (preferred RGBA format)</td></tr>
+<tr><td>selectionBorderColor</td><td></td><td>cadena</td><td>El color del borde de la selección para la hoja.</td></tr>
 <tr><td>sheetAreaOffset</td><td></td><td>objeto</td><td>Las opciones de sheetAreaOffset.</td></tr>
 <tr><td></td><td>left</td><td>entero largo</td><td>El desplazamiento a la izquierda de la hoja desde la local.</td></tr>
 <tr><td></td><td>top</td><td>entero largo</td><td>The offset top of sheet from host.</td></tr>
@@ -184,7 +184,7 @@
 <p>4D View Pro has built-in formats for numbers, dates, times, and text, but you can also create your own patterns to format the contents of cells using special characters and codes.</p>
 <p>For example, when using the <a href="/docs/Rx/es/ViewPro/method-list.html#vp-set-value">VP SET VALUE</a> or <a href="/docs/Rx/es/ViewPro/method-list.html#vp-set-num-value">VP SET NUM VALUE</a> methods to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern <em>($* #,##0.00</em>) which would display amounts as shown:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/apx_vpCellFormat1.PNG" alt=""></p>
-<p>Note that when creating your own format patterns, only the display of the data is modified. The value of the data remains unchanged.</p>
+<p>Note that when creating your own format patterns, only the display of the data is modified. El valor de los datos permanece sin cambios.</p>
 <h3><a class="anchor" aria-hidden="true" id="formatos-numérico-y-texto"></a><a href="#formatos-numérico-y-texto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formatos numérico y texto</h3>
 <p>Number formats apply to all number types (e.g., positive, negative, and zeros).</p>
 <table>
@@ -194,19 +194,19 @@
 <tbody>
 <tr><td>0</td><td>Marcador de posición que muestra ceros.</td><td>#.00 will display 1.1 as 1.10</td></tr>
 <tr><td>.</td><td>Displays a decimal point</td><td>0.00 will display 1999 as 1999.00</td></tr>
-<tr><td>,</td><td>Displays the thousands separator in a number.<p><p> Thousands are separated by commas if the format contains a comma enclosed by number signs &quot;#&quot; or by zeros. A comma following a digit placeholder scales the number by 1,000.</td><td>#,0 mostrará 12200000 como 12,200,000</td></tr>
-<tr><td>_</td><td>Skips the width of the next character.</td><td>Usually used in combination with parentheses to add left and right indents, _( and _) respectively.</td></tr>
-<tr><td>@</td><td>Formatter for text. Applies the format to all text in the cell</td><td>&quot;[Red]@&quot; applies the red font color for text values.</td></tr>
+<tr><td>,</td><td>Muestra el separador de miles en un número.<p><p> Thousands are separated by commas if the format contains a comma enclosed by number signs &quot;#&quot; or by zeros. A comma following a digit placeholder scales the number by 1,000.</td><td>#,0 mostrará 12200000 como 12,200,000</td></tr>
+<tr><td>_</td><td>Salta el ancho del siguiente caracter.</td><td>Usually used in combination with parentheses to add left and right indents, _( and _) respectively.</td></tr>
+<tr><td>@</td><td>Formatter for text. Aplica el formato a todo el texto de la celda</td><td>&quot;[Red]@&quot; applies the red font color for text values.</td></tr>
 <tr><td>*</td><td>Repeats the next character to fill the column width.</td><td>0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros.</td></tr>
 <tr><td>&quot; &quot;</td><td>Displays the text within the quotes without interpreting it.</td><td>&quot;8%&quot; será mostrado como: 8%</td></tr>
-<tr><td>%</td><td>Displays numbers as a percentage of 100.</td><td>El 8% se mostrará como 0,08</td></tr>
+<tr><td>%</td><td>Muestra los números como un porcentaje de 100.</td><td>El 8% se mostrará como 0,08</td></tr>
 <tr><td>#</td><td>Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.</td><td>#.# mostrará 1.54 como 1.5</td></tr>
-<tr><td>?</td><td>Digit placeholder that leaves space for extra zeros, but does not display them. Typically used to align numbers by decimal point.</td><td>$?? $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.</td></tr>
-<tr><td>\</td><td>Displays the character following it.</td><td>#.00? #.00? #.00? will display 123 as 123.00?</td></tr>
+<tr><td>?</td><td>Digit placeholder that leaves space for extra zeros, but does not display them. Normalmente se utiliza para alinear números por punto decimal.</td><td>$?? $?? $?? $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.</td></tr>
+<tr><td>\</td><td>Muestra el caracter que lo sigue.</td><td>#.00? #.00? #.00? #.00? will display 123 as 123.00?</td></tr>
 <tr><td>/</td><td>When used with numbers, displays them as fractions. When used with text, date or time codes, displayed &quot;as-is&quot;.</td><td>#/# mostrará .75 como 3/4</td></tr>
 <tr><td>[ ]</td><td>Crea formatos condicionales.</td><td>[&gt;100][GREEN]#,##0;[&lt;=-100][YELLOW]#,##0;[BLUE]#,##0</td></tr>
 <tr><td>E</td><td>Formato notación científica.</td><td>#E+# - mostrará 2E+6 en lugar de 1,500,500</td></tr>
-<tr><td>[color]</td><td>Formats the text or number in the color specified</td><td>[Green]###.##[Red]-###.###</td></tr>
+<tr><td>[color]</td><td>Formatea el texto o el número en el color especificado</td><td>[Green]###.##[Red]-###.###</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -220,8 +220,8 @@
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td><code>vk pattern full date time</code></td><td>&quot;<em>fullDateTimePattern</em>&quot;</td><td>ISO 8601 format for the full date and time in current localization.<p><p>USA default pattern: &quot;dddd, dd MMMM yyyy HH:mm:ss&quot;</td></tr>
-<tr><td><code>vk pattern long date</code></td><td>&quot;<em>longDatePattern</em>&quot;</td><td>ISO 8601 format for the full date in current localization.<p><p>USA default pattern: &quot;dddd, dd MMMM yyyy&quot;</td></tr>
+<tr><td><code>vk pattern full date time</code></td><td>&quot;<em>fullDateTimePattern</em>&quot;</td><td>ISO 8601 format for the full date and time in current localization.<p><p>Patrón por defecto USA: &quot;dddd, dd MMMM yyyy HH:mm:ss&quot;</td></tr>
+<tr><td><code>vk pattern long date</code></td><td>&quot;<em>longDatePattern</em>&quot;</td><td>ISO 8601 format for the full date in current localization.<p><p>Patrón por defecto USA: &quot;dddd, dd MMMM yyyy&quot;</td></tr>
 <tr><td><code>vk pattern long time</code></td><td>&quot;<em>longTimePattern</em>&quot;</td><td>ISO 8601 format for the time in current localization.<p><p>USA default pattern: &quot;HH:mm:ss&quot;</td></tr>
 <tr><td><code>vk pattern month day</code></td><td>&quot;<em>monthDayPattern</em>&quot;</td><td>ISO 8601 format for the month and day in current localization.<p><p>USA default pattern: &quot;MMMM dd&quot;</td></tr>
 <tr><td><code>vk pattern short date</code></td><td>&quot;<em>shortDatePattern</em>&quot;</td><td>Abbreviated ISO 8601 format for the date in current localization.<p><p>USA default pattern: &quot;MM/dd/yyyy&quot;</td></tr>
@@ -309,14 +309,14 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>columnEnd</td><td>entero largo</td><td>The last column to print in a cell range. Valor por defecto = -1 (todas las columnas)</td></tr>
-<tr><td>columnStart</td><td>entero largo</td><td>The first column to print in a cell range. Valor por defecto = -1 (todas las columnas)</td></tr>
-<tr><td>repeatColumnEnd</td><td>entero largo</td><td>The last column of a range of columns to print on the left of each page. Valor por defecto = -1 (todas las columnas)</td></tr>
-<tr><td>repeatColumnStart</td><td>entero largo</td><td>The first column of a range of columns to print on the left of each page. Valor por defecto = -1 (todas las columnas)</td></tr>
+<tr><td>columnEnd</td><td>entero largo</td><td>The last row to print in a cell range. Default value = -1 (all rows)</td></tr>
+<tr><td>columnStart</td><td>entero largo</td><td>The first row to print in a cell range. Default value = -1 (all rows)</td></tr>
+<tr><td>repeatColumnEnd</td><td>entero largo</td><td>The last column of a range of columns to print on the left of each page. Default value = -1 (all rows)</td></tr>
+<tr><td>repeatColumnStart</td><td>entero largo</td><td>The first column of a range of columns to print on the left of each page. Default value = -1 (all rows)</td></tr>
 <tr><td>repeatRowEnd</td><td>entero largo</td><td>The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)</td></tr>
 <tr><td>repeatRowStart</td><td>entero largo</td><td>The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)</td></tr>
-<tr><td>rowEnd</td><td>entero largo</td><td>The last row to print in a cell range. Default value = -1 (all rows)</td></tr>
-<tr><td>rowStart</td><td>entero largo</td><td>The first row to print in a cell range. Default value = -1 (all rows)</td></tr>
+<tr><td>rowEnd</td><td>entero largo</td><td>The last column to print in a cell range. Default value = -1 (all rows)</td></tr>
+<tr><td>rowStart</td><td>entero largo</td><td>The first column to print in a cell range. Default value = -1 (all rows)</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="encabezados--pies-de-página"></a><a href="#encabezados--pies-de-página" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Encabezados / Pies de página</h3>
@@ -327,20 +327,20 @@
 </thead>
 <tbody>
 <tr><td>footerCenter</td><td>texto</td><td>The text and format of the center footer on printed pages.</td></tr>
-<tr><td>footerCenterImage</td><td>picture | text*</td><td>The image for the center section of the footer.</td></tr>
+<tr><td>footerCenterImage</td><td>picture | text*</td><td>La imagen para la sección central del pie de página.</td></tr>
 <tr><td>footerLeft</td><td>texto</td><td>The text and format of the left footer on printed pages.</td></tr>
-<tr><td>footerLeftImage</td><td>picture | text*</td><td>The image for the left section of the footer.</td></tr>
+<tr><td>footerLeftImage</td><td>picture | text*</td><td>La imagen de la parte izquierda del pie de página.</td></tr>
 <tr><td>footerRight</td><td>texto</td><td>The text and format of the right footer on printed pages.</td></tr>
-<tr><td>footerRightImage</td><td>picture | text*</td><td>The image for the right section of the footer.</td></tr>
+<tr><td>footerRightImage</td><td>picture | text*</td><td>La imagen de la parte derecha del pie de página.</td></tr>
 <tr><td>headerCenter</td><td>texto</td><td>The text and format of the center header on printed pages.</td></tr>
-<tr><td>headerCenterImage</td><td>picture | text*</td><td>The image for the center section of the header.</td></tr>
+<tr><td>headerCenterImage</td><td>picture | text*</td><td>La imagen para la sección central del encabezado.</td></tr>
 <tr><td>headerLeft</td><td>texto</td><td>The text and format of the left header on printed pages.</td></tr>
-<tr><td>headerLeftImage</td><td>picture | text*</td><td>The image for the left section of the header.</td></tr>
+<tr><td>headerLeftImage</td><td>picture | text*</td><td>La imagen de la sección izquierda del encabezado.</td></tr>
 <tr><td>headerRight</td><td>texto</td><td>The text and format of the right header on printed pages.</td></tr>
-<tr><td>headerRightImage</td><td>picture | text*</td><td>The image for the right section of the header.</td></tr>
+<tr><td>headerRightImage</td><td>picture | text*</td><td>La imagen de la sección derecha del encabezado.</td></tr>
 </tbody>
 </table>
-<p>* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by <a href="/docs/Rx/es/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a>.</p>
+<p>* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by <a href="/docs/Rx/es/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="caracteres-especiales"></a><a href="#caracteres-especiales" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Caracteres especiales</h3>
 <p>The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.</p>
 <table>
@@ -349,17 +349,17 @@
 </thead>
 <tbody>
 <tr><td>&amp;</td><td>Escape character</td><td>(ver ejemplos más abajo)</td><td></td></tr>
-<tr><td>P</td><td>Página actual</td><td>printInfo.headerLeft:=&quot;This is page &amp;P.&quot;</td><td>Esta es la página 5.</td><td></td></tr>
-<tr><td>N</td><td>Conteo de páginas</td><td>printInfo.headerLeft:=&quot;There are &amp;N pages.&quot;</td><td>Hay 10 páginas.</td></tr>
+<tr><td>P</td><td>Página actual</td><td>printInfo.headerLeft:=&quot;Esta es la página &amp;P.&quot;</td><td>Esta es la página 5.</td><td></td></tr>
+<tr><td>N</td><td>Conteo de páginas</td><td>printInfo.headerLeft:=&quot;Hay &amp;N páginas.&quot;</td><td>Hay 10 páginas.</td></tr>
 <tr><td>D</td><td>Fecha actual (formato yyyy/mm/dd)</td><td>printInfo.headerLeft:=&quot;Es &amp;D.&quot;</td><td>Es 2015/6/19.</td></tr>
 <tr><td>T</td><td>Hora actual</td><td>printInfo.headerLeft:=&quot;Es &amp;T.&quot;</td><td>It is 16:30:36.</td></tr>
 <tr><td>G</td><td>Imagen</td><td>printInfo.headerLeftImage:=smiley<br>printInfo.headerLeft:=&quot;&amp;G&quot;</td><td><img src="/docs/Rx/assets/en/ViewPro/apx_vpPrintAttributes1.PNG" alt=""></td></tr>
-<tr><td>S</td><td>Strikethrough</td><td>printInfo.headerLeft:=&quot;&amp;SThis is text.&quot;</td><td><del>This is text.</del></td></tr>
-<tr><td>U</td><td>Subrayado</td><td>printInfo.headerLeft:=&quot;&amp;UThis is text.&quot;</td><td><ins>This is text.</ins></td></tr>
-<tr><td>B</td><td>Negrita</td><td>printInfo.headerLeft:=&quot;&amp;BThis is text.&quot;</td><td><strong>This is text.</strong></td></tr>
-<tr><td>I</td><td>Itálica</td><td>printInfo.headerLeft:=&quot;&amp;IThis is text.&quot;</td><td><em>This is text.</em></td></tr>
+<tr><td>S</td><td>Strikethrough</td><td>printInfo.headerLeft:=&quot;&amp;SEsto es texto.&quot;</td><td><del>This is text.</del></td></tr>
+<tr><td>U</td><td>Subrayado</td><td>printInfo.headerLeft:=&quot;&amp;UEsto es texto.&quot;</td><td><ins>This is text.</ins></td></tr>
+<tr><td>B</td><td>Negrita</td><td>printInfo.headerLeft:=&quot;&amp;BEsto es texto.&quot;</td><td><strong>This is text.</strong></td></tr>
+<tr><td>I</td><td>Itálica</td><td>printInfo.headerLeft:=&quot;&amp;IEsto es texto.&quot;</td><td><em>This is text.</em></td></tr>
 <tr><td>&quot;</td><td>Prefijo fuente</td><td>printInfo.headerLeft:=&quot;&amp;&quot;Lucida Console&quot;&amp;14This is text.&quot;</td><td><img src="/docs/Rx/assets/en/ViewPro/apx_vpPrintAttributes2.PNG" alt=""></td></tr>
-<tr><td>K</td><td>Text Color prefix</td><td>printInfo.headerLeft:=&quot;&amp;KFF0000This is text.&quot;</td><td><span style="color:red">This is text</span>.</td></tr>
+<tr><td>K</td><td>Text Color prefix</td><td>printInfo.headerLeft:=&quot;&amp;KFF0000This is text.&quot;</td><td><span style="color:red">Esto es texto</span>.</td></tr>
 <tr><td>F</td><td>Workbook name</td><td>printInfo.headerLeft:=&quot;&amp;F&quot;</td><td>2019 Monthly Revenue Forecasts</td></tr>
 <tr><td>A</td><td>Nombre de la hoja de cálculo</td><td>printInfo.headerLeft:=&quot;&amp;A&quot;</td><td>June 2019 revenue forecast</td></tr>
 </tbody>
@@ -372,10 +372,10 @@
 </thead>
 <tbody>
 <tr><td>margin</td><td></td><td>objeto</td><td>Los márgenes de impresión</td></tr>
-<tr><td></td><td>top</td><td>entero largo</td><td>Top margin, in hundredths of an inch. Por defecto = 75</td></tr>
-<tr><td></td><td>bottom</td><td>entero largo</td><td>Bottom margin, in hundredths of an inch. Por defecto = 75</td></tr>
-<tr><td></td><td>left</td><td>entero largo</td><td>Margen izquierdo, en centésimas de pulgada. Por defecto = 70</td></tr>
-<tr><td></td><td>right</td><td>entero largo</td><td>Margen derecho, en centésimas de pulgada. Por defecto = 70</td></tr>
+<tr><td></td><td>top</td><td>entero largo</td><td>Margen superior, en centésimas de pulgada. Por defecto = 75</td></tr>
+<tr><td></td><td>bottom</td><td>entero largo</td><td>El margen inferior, en centésimas del pulgada. Por defecto = 75</td></tr>
+<tr><td></td><td>left</td><td>entero largo</td><td>Margen derecho, en centésimas de pulgada. Por defecto = 70</td></tr>
+<tr><td></td><td>right</td><td>entero largo</td><td>Margen izquierdo, en centésimas de pulgada. Por defecto = 70</td></tr>
 <tr><td></td><td>header</td><td>entero largo</td><td>Header offset, in hundredths of an inch. Por defecto = 30</td></tr>
 <tr><td></td><td>footer</td><td>entero largo</td><td>Footer offset, in hundredths of an inch. Por defecto = 30</td></tr>
 </tbody>
@@ -383,7 +383,7 @@
 <h3><a class="anchor" aria-hidden="true" id="orientación"></a><a href="#orientación" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Orientación</h3>
 <p>Orientation attributes are used to specify the direction the printed page layout.</p>
 <blockquote>
-<p>This attribute defines rendering information only.</p>
+<p>Este atributo define sólo la información de renderizado.</p>
 </blockquote>
 <table>
 <thead>
@@ -400,20 +400,20 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>blackAndWhite</td><td>booleano</td><td>Printing in black and white only. <p>Valor por defecto: false</p><p><strong>Note</strong>: PDFs are not affected by this attribute. Colors in PDFs remain.</p></td></tr>
-<tr><td>centering</td><td>entero largo</td><td>How the contents are centered on the printed page. Valores disponibles: <code>vk print centering both</code>, <code>vk print centering horizontal</code>, <code>vk print centering none</code> (por defecto), <code>vk print centering vertical</code></td></tr>
-<tr><td>firstPageNumber</td><td>entero largo</td><td>The page number to print on the first page.<p>Por defecto = 1</td></tr>
+<tr><td>blackAndWhite</td><td>booleano</td><td>Printing in black and white only. <p>Valor por defecto: false</p><p><strong>Nota</strong>: los PDFs no se ven afectados por este atributo. Colors in PDFs remain.</p></td></tr>
+<tr><td>centering</td><td>entero largo</td><td>Como se centran los contenidos en la página impresa. Valores disponibles: <code>vk print centering both</code>, <code>vk print centering horizontal</code>, <code>vk print centering none</code> (por defecto), <code>vk print centering vertical</code></td></tr>
+<tr><td>firstPageNumber</td><td>entero largo</td><td>El número de página a imprimir en la primera página.<p>Por defecto = 1</td></tr>
 <tr><td>pageOrder</td><td>entero largo</td><td>The order pages are printed. Valores disponibles: <code>vk print page order auto</code> (por defecto), <code>vk print page order down then over</code>, <code>vk print page order over then down</code>.</td></tr>
 <tr><td>pageRange</td><td>texto</td><td>The range of pages for printing</td></tr>
-<tr><td>qualityFactor</td><td>entero largo</td><td>The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Por defecto = 2</p></td></tr>
-<tr><td>useMax</td><td>booleano</td><td>Only columns and rows with data are printed.<p>Valor por defecto: true</p></td></tr>
-<tr><td>zoomFactor</td><td>real</td><td>The amount to enlarge or reduce the printed page.<p>Por defecto = 1</p></td></tr>
+<tr><td>qualityFactor</td><td>entero largo</td><td>El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Por defecto = 2</p></td></tr>
+<tr><td>useMax</td><td>booleano</td><td>Sólo se imprimen columnas y líneas con datos.<p>Valor por defecto: true</p></td></tr>
+<tr><td>zoomFactor</td><td>real</td><td>La cantidad para ampliar o reducir la página impresa.<p>Por defecto = 1</p></td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="tamaño-del-papel"></a><a href="#tamaño-del-papel" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tamaño del papel</h3>
-<p>Paper size attributes are used to specify the dimensions or model of paper to use for printing. There are two ways to define paper size:</p>
+<p>Paper size attributes are used to specify the dimensions or model of paper to use for printing. Hay dos maneras de definir el tamaño del papel:</p>
 <ul>
-<li>Custom size - height and width attributes</li>
+<li>Tamaño personalizado - atributos de alto y ancho</li>
 <li>Tamaño estándar - atributo kind</li>
 </ul>
 <table>
@@ -422,8 +422,8 @@
 </thead>
 <tbody>
 <tr><td>paperSize</td><td></td><td>objeto</td><td>Paper dimensions (height, width) or specific format (kind) for printing.</td></tr>
-<tr><td></td><td>height</td><td>entero largo</td><td>Height of the paper, in hundredths of an inch.</td></tr>
-<tr><td></td><td>ancho</td><td>entero largo</td><td>Width of the paper, in hundredths of an inch.</td></tr>
+<tr><td></td><td>height</td><td>entero largo</td><td>La altura del papel, en centésimas del pulgada.</td></tr>
+<tr><td></td><td>ancho</td><td>entero largo</td><td>Ancho del papel, en centésimas de pulgada.</td></tr>
 <tr><td></td><td>kind</td><td>texto</td><td>Name of standard paper size (e.g., A2, A4, legal, etc.) returned by <code>Get Print Option</code>. Valor por defecto: &quot;letter&quot;</td></tr>
 </tbody>
 </table>
@@ -463,13 +463,13 @@
 <tr><td>marca de agua</td><td></td><td>colección</td><td>Collection of watermark settings. <p>Valor por defecto: indefinido</td></tr>
 <tr><td></td><td>[ ].height</td><td>entero largo</td><td>The height of the watermark text / image.</td></tr>
 <tr><td></td><td>[ ].imageSrc</td><td>picture | text*</td><td>The watermark text / image.</td></tr>
-<tr><td></td><td>[ ].page</td><td>texto</td><td>The page(s) where the watermark is printed.<p>Para todas las páginas: &quot;all&quot;. For specific pages: page numbers or page ranges separated by commas. Ej.: &quot;1,3,5-12&quot;</td></tr>
-<tr><td></td><td>[ ].width</td><td>entero largo</td><td>The width of the watermark text / image.</td></tr>
+<tr><td></td><td>[ ].page</td><td>texto</td><td>La(s) página(s) donde se imprime la marca de agua.<p>Para todas las páginas: &quot;all&quot;. For specific pages: page numbers or page ranges separated by commas. Ej.: &quot;1,3,5-12&quot;</td></tr>
+<tr><td></td><td>[ ].width</td><td>entero largo</td><td>El ancho del texto/imagen marca de agua.</td></tr>
 <tr><td></td><td>[ ].x</td><td>entero largo</td><td>The horizontal coordinate of the top left point of the watermark text / image.</td></tr>
 <tr><td></td><td>[ ].y</td><td>entero largo</td><td>The vertical coordinate of the top left point of the watermark text / image.</td></tr>
 </tbody>
 </table>
-<p>* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by <a href="/docs/Rx/es/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a>.</p>
+<p>* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by <a href="/docs/Rx/es/ViewPro/method-list.html#vp-get-print-info">VP Get print info</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="style-objects"></a><a href="#style-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style Objects</h2>
 <p>4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.</p>
 <h3><a class="anchor" aria-hidden="true" id="objetos-de-estilo--hojas-de-estilo"></a><a href="#objetos-de-estilo--hojas-de-estilo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos de estilo &amp; Hojas de estilo</h3>
@@ -493,8 +493,8 @@
 </thead>
 <tbody>
 <tr><td>backColor</td><td>texto</td><td>Defines the color of the background.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
-<tr><td>backgroundImage</td><td>picture, text</td><td>Specifies a background image.</td><td>Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included.</td></tr>
-<tr><td>backgroundImageLayout</td><td>entero largo</td><td>Defines the layout for the background image.</td><td><code>vk image layout center</code>, <code>vk image layout none</code>, <code>vk image layout stretch</code>, <code>vk image layout zoom</code></td></tr>
+<tr><td>backgroundImage</td><td>picture, text</td><td>Specifies a background image.</td><td>Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Nota para Windows: la extensión del archivo incluirse.</td></tr>
+<tr><td>backgroundImageLayout</td><td>entero largo</td><td>Define el diseño para la imagen de fondo.</td><td><code>vk image layout center</code>, <code>vk image layout none</code>, <code>vk image layout stretch</code>, <code>vk image layout zoom</code></td></tr>
 <tr><td>foreColor</td><td>texto</td><td>Defines the color of the foreground.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
 </tbody>
 </table>
@@ -504,7 +504,7 @@
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp</td><td></td><td>objeto</td><td>Defines the corresponding border line</td><td></td></tr>
+<tr><td>borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp</td><td></td><td>objeto</td><td>Define la línea de borde correspondiente</td><td></td></tr>
 <tr><td></td><td>color</td><td>texto</td><td>Defines the color of the border. Por defecto = black.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
 <tr><td></td><td>style</td><td>entero largo</td><td>Defines the style of the border. Por defecto = empty. Cannot be null or undefined.</td><td><code>vk line style dash dot</code>, <code>vk line style dash dot dot</code>, <code>vk line style dashed</code>, <code>vk line style dotted</code>, <code>vk line style double</code>, <code>vk line style empty</code>, <code>vk line style hair</code>, <code>vk line style medium</code>, <code>vk line style medium dash dot</code>, <code>vk line style medium dash dot dot</code>,<code>vk line style medium dashed</code>, <code>vk line style slanted dash dot</code>, <code>vk line style thick</code></td></tr>
 </tbody>
@@ -516,18 +516,18 @@
 </thead>
 <tbody>
 <tr><td>font</td><td></td><td>texto</td><td>Specifies the font characteristics in CSS font shorthand (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;). Example: &quot;14pt Century Gothic&quot;. The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes.</td><td>A CSS font shorthand.<p>4D provides utility commands to handle font characteristics as objects: <a href="/docs/Rx/es/ViewPro/method-list.html#vp-font-to-object"><code>VP Font to object</code></a> and <a href="/docs/Rx/es/ViewPro/method-list.html#vp-object-to-font"><code>VP Object to font</code></a></td></tr>
-<tr><td>formatter</td><td></td><td>texto</td><td>Pattern for value/time property.</td><td>Number/text/date/time formats, special characters. See <a href="#cell-format">Cell Format</a>.</td></tr>
-<tr><td>isVerticalText</td><td></td><td>booleano</td><td>Especifica la dirección del texto.</td><td>True = vertical text, False = horizontal text.</td></tr>
-<tr><td>labelOptions</td><td></td><td>objeto</td><td>Defines cell label options (watermark options).</td><td></td></tr>
-<tr><td></td><td>alignement</td><td>entero largo</td><td>Specifies the position of the cell label. Optional property.</td><td><code>vk label alignment top left</code>, <code>vk label alignment bottom left</code>, <code>vk label alignment top center</code>, <code>vk label alignment bottom center</code>, <code>vk label alignment top right</code>, <code>vk label alignment bottom right</code></td></tr>
-<tr><td></td><td>visibility</td><td>entero largo</td><td>Specifies the visibility of the cell label. Optional property.</td><td><code>vk label visibility auto</code>, <code>vk label visibility hidden</code>, <code>vk label visibility visible</code></td></tr>
+<tr><td>formatter</td><td></td><td>texto</td><td>Pattern for value/time property.</td><td>Number/text/date/time formats, special characters. Ver <a href="#cell-format">Formato de celda</a>.</td></tr>
+<tr><td>isVerticalText</td><td></td><td>booleano</td><td>Especifica la dirección del texto.</td><td>True = texto vertical, False = texto horizontal.</td></tr>
+<tr><td>labelOptions</td><td></td><td>objeto</td><td>Define las opciones de etiqueta de celda (opciones de marca de agua).</td><td></td></tr>
+<tr><td></td><td>alignement</td><td>entero largo</td><td>Especifica la posición de la etiqueta de la celda. Optional property.</td><td><code>vk label alignment top left</code>, <code>vk label alignment bottom left</code>, <code>vk label alignment top center</code>, <code>vk label alignment bottom center</code>, <code>vk label alignment top right</code>, <code>vk label alignment bottom right</code></td></tr>
+<tr><td></td><td>visibility</td><td>entero largo</td><td>Especifica la visibilidad de la etiqueta de la celda. Optional property.</td><td><code>vk label visibility auto</code>, <code>vk label visibility hidden</code>, <code>vk label visibility visible</code></td></tr>
 <tr><td></td><td>foreColor</td><td>texto</td><td>Defines the color of the foreground. Optional property.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
 <tr><td></td><td>font</td><td>texto</td><td>Specifies the font characteristics with CSS font shorthand (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;). The font-size and font-family values are mandatory.</td><td></td></tr>
-<tr><td>textDecoration</td><td></td><td>entero largo</td><td>Specifies the decoration added to text.</td><td><code>vk text decoration double underline</code>, <code>vk text decoration line through</code>, <code>vk text decoration none</code>, <code>vk text decoration overline</code>, <code>vk text decoration underline</code></td></tr>
+<tr><td>textDecoration</td><td></td><td>entero largo</td><td>Especifica la decoración añadida al texto.</td><td><code>vk text decoration double underline</code>, <code>vk text decoration line through</code>, <code>vk text decoration none</code>, <code>vk text decoration overline</code>, <code>vk text decoration underline</code></td></tr>
 <tr><td>textIndent</td><td></td><td>entero largo</td><td>Define la unidad de indentación del texto. 1 = 8 píxeles</td><td></td></tr>
-<tr><td>textOrientation</td><td></td><td>entero largo</td><td>Defines the rotation angle of the text in a cell. Número entre -90 y 90</td><td></td></tr>
-<tr><td>marca de agua</td><td></td><td>texto</td><td>Defines the watermark (cell label) content</td><td></td></tr>
-<tr><td>wordWrap</td><td></td><td>booleano</td><td>Specifies if text should be wrapped.</td><td>True = wrapped text, False = unwrapped text</td></tr>
+<tr><td>textOrientation</td><td></td><td>entero largo</td><td>Define el ángulo de rotación del texto en una celda. Número entre -90 y 90</td><td></td></tr>
+<tr><td>marca de agua</td><td></td><td>texto</td><td>Define el contenido de la marca de agua (etiqueta de la celda)</td><td></td></tr>
+<tr><td>wordWrap</td><td></td><td>booleano</td><td>Specifies if text should be wrapped.</td><td>True = texto ajustado, False = texto no ajustado</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="disposición"></a><a href="#disposición" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disposición</h4>
@@ -537,11 +537,11 @@
 </thead>
 <tbody>
 <tr><td>cellPadding</td><td>texto</td><td>Define el relleno de la celda</td><td></td></tr>
-<tr><td>hAlign</td><td>entero largo</td><td>Defines the horizontal alignment of cell contents.</td><td><code>vk horizontal align center</code>, <code>vk horizontal align general</code>, <code>vk horizontal align left</code>, <code>vk horizontal align right</code></td></tr>
+<tr><td>hAlign</td><td>entero largo</td><td>Define la alineación horizontal del contenido de la celda.</td><td><code>vk horizontal align center</code>, <code>vk horizontal align general</code>, <code>vk horizontal align left</code>, <code>vk horizontal align right</code></td></tr>
 <tr><td>locked</td><td>booleano</td><td>Specifies cell protection status. Note, this is only available if <a href="#sheet-protection">sheet protection</a> is enabled.</td><td>True = bloqueado, False = desbloqueado.</td></tr>
-<tr><td>shrinkToFit</td><td>booleano</td><td>Specifies if the contents of the cell should be reduced.</td><td>True = reduced content, False = no reduction.</td></tr>
+<tr><td>shrinkToFit</td><td>booleano</td><td>Specifies if the contents of the cell should be reduced.</td><td>True = contenido reducido, False = sin reducción.</td></tr>
 <tr><td>tabStop</td><td>booleano</td><td>Specifies if the focus to the cell can be set using the Tab key.</td><td>True = Tab key sets focus, False = Tab key does not set focus.</td></tr>
-<tr><td>vAlign</td><td>entero largo</td><td>Specifies the vertical alignment of cell contents.</td><td><code>vk vertical align bottom</code>, <code>vk vertical align center</code>, <code>vk vertical align top</code></td></tr>
+<tr><td>vAlign</td><td>entero largo</td><td>Especifica la alineación vertical del contenido de la celda.</td><td><code>vk vertical align bottom</code>, <code>vk vertical align center</code>, <code>vk vertical align top</code></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="style-information"></a><a href="#style-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Style information</h4>
@@ -551,12 +551,12 @@
 </thead>
 <tbody>
 <tr><td>name</td><td>texto</td><td>Defines the name of the style</td></tr>
-<tr><td>parentName</td><td>texto</td><td>Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet.</td></tr>
+<tr><td>parentName</td><td>texto</td><td>Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Sólo está disponible cuando se utiliza una hoja de estilo.</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="objeto-4d-view-pro"></a><a href="#objeto-4d-view-pro" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto 4D View Pro</h2>
-<p>The 4D View Pro <a href="/docs/Rx/es/Concepts/object.html">object</a> stores the whole spreadsheet contents. It is automatically handled by 4D View Pro. You can set or get this object using the <a href="/docs/Rx/es/ViewPro/method-list.html#vp-import-from-object">VP IMPORT FROM OBJECT</a> or <a href="/docs/Rx/es/ViewPro/method-list.html#vp-export-to-object">VP Export to object</a> methods.</p>
-<p>It contains the following properties:</p>
+<p>The 4D View Pro <a href="/docs/Rx/es/Concepts/object.html">object</a> stores the whole spreadsheet contents. Es manejado automáticamente por 4D View Pro. You can set or get this object using the <a href="/docs/Rx/es/ViewPro/method-list.html#vp-import-from-object">VP IMPORT FROM OBJECT</a> or <a href="/docs/Rx/es/ViewPro/method-list.html#vp-export-to-object">VP Export to object</a> methods.</p>
+<p>Contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo de valor</th><th>Descripción</th></tr>
@@ -565,16 +565,16 @@
 <tr><td>version</td><td>Entero largo</td><td>Versión del componente interno</td></tr>
 <tr><td>dateCreation</td><td>Timestamp</td><td>Creation date</td></tr>
 <tr><td>dateModified</td><td>Timestamp</td><td>Last modification date</td></tr>
-<tr><td>meta</td><td>Objeto</td><td>Free contents, reserved for the 4D developer</td></tr>
+<tr><td>meta</td><td>Objeto</td><td>Contenido gratuito, reservado para el desarrollador 4D</td></tr>
 <tr><td>spreadJS</td><td>Objeto</td><td>Reservado para el componente 4D View Pro</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="4d-view-pro-form-object-variable"></a><a href="#4d-view-pro-form-object-variable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D View Pro Form Object Variable</h2>
 <p>The 4D View Pro form object variable is the <a href="/docs/Rx/es/Concepts/object.html">object</a> variable associated to the 4D View Pro form area. It manages information used by the 4D View Pro object.</p>
 <blockquote>
-<p>The 4D View Pro form object variable is for information purposes only (i.e., debugging). Under no circumstances should it be modified.</p>
+<p>The 4D View Pro form object variable is for information purposes only (i.e., debugging). Bajo ninguna circunstancia debe modificarse.</p>
 </blockquote>
-<p>It contains the following properties:</p>
+<p>Contiene las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo de valor</th><th>Descripción</th></tr>
@@ -584,7 +584,7 @@
 <tr><td>ViewPro.callbacks</td><td>Objeto</td><td>Stores temporary information necessary for commands requiring callbacks such as importing and exporting.</td></tr>
 <tr><td>ViewPro.commandBuffers</td><td>Collection</td><td>Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the <a href="/docs/Rx/es/ViewPro/method-list.html#vp-flush-commands">VP FLUSH COMMANDS</a> is called. This mechanism increases performance by reducing the number of requests sent.</td></tr>
 <tr><td>ViewPro.events</td><td>Objeto</td><td><a href="#form-events">Event</a> list.</td></tr>
-<tr><td>ViewPro.formulaBar</td><td>Booleano</td><td>Indicates whether or not the formula bar is displayed. Available only for the &quot;toolbar&quot; interface.</td></tr>
+<tr><td>ViewPro.formulaBar</td><td>Booleano</td><td>Indicates whether or not the formula bar is displayed. Disponible sólo para la interfaz de la &quot;barra de herramientas&quot;.</td></tr>
 <tr><td>ViewPro.inited</td><td>Booleano</td><td>Indicates whether or not the 4D View Pro area has been initialized (see <a href="/docs/Rx/es/Events/onVpReady.html">On VP Ready</a> event).</td></tr>
 <tr><td>ViewPro.interface</td><td>Texto</td><td>Specifies the type of user interface:&quot;ribbon&quot;, &quot;toolbar&quot;, &quot;none&quot;.</td></tr>
 </tbody>
