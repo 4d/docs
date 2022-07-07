@@ -161,7 +161,7 @@
 <tr><td>fk database folder</td><td>4</td><td>Filesystem asociado: &quot;/PACKAGE&quot;</td></tr>
 <tr><td>fk desktop folder</td><td>115</td><td></td></tr>
 <tr><td>fk documents folder</td><td>117</td><td>Carpeta Documentos del usuario</td></tr>
-<tr><td>fk licenses folder</td><td>1</td><td>Folder containing the machine's 4D license files</td></tr>
+<tr><td>fk licenses folder</td><td>1</td><td>Carpeta que contiene los archivos de licencia 4D de la máquina</td></tr>
 <tr><td>fk logs folder</td><td>7</td><td>Filesystem asociado: &quot;/LOGS&quot;</td></tr>
 <tr><td>fk mobileApps folder</td><td>10</td><td></td></tr>
 <tr><td>fk remote database folder</td><td>3</td><td>4D database folder created on each 4D remote machine</td></tr>
@@ -187,7 +187,7 @@
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>4D.Folder.new()</code> function creates and returns a new object of the <code>4D.Folder</code> type. It is identical to the <a href="#folder"><code>Folder</code></a> command (shortcut).</p>
 <blockquote>
-<p>It is recommended to use the <a href="#folder"><code>Folder</code></a> shortcut command instead of <code>4D.Folder.new()</code>.</p>
+<p>Se recomienda utilizar el comando de acceso directo<a href="#folder"><code>Folder&lt;</code></a> en lugar de <code>4D.Folder.new()</code>.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="copyto"></a><a href="#copyto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.copyTo()</h2>
 <p><details><summary>Histórico</summary></p>
@@ -258,8 +258,8 @@
 <p>If necessary, the function creates the folder hierachy as described in the <a href="#platformpath">platformPath</a> or <a href="#path">path</a> properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.</p>
 <p><strong>Valor devuelto</strong></p>
 <ul>
-<li><strong>True</strong> if the folder is created successfully;</li>
-<li><strong>False</strong> if a folder with the same name already exists or if an error occured.</li>
+<li><strong>True</strong> si la carpeta se crea con éxito;</li>
+<li><strong>False</strong> si ya existe una carpeta con el mismo nombre o si ha ocurrido un error.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-1"></a><a href="#ejemplo-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
 <p>Cree una carpeta vacía en la carpeta de la base:</p>
@@ -295,7 +295,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Destination folder for the alias or shortcut</td></tr>
+<tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Carpeta de destino para el alias o el acceso directo</td></tr>
 <tr><td>aliasName</td><td>Texto</td><td>-&gt;</td><td>Nombre del alias o del atajo</td></tr>
 <tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>Tipo de enlace del alias</td></tr>
 <tr><td>Resultado</td><td>4D.File</td><td>&lt;-</td><td>Referencia de alias o de acceso directo</td></tr>
@@ -380,20 +380,20 @@ End if</span>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td><code>Delete only if empty</code></td><td>0</td><td>Deletes folder only when it is empty</td></tr>
-<tr><td><code>Delete with contents</code></td><td>1</td><td>Deletes folder along with everything it contains</td></tr>
+<tr><td><code>Delete only if empty</code></td><td>0</td><td>Elimina la carpeta sólo cuando está vacía</td></tr>
+<tr><td><code>Delete with contents</code></td><td>1</td><td>Elimina la carpeta junto con todo lo que contiene</td></tr>
 </tbody>
 </table>
 <p>When <code>Delete only if empty</code> is passed or if you omit the option parameter:</p>
 <ul>
-<li>The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.</li>
-<li>If the folder does not exist, the error -120 is generated.</li>
+<li>La carpeta sólo se elimina si está vacía; en caso contrario, el comando no hace nada y se genera un error -47.</li>
+<li>Si la carpeta no existe, se genera el error -120.</li>
 </ul>
-<p>When <code>Delete with contents</code> is passed:</p>
+<p>Cuando se pasa <code>Delete with contents</code>:</p>
 <ul>
-<li>The folder, along with all of its contents, is deleted. <strong>Warning</strong>: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.</li>
-<li>If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the <code>GET LAST ERROR STACK</code> command to retrieve the name and path of the offending file.</li>
-<li>If the folder does not exist, the command does nothing and no error is returned. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)</li>
+<li>La carpeta, junto con todo su contenido, se elimina. <strong>Advertencia</strong>: incluso esta carpeta y/o su contenido estén bloqueados o definidos como de sólo lectura, si el usuario actual tiene los derechos de acceso adecuados, la carpeta (y su contenido) aún se elimina.</li>
+<li>Si esta carpeta, o cualquiera de los archivos que contiene, no puede ser eliminada, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible y se devuelve un error(*). En este caso, la carpeta puede ser eliminada sólo parcialmente. Cuando se interrumpe el borrado, puede utilizar el comando <code>GET LAST ERROR STACK</code> para recuperar el nombre y la ruta de acceso del archivo infractor.</li>
+<li>Si la carpeta no existe, el comando no hace nada y no devuelve ningún error. (*) Windows: -54 (Intento de abrir un archivo bloqueado para escribir) macOS: -45 (El archivo está bloqueado o la ruta no es correcta)</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="exists"></a><a href="#exists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.exists</h2>
 <p><details><summary>Histórico</summary></p>

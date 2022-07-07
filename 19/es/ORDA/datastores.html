@@ -70,7 +70,7 @@
 <ul>
 <li>4D remote applications using ORDA to access the main datastore with the <code>ds</code> command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the <strong>4D application server</strong>.</li>
 <li>Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the <code>Open datastore</code> command. These accesses are handled by the <strong>HTTP REST server</strong>.</li>
-<li>4D for iOS queries for updating iOS applications. These accesses are handled by the <strong>HTTP server</strong>.</li>
+<li>Las peticiones 4D for iOS para actualizar las aplicaciones iOS. These accesses are handled by the <strong>HTTP server</strong>.</li>
 </ul>
 <p>When you work with a remote datastore referenced through calls to the <code>Open datastore</code> command, the connection between the requesting processes and the remote datastore is handled via sessions.</p>
 <h2><a class="anchor" aria-hidden="true" id="apertura-de-las-sesiones"></a><a href="#apertura-de-las-sesiones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Apertura de las sesiones</h2>
@@ -104,7 +104,7 @@
 <li>Locks on entities are removed and transactions are rollbacked:
 <ul>
 <li>when the process is killed.</li>
-<li>when the session is closed on the server</li>
+<li>cuando la sesión se cierra en el servidor</li>
 <li>when the session is killed from the server administration window.</li>
 </ul></li>
 </ul>

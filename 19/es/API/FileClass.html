@@ -165,7 +165,7 @@
 <tr><td>Backup settings file</td><td>1</td><td>Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto</td></tr>
 <tr><td>Backup settings file for data</td><td>17</td><td>archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data</td></tr>
 <tr><td>Build application log file</td><td>14</td><td>Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Build application settings file</td><td>20</td><td>Default settings file of the application builder (&quot;buildApp.4DSettings&quot;). Stored in the Settings folder of the project.</td></tr>
+<tr><td>Build application settings file</td><td>20</td><td>Default settings file of the application builder (&quot;buildApp.4DSettings&quot;). Almacenado en la carpeta Settings del proyecto.</td></tr>
 <tr><td>Compacting log file</td><td>6</td><td>Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>Current backup settings file</td><td>18</td><td>backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file</td></tr>
 <tr><td>Debug log file</td><td>12</td><td>Log file created by the <code>SET DATABASE PARAMETER(Debug log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
@@ -273,8 +273,8 @@
 <p>If necessary, the function creates the folder hierachy as described in the <a href="#platformpath">platformPath</a> or <a href="#path">path</a> properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.</p>
 <p><strong>Valor devuelto</strong></p>
 <ul>
-<li><strong>True</strong> if the file is created successfully;</li>
-<li><strong>False</strong> if a file with the same name already exists or if an error occured.</li>
+<li><strong>True</strong> si el archivo se crea con éxito;</li>
+<li><strong>False</strong> si ya existe un archivo con el mismo nombre o si ha ocurrido un error.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>Creation of a preferences file in the database folder:</p>
@@ -298,7 +298,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Destination folder for the alias or shortcut</td></tr>
+<tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Carpeta de destino para el alias o el acceso directo</td></tr>
 <tr><td>aliasName</td><td>Texto</td><td>-&gt;</td><td>Name of the alias or shortcut</td></tr>
 <tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>Tipo de enlace del alias</td></tr>
 <tr><td>Resultado</td><td>4D.File</td><td>&lt;-</td><td>Referencia del archivo del alias o de atajo</td></tr>
@@ -375,7 +375,7 @@
 <p>If the file is currently open, an error is generated.</p>
 <p>If the file does not exist on disk, the function does nothing (no error is generated).</p>
 <blockquote>
-<p><strong>WARNING</strong>: <code>.delete( )</code> can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. <code>.delete( )</code> should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.</p>
+<p><strong>ATENCIÓN</strong>: <code>.delete( )</code> puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. <code>.delete( )</code> debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to delete a specific file in the database folder:</p>
@@ -455,11 +455,11 @@
 <p>The <code>.getAppInfo()</code> function returns the contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file information as an object.</p>
 <p>The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).</p>
 <blockquote>
-<p>The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.</p>
+<p>La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.</p>
 </blockquote>
-<p><strong>Returned object with a .exe or .dll file</strong></p>
+<p><strong>Objeto devuelto con un archivo .exe o .dll</strong></p>
 <blockquote>
-<p>Reading a .exe or .dll is only possible on Windows.</p>
+<p>La lectura de un .exe o .dll sólo es posible en Windows.</p>
 </blockquote>
 <p>Todos los valores de propiedades son de tipo Texto.</p>
 <table>
@@ -763,7 +763,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <h4><a class="anchor" aria-hidden="true" id="descripción-22"></a><a href="#descripción-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.moveTo()</code> function moves or renames the <code>File</code> object into the specified <em>destinationFolder</em>.</p>
 <p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
-<p>By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the <em>newName</em> parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error.</p>
+<p>Por defecto, el archivo conserva su nombre cuando se mueve. If you want to rename the moved file, pass the new full name in the <em>newName</em> parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>El objeto <code>File</code> movido.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-8"></a><a href="#ejemplo-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -907,7 +907,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <p>The <code>.setAppInfo()</code> function writes the <em>info</em> properties as information contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file.</p>
 <p>The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.</p>
 <blockquote>
-<p>The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.</p>
+<p>La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.</p>
 </blockquote>
 <p><strong><em>info</em> parameter object with a .exe or .dll file</strong></p>
 <blockquote>
@@ -931,7 +931,7 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </table>
 <p>If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.</p>
 <p><strong><em>info</em> parameter object with a .plist file</strong></p>
-<p>Each valid property set in the <em>info</em> object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Value types are preserved when possible.</p>
+<p>Each valid property set in the <em>info</em> object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Los tipos de valores se conservan cuando es posible.</p>
 <p>If a key set in the <em>info</em> parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.</p>
 <blockquote>
 <p>To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds (&quot;2003-02-01T01:02:03Z&quot;) like in the Xcode plist editor.</p>
@@ -1028,10 +1028,10 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </thead>
 <tbody>
 <tr><td><code>Document unchanged</code></td><td>0</td><td>Sin procesar</td></tr>
-<tr><td><code>Document with native format</code></td><td>1</td><td>(Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows</td></tr>
-<tr><td><code>Document with CRLF</code></td><td>2</td><td>Line breaks are converted to CRLF (carriage return + line feed), the default Windows format</td></tr>
-<tr><td><code>Document with CR</code></td><td>3</td><td>Line breaks are converted to CR (carriage return), the default Classic Mac OS format</td></tr>
-<tr><td><code>Document with LF</code></td><td>4</td><td>Line breaks are converted to LF (line feed), the default Unix and macOS format</td></tr>
+<tr><td><code>Document with native format</code></td><td>1</td><td>(Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows</td></tr>
+<tr><td><code>Document with CRLF</code></td><td>2</td><td>Los saltos de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows</td></tr>
+<tr><td><code>Document with CR</code></td><td>3</td><td>Los saltos de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS</td></tr>
+<tr><td><code>Document with LF</code></td><td>4</td><td>Los saltos de línea se convierten en LF (salto de línea), el formato por defecto de Unix y macOS</td></tr>
 </tbody>
 </table>
 <p>Por defecto, cuando se omite el parámetro <em>breakMode</em>, los saltos de línea se procesan en modo nativo (1).</p>

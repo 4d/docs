@@ -223,8 +223,8 @@ Function</span><span class="hljs-function"> getFullname</span>()-&gt;<span class
 <p>For a class function, the <code>Current method name</code> command returns: <code>&lt;ClassName&gt;.&lt;FunctionName&gt;</code>, for example &quot;MyClass.myMethod&quot;.</p>
 <p>In the application code, class functions are called as member methods of the object instance and can receive <a href="#class-function-parameters">parameters</a> if any. Se soportan las siguientes sintaxis:</p>
 <ul>
-<li>use of the <code>()</code> operator. For example, <code>myObject.methodName(&quot;hello&quot;)</code></li>
-<li>use of a &quot;4D.Function&quot; class member method:
+<li>utilización del operador <code>()</code>. For example, <code>myObject.methodName(&quot;hello&quot;)</code></li>
+<li>utilización de un método miembro de la clase &quot;4D.Function&quot;:
 <ul>
 <li><a href="/docs/19/es/API/FunctionClass.html#apply"><code>apply()</code></a></li>
 <li><a href="/docs/19/es/API/FunctionClass.html#call"><code>call()</code></a></li>
@@ -301,11 +301,11 @@ var</span> <span class="hljs-variable">$o </span>: cs.MyClass
 Class extends</span> &lt;ParentClass&gt;
 </code></pre>
 <p>The <code>Class extends</code> keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.</p>
-<p>Class extension must respect the following rules:</p>
+<p>La extensión de clase debe respetar las siguientes reglas:</p>
 <ul>
 <li>A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)</li>
 <li>A user class cannot extend a user class from another project or component.</li>
-<li>A user class cannot extend itself.</li>
+<li>Una clase usuario no puede extenderse a sí misma.</li>
 <li>It is not possible to extend classes in a circular way (i.e. &quot;a&quot; extends &quot;b&quot; that extends &quot;a&quot;).</li>
 </ul>
 <p>Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and <code>check syntax</code> will throw an error in this case.</p>
@@ -340,17 +340,17 @@ Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>param</td><td>mixto</td><td>-&gt;</td><td>Parameter(s) to pass to the parent constructor</td></tr>
+<tr><td>param</td><td>mixto</td><td>-&gt;</td><td>Parámetro(s) a pasar al constructor de la clase padre</td></tr>
 <tr><td>Resultado</td><td>objeto</td><td>&lt;-</td><td>Padre del objeto</td></tr>
 </tbody>
 </table>
 <p>The <code>Super</code> keyword allows calls to the <code>superclass</code>, i.e. the parent class.</p>
-<p><code>Super</code> serves two different purposes:</p>
+<p><code>Super</code> tiene dos propósitos diferentes:</p>
 <ol>
 <li>Inside a <a href="#class-constructor">constructor code</a>, <code>Super</code> is a command that allows to call the constructor of the superclass. When used in a constructor, the <code>Super</code> command appears alone and must be used before the <code>This</code> keyword is used.</li>
 </ol>
 <ul>
-<li>If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.</li>
+<li>If all class constructors in the inheritance tree are not properly called, error -10748 is generated. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.</li>
 <li>If the <code>This</code> command is called on an object whose superclasses have not been constructed, error -10743 is generated.</li>
 <li>If <code>Super</code> is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.</li>
 </ul>
@@ -421,7 +421,7 @@ Function</span><span class="hljs-function"> description</span>()<span class="hlj
     var</span> <span class="hljs-variable">$0 </span>: Text
     <span class="hljs-variable">$0</span>:=Super.<span class="hljs-function">nbSides</span>()+<span class="hljs-string">" which are all equal"</span>
 </code></pre>
-<p>Then you can write in a project method:</p>
+<p>Entonces puede escribir en un método proyecto:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$square </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$message </span>: Text
 <span class="hljs-variable">$square</span>:=cs.Square.<span class="hljs-function">new</span>()
@@ -467,7 +467,7 @@ Class Constructor
 Function</span> f()
     <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.a+<span class="hljs-literal">This</span>.b
 </code></pre>
-<p>Then you can write in a project method:</p>
+<p>Entonces puede escribir en un método proyecto:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=cs.ob.<span class="hljs-function">new</span>()
 <span class="hljs-variable">$o</span>.a:=<span class="hljs-number">5</span>
 <span class="hljs-variable">$o</span>.b:=<span class="hljs-number">3</span>

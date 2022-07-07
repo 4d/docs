@@ -268,18 +268,18 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>area</td><td>texto</td><td>List box object area (&quot;header&quot;, &quot;footer&quot;, &quot;cell&quot;)</td></tr>
+<tr><td>area</td><td>texto</td><td>Área de objeto list box (&quot;header&quot;, &quot;footer&quot;, &quot;cell&quot;)</td></tr>
 <tr><td>areaName</td><td>texto</td><td>Nombre del área</td></tr>
 <tr><td>column</td><td>entero largo</td><td>Número de columna</td></tr>
 <tr><td>columnName</td><td>texto</td><td>Nombre de la columna</td></tr>
 <tr><td>footerName</td><td>texto</td><td>Nombre del pie</td></tr>
 <tr><td>headerName</td><td>texto</td><td>Nombre del encabezado</td></tr>
 <tr><td>horizontalScroll</td><td>entero largo</td><td>Positive if scroll is towards the right, negative if towards the left</td></tr>
-<tr><td>isRowSelected</td><td>booleano</td><td>True if row is selected, else False</td></tr>
+<tr><td>isRowSelected</td><td>booleano</td><td>True si la línea está seleccionada, de lo contrario False</td></tr>
 <tr><td>newPosition</td><td>entero largo</td><td>New position of the column or row</td></tr>
 <tr><td>newSize</td><td>entero largo</td><td>Nuevo tamaño (en píxeles) de la columna o línea</td></tr>
-<tr><td>oldPosition</td><td>entero largo</td><td>Previous position of the column or row</td></tr>
-<tr><td>oldSize</td><td>entero largo</td><td>Previous size (in pixels) of the column or row</td></tr>
+<tr><td>oldPosition</td><td>entero largo</td><td>Posición anterior de la columna o línea</td></tr>
+<tr><td>oldSize</td><td>entero largo</td><td>Tamaño anterior (en píxeles) de la columna o línea</td></tr>
 <tr><td>row</td><td>entero largo</td><td>Número de línea</td></tr>
 <tr><td>verticalScroll</td><td>entero largo</td><td>Positive if scroll is towards the bottom, negative if towards the top</td></tr>
 </tbody>
@@ -375,8 +375,8 @@
 <p>In order to preserve data consistency for selection type and entity selection type list boxes, any modified record/entity is automatically saved as soon as the cell is validated, i.e.:</p>
 <ul>
 <li>when the the cell is deactivated (user presses tab, clicks, etc.)</li>
-<li>when the listbox is no longer focused,</li>
-<li>when the form is no longer focused.</li>
+<li>cuando el listbox ya no tiene el foco,</li>
+<li>cuando el formulario ya no tiene el foco.</li>
 </ul>
 <p>The typical sequence of events generated during data entry or modification is as follows:</p>
 <table>
@@ -390,9 +390,9 @@
 <tr><td></td><td>Todos</td><td>On After Keystroke</td></tr>
 <tr><td></td><td>Todos</td><td>On After Edit</td></tr>
 <tr><td>Un usuario valida y abandona la celda</td><td>List box de tipo selección</td><td>Guardar</td></tr>
-<tr><td></td><td>List box de tipo selección de registro</td><td>On saving an existing record trigger (if set)</td></tr>
+<tr><td></td><td>List box de tipo selección de registro</td><td>Activación de On saving an existing record (si definido)</td></tr>
 <tr><td></td><td>List box de tipo selección</td><td>On Data Change(*)</td></tr>
-<tr><td></td><td>List box de tipo selección de entidades</td><td>Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. If the save operation fails, an error is displayed</td></tr>
+<tr><td></td><td>List box de tipo selección de entidades</td><td>Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. Si la operación de guardado falla, se mostrará un error</td></tr>
 <tr><td></td><td>Todos</td><td>On Losing Focus</td></tr>
 </tbody>
 </table>
@@ -493,7 +493,7 @@
 <p>In hierarchical list boxes, break rows cannot be highlighted when the <a href="/docs/19/es/FormObjects/propertiesAppearance.html#hide-selection-highlight">Hide selection highlight</a> option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="gestión-de-ordenaciones"></a><a href="#gestión-de-ordenaciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestión de ordenaciones</h2>
-<p>A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.</p>
+<p>Un orden en un list box puede ser estándar o personalizado. When a column of a list box is sorted, all other columns are always synchronized automatically.</p>
 <h3><a class="anchor" aria-hidden="true" id="ordenación-estándar"></a><a href="#ordenación-estándar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ordenación estándar</h3>
 <p>By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.</p>
 <p>You can enable or disable standard user sorts by disabling the <a href="/docs/19/es/FormObjects/propertiesAction.html#sortable">Sortable</a> property of the list box (enabled by default).</p>
@@ -503,7 +503,7 @@
 <tr><th>List box type</th><th>Support of standard sort</th><th>Comentarios</th></tr>
 </thead>
 <tbody>
-<tr><td>Colección de objetos</td><td>Sí</td><td><li>&quot;This.a&quot; or &quot;This.a.b&quot; columns are sortable.</li><li>The <a href="/docs/19/es/FormObjects/propertiesObject.html#variable-or-expression">list box source property</a> must be an <a href="/docs/19/es/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li></td></tr>
+<tr><td>Colección de objetos</td><td>Sí</td><td><li>Las columnas &quot;This.a&quot; o &quot;This.a.b&quot; son ordenables.</li><li>The <a href="/docs/19/es/FormObjects/propertiesObject.html#variable-or-expression">list box source property</a> must be an <a href="/docs/19/es/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li></td></tr>
 <tr><td>Colección de valores escalares</td><td>No</td><td>Use custom sort with <a href="/docs/19/es/API/CollectionClass.html#orderby"><code>orderBy()</code></a> function</td></tr>
 <tr><td>Entity selection</td><td>Sí</td><td><li>The <a href="/docs/19/es/FormObjects/propertiesObject.html#variable-or-expression">list box source property</a> must be an <a href="/docs/19/es/Concepts/quick-tour.html#assignable-vs-non-assignable-expressions">assignable expression</a>.</li><li>Supported: sorts on object attribute properties (e.g. &quot;This.data.city&quot; when &quot;data&quot; is an object attribute)</li><li>Supported: sorts on related attributes (e.g. &quot;This.company.name&quot;)</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. &quot;This.company.data.city&quot;). For this, you need to use custom sort with <a href="/docs/19/es/API/EntitySelectionClass.html#orderbyformula"><code>orderByFormula()</code></a> function (see example below)</li></td></tr>
 <tr><td>Selección actual</td><td>Sí</td><td>Only simple expressions are sortable (e.g. <code>[Table_1]Field_2</code>)</td></tr>
@@ -551,7 +551,7 @@ End if</span>
 <blockquote>
 <p>The <a href="https://doc.4d.com/4dv19/help/command/en/page236.html"><code>OBJECT SET FORMAT</code></a> command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.</p>
 </blockquote>
-<h2><a class="anchor" aria-hidden="true" id="managing-row-colors-styles-and-display"></a><a href="#managing-row-colors-styles-and-display" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing row colors, styles, and display</h2>
+<h2><a class="anchor" aria-hidden="true" id="gestión-de-los-colores-estilos-y-visualización-de-las-líneas"></a><a href="#gestión-de-los-colores-estilos-y-visualización-de-las-líneas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestión de los colores, estilos y visualización de las líneas</h2>
 <p>There are several different ways to set background colors, font colors and font styles for list boxes:</p>
 <ul>
 <li>at the level of the <a href="#list-box-objects">list box object properties</a>,</li>
@@ -577,12 +577,12 @@ End if</span>
 <p>For example, if you set a font style in the list box properties and another using a style array for the column, the latter one will be taken into account.</p>
 <p>For each attribute (style, color and background color), an <strong>inheritance</strong> is implemented when the default value is used:</p>
 <ul>
-<li>for cell attributes: attribute values of rows</li>
-<li>for row attributes: attribute values of columns</li>
+<li>para los atributos de las celdas: valores de atributos de las líneas</li>
+<li>para los atributos líneas: valores de atributos de columnas</li>
 <li>for column attributes: attribute values of the list box</li>
 </ul>
 <p>This way, if you want an object to inherit the attribute value from a higher level, you can use pass the <code>lk inherited</code> constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors: <img src="/docs/19/assets/en/FormObjects/listbox_styles3.png" alt=""></p>
-<p>You perform the following modifications:</p>
+<p>Realiza las siguientes modificaciones:</p>
 <ul>
 <li>change the background of row 2 to red using the <a href="/docs/19/es/FormObjects/propertiesBackgroundAndBorder.html#row-background-color-array">Row Background Color Array</a> property of the list box object,</li>
 <li>change the style of row 4 to italics using the <a href="/docs/19/es/FormObjects/propertiesText.html#row-style-array">Row Style Array</a> property of the list box object,</li>
@@ -612,7 +612,7 @@ End if</span>
 <h2><a class="anchor" aria-hidden="true" id="imprimir-list-boxes"></a><a href="#imprimir-list-boxes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Imprimir list boxes</h2>
 <p>Two printing modes are available: <strong>preview mode</strong> - which can be used to print a list box like a form object, and <strong>advanced mode</strong> - which lets you control the printing of the list box object itself within the form. Note that the &quot;Printing&quot; appearance is available for list box objects in the Form editor.</p>
 <h3><a class="anchor" aria-hidden="true" id="modo-de-vista-previa"></a><a href="#modo-de-vista-previa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modo de vista previa</h3>
-<p>Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the <strong>Print</strong> menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.</p>
+<p>Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the <strong>Print</strong> menu command. El list box se imprime tal como está en el formulario. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.</p>
 <h3><a class="anchor" aria-hidden="true" id="modo-avanzado"></a><a href="#modo-avanzado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modo avanzado</h3>
 <p>In this mode, the printing of list boxes is carried out by programming, via the <code>Print object</code> command (project forms and table forms are supported). The <code>LISTBOX GET PRINT INFORMATION</code> command is used to control the printing of the object.</p>
 <p>En este modo:</p>
@@ -647,7 +647,7 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="crear-una-jerarquía-mediante-el-menú-contextual"></a><a href="#crear-una-jerarquía-mediante-el-menú-contextual" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Crear una jerarquía mediante el menú contextual</h4>
 <p>When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the <strong>Create hierarchy</strong> command is available in the context menu:</p>
 <p><img src="/docs/19/assets/en/FormObjects/listbox_hierarchy1.png" alt=""></p>
-<p>This command is a shortcut to define a hierarchy. Cuando se selecciona, se llevan a cabo las siguientes acciones:</p>
+<p>Este comando es un acceso directo para definir una jerarquía. Cuando se selecciona, se llevan a cabo las siguientes acciones:</p>
 <ul>
 <li>The <strong>Hierarchical list box</strong> option is checked for the object in the Property List.</li>
 <li>Las variables de las columnas se utilizan para definir la jerarquía. Reemplazan las variables ya definidas.</li>
@@ -708,8 +708,8 @@ End if</span>
 <p>Si una o más líneas están ocultas porque sus padres están contraídos, ya no se seleccionan. Sólo se pueden seleccionar las líneas visibles (directamente o por desplazamiento). En otras palabras, las líneas no pueden estar ocultas y seleccionadas a la vez.</p>
 </blockquote>
 <p>Al igual que con las selecciones, el comando <code>LISTBOX GET CELL POSITION</code> devolverá los mismos valores para un list box jerárquico y un list box no jerárquico. Esto significa que en los dos ejemplos siguientes, <code>LISTBOX GET CELL POSITION</code> devolverá la misma posición: (3;2).</p>
-<p><em>Non-hierarchical representation:</em> <img src="/docs/19/assets/en/FormObjects/hierarch9.png" alt=""></p>
-<p><em>Hierarchical representation:</em> <img src="/docs/19/assets/en/FormObjects/hierarch10.png" alt=""></p>
+<p><em>Representación no jerárquica:</em> <img src="/docs/19/assets/en/FormObjects/hierarch9.png" alt=""></p>
+<p><em>Representación jerárquica:</em> <img src="/docs/19/assets/en/FormObjects/hierarch10.png" alt=""></p>
 <p>When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. En el ejemplo anterior, si las líneas 1 a 3 están ocultas, la línea de ruptura &quot;Bretaña&quot; no aparecerá.</p>
 <h4><a class="anchor" aria-hidden="true" id="líneas-de-quiebre"></a><a href="#líneas-de-quiebre" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Líneas de quiebre</h4>
 <p>Si el usuario selecciona una línea de ruptura, <code>LISTBOX GET CELL POSITION</code> devuelve la primera ocurrencia de la línea en el array correspondiente. En el caso siguiente:</p>
@@ -717,8 +717,8 @@ End if</span>
 <p>... <code>LISTBOX GET CELL POSITION</code> devuelve (2;4). Para seleccionar una línea de ruptura por programación, deberá utilizar el comando <code>LISTBOX SELECT BREAK</code>.</p>
 <p>Las líneas de rotura no se tienen en cuenta en los arrays internos utilizados para gestionar el aspecto gráfico de los list box (estilos y colores). No obstante, es posible modificar estas características para las líneas de ruptura mediante los comandos de gestión gráfica de los objetos. Basta con ejecutar los comandos adecuados en los arrays que constituyen la jerarquía.</p>
 <p>Dado, por ejemplo, el siguiente list box (los nombres de los arrays asociados se especifican entre paréntesis):</p>
-<p><em>Non-hierarchical representation:</em> <img src="/docs/19/assets/en/FormObjects/hierarch12.png" alt=""></p>
-<p><em>Hierarchical representation:</em> <img src="/docs/19/assets/en/FormObjects/hierarch13.png" alt=""></p>
+<p><em>Representación no jerárquica:</em> <img src="/docs/19/assets/en/FormObjects/hierarch12.png" alt=""></p>
+<p><em>Representación jerárquica:</em> <img src="/docs/19/assets/en/FormObjects/hierarch13.png" alt=""></p>
 <p>En modo jerárquico, los niveles de ruptura no son tenidos en cuenta por los arrays de modificación de estilo denominados <code>tStyle</code> y <code>tColors</code>. Para modificar el color o el estilo de los niveles de ruptura, debe ejecutar las siguientes instrucciones:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> OBJECT SET RGB COLORS</span>(T1;<span class="hljs-number">0x0000FF</span>;<span class="hljs-number">0xB0B0B0</span>)
 <span class="hljs-function"> OBJECT SET FONT STYLE</span>(T2;Bold)
@@ -759,7 +759,7 @@ End if</span>
 </code></pre>
 <p><img src="/docs/19/assets/en/FormObjects/listbox_column_objectArray_helloWorld.png" alt=""></p>
 <blockquote>
-<p>Display format and entry filters cannot be set for an object column. They automatically depend on the value type.</p>
+<p>Display format and entry filters cannot be set for an object column. Dependen automáticamente del tipo de valor.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="valuetype-y-visualización-de-datos"></a><a href="#valuetype-y-visualización-de-datos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>valueType y visualización de datos</h4>
 <p>When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:</p>
@@ -778,8 +778,8 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>texto</td><td>entrada de texto</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
-<tr><td>real</td><td>controlled text input (numbers and separators)</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
-<tr><td>integer</td><td>controlled text input (numbers only)</td><td>drop-down menu (required list) or combo box (choice list) or three-states check box</td></tr>
+<tr><td>real</td><td>entrada de texto controlada (números y separadores)</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
+<tr><td>integer</td><td>entrada de texto controlada (números únicamente)</td><td>drop-down menu (required list) or combo box (choice list) or three-states check box</td></tr>
 <tr><td>booleano</td><td>casilla de selección</td><td>drop-down menu (required list)</td></tr>
 <tr><td>color</td><td>color de fondo</td><td>texto</td></tr>
 <tr><td>evento</td><td>botón con etiqueta</td><td></td></tr>
@@ -788,7 +788,7 @@ End if</span>
 </table>
 <p>You set the cell display and options using specific attributes in each object (see below).</p>
 <h4><a class="anchor" aria-hidden="true" id="display-formats-and-entry-filters"></a><a href="#display-formats-and-entry-filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display formats and entry filters</h4>
-<p>You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:</p>
+<p>You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. Estos están listados en la siguiente tabla:</p>
 <table>
 <thead>
 <tr><th>Tipo de valor</th><th>Formato por defecto</th><th>Control de entrada</th></tr>
@@ -820,7 +820,7 @@ End if</span>
 <tr><td>requiredList</td><td>drop-down list defined in object</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>choiceList</td><td>combo box definido en objeto</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>requiredListReference</td><td>4D list ref, depends on &quot;saveAs&quot; value</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
-<tr><td>requiredListName</td><td>4D list name, depends on &quot;saveAs&quot; value</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
+<tr><td>requiredListName</td><td>Nombre de la lista 4D, depende del valor &quot;saveAs&quot;</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>saveAs</td><td>&quot;reference&quot; o &quot;value&quot;</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>choiceListReference</td><td>4D list ref, display combo box</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>choiceListName</td><td>4D list name, display combo box</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
@@ -832,7 +832,7 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="value"></a><a href="#value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>value</h4>
-<p>Cell values are stored in the &quot;value&quot; attribute. This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).</p>
+<p>Los valores de las celdas se almacenan en el atributo &quot;valor&quot;. This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//array columna </span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
  <span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span>
@@ -1063,7 +1063,7 @@ End if</span>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="event-valuetype"></a><a href="#event-valuetype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>event valueType</h4>
 <p>The &quot;event&quot; valueType displays a simple button that generates an <code>On Clicked</code> event when clicked. No se puede pasar ni devolver ningún dato o valor.</p>
-<p>Optionally, you can pass a &quot;label&quot; attribute.</p>
+<p>Opcionalmente, se puede pasar un atributo &quot;label&quot;.</p>
 <p>Ejemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$ob</span>)
 <span class="hljs-function">OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"valueType"</span>;<span class="hljs-string">"event"</span>)
@@ -1079,12 +1079,12 @@ End if</span>
 <li>en una lista desplegable</li>
 <li>en un área combo box</li>
 <li>in a unit button (switch from value x to value x+1)</li>
-<li>in a check box (switch between checked/unchecked)</li>
+<li>en una casilla de selección (cambia entre marcado/desmarcado)</li>
 </ul></li>
-<li><strong>On Clicked</strong>: When the user clicks on a button installed using the &quot;event&quot; <em>valueType</em> attribute, an <code>On Clicked</code> event will be generated. This event is managed by the programmer.</li>
-<li><strong>On Alternative Click</strong>: When the user clicks on an ellipsis button (&quot;alternateButton&quot; attribute), an <code>On Alternative Click</code> event will be generated. This event is managed by the programmer.</li>
+<li><strong>On Clicked</strong>: When the user clicks on a button installed using the &quot;event&quot; <em>valueType</em> attribute, an <code>On Clicked</code> event will be generated. Este evento es gestionado por el programador.</li>
+<li><strong>On Alternative Click</strong>: When the user clicks on an ellipsis button (&quot;alternateButton&quot; attribute), an <code>On Alternative Click</code> event will be generated. Este evento es gestionado por el programador.</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/es/FormObjects/listOverview.html"><span class="arrow-prev">← </span><span>Lista jerárquica</span></a><a class="docs-next button" href="/docs/19/es/FormObjects/pictureButtonOverview.html"><span>Botón Imagen</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#generalidades">Generalidades</a><ul class="toc-headings"><li><a href="#principios-de-utilización-básicos">Principios de utilización básicos</a></li><li><a href="#partes-de-list-box">Partes de list box</a></li><li><a href="#tipos-de-list-box">Tipos de list box</a></li><li><a href="#gestión-de-list-boxes">Gestión de list boxes</a></li></ul></li><li><a href="#objetos-tipo-list-box">Objetos tipo List box</a><ul class="toc-headings"><li><a href="#list-box-de-tipo-array">List box de tipo array</a></li><li><a href="#list-box-de-tipo-selección">List box de tipo selección</a></li><li><a href="#list-box-colección-o-entity-selection">List box colección o entity selection</a></li><li><a href="#propiedades-soportadas">Propiedades soportadas</a></li><li><a href="#eventos-formulario-soportados">Eventos formulario soportados</a></li></ul></li><li><a href="#columnas-de-list-box">Columnas de list box</a><ul class="toc-headings"><li><a href="#propiedades-específicas-de-la-columna">Propiedades específicas de la columna</a></li><li><a href="#eventos-formulario-soportados-1">Eventos formulario soportados</a></li></ul></li><li><a href="#encabezados-de-list-box">Encabezados de list box</a><ul class="toc-headings"><li><a href="#propiedades-específicas-de-los-encabezados">Propiedades específicas de los encabezados</a></li></ul></li><li><a href="#pies-de-list-box">Pies de list box</a><ul class="toc-headings"><li><a href="#propiedades-específicas-de-los-pies">Propiedades específicas de los pies</a></li></ul></li><li><a href="#gestión-de-entrada">Gestión de entrada</a></li><li><a href="#gestión-de-selecciones">Gestión de selecciones</a><ul class="toc-headings"><li><a href="#personalizar-la-apariencia-de-las-líneas-seleccionadas">Personalizar la apariencia de las líneas seleccionadas</a></li></ul></li><li><a href="#gestión-de-ordenaciones">Gestión de ordenaciones</a><ul class="toc-headings"><li><a href="#ordenación-estándar">Ordenación estándar</a></li><li><a href="#ordenación-personalizada">Ordenación personalizada</a></li><li><a href="#column-header-variable">Column header variable</a></li></ul></li><li><a href="#managing-row-colors-styles-and-display">Managing row colors, styles, and display</a><ul class="toc-headings"><li><a href="#priority--inheritance">Priority &amp; inheritance</a></li><li><a href="#uso-de-arrays-y-expresiones">Uso de arrays y expresiones</a></li></ul></li><li><a href="#imprimir-list-boxes">Imprimir list boxes</a><ul class="toc-headings"><li><a href="#modo-de-vista-previa">Modo de vista previa</a></li><li><a href="#modo-avanzado">Modo avanzado</a></li></ul></li><li><a href="#list-box-jerárquicos">List box jerárquicos</a><ul class="toc-headings"><li><a href="#definir-una-jerarquía">Definir una jerarquía</a></li><li><a href="#principios-de-funcionamiento">Principios de funcionamiento</a></li></ul></li><li><a href="#object-arrays-in-columns">Object arrays in columns</a><ul class="toc-headings"><li><a href="#configuring-an-object-array-column">Configuring an object array column</a></li><li><a href="#atributos">Atributos</a></li><li><a href="#gestión-de-eventos">Gestión de eventos</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/es/FormObjects/listOverview.html"><span class="arrow-prev">← </span><span>Lista jerárquica</span></a><a class="docs-next button" href="/docs/19/es/FormObjects/pictureButtonOverview.html"><span>Botón Imagen</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#generalidades">Generalidades</a><ul class="toc-headings"><li><a href="#principios-de-utilización-básicos">Principios de utilización básicos</a></li><li><a href="#partes-de-list-box">Partes de list box</a></li><li><a href="#tipos-de-list-box">Tipos de list box</a></li><li><a href="#gestión-de-list-boxes">Gestión de list boxes</a></li></ul></li><li><a href="#objetos-tipo-list-box">Objetos tipo List box</a><ul class="toc-headings"><li><a href="#list-box-de-tipo-array">List box de tipo array</a></li><li><a href="#list-box-de-tipo-selección">List box de tipo selección</a></li><li><a href="#list-box-colección-o-entity-selection">List box colección o entity selection</a></li><li><a href="#propiedades-soportadas">Propiedades soportadas</a></li><li><a href="#eventos-formulario-soportados">Eventos formulario soportados</a></li></ul></li><li><a href="#columnas-de-list-box">Columnas de list box</a><ul class="toc-headings"><li><a href="#propiedades-específicas-de-la-columna">Propiedades específicas de la columna</a></li><li><a href="#eventos-formulario-soportados-1">Eventos formulario soportados</a></li></ul></li><li><a href="#encabezados-de-list-box">Encabezados de list box</a><ul class="toc-headings"><li><a href="#propiedades-específicas-de-los-encabezados">Propiedades específicas de los encabezados</a></li></ul></li><li><a href="#pies-de-list-box">Pies de list box</a><ul class="toc-headings"><li><a href="#propiedades-específicas-de-los-pies">Propiedades específicas de los pies</a></li></ul></li><li><a href="#gestión-de-entrada">Gestión de entrada</a></li><li><a href="#gestión-de-selecciones">Gestión de selecciones</a><ul class="toc-headings"><li><a href="#personalizar-la-apariencia-de-las-líneas-seleccionadas">Personalizar la apariencia de las líneas seleccionadas</a></li></ul></li><li><a href="#gestión-de-ordenaciones">Gestión de ordenaciones</a><ul class="toc-headings"><li><a href="#ordenación-estándar">Ordenación estándar</a></li><li><a href="#ordenación-personalizada">Ordenación personalizada</a></li><li><a href="#column-header-variable">Column header variable</a></li></ul></li><li><a href="#gestión-de-los-colores-estilos-y-visualización-de-las-líneas">Gestión de los colores, estilos y visualización de las líneas</a><ul class="toc-headings"><li><a href="#priority--inheritance">Priority &amp; inheritance</a></li><li><a href="#uso-de-arrays-y-expresiones">Uso de arrays y expresiones</a></li></ul></li><li><a href="#imprimir-list-boxes">Imprimir list boxes</a><ul class="toc-headings"><li><a href="#modo-de-vista-previa">Modo de vista previa</a></li><li><a href="#modo-avanzado">Modo avanzado</a></li></ul></li><li><a href="#list-box-jerárquicos">List box jerárquicos</a><ul class="toc-headings"><li><a href="#definir-una-jerarquía">Definir una jerarquía</a></li><li><a href="#principios-de-funcionamiento">Principios de funcionamiento</a></li></ul></li><li><a href="#object-arrays-in-columns">Object arrays in columns</a><ul class="toc-headings"><li><a href="#configuring-an-object-array-column">Configuring an object array column</a></li><li><a href="#atributos">Atributos</a></li><li><a href="#gestión-de-eventos">Gestión de eventos</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

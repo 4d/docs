@@ -102,7 +102,7 @@
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     el número de puerto utilizado para las transacciones de correo</td></tr>
 <tr><td><a href="#searchmails"><strong>.searchMails</strong>( <em>searchCriteria</em> : Text ) : Collection</a><p>    busca los mensajes que coincidan con el <em>searchCriteria</em> en el buzón actual</td></tr>
 <tr><td><a href="#selectbox"><strong>.selectBox</strong>( <em>name</em> : Text { ; <em>state</em> : Integer } ) : Object</a><p>    selecciona el buzón <em>name</em> como el buzón actual</td></tr>
-<tr><td><a href="#subscribe"><strong>.subscribe</strong>( <em>name</em> : Text ) : Object</a><p>    allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes</td></tr>
+<tr><td><a href="#subscribe"><strong>.subscribe</strong>( <em>name</em> : Text ) : Object</a><p>    permite añadir o eliminar el buzón especificado del conjunto de buzones &quot;suscritos&quot; en el servidor IMAP</td></tr>
 <tr><td><a href="#unsubscribe"><strong>.unsubscribe</strong>( <em>name</em> : Text ) : Object</a><p>    elimina un buzón de un conjunto de buzones suscritos</td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     el nombre de usuario utilizado para la autenticación en el servidor de correo</td></tr>
 </tbody>
@@ -1659,9 +1659,9 @@ End if</span>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = CHARSET <span class="hljs-string">"ISO-8859"</span> BODY <span class="hljs-string">"Help"</span>
 </code></pre>
-<p>... means the search criteria uses the charset iso-8859 and the server will have to convert the search criteria before searching, if necessary.</p>
+<p>... significa que los criterios de búsqueda utilizan el conjunto de caracteres iso-8859 y el servidor tendrá que convertir los criterios de búsqueda antes de buscar, si es necesario.</p>
 <h4><a class="anchor" aria-hidden="true" id="tipos-de-valores-de-búsqueda"></a><a href="#tipos-de-valores-de-búsqueda" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tipos de valores de búsqueda</h4>
-<p>Search-keys may request the value to search for:</p>
+<p>Las claves de búsqueda pueden solicitar el valor a buscar:</p>
 <ul>
 <li><p><strong>Search-keys with a field-name value</strong>: the field-name is the name of a header field. Ejemplo: <code>searchCriteria = SENTBEFORE 1-Feb-2020</code> (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)</p></li>
 <li><p><strong>Search-keys with a string value</strong>: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Ejemplo: <code>criterios de búsqueda = FROM &quot;SMITH&quot;</code> Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.</p></li>
@@ -1670,20 +1670,20 @@ End if</span>
 <li><p><strong>Search-keys with a message set value</strong>: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Ejemplos: <code>2,4:7,9,12:*</code> es <code>2,4,5,6,7,9,12,13,14,15</code> para un buzón con 15 mensajes. <code>searchCriteria = 1:5 ANSWERED</code> search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. <code>searchCriteria= 2,4 ANSWERED</code> search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.</p></li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="teclas-de-búsqueda-disponibles"></a><a href="#teclas-de-búsqueda-disponibles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Teclas de búsqueda disponibles</h4>
-<p><strong>ALL</strong>: All messages in the mailbox.<br>
-<strong>ANSWERED</strong>: Messages with the \Answered flag set.<br>
-<strong>UNANSWERED</strong>: Messages that do not have the \Answered flag set.<br>
-<strong>DELETED</strong>: Messages with the \Deleted flag set.<br>
-<strong>UNDELETED</strong>: Messages that do not have the \Deleted flag set.<br>
-<strong>DRAFT</strong>: Messages with the \Draft flag set.<br>
-<strong>UNDRAFT</strong>: Messages that do not have the \Draft flag set.<br>
-<strong>FLAGGED</strong>: Messages with the \Flagged flag set.<br>
-<strong>UNFLAGGED</strong>: Messages that do not have the \Flagged flag set.<br>
-<strong>RECENT</strong>: Messages that have the \Recent flag set.<br>
-<strong>OLD</strong>: Messages that do not have the \Recent flag set.<br>
-<strong>SEEN</strong>: Messages that have the \Seen flag set.<br>
-<strong>UNSEEN</strong>: Messages that do not have the \Seen flag set.<br>
-<strong>NEW</strong>: Messages that have the \Recent flag set but not the \Seen flag. This is functionally equivalent to &quot;(RECENT UNSEEN)&quot;.<br>
+<p><strong>ALL</strong>: todos los mensajes del buzón.<br>
+<strong>ANSWERED</strong>: mensajes con el marcador \Answered.<br>
+<strong>UNANSWERED</strong>: mensajes que no tienen el marcador \Answered.<br>
+<strong>DELETED</strong>: mensajes con el marcador \Deleted.<br>
+<strong>UNDELETED</strong>: mensajes que no tienen el marcador \Deleted.<br>
+<strong>DRAFT</strong>: mensajes con el marcador \Draft.<br>
+<strong>UNDRAFT</strong>: mensajes que no tienen el marcador \Draft.<br>
+<strong>FLAGGED</strong>: mensajes con el marcador \Flagged.<br>
+<strong>UNFLAGGED</strong>: mensajes que no tienen el marcador \Flagged.<br>
+<strong>RECENT</strong>: mensajes que tienen el marcador \Recent.<br>
+<strong>OLD</strong>: mensajes que no tienen el marcador \Recent.<br>
+<strong>SEEN</strong>: mensajes que tienen el marcador \Seen.<br>
+<strong>UNSEEN</strong>: Mensajes que no tienen el marcador \Seen.<br>
+<strong>NEW</strong>: mensajes que tienen el marcador \Recent pero no el marcador \Seen. This is functionally equivalent to &quot;(RECENT UNSEEN)&quot;.<br>
 ***KEYWORD ***flag******: Messages with the specified keyword set.<br>
 ***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.<br>
 ***BEFORE ***date******: Messages whose internal date is earlier than the specified date.<br>
@@ -1730,17 +1730,17 @@ End if</span>
 <h4><a class="anchor" aria-hidden="true" id="descripción-28"></a><a href="#descripción-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>La función <code>.selectBox()</code> selecciona el buzón <em>name</em> como el buzón actual. Esta función permite recuperar la información sobre el buzón.</p>
 <blockquote>
-<p>To get the information from a mailbox without changing the current mailbox, use <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.</p>
+<p>Para obtener la información de un buzón sin cambiar el buzón actual, utilice <a href="#getboxinfo"><code>.getBoxInfo()</code></a>.</p>
 </blockquote>
 <p>En el parámetro <em>name</em>, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función <a href="#getdelimiter"><code>.getDelimiter()</code></a>.</p>
-<p>The optional <em>state</em> parameter defines the type of access to the mailbox. Los valores posibles son:</p>
+<p>El parámetro opcional <em>state</em> define el tipo de acceso al buzón. Los valores posibles son:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
 </thead>
 <tbody>
-<tr><td>IMAP read only state</td><td>1</td><td>The selected mailbox is accessed with read only privileges. Messages with a &quot;recent&quot; flag (indicating new messages) remain unchanged.</td></tr>
-<tr><td>IMAP read write state</td><td>0</td><td>The selected mailbox is accessed with read and write privileges. Messages are considered &quot;seen&quot; and lose the &quot;recent&quot; flag (indicating new messages). (Valor por defecto)</td></tr>
+<tr><td>IMAP read only state</td><td>1</td><td>Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera &quot;reciente&quot; (que indica que son nuevos) no se modifican.</td></tr>
+<tr><td>IMAP read write state</td><td>0</td><td>Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran &quot;vistos&quot; y pierden la bandera &quot;reciente&quot; (que indica que son mensajes nuevos). (Valor por defecto)</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -1795,8 +1795,8 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-29"></a><a href="#descripción-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.subscribe()</code> function allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.</p>
-<p>In the <code>name</code> parameter, pass the name of the mailbox to add (subscribe) to your &quot;subscribed&quot; mailboxes.</p>
+<p>La función <code>.subscribe()</code> permite añadir o eliminar el buzón especificado del conjunto de buzones &quot;suscritos&quot; en el servidor IMAP. De este modo, puede optar por acotar una gran lista de buzones disponibles suscribiéndose a los que habitualmente consulta.</p>
+<p>En el parámetro <code>name</code>, pase el nombre del buzón a añadir (suscribir) a sus buzones &quot;suscritos&quot;.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>La función devuelve un objeto que describe el estado IMAP:</p>
 <table>
