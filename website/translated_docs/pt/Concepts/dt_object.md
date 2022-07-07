@@ -138,7 +138,7 @@ Exemplo:
  x:=vPtr->a //x=10
 ```
 
-### Null value
+### Valor Null
 
 Quando se usar a notação de objeto, o valore **null** se torna compatível com o comando **Null** . Este comando pode ser usado para atribuir ou comparar o valor nulo com as propriedades de objeto ou elementos de coleção, por exemplo
 
@@ -197,7 +197,7 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
  - Picture: Empty picture
  - Boolean: False
  - String: ""
- - Number: 0
+ - Número: 0
  - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
  - Time: 0 (number of ms)
  - Undefined, Null: no change

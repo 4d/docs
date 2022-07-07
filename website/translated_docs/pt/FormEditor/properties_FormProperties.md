@@ -16,9 +16,9 @@ This property defines the color scheme for the form. This property defines the c
 
 #### JSON Grammar
 
-| Nome        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| colorScheme | string    | "dark", "light" |
+| Nome        | Tipo de dados | Possible Values |
+| ----------- | ------------- | --------------- |
+| colorScheme | string        | "dark", "light" |
 
 ---
 
@@ -34,14 +34,14 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 #### JSON Grammar
 
-| Nome  | Data Type  | Possible Values                                                          |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
+| Nome  | Tipo de dados | Possible Values                                                          |
+| ----- | ------------- | ------------------------------------------------------------------------ |
+| pages | collection    | Collection of pages (each page is an object, page 0 is the first element |
 
 ---
 
 
-## Form Name
+## Nome do formulário
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
@@ -52,7 +52,7 @@ The form name is defined by the name of the folder that contains the form.4Dform
 
 ---
 
-## Form Type
+## Tipo de formulário
 
 The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
@@ -66,7 +66,7 @@ Each table in a database generally has at least two table forms. One for listing
 Supported types depend on the form category:
 
 
-| Form Type                | JSON grammar     | Descrição                                                     | Supported with              |
+| Tipo de formulário       | JSON grammar     | Descrição                                                     | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
 | Formulário detalhado     | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
@@ -77,9 +77,9 @@ Supported types depend on the form category:
 
 #### JSON Grammar
 
-| Nome        | Data Type | Possible Values                                              |
-| ----------- | --------- | ------------------------------------------------------------ |
-| destination | string    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
+| Nome        | Tipo de dados | Possible Values                                              |
+| ----------- | ------------- | ------------------------------------------------------------ |
+| destination | string        | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
 ---
 
@@ -94,9 +94,9 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 #### JSON Grammar
 
-| Nome          | Data Type | Possible Values                                                                                                    |
-| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nome          | Tipo de dados | Possible Values                                                                                                    |
+| ------------- | ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
 ---
 
@@ -110,7 +110,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 #### JSON Grammar
 
-| Nome               | Data Type        | Possible Values            |
+| Nome               | Tipo de dados    | Possible Values            |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
 
@@ -127,9 +127,9 @@ Only project forms can be specified as published subforms.
 
 #### JSON Grammar
 
-| Nome   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| shared | booleano  | true, false     |
+| Nome   | Tipo de dados | Possible Values |
+| ------ | ------------- | --------------- |
+| shared | booleano      | true, false     |
 
 
 ---
@@ -146,9 +146,9 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 #### JSON Grammar
 
-| Nome             | Data Type | Possible Values |
-| ---------------- | --------- | --------------- |
-| memorizeGeometry | booleano  | true, false     |
+| Nome             | Tipo de dados | Possible Values |
+| ---------------- | ------------- | --------------- |
+| memorizeGeometry | booleano      | true, false     |
 
 #### Veja também
 [**Save Value**](FormObjects/properties_Object.md#save-value)
@@ -172,8 +172,8 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 #### JSON Grammar
 
-| Nome        | Data Type | Possible Values                                        |
-| ----------- | --------- | ------------------------------------------------------ |
-| windowTitle | string    | The name of the window as plain text or as a reference |
+| Nome        | Tipo de dados | Possible Values                                        |
+| ----------- | ------------- | ------------------------------------------------------ |
+| windowTitle | string        | The name of the window as plain text or as a reference |
 
 

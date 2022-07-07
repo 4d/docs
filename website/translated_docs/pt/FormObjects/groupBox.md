@@ -1,6 +1,6 @@
 ---
 id: groupBox
-title: Group Box
+title: Área de grupo
 ---
 
 A group box is a static object that allows you to visually assemble multiple form objects:

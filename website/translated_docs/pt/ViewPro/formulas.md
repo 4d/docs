@@ -42,7 +42,7 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Tipos de dados                     | Values                                             | Operators                                                                                                                                                                                                                                         |
+| Tipos de dados                     | Values                                             | Operadores                                                                                                                                                                                                                                        |
 | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Número](Concepts/dt_number.md)    | 1.2<br>1.2 E3<br>1.2E-3<br>10.3x | + (addition)<br>- (subtraction)<br>* (multiplication)<br>/ (division)<br>^ (exponent, the number of times to multiply a number by itself)<br>% (percentage -- divide the number before the operator by one hundred) |
 | [Date](Concepts/dt_date.md)        | 10/24/2017                                         | + (date + number of days -> date)<br>+ (date + time -> date + time of day)<br>- (date - number of days -> date)<br>- (date - date -> number of days between the two)                                                            |
@@ -73,9 +73,9 @@ List of operators from most to least important:
 | --------------- | -------------------------- |
 | ()              | Parenthesis (for grouping) |
 | -               | Negate                     |
-| +               | Plus                       |
+| +               | Mais                       |
 | %               | Percent                    |
-| ^               | Exponent                   |
+| ^               | Expoente                   |
 | * and /         | Multiply and divide        |
 | + and -         | Add and Subtract           |
 | &               | Concatenate                |
@@ -114,11 +114,11 @@ The following table shows the effect of the different notations:
 
 | Exemplo   | Type of reference | Descrição                                                                                                                                      |
 | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5        | Relative          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5      | Absolute          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
+| C5        | Relativo          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
+| $C$5      | Absoluto          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
 | $C5       | Mixed             | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
 | C$5       | Mixed             | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Cell name | Absolute          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Cell name | Absoluto          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 

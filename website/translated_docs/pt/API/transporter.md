@@ -20,7 +20,7 @@ title: Transporter Class
 
 #### Descrição
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection. Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+A propriedade `.acceptUnsecureConnection` contém <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** se 4D tiver a permissão de estabelecer uma conexão não criptografada<!-- END REF --> quando a conexão cifrada não for possível.
 
 It contains **False** if unencrypted connections are unallowed, in which case an error in returned when encrypted connection is not possible.
 
@@ -36,7 +36,7 @@ Available secured ports are:
 
 - POP3
     - 110: POP3 non-encrypted port
-    - 995: POP3 with STARTTLS upgrade if supported by the server.
+    - 995: POP3 com atualização STARTTLS se suportado pelo servidor.
 <!-- END REF -->
 
 ---
@@ -56,7 +56,7 @@ Available secured ports are:
 
 #### Descrição
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode. Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+A propriedade `.authenticationMode` contém <!-- REF #transporter.authenticationMode.Summary -->o modo de autenticação usado para abrir a sessão no servidor de correio <!-- END REF -->.
 
 By default, the most secured mode supported by the server is used.
 
@@ -155,7 +155,7 @@ Possible values are:
 
 #### Descrição
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset. Summary --> the charset and encoding used for the email header<!-- END REF -->.
+A propriedade `.bodyCharset` contém <!-- REF #transporter.bodyCharset.Summary -->  o conjunto de caracteres e a codificação utilizados para a parte do corpo do correio eletrônico<!-- END REF -->.
 
 *   subject,
 *   attachment filename(s),

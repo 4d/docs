@@ -120,7 +120,7 @@
         "title": "Parámetros de la copia de seguridad"
       },
       "code-editor/navigation": {
-        "title": "Navigation dropdown"
+        "title": "Despliegue de navegación"
       },
       "Concepts/about": {
         "title": "Acerca del lenguaje 4D"
@@ -217,7 +217,7 @@
         "title": "Básicos"
       },
       "Debugging/breakpoints": {
-        "title": "Breakpoints and Command Catching"
+        "title": "Puntos de ruptura y captura de comandos"
       },
       "Debugging/debugger": {
         "title": "Depurador"

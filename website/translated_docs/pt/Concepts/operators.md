@@ -1,6 +1,6 @@
 ---
 id: operators
-title: Operators
+title: Operadores
 ---
 
 An operator is a symbol or a group of symbols that you use to check, modify, or combine values. You are already familiar with many operators. For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or >, let you compare two or more values.

@@ -62,7 +62,7 @@ Também pode obter uma referencia em um datastore remoto aberto passando seu id 
 
 Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Objects available in the `cs. Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 #### Exemplo 1
 
@@ -137,7 +137,7 @@ Se não se encontrar nenhum banco de dados coincidente, `Open datastore` devolve
 
 *localID* é um alias local para a sessão aberta no armazém de dados remoto. Se *localID* já existir na aplicação, se utiliza. Em caso contrário, se cria uma nova sessão *localID* quando se utiliza o objeto datastore.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
+Objects available in the `cs. Datastore` are mapped from the target database with respect to the [ORDA general rules](Concepts/dsMapping.md#general-rules).
 
 Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma referência sobre o mesmo objeto datastore:
 
@@ -153,7 +153,7 @@ Passe em *connectionInfo* um objeto que desceva o armazém de dados remoto ao qu
 | ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hostname    | Texto         | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
 | user        | Texto         | User name                                                                                                                                                                                                                                                              |
-| password    | Texto         | User password                                                                                                                                                                                                                                                          |
+| senha       | Texto         | User password                                                                                                                                                                                                                                                          |
 | idleTimeout | Inteiro longo | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
 | tls         | Booleano      | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
 | type        | Texto         | Must be "4D Server"                                                                                                                                                                                                                                                    |

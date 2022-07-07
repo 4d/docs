@@ -96,7 +96,7 @@ Using copy-paste or drag-and-drop with certain library objects also causes their
 
 The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
 
-- Lists
+- Listas
 - Formats/Filters
 - Imagens
 - Help Tips (linked to a field)

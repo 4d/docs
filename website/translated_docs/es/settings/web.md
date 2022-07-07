@@ -20,7 +20,7 @@ Indicates whether or not the Web server will accept non-secure connections. See 
 
 #### Puerto HTTP
 
-Listening IP (TCP) port number for HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
+Número de puerto IP (TCP) de escucha para HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
 
 #### Dirección IP
 
@@ -36,7 +36,7 @@ Indicates whether or not the Web server will accept secure connections. See [Ena
 
 Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). See [HTTPS Port](../WebServer/webServerConfig.md#https-port).
 
-#### Allow database access through 4DSYNC URLs
+#### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
 
 *Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
 
@@ -49,7 +49,7 @@ Define the default location of the Web site files and to indicate the hierarchic
 
 #### Página de inicio por defecto
 
-Designate a default home page for the Web server. See [Default Home page](../WebServer/webServerConfig.md#default-home-page).
+Designa una página de inicio por defecto para el servidor web. See [Default Home page](../WebServer/webServerConfig.md#default-home-page).
 
 
 
@@ -70,7 +70,7 @@ Define el tamaño de la caché. See [Cache](../WebServer/webServerConfig.md#cach
 
 #### Vaciar la caché
 
-En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). The cache is then immediately cleared.
+En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché). En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché). La caché se borra inmediatamente.
 
 > You can also use the special URL [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -80,7 +80,7 @@ This area allows you to configure how the web server will handle user sessions a
 
 > The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
 
-#### Scalable sessions (multi-process sessions)
+#### Sesiones extensibles (sesiones multiproceso)
 
 When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
 
@@ -95,7 +95,7 @@ In this mode, you can configure additional web server setttings:
 -   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
 -   [Utilizar los procesos apropiativos](#use-preemptive-web-processes)
 
-#### Legacy sessions (single process sessions)
+#### Sesiones antiguas (sesiones procesos únicos)
 
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
@@ -122,24 +122,24 @@ Not available with [scalable sessions](../WebServer/sessions.md).
 
 Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
 
-> This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client).  See [Enabling the preemptive mode for the web server](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> Esta opción no se aplica a las sesiones extensibles, a los procesos REST (modo compilado) ni a los procesos de servicios web (servidor o cliente).  Ver [Activar el modo apropiativo para el servidor web](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
 
 
 #### Tiempo de espera del proceso inactivo
 
 Not available with [scalable sessions](../WebServer/sessions.md).
 
-Allows you to set the maximum timeout before closing for inactive Web processes on the server. See [Inactive Process Timeout](../WebServer/webServerConfig.md#inactive-process-timeout).
+Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web inactivos en el servidor. Ver [Duración de los procesos inactivos](../WebServer/webServerConfig.md#inactive-process-timeout).
 
 
 
 ### Web Passwords
 
-Set the authentication system that you want to apply to your Web server. Se proponen tres opciones:
+Define el sistema de autenticación que desea aplicar a su servidor web. Se proponen tres opciones:
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Using **Custom** authentication is recommended. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
+Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la sección *Desarrollo Web*.
 
 
 ## Options (II)
@@ -148,11 +148,11 @@ Using **Custom** authentication is recommended. See [**Authentication**](../WebS
 
 #### Send Extended Characters Directly
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#deprecated-settings).
+Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings).
 
 #### Standard Set
 
-Define the set of characters to be used by the 4D Web server. See [Character Set](../WebServer/webServerConfig.md#character-set).
+Define el conjunto de caracteres a utilizar por el servidor web 4D. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
 
 ### Conexiones Keep-Alive
 
@@ -162,11 +162,11 @@ Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#keep-alive-connectio
 
 #### Activar CORS
 
-Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
+Activa el servicio Cross-origin resource sharing (CORS). Ver [Activar Cors](../WebServer/webServerConfig.md#activer-cors).
 
 #### Domain names/HTTP methods allowed
 
-Lista de hosts y métodos permitidos para el servicio CORS. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
+Lista de hosts y métodos permitidos para el servicio CORS. Ver [Parámetros CORS](../WebServer/webServerConfig.md#cors-settings).
 
 
 
@@ -175,12 +175,12 @@ Lista de hosts y métodos permitidos para el servicio CORS. See [CORS Settings](
 
 ### Formato del historial
 
-Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. See [Log Recording](../WebServer/webServerConfig.md#log-recording).
+Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. Ver [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
+> La activación y desactivación del archivo de historial de peticiones también se puede efectuar por programación utilizando el comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
 
-The log format menu provides the following options:
+El menú de formato de registro ofrece las siguientes opciones:
 
 -   **No Log File**: When this option is selected, 4D will not generate a log file of requests.
 
@@ -199,7 +199,7 @@ The log format menu provides the following options:
 -   state: reply given by the server.
 -   length: size of the data returned (except the HTTP header) or 0.
 
-> **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
+> **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos. Los valores posibles del estado son los siguientes: 200: OK 204: Sin contenido 302: Redirección 304: No modificado 400: Petición incorrecta 401: Autenticación requerida 404: No encontrada 500: Error interno El formato CLF no puede ser personalizado.
 
 -   **DLF (Combined Log Format)**: When this option is selected, the request log is generated in DLF format. DLF format is similar to CLF format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent.
 
@@ -210,9 +210,9 @@ The log format menu provides the following options:
 
 -   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Like the ELF format, it can be customized.
+-   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Al igual que el formato ELF, se puede personalizar.
 
-**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. You will need to select each field to be included in the log.
+**Configurar los campos** Cuando selecciona el formato ELF (Extended Log Format) o WLF (WebStar Log Format), el área "Weg Log Token Selection" muestra los campos disponibles para el formato elegido. You will need to select each field to be included in the log. Para ello, utilice los botones de flecha o simplemente arrastre y suelte los campos deseados en el área "Tokens seleccionados".
 
 **Nota**: no puede seleccionar el mismo campo dos veces.
 
@@ -227,18 +227,18 @@ The following table lists the fields available for each format (in alphabetical 
 | CONNECTION_ID  |     | X   | Número de identificación de la conexión                                    |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
 | CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                             |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
+| CS(REFERER)    | X   | X   | URL de la página que apunta al documento solicitado                        |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
 | CS_SIP         | X   | X   | Dirección IP del servidor                                                  |
 | CS_URI         | X   | X   | URI sobre el que se realiza la petición                                    |
 | CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                      |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
+| CS_URI_STEM  | X   | X   | Parte de la petición sin los parámetros de consulta                        |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
 | PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
 | STATUS         | X   | X   | Respuesta ofrecida por el servidor                                         |
 | TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
-| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
+| TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
 | URL            |     | X   | URL solicitado por el cliente                                              |
@@ -250,37 +250,37 @@ The following table lists the fields available for each format (in alphabetical 
 Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de los archivos haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
 -   **No Backup**: The scheduled backup function is deactivated.
--   **Every X hour(s)**: This option is used to program backups on an hourly basis. You can enter a value between 1 and 24 .
+-   **Every X hour(s)**: This option is used to program backups on an hourly basis. Puede introducir un valor entre 1 y 24 .
 
     -   **starting at**: Used to set the time at which the first back up will begin.
--   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
+-   **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduzca 1 si desea realizar una copia de seguridad diaria. When this option is checked, you must indicate the time when the backup must be started.
 -   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 -   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. Introduzca 1 si desea realizar una copia de seguridad mensual.
--   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
+-   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Puede definir un límite de tamaño de 1, 10, 100 o 1000 MB.
 
-> In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
+> En el caso de las copias de seguridad programadas, si el servidor web no fue lanzado cuando se programó la copia de seguridad, en el siguiente lanzamiento 4D considera que la copia de seguridad ha fallado y aplica los parámetros adecuados, definidos en las Propiedades de la base.
 
 ## Web Services
 
-You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
+Las opciones de esta pestaña permiten activar y configurar los servicios Web para el proyecto 4D, tanto por su publicación (lado del servidor) y su suscripción (lado del cliente).
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html) chapter.
+Para más información sobre el soporte de los servicios web en 4D, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html).
 
 ### Servidor
 
-This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
+Esta área contiene varias opciones relativas con el uso de 4D como un "servidor" de Servicios Web, es decir la publicación de los métodos proyecto en forma de Servicios Web.
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
--   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService.
+-   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por defecto, 4D utiliza el nombre A_WebService.
 -   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
 
-> In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
+> Conforme al estándar XML para los nombres de etiquetas, las cadenas de caracteres utilizadas no deben contener espacios ni comenzar con un número. Además, para evitar cualquier riesgo de incompatibilidad, recomendamos que no utilice ningún caracter extendido (como los caracteres acentuados).
 
 ### Cliente
 
-This area contains various options related to the use of 4D as a Web Services "client" i.e., subscribing to services published on the network.
+Esta área contiene varias opciones relacionadas con el uso de 4D como un "cliente" de Servicios Web, es decir, suscribirse a los servicios publicados en la red.
 
--   **Wizard Method Prefix**: This area lets you change the prefix that is added automatically by 4D to the name of proxy methods generated by the Web Services Wizard. Proxy project methods form a link between the 4D application and the Web Services server. By default, 4D uses the prefix "proxy_".
+-   **Wizard Method Prefix**: This area lets you change the prefix that is added automatically by 4D to the name of proxy methods generated by the Web Services Wizard. Proxy project methods form a link between the 4D application and the Web Services server. Por defecto, 4D utiliza el prefijo "proxy_".
 
 
 ## Funcionalidades Web
@@ -295,7 +295,7 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 ### Acceso
 
-This option specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests. See [Configuring REST access](../REST/configuration.md#configuring-rest-access).
+Esta opción especifica un grupo de usuarios 4D que está autorizado a establecer la conexión a la base 4D utilizando las peticiones REST. Ver [Configuración del acceso REST](../REST/configuration.md#configuring-rest-access).
 
 ### Web Studio
 

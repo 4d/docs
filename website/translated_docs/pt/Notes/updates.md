@@ -8,7 +8,7 @@ The list of main updates in this documentation. For general information about ne
 
 ## 4D v19 R4
 
-- [Alias attributes](ORDA/ordaClasses.md#alias-attributes) are available in ORDA classes.
+- [Alias attributes](ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
 - Support for [break and continue](Concepts/cf_looping.md#break-and-continue) statements in loops.
 - Support for [return](Concepts/flow-control.md#return-expression) statement and [return expression](Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](Concepts/operators.md#compound-assignment-operators), [short-circuit operators](Concepts/operators.md#short-circuit-operators), and [ternary operator](Concepts/operators.md#ternary-operator)
@@ -37,7 +37,7 @@ The list of main updates in this documentation. For general information about ne
 ## 4D v19 R2
 
 - A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
-- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
+- New [Blob class API](API/BlobClass.md) to handle new [`4D. Blob` objects](Concepts/dt_blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
 
 

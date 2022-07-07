@@ -14,7 +14,7 @@ You can develop 4D components for your own needs and keep them private. You can 
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
-## Basics
+## Básicos
 
 Creating and installing 4D components is carried out directly from 4D:
 

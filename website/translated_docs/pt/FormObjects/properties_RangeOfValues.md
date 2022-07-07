@@ -17,7 +17,7 @@ The default value can only be used if the [data source type](properties_Object.m
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
-| Stamp | Meaning         |
+| Stamp | Significado     |
 | ----- | --------------- |
 | #D    | Current date    |
 | #H    | Current time    |
@@ -29,7 +29,7 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### JSON Grammar
 
-| Nome         | Data Type                           | Possible Values                            |
+| Nome         | Tipo de dados                       | Possible Values                            |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
@@ -48,9 +48,9 @@ Allows setting a list whose values cannot be entered in the object. Se um valor 
 
 #### JSON Grammar
 
-| Nome         | Data Type | Possible Values                  |
-| ------------ | --------- | -------------------------------- |
-| excludedList | list      | A list of values to be excluded. |
+| Nome         | Tipo de dados | Possible Values                  |
+| ------------ | ------------- | -------------------------------- |
+| excludedList | lista         | A list of values to be excluded. |
 
 #### Objects Supported
 
@@ -69,9 +69,9 @@ Making a list required does not automatically display the list when the field is
 
 #### JSON Grammar
 
-| Nome         | Data Type | Possible Values             |
-| ------------ | --------- | --------------------------- |
-| requiredList | list      | A list of mandatory values. |
+| Nome         | Tipo de dados | Possible Values             |
+| ------------ | ------------- | --------------------------- |
+| requiredList | lista         | A list of mandatory values. |
 
 #### Objects Supported
 

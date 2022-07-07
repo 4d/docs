@@ -22,7 +22,7 @@ There are multiple ways to get the Debugger to display:
 * Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
 * Adding a break point in the Method Editor window or in the Break and Catch pages of the Runtime Explorer.
 
-When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
+When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. Por ejemplo, en la ventana del depurador arriba:
 
 * *Clients_BuildLogo* is the method being traced
 * The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
@@ -30,9 +30,9 @@ When called, the debugger window provides the name of the method or class functi
 
 Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process.
 
-The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
+The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. Con una aplicación cliente/servidor se muestra:
 
-- on the remote 4D for code running locally
+- en el 4D remoto para el código que se ejecuta localmente
 - on the server machine for code running on the server (for example, a method with the **execute on server** option).
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
@@ -47,13 +47,13 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 #### Fin del rastreo
 
-Tracing stops and normal method execution resumes.
+Detener el modo Seguimiento y reanudar el curso normal de la ejecución del método.
 
 > **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. It also disables all the subsequent TRACE calls for the current process.
 
 #### Pasar por encima
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
+Executes the current method line, indicated by the program counter (the yellow arrow). El depurador pasa a la siguiente línea.
 
 The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
@@ -156,17 +156,17 @@ $c:=a+b
 
 #### Variables
 
-This theme is composed of the following subthemes:
+Este tema se compone de los siguientes subtemas:
 
 | Subtema      | Descripción                                                  | ¿Se pueden modificar los valores? |
 | ------------ | ------------------------------------------------------------ | --------------------------------- |
 | Interproceso | List of interprocess variables being used at this point      | Sí                                |
 | Proceso      | List of process variables used by the current process        | Sí                                |
 | Local        | List of local variables used by the method being traced      | Sí                                |
-| Parámetros   | List of parameters received by the method                    | Sí                                |
+| Parámetros   | Lista de parámetros recibidos por el método                  | Sí                                |
 | Self         | Pointer to the current object, when tracing an Object Method | No                                |
 
-Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. El depurador muestra los primeros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
 To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
 
@@ -190,7 +190,7 @@ Like the Constants page of the Explorer window, this theme displays predefined c
 
 #### Semáforos
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. Global semaphores are not displayed.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. No se muestran los semáforos globales.
 
 #### Procesos
 
@@ -238,7 +238,7 @@ Additional options are available from the contextual menu of the Watch pane.
 * **Show Field and Table Numbers**: Displays the number of each table or field. Useful if you work with table or field numbers, or with pointers using commands such as `Table` or `Field`.
 * **Show Icons**: Displays an icon denoting the object type for each object. You can turn this option off in order to speed up the display, or just because you prefer to use only the **Show Types** option.
 * **Sorted Tables and Fields**: Sorts the tables and fields in alphabetical order within their respective lists.
-* **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. This option displays them in hexadecimal notation. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
+* **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. Esta opción los muestra en notación hexadecimal. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
 * **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
 
 ## Panel de la cadena de llamadas
@@ -260,7 +260,7 @@ En la imagen de arriba:
 
 You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
-Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Values appear on the right side of the pane. Clicking on any value on the right side allows you to change the value of any parameter or function result.
+Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Los valores aparecen en el lado derecho del panel. Clicking on any value on the right side allows you to change the value of any parameter or function result.
 
 To display the parameter type, check the **Show types** option in the contextual menu:
 
@@ -272,7 +272,7 @@ You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/p
 
 ## Panel de vigilancia personalizado
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
+The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Todo tipo de expresión puede ser evaluada:
 
 * campo
 * variable
@@ -280,7 +280,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * cálculo
 * Comando 4D
 * method
-* and anything else that returns a value
+* y cualquier otra cosa que devuelva un valor
 
 ![custom-Watch-pane](assets/en/Debugging/custom-watch-pane.png)
 
@@ -294,7 +294,7 @@ There are several ways to add expressions to the list:
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
 * Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
 
-You can enter any formula that returns a result.
+Puede introducir cualquier fórmula que devuelva un resultado.
 
 To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
 
@@ -343,7 +343,7 @@ Esto también funciona con las selecciones:
 
 ![source-code-pane-tip](assets/en/Debugging/sourcePaneTip.png)
 
-### Adding expressions to the Custom Watch Pane
+### Añadir expresiones al panel de control personalizado
 
 You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
@@ -355,7 +355,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 
 ### Program Counter
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. It marks the next line to be executed.
+The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca la siguiente línea a ejecutar.
 
 By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
 

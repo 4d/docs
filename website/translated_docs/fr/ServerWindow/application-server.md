@@ -17,7 +17,7 @@ La partie supérieure de la page fournit des informations sur le statut courant 
 
 ## Refuser / Accepter nouvelles connexions
 
-Ce bouton fonctionne en bascule. Il permet de gérer l’accès de nouveaux postes clients à l’application serveur.
+Il permet de gérer l’accès de nouveaux postes clients à l’application serveur.
 
 Par défaut, lorsque la base est publiée :
 - Le libellé du bouton est "Refuser nouvelles connexions"

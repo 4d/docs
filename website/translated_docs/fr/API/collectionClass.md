@@ -10,8 +10,8 @@ Une collection est initialisée avec :
 
 |                                                                                                                                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
-| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
+| [<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->                      |
+| [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary --> |
 
 
 ### Exemple
@@ -27,59 +27,61 @@ Une collection est initialisée avec :
 
 |                                                                                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [<!-- INCLUDE #collection.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->|
-| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary --> |
-| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary --> |
-| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.concat().Summary -->|
-| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.copy().Summary -->|
-| [<!-- INCLUDE #collection.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.count().Summary -->|
-| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.countValues().Summary -->|
-| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.distinct().Summary -->|
-| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.equal().Summary -->|
-| [<!-- INCLUDE #collection.every().Syntax -->](#every)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.every().Summary -->|
-| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.extract().Summary -->|
-| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.fill().Summary -->|
-| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.filter().Summary -->|
-| [<!-- INCLUDE #collection.find().Syntax -->](#find)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.find().Summary -->|
-| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->|
-| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->|
-| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->|
-| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.insert().Summary -->|
-| [<!-- INCLUDE #collection.join().Syntax -->](#join)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.join().Summary -->|
-| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->|
-| [<!-- INCLUDE #collection.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.length.Summary -->|
-| [<!-- INCLUDE #collection.map().Syntax -->](#map)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
-| [<!-- INCLUDE #collection.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
-| [<!-- INCLUDE #collection.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
-| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
-| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
-| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
-| [<!-- INCLUDE #collection.push().Syntax -->](#push)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->|
-| [<!-- INCLUDE #collection.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->|
-| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->|
-| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->|
-| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->|
-| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->|
-| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.shift().Summary -->|
-| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.slice().Summary -->|
-| [<!-- INCLUDE #collection.some().Syntax -->](#some)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.some().Summary -->|
-| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sort().Summary -->|
-| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->|
-| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->|
+| [<!-- INCLUDE #collection.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->                   |
+| [<!-- INCLUDE #collection.clear().Syntax -->](#clear)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary -->                         |
+| [<!-- INCLUDE #collection.combine().Syntax -->](#combine)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary -->                   |
+| [<!-- INCLUDE #collection.concat().Syntax -->](#concat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.concat().Summary -->                      |
+| [<!-- INCLUDE #collection.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.copy().Summary -->                            |
+| [<!-- INCLUDE #collection.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.count().Summary -->                         |
+| [<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.countValues().Summary -->       |
+| [<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.distinct().Summary -->                |
+| [<!-- INCLUDE #collection.equal().Syntax -->](#equal)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.equal().Summary -->                         |
+| [<!-- INCLUDE #collection.every().Syntax -->](#every)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.every().Summary -->                         |
+| [<!-- INCLUDE #collection.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.extract().Summary -->                   |
+| [<!-- INCLUDE #collection.fill().Syntax -->](#fill)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.fill().Summary -->                            |
+| [<!-- INCLUDE #collection.filter().Syntax -->](#filter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.filter().Summary -->                      |
+| [<!-- INCLUDE #collection.find().Syntax -->](#find)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.find().Summary -->                            |
+| [<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->                  |
+| [<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->                   |
+| [<!-- INCLUDE #collection.indices().Syntax -->](#indices)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->                   |
+| [<!-- INCLUDE #collection.insert().Syntax -->](#insert)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.insert().Summary -->                      |
+| [<!-- INCLUDE #collection.join().Syntax -->](#join)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.join().Summary -->                            |
+| [<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->       |
+| [<!-- INCLUDE #collection.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.length.Summary -->                          |
+| [<!-- INCLUDE #collection.map().Syntax -->](#map)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->                               |
+| [<!-- INCLUDE #collection.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->                               |
+| [<!-- INCLUDE #collection.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->                               |
+| [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->                   |
+| [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary --> |
+| [<!-- INCLUDE #collection.pop().Syntax -->](#pop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->                               |
+| [<!-- INCLUDE #collection.push().Syntax -->](#push)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->                            |
+| [<!-- INCLUDE #collection.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->                         |
+| [<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->                      |
+| [<!-- INCLUDE #collection.remove().Syntax -->](#remove)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->                      |
+| [<!-- INCLUDE #collection.resize().Syntax -->](#resize)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->                      |
+| [<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->                   |
+| [<!-- INCLUDE #collection.shift().Syntax -->](#shift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.shift().Summary -->                         |
+| [<!-- INCLUDE #collection.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.slice().Summary -->                         |
+| [<!-- INCLUDE #collection.some().Syntax -->](#some)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.some().Summary -->                            |
+| [<!-- INCLUDE #collection.sort().Syntax -->](#sort)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sort().Summary -->                            |
+| [<!-- INCLUDE #collection.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->                               |
+| [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->                   |
 
 
 
 ## `New collection`
 
 
-<!-- REF #_command_.New collection.Syntax -->
-**New collection** {( *...value* : any )} : Collection<!-- END REF -->
+
+<!-- REF #_command_.New collection.Syntax --> **New collection** {( *...value* : any )} : Collection<!-- END REF -->
+
 
 <!-- REF #_command_.New collection.Params -->
 | Paramètres | Type                                                                    |    | Description             |
 | ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection |
 | Résultat   | Collection                                                              | <- | New collection          |
+
 <!-- END REF -->
 
 
@@ -156,14 +158,16 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #_command_.New shared collection.Syntax -->
-**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
+
+<!-- REF #_command_.New shared collection.Syntax --> **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
+
 
 <!-- REF #_command_.New shared collection.Params -->
 | Paramètres | Type                                                                |    | Description                         |
 | ---------- | ------------------------------------------------------------------- |:--:| ----------------------------------- |
 | value      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Valeur(s) de la collection partagée |
 | Résultat   | Collection                                                          | <- | New shared collection               |
+
 <!-- END REF -->
 
 
@@ -204,8 +208,7 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
  Use($mySharedCol)
     $mySharedCol[1]:="beta"
  End use
-``` 
-
+```
 
 
 <!-- REF collection.average().Desc -->
@@ -217,8 +220,9 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.average().Syntax -->
-**.average**( {*propertyPath* : Text } ) : Real<!-- END REF -->
+
+<!-- REF #collection.average().Syntax --> **.average**( {*propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.average().Params -->
@@ -226,6 +230,7 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 | ------------ | --------------- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Real, Undefined | <- | Moyenne arithmétique des valeurs de la collection               |
+
 <!-- END REF -->
 
 
@@ -264,11 +269,10 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
  $col.push(New object("name";"Wesson";"salary";50000))
  $col.push(New object("name";"Gross";"salary";10500))
  $vAvg:=$col.average("salary") //23500
-``` 
+```
+
 
 <!-- END REF -->
-
-
 
 <!-- REF collection.clear().Desc -->
 ## .clear()
@@ -279,13 +283,15 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.clear().Syntax -->
-**.clear()** : Collection<!-- END REF -->
+
+<!-- REF #collection.clear().Syntax --> **.clear()** : Collection<!-- END REF -->
+
 
 <!-- REF #collection.clear().Params -->
 | Paramètres | Type       |    | Description                                                   |
 | ---------- | ---------- |:--:| ------------------------------------------------------------- |
 | Résultat   | Collection | <- | Collection d'origine dont tous les éléments ont été supprimés |
+
 <!-- END REF -->
 
 
@@ -301,13 +307,10 @@ var $col : Collection
 $col:=New collection(1;2;5)
 $col.clear()
 $vSize:=$col.length //$vSize=0
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.combine().Desc -->
 ## .combine()
@@ -318,8 +321,9 @@ $vSize:=$col.length //$vSize=0
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.combine().Syntax -->
-**.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.combine().Syntax --> **.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.combine().Params -->
@@ -328,6 +332,7 @@ $vSize:=$col.length //$vSize=0
 | col2       | Collection | -> | Collection à combiner                                            |
 | index      | Integer    | -> | Emplacement où insérer les éléments à combiner (défaut=length+1) |
 | Résultat   | Collection | <- | Collection d'origine incluant les éléments combinés              |
+
 <!-- END REF -->
 
 
@@ -351,13 +356,10 @@ var $c; $fruits : Collection
 $c:=New collection(1;2;3;4;5;6)
 $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
 $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.concat().Desc -->
 ## .concat()
@@ -368,14 +370,16 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.concat().Syntax -->
-**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.concat().Syntax --> **.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+
 
 <!-- REF #collection.concat().Params -->
 | Paramètres | Type                                                           |    | Description                                                                                                                      |
 | ---------- | -------------------------------------------------------------- |:--:| -------------------------------------------------------------------------------------------------------------------------------- |
 | value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Valeur(s) à concaténer. Si *value* est une collection, tous les éléments de la collection sont ajoutés à la collection d'origine |
 | Résultat   | Collection                                                     | <- | Nouvelle collection contenant les valeurs d'origine et les valeurs ajoutées                                                      |
+
 <!-- END REF -->
 
 
@@ -396,12 +400,10 @@ $fruits:=New collection("Orange";"Banana";"Apple";"Grape")
 $fruits.push(New object("Intruder";"Tomato"))
 $c2:=$c.concat($fruits) //[1,2,3,4,5,"Orange","Banana","Apple","Grape",{"Intruder":"Tomato"}]
 $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.copy().Desc -->
 ## .copy()
@@ -413,8 +415,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | v16 R6  | Ajout                                                        |
 </details>
 
-<!-- REF #collection.copy().Syntax -->
-**.copy**() : Collection<br>**.copy**( *option* : Integer ) : Collection<br>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
+
+<!-- REF #collection.copy().Syntax --> **.copy**() : Collection<br>**.copy**( *option* : Integer ) : Collection<br>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.copy().Params -->
@@ -424,6 +427,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 | groupWithCol | Collection | -> | Collection partagée à grouper avec la collection résultante                                                            |
 | groupWithObj | Object     | -> | Objet partagé à grouper avec la collection résultante                                                                  |
 | Résultat     | Collection | <- | Copie de la collection d'origine (deep copy)                                                                           |
+
 <!-- END REF -->
 
 
@@ -520,14 +524,10 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
  ALERT($col3[0].alpha+" "+$col3[1].what) //affiche "Hello You!"
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.count().Desc -->
 ## .count()
@@ -538,8 +538,9 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.count().Syntax -->
-**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
+<!-- REF #collection.count().Syntax --> **.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.count().Params -->
@@ -547,6 +548,7 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 | ------------ | ---- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Réel | <- | Nombre d'éléments dans la collection                            |
+
 <!-- END REF -->
 
 
@@ -569,13 +571,10 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
  $count1:=$col.count() //$count1=7
  $count2:=$col.count("name") //$count2=3
 
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.countValues().Desc -->
 ## .countValues()
@@ -586,8 +585,9 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.countValues().Syntax -->
-**.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
+
+<!-- REF #collection.countValues().Syntax --> **.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.countValues().Params -->
@@ -596,6 +596,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 | value        | Text, Number, Boolean, Date, Object, Collection | -> | Valeur à compter                                                |
 | propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Réel                                            | <- | Nombre d'occurrences de la valeur                               |
+
 <!-- END REF -->
 
 
@@ -649,14 +650,10 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
  $numbers:=New collection(1;2;$letters;3;4;5)
 
  $vCount:=$numbers.countValues($letters) //$vCount=1
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.distinct().Desc -->
 ## .distinct()
@@ -667,8 +664,9 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.distinct().Syntax -->
-**.distinct**( {*option* : Integer} ) : Collection<br>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.distinct().Syntax --> **.distinct**( {*option* : Integer} ) : Collection<br>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.distinct().Params -->
@@ -677,6 +675,7 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 | option       | Integer    | -> | `ck diacritical` : évaluation diacritique ("A" # "a" par exemple)       |
 | propertyPath | Text       | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
 | Résultat     | Collection | <- | Nouvelle collection contenant uniquement les valeurs distinctes         |
+
 <!-- END REF -->
 
 
@@ -705,13 +704,10 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
  $c2:=$c.distinct() //$c2=["a","b","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct(ck diacritical) //$c2=["a","A","b","B","c",{"size":1},{"size":3},{"size":1}]
  $c2:=$c.distinct("size") //$c2=[1,3]
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.equal().Desc -->
 ## .equal()
@@ -722,8 +718,9 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.equal().Syntax -->
-**.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
+
+<!-- REF #collection.equal().Syntax --> **.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
+
 
 <!-- REF #collection.equal().Params -->
 | Paramètres  | Type       |    | Description                                                       |
@@ -731,6 +728,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 | collection2 | Collection | -> | Collection à comparer                                             |
 | option      | Integer    | -> | `ck diacritical` : évaluation diacritique ("A" # "a" par exemple) |
 | Résultat    | Booléen    | <- | Vrai si les collections sont identiques, sinon faux               |
+
 <!-- END REF -->
 
 
@@ -762,12 +760,10 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
  $c:=New collection(New object("a";1;"b";"orange");2;3)
  $c2:=New collection(New object("a";1;"b";"ORange");2;3)
  $b:=$c.equal($c2;ck diacritical) //false
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.every().Desc -->
 ## .every()
@@ -778,8 +774,9 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.every().Syntax -->
-**.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
+
+<!-- REF #collection.every().Syntax --> **.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
+
 
 <!-- REF #collection.every().Params -->
 | Paramètres | Type    |    | Description                                   |
@@ -788,6 +785,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 | methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
 | param      | Mixed   | -> | Paramètre(s) à passer à nomMéthode            |
 | Résultat   | Booléen | <- | Vrai si tous les éléments sont évalués à vrai |
+
 <!-- END REF -->
 
 
@@ -858,12 +856,10 @@ Avec la méthode ***TypeLookUp*** suivante :
 If(Value type($toEval.value)=$param)
     $toEval.result:=True
 End if
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.extract().Desc -->
 ## .extract()
@@ -874,8 +870,9 @@ End if
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.extract().Syntax -->
-Paramètre(s) à passer à *methodName*<!-- END REF -->
+
+<!-- REF #collection.extract().Syntax --> Paramètre(s) à passer à *methodName*<!-- END REF -->
+
 
 
 <!-- REF #collection.extract().Params -->
@@ -885,6 +882,7 @@ Paramètre(s) à passer à *methodName*<!-- END REF -->
 | targetpath   | Text       | -> | Chemin ou nom de propriété cible                                                                                                             |
 | option       | Integer    | -> | `ck keep null` : inclure les propriétés null dans la collection retournée (ignorées par défaut). Paramètre ignoré si *targetPath* est passé. |
 | Résultat     | Collection | <- | Nouvelle collection contenant les valeurs extraites                                                                                          |
+
 <!-- END REF -->
 
 
@@ -932,13 +930,10 @@ $c.push(New object("name";"Clanton";"zc";35046))
 $c.push(New object("name";"Clanton";"zc";35045))
 $c2:=$c.extract("name";"City") //$c2=[{City:null},{City:Cleveland},{City:Blountsville},{City:Adger},{City:Clanton},{City:Clanton}]
 $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:35049},{City:Cleveland,Zip:35049},{City:Blountsville,Zip:35031},{City:Adger,Zip:35006},{City:Clanton,Zip:35046},{City:Clanton,Zip:35045}]
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.fill().Desc -->
 ## .fill()
@@ -949,8 +944,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.fill().Syntax -->
-**.fill**( *value* : any ) : Collection<br>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.fill().Syntax --> **.fill**( *value* : any ) : Collection<br>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+
 
 
 
@@ -961,6 +957,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 | startFrom  | Integer                                         | -> | Numéro de l'élément de départ (inclus)           |
 | end        | Integer                                         | -> | Position de fin (non incluse)                    |
 | Résultat   | collection                                      | <- | Collection d'origine avec valeurs de remplissage |
+
 <!-- END REF -->
 
 
@@ -989,13 +986,10 @@ En cas d'incohérence, les règles suivantes sont appliquées :
  $c.fill("Hello";5) // $c=[2,2,2,2,2,Hello,Hello,Hello]
  $c.fill(0;1;5) // $c=[2,0,0,0,0,Hello,Hello,Hello]
  $c.fill("world";1;-5) //-5+8=3 -> $c=[2,"world","world",0,0,Hello,Hello,Hello]
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.filter().Desc -->
 ## .filter()
@@ -1006,8 +1000,9 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.filter().Syntax -->
-**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.filter().Syntax --> **.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.filter().Params -->
@@ -1016,6 +1011,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 | methodName | Text       | -> | Nom de la méthode à appeler pour filtrer la collection            |
 | param      | Mixed      | -> | Paramètre(s) à passer à *methodName*                              |
 | Résultat   | Collection | <- | Nouvelle collection contenant les éléments filtrés (shallow copy) |
+
 <!-- END REF -->
 
 
@@ -1083,13 +1079,10 @@ Le code de ***TypeLookUp*** est :
 
     $1.result:=True
  End if
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.find().Desc -->
 ## .find()
@@ -1100,8 +1093,9 @@ Le code de ***TypeLookUp*** est :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.find().Syntax -->
-**.find**( *methodName* : Text { ; *...param* : any } ) : any<br>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
+
+<!-- REF #collection.find().Syntax --> **.find**( *methodName* : Text { ; *...param* : any } ) : any<br>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
+
 
 
 <!-- REF #collection.find().Params -->
@@ -1111,6 +1105,7 @@ Le code de ***TypeLookUp*** est :
 | methodName | Text    | -> | Nom de la méthode à appeler pour la recherche      |
 | param      | any     | -> | Paramètre(s) à passer à *methodName*               |
 | Résultat   | any     | <- | Première valeur trouvée (Undefined si non trouvée) |
+
 <!-- END REF -->
 
 
@@ -1181,13 +1176,10 @@ Le code de la méthode ***FindCity*** est :
  var $1 : Object
  var $2 : Text
  $1.result:=$1.value.name=$2 //name est un nom de propriété d'objets dans la collection
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.findIndex().Desc -->
 ## .findIndex()
@@ -1199,8 +1191,9 @@ Le code de la méthode ***FindCity*** est :
 </details>
 
 
-<!-- REF #collection.findIndex().Syntax -->
-**.findIndex**( *methodName* : Text { ; *...param* : any } ) : Integer<br>**.findIndex**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
+
+<!-- REF #collection.findIndex().Syntax --> **.findIndex**( *methodName* : Text { ; *...param* : any } ) : Integer<br>**.findIndex**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
+
 
 
 
@@ -1211,6 +1204,7 @@ Le code de la méthode ***FindCity*** est :
 | methodName | Text    | -> | Nom de la méthode à appeler pour la recherche       |
 | param      | any     | -> | Paramètre(s) à passer à *methodName*                |
 | Résultat   | Integer | <- | Numéro du premier élément trouvé (-1 si non trouvé) |
+
 <!-- END REF -->
 
 
@@ -1261,14 +1255,10 @@ Le code de la méthode ***FindCity*** est :
  var $1 : Object
  var $2 : Text
  $1.result:=$1.value.name=$2
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.indexOf().Desc -->
 ## .indexOf()
@@ -1279,8 +1269,9 @@ Le code de la méthode ***FindCity*** est :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.indexOf().Syntax -->
-**.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+
+<!-- REF #collection.indexOf().Syntax --> **.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+
 
 <!-- REF #collection.indexOf().Params -->
 | Paramètres | Type       |    | Description                                                                        |
@@ -1288,6 +1279,7 @@ Le code de la méthode ***FindCity*** est :
 | toSearch   | expression | -> | Expression à rechercher dans la collection                                         |
 | startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                       |
 | Résultat   | Integer    | <- | Numéro de la première occurrence de toSearch dans la collection, -1 si non trouvée |
+
 <!-- END REF -->
 
 
@@ -1326,13 +1318,10 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
  $i:=$col.indexOf(5;5) //$i=9
  $i:=$col.indexOf("al@") //$i=5
  $i:=$col.indexOf("Hello") //$i=-1
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.indices().Desc -->
 ## .indices()
@@ -1343,8 +1332,9 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.indices().Syntax -->
-**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.indices().Syntax --> **.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.indices().Params -->
@@ -1353,6 +1343,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 | queryString | Text       | -> | Critère(s) de recherche                                                         |
 | value       | any        | -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne       |
 | Résultat    | Collection | <- | Numéro(s) d'élément(s) de la collection répondant au(x) critère(s) de recherche |
+
 <!-- END REF -->
 
 
@@ -1383,12 +1374,10 @@ Pour une description détaillée de la construction de recherches à l'aide des 
  $c.push(New object("name";"Clanton";"zc";35045))
  $icol:=$c.indices("name = :1";"Cleveland") // $icol=[0]
  $icol:=$c.indices("zc > 35040") // $icol=[0,3,4]
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.insert().Desc -->
 ## .insert()
@@ -1399,8 +1388,9 @@ Pour une description détaillée de la construction de recherches à l'aide des 
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.insert().Syntax -->
-**.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
+
+<!-- REF #collection.insert().Syntax --> **.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
+
 
 <!-- REF #collection.insert().Params -->
 | Paramètres | Type       |    | Description                                    |
@@ -1408,6 +1398,7 @@ Pour une description détaillée de la construction de recherches à l'aide des 
 | index      | Integer    | -> | Où insérer l'élément                           |
 | element    | any        | -> | Elément à insérer dans la collection           |
 | Résultat   | Collection | <- | Collection d'origine incluant l'élément inséré |
+
 <!-- END REF -->
 
 
@@ -1433,13 +1424,10 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
  $col.insert(2;"X") //$col=["a","b","X","c","d"]
  $col.insert(-2;"Y") //$col=["a","b","X","Y","c","d"]
  $col.insert(-10;"Hi") //$col=["Hi","a","b","X","Y","c","d"]
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.join().Desc -->
 ## .join()
@@ -1450,8 +1438,9 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.join().Syntax -->
-**.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
+
+<!-- REF #collection.join().Syntax --> **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
+
 
 <!-- REF #collection.join().Params -->
 | Paramètres | Type    |    | Description                                                                    |
@@ -1459,12 +1448,13 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 | delimiter  | Text    | -> | Séparateur à utiliser entre les éléments                                       |
 | option     | Integer | -> | `ck ignore null or empty` : ignorer les chaînes null ou vides dans le résultat |
 | Résultat   | Text    | <- | Chaîne contenant tous les éléments de la collection, séparés par delimiter     |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.unshift()`<!-- REF #collection.unshift().Summary -->insère la ou les *valeur(s)* données au début de la collection<!-- END REF -->et retourne la collection modifiée.
+La fonction `.unshift()` <!-- REF #collection.unshift().Summary -->insère la ou les *valeur(s)* données au début de la collection <!-- END REF -->et retourne la collection modifiée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1478,12 +1468,10 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
  $c:=New collection(1;2;3;"Paris";Null;"";4;5)
  $t1:=$c.join("|") //1|2|3|Paris|null||4|5
  $t2:=$c.join("|";ck ignore null or empty) //1|2|3|Paris|4|5
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.lastIndexOf().Desc -->
 ## .lastIndexOf()
@@ -1494,8 +1482,9 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.lastIndexOf().Syntax -->
-**.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+
+<!-- REF #collection.lastIndexOf().Syntax --> **.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+
 
 <!-- REF #collection.lastIndexOf().Params -->
 | Paramètres | Type       |    | Description                                                                       |
@@ -1503,6 +1492,7 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 | toSearch   | expression | -> | Elément à chercher dans la collection                                             |
 | startFrom  | Integer    | -> | Elément à partir duquel débuter la recherche                                      |
 | Résultat   | Integer    | <- | Numéro de la dernière occurrence de toSearch dans la collection, -1 si non trouvé |
+
 <!-- END REF -->
 
 
@@ -1537,12 +1527,10 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
  $pos3:=$col.lastIndexOf("e";15) //retourne 12
  $pos4:=$col.lastIndexOf("e";-2) //retourne 10
  $pos5:=$col.lastIndexOf("x") //retourne -1
-``` 
+```
+
 
 <!-- END REF -->
-
- 
-
 
 <!-- REF collection.length.Desc -->
 ## .length
@@ -1553,8 +1541,8 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 | v16 R5  | Ajout         |
 </details>
 
-<!-- REF #collection.length.Syntax -->
-**.length** : Integer 
+
+<!-- REF #collection.length.Syntax --> **.length** : Integer 
 <!-- END REF -->
 
 
@@ -1573,12 +1561,10 @@ La propriété `.length` est initialisée à la création de la collection. Elle
  $col:=New collection("one";"two";"three") //$col.length est mise à jour et vaut 3
  $col[4]:="five" //$col.length vaut 5
  $vSize:=$col.remove(0;3).length //$vSize=2
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.map().Desc -->
 ## .map()
@@ -1589,8 +1575,9 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.map().Syntax -->
-**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.map().Syntax --> **.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.map().Params -->
@@ -1599,6 +1586,7 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 | methodName | Text       | -> | Nom de la méthode à appeler pour transformer les éléments de la collection |
 | param      | any        | -> | Paramètre(s) à passer à la méthode                                         |
 | Résultat   | Collection | <- | Collection de valeurs transformées                                         |
+
 <!-- END REF -->
 
 
@@ -1637,14 +1625,10 @@ Avec la méthode *NumberGreaterThan0* suivante :
  var $1 : Object
  var $2 : Real
  $1.result:=Round(($1.value/$2)*100;2)
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.max().Desc -->
 ## .max()
@@ -1655,14 +1639,16 @@ Avec la méthode *NumberGreaterThan0* suivante :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.max().Syntax -->
-**.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
+
+<!-- REF #collection.max().Syntax --> **.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
+
 
 <!-- REF #collection.max().Params -->
 | Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Boolean, Text, Number, Collection, Object, Date | <- | Valeur maximum de la collection                                 |
+
 <!-- END REF -->
 
 
@@ -1675,7 +1661,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* pour i
 
 Si la collection est vide, `.max()` retourne *Undefined*.
 
-La fonction `.some()`<!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
+La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
 #### Exemple
 
@@ -1689,12 +1675,10 @@ La fonction `.some()`<!-- REF #collection.some().Summary -->retourne true si au 
  $max:=$col.max() //{name:Alabama,salary:10500}
  $maxSal:=$col.max("salary") //50000
  $maxName:=$col.max("name") //"Wesson"
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.min().Desc -->
 ## .min()
@@ -1706,27 +1690,29 @@ La fonction `.some()`<!-- REF #collection.some().Summary -->retourne true si au 
 
 </details>
 
-<!-- REF #collection.min().Syntax -->
-**.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
+
+<!-- REF #collection.min().Syntax --> **.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
+
 
 <!-- REF #collection.min().Params -->
 | Paramètres   | Type                                            |    | Description                                                     |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Boolean, Text, Number, Collection, Object, Date | <- | Valeur minimum de la collection                                 |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.min()` <!-- REF #collection.min().Summary -->retourne l'élément ayant la plus petite valeur dans la collection<!-- END REF --> (équivaut au premier élément de la collection après un tri croissant effectué par la fonction [`.sort()`](#sort)).
-> Cette fonction ne modifie pas la collection d'origine.
-
 Si la collection contient différents types de valeurs, la fonction `.mix()` retournera la plus petite valeur du premier type d'élément dans l'ordre de la liste de types (cf. description de [`.sort()`](#sort)).
+> Cette fonction ne modifie pas la collection d'origine.
 
 Si la collection contient des objets, passez le paramètre *propertyPath* pour indiquer la propriété d'objet dont vous souhaitez obtenir la valeur minimum.
 
 Si la collection est vide, `.min()` retourne *Undefined*.
+
+La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
 
 #### Exemple
 
@@ -1740,12 +1726,10 @@ Si la collection est vide, `.min()` retourne *Undefined*.
  $min:=$col.min() //55
  $minSal:=$col.min("salary") //10000
  $minName:=$col.min("name") //"Alabama"
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.orderBy().Desc -->
 ## .orderBy()
@@ -1756,8 +1740,9 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.orderBy().Syntax -->
-**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
+
+<!-- REF #collection.orderBy().Syntax --> **.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.orderBy().Params -->
@@ -1766,7 +1751,8 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 | pathStrings | Text       | -> | Chemin(s) de propriété(s) à utiliser pour trier la collection |
 | pathObjects | Collection | -> | Collection d'objets critère                                   |
 | ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valeurs scalaires)         |
-| Résultat    | Collection | <- | Copie triée de la collection (shallow copy)                   |
+| Résultat    | Collection | <- | Copiée triée de la collection (shallow copy)                  |
+
 <!-- END REF -->
 
 
@@ -1813,7 +1799,7 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 
 #### Exemple 1
 
-Tri d'une collection de nombres par ordre croissant et décroissant :
+Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
 
 ```4d
  var $c; $c2; $3 : Collection 
@@ -1828,7 +1814,7 @@ Tri d'une collection de nombres par ordre croissant et décroissant :
 
 #### Exemple 2
 
-Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
+Tri d'une collection d'objets sur des propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -1841,7 +1827,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $c; $c2 : Collection
@@ -1855,7 +1841,7 @@ Tri d'une collection d'objets sur des propriétés :
 
 #### Exemple 3
 
-Tri d'une collection d'objets via une collection d'objets critères :
+Tri avec un chemin de propriété :
 
 ```4d
  var $crit; $c; $c2 : COllection
@@ -1878,14 +1864,10 @@ Tri avec un chemin de propriété :
  $c.push(New object("name";"Blountsville";"phones";New object("p1";"00";"p2";"03")))
  $crit:=New collection(New object("propertyPath";"phones.p2";"descending";True))
  $c2:=$c.orderBy($crit)
-``` 
+```
 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.orderByMethod().Desc -->
 ## .orderByMethod()
@@ -1896,8 +1878,9 @@ Tri avec un chemin de propriété :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->
-**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.orderByMethod().Syntax --> **.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.orderByMethod().Params -->
@@ -1905,7 +1888,8 @@ Tri avec un chemin de propriété :
 | ---------- | ---------- |:--:| --------------------------------------------------- |
 | methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
 | extraParam | expression | -> | Paramètre(s) à passer à la méthode                  |
-| Résultat   | Collection | <- | Copiée triée de la collection (shallow copy)        |
+| Résultat   | Collection | <- | Copie triée de la collection (shallow copy)         |
+
 <!-- END REF -->
 
 
@@ -1928,7 +1912,7 @@ Dans *methodName*, passez le nom d'une méthode qui compare deux valeurs et reto
 
 #### Exemple 1
 
-Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
+Voici le code de la méthode ***NumAscending*** :
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -1938,7 +1922,7 @@ Vous souhaitez trier une collection de chaînes contenant des nombres par valeur
  $c3:=$c.orderByMethod("NumAscending") // $c3=["4","33","222","1111"]
 ```
 
- Voici le code de la méthode ***NumAscending*** :
+ Vous souhaitez trier une collection de chaînes selon leur longueur :
 
 
 ```4d
@@ -1949,7 +1933,7 @@ Vous souhaitez trier une collection de chaînes contenant des nombres par valeur
 
 #### Exemple 2
 
-Vous souhaitez trier une collection de chaînes selon leur longueur :
+Voici le code de la méthode ***WordLength*** :
 
 ```4d
  var $fruits; $c2 : Collection
@@ -1958,7 +1942,7 @@ Vous souhaitez trier une collection de chaînes selon leur longueur :
   //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
 ```
 
-Voici le code de la méthode ***WordLength*** :
+Vous souhaitez trier une collection par code de caractère ou par langage :
 
 ```4d
  $1.result:=Length(String($1.value))>Length(String($1.value2))
@@ -1966,7 +1950,7 @@ Voici le code de la méthode ***WordLength*** :
 
 #### Exemple 3
 
-Vous souhaitez trier une collection par code de caractère ou par langage :
+La méthode ***sortCollection*** :
 
 ```4d
 var $strings1; $strings2 : Collection
@@ -1981,20 +1965,17 @@ $strings2:=$string1s.orderByMethod("sortCollection";sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-La méthode ***sortCollection*** :
+Paramètre(s) à passer à *methodName*
 
 ```4d
 var$1Object
 var$2Integer // option de tri
 
 $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
-``` 
+```
+
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.pop().Desc -->
 ## .pop()
@@ -2006,26 +1987,28 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 </details>
 
 
-<!-- REF #collection.pop().Syntax -->
-**.pop()** : any <!-- END REF -->
+
+<!-- REF #collection.pop().Syntax --> **.pop()** : any <!-- END REF -->
+
 
 <!-- REF #collection.pop().Params -->
 | Paramètres | Type |    | Description                   |
 | ---------- | ---- |:--:| ----------------------------- |
 | Résultat   | any  | <- | Dernier élément de collection |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.pop()` <!-- REF #collection.pop().Summary -->supprime le dernier élément de la collection et le retourne comme résultat de la fonction<!-- END REF -->.
+Lorsqu'il est appliqué à une collection vide, .`pop()` retourne ***undefined***.
 > Cette fonction modifie la collection d'origine.
 
-Lorsqu'il est appliqué à une collection vide, .`pop()` retourne ***undefined***.
+`.pop()`, combiné à [`push()`](#push), peut être utilisé pour implémenter une fonctionnalité last in first out de traitement des données empilées :
 
 #### Exemple
 
-`.pop()`, combiné à [`push()`](#push), peut être utilisé pour implémenter une fonctionnalité last in first out de traitement des données empilées :
+La fonction `.pop()` <!-- REF #collection.pop().Summary -->supprime le dernier élément de la collection et le retourne comme résultat de la fonction<!-- END REF -->.
 
 ```4d
  var $stack : Collection
@@ -2040,10 +2023,6 @@ Lorsqu'il est appliqué à une collection vide, .`pop()` retourne ***undefined**
 
 <!-- END REF -->
 
-
-
-
-
 <!-- REF collection.push().Desc -->
 ## .push()
 
@@ -2053,20 +2032,22 @@ Lorsqu'il est appliqué à une collection vide, .`pop()` retourne ***undefined**
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.push().Syntax -->
-**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.push().Syntax --> **.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
+
 
 <!-- REF #collection.push().Params -->
 | Paramètres | Type       |    | Description                                         |
 | ---------- | ---------- |:--:| --------------------------------------------------- |
 | element    | Mixed      | -> | Élément(s) à ajouter à la collection                |
 | Résultat   | Collection | <- | Collection originale contenant des éléments ajoutés |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.push()`<!-- REF # collection.push().Summary -->ajoute un ou plusieurs *élément*(s) à la fin de l'instance de collection et retourne la collection modifiée<!-- END REF -->.
+Vous souhaitez trier la collection résultante :
 > Cette fonction modifie la collection d'origine.
 
 
@@ -2084,7 +2065,7 @@ La fonction `.push()`<!-- REF # collection.push().Summary -->ajoute un ou plusie
 
 #### Exemple 2
 
-Vous souhaitez trier la collection résultante :
+Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2095,12 +2076,7 @@ Vous souhaitez trier la collection résultante :
 ```
 
 
-
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.query().Desc -->
 ## .query()
@@ -2112,8 +2088,9 @@ Vous souhaitez trier la collection résultante :
 | v16 R6  | Ajout                            |
 </details>
 
-<!-- REF #collection.query().Syntax -->
-**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+
+<!-- REF #collection.query().Syntax --> **.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.query().Params -->
@@ -2123,6 +2100,7 @@ Vous souhaitez trier la collection résultante :
 | value         | Mixed      | -> | Valeur(s) à comparer lors de l'utilisation de paramètre(s) dans la chaîne |
 | querySettings | Object     | -> | Options de requête : paramètres, attributs                                |
 | Résultat      | Collection | <- | Élément(s) correspondant à queryString dans la collection                 |
+
 <!-- END REF -->
 
 
@@ -2137,7 +2115,7 @@ Le paramètre *queryString* doit respecter la syntaxe suivante :
 propertyPath comparator value {logicalOperator propertyPath comparator value}
 ```
 
-Pour plus d'informations sur la génération d'une requête à l'aide des paramètres *queryString*, *value* et *querySettings*, reportez-vous à la description de la fonction de dataclass [`.query()`](DataClassClass.md#query).
+Cet exemple retourne les personnes dont le nom contient "in" :
 
 > Les formules ne sont pas prises en charge par la fonction `collection.query()`, ni dans le paramètre *queryString* ni en tant que paramètre objet *formula*.
 
@@ -2174,14 +2152,14 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-Cet exemple retourne les personnes dont le nom contient "in" :
+Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
 
 ```4d
  $col:=$c.query("name = :1";"@in@")
   //$col=[{name:Winch...},{name:Sterling...}]
 ```
 
-Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
+Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
 
 ```4d
  $col:=$c.query("name # :1";$aString+"@")
@@ -2189,14 +2167,14 @@ Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d
   //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}]
 ```
 
-Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
+Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("age=null") //placeholders not allowed with "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
-Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
+Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
@@ -2210,10 +2188,6 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 <!-- END REF -->
 
-
-
-
-
 <!-- REF collection.reduce().Desc -->
 ## .reduce()
 
@@ -2223,8 +2197,9 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.reduce().Syntax -->
-**.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any <!-- END REF -->
+
+<!-- REF #collection.reduce().Syntax --> **.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any <!-- END REF -->
+
 
 
 <!-- REF #collection.reduce().Params -->
@@ -2234,6 +2209,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
 | param      | expression                                      | -> | Paramètre(s) à passer à *methodName*                                      |
 | Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Résultat de la valeur de l'accumulateur                                   |
+
 <!-- END REF -->
 
 
@@ -2269,7 +2245,7 @@ Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S
 ```
 
 
-Avec la méthode ***Multiply*** suivante :
+Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
 
 ```4d
  If(Value type($1.value)=Is real)
@@ -2279,7 +2255,7 @@ Avec la méthode ***Multiply*** suivante :
 
 #### Exemple 2
 
-Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
+Avec la méthode ***Flatten*** suivante :
 
 ```4d
  var $c;$r : Collection
@@ -2291,7 +2267,7 @@ Cet exemple permet de réduire plusieurs éléments de collection en un seul él
  $r:=$c.reduce("Flatten") //$r=[0,1,2,3,4,5,6,7]
 ```
 
-Avec la méthode ***Flatten*** suivante :
+Avec la méthode *NumberGreaterThan0* suivante :
 
 ```4d
  If($1.accumulator=Null)
@@ -2300,10 +2276,8 @@ Avec la méthode ***Flatten*** suivante :
  $1.accumulator.combine($1.value)
 ```
 
+
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.remove().Desc -->
 ## .remove()
@@ -2314,8 +2288,9 @@ Avec la méthode ***Flatten*** suivante :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.remove().Syntax -->
-**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.remove().Syntax --> **.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.remove().Params -->
@@ -2324,15 +2299,16 @@ Avec la méthode ***Flatten*** suivante :
 | index      | Integer    | -> | Élément à partir duquel la suppression peut commencer |
 | howMany    | Integer    | -> | Nombre d'éléments à supprimer, ou 1 élément si omis   |
 | Résultat   | Collection | <- | Collection d'origine sans élément(s) supprimé(s)      |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
+Dans *index*, passez la position où vous souhaitez supprimer l'élément de la collection.
 > Cette fonction modifie la collection d'origine.
 
-Dans *index*, passez la position où vous souhaitez supprimer l'élément de la collection.
+La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
 > **Attention** : A noter que la numérotation des éléments de collection débute à 0. Si *index* est supérieur à la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
 
 *   Si *index* < 0, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
@@ -2358,12 +2334,8 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
  $col.remove(-3;1) // $col=["b","g","h"]
 ```
 
+
 <!-- END REF -->
-
-
-
-
-
 
 <!-- REF collection.resize().Desc -->
 ## .resize()
@@ -2377,8 +2349,9 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 
 
 
-<!-- REF #collection.resize().Syntax -->
-**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.resize().Syntax --> **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
+
 
 <!-- REF #collection.resize().Params -->
 | Paramètres   | Type                                            |    | Description                                         |
@@ -2386,6 +2359,7 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 | size         | Integer                                         | -> | Nouvelle taille de la collection                    |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Valeur par défaut pour remplir de nouveaux éléments |
 | Résultat     | Collection                                      | <- | Collection d'origine redimensionnée                 |
+
 <!-- END REF -->
 
 
@@ -2418,12 +2392,8 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 ```
 
+
 <!-- END REF -->
-
-
-
-
-
 
 <!-- REF collection.reverse().Desc -->
 ## .reverse()
@@ -2434,13 +2404,15 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.reverse().Syntax -->
-**.reverse( )** : Collection <!-- END REF -->
+
+<!-- REF #collection.reverse().Syntax --> **.reverse( )** : Collection <!-- END REF -->
+
 
 <!-- REF #collection.reverse().Params -->
 | Paramètres | Type       |    | Description                     |
 | ---------- | ---------- |:--:| ------------------------------- |
 | Résultat   | Collection | <- | Copie inversée de la collection |
+
 <!-- END REF -->
 
 
@@ -2458,11 +2430,8 @@ La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->retourne une 
  $c2:=$c.reverse() //$c2=[6,4,2,5,3,1]
 ```
 
+
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.shift().Desc -->
 ## .shift()
@@ -2473,19 +2442,21 @@ La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->retourne une 
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.shift().Syntax -->
-**.shift()** : any<!-- END REF -->
+
+<!-- REF #collection.shift().Syntax --> **.shift()** : any<!-- END REF -->
+
 
 <!-- REF #collection.shift().Params -->
 | Paramètres | Type |    | Description                   |
 | ---------- | ---- |:--:| ----------------------------- |
 | Résultat   | any  | <- | Premier élément de collection |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.shift()` <!-- REF #collection.shift().Summary -->supprime le premier élément de la collection et le retourne comme résultat de la fonction<!-- END REF -->.
+Si la collection est vide, cette méthode ne fait rien.
 > Cette fonction modifie la collection d'origine.
 
 Si la collection est vide, cette méthode ne fait rien.
@@ -2502,13 +2473,8 @@ Si la collection est vide, cette méthode ne fait rien.
   // $c=[2,4,5,6,7,8]
 ```
 
+
 <!-- END REF -->
-
-
-
-
-
-
 
 <!-- REF collection.slice().Desc -->
 ## .slice()
@@ -2519,8 +2485,9 @@ Si la collection est vide, cette méthode ne fait rien.
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.slice().Syntax -->
-**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.slice().Syntax --> **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+
 
 <!-- REF #collection.slice().Params -->
 | Paramètres | Type       |    | Description                                                               |
@@ -2528,6 +2495,7 @@ Si la collection est vide, cette méthode ne fait rien.
 | startFrom  | Integer    | -> | Numéro de l'élément de départ (inclus)                                    |
 | end        | Integer    | -> | Position de fin (non incluse)                                             |
 | Résultat   | Collection | <- | Nouvelle collection contenant des éléments scindées (copie superficielle) |
+
 <!-- END REF -->
 
 
@@ -2555,11 +2523,8 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
  $nc:=$c.slice(-3;-2) //$nc=[3]
 ```
 
+
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.some().Desc -->
 ## .some()
@@ -2570,8 +2535,9 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.some().Syntax -->
-**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
+
+<!-- REF #collection.some().Syntax --> **.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
+
 
 
 <!-- REF #collection.some().Params -->
@@ -2581,15 +2547,16 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 | methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
 | param      | Mixed   | -> | Paramètre(s) à passer à *methodName*          |
 | Résultat   | Booléen | <- | Vrai si au moins un élément a réussi le test  |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.some()` <!-- REF #collection.some().Summary -->retourne true si au moins un élément de la collection a réussi un test<!-- END REF --> implémenté dans la méthode *methodName* fournie.
+La fonction `.push()`<!-- REF # collection.push().Summary -->ajoute un ou plusieurs *élément*(s) à la fin de l'instance de collection et retourne la collection modifiée<!-- END REF -->.
 
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
 *methodName* reçoit les paramètres suivants :
 
@@ -2602,7 +2569,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *   *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
-Dans tous les cas, au moment où la fonction `.some()` rencontre le premier élément de collection retournant true dans *$1.result*, elle arrête d'appeler *methodName* et retourne **true**.
+La fonction `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->recherche l'expression *toSearch* parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée<!-- END REF -->, ou -1 si aucune occurrence n'a été trouvée.
 
 By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
 
@@ -2629,7 +2596,7 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
  $b:=$c.some(1;"NumberGreaterThan0") //$b=false
 ```
 
-Avec la méthode *NumberGreaterThan0* suivante :
+*methodName* doit fixer le paramètre suivant :
 
 ```4d
  $1.result:=$1.value>0
@@ -2637,10 +2604,6 @@ Avec la méthode *NumberGreaterThan0* suivante :
 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.sort().Desc -->
 ## .sort()
@@ -2651,8 +2614,9 @@ Avec la méthode *NumberGreaterThan0* suivante :
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.sort().Syntax -->
-**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+
+<!-- REF #collection.sort().Syntax --> **.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.sort().Params -->
@@ -2661,6 +2625,7 @@ Avec la méthode *NumberGreaterThan0* suivante :
 | methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
 | extraParam | any        | -> | Paramètre(s) à passer à la méthode                  |
 | Résultat   | Collection | <- | Collection d'origine triée                          |
+
 <!-- END REF -->
 
 
@@ -2723,12 +2688,10 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
   //méthode projet numberOrder
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
-``` 
- 
+```
+
+
 <!-- END REF -->
-
-
-
 
 <!-- REF collection.sum().Desc -->
 ## .sum()
@@ -2739,20 +2702,22 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.sum().Syntax -->
-**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
+<!-- REF #collection.sum().Syntax --> **.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 <!-- REF #collection.sum().Params -->
 | Paramètres   | Type |    | Description                                                     |
 | ------------ | ---- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text | -> | Chemin de propriété d'objet à utiliser pour évaluer les valeurs |
 | Résultat     | Réel | <- | Somme des valeurs de collection                                 |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.sum()` <!-- REF #collection.sum().Summary -->retourne la somme de toutes les valeurs de l'instance de collection<!-- END REF -->.
+Seuls les éléments ayant une valeur numérique sont pris en compte pour le calcul (les autres types d'éléments sont ignorés).
 
 Seuls les éléments ayant une valeur numérique sont pris en compte pour le calcul (les autres types d'éléments sont ignorés).
 
@@ -2786,11 +2751,8 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
  $vSum:=$col.sum("salary") //$vSum=70500,5
 ```
 
+
 <!-- END REF -->
-
-
-
-
 
 <!-- REF collection.unshift().Desc -->
 ## .unshift()
@@ -2801,20 +2763,22 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 | v16 R6  | Ajout         |
 </details>
 
-<!-- REF #collection.unshift().Syntax -->
-**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
+
+<!-- REF #collection.unshift().Syntax --> **.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
+
 
 <!-- REF #collection.unshift().Params -->
 | Paramètres | Type                                   |    | Description                                   |
 | ---------- | -------------------------------------- |:--:| --------------------------------------------- |
 | value      | Text, Number, Object, Collection, Date | -> | Valeur(s) à insérer au début de la collection |
 | Résultat   | Réel                                   | <- | Collection contenant des éléments ajoutés     |
+
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.unshift()` <!-- REF #collection.unshift().Summary -->insère la ou les *valeur(s)* données au début de la collection <!-- END REF -->et retourne la collection modifiée.
+Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps, ce qui signifie qu'elles apparaissent dans la collection résultante dans le même ordre que dans la liste d'arguments.
 > Cette fonction modifie la collection d'origine.
 
 Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps, ce qui signifie qu'elles apparaissent dans la collection résultante dans le même ordre que dans la liste d'arguments.
@@ -2830,6 +2794,7 @@ Si plusieurs valeurs sont passées, elles sont insérées toutes en même temps,
  $c.unshift(5) //$c=[5,4,1,2]
  $c.unshift(6;7) // $c=[6,7,5,4,1,2]
 ```
+
 
 <!-- END REF -->
 

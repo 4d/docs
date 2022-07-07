@@ -152,7 +152,7 @@ Langue de la documentation HTML à afficher. Vous pouvez sélectionner une docum
 
 Définit l'emplacement des pages de documentation recherchées par 4D.
 
-*   Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. If it is found, 4D displays the page in the current browser. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
+*   Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
 *   If it is not found, 4D displays an error message in the browser. Si elle n'est pas trouvée, 4D affiche un message d'erreur dans le navigateur.
 
 ### Dossier local

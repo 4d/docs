@@ -102,7 +102,7 @@ En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utiliz
 | fk database folder         | 4     | Filesystem asociado: "/PACKAGE"                                                                     |
 | fk desktop folder          | 115   |                                                                                                     |
 | fk documents folder        | 117   | Carpeta Documentos del usuario                                                                      |
-| fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
+| fk licenses folder         | 1     | Carpeta que contiene los archivos de licencia 4D de la máquina                                      |
 | fk logs folder             | 7     | Filesystem asociado: "/LOGS"                                                                        |
 | fk mobileApps folder       | 10    |                                                                                                     |
 | fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
@@ -129,7 +129,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
+> Se recomienda utilizar el comando de acceso directo[`Folder<`](#folder) en lugar de `4D.Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
@@ -166,8 +166,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valor devuelto**
 
-*   **True** if the folder is created successfully;
-*   **False** if a folder with the same name already exists or if an error occured.
+*   **True** si la carpeta se crea con éxito;
+*   **False** si ya existe una carpeta con el mismo nombre o si ha ocurrido un error.
 
 #### Ejemplo 1
 
@@ -215,12 +215,12 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parámetros        | Tipo      |    | Descripción                                  |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Tipo de enlace del alias                     |
-| Resultado         | 4D.File   | <- | Referencia de alias o de acceso directo      |
+| Parámetros        | Tipo      |    | Descripción                                          |
+| ----------------- | --------- | -- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Texto     | -> | Name of the alias or shortcut                        |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                             |
+| Resultado         | 4D.File   | <- | Referencia de alias o de acceso directo              |
 <!-- END REF -->
 
 
@@ -290,21 +290,21 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the f
 
 By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
 
-| Constante              | Valor | Comentario                                       |
-| ---------------------- | ----- | ------------------------------------------------ |
-| `Delete only if empty` | 0     | Deletes folder only when it is empty             |
-| `Delete with contents` | 1     | Deletes folder along with everything it contains |
+| Constante              | Valor | Comentario                                        |
+| ---------------------- | ----- | ------------------------------------------------- |
+| `Delete only if empty` | 0     | Elimina la carpeta sólo cuando está vacía         |
+| `Delete with contents` | 1     | Elimina la carpeta junto con todo lo que contiene |
 
 When `Delete only if empty` is passed or if you omit the option parameter:
 
-*   The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.
-*   If the folder does not exist, the error -120 is generated.
+*   La carpeta sólo se elimina si está vacía; en caso contrario, el comando no hace nada y se genera un error -47.
+*   Si la carpeta no existe, se genera el error -120.
 
-When `Delete with contents` is passed:
+Cuando se pasa `Delete with contents`:
 
-*   The folder, along with all of its contents, is deleted. **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-*   If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
-*   If the folder does not exist, the command does nothing and no error is returned. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+*   La carpeta, junto con todo su contenido, se elimina. **Advertencia**: incluso esta carpeta y/o su contenido estén bloqueados o definidos como de sólo lectura, si el usuario actual tiene los derechos de acceso adecuados, la carpeta (y su contenido) aún se elimina.
+*   Si esta carpeta, o cualquiera de los archivos que contiene, no puede ser eliminada, la eliminación se interrumpe tan pronto como se detecta el primer elemento inaccesible y se devuelve un error(*). En este caso, la carpeta puede ser eliminada sólo parcialmente. Cuando se interrumpe el borrado, puede utilizar el comando `GET LAST ERROR STACK` para recuperar el nombre y la ruta de acceso del archivo infractor.
+*   Si la carpeta no existe, el comando no hace nada y no devuelve ningún error. (*) Windows: -54 (Intento de abrir un archivo bloqueado para escribir) macOS: -45 (El archivo está bloqueado o la ruta no es correcta)
 
 <!-- END REF -->
  

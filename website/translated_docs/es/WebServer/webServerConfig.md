@@ -27,7 +27,7 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 Activa y configura la caché de las páginas web.
 
-El servidor web 4D dispone de una caché que permite cargar las páginas estáticas, las imágenes GIF, las imágenes JPEG (<512 kb) y las hojas de estilo (archivos.css) en memoria, a medida que se solicitan. El uso de la caché permite aumentar considerablemente el rendimiento del servidor web cuando se envían páginas estáticas. El caché se comparte entre todos los procesos web. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. If it finds the page, it sends it immediately. If not, 4D loads the page from disk and places it in the cache.
+El servidor web 4D dispone de una caché que permite cargar las páginas estáticas, las imágenes GIF, las imágenes JPEG (<512 kb) y las hojas de estilo (archivos.css) en memoria, a medida que se solicitan. El uso de la caché permite aumentar considerablemente el rendimiento del servidor web cuando se envían páginas estáticas. El caché se comparte entre todos los procesos web. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. Si encuentra la página, la envía inmediatamente. If not, 4D loads the page from disk and places it in the cache.
 
 Puede modificar el tamaño de la caché en el área **Tamaño de la caché de las páginas**. El valor a definir depende del número y del tamaño de las páginas estáticas de su sitio web, así como de los recursos de que dispongan las máquinas locales.
 > Mientras utiliza su base de datos web, puede verificar el rendimiento de la caché utilizando el comando `WEB GET STATISTICS`. Si, por ejemplo, observa que la tasa de uso de la caché se acerca al 100%, puede considerar aumentar el tamaño que se le ha asignado. Los URL [/4DSTATS] y [/4DHTMLSTATS] también permiten obtener información sobre el estado de la caché.
@@ -137,13 +137,13 @@ Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](.
 
 ## Página de inicio por defecto
 
-| Puede ajustarse con           | Nombre                                                                       | Comentarios                               |
-| ----------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------- |
-| objeto webServer              | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                   | Texto                                     |
-| `WEB SET HOME PAGE`           |                                                                              | Puede ser diferente para cada proceso web |
-| Caja de diálogo de parámetros | [Configuration page/Default Home Page](../settings/web.md#default-home-page) |                                           |
+| Puede ajustarse con           | Nombre                                                                                        | Comentarios                               |
+| ----------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| objeto webServer              | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage)                                    | Texto                                     |
+| `WEB SET HOME PAGE`           |                                                                                               | Puede ser diferente para cada proceso web |
+| Caja de diálogo de parámetros | [Página Configuración/Página de bienvenida por defecto](../settings/web.md#default-home-page) |                                           |
 
-Designate a default home page for the web server. This page can be static or [semi-dynamic].
+Designate a default home page for the web server. Esta página puede ser estática o [semi-dynamic].
 
 By default, when the web server is launched for the first time, 4D creates a home page named "index.html" and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:
 
@@ -205,7 +205,7 @@ Estado de la comunicación a través de HTTPS. Esta opción se describe en [esta
 | objeto webServer    | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Booleano, true para activar HSTS (por defecto es false) |
 | `WEB SET OPTION`    | `Web HSTS enabled`                                 | 0 (desactivado, por defecto) o 1 (activado)             |
 
-HTTP Strict Transport Security (HSTS) status.
+Estado de HTTP Strict Transport Security (HSTS).
 
 When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabled](#enable-http), the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace "https" by "http"). To forbid http redirections, you can [disable HTTP](#enable-http), however in this case an error message is displayed to client HTTP requests.
 
@@ -251,7 +251,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 
 In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.
 
-Pass the size expressed in bytes as value. By default, the compression threshold is set to 1024 bytes.
+Pasa el tamaño expresado en bytes como valor. By default, the compression threshold is set to 1024 bytes.
 
 
 ## Puerto HTTP
@@ -262,7 +262,7 @@ Pass the size expressed in bytes as value. By default, the compression threshold
 | `WEB SET OPTION`              | `Web port ID`                                                    |             |
 | Caja de diálogo de parámetros | [Página Configuración/Puerto HTTP](../settings/web.md#http-port) |             |
 
-Listening IP (TCP) port number for HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
+Número de puerto IP (TCP) de escucha para HTTP. By default, 4D publishes a web application on the regular Web HTTP Port (TCP port), which is port 80. If that port is already used by another web service, you need to change the HTTP Port used by 4D for this database.
 
 > En macOS, la modificación del puerto HTTP permite iniciar el servidor web 4D sin ser el usuario raíz de la máquina (ver [macOS HelperTool](#macos-helpertool)).
 
@@ -279,7 +279,7 @@ If you specify 0, 4D will use the default HTTP port number 80.
 | objeto webServer    | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Booleano, falso por defecto          |
 | `WEB SET OPTION`    | `Web HTTP TRACE`                               | Integer, 0 por defecto (desactivado) |
 
-HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
+Activación del método HTTP TRACE en el servidor web 4D. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
 
 
 
@@ -294,7 +294,7 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 
 |Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
 
-Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also [HTTP Port](#http-port) for information on port numbers.
+Listening IP port number for HTTPS connections via TLS. Por defecto, el valor es 443 (valor estándar). See also [HTTP Port](#http-port) for information on port numbers.
 
 
 ## Tiempo de espera del proceso inactivo
@@ -425,7 +425,7 @@ Valores posibles: 500 000 a 2 147 483 648.
 | objeto webServer    | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`    | `Web max sessions`                                 |             |
 
-Maximum number of simultaneous sessions. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
+Número máximo de sesiones simultáneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
 Default value: 100 (pass 0 to restore the default value).
 
@@ -457,7 +457,7 @@ Valores posibles:
 | objeto webServer    | [`name`](API/WebServerClass.md#name) |             |
 
 
-Nombre de la aplicación del servidor web. Useful when component web servers are started.
+Nombre de la aplicación del servidor web. Útil cuando se inician los servidores web de los componentes.
 
 ## Versión OpenSSL
 
@@ -465,7 +465,7 @@ Nombre de la aplicación del servidor web. Useful when component web servers are
 | ------------------- | -------------------------------------------------------- | ------------ |
 | objeto webServer    | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Sólo lectura |
 
-Version of the OpenSSL library used.
+Versión de la librería OpenSSL utilizada.
 
 
 ## Perfect Forward Secrecy
@@ -531,13 +531,13 @@ In this case, robots are not allowed to access the entire site.
 
 ## Root Folder
 
-| Puede ajustarse con           | Nombre                                                                       | Comentarios                                                                                                                           |
-| ----------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                             | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
-| `WEB SET ROOT FOLDER`         |                                                                              |                                                                                                                                       |
-| Caja de diálogo de parámetros | [Configuration page/Default HTML Root](../settings/web.md#default-html-root) |                                                                                                                                       |
+| Puede ajustarse con           | Nombre                                                                             | Comentarios                                                                                                                           |
+| ----------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                                   | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
+| `WEB SET ROOT FOLDER`         |                                                                                    |                                                                                                                                       |
+| Caja de diálogo de parámetros | [Página Configuración/Raiz HTML por defecto](../settings/web.md#default-html-root) |                                                                                                                                       |
 
-Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. The path is formatted in POSIX full path. The web server will need to be restarted in order for the new root folder to be taken into account.
+Path of web server root folder, i.e. the folder in which 4D will search for the static and semi-dynamic HTML pages, pictures, etc., to send to the browsers. La ruta de acceso está en formato POSIX (ruta completa). The web server will need to be restarted in order for the new root folder to be taken into account.
 
 Moreover, the HTML root folder defines, on the web server hard drive, the hierarchical level above which the files will not be accessible. If a requested URL or a 4D command tries to access a file located above the HTML root folder, an error is returned indicating that the file has not been found.
 
@@ -576,7 +576,7 @@ Scalable session management enabling status for the 4D web server. Web server se
 | objeto webServer    | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`    | `Web session cookie domain`                                        |             |
 
-Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
+Campo "path" de la cookie de sesión. Useful for controlling the scope of the session cookies. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
 
 
 ## Nombre de la cookie de sesión
@@ -633,9 +633,9 @@ This option enables the preemptive mode for your application's web server code w
 
 ## Parámetros obsoletos
 
-The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values.
+The following settings are still supported but rely on deprecated features or technologies. Generalmente se recomienda mantener los valores por defecto.
 
-#### Allow database access through 4DSYNC URLs
+#### Autorizar el acceso a la base de datos a través de las URL 4DSYNC
 
 This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs.
 
@@ -643,7 +643,7 @@ This option controls the support of HTTP synchronization requests containing dep
 
 > This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
 
-IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
+Estado de validación de la dirección IP para las cookies de sesión. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
 
 
@@ -655,9 +655,9 @@ When this option is checked, the web server sends extended characters “as is�
 
 #### Conexiones Keep-Alive
 
-The 4D Web Server can use keep-alive connections. The keep-alive option allows you to maintain a single open TCP connection for the set of exchanges between the web browser and the server to save system resources and to optimize transfers.
+El servidor web 4D puede utilizar conexiones persistentes. The keep-alive option allows you to maintain a single open TCP connection for the set of exchanges between the web browser and the server to save system resources and to optimize transfers.
 
-The **Use Keep-Alive Connections** option enables or disables keep-alive TCP connections for the web server. This option is enabled by default. In most cases, it is advisable to keep this option check since it accelerates the exchanges. If the web browser does not support connection keep alive, the 4D Web Server automatically switches to HTTP/1.0.
+The **Use Keep-Alive Connections** option enables or disables keep-alive TCP connections for the web server. Esta opción está activada por defecto. In most cases, it is advisable to keep this option check since it accelerates the exchanges. If the web browser does not support connection keep alive, the 4D Web Server automatically switches to HTTP/1.0.
 
 The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.
 

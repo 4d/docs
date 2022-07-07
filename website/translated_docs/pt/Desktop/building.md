@@ -384,7 +384,7 @@ Items must be installed:
     *   **Server application** - in the *Client Server executable\ \<ApplicationName>Server\Server Database* subfolder.
     *   **Client application** - in the *Client Server executable\ \<ApplicationName>Client* subfolder.
 
-*   **on macOS**
+*   **no macOS**
     *   **Server application** - next to the *\<ApplicationName>Server* software package.
     *   **Client application** - next to the *\<ApplicationName>Client* software package.
 

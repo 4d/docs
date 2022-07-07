@@ -62,7 +62,7 @@ Para ello, puede:
 -   4D: click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box.
 -   4D Server: click on the **Clear Cache** button in the HTTP page of the [4D Server Administration window](Admin/server-admin.md#http-server-page).
 
-The cache is then immediately cleared.
+La caché se borra inmediatamente.
 > También puede utilizar la URL [/4DCACHECLEAR](#cacheclear).
 
 
@@ -203,18 +203,18 @@ The following table lists the fields available for each format (in alphabetical 
 | CONNECTION_ID  |     | X   | Número de identificación de la conexión                                                                                     |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                     |
 | CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                                                                              |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                                                                          |
+| CS(REFERER)    | X   | X   | URL de la página que apunta al documento solicitado                                                                         |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
 | CS_SIP         | X   | X   | Dirección IP del servidor                                                                                                   |
 | CS_URI         | X   | X   | URI sobre el que se realiza la petición                                                                                     |
 | CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                                                                       |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                    |
+| CS_URI_STEM  | X   | X   | Parte de la petición sin los parámetros de consulta                                                                         |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
 | PATH_ARGS      |     | X   | Parámetros CGI: cadena situada después del caracter "$"                                                                     |
 | STATUS         | X   | X   | Respuesta ofrecida por el servidor                                                                                          |
 | TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
-| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                                                                              |
+| TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                 |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
 | URL            |     | X   | URL solicitado por el cliente                                                                                               |
 
@@ -239,13 +239,13 @@ Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límit
 
 *   **No Backup**: The scheduled backup function is deactivated.
 
-*   **Every X hour(s)**: This option is used to program backups on an hourly basis. You can enter a value between 1 and 24 .
+*   **Every X hour(s)**: This option is used to program backups on an hourly basis. Puede introducir un valor entre 1 y 24 .
     *   **starting at**: Used to set the time at which the first back up will begin.
 
-*   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
+*   **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduzca 1 si desea realizar una copia de seguridad diaria. When this option is checked, you must indicate the time when the backup must be started.
 
 *   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 
 *   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. Introduzca 1 si desea realizar una copia de seguridad mensual.
 
-*   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
+*   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Puede definir un límite de tamaño de 1, 10, 100 o 1000 MB.

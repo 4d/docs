@@ -69,7 +69,7 @@ Three location options are provided:
 
 On Japanese systems, 4D supports the *Mecab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
 
-This algorithm is used by default in Japanese versions of 4D. The files required for the *Mecab* library are installed in the **mecab** folder of the **Resources** folder for 4D applications (Japanese versions only).
+This algorithm is used by default in Japanese versions of 4D. **Consider only non-alphanumeric chars for keywords**: Modifies the algorithm used by 4D to identify keyword separators and hence build their indexes.
 
 If needed, you can disable the use of the *Mecab* algorithm and use the conventional *ICU* library.
 

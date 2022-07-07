@@ -4,7 +4,7 @@ title: Comencemos
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) an specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
 
 
 ![](assets/en/ViewPro/vpSpreadsheet.PNG)
@@ -18,7 +18,7 @@ Embedding 4D View Pro areas in your forms allows you to import and export spread
 
 4D View Pro features are directly included in 4D, making it easy to deploy and manage. No se requiere ninguna instalación adicional.
 
-However, 4D View Pro requires a license. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
+Sin embargo, 4D View Pro requiere una licencia. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
 
 ![](assets/en/ViewPro/licenseError.png)
 
@@ -38,7 +38,7 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 
 ## Fundamentos de la selección, la entrada y de la navegación
 
-Spreadsheets are composed of rows and columns. A number is associated with each row. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
+Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Las celdas pueden ser seleccionadas y sus contenidos editados.
 
 ### Selecting cells, columns and rows
 
@@ -120,7 +120,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilización de objetos de rango
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. This area can be composed of one or several cells. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. Esta área puede estar compuesta de una o varias celdas. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
 
 For example, to create a range object for the following cells:
 
@@ -138,18 +138,18 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 4D View Pro range objects are composed of several properties:
 
 *   area - El nombre del área 4D View Pro
-*   ranges - A collection of range object(s). Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
+*   rangos - Una colección de objeto(s) rango. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
-| Propiedad |                   | Tipo      | Descripción                                                         | Disponible para                                    |
-| --------- | ----------------- | --------- | ------------------------------------------------------------------- | -------------------------------------------------- |
-| area      |                   | texto     | 4D View Pro area form object name                                   | always available                                   |
-| ranges    |                   | colección | Colección de rangos                                                 | always available                                   |
-|           | \[ ].name        | texto     | Nombre de rango                                                     | name                                               |
-|           | \[ ].sheet       | number    | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
-|           | \[ ].row         | number    | Índice de la línea (el conteo comienza en 0)                        | celda, celdas, línea, líneas                       |
-|           | \[ ].rowCount    | number    | Número de líneas                                                    | celdas, líneas                                     |
-|           | \[ ].column      | number    | Índice de la columna (el conteo comienza en 0)                      | celda, celdas, columna, columnas                   |
-|           | \[ ].columnCount | number    | Conteo de columnas                                                  | celdas, columnas                                   |
+| Propiedad |                   | Tipo      | Descripción                                                         | Disponible para                                                |
+| --------- | ----------------- | --------- | ------------------------------------------------------------------- | -------------------------------------------------------------- |
+| area      |                   | texto     | 4D View Pro area form object name                                   | always available                                               |
+| ranges    |                   | colección | Colección de rangos                                                 | always available                                               |
+|           | \[ ].name        | texto     | Nombre de rango                                                     | name                                                           |
+|           | \[ ].sheet       | number    | Sheet index (current sheet index by default) (counting begins at 0) | celda, celdas, línea, líneas, columna, columnas, todos, nombre |
+|           | \[ ].row         | number    | Índice de la línea (el conteo comienza en 0)                        | celda, celdas, línea, líneas                                   |
+|           | \[ ].rowCount    | number    | Número de líneas                                                    | celdas, líneas                                                 |
+|           | \[ ].column      | number    | Índice de la columna (el conteo comienza en 0)                      | celda, celdas, columna, columnas                               |
+|           | \[ ].columnCount | number    | Conteo de columnas                                                  | celdas, columnas                                               |
 
 
 

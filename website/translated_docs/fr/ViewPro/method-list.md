@@ -162,7 +162,7 @@ La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère un
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-Dans *index*, vous pouvez passer un numéro pour la nouvelle feuille. Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
+Dans *index*, vous pouvez passer un numéro pour la nouvelle feuille. In *sheet*, you can pass an index for the new sheet. Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début.
 > La numérotation démarre à 0.
 
 Dans *name*, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
@@ -1489,7 +1489,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 ```4d
   //fixer une formule
  VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
- 
+
  $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 ```
 #### Voir aussi
@@ -1725,7 +1725,7 @@ Le code suivant :
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... retourne les attributs d'impression de la zone 4D View Pro dans la commande [VP SET PRINT INFO](#vp-set-print-info) :
+Dès que la commande `VP SET CUSTOM FUNCTIONS` est appelée, les méthodes autorisées par [SET ALLOWED METHODS](#vp-set-allowed-methods) sont ignorées dans la zone 4D View Pro.
 
 ```4d
 {
@@ -1837,7 +1837,7 @@ La commande `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->re
 
 Dans *vpAreaName*, passez la propriété du nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Vous pouvez définir l'emplacement du nombre de lignes dans le paramère optionnel *sheet* à l'aide de l'indice de la feuille (la numérotation démarre à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
+In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 
 #### Exemple
@@ -2034,7 +2034,7 @@ La commande `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summa
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis ou si vous passez `vk current sheet`, la feuille courante est utilisée.
 
 
 #### Objet retourné
@@ -2122,7 +2122,7 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 ```4d
 // Rechercher toutes les cellules fusionnées
  $range:=VP Get spans(VP All("ViewProArea"))
- 
+
  //centrer le texte
  $style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
  VP SET CELL STYLE($range;$style)
@@ -3029,7 +3029,7 @@ Pour retirer toutes les fusions de cellules de ce document :
 ```4d
  //identifier toutes les cellules fusionnées 
  $span:=VP Get spans(VP All("ViewProArea"))
- 
+
   //retirer les fusions
  VP REMOVE SPAN($span)
 ```
@@ -3172,9 +3172,9 @@ La commande `VP Row` <!-- REF #_method_.VP Row.Summary -->retourne une nouvelle 
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Le paramètre *row* définit la première ligne de la plage. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Pass the row index (counting begins at 0) in this parameter.
+Le paramètre *row* définit la première ligne de la plage. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre.
 
-Le paramètre optionnel *rowCount* vous permet de définir le nombre total de lignes comprises dans la plage. *rowCount* doit être supérieur à 0. Si le paramètre est omis, la valeur 1 sera définie par défaut.
+Dans le paramètre *row*, vous pouvez définir l'emplacement de la ou des lignes de la plage de cellules. *rowCount* doit être supérieur à 0. Passez l'indice de la ligne (la numérotation commence à zéro) dans ce paramètre.
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
@@ -3293,14 +3293,14 @@ Vous souhaitez créer une zone 4D View Pro hors écran et lire la valeur d'une c
 // Déclaration de la classe OffscreenArea
  Class constructor ($path : Text)
     This.filePath:=$path
- 
+
   //  Cette fonction sera appelée sur chaque événement de la zone hors écran
  Fonction onEvent
      Case of
         :(FORM Event.code=On VP Ready)
             VP IMPORT DOCUMENT(This.area;This.filePath)
             This.result:=VP Get value(VP Cell(This.area;6;22))
- 
+
        ALERT("La cellule G23 contient la valeur : "+String(This.result))
  End case
 ```
@@ -3453,11 +3453,11 @@ Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :
 ```4d
 C_OBJECT($allowed)
  $allowed:=New object //paramètre pour la commande
- 
+
  $allowed.Hello:=New object //crée une première fonction simple nommée "Hello"
  $allowed.Hello.method:="My_Hello_Method" //définit la méthode 4D
  $allowed.Hello.summary:="Hello prints hello world" 
- 
+
  $allowed.Byebye:=New object //crée une deuxième fonction avec des paramètres nommée "Byebye" 
  $allowed.Byebye.method:="My_ByeBye_Method"
  $allowed.Byebye.parameters:=New collection
@@ -3467,7 +3467,7 @@ C_OBJECT($allowed)
  $allowed.Byebye.summary:="Byebye prints a custom timestamp" 
  $allowed.Byebye.minParams:=3
  $allowed.Byebye.maxParams:=3
- 
+
  VP SET ALLOWED METHODS($allowed)
 ```
 
@@ -3476,7 +3476,7 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 ![](assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG)
 
 
-> Les noms de fonctions 4D View Pro s'affichement automatiquement en majuscules.
+> La numérotation démarre à 0.
 
 #### Voir aussi
 
@@ -3543,7 +3543,7 @@ Le paramètre *borderStyleObj* vous permet de définir le style des lignes de la
 | style     | Integer | Defines the style of the border. Default = empty. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 
-Vous pouvez définir la position de *borderStyleObj* (i.e. là où la ligne est appliquée) à l'aide de *borderPosObj* :
+Les bordures appliquées à l'aide de `VP SET CELL STYLE` seront appliquées à chaque cellule de *rangeObj*, contrairement à la commande [VP SET BORDER](#vp-set-border) qui applique les bordures à l'ensemble de *rangeObj*.
 
 
 
@@ -3582,7 +3582,7 @@ Ce code illustre, en termes de définition des bordures, la différence entre la
  $border:=New object("color";"red";"style";vk line style thick)
  $option:=New object("outline";True)
  VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
- 
+
  // // Appliquer des bordures à l'aide de VP SET CELL STYLE
  $cellStyle:=New object
  $cellStyle.borderBottom:=New object("color";"blue";"style";vk line style thick)
@@ -3615,7 +3615,7 @@ Ce code illustre, en termes de définition des bordures, la différence entre la
 La commande `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->applique le(s) style(s) défini(s) dans *styleObj* aux cellules définies dans *rangeObj*<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage de cellules à laquelle s'appliquera le style. Si *rangeObj* contient plusieurs cellules, le style s'applique à chaque cellule.
-> Les bordures appliquées à l'aide de `VP SET CELL STYLE` seront appliquées à chaque cellule de *rangeObj*, contrairement à la commande [VP SET BORDER](#vp-set-border) qui applique les bordures à l'ensemble de *rangeObj*.
+> Si *rangeObj* n'est pas une plage cellule, seule la première cellule de la plage est utilisée.
 
 Le paramètre *styleObj* vous permet de passer un objet contenant des propriétés de style. Vous pouvez utiliser une feuille de style existante ou créer un nouveau style. Si *styleObj* contient à la fois une feuille de style existante et des propriétés de style supplémentaires, la feuille de style existante s'applique, suivie des propriétés supplémentaires.
 
@@ -3800,7 +3800,7 @@ La commande `VP SET CUSTOM FUNCTIONS` <!-- REF #_method_.VP SET CUSTOM FUNCTIONS
 
 Les formules spécifiées par `VP SET CUSTOM FUNCTIONS` apparaissent dans un menu pop-up lorsque la première lettre de leur nom est saisie. Voir la page [Formules et Fonctions](formulas.md).
 
-> Si `VP SET CUSTOM FUNCTIONS` est appelée plusieurs fois dans la même zone et la même session, seul le dernier appel est pris en compte.
+> La numérotation démarre à 0.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -3818,7 +3818,7 @@ Dans le paramètre *formulaObj*, passez un objet contenant les formules 4D pouva
 |                          | maxParams  |            | Nombre              | Nombre maximum de paramètres. Passer un nombre supérieur à la longueur de *parameters* permet de déclarer les paramètres "optionnels" avec un type par défaut                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 > **ATTENTION**
 > 
-> * Dès que la commande `VP SET CUSTOM FUNCTIONS` est appelée, les méthodes autorisées par [SET ALLOWED METHODS](#vp-set-allowed-methods) sont ignorées dans la zone 4D View Pro.
+> * Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les fonctions basées sur les commandes `SET TABLE TITLES` et `SET FIELD TITLES` sont ignorées dans la zone 4D View Pro.
 > * Dès que `VP SET CUSTOM FUNCTIONS` est appelé, les fonctions basées sur les commandes `SET TABLE TITLES` et `SET FIELD TITLES` sont ignorées dans la zone 4D View Pro.
 
 #### Exemple
@@ -3896,7 +3896,7 @@ Le paramètre optionnel *formatPattern* définit un modèle pour les paramètres
 ```4d
 //Attribuer la date et l'heure locales à la valeur de la cellule 
  VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
- 
+
  //Attribuer le 18 décembre à la valeur de la cellule
  VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
@@ -3946,7 +3946,7 @@ Pour plus d'informations sur les modèles et les caractères de formatage, veuil
 ```4d
 //Définir la valeur de la cellule à la date du jour
  VP SET DATE VALUE(VP Cell("ViewProArea";4;2);Current date))
- 
+
  //Définir la valeur de la cellule à une date spécifique avec un format désigné
  VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
  VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
@@ -4018,7 +4018,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 La commande `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->assigne un champ spécifique de la base 4D à une plage de cellules désignée<!-- END REF -->.
 
-Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
+Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur. Dans *rangeObj*, passez la plage de cellule(s) dont vous souhaitez indiquer la valeur.
 
 Le paramètre *field* indique un [champ virtuel](formulas.md#referencing-fields-using-the-virtual-structure) de la base 4D à assigner à *rangeObj*. Le nom de la structure virtuelle pour le *field* peut être visualisé dans la barre de formule. Si du contenu est déjà présent dans l'une des cellules de *rangeObj*, il sera remplacé par *rangeObj*.
 
@@ -4051,7 +4051,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 La commande `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->assigne une formule spécifique ou une méthode 4D à une plage de cellules désignée<!-- END REF -->.
 
-Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
+Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur.
 
 Le paramètre *formula* indique un nom de formule ou de méthode 4D à assigner à *rangeObj*. Si une méthode 4D est utilisée, elle doit être autorisée à l'aide de la commande [`VP SET ALLOWED METHODS`](#vp-set-allowed-method).
 
@@ -4539,7 +4539,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Passez un objet contenant les défintions des options à définir dans le paramètre *sheetOptions*. Pour visualiser la liste complète des options disponibles, veuillez vous reporter aux [Sheet Options](configuring.md#sheet-options) de 4D View Pro.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
 *   `vk current sheet`
 
@@ -4798,27 +4798,28 @@ Le paramètre *valueObj* est un objet qui définit la valeur et le [format](conf
 ```4d
 //Fixer la valeur de la cellule à Faux
  VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
- 
+
  //Fixer la valeur de la cellule à 2
  VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";2))
- 
+
  //Fixer la valeur de la cellule à $125,571.35
  VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)"))
- 
+
  //Fixer la valeur de la cellule à Hello World!
- VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
- 
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
+
  //Fixer la valeur de la cellule à date du jour
  VP SET VALUE(VP Cell("ViewProArea";4;2);New object("value";Current date))
- 
+
  //Fixer la valeur de la cellule à heure courante
  VP SET VALUE(VP Cell("ViewProArea";5;2);New object("time";Current time))
- 
+
  //Fixer la valeur de la cellule à une date et une heure spécifiques
  VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
- 
+
  //Effacer le contenu de la cellule
  VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))!
+
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
 
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
@@ -4859,12 +4860,12 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 La commande `VP SET VALUES` <!-- REF #_method_.VP SET VALUES.Summary -->affecte une collection de valeurs qui commence à partir de la plage de cellule spécifiée<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage de cellule (créée via [`VP Cell`](#vp-cell)) dont vous souhaitez indiquer la valeur. La cellule définie dans *rangeObj* est utilisée pour déterminer le point de départ.
-> * Si *rangeObj* n'est pas une plage cellule, seule la première cellule de la plage est utilisée.
+> * Si *rangeObj* comprend plusieurs plages, seule la première cellule de la première plage est utilisée.
 > * Si *rangeObj* comprend plusieurs plages, seule la première cellule de la première plage est utilisée.
 
 Le paramètre *valuesCol* est bidimensionnel :
 
-*   La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Passez une collection vide pour sauter une ligne.
+*   La collection de premier niveau contient des sous-collections de valeurs. Chaque sous-collection définit une ligne. Chaque sous-collection définit une ligne.
 *   Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs peuvent être de type entier long, réel, booléen, texte, date, null ou objet. Si la valeur est un objet, elle peut avoir les propriétés suivantes :
 
     | Propriété | Type                                     | Description                           |
@@ -5016,19 +5017,19 @@ Dans *rangeObj*, passez, en tant qu'objet, une plage de cellules que vous souhai
 
 Les sélecteurs suivants sont disponibles :
 
-| Sélecteur             | Description                                                                                                                                                                                                                                                                                                                         | Disponible avec *vPos* | *hPos* |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------ |
-| `vk position bottom`  | Alignement vertical vers le bas de la cellule ou de la ligne.                                                                                                                                                                                                                                                                       | X                      |        |
-| `vk position center`  | Alignement vers le centre. L'alignement s'appliquera à la limite de la cellule, ligne ou colonne, en fonction de la position de la vue indiquée :<li>Position verticale de la vue - cellule ou ligne</li><li>Position horizontale de la vue - cellule ou ligne</li>                                                                                                                               | X                      | X      |
-| `vk position left`    | Alignement horizontal vers la gauche de la cellule ou de la colonne                                                                                                                                                                                                                                                                 |                        | X      |
-| `vk position nearest` | Alignement vers la limite la plus proche (haut, bas, gauche, droite, centre). L'alignement s'appliquera à la limite de la cellule, ligne ou colonne, en fonction de la position de la vue indiquée :<li>Position verticale de la vue (haut, centre, bas) - cellule ou ligne </li><li>Position horizontale de la vue (gauche, centre, droite) - cellule ou ligne | X                      | X      |
-| `vk position right`   | Alignement horizontal vers la droite de la cellule ou de la colonne                                                                                                                                                                                                                                                                 |                        | X      |
-| `vk position top`     | Alignement vertical vers le haut de la cellule ou de la ligne                                                                                                                                                                                                                                                                       | X                      |        |
+| Sélecteur             | Description                                                                                                                                                                                                                                                                                                                         | Disponible avec *vPos* | là où la ligne est appliquée) à l'aide de *borderPosObj* : |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------------- |
+| `vk position bottom`  | Alignement vertical vers le bas de la cellule ou de la ligne.                                                                                                                                                                                                                                                                       | X                      |                                                            |
+| `vk position center`  | Alignement vers le centre. L'alignement s'appliquera à la limite de la cellule, ligne ou colonne, en fonction de la position de la vue indiquée :<li>Position verticale de la vue - cellule ou ligne</li><li>Position horizontale de la vue - cellule ou ligne</li>                                                                                                                               | X                      | X                                                          |
+| `vk position left`    | Alignement horizontal vers la gauche de la cellule ou de la colonne                                                                                                                                                                                                                                                                 |                        | X                                                          |
+| `vk position nearest` | Alignement vers la limite la plus proche (haut, bas, gauche, droite, centre). L'alignement s'appliquera à la limite de la cellule, ligne ou colonne, en fonction de la position de la vue indiquée :<li>Position verticale de la vue (haut, centre, bas) - cellule ou ligne </li><li>Position horizontale de la vue (gauche, centre, droite) - cellule ou ligne | X                      | X                                                          |
+| `vk position right`   | Alignement horizontal vers la droite de la cellule ou de la colonne                                                                                                                                                                                                                                                                 |                        | X                                                          |
+| `vk position top`     | Alignement vertical vers le haut de la cellule ou de la ligne                                                                                                                                                                                                                                                                       | X                      |                                                            |
 > Cette commande n'est efficace que si le repositionnement de la vue est possible. Par example, si *rangeObj* est contenu dans la cellule A1 (la première colonne et la première ligne) de la feuille courante, le repositionnement de la vue n'apportera aucun changement, étant donné que les limites verticales et horizontales ont déjà été atteintes (i.e., il n'est pas possible de faire dérouler davantage vers le haut ou vers la gauche). De même si *rangeObj* est contenu dans la cellule C3 et que la vue est repositionnée au centre ou en bas à droite. La vue demeure inchangée.
 
 #### Exemple
 
-Vous souhaitez visualiser la cellule dans la colonne AY, ligne 51, au centre de la zone 4D View Pro. Le code suivant :
+Vous souhaitez visualiser la cellule dans la colonne AY, ligne 51, au centre de la zone 4D View Pro.
 
 ```4d
 $displayCell:=VP Cell("myVPArea";50;50)
@@ -5088,9 +5089,9 @@ Le code du bouton Suspend Computing :
 ```4d
  //mettre les calculs sur pause pendant que les utilisateurs saisissent les informations
  If(FORM Event.code=On Clicked)
- 
+
     VP SUSPEND COMPUTING("ViewProArea")
- 
+
  End if
 ```
 

@@ -2552,7 +2552,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 La función `.some()` <!-- REF #collection.some().Summary --> devuelve true si al menos un elemento de la colección ha superado con éxito una prueba<!-- END REF --> implementada en el método *methodName* proporcionado.
 
 
-En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. Este método recibe un `Object` como primer parámetro ($1) y debe definir *$ 1.result* en **True** para cada elemento que cumpla la prueba.
+En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional).
 
 *methodName* recibe los siguientes parámetros:
 

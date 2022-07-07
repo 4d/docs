@@ -104,7 +104,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 | Backup settings file              | 1     | Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto                                                                                                                                                                                                                                                                                                      |
 | Backup settings file for data     | 17    | archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data                                                                                                                                                                                                                                                                                       |
 | Build application log file        | 14    | Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                 |
-| Build application settings file   | 20    | Default settings file of the application builder ("buildApp.4DSettings"). Stored in the Settings folder of the project.                                                                                                                                                                                                                                                                                  |
+| Build application settings file   | 20    | Default settings file of the application builder ("buildApp.4DSettings"). Almacenado en la carpeta Settings del proyecto.                                                                                                                                                                                                                                                                                |
 | Compacting log file               | 6     | Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                    |
 | Current backup settings file      | 18    | backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file                                                                                                                                                                                                                                   |
 | Debug log file                    | 12    | Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                            |
@@ -142,7 +142,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve un nuevo objeto de tipo `4D.File`<!-- END REF -->. Es idéntico al comando [`File`](#file) (acceso directo).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
+> Se recomienda utilizar el comando de acceso directo[`File<`](#file) en lugar de `4D.File.new()`.
 
 
 <!-- INCLUDE document.copyTo().Desc -->
@@ -179,8 +179,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Valor devuelto**
 
-*   **True** if the file is created successfully;
-*   **False** if a file with the same name already exists or if an error occured.
+*   **True** si el archivo se crea con éxito;
+*   **False** si ya existe un archivo con el mismo nombre o si ha ocurrido un error.
 
 #### Ejemplo
 
@@ -210,12 +210,12 @@ Creation of a preferences file in the database folder:
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parámetros        | Tipo      |    | Descripción                                  |
-| ----------------- | --------- | -- | -------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut |
-| aliasName         | Texto     | -> | Name of the alias or shortcut                |
-| aliasType         | Integer   | -> | Tipo de enlace del alias                     |
-| Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo  |
+| Parámetros        | Tipo      |    | Descripción                                          |
+| ----------------- | --------- | -- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Texto     | -> | Name of the alias or shortcut                        |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                             |
+| Resultado         | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
 <!-- END REF -->
 
 
@@ -289,7 +289,7 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 If the file is currently open, an error is generated.
 
 If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+> **ATENCIÓN**: `.delete( )` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete( )` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 #### Ejemplo
 
@@ -346,11 +346,11 @@ The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns
 
 The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
-**Returned object with a .exe or .dll file**
+**Objeto devuelto con un archivo .exe o .dll**
 
-> Reading a .exe or .dll is only possible on Windows.
+> La lectura de un .exe o .dll sólo es posible en Windows.
 
 Todos los valores de propiedades son de tipo Texto.
 
@@ -468,7 +468,7 @@ The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or rename
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, el archivo conserva su nombre cuando se mueve. If you want to rename the moved file, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 
 **Objeto devuelto**
@@ -577,7 +577,7 @@ The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes 
 
 The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.
 
-> The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.
+> La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
 ***info* parameter object with a .exe or .dll file**
 
@@ -601,7 +601,7 @@ If you pass a null or empty text as value, an empty string is written in the pro
 
 ***info* parameter object with a .plist file**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Value types are preserved when possible.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Los tipos de valores se conservan cuando es posible.
 
 If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
 
@@ -678,10 +678,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones                                          |
-| ------- | ------------------------------------------------------- |
-| v19 R3  | Default for new projects: no BOM and (macOS) LF for EOL |
-| v17 R5  | Añadidos                                                |
+| Versión | Modificaciones                                                       |
+| ------- | -------------------------------------------------------------------- |
+| v19 R3  | Por defecto para los nuevos proyectos: sin BOM y (macOS) LF para EOL |
+| v17 R5  | Añadidos                                                             |
 </details>
 
 
@@ -714,21 +714,21 @@ Optionally, you can designate the character set to be used for writing the conte
 
 > Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando `CONVERT FROM TEXT`.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
+Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D la inserta en el archivo a menos que el conjunto de caracteres utilizado contenga el sufijo "-no-bom" (por ejemplo, "UTF-8-no-bom"). Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" sin BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
 
-| Constante                     | Valor | Comentario                                                                                                                                               |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Sin procesar                                                                                                                                             |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Document with CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
-| `Document with CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
-| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
+| Constante                     | Valor | Comentario                                                                                                                                                                 |
+| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Sin procesar                                                                                                                                                               |
+| `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |
+| `Document with CRLF`          | 2     | Los saltos de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                        |
+| `Document with CR`            | 3     | Los saltos de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                       |
+| `Document with LF`            | 4     | Los saltos de línea se convierten en LF (salto de línea), el formato por defecto de Unix y macOS                                                                           |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Nota de compatibilidad**: las opciones de compatibilidad están disponibles para la gestión de EOL y de BOM. Ver[Página Compatibilidad](https://doc.4d.com/4dv19R/help/title/en/page3239.html) en doc.4d.com.
 
 #### Ejemplo
 

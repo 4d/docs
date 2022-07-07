@@ -38,14 +38,14 @@ Negative numbers are specified with the minus sign (-). Por exemplo:
 
 ## Number operators
 
-| Operation                | Sintaxe          | Returns  | Expressão | Value |
+| Operação                 | Sintaxe          | Retorna  | Expressão | Value |
 | ------------------------ | ---------------- | -------- | --------- | ----- |
 | Addition                 | Number + Number  | Número   | 2 + 3     | 5     |
 | Subtraction              | Number - Number  | Número   | 3 – 2     | 1     |
 | Multiplication           | Number * Number  | Número   | 5 * 2     | 10    |
 | Division                 | Number / Number  | Número   | 5 / 2     | 2.5   |
 | Longint division         | Number \ Number | Número   | 5 \ 2    | 2     |
-| Modulo                   | Number % Number  | Número   | 5 % 2     | 1     |
+| Módulo                   | Number % Number  | Número   | 5 % 2     | 1     |
 | Exponentiation           | Number ^ Number  | Número   | 2 ^ 3     | 8     |
 | Igual                    | Number = Number  | Booleano | 10 = 10   | True  |
 |                          |                  |          | 10 = 11   | False |
@@ -53,7 +53,7 @@ Negative numbers are specified with the minus sign (-). Por exemplo:
 |                          |                  |          | 10 # 10   | False |
 | Greater than             | Number > Number  | Booleano | 11 > 10   | True  |
 |                          |                  |          | 10 > 11   | False |
-| Less than                | Number < Number  | Booleano | 10 < 11   | True  |
+| Menor que                | Number < Number  | Booleano | 10 < 11   | True  |
 |                          |                  |          | 11 < 10   | False |
 | Greater than or equal to | Number >= Number | Booleano | 11 >= 10  | True  |
 |                          |                  |          | 10 >= 11  | False |
@@ -103,7 +103,7 @@ Because each bit can equal 0 or 1, you can also think about a Long Integer value
 
 An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
 
-| Operation              | Operator  | Sintaxe                | Returns              |
+| Operação               | Operator  | Sintaxe                | Retorna              |
 | ---------------------- | --------- | ---------------------- | -------------------- |
 | Bitwise AND            | &         | Long & Long            | Long                 |
 | Bitwise OR (inclusive) | &#124;    | Long &#124; Long       | Long                 |
@@ -123,7 +123,7 @@ An expression that uses a bitwise operator returns a Long Integer value, except 
 
 The following table lists the bitwise operators and their effects:
 
-| Operation              | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Operação               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bitwise AND            | Each resulting bit is the logical AND of the bits in the two operands. <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                                           |
 | Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
@@ -136,7 +136,7 @@ The following table lists the bitwise operators and their effects:
 
 ### Exemplos
 
-| Operation              | Exemplo                         | Resultado  |
+| Operação               | Exemplo                         | Resultado  |
 | ---------------------- | ------------------------------- | ---------- |
 | Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |

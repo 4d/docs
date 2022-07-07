@@ -1800,6 +1800,37 @@ showRowHeader:0,
 useMax:true,
 watermark:[],
 zoomFactor:1
+} &A Sales Per Region",
+footerCenterImage:,
+footerLeft:,
+footerLeftImage:,
+footerRight:"page &P of &N",
+footerRightImage:,
+headerCenter:,
+headerCenterImage:,
+headerLeft:"&G",
+headerLeftImage:logo.png,
+headerRight:,
+headerRightImage:,
+margin:{top:75,bottom:75,left:70,right:70,header:30,footer:30},
+orientation:2,
+pageOrder:0,
+pageRange:,
+paperSize:{width:850,height:1100,kind:1},
+qualityFactor:2,
+repeatColumnEnd:-1,
+repeatColumnStart:-1,
+repeatRowEnd:-1,
+repeatRowStart:-1,
+rowEnd:24,
+rowStart:0,
+showBorder:false,
+showColumnHeader:0,
+showGridLine:false,
+showRowHeader:0,
+useMax:true,
+watermark:[],
+zoomFactor:1
 }
 ```
 
@@ -3205,9 +3236,9 @@ The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range ob
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-The *row* parameter defines the first row of the row range. Pass the row index (counting begins at 0) in this parameter. Pass the row index (counting begins at 0) in this parameter.
+The *column* parameter defines the first column of the column range. Pass the row index (counting begins at 0) in this parameter. Pass the column index (counting begins at 0)  in this parameter.
 
-The optional *rowCount* parameter allows you to define the total number of rows of the range. *rowCount* must be greater than 0. If omitted, the value will be set to 1 by default.
+In the *row* parameter, you can define the row(s) of the cell range's position. *rowCount* must be greater than 0. Pass the row index (counting begins at 0) in this parameter.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If not specified, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 
@@ -4051,7 +4082,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
+In *rangeObj*, pass a range of the cell(s) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
 
 The *field* parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
@@ -4307,6 +4338,37 @@ $printInfo:=New object
 
 //define print attributes
 $printInfo.headerCenter:="&BS.H.I.E.L.D. var $printInfo : Object
+
+//declare print attributes object
+$printInfo:=New object
+
+//define print attributes
+$printInfo.headerCenter:="&BS.H.I.E.L.D. &A Sales Per Region"
+$printInfo.firstPageNumber:=1
+$printInfo.footerRight:="page &P of &N"
+$printInfo.orientation:=vk print page orientation landscape
+$printInfo.centering:=vk print centering horizontal
+$printInfo.columnStart:=0
+$printInfo.columnEnd:=8
+$printInfo.rowStart:=0
+$printInfo.rowEnd:=24
+
+$printInfo.showGridLine:=True
+
+//Add corporate logo
+$printInfo.headerLeftImage:=logo.png
+$printInfo.headerLeft:="&G"
+
+$printInfo.showRowHeader:=vk print visibility hide
+$printInfo.showColumnHeader:=vk print visibility hide
+$printInfo.fitPagesWide:=1
+$printInfo.fitPagesTall:=1
+
+//print PDF document
+VP SET PRINT INFO ("ViewProArea";$printInfo)
+
+//export the PDF
+VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(ALERT("PDF ready!")))) var $printInfo : Object
 
 //declare print attributes object
 $printInfo:=New object
@@ -4845,6 +4907,8 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";2))
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)"))
 
 //Set the cell value as Hello World!
+VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
+
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))
 
 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";"Hello World!"))

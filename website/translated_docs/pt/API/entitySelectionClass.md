@@ -1779,13 +1779,13 @@ The function returns an empty collection in the `ranges` property if the origina
 #### Exemplo
 
 ```4d
-var $invoices; $cashSel; $creditSel : cs.Invoices
+var $invoices; $cashSel; $creditSel : cs. Invoices
 var $result1; $result2 : Object
 
-$invoices:=ds.Invoices.all()
+$invoices:=ds. Invoices.all()
 
-$cashSelection:=ds.Invoices.query("payment = :1"; "Cash")
-$creditSel:=ds.Invoices.query("payment IN :1"; New collection("Cash"; "Credit Card"))
+$cashSelection:=ds. Invoices.query("payment = :1"; "Cash")
+$creditSel:=ds. Invoices.query("payment IN :1"; New collection("Cash"; "Credit Card"))
 
 $result1:=$invoices.selected($cashSelection)
 $result2:=$invoices.selected($creditSel)
@@ -2104,17 +2104,14 @@ Retorna:
 Example with slicing and filtering on properties:
 
 ```4d
-var $employeesCollection; $filter : Collection
-var $employees : cs.EmployeeSelection
-
-$employeesCollection:=New collection
-$filter:=New collection
-
-$filter.push("firstName")
-$filter.push("lastName")
-
-$employees:=ds.Employee.all()
-$employeesCollection:=$employees.toCollection($filter;0;0;2)
+EmployeeSelection
+ $employees:=ds.Employee.query("firstName=:1";"S@")
+ $notDropped:=$employees.drop() // $notDropped for uma entity selection que contém todas as entidades não suprimidas
+ If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas
+    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria
+ Else
+    ALERT("Problem during drop, try later")
+ End if var $employees; $notDropped : cs.
 ```
 
 Retorna:

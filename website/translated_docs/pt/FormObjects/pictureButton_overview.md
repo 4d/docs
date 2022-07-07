@@ -10,7 +10,7 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
   For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
-  | Propriedade                | JSON name              | Value |
+  | Propriedade                | Nome JSON              | Value |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
   | Colunas                    | columnCount            | 4     |
@@ -43,7 +43,7 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
 
 
-## Animation
+## Animação
 
 In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
 

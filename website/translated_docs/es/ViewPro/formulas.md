@@ -9,7 +9,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 
 ### Entrada de las fórmulas
 
-To enter a formula in a 4D View Pro area:
+Para introducir una fórmula en un área 4D View Pro:
 
 1.  Select the cell into which you will enter the formula or function.
 2.  Introduzca = (el signo igual).
@@ -21,7 +21,7 @@ When writing a formula, you can use different shortcuts:
 
 ![](assets/en/ViewPro/formulas.PNG)
 
-- type the first letter of a function to enter. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+- escriba la primera letra de una función a ingresar. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
 
 ![](assets/en/ViewPro/formula2.PNG)
 
@@ -29,7 +29,7 @@ You can also create named formulas that can be called via their name. To do so, 
 
 ### Operadores y operandos
 
-All formulas have operands and operators:
+Todas las fórmulas tienen operandos y operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
 *   **Operands** include several categories:
@@ -40,7 +40,7 @@ All formulas have operands and operators:
 
 ## Valores y operadores
 
-4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
+4D View Pro soporta cinco tipos de datos. For each data type, specific literal values and operators are supported.
 
 | Tipos de datos                     | Valores                                            | Operadores                                                                                                                                                                                                                                        |
 | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -67,7 +67,7 @@ The following operators can be used with two operands of the same type:
 
 ### Presedencia de los operadores
 
-List of operators from most to least important:
+Lista de los operadores de la mas a menos importante:
 
 | Operador        | Descripción               |
 | --------------- | ------------------------- |
@@ -86,7 +86,7 @@ List of operators from most to least important:
 
 ## Referencias de celdas
 
-Formulas often refer to other cells by cell addresses. You can copy these formulas into other cells. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+Formulas often refer to other cells by cell addresses. Puede copiar estas fórmulas a otras celdas. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
 
 ```
 = C6 + C7
@@ -108,7 +108,7 @@ If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the 
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
 
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. A reference to a named cell is always absolute. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
+A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Una referencia a una celda nombrada es siempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
 
 The following table shows the effect of the different notations:
 
@@ -250,7 +250,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
-An error is returned in the 4D View Pro cell if:
+Se devuelve un error en la celda 4D View Pro si:
 
 *   the 4D method returns another type other than those listed above,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
@@ -278,7 +278,7 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 
 Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
 
-### Referencing fields using the virtual structure
+### Referenciación de campos mediante la estructura virtual
 
 
 4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
@@ -314,7 +314,7 @@ For example, if you declared the "Name" field of the "People" table in the virtu
 
 We want to print the name of a person in a 4D View Pro area cell using a 4D virtual field:
 
-1.  Create an "Employee" table with a "L_Name" field:
+1.  Crear una tabla "Employee" con un campo "L_Name":
 
 ![](assets/en/ViewPro/vpFieldMeth1.PNG)
 
@@ -348,7 +348,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 5.  Validate the field to display the name of the current employee:
 
 ![](assets/en/ViewPro/vpFieldMeth4.PNG)
-> The \[Employee] table must have a current record.
+> La tabla \[Employee] debe tener un registro actual.
 
 
 ### Declarar los métodos autorizados
@@ -363,5 +363,5 @@ To be called in a 4D View Pro formula, a project method must be:
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> > > > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 

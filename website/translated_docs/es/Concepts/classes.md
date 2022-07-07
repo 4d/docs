@@ -215,8 +215,8 @@ For a class function, the `Current method name` command returns: `<ClassName>.<F
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. Se soportan las siguientes sintaxis:
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
-- use of a "4D.Function" class member method:
+- utilización del operador `()`. For example, `myObject.methodName("hello")`
+- utilización de un método miembro de la clase "4D.Function":
     - [`apply()`](API/FunctionClass.md#apply)
     - [`call()`](API/FunctionClass.md#call)
 
@@ -254,7 +254,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
     $result:=$x+$y
 ```
 
-You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). Por ejemplo:
+También puede declarar el parámetro de retorno añadiendo sólo`: type` y utilizar la expresión [`retorno`](parameters.md#return-expression) (también terminará la ejecución de la función). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -289,7 +289,7 @@ $area:=$rect.getArea() //5000
 
 #### Ejemplo 2
 
-This example uses the [`return expression`](parameters.md#return-expression):
+Este ejemplo utiliza la [`expresión retorno`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -317,32 +317,32 @@ Function set <name>($parameterName : type)
 // código
 ```
 
-`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+`Function get` y `Function set` son accesos que definen las **propiedades calculadas** en la clase. Una propiedad calculada es una propiedad nombradas con un tipo de datos que enmascara un cálculo. Cuando se accede a un valor de propiedad calculado, 4D sustituye el código del accesor correspondiente:
 
-- when the property is read, the `Function get` is executed,
-- when the property is written, the `Function set` is executed.
+- cuando se lee la propiedad, `Function get` se ejecuta,
+- cuando se escribe la propiedad, `Function get` se ejecuta.
 
-If the property is not accessed, the code never executes.
+Si no se accede a la propiedad, el código nunca se ejecuta.
 
-Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
-
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
+Las propiedades calculadas están diseñadas para manejar datos que no necesitan ser guardados en memoria. Generalmente se basan en propiedades persistentes. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
 
 In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
 
-In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property.
 
-`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+En el archivo de definición de la clase, las declaraciones de propiedades calculadas utilizan las palabras claves `Function get` (*getter*) y `Function set` (*setter*) seguido por el nombre de la propiedad. El nombre debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
 
-When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
+`Función get` devuelve un valor del tipo de la propiedad y `Function set` toma un parámetro del tipo de la propiedad. Ambos argumentos deben cumplir con los [parámetros de función](#parameters) estándar.
+
+Cuando ambas funciones están definidas, la propiedad calculada es **read-write**. Si solo se define una `Function get`, la propiedad calculada es **de solo lectura**. En este caso, se devuelve un error si el código intenta modificar la propiedad. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
 
 The type of the computed property is defined by the `$return` type declaration of the *getter*.
 
 The type of the computed property is defined by the `$return` type declaration of the *getter*.
 
-The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md).
+El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del *getter *. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
-> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+> Asignar *undefined* a una propiedad de objeto limpia su valor mientras se preserva su tipo. Para ello, la `Function get` es llamada primero para recuperar el tipo de valor, luego `Function set` es llamado con un valor vacío de ese tipo.
 
 #### Ejemplo 1
 
@@ -399,7 +399,7 @@ A class constructor function, which can accept [parameters](#parameters), can be
 
 In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-For a class constructor function, the `Current method name` command returns: `<ClassName>:constructor`, for example "MyClass:constructor".
+Para una función class constructor, el comando `Current method name` devuelve: `<ClassName>:constructor`, por ejemplo "MyClass:constructor".
 
 
 
@@ -434,11 +434,11 @@ Class extends <ParentClass>
 
 The `Class extends` keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.
 
-Class extension must respect the following rules:
+La extensión de clase debe respetar las siguientes reglas:
 
 - A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)
 - A user class cannot extend a user class from another project or component.
-- A user class cannot extend itself.
+- Una clase usuario no puede extenderse a sí misma.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
@@ -478,18 +478,18 @@ Class constructor ($side : Integer)
 Super {( param{;...;paramN} )} {-> Object} 
 ```
 
-| Parámetros | Tipo   |    | Descripción                                    |
-| ---------- | ------ | -- | ---------------------------------------------- |
-| param      | mixto  | -> | Parameter(s) to pass to the parent constructor |
-| Resultado  | objeto | <- | Padre del objeto                               |
+| Parámetros | Tipo   |    | Descripción                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| param      | mixto  | -> | Parámetro(s) a pasar al constructor de la clase padre |
+| Resultado  | objeto | <- | Padre del objeto                                      |
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 
-`Super` serves two different purposes:
+`Super` tiene dos propósitos diferentes:
 
 1. Inside a [constructor code](#class-constructor), `Super` is a command that allows to call the constructor of the superclass. When used in a constructor, the `Super` command appears alone and must be used before the `This` keyword is used.
 
-- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
+- If all class constructors in the inheritance tree are not properly called, error -10748 is generated. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
 
@@ -577,7 +577,7 @@ Function description()
     $0:=Super.nbSides()+" which are all equal"
 ```
 
-Then you can write in a project method:
+Entonces puede escribir en un método proyecto:
 
 ```4d
 var $square : Object
@@ -598,7 +598,7 @@ This -> Object
 | ---------- | ------ | -- | ------------- |
 | Resultado  | objeto | <- | Objeto actual |
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
+The `This` keyword returns a reference to the currently processed object. En 4D, se puede utilizar en [contextos diferentes](https://doc.4d.com/4Dv19/help/command/page1470.html).
 
 In most cases, the value of `This` is determined by how a function is called. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
@@ -639,7 +639,7 @@ Function f()
     $0:=This.a+This.b
 ```
 
-Then you can write in a project method:
+Entonces puede escribir en un método proyecto:
 
 ```4d
 $o:=cs.ob.new()

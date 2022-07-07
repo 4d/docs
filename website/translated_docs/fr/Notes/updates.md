@@ -8,7 +8,7 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 
 ## 4D v19 R4
 
-- Les [attributs d'alias](ORDA/ordaClasses.md#alias-attributes) sont disponibles dans les classes ORDA.
+- [Alias attributes](ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
 - Prise en charge des instructions [break et continue](Concepts/cf_looping.md#break-and-continue) dans les boucles.
 - Prise en charge de l'instruction [return](Concepts/flow-control.md#return-expression) et de [l'expression return](Concepts/parameters.md#return-expression) pour retourner des valeurs.
 - Prise en charge des [opérateurs d'assignation composés](Concepts/operators.md#compound-assignment-operators), des [opérateurs de court-circuit](Concepts/operators.md#short-circuit-operators) et de [l'opérateur ternaire](Concepts/operators.md#ternary-operator)

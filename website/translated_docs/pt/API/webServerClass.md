@@ -59,10 +59,10 @@ They provide the following properties and functions:
 ## WEB Server
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                           |
-| ------ | ---------------------------------- |
-| v18 R3 | Adicionado                         |
-| v19    | support for .sessionCookieSameSite |
+| Versão | Mudanças                            |
+| ------ | ----------------------------------- |
+| v18 R3 | Adicionado                          |
+| v19    | suporte para .sessionCookieSameSite |
 
 </details>
 
@@ -79,9 +79,9 @@ They provide the following properties and functions:
 
 <!-- END REF -->
 
-The `WEB Server` command<!-- REF #_command_.WEB Server. Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+A função `.start()`<!-- REF #WebServerClass.start().Summary -->inicia o servidor web sobre o que se aplica<!-- END REF -->, utilizando as propriedades estabelecidas no parâmetro opcional do objeto *settings*.
 
-By default, if the *option* parameter is omitted, the command returns a reference to the Web server of the database, i.e. the default Web server. To designate the Web server to return, you can pass one of the following constants in the *option* parameter:
+Por padrão, se o parâmetro *opção* for omitido, o comando retorna uma referência ao servidor Web do banco de dados, i. . o servidor web padrão. Para designar o servidor da Web para retornar, você pode passar uma das seguintes constantes no parâmetro de *opção*:
 
 | Constante                      | Value | Comentário                                               |
 | ------------------------------ | ----- | -------------------------------------------------------- |
@@ -89,11 +89,11 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 | `Web server host database`     | 2     | Web server of the host database of a component           |
 | `Web server receiving request` | 3     | Web server that received the request (target Web server) |
 
-The returned Web server object contains the current values of the Web server properties.
+O objeto Servidor Web retornado contém os valores atuais das propriedades do Servidor Web.
 
 #### Exemplo
 
-From your component, you want to know if the Web server of the host database is started:
+Do seu componente, você quer saber se o servidor Web do banco de dados host está iniciado:
 
 ```4d
   // Method of a component
@@ -124,23 +124,23 @@ From your component, you want to know if the Web server of the host database is 
 
 <!-- END REF -->
 
-The `WEB Server list` command<!-- REF #_command_.WEB Server list. Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+O comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->retorna uma coleção de todos os objetos Web server disponíveis nas aplicações 4D<!-- END REF -->.
 
-A 4D application can contain anywhere from one to several Web servers:
+Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
 - one Web server for the host database (default Web server)
 - one Web server for each component.
 
-All available Web servers are returned by the `WEB Server list` command, whether they are actually running or not.
+Todos os servidores Web disponíveis são retornados pelo comando `WEB Server list` , quer estejam realmente executando ou não.
 
 > The default Web server object is automatically loaded by 4D at startup. On the other hand, each component Web server that you want to use must be instantiated using the [`WEB Server`](#web-server) command.
 
-You can use the [.name](#name) property of the Web server object to identify the project or component to which each Web server object in the list is attached.
+Você pode usar o [. ame](#name) propriedade do objeto do servidor Web para identificar o projeto ou componente ao qual cada objeto do servidor Web está anexado na lista.
 
 
 #### Exemplo
 
-We want to know how many running web servers are available:
+Queremos saber quantos servidores rodando estão disponíveis:
 
 ```4d
  var $wSList : Collection
@@ -162,7 +162,7 @@ We want to know how many running web servers are available:
 **.accessKeyDefined** : Boolean<!-- END REF -->
 
 
-The **.accessKeyDefined** property contains<!-- REF #WebServerClass.accessKeyDefined. Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. This property is used by the WebAdmin web server to validate the security configuration of the administration interface.
+A propriedade **.accessKeyDefined** contém<!-- REF #WebServerClass.accessKeyDefined. Summary -->true se uma chave de acesso for definida nas configurações do web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
 
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
@@ -175,7 +175,7 @@ The **.accessKeyDefined** property contains<!-- REF #WebServerClass.accessKeyDef
 **.certificateFolder** : Text<!-- END REF -->
 
 
-Path of the<!-- REF #WebServerClass.certificateFolder. Summary -->folder where the certificate files are located<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter of the [`.start()`](#start) function, it can be a [`Folder` object](FolderClass.md).
+Rota de<!-- REF #WebServerClass.certificateFolder. Summary -->pasta onde está o certificado de arquivos<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `configurações` do [`. tart()`](#start) função, pode ser um [`Pasta` objeto](FolderClass.md).
 
 <!-- END REF -->
 
@@ -189,7 +189,7 @@ Path of the<!-- REF #WebServerClass.certificateFolder. Summary -->folder where t
 **.characterSet** : Number<br>**.characterSet** : Text<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.characterSet. Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. The default value actually depends on the language of the OS. Can be a MIBEnum integer or a Name string, identifiers [defined by IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Here is the list of identifiers corresponding to the character sets supported by the 4D Web Server:
+O <!-- REF #WebServerClass.characterSet.Summary -->conjunto de caracteres que o Servidor Web 4D deve usar para se comunicar com navegadores conectados ao aplicativo<!-- FIM REF -->. The default value actually depends on the language of the OS. Pode ser um inteiro MIBEnum ou uma string de nome, identificadores [definidos por IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
 
 *   4 = ISO-8859-1
 *   12 = ISO-8859-9
@@ -217,7 +217,7 @@ The<!-- REF #WebServerClass.characterSet. Summary -->character set that the 4D W
 **.cipherSuite** : Text<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.cipherSuite. Summary -->cipher list used for the secure protocol<!-- END REF -->. Sets the priority of ciphering algorithms implemented by the 4D web server. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
+A lista de cifrado <!-- REF #WebServerClass.cipherSuite.Summary -->utilizada para o protocolo seguro<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Can be a sequence of strings separated by colons (for example "ECDHE-RSA-AES128-..."). See the [ciphers page](https://www.openssl.org/docs/manmaster/man1/ciphers.html) on the OpenSSL site.
 
 <!-- END REF -->
 
@@ -231,11 +231,11 @@ The<!-- REF #WebServerClass.cipherSuite. Summary -->cipher list used for the sec
 **.CORSEnabled** : Boolean<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.CORSEnabled. Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. For security reasons, "cross-domain" requests are forbidden at the browser level by default. When enabled (True), XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see `CORSSettings` below). When disabled (False, default), all cross site requests sent with CORS are ignored. When enabled (True) and a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
+O <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*cross-origin resource sharing*) status do serviço para o servidor<!-- FIM REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando ativado (True), chamadas XHR (por exemplo, Solicitações REST) de páginas da Web fora do domínio podem ser permitidas na sua aplicação (você precisa definir a lista de endereços permitidos na lista de domínio CORS, veja `CORSSettings` abaixo). Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
 
-Default: False (disabled)
+Padrão: Falso (desabilitado)
 
-For more information about CORS, please refer to the [Cross-origin resource sharing page](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) on Wikipedia.
+Para obter mais informações sobre o CORS, consulte a [página de compartilhamento de recursos entre origens](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipédia.
 
 <!-- END REF -->
 
@@ -249,7 +249,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 **.CORSSettings** : Collection<!-- END REF -->
 
 
-A<!-- REF #WebServerClass.CORSSettings. Summary -->list of allowed hosts and methods for the CORS service<!-- END REF --> (see [`CORSEnabled`](#corsenabled) property). Each object must contain a **host** property and, optionally, a **methods** property:
+Uma <!-- REF #WebServerClass.CORSSettings.Summary -->lista de hosts e métodos permitidos para o serviço CORS<!-- END REF --> (veja [`CORSenabled`](#corsenabled) propriedade). Cada objeto deve conter uma propriedade **host** e, opcionalmente, uma propriedade **métodos**:
 
 *   **host** (text, mandatory): Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Multiple domain attributes can be added to create a white list. If *host* is not present or empty, the object is ignored. Several syntaxes are supported:
     -   192.168.5.17:8081
@@ -277,7 +277,7 @@ A<!-- REF #WebServerClass.CORSSettings. Summary -->list of allowed hosts and met
 **.debugLog** : Number<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.debugLog. Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
+O <!-- REF #WebServerClass.debugLog.Summary -->status do arquivo de log de requisições HTTP<!-- END REF --> (HTTPDebugLog_nn. xt, armazenado na pasta "Logs" da aplicação -- nn é o número do arquivo).
 
 *   0 = disabled
 *   1 = enabled without body parts (body size is provided in this case)
@@ -297,7 +297,7 @@ The<!-- REF #WebServerClass.debugLog. Summary -->status of the HTTP request log 
 **.defaultHomepage** : Text<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.defaultHomepage. Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
+O <!-- REF #WebServerClass.defaultHomepage.Summary -->nome da página inicial padrão<!-- END REF --> ou "" para não enviar a página inicial personalizada.
 
 <!-- END REF -->
 
@@ -310,7 +310,7 @@ The<!-- REF #WebServerClass.defaultHomepage. Summary -->name of the default home
 **.HSTSEnabled** : Boolean<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.HSTSEnabled. Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. HSTS allows the Web server to declare that browsers should only interact with it via secure HTTPS connections. Browsers will record the HSTS information the first time they receive a response from the web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the `HSTSMaxAge` property. HSTS requires that HTTPS is enabled on the server. HTTP must also be enabled to allow initial client connections.
+<!-- REF #WebServerClass.HSTSEnabled. Summary -->estado HTTP Strict Transport Security (HSTS)<!-- END REF -->. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor web, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O tempo que essas informações são armazenadas pelo navegador é especificado na propriedade `HSTSMaxAge`. A HSTS requer que HTTPS esteja ativado no servidor. HTTP deve também ser habilitado para permitir conexões iniciais de clientes.
 
 <!-- END REF -->
 
@@ -323,9 +323,9 @@ The<!-- REF #WebServerClass.HSTSEnabled. Summary -->HTTP Strict Transport Securi
 **.HSTSMaxAge** : Number<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.HSTSMaxAge. Summary -->maximum length of time (in seconds) that HSTS is active for each new client connection<!-- END REF -->. This information is stored on the client side for the specified duration.
+O <!-- REF #WebServerClass.HSTSMaxAge.Summary -->tempo máximo (em segundos) que HSTS está ativo para cada nova conexão de cliente<!-- END REF -->. Esta informação é armazenada no lado do Cliente durante a duração especificada.
 
-Default value: 63072000 (2 years).
+Valor padrão: 63072000 (2 anos).
 
 <!-- END REF -->
 
@@ -338,14 +338,14 @@ Default value: 63072000 (2 years).
 **.HTTPCompressionLevel** : Number<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.HTTPCompressionLevel. Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. This selector lets you optimize exchanges by either prioritizing speed of execution (less compression) or the amount of compression (less speed).
+O <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->nivel de compressão para todos os intercambios HTTP comprimidos para o servidor HTTP 4D (petições do cliente ou respostas do servidor)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
 
 Possible values:
 
 *   1 to 9 (where 1 is the fastest compression and 9 the highest).
 *   -1 = set a compromise between speed and rate of compression.
 
-Default = 1 (faster compression).
+Padrão = 1 (compressão mais rápida).
 
 <!-- END REF -->
 
@@ -358,9 +358,9 @@ Default = 1 (faster compression).
 **.HTTPCompressionThreshold** : Number<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.HTTPCompressionThreshold. Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. This setting is useful in order to avoid losing machine time by compressing small exchanges.
+O <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->tamanho limite (bytes) para solicitações abaixo das quais as trocas não devem ser compactadas<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
-Default compression threshold = 1024 bytes
+Limite de compressão padrão = 1024 bytes
 
 <!-- END REF -->
 
@@ -662,7 +662,7 @@ The<!-- REF #WebServerClass.perfectForwardSecrecy. Summary -->PFS availability o
 **.rootFolder** : Text<!-- END REF -->
 
 
-The<!-- REF #WebServerClass.rootFolder. Summary -->path of web server root folder<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.
+The<!-- REF #WebServerClass.rootFolder. Summary -->path of web server root folder<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
 
 <!-- END REF -->
 

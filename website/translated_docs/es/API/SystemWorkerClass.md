@@ -3,7 +3,7 @@ id: SystemWorkerClass
 title: SystemWorker
 ---
 
-System workers allow the 4D code to call any external process (a shell command, PHP, etc.) on the same machine. System workers are called asynchronously. By using callbacks, 4D makes it possible to communicate both ways.
+System workers allow the 4D code to call any external process (a shell command, PHP, etc.) on the same machine. Los trabajadores del sistema se llaman de forma asíncrona. By using callbacks, 4D makes it possible to communicate both ways.
 
 The `SystemWorker` class is available from the `4D` class store.
 
@@ -90,19 +90,19 @@ En el parámetro *options*, pase un objeto que pueda contener las siguientes pro
 
 | Propiedad        | Tipo     | Por defecto | Descripción                                                                                                                                                                                                                                                                                          |
 | ---------------- | -------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onResponse       | Formula  | indefinido  | Callback for system worker messages. This callback is called once the complete response is received. It receives two objects as parameters (see below)                                                                                                                                               |
-| onData           | Formula  | indefinido  | Callback for system worker data. This callback is called each time the system worker receives data. It receives two objects as parameters (see below)                                                                                                                                                |
-| onDataError      | Formula  | indefinido  | Callback for the external process errors (*stderr* of the external process). It receives two objects as parameters (see below)                                                                                                                                                                       |
-| onError          | Formula  | indefinido  | Callback for execution errors, returned by the system worker in case of unusual runtime conditions (system errors). It receives two objects as parameters (see below)</li>                                                                                                                           |
-| onTerminate      | Formula  | indefinido  | Callback when the external process is terminated. It receives two objects as parameters (see below)                                                                                                                                                                                                  |
+| onResponse       | Formula  | indefinido  | Callback for system worker messages. This callback is called once the complete response is received. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                  |
+| onData           | Formula  | indefinido  | Callback for system worker data. This callback is called each time the system worker receives data. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                   |
+| onDataError      | Formula  | indefinido  | Callback for the external process errors (*stderr* of the external process). Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                          |
+| onError          | Formula  | indefinido  | Callback for execution errors, returned by the system worker in case of unusual runtime conditions (system errors). Recibe dos objetos como parámetros (ver abajo)</li>                                                                                                                              |
+| onTerminate      | Formula  | indefinido  | Retrollamada cuando el proceso externo se termina. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                                                    |
 | timeout          | Número   | indefinido  | Time in seconds before the process is killed if it is still alive                                                                                                                                                                                                                                    |
-| dataType         | Texto    | "text"      | Type of the response body content. Possible values: "text" (default), "blob".                                                                                                                                                                                                                        |
-| encoding         | Texto    | "UTF-8"     | Only if `dataType="text"`. Encoding of the response body content. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                                       |
+| dataType         | Texto    | "text"      | Type of the response body content. Valores posibles: "text" (por defecto), "blob".                                                                                                                                                                                                                   |
+| encoding         | Texto    | "UTF-8"     | Sólo si `dataType="text"`. Codificación del contenido del cuerpo de la respuesta. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                       |
 | variables        | Objeto   |             | Sets custom environment variables for the system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Values are converted into strings when possible. The value cannot contain a '='. If not defined, the system worker inherits from the 4D environment. |
-| currentDirectory | Folder   |             | Working directory in which the process is executed                                                                                                                                                                                                                                                   |
+| currentDirectory | Folder   |             | Directorio de trabajo en el que se ejecuta el proceso                                                                                                                                                                                                                                                |
 | hideWindow       | Booleano | true        | (Windows) Hide the application window (if possible) or the Windows console                                                                                                                                                                                                                           |
 
-All callback functions receive two object parameters. Their contents depend on the callback:
+All callback functions receive two object parameters. Su contenido depende de la retrollamada:
 
 | Parámetros   | Tipo        | *onResponse* | *onData*      | *onDataError* | *onError*    | *onTerminate* |
 | ------------ | ----------- | ------------ | ------------- | ------------- | ------------ | ------------- |
@@ -115,7 +115,7 @@ Esta es la secuencia de llamadas de retorno:
 1. `onData` and `onDataError` are executed one or several times
 2. if called, `onError` is executed once (stops the system worker processing)
 3. if no error occured, `onResponse` is executed once
-4. `onTerminate` is always executed
+4. `onTerminate` se ejecuta siempre
 
 
 #### Valor devuelto
@@ -125,7 +125,7 @@ The function returns a system worker object on which you can call functions and 
 
 #### Ejemplos en Windows
 
-1. To open Notepad and open a specific document:
+1. Para abrir el Bloc de notas y abrir un documento específico:
 
 ```4d
 var $sw : 4D.SystemWorker
@@ -353,7 +353,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descripción
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. Possible values : "text" or "blob".
+The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. Valores posibles: "text" o "blob".
 
 
 Esta propiedad es **de sólo lectura**. 
@@ -591,9 +591,9 @@ Actually, `.wait()` waits until the end of processing of the `onTerminate` formu
 
 During a `.wait()` execution, callback functions are executed, especially callbacks from other events or from other `SystemWorker` instances. You can exit from a `.wait()` by calling [`terminate()`](#terminate) from a callback.
 
-This function returns the SystemWorker object.
+Esta función devuelve el objeto SystemWorker.
 
-> This function is not necessary if you created the `SystemWorker` form a 4D worker process.
+> Esta función no es necesaria si ha creado el `SystemWorker` de un proceso worker 4D.
 
 <!-- END REF -->
 

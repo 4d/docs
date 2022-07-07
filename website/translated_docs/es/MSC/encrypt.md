@@ -12,7 +12,7 @@ Se crea una nueva carpeta cada vez que se realiza una operación de cifrado/desc
 > El cifrado sólo está disponible en [modo mantenimiento](overview.md#display-in-maintenance-mode). Si intenta realizar esta operación en modo estándar, un diálogo de advertencia le informará de que la aplicación se cerrará y se reiniciará en modo de mantenimiento
 
 **Atención:**
-- Encrypting a data file is a lengthy operation. Muestra un indicador de progreso (que puede ser interrumpido por el usuario). Note also that an application encryption operation always includes a compacting step.
+- Cifrar un archivo de datos es una operación de larga duración. Muestra un indicador de progreso (que puede ser interrumpido por el usuario). Note also that an application encryption operation always includes a compacting step.
 - Cada operación de cifrado produce una copia del archivo de datos, lo que aumenta el tamaño de la carpeta de la aplicación. Es importante tener esto en cuenta (especialmente en macOS, donde las aplicaciones 4D aparecen como paquetes) para que el tamaño de la aplicación no aumente excesivamente. Mover o eliminar manualmente las copias del archivo original dentro del paquete puede ser útil para minimizar el tamaño del paquete.
 
 ## Cifrar datos por primera vez

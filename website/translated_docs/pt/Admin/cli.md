@@ -21,7 +21,7 @@ You can execute command lines for 4D applications using the macOS Terminal or th
 
 Here is a description of command lines and the arguments supported to launch 4D applications.
 
-Syntax:
+Sintaxe:
 ```
 <applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
 [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]
