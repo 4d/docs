@@ -85,7 +85,7 @@
 <h2><a class="anchor" aria-hidden="true" id="nombre-del-objeto"></a><a href="#nombre-del-objeto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nombre del objeto</h2>
 <p>Each active form object is associated with an object name. Each object name must be unique.</p>
 <blockquote>
-<p>Object names are limited to a size of 255 bytes.</p>
+<p>Los nombres de objetos están limitados a un tamaño de 255 bytes.</p>
 </blockquote>
 <p>When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html">Object Properties</a> in the 4D Language Reference manual).</p>
 <p>For more information about naming rules for form objects, refer to <a href="/docs/18/es/Concepts/identifiers.html">Identifiers</a> section.</p>
@@ -105,7 +105,7 @@
 <blockquote>
 <p>See also <strong><a href="properties_DataSource#expression">Expression</a></strong> for Selection and collection type list box columns.</p>
 </blockquote>
-<p>This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each <a href="#object-name">object name</a> must be unique.</p>
+<p>Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each <a href="#object-name">object name</a> must be unique.</p>
 <blockquote>
 <p>El tamaño del nombre de la variable está limitado a 31 bytes. See <a href="/docs/18/es/Concepts/identifiers.html">Identifiers</a> section for more information about naming rules.</p>
 </blockquote>
@@ -135,7 +135,7 @@
  <span class="hljs-variable">$p</span> :=<span class="hljs-function">OBJECT Get pointer</span>(Object named;<span class="hljs-string">"tstart"</span>)
  <span class="hljs-variable">$p</span>-&gt;:=<span class="hljs-literal">?12:00:00?</span>
 </code></pre>
-<p>There are two advantages with this mechanism:</p>
+<p>Este mecanismo tiene dos ventajas:</p>
 <ul>
 <li>On the one hand, it allows the development of &quot;subform&quot; type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.</li>
 <li>Por otra parte, puede utilizarse para limitar el uso de la memoria. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.</li>
@@ -158,11 +158,11 @@
 <blockquote>
 <p>This property is called <strong>Data Type</strong> in the Property List for Selection and collection type list box columns.</p>
 </blockquote>
-<p>Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema <code>Compilador</code>.</p>
+<p>Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. En realidad, no escribe la variable en sí. En vista de la compilación de una base de datos, debe utilizar los comandos del lenguaje 4D del tema <code>Compilador</code>.</p>
 <p>However, this property has a typing function in the following specific cases:</p>
 <ul>
 <li><strong><a href="#dynamic-variables">Dynamic variables</a></strong>: you can use this property to declare the type of dynamic variables.</li>
-<li><strong><a href="/docs/18/es/FormObjects/listboxOverview.html#list-box-columns">List Box Columns</a></strong>: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.</li>
+<li><strong><a href="/docs/18/es/FormObjects/listboxOverview.html#list-box-columns">List Box Columns</a></strong>: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Todos los formatos personalizados existentes también están disponibles.</li>
 <li><strong><a href="/docs/18/es/FormObjects/inputOverview.html">Picture variables</a></strong>: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the <code>On Load</code> form event — unlike other types of variables. To do this, you need either for the statement <code>C_PICTURE(varName)</code> to have been executed before loading the form (typically, in the method calling the <code>DIALOG</code> command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-3"></a><a href="#gramática-json-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
@@ -270,10 +270,10 @@
 <p><a href="/docs/18/es/FormObjects/radiobuttonOverview.html">Botón radio</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="título"></a><a href="#título" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Título</h2>
-<p>Allows inserting a label on an object. The font and the style of this label can be specified.</p>
+<p>Permite insertar una etiqueta en un objeto. The font and the style of this label can be specified.</p>
 <p>You can force a carriage return in the label by using the \ character (backslash).</p>
 <p><img src="/docs/18/assets/en/FormObjects/property_title.png" alt=""></p>
-<p>To insert a \ in the label, enter &quot;\\&quot;.</p>
+<p>Para insertar un \ en la etiqueta, ingrese &quot;\\&quot;.</p>
 <p>By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the <a href="/docs/18/es/FormObjects/propertiesTextAndPicture.html#title-picture-position">Title/Picture Position</a> property.</p>
 <p>Para la traducción de la base de datos, puede introducir una referencia XLIFF en el área del título de un botón (ver <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html">Apéndice B: arquitectura XLIFF</a>).</p>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-9"></a><a href="#gramática-json-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
@@ -293,7 +293,7 @@
 <blockquote>
 <p>El cálculo de los pies de página también puede definirse con el comando 4D <code>LISTBOX SET FOOTER CALCULATION</code>.</p>
 </blockquote>
-<p>There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):</p>
+<p>Hay varios tipos de cálculos disponibles. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):</p>
 <table>
 <thead>
 <tr><th>Cálculo</th><th>Num</th><th>Texto</th><th>Fecha</th><th>Hora</th><th>Bool</th><th>Imágenes</th><th>tipos de variables de pie de página</th></tr>
@@ -310,7 +310,7 @@
 <tr><td>Custom (&quot;none&quot;)</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>X</td><td>Cualquiera</td></tr>
 </tbody>
 </table>
-<p>(*) Only for array type list boxes.</p>
+<p>(*) Sólo para list boxes de tipo array.</p>
 <p>When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.</p>
 <p>When <strong>Custom</strong> (&quot;none&quot; in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.</p>
 <blockquote>
