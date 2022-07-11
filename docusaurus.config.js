@@ -57,6 +57,9 @@ module.exports = {
     ]
   ],
   "themeConfig": {
+    prism: {
+      theme: require("./src/theme/highlight/themes/palenight"),
+    },
     "navbar": {
       "title": "4D Documentation"
     },
