@@ -48,6 +48,10 @@
   color: white;
 }
 
+footer {
+  margin-top: 100px;
+}
+
 
 @media only screen and (max-width: 768px) {
   .tile {
