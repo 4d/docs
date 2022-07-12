@@ -43,6 +43,27 @@ module.exports = {
       },
     ],
   ],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fr", "es", "ja", "pt"],
+    localeConfigs: {
+      en: {
+        label: "English",
+      },
+      fr: {
+        label: "Français",
+      },
+      es: {
+        label: "Español",
+      },
+      ja: {
+        label: "日本語",
+      },
+      pt: {
+        label: "Português",
+      },
+    },
+  },
   "plugins": [
     [require.resolve('@cmfcmf/docusaurus-search-local'), {
       // Options here
@@ -61,7 +82,11 @@ module.exports = {
       theme: require("./src/theme/highlight/themes/palenight"),
     },
     "navbar": {
-      "title": "4D Documentation"
+      "title": "4D Documentation",
+      items: [{
+        type: 'localeDropdown',
+        position: 'right',
+      }],
     },
     "image": "../assets/en/logohome.png",
     "footer": {
