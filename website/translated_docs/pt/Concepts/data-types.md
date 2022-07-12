@@ -49,7 +49,7 @@ The following table illustrates these default values:
 
 | Type          | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
 | ------------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Boolean       | False                                                                               | True                    | True (varies)                |
+| Booleano      | False                                                                               | True                    | True (varies)                |
 | Date          | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
 | Inteiro longo | 0                                                                                   | 1919382119              | 909540880 (varies)           |
 | Hora          | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |

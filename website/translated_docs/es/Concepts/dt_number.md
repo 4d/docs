@@ -112,7 +112,7 @@ Una expresión que utiliza un operador bitwise devuelve un valor Entero largo, e
 | Right Bit Shift   | >>        | Long >> Long        | Long (ver nota 1)    |
 | Bit Set           | ?+        | Long ?+ Long        | Long (ver nota 2)    |
 | Poner el bit en 0 | ?-        | Long ?- Long        | Long (ver nota 2)    |
-| Probar bit        | ??        | Long ?? Long        | Boolean (ver nota 2) |
+| Probar bit        | ??        | Long ?? Long Long   | Boolean (ver nota 2) |
 
 #### Notas
 
@@ -145,4 +145,4 @@ La siguiente tabla lista los operadores a nivel de bits y sus efectos:
 | Right Bit Shift   | 0x0000FFFF >> 8                 | 0x000000FF |
 | Bit Set           | 0x00000000 ?+ 16                | 0x00010000 |
 | Poner el bit en 0 | 0x00010000 ?- 16                | 0x00000000 |
-| Probar bit        | 0x00010000 ?? 16 16 16 16       | True       |
+| Probar bit        | 0x00010000 ?? 16 16 16 16 16    | True       |

@@ -176,7 +176,7 @@ The collection or the entity selection must be available to the form when it is 
 
 *   if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example **This.\<propertyPath>**.
 *   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
-> > > > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+> > > > > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### Gramática JSON
 
@@ -297,17 +297,17 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 Hay varios tipos de cálculos disponibles. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo                | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
-| ---------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
-| Mínimo                 | X   |       | X     | X    | X    |          | Same as column type                 |
-| Máximo                 | X   |       | X     | X    | X    |          | Same as column type                 |
-| Suma                   | X   |       | X     |      | X    |          | Same as column type                 |
-| Conteo                 | X   | X     | X     | X    | X    | X        | Entero largo                        |
-| Promedio               | X   |       |       | X    |      |          | Real                                |
-| Desviación estándar(*) | X   |       |       | X    |      |          | Real                                |
-| Varianza(*)            | X   |       |       | X    |      |          | Real                                |
-| Suma de cuadrados(*)   | X   |       |       | X    |      |          | Real                                |
-| Custom ("none")        | X   | X     | X     | X    | X    | X        | Cualquiera                          |
+| Cálculo                 | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
+| ----------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
+| Mínimo                  | X   |       | X     | X    | X    |          | Same as column type                 |
+| Máximo                  | X   |       | X     | X    | X    |          | Same as column type                 |
+| Suma                    | X   |       | X     |      | X    |          | Same as column type                 |
+| Conteo                  | X   | X     | X     | X    | X    | X        | Entero largo                        |
+| Promedio                | X   |       |       | X    |      |          | Real                                |
+| Desviación estándar(*)  | X   |       |       | X    |      |          | Real                                |
+| Varianza(*)             | X   |       |       | X    |      |          | Real                                |
+| Suma de cuadrados(*)    | X   |       |       | X    |      |          | Real                                |
+| Personalizado ("None ") | X   | X     | X     | X    | X    | X        | Cualquiera                          |
 
 (*) Sólo para list boxes de tipo array.
 

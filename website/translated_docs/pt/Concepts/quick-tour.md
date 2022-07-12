@@ -83,7 +83,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
 4D SVG é incluído em 4D.
 
-## Constantes
+## Constants
 
 4D oferece um conjunto extensivo de constantes predefinidas, cujos valores são acessíveis por nome. Por exemplo, `Read Mode` é uma constante (valor 2). As constantes pré-definidas aparecem sublinhadas como padrão no editor de métodos 4D. Isso permite escrever código mais legível.
 
@@ -171,6 +171,7 @@ Note that if the object property value is an object that encapsulates a method (
 ```
 $f:=New object
 $f.message:=New formula(ALERT("Hello world!"))
+$f.message() //displays "Hello world!"
 $f.message() //displays "Hello world!"
 ```
 

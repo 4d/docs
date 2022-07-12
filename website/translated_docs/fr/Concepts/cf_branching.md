@@ -54,10 +54,6 @@ Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
  Else
     ALERT("You did not enter a name.")
  End if
- End if
- End if
- End if
- End if
 ```
 
 **Astuce :** Il n'est pas obligatoire que des instructions soient exécutées dans chaque branche de l'alternative. Lorsque vous développez un algorithme, ou lorsque vous poursuivez un but précis, rien ne vous empêche d'écrire :
@@ -131,10 +127,6 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
 ```4d
  Case of
     :(vResult=1) //Tester si le chiffre est 1
-       ALERT("One.") Case of
-    :(vResult=1) //Tester si le chiffre est 1
-       ALERT("One.") Case of
-    :(vResult=1) //Tester si le chiffre est 1
        ALERT("One.") //Si le chiffre est 1, afficher une alerte
     :(vResult=2) //Tester si le chiffre est 2
        ALERT("Two.") //Si le chiffre est 2, afficher une alerte
@@ -142,19 +134,6 @@ Cet exemple teste une variable numérique et affiche une boîte de dialogue d’
        ALERT("Three.") //Si le chiffre est 3, afficher une alerte
     Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
        ALERT("It was not one, two, or three.")
- //déclaration(s)
- End case //Si le chiffre est 2, afficher une alerte
-    :(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
- //déclaration(s)
- End case //Si le chiffre est 2, afficher une alerte
-    :(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
- //déclaration(s)
  End case
 ```
 
@@ -162,37 +141,10 @@ A titre de comparaison, voici la version avec `If...Else...End if` de la même m
 
 ```4d
  If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
-    ALERT("One.") If(vResult=1) //Tester si le chiffre est 1
     ALERT("One.") //Si le chiffre est 1, afficher une alerte
  Else
-    If(vResult=2) //Tester si le chiffre est 2
+    If:(vResult=2) //Tester si le chiffre est 2
        ALERT("Two.") //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 2, afficher une alerte
-    Else
-    If(vResult=3) //Tester si le chiffre est 3
-       ALERT("Three.") //Si le chiffre est 3, afficher une alerte
-    Else //Si le chiffre n'est pas 1, 2 ou 3, afficher une alerte
-       ALERT("It was not one, two, or three.")
-       End if
-    End if
- End if //Si le chiffre est 2, afficher une alerte
     Else
     If(vResult=3) //Tester si le chiffre est 3
        ALERT("Three.") //Si le chiffre est 3, afficher une alerte

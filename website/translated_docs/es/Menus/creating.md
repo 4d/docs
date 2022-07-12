@@ -22,7 +22,7 @@ La barra de menús por defecto incluye tres menús:
 - **Archivo**: sólo incluye el comando **Salir**. La acción estándar *Salir* está asociada al comando, que hace que la aplicación salga.
 - **Editar**: menú estándar y totalmente editable. Las funciones de edición, como copiar, pegar, etc., se definen mediante acciones estándar.
 - **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
-> > > Los elementos del menú aparecen *en itálica * porque consisten de referencias y no de texto codificado. Consulte [Propiedad Título](properties.md#title).
+> > > > Los elementos del menú aparecen *en itálica * porque consisten de referencias y no de texto codificado. Consulte [Propiedad Título](properties.md#title).
 
 Puede modificar esta barra de menú como desee o crear otras adicionales.
 

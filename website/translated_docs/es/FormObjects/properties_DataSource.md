@@ -278,7 +278,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 ## Selección de nombres
-`Named selection list boxes`
+`List boxes de tipo selección nombrada`
 
 Especifica la selección con nombre que se utilizará. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 

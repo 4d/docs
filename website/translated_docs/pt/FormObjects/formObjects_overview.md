@@ -17,9 +17,10 @@ You build and customize your application forms by manipulating the objects on th
 
 You can add or modify 4D form objects in the following ways:
 
-*   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Use the [type](properties_Object.md#type) property to define the object type, then set its available properties. Consulte a página [Formulários dinâmicos](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) para obter informação.
+*   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Then use the Property List to specify the object's properties.   
+  See the [Building Forms](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) chapter for more information.
 
 * **4D language**: Commands from the [Objects (Forms)](https://doc.4d.com/4Dv17R5/4D/17-R5/Objects-Forms.201-4127128.en.html) theme such as `OBJECT DUPLICATE` or `OBJECT SET FONT STYLE` allow to create and define form objects.
 
 *   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Then use the Property List to specify the object's properties.   
-  See the [Building Forms](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) chapter for more information.
+  Consulte a página [Formulários dinâmicos](https://doc.4d.com/4Dv17R5/4D/17-R5/Dynamic-Forms.300-4163740.en.html#3692292) para obter informação.

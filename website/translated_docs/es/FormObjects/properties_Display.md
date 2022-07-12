@@ -16,7 +16,7 @@ The number sign (#) is the placeholder for an alphanumeric display format. You c
 
 For example, consider a part number with a format such as "RB-1762-1".
 
-The alpha format would be:
+El formato alfa sería:
 
     ##-####-#
 
@@ -113,8 +113,8 @@ In each of the number display formats, the number sign (#), zero (0), caret (^),
 | -------- | ------------------------------------ |
 | #        | No muestra nada                      |
 | 0        | Muestra 0                            |
-| ^        | Displays a space (1)                 |
-| *        | Displays an asterisk                 |
+| ^        | Muestra un espacio (1)               |
+| *        | Muestra un asterisco                 |
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
@@ -130,7 +130,7 @@ Each placeholder character has a different effect on the display of leading or t
 Suppose you use the format ##0 to display three digits. If the user enters nothing in the field, the field displays 0. Si el usuario introduce 26, el campo muestra 26.
 
 
-### Separator characters
+### Caracteres separadores
 
 The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
 > En Windows, al utilizar la tecla del separador decimal del teclado numérico, 4D hace una distinción según el tipo de campo donde se encuentre el cursor: * en un campo de tipo Real, al utilizar esta tecla se inserta el separador decimal definido en el sistema, * en cualquier otro tipo de campo, esta tecla inserta el carácter asociado a la tecla, normalmente un punto (.) o una coma (,).

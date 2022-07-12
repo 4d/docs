@@ -89,9 +89,9 @@ Décrit le type de ligne en pointillé comme une séquence de points noirs et bl
 
 #### Grammaire JSON
 
-| Nom             | Type de données        | Valeurs possibles                                                                          |
-| --------------- | ---------------------- | ------------------------------------------------------------------------------------------ |
-| strokeDashArray | number array or string | Ex : Ex : Ex : Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
+| Nom             | Type de données        | Valeurs possibles                                                                               |
+| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
+| strokeDashArray | number array or string | Ex : Ex : Ex : Ex : Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
 
 #### Objets pris en charge
 

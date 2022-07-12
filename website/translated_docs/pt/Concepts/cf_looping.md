@@ -3,7 +3,7 @@ id: looping
 title: Estruturas de loop
 ---
 
-## While...End while
+## While... End while
 A sintaxe da estrutura condicional `While... End while` é:
 ```4d
  While(Boolean_Expression)
@@ -26,7 +26,7 @@ Se você se encontrar em uma situação desse tipo, na qual um método fica exec
 ### Exemplo
 
 ```4d
- CONFIRM("Add a new record?") //o usuário quer adicionar um registro?
+ CONFIRM("Add a new record?") //o usuário quer adicionar um registro? //o usuário quer adicionar um registro?
  While(OK=1) //Loop enquanto o usuário quiser
     ADD RECORD([aTable]) //Adiciona um novo registro
  End while //O loop sempre termina com End while
@@ -34,7 +34,7 @@ Se você se encontrar em uma situação desse tipo, na qual um método fica exec
 
 Nesse exemplo, o valor da variável sistema `OK` é estabelecida pelo comando `CONFIRM` antes de que inicia o loop. Se o usuário clicar no botão **OK** da caixa de diálogo de confirmação, a variável do sistema `OK` toma o valor 1 e se inicia o loop. Senão, a variável de sistema `OK` toma o valor 0 e se omite o loop. Quando iniciar o loop, o comando `ADD RECORD` permite continuar a execução do loop porque se define a variável sistema `OK` em 1 quando o usuário salvar o registro. Quando o usuário cancelar (não salvar) o último registro, a variável do sistema `OK` é estabelecida como 0 e o loop para.
 
-## Repeat...Until
+## Repeat... Until
 
 A sintaxe da estrutura condicional `Repeat... Until` é:
 ```4d
@@ -55,7 +55,7 @@ Compare o exemplo abaixo com o exemplo para o lopp `While... End while`. Lembre 
  Until(OK=0)
 ```
 
-## For...End for
+## For... End for
 A sintaxe da estrutura condicional `For... End for` é:
 
 ```4d
@@ -66,7 +66,7 @@ A sintaxe da estrutura condicional `For... End for` é:
 
 O loop `For... End for` é um loop controlado por um contador:
 
-- A variável contador *Counter_Variable* é uma variável numérica (Real ou Long Integer) iniciada por `For...End for` com o valor especificado por *Start_Expression*.
+- A variável contador *Counter_Variable* é uma variável numérica (Real ou Long Integer) iniciada por `For... End for` com o valor especificado por *Start_Expression*.
 - Cada vez que se executa o loop, a variável do contador se incrementa no valor especificado no valor opcional *Increment_Expression*. Se não especificar *Increment_Expression*, a variável contadora é incrementada por um (1), que é o padrão.
 - Quando a variável contador passar o valor *End_Expression* daí o loop para.
 
@@ -190,7 +190,7 @@ Voltamos ao primeiro exemplo de `For... End for`. O seguinte exemplo executa 100
  End for
 ```
 
-Aquí está o loop equivalente `Repeat... Until`:
+Aqui está o loop equivalente `While... End while`:
 ```4d
  $i:=1 //Initializa o contador
  While($i<=100) //Loop 100 vezes
@@ -199,7 +199,7 @@ Aquí está o loop equivalente `Repeat... Until`:
  End while
 ```
 
-Aqui está o loop equivalente `While... End while`:
+Aquí está o loop equivalente `Repeat... Until`:
 ```4d
  $i:=1 //Initializa o contador
  Repeat
@@ -222,7 +222,7 @@ Pode utilizar variáveis reais e inteiras, assim como contadores interprocesso, 
  End for
 ```
 
-### Estruturas For...End aninhadas
+### Estruturas For... End aninhadas
 
 Pode aninhar tantas estruturas de controle (dentro do razoável) como precisar. Isso inclui o aninhamento de loops `For... End for`. Para evitar erros, tenha certeza de usar variáveis contador diferentes para cada estrutura de looping.
 
@@ -263,7 +263,7 @@ Aqui são dois exemplos:
  End for
 ```
 
-## For each...End for each
+## For each... End for each
 A sintaxe da estrutura condicional `For each... End for each` é:
 
 ```4d
@@ -290,7 +290,7 @@ A tabela abaixo compara os três tipos de `For each... End for each`:
 - O número de loops é avaliado no início e não muda durante o processo. Adicionar ou remover itens durante o loop não é recomendado porque resulta em iterações faltantes ou redundantes.
 - Por padrão, as  _instruções_ anexas são executadas para cada valor de *Expressão*. Entretanto, é possível sair do loop comprovando uma condição ao início do loop (`While`) ou ao final do loop (`Until`).
 - Os parâmetros opcionais *begin* e *end* podem ser usados com coleç~eos e seleções de entidades para definir os limites do loop.
-- O loop `For each...End for each` pode ser usado em uma **coleção compartida** ou um **objeto compartilhado**. Se seu código necessitar modificar um ou  mais elementos da coleção ou das propriedades de objeto, deve utilizar as palavras chave `Use...End use`. Dependendo de sus necessidades, pode chamar às palavras clave `Use...End use`:
+- O loop `For each... End for each` pode ser usado em uma **coleção compartida** ou um **objeto compartilhado**. Se seu código necessitar modificar um ou  mais elementos da coleção ou das propriedades de objeto, deve utilizar as palavras chave `Use... End use`. Dependendo de sus necessidades, pode chamar às palavras clave `Use... End use`:
     - antes de entrar no loop, se os elementos devem ser modificados juntos por razões de integridade, ou
     - dentro do loop quando só tiver que modificar alguns elementos/propriedades e não é necessário gerenciar a integridade.
 
@@ -332,7 +332,7 @@ Se quiser computar algumas estatísticas para uma coleção de números:
 
 ### Loop nas seleções de entidades
 
-Quando `For each...End for each` for utilizado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção.
+Quando `For each... End for each` for utilizado com uma _Expression_ do tipo _Collection_, o parâmetro _Current_Item_ é uma variável do mesmo tipo que os elementos da coleção.
 
 O número de loops é baseado no número de entidades da seleção de entidades. Em cada iteração do loop, o parâmetro *Current_Item* é preenchido automaticamente com a entidade da seleção de entidade que estiver sendo processada atualmente.
 
@@ -345,7 +345,7 @@ Lembre que qualquer modificação aplicada na entidade atual deve ser guardada e
 Se quiser aumentar o salário de todos os empregados britânicos em uma seleção de entidades:
 ```4d
  C_OBJECT(emp)
- For each(emp;ds.Employees.query("country='UK'"))
+ For each(emp;ds. Employees.query("country='UK'"))
     emp.salary:=emp.salary*1,03
     emp.save()
  End for each

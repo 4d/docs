@@ -40,7 +40,7 @@ Para proteger efetivamente os métodos projeto de um componente, simplesmente co
 ## Partilhar os métodos de projeto
 Todos os métodos de projeto de um banco de dados matriz são incluídos por definição no componente (o banco de dados é o componente) o que significa que pode ser chamado e executado pelo componente.
 
-Por outro lado, como padrão esses métodos projeto não serão visíveis, nem poderão ser chamados no banco de dados host local. No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local Esses métodos de projeto podem ser chamados no código do banco de dados local/host (mas não podem ser modificados no editor Métodos do banco de dados host). Estes métodos formam os **pontos de entrada** no componente.
+Por outro lado, como padrão esses métodos projeto não serão visíveis, nem poderão ser chamados no banco de dados host local. No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local No banco de dados matriz, deve atribuir explicitamente os métodos que quiser que sejam partilhados com o banco de dados local Esses métodos de projeto podem ser chamados no código do banco de dados local/host (mas não podem ser modificados no editor Métodos do banco de dados host). Estes métodos formam os **pontos de entrada** no componente.
 
 **Nota:** por outro lado, por razões de segurança, o comportamento normal não permite executar métodos de projeto pertencentes ao banco de dados  local. Em certos casos, pode precisar dar permissão para que um componente acesse os métodos projetos de seu banco de dados host. Para fazer isso, deve atribuir explicitamente os métodos de projeto do banco host que queira que tenham acesso aos componentes.
 
@@ -163,7 +163,7 @@ Um [método de gestião de erros](Concepts/error-handling.md) instalado pelo com
 
 **Nota:** se um componente utilizar o comando `ADD RECORD`, se mostrará o formulário de entrada atual do banco de dados local, no contexto do banco local. Por isso se o formulário incluir variáveis, o componente não terá acesso ao formulário.
 
-- Pode publicar formulários componentes como subformulários no banco de dados local Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
+- Pode publicar formulários componentes como subformulários no banco de dados local Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
 
 ## Uso de tabelas e campos
 

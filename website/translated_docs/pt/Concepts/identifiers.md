@@ -12,7 +12,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
-- Pontos (".") Pontos (".") e colchetes ("[ ]") não estão permitidos nos nomes de tabelas, campos, métodos ou variáveis.
+- Pontos (".") Pontos (".") Pontos (".") e colchetes ("[ ]") não estão permitidos nos nomes de tabelas, campos, métodos ou variáveis.
 - Não são permitidos vírgulas, barras inclinadas, aspas nem dois pontos.
 - Os caracteres reservados para seu uso como oepradores como * e + não estão permitidos.
 - Não use nomes reservados, ou seja, nomes de comando 4D (`Date`, `Time`, etc), palavras chaves (If, For, etc.), e constantes.
@@ -20,7 +20,7 @@ As regras abaixo são aplicadas à todas as estruturas de 4D.
 
 ### Regras adicionais para as propriedades dos objetos e os nomes ORDA
 - Os caracteres de espaço não estão permitidos.
-- Pontos (".") Pontos (".") e os colchetes ("[ ]") não estão permitidos.
+- Pontos (".") Pontos (".") Pontos (".") e os colchetes ("[ ]") não estão permitidos.
 - Os nomes são sensíveis às maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL
@@ -220,7 +220,7 @@ Exemplos:
     //Mas este comando espera um nome de método ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Os métodos projeto podem aceitar parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
+Os métodos projeto podem aceitar parâmetros (argumentos). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 

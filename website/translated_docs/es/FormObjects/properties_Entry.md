@@ -108,7 +108,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &@                                     | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                 |
 | ~a##                                   | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                  |
 | !0&9##/##/##                           | Standard date entry format. Display zeros in entry spaces. Permitir cualquier número.                                                                 |
-| !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Display zeros in entry spaces. Permitir cualquier número. Limited to hours and minutes.                                   |
+| !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Display zeros in entry spaces. Permitir cualquier número. Limitado a horas y minutos.                                     |
 | !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Display zeros in entry spaces. Permitir cuatro números, separados por dos puntos.             |
 | !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Display zeros in entry spaces. Permitir dos números antes de cada palabra.                                                |
 | !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Display zeros in entry spaces. Permitir dos números después de cada palabra.                                              |
@@ -123,9 +123,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                             |
-| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | cadena         | <li>Entry filter code or <li>Entry filter name (filter names start with &#124; ) |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                      |
+| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | cadena         | <li>Código de filtro de entrada o <li>Entry filter name (filter names start with &#124; ) |
 
 
 #### Objetos soportados

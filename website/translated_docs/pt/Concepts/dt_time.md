@@ -32,22 +32,22 @@ Uma hora nula se escreve ?00:00:00?
 | Operação           | Sintaxe        | Retorna  | Expressão               | Valor      |
 | ------------------ | -------------- | -------- | ----------------------- | ---------- |
 | Adição             | Hora + Hora    | Hora     | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtração          | Hora – Hora    | Hora     | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Adição             | Hora + Número  | Número   | ?02:03:04? + 65         | 7449       |
-| Subtração          | Hora – Número  | Número   | ?02:03:04? – 65         | 7319       |
-| Multiplicação      | Hora * Número  | Número   | ?02:03:04? * 2          | 14768      |
-| Divisão            | Hora / Número  | Número   | ?02:03:04? / 2          | 3692       |
-| Divisão inteira    | Hora \ Número | Número   | ?02:03:04? \ 2         | 3692       |
+| Subtração          | Hora – Hora    | Hora     | ?02:03:04? ?01:02:03?   | ?01:01:01? |
+| Adição             | Hora + Número  | Número   | ?02:03:04? ?01:02:03?   | 7449       |
+| Subtração          | Hora – Número  | Número   | ?02:03:04? ?01:02:03?   | 7319       |
+| Multiplicação      | Hora * Número  | Número   | ?02:03:04? ?01:02:03?   | 14768      |
+| Divisão            | Hora / Número  | Número   | ?02:03:04? ?02:03:04?   | 3692       |
+| Divisão inteira    | Hora \ Número | Número   | ?02:03:04? ?01:02:03?   | 3692       |
 | Módulo             | Hora % Hora    | Hora     | ?20:10:00? % ?04:20:00? | ?02:50:00? |
 | Módulo             | Hora % Número  | Número   | ?02:03:04? % 2          | 0          |
-| Igual              | Hora = Hora    | Booleano | ?01:02:03? = ?01:02:03? | True       |
-|                    |                |          | ?01:02:03? = ?01:02:04? | False      |
-| Desigualdade       | Hora # Hora    | Booleano | ?01:02:03? # ?01:02:04? | True       |
-|                    |                |          | ?01:02:03? # ?01:02:03? | False      |
-| Maior que          | Hora > Hora    | Booleano | ?01:02:04? > ?01:02:03? | True       |
+| Igual              | Hora = Hora    | Booleano | ?01:02:03? >=?01:02:03? | True       |
+|                    |                |          | ?01:02:03? ?01:02:04?   | False      |
+| Desigualdade       | Hora # Hora    | Booleano | ?01:02:03? ?01:02:03?   | True       |
+|                    |                |          | ?01:02:03? ?01:02:03?   | False      |
+| Maior que          | Hora > Hora    | Booleano | ?01:02:03? < ?01:02:04? | True       |
 |                    |                |          | ?01:02:03? > ?01:02:03? | False      |
-| Menor que          | Hora < Hora    | Booleano | ?01:02:03? < ?01:02:04? | True       |
-|                    |                |          | ?01:02:03? < ?01:02:03? | False      |
+| Menor que          | Hora < Hora    | Booleano | ?01:02:03? ?01:02:04?   | True       |
+|                    |                |          | ?01:02:03? ?01:02:03?   | False      |
 | Maior ou igual que | Hora >= Hora   | Booleano | ?01:02:03? >=?01:02:03? | True       |
 |                    |                |          | ?01:02:03? >=?01:02:04? | False      |
 | Menor ou igual que | Hora <= Hora   | Booleano | ?01:02:03? <=?01:02:03? | True       |
@@ -83,5 +83,5 @@ $t1:=?23:00:00? // São 23:00 p.m.
   // São 23:00 p.m.
   // Queremos adicionar 2 horas e meia
 $t2:=$t1 +?02:30:00? // Com uma simples adição, $t2 é?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 é ?01:30:00? e é 1:30 a.m. a manhã seguinte a manhã seguinte
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 é ?01:30:00? e é 1:30 a.m. a manhã seguinte a manhã seguinte a manhã seguinte
 ```

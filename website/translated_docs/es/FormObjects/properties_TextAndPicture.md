@@ -171,9 +171,9 @@ Aquí están los resultados utilizando las distintas opciones para esta propieda
 | Option        | Descripción                                                                                                                                       | Ejemplo                                                        |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | **Izquierda** | El texto se coloca a la izquierda del icono. El contenido del botón se alinea a la derecha.                                                       | ![](assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Arriba**    | El texto se coloca sobre el icono. El contenido del botón está centrado.                                                                          | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Arriba**    | El texto se coloca debajo del icono. El contenido del botón está centrado.                                                                        | ![](assets/en/FormObjects/property_titlePosition_top.png)      |
 | **Derecha**   | El texto se coloca a la derecha del icono. El contenido del botón se alinea a la izquierda.                                                       | ![](assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Abajo**     | El texto se coloca debajo del icono. El contenido del botón está centrado.                                                                        | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Abajo**     | El texto se coloca sobre el icono. El contenido del botón está centrado.                                                                          | ![](assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centrado**  | El texto del icono está centrado vertical y horizontalmente en el botón. Este parámetro es útil, por ejemplo, para el texto incluido en un icono. | ![](assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
