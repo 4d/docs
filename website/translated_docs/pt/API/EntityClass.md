@@ -66,8 +66,8 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 #### Exemplo
 
 ```4d
- var $myEntity : cs.EmployeeEntity
- $myEntity:=ds.Employee.new() //Create a new entity
+ var $myEntity : cs. EmployeeEntity
+ $myEntity:=ds. Employee.new() //Create a new entity
  $myEntity.name:="Dupont" // assign 'Dupont' to the 'name' attribute
  $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
  $myEntity.save() //save the entity
@@ -109,8 +109,8 @@ This function can only be used with entities already saved in the database. It c
 #### Exemplo
 
 ```4d
- var $emp; $empCloned : cs.EmployeeEntity
- $emp:=ds.Employee.get(672)
+ var $emp; $empCloned : cs. EmployeeEntity
+ $emp:=ds. Employee.get(672)
  $empCloned:=$emp.clone()
 
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
@@ -172,7 +172,7 @@ If one of the compared entities is **Null**, an error is raised.
 
 ```4d
  var $diff1; $diff2 : Collection
- employee:=ds.Employee.query("ID=1001").first()
+ employee:=ds. Employee.query("ID=1001").first()
  $clone:=employee.clone()
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
@@ -227,13 +227,13 @@ $diff2:
  vCompareResult3:=New collection
  $attributesToInspect:=New collection
 
- $e1:=ds.Employee.get(636)
- $e2:=ds.Employee.get(636)
+ $e1:=ds. Employee.get(636)
+ $e2:=ds. Employee.get(636)
 
  $e1.firstName:=$e1.firstName+" update"
  $e1.lastName:=$e1.lastName+" update"
 
- $c:=ds.Company.get(117)
+ $c:=ds. Company.get(117)
  $e1.employer:=$c
  $e2.salary:=100
 
@@ -397,10 +397,10 @@ The object returned by `.drop( )` contains the following properties:
 Example without `dk force drop if stamp changed` option:
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee : cs.EmployeeEntity
+ var $employees : cs. EmployeeSelection
+ var $employee : cs. EmployeeEntity
  var $status : Object
- $employees:=ds.Employee.query("lastName=:1";"Smith")
+ $employees:=ds. Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $status:=$employee.drop()
  Case of
@@ -416,10 +416,10 @@ Example without `dk force drop if stamp changed` option:
 Example with `dk force drop if stamp changed` option:
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee : cs.EmployeeEntity
+ var $employees : cs. EmployeeSelection
+ var $employee : cs. EmployeeEntity
  var $status : Object
- $employees:=ds.Employee.query("lastName=:1";"Smith")
+ $employees:=ds. Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $status:=$employee.drop(dk force drop if stamp changed)
  Case of
@@ -463,9 +463,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 #### Exemplo
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee; $firstEmployee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ var $employees : cs. EmployeeSelection
+ var $employee; $firstEmployee : cs. EmployeeEntity
+ $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[2]
  $firstEmployee:=$employee.first() //$firstEmployee is the first entity of the $employees entity selection
 ```
@@ -532,8 +532,8 @@ The following code will create an entity with manager and employer related entit
 
 ```4d
  var $o : Object
- var $entity : cs.EmpEntity
- $entity:=ds.Emp.new()
+ var $entity : cs. EmpEntity
+ $entity:=ds. Emp.new()
  $entity.fromObject($o)
  $entity.save()
 ```
@@ -596,8 +596,8 @@ The following generic code duplicates any entity:
   //duplicate_entity method 
   //duplicate_entity($entity) 
 
- #DECLARE($entity : 4D.Entity)  
- var $entityNew : 4D.Entity
+ #DECLARE($entity : 4D. Entity)  
+ var $entityNew : 4D. Entity
  var $status : Object
 
  $entityNew:=$entity.getDataClass().new() //create a new entity in the parent dataclass
@@ -643,9 +643,9 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 
 ```4d
- var $employees : cs.EmployeeSelection
- var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName=:1";"Smith")
+ var $employees : cs. EmployeeSelection
+ var $employee : cs. EmployeeEntity
+ $employees:=ds. Employee.query("lastName=:1";"Smith")
  $employee:=$employees[0]
  ALERT("The primary key is "+$employee.getKey(dk key as string))
 ```

@@ -101,6 +101,9 @@ $var3:=?10:02:24?
 $var1:="my text"
 $var2:=5.3
 $var3:=?10:02:24?
+$var1:="my text"
+$var2:=5.3
+$var3:=?10:02:24?
 $var4:=True
 
 $vLength:=Calc_Length(->$var1)+Calc_Length(->$var2)+Calc_Length (->$var3)+Calc_Length(->$var4)

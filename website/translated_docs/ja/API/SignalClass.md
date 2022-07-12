@@ -28,7 +28,7 @@ Signal オブジェクトは、[New signal](#new-signal) コマンドによっ�
 
 ### シグナルの使い方
 
-4D では、[`New signal`](#new-signal) コマンドを呼び出すことで新規 Signal オブジェクトを作成します。 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。それにより、プロセスやワーカーはタスクを完了した際にシグナルを書き換えることができます。
+4D では、[`New signal`](#new-signal) コマンドを呼び出すことで新規 Signal オブジェクトを作成します。 作成したシグナルは、`New process` あるいは `CALL WORKER` コマンドに引数として渡す必要があります。
 
 - `signal.wait()` は、他のワーカー/プロセスのタスクが完了するまで待機するワーカー/プロセスから呼び出す必要があります。
 - `signal.trigger()` は、他のワーカー/プロセスを待機状態から解放するために、タスク実行を終えたワーカー/プロセスが呼び出す必要があります。
@@ -38,7 +38,7 @@ Signal オブジェクトは、[New signal](#new-signal) コマンドによっ�
 
 `signal.trigger()` の呼び出しによって解放されたシグナルは 、再利用することができません。 別のシグナルを設定するには、`New signal` コマンドをあらためて呼び出す必要があります。
 
-Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) であるため、呼び出されたワーカー/プロセスから結果を返すために使用することもできます。この場合、`Use...End use` 構文内で値を書き込む必要があります。
+Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) であるため、呼び出されたワーカー/プロセスから結果を返すために使用することもできます。 この場合、`Use...End use` 構文内で値を書き込む必要があります。
 
 ### 例題
 
@@ -137,17 +137,12 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 以下は、シグナルを設定するワーカーの典型的な例です:
 
 ```4d
- var $signal : 4D.Signal
- $signal:=New signal("This is my first signal")
-
- CALL WORKER("myworker";"doSomething";$signal)
- $signaled:=$signal.wait(1) // 最大で1秒待機します
-
- If($signaled)
-    ALERT("myworker はタスクを終了しました。 結果: "+$signal.myresult)
- Else
-    ALERT("myworker は 1秒以内にタスクを終了できませんでした。")
- End if
+ #DECLARE ($signal : 4D.Signal)
+  // 何らかの処理
+  //... Use($signal)
+    $signal.myresult:=$processingResult  // 結果を返します
+ End use
+ $signal.trigger() // 処理が完了しました
 ```
 
 
@@ -157,10 +152,10 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
  #DECLARE ($signal : 4D.Signal)
   // 何らかの処理
   //...
- Use($signal)
-    $signal.myresult:=$processingResult  // 結果を返します
- End use
- $signal.trigger() // 処理が完了しました
+ 結果: "+$signal.myresult)
+ Else
+    ALERT("myworker は 1秒以内にタスクを終了できませんでした。 ")
+ End if
 ```
 
 <!-- END REF -->
@@ -267,7 +262,7 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 `.wait( )` 関数は、 <!-- REF #SignalClass.wait().Summary -->シグナルオブジェクトの `.signaled` プロパティが **true** になるか、任意の *timeout* に指定したタイムアウト時間が経過するまで、カレントプロセスを待機させます<!-- END REF -->。
 
 コード実行のブロックを防ぐため、*timeout* 引数を使用して最長待機時間を秒単位で指定することもできます(小数を使用できます)。
-> **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
+> **警告**: *timeout* 引数を渡さずに `.wait()` を 4D のメインプロセスで呼び出すことは推奨されていません。 最悪の場合 4Dアプリケーション全体がフリーズしてしまう恐れがあります。
 
 Signal がすでにシグナルされている (つまり `signaled` プロパティが **true** になっている) 状態であった場合、この関数は即座に戻り値を返します。
 

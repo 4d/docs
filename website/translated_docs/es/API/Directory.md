@@ -563,6 +563,7 @@ Quiere saber si hay archivos invisibles en la carpeta de la base:
  If($all.length#$noInvisible.length)
     ALERT("Database folder contains hidden files.")
  End if
+ End if
 ```
 
 #### Ejemplo 2

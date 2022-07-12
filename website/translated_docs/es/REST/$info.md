@@ -32,7 +32,7 @@ Para cada selección de entidad almacenada actualmente en la caché de 4D Server
 
 Para obtener información sobre cómo crear una selección de entidades, consulte `$method=entityset`. Si desea eliminar la selección de entidades de la caché de 4D Server, utilice `$method=release`.
 > 4D también crea sus propias selecciones de entidades con fines de optimización, por lo que las que se crean con `$method=entityset` no son las únicas que se devuelven.
-> **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+> La información del indicador de progreso que aparece después de las selecciones de entidades es utilizada internamente por 4D.
 
 ### sessionInfo
 

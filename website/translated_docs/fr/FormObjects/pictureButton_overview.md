@@ -56,7 +56,7 @@ Les autres modes disponibles sont les suivants :
 - [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
-> [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > La [variable associée](properties_Object.md#variable-or-expression) à un bouton image retourne le numéro d’indice, dans le tableau d’imagettes, de l’image actuellement affichée. La numérotation des images dans le tableau débute à 0.
+> [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) > La [variable associée](properties_Object.md#variable-or-expression) à un bouton image retourne le numéro d’indice, dans le tableau d’imagettes, de l’image actuellement affichée. La numérotation des images dans le tableau débute à 0.
 
 ## Propriétés prises en charge
 

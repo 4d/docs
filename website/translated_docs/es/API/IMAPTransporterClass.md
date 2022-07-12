@@ -505,27 +505,29 @@ Para crear un nuevo buzón "Invoices":
 
 
 ```4d
-var $pw : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //Obligatorio
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:")
-If(OK=1)
-$options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //crear transportador
+ $transporter:=IMAP New transporter($server)
 
-$transporter:=IMAP New transporter($options)
+  //seleccionar buzón
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$status:=$transporter.createBox("Invoices")
-
-If ($status.success)
-ALERT("Mailbox creation successful!")
-Else
-ALERT("Error: "+$status.statusText)
-End if
-End if
+  If($boxInfo.mailCount>0)
+        // recuperar los encabezados de los últimos 20 mensajes sin marcarlos como leídos
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+        New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+        // ...
+End for each
+ End if
 ```
 
 <!-- END REF -->
@@ -1854,6 +1856,10 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
    End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1923,6 +1929,10 @@ $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
    ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

@@ -36,7 +36,7 @@ Function names must be compliant with standard [property naming rules](#object-p
 
 The name of an object property (also called object *attribute*) can contain up to 255 characters.
 
-Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
+Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Object properties can reference scalar values, ORDA elements, class functions, other objects, etc. Whatever their nature, object property names must follow the following rules **if you want to use the [dot notation](dt_object.md#object-properties)**:
 
 - A property name must begin with a letter, an underscore, or a dollar "$".
 - Thereafter, the name can include any letter, digit, the underscore character ("_"), or the dollar character ("$").
@@ -141,8 +141,7 @@ Exemplos:
 ```4d
 For($vlRecord;1;100) //local variable
 $vsMyString:="Hello there" //local variable
-var $vName; $vJob : Text //local variales 
-If(bValidate=1) //process variable
+var $vName; $vJob : Text //local variales If(bValidate=1) //process variable
 <>vlProcessID:=Current process() //interprocess variable
 ```
 
@@ -160,15 +159,12 @@ Exemplos:
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
+USE NAMED SELECTION([Customers];"Closed")//Process Named Selection USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
     //Starting the global process "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
     //Starting the local process "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")//Process set USE SET("<>Deleted Records") //Interprocess set If(Records in set("$Selection"+String($i))>0) //Client set
 
 ```
 

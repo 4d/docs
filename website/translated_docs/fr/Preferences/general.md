@@ -16,7 +16,7 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 *   **Ouvrir le dernier projet utilisé** : 4D ouvre directement le dernier projet utilisé, aucune boîte de dialogue d’ouverture n’apparaît. >Pour forcer l’affichage de la boîte de dialogue d’ouverture lorsque cette option est sélectionnée, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) pendant le lancement du projet.
 *   **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
 *   **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
-> **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
+> > **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
 
 ### Création de formulaire automatique
 

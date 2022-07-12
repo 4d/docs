@@ -63,4 +63,4 @@ A cada separador se le asocia una [variable](properties_Object.md#variable-or-ex
 *   Si el valor es positivo: el separador se ha movido hacia el fondo o hacia la derecha,
 *   Si el valor es 0: el separador se ha movido a su posición original.
 
-También puede mover el separador por programación: sólo tiene que definir el valor de la variable asociada. Por ejemplo, si un separador vertical está asociado a una variable llamada `split1`, y si se ejecuta la siguiente sentencia:` split1:=-10`, el separador se moverá 10 píxeles a la izquierda - como si el usuario lo hiciera manualmente. El movimiento se realiza realmente al final de la ejecución del método del formulario u objeto que contiene la instrucción. 
+También puede mover el separador por programación: sólo tiene que definir el valor de la variable asociada. Por ejemplo, si un separador vertical está asociado a una variable llamada `split1`, y si se ejecuta la siguiente sentencia:`split1:=-10`, el separador se moverá 10 píxeles a la izquierda - como si el usuario lo hiciera manualmente. El movimiento se realiza realmente al final de la ejecución del método del formulario u objeto que contiene la instrucción. 

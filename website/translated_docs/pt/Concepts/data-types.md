@@ -39,7 +39,7 @@ The default value depends on the variable type:
 
 | Type          | Default value  |
 | ------------- | -------------- |
-| Boolean       | False          |
+| Booleano      | False          |
 | Date          | 00-00-00       |
 | Inteiro longo | 0              |
 | Hora          | 00:00:00       |

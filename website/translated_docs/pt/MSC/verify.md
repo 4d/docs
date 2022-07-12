@@ -16,7 +16,7 @@ The page contains action buttons that provide direct access to the verification 
 - **Verify the records and the indexes:** Starts the total data verification procedure.
 - **Verify the records only**: Starts the verification procedure for records only (indexes are not verified).
 - **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
-> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+> > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 
 ## Open log file

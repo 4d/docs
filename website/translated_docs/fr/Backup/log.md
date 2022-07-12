@@ -13,7 +13,7 @@ Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, p
 
 L’historique généré par 4D se présente sous la forme d’un fichier dans lequel toutes les opérations effectuées sur les données des tables journalisées de l'application viennent s’inscrire séquentiellement. Par défaut, toutes les tables sont journalisées, c'est-à-dire incluses dans l'historique, mais vous pouvez en désélectionner certaines via la propriété **Inclure dans le fichier d'historique**.
 
-Ainsi, chaque opération effectuée par un utilisateur provoque deux actions simultanées : une première sur le fichier de données (l’instruction est exécutée normalement) et une seconde dans le fichier d’historique (la description de l’opération y est enregistrée). Le fichier d’historique se construit de manière indépendante, sans gêner ni ralentir le travail de l’utilisateur. Une application ne peut travailler qu’avec un seul fichier d’historique à la fois. Le fichier d’historique enregistre les types d’opérations suivants :
+Ainsi, chaque opération effectuée par un utilisateur provoque deux actions simultanées : une première sur le fichier de données (l’instruction est exécutée normalement) et une seconde dans le fichier d’historique (la description de l’opération y est enregistrée). Le fichier d’historique se construit de manière indépendante, sans gêner ni ralentir le travail de l’utilisateur. Le fichier d’historique se construit de manière indépendante, sans gêner ni ralentir le travail de l’utilisateur. Le fichier d’historique enregistre les types d’opérations suivants :
 
 - Ouvertures et fermetures du fichier de données,
 - Ouvertures et fermetures de process (contextes),

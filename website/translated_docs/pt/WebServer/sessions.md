@@ -96,10 +96,8 @@ Exemplo:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-    //Access is granted, do nothing
-Else
-    //Display an authentication page
-End if
+    //Access is granted, do nothing Else
+    //Display an authentication page End if
 ```
 
 

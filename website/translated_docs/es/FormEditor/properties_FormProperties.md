@@ -11,8 +11,8 @@ title: Propiedades de los formularios
 This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
 *   dark -- texto claro sobre fondo oscuro
-*   light - texto oscuro en un fondo claro
-> A defined color scheme can not be overridden by a CSS.
+*   light - texto oscuro en un fondo claro > A defined color scheme can not be overridden by a CSS.
+> El número de caracteres para el título de una ventana está limitado a 31.
 
 #### Gramática JSON
 
@@ -110,9 +110,9 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 #### Gramática JSON
 
-| Nombre             | Tipos de datos  | Valores posibles           |
-| ------------------ | --------------- | -------------------------- |
-| inheritedFormTable | string o number | table name or table number |
+| Nombre             | Tipos de datos  | Valores posibles                  |
+| ------------------ | --------------- | --------------------------------- |
+| inheritedFormTable | string o number | nombre de tabla o número de tabla |
 
 
 ---
@@ -140,7 +140,7 @@ Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Ope
 
 *   la página actual,
 *   la posición, el tamaño y la visibilidad de cada objeto del formulario (incluyendo el tamaño y la visibilidad de las columnas de list box).
-> Esta opción no tiene en cuenta los objetos generados con el comando `OBJECT DUPLICATE`. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
+> > Esta opción no tiene en cuenta los objetos generados con el comando `OBJECT DUPLICATE`. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
 
 Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/properties_Object.md#save-value) está disponible para ciertos objetos.
 
@@ -163,9 +163,7 @@ El título de la ventana se utiliza cuando se abre el formulario mediante los co
 Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, *es decir*:
 
 *   Una referencia estándar XLIFF almacenada en la carpeta Resources.
-*   Una etiqueta de tabla o de campo: la sintaxis a aplicar es <?[TableNum]FieldNum> o 
-  
-  <?[TableName]FieldName>.
+*   Una etiqueta de tabla o de campo: la sintaxis a aplicar es <?[TableNum]FieldNum> o
 *   Una variable o un campo: la sintaxis a aplicar es \<VariableName> o <[TableName]FieldName>. El valor actual del campo o de la variable se mostrará en el título de la ventana.
 
 > El número de caracteres para el título de una ventana está limitado a 31.

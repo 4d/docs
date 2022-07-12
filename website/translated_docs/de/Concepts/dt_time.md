@@ -81,9 +81,9 @@ Die 2. Zeile lässt sich auch einfacher schreiben:
 Der Operator Modulo dient insbesondere zum Hinzufügen von Zeiten im 24-Stunden Format:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 hours
+$t1:=?23:00:00? $t1:=?23:00:00? // With a simple addition, $t2 is ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? // It is 23:00 hours
   // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 hour the next morning
+$t2:=$t1 +?02:30:00?
 ```
 

@@ -60,7 +60,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
-**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. Folder<br>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D. Folder<!-- END REF -->
 
 
 <!-- REF FolderClass.Folder.Params -->
@@ -114,7 +114,7 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
 
-## 4D.Folder.new()
+## 4D. Folder.new()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -129,7 +129,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 The `.rename()` function<!-- REF #FolderClass.rename(). Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`. 
+> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D. Folder.new()`. 
 
 
 <!-- INCLUDE directory.copyTo().Desc -->
@@ -220,7 +220,7 @@ End if
 | destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto      | -> | Name of the alias or shortcut                |
 | aliasType         | Integer    | -> | Type of the alias link                       |
-| Resultado         | 4D.File    | <- | Alias or shortcut reference                  |
+| Resultado         | 4D. File   | <- | Alias or shortcut reference                  |
 <!-- END REF -->
 
 

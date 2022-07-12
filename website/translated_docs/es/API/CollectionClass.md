@@ -524,6 +524,11 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
  $what:="You!"
  $col3:=$col2.copy(ck resolve pointers)
  ALERT($col3[0].alpha+" "+$col3[1].what) //muestra "Hello You!"
+ ALERT($col[0].alpha+" "+$col2[1].beta) //muestra "Hello World!"
+
+ $what:="You!"
+ $col3:=$col2.copy(ck resolve pointers)
+ ALERT($col3[0].alpha+" "+$col3[1].what) //muestra "Hello You!"
 ```
 
 
@@ -2146,6 +2151,10 @@ Para obtener información detallada sobre cómo construir una consulta utilizand
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 Este ejemplo devuelve las personas cuyo nombre contiene "in":
@@ -2174,7 +2183,7 @@ Este ejemplo devuelve las personas contratadas hace más de 90 días:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si hoy es 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si hoy es 01/10/2018 si hoy es 01/10/2018
 ```
 
 

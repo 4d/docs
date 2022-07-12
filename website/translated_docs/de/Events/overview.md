@@ -24,9 +24,7 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 | Property | Typ | Beschreibung |
 | -------- | --- | ------------ |
 |          |     |              |
- objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
-
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
+ objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the
 
 Additional properties are returned when the event occurs on specific objects. Das bedeutet im einzelnen:
 

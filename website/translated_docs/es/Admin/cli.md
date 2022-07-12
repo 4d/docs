@@ -53,7 +53,7 @@ Estos ejemplos suponen que su aplicación 4D está almacenada en el escritorio y
 
 > La carpeta actual del usuario se alcanza utilizando el comando "~ " en macOS y el comando "%HOMEPATH%" en Windows.
 
-Lance la aplicación:
+Estos ejemplos suponen que su aplicación 4D está almacenada en el escritorio y que la base de datos a abrir se encuentra en la carpeta "Documentos".
 
 *   macOS:
 

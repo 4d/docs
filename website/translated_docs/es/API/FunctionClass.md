@@ -334,10 +334,19 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 ```4d
  var $f : 4D.Function
- $f:=Formula($1+$2+$3)
 
- $c:=New collection(10;20;30)
- $result:=$f.apply(Null;$c) // devuelve 60
+ $f:=Formula(myMethod)
+  //Writing Formula(myMethod($1;$2)) no es necesario
+ $text:=$f.call(Null;"Hello";"World") //devuelve "Hello World"
+ $text:=$f.call() //devuelve "How are you?"
+
+  //myMethod
+ #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
+ If(Count parameters=2)
+    $return:=$param1+" "+$param2
+ Else
+    $return:="How are you?"
+ End if
 ```
 
 

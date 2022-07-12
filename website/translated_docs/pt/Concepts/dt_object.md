@@ -47,7 +47,7 @@ Exemplo:
 Pode criar dois tipos de objetos:
 
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
+- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use... End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 
 ## Syntax basics

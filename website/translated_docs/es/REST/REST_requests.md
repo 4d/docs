@@ -6,7 +6,7 @@ title: Acerca de las peticiones REST
 
 Se soportan las siguientes estructuras para las peticiones REST:
 
-| URI                              | Resource (Input)                                                                                    | /? or &{filter} (Output)                                                                              |
+| URI                              | Resource (Input)                                                                                    | /? /? or &{filter} (Output)                                                                           |
 | -------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                                 | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/[$entityset/{entitySetID}](entityset.html#entitysetentitysetid) | [$method=...]($method.md)                                                                             |

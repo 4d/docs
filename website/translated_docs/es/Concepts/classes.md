@@ -1,5 +1,5 @@
 ---
-id: clases
+id: classes
 title: Clases
 ---
 
@@ -414,11 +414,6 @@ Class constructor($width : Integer; $height : Integer)
 
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
-
-// Function definition
-Function getArea()
-    var $0 : Integer
-    $0:=(This.height)*(This.width)
 
 // Function definition
 Function getArea()

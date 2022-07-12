@@ -43,20 +43,13 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 ### Beispiel
 
 ```4d
- var $signal : 4D.Signal
-
-  // Creation of a signal
- $signal:=New signal
-
-  // call main process and execute OpenForm method
- CALL WORKER(1;"OpenForm";$signal)
-  // do another calculation
- ...
-  // Waiting for the end of the process
- $signaled:=$signal.wait()
-
-  // Processing of the results
- $calc:=$signal.result+...
+ #DECLARE ($signal : 4D.Signal)
+  //any processing
+  //...
+  Use($signal)
+    $signal.myresult:=$processingResult  //return the result
+ End use
+ $signal.trigger() // The work is finished
 ```
 
 ***OpenForm*** method :

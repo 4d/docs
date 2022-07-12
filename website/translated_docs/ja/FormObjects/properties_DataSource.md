@@ -168,7 +168,7 @@ title: データソース
 | saveAs | string | "value", "reference" |
 
 
-> `"type": "dropdown"` フォームオブジェクトに `"dataSourceTypeHint" : "integer"` のみを設定すると、階層ドロップダウンリストが宣言されます。
+> このプロパティと、新規レコードのフィールド値を定義するのに使える入力オブジェクトの [デフォルト値](properties_RangeOfValues.md#デフォルト値) を混同しないようにしてください。
 
 
 #### 対象オブジェクト

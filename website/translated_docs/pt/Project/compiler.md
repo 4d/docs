@@ -123,7 +123,7 @@ This area groups the generic options used during the compilation process.
 
 #### Generate symbol file
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
 #### Generate error file
 

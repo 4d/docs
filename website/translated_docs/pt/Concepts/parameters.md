@@ -97,8 +97,7 @@ $area:=$o.getArea(50;100)
 In the class function code, the value of each parameter is copied into the corresponding declared parameter:
 
 ```4d    
-// Class: Polygon
-Function getArea($width : Integer; $height : Integer)-> $area : Integer
+// Class: Polygon Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
 > If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
@@ -111,7 +110,7 @@ All 4D method kinds support the `#DECLARE` keyword, including database methods. 
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
-$entitySelection:=ds.User.query("login=:1"; $user)
+$entitySelection:=ds. User.query("login=:1"; $user)
 // Check hash password...
 ```
 
@@ -136,7 +135,7 @@ Function add($x : Variant; $y : Integer): Integer
 With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  Por exemplo:
 
 ```4d
-Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
+Function saveToFile($entity : cs. ShapesEntity; $file : 4D. File)
 ```
 
 

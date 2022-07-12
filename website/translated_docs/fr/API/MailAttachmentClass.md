@@ -13,19 +13,19 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 
 |                                                                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->                            |
+| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->    |
+| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->   |
+| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary --> |
+| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->                         |
 
 
 ## MAIL New attachment
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #_command_.MAIL_New_attachment.Syntax --> **MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -38,6 +38,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 | type        | Text              | -> | Valeur de l'en-tête content-type                                                   |
 | disposition | Text              | -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                 |
 | Résultat    | 4D.MailAttachment | <- | Objet pièce jointe                                                                 |
+
 <!-- END REF -->
 
 
@@ -161,8 +162,8 @@ $transporter.send($email)
 ## 4D.MailAttachment.new()
 
 
-<!-- REF #4D.MailAttachment.new().Syntax -->
-**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #4D.MailAttachment.new().Syntax --> **4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
@@ -175,17 +176,18 @@ $transporter.send($email)
 | type        | Text              | -> | Valeur de l'en-tête content-type                                                   |
 | disposition | Text              | -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                 |
 | Résultat    | 4D.MailAttachment | <- | Objet pièce jointe                                                                 |
+
 <!-- END REF -->
 
 #### Description
 
-La fonction `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crée et retourne un nouvel objet de type `4D.MailAttachment`<!-- END REF -->. Elle est identique à la commande [`MAIL New attachment`](#mail-new-attachment) (raccourci).
+La fonction `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crée et retourne un nouvel objet de type `4D.MailAttachment`<!-- END REF -->. La fonction `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crée et retourne un nouvel objet de type `4D.MailAttachment`<!-- END REF -->.
 
 
 ## .cid
 
-<!-- REF #MailAttachmentClass.cid.Syntax -->
-**.cid** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.cid.Syntax --> **.cid** : Text<!-- END REF -->
 
 
 #### Description
@@ -195,8 +197,8 @@ La propriété `.cid` contient <!-- REF #MailAttachmentClass.cid.Summary --> l'I
 
 ## .disposition
 
-<!-- REF #MailAttachmentClass.disposition.Syntax -->
-**.disposition** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.disposition.Syntax --> **.disposition** : Text<!-- END REF -->
 
 
 #### Description
@@ -209,13 +211,15 @@ La propriété `.disposition` contient <!-- REF #MailAttachmentClass.disposition
 
 ## .getContent()
 
-<!-- REF #MailAttachmentClass.getContent().Syntax -->
-**.getContent()** : Blob<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.getContent().Syntax --> **.getContent()** : Blob<!-- END REF -->
+
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 | Paramètres | Type |    | Description                |
 | ---------- | ---- |:--:| -------------------------- |
 | Résultat   | Blob | <- | Contenu de la pièce jointe |
+
 <!-- END REF -->
 
 
@@ -227,8 +231,8 @@ La fonction `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -
 
 ## .name
 
-<!-- REF #MailAttachmentClass.name.Syntax -->
-**.name** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.name.Syntax --> **.name** : Text<!-- END REF -->
 
 
 #### Description
@@ -237,8 +241,8 @@ La propriété `.name` contient <!-- REF #MailAttachmentClass.name.Summary -->le
 
 ## .path
 
-<!-- REF #MailAttachmentClass.path.Syntax -->
-**.path** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.path.Syntax --> **.path** : Text<!-- END REF -->
 
 
 #### Description
@@ -254,8 +258,8 @@ La propriété `.path` contient <!-- REF #MailAttachmentClass.path.Summary -->le
 | v19     | Ajout         |
 </details>
 
-<!-- REF #MailAttachmentClass.platformPath.Syntax -->
-**.platformPath** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.platformPath.Syntax --> **.platformPath** : Text<!-- END REF -->
 
 
 #### Description
@@ -265,8 +269,8 @@ La propriété `.platformPath` contient <!-- REF #MailAttachmentClass.platformPa
 
 ## .type
 
-<!-- REF #MailAttachmentClass.type.Syntax -->
-**.type** : Texte<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.type.Syntax --> **.type** : Texte<!-- END REF -->
 
 
 #### Description

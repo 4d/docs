@@ -41,6 +41,9 @@ Case of
         WEB SEND TEXT("Hello World!")
     Else 
         // Error 404 por ejemplo
+End case
+    Else 
+        // Error 404 por ejemplo
 End case 
 ```
 
@@ -254,6 +257,10 @@ If ($user#Null) //se encontró un usuario
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
+    End if 
+Else 
+    WEB SEND TEXT("Wrong user name or password.")
+End if
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")

@@ -815,7 +815,7 @@ The function returns an object describing the Web server launch status. This obj
 
 ```4d
  var $settings;$result : Object
- var $webServer : 4D.WebServer
+ var $webServer : 4D. WebServer
 
  $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
 
@@ -861,7 +861,7 @@ If the web server was started, all web connections and web processes are closed,
 To stop the database Web server:
 
 ```4d
- var $webServer : 4D.WebServer
+ var $webServer : 4D. WebServer
 
  $webServer:=WEB Server(Web server database)
  $webServer.stop()

@@ -69,13 +69,13 @@ open ~/Desktop/4D.app
 %HOMEPATH%\Desktop\4D\4D.exe
 ```
 
-Lancer l'application :
+Ces exemples supposent que votre application 4D est stockée sur le bureau et que la base de données à ouvrir se trouve dans le dossier "Documents".
 
 ```bash
 yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
-Lancer l'application avec un fichier de package sur macOS :
+Lancer l'application :
 
 *   Sous macOS :
 
@@ -94,7 +94,7 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 
-Lancer l'application avec un fichier projet :
+Lancer l'application avec un fichier de package sur macOS :
 
 *   Sous macOS :
 
@@ -112,7 +112,7 @@ ou :
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Lancer l'application avec un fichier projet et un fichier de données :
+Lancer l'application avec un fichier projet :
 
 *   Sous macOS :
 
@@ -136,7 +136,7 @@ open "~/Desktop/4D Server.app" MyDatabase.4DLink
 %HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
 ```
 
-Lancer l'application avec un fichier .4DLink :
+Lancer l'application avec un fichier projet et un fichier de données :
 
 *   Sous macOS :
 
@@ -152,7 +152,7 @@ open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled -
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-Lancez l'application en mode compilé et créer un fichier de données s'il n'est pas disponible :
+Lancer l'application avec un fichier .4DLink :
 
 *   Sous macOS :
 
@@ -168,7 +168,7 @@ open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProje
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-Lancer l'application avec un fichier projet et un fichier de données et passer une chaîne comme paramètre utilisateur :
+Lancez l'application en mode compilé et créer un fichier de données s'il n'est pas disponible :
 
 *   Sous macOS :
 

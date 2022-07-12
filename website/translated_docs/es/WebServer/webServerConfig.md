@@ -376,7 +376,7 @@ True por defecto (activado).
 | ----------------------------- | ---------------------------------------------------- | ----------- |
 | objeto webServer              | [`logRecording`](API/WebServerClass.md#logrecording) |             |
 | `WEB SET OPTION`              | `Web log recording`                                  |             |
-| Caja de diálogo de parámetros | Log (type) page/Log Format                           | Menú popup  |
+| Caja de diálogo de parámetros | Historial (tipo)/Formato del historial               | Menú popup  |
 
 Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 

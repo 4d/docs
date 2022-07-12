@@ -11,7 +11,7 @@ Apesar do modo de representação de datas de C_DATE permitir trabalhar com data
 
 ## Date literals
 
-Uma constante literal de tipo data está cercada de sinais de exclamação (!...!). Uma data deve ser estruturada usando o formato ISO (!YYYY-MM-DD!) Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas:
+Uma constante literal de tipo data está cercada de sinais de exclamação (!...!). Uma data deve ser estruturada usando o formato ISO (!YYYY-MM-DD!) Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas: Estes são alguns exemplos de constantes de datas:
 
 ```4d
 !1976-01-01!
@@ -33,17 +33,17 @@ Uma data nula é especificada por _!00-00-00!_.
 | Operação                 | Sintaxe        | Retorna  | Expressão                    | Value        |
 | ------------------------ | -------------- | -------- | ---------------------------- | ------------ |
 | Date difference          | Date - Date    | Número   | !2017-01-20! - !2017-01-01!  | 19           |
-| Day addition             | Date + Number  | Date     | !2017-01-20! + 9             | !2017-01-29! |
-| Day subtraction          | Date – Number  | Date     | !2017-01-20! - 9             | !2017-01-11! |
-| Igual                    | Date = Date    | Booleano | !2017-01-01! =!2017-01-01!   | True         |
-|                          |                |          | !2017-01-20! = !2017-01-01!  | False        |
-| Desigualdade             | Date # Date    | Booleano | !2017-01-20! # !2017-01-01!  | True         |
-|                          |                |          | !2017-01-20! # !2017-01-20!  | False        |
-| Greater than             | Date > Date    | Booleano | !2017-01-20! > !2017-01-01!  | True         |
-|                          |                |          | !2017-01-20! > !2017-01-20!  | False        |
-| Menor que                | Date < Date    | Booleano | !2017-01-01! < !2017-01-20!  | True         |
-|                          |                |          | !2017-01-20! < !2017-01-20!  | False        |
-| Greater than or equal to | Date >= Date   | Booleano | !2017-01-20! >=!2017-01-01!  | True         |
+| Day addition             | Date + Number  | Date     | !2017-01-20! !2017-01-20!    | !2017-01-29! |
+| Day subtraction          | Date – Number  | Date     | !2017-01-20! !2017-01-01!    | !2017-01-11! |
+| Igual                    | Date = Date    | Booleano | !2017-01-20! = !2017-01-01!  | True         |
+|                          |                |          | !2017-01-20! !2017-01-20!    | False        |
+| Desigualdade             | Date # Date    | Booleano | !2017-01-20! !2017-01-01!    | True         |
+|                          |                |          | !2017-01-20! !2017-01-20!    | False        |
+| Greater than             | Date > Date    | Booleano | !2017-01-20! !2017-01-20!    | True         |
+|                          |                |          | !2017-01-20! !2017-01-20!    | False        |
+| Menor que                | Date < Date    | Booleano | !2017-01-20! !2017-01-20!    | True         |
+|                          |                |          | !2017-01-20! !2017-01-20!    | False        |
+| Greater than or equal to | Date >= Date   | Booleano | !2017-01-20! !2017-01-20!    | True         |
 |                          |                |          | !2017-01-01!>=!2017-01-20!   | False        |
 | Less than or equal to    | Date \<= Date | Booleano | !2017-01-01!\<=!2017-01-20! | True         |
 |                          |                |          | !2017-01-20!\<=!2017-01-01! | False        |

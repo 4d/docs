@@ -30,6 +30,7 @@ $myDate:=!2018/01/21! //asigna una fecha literal
 $myHour:=?08:12:55? //asigna una hora literal //asigna una fecha literal
 $myHour:=?08:12:55? //asigna una hora literal //asigna una fecha literal
 $myHour:=?08:12:55? //asigna una hora literal //asigna una fecha literal
+$myHour:=?08:12:55? //asigna una hora literal //asigna una fecha literal
 $myHour:=?08:12:55? //asigna una hora literal
 ```
 
@@ -189,6 +190,7 @@ $f.message() //displays "Hello world!"
 $f.message() //displays "Hello world!"
 $f.message() //displays "Hello world!"
 $f.message() //displays "Hello world!"
+$f.message() //displays "Hello world!"
 ```
 
 Para acceder a un elemento de la colección, debe pasar el número del elemento entre corchetes:
@@ -270,11 +272,11 @@ Los operadores numéricos son sólo un tipo de operador disponible. 4D soporta m
 
 Los mismos símbolos se utilizan a menudo para diferentes operaciones, dependiendo del tipo de datos. Por ejemplo, el signo más (+) realiza diferentes operaciones con diferentes datos:
 
-| Tipos de datos | Operación        | Ejemplo                                                                                                                                                       |
-| -------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Número         | Adición          | 1 + 2 suma los números y da como resultado 3                                                                                                                  |
-| Cadena         | Concatenación    | "Hola" + "a todos" concatena (une) las cadenas y da como resultado "Hola a todos"                                                                             |
-| Fecha y Número | Adición de fecha | !1989-01-01! !1989-01-01! !1989-01-01! !1989-01-01! + 20 añade 20 días a la fecha del 1 de enero de 1989 y da como resultado la fecha del 21 de enero de 1989 |
+| Tipos de datos | Operación        | Ejemplo                                                                                                                                                                    |
+| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Número         | Adición          | 1 + 2 suma los números y da como resultado 3                                                                                                                               |
+| Cadena         | Concatenación    | "Hola" + "a todos" concatena (une) las cadenas y da como resultado "Hola a todos"                                                                                          |
+| Fecha y Número | Adición de fecha | !1989-01-01! !1989-01-01! !1989-01-01! !1989-01-01! !1989-01-01! + 20 añade 20 días a la fecha del 1 de enero de 1989 y da como resultado la fecha del 21 de enero de 1989 |
 
 
 ## Expresiones
@@ -295,30 +297,30 @@ Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una ex
 ### Tese de expresiones
 Se hace referencia a una expresión por el tipo de datos que devuelve. Hay varios tipos de expresiones. En la siguiente tabla se dan ejemplos de cada tipo de expresión.
 
-| Expresión                                                                     | Tipo                   | Descripción                                                                                                                                                          |
-| ----------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                                                                       | Cadena                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                           |
-| “Hello ” + “there”                                                            | Cadena                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                |
-| “Sr. ” + [People]Name                                                         | Cadena                 | Se concatenan dos cadenas: la cadena "Sr." y el valor actual del campo Nombre de la tabla Personas. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
-| Uppercase("smith")                                                            | Cadena                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                        |
-| 4                                                                             | Número                 | Se trata de una constante numérica, 4.                                                                                                                               |
-| 4 * 2                                                                         | Número                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (*). El resultado es el número 8.                                                        |
-| myButton                                                                      | Número                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                             |
-| !1997-01-25!                                                                  | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                             |
-| Current date+ 30                                                              | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.   |
-| ?8:05:30?                                                                     | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                               |
-| ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? + ?1:02:03? | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                            |
-| True                                                                          | Booleano               | Este comando devuelve el valor booleano TRUE.                                                                                                                        |
-| 10 # 20                                                                       | Booleano               | Se trata de una comparación lógica entre dos números. El símbolo número (#) significa "es diferente de". Como 10 "es diferente de" 20, la expresión devuelve TRUE.   |
-| “ABC” = “XYZ”                                                                 | Booleano               | Se trata de una comparación lógica entre dos cadenas. Son diferentes, por lo que la expresión devuelve FALSE.                                                        |
-| My Picture + 50                                                               | Imagen                 | Esta expresión toma la imagen en My Picture, la mueve 50 píxeles a la derecha y devuelve la imagen resultante.                                                       |
-| ->[People]Name                                                                | Puntero                | Esta expresión devuelve un puntero al campo llamado [People]Name.                                                                                                    |
-| Table (1)                                                                     | Puntero                | Este es un comando que devuelve un puntero a la primera tabla.                                                                                                       |
-| JSON Parse (MyString)                                                         | Objeto                 | Este es un comando que devuelve MyString como un objeto (si el formato es el adecuado)                                                                               |
-| JSON Parse (MyJSONArray)                                                      | Collection             | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                     |
-| Form.pageNumber                                                               | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                           |
-| Col[5]                                                                        | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                       |
-| $entitySel[0]                                                                 | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                          |
+| Expresión                                                                                           | Tipo                   | Descripción                                                                                                                                                          |
+| --------------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| “Hello”                                                                                             | Cadena                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                           |
+| “Hello ” + “there”                                                                                  | Cadena                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                |
+| “Sr. ” + [People]Name                                                                               | Cadena                 | Se concatenan dos cadenas: la cadena "Sr." y el valor actual del campo Nombre de la tabla Personas. Si el campo contiene "Smith", la expresión devuelve "Mr. Smith". |
+| Uppercase("smith")                                                                                  | Cadena                 | Esta expresión utiliza `Uppercase`, un comando del lenguaje, para convertir la cadena "smith" a mayúsculas. Devuelve “SMITH”.                                        |
+| 4                                                                                                   | Número                 | Se trata de una constante numérica, 4.                                                                                                                               |
+| 4 * 2                                                                                               | Número                 | Dos números, 4 y 2, se multiplican utilizando el operador de multiplicación (*). El resultado es el número 8.                                                        |
+| myButton                                                                                            | Número                 | Es una variable asociada a un botón. Devuelve el valor actual del botón: 1 si se ha hecho clic, 0 si no.                                                             |
+| !1997-01-25!                                                                                        | Fecha                  | Esta es una constante fecha para la fecha 1/25/97 (25 de enero de 1997).                                                                                             |
+| Current date+ 30                                                                                    | Fecha                  | Esta es una expresión de tipo Fecha que utiliza el comando `Current date` para obtener la fecha de hoy. Añade 30 días a la fecha de hoy y devuelve la nueva fecha.   |
+| ?8:05:30?                                                                                           | Hora                   | Es una constante hora que representa 8 horas, 5 minutos y 30 segundos.                                                                                               |
+| ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? ?2:03:04? + ?1:02:03? + ?1:02:03? | Hora                   | Esta expresión suma dos horas y devuelve la hora 3:05:07.                                                                                                            |
+| True                                                                                                | Booleano               | Este comando devuelve el valor booleano TRUE.                                                                                                                        |
+| 10 # 20                                                                                             | Booleano               | Se trata de una comparación lógica entre dos números. El símbolo número (#) significa "es diferente de". Como 10 "es diferente de" 20, la expresión devuelve TRUE.   |
+| “ABC” = “XYZ”                                                                                       | Booleano               | Se trata de una comparación lógica entre dos cadenas. Son diferentes, por lo que la expresión devuelve FALSE.                                                        |
+| My Picture + 50                                                                                     | Imagen                 | Esta expresión toma la imagen en My Picture, la mueve 50 píxeles a la derecha y devuelve la imagen resultante.                                                       |
+| ->[People]Name                                                                                      | Puntero                | Esta expresión devuelve un puntero al campo llamado [People]Name.                                                                                                    |
+| Table (1)                                                                                           | Puntero                | Este es un comando que devuelve un puntero a la primera tabla.                                                                                                       |
+| JSON Parse (MyString)                                                                               | Objeto                 | Este es un comando que devuelve MyString como un objeto (si el formato es el adecuado)                                                                               |
+| JSON Parse (MyJSONArray)                                                                            | Collection             | Este es un comando que devuelve MyJSONArray en forma de colección (si el formato es el adecuado)                                                                     |
+| Form.pageNumber                                                                                     | Propiedad objeto       | Una propiedad objeto es una expresión que puede ser de todo tipo soportado                                                                                           |
+| Col[5]                                                                                              | Elementos de colección | Un elemento de colección es una expresión que puede ser de todo tipo soportado                                                                                       |
+| $entitySel[0]                                                                                       | Entity                 | Un elemento de una selección de entidades ORDA es una expresión de tipo entidad. Este tipo de expresión es **no asignable**                                          |
 
 ### Expresiones asignables y no asignables
 

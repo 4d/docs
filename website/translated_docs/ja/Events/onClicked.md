@@ -10,7 +10,7 @@ title: On Clicked
 
 ## 説明
 
-` On Clicked` イベントは、ユーザーがオブジェクト上でクリックしたときに発生します。
+`On Clicked` イベントは、ユーザーがオブジェクト上でクリックしたときに発生します。
 
 > いくつかのフォームオブジェクトはキーボードからも操作可能です。 たとえば、チェックボックスがフォーカスを得ると、スペースバーでオン/オフを切り替えることができます。 この場合でも `On Clicked` イベントは生成されます。
 
@@ -26,7 +26,7 @@ title: On Clicked
 
 ### On Clicked と On Double Clicked
 
-`On Clicked` や [`On Double Clicked`](onDoubleClicked.md) オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。`FORM Event` コマンドはユーザーアクションに応じ、`On Clicked` または [`On Double Clicked`](onDoubleClicked.md)を返します。
+`On Clicked` や [`On Double Clicked`](onDoubleClicked.md) オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。 `FORM Event` コマンドはユーザーアクションに応じ、`On Clicked` または [`On Double Clicked`](onDoubleClicked.md)を返します。
 
 両イベントがオブジェクトに対し選択されている場合、ダブルクリックがおこなわれるとまず `On Clicked` が、そして `On Double Clicked` イベントが生成されます。
 

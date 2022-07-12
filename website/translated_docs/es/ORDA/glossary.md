@@ -149,7 +149,7 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 ## Propiedad
 
 Ver [Atributo](#attribute).
-> Los atributos y las propiedades son conceptos similares. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> > *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 

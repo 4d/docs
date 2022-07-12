@@ -196,7 +196,7 @@ http://localhost/rest/Friends
 - ユーザーは、専用の非公開テーブル (例: *WebUsers*) に保存されます。
 - [暗号化](MSC/encrypt.md) することも可能な *WebUsers* テーブルには、ユーザーのログイン名とパスワードのハッシュが保存されています。
 
-1. いくつかのフィールドを持つテーブルを作成します。たとえば:
+1. いくつかのフィールドを持つテーブルを作成します。 たとえば:
 
 ![](assets/en/WebServer/helloUsers.png)
 

@@ -167,7 +167,7 @@ In addition, the following relation attributes will also be automatically availa
 
 *   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 *   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
 All dataclass attributes are exposed as properties of the dataclass:
 

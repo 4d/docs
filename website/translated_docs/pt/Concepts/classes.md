@@ -133,7 +133,7 @@ The `4D` command returns the class store for available built-in 4D classes. It p
 You want to create a new key in the `CryptoKey` class:
 
 ```4d
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+$key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 ```
 
 
@@ -176,11 +176,11 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
+Class functions are specific properties of the class. They are objects of the [4D. Function](API/FunctionClass.md#about-4dfunction-objects) class.
 
 In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
-> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs.MyClass. "`.
+> **Tip:** Starting the function name with an underscore character ("_") will exclude the function from the autocompletion features in the 4D code editor. For example, if you declare `Function _myPrivateFunction` in `MyClass`, it will not be proposed in the code editor when you type in `"cs. MyClass. "`.
 
 Immediately following the function name, [parameters](#parameters) for the function can be declared with an assigned name and data type, including the return parameter (optional). Por exemplo:
 
@@ -193,9 +193,7 @@ Within a class function, the `This` command is used as the object instance. Por 
 ```4d  
 Function setFullname($firstname : Text; $lastname : Text)
     This.firstName:=$firstname
-    This.lastName:=$lastname
-
-Function getFullname()->$fullname : Text
+    This.lastName:=$lastname Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 

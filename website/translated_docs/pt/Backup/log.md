@@ -13,7 +13,7 @@ Por último, 4D possui funções que analisam os conteúdos do arquivo de histó
 
 O arquivo de histórico gerado por 4D contém uma descrição de todas as operações realizadas nos dados das tbelas registradas no diário, as quais são registradas de forma sequencial. Como padrão, todas as tabelas são registradas, ou seja, incluidas no arquivo de histórico, mas pode desmarcar as tabelas individuais usando a propriedade de tabela **Incluir no arquivo de histórico**.
 
-Dessa forma, cada operação realizada por um usuário causa duas ações simultâneas: a primeira é no arquivo de dados (a instrução é executada normalmente) e a segunda é no arquivo de histórico ( a descrição da operação é registrada). O arquivo de historial se cria de forma independente, sem perturbar nem ralentar o trabalho do usuário. Uma aplicação só pode trabalhar com um arquivo de historial por vez. O arquivo de historial registra os seguintes tipos de ações:
+Dessa forma, cada operação realizada por um usuário causa duas ações simultâneas: a primeira é no arquivo de dados (a instrução é executada normalmente) e a segunda é no arquivo de histórico ( a descrição da operação é registrada). O arquivo de historial se cria de forma independente, sem perturbar nem ralentar o trabalho do usuário. O arquivo de historial se cria de forma independente, sem perturbar nem ralentar o trabalho do usuário. O arquivo de historial registra os seguintes tipos de ações:
 
 - Abertura e fechamento de arquivos de dados,
 - Abertura e fechamento de processos (contextos),

@@ -125,7 +125,7 @@ Une clé d'accès est similaire à un mot de passe, mais sans login associé.
 
 ## Configuration de WebAdmin sans interface
 
-Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Le fichier par défaut `WebAdmin.4DSettings` est alors utilisé.
+Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
 
 Dans le cas d'une application 4D ou 4D Server sans interface, vous pouvez configurer et utiliser le fichier `WebAdmin.4DSettings` par défaut, ou désigner un fichier `.4DSettings` personnalisé.
 

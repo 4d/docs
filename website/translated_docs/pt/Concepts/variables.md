@@ -45,7 +45,7 @@ Por exemplo:
 ```4d
 var $myText : Text  //a text variable
 var myDate1; myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
+var $myFile : 4D. File  //a file class object variable
 var $myVar //a variant variable
 ```
 
@@ -88,23 +88,23 @@ var myVar //variant
 
 var $o : Object    
 //equivalent to:  
-var $o : 4D.Object
+var $o : 4D. Object
 //also equivalent to C_OBJECT($o)
 ```
 
 - To declare object variables of 4D class:
 
 ```4d
-var $myFolder : 4D.Folder
-var $myFile : 4D.File
+var $myFolder : 4D. Folder
+var $myFile : 4D. File
 ```
 
 - To declare object variables of user class:
 
 ```4d
-var $myClass : cs.MyClass
-var $dataclass : cs.Employee
-var $entity : cs.EmployeeEntity
+var $myClass : cs. MyClass
+var $dataclass : cs. Employee
+var $entity : cs. EmployeeEntity
 ```
 
 

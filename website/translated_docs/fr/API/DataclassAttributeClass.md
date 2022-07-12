@@ -313,7 +313,7 @@ La propriété `.name` <!-- REF DataClassAttributeClass.name.Summary -->retourne
 
 
 #### Description
-> Cette propriété n'est disponible qu'avec les attributs de la propriété "relatedEntity" ou "relatedEntities" [`.kind`](#kind).
+> Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si `.unique` n'est pas retourné.
 
 La propriété `.relatedDataClass` <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->retourne le nom de la dataclass liée à l'attribut<!-- END REF -->.
 

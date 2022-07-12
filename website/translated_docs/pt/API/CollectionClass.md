@@ -852,10 +852,8 @@ $b:=$c.every("TypeLookUp";Is real) //$b=false
 Com o método ***TypeLookUp***:
 
 ```4d
-#DECLARE ($toEval : Object ; $param : Integer) //$1; $2
-If(Value type($toEval.value)=$param)
-    $toEval.result:=True
-End if
+#DECLARE ($toEval : Object ; $param : Integer) //$1; $2 If(Value type($toEval.value)=$param)
+    $toEval.result:=True End if
 ```
 
 
@@ -2174,7 +2172,7 @@ Este exemplo devolve as pessoas contratadas há mais de 90 dias:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] se hoje for 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 se hoje for 01/10/2018
 ```
 
 
@@ -2305,7 +2303,7 @@ The `.remove()` function <!-- REF #collection.remove(). Summary -->removes one o
 > This function modifies the original collection.
 
 In *index*, pass the position where you want the element to be removed from the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Warning**: Keep in mind that collection elements are numbered from 0. If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
 
 *   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
 *   If the calculated value < 0, *index* is set to 0.
@@ -2421,9 +2419,14 @@ The `.sort()` function <!-- REF #collection.sort(). Na coleção original é uma
 
 
 ```4d
- var $c; $c2 : Collection
- $c:=New collection(1;3;5;2;4;6)
- $c2:=$c.reverse() //$c2=[6,4,2,5,3,1]
+ var $c : Collection
+ $c:=New collection
+ $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
+ $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
 
@@ -2502,9 +2505,9 @@ A função `.query()` <!-- REF #collection.query(). Summary --> devolve todos os
 
 The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
 
-*   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection).
+*   Se *index* < 0, será recalculado como *startFrom:=startFrom+length* (é considerado como o offset do final da coleção).
 *   If the calculated value < 0, *startFrom* is set to 0.
-*   If *end* < 0 , it is recalculated as *end:=end+length*.
+*   Se *end* < 0 , é recalculado como sendo *end:=end+length*.
 *   If *end < startFrom* (passed or calculated values), the method does nothing.
 
 #### Exemplo
@@ -2563,7 +2566,7 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
 *methodName* estabelece os parâmetros abaixo:
 
 *   *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
-*   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+*   *$1.stop* (boolean, opcional): **true** para parar o callback do método. The returned value is the last calculated.
 
 In any case, at the point where `.some()` function encounters the first collection element returning true in *$1.result*, it stops calling *methodName* and returns **true**.
 
@@ -2634,14 +2637,14 @@ If `.sort()` is called with no parameters, only scalar values (number, text, dat
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
 
-*   *methodName* will receive the following parameters:
-    *   $1 (object), where:
-        *   *$1.value* (any type): first element value to be compared
-        *   *$1.value2* (any type): second element value to be compared
-    *   $2...$N (any type): extra parameters
+*   *methodName* recebe os parâmetros abaixo:
+    *   $1 (objeto), onde:
+        *   em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
+        *   em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
+    *   $2...$N (qualquer tipo): parâmetros adicionais
 
-*methodName* sets the following parameter:
-    *   *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
+*methodName* estabelece os parâmetros abaixo:
+    *   *$1.result* (boolean): **true** se *$1.value < $1.value2*, **false** do contrário
 
 Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 

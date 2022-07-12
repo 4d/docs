@@ -56,7 +56,7 @@ Exemplo:
 Pode criar dois tipos de coleções:
 
 - regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use... End use`](Concepts/shared.md#useend-use) structures.
 
 Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
