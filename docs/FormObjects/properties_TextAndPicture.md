@@ -103,7 +103,7 @@ This property sets the exact number of states present in the picture used as the
 
 Each state is represented by a different picture. In the source picture, the states must be stacked vertically:
 
-![](../assets/img/en/property_numberOfStates.png)
+![](../assets/img/en/FormObjects/property_numberOfStates.png)
 
 The following states are represented:
 
