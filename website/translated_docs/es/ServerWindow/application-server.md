@@ -39,7 +39,7 @@ If you click on the **Reject new connections** button:
 
 This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. If the administrator uses a remote connection, they can be certain to be the only one modifying the data. It is also possible to use this function in preparation of a maintenance operation which requires that there be no desktop client machine connected.
 
-## Information
+## Información
 
 ### Configuración
 

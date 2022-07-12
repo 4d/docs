@@ -208,7 +208,7 @@ The following fields are logged for each event:
 
 ## 4DDiagnosticLog.txt
 
-This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command.
+This log file records many events related to the internal application operation and is human-readable. You can include custom information in this file using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command. 
 
 How to start this log:
 
@@ -224,10 +224,26 @@ The following fields are logged for each event:
 |timestamp|Date and time in ISO 8601 format (YYYY-MM-DDThh:mm:ss.mmm)|
 |loggerID|Optional|
 |componentSignature|Optional - internal component signature|
-|messageLevel|Info, Warning, Error|
+|messageLevel|Trace, Debug, Info, Warning, Error|
 |message|Description of the log entry|
 
 Depending on the event, various other fields can also be logged, such as task, socket, etc.
+
+### Diagnostic log levels
+
+The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).  
+
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+
+|Message level|Description|When selected, includes|
+|---|---|---|
+|ERROR|A part of the application does not work|ERROR|
+|WARN|Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation|ERROR, WARN|
+|INFO|*Default level* - Important application event|ERROR, WARN, INFO|
+|DEBUG|Detail of application flow (for 4D technical services)|ERROR, WARN, INFO, DEBUG|
+|TRACE|Other internal information (for 4D technical services)|ERROR, WARN, INFO, DEBUG, TRACE|
+
+
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt   
 
@@ -412,7 +428,13 @@ The log configuration file is a `.json` file that can contain the following prop
                     "description": "Enable/Disable diagnostic logs 0 or 1 (0 = do not record, 1 = record)",
                     "type": "integer",
                     "minimum": 0    
-                }
+                },
+                "level": {
+            		"description": "Configure diagnostic logs",
+            		"type": "integer",
+            		"minimum": 2,
+            		"maximum": 6
+        		}
             }
           },
         "httpDebugLogs": {

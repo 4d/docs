@@ -71,7 +71,7 @@ The following table lists all supported `varType` values:
 |`Real`|Real value|
 |`Pointer`|Pointer value|
 |`Picture`|Picture value|
-|`Blob`|BLOB value|
+|`Blob`|Scalar Blob value|
 |`Collection`|Collection value|
 |`Variant`|Variant value|
 |`Object`|Object with default class (4D.Object)|

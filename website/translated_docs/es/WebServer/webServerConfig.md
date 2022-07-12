@@ -557,7 +557,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 > When the HTML root folder is modified, the cache is cleared so as to not store files whose access is restricted.
 
 
-## Scalable Sessions
+## Sesiones escalables
 
 | Puede ajustarse con           | Nombre                                                                                                                     | Comentarios |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ----------- |

@@ -181,7 +181,7 @@ Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStru
 You want to use an alternative compression algorithm with a high compression level:
 
 ```4d
-var $destination : 4D.File
+var $destination : 4D. File
 var $zip; $err : Object
 
 $zip:=New object

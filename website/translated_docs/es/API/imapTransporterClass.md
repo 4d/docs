@@ -244,7 +244,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 La función `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->añade el objeto `mailObj` a la caja `destinationBox`<!-- END REF -->.
 
-En el parámetro `mailObj`, pase un objeto Email. Para una descripción completa de las propiedades del correo, ver [objeto Email](EmailObjectClass.md#email-object). La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
+En el parámetro `mailObj`, pase un objeto Email. En el parámetro `mailObj`, pase un objeto Email. La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
 
 El parámetro opcional `destinationBox` permite pasar el nombre del buzón donde se añadirá el objeto `mailObj`. Si se omite, se utiliza el buzón actual.
 
@@ -1653,7 +1653,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.
 
-- The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
+- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*. Por lo tanto, debe convertir la cadena *searchCriteria* en el conjunto de caracteres especificado si utiliza la instrucción \[CHARSET] (ver los comandos `CONVERT FROM TEXT` o `Convert to text`). Por defecto, 4D codifica la cadena de criterios searchCriteria en Quotable Printable si contiene los caracteres extendidos.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
@@ -1665,15 +1665,15 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 Las claves de búsqueda pueden solicitar el valor a buscar:
 
-- **Search-keys with a field-name value**: the field-name is the name of a header field. Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
+- **Valores de tipo fecha**: los valores de tipo fecha se colocan en cadenas con el siguiente formato: *date-day+"-"+date-month+"-"+date-year* donde date-day indica la fecha del día del mes (2 caracteres como máximo), date-month indica el mes (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) y date-year indica el año (4 dígitos). Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
 
-- **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
+- **Valores de tipo cadena**: la cadena puede contener cualquier caracter y debe ir entre comillas. Si la cadena no contiene ningún caracter especial, como el espacio, por ejemplo, no es necesario colocarla entre comillas. Al colocar entre comillas estas cadenas se garantiza que su valor se interpretará correctamente. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
 
 - **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
-- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
+- **Marcadores**: los valores de tipo marcador (flags) aceptan una o varias palabras claves (incluyendo marcadores estándar) separados por espacios. Ejemplo: `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
+- **Conjunto de mensajes**: identifica un conjunto de mensajes. En el caso de los números de secuencia de los mensajes, se trata de números consecutivos desde el 1 hasta el número total de mensajes en el buzón. Los números son separados por coma; un dos puntos (:) delimita entre dos números inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` busca en la selección de mensajes 1 a 5, los mensajes que tienen el marcador \Answered. `searchCriteria= 2,4 ANSWERED` busca en la selección de mensajes (números de mensaje 2 y 4) los mensajes que tienen el marcador \Answered.
 
 
 #### Teclas de búsqueda disponibles

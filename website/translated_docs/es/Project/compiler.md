@@ -123,7 +123,7 @@ This area groups the generic options used during the compilation process.
 
 #### Generar el archivo de símbolos
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
 #### Generar archivo de errores
 
@@ -160,7 +160,7 @@ Se proponen dos opciones de objetivo. The result depends on the processor of the
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang viene con la última versión de Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
-### Default typing
+### Digitación por defecto
 
 Use this area to set the default type for ambiguous database objects.
 

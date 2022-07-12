@@ -6,7 +6,7 @@ title: Page Formulaires
  
 Cette page permet de paramétrer des options de fonctionnement et d'affichage de l'éditeur de formulaires de 4D.
 
-## Déplacer
+## Déplacement
 
 Ce groupe d'options permet de paramétrer les déplacements d’objets à l’aide du clavier ou de la souris dans l’éditeur de formulaires.
 

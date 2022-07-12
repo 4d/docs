@@ -50,7 +50,6 @@
 					"Concepts/looping"
 				]
 			},
-			"Tags/tags",
 			"Concepts/error-handling",
 			"Concepts/interpreted-compiled",
 			"Concepts/components",
@@ -87,7 +86,7 @@
 			"API/SignalClass",
 			"API/SMTPTransporterClass",
 			"API/SystemWorkerClass",
-      "API/WebServerClass",
+			"API/WebServerClass",
 			"API/ZipArchiveClass",
 			"API/ZipFileClass",
 			"API/ZipFolderClass"
@@ -102,6 +101,9 @@
 			"Debugging/debugging-remote",
 			"Debugging/debugLogFiles"
 		],
+		"Transformation Tags":[
+			"Tags/tags"
+		],	
 		"Settings": [
 			"settings/overview",
 			"settings/general",
@@ -413,7 +415,8 @@
 			"ViewPro/getting-started",
 			"ViewPro/configuring",
 			"ViewPro/formulas",
-			"ViewPro/method-list"
+			"ViewPro/method-list",
+			"ViewPro/advanced-programming"
 		]
 	}
 }

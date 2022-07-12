@@ -22,7 +22,7 @@ Unless this option is checked, it is not possible to open a database when its da
 
 Locked files can be read but their contents cannot be modified. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
 
-### Temporary Folder Location
+### Ubicación de carpeta temporal
 
 This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
 

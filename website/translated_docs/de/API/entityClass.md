@@ -8,8 +8,8 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 ### Summary
 
-|                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
 | [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
@@ -18,6 +18,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 | [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
 | [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
 | [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
+| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 | [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
 | [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
 | [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
@@ -653,7 +654,61 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 <!-- END REF -->
 
 
+<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+## .getRemoteContextAttributes()
 
+<details><summary>History</summary>
+| Version | Changes |
+| ------- | ------- |
+| v19R5   | Added   |
+</details>
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
+**.getRemoteContextAttributes()** : Text<!-- END REF -->
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Params -->
+| Parameter | Typ  |    | Beschreibung                                                  |
+| --------- | ---- | -- | ------------------------------------------------------------- |
+| result    | Text | <- | Context attributes linked to the entity, separated by a comma |
+<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+
+#### Beschreibung
+
+The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
+
+If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
+
+#### Beispiel
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $address : cs.AddressEntity
+var $p : cs.PersonsEntity
+var $contextA : Object
+var $info : Text
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$contextA:=New object("context"; "contextA")
+
+$address:=$ds.Address.get(1; $contextA)
+$text:="" 
+For each ($p; $address.persons)
+    $text:=$p.firstname+" "+$p.lastname
+End for each 
+
+$info:=$address.getRemoteContextAttributes()
+
+//$info = "persons,persons.lastname,persons.firstname"
+```
+
+#### See also
+
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -941,7 +996,7 @@ The object returned by `.lock( )` contains the following properties:
 |                  | task_name           | Text                  | Process name                                                                                                                                                |
 |                  | client_version      | Text                  | Version of the client                                                                                                                                       |
 |                  |                     |                       | ***Available only for a REST session lock:***                                                                                                               |
-|                  | host                | Text                  | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
+|                  | host                | Text                  | URL that locked the entity (e.g. "www.myserver.com")                                                                                                        |
 |                  | IPAddr              | Text                  | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
 |                  | userAgent           | Text                  | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                       | ***Available only in case of serious error*** (primary key already exists, disk full...):                                                                   |

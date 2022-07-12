@@ -226,6 +226,22 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 イベントによって、タスク、ソケットなど様々な他のフィールドを記録に含めることができます。
 
+### ファイルを有効化する方法
+
+*4DDiagnosticLog.txt* ファイルは、`ERROR` (最も重要) から `TRACE` (あまり重要でない) まで、異なるレベルのメッセージをログに記録することができます。 デフォルトでは、`INFO` レベルが設定されており、エラーや予期せぬ結果などの重要なイベントのみを記録します (後述参照)。
+
+[SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドの `Diagnostic log level` セレクターを使用して、必要に応じてメッセージのレベルを選択することができます。 あるレベルを選択すると、その上のレベル (より重要なもの) も暗黙のうちに選択されます。 次のレベルが利用可能です:
+
+| カラム番号 | 説明                                            | 選択時に次を含みます                      |
+| ----- | --------------------------------------------- | ------------------------------- |
+| ERROR | ログセッション内で固有かつシーケンシャルなオペレーション番号                | ERROR                           |
+| WARN  | RFC3339 フォーマットの日付と時間 (yyyy-mm-ddThh:mm:ss.ms) | ERROR, WARN                     |
+| INFO  | 4DプロセスID                                      | ERROR, WARN, INFO               |
+| DEBUG | 固有プロセスID                                      | ERROR, WARN, INFO, DEBUG        |
+| TRACE | その他の内部情報 (4Dテクニカルサービス用)                       | ERROR, WARN, INFO, DEBUG, TRACE |
+
+
+
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, および 4DIMAPLog.txt
 
 これらのログファイルは、以下のコマンドを使用して始動された、4Dアプリケーションとメールサーバー (SMTP、POP3、IMAP) 間の通信をそれぞれ記録します:

@@ -75,8 +75,9 @@ class Index extends React.Component {
       plug: <translate>Developing Plugins</translate>,
       working: <translate>Working with a project</translate>,
       settings: <translate>Settings</translate>,
+	  tags: <translate>Transformation Tags</translate>,
       usersettings: <translate>User Settings</translate>,
-	    langUrl: <translate>https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html</translate>
+	    langUrl: <translate>https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html</translate>
     };
 
     return (
@@ -103,7 +104,8 @@ class Index extends React.Component {
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
                   [${subContents.codeEditor}](${siteConfig.baseUrl}${this.props.language}/code-editor/navigation.html)<br>
 				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
-          [${subContents.settings}](${siteConfig.baseUrl}${this.props.language}/settings/overview.html)<br>
+	            [${subContents.tags}](${siteConfig.baseUrl}${this.props.language}/Tags/tags.html)<br>
+				[${subContents.settings}](${siteConfig.baseUrl}${this.props.language}/settings/overview.html)<br>
 				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,
                   imageAlign: "top",

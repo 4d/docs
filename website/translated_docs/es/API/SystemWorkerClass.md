@@ -574,10 +574,10 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #SystemWorkerClass.wait().Syntax -->**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| Parámetros | Tipo            |    | Descripción               |
-| ---------- | --------------- |:--:| ------------------------- |
-| timeout    | Real            | -> | Waiting time (in seconds) |
-| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker       |
+| Parámetros | Tipo            |    | Descripción                    |
+| ---------- | --------------- |:--:| ------------------------------ |
+| timeout    | Real            | -> | Tiempo de espera (en segundos) |
+| Resultado  | 4D.SystemWorker | <- | Objeto SystemWorker            |
 <!-- END REF -->
 
 

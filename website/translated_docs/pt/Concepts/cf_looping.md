@@ -52,8 +52,7 @@ A sintaxe da estrutura condicional `Repeat... Until` é:
 Repeat
     statement(s)
     {break}  
-    {continue}
-Until(Boolean_Expression)
+    {continue} Until(Boolean_Expression)
 ```
 A outra diferença com um loop `Repeat... Until` é que o loop continua até que a expressão seja TRUE.
 
@@ -79,8 +78,7 @@ A sintaxe da estrutura condicional `For... End for` é:
 For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
    statement(s)
     {break}  
-    {continue}
-End for
+    {continue} End for
 ```
 
 O loop `For... End for` é um loop controlado por um contador:
@@ -491,8 +489,7 @@ If the `break` statement is inside a [nested loop](#nested-forend-for-looping-st
 For (vCounter;1;100)
     If ($tab{vCounter}="") //if a condition becomes true
         break //end of the for loop
-    End if
-End for
+    End if End for
 ```
 
 ### continue
@@ -500,8 +497,7 @@ End for
 The `continue` statement terminates execution of the statements in the current iteration of the current loop, and continues execution of the loop with the next iteration.
 
 ```4d
-var $text : Text
-For ($i; 0; 9)
+var $text : Text For ($i; 0; 9)
     If ($i=3)
         continue //go directly to the next iteration
     End if

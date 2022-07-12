@@ -71,7 +71,7 @@ Nachfolgende Liste zeigt alle unterstützten Werte für `varTyp`:
 | `Zahl`                 | Zahlenwert                            |
 | `Zeiger`               | Zeigerwert                            |
 | `Bild`                 | Bildwert                              |
-| `Blob`                 | BLOB Wert                             |
+| `Blob`                 | Scalar Blob value                     |
 | `Collection`           | Collection Wert                       |
 | `Variant`              | Variant Wert                          |
 | `Objekt`               | Objekt mit Standardklasse (4D.Objekt) |

@@ -32,9 +32,7 @@ The `return` statement can be used to [return a value](parameters.md#return-expr
 
 ```4d
 var $message : Text
-var $i : Integer
-
-While (True) //infinite loop
+var $i : Integer While (True) //infinite loop
     $i:=$i+1
     $message+=String($i)+"A\r"  // until 5
     logConsole($message)

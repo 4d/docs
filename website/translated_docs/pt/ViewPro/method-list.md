@@ -551,7 +551,7 @@ Selecting the columns and running this code:
 
 #### Descrição
 
-The `VP Combine Ranges` command<!-- REF #_method_.VP Combine Ranges. Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
+The `VP Export to object` command<!-- REF #_method_.VP Export to object. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
 
 In *rangeObj*, pass the first range object.
 
@@ -627,7 +627,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 #### Descrição
 
-The `VP Convert to picture` command<!-- REF #_method_.VP Convert to picture. Summary -->converts the *vpObject* 4D View Pro object (or the *rangeObj* range within *vpObject*) to a SVG picture<!-- END REF -->.
+The `VP Convert to picture` command <!-- REF #_method_.VP Convert to picture.Summary -->converts the *vpObject* 4D View Pro object (or the *rangeObj* range within *vpObject*) to a SVG picture<!-- END REF -->.
 
 This command is useful, for example:
 
@@ -649,7 +649,7 @@ Document contents are converted with respect to their viewing attributes, includ
 *   Row height
 *   Column width
 *   Hidden columns / rows.
-> > Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
+> Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Function result
 
@@ -693,7 +693,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 <!-- END REF -->  
 #### Descrição
 
-The `VP Copy to object` command <!-- REF #_method_.VP Copy to object.Summary -->copies the contents, style and formulas from *rangeObj* to an object<!-- END REF -->.
+The `VP Copy to object` command<!-- REF #_method_.VP Copy to object. Summary -->copies the contents, style and formulas from *rangeObj* to an object<!-- END REF -->.
 
 In *rangeObj*, pass the cell range with the values, formatting, and formulas to copy. If *rangeObj* is a combined range, only the first one is used.
 
@@ -752,7 +752,7 @@ In *rangeObj*, pass an object containing a range of columns to remove. If the pa
 
 *   both columns and rows, only the columns are removed.
 *   only rows, the command does nothing.
-> > Columns are deleted from right to left.
+> Columns are deleted from right to left.
 
 
 #### Exemplo
@@ -785,13 +785,13 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 #### Descrição
 
-The `VP DELETE ROWS` command<!-- REF #_method_.VP DELETE ROWS. Summary -->removes the rows  in the *rangeObj*<!-- END REF -->.
+The `VP DELETE ROWS` command <!-- REF #_method_.VP DELETE ROWS.Summary -->removes the rows  in the *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass an object containing a range of rows  to remove. If the passed range contains:
 
 *   both columns and rows, only the rows  are removed.
 *   only columns, the command does nothing.
-> > Rows are deleted from bottom to top.
+> Rows are deleted from bottom to top.
 
 
 #### Exemplo
@@ -984,7 +984,7 @@ Here's the result:
 
 #### Descrição
 
-The `VP Convert from 4D View` command<!-- REF #_method_.VP Convert from 4D View. Summary -->allows you to convert a legacy 4D View document into a 4D View Pro object<!-- END REF -->.
+The `VP Export to object` command<!-- REF #_method_.VP Export to object. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -1474,7 +1474,7 @@ will return this information in the *$defaultStyle* object:
 #### Descrição
 
 
-The `VP Get formula` command<!-- REF #_method_.VP Get formula. Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
+The `VP Get formula` command <!-- REF #_method_.VP Get formula.Summary -->retrieves the formula from a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
 
@@ -1602,7 +1602,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 #### Descrição
 
 
-The `VP Get frozen panes` command<!-- REF #_method_.VP Get frozen panes. Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
+The `VP Get frozen panes` command <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -1702,7 +1702,7 @@ $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 
 #### Descrição
 
-The `VP Get print info` command<!-- REF #_method_.VP Get print info. Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
+The `VP Get print info` command <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
 
 
 Pass the the name of the 4D View Pro area in *vpAreaName*. If you pass a name that does not exist, an error is returned.
@@ -3197,7 +3197,7 @@ $row:=VP Row("ViewProArea";9) // row 10
 
 #### Descrição
 
-The `VP ROW AUTOFIT` command<!-- REF #_method_.VP ROW AUTOFIT. Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
+The `VP ROW AUTOFIT` command <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
 
 
 In *rangeObj*, pass a range object containing a range of the rows whose size will be automatically handled.
@@ -4774,7 +4774,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 
 The *valuesCol* parameter is two-dimensional:
 
-*   The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row.
+*   The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row.
 *   Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:
 
     | Propriedade | Type                                     | Descrição                        |

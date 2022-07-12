@@ -89,7 +89,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
       ![](assets/en/ViewPro/vpContext2.PNG)
 
 
-## Using 4D View Pro methods
+## Utilización de los métodos 4D View Pro
 
 4D View Pro methods can be used in the 4D Method editor, just like 4D language commands.
 

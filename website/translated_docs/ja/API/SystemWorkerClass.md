@@ -316,6 +316,13 @@ $worker.closeInput()
 $worker.wait()
 
 $output:=$worker.response
+$worker.postMessage($input)
+// 終了したことを明確にするため closeInput() を呼び出します 
+// gzip (および stdin からのデータを待機する多数のプログラム) は入力ストリームが明示的に閉じられるまで待機します
+$worker.closeInput()
+$worker.wait()
+
+$output:=$worker.response
 
 ```
 

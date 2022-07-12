@@ -171,7 +171,7 @@
         "title": "Pointeur"
       },
       "Concepts/string": {
-        "title": "Chaine"
+        "title": "Chaîne"
       },
       "Concepts/time": {
         "title": "Heure"
@@ -919,6 +919,9 @@
       "Users/overview": {
         "title": "Présentation du contrôle des accès"
       },
+      "ViewPro/advanced-programming": {
+        "title": "Programmation avancée avec Javascript"
+      },
       "ViewPro/configuring": {
         "title": "Configuration des zones 4D View Pro"
       },
@@ -982,6 +985,7 @@
       "Class API Reference": "Classes API",
       "Code Editor": "Éditeur de code",
       "Debugging": "Débogage",
+      "Transformation Tags": "Transformation Tags",
       "Settings": "Settings",
       "Preferences": "Préférences",
       "4D Server Administration Window": "Fenêtre d'administration de 4D Server",
@@ -1047,8 +1051,9 @@
     "Developing Plugins|no description given": "Plugins de développement",
     "Working with a project|no description given": "Travailler avec des projets",
     "Settings|no description given": "Settings",
+    "Transformation Tags|no description given": "Transformation Tags",
     "User Settings|no description given": "Propriétés utilisateur",
-    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
+    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",

@@ -96,10 +96,10 @@ Entity attributes store data and map corresponding fields in the corresponding t
 Por ejemplo, para definir un atributo de almacenamiento:
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
- $entity.save() //save the modifications
+ $entity:=ds.Employee.get(1) //obtener el atributo de Employee con ID 1
+ $name:=$entity.lastname //obtener el nombre del empleado, por ejemplo "Smith"
+$entity.lastname:="Jones" //definir el nombr del empleado
+$entity.save() //guardar los cambios
 ```
 
 > Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
@@ -380,12 +380,12 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
-This feature is based upon two functions of the `Entity` class:
+Esta funcionalidad se basa en dos funciones de la clase `Entity`:
 
 *   [`entity.lock()`](../API/EntityClass.md#lock)
 *   [`entity.unlock()`](../API/EntityClass.md#unlock)
 
-For more information, please refer to the descriptions for these functions.
+Para más información, consulte las descripciones de estas funciones.
 
 > Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
 

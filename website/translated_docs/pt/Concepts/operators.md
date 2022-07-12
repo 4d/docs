@@ -183,8 +183,7 @@ Short-circuit operators are useful in tests such as:
 
 ```4d
 If(($myObject#Null) && ($myObject.value>10))
-    //code
-End if
+    //code End if
 ```
 
 If $myObject is Null, the second argument is not executed, thus no error is thrown.
@@ -210,7 +209,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Exemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Say you have a table called Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
 
 ```4d
 var $phone : Text
@@ -241,13 +240,15 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 ## Ternary operator
 
-The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
+The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence ofIf…</p> 
 
-It takes three operands in the following order:
+It takes three operands in the following order: 
 
 * a condition followed by a question mark (?)
 * an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
 * an expression to execute if the condition is [falsy](#truthy-and-falsy)
+
+
 
 ### Sintaxe
 
@@ -255,25 +256,36 @@ The syntax is as follows:
 
 `condition ? exprIfTruthy : exprIfFalsy`
 
+
+
 > Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
+
+
 
 ### Exemplos
 
+
+
 #### A simple example
+
+
 
 ```4d
 var $age : Integer
 var $beverage : Text
 
 $age:=26
-$beverage:=($age>=21) ? "Beer" : "Juice"
-
-ALERT($beverage) // "Beer"
+$beverage:=($age>=21) ? "Beer" : "Juice" ALERT($beverage) // "Beer"
 ```
+
+
+
 
 #### Handling data from a table
 
 This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:
+
+
 
 ```4d
 var $fullname : Text
@@ -282,9 +294,14 @@ var $fullname : Text
 $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
+
+
+
 ## Truthy and falsy
 
-As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**.
+As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**. 
+
+
 
 > **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
 
@@ -310,13 +327,18 @@ In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value
 
 For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
 
+
+
 ```4d
 $value:=$object.value || $defaultValue
 ```
 
+
 ... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. So this operator checks the existence or usability of the value instead of a specific value. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
 
 Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. It is handy when you want to assign a default value whenever an empty one is encountered.
+
+
 
 ```4d
 $phone:=$emp.phone || "n/a"

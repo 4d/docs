@@ -758,7 +758,7 @@ Webサーバーのルートフォルダーのパス<!-- END REF -->。 パスは
 
 プロジェクトの設定ファイルに定義されているデフォルトの設定、または `WEB SET OPTION` コマンドで定義された設定 (ホストデータベースのみ) を使用して、Webサーバーは開始されます。 しかし、*settings* 引数を渡せば、Webサーバーセッションにおいてカスタマイズされた設定を定義することができます。
 
-詳細については [Session Cookie SameSite](WebServer/webServerConfig.md#セッションcookie-samesite) を参照ください。
+[Web Server オブジェクト](#webサーバーオブジェクト) の設定は、読み取り専用プロパティ ([.isRunning](#isrunning)、[.name](#name)、[.openSSLVersion](#opensslversion)、[.perfectForwardSecrecy](#perfectforwardsecrecy)、[.sessionCookieName](#sessioncookiename)) を除いて、すべてカスタマイズ可能です。
 
 データベースWebサーバーを停止します:
 

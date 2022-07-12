@@ -11,15 +11,15 @@ The `SystemWorker` class is available from the `4D` class store.
 
 ```4d
     // Windows example to get access to the ipconfig information
-var $myWinWorker : 4D.SystemWorker
+var $myWinWorker : 4D. SystemWorker
 var $ipConfig : Text
-$myWinWorker:= 4D.SystemWorker.new("ipconfig")
+$myWinWorker:= 4D. SystemWorker.new("ipconfig")
 $ipConfig:=$myWinWorker.wait(1).response //timeout 1 second
 
     // macOS example to change the permissions for a file on macOS
     // chmod is the macOS command used to modify file access
-var $myMacWorker : 4D.SystemWorker
-$myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
+var $myMacWorker : 4D. SystemWorker
+$myMacWorker:= 4D. SystemWorker.new("chmod +x /folder/myfile.sh")
 
 ```
 
@@ -51,7 +51,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 
 <!-- REF 4D.SystemWorker.new().Desc -->
-## 4D.SystemWorker.new()
+## 4D. SystemWorker.new()
 
 
 <details><summary>Histórico</summary>
@@ -60,20 +60,20 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 | v19 R4 | Adicionado |
 </details>
 
-<!-- REF #4D.SystemWorker.new().Syntax -->**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
+<!-- REF #4D.SystemWorker.new().Syntax -->**4D. SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D. SystemWorker<!-- END REF -->
 
 <!-- REF #4D.SystemWorker.new().Params -->
-| Parameter   | Type            |    | Descrição                                                     |
-| ----------- | --------------- |:--:| ------------------------------------------------------------- |
-| commandLine | Texto           | -> | Command line to execute                                       |
-| options     | Objeto          | -> | Worker parameters                                             |
-| result      | 4D.SystemWorker | <- | New asynchronous System worker or null if process not started |  
+| Parameter   | Type             |    | Descrição                                                     |
+| ----------- | ---------------- |:--:| ------------------------------------------------------------- |
+| commandLine | Texto            | -> | Command line to execute                                       |
+| options     | Objeto           | -> | Worker parameters                                             |
+| result      | 4D. SystemWorker | <- | New asynchronous System worker or null if process not started |  
 <!-- END REF -->
 
 
 #### Descrição
 
-The `4D.SystemWorker.new()` function <!-- REF #4D.SystemWorker.new().Summary -->creates and returns a `4D.SystemWorker` object that will execute the *commandLine* you passed as parameter to launch an external process<!-- END REF -->.
+The `4D. SystemWorker.new()` function<!-- REF #4D. SystemWorker.new(). Summary -->creates and returns a `4D. SystemWorker` object that will execute the *commandLine* you passed as parameter to launch an external process<!-- END REF -->.
 
 The returned system worker object can be used to post messages to the worker and get the worker output.
 
@@ -128,27 +128,27 @@ The function returns a system worker object on which you can call functions and 
 1. To open Notepad and open a specific document:
 
 ```4d
-var $sw : 4D.SystemWorker
+var $sw : 4D. SystemWorker
 var $options : Object
 $options:=New object
 $options.hideWindow:= False
 
-$sw:=4D.SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
+$sw:=4D. SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
 ```
 
 2. Run npm install in the console:
 
 ```4d
-var $folder : 4D.Folder
+var $folder : 4D. Folder
 var $options : Object
-var $worker : 4D.SystemWorker
+var $worker : 4D. SystemWorker
 
 $folder:=Folder(fk database folder) 
 $options:=New object
 $options.currentDirectory:=$folder
 $options.hideWindow:=False
 
-$worker:=4D.SystemWorker.new("cmd /c npm install";$options)
+$worker:=4D. SystemWorker.new("cmd /c npm install";$options)
 
 ```
 
@@ -156,8 +156,8 @@ $worker:=4D.SystemWorker.new("cmd /c npm install";$options)
 
 ```4d
 $mydoc:="C:\\Program Files\\Microsoft Office\\Office15\\WINWORD.EXE C:\\Tempo\\output.txt"
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new($mydoc)
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new($mydoc)
 ```
 
 
@@ -165,11 +165,11 @@ $sw:=4D.SystemWorker.new($mydoc)
 
 ```4d
 var $param : Object
-var $sys : 4D.SystemWorker
+var $sys : 4D. SystemWorker
 
 $param:=New object
 $param.currentDirectory:=Folder(fk database folder)
-$sys:=4D.SystemWorker.new("git commit -F -";$param)
+$sys:=4D. SystemWorker.new("git commit -F -";$param)
 $sys.postMessage("This is a postMessage")
 $sys.closeInput()
 ```
@@ -179,8 +179,8 @@ $sys.closeInput()
 ```4d
 $docname:=Select document("";"*.*";"Choose the file to open";0)
 If(OK=1)
-    var $sw : 4D.SystemWorker
-    $sw:=4D.SystemWorker.new("cmd.exe /C start \"\" \""+$docname+"\"")
+    var $sw : 4D. SystemWorker
+    $sw:=4D. SystemWorker.new("cmd.exe /C start \"\" \""+$docname+"\"")
 End if
 ```
 
@@ -192,8 +192,8 @@ End if
 
 ```4d
 
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new("/bin/cat /folder/myfile.txt")
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new("/bin/cat /folder/myfile.txt")
 $sw.wait() //synchronous execution
 
 ```
@@ -201,18 +201,18 @@ $sw.wait() //synchronous execution
 2. To launch an independent "graphic" application, it is preferable to use the `open` system command (in this case, the code has the same effect as double-clicking the application):
 
 ```4d
-var $sw : 4D.SystemWorker
-$sw:=4D.SystemWorker.new ("open /Applications/Calculator.app")
+var $sw : 4D. SystemWorker
+$sw:=4D. SystemWorker.new ("open /Applications/Calculator.app")
 ```
 
 3. To get the contents of the "Users" folder (ls -l is the macOS equivalent of the dir command in DOS).
 
 ```4d
-var $systemworker : 4D.SystemWorker
+var $systemworker : 4D. SystemWorker
 var $output : Text
 var $errors : Collection
 
-$systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ")
+$systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ")
 $systemworker.wait(5)
 $output:=$systemworker.response
 $error:=$systemworker.errors
@@ -224,35 +224,23 @@ $error:=$systemworker.errors
 
 ```4d
 
-var $systemworker : 4D.SystemWorker
-$systemworker:=4D.SystemWorker.new("/bin/ls -l /Users ";cs.Params.new())
+var $systemworker : 4D. SystemWorker
+$systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 
-// "Params" class
-
-Class constructor
+// "Params" class Class constructor
     This.dataType:="text"
     This.data:=""
-    This.dataError:=""
-
-Function onResponse($systemWorker : Object)
-     This._createFile("onResponse"; $systemWorker.response)
-
-Function onData($systemWorker : Object; $info : Object)
+    This.dataError:="" Function onResponse($systemWorker : Object)
+     This._createFile("onResponse"; $systemWorker.response) Function onData($systemWorker : Object; $info : Object)
      This.data+=$info.data
-     This._createFile("onData";this.data)
-
-Function onDataError($systemWorker : Object; $info : Object)
+     This._createFile("onData";this.data) Function onDataError($systemWorker : Object; $info : Object)
      This.dataError+=$info.data
-     This._createFile("onDataError";this.dataError)
-
-Function onTerminate($systemWorker : Object)
+     This._createFile("onDataError";this.dataError) Function onTerminate($systemWorker : Object)
      var $textBody : Text
      $textBody:="Response: "+$systemWorker.response
      $textBody+="ResponseError: "+$systemWorker.responseError
-     This._createFile("onTerminate"; $textBody)
-
-Function _createFile($title : Text; $textBody : Text)
+     This._createFile("onTerminate"; $textBody) Function _createFile($title : Text; $textBody : Text)
      TEXT TO DOCUMENT(Get 4D folder(Current resources folder)+$title+".txt"; $textBody)
 
 ```
@@ -293,13 +281,12 @@ When the executable waits for all data to be received through `postMessage()`, `
 ```4D
 // Create some data to gzip
 var $input;$output : Blob
-var $gzip : Text
-TEXT TO BLOB("Hello, World!";$input)
+var $gzip : Text TEXT TO BLOB("Hello, World!";$input)
 $gzip:="\"C:\\Program Files (x86)\\GnuWin32\\bin\\gzip.exe\" "
 
 // Create an asynchronous system worker
-var $worker : 4D.SystemWorker
-$worker:= 4D.SystemWorker.new($gzip;New object("dataType";"blob"))
+var $worker : 4D. SystemWorker
+$worker:= 4D. SystemWorker.new($gzip;New object("dataType";"blob"))
 
 // Send the compressed file on stdin.
 $worker.postMessage($input)
@@ -324,7 +311,7 @@ $output:=$worker.response
 
 #### Descrição
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
+The `.commandLine` property<!-- REF #SystemWorkerClass.commandLine. Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -334,12 +321,12 @@ Essa propriedade é**apenas leitura**.
 <!-- REF SystemWorkerClass.currentDirectory.Desc -->
 ## .currentDirectory   
 
-<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D.Folder<!-- END REF -->
+<!-- REF #SystemWorkerClass.currentDirectory.Syntax -->**.currentDirectory** : 4D. Folder<!-- END REF -->
 
 
 #### Descrição
 
-The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contains the working directory in which the external process is executed<!-- END REF -->. 
+The `.currentDirectory` property<!-- REF #SystemWorkerClass.currentDirectory. Summary -->contains the working directory in which the external process is executed<!-- END REF -->. 
 
 <!-- END REF -->
 
@@ -353,7 +340,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descrição
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. Possible values : "text" or "blob".
+The `.dataType` property<!-- REF #SystemWorkerClass.dataType. Summary -->contains the type of the response body content<!-- END REF -->. Possible values : "text" or "blob".
 
 
 Essa propriedade é**apenas leitura**. 
@@ -368,7 +355,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
+The `.encoding` property<!-- REF #SystemWorkerClass.encoding. Summary -->contains the encoding of the response body content<!-- END REF -->. This property is only available if the [`dataType`](#datatype) is "text".
 
 Essa propriedade é**apenas leitura**. 
 
@@ -383,7 +370,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
+The `.errors` property<!-- REF #SystemWorkerClass.errors. Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
 
 Each element of the collection is an object with the following properties:
 
@@ -407,7 +394,7 @@ If no error occured, `.errors` contains an empty collection.
 
 #### Descrição
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
+The `.terminated` property<!-- REF #SystemWorkerClass.terminated. Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -423,7 +410,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->. 
+The `.hideWindow` property<!-- REF #SystemWorkerClass.hideWindow. Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->. 
 
 <!-- END REF -->
 
@@ -439,7 +426,7 @@ Essa propriedade é**apenas escrita**.
 
 #### Descrição
 
-The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
+The `.pid` property<!-- REF #SystemWorkerClass.pid. Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -462,7 +449,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. In the *message* parameter, pass the text to write in *stdin*.
+The `.closeInput()` function<!-- REF #SystemWorkerClass.closeInput(). Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
 
 The `.postMessage()` function also accepts a Blob type value in *messageBLOB* to pass in *stdin*, so that you can post binary data.
 
@@ -479,7 +466,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 #### Descrição
 
-The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+The `.response` property<!-- REF #SystemWorkerClass.response. Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
 The type of the message is defined according to the [`dataType`](#datatype) attribute.
 
@@ -498,7 +485,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
+The `.responseError` property<!-- REF #SystemWorkerClass.responseError. Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -518,7 +505,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #SystemWorkerClass.terminate().Summary -->forces the `SystemWorker` to terminate its execution<!-- END REF -->.
+The `.terminate()` function<!-- REF #SystemWorkerClass.terminate(). Summary -->forces the `SystemWorker` to terminate its execution<!-- END REF -->.
 
 This function sends the instruction to terminate and give control back to the executing script.
 
@@ -535,7 +522,7 @@ This function sends the instruction to terminate and give control back to the ex
 
 #### Descrição
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+The `.exitCode` property<!-- REF #SystemWorkerClass.exitCode. Summary -->contains the exit code returned by the external process<!-- END REF -->. If the process did not terminate normaly, `exitCode` is *undefined*.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -552,7 +539,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.timeout` property <!-- REF #SystemWorkerClass.timeout.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
+The `.timeout` property<!-- REF #SystemWorkerClass.timeout. Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -571,19 +558,19 @@ Essa propriedade é**apenas leitura**.
 
 </details>
 
-<!-- REF #SystemWorkerClass.wait().Syntax -->**.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
+<!-- REF #SystemWorkerClass.wait().Syntax -->**.wait**( {*timeout* : Real} ) : 4D. SystemWorker<!-- END REF -->
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| Parameter | Type            |    | Descrição                 |
-| --------- | --------------- |:--:| ------------------------- |
-| timeout   | Real            | -> | Waiting time (in seconds) |
-| Resultado | 4D.SystemWorker | <- | SystemWorker object       |
+| Parameter | Type             |    | Descrição                 |
+| --------- | ---------------- |:--:| ------------------------- |
+| timeout   | Real             | -> | Waiting time (in seconds) |
+| Resultado | 4D. SystemWorker | <- | SystemWorker object       |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+The `.wait()` function<!-- REF #SystemWorkerClass.wait(). Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
 
 In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
 

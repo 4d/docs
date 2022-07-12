@@ -17,13 +17,13 @@ Un combo box se inicializa exactamente igual que una [lista desplegable](dropdow
 
 ### Utilizar un objeto
 
-> Esta funcionalidad sólo está disponible en proyectos 4D.
+> Esta funcionalidad sólo está disponible en los proyectos 4D.
 
 Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection) puede utilizarse como fuente de datos de un combo box. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                              |
 | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío |
+| `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío |
 | `currentValue` | igual que Collection | Texto introducido por el usuario                                                                                                                                                                                                                                         |
 
 Si el objeto contiene otras propiedades, se ignoran.

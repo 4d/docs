@@ -169,7 +169,7 @@ Le paramètre `keywords` vous permet de passer un objet avec des valeurs de mots
 
 | Paramètres | Type    | Description                                         |
 | ---------- | ------- | --------------------------------------------------- |
-| $draft     | Booléen | True pour ajouter le marqueur "draft" au message    |
+| $draft     | Boolean | True pour ajouter le marqueur "draft" au message    |
 | $seen      | Booléen | True pour ajouter le marqueur "seen" au message     |
 | $flagged   | Booléen | True pour ajouter le marqueur "flagged" au message  |
 | $answered  | Booléen | True pour ajouter le marqueur "répondu" au message  |
@@ -184,10 +184,10 @@ La fonction retourne un objet décrivant le statut IMAP :
 
 | Propriété  |                         | Type       | Description                                                                                            |
 | ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------------ |
-| success    |                         | Booléen    | Vrai si l'opération est réussie, sinon Faux                                                            |
+| success    |                         | Boolean    | Vrai si l'opération est réussie, sinon Faux                                                            |
 | statusText |                         | Text       | Message du statut retourné par le serveur IMAP, ou dernière erreur retournée dans la pile d'erreurs 4D |
 | errors     |                         | Collection | Pile d'erreurs 4D (non retournée si une réponse du serveur IMAP est reçue)                             |
-|            | \[].errcode            | Nombre     | Code d'erreur 4D                                                                                       |
+|            | \[].errcode            | Number     | Code d'erreur 4D                                                                                       |
 |            | \[].message            | Text       | Description de l'erreur 4D                                                                             |
 |            | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                                                 |
 

@@ -10,38 +10,39 @@ Entity selections can be created from existing selections using various function
 
 ### Resumo
 
-|                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                              |
-| [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->          |
-| [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                  |
-| [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                  |
-| [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                      |
-| [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                   |
-| [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->                            |
-| [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                   |
-| [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->                               |
-| [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->                      |
-| [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->                            |
-| [<!-- INCLUDE #EntitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.getDataClass().Summary -->       |
-| [<!-- INCLUDE #EntitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isAlterable().Summary -->          |
-| [<!-- INCLUDE #EntitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isOrdered().Summary -->                |
-| [<!-- INCLUDE #EntitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.last().Summary -->                               |
-| [<!-- INCLUDE #EntitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.length.Summary -->                             |
-| [<!-- INCLUDE #EntitySelectionClass.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.max().Summary -->                                  |
-| [<!-- INCLUDE #EntitySelectionClass.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.min().Summary -->                                  |
-| [<!-- INCLUDE #EntitySelectionClass.minus().Syntax -->](#minus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.minus().Summary -->                            |
-| [<!-- INCLUDE #EntitySelectionClass.or().Syntax -->](#or)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.or().Summary -->                                     |
-| [<!-- INCLUDE #EntitySelectionClass.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderBy().Summary -->                      |
-| [<!-- INCLUDE #EntitySelectionClass.orderByFormula().Syntax -->](#orderbyformula)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderByFormula().Summary --> |
-| [<!-- INCLUDE #EntitySelectionClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.query().Summary -->                            |
-| [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->                    |
-| [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->                    |
-| [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->                      |
-| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->                   |
-| [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->                            |
-| [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                  |
-| [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->       |
+|                                                                                                                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
+| [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
+| [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
+| [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
+| [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
+| [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
+| [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                                              |
+| [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->                                                          |
+| [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->                                                       |
+| [<!-- INCLUDE #EntitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.getDataClass().Summary -->                                  |
+| [<!-- INCLUDE #EntitySelectionClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary --> |
+| [<!-- INCLUDE #EntitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isAlterable().Summary -->                                     |
+| [<!-- INCLUDE #EntitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isOrdered().Summary -->                                           |
+| [<!-- INCLUDE #EntitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.last().Summary -->                                                          |
+| [<!-- INCLUDE #EntitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.length.Summary -->                                                        |
+| [<!-- INCLUDE #EntitySelectionClass.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.max().Summary -->                                                             |
+| [<!-- INCLUDE #EntitySelectionClass.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.min().Summary -->                                                             |
+| [<!-- INCLUDE #EntitySelectionClass.minus().Syntax -->](#minus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.minus().Summary -->                                                       |
+| [<!-- INCLUDE #EntitySelectionClass.or().Syntax -->](#or)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.or().Summary -->                                                                |
+| [<!-- INCLUDE #EntitySelectionClass.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderBy().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.orderByFormula().Syntax -->](#orderbyformula)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderByFormula().Summary -->                            |
+| [<!-- INCLUDE #EntitySelectionClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.query().Summary -->                                                       |
+| [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->                                               |
+| [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->                                               |
+| [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->                                                 |
+| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->                                              |
+| [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->                                                       |
+| [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                                             |
+| [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->                                  |
 
 
 
@@ -116,8 +117,7 @@ This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.m
 ```4d
 var $entitySel : Object
 
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
-REDUCE SELECTION([Employee];0)
+$entitySel:=ds. Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass REDUCE SELECTION([Employee];0)
 USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
 ```
 
@@ -800,33 +800,33 @@ Dada a seguinte tabela e relação:
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames é uma coleção de Strings
+  //$firstnames is a collection of Strings
 
 
  $firstnames:=ds. Teachers.all().extract("firstname")
   //
-  //$addresses é uma coleção de entities relacionadas ao dataclass Address
-  //Valores Null para o endereço são extraídos
+  //$addresses is a collection of entities related to dataclass Address
+  //Null values for address are extracted
  $addresses:=ds. Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing é uma coleção de objetos com propriedades "who" e "to"
-  //conteúdo propriedade "who" é do tipo String
-  //conteudo propriedade "to" é do tipo entity (Address dataclass)
+  //$mailing is a collection of objects with properties "who" and "to"
+  //"who" property content is String type 
+  //"to" property content is entity type (Address dataclass)
  $mailing:=ds. Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing é uma coleção de objetos com propriedades "who" e "city"
-  //conteúdo propriedade "who" é tipo String
-  //conteúdo propriedade "city" é tipo String
+  //$mailing is a collection of objects with properties "who" and "city"
+  //"who" property content is String type 
+  //"city" property content is String type 
  $mailing:=ds. Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers é uma coleção de objetos com propriedades "where" e "who"
-  //conteúdo propriedade "where" é String
-  //conteúdo propriedade "who" é uma entity selection (Teachers dataclass)
+  //$teachers is a collection of objects with properties "where" and "who"
+  //"where" property content is String
+  //"who" property content is an entity selection (Teachers dataclass)
  $teachers:=ds. Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers é uma coleção de entity selections
+  //$teachers is a collection of entity selections
  $teachers:=ds. Address.all().extract("teachers")
 ```
 
@@ -942,6 +942,59 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 
 <!-- END REF -->
+
+<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
+## .getRemoteContextAttributes()
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19R5  | Adicionado |
+</details>
+
+
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax --> **.getRemoteContextAttributes()** : Text<!-- END REF -->
+
+
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
+| Parameter | Type  |    | Descrição                                                               |
+| --------- | ----- | -- | ----------------------------------------------------------------------- |
+| result    | Texto | <- | Context attributes linked to the entity selection, separated by a comma |
+
+<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+
+#### Descrição
+
+The `.getRemoteContextAttributes()` function <!-- REF #EntitySelectionClass.getRemoteContextAttributes(). Summary -->returns information about the optimization context used by the entity selection<!-- END REF -->.
+
+If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity selection, the function returns an empty Text.
+
+#### Exemplo
+
+```4d
+var $ds : 4D. DataStoreImplementation
+var $persons : cs. PersonsSelection
+var $p : cs. PersonsEntity
+
+var $info : Text
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$persons:=$ds. Persons.all()
+$text:="" For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / " End for each 
+
+$info:=$persons.getRemoteContextAttributes()
+//$info = "firstname,address,address.city"
+```
+
+#### Veja também
+
+[Entity.getRemoteContextAttributes()](./EntityClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 ## .isAlterable()
@@ -1109,6 +1162,7 @@ A função `.count()` <!-- REF #EntitySelectionClass.count(). Summary -->devolve
 
 As entity selections sempre têm uma propriedade `.length`.
 
+> To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](DataClassClass.md#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
 
 #### Exemplo
 
@@ -1147,7 +1201,7 @@ As entity selections sempre têm uma propriedade `.length`.
 
 #### Descrição
 
-The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+The `.or()` function <!-- REF #EntitySelectionClass.or(). Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
 
 If you pass in *attributePath* a path to an object property containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](CollectionClass.md#sort) description).
 
@@ -1201,7 +1255,7 @@ We want to find the highest salary among all the female employees:
 
 #### Descrição
 
-The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
+The `.minus()` function <!-- REF #EntitySelectionClass.minus().  Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 If you pass in *attributePath* a path to an object property containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](CollectionClass.md#sort) description).
 
@@ -1238,7 +1292,7 @@ In this example, we want to find the lowest salary among all the female employee
 </details>
 
 
-<!-- REF #EntitySelectionClass.minus().Syntax --> **.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.minus().Syntax --> **.minus**( *entity* : 4D. Entity ) : 4D. EntitySelection<br>**.minus**( *entitySelection* : 4D. EntitySelection ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
@@ -1252,7 +1306,7 @@ In this example, we want to find the lowest salary among all the female employee
 
 #### Descrição
 
-The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
+The `.slice()` function <!-- REF #EntitySelectionClass.slice(). Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection.
 
 *   If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
 *   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
@@ -1268,14 +1322,12 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 #### Exemplo 1
 
 ```4d
- EmployeeSelection
- $employees:=ds.Employee.query("firstName=:1";"S@")
- $notDropped:=$employees.drop() // $notDropped for uma entity selection que contém todas as entidades não suprimidas
- If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas
-    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria
- Else
-    ALERT("Problem during drop, try later")
- End if var $employees; $notDropped : cs.
+ var $employees; $result : cs. EmployeeSelection
+ var $employee : cs. EmployeeEntity
+
+ $employees:=ds. Employee.query("lastName = :1";"H@") 
+  // The $employees entity selection contains the entity with primary key 710 and other entities
+  // for ex. var $employees; $notDropped : cs. var $employees; $notDropped : cs.
 ```
 
 
@@ -1304,7 +1356,7 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 </details>
 
 
-<!-- REF #EntitySelectionClass.or().Syntax --> **.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.or().Syntax --> **.or**( *entity* : 4D. Entity ) : 4D. EntitySelection<br>**.or**( *entitySelection* : 4D. EntitySelection ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
@@ -1366,7 +1418,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 </details>
 
 
-<!-- REF #EntitySelectionClass.orderBy().Syntax --> **.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.orderBy().Syntax --> **.orderBy**( *pathString* : Text ) : 4D. EntitySelection<br>**.orderBy**( *pathObjects* : Collection ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
@@ -1380,7 +1432,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 #### Descrição
 
-The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
+The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy(). Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
 > * This method does not modify the original entity selection.
 *   For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
@@ -1442,7 +1494,7 @@ You can add as many objects in the criteria collection as necessary.
 </details>
 
 
-<!-- REF #EntitySelectionClass.orderByFormula().Syntax --> **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.orderByFormula().Syntax --> **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D. EntitySelection<br>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
@@ -1458,7 +1510,7 @@ You can add as many objects in the criteria collection as necessary.
 
 #### Descrição
 
-The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
+The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula(). Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
 > Esta função não modifica a entity selection original.
 
 You can use either a *formulaString* or a *formulaObj* parameter:
@@ -1580,10 +1632,11 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 #### Descrição
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+The `.query()` function <!-- REF #EntitySelectionClass.query(). Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
 > Esta função não modifica a entity selection original.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
+
 
 For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
 > By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
@@ -1624,9 +1677,9 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 #### Descrição
 
-The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+A função `.extract()` <!-- REF #EntitySelectionClass.extract(). Summary -->retorna una coleção que contenha os valores de *attributePath* extraídos da entity selection<!-- END REF -->.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
 
 <!-- END REF -->
 
@@ -1644,11 +1697,12 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 <!-- REF #EntitySelectionClass.queryPlan.Syntax --> **.queryPlan** : Text<!-- END REF -->
 
 
+
 #### Descrição
 
-The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan. Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
 
 <!-- END REF -->
 
@@ -1676,7 +1730,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 #### Descrição
 > This function only works with a remote datastore (client / server or `Open datastore` connection).
 
-The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
+The `.refresh()` function <!-- REF #EntitySelectionClass.refresh(). Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
 By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
 
@@ -1743,7 +1797,7 @@ A list box displays the Form.students entity selection and several clients work 
 </details>
 
 
-<!-- REF #EntitySelectionClass.selected().Syntax --> **.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
+<!-- REF #EntitySelectionClass.selected().Syntax --> **.selected**( *selectedEntities* : 4D. EntitySelection ) : Object<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.selected().Params -->
@@ -1757,7 +1811,7 @@ A list box displays the Form.students entity selection and several clients work 
 
 #### Descrição
 
-The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+The `.selected()` function <!-- REF #EntitySelectionClass.selected(). Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
@@ -1809,7 +1863,7 @@ $result2:=$invoices.selected($creditSel)
 </details>
 
 
-<!-- REF #EntitySelectionClass.slice().Syntax --> **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.slice().Syntax --> **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D. EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.slice().Params -->
@@ -1823,7 +1877,7 @@ $result2:=$invoices.selected($creditSel)
 
 #### Descrição
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
+A função `.copy()` <!-- REF #EntitySelectionClass.copy(). Summary --> devolve uma cópia da entity selection original<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
@@ -1848,7 +1902,7 @@ $sliced:=$sel.slice(0;9) //
 
 #### Exemplo 2
 
-Assuming we have ds.Employee.all().length = 10
+Assuming we have ds. Employee.all().length = 10
 
 ```4d
 var $slice : cs. EmployeeSelection
@@ -1874,6 +1928,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 <!-- REF #EntitySelectionClass.sum().Syntax --> **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 
+
 <!-- REF #EntitySelectionClass.sum().Params -->
 | Parameter     | Type  |    | Descrição                                        |
 | ------------- | ----- |:--:| ------------------------------------------------ |
@@ -1885,7 +1940,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 #### Descrição
 
 
-The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+The `.sum()` function <!-- REF #EntitySelectionClass.sum(). Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
 
 `.sum()` returns 0 if the entity selection is empty.
 
@@ -1940,7 +1995,7 @@ $sum:=$sel.sum("salary")
 
 #### Descrição
 
-The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
+The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection(). Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
 
 If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Attributes with [kind](DataClassAttributeClass.md#kind) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with kind property as "relatedEntities" are not extracted.
 
@@ -2134,7 +2189,6 @@ Retorna:
 #### Exemplo 4
 
 Example with `relatedEntity` type with simple form:
-
 
 ```4d
 var $employeesCollection : Collection

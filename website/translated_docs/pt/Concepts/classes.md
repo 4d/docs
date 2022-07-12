@@ -15,24 +15,17 @@ Once a user class is defined, you can **instantiate** objects of this class anyw
 For example, you could create a `Person` class with the following definition:
 
 ```4d  
-//Class: Person.4dm
-Class constructor($firstname : Text; $lastname : Text)
-    This.firstName:=$firstname
-    This.lastName:=$lastname
-
-Function get fullName() -> $fullName : text
-    $fullName:=This.firstName+" "+This.lastName
-
-Function sayHello()->$welcome : Text
-    $welcome:="Hello "+This.fullName
+// Class: MyClass Class Constructor({$parameterName : type; ...})
+// code
+// code
 ```
 
 In a method, creating a "Person":
 
 ```
-var $person : cs.Person //object of Person class  
+var $person : cs. Person //object of Person class  
 var $hello : Text
-$person:=cs.Person.new("John";"Doe")
+$person:=cs. Person.new("John";"Doe")
 // $person:{firstName: "John"; lastName: "Doe"; fullName: "John Doe"}
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
@@ -55,6 +48,8 @@ For example, if you want to define a class named "Polygon", you need to create t
 
 - Project folder
     + Project
+
+
 
 
         * Sources
@@ -211,7 +206,7 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
+For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myFunction".
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
@@ -350,7 +345,6 @@ Function set fullName( $fullName : Text )
     $p:=Position(" "; $fullName)
     This.firstName:=Substring($fullName; 1; $p-1)
     This.lastName:=Substring($fullName; $p+1)
-
 ```
 
 ```4d
@@ -439,7 +433,11 @@ This example creates a class called `Square` from a class called `Polygon`.
 ```4d
 //Class: Square
 
-//path: Classes/Square.4dm Class extends Polygon Class constructor ($side : Integer)
+//path: Classes/Square.4dm 
+
+Class extends Polygon
+
+Class constructor ($side : Integer)
 
     // It calls the parent class's constructor with lengths
     // provided for the Polygon's width and height
@@ -447,6 +445,8 @@ This example creates a class called `Square` from a class called `Polygon`.
     // In derived classes, Super must be called before you
     // can use 'This'
     This.name:="Square"
+
+
 
     Function getArea()
         C_LONGINT($0)
@@ -458,7 +458,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 #### Sintaxe
 
 ```4d
-Super {( param{;...;paramN} )} {-> Object} 
+Super {( param{;...;paramN} )} {-> Object}
 ```
 
 | Parameter | Type   |    | Descrição                                      |
@@ -501,8 +501,10 @@ This example illustrates the use of `Super` in a class constructor. The command 
 
 // Function definition
 
+// Function definition
 Function getArea()
     var $0 : Integer
+
     $0:=(This.height)*(This.width)
 ```
 
@@ -603,6 +605,7 @@ $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
+
 ```
 
 In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
@@ -615,13 +618,13 @@ Several commands of the 4D language allows you to handle class features.
 
 ### `OB Class`
 
-#### OB Class ( object ) -> Object | Null
+#### `OB Class ( object ) -> Object | Null`
 
 `OB Class` returns the class of the object passed in parameter.
 
 
 ### `OB Instance of`
 
-#### OB Instance of ( object ; class ) -> Boolean
+#### `OB Instance of ( object ; class ) -> Boolean`
 
 `OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.

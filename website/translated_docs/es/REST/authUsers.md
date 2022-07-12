@@ -12,7 +12,7 @@ Como primer paso para abrir una sesión REST en el servidor 4D, el usuario que e
 
 You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
 
-## Apertura de las sesiones
+## Apertura de sesiones
 
 When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
 
