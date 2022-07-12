@@ -6,15 +6,14 @@ title: Restore
 4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Two primary categories of incidents can occur:
 
 - The unexpected stoppage of a database while in use. This incident can occur because of a power outage, system element failure, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
-	- If the cache was empty, the database opens normally. Any changes made in the database were recorded. This case does not require any particular operation.
-	- If the cache contains operations, the data file is intact but it requires integrating the current log file.
-	- If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
+  - If the cache was empty, the database opens normally. Any changes made in the database were recorded. This case does not require any particular operation.
+  - If the cache contains operations, the data file is intact but it requires integrating the current log file.
+  - If the cache was in the process of being written, the data file is probably damaged. The last backup must be restored and the current log file must be integrated.
 
 - The loss of database file(s). This incident can occur because of defective sectors on the disk containing the database, a virus, manipulation error, etc. The last backup must be restored and then the current log file must be integrated. To find out if a database was damaged following an incident, simply relaunch the database using 4D. The program performs a self-check and details the necessary restore operations to perform. In automatic mode, these operations are performed directly without any intervention on the part of the user. If a regular backup strategy was put into place, the 4D restore tools will allow you to recover (in most cases) the database in the exact state it was in before the incident.
 
 > 4D can launch procedures automatically to recover databases following incidents. These mechanisms are managed using two options available on the **Backup/Backup & Restore** page of the Database Settings. For more information, refer to the [Automatic Restore](settings.md#automatic-restore) paragraph.  
 > If the incident is the result of an inappropriate operation performed on the data (deletion of a record, for example), you can attempt to repair the database using the "rollback" function in the log file. This function is available on the [Rollback](MSC/rollback.md) page of the MSC.
-
 
 ## Manually restoring a backup (standard dialog)
 
@@ -32,7 +31,7 @@ A standard Open file dialog box appears.
 2. Select a backup file (.4bk) or a log backup file (.4bl) to be restored and click **Open**.
 A dialog box appears, which allows you to specify the location where files will be restored. By default, 4D restores the files in a folder named *Archivename* (no extension) located next to the archive. You can display the path:
 
-![](../assets/img/en/Backup/backup07.png)
+![](../assets/en/Backup/backup07.png)
 
 You can also click on the **[...]** button to specify a different location.
 3. Click on the **Restore** button.
@@ -47,12 +46,11 @@ The destination folder is displayed. During the restore, 4D places all backup fi
 
 You can manually restore an archive of the current database using the [Restore page](MSC/restore.md) of the Maintenance and Security Center (MSC).
 
-
 ## Manually integrating the log
 
 If you have not checked the option for the automatic integration of the log file on the Restore page of the MSC (see [Successive integration of several log files](MSC/restore.md#successive-intergration-of-several-data-log-files)), a warning dialog box appears during the opening of the database when 4D notices that the log file contains more operations than have been carried out in the database.
 
-![](../assets/img/en/Backup/backup08.png)
+![](../assets/en/Backup/backup08.png)
 
 > In order for this mechanism to work, 4D must be able to access the log file in its current location.
 

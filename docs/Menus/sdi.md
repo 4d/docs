@@ -10,6 +10,7 @@ On Windows, 4D developers can configure their 4D merged applications to work as 
 > The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
 
 ### SDI mode availabilty
+
 The SDI mode is available in the following execution environment only:
 
 - Windows
@@ -34,7 +35,7 @@ In SDI mode, the process menu bar is automatically displayed in every document t
 
 Menus are added above windows without modifiying their contents size:
 
-![](../assets/img/en/Menus/sdi1.png)
+![](../assets/en/Menus/sdi1.png)
 
 Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
 

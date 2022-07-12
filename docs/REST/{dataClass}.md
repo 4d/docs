@@ -17,30 +17,27 @@ Dataclass names can be used directly in the REST requests to work with entities,
 |[**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee/getHighSalaries`|Executes a project method and returns an object or a collection (the project method must be exposed)|
 |[**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod)|`/Employee(22)/getAge`|Returns a value based on an entity method|
 
-
-
-
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)	
+Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`) 
 
-### Description   
+### Description
 
 When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
 
 Here is a description of the data returned:
 
-|Property|	Type|	Description|
+|Property| Type| Description|
 |---|---|---|
-|__entityModel|	String|	Name of the dataclass.|
-|__COUNT|	Number	|Number of entities in the dataclass.|
-|__SENT|	Number|	Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.|
-|__FIRST|	Number|	Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
-|__ENTITIES	|Collection|	This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
+|__entityModel| String| Name of the dataclass.|
+|__COUNT| Number |Number of entities in the dataclass.|
+|__SENT| Number| Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.|
+|__FIRST| Number| Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
+|__ENTITIES |Collection| This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
 
 Each entity contains the following properties:
 
-|Property|	Type|	Description|
+|Property| Type| Description|
 |---|---|---|
 |__KEY|String|Value of the primary key defined for the dataclass.|
 |__TIMESTAMP|Date|Timestamp of the last modification of the entity|
@@ -49,8 +46,6 @@ Each entity contains the following properties:
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
-
-
 
 ### Example  
 
@@ -137,12 +132,11 @@ Return all the data for a specific dataclass.
 }
 ````
 
-
 ## {dataClass}({key})
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
-### Description   
+### Description
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
@@ -185,8 +179,6 @@ The following request returns all the public data in the Company dataclass whose
 }
 ````
 
-
-
 ## {dataClass}:{attribute}(value)
 
 Returns the data for one entity in which the attribute's value is defined
@@ -211,19 +203,17 @@ The following request returns all the public data of the employee named "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
 
-
 ## {dataClass}/{method} and {dataClass}({key})/{method}
 
 Returns an object or a collection based on a project method.
 
-### Description   
+### Description
 
-Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection. 
+Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
 
 `POST  /rest/Employee/getHighSalaries`
 
 `POST  /rest/Employee(52)/getFullName`
-
 
 ### 4D Configuration
 
@@ -231,14 +221,13 @@ To be called in a REST request, a method must:
 
 - have been declared as "Available through REST server" in 4D,
 - have its master table and scope defined accordingly:
-	-  **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
-	-  **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
-		- **Table** -for methods applied to the whole table (dataclass)
-		- **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax. 
-		- **Current selection** -for methods applied to the current selection
+  - **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
+  - **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
+    - **Table** -for methods applied to the whole table (dataclass)
+    - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax.
+    - **Current selection** -for methods applied to the current selection
 
-![alt-text](../assets/img/en/REST/MethodProp.png)
-
+![alt-text](../assets/en/REST/MethodProp.png)
 
 ### Passing Parameters to a Method  
 
@@ -250,20 +239,17 @@ You can POST data in the body part of the request, for example:
 
 ["John","Smith"]
 
-
-
-
 ### Examples
 
 #### Table scope
 
 Call of a `getAverage` method:
+
 - on [Employee] table
 - with **Table** scope
 
-
 ```4d
-	//getAverage  
+ //getAverage  
 ALL RECORDS([Employee])
 $0:=New object("ageAverage";Average([Employee]age))
 ```
@@ -271,6 +257,7 @@ $0:=New object("ageAverage";Average([Employee]age))
 `POST  /rest/Employee/getAverage`
 
 Result:
+
 ```
 {
     "result": {
@@ -279,22 +266,22 @@ Result:
 }
 ```
 
-
-
 #### Current record scope
 
 Call of a `getFullName` method:
+
 - on [Employee] table
 - with **Current record** scope
 
 ```4d
-	//getFullName  
+ //getFullName  
 $0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
 ```
 
 `POST  /rest/Employee(3)/getFullName`
 
 Result:
+
 ```
 {
     "result": {
@@ -303,22 +290,21 @@ Result:
 }
 ```
 
-
-
 #### Current selection scope
 
 Call of a `updateSalary` method:
+
 - on [Employee] table
 - with **Current selection** scope
 
 ```4d
-	//updateSalary  
+ //updateSalary  
 C_REAL($1;$vCount)
 READ WRITE([Employee])
 $vCount:=0
 FIRST RECORD([Employee])
 While (Not(End selection([Employee]))  
-	[Employee]salary:=[Employee]salary * $1
+ [Employee]salary:=[Employee]salary * $1
     SAVE RECORD([Employee])
     $vCount:=$vCount+1
     NEXT RECORD([Employee])
@@ -333,6 +319,7 @@ POST data (in the request body):
 [1.5]
 
 Result:
+
 ```
 {
     "result": {
@@ -340,4 +327,3 @@ Result:
     }
 }
 ```
-

@@ -28,14 +28,12 @@ For more information about these actions, refer to the [Activity analysis](MSC/a
 
 The following illustration sums up how the log file works:
 
-![](../assets/img/en/Backup/backup05.png)
-
+![](../assets/en/Backup/backup05.png)
 
 The current log file is automatically saved with the current data file. This mechanism has two distinct advantages:
 
 - Its avoids saturating the disk volume where the log file is stored. Without a backup, the log file would get bigger and bigger with use, and would eventually use all available disk space. For each data file backup, 4D or 4D Server closes the current log file and immediately starts a new, empty file, thereby avoiding the risk of saturation. The old log file is then archived and eventually destroyed depending on the mechanism for managing the backup sets.
 - It keeps log files corresponding to backups in order to be able to parse or repair a database at a later point in time. The integration of a log file can only be done in the database to which it corresponds. It is important, in order to be able to properly integrate a log file into a backup, to have backups and log files archived simultaneously.
-
 
 ## Creating the log file
 
@@ -67,14 +65,13 @@ Without having to do anything else, all operations performed on the data are log
 
 You must create another log file if you create a new data file. You must set or create another log file if you open another data file that is not linked to a log file (or if the log file is missing).
 
-
 ## Stopping a log file
 
 If you would like to stop logging operations to the current log file, simply deselect the **Use Log** option on the **Backup/Configuration** page of the Database Settings.
 
 4D then displays an alert message to remind you that this action prevents you from taking advantage of the security that the log file provides:
 
-![](../assets/img/en/Backup/backup06.png)
+![](../assets/en/Backup/backup06.png)
 
 If you click **Stop**, the current log file is immediately closed (the Database Settings dialog box does not need to be validated afterwards).
 

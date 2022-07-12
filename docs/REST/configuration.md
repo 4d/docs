@@ -15,7 +15,7 @@ To start using the REST features, you need to start and configure the 4D REST se
 
 For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the database settings in order for REST requests to be processed.
 
-![alt-text](../assets/img/en/REST/Settings.png)
+![alt-text](../assets/en/REST/Settings.png)
 
 > REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
 
@@ -71,7 +71,7 @@ To remove the REST exposure for a table:
 1. Display the Table Inspector in the Structure editor and select the table you want to modify.
 
 2. Uncheck the **Expose as REST resource** option:
- ![alt-text](../assets/img/en/REST/table.png)
+ ![alt-text](../assets/en/REST/table.png)
 Do this for each table whose exposure needs to be modified.
 
 ### Exposing fields
@@ -85,7 +85,7 @@ To remove the REST exposure for a field:
 1. Display the Field Inspector in the Structure editor and select the field you want to modify.
 
 2. Uncheck the **Expose as REST resource** for the field.
- ![alt-text](../assets/img/en/REST/field.png)
+ ![alt-text](../assets/en/REST/field.png)
 Repeat this for each field whose exposure needs to be modified.
 
 > In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.

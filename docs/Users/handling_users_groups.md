@@ -9,6 +9,7 @@ title: Managing 4D users and groups
 
 The most powerful user is named **Designer**. No aspect of the database is closed to the Designer.
 The Designer can:
+
 - access all database servers without restriction,
 - create users and groups,
 - assign access privileges to groups,
@@ -19,30 +20,30 @@ In client/server environment, assigning a password to the Designer activates the
 After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
 
 The Administrator can:
+
 - create users and groups,
 - access the 4D Server Administration window and monitor
 - access the MSC window to monitor backup, restore, or server.
 
 The Administrator cannot:
+
 - edit the Designer user
 - by default, access to protected parts of the database. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the database. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Both the Designer and Administrator are available by default in all databases. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
-- Designer icon: ![](../assets/img/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/img/en/Users/iconAdmin.png)
+- Designer icon: ![](../assets/en/Users/iconDesigner.png)
+- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
 The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
 
-
-
 ## Users editor
 
 The editor for users is located in the Toolbox of 4D.
 
-![](../assets/img/en/Users/editor.png)
+![](../assets/en/Users/editor.png)
 
 ### Adding and modifying users
 
@@ -55,7 +56,7 @@ To add a user from the Toolbox :
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
-2. Click on the ![](../assets/img/en/Users/PlussNew.png) button located below the list of users.
+2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users.
 OR
 Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
@@ -79,7 +80,7 @@ The membership of users to different groups can also be set by group on the [Gro
 ### Deleting a user
 
 To delete a user, select it then click the deletion button or use the **Delete** command of the context menu.
-![](../assets/img/en/Users/MinussNew.png)
+![](../assets/en/Users/MinussNew.png)
 
 Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
 
@@ -89,7 +90,6 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 - **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional).
 This method can be used for example to load the user preferences.
-
 
 ## Groups editor
 
@@ -106,7 +106,7 @@ To create a group:
 1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button.
 4D displays the groups editor window. The list of groups displays all the groups of the database.
 
-2. Click on the ![](../assets/img/en/Users/PlussNew.png) button located below the list of groups.  
+2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
 OR  
 Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
@@ -118,14 +118,13 @@ Right-click in the list of groups and choose the **Add** or **Duplicate** comman
 The group name can be up to 15 characters long.
 You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
-
 ### Placing users or groups into groups  
 
 You can place any user or group into a group, and you can also place the group itself into several other groups. It is not mandatory to place a user in a group.
 
 To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
 
-![](../assets/img/en/Users/groups.png)
+![](../assets/en/Users/groups.png)
 
 If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group.
 The affiliated user or group will then have the same access privileges as those assigned to the new group.
@@ -144,10 +143,9 @@ You can also restrict the use of the 4D Client Web server and SOAP server via th
 
 The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option.
 
-![](../assets/img/en/Users/plugins.png)
+![](../assets/en/Users/plugins.png)
 
 The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
-
 
 ### An access hierarchy scheme
 
@@ -158,13 +156,13 @@ In this example, a user is assigned to one of three groups depending on their le
 The groups are then nested so that privileges are correctly distributed to the users of each group.
 
 - The General Management group contains only “high-level” users.
-![](../assets/img/en/Users/schema1.png)
+![](../assets/en/Users/schema1.png)
 
 - The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well.
-![](../assets/img/en/Users/schema2.png)
+![](../assets/en/Users/schema2.png)
 
 - The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well.
-![](../assets/img/en/Users/schema3.png)
+![](../assets/en/Users/schema3.png)
 
 You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
 

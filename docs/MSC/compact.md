@@ -22,8 +22,7 @@ The “Information” area summarizes the data concerning the fragmentation of t
 
 To directly begin the compacting of the data file, click on the compacting button in the MSC window.
 
-![](../assets/img/en/MSC/MSC_compact.png)
-
+![](../assets/en/MSC/MSC_compact.png)
 
 >Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file.
 
@@ -43,7 +42,6 @@ After compacting is completed, 4D generates a log file in the Logs folder of the
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
-
 
 ## Advanced mode
 
@@ -69,6 +67,7 @@ In this case, 4D does not convert data already entered retroactively; data is co
 >All the indexes are updated when this option is selected.
 
 ### Compact address table
+
 (option only active when preceding option is checked)
 
 This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.

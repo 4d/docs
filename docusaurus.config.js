@@ -12,13 +12,13 @@ module.exports = {
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
     "/docs/18/js/code-blocks-buttons.js"
   ],
-  "favicon": "../assets/img/en/4d.gif",
+  "favicon": "../assets/en/4d.gif",
   "customFields": {
     "docsUrl": "",
     "users": [
       {
         "caption": "User1",
-        "image": "/../assets/img/en/4DLogo.gif",
+        "image": "/../assets/en/4DLogo.gif",
         "infoLink": "https://www.facebook.com",
         "pinned": true
       }
@@ -63,7 +63,7 @@ module.exports = {
     "navbar": {
       "title": "4D Documentation"
     },
-    "image": "../assets/img/en/logohome.png",
+    "image": "../assets/en/logohome.png",
     "footer": {
       style: 'dark',
       links: [

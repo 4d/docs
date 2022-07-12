@@ -7,10 +7,6 @@ If more than one person uses a database, which is usually the case in client-ser
 
 > For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
-
-
-
-
 ## Assigning group access
 
 4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
@@ -19,9 +15,7 @@ Groups can then be assigned access privileges to specific parts or features of t
 
 The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
 
-![](../assets/img/en/Users/Access1.png)
-
-
+![](../assets/en/Users/Access1.png)
 
 ## Activating access control
 
@@ -32,7 +26,6 @@ Until you give the Designer a password, all database access are done with the De
 When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the database, remote users must enter a password.
 
 To disable the password access system, you just need to remove the Designer password.
-
 
 ## Users and groups in project architecture
 
@@ -45,19 +38,13 @@ In project databases (.4DProject or .4dz files), 4D users and groups can be conf
 |User identification|no (all users are Designer)|yes|
 |Access control once the Designer has been assigned a password|no (all access are Designer)|yes|
 
-
-
-
-
 ## Toolbox editor
 
 The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
 
-![](../assets/img/en/Users/editor.png)
+![](../assets/en/Users/editor.png)
 
 > Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command.
-
-
 
 ## Directory.json file
 

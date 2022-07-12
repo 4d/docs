@@ -8,7 +8,7 @@ sidebar_label: Restore Page
 
 You can manually restore an archive of the current database using the **Restore** page. This page provides several options that can be used to control the database restoration:
 
-![](../assets/img/en/MSC/MSC_restore.png)
+![](../assets/en/MSC/MSC_restore.png)
 
 > 4D automatic recovery systems restore databases and include data log file when necessary.
 
@@ -40,7 +40,6 @@ When restoring a backup and integrating the current log file in a encrypted data
 
 The following sequence illustrates the principles of a multi-key backup/restore operation:
 
-
 |Operation|Generated files|Comment|
 |---|----|----|
 |New database|||
@@ -61,6 +60,6 @@ The following sequence illustrates the principles of a multi-key backup/restore 
 |Add data (record # 8)|||
 |Backup database|0007.4BL and 0008.4BK files (encrypted with key2)|We can restore 0006.4BK and integrate 0006.4BL + 0007.4BL. We can restore 0007.4BK and integrate 0007.4BL|
 
->When restoring a backup and integrating one or several .4BL files, the restored .4BK and .4BL files must have the same encryption key. During the integration process, if no valid encryption key is found in the 4D keychain when the .4BL file is integrated, an error is generated.    
+>When restoring a backup and integrating one or several .4BL files, the restored .4BK and .4BL files must have the same encryption key. During the integration process, if no valid encryption key is found in the 4D keychain when the .4BL file is integrated, an error is generated.
 >
 >If you have stored successive data keys on the same external device, restoring a backup and integrating log files will automatically find the matching key if the device is connected.

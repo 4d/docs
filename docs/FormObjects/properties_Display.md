@@ -9,7 +9,7 @@ title: Display
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
 
-![](../assets/img/en/FormObjects/property_alphaFormat.png)
+![](../assets/en/FormObjects/property_alphaFormat.png)
 
 You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties.
 Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
@@ -263,7 +263,7 @@ The truncation and scaling options do not affect the picture itself. The content
 
 The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
-![](../assets/img/en/FormObjects/property_pictureFormat_ScaledToFit.png)
+![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
 ### Truncated (centered and non-centered)  
 
@@ -275,7 +275,7 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 >When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
 
-![](../assets/img/en/FormObjects/property_pictureFormat_Truncated.png)
+![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
 ### Scaled to fit (proportional) and Scaled to fit centered (proportional)  
 
@@ -287,7 +287,7 @@ If the picture is smaller than the area set in the form, it will not be modified
 
 If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
 
-![](../assets/img/en/FormObjects/property_pictureFormat_ScaledProportional.png)
+![](../assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
 ### Replicated  
 
@@ -295,7 +295,7 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
-![](../assets/img/en/FormObjects/property_pictureFormat_Replicated.png)
+![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
@@ -466,13 +466,13 @@ This option is available for columns with any type of contents, except pictures 
 
 * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
- ![](../assets/img/en/FormObjects/property_truncate1.png)
+ ![](../assets/en/FormObjects/property_truncate1.png)
 
 >The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
 
 * When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
- ![](../assets/img/en/FormObjects/property_truncate2.png)
+ ![](../assets/en/FormObjects/property_truncate2.png)
 
 The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
 
@@ -510,7 +510,7 @@ In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-ty
 
 This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
 
-![](../assets/img/en/FormObjects/select-row.png)
+![](../assets/en/FormObjects/select-row.png)
 
 4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
@@ -542,7 +542,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 * In multiline columns/areas, 4D carries out automatic line returns.
 
-![](../assets/img/en/FormObjects/wordwrap2.png)
+![](../assets/en/FormObjects/wordwrap2.png)
 
 #### Unchecked for list box/No for input
 
@@ -550,15 +550,15 @@ When this option is selected, text automatically wraps to the next line whenever
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
 
-![](../assets/img/en/FormObjects/wordwrap3.png)
+![](../assets/en/FormObjects/wordwrap3.png)
 
 In list boxes, any text that is too long is truncated and displayed with an ellipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
 
-![](../assets/img/en/FormObjects/property_wordwrap1.png)
+![](../assets/en/FormObjects/property_wordwrap1.png)
 
 Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
 
-![](../assets/img/en/FormObjects/property_wordwrap2.png)
+![](../assets/en/FormObjects/property_wordwrap2.png)
 
 #### Automatic for input (default option)
 
@@ -567,7 +567,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 * In single-line areas, words located at the end of lines are truncated and there are no line returns.
 * In multiline areas, 4D carries out automatic line returns.
 
-![](../assets/img/en/FormObjects/wordwrap1.png)
+![](../assets/en/FormObjects/wordwrap1.png)
 
 #### JSON Grammar
 

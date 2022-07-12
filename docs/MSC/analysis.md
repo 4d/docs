@@ -8,7 +8,7 @@ The Activity analysis page allows viewing the contents of the current log file. 
 
 >It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
 
-![](../assets/img/en/MSC/MSC_analysis.png)
+![](../assets/en/MSC/MSC_analysis.png)
 
 Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
 
@@ -16,17 +16,17 @@ This information allows you to identify the source and context of each operation
 
 - **Operation**: Sequence number of operation in the log file.
 - **Action**: Type of operation performed on the data. This column can contain one of the following operations:
-	- Opening of Data File: Opening of a data file.
-	- Closing of Data File: Closing of an open data file.
-	- Creation of a Context: Creation of a process that specifies an execution context.
-	- Closing of a Context: Closing of process.
-	- Addition: Creation and storage of a record.
-	- Adding a BLOB: Storage of a BLOB in a BLOB field.
-	- Deletion: Deletion of a record.
-	- Modification: Modification of a record.
-	- Start of Transaction: Transaction started.
-	- Validation of Transaction: Transaction validated.
-	- Cancellation of Transaction: Transaction cancelled.
+  - Opening of Data File: Opening of a data file.
+  - Closing of Data File: Closing of an open data file.
+  - Creation of a Context: Creation of a process that specifies an execution context.
+  - Closing of a Context: Closing of process.
+  - Addition: Creation and storage of a record.
+  - Adding a BLOB: Storage of a BLOB in a BLOB field.
+  - Deletion: Deletion of a record.
+  - Modification: Modification of a record.
+  - Start of Transaction: Transaction started.
+  - Validation of Transaction: Transaction validated.
+  - Cancellation of Transaction: Transaction cancelled.
 
 - **Table**: Table to which the added/deleted/modified record or BLOB belongs.
 - **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
