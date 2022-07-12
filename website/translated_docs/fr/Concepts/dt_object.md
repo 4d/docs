@@ -28,7 +28,7 @@ Vous gérez les variables, les champs ou les expressions de type Objet à l'aide
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
-- Dans le code 4D, soit écrites dans les méthodes (éditeur de méthodes) soit externalisées (formules, fichiers d'étiquettes traités par la commande `PROCESS 4D TAGS` ou le Serveur Web, fichiers d'export, documents 4D Write Pro, etc.),
+- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
 - Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 

@@ -71,12 +71,12 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary --> crea u
 
 #### *parámetros*
 
-| Propiedad       | Tipo    | Descripción                                     |
-| --------------- | ------- | ----------------------------------------------- |
-| [curve](#curve) | texto   | Nombre de la curva ECDSA                        |
-| [pem](#pem)     | texto   | Definición PEM de una llave de cifrado a cargar |
-| [size](#size)   | integer | Tamaño de la llave RSA en bits                  |
-| [type](#type)   | texto   | Tipo de la llave: "RSA", "ECDSA" o "PEM"</li>   |
+| Propiedad       | Tipo    | Descripción                                           |
+| --------------- | ------- | ----------------------------------------------------- |
+| [curve](#curve) | texto   | Nombre de la curva ECDSA                              |
+| [pem](#pem)     | texto   | Definición PEM de una llave de cifrado a cargar       |
+| [size](#size)   | integer | Tamaño de la llave RSA en bits                        |
+| [type](#type)   | texto   | Nombre del tipo de llave - "RSA", "ECDSA", "PEM"</li> |
 
 
 #### *CryptoKey*

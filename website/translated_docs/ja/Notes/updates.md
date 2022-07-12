@@ -6,10 +6,19 @@ title: ドキュメンテーション更新情報
 このドキュメントのおもな更新内容のリストです。 4D製品の新機能についての一般的な情報は、[doc.4d.com](https://doc.4d.com) の **リリースノート** を参照ください。
 
 
+## 4D v19 R6
+
+- 新しい [HTTPRequest](API/HTTPRequestClass.md) クラス。
+- コードを呼び出す Collectionクラス関数は、*formula* 引数として Formulaオブジェクトをサポートするようになりました: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
+- リストボックスのセルは、[横方向](FormObjects/properties_CoordinatesAndSizing.md#横方向パディング) および [縦方向](FormObjects/properties_CoordinatesAndSizing.md#縦方向パディング) のパディングをサポートするようになりました。
+- 4D View Pro: 新しい [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) と [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) コマンドを使用して、シート内のテーブルを操作します。
+- [4D がデータを収集する理由と方法](Admin/data-collect.md) について詳細を説明する新しいページ
+
+
 ## 4D v19 R5
 
 - ビルドされたクライアント/サーバーアプリケーション:
-    - ビルド時に、プロジェクトの [directory.json ファイル](../Users/handling_users_groups.md#directoryjson-file) を [サーバーに埋め込む](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
+    - ビルド時に、プロジェクトの [directory.json ファイル](../Users/handling_users_groups.md#directoryjson-file) を [サーバーに埋め込む](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。 これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
     - ビルドするアプリケーションで、[使用しないモジュールの選択を解除](../Desktop/building.md#モジュールの選択解除) できるようになりました。
 
 - [クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化): 新しいクラス関数により、ORDAキャッシュと最適化コンテキストの内容を操作することができます。 詳細は、[コンテキストの事前設定](../ORDA/remoteDatastores.md#コンテキストの事前設定) および [ORDAキャッシュ](../ORDA/remoteDatastores.md#ordaキャッシュ) を参照ください。
@@ -66,7 +75,7 @@ title: ドキュメンテーション更新情報
 - 新しい [4DEACH](Tags/tags.md#4deach-and-4dendeach) 変換タグ
 - Web サーバー: 新しい [SameSite セッションcookie](WebServer/webServerConfig.md#セッションcookie-samesite) 設定
 - [フォーム](FormEditor/properties_FormProperties.md#カラースキーム) および [スタイルシート](FormEditor/createStylesheet.md#メディアクエリ) 用のダークおよびライトカラースキームサポート
-- [メソッドエディター環境設定](Preferences/methods.md#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
+- [コードエディター環境設定](Preferences/methods.md#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
 - Apple Silicon プロセッサー用の [ネイティブコンパイル](Project/compiler.md#コンパイラーメソッド)
 - エンティティセレクション型リストボックスの列で、[変数の計算](FormObjects/properties_Object.md#変数の計算) プロパティがサポートされるようになりました。
 - 新しい包括的な [CLI](Admin/cli.md) (コマンドラインインターフェース) ページ

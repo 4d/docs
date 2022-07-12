@@ -16,7 +16,7 @@ This option allows you to configure the default 4D display at startup, when the 
 *   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears. >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
 *   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
 *   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+> > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
 ### Creación de formularios automática
 
@@ -28,7 +28,7 @@ Starting with macOS Sierra, Mac applications can benefit from the Automatic Wind
 
 You can benefit from this feature in the following environments (with 4D 64-bit versions only):
 
-*   Ventana del editor de métodos
+*   Code Editor windows
 *   Ventana del editor de formularios
 
 All windows from these editors can be put in tab form:
@@ -46,7 +46,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 Hay tres opciones disponibles:
 
 *   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-*   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
+*   **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
 *   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
 ### Apariencia (sólo para macOS)
@@ -138,7 +138,7 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 This area configures access to the 4D HTML documentation displayed in your current browser:
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
+*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
 *   When you double-click on a 4D command in the **Commands Page** of the Explorer.
 
 

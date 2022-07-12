@@ -13,13 +13,13 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 |                                                                                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->                            |
+| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->    |
+| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->   |
+| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary --> |
+| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->                         |
 
 
 ## MAIL New attachment
@@ -30,8 +30,8 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | v19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->
-**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #_command_.MAIL_New_attachment.Syntax --> **MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -46,6 +46,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | type        | Text              | -> | content-type ヘッダーの値                                    |
 | disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
+
 <!-- END REF -->
 
 
@@ -92,10 +93,10 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 任意の *disposition* 引数を渡して、添付ファイルの `content-disposition` ヘッダーを指定できます。 "Mail" 定数テーマ内の、以下の定数のいずれか 1つを渡すことができます:
 
-| 定数                          | 値            | 説明                                                                                                                              |
-| --------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。                                      |
-| mail disposition inline     | "inline"     | Content-disposition ヘッダーの値を "inline" に設定します。これは添付ファイルはメッセージ本文内の、"cid" の位置にレンダリングされる必要があることを意味します。 レンダリングの結果はメールクライアントによって異なります。 |
+| 定数                          | 値            | 説明                                                                                          |
+| --------------------------- | ------------ | ------------------------------------------------------------------------------------------- |
+| mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。 これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。 |
+| mail disposition inline     | "inline"     | "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 レンダリングの結果はメールクライアントによって異なります。            |
 
 *disposition* 引数が省略された場合はデフォルトで:
 
@@ -160,7 +161,8 @@ $email:=New object
 $email.from:="user@mail.com"
 $email.to:="customer@mail.com"
 $email.subject:="新規年次レポート"
-$email.textBody:="添付のとおり、新しい年次レポートをご連絡します。"
+$email.textBody:="添付のとおり、新しい年次レポートをご連絡します。
+"
 $email.attachments:=New collection(MAIL New attachment($blob;"Annual report.docx"))
 
 $transporter.send($email)
@@ -175,8 +177,8 @@ $transporter.send($email)
 | v19 R2 | 4D.File, 4D.ZipFile, 4D.Blob の受け入れ |
 </details>
 
-<!-- REF #4D.MailAttachment.new().Syntax -->
-**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+
+<!-- REF #4D.MailAttachment.new().Syntax --> **4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
@@ -191,18 +193,19 @@ $transporter.send($email)
 | type        | Text              | -> | content-type ヘッダーの値                                    |
 | disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
+
 <!-- END REF -->
 
 
 #### 説明
 
-`4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 この関数の機能は、[`MAIL New attachment`](#mail-new-attachment) コマンドと同一です。
+`4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。 `4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。
 
 
 ## .cid
 
-<!-- REF #MailAttachmentClass.cid.Syntax -->
-**.cid** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.cid.Syntax --> **.cid** : Text<!-- END REF -->
 
 
 #### 説明
@@ -212,8 +215,8 @@ $transporter.send($email)
 
 ## .disposition
 
-<!-- REF #MailAttachmentClass.disposition.Syntax -->
-**.disposition** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.disposition.Syntax --> **.disposition** : Text<!-- END REF -->
 
 
 #### 説明
@@ -226,13 +229,15 @@ $transporter.send($email)
 
 ## .getContent()
 
-<!-- REF #MailAttachmentClass.getContent().Syntax -->
-**.getContent()** : 4D.Blob<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.getContent().Syntax --> **.getContent()** : 4D.Blob<!-- END REF -->
+
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 | 引数  | タイプ     |    | 説明    |
 | --- | ------- |:--:| ----- |
 | 戻り値 | 4D.Blob | <- | 添付の中身 |
+
 <!-- END REF -->
 
 
@@ -244,8 +249,8 @@ $transporter.send($email)
 
 ## .name
 
-<!-- REF #MailAttachmentClass.name.Syntax -->
-**.name** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.name.Syntax --> **.name** : Text<!-- END REF -->
 
 
 #### 説明
@@ -254,8 +259,8 @@ $transporter.send($email)
 
 ## .path
 
-<!-- REF #MailAttachmentClass.path.Syntax -->
-**.path** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.path.Syntax --> **.path** : Text<!-- END REF -->
 
 
 #### 説明
@@ -271,8 +276,8 @@ $transporter.send($email)
 | v19   | 追加 |
 </details>
 
-<!-- REF #MailAttachmentClass.platformPath.Syntax -->
-**.platformPath** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.platformPath.Syntax --> **.platformPath** : Text<!-- END REF -->
 
 
 #### 説明
@@ -282,8 +287,8 @@ $transporter.send($email)
 
 ## .type
 
-<!-- REF #MailAttachmentClass.type.Syntax -->
-**.type** : Text<!-- END REF -->
+
+<!-- REF #MailAttachmentClass.type.Syntax --> **.type** : Text<!-- END REF -->
 
 
 #### 説明

@@ -10,7 +10,7 @@ En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l
 ALERT("Hello, World!")
 ```
 
-Ce code affichera une boîte de dialogue d'alerte standard contenant le message "Hello, World!" et un bouton OK. Pour exécuter le code, il vous suffit de cliquer sur le bouton d'exécution dans l'éditeur de méthode :
+Ce code affichera une boîte de dialogue d'alerte standard contenant le message "Hello, World!" et un bouton OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lecture seule
 ```
 
-> Par défaut, les constantes prédéfinies sont <u>soulignées</u> dans l'éditeur de méthodes 4D.
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
 
 ## Méthodes
 

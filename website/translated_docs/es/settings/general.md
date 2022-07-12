@@ -20,7 +20,7 @@ Este menú le permite seleccionar el modo en el que desea que la base se abra po
 
 ## Componente
 
-Esta área permite a [los desarrolladores de componentes](../Extensions/develop-components.md) configurar cómo se expondrán las clases y las funciones de sus componentes en el editor de métodos de 4D una vez instalado el componente.
+This area allows [component developers](../Extensions/develop-components.md) to configure how their component classes and functions will be exposed in the 4D Code Editor once the component is installed.
 
 ### Namespace del componente en la class store
 

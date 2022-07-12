@@ -29,7 +29,7 @@ El **objeto de lenguaje** está referenciado por un ID interno único de tipo En
 
 El **objeto de formulario** no es necesariamente único: puede haber varias representaciones de la misma lista jerárquica en el mismo formulario o en otros diferentes. Al igual que con otros objetos formulario, se especifica el objeto en el lenguaje utilizando la sintaxis (*; "NomLista", etc.).
 
-Conecte el "objeto lenguaje " lista jerárquica con el "objeto de formulario" lista jerárquica por medio de la variable que contiene el valor RefLista. Por ejemplo, si has asociado la [variable](properties_Object.md#variable-or-expression) mylist al objeto de formulario, puede escribir:
+Conecte el "objeto lenguaje " lista jerárquica con el "objeto de formulario" lista jerárquica por medio de la variable que contiene el valor RefLista. Conecte el "objeto lenguaje " lista jerárquica con el "objeto de formulario" lista jerárquica por medio de la variable que contiene el valor RefLista.
 
 ```4d
 mylist:=New list

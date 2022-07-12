@@ -100,7 +100,7 @@ Les fichiers `.4DLink` peuvent également être créés avec un éditeur XML.
 
 Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs intégrés de 4D pour créer, modifier ou sauvegarder des éléments de la structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur disque lorsque vous sélectionnez une commande **Sauvegarde**, ou lorsque la fenêtre de l'éditeur perd ou récupère le focus.
 
-Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre d'éditeur de méthode *et* dans un éditeur de texte, la sauvegarde des deux modifications entraînera un conflit.
+Les éditeurs utilisant des fichiers sur le disque, d'éventuels conflits peuvent se produire si le même fichier est modifié voire supprimé de différents endroits. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
 
 Le développement 4D comprend un gestionnaire d’accès aux fichiers permettant de contrôler les accès simultanés :
 

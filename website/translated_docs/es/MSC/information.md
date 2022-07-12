@@ -32,7 +32,7 @@ La página lista todas las tablas de la base (incluidas las tablas invisibles), 
 - **Campos**: número de campos en la tabla. Los campos invisibles se cuentan, sin embargo, los campos borrados no se cuentan.
 - **Índices**: número de índices de todo tipo en la tabla
 - **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
-- **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos. ***Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC.*
+- **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos. **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos.
 - **Tamaño tabla direcciones**: tamaño de la tabla de direcciones para cada tabla. La tabla de direcciones es una tabla interna que almacena un elemento por cada registro creado en la tabla. De hecho, vincula los registros a su dirección física. Por razones de rendimiento, no se redimensiona cuando se eliminan registros, por lo que su tamaño puede ser diferente del número de registros actual de la tabla. Si esta diferencia es significativa, se puede ejecutar una operación de compactación de datos con la opción "Compactar la tabla de direcciones" marcada para optimizar el tamaño de la tabla de direcciones (ver la página [Compactar](compact.md)). ***Nota:** las diferencias entre el tamaño de la tabla de direcciones y el número de registros también pueden ser el resultado de un incidente durante la escritura de la caché en el disco.*
 
 

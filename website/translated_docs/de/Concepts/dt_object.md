@@ -28,7 +28,7 @@ Sie verwalten Variablen, Felder oder Ausdrücke vom Typ Objekt mit der [Objektno
 
 Jeder Eigenschaftswert, auf den über Objektnotation zugegriffen wird, wird als ein Ausdruck gewertet. Sie können solche Werte überall verwenden, wo 4D Ausdrücke erwartet werden:
 
-- In 4D Code, entweder in den Methoden (Methodeneditor) oder extern geschrieben (Formeln, Dateien mit 4D Tags, die mit `PROCESS 4D TAGS` oder dem Web Server bearbeitet werden, Exportdateien, 4D Write Pro Dokumente...),
+- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - In den Bereichen Ausdruck des Debugger und des Runtime Explorer,
 - In der Eigenschaftenliste des Formulareditors für Formularobjekte: Felder vom Typ Variable oder Ausdruck, sowie verschiedene Auswahl Listboxen und Spalten Ausdrücke (Datenquelle, Hintergrundfarbe, Stil oder Schriftfarbe).
 

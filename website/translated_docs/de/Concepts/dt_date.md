@@ -21,7 +21,7 @@ Das Datumsformat in der Programmiersprache und das bei Eingabe durch den Endanwe
 
 Ein Leerdatum wird als _!00-00-00!_ angegeben.
 
-**Tipp:** Der Methodeneditor enthält ein Tastenkürzel für Leerdatum. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.
+**Tip:** The Code Editor includes a shortcut for entering a null date. Tippen Sie einfach das Ausrufezeichen (!) und drücken die Enter-Taste.
 
 **Hinweise:**
 

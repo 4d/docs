@@ -12,7 +12,7 @@ Signals are tools provided by the 4D language to manage interactions and avoid c
 
 A signal is a shared object that must be passed as a parameter to commands that call or create workers or processes.
 
-A `4D.Signal` object contains the following built-in methods and properties:
+A `4D. Signal` object contains the following built-in methods and properties:
 
 - [`.wait()`](#wait)
 - [`.trigger()`](#trigger)
@@ -38,31 +38,13 @@ In 4D, you create a new signal object by calling the [`New signal`](#new-signal)
 
 Quando um sinal tiver sido lançado usando uma chamada `signal.trigger()`, não pode ser reutilizado. If you want to set another signal, you need to call the `New signal` command again.
 
-Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use...End use` structure (see example).
+Since a signal object is a [shared object](Concepts/shared.md), you can use it to return results from called workers/processes, provided that you do not forget to write values within a `Use... End use` structure (see example).
 
 ### Exemplo
 
 ```4d
- var $signal : 4D.Signal
-
-  // Creation of a signal
- $signal:=New signal
-
-  // call main process and execute OpenForm method
- CALL WORKER(1;"OpenForm";$signal)
-  // do another calculation
- ...
-  // Esperando pelo final do processo
- $signaled:=$signal.wait()
-
-  // Processando o resultado
- $calc:=$signal.result+...
-```
-
-***OpenForm*** method :
-
-```4d
- #DECLARE ($signal : 4D.Signal)  
+ #DECLARE ($signal : 4D.
+  Signal)  
  var $form : Object
  $form:=New object("value";0)
 
@@ -78,6 +60,24 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
   // Ativa o sinal para o processo de espera
  $signal.trigger()
+```
+
+***OpenForm*** method :
+
+```4d
+ var $signal : 4D. Signal
+
+  // Creation of a signal
+ $signal:=New signal
+
+  // call main process and execute OpenForm method
+ CALL WORKER(1;"OpenForm";$signal)
+  // do another calculation
+ ... // Esperando pelo final do processo
+ $signaled:=$signal.wait()
+
+  // Processando o resultado
+ $calc:=$signal.result+...
 ```
 
 ### Resumo
@@ -137,7 +137,7 @@ Um novo objeto [`4D. Signal`](#signal-object).
 Este é um exemplo típico de um worker que fixa um sinal:
 
 ```4d
- var $signal : 4D.Signal
+ var $signal : 4D. Signal
  $signal:=New signal("This is my first signal")
 
  CALL WORKER("myworker";"doSomething";$signal)
@@ -154,7 +154,7 @@ Este é um exemplo típico de um worker que fixa um sinal:
 O método ***doSomething*** poderia ser algo como:
 
 ```4d
- #DECLARE ($signal : 4D.Signal)
+ #DECLARE ($signal : 4D. Signal)
   //any processing
   //...
  Use($signal)

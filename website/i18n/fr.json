@@ -8,6 +8,9 @@
       "Admin/cli": {
         "title": "Interface de ligne de commande"
       },
+      "Admin/data-collect": {
+        "title": "About Data Collection"
+      },
       "Admin/dataExplorer": {
         "title": "Explorateur de données Web"
       },
@@ -65,6 +68,9 @@
       "API/FunctionClass": {
         "title": "Formula"
       },
+      "API/HTTPRequestClass": {
+        "title": "HTTPRequest"
+      },
       "API/IMAPTransporterClass": {
         "title": "IMAPTransporter"
       },
@@ -119,8 +125,17 @@
       "Backup/settings": {
         "title": "Paramètres de sauvegarde"
       },
-      "code-editor/navigation": {
-        "title": "Navigation dropdown"
+      "code-editor/creating-using-macros": {
+        "title": "Creating and using macros"
+      },
+      "code-editor/find-replace": {
+        "title": "Find and replace"
+      },
+      "code-editor/overview": {
+        "title": "About 4D Code"
+      },
+      "code-editor/write-class-method": {
+        "title": "Éditeur de code"
       },
       "Concepts/about": {
         "title": "À propos du Langage 4D"
@@ -624,13 +639,13 @@
       "FormObjects/text": {
         "title": "Text"
       },
-      "FormObjects/viewProArea_overview": {
+      "FormObjects/viewProAreaOverview": {
         "title": "Zone 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Zone Web"
       },
-      "FormObjects/writeProArea_overview": {
+      "FormObjects/writeProAreaOverview": {
         "title": "Zone 4D Write Pro"
       },
       "GettingStarted/creating": {
@@ -983,16 +998,15 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
-      "Code Editor": "Éditeur de code",
+      "Handling Code": "Handling Code",
       "Debugging": "Débogage",
-      "Transformation Tags": "Transformation Tags",
       "Settings": "Settings",
       "Preferences": "Préférences",
       "4D Server Administration Window": "Fenêtre d'administration de 4D Server",
       "Web Administration": "Administration Web",
       "Command Line Interface": "Interface de ligne de commande",
       "TLS Protocol": "Protocole TLS",
-      "License Management": "Gestion des licences",
+      "Licenses & Data Collection": "Licenses & Data Collection",
       "Access Rights": "Droits d'accès",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
@@ -1038,7 +1052,7 @@
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol|no description given": "Protocole TLS",
     "Debugging|no description given": "Débogage",
-    "Code Editor|no description given": "Éditeur de code",
+    "Handling Code|no description given": "Handling Code",
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",

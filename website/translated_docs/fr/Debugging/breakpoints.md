@@ -17,7 +17,7 @@ Les points d'arrêt sur commande vous permettent de commencer à tracer l'exécu
 ## Points d'arrêt
 
 
-Pour créer un point d'arrêt, cliquez dans la marge gauche du volet Code source dans le débogueur ou dans l'éditeur de méthode.
+To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor.
 
 Dans l'exemple suivant, un point d'arrêt (la puce rouge) a été défini dans le débogueur, sur la ligne `If ($in.dataClass#Null)` :
 
@@ -34,7 +34,7 @@ Vous pouvez modifier le comportement d'un point d'arrêt à l'aide de la fenêtr
 
 ![breakpoint-properties](assets/en/Debugging/breakpoint-properties.png)
 
-Cette fenêtre est disponible à partir de l'Editeur de méthode ou du [volet de code source](debugger.md#source-code-pane). Vous pouvez :
+This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). Vous pouvez :
 
 - faites un clic droit sur une ligne et sélectionnez **Modifier le point d'arrêt** dans le menu contextuel, ou
 - .`Alt+clic` (Windows) ou `Option+clic` (macOS) dans la marge de gauche.
@@ -57,7 +57,7 @@ La liste de points d'arrêt du serveur est automatiquement restaurée s'il redev
 
 ### Liste des points d'arrêt
 
-La liste des points d'arrêt est une page de l'Explorateur d'exécution qui vous permet de gérer les points d'arrêt créés dans la fenêtre du débogueur ou dans l'éditeur de méthode. Pour plus d'informations sur l'Explorateur d'exécution, voir sa page dédiée dans [le manuel de Développement](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. Pour plus d'informations sur l'Explorateur d'exécution, voir sa page dédiée dans [le manuel de Développement](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
 Pour ouvrir la page de la liste des points d'arrêt :
 
@@ -74,7 +74,7 @@ Pour ouvrir la page de la liste des points d'arrêt :
 * Supprimer des points d'arrêt en appuyant sur la touche `Delete` ou `Backspace`, ou en cliquant sur le bouton **Delete** sous la liste.
 * Ouvrez les méthodes où se trouvent les points d'arrêt en doube-cliquant sur n'importe quelle ligne de la liste
 
-Vous ne pouvez pas ajouter de nouveaux points d'arrêt à partir de cette fenêtre. Les points d'arrêt ne peuvent être créés qu'à partir de la fenêtre du débogueur ou de l'éditeur de méthodes.
+Vous ne pouvez pas ajouter de nouveaux points d'arrêt à partir de cette fenêtre. Breakpoints can only be created from within the Debugger window or the Code Editor.
 
 
 ## Points d'arrêts sur les commandes

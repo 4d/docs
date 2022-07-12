@@ -32,7 +32,7 @@ Si des erreurs sont détectées, le process est stoppé et le message "Compilati
 
 ![](assets/en/Project/compilerWin2.png)
 
-Double-cliquez sur chaque erreur détectée pour ouvrir la méthode ou la classe concernée directement dans l'éditeur de méthode 4D. La ligne contenant l'erreur est mise en évidence et le type d'erreur est affiché dans la zone syntaxique de la fenêtre.
+Double-click on each error detected to open the method or class concerned directly in the 4D Code Editor. La ligne contenant l'erreur est mise en évidence et le type d'erreur est affiché dans la zone syntaxique de la fenêtre.
 
 Utilisez les commandes **Erreur précédente** / **Erreur suivante** du menu **Méthode** pour naviguer d'une erreur à l'autre.
 
@@ -68,7 +68,7 @@ Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le 
 
 Seules les méthodes de compilation nécessaires (c'est-à-dire celles pour lesquelles des éléments existent déjà dans le projet) sont générées.
 
-La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. En double-cliquant sur une ligne d'erreur, la méthode et la ligne concernées sont affichées dans l'éditeur de méthode.
+La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. Double-clicking on an error line causes the method and line concerned to be displayed in the Code Editor.
 
 
 ### Effacer le code compilé
@@ -251,7 +251,7 @@ Si votre projet ne présente aucune erreur générale, le fichier ne comporte pa
 
 Un fichier d’erreurs peut donc comporter trois types de messages :
 
-- **Erreurs attachées à une ligne précise** : Ces erreurs vous sont indiquées accompagnées de leur contexte (la ligne où elles ont été détectées) et d’un commentaire.  Elles apparaissent lorsque le compilateur rencontre une expression qui lui pose un problème, que ce soit de typage ou de syntaxe. Dans la fenêtre de compilation, il vous suffit de double-cliquer sur le libellé de l’erreur pour ouvrir la méthode concernée à la ligne correspondante.
+- **Erreurs attachées à une ligne précise** : Ces erreurs vous sont indiquées accompagnées de leur contexte (la ligne où elles ont été détectées) et d’un commentaire.  Elles apparaissent lorsque le compilateur rencontre une expression qui lui pose un problème, que ce soit de typage ou de syntaxe. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Code Editor, with the line containing the error highlighted.
 
 - **Erreurs générales** : Il s’agit d’erreurs qui ne permettent pas le passage en passe de compilation. Le compilateur délivre une erreur générale dans deux cas :
     - Si le type d’une variable process ou interprocess n’a pas pu être déterminé.
@@ -259,7 +259,7 @@ Un fichier d’erreurs peut donc comporter trois types de messages :
 
 Ces erreurs sont dites générales parce qu’elles ne peuvent être rattachées à aucune méthode en particulier. En effet, le compilateur n’a pu procéder au typage nulle part dans la base pour le premier cas. Dans le second, il ne peut choisir d’associer un nom à un objet plutôt qu’à un autre.
 
-- **Warnings** : Les warnings ne sont pas des erreurs. Ils n’empêchent pas la compilation de la base, il s’agit simplement de points sur lesquels le compilateur souhaite attirer votre attention parce qu’il y a un risque d’erreur. Dans la fenêtre de compilation, les warnings apparaissent en caractères italiques. Il vous suffit de double-cliquer sur le libellé d’un warning pour ouvrir la méthode concernée à la ligne correspondante.
+- **Warnings** : Les warnings ne sont pas des erreurs. Ils n’empêchent pas la compilation de la base, il s’agit simplement de points sur lesquels le compilateur souhaite attirer votre attention parce qu’il y a un risque d’erreur. Dans la fenêtre de compilation, les warnings apparaissent en caractères italiques. Double-click on each warning to open the method concerned directly in the 4D Code Editor, with the line containing the warning highlighted.
 
 
 

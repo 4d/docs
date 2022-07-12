@@ -178,7 +178,7 @@ For optimization reasons, data requested from the server via ORDA is loaded in t
 
 The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Expired data remains in the cache until space is needed.
 
-By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions: However, you can control its contents using the following ORDA class functions:
+By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions: By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions: However, you can control its contents using the following ORDA class functions:
 
 * [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 * [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)

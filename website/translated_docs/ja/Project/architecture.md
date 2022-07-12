@@ -207,7 +207,7 @@ Settings フォルダーには、アプリケーションの管理に使用さ�
 
 | 内容                         | 説明                                  | 形式     |
 | -------------------------- | ----------------------------------- | ------ |
-| methodPreferences.json     | カレントユーザーのメソッドエディター環境設定              | JSON   |
+| methodPreferences.json     | カレントユーザーのコードエディター環境設定               | JSON   |
 | methodWindowPositions.json | カレントユーザーのメソッドのウィンドウポジション            | JSON   |
 | formWindowPositions.json   | カレントユーザーのフォームのウィンドウポジション            | JSON   |
 | workspace.json             | 開かれているウィンドウのリスト；macOS ではタブウィンドウの順序  | JSON   |

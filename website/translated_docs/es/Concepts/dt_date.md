@@ -27,7 +27,7 @@ Una constante literal de tipo fecha está rodeada de signos de exclamación (!..
 
 Una fecha nula es especificada por _!00-00-00!_.
 
-**Consejo:** el Editor de métodos incluye un acceso directo para introducir una fecha nula. Para escribir una fecha nula, introduzca el carácter de exclamación (!) y pulse Intro.
+**Tip:** The Code Editor includes a shortcut for entering a null date. Para escribir una fecha nula, introduzca el carácter de exclamación (!) y pulse Intro.
 
 **Notas:**
 

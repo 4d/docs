@@ -16,7 +16,7 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 *   **Ouvrir le dernier projet utilisé** : 4D ouvre directement le dernier projet utilisé, aucune boîte de dialogue d’ouverture n’apparaît. >Pour forcer l’affichage de la boîte de dialogue d’ouverture lorsque cette option est sélectionnée, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) pendant le lancement du projet.
 *   **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
 *   **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
-> **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
+> > **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
 
 ### Création de formulaire automatique
 
@@ -28,7 +28,7 @@ Depuis macOS Sierra, les applications Mac bénéficient d'onglets automatiques f
 
 Vous pouvez bénéficier de cette fonctionnalité dans les environnements de 4D suivants (versions 64 bits uniquement) :
 
-*   Fenêtres de l'éditeur de méthodes
+*   Code Editor windows
 *   Fenêtres de l'éditeur de formulaires
 
 Toutes les fenêtres de ces éditeurs peuvent être ouvertes sous forme d'onglets :
@@ -46,7 +46,7 @@ Dans la boîte de dialogue des Préférences de 4D, l'option **Fenêtre à ongle
 Trois options sont disponibles :
 
 *   **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
-*   **Jamais** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera toujours la création d'une nouvelle fenêtre (les onglets ne sont jamais créés).
+*   **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
 *   **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
 
 ### Apparence (macOS uniquement)
@@ -138,7 +138,7 @@ Lors de la création d’un nouveau fichier de données, 4D utilise la langue d�
 
 Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
-*   Lorsque vous appuyez sur la touche **F1** pendant que le curseur est inséré dans une fonction de classe 4D ou un nom de commande dans l'éditeur de méthode ;
+*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
 *   Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
 
 

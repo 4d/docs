@@ -607,7 +607,7 @@ $output:=$worker.response
 
 この関数は、SystemWorker オブジェクトを返します。
 
-> `SystemWorker` を 4D のワーカープロセスの形で作成した場合、この関数は必要ありません。
+> `SystemWorker` を 4D のワーカープロセスから作成した場合、この関数は必要ありません。
 
 <!-- END REF -->
 

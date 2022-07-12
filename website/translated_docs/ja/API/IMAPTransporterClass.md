@@ -311,6 +311,8 @@ $status:=$imap.append($msg; "Drafts")
 
 
 
+
+
 <!-- INCLUDE transporter.authenticationModeIMAP.Desc -->
 
 
@@ -320,6 +322,7 @@ $status:=$imap.append($msg; "Drafts")
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
 
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
 
 ## .checkConnectionDelay
 
@@ -338,7 +341,7 @@ $status:=$imap.append($msg; "Drafts")
 `.checkConnectionDelay` 関数は、 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->サーバー接続をチェックするまでの最長時間 (秒単位)<!-- END REF -->を格納します。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
 
-
+<!-- END REF -->
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
@@ -790,6 +793,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF IMAPTransporterClass.getBoxInfo().Desc -->
+
 ## .getBoxInfo()
 
 <details><summary>履歴</summary>
@@ -1558,6 +1562,7 @@ $options:=New object
 $pw:=Request("パスワードを入力してください:")
 
 If(OK=1) $options.host:="imap.gmail.com"
+
 $options.user:="test@gmail.com"
 $options.password:=$pw
 

@@ -56,7 +56,7 @@ Ejemplo:
 Puede crear dos tipos de colecciones:
 
 - colecciones estándar (no compartidas), utilizando el comando [`New collection`](API/CollectionClass.md#new-collection). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
-- colecciones compartidas, utilizando el comando [`New shared collection`](API/CollectionClass.md#new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
+- colecciones compartidas, utilizando el comando [`New shared collection`](API/CollectionClass.md#new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos.
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](Concepts/shared.md).
 

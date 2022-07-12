@@ -8,6 +8,9 @@
       "Admin/cli": {
         "title": "Command Line Interface"
       },
+      "Admin/data-collect": {
+        "title": "About Data Collection"
+      },
       "Admin/dataExplorer": {
         "title": "Web Data Explorer"
       },
@@ -65,6 +68,9 @@
       "API/FunctionClass": {
         "title": "Formula"
       },
+      "API/HTTPRequestClass": {
+        "title": "HTTPRequest"
+      },
       "API/IMAPTransporterClass": {
         "title": "IMAPTransporter"
       },
@@ -119,8 +125,17 @@
       "Backup/settings": {
         "title": "Parâmetros da cópia de segurança"
       },
-      "code-editor/navigation": {
-        "title": "Navigation dropdown"
+      "code-editor/creating-using-macros": {
+        "title": "Creating and using macros"
+      },
+      "code-editor/find-replace": {
+        "title": "Find and replace"
+      },
+      "code-editor/overview": {
+        "title": "About 4D Code"
+      },
+      "code-editor/write-class-method": {
+        "title": "Code Editor"
       },
       "Concepts/about": {
         "title": "Sobre a linguagem 4D"
@@ -624,13 +639,13 @@
       "FormObjects/text": {
         "title": "Texto"
       },
-      "FormObjects/viewProArea_overview": {
+      "FormObjects/viewProAreaOverview": {
         "title": "Área 4D View Pro"
       },
       "FormObjects/webAreaOverview": {
         "title": "Área Web"
       },
-      "FormObjects/writeProArea_overview": {
+      "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro area"
       },
       "GettingStarted/creating": {
@@ -983,16 +998,15 @@
       "4D Language Concepts": "4D Language Concepts",
       "ORDA": "ORDA",
       "Class API Reference": "Class API Reference",
-      "Code Editor": "Code Editor",
+      "Handling Code": "Handling Code",
       "Debugging": "Debugging",
-      "Transformation Tags": "Transformation Tags",
       "Settings": "Settings",
       "Preferences": "Preferences",
       "4D Server Administration Window": "4D Server Administration Window",
       "Web Administration": "Web Administration",
       "Command Line Interface": "Command Line Interface",
       "TLS Protocol": "TLS Protocol",
-      "License Management": "License Management",
+      "Licenses & Data Collection": "Licenses & Data Collection",
       "Access Rights": "Access Rights",
       "MSC": "CSM",
       "Backup and Restore": "Backup and Restore",
@@ -1038,7 +1052,7 @@
     "Client/Server|no description given": "Client/Server",
     "TLS Protocol|no description given": "TLS Protocol",
     "Debugging|no description given": "Debugging",
-    "Code Editor|no description given": "Code Editor",
+    "Handling Code|no description given": "Handling Code",
     "Web Data Explorer|no description given": "Web Data Explorer",
     "Language Reference (4D Doc Center)|no description given": "Language Reference (4D Doc Center)",
     "Access Rights|no description given": "Access Rights",

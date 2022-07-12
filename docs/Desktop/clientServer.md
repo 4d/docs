@@ -47,15 +47,15 @@ To connect to a server from the list, double-click on its name or select it and 
 
 If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name. 
 
-![](assets/en/getStart/serverConnect2.png)
+![](assets/en/Desktop/serverConnect2.png)
 
 
 - **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
 - **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings. 
 
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server. 
+> The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option). 
 
-> If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.
+Once this page assigns a server, clicking the **OK** button will allow you to connect to the server. 
 
 Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
 
@@ -78,6 +78,8 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 ## Using 4D and 4D Server on the same machine
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. This feature allows you to develop a client/server application in the same context as the deployment context. 
+
+> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [opening option](#opening-a-remote-project) status.
 
 Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 

@@ -37,7 +37,7 @@ L'Administrateur peut :
 
 L'Administrateur ne peut pas :
 - modifier l'utilisateur Super_Utilisateur
-- par défaut, accéder à des objets protégés de l'application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. L'Administrateur doit faire partie d'un ou plusieurs groupes pour avoir des privilèges d’accès dans l'application. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
+- par défaut, accéder à des objets protégés de l'application. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. En particulier, l'Administrateur ne peut pas accéder au mode Développement s'il est restreint. Il est placé dans tous les nouveaux groupes, mais vous pouvez cependant l'exclure de ces groupes.
 
 Par défaut, le Super_Utilisateur et l'Administrateur se trouvent dans toutes les applications. Dans la [boîte de dialogue de gestion des utilisateurs](#users-and-groups-editor), les icônes du Super_Utilisateur et de l’Administrateur ont des icônes respectivement rouge et verte :
 
@@ -74,7 +74,7 @@ La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Uti
 
 4D ajoute un nouvel utilisateur à la liste, nommé par défaut "Nouvel utilisateurN".
 
-3. Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir l'application. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+3. Saisissez le nom du nouvel utilisateur. Saisissez le nom du nouvel utilisateur. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
 
 4. Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton **Modifier...** dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
 

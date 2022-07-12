@@ -8,6 +8,9 @@
       "Admin/cli": {
         "title": "コマンドライン・インターフェース"
       },
+      "Admin/data-collect": {
+        "title": "データ収集について"
+      },
       "Admin/dataExplorer": {
         "title": "Webデータエクスプローラー"
       },
@@ -65,6 +68,9 @@
       "API/FunctionClass": {
         "title": "Formula"
       },
+      "API/HTTPRequestClass": {
+        "title": "HTTPRequest"
+      },
       "API/IMAPTransporterClass": {
         "title": "IMAPTransporter"
       },
@@ -119,8 +125,17 @@
       "Backup/settings": {
         "title": "バックアップ設定"
       },
-      "code-editor/navigation": {
-        "title": "ナビゲーションドロップダウン"
+      "code-editor/creating-using-macros": {
+        "title": "マクロの作成と利用"
+      },
+      "code-editor/find-replace": {
+        "title": "検索と置換"
+      },
+      "code-editor/overview": {
+        "title": "4D コードについて"
+      },
+      "code-editor/write-class-method": {
+        "title": "コードエディター"
       },
       "Concepts/about": {
         "title": "4D ランゲージについて"
@@ -624,13 +639,13 @@
       "FormObjects/text": {
         "title": "テキスト"
       },
-      "FormObjects/viewProArea_overview": {
+      "FormObjects/viewProAreaOverview": {
         "title": "4D View Pro エリア"
       },
       "FormObjects/webAreaOverview": {
         "title": "Webエリア"
       },
-      "FormObjects/writeProArea_overview": {
+      "FormObjects/writeProAreaOverview": {
         "title": "4D Write Pro エリア"
       },
       "GettingStarted/creating": {
@@ -983,16 +998,15 @@
       "4D Language Concepts": "ランゲージのコンセプト",
       "ORDA": "ORDA",
       "Class API Reference": "クラス API リファレンス",
-      "Code Editor": "コードエディター",
+      "Handling Code": "コードの扱い方",
       "Debugging": "デバッガー",
-      "Transformation Tags": "変換タグ",
       "Settings": "設定",
       "Preferences": "環境設定",
       "4D Server Administration Window": "4D Server 管理ウィンドウ",
       "Web Administration": "Web 管理",
       "Command Line Interface": "コマンドライン・インターフェース",
       "TLS Protocol": "TLSプロトコル",
-      "License Management": "ライセンス管理",
+      "Licenses & Data Collection": "ライセンス＆データ収集",
       "Access Rights": "アクセス権限",
       "MSC": "MSC",
       "Backup and Restore": "バックアップと復元",
@@ -1038,7 +1052,7 @@
     "Client/Server|no description given": "クライアント/サーバー",
     "TLS Protocol|no description given": "TLSプロトコル",
     "Debugging|no description given": "デバッガー",
-    "Code Editor|no description given": "コードエディター",
+    "Handling Code|no description given": "コードの扱い方",
     "Web Data Explorer|no description given": "Webデータエクスプローラー",
     "Language Reference (4D Doc Center)|no description given": "ランゲージリファレンス (4D Doc Center)",
     "Access Rights|no description given": "アクセス権限",

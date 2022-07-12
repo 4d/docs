@@ -72,10 +72,10 @@ They provide the following properties and functions:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter | Type         |    | Descrição                                                      |
-| --------- | ------------ | -- | -------------------------------------------------------------- |
-| option    | Integer      | -> | Web server to get (default if omitted = `Web server database`) |
-| Resultado | 4D.WebServer | <- | Web server object                                              |
+| Parameter | Type          |    | Descrição                                                      |
+| --------- | ------------- | -- | -------------------------------------------------------------- |
+| option    | Integer       | -> | Web server to get (default if omitted = `Web server database`) |
+| Resultado | 4D. WebServer | <- | Web server object                                              |
 
 <!-- END REF -->
 
@@ -97,7 +97,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 ```4d
   // Method of a component
- var $hostWS : 4D.WebServer
+ var $hostWS : 4D. WebServer
  $hostWS:=WEB Server(Web server host database)
  If($hostWS.isRunning)
     ...
@@ -816,7 +816,7 @@ The function returns an object describing the Web server launch status. This obj
 
 ```4d
  var $settings;$result : Object
- var $webServer : 4D.WebServer
+ var $webServer : 4D. WebServer
 
  $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
 
@@ -862,7 +862,7 @@ If the web server was started, all web connections and web processes are closed,
 To stop the database Web server:
 
 ```4d
- var $webServer : 4D.WebServer
+ var $webServer : 4D. WebServer
 
  $webServer:=WEB Server(Web server database)
  $webServer.stop()

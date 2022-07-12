@@ -30,7 +30,7 @@ Starting with macOS Sierra, Mac applications can benefit from the Automatic Wind
 
 You can benefit from this feature in the following environments (with 4D 64-bit versions only):
 
-*	Method Editor windows
+*	Code Editor windows
 *	Form Editor windows
 
 All windows from these editors can be put in tab form:
@@ -48,7 +48,7 @@ In the 4D's Preferences dialog box, the **Window tabbing** option allows you to 
 Three options are available:
 
 *	**According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-*	**Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
+*	**Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
 *	**Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
 ### Appearance (macOS only) 
@@ -141,7 +141,7 @@ When creating a new data file, 4D uses the language previously set in this menu.
 
 This area configures access to the 4D HTML documentation displayed in your current browser:
 
-*	When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Method editor;
+*	When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
 *	When you double-click on a 4D command in the **Commands Page** of the Explorer.
 
 

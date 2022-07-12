@@ -315,6 +315,8 @@ $status:=$imap.append($msg; "Drafts")
 
 
 
+
+
 <!-- INCLUDE transporter.authenticationModeIMAP.Desc -->
 
 
@@ -324,6 +326,7 @@ $status:=$imap.append($msg; "Drafts")
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
 
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
 
 ## .checkConnectionDelay
 
@@ -343,7 +346,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 >**Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
-
+<!-- END REF -->
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
@@ -797,6 +800,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF IMAPTransporterClass.getBoxInfo().Desc -->
+
 ## .getBoxInfo()
 
 <details><summary>History</summary>
@@ -1573,6 +1577,7 @@ $options:=New object
 $pw:=Request("Please enter your password:")
 
 If(OK=1) $options.host:="imap.gmail.com"
+
 $options.user:="test@gmail.com"
 $options.password:=$pw
 

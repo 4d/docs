@@ -17,7 +17,7 @@ Catching a command enables you to start tracing the execution of any process as 
 ## Breakpoints
 
 
-To create a break point, click in the left margin of the Source Code pane in the debugger or in the Method editor. 
+To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor. 
 
 In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
 
@@ -34,7 +34,7 @@ You can edit the behavior of a breakpoint using the Breakpoint Properties window
 
 ![breakpoint-properties](assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Method Editor or the [Source Code Pane](debugger.md#source-code-pane). You can:
+This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). You can:
 
 - right-click a line and select **Edit Breakpoint** in the contextual menu, or 
 - `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.
@@ -57,7 +57,7 @@ The server break point list is automatically restored if it becomes again the at
 
 ### Break List 
 
-The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Method Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
 To open the Break list page:
 
@@ -74,7 +74,7 @@ Using this window, you can:
 * Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
 * Open the methods where the breakpoint are located by double-clicking any line in the list
 
-You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Method Editor.
+You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Code Editor.
 
 
 ## Catching Commands

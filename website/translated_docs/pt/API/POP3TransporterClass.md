@@ -58,15 +58,15 @@ O comando `POP3 New transporter`<!-- REF #_command_.POP3 New transporter. Summar
 In the *server* parameter, pass an object containing the following properties:
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                | Default value (if omitted)                                          |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                      | Default value (if omitted)                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                               |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object. | nenhum                                                              |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Text string or token object representing OAuth2 authorization credentials. | nenhum                                                              |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| the most secure authentication mode supported by the server is used |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                  |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obrigatório*                                                       |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| nenhum                                                              |
-| **.password** : Text<p>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.                                                                                                                                                                                                                                                      | nenhum                                                              |
+| **.password** : Text<p>User password for authentication on the server. Text string or token object representing OAuth2 authorization credentials.                                                                                                                                                                                                                                                      | nenhum                                                              |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                 |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| nenhum                                                              |
 
@@ -145,6 +145,10 @@ A função `.getMIMEAsBlob()`<!-- REF #POP3TransporterClass.getMIMEAsBlob(). Sum
     $status:=$transporter.checkConnection()
     If($status.success)
        ALERT("POP3 connection check successful!")
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
     Else
        ALERT("Error: "+$status.statusText)
     End if
@@ -373,6 +377,7 @@ O método retorna **Null** se:
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
 ```
 

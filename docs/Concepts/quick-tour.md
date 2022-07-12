@@ -10,7 +10,7 @@ Using the 4D language, printing the traditional "Hello, world!" message on scree
 ALERT("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Method editor:
+This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Code Editor:
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor. 
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor. 
 
 ## Methods
 

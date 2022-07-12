@@ -147,7 +147,7 @@ Tenga en cuenta que la entidad correspondiente se vuelve a cargar desde el almac
 *index* puede ser cualquier número entre 0 y `.length`-1.
 
 *   Si *index* está fuera de rango, se devuelve un error.
-*   Si *index* corresponde a una entidad descartada, se devuelve un valor Null.
+*   Si el "kind" de *attributeName* es `storage`: `.attributeName` devuelve una colección de valores del mismo tipo que *attributeName*.
 > > **Atención**: `EntitySelection[index]` es una expresión no asignable, lo que significa que no puede utilizarse como referencia editable de la entidad con métodos como [`.lock()`](EntityClass.md#lock) o [`.save()`](EntityClass.md#save). Para trabajar con la entidad correspondiente, es necesario asignar la expresión devuelta a una expresión asignable, como una variable. Ejemplos:
 
 ```4d

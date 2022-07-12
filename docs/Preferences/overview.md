@@ -3,7 +3,7 @@ id: overview
 title: Overview
 ---
 
-User preferences specify various settings affecting your working environment, e.g. default options, display themes, method editor features, shortcuts, etc. They are applied to all projects opened with your 4D or 4D Server application.
+User preferences specify various settings affecting your working environment, e.g. default options, display themes, Code Editor features, shortcuts, etc. They are applied to all projects opened with your 4D or 4D Server application.
 
 **4D Server**: Object locking occurs when two or more users try to modify the settings in the Preferences dialog box at the same time. Only one user can use the Preferences dialog box at a time.
 

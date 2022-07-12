@@ -593,7 +593,7 @@ Durante una ejecución de `.wait()` se ejecutan las funciones de retrollamada, e
 
 Esta función devuelve el objeto SystemWorker.
 
-> Esta función no es necesaria si ha creado el `SystemWorker` de un proceso worker 4D.
+> This function is not necessary if you created the `SystemWorker` form a 4D worker process.
 
 <!-- END REF -->
 

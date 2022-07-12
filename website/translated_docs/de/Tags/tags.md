@@ -407,12 +407,15 @@ This example of code inserted in a static HTML page displays a different label a
 ```html
 <BODY>
 ...
+<BODY>
+...
 <!--#4DIF (vname#"")-->
 Names starting with <!--#4DTEXT vname-->.
 <!--#4DELSE-->
 No name has been found.
 <!--#4DENDIF-->
 ...
+</BODY>
 </BODY>
 ```
 
@@ -493,6 +496,8 @@ The following code:
     ...
     NEXT RECORD([People])
  End while
+    NEXT RECORD([People])
+ End while
 ```
 
 ### `<!--#4DLOOP array-->`
@@ -516,6 +521,7 @@ The following code example:
     arr_names:=$Elem
     ...
  End for
+ End for
 ```
 
 ### `<!--#4DLOOP method-->`
@@ -537,13 +543,17 @@ The following code example:
 ... could be expressed in 4D language in the following way:
 
 ```4d
- If(AuthenticationWebOK)
-    If(my_method(0))
-       $counter:=1
-       While(my_method($counter))
-          ...
-          $counter:=$counter+1
-       End while
+ C_LONGINT($1)
+ C_BOOLEAN($0)
+ If($1=0) `Initialisation
+    $0:=True
+ Else
+    If($1<50)
+       ...
+       var:=...
+          $0:=True
+    Else
+       $0:=False `Stops the loop
     End if
  End if
 ```

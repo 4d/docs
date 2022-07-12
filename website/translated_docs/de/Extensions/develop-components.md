@@ -77,7 +77,7 @@ On the other hand, by default these project methods will not be visible, and the
 
 ![](assets/en/Concepts/shared-methods.png)
 
-Shared project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). These methods are **entry points** of the component.
+Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). These methods are **entry points** of the component.
 
 Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In manchen Fällen müssen Sie jedoch zulassen, dass eine Komponente auf die Projektmethoden Ihres Host Projekts zugreifen kann. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Sharing of classes and functions
 
-By default, component classes and functions cannot be called from the 4D method editor of the host project. If you want your component classes and functions to be exposed in the host projects, you need to declare a component namespace. Additionally, you can control how component classes and functions are suggested in the host method editor.
+If you want your component classes and functions to be exposed in the host projects, you need to declare a component namespace. By default, component classes and functions cannot be called from the 4D Code Editor of the host project. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
 
 ### Declaring the component namespace
 
@@ -356,7 +356,7 @@ Executing initialization or closing code is done by means of the `On Host Databa
 
 By default, all the code of a matrix project installed as a component is potentially visible from the host project. Das bedeutet im einzelnen:
 
-- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. However, it's not possible to open them in the Method editor or modify them.
+- Gemeinsam verwendete Projektmethoden erscheinen im Explorer auf der Seite Methoden und lassen sich in den Methoden des Host Projekts aufrufen. Ihr Inhalt lässt sich auswählen und aus der Vorschau des Explorers kopieren. Sie sind auch im Debugger sichtbar. However, it's not possible to open them in the Code Editor or modify them.
 - Andere Projektmethoden des Matrix Projekts erscheinen nicht im Explorer, sind jedoch ebenfalls im Debugger des Host Projekts sichtbar.
 - The non-hidden classes and functions can be viewed in the debugger [if a namespace is declared](#declaring-the-component-namespace).
 

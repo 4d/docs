@@ -626,6 +626,7 @@ $mail:=New object
 // Creación de un correo
 $mail.from:="tsales@massmarket.com"
 $mail.subject:="Terrific Sale! This week only!"
+This week only!"
 $mail.textBody:="Text format email"
 $mail.htmlBody:="<html><body>HTML format email</body></html>"
 $mail.to:=New collection
@@ -644,7 +645,8 @@ $mime:=MAIL Convert to MIME($mail)
 // To: noreply@4d.com
 // To: test@4d.com
 // Content-Type: multipart/alternative; boundary="E0AE5773D5E95245BBBD80DD0687E218"
-// Subject: Terrific Sale! This week only!
+// Subject: This week only!
+This week only!
 //
 // --E0AE5773D5E95245BBBD80DD0687E218
 // Content-Type: text/plain; charset="UTF-8"

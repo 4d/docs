@@ -207,7 +207,7 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 
 | Contenido                  | Descripción                                                               | Formato |
 | -------------------------- | ------------------------------------------------------------------------- | ------- |
-| methodPreferences.json     | Preferencias del editor de métodos del usuario actual                     | JSON    |
+| methodPreferences.json     | Current user Code Editor preferences                                      | JSON    |
 | methodWindowPositions.json | Posición de la ventana de usuario actual para los métodos                 | JSON    |
 | formWindowPositions.json   | Posición de la ventana de usuario actual para los formularios             | JSON    |
 | workspace.json             | Lista de ventanas abiertas; en macOS, orden de las ventanas de la pestaña | JSON    |

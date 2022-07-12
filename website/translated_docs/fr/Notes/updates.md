@@ -6,6 +6,15 @@ title: Mises à jour de la documentation
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
 
 
+## 4D v19 R6
+
+- New [HTTPRequest](API/HTTPRequestClass.md) class.
+- Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
+- Listbox cells support [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
+- 4D View Pro: new [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
+- New page explaining [why and how 4D collects data](Admin/data-collect.md).
+
+
 ## 4D v19 R5
 
 - Applications client/serveur générées:
@@ -66,7 +75,7 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - New [4DEACH](Tags/tags.md#4deach-and-4dendeach) transformation tag.
 - Web Server: new [SameSite session cookie](WebServer/webServerConfig.md#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](FormEditor/createStylesheet.md#media-queries)
-- New default dark and light themes in [method editor preferences](Preferences/methods.md#theme-list).
+- New default dark and light themes in [Code Editor preferences](Preferences/methods.md#theme-list).
 - [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
 - New, comprehensive [CLI](Admin/cli.md) page.

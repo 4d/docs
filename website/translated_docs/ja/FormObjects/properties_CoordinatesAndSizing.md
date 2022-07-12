@@ -280,3 +280,45 @@ RowHeights{5}:=3
 
 
 
+---
+## 横方向パディング
+
+
+セルの水平方向のパディングを設定します。 値はピクセル単位です (デフォルトは 0)。
+
+![](assets/en/FormObjects/padding.png)
+
+
+
+#### JSON 文法
+
+| 名称                | データタイプ | とりうる値       |
+| ----------------- | ------ | ----------- |
+| horizontalPadding | number | ピクセル数 (>=0) |
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [フッター](properties_Footers.md) - [ヘッダー](properties_Headers.md)
+
+#### 参照
+[縦方向パディング](#vertical-padding)
+
+---
+## 縦方向パディング
+
+
+セルの垂直方向のパディングを設定します。 値はピクセル単位です (デフォルトは 0)。
+
+
+#### JSON 文法
+
+| 名称              | データタイプ | とりうる値       |
+| --------------- | ------ | ----------- |
+| verticalPadding | number | ピクセル数 (>=0) |
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [フッター](properties_Footers.md) - [ヘッダー](properties_Headers.md)
+
+#### 参照
+[横方向パディング](#horizontal-padding)

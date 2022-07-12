@@ -53,15 +53,11 @@ When naming classes, you should keep in mind the following rules:
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
-- Project folder
-	+ Project
-
-
-
-
-		* Sources
-			- Classes
-				+ Polygon.4dm
+Project folder
+	Project
+		Sources
+			Classes
+				Polygon.4dm
 
 ### Deleting a class
 
@@ -71,7 +67,7 @@ To delete an existing class, you can:
 - in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
 
 
-### Using 4D interface
+### Using the 4D interface
 
 Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer. 
 

@@ -128,7 +128,7 @@ title: テキスト
 * *総称ファミリー:* "serif", "sans-serif", "cursive", "fantasy", "monospace" などの汎用ファミリーの名称。
 
 このプロパティは [**OBJECT SET FONT**](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-FONT.301-4505454.ja.html) コマンドによって設定することができます。
-> <span style="font-family:YuGothic; font-size:20pt"> これは 游ゴシック フォントです。</span><br> <span style="font-family:YuMincho; font-size:20pt"> これは 游明朝 フォントです。</span>
+> <span style="font-family:YuGothic; font-size:20pt"> これは 游ゴシック フォントです。 </span><br> <span style="font-family:YuMincho; font-size:20pt"> これは 游明朝 フォントです。 </span>
 
 #### JSON 文法
 

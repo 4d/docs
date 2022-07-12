@@ -21,7 +21,7 @@ Une constante littérale de type date est comprise entre deux points d'exclamati
 
 Une date nulle s’écrit _!00-00-00!_.
 
-**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour entrer une date nulle. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
+**Tip:** The Code Editor includes a shortcut for entering a null date. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
 
 **Notes :**
 

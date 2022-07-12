@@ -26,7 +26,7 @@ Chaque type de blob a ses avantages. Utilisez le tableau suivant pour détermine
 | Performances lors de l'accès aux octets |  +   |    -    |
 | Taille maximale                         | 2Go  | Mémoire |
 
-\*Contrairement aux commandes 4D conçues pour prendre un blob scalaire en paramètre, le fait de passer un blob scalaire à une méthode le duplique en mémoire. Lorsque vous travaillez avec des méthodes, l'utilisation d'objets blob (`4D.Blob`) est plus efficace, car ils sont passés par référence.
+A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes. Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes.
 
 > Par défaut, la taille maximale des blobs scalaires est fixée à 2 Go, mais cette limite peut être inférieure en fonction de votre OS et de l'espace disponible.
 
@@ -75,7 +75,7 @@ Certaines commandes 4D modifient le blob d'origine et ne prennent donc pas en ch
 
 ### Passer des blobs et des objets blob aux méthodes
 
-Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
+Lorsque vous travaillez avec des méthodes, l'utilisation d'objets blob (`4D.Blob`) est plus efficace, car ils sont passés par référence. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
 
 ### Passer un blob scalaire par référence en utilisant un pointeur
 

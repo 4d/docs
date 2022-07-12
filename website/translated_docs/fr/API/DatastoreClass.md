@@ -380,6 +380,9 @@ Vous souhaitez connaitre le nombre de tables chiffr√©es dans le fichier de donn√
  Else
     ALERT("This database is not encrypted.")
  End if
+ Else
+    ALERT("This database is not encrypted.")
+ End if
 ```
 
 <!-- END REF -->

@@ -148,7 +148,7 @@ Webサーバオブジェクトの [.name](#name) プロパティを使用する�
 
  $wSList:=WEB Server list
  $vRun:=$wSList.countValues(True;"isRunning")
- ALERT("利用可能 Webサーバー "+String($wSList.length)+" つ中、"+String($vRun)+" つの Webサーバーが実行中です。")
+ ALERT("利用可能 Webサーバー "+String($wSList.length)+" つ中、"+String($vRun)+" つの Webサーバーが実行中です。 ")
 
 ```
 

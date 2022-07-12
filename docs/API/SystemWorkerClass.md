@@ -592,7 +592,7 @@ During a `.wait()` execution, callback functions are executed, especially callba
 
 This function returns the SystemWorker object. 
 
-> This function is not necessary if you created the `SystemWorker` form a 4D worker process.
+> This function is not necessary if you created the `SystemWorker` from a 4D worker process.
 
 <!-- END REF -->
 

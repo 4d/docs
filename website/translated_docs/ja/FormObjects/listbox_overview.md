@@ -105,11 +105,11 @@ LIST TO ARRAY("ListName";varCol)
 
 このタイプのリストボックスでは、各カラムに式が割り当てられている必要があります。 各行の中身はコレクション要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。
 
-コレクションの各要素、またはエンティティセレクションの各エンティティは、[This](../Concepts/classes.md#this) キーワードを用いてオブジェクトとして取得します。 カラムの式にはプロパティパス、プロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、`This` を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。例: `This.<propertyPath>` (あるいはスカラー値のコレクションの場合は `This.value`)。 カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
+コレクションの各要素、またはエンティティセレクションの各エンティティは、[This](../Concepts/classes.md#this) キーワードを用いてオブジェクトとして取得します。 カラムの式にはプロパティパス、プロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、`This` を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。 例: `This.<propertyPath>` (あるいはスカラー値のコレクションの場合は `This.value`)。 カラムをプログラムで変更するには、`LISTBOX SET COLUMN FORMULA` および `LISTBOX INSERT COLUMN FORMULA` コマンドを使用します。
 
 データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。 その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。
 
-データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 その一方で、コレクションに対して、たとえば [Collection クラス](../API/CollectionClass.md) の様々な関数を使用して変更をおこなった場合、コレクション変数を自らに再代入することで明示的に 4D に通知する必要があり、それによってリストボックスのコンテンツは更新されます。 たとえば:
+データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 たとえば:
 
 ```4d
 myCol:=myCol.push("new value") // リストボックスに new value を表示
@@ -157,6 +157,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [ハイライトセット](properties_ListBox.md#ハイライトセット)                          |           | ○             |                              |
 | [横揃え](properties_Text.md#横揃え)                                       | ○         | ○             | ○                            |
 | [横線カラー](properties_Gridlines.md#横線カラー)                              | ○         | ○             | ○                            |
+| [横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding)   | ○         | ○             | ○                            |
 | [横スクロールバー](properties_Appearance.md#縦スクロールバー)                       | ○         | ○             | ○                            |
 | [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更)                  | ○         | ○             | ○                            |
 | [イタリック](properties_Text.md#イタリック)                                   | ○         | ○             | ○                            |
@@ -190,6 +191,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [変数あるいは式](properties_Object.md#変数あるいは式)                             | ○         | ○             |                              |
 | [縦揃え](properties_Text.md#縦揃え)                                       | ○         | ○             | ○                            |
 | [縦線カラー](properties_Gridlines.md#縦線カラー)                              | ○         | ○             | ○                            |
+| [縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding)     | ○         | ○             | ○                            |
 | [縦スクロールバー](properties_Appearance.md#縦スクロールバー)                       | ○         | ○             | ○                            |
 | [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更)                  | ○         | ○             | ○                            |
 | [表示状態](properties_Display.md#表示状態)                                  | ○         | ○             | ○                            |
@@ -277,7 +279,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### 列特有のプロパティ
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式の型-式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-(True時)-テキスト-(False時)) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [行フォントカラー式](properties_Text.md#行フォントカラー式) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式タイプ (配列リストボックス列)](properties_Object.md#式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (セレクションおよびコレクションリストボックス列)](properties_DataSource.md#データタイプ) - [関連付け](properties_DataSource.md#関連付け) - [幅](properties_CoordinatesAndSizing.md#幅) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding) - [縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [入力可](properties_Entry.md#入力可) - [入力フィルター](properties_Entry.md#入力フィルター) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#表示タイプ) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_Text.md#背景色) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
 ### フォームイベント
 
@@ -328,7 +330,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ### ヘッダー特有のプロパティ
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [パス名](properties_TextAndPicture.md#ピクチャーパス名) - [アイコンの場所](properties_TextAndPicture.md#アイコンの場所) - [幅](properties_CoordinatesAndSizing.md#幅) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [パス名](properties_TextAndPicture.md#ピクチャーパス名) - [アイコンの場所](properties_TextAndPicture.md#アイコンの場所) - [幅](properties_CoordinatesAndSizing.md#幅) - [横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding) - [縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
 
 
 
@@ -352,7 +354,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 ### フッター特有のプロパティ
 
 
-[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [変数の計算](properties_Object.md#変数の計算) - [CSSクラス](properties_Object.md#cssクラス) - [幅](properties_CoordinatesAndSizing.md#幅) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [ワードラップ](properties_Display.md#ワードラップ) [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [変数の計算](properties_Object.md#変数の計算) - [CSSクラス](properties_Object.md#cssクラス) - [幅](properties_CoordinatesAndSizing.md#幅) - [横方向パディング](properties_CoordinatesAndSizing.md#horizontal-padding) - [縦方向パディング](properties_CoordinatesAndSizing.md#vertical-padding) - [文字フォーマット](properties_Display.md#文字フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [ヘルプTips](properties_Help.md#ヘルプtips)
 
 
 ## 入力の管理
@@ -591,7 +593,7 @@ End if
 
 変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。
 
-> [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/ja/page236.html) コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。
+> [配列タイプ](#配列リストボックス) のリストボックスのみを階層にできます。
 
 
 ## スタイルとカラー、表示の管理

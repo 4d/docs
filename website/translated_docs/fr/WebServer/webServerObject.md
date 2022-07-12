@@ -92,7 +92,7 @@ Un objet serveur Web contient [diverses propriétés](API/WebServerClass.md#web-
 
 Ces propriétés sont définies :
 
-1. à l'aide du `paramètre` <0>settings</0> de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
+1. de la fonction [`.start()`](API/WebServerClass.md#start) (sauf pour les propriétés en lecture seule, voir ci-dessous),
 2. si elles ne sont pas utilisées, à l'aide de la commande `WEB SET OPTION` (applications hôtes uniquement),
 3. si elles ne sont pas utilisées, dans les paramètres de l'application hôte ou du composant.
 

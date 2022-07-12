@@ -34,7 +34,7 @@ El evento `On After Keystroke` no se genera:
 Cuando una entrada requiere una secuencia de presiones de teclas, los eventos [`On Before Keystroke`](onBeforeKeystroke.md) y [`On After Keystroke`] se generan sólo cuando el usuario valida completamente la entrada. El comando `Keystroke` devuelve el carácter validado. Este caso se da principalmente:
 
 - cuando se utilizan las teclas "muertas" como ^ o ~: los eventos se generan sólo cuando se introduce el carácter extendido eventualmente (por ejemplo, "ê" o ñ),
-- cuando un IME (editor de métodos de entrada) muestra una caja de diálogo intermedia en la que el usuario puede introducir una combinación de caracteres: los eventos se generan sólo cuando el diálogo IME se valida.
+- when an IME (Input Code Editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
 
 
 ### Ver también

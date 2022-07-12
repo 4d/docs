@@ -5,7 +5,7 @@ title: Formula
 
 
 
-Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos nativos [`4D.Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
+Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) permitem criar objetos nativos [`4D. Function`](#about-4dfunction-objects) para executar expressões ou códigos 4D expressos como texto.
 
 
 ### Objetos de formulários
@@ -13,7 +13,7 @@ Os comandos [Formula](#formula) e [Formula from string](#formula-from-string) pe
 Objetos formulário podem ser encapsulados em propriedades objeto:
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=New object
  $f.message:=Formula(ALERT("Hello world"))
 ```
@@ -44,7 +44,7 @@ Também pode executar uma função usando as funções [`apply()`](#apply) e [`c
 
 #### Utilização de parâmetros
 
-Pode passar parâmetros para suas fórmulas usando o parâmetro sequencial [ syntax](Concepts/parameters.md#sequential-parameters) baseado em $1, $2...$n. For example, you can write:
+Pode passar parâmetros para suas fórmulas usando o parâmetro sequencial [ syntax](Concepts/parameters.md#sequential-parameters) baseado em $1, $2...$n. For example, you can write: For example, you can write:
 
 ```4d
  var $f : Object
@@ -67,7 +67,7 @@ Ou usando a função[.call()](#call):
 Para mais conveniência, quando a fórmula é feita de um único método de projeto, parâmetros podem ser omitidos na inicialização do objeto fórmula. Pode ser passado quando a fórmula for chamada. Por exemplo:
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
 
  $f:=Formula(myMethod)
   //Não é necessário escrever Formula(myMethod($1;$2))
@@ -85,9 +85,9 @@ Para mais conveniência, quando a fórmula é feita de um único método de proj
 
 Parâmetros são recebidos dentro do método, na ordem que são especificados na chamada.
 
-### Sobre objetos 4D.Function
+### Sobre objetos 4D. Function
 
-Um objeto`4D.Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos Function:
+Um objeto`4D. Function` contém um pedaço de código que pode ser executado de um objeto, seja usando o operador `()` ou usando as funções [`apply()`](#apply) e [`call()`](#call). 4D propõe três tipos de objetos Function:
 
 - funções nativas, ou seja, funções integradas, built-in, de várias classes 4D tais como `collection.sort()` ou `file.copyTo()`.
 - funções usuário, ciradas em [classes](Concepts/classes.md) usuário usanod a [palavra chave Function](Concepts/classes.md#function).
@@ -139,7 +139,7 @@ A fórmula retornada pode ser chamada com:
 *   sintaxe notação objeto (ver [formula object](#formula-object)).
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=Formula(1+2)
  $o:=New object("myFormula";$f)
 
@@ -163,7 +163,7 @@ Os objetos criados por `Formula` podem ser salvos, por exemplo, em um campo de d
 Uma fórmula simples:
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=Formula(1+2)
 
  var $o : Object
@@ -224,7 +224,7 @@ Chamar uma fórmula usando notação de objeto:
 
 ```4d
  var $feta; $robot : Object
- var $calc : 4D.Function
+ var $calc : 4D. Function
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
 
@@ -276,7 +276,7 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 ```4d
  var $textFormula : Text
- var $f : 4D.Function
+ var $f : 4D. Function
  $textFormula:=Request("Please type a formula")
  If(ok=1)
     $f:=Formula from string($textFormula)
@@ -333,7 +333,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 #### Exemplo 1
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=Formula($1+$2+$3)
 
  $c:=New collection(10;20;30)
@@ -344,7 +344,7 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 #### Exemplo 2
 
 ```4d
- var $calc : 4D.Function
+ var $calc : 4D. Function
  var $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
@@ -392,7 +392,7 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
 #### Exemplo 1
 
 ```4d
- var $f : 4D.Function
+ var $f : 4D. Function
  $f:=Formula(Uppercase($1))
  $result:=$f.call(Null;"hello") // retorna "HELLO"
 ```
@@ -431,7 +431,7 @@ Essa propriedade é**apenas leitura**.
 #### Exemplo
 
 ```4d
- var $of : 4D.Function
+ var $of : 4D. Function
  var $tf : Text
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"

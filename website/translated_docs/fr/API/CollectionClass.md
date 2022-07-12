@@ -196,8 +196,8 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 *   heure (stockée en nombre de milliseconds - réel)
 *   null
 *   shared object(*)
-*   shared collection(*)
-> Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
+*   shared collection(*) > Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
+> Cette fonction modifie la collection d'origine.
 
 (\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) comme élément à une collection partagée, il/elle hérite de son (*)locking identifier*. Pour plus d'informations sur ce point, reportez-vous au manuel **Concepts du langage 4D**.
 
@@ -342,7 +342,7 @@ La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les �
 > Cette fonction modifie la collection d'origine.
 
 Par défaut, les éléments de *col2* sont ajoutés à la fin de la collection d'origine. Vous pouvez passer dans *index* le numéro de l'élément après lequel vous souhaitez que les éléments de *col2* soient insérés dans la collection.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0.
+> Cette fonction ne modifie pas la collection d'origine.
 
 *   Si *index* > la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
 *   Si *index* < 0, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
@@ -737,7 +737,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **vrai** si elles sont identiques (deep comparison).
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre option.
-> Les éléments contenant valeurs **Null** ne sont pas équivalents aux éléments Undefined.
+> Cette fonction ne modifie pas la collection d'origine.
 
 #### Exemple
 
@@ -769,45 +769,51 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 ## .every()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.every().Syntax --> **.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
+<!-- REF #collection.every().Syntax --> **.every**( { *startFrom* : Integer ; } *formula* : 4D.Function { ;*...param* : any } ) : Boolean<br>**.every**( { *startFrom* : Integer ; } *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 
 <!-- REF #collection.every().Params -->
-| Paramètres | Type    |    | Description                                   |
-| ---------- | ------- |:--:| --------------------------------------------- |
-| startFrom  | Integer | -> | Elément à partir duquel débuter l'évaluation  |
-| methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
-| param      | Mixed   | -> | Paramètre(s) à passer à nomMéthode            |
-| Résultat   | Booléen | <- | Vrai si tous les éléments sont évalués à vrai |
+| Paramètres | Type        |    | Description                                       |
+| ---------- | ----------- |:--:| ------------------------------------------------- |
+| startFrom  | Integer     | -> | Elément à partir duquel débuter l'évaluation      |
+| formula    | 4D.Function | -> | Objet formule                                     |
+| methodName | Text        | -> | Name of a method                                  |
+| param      | Mixed       | -> | Parameter(s) to pass to *formula* or *methodName* |
+| Résultat   | Booléen     | <- | Vrai si tous les éléments sont évalués à vrai     |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.every()` <!-- REF #collection.every().Summary -->retourne **vrai** si tous les éléments de la collection ont été évalués à vrai par le test implémenté dans la méthode *methodName* passée en paramètre<!-- END REF -->.
+The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* name<!-- END REF -->.
 
+You designate the callback to be executed to evaluate collection elements using either:
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. La méthode reçoit un paramètre de type `Object` dans $1 et doit passer true dans *$1.result* pour chaque élément ayant satisfait aux conditions du test.
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
 
-*methodName* reçoit les paramètres suivants :
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. It receives an `Object` in first parameter ($1).
+
+The callback receives the following parameters:
 
 *   dans *$1.value* : valeur de l'élément à évaluer
 *   in *$2*: param
 *   in *$N...*: paramN...
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+It can set the following parameter(s):
 
-*   *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
+*   (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
-Dans tous les cas, au premier élément retournant **false** dans *$1.result*, la fonction `.every()` cesse d'appeler *methodName* et retourne **false**.
+In all cases, at the point when the `.every()` function encounters the first collection element evaluated to **false**, it stops calling the callback and returns **false**.
 
 Par défaut, `.every()` évalue l'ensemble de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer l'évaluation.
 
@@ -821,17 +827,14 @@ Par défaut, `.every()` évalue l'ensemble de la collection. Optionnellement, vo
 ```4d
 var $c : Collection  
 var $b : Boolean
+var $f : 4D.Function
+
+$f:=Formula($1.value>0)
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("NumberGreaterThan0") //retourne true
+$b:=$c.every($f) //returns true
 $c.push(-1)
-$b:=$c.every("NumberGreaterThan0") //retourne false
-```
-
-Avec la méthode ***NumberGreaterThan0*** suivante :
-
-```4d
-$1.result:=$1.value>0
+$b:=$c.every($f) //returns false
 ```
 
 #### Exemple 2
@@ -841,21 +844,15 @@ Cet exemple vérifie que tous les éléments de la collection sont de type réel
 ```4d
 var $c : Collection
 var $b : Boolean
+var $f : 4D.Function
+
+$f:=Formula(Value type($1.value)=$2
 $c:=New collection
 $c.push(5;3;1;4;6;2)
-$b:=$c.every("TypeLookUp";Is real) //$b=true
+$b:=$c.every($f;Is real) //$b=true
 $c:=$c.push(New object("name";"Cleveland";"zc";35049))
 $c:=$c.push(New object("name";"Blountsville";"zc";35031))
-$b:=$c.every("TypeLookUp";Is real) //$b=false
-```
-
-Avec la méthode ***TypeLookUp*** suivante :
-
-```4d
-#DECLARE ($toEval : Object ; $param : Integer) //$1; $2
-If(Value type($toEval.value)=$param)
-    $toEval.result:=True
-End if
+$b:=$c.every($f;Is real) //$b=false
 ```
 
 
@@ -864,11 +861,10 @@ End if
 <!-- REF collection.extract().Desc -->
 ## .extract()
 
-<details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
-</details>
+<details><summary>History</summary>
+|Version|Changes|
+
+|---|---| |v16 R6|Added| </details>
 
 
 <!-- REF #collection.extract().Syntax --> Paramètre(s) à passer à *methodName*<!-- END REF -->
@@ -995,42 +991,49 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 ## .filter()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.filter().Syntax --> **.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.filter().Syntax --> **.filter**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br>**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
 
 
 
 <!-- REF #collection.filter().Params -->
-| Paramètres | Type       |    | Description                                                       |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------- |
-| methodName | Text       | -> | Nom de la méthode à appeler pour filtrer la collection            |
-| param      | Mixed      | -> | Paramètre(s) à passer à *methodName*                              |
-| Résultat   | Collection | <- | Nouvelle collection contenant les éléments filtrés (shallow copy) |
+| Paramètres | Type        |    | Description                                                       |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objet formule                                                     |
+| methodName | Text        | -> | Name of a method                                                  |
+| param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*                 |
+| Résultat   | Collection  | <- | Nouvelle collection contenant les éléments filtrés (shallow copy) |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.filter()` <!-- REF #collection.filter().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine pour lesquels le résultat de la méthode *methodName* est **true**<!-- END REF -->. Cette méthode retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which the *formula* or *methodName* result is **true**<!-- END REF -->. Cette méthode retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
+You designate the callback to be executed to filter collection elements using either:
 
-*methodName* reçoit les paramètres suivants :
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection. It receives an `Object` in first parameter ($1).
+
+The callback receives the following parameters:
 
 *   dans *$1.value* : valeur de l'élément à évaluer
-*   dans *$2* : *param*
-*   dans *$N...* : param2...paramN
+*   in *$2*: param
+*   in *$N...*: paramN...
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+It can set the following parameter(s):
 
-*   *$1.result* (booléen) : **true** si l'élément satisfait à la condition de filtrage et doit être conservé.
+*   (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the filter condition and must be kept, **false** otherwise.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 
@@ -1039,20 +1042,10 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 Vous voulez obtenir la collection des éléments de type texte dont la longueur est inférieure à 6 :
 
 ```4d
- var $col;$colNew : Collection
- $col:=New collection("hello";"world";"red horse";66;"tim";"san jose";"miami")
- $colNew:=$col.filter("LengthLessThan";6)
+var $col;$colNew : Collection
+$col:=New collection("hello";"world";"red horse";66;"tim";"san jose";"miami")
+$colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)<$2)); 6)
   //$colNew=["hello","world","tim","miami"]
-```
-
-Le code de la méthode ***LengthLessThan*** est le suivant :
-
-```4d
- C_OBJECT($1)
- C_LONGINT($2)
- If(Value type($1.value)=Is text)
-    $1.result:=(Length($1.value))<$2
- End if
 ```
 
 #### Exemple 2
@@ -1061,24 +1054,15 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 
 ```4d
  var $c;$c2;$c3 : Collection
+ var $f : 4D.Function
+
+ $f:=Formula(OB Get type($1;"value")=$2)
  $c:=New collection(5;3;1;4;6;2)
  $c.push(New object("name";"Cleveland";"zc";35049))
  $c.push(New object("name";"Blountsville";"zc";35031))
- $c2:=$c.filter("TypeLookUp";Is real) // $c2=[5,3,1,4,6,2]
- $c3:=$c.filter("TypeLookUp";Is object)
+ $c2:=$c.filter($f;Is real) // $c2=[5,3,1,4,6,2]
+ $c3:=$c.filter($f;Is object)
   // $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]
-```
-
-Le code de ***TypeLookUp*** est :
-
-```4d
- C_OBJECT($1)
- C_LONGINT($2)
- If(OB Get type($1;"value")=$2)
-
-
-    $1.result:=True
- End if
 ```
 
 
@@ -1088,44 +1072,52 @@ Le code de ***TypeLookUp*** est :
 ## .find()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.find().Syntax --> **.find**( *methodName* : Text { ; *...param* : any } ) : any<br>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
+<!-- REF #collection.find().Syntax --> **.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : any<br>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
 
 
 
 <!-- REF #collection.find().Params -->
-| Paramètres | Type    |    | Description                                        |
-| ---------- | ------- |:--:| -------------------------------------------------- |
-| startFrom  | Integer | -> | Elément à partir duquel débuter la recherche       |
-| methodName | Text    | -> | Nom de la méthode à appeler pour la recherche      |
-| param      | any     | -> | Paramètre(s) à passer à *methodName*               |
-| Résultat   | any     | <- | Première valeur trouvée (Undefined si non trouvée) |
+| Paramètres | Type        |    | Description                                        |
+| ---------- | ----------- |:--:| -------------------------------------------------- |
+| startFrom  | Integer     | -> | Elément à partir duquel débuter la recherche       |
+| formula    | 4D.Function | -> | Objet formule                                      |
+| methodName | Text        | -> | Name of a method                                   |
+| param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*  |
+| Résultat   | any         | <- | Première valeur trouvée (Undefined si non trouvée) |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.find()` <!-- REF #collection.find().Summary -->retourne la première valeur dans la collection pour laquelle *methodName* retourne **true**<!-- END REF -->.
+The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *formula* or *methodName* result, applied on each element, returns **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
+You designate the callback to be executed to evaluate collection elements using either:
 
-*methodName* reçoit les paramètres suivants :
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
+
+The callback receives the following parameters:
 
 *   dans *$1.value* : valeur de l'élément à évaluer
-*   dans $2 : *param*
-*   dans *$N...* : param2...paramN
+*   in *$2*: param
+*   in *$N...*: paramN...
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+It can set the following parameter(s):
 
-*   *$1.result* (booléen) : **true** si l'élément satisfait à la condition de recherche et doit être conservé.
+*   (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the search condition, **false** otherwise.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+
 
 Par défaut, `.find()` effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer la recherche.
 
@@ -1136,22 +1128,12 @@ Par défaut, `.find()` effectue une recherche dans la totalité de la collection
 
 #### Exemple 1
 
-Vous souhaitez obtenir le premier élément dont la taille est inférieure à 5 caractères :
+You want to get the first text element with a length smaller than 5:
 
 ```4d
- var $col : Collection
- $col:=New collection("hello";"world";4;"red horse";"tim";"san jose")
- $value:=$col.find("LengthLessThan";5) //$value="tim"
-```
-
-Le code de la méthode ***LengthLessThan*** est le suivant :
-
-```4d
- var $1 : Object
- var $2 : Integer
- If(Value type($1.value)=Is text)
-    $1.result:=(Length($1.value))<$2
- End if
+var $col : Collection
+$col:=New collection("hello";"world";4;"red horse";"tim";"san jose")
+$value:=$col.find(Formula((Value type($1.value)=Is text) && (Length($1.value)<$2)); 5) //$value="tim"
 ```
 
 #### Exemple 2
@@ -1159,23 +1141,17 @@ Le code de la méthode ***LengthLessThan*** est le suivant :
 Vous souhaitez trouver un nom de ville dans une collection :
 
 ```4d
- var $c : Collection
- var $c2 : Object
- $c:=New collection
- $c.push(New object("name";"Cleveland";"zc";35049))
- $c.push(New object("name";"Blountsville";"zc";35031))
- $c.push(New object("name";"Adger";"zc";35006))
- $c.push(New object("name";"Clanton";"zc";35046))
- $c.push(New object("name";"Clanton";"zc";35045))
- $c2:=$c.find("FindCity";"Clanton") //$c2={name:Clanton,zc:35046}
-```
+var $c : Collection
+var $c2 : Object
+$c:=New collection
+$c.push(New object("name"; "Cleveland"; "zc"; 35049))
+$c.push(New object("name"; "Blountsville"; "zc"; 35031))
+$c.push(New object("name"; "Adger"; "zc"; 35006))
+$c.push(New object("name"; "Clanton"; "zc"; 35046))
+$c.push(New object("name"; "Clanton"; "zc"; 35045))
 
-Le code de la méthode ***FindCity*** est :
+$c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046}
 
-```4d
- var $1 : Object
- var $2 : Text
- $1.result:=$1.value.name=$2 //name est un nom de propriété d'objets dans la collection
 ```
 
 
@@ -1185,45 +1161,51 @@ Le code de la méthode ***FindCity*** est :
 ## .findIndex()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
 
-<!-- REF #collection.findIndex().Syntax --> **.findIndex**( *methodName* : Text { ; *...param* : any } ) : Integer<br>**.findIndex**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
-
+<!-- REF #collection.findIndex().Syntax --> **.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : Integer<br>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
 
 
 
 <!-- REF #collection.findIndex().Params -->
-| Paramètres | Type    |    | Description                                         |
-| ---------- | ------- |:--:| --------------------------------------------------- |
-| startFrom  | Integer | -> | Elément à partir duquel débuter la recherche        |
-| methodName | Text    | -> | Nom de la méthode à appeler pour la recherche       |
-| param      | any     | -> | Paramètre(s) à passer à *methodName*                |
-| Résultat   | Integer | <- | Numéro du premier élément trouvé (-1 si non trouvé) |
+| Paramètres | Type        |    | Description                                         |
+| ---------- | ----------- |:--:| --------------------------------------------------- |
+| startFrom  | Integer     | -> | Elément à partir duquel débuter la recherche        |
+| formula    | 4D.Function | -> | Objet formule                                       |
+| methodName | Text        | -> | Name of a method                                    |
+| param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*   |
+| Résultat   | Integer     | <- | Numéro du premier élément trouvé (-1 si non trouvé) |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->retourne le numéro, dans la collection, du premier élément pour lequel *methodName* retourne **true**<!-- END REF -->.
+The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *formula* or *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres.
+You designate the callback to be executed to evaluate collection elements using either:
 
-*methodName* reçoit les paramètres suivants :
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- *methodName*, the name of a project method (text).
+
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
+
+The callback receives the following parameters:
 
 *   dans *$1.value* : valeur de l'élément à évaluer
-*   dans $2 : *param*
-*   dans *$N...* : param2...paramN
+*   in *$2*: param
+*   in *$N...*: paramN...
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+It can set the following parameter(s):
 
-*   *$1.result* (booléen) : **true** si l'élément satisfait à la condition de recherche et doit être conservé.
+*   (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value matches the search condition, **false** otherwise.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
 Par défaut, `.findIndex()` effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer la recherche.
@@ -1237,24 +1219,16 @@ Par défaut, `.findIndex()` effectue une recherche dans la totalité de la colle
 Vous souhaitez trouver la position du premier nom de ville dans la collection :
 
 ```4d
- var $c : Collection
- var $val2;$val3 : Integer
- $c:=New collection
- $c.push(New object("name";"Cleveland";"zc";35049))
- $c.push(New object("name";"Blountsville";"zc";35031))
- $c.push(New object("name";"Adger";"zc";35006))
- $c.push(New object("name";"Clanton";"zc";35046))
- $c.push(New object("name";"Clanton";"zc";35045))
- $val2:=$c.findIndex("FindCity";"Clanton") // $val2=3
- $val3:=$c.findIndex($val2+1;"FindCity";"Clanton") //$val3=4
-```
-
-Le code de la méthode ***FindCity*** est :
-
-```4d
- var $1 : Object
- var $2 : Text
- $1.result:=$1.value.name=$2
+var $c : Collection
+var $val2;$val3 : Integer
+$c:=New collection
+$c.push(New object("name";"Cleveland";"zc";35049))
+$c.push(New object("name";"Blountsville";"zc";35031))
+$c.push(New object("name";"Adger";"zc";35006))
+$c.push(New object("name";"Clanton";"zc";35046))
+$c.push(New object("name";"Clanton";"zc";35045))
+$val2:=$c.findIndex(Formula($1.value.name=$2);"Clanton") // $val2=3
+$val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 ```
 
 
@@ -1408,7 +1382,7 @@ La fonction `.insert()` <!-- REF #collection.insert().Summary --> insère *eleme
 > Cette fonction modifie la collection d'origine.
 
 Dans *index*, passez le numéro de l'élément après lequel vous souhaitez que le paramètre element soit inséré.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0.
+> Cette fonction ne modifie pas la collection d'origine.
 
 *   Si *index* > la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
 *   Si *index* < 0, il est recalculé comme *index:=index+length* (la fin de la collection est considérée comme point de départ du calcul de la position).
@@ -1549,7 +1523,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 #### Description
 
-La propriété `.length` <!-- REF #collection.length.Summary -->retourne le nombre d'éléments contenus dans la collection.<!-- END REF -->
+La propriété `.length` <!-- REF #collection.length.Summary -->retourne le nombre d'éléments contenus dans la collection<!-- END REF -->.
 
 La propriété `.length` est initialisée à la création de la collection. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. Cette propriété est en **lecture seulement** (vous ne pouvez pas l'utiliser pour modifier la taille de la collection).
 
@@ -1570,61 +1544,61 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 ## .map()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.map().Syntax --> **.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.map().Syntax --> **.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br>**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 
 
 <!-- REF #collection.map().Params -->
-| Paramètres | Type       |    | Description                                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| methodName | Text       | -> | Nom de la méthode à appeler pour transformer les éléments de la collection |
-| param      | any        | -> | Paramètre(s) à passer à la méthode                                         |
-| Résultat   | Collection | <- | Collection de valeurs transformées                                         |
+| Paramètres | Type        |    | Description                                       |
+| ---------- | ----------- |:--:| ------------------------------------------------- |
+| formula    | 4D.Function | -> | Objet formule                                     |
+| methodName | Text        | -> | Name of a method                                  |
+| param      | any         | -> | Parameter(s) to pass to *formula* or *methodName* |
+| Résultat   | Collection  | <- | Collection de valeurs transformées                |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.map()` <!-- REF #collection.map().Summary -->crée une nouvelle collection basée sur le résultat de l'exécution de la méthode *methodName* sur chaque élément de la collection d'origine<!-- END REF -->. Optionnellement, vous pouvez passer des paramètres à *methodName* via le paramètre *param*. `.map()` retourne toujours une collection de taille égale à celle de la collection d'origine.
+The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). `.map()` retourne toujours une collection de taille égale à celle de la collection d'origine.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
 
-*methodName* reçoit les paramètres suivants :
+You designate the callback to be executed to evaluate collection elements using either:
 
-*   dans *$1.value* (tout type) : valeur de l'élément à évaluer
-*   dans *$2* (tout type) : *param*
-*   dans *$N...* (tout type) : *paramN...*
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any operation, with or without the parameter(s) and must return new transformed value to add to the resulting collection. It receives an `Object` in first parameter ($1).
 
+The callback receives the following parameters:
 
-*   *$1.result* (tout type) : nouvelle valeur transformée à ajouter à la collection résultante
+*   dans *$1.value* : valeur de l'élément à évaluer
+*   in *$2*: param
+*   in *$N...*: paramN...
+
+It can set the following parameter(s):
+
+*   (mandatory if you used a method) *$1.result* (any type): new transformed value to add to the resulting collection
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+
 
 #### Exemple
 
 
 ```4d
- var $c; $c2 : Collection
- $c:=New collection(1;4;9;10;20)
- $c2:=$c.map("Percentage";$c.sum())
+var $c; $c2 : Collection
+$c:=New collection(1; 4; 9; 10; 20)
+$c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
   //$c2=[2.27,9.09,20.45,22.73,45.45]
-```
-
-Avec la méthode *NumberGreaterThan0* suivante :
-
-```4d
- var $1 : Object
- var $2 : Real
- $1.result:=Round(($1.value/$2)*100;2)
 ```
 
 
@@ -1873,42 +1847,53 @@ Tri avec un chemin de propriété :
 ## .orderByMethod()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.orderByMethod().Syntax --> **.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax --> **.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
 
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| Paramètres | Type       |    | Description                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
-| extraParam | expression | -> | Paramètre(s) à passer à la méthode                  |
-| Résultat   | Collection | <- | Copie triée de la collection (shallow copy)         |
+| Paramètres | Type        |    | Description                                 |
+| ---------- | ----------- |:--:| ------------------------------------------- |
+| formula    | 4D.Function | -> | Objet formule                               |
+| methodName | Text        | -> | Name of a method                            |
+| extraParam | any         | -> | Parameter(s) to pass                        |
+| Résultat   | Collection  | <- | Copie triée de la collection (shallow copy) |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par *methodName*<!-- END REF -->.
+The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *formula* 4D function or *methodName* method<!-- END REF -->.
 
 Cette fonction retourne une **shallow copy (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom d'une méthode qui compare deux valeurs et retourne **true** dans *$1.result* si la première valeur est inférieure à la seconde valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via *extraParam*.
 
-*   *methodName* reçoit les paramètres suivants :
-    *   $1 (object), où :
-        *   *$1.value* (tout type) : valeur du premier élément à comparer
-        *   *$1.value2* (tout type) : valeur du second élément à comparer
-    *   $2...$N (tout type) : paramètres supplémentaires (extraParam)
-*   *methodName* doit fixer le paramètre suivant :
-    *   *$1.result* (booléen): **vrai** si *$1.value < $1.value2*, **faux** sinon
+You designate the callback to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. You can provide *extraParam* parameters to the callback if necessary.
+
+The callback receives the following parameters:
+
+- $1 (object), où :
+    - *$1.value* (tout type) : valeur du premier élément à comparer
+    - *$1.value2* (tout type) : valeur du second élément à comparer
+    - $2...$N (tout type) : paramètres supplémentaires (extraParam)
+
+If you used a method, it must set the following parameter:
+
+- *$1.result* (booléen): **vrai** si *$1.value < $1.value2*, **faux** sinon
 
 #### Exemple 1
 
@@ -1919,17 +1904,8 @@ Voici le code de la méthode ***NumAscending*** :
  $c:=New collection
  $c.push("33";"4";"1111";"222")
  $c2:=$c.orderBy() //$c2=["1111","222","33","4"], alphabetical order
- $c3:=$c.orderByMethod("NumAscending") // $c3=["4","33","222","1111"]
+ $c3:=$c.orderByMethod(Formula(Num($1.value)<Num($1.value2))) // $c3=["4","33","222","1111"]
 ```
-
- Vous souhaitez trier une collection de chaînes selon leur longueur :
-
-
-```4d
- $1.result:=Num($1.value)<Num($1.value2)
-```
-
-
 
 #### Exemple 2
 
@@ -1938,14 +1914,8 @@ Voici le code de la méthode ***WordLength*** :
 ```4d
  var $fruits; $c2 : Collection
  $fruits:=New collection("Orange";"Apple";"Grape";"pear";"Banana";"fig";"Blackberry";"Passion fruit")
- $c2:=$fruits.orderByMethod("WordLength")
+ $c2:=$fruits.orderByMethod(Formula(Length(String($1.value))>Length(String($1.value2))))
   //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
-```
-
-Vous souhaitez trier une collection par code de caractère ou par langage :
-
-```4d
- $1.result:=Length(String($1.value))>Length(String($1.value2))
 ```
 
 #### Exemple 3
@@ -1957,19 +1927,19 @@ var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
 //using the character code:
-$strings2:=$strings1.orderByMethod("sortCollection";sk character codes)
+$strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
 //using the language:
-$strings2:=$string1s.orderByMethod("sortCollection";sk strict)
+$strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
 Paramètre(s) à passer à *methodName*
 
 ```4d
-var$1Object
-var$2Integer // option de tri
+var $1 : Object
+var $2: Integer // sort option
 
 $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ```
@@ -2117,7 +2087,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 Cet exemple retourne les personnes dont le nom contient "in" :
 
-> Les formules ne sont pas prises en charge par la fonction `collection.query()`, ni dans le paramètre *queryString* ni en tant que paramètre objet *formula*.
+> Cette fonction ne modifie pas la collection d'origine.
 
 #### Exemple 1
 
@@ -2142,6 +2112,10 @@ Cet exemple retourne les personnes dont le nom contient "in" :
  $c:=New collection
  $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
  $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
  $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
@@ -2178,7 +2152,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018 si la date du jour est 01/10/2018
 ```
 
 
@@ -2192,23 +2166,25 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 ## .reduce()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.reduce().Syntax --> **.reduce**( *methodName* : Text ) : any <br>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any <!-- END REF -->
+<!-- REF #collection.reduce().Syntax --> **.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br>**.reduce**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
 
 
 
 <!-- REF #collection.reduce().Params -->
-| Paramètres | Type                                            |    | Description                                                               |
-| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------------- |
-| methodName | Text                                            | -> | Nom de la fonction à appeler pour traiter les éléments de collection      |
-| initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Valeur à utiliser comme premier argument du premier appel de *methodName* |
-| param      | expression                                      | -> | Paramètre(s) à passer à *methodName*                                      |
-| Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Résultat de la valeur de l'accumulateur                                   |
+| Paramètres | Type                                            |    | Description                                                                       |
+| ---------- | ----------------------------------------------- |:--:| --------------------------------------------------------------------------------- |
+| formula    | 4D.Function                                     | -> | Objet formule                                                                     |
+| methodName | Text                                            | -> | Name of a method                                                                  |
+| initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *formula* or *methodName* |
+| param      | expression                                      | -> | Parameter(s) to pass                                                              |
+| Résultat   | Text, Number, Object, Collection, Date, Boolean | <- | Résultat de la valeur de l'accumulateur                                           |
 
 <!-- END REF -->
 
@@ -2216,20 +2192,25 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 #### Description
 
 
-La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la méthode callback *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour le réduire à une valeur unique<!-- END REF -->.
+The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif). *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
+You designate the callback to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback takes each collection element and performs any desired operation to accumulate the result into *$1.accumulator*, which is returned in *$1.value*.
 
 Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S'il est omis, *$1.accumulator* commence par *Undefined*.
 
-*methodName* reçoit les paramètres suivants :
+The callback receives the following parameters:
 
 *   dans *$1.value* : valeur de l'élément à évaluer
 *   dans $2 : *param*
 *   dans *$N...* : *paramN...*
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+The callback sets the following parameter(s):
 
 *   *$1.accumulator*: valeur à modifier par la fonction et qui est initialisée par *initValue*.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
@@ -2239,19 +2220,11 @@ Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S
 
 
 ```4d
- C_COLLECTION($c)
- $c:=New collection(5;3;5;1;3;4;4;6;2;2)
- $r:=$c.reduce("Multiply";1) //retourne 86400
+var $c : Collection
+$c:=New collection(5;3;5;1;3;4;4;6;2;2)
+$r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //returns 86400
 ```
 
-
-Cet exemple permet de réduire plusieurs éléments de collection en un seul élément :
-
-```4d
- If(Value type($1.value)=Is real)
-    $1.accumulator:=$1.accumulator*$1.value
- End if
-```
 
 #### Exemple 2
 
@@ -2264,7 +2237,7 @@ Avec la méthode ***Flatten*** suivante :
  $c.push(New collection(2;3))
  $c.push(New collection(4;5))
  $c.push(New collection(6;7))
- $r:=$c.reduce("Flatten") //$r=[0,1,2,3,4,5,6,7]
+ $r:=$c.reduce(Formula(Flatten)) //$r=[0,1,2,3,4,5,6,7]
 ```
 
 Avec la méthode *NumberGreaterThan0* suivante :
@@ -2309,7 +2282,7 @@ Dans *index*, passez la position où vous souhaitez supprimer l'élément de la 
 > Cette fonction modifie la collection d'origine.
 
 La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0. Si *index* est supérieur à la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
+> Cette fonction ne modifie pas la collection d'origine. Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
 
 *   Si *index* < 0, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
 *   Si la valeur recalculée est négative, *index* prend la valeur 0.
@@ -2530,46 +2503,53 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 ## .some()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.some().Syntax --> **.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
+<!-- REF #collection.some().Syntax --> **.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; *...param* : any } ) : Boolean<br>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
 
 
 
 <!-- REF #collection.some().Params -->
-| Paramètres | Type    |    | Description                                   |
-| ---------- | ------- |:--:| --------------------------------------------- |
-| startFrom  | Integer | -> | Elément à partir duquel débuter l'évaluation  |
-| methodName | Text    | -> | Nom de la méthode à appeler pour l'évaluation |
-| param      | Mixed   | -> | Paramètre(s) à passer à *methodName*          |
-| Résultat   | Booléen | <- | Vrai si au moins un élément a réussi le test  |
+| Paramètres | Type        |    | Description                                  |
+| ---------- | ----------- |:--:| -------------------------------------------- |
+| startFrom  | Integer     | -> | Elément à partir duquel débuter l'évaluation |
+| formula    | 4D.Function | -> | Objet formule                                |
+| methodName | Text        | -> | Name of a method                             |
+| param      | Mixed       | -> | Parameter(s) to pass                         |
+| Résultat   | Booléen     | <- | Vrai si au moins un élément a réussi le test |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.push()`<!-- REF # collection.push().Summary -->ajoute un ou plusieurs *élément*(s) à la fin de l'instance de collection et retourne la collection modifiée<!-- END REF -->.
+The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
+
+You designate the 4D code (callback) to be executed to evaluate collection elements using either:
+
+- *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
+- or *methodName*, the name of a project method (text).
+
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. It receives an `Object` in first parameter ($1).
 
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
-
-*methodName* reçoit les paramètres suivants :
+The callback receives the following parameters:
 
 *   dans *$1.value* : valeur de l'élément à évaluer
-*   in *$2*: param
-*   dans *$N...* : param2...paramN
+*   dans $2 : *param*
+*   dans *$N...* : *paramN...*
 
-*methodName* doit fixer le(s) paramètre(s) suivant(s) :
+It can set the following parameter(s):
 
-*   *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
+*   (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 *   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
 
-La fonction `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->recherche l'expression *toSearch* parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée<!-- END REF -->, ou -1 si aucune occurrence n'a été trouvée.
+In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
 By default, `.every()` tests the whole collection. Optionally, you can pass in *startFrom* the index of the element from which to start the test.
 
@@ -2580,26 +2560,21 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
 
 #### Exemple
 
+You want to know if at least one collection value is >0.
 
 ```4d
  var $c : Collection
  var $b : Boolean
  $c:=New collection
  $c.push(-5;-3;-1;-4;-6;-2)
- $b:=$c.some("NumberGreaterThan0") // retourne false
+ $b:=$c.some(Formula($1.value>0)) // $b=false
  $c.push(1)
- $b:=$c.some("NumberGreaterThan0") // retourne true
+ $b:=$c.some(Formula($1.value>0)) // $b=true
 
  $c:=New collection
  $c.push(1;-5;-3;-1;-4;-6;-2)
- $b:=$c.some("NumberGreaterThan0") //$b=true
- $b:=$c.some(1;"NumberGreaterThan0") //$b=false
-```
-
-*methodName* doit fixer le paramètre suivant :
-
-```4d
- $1.result:=$1.value>0
+ $b:=$c.some(Formula($1.value>0)) //$b=true
+ $b:=$c.some(1;Formula($1.value>0)) //$b=false
 ```
 
 
@@ -2609,43 +2584,47 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
 ## .sort()
 
 <details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v16 R6  | Ajout         |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v19 R6  | Support of formula |
+| v16 R6  | Ajout              |
 </details>
 
 
-<!-- REF #collection.sort().Syntax --> **.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax --> **.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 
 <!-- REF #collection.sort().Params -->
-| Paramètres | Type       |    | Description                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| methodName | Text       | -> | Nom de la méthode utilisée pour trier la collection |
-| extraParam | any        | -> | Paramètre(s) à passer à la méthode                  |
-| Résultat   | Collection | <- | Collection d'origine triée                          |
+| Paramètres | Type        |    | Description                        |
+| ---------- | ----------- |:--:| ---------------------------------- |
+| formula    | 4D.Function | -> | Objet formule                      |
+| methodName | Text        | -> | Name of a method                   |
+| extraParam | any         | -> | Paramètre(s) à passer à la méthode |
+| Résultat   | Collection  | <- | Collection d'origine triée         |
 
 <!-- END REF -->
 
 
 #### Description
 
-La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine<!-- END REF --> et retourne également la collection triée.
+The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
 > Cette fonction modifie la collection d'origine.
 
 Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.
 
-Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans *methodName*, une méthode de comparaison qui compare deux valeurs et retourne **true** dans *$1.result* si la première valeur est inférieure à la deuxième valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via *extraParam*.
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a comparison callback that compares two values and returns **true** if the first value is lower than the second value. You can provide additional parameters to the callback if necessary.
 
-*   *methodName* reçoit les paramètres suivants :
-    *   $1 (object), où :
-        *   *$1.value* (tout type) : valeur du premier élément à comparer
-        *   *$1.value2* (tout type) : valeur du second élément à comparer
-    *   $2...$N (tout type) : paramètres supplémentaires (extraParam)
+The callback receives the following parameters:
 
-*methodName* doit fixer le paramètre suivant :
-    *   *$1.result* (booléen): **vrai** si *$1.value < $1.value2*, **faux** sinon
+- $1 (object), où :
+    - *$1.value* (tout type) : valeur du premier élément à comparer
+    - *$1.value2* (tout type) : valeur du second élément à comparer
+- $2...$N (tout type) : paramètres supplémentaires (extraParam)
+
+If you used a method, you must set the folllowing parameter:
+
+- *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise.
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si *attributePath* est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.
 
@@ -2678,16 +2657,10 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 #### Exemple 3
 
 ```4d
- var $col; $col2; $col3 : Collection
- $col:=New collection(33;4;66;1111;222)
- $col2:=$col.sort() //tri numérique : [4,33,66,222,1111]
- $col3:=$col.sort("numberOrder") //tri alphabétique : [1111,222,33,4,66]
-```
-
-```4d
-  //méthode projet numberOrder
- var $1 : Object
- $1.result:=String($1.value)<String($1.value2)
+var $col; $col2; $col3 : Collection
+$col:=New collection(33;4;66;1111;222)
+$col2:=$col.sort() //numerical sort: [4,33,66,222,1111]
+$col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sort: [1111,222,33,4,66]
 ```
 
 

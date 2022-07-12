@@ -311,6 +311,8 @@ $status:=$imap.append($msg; "Drafts")
 
 
 
+
+
 <!-- INCLUDE transporter.authenticationModeIMAP.Desc -->
 
 
@@ -320,6 +322,7 @@ $status:=$imap.append($msg; "Drafts")
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
 
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
 
 ## .checkConnectionDelay
 
@@ -338,7 +341,7 @@ $status:=$imap.append($msg; "Drafts")
 La propriété `.checkConnectionDelay` contient la <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->durée maximale (en secondes) autorisée avant vérification de la connexion au serveur<!-- END REF -->.  Si cette durée est dépassée entre deux appels de méthodes, la connexion au serveur sera vérifiée. Par défaut, si la propriété n'a pas été définie dans l'objet *server*, la valeur est de 300.
 > **Attention** : Assurez-vous que le timeout défini est inférieur au timeout du serveur, sinon le timeout du client sera inutile.
 
-
+<!-- END REF -->
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
@@ -505,23 +508,27 @@ Pour créer une nouvelle boîte “Invoices” :
 
 
 ```4d
-var $pw : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //obligatoire
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:")
-If(OK=1)
-$options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //create transporter
+ $transporter:=IMAP New transporter($server)
 
-$transporter:=IMAP New transporter($options)
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$status:=$transporter.createBox("Invoices")
-
-If ($status.success)
-ALERT("Mailbox creation successful!")
+  If($boxInfo.mailCount>0)
+        // récupérer les en-têtes des 20 derniers messages sans les marquer comme lus
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+        New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+        // ...
 End for each
  End if
 ```
@@ -717,6 +724,10 @@ End if
     ALERT("Error: "+$status.statusText)
     End if
 End if
+    Else
+    ALERT("Error: "+$status.statusText)
+    End if
+End if
 ```
 
 <!-- END REF -->
@@ -793,6 +804,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF IMAPTransporterClass.getBoxInfo().Desc -->
+
 ## .getBoxInfo()
 
 <details><summary>Historique</summary>
@@ -817,7 +829,7 @@ $status:=$transporter.expunge()
 
 La fonction `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->retourne un objet `boxInfo` correspondant à la boîte de réception courante ou à la boîte nommée *name*<!-- END REF -->. Cette fonction retourne les mêmes informations que [`.selectBox()`](#selectbox) mais sans modifier la boite de réception courante.
 
-Dans le paramètre optionnel *name* passez le nom de la boite de réception à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
+Dans le paramètre *name* passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
 
 Si la boîte de réception nommée *name* n'est pas sélectionnable ou n'existe pas, la fonction génère une erreur et retourne **null**.
 
@@ -952,13 +964,13 @@ Caractère de délimitation des noms de boites de réception.
 > * Si aucune connexion n'est ouverte, `.getDelimiter()` ouvrira une connexion.
 > * Si la connexion n'a pas été utilisée depuis le [délai de connexion](#checkconnectiondelay), la fonction
 
-`.checkConnection( )<code></a> est automatiquement appelée.</li>
-  </ul>
-</blockquote>
 
-<h4 spaces-before="0">Exemple</h4>
 
-<pre><code class="4d"> var $transporter : 4D.IMAPTransporter
+#### Exemple
+
+
+```4d
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
 
  $boxList:=$transporter.getBoxList()
@@ -969,19 +981,16 @@ Caractère de délimitation des noms de boites de réception.
        ALERT("New emails are available in the box: "+$split[$split.length-1])
     End if
  End for each
-`</pre>
+```
 
 <!-- END REF -->
 
 
 
 <!-- REF IMAPTransporterClass.getMail().Desc -->
->     
->     ## .getMail()
->     
->     <details><summary>Historique</summary>
->     
->     
+## .getMail()
+
+<details><summary>Historique</summary>
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajout         |
@@ -1006,8 +1015,8 @@ La fonction `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->ret
 
 Dans le premier paramètre, vous pouvez passer soit :
 
-* *msgNumber*, une valeur *integer* indiquant le numéro de séquence du message à récupérer ou
-* *msgID*, une valeur *text* indiquant l'ID unique du message à récupérer.
+*   *msgNumber*, une valeur *integer* indiquant le numéro de séquence du message à récupérer ou
+*   *msgID*, une valeur *text* indiquant l'ID unique du message à récupérer.
 
 Le paramètre facultatif *options* vous permet de passer un objet définissant des instructions supplémentaires pour la gestion de votre message. Les propriétés suivantes sont disponibles :
 
@@ -1015,13 +1024,15 @@ Le paramètre facultatif *options* vous permet de passer un objet définissant d
 | ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen | boolean | Si Vrai, le message est marqué comme "seen" (lu) dans la boite de réception. Si Faux, le message n'est pas marqué comme "seen". Valeur par défaut : Vrai |
 | withBody   | boolean | Passez Vrai pour retourner le corps du message. Si Faux, seul l'en-tête du message est retourné. Valeur par défaut : Vrai                                |
-
-
 > * La fonction génère une erreur et retourne **Null** si *msgID* désigne un message non existant,
 > * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée,
 > * Si aucune connexion n'est ouverte, `.getMail()` ouvrira une connexion avec la dernière boite de réception spécifiée par [`.selectBox()`](#selectbox).
 
+
+
 #### Résultat
+
+
 
 `.getMail()` retourne un [`objet Email`](EmailObjectClass.md#objet-email) avec les propriétés IMAP supplémentaires suivantes : *id*, *receivedAt* et *size*.
 
@@ -1093,13 +1104,13 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 
 **Deuxième syntaxe :**
 
-***.getMails( startMsg ; endMsg { ; options } ) -> result***
+ ***.getMails( startMsg ; endMsg { ; options } ) -> result***
 
 La deuxième syntaxe vous permet de récupérer des messages en fonction d'une plage séquentielle. Les valeurs passées représentent la position des messages dans la boite de réception.
 
-Dans le paramètre *startMsg* passez une valeur *entier* correspondant au numéro du premier message dans une plage séquentielle. Si vous passez un nombre négatif (*startMsg* <= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.
+Dans le paramètre *startMsg*, passez une valeur integer correspondant au numéro du premier message dans la plage séquentielle. Si vous passez un nombre négatif (*startMsg* <= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.
 
-Dans le paramètre *endMsg* passez une valeur *entier long* correspondant au numéro du dernier message à inclure dans une plage séquentielle. Si vous passez un nombre négatif (*endMsg* <= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.
+Dans le paramètre *endMsg*, passez une valeur integer correspondant au numéro du dernier message dans la plage séquentielle. Si vous passez un nombre négatif (*endMsg* <= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.
 
 Le paramètre optionnel *options* vous permet de définir les parties de messages à retourner.
 
@@ -1109,14 +1120,14 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | updateSeen | Booléen | Si Vrai, les messages sont marqués comme "seen" (lus) dans la boite de réception. Si Faux, les messages ne sont pas marqués comme "seen". Valeur par défaut : Vrai |
 | withBody   | Booléen | Passez Vrai pour retourner le corps des messages spécifiés. Si Faux, seuls les en-tête des messages sont retournés. Valeur par défaut : Vrai                       |
-
-
 > * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée.
 > * S'il n'y a pas de connexion ouverte, `.getMails()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de [`.selectBox()`](#selectbox).
+
 
 #### Résultat
 
 `.getMails()` retourne un objet contenant les collections suivantes :
+
 
 | Propriété | Type       | Description                                                                                                                            |
 | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1129,27 +1140,15 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 Vous souhaitez récupérer les 20 emails les plus récents sans modifier le statut "seen" :
 
 ```4d
- var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
-
+ var $server; $boxinfo : Object
  $server:=New object
- $server.host:="imap.gmail.com" //obligatoire
- $server.port:=993
+ $server.host:="imap.gmail.com" //Obligatoire
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+ var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
-
-  //select mailbox
  $boxInfo:=$transporter.selectBox("INBOX")
-
-  If($boxInfo.mailCount>0)
-        // récupérer les en-têtes des 20 derniers messages sans les marquer comme lus
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-        New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-        // ...
     End for each
  End if
 ```
@@ -1189,44 +1188,47 @@ La fonction `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Su
 
 Dans le premier paramètre, vous pouvez passer soit :
 
-* *msgNumber*, une valeur *integer* indiquant le numéro de séquence du message à récupérer ou
-* *msgID*, une valeur *text* indiquant l'ID unique du message à récupérer.
+*   *msgNumber*, une valeur *integer* indiquant le numéro de séquence du message à récupérer ou
+*   *msgID*, une valeur *text* indiquant l'ID unique du message à récupérer.
 
 Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est marqué comme "seen" (lu) dans la boîte de réception. Vous pouvez passer :
 
-* **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
-* **Faux** - pour ne pas modifier le statut "seen" du message
-
+*   **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
+*   **Faux** - pour ne pas modifier le statut "seen" du message
 > * La fonction retourne un BLOB vide si *msgNumber* ou msgID désigne un message inexistant,
 > * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée,
 > * S'il n'y a pas de connexion ouverte,`.getMIMEAsBlob()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de `.selectBox()`.
+
 
 #### Résultat
 
 `.getMIMEAsBlob()` retourne un `BLOB` qui peut être archivé dans une base de données ou converti en un objet [`Email`](EmailObjectClass.md#objet-email) avec la commande `MAIL Convert from MIME`.
 
+
 #### Exemple
 
+
 ```4d
- var $server : Object
- var $boxInfo : Variant
- var $blob : Blob
+ var $server;$boxInfo;$status : Object
+ var $mailIds : Collection
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com"
+ $server.host:="imap.gmail.com" //Obligatoire
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //créer transporteur
  $transporter:=IMAP New transporter($server)
 
   //sélectionner la boite de réception
- $boxInfo:=$transporter.selectBox("Inbox")
+ $boxInfo:=$transporter.selectBox("inbox")
 
-  //obtenir BLOB
- $blob:=$transporter.getMIMEAsBlob(1)
+  //obtenir la collection d'IDs uniques des messages
+ $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
+
+  // déplacer les messages de la boite de réception courante vers la boite de réception "documents"
+ $status:=$transporter.move($mailIds;"documents")
 ```
 
 <!-- END REF -->
@@ -1277,6 +1279,7 @@ Le paramètre *destinationBox* vous permet de passer une valeur texte avec le no
 
 > Cette fonction est uniquement prise en charge par les serveurs IMAP compatibles avec RFC [8474](https://tools.ietf.org/html/rfc8474).
 
+
 **Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
@@ -1291,36 +1294,11 @@ La fonction retourne un objet décrivant le statut IMAP :
 |            | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                                                 |
 
 
+
+
 #### Exemple 1
 
 Pour déplacer une sélection de messages :
-
-```4d
- var $server;$boxInfo;$status : Object
- var $mailIds : Collection
- var $transporter : 4D.IMAPTransporter
-
- $server:=New object
- $server.host:="imap.gmail.com" //Obligatoire
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
-
- $transporter:=IMAP New transporter($server)
-
-  //sélectionner la boite de réception
- $boxInfo:=$transporter.selectBox("inbox")
-
-  //obtenir la collection d'IDs uniques des messages
- $mailIds:=$transporter.searchMails("subject \"4D new feature:\"")
-
-  // déplacer les messages de la boite de réception courante vers la boite de réception "documents"
- $status:=$transporter.move($mailIds;"documents")
-```
-
-#### Exemple 2
-
-Pour déplacer tous les messages de la boîte de réception courante :
 
 ```4d
  var $server;$boxInfo;$status : Object
@@ -1339,6 +1317,34 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
   // déplacer tous les messages de la boite de réception courante vers la boite de réception "documents"
  $status:=$transporter.move(IMAP all;"documents")
+```
+
+#### Exemple 2
+
+Pour déplacer tous les messages de la boîte de réception courante :
+
+
+```4d
+ var $transporter : 4D.IMAPTransporter
+ var $server;$boxInfo;$status : Object
+ var $mailIds : Collection
+
+ $server:=New object
+ $server.host:="imap.gmail.com" //Obligatoire
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
+
+ $transporter:=IMAP New transporter($server)
+
+  //sélectionner la boite de réception
+ $boxInfo:=$transporter.selectBox("inbox")
+
+  //obtenir les IDs des 5 derniers messages reçus
+ $mailIds:=$transporter.numToID(($boxInfo.mailCount-5);$boxInfo.mailCount)
+
+  //supprimer les messages de la boite de réception courante
+ $status:=$transporter.delete($mailIds)
 ```
 
 <!-- END REF -->
@@ -1370,9 +1376,10 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 La fonction `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->convertit les numéros de séquence en IDs uniques IMAP pour les messages de la plage séquentielle désignée par *startMsg* et *endMsg*<!-- END REF --> dans la boîte de réception courante.
 
-Dans le paramètre *startMsg*, passez une valeur integer correspondant au numéro du premier message dans la plage séquentielle. Si vous passez un nombre négatif (*startMsg* <= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.
+Dans le paramètre *startMsg* passez une valeur *entier* correspondant au numéro du premier message dans une plage séquentielle. Si vous passez un nombre négatif (*startMsg* <= 0), le premier message de la boîte de réception sera utilisé comme début de la séquence.
 
-Dans le paramètre *endMsg*, passez une valeur integer correspondant au numéro du dernier message dans la plage séquentielle. Si vous passez un nombre négatif (*endMsg* <= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.
+Dans le paramètre *endMsg* passez une valeur *entier long* correspondant au numéro du dernier message à inclure dans une plage séquentielle. Si vous passez un nombre négatif (*endMsg* <= 0), le dernier message de la boîte de réception sera utilisé comme fin de séquence.
+
 
 #### Résultat
 
@@ -1380,27 +1387,26 @@ La fonction retourne une collection de chaînes (IDs uniques).
 
 #### Exemple
 
+
 ```4d
- var $transporter : 4D.IMAPTransporter
- var $server;$boxInfo;$status : Object
- var $mailIds : Collection
+ var $options;$transporter;$boxInfo;$status : Object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Obligatoire
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
+$options.host:="imap.gmail.com"
+$options.port:=993
+$options.user:="4d@gmail.com"
+$options.password:="xxxxx"
 
- $transporter:=IMAP New transporter($server)
+// Créer le transporteur
+$transporter:=IMAP New transporter($options)
 
-  //sélectionner la boite de réception
- $boxInfo:=$transporter.selectBox("inbox")
+// Sélectionner la boite de réception
+$boxInfo:=$transporter.selectBox("INBOX")
 
-  //obtenir les IDs des 5 derniers messages reçus
- $mailIds:=$transporter.numToID(($boxInfo.mailCount-5);$boxInfo.mailCount)
-
-  //supprimer les messages de la boite de réception courante
- $status:=$transporter.delete($mailIds)
+// Marquer tous les messages de la boite de réception comme étant non vus
+$flags:=New object
+$flags["$seen"]:=True
+$status:=$transporter.removeFlags(IMAP all;$flags)
 ```
 
 <!-- END REF -->
@@ -1433,14 +1439,13 @@ La fonction `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summar
 
 Dans le paramètre `msgIDs`, vous pouvez passer soit :
 
-* une *collection* contenant les IDs uniques de messages spécifiques, ou
-* l'ID unique (*texte*) d'un seul message ou
-* la constante suivante (*entier long*) pour tous les messages de la boîte sélectionnée :
-    
+*   une *collection* contenant les IDs uniques de messages spécifiques, ou
+*   l'ID unique (*texte*) d'un seul message ou
+*   la constante suivante (*entier long*) pour tous les messages de la boîte sélectionnée :
+
     | Constante | Valeur | Commentaire                                             |
     | --------- | ------ | ------------------------------------------------------- |
     | IMAP all  | 1      | Sélectionner tous les messages de la boîte sélectionnée |
-
 
 Le paramètre `keywords` vous permet de passer un objet avec des valeurs de mots-clés pour les flags spécifiques à supprimer des `msgIDs`. Vous pouvez utiliser les mots-clés suivants :
 
@@ -1452,8 +1457,8 @@ Le paramètre `keywords` vous permet de passer un objet avec des valeurs de mots
 | $answered  | Booléen | True pour supprimer le marqueur "answered" du message |
 | $deleted   | Booléen | True pour supprimer le marqueur "deleted" du message  |
 
-
 Les valeurs à faux sont ignorées.
+
 
 **Objet retourné**
 
@@ -1472,24 +1477,28 @@ La fonction retourne un objet décrivant le statut IMAP :
 #### Exemple
 
 ```4d
-var $options;$transporter;$boxInfo;$status : Object
+var $pw : text
+var $options; $transporter; $status : object
 
 $options:=New object
-$options.host:="imap.gmail.com"
-$options.port:=993
-$options.user:="4d@gmail.com"
-$options.password:="xxxxx"
 
-// Créer le transporteur
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
 $transporter:=IMAP New transporter($options)
 
-// Sélectionner la boite de réception
-$boxInfo:=$transporter.selectBox("INBOX")
+// renommer la boite de réception
+$status:=$transporter.renameBox("Invoices"; "Bills")
 
-// Marquer tous les messages de la boite de réception comme étant non vus
-$flags:=New object
-$flags["$seen"]:=True
-$status:=$transporter.removeFlags(IMAP all;$flags)
+If ($status.success)
+   ALERT("Mailbox renaming successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
 ```
 
 <!-- END REF -->
@@ -1527,6 +1536,7 @@ Dans le paramètre `currentName`, passez le nom de la mailbox à renommer.
 
 Passez le nouveau nom de la mailbox dans e paramètre `newName`.
 
+
 **Objet retourné**
 
 La fonction retourne un objet décrivant le statut IMAP :
@@ -1546,24 +1556,27 @@ La fonction retourne un objet décrivant le statut IMAP :
 Pour renommer la mailbox “Invoices” en “Bills”:
 
 ```4d
-var $pw : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //obligatoire
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:")
+  //create transporter
+ $transporter:=IMAP New transporter($server)
 
-If(OK=1) $options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //select mailbox
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$transporter:=IMAP New transporter($options)
-
-// renommer la boite de réception
-$status:=$transporter.renameBox("Invoices"; "Bills")
-
-If ($status.success)
-   ALERT("Mailbox renaming successful!")
+  If($boxInfo.mailCount>0)
+        // récupérer les en-têtes des 20 derniers messages sans les marquer comme lus
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+        New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+        // ...
    Else
    ALERT("Error: "+$status.statusText)
  End if
@@ -1623,33 +1636,27 @@ SearchKey3 = FLAGGED DRAFT
 ```
 searchCriteria = FLAGGED FROM "SMITH"
 ```
-
 ... retourne tous les messages comportant le marqueur \Flagged ET envoyés par Smith.
-
 - Vous pouvez utiliser les opérateurs **OR** ou **NOT** comme suit :
 
 ```
 searchCriteria = OR SEEN FLAGGED
 ```
-
 ... retourne tous les messages comportant le marqueur \Seen OU \Flagged
 
 ```
 searchCriteria = NOT SEEN
 ```
-
 ... retourne tous les messages ne comportant pas le marqueur \Seen.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "MIXED" NOT HEADER CONTENT-TYPE "TEXT"...
 ```
-
 ... retourne les messages dont l'en-tête content-type contient “Mixed” et ne contient pas “Text”.
 
 ```
 searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE "MIXED"
 ```
-
 ... retourne les messages dont l'en-tête content-type contient “ e ” et dont l'en-tête Subject ne contient pas “ o ” et dont l'en-tête content-type n'est pas “ Mixed ”.
 
 A noter que dans les deux derniers exemples, le résultat de la recherche est différent lorsque vous enlevez les parenthèses de la première liste de mots-clés.
@@ -1659,8 +1666,8 @@ A noter que dans les deux derniers exemples, le résultat de la recherche est di
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
 ```
-
 signifie que le critère de recherche utilise le jeu de caractères iso-8859 et que le serveur devra convertir la chaîne avant la recherche, si nécessaire.
+
 
 #### Mots-clés de recherche autorisés
 
@@ -1675,6 +1682,7 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 - **Marqueurs** : Les valeurs de type marqueur (flags) acceptent un ou plusieurs mots-clés (y compris des marqueurs standard) séparés par des espaces. Exemple : `searchCriteria = KEYWORD \Flagged \Draft`
 
 - **Ensemble de messages** : Les valeurs de ce type désignent un ensemble de messages. Elles contiennent une liste de numéros de messages dans un ordre croissant, de 1 au nombre total de messages dans la boîte aux lettres. Les numéros sont séparés par des virgules ; un deux-points (:) indique un intervalle (inclusif) de numéros. Exemples : `2,4:7,9,12:*` représente les messages `2,4,5,6,7,9,12,13,14,15` pour une mailbox contenant 15 messages. `searchCriteria = 1:5 ANSWERED` recherche, parmi les messages 1 à 5, ceux qui comportent le marqueur \Answered. `searchCriteria= 2,4 ANSWERED` recherche, parmi les messages 2 et 4, ceux qui comportent le marqueur \Answered.
+
 
 #### Mots-clés de recherche autorisés
 
@@ -1742,10 +1750,9 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 #### Description
 
 La fonction `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->sélectionne la mailbox *name* comme étant la mailbox courante<!-- END REF -->. Cette fonction vous permet de récupérer des informations sur la boite de réception.
-
 > Pour lire les informations à partir d'une mailbox sans changer la mailbox courante, utilisez [`.getBoxInfo()`](#getboxinfo).
 
-Dans le paramètre *name* passez le nom de la mailbox à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
+Dans le paramètre optionnel *name* passez le nom de la boite de réception à laquelle vous souhaitez accéder. Le nom doit représenter une hiérarchie claire, de gauche à droite, avec des niveaux séparés par un caractère délimiteur spécifique. Le délimiteur peut être récupéré à l'aide de la fonction [`.getDelimiter()`](#getdelimiter).
 
 Le paramètre optionnel *state* définit le type d'accès à la mailbox. Les valeurs possibles sont les suivantes :
 
@@ -1753,8 +1760,6 @@ Le paramètre optionnel *state* définit le type d'accès à la mailbox. Les val
 | --------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IMAP read only state  | 1      | La mailbox sélectionnée est accessible avec les privilèges de lecture seule. Les messages contenant un marqueur "recent" (indication de nouveaux messages) restent inchangés.                                    |
 | IMAP read write state | 0      | La mailbox sélectionnée est accessible avec des privilèges de lecture et d'écriture. Les messages sont considérés "seen" et perdent le marqueur "recent" (indication des nouveaux messages). (Valeur par défaut) |
-
-
 > * La fonction génère une erreur et retourne **Null** si *name* désigne une mailbox inexistante.
 > * Si aucune connexion n'est ouverte, `.selectBox()` ouvrira une connexion.
 > * Si la connexion n'a pas été utilisée depuis le délai de connexion (voir `IMAP New transporter`), la fonction [`.checkConnection( )`](#checkconnection) est automatiquement appelée.
@@ -1772,16 +1777,34 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 #### Exemple
 
-```4d
- var $server; $boxinfo : Object
- $server:=New object
- $server.host:="imap.gmail.com" //Obligatoire
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
 
- var $transporter : 4D.IMAPTransporter
- $transporter:=IMAP New transporter($server)
- $boxInfo:=$transporter.selectBox("INBOX")
+```4d
+ var $pw; $name : text
+var $options; $transporter; $status : object
+
+$options:=New object
+
+$pw:=Request("Please enter your password:")
+
+If(OK=1) $options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+$name:="Bills"+$transporter.getDelimiter()+"Atlas Corp"
+$status:=$transporter.subscribe($name)
+
+If ($status.success)
+   ALERT("Mailbox subscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1826,6 +1849,7 @@ La fonction retourne un objet décrivant le statut IMAP :
 |            | \[].errcode            | Nombre     | Code d'erreur 4D                                                                                       |
 |            | \[].message            | Text       | Description de l'erreur 4D                                                                             |
 |            | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                                                 |
+
 
 
 #### Exemple
@@ -1904,6 +1928,7 @@ La fonction retourne un objet décrivant le statut IMAP :
 |            | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                                                 |
 
 
+
 #### Exemple
 
 Pour ne plus souscrire à la mailbox "Atlas Corp” dans la hiérarchie "Bills" :
@@ -1927,6 +1952,10 @@ $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
    ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

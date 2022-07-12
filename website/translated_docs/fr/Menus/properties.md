@@ -55,7 +55,7 @@ Vous choisissez d’associer une action standard ou une méthode projet à la co
 ### Associer une méthode projet ou une action standard
 
 Pour associer une méthode projet et/ou une action standard à une commande de menu sélectionnée dans l'éditeur de menu :
-- **Nom de la méthode** : sélectionnez une méthode projet existante dans la combo box. Si la méthode projet n’existe pas, saisissez son nom dans la combo box “Nom de la méthode” puis cliquez sur le bouton [...]. 4D affiche la boîte de dialogue de création de méthode projet, vous permettant d’accéder à l’éditeur de méthodes.
+- **Nom de la méthode** : sélectionnez une méthode projet existante dans la combo box. Si la méthode projet n’existe pas, saisissez son nom dans la combo box “Nom de la méthode” puis cliquez sur le bouton [...]. 4D displays a project method creation dialog that is used to access the Code Editor.
 - **Action standard associée** : Choisissez ou saisissez le nom de l’action que vous souhaitez associer dans la combo box "Action standard associée". Vous pouvez saisir toute action prise en charge et (optionnellement) tout paramètre dans la zone. Pour la liste complète des actions standard, veuillez vous reporter à la section **Actions standard** dans le *Mode Développement*. **Note macOS :** Sous macOS, les commandes de menus créés associées à l'action *Quitter* sont automatiquement placées dans le menu de l’application, conformément aux normes d’interface de cette plate-forme.
 
 A l'aide du langage 4D, vous pouvez associer une méthode projet via la commande `SET MENU ITEM METHOD` et une action standard via la commande `SET MENU ITEM PROPERTY`.

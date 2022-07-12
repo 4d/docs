@@ -22,7 +22,7 @@ When this property is enabled, the height of every row is automatically calculat
 *   The row height calculation ignores:
     *   hidden column contents
     *   [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
-> > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+> > > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
 
 
@@ -170,7 +170,7 @@ This property designates an object's horizontal size.
 
 #### Objects Supported
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 
 
@@ -280,3 +280,45 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 
 
+---
+## Horizontal Padding
+
+
+Sets a horizontal padding for the cells. The value is set in pixels (default = 0).
+
+![](assets/en/FormObjects/padding.png)
+
+
+
+#### JSON Grammar
+
+| Nome              | Tipo de dados | Possible Values                |
+| ----------------- | ------------- | ------------------------------ |
+| horizontalPadding | number        | Number of pixels (must be >=0) |
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+
+#### Veja também
+[Vertical Padding](#vertical-padding)
+
+---
+## Vertical Padding
+
+
+Sets a vertical padding for the cells. The value is set in pixels (default = 0).
+
+
+#### JSON Grammar
+
+| Nome            | Tipo de dados | Possible Values                |
+| --------------- | ------------- | ------------------------------ |
+| verticalPadding | number        | Number of pixels (must be >=0) |
+
+#### Objects Supported
+
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+
+#### Veja também
+[Horizontal Padding](#horizontal-padding)

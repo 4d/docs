@@ -53,15 +53,7 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 たとえば、"Polygon" という名前のクラスを定義するには、次のファイルを作成する必要があります:
 
-- Project フォルダー
-    + Project
-
-
-
-
-        * Sources
-            - Classes
-                + Polygon.4dm
+Project フォルダー Project Sources Classes Polygon.4dm
 
 ### クラスの削除
 
@@ -280,7 +272,7 @@ Function add($x : Integer)
 
 #### 戻り値
 
-関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (`->`) と戻り値の定義を追加します。または、コロン (`:`) 記号の後に戻り値のデータ型だけを指定することも可能です。 たとえば:
+コロン (`:`) 記号の後に戻り値のデータ型だけを指定し、そのうえで [`return 文`](parameters.md#return-expression) を使って戻り値を返すこともできます (これは関数の実行を終了します)。 たとえば:
 
 
 
@@ -290,7 +282,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
 
-コロン (`:`) 記号の後に戻り値のデータ型だけを指定し、そのうえで [`return 文`](parameters.md#return-expression) を使って戻り値を返すこともできます (これは関数の実行を終了します)。 たとえば: 
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 たとえば: 
 
 
 
@@ -636,10 +628,15 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
 
-// 関数定義
-Function getArea()
-    var $0 : Integer
-    $0:=(This.height)*(This.width)
+// クラス: Rectangle
+Class constructor($width : Integer; $height : Integer)
+    This.name:="Rectangle"
+    This.height:=$height
+    This.width:=$width
+
+
+Function sayName()
+    ALERT("Hi, I am a "+This.name+".")
 ```
 
 

@@ -3,11 +3,11 @@ id: methods
 title: Página Métodos
 ---
 
-This page contains parameters defining the Method editor interface and its default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
+This page contains parameters defining the Code Editor interface and its default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
 
 ## Temas
 
-This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
+This page allows selecting, creating, or configuring Code Editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
 
 ![](assets/en/Preferences/themes.png)
 
@@ -20,7 +20,7 @@ In this list, you select the theme to apply to the code editor. All available th
 
 > Los temas por defecto no pueden ser modificados ni eliminados.
 
-A **myTheme** theme is automatically added if you already customized method editor styles in previous 4D releases.
+A **myTheme** theme is automatically added if you already customized Code Editor styles in previous 4D releases.
 
 ### Creación de temas personalizados
 
@@ -45,7 +45,7 @@ Combining different colors and styles is particularly useful for code maintenanc
 
 ### Fuentes y tamaños de fuente
 
-The **font** and **font size** menus allows you to select the font name and size used in the Method editor entry area for all categories.
+The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
 
 ### Lenguaje 4D y lenguaje SQL
 
@@ -54,14 +54,14 @@ You can set different font styles and colors (font color or background color) fo
 
 ### Otros estilos
 
-These options configure the various colors used in the Method editor and debugger interfaces.
+These options configure the various colors used in the Code Editor and debugger interfaces.
 
 ![](assets/en/Preferences/categories.png)
 
 
 |                                                        | Descripción                                                                                                                                                              |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Color de fondo**                                     | Color de fondo de la ventana del editor de métodos.                                                                                                                      |
+| **Color de fondo**                                     | Color de fondo de la ventana del editor de código.                                                                                                                       |
 | **Borde de la línea en ejecución en el depurador**     | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
 | **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                       |
 | **Color de fondo de la línea en ejecución**            | Background color of line being executed in the debugger.                                                                                                                 |
@@ -71,14 +71,14 @@ These options configure the various colors used in the Method editor and debugge
 | **Resaltar la misma variable o campo**                 | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Resaltado de la línea en ejecución en el depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
 | **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                          |
-| **Texto sugerido**                                     | Color of autocomplete text suggested by the Method editor.                                                                                                               |
+| **Texto sugerido**                                     | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
 
 
 
 ## Opciones
 
 
-This page configures Method editor display options.
+Esta página configura las opciones de visualización del Editor de Código.
 
 ![](assets/en/Preferences/options.png)
 
@@ -97,7 +97,7 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 #### Indentación
 
-Changes the indentation value for the 4D code in the Method editor. The width must be specified in points (10 by default).
+Changes the indentation value for the 4D code in the Code Editor. The width must be specified in points (10 by default).
 
 4D code is automatically indented in order to reveal its structure:
 
@@ -107,11 +107,11 @@ Modifying this default value can be useful if your methods contain complex algor
 
 #### Mostrar los números de línea
 
-Lets you display the line numbers by default in each window of the Method editor. You can also show/hide line numbers for the current window directly from the Method editor.
+Lets you display the line numbers by default in each window of the Code Editor. You can also show/hide line numbers for the current window directly from the Code Editor.
 
 #### Mostrar las listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. You can also show or hide each list directly from the Method editor.
+Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. You can also show or hide each list directly from the Code Editor.
 
 #### Mostrar los portapapeles
 
@@ -184,11 +184,11 @@ If you deselect this option, only the yellow arrow is shown.
 
 ### Sugerencias
 
-This area lets you configure autocomplete mechanisms in the Method editor to adapt it to your own work habits.
+This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
 
 |                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Apertura automática de la ventana | Triggers the automatic display of the suggestion window for:<p> <ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validación de una sugerencia      | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. Esto se puede utilizar más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de los elementos, como ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
+| Validación de una sugerencia      | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. Esto se puede utilizar más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de los elementos, como ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                      |
 	
 

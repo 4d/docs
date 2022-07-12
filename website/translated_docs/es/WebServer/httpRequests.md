@@ -126,7 +126,7 @@ Esta URL permite llamar al método proyecto 4D *MethodName* con un parámetro te
 <A HREF="/4DACTION/MyMethod/hello">Do Something</A>
 ```
 
-El método proyecto `MyMethod` debe devolver generalmente una "respuesta" (envío de una página HTML utilizando `WEB SEND FILE` o `WEB SEND TEXT`, etc.). mediante. Asegúrese de que el tratamiento sea lo más breve posible para no bloquear el navegador.
+El método proyecto `MyMethod` debe devolver generalmente una "respuesta" (envío de una página HTML utilizando `WEB SEND FILE` o `WEB SEND TEXT`, etc.). Asegúrese de que el tratamiento sea lo más breve posible para no bloquear el navegador.
 
 > Un método llamado por `/4DACTION` no debe llamar a elementos de la interfaz (`DIALOG`, `ALERT`, etc.).
 
@@ -150,8 +150,7 @@ var $BlobVar : Blob
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
 READ PICTURE FILE($path;$PictVar) //pone la imagen en la variable imagen
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png".
-WEB SEND BLOB($BLOB;"image/png")
+PICTURE TO BLOB($PictVar;$BLOB;".png") //convierte la imagen en formato ".png". WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACCIÓN para publicar formularios
@@ -251,6 +250,30 @@ if(formObj.vtUserName.value!=""){
 return true
 } else {
 alert("Enter your name, then try again.")
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p> 
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p> 
+<input name="vtNav_appName" value="" type="hidden"> 
+<input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
 return false
 }
 }

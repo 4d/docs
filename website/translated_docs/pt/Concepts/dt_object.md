@@ -28,7 +28,7 @@ You manage Object type variables, fields or expressions using the [object notati
 
 Cada valor de propriedade acessado através da notação de objeto é considerado uma expressão. You can use such values wherever 4D expressions are expected:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
 - in the Expression areas of the Debugger and the Runtime explorer,
 - in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
 
@@ -47,7 +47,7 @@ Exemplo:
 Pode criar dois tipos de objetos:
 
 - regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
+- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use... End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 
 ## Syntax basics

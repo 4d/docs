@@ -244,7 +244,7 @@ Pour chaque objet de *objectCol* :
     *   Si la clé primaire est fournie (telle quelle) et existe, une erreur est générée
     *   Si la clé primaire est fournie (telle quelle) et n'existe pas, l'entité est créée
     *   Si la clé primaire n'est pas fournie, l'entité est créée et la clé primaire est assignée selon les règles en vigueur de la base de données.
-> La propriété "\_\_KEY" n'est prise en compte que lorsque la propriété "\_\_NEW" est fixée à **faux** (ou est omise) et qu'une entité correspondante existe. Dans tous les autres cas, la valeur de la propriété "\_\_KEY" est ignorée, la clé primaire doit être passée "telle quelle".
+> Les objets imbriqués décrivant les entités relatives doivent contenir une propriété "\_\_KEY" (contenant la valeur de la clé primaire de l'entité relative) ou la clé primaire de l'entité relative elle-même. L'utilisation de la propriété \_\_KEY permet de ne pas dépendre du nom de l'attribut clé primaire.
 
 **Related entities**
 
@@ -872,7 +872,7 @@ attributePath|formula comparator value
 où :
 
 *   **attributePath** : Chemin de l'attribut sur lequel vous souhaitez exécuter la recherche. Ce paramètre peut contenir un nom simple (par exemple "pays") ou un chemin d'attribut valide (par exemple "pays.nom"). Dans le cas d'un chemin d'attribut de type `Collection`, la notation \[ ] est utilisée pour designer toutes les occurrences (par exemple "enfants\[ ].age").
-> *Vous ne pouvez pas utiliser directement des attributs dont les noms contiennent des caractères spéciaux tels que ".", "\[ ]", ou "=", ">", "#"..., car ils ne seront pas correctement évalués dans la chaîne de recherche. Si vous souhaitez rechercher ces attributs, vous devez utiliser des placeholders, qui permettent d'utiliser un ensemble de caractères plus étendu dans les chemins d'attribut (voir * **Utiliser des placeholders** *ci-dessous).*
+> Vous ne pouvez pas utiliser directement des attributs dont les noms contiennent des caractères spéciaux tels que ".", "\[ ]", ou "=", ">", "#"..., car ils ne seront pas correctement évalués dans la chaîne de recherche. Si vous souhaitez rechercher ces attributs, vous devez utiliser des placeholders, qui permettent d'utiliser un ensemble de caractères plus étendu dans les chemins d'attribut (voir * **Utiliser des placeholders** *ci-dessous).
 
 *   **formula** : Une formule valide passée en `Text` ou en `Object`. La formule sera évaluée pour chaque entité traitée et doit retourner une valeur booléenne. Dans la formule, l'entité est disponible via l'objet `This`.
 
@@ -972,7 +972,7 @@ L'utilisation de placeholders dans les recherches **est recommandée** pour les 
 
     Dans ce cas, si l'utilisateur saisit *smith OR status='private'* dans la zone *myname*, cela ne sera pas interprété dans la chaîne de recherche, mais uniquement passé en tant que valeur. La recherche d'une personne nommée "smith OR status='private"' échouera simplement.
 
-2.  Cela résout les questions liées au formatage des valeurs ou des caractères, notamment lorsque vous gérez des paramètres *attributePath* et *value* qui peuvent contenir des caractères non-alphanumériques tels que ".", "["... ".", "['...
+2.  Cela résout les questions liées au formatage des valeurs ou des caractères, notamment lorsque vous gérez des paramètres *attributePath* et *value* qui peuvent contenir des caractères non-alphanumériques tels que ".", "["...
 
 3.  Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Voici quelques exemples :
 

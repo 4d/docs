@@ -35,6 +35,5 @@ Cet exemple illustre comment vous pouvez répondre à un événement de fermetur
           CANCEL
        End if
   //...
- //déclaration(s)
  End case
 ```

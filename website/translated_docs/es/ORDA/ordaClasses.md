@@ -945,7 +945,7 @@ Once a class is defined, its name is no longer dimmed in the Explorer.
 
 ### Editar las clases
 
-To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
+To open a defined ORDA class in the 4D Code Editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
 
 ![](assets/en/ORDA/classORDA4.png)
 
@@ -954,9 +954,9 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 ![](assets/en/ORDA/classORDA5.png)
 
 
-### Editor de método
+### Editor de código
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
+In the 4D Code Editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
 
 ![](assets/en/ORDA/AutoCompletionEntity.png)
 

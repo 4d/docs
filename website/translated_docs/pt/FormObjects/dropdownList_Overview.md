@@ -48,12 +48,8 @@ To initialize the object associated to the drop-down list, you can:
 * Execute code that creates the object and its properties. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
 
 ```4d
-// Form.myDrop is the datasource of the form object
-
-Form.myDrop:=New object
-Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
-Form.myDrop.index:=-1  //currentValue is a placeholder
-Form.myDrop.currentValue:="Select a fruit" 
+// Form.myDrop is the datasource of the form object Form.myDrop:=New object Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
+Form.myDrop.index:=-1  //currentValue is a placeholder Form.myDrop.currentValue:="Select a fruit" 
 ```
 
 The drop-down list is displayed with the placeholder string:
@@ -66,8 +62,7 @@ After the user selects a value:
 
 ```4d
 Form.myDrop.values // ["apples","nuts","pears","oranges","carrots"]
-Form.myDrop.currentValue //"oranges"
-Form.myDrop.index //3
+Form.myDrop.currentValue //"oranges" Form.myDrop.index //3
 ```
 
 

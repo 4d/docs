@@ -77,7 +77,7 @@ On the other hand, by default these project methods will not be visible, and the
 
 ![](assets/en/Concepts/shared-methods.png)
 
-Shared project methods can be called in the code of the host project (but they cannot be modified in the Method editor of the host project). These methods are **entry points** of the component. 
+Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). These methods are **entry points** of the component. 
 
 Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Sharing of classes and functions
 
-By default, component classes and functions cannot be called from the 4D method editor of the host project. If you want your component classes and functions to be exposed in the host projects, you need to declare a component namespace. Additionally, you can control how component classes and functions are suggested in the host method editor.
+By default, component classes and functions cannot be called from the 4D Code Editor of the host project. If you want your component classes and functions to be exposed in the host projects, you need to declare a component namespace. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
 
 ### Declaring the component namespace
 
@@ -358,7 +358,7 @@ Executing initialization or closing code is done by means of the `On Host Databa
 
 By default, all the code of a matrix project installed as a component is potentially visible from the host project. In particular:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it's not possible to open them in the Method editor or modify them.
+- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Their contents can be selected and copied in the preview area of the Explorer. They can also be viewed in the debugger. However, it's not possible to open them in the Code Editor or modify them.
 - The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project. 
 - The non-hidden classes and functions can be viewed in the debugger [if a namespace is declared](#declaring-the-component-namespace).
 

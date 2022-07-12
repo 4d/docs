@@ -105,7 +105,7 @@ Une expression utilisant un opérateur sur les bits retourne une valeur de type 
 
 | Opération             | Opérateur | Syntaxe                | Retourne                |
 | --------------------- | --------- | ---------------------- | ----------------------- |
-| ET                    | &         | long & E. long         | E. long                 |
+| ET                    | &         | long & E. E. long      | E. long                 |
 | OU (inclusif)         | &#124;    | long &#124; E. long    | E. long                 |
 | OU (exclusif)         | \^&#124; | long \^&#124; E. long | E. long                 |
 | Décaler bits à gauche | <<        | E. Long << E. Long     | long (voir note n°1)    |

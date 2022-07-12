@@ -22,7 +22,7 @@ Consider for example the following configuration, where an application is duplic
 
 ![](assets/en/settings/user-settings-config.png)
 
-## Enabling User settings
+## Activar las propiedades usuario
 
 To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
 
@@ -58,11 +58,11 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Página Base de datos/almacenamiento de datos](../settings/database.md#data-storage)       | N/a                                                | N/a                                                     |
 | [Página Base de datos/Memoria](../settings/database.md#memory)                             | Identical to standard settings                     | Identical to standard settings                          |
 | [Page Backup/Periodicidad](../settings/backup.md#scheduler)                                | N/a                                                | Identical to standard settings                          |
-| [Backup/Configuration page](../settings/backup.md#configuration)                           | N/a                                                | Identical to standard settings                          |
+| [Página Backup/Configuración](../settings/backup.md#configuration)                         | N/a                                                | Identical to standard settings                          |
 | [Página Backup & Backup y restaurar](../settings/backup.md/#backup-restore)                | N/a                                                | Identical to standard settings                          |
 | [Client-server/Network options page](../settings/client-server.md/#network-options)        | Identical to standard settings                     | Identical to standard settings                          |
 | [Página Cliente-Servidor/Configuración IP](../settings/client-server.md/#ip-configuration) | Identical to standard settings                     | Identical to standard settings                          |
-| [Web/Configuration page](../settings/web.md#configuration)                                 | Identical to standard settings                     | Identical to standard settings                          |
+| [Página Web/Configuración](../settings/web.md#configuration)                               | Identical to standard settings                     | Identical to standard settings                          |
 | [Página Web/Opciones (I)](../settings/web.md#options)                                      | Identical to standard settings                     | Identical to standard settings                          |
 | [Página Web/Opciones (II)](../settings/web.md#options-ii)                                  | Identical to standard settings                     | Identical to standard settings                          |
 | [Página Web/Log (tipo)](../settings/web.md#log)                                            | Identical to standard settings                     | Identical to standard settings                          |
@@ -83,7 +83,7 @@ When the **User Settings** feature is enabled, user settings edited by the [SET 
 
 > `Table sequence number` is an exception; this setting value is always saved in the data file itself.
 
-## settings.4DSettings files
+## Archivos settings.4DSettings
 
 When you [check the **Enable User Settings** option](#enabling-user-settings), user settings files are automatically created. Their location depends on the type of user settings defined.
 

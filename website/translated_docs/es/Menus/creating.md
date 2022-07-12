@@ -13,7 +13,7 @@ Puede combinar ambas funcionalidades y utilizar los menús creados en la estruct
 
 ## Barra de menús por defecto
 
-Una aplicación personalizada debe contener al menos una barra de menús con un menú. Por defecto, cuando se crea un nuevo proyecto, 4D crea automáticamente una barra de menú por defecto (Barra de nº 1) para que pueda acceder al modo Aplicación. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
+Una aplicación personalizada debe contener al menos una barra de menús con un menú. Una aplicación personalizada debe contener al menos una barra de menús con un menú. La barra de menús por defecto incluye menús estándar y un comando para volver al modo Diseño.
 
 Esto permite al usuario acceder al modo Aplicación tan pronto como se crea el proyecto. La barra de menús nº 1 se llama automáticamente cuando se elige el comando **Test Application** en el menú **Ejecución**.
 
@@ -22,7 +22,7 @@ La barra de menús por defecto incluye tres menús:
 - **Archivo**: sólo incluye el comando **Salir**. La acción estándar *Salir* está asociada al comando, que hace que la aplicación salga.
 - **Editar**: menú estándar y totalmente editable. Las funciones de edición, como copiar, pegar, etc., se definen mediante acciones estándar.
 - **Modo**: contiene, por defecto, el comando **Volver al modo Diseño**, que se utiliza para salir del modo Aplicación.
-> > > Los elementos del menú aparecen *en itálica * porque consisten de referencias y no de texto codificado. Consulte [Propiedad Título](properties.md#title).
+> > > > Los elementos del menú aparecen *en itálica * porque consisten de referencias y no de texto codificado. Consulte [Propiedad Título](properties.md#title).
 
 Puede modificar esta barra de menú como desee o crear otras adicionales.
 

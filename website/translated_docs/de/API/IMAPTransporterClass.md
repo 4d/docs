@@ -311,6 +311,8 @@ $status:=$imap.append($msg; "Drafts")
 
 
 
+
+
 <!-- INCLUDE transporter.authenticationModeIMAP.Desc -->
 
 
@@ -320,6 +322,7 @@ $status:=$imap.append($msg; "Drafts")
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
 
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
 
 ## .checkConnectionDelay
 
@@ -338,7 +341,7 @@ $status:=$imap.append($msg; "Drafts")
 The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  If this time is exceeded between two method calls, the connection to the server will be checked. By default, if the property has not been set in the *server* object, the value is 300.
 > **Warning**: Make sure the defined timeout is lower than the server timeout, otherwise the client timeout will be useless.
 
-
+<!-- END REF -->
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
@@ -522,6 +525,10 @@ $status:=$transporter.createBox("Invoices")
 
 If ($status.success)
 ALERT("Mailbox creation successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
 Else
 ALERT("Error: "+$status.statusText)
 End if
@@ -715,6 +722,10 @@ If ($status.success)
     ALERT("Error: "+$status.statusText)
     End if
 End if
+    Else
+    ALERT("Error: "+$status.statusText)
+    End if
+End if
 ```
 
 <!-- END REF -->
@@ -791,6 +802,7 @@ $status:=$transporter.expunge()
 
 
 <!-- REF IMAPTransporterClass.getBoxInfo().Desc -->
+
 ## .getBoxInfo()
 
 <details><summary>History</summary>
@@ -1149,6 +1161,8 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
         // ...
     End for each
  End if
+    End for each
+ End if
 ```
 
 <!-- END REF -->
@@ -1194,7 +1208,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
-> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
+> * > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 
 
@@ -1573,6 +1587,10 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
  End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
 ```
 
 <!-- END REF -->
@@ -1854,6 +1872,10 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
    End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1923,6 +1945,10 @@ $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
    ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

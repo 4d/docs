@@ -27,7 +27,7 @@ Voici quelques exemples de constantes littérales de type heure :
 
 Une heure nulle s’écrit ?00:00:00?
 
-**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour saisir une heure nulle. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
+**Tip:** The Code Editor includes a shortcut for entering a null time. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
 
 ## Opérateurs sur les heures
 
@@ -80,9 +80,9 @@ La seconde ligne peut également être écrite de la façon suivante :
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```4d
-$t1:=?23:00:00? // Il est 23 heures
+$t1:=?23:00:00? $t1:=?23:00:00? // avec une addition simple, $t2 vaut ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? // Il est 23 heures
   // Nous souhaitons ajouter 2 heures et demi
-$t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? , il est bien 1h30 du matin le lendemain
+$t2:=$t1 +?02:30:00?
 ```
 

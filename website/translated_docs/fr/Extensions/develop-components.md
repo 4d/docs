@@ -77,7 +77,7 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 ![](assets/en/Concepts/shared-methods.png)
 
-Les méthodes projet partagées peuvent être appelées dans le code du projet hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
+Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). Ces méthodes constituent les **points d’entrée** du composant.
 
 A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. In certain cases, you may need to allow a component to access the project methods of your host project.
 
@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Partage des classes et des fonctions
 
-Par défaut, les classes et fonctions des composants ne peuvent pas être appelées à partir de l'éditeur de méthodes 4D du projet hôte. By default, component classes and functions cannot be called from the 4D Code Editor of the host project. En outre, vous pouvez contrôler la manière dont les classes et les fonctions des composants sont suggérées dans l'éditeur de méthodes de l'hôte.
+Si vous souhaitez que les classes et fonctions de vos composants soient exposées dans les projets hôtes, vous devez déclarer un namespace. By default, component classes and functions cannot be called from the 4D Code Editor of the host project. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
 
 ### Déclaration du namespace
 
@@ -356,7 +356,7 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 Par défaut, tout le code d’un projet utilisé comme matrice installé comme composant est virtuellement visible depuis le projet hôte. En particulier :
 
-- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes du projet hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Il n’est toutefois pas possible de les ouvrir dans l’éditeur de méthodes ni de les modifier.
+- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes du projet hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. However, it's not possible to open them in the Code Editor or modify them.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur du projet hôte.
 - Les classes et fonctions non cachées peuvent être visualisées dans le débogueur [si un namespace est déclaré](#declaring-the-component-namespace).
 

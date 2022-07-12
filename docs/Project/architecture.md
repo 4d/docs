@@ -208,7 +208,7 @@ This folder contains files that memorize user configurations, e.g. break point o
 
 Contents|Description|Format|
 --------|-------|----|
-methodPreferences.json|Current user method editor preferences|JSON|
+methodPreferences.json|Current user Code Editor preferences|JSON|
 methodWindowPositions.json|Current user window positions for methods|JSON|
 formWindowPositions.json|Current user window positions for forms|JSON|
 workspace.json|List of opened windows; on macOS, order of tab windows|JSON|

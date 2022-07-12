@@ -10,7 +10,7 @@ Mit der 4D Programmiersprache lässt sich die gängige Meldung "Hello, world!" a
 ALERT("Hello, World!")
 ```
 
-Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meldung "Hello, World!" mit der Schaltfläche OK. Zum Ausführen des Code klicken Sie einfach im Methodeneditor auf die Schaltfläche zum Ausführen:
+Dieser Code zeigt ein standardmäßiges Dialogfenster der Plattform mit der Meldung "Hello, World!" mit der Schaltfläche OK. To execute the code, you just need to click on the execution button in the Code Editor:
 
 ![alt-text](assets/en/Concepts/helloworld.png)
 
@@ -100,7 +100,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Method editor.
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
 
 ## Methoden
 

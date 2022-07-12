@@ -75,16 +75,15 @@ Se `.new()` for chamado em uma classe não existente, um erro é retornado.
 Para criar uma nova instância da classe Person:
 
 ```4d
-var $person : cs.Person  
-$person:=cs.Person.new() //create the new instance  
+var $person : cs. Person  
+$person:=cs. Person.new() //create the new instance  
 //$person contains functions of the class
 ```
 
 Para criar uma nova instância da classe Person com parâmetros:
 
 ```4d
-//Class: Person.4dm
-Class constructor($firstname : Text; $lastname : Text; $age : Integer)
+//Class: Person.4dm Class constructor($firstname : Text; $lastname : Text; $age : Integer)
     This.firstName:=$firstname
     This.lastName:=$lastname
     This.age:=$age
@@ -92,8 +91,8 @@ Class constructor($firstname : Text; $lastname : Text; $age : Integer)
 
 ```4d
 //In a method
-var $person : cs.Person  
-$person:=cs.Person.new("John";"Doe";40)  
+var $person : cs. Person  
+$person:=cs. Person.new("John";"Doe";40)  
 //$person.firstName = "John"
 //$person.lastName = "Doe"
 //$person.age = 40
@@ -128,13 +127,13 @@ Essa propriedade é**apenas leitura**.
 #### Exemplos
 
 ```4d
-$sup:=4D.File.superclass //Document
-$sup:=4D.Document.superclass //Object
-$sup:=4D.Object.superclass //null
+$sup:=4D. File.superclass //Document
+$sup:=4D. Document.superclass //Object
+$sup:=4D. Object.superclass //null
 
 // If you created a MyFile class  
 // with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
+$sup:=cs. MyFile.superclass //File 
 
 ```
 

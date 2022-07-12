@@ -149,14 +149,14 @@ Once the session is opened, the following statements become equivalent and retur
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-| Property    | Typ            | Beschreibung                                                                                                                                                                                                                                                           |
-| ----------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hostname    | Text           | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                               |
-| user        | Text           | User name                                                                                                                                                                                                                                                              |
-| password    | Text           | User password                                                                                                                                                                                                                                                          |
-| idleTimeout | Lange Ganzzahl | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
-| tls         | Boolean        | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                  |
-| type        | Text           | Must be "4D Server"                                                                                                                                                                                                                                                    |
+| Property    | Typ            | Beschreibung                                                                                                                                                                                                                                                                                                 |
+| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| hostname    | Text           | Name or IP address of the remote database + ":" + port number (port number is mandatory)                                                                                                                                                                                                                     |
+| user        | Text           | User name                                                                                                                                                                                                                                                                                                    |
+| password    | Text           | User password                                                                                                                                                                                                                                                                                                |
+| idleTimeout | Lange Ganzzahl | Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**. |
+| tls         | Boolean        | Use secured connection(*). If omitted, false by default. Using a secured connection is recommended whenever possible.                                                                                                                                                                                        |
+| type        | Text           | Must be "4D Server"                                                                                                                                                                                                                                                                                          |
 
 (*) If tls is true, the HTTPS protocol is used if:
 
@@ -377,6 +377,9 @@ You want to know the number of encrypted tables in the current data file:
        End if
     End for each
     ALERT(String($vcount)+" encrypted table(s) in this datastore.")
+ Else
+    ALERT("This database is not encrypted.")
+ End if
  Else
     ALERT("This database is not encrypted.")
  End if

@@ -1379,12 +1379,12 @@ If a filter is specified for attributes of the relatedEntity [kind](DataClassAtt
 
 *   propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
 *   propertyPath = "relatedEntity.*" -> all the properties are extracted
-*   propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted
+*   propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted
 
 If a filter is specified for attributes of the relatedEntities [kind](DataClassAttributeClass.md#kind):
 
 *   propertyPath = "relatedEntities.*" -> all the properties are extracted
-*   propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted
+*   propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted
 
 In the *options* parameter, you can pass the `dk with primary key` and/or`dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
 

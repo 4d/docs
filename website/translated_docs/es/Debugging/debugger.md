@@ -14,13 +14,13 @@ There are multiple ways to get the Debugger to display:
 
 * Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
 * Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
-* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Method editor
+* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
 * Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
 ![open-debugger](assets/en/Debugging/openDebugger.png)
 
 * Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
-* Adding a break point in the Method Editor window or in the Break and Catch pages of the Runtime Explorer.
+* Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
 
 When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. Por ejemplo, en la ventana del depurador arriba:
 
@@ -76,12 +76,12 @@ Stops method execution, and returns to the state before the method started execu
 #### Detener y editar
 
 
-Pausa la ejecución del método. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
+Pausa la ejecución del método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
 #### Editar
 
-Pausa la ejecución del método. The method that is executing at the time you click the Edit button opens in the Method Editor.
+Pausa la ejecución del método. The method that is executing at the time you click the Edit button opens in the Code Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
@@ -190,7 +190,7 @@ Like the Constants page of the Explorer window, this theme displays predefined c
 
 #### Semáforos
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. No se muestran los semáforos globales.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
 #### Procesos
 
@@ -359,7 +359,7 @@ The yellow arrow in the left margin of the Source Code pane is called the progra
 
 By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
 
-#### Moving the program counter
+#### Mover el contador del programa
 
 For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). To do so, click and drag the yellow arrow to another line.
 
@@ -386,18 +386,18 @@ The contextual menu of the Source Code Pane provides access to several functions
 ![source-code-pane-context-window](assets/en/Debugging/sourceCodePaneContext.png)
 
 * **Goto Definition**: Goes to where the selected object is defined. Este comando está disponible para:
-  * *Project methods:* displays method contents in a new window of the Method editor
+  * *Project methods:* displays method contents in a new window of the Code Editor
   * *Fields:* Displays field properties in the inspector of the Structure window
   * *Tables:* Displays table properties in the inspector of the Structure window
   * *Forms:* Displays form in the Form editor
   * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
-* **Search References** (also available in Method editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. This can be the name of a field, variable, command, string, and so on. Search results are displayed in a new standard results window.
+* **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. This can be the name of a field, variable, command, string, and so on. Search results are displayed in a new standard results window.
 * **Copy**: Standard copy of the selected expression to the pasteboard.
 * **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.
 * **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
 * **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
-* **Toggle Breakpoint** (also available in Method editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
-* **Edit Breakpoint** (also available in Method editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
+* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
+* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
 
 ### Buscar siguiente/anterior
 
@@ -431,7 +431,7 @@ This section lists all the shortcuts available in the debugger window.
 
 #### Todas las ventanas
 
-- **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Method editor and is stored in the Preferences.
+- **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
 - **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
 - When no item is selected in any pane, press **Enter** to step over.
 - When an item value is selected, use the arrows keys to navigate through the list.

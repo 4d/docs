@@ -5,7 +5,6 @@ title: Document Class
 
 ## Description
 
-
 <!-- REF document.creationDate.Desc -->
 ## .creationDate
 
@@ -15,8 +14,8 @@ title: Document Class
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.creationDate.Syntax -->
-**.creationDate** : Date<!-- END REF -->
+
+<!-- REF #document.creationDate.Syntax --> **.creationDate** : Date<!-- END REF -->
 
 
 #### Description
@@ -26,8 +25,9 @@ La propriété `.creationDate` retourne <!-- REF #document.creationDate.Summary 
 Cette propriété est en **lecture seule**. 
 
 <!-- END REF -->
- 
- 
+
+
+
  <!-- REF document.creationTime.Desc -->
 ## .creationTime
 
@@ -37,8 +37,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.creationTime.Syntax -->
-**.creationTime** : Time<!-- END REF -->
+
+<!-- REF #document.creationTime.Syntax --> **.creationTime** : Time<!-- END REF -->
 
 
 #### Description
@@ -49,9 +49,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.exists.Desc -->
 ## .exists
 
@@ -61,8 +58,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.exists.Syntax -->
-**.exists** : Boolean<!-- END REF -->
+
+<!-- REF #document.exists.Syntax --> **.exists** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -72,10 +69,6 @@ La propriété `.exists` retourne <!-- REF #document.exists.Summary -->vrai si l
 Cette propriété est en **lecture seule**. 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF document.extension.Desc -->
 
@@ -87,20 +80,16 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.extension.Syntax -->
-**.extension** : Text<!-- END REF -->
+
+<!-- REF #document.extension.Syntax --> **.extension** : Text<!-- END REF -->
 
 #### Description
 
-La propriété `.extension` retourne <!-- REF #document.extension.Summary -->l'extension du nom de fichier (le cas échéant)<!-- END REF -->. Une extension commence toujours par ".". La propriété retourne une chaine vide si le nom du fichier ne contient pas d'extension.
+La propriété `.extension` retourne <!-- REF #document.extension.Summary -->l'extension du nom de fichier (le cas échéant)<!-- END REF -->. Une extension commence toujours par ".". La propriété `.extension` retourne <!-- REF #document.extension.Summary -->l'extension du nom de fichier (le cas échéant)<!-- END REF -->.
 
 Cette propriété est en **lecture seule**. 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF document.fullName.Desc -->
 ## .fullName
@@ -111,8 +100,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.fullName.Syntax -->
-**.fullName** : Text<!-- END REF -->
+
+<!-- REF #document.fullName.Syntax --> **.fullName** : Text<!-- END REF -->
 
 #### Description
 
@@ -121,9 +110,6 @@ La propriété `.fullName` retourne <!-- REF #document.fullName.Summary -->le no
 Cette propriété est en **lecture seule**. 
 
 <!-- END REF -->
-
-
-
 
 <!-- REF document.hidden.Desc -->
 ## .hidden
@@ -134,8 +120,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.hidden.Syntax -->
-**.hidden** : Boolean<!-- END REF -->
+
+<!-- REF #document.hidden.Syntax --> **.hidden** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -146,9 +132,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.isAlias.Desc -->
 ## .isAlias
 
@@ -158,8 +141,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.isAlias.Syntax -->
-**.isAlias** : Boolean<!-- END REF -->
+
+<!-- REF #document.isAlias.Syntax --> **.isAlias** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -170,8 +153,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.isFile.Desc -->
 ## .isFile
 
@@ -181,8 +162,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.isFile.Syntax -->
-**.isFile** : Boolean<!-- END REF -->
+
+<!-- REF #document.isFile.Syntax --> **.isFile** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -193,8 +174,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.isFolder.Desc -->
 ## .isFolder
 
@@ -204,8 +183,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.isFolder.Syntax -->
-**.isFolder** : Boolean<!-- END REF -->
+
+<!-- REF #document.isFolder.Syntax --> **.isFolder** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -216,9 +195,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.isWritable.Desc -->
 ## .isWritable
 
@@ -228,8 +204,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.isWritable.Syntax -->
-**.isWritable** : Boolean<!-- END REF -->
+
+<!-- REF #document.isWritable.Syntax --> **.isWritable** : Boolean<!-- END REF -->
 
 
 #### Description
@@ -248,10 +224,8 @@ Cette propriété est en **lecture seule**.
  End if
 ```
 
+
 <!-- END REF -->
-
-
-
 
 <!-- REF document.modificationDate.Desc -->
 ## .modificationDate
@@ -262,8 +236,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.modificationDate.Syntax -->
-**.modificationDate** : Date<!-- END REF -->
+
+<!-- REF #document.modificationDate.Syntax --> **.modificationDate** : Date<!-- END REF -->
 
 
 #### Description
@@ -274,9 +248,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.modificationTime.Desc -->
 ## .modificationTime
 
@@ -286,8 +257,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.modificationTime.Syntax -->
-**.modificationTime** : Time<!-- END REF -->
+
+<!-- REF #document.modificationTime.Syntax --> **.modificationTime** : Time<!-- END REF -->
 
 
 ##### Description
@@ -298,8 +269,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.name.Desc -->
 ## .name
 
@@ -309,8 +278,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.name.Syntax -->
-**.name** : Text<!-- END REF -->
+
+<!-- REF #document.name.Syntax --> **.name** : Text<!-- END REF -->
 
 
 #### Description
@@ -321,7 +290,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
 <!-- REF document.original.Desc -->
 ## .original
 
@@ -331,8 +299,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.original.Syntax -->
-**.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
+
+<!-- REF #document.original.Syntax --> **.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
 
 
 #### Description
@@ -348,9 +316,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.parent.Desc -->
 ## .parent
 
@@ -360,8 +325,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.parent.Syntax -->
-**.parent** : 4D.Folder<!-- END REF -->
+
+<!-- REF #document.parent.Syntax --> **.parent** : 4D.Folder<!-- END REF -->
 
 
 #### Description
@@ -372,9 +337,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.path.Desc -->
 ## .path
 
@@ -384,8 +346,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.path.Syntax -->
-**.path** : Text<!-- END REF -->
+
+<!-- REF #document.path.Syntax --> **.path** : Text<!-- END REF -->
 
 
 #### Description
@@ -396,8 +358,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.platformPath.Desc -->
 ## .platformPath
 
@@ -407,8 +367,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.platformPath.Syntax -->
-**.platformPath** : Text<!-- END REF -->
+
+<!-- REF #document.platformPath.Syntax --> **.platformPath** : Text<!-- END REF -->
 
 
 #### Description
@@ -419,9 +379,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.size.Desc -->
 ## .size
 
@@ -431,8 +388,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.size.Syntax -->
-**.size** : Real<!-- END REF -->
+
+<!-- REF #document.size.Syntax --> **.size** : Real<!-- END REF -->
 
 
 #### Description
@@ -443,15 +400,6 @@ Cette propriété est en **lecture seule**.
 
 <!-- END REF -->
 
-
-
-
-
-
-
-
-
-
 <!-- REF document.copyTo().Desc -->
 ## .copyTo()
 
@@ -461,8 +409,9 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.copyTo().Syntax -->
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+
+<!-- REF #document.copyTo().Syntax --> **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+
 
 <!-- REF #document.copyTo().Params -->
 | Paramètres        | Type      |    | Description                                        |
@@ -471,6 +420,7 @@ Cette propriété est en **lecture seule**.
 | newName           | Text      | -> | Nom de la copie                                    |
 | overwrite         | Integer   | -> | `fk overwrite` pour écraser les éléments existants |
 | Résultat          | 4D.File   | <- | Fichier copié                                      |
+
 <!-- END REF -->
 
 
@@ -503,9 +453,8 @@ $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
 
+
  <!-- END REF -->
-
-
 
 <!-- REF document.getContent().Desc -->
 ## .getContent()
@@ -517,13 +466,15 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5  | Ajout            |
 </details>
 
-<!-- REF #document.getContent().Syntax -->
-**.getContent( )** : 4D.Blob<!-- END REF -->
+
+<!-- REF #document.getContent().Syntax --> **.getContent( )** : 4D.Blob<!-- END REF -->
+
 
 <!-- REF #document.getContent().Params -->
 | Paramètres | Type    |    | Description        |
 | ---------- | ------- | -- | ------------------ |
 | Résultat   | 4D.Blob | <- | Contenu du fichier |
+
 <!-- END REF -->
 
 
@@ -547,9 +498,8 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
  End if
 ```
 
+
 <!-- END REF -->
-
-
 
 <!-- REF document.getIcon().Desc -->
 ## .getIcon()
@@ -560,14 +510,16 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.getIcon().Syntax -->
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+
+<!-- REF #document.getIcon().Syntax --> **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+
 
 <!-- REF #document.getIcon().Params -->
 | Paramètres | Type    |    | Description                                    |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
 | Résultat   | Image   | <- | Icône                                          |
+
 <!-- END REF -->
 
 
@@ -583,11 +535,7 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 
 [Image](../Concepts/picture.html) de l'icône du fichier.
 
-
-
 <!-- END REF -->
-
-
 
 <!-- REF document.getText().Desc -->
 ## .getText()
@@ -598,8 +546,9 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 | v17 R5  | Ajout         |
 </details>
 
-<!-- REF #document.getText().Syntax -->
-**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
+
+<!-- REF #document.getText().Syntax --> **.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
+
 
 
 <!-- REF #document.getText().Params -->
@@ -609,6 +558,7 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 | charSetNum  | Integer | -> | Numéro du jeu de caractères               |
 | breakMode   | Integer | -> | Mode de traitement des retours à la ligne |
 | Résultat    | Text    | <- | Texte du document                         |
+
 <!-- END REF -->
 
 
@@ -673,8 +623,6 @@ Dans ce cas, le contenu de `$txt` est :
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
 Cette fois-ci `\n` (LF) est utilisé comme délimiteur de ligne.
-
-
 
 <!-- END REF -->
  

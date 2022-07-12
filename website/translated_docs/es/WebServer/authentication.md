@@ -175,7 +175,7 @@ El método base `On Web Authentication` devuelve un booleano en $0:
 
 El método base `On Web Connection` sólo se ejecuta si la conexión ha sido aceptada por `On Web Authentication`.
 > **ADVERTENCIA**<br>Si no se define ningún valor en $0 o si $0 no está definido en el método base `On Web Authentication`, la conexión se considera aceptada y se ejecuta el método base `On Web Connection`.
-> * No llame a ningún elemento de la interfaz en el método base `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, de lo contrario, se interrumpirá su ejecución y se rechazará la conexión. Lo mismo ocurrirá si se produce un error durante su procesamiento.
+> * * No llame a ningún elemento de la interfaz en el método base `On Web Authentication` (`ALERT`, `DIALOG`, etc.) porque, de lo contrario, se interrumpirá su ejecución y se rechazará la conexión. Lo mismo ocurrirá si se produce un error durante su procesamiento.
 
 
 ### Ejemplo

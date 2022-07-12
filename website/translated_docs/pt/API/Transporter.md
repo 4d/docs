@@ -62,7 +62,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Value    | Constantes                     | Comentário                             |
+| Value    | Constants                      | Comentário                             |
 | -------- | ------------------------------ | -------------------------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
 | LOGIN    | `IMAP authentication login`    | Authentication using LOGIN protocol    |
@@ -95,7 +95,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Value    | Constantes                     | Comentário                                     |
+| Value    | Constants                      | Comentário                                     |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentication using CRAM-MD5 protocol         |
@@ -129,7 +129,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Value    | Constantes                     | Comentário                             |
+| Value    | Constants                      | Comentário                             |
 | -------- | ------------------------------ | -------------------------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
 | LOGIN    | `SMTP authentication login`    | Authentication using LOGIN protocol    |
@@ -217,12 +217,12 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset. The head
 
 **Possible values:**
 
-| Constante                | Value                          | Comentário                                                                                                |
-| ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                 |
-| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                |
-| mail mode UTF8           | US-ASCII_UTF8_QP             | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (default value) |
-| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64                           |
+| Constante                | Value                          | Comentário                                                                      |
+| ------------------------ | ------------------------------ | ------------------------------------------------------------------------------- |
+| mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                       |
+| mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                      |
+| mail mode UTF8           | US-ASCII_UTF8_QP             | texto                                                                           |
+| mail mode UTF8 in base64 | US-ASCII_UTF8_B64            | *headerCharset* & *bodyCharset*: US-ASCII if possible, otherwise UTF-8 & base64 |
 
 
 <!-- END REF -->

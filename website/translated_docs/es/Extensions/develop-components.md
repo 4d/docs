@@ -77,7 +77,7 @@ Por otro lado, por defecto estos métodos proyecto no serán visibles, y no podr
 
 ![](assets/en/Concepts/shared-methods.png)
 
-Los métodos proyecto compartidos se pueden llamar en el código del proyecto local (pero no se pueden modificar en el editor de métodos del proyecto local). Estos métodos son los **puntos de entrada** del componente.
+Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). Estos métodos son los **puntos de entrada** del componente.
 
 Por el contrario, por razones de seguridad, por defecto un componente no puede ejecutar métodos proyecto que pertenezcan al proyecto local. En algunos casos, puede ser necesario permitir que un componente acceda a los métodos proyecto de su proyecto local. Para ello, debe designar explícitamente qué métodos proyecto del proyecto local quiere hacer accesibles a los componentes (en las propiedades del método, marque la casilla **Compartido por componentes y proyecto local**).
 
@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Compartir las clases y las funciones
 
-Por defecto, las clases y funciones de los componentes no pueden ser llamadas desde el editor de métodos 4D del proyecto local. Si quiere exponer las clases y funciones del componente en el proyecto local, necesita declarar un espacio de nombres del componente. Además, puede controlar cómo se sugieren las clases y las funciones de los componentes en el editor de métodos local.
+By default, component classes and functions cannot be called from the 4D Code Editor of the host project. Si quiere exponer las clases y funciones del componente en el proyecto local, necesita declarar un espacio de nombres del componente. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
 
 ### Declarar del namespace
 
@@ -355,7 +355,7 @@ La ejecución del código de inicialización o cierre se realiza mediante el mé
 
 Por defecto, todo el código de un proyecto matriz instalado como componente es potencialmente visible desde el proyecto local. En particular:
 
-- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. Sin embargo, no es posible abrirlos en el editor de métodos o modificarlos.
+- Los métodos proyecto compartido se encuentran en la Página Métodos del Explorador y pueden ser llamados en los métodos del proyecto local. Su contenido puede ser seleccionado y copiado en el área de vista previa del Explorador. También se pueden ver en el depurador. However, it's not possible to open them in the Code Editor or modify them.
 - Los otros métodos proyecto del proyecto matriz no aparecen en el Explorador, pero también pueden verse en el depurador del proyecto local.
 - Las clases y funciones no ocultas pueden verse en el depurador [si se declara un namespace](#declaring-the-component-namespace).
 

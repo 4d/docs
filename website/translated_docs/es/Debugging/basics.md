@@ -11,7 +11,7 @@ El entorno de desarrollo 4D ofrece varias herramientas de depuración para todo 
 
 ### Errores de digitación
 
-El editor de métodos detecta errores de digitación. Se muestran en rojo y se ofrece información adicional en la parte inferior de la ventana. He aquí un error de escritura:
+Los errores de escritura son detectados por el Editor de código. Se muestran en rojo y se ofrece información adicional en la parte inferior de la ventana. He aquí un error de escritura:
 
 ![punto de ruptura](assets/en/Debugging/typing-error.png)
 
@@ -65,7 +65,7 @@ El área de texto superior muestra un mensaje describiendo el error. El área de
 
 La ventana de error de sintaxis propone varias opciones:
 
-- **Modificar**: detiene la ejecución de todos los métodos. 4D cambia al entorno Diseño y el método con el error se abre en el editor de métodos, permitiéndole solucionarlo. Utilice esta opción cuando reconozca inmediatamente el error y pueda arreglarlo sin más investigación.
+- **Modificar**: detiene la ejecución de todos los métodos. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Utilice esta opción cuando reconozca inmediatamente el error y pueda arreglarlo sin más investigación.
 
 - **Rastrear**: entra en modo Rastrear/Depurador. Se muestra la ventana del [Depurador](debugger.md). Si la línea actual solo se ha ejecutado parcialmente, es posible que tenga que hacer clic en el botón **rastrear** varias veces.
 
@@ -84,7 +84,7 @@ La ventana de error de sintaxis propone varias opciones:
 
 ## Depurador
 
-Un error común de principiantes en la detección de errores es hacer clic en **Abandonar** en la ventana de error de sintaxis, volver al editor de métodos, y tratar de averiguar qué está pasando mirando el código. ¡No lo haga! Ahorrará mucho tiempo y energía utilizando siempre el **Depurador**.
+A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. ¡No lo haga! Ahorrará mucho tiempo y energía utilizando siempre el **Depurador**.
 
 El depurador le permite pasar lentamente por los métodos. Muestra toda la información que necesita para entender por qué ha ocurrido un error. Una vez que tiene esta información, usted sabe cómo arreglar el error.
 
@@ -94,4 +94,4 @@ Otra razón para usar el Depurador es el desarrollo del código. A veces se pued
 
 En el proceso de depuración, puede que necesite saltar el seguimiento de algunas partes del código hasta una línea determinada. O, puede querer rastrear el código cuando una expresión dada tiene un determinado valor (e.. "$myVar > 1000"), o cada vez que se llama un comando 4D específico.
 
-Estas necesidades están cubiertas por **puntos de interrupción** y las funciones de **captura de comando**. Pueden configurarse desde el editor de métodos, el depurador o el Explorador de tiempos de ejecución.
+Estas necesidades están cubiertas por **puntos de interrupción** y las funciones de **captura de comando**. They can be configured from the Code Editor, the debugger, or the Runtime Explorer.

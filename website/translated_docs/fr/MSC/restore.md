@@ -17,7 +17,7 @@ Lorsque vous sélectionnez une sauvegarde dans cette liste, la partie droite de 
 - **Chemin d’accès** : chemin d’accès complet du fichier de sauvegarde sélectionné. Le bouton Montrer ouvre le dossier de sauvegarde dans une fenêtre système.
 - **Date et heure** : date et heure de la sauvegarde.
 - **Contenu** : contenu du fichier de sauvegarde. Chaque élément de la liste est associé à une case à cocher, permettant de spécifier si vous souhaitez ou non le restituer. Vous pouvez utiliser les boutons **Tout sélectionner** ou **Tout désélectionner** pour paramétrer la liste des éléments à restituer.
-- **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. Par défaut, 4D restitue les fichiers dans un dossier nommé “Nomarchive” (sans extension) placé à côté du dossier Project. Pour modifier cet emplacement, cliquez sur le bouton **[...]** et désignez le dossier dans lequel vous souhaitez effectuer la restitution.
+- **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. **Emplacement des fichiers restitués** : dossier dans lequel seront placés les fichiers restitués. Pour modifier cet emplacement, cliquez sur le bouton **[...]** et désignez le dossier dans lequel vous souhaitez effectuer la restitution.
 
 Le bouton **Restituer** lance la restitution manuelle des éléments sélectionnés.
 

@@ -54,7 +54,7 @@ class Index extends React.Component {
       restServer: <translate>REST Server</translate>,
       msc: <translate>Maintenance and Security Center</translate>,
       backup: <translate>Backup and Restore</translate>,
-      licenses: <translate>License Management</translate>,
+      licenses: <translate>Licenses & Data Collection</translate>,
       buildApp: <translate>Build Application</translate>,
       webAdmin: <translate>Web Administration</translate>,
       serverAdmin: <translate>4D Server Administration Window</translate>,
@@ -62,7 +62,7 @@ class Index extends React.Component {
       cs: <translate>Client/Server</translate>,
       tls: <translate>TLS Protocol</translate>,
       debugging: <translate>Debugging</translate>,
-      codeEditor: <translate>Code Editor</translate>,
+      codeEditor: <translate>Handling Code</translate>,
       dataExplorer: <translate>Web Data Explorer</translate>,
       langRef: <translate>Language Reference (4D Doc Center)</translate>,
       users: <translate>Access Rights</translate>,
@@ -77,7 +77,7 @@ class Index extends React.Component {
       settings: <translate>Settings</translate>,
 	  tags: <translate>Transformation Tags</translate>,
       usersettings: <translate>User Settings</translate>,
-	    langUrl: <translate>https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html</translate>
+	    langUrl: <translate>https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html</translate>
     };
 
     return (
@@ -102,9 +102,8 @@ class Index extends React.Component {
 				  [${subContents.langRef}](${subContents.langUrl})<br>
                   [${subContents.ORDA}](${siteConfig.baseUrl}${this.props.language}/ORDA/overview.html)<br>
                   [${subContents.class}](${siteConfig.baseUrl}${this.props.language}/API/overview.html)<br>
-                  [${subContents.codeEditor}](${siteConfig.baseUrl}${this.props.language}/code-editor/navigation.html)<br>
+                  [${subContents.codeEditor}](${siteConfig.baseUrl}${this.props.language}/code-editor/overview.html)<br>
 				  [${subContents.debugging}](${siteConfig.baseUrl}${this.props.language}/Debugging/basics.html)<br>
-	            [${subContents.tags}](${siteConfig.baseUrl}${this.props.language}/Tags/tags.html)<br>
 				[${subContents.settings}](${siteConfig.baseUrl}${this.props.language}/settings/overview.html)<br>
 				  [${subContents.preferences}](${siteConfig.baseUrl}${this.props.language}/Preferences/overview.html)`,
                   image: `${siteConfig.baseUrl}img/illu_CoreDevelopment.png`,

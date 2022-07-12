@@ -33,7 +33,7 @@ For detailed information about the session implementation, please refer to the [
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
-**Session** : 4D.Session<!-- END REF -->
+**Session** : 4D. Session<!-- END REF -->
 
 
 <!-- REF #_command_.Session.Params -->
@@ -110,9 +110,7 @@ A função `.hasPrivilege()`<!-- REF #SessionClass.hasPrivilege(). Summary -->de
 
 ```4d
 //Invalidate a session
-var $isGuest : Boolean  
-
-Session.clearPrivileges()
+var $isGuest : Boolean Session.clearPrivileges()
 $isGuest:=Session.isGuest() //$isGuest is True
 ```
 
@@ -182,11 +180,8 @@ Se quiser comprovar se o privilégio "WebAdmin" está associado à sessão:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
-    //Access is granted, do nothing
-Else
-    //Display an authentication page
-
-End if
+    //Access is granted, do nothing Else
+    //Display an authentication page End if
 ```
 
 <!-- END REF -->
@@ -222,11 +217,9 @@ Essa propriedade é**apenas escrita**.
 ```4d
 If (Session.isGuest())
         // A Guest session will close after 60 minutes of inactivity
-    Session.idleTimeout:=60
-Else
+    Session.idleTimeout:=60 Else
         // Other sessions will close after 120 minutes of inactivity
-    Session.idleTimeout:=120
-End if
+    Session.idleTimeout:=120 End if
 
 ```
 
@@ -263,8 +256,7 @@ No método base `On Web Connection`:
 
 ```4d
 If (Session.isGuest())
-    //Do something for Guest user
-End if
+    //Do something for Guest user End if
 ```
 
 
@@ -322,9 +314,7 @@ Em um método de autenticação personalizado, deve estabecer o privilégio "Web
 ```4d
 var $userOK : Boolean
 
-... //Authenticate the user
-
-If ($userOK) //The user has been approved
+... //Authenticate the user If ($userOK) //The user has been approved
   var $info : Object
   $info:=New object()
   $info.privileges:=New collection("WebAdmin")
@@ -367,8 +357,7 @@ Se quiser armazenar a IP do cliente na propriedade `.storage`. Pode escrever no 
 If (Session.storage.clientIP=Null) //first access
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
-    End use 
-End if 
+    End use End if 
 
 ```
 

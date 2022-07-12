@@ -261,7 +261,7 @@ Say you have an online store, and some products have a tax rate applied, and oth
 
 To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
 
-So you can write this:
+Así que puede escribir esto:
 
 ```4d
 var $tax : Variant
@@ -381,7 +381,7 @@ This example stores a person's full name in a variable, and handles the case whe
 var $fullname : Text
 
 // If one of the names is missing, store the one that exists, otherwise store an empty string
-$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
+$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
 ## Truthy y falsy

@@ -15,7 +15,7 @@ An attribute is the smallest storage cell in a relational database (see also [Re
 
 *   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
 *   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> Los atributos y las propiedades son conceptos similares. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## AttributePath
 
@@ -154,7 +154,7 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 ## Propiedad
 
 Ver [Atributo](#attribute).
-> Los atributos y las propiedades son conceptos similares. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
+> > *Attributes* and *properties* are similar concepts. "Atributo" se utiliza para designar las propiedades de la dataclass que almacena datos, mientras que "propiedad" es más genérico y define un dato almacenado dentro de un objeto.
 
 ## PropertyPath
 

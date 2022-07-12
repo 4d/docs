@@ -32,7 +32,7 @@ The page lists all the tables of the database (including invisible tables) as we
 - **Fields**: Number of fields in the table. Invisible fields are counted, however, deleted fields are not counted.
 - **Indexes**: Number of indexes of any kind in the table
 - **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. ***Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC.*
+- **Encrypted**: If checked, the records of the table are encrypted in the data file. **Encrypted**: If checked, the records of the table are encrypted in the data file.
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 
 

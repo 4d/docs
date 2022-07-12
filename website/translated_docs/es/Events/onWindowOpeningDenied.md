@@ -8,9 +8,9 @@ title: On Window Opening Denied
 | 53   | [Área Web](FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
 
 <details><summary>Histórico</summary>
-| Versión | Modificaciones    |
-| ------- | ----------------- |
-| v19 R5  | Triggered on drop |
+| Versión | Modificaciones     |
+| ------- | ------------------ |
+| v19 R5  | Activado al soltar |
 </details>
 
 ## Descripción

@@ -5,7 +5,6 @@ title: Document Class
 
 ## Beschreibung
 
-
 <!-- REF document.creationDate.Desc -->
 ## .creationDate
 
@@ -15,8 +14,8 @@ title: Document Class
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.creationDate.Syntax -->
-**.creationDate** : Date<!-- END REF -->
+
+<!-- REF #document.creationDate.Syntax --> **.creationDate** : Date<!-- END REF -->
 
 
 #### Beschreibung
@@ -26,8 +25,9 @@ The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->
 This property is **read-only**. 
 
 <!-- END REF -->
- 
- 
+
+
+
  <!-- REF document.creationTime.Desc -->
 ## .creationTime
 
@@ -37,8 +37,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.creationTime.Syntax -->
-**.creationTime** : Time<!-- END REF -->
+
+<!-- REF #document.creationTime.Syntax --> **.creationTime** : Time<!-- END REF -->
 
 
 #### Beschreibung
@@ -49,9 +49,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.exists.Desc -->
 ## .exists
 
@@ -61,8 +58,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.exists.Syntax -->
-**.exists** : Boolean<!-- END REF -->
+
+<!-- REF #document.exists.Syntax --> **.exists** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -72,10 +69,6 @@ The `.exists` property returns <!-- REF #document.exists.Summary -->true if the 
 This property is **read-only**. 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF document.extension.Desc -->
 
@@ -87,20 +80,16 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.extension.Syntax -->
-**.extension** : Text<!-- END REF -->
+
+<!-- REF #document.extension.Syntax --> **.extension** : Text<!-- END REF -->
 
 #### Beschreibung
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The property returns an empty string if the file name does not have an extension.
+The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. An extension always starts with ".". The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->.
 
 This property is **read-only**. 
 
 <!-- END REF -->
-
-
-
-
 
 <!-- REF document.fullName.Desc -->
 ## .fullName
@@ -111,8 +100,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.fullName.Syntax -->
-**.fullName** : Text<!-- END REF -->
+
+<!-- REF #document.fullName.Syntax --> **.fullName** : Text<!-- END REF -->
 
 #### Beschreibung
 
@@ -121,9 +110,6 @@ The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full
 This property is **read-only**. 
 
 <!-- END REF -->
-
-
-
 
 <!-- REF document.hidden.Desc -->
 ## .hidden
@@ -134,8 +120,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.hidden.Syntax -->
-**.hidden** : Boolean<!-- END REF -->
+
+<!-- REF #document.hidden.Syntax --> **.hidden** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -146,9 +132,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.isAlias.Desc -->
 ## .isAlias
 
@@ -158,8 +141,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.isAlias.Syntax -->
-**.isAlias** : Boolean<!-- END REF -->
+
+<!-- REF #document.isAlias.Syntax --> **.isAlias** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -170,8 +153,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.isFile.Desc -->
 ## .isFile
 
@@ -181,8 +162,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.isFile.Syntax -->
-**.isFile** : Boolean<!-- END REF -->
+
+<!-- REF #document.isFile.Syntax --> **.isFile** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -193,8 +174,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.isFolder.Desc -->
 ## .isFolder
 
@@ -204,8 +183,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.isFolder.Syntax -->
-**.isFolder** : Boolean<!-- END REF -->
+
+<!-- REF #document.isFolder.Syntax --> **.isFolder** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -216,9 +195,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.isWritable.Desc -->
 ## .isWritable
 
@@ -228,8 +204,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.isWritable.Syntax -->
-**.isWritable** : Boolean<!-- END REF -->
+
+<!-- REF #document.isWritable.Syntax --> **.isWritable** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -248,10 +224,8 @@ This property is **read-only**.
  End if
 ```
 
+
 <!-- END REF -->
-
-
-
 
 <!-- REF document.modificationDate.Desc -->
 ## .modificationDate
@@ -262,8 +236,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.modificationDate.Syntax -->
-**.modificationDate** : Date<!-- END REF -->
+
+<!-- REF #document.modificationDate.Syntax --> **.modificationDate** : Date<!-- END REF -->
 
 
 #### Beschreibung
@@ -274,9 +248,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.modificationTime.Desc -->
 ## .modificationTime
 
@@ -286,8 +257,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.modificationTime.Syntax -->
-**.modificationTime** : Time<!-- END REF -->
+
+<!-- REF #document.modificationTime.Syntax --> **.modificationTime** : Time<!-- END REF -->
 
 
 ##### Beschreibung
@@ -298,8 +269,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.name.Desc -->
 ## .name
 
@@ -309,8 +278,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.name.Syntax -->
-**.name** : Text<!-- END REF -->
+
+<!-- REF #document.name.Syntax --> **.name** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -321,7 +290,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
 <!-- REF document.original.Desc -->
 ## .original
 
@@ -331,8 +299,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.original.Syntax -->
-**.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
+
+<!-- REF #document.original.Syntax --> **.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
 
 
 #### Beschreibung
@@ -348,9 +316,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.parent.Desc -->
 ## .parent
 
@@ -360,8 +325,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.parent.Syntax -->
-**.parent** : 4D.Folder<!-- END REF -->
+
+<!-- REF #document.parent.Syntax --> **.parent** : 4D.Folder<!-- END REF -->
 
 
 #### Beschreibung
@@ -372,9 +337,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.path.Desc -->
 ## .path
 
@@ -384,8 +346,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.path.Syntax -->
-**.path** : Text<!-- END REF -->
+
+<!-- REF #document.path.Syntax --> **.path** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -396,8 +358,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
 <!-- REF document.platformPath.Desc -->
 ## .platformPath
 
@@ -407,8 +367,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.platformPath.Syntax -->
-**.platformPath** : Text<!-- END REF -->
+
+<!-- REF #document.platformPath.Syntax --> **.platformPath** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -419,9 +379,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
 <!-- REF document.size.Desc -->
 ## .size
 
@@ -431,8 +388,8 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.size.Syntax -->
-**.size** : Real<!-- END REF -->
+
+<!-- REF #document.size.Syntax --> **.size** : Real<!-- END REF -->
 
 
 #### Beschreibung
@@ -443,15 +400,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-
-
-
-
-
-
-
-
-
 <!-- REF document.copyTo().Desc -->
 ## .copyTo()
 
@@ -461,8 +409,9 @@ This property is **read-only**.
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.copyTo().Syntax -->
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+
+<!-- REF #document.copyTo().Syntax --> **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+
 
 <!-- REF #document.copyTo().Params -->
 | Parameter         | Typ       |    | Beschreibung                                |
@@ -471,6 +420,7 @@ This property is **read-only**.
 | newName           | Text      | -> | Name for the copy                           |
 | overwrite         | Ganzzahl  | -> | `fk overwrite` to replace existing elements |
 | Ergebnis          | 4D.File   | <- | Copied file                                 |
+
 <!-- END REF -->
 
 
@@ -503,9 +453,8 @@ $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
 
+
  <!-- END REF -->
-
-
 
 <!-- REF document.getContent().Desc -->
 ## .getContent()
@@ -517,13 +466,15 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5  | Added           |
 </details>
 
-<!-- REF #document.getContent().Syntax -->
-**.getContent( )** : 4D.Blob<!-- END REF -->
+
+<!-- REF #document.getContent().Syntax --> **.getContent( )** : 4D.Blob<!-- END REF -->
+
 
 <!-- REF #document.getContent().Params -->
 | Parameter | Typ     |    | Beschreibung |
 | --------- | ------- | -- | ------------ |
 | Ergebnis  | 4D.Blob | <- | File content |
+
 <!-- END REF -->
 
 
@@ -547,9 +498,8 @@ To save a document's contents in a `BLOB` field:
  End if
 ```
 
+
 <!-- END REF -->
-
-
 
 <!-- REF document.getIcon().Desc -->
 ## .getIcon()
@@ -560,14 +510,16 @@ To save a document's contents in a `BLOB` field:
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.getIcon().Syntax -->
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+
+<!-- REF #document.getIcon().Syntax --> **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+
 
 <!-- REF #document.getIcon().Params -->
 | Parameter | Typ      |    | Beschreibung                                  |
 | --------- | -------- | -- | --------------------------------------------- |
 | size      | Ganzzahl | -> | Side length for the returned picture (pixels) |
 | Ergebnis  | Bild     | <- | Icon                                          |
+
 <!-- END REF -->
 
 
@@ -583,11 +535,7 @@ If the file does not exist on disk, a default blank icon is returned.
 
 File icon [picture](../Concepts/picture.html).
 
-
-
 <!-- END REF -->
-
-
 
 <!-- REF document.getText().Desc -->
 ## .getText()
@@ -598,8 +546,9 @@ File icon [picture](../Concepts/picture.html).
 | v17 R5  | Added   |
 </details>
 
-<!-- REF #document.getText().Syntax -->
-**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
+
+<!-- REF #document.getText().Syntax --> **.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
+
 
 
 <!-- REF #document.getText().Params -->
@@ -609,6 +558,7 @@ File icon [picture](../Concepts/picture.html).
 | charSetNum  | Ganzzahl | -> | Number of character set         |
 | breakMode   | Ganzzahl | -> | Processing mode for line breaks |
 | Ergebnis    | Text     | <- | Text from the document          |
+
 <!-- END REF -->
 
 
@@ -673,8 +623,6 @@ In this case, the contents of `$txt` are as follows:
 "id\tname\tprice\tvat\n3\tthé\t1.06€\t19.6\n2\tcafé\t1.05€\t19.6"
 
 This time `\n` (LF) is used as line delimiter.
-
-
 
 <!-- END REF -->
  

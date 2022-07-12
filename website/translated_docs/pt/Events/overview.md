@@ -8,10 +8,8 @@ Form events are events that can lead to the execution of the form method and/or 
 In your code, you control the events using the `FORM Event` command, that returns the triggered event. Por exemplo:
 
 ```4d  
-//code of a button
-If(FORM Event.code=On Clicked) 
-// do something when the button is clicked
-End if
+//code of a button If(FORM Event.code=On Clicked) 
+// do something when the button is clicked End if
 ```
 
 > Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.
@@ -24,9 +22,7 @@ Each event is returned as an object by the `FORM Event` command. By default, it 
 | Propriedade | Type | Descrição |
 | ----------- | ---- | --------- |
 |             |      |           |
- objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the 
-
-`Form event code` command| |description|text|Name of the form event (e.g. "On After Edit")|
+ objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the
 
 Additional properties are returned when the event occurs on specific objects. Em particular:
 

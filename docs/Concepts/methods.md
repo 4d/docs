@@ -34,6 +34,8 @@ A project method can have one of the following roles, depending on how it is exe
 - Process method
 - Event or Error catching method
 
+You can also execute your project methods manually, for testing purpose for example.
+
 ### Subroutines
 
 A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
@@ -170,6 +172,51 @@ A **process method** is a project method that is called when a process is starte
 An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
+
+
+### Manual Execution 
+
+Project methods written in your application are usually called automatically during the use of the application via menu commands, buttons, other methods, and so on. As for database methods, they are executed in relation to specific events that occur in the application. 
+
+However, for testing and debugging purposes, 4D lets you manually execute project methods and certain database methods in Design mode. In this case, it is possible to run the method in a new process and/or directly in Debug mode, in order to check its execution step by step.
+
+You can execute methods in two ways:
+
+-   From the Code Editor window,
+-   From the Execute Method dialog box (project methods only).
+
+#### From the Code Editor 
+
+Each [**Code Editor**](../code-editor/write-class-method.md) window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution desired:
+
+![](assets/en/concepts/execute-method.png)
+
+This button is only active for project methods and for the following database methods:
+
+-   On Startup
+-   On Exit
+-   On Server Startup
+-   On Server Shutdown
+
+For more information, see [Toolbar](../code-editor/write-class-method.md#toolbar).
+
+#### From the Execute Method dialog box  
+
+When you select the **Method...** command of the **Run** menu,  displays the **Execute Method** dialog.
+
+This dialog box lists all the project methods of the database, including shared project methods of components. On the other hand, project methods that have been declared invisible will not appear. 
+
+To execute a project method, simply select its name in the list and click on **Execute**. To run a method step by step in Debug mode, click on **Debug**. For more information about the 4D debugger, refer to the [Debugging](../Debugging/basics.md) section. 
+
+If you check the **New Process** check box, the method you selected executes in another process. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
+
+**4D Server Notes**:
+
+-   If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. This option can be used to reduce network traffic and optimize the functioning of 4D Server, in particular for methods that call data stored on the disk. All types of methods can be executed on the server machine or on another client machine, except for those that modify the user interface. In this case, stored procedures are ineffective.
+-   You can also choose to run the method on another client workstation. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
+
+By default, the **locally** option is selected. With the 4D single-user version, this is the only option available.
+
 
 ## Recursive Project Methods
 

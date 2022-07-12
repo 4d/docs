@@ -549,7 +549,7 @@ You can designate another default HTML root folder by entering its pathname.
 
 - The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
-- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name
+- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name
 - The path must not start with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, but for access to the folders above to be forbidden, in which case you can pass "/" as the root folder).
 
 For example, if you want the HTML root folder to be the "Web" subfolder in the "MyWebApp" folder, enter "MyWebApp/Web".

@@ -14,13 +14,13 @@ Il existe plusieurs façons d'afficher le débogueur :
 
 * En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
 * En utilisant la commande [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
-* En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de la méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de méthode
+* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
 * En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
 ![open-debugger](assets/en/Debugging/openDebugger.png)
 
 * Cliquez sur le bouton **Trace** lorsqu'un process est sélectionné dans la page Process de l'Explorateur d'exécution.
-* Ajout d'un point d'arrêt dans la fenêtre de l'éditeur de méthode ou dans les pages Break et Catch de l'explorateur d'exécution.
+* Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
 
@@ -49,11 +49,11 @@ The debugger's tool bar includes several buttons, associated with default shortc
 
 Arrêt du mode Trace et reprise du cours normal de l’exécution de la méthode.
 
-> La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant.
+> La combinaison **Maj**+**F5** ou **Maj**+clic sur le bouton **Reprendre exécution** provoque la reprise de l’exécution avec désactivation de tous les appels à TRACE suivants dans le process courant. avec désactivation de tous les appels à TRACE suivants dans le process courant.
 
 #### Bouton 'Exécuter pas à pas'
 
-La ligne courante de la méthode (indiquée par la flèche jaune — cette flèche s’appelle le compteur de programme) est exécuté et le débogueur passe à la ligne suivante.
+The yellow arrow in the left margin of the Source Code pane is called the program counter. et le débogueur passe à la ligne suivante.
 
 Le bouton Exécuter pas à pas ne passe pas dans les sous-routines et les fonctions. Il reste au niveau de la méthode que vous êtes en train de tracer. Si vous souhaitez également tracer les appels aux sous-routines et aux fonctions, utilisez le bouton **Pas à pas détaillé**.
 
@@ -76,12 +76,12 @@ La méthode s’arrête et vous retournez là où vous étiez avant son exécuti
 #### Bouton 'Stopper et éditer'
 
 
-La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.
+La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Conseil** : Utilisez ce bouton lorsque vous connaissez les modifications à apporter à votre code, et le moment où elles doivent être effectuées pour pouvoir poursuivre le test de vos méthodes. Une fois vos modifications effectuées, ré-exécutez la méthode.
 
 #### Modifier
 
-La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing at the time you click the Edit button opens in the Method Editor.
+La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing at the time you click the Edit button opens in the Code Editor.
 
 If you use this button to modify a method, the modifications are only effective the next time it executes.
 
@@ -190,7 +190,7 @@ Like the Constants page of the Explorer window, this theme displays predefined c
 
 #### Semaphores
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. Global semaphores are not displayed.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
 #### Process
 
@@ -235,7 +235,7 @@ Le menu contextuel de la fenêtre d’expression vous propose des options suppl�
 * **Contracter** : Contracte tous les niveaux de la liste hiérarchique des expressions.
 * **Déployer** : Déploie tous les niveaux de la liste hiérarchique des expressions.
 * **Montrer les types** : Lorsque vous sélectionnez cette option, le type de l’objet s’affiche (lorsque cela est pertinent).
-* **Montrer le numéro de champ et de table** : Affiche le numéro des tables ou de champs. Utile si vous travaillez avec des numéros de table ou de champs, ou avec des pointeurs utilisant les commandes `Table` ou `Champ`.
+* **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
 * **Montrer les icônes** : Chaque objet est précédé d'une icône qui indique son type. Vous pouvez désactiver cette option pour accélérer l’affichage, ou tout simplement parce que l’option **Montrer les types** vous convient.
 * **Tables et champs triés** : Cette option force les tables et les champs à s’afficher par ordre alphabétique (dans leurs listes respectives).
 * **Afficher les entiers en hexadécimal** : Les nombres s’affichent en notation décimale. Sélectionnez cette option pour les afficher en hexadécimal. Note : Pour exprimer une valeur numérique en hexadécimal, saisissez 0x (zéro + "x") puis les caractères hexadécimaux.
@@ -319,7 +319,7 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 > This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
 * **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
 * **Show Types**: Displays the type of each item in the list (when appropriate).
-* **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
+* **Montrer le numéro de champ et de table** : Affiche le numéro des tables ou de champs. Utile si vous travaillez avec des numéros de table ou de champs, ou avec des pointeurs utilisant les commandes `Table` ou `Champ`.
 * **Show Icons**: Displays an icon denoting the type of each item.
 * **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
 * **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
@@ -386,18 +386,18 @@ Le menu contextuel de la Fenêtre d'évaluation des méthodes donne accès à pl
 ![source-code-pane-context-window](assets/en/Debugging/sourceCodePaneContext.png)
 
 * **Aller à définition** : permet d’accéder à la définition de l’objet sélectionné. Cette commande est disponible avec les objets suivants :
-  * *méthode projet* : affiche le contenu de la méthode dans une nouvelle fenêtre de l’éditeur de méthodes
+  * *Project methods:* displays method contents in a new window of the Code Editor
   * *Champ* : affiche les propriétés du champ dans l’inspecteur de la fenêtre de structure
   * *table* : affiche les propriétés de la table dans l’inspecteur de la fenêtre de structure
   * *formulaire* : affiche le formulaire dans l’éditeur de formulaires
   * *variable* (locale, process, interprocess ou paramètre $n) : affiche la ligne de déclaration de la variable dans la méthode courante ou parmi les méthodes compilateur
-* **Chercher les références** (cette fonction est également accessible depuis l’éditeur de méthodes) : rechercher tous les objets du projet (méthodes et formulaires) dans lesquels l’élément courant de la méthode est référencé. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
+* **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. L’élément courant est l’élément sélectionné ou l’élément dans lequel se trouve le curseur. Il peut s’agir d’un nom de champ, de variable, de commande, d’une chaîne, etc. Le résultat de la recherche est affiché dans une nouvelle fenêtre de résultat standard.
 * **Copier** : copie standard de l'expression sélectionnée dans le conteneur de données.
 * **Copier dans la fenêtre d'expression** : copie l'expression sélectionnée dans la Fenêtre d'évaluation.
 * **Exécuter jusqu’au curseur** : provoque l’exécution des instructions situées entre le compteur de programme (flèche jaune) et la ligne sélectionnée de la méthode (dans laquelle se trouve le curseur).
 * **Fixer prochaine instruction** : déplace le compteur de programme jusqu’à la ligne sélectionnée sans l’exécuter et sans exécuter les lignes intermédiaires. La ligne désignée ne sera exécutée que si l’utilisateur clique sur l’un des boutons d’exécution.
-* **Permuter point d’arrêt** (également accessible depuis l’éditeur de méthodes) : Elle permet alternativement d’insérer ou de supprimer le point d’arrêt correspondant la ligne sélectionnée. Cette fonction modifie le point d’arrêt de façon permanente : par exemple, un point d’arrêt supprimé dans le débogueur n’apparaît plus dans la méthode d’origine.
-* **Modifier point d’arrêt... ** (également accessible depuis l’éditeur de méthodes) : Elle permet d’afficher la boîte de dialogue de définition des Propriétés du point d’arrêt. Cette fonction modifie le point d’arrêt de façon permanente.
+* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. Cette fonction modifie le point d’arrêt de façon permanente : par exemple, un point d’arrêt supprimé dans le débogueur n’apparaît plus dans la méthode d’origine.
+* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cette fonction modifie le point d’arrêt de façon permanente.
 
 ### Find Next/Previous
 
@@ -431,7 +431,7 @@ Cette section répertorie tous les raccourcis disponibles dans la fenêtre du d�
 
 #### Toutes les fenêtres
 
-- **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. La taille de la police modifiée s'applique également à l'Editeur de méthodes et est stockée dans les Préférences.
+- **Ctrl** + **+/-** (Windows) ou **Commande** + **+/-** (macOS) augmente ou réduit la taille de la police pour une meilleure lisibilité. The modified font size is also applied to the Code Editor and is stored in the Preferences.
 - **Ctrl+***(Windows) ou **Commande+*** (macOS) force la réactualisation de la Fenêtre d'expression.
 - Lorsqu'aucun objet n’est sélectionné dans les fenêtres, en appuyant sur **Entrée**, vous avancez d’une ligne.
 - Lorsque la valeur d’un élément est sélectionnée, utilisez les touches directionnelles pour naviguer dans la liste.

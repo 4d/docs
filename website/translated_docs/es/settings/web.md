@@ -211,7 +211,7 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 -   **WLF (WebStar Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato WLF. El formato WLF se desarrolló específicamente para el servidor 4D WebSTAR. Es similar al formato ELF, con sólo unos pocos campos adicionales. Al igual que el formato ELF, se puede personalizar.
 
-**Configurar los campos** Cuando selecciona el formato ELF (Extended Log Format) o WLF (WebStar Log Format), el área "Weg Log Token Selection" muestra los campos disponibles para el formato elegido. Deberá seleccionar cada campo para incluirlo en el registro. Para ello, utilice los botones de flecha o simplemente arrastre y suelte los campos deseados en el área "Tokens seleccionados".
+**Configurar los campos** Cuando selecciona el formato ELF (Extended Log Format) o WLF (WebStar Log Format), el área "Weg Log Token Selection" muestra los campos disponibles para el formato elegido. Deberá seleccionar cada campo para incluirlo en el registro. Deberá seleccionar cada campo para incluirlo en el registro.
 
 **Nota**: no puede seleccionar el mismo campo dos veces.
 

@@ -79,6 +79,7 @@
 			"API/FileClass",
 			"API/FolderClass",
 			"API/FunctionClass",
+			"API/HTTPRequestClass",
 			"API/IMAPTransporterClass",
 			"API/MailAttachmentClass",
 			"API/POP3TransporterClass",
@@ -91,8 +92,12 @@
 			"API/ZipFileClass",
 			"API/ZipFolderClass"
 		],
-		"Code Editor": [
-			"code-editor/navigation"
+		"Handling Code": [
+			"code-editor/overview",
+			"code-editor/write-class-method",
+			"code-editor/find-replace",
+			"code-editor/creating-using-macros",
+			"Tags/tags"
 		],
 		"Debugging": [
 			"Debugging/basics",
@@ -101,9 +106,6 @@
 			"Debugging/debugging-remote",
 			"Debugging/debugLogFiles"
 		],
-		"Transformation Tags":[
-			"Tags/tags"
-		],	
 		"Settings": [
 			"settings/overview",
 			"settings/general",
@@ -150,8 +152,9 @@
 		"TLS Protocol": [
 			"Admin/tls"
 		],
-		"License Management": [
-			"Admin/licenses"
+		"Licenses & Data Collection": [
+			"Admin/licenses",
+			"Admin/data-collect"
 		],
 		"Access Rights": [
 			"Users/overview",

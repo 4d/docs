@@ -5,15 +5,15 @@ title: Restaurar
 
 4D lhe permite restaurar conjuntos inteiros de dados de aplicações no caso de que se apresente um incidente, independentemente da causa do mesmo. Podem ocorrer dois tipos principais de incidentes:
 
-- A parada inesperada de uma aplicação enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Nesse caso, dependendo do estado atual da cache de dados no momento do incidente, a restauração da aplicação pode requerer diferentes operações:
+- A parada inesperada de uma aplicação enquanto estiver em uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. Nesse caso, dependendo do estado atual da cache de dados no momento do incidente, a restauração da aplicação pode requerer diferentes operações:
     - Se a cache estiver vazia, a aplicação abre normalmente. Quaisquer mudanças feitas na aplicação foram registradas. Este caso não exige nenhuma operação particular
     - Se a cache conter operações, o arquivo de dados está intacto mas exige integrar o arquivo de histórico atual.
     - Se a cache estiver no processo de ser escrita, o arquivo de dados está provavelmente danificado. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado.
 
-- A perda dos arquivos de aplicação. Esse incidente pode ocorrer por causa de setores defeituosos no disco que contenham a aplicação, por causa de vírus, erro de manipulação, etc. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. Para descobrir se uma aplicação foi danificada em um incidente, relance a aplicação com 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. Se uma estratégia de backup foi colocada em prática, as ferramentas de restauração de 4D permitem que recuperem a aplicação (na maioria dos casos) no mesmo estado em que estava antes do incidente.
+- A perda dos arquivos de aplicação. Esse incidente pode ocorrer por causa de setores defeituosos no disco que contenham a aplicação, por causa de vírus, erro de manipulação, etc. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. O último backup deve ser restaurado e o arquivo de histórico atual deve ser integrado. Para descobrir se uma aplicação foi danificada em um incidente, relance a aplicação com 4D. O programa realiza um autodiagnóstico e detalha as operações de restauração necessárias. Em modo automático, essas operações são realizadas diretamente sem precisar de ajuda da parte do usuário. Se uma estratégia de backup foi colocada em prática, as ferramentas de restauração de 4D permitem que recuperem a aplicação (na maioria dos casos) no mesmo estado em que estava antes do incidente.
 
 > 4D pode lançar procedimentos automaticamente para recuperar aplicações depois de incidentes. Esses mecanismos são gerenciados usando duas opções disponíveis na página **Backup/Backup & Restore** das Propriedades. Para saber mais, veja o parágrafo [Automatic Restore](settings.md#automatic-restore).  
-> Se o incidente for resultado de uma operação inapropriada realizada nos dados (apagar um registro, por exemplo), pode tentar reparar o arquivo de dados usando a função "rollback" no arquivo de log. Essa função está disponível na página [Rollback](MSC/rollback.md) do MSC.
+> Se o incidente for resultado de uma operação inapropriada realizada nos dados (apagar um registro, por exemplo), pode tentar reparar o arquivo de dados usando a função "rollback" no arquivo de log. Essa função está disponível na página [Rollback](MSC/rollback.md) do MSC. Essa função está disponível na página [Rollback](MSC/rollback.md) do MSC.
 
 
 ## Restaurar manualmente o backup (diálogo padrão)
@@ -24,7 +24,7 @@ A restauração manual de backups pode ser realizada via a caixa de diálogo de 
 
 Para restaurar a aplicação manualmente vai uma caixa de diálogo padrão:
 
-1. Escolha **Restaurar...** no menu da aplicação 4D **File**. Não é obrigatório que um projeto de aplicação esteja aberto OU Execute o comando `RESTORE` desde um método 4D. Uma caixa de diálogo de abertura de arquivos vai aparecer.
+1. Escolha **Restaurar...** no menu da aplicação 4D **File**. Não é obrigatório que um projeto de aplicação esteja aberto Não é obrigatório que um projeto de aplicação esteja aberto OU Execute o comando `RESTORE` desde um método 4D. Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de histórico (.4bl) para ser restaurado e clique **Abrir**. Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Como padrão 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) que fica do lado do arquivo. Pode exibir a rota:
 
 ![](assets/en/Backup/backup07.png)

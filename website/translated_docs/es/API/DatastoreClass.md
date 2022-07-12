@@ -380,6 +380,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
  Else
     ALERT("This database is not encrypted.")
  End if
+ Else
+    ALERT("This database is not encrypted.")
+ End if
 ```
 
 <!-- END REF -->

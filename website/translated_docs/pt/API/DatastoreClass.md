@@ -47,10 +47,10 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 
 <!-- REF #_command_.ds.Params -->
-| Parameter | Type         |    | Descrição                                       |
-| --------- | ------------ | -- | ----------------------------------------------- |
-| localID   | Texto        | -> | ID local del armazém de dados remoto a devolver |
-| Resultado | cs.DataStore | <- | Referencia ao armazém de dados                  |
+| Parameter | Type          |    | Descrição                                       |
+| --------- | ------------- | -- | ----------------------------------------------- |
+| localID   | Texto         | -> | ID local del armazém de dados remoto a devolver |
+| Resultado | cs. DataStore | <- | Referencia ao armazém de dados                  |
 
 <!-- END REF -->
 
@@ -73,7 +73,7 @@ Objects available in the `cs. Datastore` are mapped from the target database wit
 Usar a datastore principal do banco de dados 4D:
 
 ```4d
- $result:=ds.Employee.query("firstName = :1";"S@")
+ $result:=ds. Employee.query("firstName = :1";"S@")
 ```
 
 #### Exemplo 2
@@ -81,7 +81,7 @@ Usar a datastore principal do banco de dados 4D:
 ```4d
  var $connectTo; $firstFrench; $firstForeign : Object
 
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : cs. DataStore
 
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
@@ -97,7 +97,7 @@ Usar a datastore principal do banco de dados 4D:
 ```4d
   //getFirst method
   //getFirst(localID;dataclass) -> entity
- #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D.Entity
+ #DECLARE( $localId : Text; $dataClassName : Text ) -> $entity : 4D. Entity
 
  $0:=ds($localId)[$dataClassName].all().first()
 ```
@@ -118,11 +118,11 @@ Usar a datastore principal do banco de dados 4D:
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parameter      | Type         |    | Descrição                                                                    |
-| -------------- | ------------ | -- | ---------------------------------------------------------------------------- |
-| connectionInfo | Objeto       | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
-| localID        | Texto        | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
-| Resultado      | cs.DataStore | <- | Objeto do armazém de dados                                                   |
+| Parameter      | Type          |    | Descrição                                                                    |
+| -------------- | ------------- | -- | ---------------------------------------------------------------------------- |
+| connectionInfo | Objeto        | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
+| localID        | Texto         | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
+| Resultado      | cs. DataStore | <- | Objeto do armazém de dados                                                   |
 
 <!-- END REF -->
 
@@ -174,10 +174,10 @@ Conexão a uma datastore remota sem usuário ou senha:
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : cs. DataStore
  $connectTo:=New object("type";"4D Server";"hostname";"192.168.18.11:8044")
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+ ALERT("This remote datastore contains "+String($remoteDS. Students.all().length)+" students")
 ```
 
 #### Exemplo 2
@@ -186,11 +186,11 @@ Conexão a uma datastore remota com usuário/ senha/ timetou/ tls
 
 ```4d
  var $connectTo : Object
- var $remoteDS : cs.DataStore
+ var $remoteDS : cs. DataStore
  $connectTo:=New object("type";"4D Server";"hostname";\"192.168.18.11:4443";\  
     "user";"marie";"password";$pwd;"idleTimeout";70;"tls";True)
  $remoteDS:=Open datastore($connectTo;"students")
- ALERT("This remote datastore contains "+String($remoteDS.Students.all().length)+" students")
+ ALERT("This remote datastore contains "+String($remoteDS. Students.all().length)+" students")
 ```
 
 #### Exemplo 3
@@ -199,13 +199,13 @@ Trabalhando com várias datastores remotas:
 
 ```4d
  var $connectTo : Object
- var $frenchStudents; $foreignStudents : cs.DataStore
+ var $frenchStudents; $foreignStudents : cs. DataStore
  $connectTo:=New object("hostname";"192.168.18.11:8044")
  $frenchStudents:=Open datastore($connectTo;"french")
  $connectTo.hostname:="192.168.18.11:8050"
  $foreignStudents:=Open datastore($connectTo;"foreign")
- ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
- ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
+ ALERT("They are "+String($frenchStudents. Students.all().length)+" French students")
+ ALERT("They are "+String($foreignStudents. Students.all().length)+" foreign students")
 ```
 
 #### Error management
@@ -233,13 +233,13 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 #### Exemplo
 
 ```4d
- var $emp : cs.Employee
- var $sel : cs.EmployeeSelection
- $emp:=ds.Employee //$emp contiene la dataclass Employee 
+ var $emp : cs. Employee
+ var $sel : cs. EmployeeSelection
+ $emp:=ds. Employee //$emp contiene la dataclass Employee 
  $sel:=$emp.all() //obtém uma seleção de entidades de todos os empregados
 
   //também pode escrever diretamente:
- $sel:=ds.Employee.all()
+ $sel:=ds. Employee.all()
 ```
 
 
@@ -382,6 +382,9 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
        End if
     End for each
     ALERT(String($vcount)+" encrypted table(s) in this datastore.")
+ Else
+    ALERT("This database is not encrypted.")
+ End if
  Else
     ALERT("This database is not encrypted.")
  End if
@@ -953,10 +956,10 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parameter | Type    |    | Descrição                             |
-| --------- | ------- | -- | ------------------------------------- |
-| file      | 4D.File | -> | File object                           |
-| reqNum    | Integer | -> | Número de petiçõs a manter em memória |
+| Parameter | Type     |    | Descrição                             |
+| --------- | -------- | -- | ------------------------------------- |
+| file      | 4D. File | -> | File object                           |
+| reqNum    | Integer  | -> | Número de petiçõs a manter em memória |
 
 <!-- END REF -->
 

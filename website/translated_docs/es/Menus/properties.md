@@ -55,7 +55,7 @@ La elección entre asociar una acción estándar o un método proyecto a un coma
 ### Asociar un método proyecto o una acción estándar
 
 Puede asignar un método proyecto y/o una acción estándar a un comando de menú seleccionado en el editor de menú:
-- **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. Si el método proyecto no existe, introduzca su nombre en el combo "Nombre del método" y haga clic en el botón [...]. 4D muestra un diálogo de creación de método proyecto que se utiliza para acceder al editor de métodos.
+- **Nombre del método**: seleccione un nombre de método proyecto existente en el combo box. Si el método proyecto no existe, introduzca su nombre en el combo "Nombre del método" y haga clic en el botón [...]. 4D displays a project method creation dialog that is used to access the Code Editor.
 - **Acción estándar asociada**: elija o escriba la acción que desea asignar en el combo box "Acción estándar asociada". Puede introducir toda acción soportada y (opcionalmente) el parámetro que desee en el área. Para obtener una lista completa de acciones estándar, consulte la sección **Acciones estándar** en el *Modo Diseño*. **Nota para macOS:** en macOS, los comandos de menús personalizados asociados a la acción *Salir* se colocan automáticamente en el menú de la aplicación, conforme a los estándares de interfaz de la plataforma.
 
 Utilizando el lenguaje 4D, puedes asociar un método proyecto utilizando el comando `SET MENU ITEM METHOD`, y una acción estándar utilizando el comando `SET MENU ITEM PROPERTY`.

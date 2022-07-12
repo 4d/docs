@@ -31,7 +31,7 @@ ds.Company.city // 都市の名前を返します
 
 > ORDA の世界では，ds.Company は **データクラス** です。 ds.Company.city は **属性** です。
 
-> ORDA は大文字と小文字を区別します。 ` ds.company.city` が ds.Company.city 属性を参照することはありません。
+> ORDA は大文字と小文字を区別します。 `ds.company.city` が ds.Company.city 属性を参照することはありません。
 
 また、ds.Company データクラスに `hires` プロパティが追加されていることにお気づきでしょうか。 これはフィールドに対応した属性ではありません。 `hires` は、実際には Company と Employee の間の *1対N* リレーションの名前です:
 

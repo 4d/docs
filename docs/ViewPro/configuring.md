@@ -375,6 +375,13 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 ||width|longint|Width of the paper, in hundredths of an inch.|
 ||kind|text|Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Default value = "letter"|
 
+* If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./method-list.md#vp-get-print-info) returns a paper size with `custom` as value for `kind`.
+
+* If you set the paper size using the `kind` property, you can use either: 
+    * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
+    * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command.
+    In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
+
 ### Scale
   
 Scale attributes are used to specify printing optimization and adjustments.

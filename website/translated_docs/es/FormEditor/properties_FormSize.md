@@ -12,20 +12,15 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 ## Tamaño basado en
 
 
-*   **Tamaño automático**: el tamaño del formulario será el necesario para mostrar todos los objetos, al que se añadirán los valores de margen (en píxeles) introducidos en
-
-**los campos **Margen [hor.](#hor-margin) y Margen [**ver.** Margin</strong>](#vert-margin) fields. <p> Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (*es decir*, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.</p></li> 
-  
-  *   **Definir tamaño**: el tamaño del formulario se basará en lo que introduzca (en píxeles) en los campos [**Ancho**](#width) y [**Alto**](#height).
-
-*   **\<object name>**: el tamaño del formulario se basará en la posición del objeto formulario seleccionado. Por ejemplo, si elige un objeto situado en la parte inferior derecha del área a mostrar, el tamaño del formulario consistirá en un rectángulo cuya esquina superior izquierda será el origen del formulario y la esquina inferior derecha corresponderá a la del objeto seleccionado, más los valores de los márgenes.</ul> 
+*   **Tamaño automático**: el tamaño del formulario será el necesario para mostrar todos los objetos, al que se añadirán los valores de margen (en píxeles) introducidos en **Margen [hor.](#hor-margin) y Margen [**ver.** Margin</strong>](#vert-margin) fields. <p> Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (*es decir*, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.</p></li>
 
 
+*   **Definir tamaño**: el tamaño del formulario se basará en lo que introduzca (en píxeles) en los campos [**Ancho**](#width) y [**Alto**](#height).
+
+*   **\<object name>**: el tamaño del formulario se basará en la posición del objeto formulario seleccionado. Por ejemplo, si elige un objeto situado en la parte inferior derecha del área a mostrar, el tamaño del formulario consistirá en un rectángulo cuya esquina superior izquierda será el origen del formulario y la esquina inferior derecha corresponderá a la del objeto seleccionado, más los valores de los márgenes.</ul>
 
 
 > Para los formularios de salida, sólo se pueden utilizar los campos Margen [**hor. **](#hor-margin) o [**Largo**](width) son disponibles.
-
-
 
 
 #### Gramática JSON
@@ -34,17 +29,10 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 | -------------- | -------------- | ------------------------------------------------------------------ |
 | formSizeAnchor | cadena         | Nombre del objeto a utilizar para definir el tamaño del formulario |
 
-
-
-
---- 
-
-
+---
 ## Altura
 
-**los campos **Margen [hor.](#hor-margin) y Margen [**ver.** Margin</strong>](#vert-margin) fields.  
-
-
+**los campos **Margen [hor.](#hor-margin) y Margen [**ver.** Margin</strong>](#vert-margin) fields.
 
 
 #### Gramática JSON
@@ -54,19 +42,11 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 | height | number         | valor entero largo |
 
 
-
-
-
---- 
-
-
+---
 ## Margen hor.
+Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>**.
 
-**Tamaño automático**: el tamaño del formulario será el necesario para mostrar todos los objetos, al que se añadirán los valores de margen (en píxeles) introducidos en
-
-Altura del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-based-on) está definido en **Fijar tamaño **.
-
-
+**los campos **Margen [hor.](#hor-margin) y Margen [**ver.** Margin</strong>](#vert-margin) fields.
 
 #### Gramática JSON
 
@@ -75,20 +55,12 @@ Altura del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-b
 | rightMargin | number         | valor entero largo |
 
 
-
-
-
 ---
 
-
-
 ## Margen hor.
+**Tamaño automático**: el tamaño del formulario será el necesario para mostrar todos los objetos, al que se añadirán los valores de margen (en píxeles) introducidos en
 
-Valor a añadir (en píxeles) al margen derecho del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>** 
-
-Este valor también determina los márgenes derechos de los formularios utilizados en el editor de etiquetas.
-
-
+Altura del formulario (en píxeles) cuando el [ tamaño del formulario ](#size-based-on) está definido en **Fijar tamaño **.
 
 #### Gramática JSON
 
@@ -97,17 +69,10 @@ Este valor también determina los márgenes derechos de los formularios utilizad
 | bottomMargin | number         | valor entero largo |
 
 
-
-
-
---- 
-
-
+---
 ## Ancho
 
-Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>**.  
-
-
+Valor a añadir (en píxeles) al margen derecho del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o **\<object name>**
 
 
 #### Gramática JSON

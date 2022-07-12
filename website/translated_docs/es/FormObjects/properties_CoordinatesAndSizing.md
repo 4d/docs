@@ -21,7 +21,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 *   El cálculo de la altura de línea no tiene en cuenta:
     *   contenido de columna oculta
-    *   La propiedad Row Height Array no se tiene en cuenta para los list box jerárquicos.
+    *   Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
 > Algunos objetos pueden tener una altura predefinida que no se puede modificar.
 
 
@@ -170,7 +170,7 @@ Esta propiedad designa el tamaño horizontal de un objeto.
 
 #### Objetos soportados
 
-[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área de texto](text.md) - [Área Web](webArea_overview.md#overview)
+[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
 
 
@@ -280,3 +280,45 @@ Asumiendo que la unidad de las líneas es "líneas", entonces la quinta línea d
 
 
 
+---
+## Horizontal Padding
+
+
+Establece un relleno horizontal para las celdas. El valor se establece en píxeles (por defecto = 0).
+
+![](assets/en/FormObjects/padding.png)
+
+
+
+#### Gramática JSON
+
+| Nombre            | Tipos de datos | Valores posibles               |
+| ----------------- | -------------- | ------------------------------ |
+| horizontalPadding | number         | Number of pixels (must be >=0) |
+
+#### Objetos soportados
+
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+
+#### Ver también
+[Vertical Padding](#vertical-padding)
+
+---
+## Vertical Padding
+
+
+Establece un relleno vertical para las celdas. El valor se establece en píxeles (por defecto = 0).
+
+
+#### Gramática JSON
+
+| Nombre          | Tipos de datos | Valores posibles               |
+| --------------- | -------------- | ------------------------------ |
+| verticalPadding | number         | Number of pixels (must be >=0) |
+
+#### Objetos soportados
+
+[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
+
+#### Ver también
+[Horizontal Padding](#horizontal-padding)

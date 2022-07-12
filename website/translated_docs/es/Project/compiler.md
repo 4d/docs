@@ -32,7 +32,7 @@ If errors are detected, the process is stopped and the "Compilation failed" mess
 
 ![](assets/en/Project/compilerWin2.png)
 
-Double-click on each error detected to open the method or class concerned directly in the 4D method editor. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
+Double-click on each error detected to open the method or class concerned directly in the 4D Code Editor. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
 
 Use the **Previous Error** / **Next Error** commands of the **Method** menu to navigate from one error to the next.
 
@@ -68,7 +68,7 @@ The name of these methods must begin with `Compiler_`. You can set the default n
 
 Only the necessary compiler methods (i.e., those for which items already exist in the project) are generated.
 
-The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Method editor.
+The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Code Editor.
 
 
 ### Eliminar el código de compilación
@@ -123,7 +123,7 @@ This area groups the generic options used during the compilation process.
 
 #### Generar el archivo de símbolos
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). Used to generate the symbol file (see [symbol file](#symbol-file)).
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
 #### Generar archivo de errores
 
@@ -160,7 +160,7 @@ Se proponen dos opciones de objetivo. The result depends on the processor of the
 
 > Apple Silicon compiler target requires that the **Clang** application be installed on your machine. Clang viene con la última versión de Xcode. See the [Silicon compiler requirements](#requirements) for more information.
 
-### Default typing
+### Digitación por defecto
 
 Use this area to set the default type for ambiguous database objects.
 
@@ -251,7 +251,7 @@ If your project does not have any general errors, the file will not have a *Gene
 
 Un archivo de error puede contener tres tipos de mensajes:
 
-- **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
+- **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Code Editor, with the line containing the error highlighted.
 
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
     - The data type of a process variable could not be determined.
@@ -259,7 +259,7 @@ Un archivo de error puede contener tres tipos de mensajes:
 
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Code Editor, with the line containing the warning highlighted.
 
 
 

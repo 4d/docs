@@ -42,8 +42,7 @@ You can then allow or deny access within your application by using code such as:
 
 ```4d
 If(Current system user = $user) //you can store users in a database table
-    // give access to some features
-End if
+    // give access to some features End if
 ```
 
 If you want to use the system user name in 4D instead of "Designer" (e.g. in log files), you can call the [`SET USER ALIAS`](https://doc.4d.com/4dv19R/help/command/en/page1666.html) command, for example:
