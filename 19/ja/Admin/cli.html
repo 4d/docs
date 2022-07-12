@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>コマンドライン・インターフェース · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="コマンドライン・インターフェース · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R5 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R4</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/Admin/cli.html">English</a></li><li><a href="/docs/19/de/Admin/cli.html">Deutsch</a></li><li><a href="/docs/19/es/Admin/cli.html">Español</a></li><li><a href="/docs/19/fr/Admin/cli.html">Français</a></li><li><a href="/docs/19/pt/Admin/cli.html">Português</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="ja"><head><meta name="docsearch:version" content="19"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>コマンドライン・インターフェース · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><meta name="docsearch:language" content="ja"/><meta property="og:title" content="コマンドライン・インターフェース · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/19/index.html"/><meta property="og:description" content="macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:"/><meta property="og:image" content="https://4d.github.io/docs/19/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/19/img/logohome.png"/><link rel="shortcut icon" href="/docs/19/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/19/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/19/css/main.css"/><script src="/docs/19/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/19/ja"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://developer.4d.com/docs" target="_self">v19 R6 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R5</a></li><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/19/img/language.svg" alt="Languages icon"/>日本語</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/19/en/Admin/cli.html">English</a></li><li><a href="/docs/19/de/Admin/cli.html">Deutsch</a></li><li><a href="/docs/19/es/Admin/cli.html">Español</a></li><li><a href="/docs/19/fr/Admin/cli.html">Français</a></li><li><a href="/docs/19/pt/Admin/cli.html">Português</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -100,7 +100,7 @@
 <tr><td><code>--opening-mode</code></td><td>interpreted | compiled</td><td>データベースをインタープリタモードまたはコンパイルモードで開くように指示します。 指定のモードが利用できない場合でも、エラーは発生しません。</td></tr>
 <tr><td><code>--create-data</code></td><td></td><td>有効なデータファイルが見つからない場合、新しいデータファイルを自動的に作成します。 ダイアログボックスは表示されません。 &quot;-data&quot; 引数で渡されたファイルがあれば、4D はそれを使用します (同じ名前のファイルが既に存在する場合にはエラーが生成されます)。</td></tr>
 <tr><td><code>--user-param</code></td><td>カスタムのユーザー文字列</td><td>Get database parameter コマンドを通して 4Dアプリケーションで利用可能な任意の文字列 (ただし文字列は予約文字である &quot;-&quot; から始まってはいけません)。</td></tr>
-<tr><td><code>--headless</code></td><td></td><td>4D、4D Server、または組み込みアプリケーションをインターフェースなし (ヘッドレスモード) で起動します。 このモードでは:<li> デザインモードは使えません。データベースはアプリケーションモードで起動します。</li><li> ツールバー、メニューバー、MDI ウィンドウやスプラッシュスクリーンは表示されません。</li><li>Dock またはタスクバーにはアイコンは表示されません。</li><li>開かれたデータベースは、&quot;最近使用したデータベース&quot; メニューに登録されません。</li><li>4D診断ファイルの記録が自動的に開始されます (<a href="https://doc.4d.com/4dv19/help/command/ja/page642.html">SET DATABASE PARAMETER</a>、値79 参照)</li><li>ダイアログボックスへのコールはすべてインターセプトされ、自動的にレスポンスが返されます (例: <a href="https://doc.4d.com/4dv19/help/command/ja/page41.html">ALERT</a> コマンドの場合は OK、エラーダイアログの場合は Abort など)。 インターセプトされたコマンド (*) は、診断ファイルに記録されます。</li><br/>保守上の理由から、<a href="https://doc.4d.com/4dv19/help/command/ja/page667.html">LOG EVENT</a> コマンドを使用して任意のテキストを標準の出力ストリームに送ることができます。 ヘッドレスモードの 4Dアプリケーションは、<a href="https://doc.4d.com/4dv19/help/command/ja/page291.html">QUIT 4D</a> を呼び出すか OSタスクマネージャーを使用することでしか終了できない点に注意が必要です。</td></tr>
+<tr><td><code>--headless</code></td><td></td><td>4D、4D Server、または組み込みアプリケーションをインターフェースなし (ヘッドレスモード) で起動します。 このモードでは:<li> デザインモードは使えません。 データベースはアプリケーションモードで起動します。</li><li> ツールバー、メニューバー、MDI ウィンドウやスプラッシュスクリーンは表示されません。</li><li>Dock またはタスクバーにはアイコンは表示されません。</li><li>開かれたデータベースは、&quot;最近使用したデータベース&quot; メニューに登録されません。</li><li>4D診断ファイルの記録が自動的に開始されます (<a href="https://doc.4d.com/4dv19/help/command/ja/page642.html">SET DATABASE PARAMETER</a>、値79 参照)</li><li>ダイアログボックスへのコールはすべてインターセプトされ、自動的にレスポンスが返されます (例: <a href="https://doc.4d.com/4dv19/help/command/ja/page41.html">ALERT</a> コマンドの場合は OK、エラーダイアログの場合は Abort など)。 インターセプトされたコマンド (*) は、診断ファイルに記録されます。</li><br/>保守上の理由から、<a href="https://doc.4d.com/4dv19/help/command/ja/page667.html">LOG EVENT</a> コマンドを使用して任意のテキストを標準の出力ストリームに送ることができます。 ヘッドレスモードの 4Dアプリケーションは、<a href="https://doc.4d.com/4dv19/help/command/ja/page291.html">QUIT 4D</a> を呼び出すか OSタスクマネージャーを使用することでしか終了できない点に注意が必要です。</td></tr>
 <tr><td><code>--dataless</code></td><td></td><td>4D、4D Server、または組み込みアプリケーションをデータレスモードで起動します。 データレスモードは、4D がデータを必要としないタスク (プロジェクトのコンパイルなど) を実行する場合に便利です。 このモードでは: <li>コマンドラインや <code>.4DLink</code> ファイルで指定されていても、また <code>CREATE DATA FILE</code> や <code>OPEN DATA FILE</code> コマンドを使用していても、データを含むファイルは開かれません。</li><li>データを操作するコマンドはエラーを生成します。 たとえば、<code>CREATE RECORD</code> は &quot;このコマンドの対象となるテーブルがありません&quot; というエラーを生成します。</li><br/><strong>注記</strong>:<li>コマンドラインで引数が渡された場合、アプリケーションを終了しない限り、4D で開かれているすべてのデータベースにデータレスモードが適用されます。</li><li><code>.4DLink</code> ファイルを使って引数が渡された場合には、データレスモードは <code>.4DLink</code> ファイルで指定されたデータベースにのみ適用されます。 <code>.4DLink</code> ファイルの詳細については、<a href="/docs/19/ja/Project/creating.html#プロジェクトを開く-その他の方法">プロジェクトを開く (その他の方法)</a> を参照ください。</li></td></tr>
 <tr><td><code>--webadmin-settings-file</code></td><td>ファイルパス</td><td><a href="/docs/19/ja/Admin/webAdmin.html">WebAdmin Webサーバー</a> 用のカスタム WebAdmin <code>.4DSettings</code> ファイルのパス</td></tr>
 <tr><td><code>--webadmin-access-key</code></td><td>String</td><td><a href="/docs/19/ja/Admin/webAdmin.html">WebAdmin Webサーバー</a> 用のアクセスキー</td></tr>
@@ -114,7 +114,7 @@
 <blockquote>
 <p>ユーザーのカレントフォルダーは、macOS では &quot;~&quot; コマンドを、Windows では &quot;%HOMEPATH%&quot; コマンドを使用することで取得することができます。</p>
 </blockquote>
-<p>アプリケーションを起動:</p>
+<p>以下の例題では、4Dアプリケーションがデスクトップに保存されており、開こうとしているデータベースが &quot;Documents&quot; フォルダーにあるものとします。</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -125,10 +125,10 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe
 </code></pre>
-<p>macOS上でパッケージファイルを指定してアプリケーションを起動:</p>
+<p>アプリケーションを起動:</p>
 <pre><code class="hljs css language-bash">yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 </code></pre>
-<p>プロジェクトファイルを指定してアプリケーションを起動:</p>
+<p>macOS上でパッケージファイルを指定してアプリケーションを起動:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -139,7 +139,7 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 </code></pre>
-<p>プロジェクトファイルとデータファイルを指定してアプリケーションを起動:</p>
+<p>プロジェクトファイルを指定してアプリケーションを起動:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -152,7 +152,7 @@
 または
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 </code></pre>
-<p>.4DLink ファイルを指定してアプリケーションを起動:</p>
+<p>プロジェクトファイルとデータファイルを指定してアプリケーションを起動:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -167,7 +167,7 @@
 </code></pre>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D Server.exe<span class="hljs-string">" MyDatabase.4DLink
 </span></code></pre>
-<p>アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:</p>
+<p>.4DLink ファイルを指定してアプリケーションを起動:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -178,7 +178,7 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data <span class="hljs-literal">true</span>
 </code></pre>
-<p>プロジェクトファイルとデータファイルを指定してアプリケーションを起動し、ユーザー引数として文字列を渡す:</p>
+<p>アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -189,7 +189,7 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param <span class="hljs-string">"Hello world"</span>
 </code></pre>
-<p>インターフェースなしのアプリケーションを起動する (ヘッドレスモード):</p>
+<p>プロジェクトファイルとデータファイルを指定してアプリケーションを起動し、ユーザー引数として文字列を渡す:</p>
 <ul>
 <li>macOS:</li>
 </ul>
