@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="19 R5 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Calling ORDA class functions · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="You can call [data model class functions](/docs/pt/ORDA/ordaClasses.html) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application."/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="Calling ORDA class functions · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="You can call [data model class functions](/docs/pt/ORDA/ordaClasses.html) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R5 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R4</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/classFunctions.html">English</a></li><li><a href="/docs/ja/REST/classFunctions.html">日本語</a></li><li><a href="/docs/de/REST/classFunctions.html">Deutsch</a></li><li><a href="/docs/es/REST/classFunctions.html">Español</a></li><li><a href="/docs/fr/REST/classFunctions.html">Français</a></li></ul></div></li><script>
+<!DOCTYPE html><html lang="pt"><head><meta name="docsearch:version" content="19 R6 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Calling ORDA class functions · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="You can call [data model class functions](/docs/pt/ORDA/ordaClasses.html) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application."/><meta name="docsearch:language" content="pt"/><meta property="og:title" content="Calling ORDA class functions · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="You can call [data model class functions](/docs/pt/ORDA/ordaClasses.html) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application."/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/pt"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R6 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R5</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/en/REST/classFunctions.html">English</a></li><li><a href="/docs/ja/REST/classFunctions.html">日本語</a></li><li><a href="/docs/de/REST/classFunctions.html">Deutsch</a></li><li><a href="/docs/es/REST/classFunctions.html">Español</a></li><li><a href="/docs/fr/REST/classFunctions.html">Français</a></li></ul></div></li><script>
         const languagesMenuItem = document.getElementById("languages-menu");
         const languagesDropDown = document.getElementById("languages-dropdown");
         languagesMenuItem.addEventListener("click", function(event) {
@@ -71,7 +71,7 @@
 <p><code>/rest/City/getCity</code></p>
 <p>with data in the body of the POST request: <code>[&quot;Aguada&quot;]</code></p>
 <p>In 4D language, this call is equivalent to, :</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$city</span>:=ds.City.<span class="hljs-function">getCity</span>(<span class="hljs-string">"Aguada"</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$city</span>:=ds. City.<span class="hljs-function">getCity</span>(<span class="hljs-string">"Aguada"</span>)
 </code></pre>
 <blockquote>
 <p>Only functions with the <code>exposed</code> keyword can be directly called from REST requests. See <a href="/docs/pt/ORDA/ordaClasses.html#exposed-vs-non-exposed-functions">Exposed vs non-exposed functions</a> section.</p>
@@ -159,9 +159,7 @@ The function is searched in the entity selection class first. If not found, it i
 <p><img src="/docs/assets/en/REST/ordastructure.png" alt="alt-text"></p>
 <h3><a class="anchor" aria-hidden="true" id="using-a-datastore-class-function"></a><a href="#using-a-datastore-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a datastore class function</h3>
 <p>The US_Cities <code>DataStore</code> class provides an API:</p>
-<pre><code class="hljs">// DataStore <span class="hljs-class"><span class="hljs-keyword">class</span></span>
-
-<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataStoreImplementation</span></span>
+<pre><code class="hljs">// DataStore <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DataStoreImplementation</span></span>
 
 exposed <span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getName</span>(</span>)
     <span class="hljs-number">$0</span>:=<span class="hljs-string">"US cities and zip codes manager"</span> 
@@ -175,12 +173,10 @@ exposed <span class="hljs-function"><span class="hljs-keyword">Function</span> <
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-a-dataclass-class-function"></a><a href="#using-a-dataclass-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using a dataclass class function</h3>
 <p>The Dataclass class <code>City</code> provides an API that returns a city entity from a name passed in parameter:</p>
-<pre><code class="hljs"><span class="hljs-comment">// City class</span><span class="hljs-keyword">
-
-Class extends</span> DataClass
+<pre><code class="hljs"><span class="hljs-comment">// City class Class extends DataClass</span>
 
 <span class="hljs-function">exposed Function getCity</span>()<span class="hljs-keyword">
-    var</span> <span class="hljs-variable">$0 </span>: cs.CityEntity<span class="hljs-keyword">
+    var</span> <span class="hljs-variable">$0 </span>: cs. CityEntity<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$1</span>,<span class="hljs-variable">$nameParam </span>: text
     <span class="hljs-variable">$nameParam</span>:=<span class="hljs-variable">$1</span>
     <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"name = :1"</span>;<span class="hljs-variable">$nameParam</span>).<span class="hljs-function">first</span>()
@@ -214,9 +210,7 @@ Class extends</span> DataClass
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entity-class-function"></a><a href="#using-an-entity-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entity class function</h3>
 <p>The Entity class <code>CityEntity</code> provides an API:</p>
-<pre><code class="hljs">// CityEntity <span class="hljs-class"><span class="hljs-keyword">class</span></span>
-
-<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Entity</span></span>
+<pre><code class="hljs">// CityEntity <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Entity</span></span>
 
 exposed <span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getPopulation</span>(</span>)
     <span class="hljs-number">$0</span>:=This.zips.sum(<span class="hljs-string">"population"</span>)
@@ -230,9 +224,7 @@ exposed <span class="hljs-function"><span class="hljs-keyword">Function</span> <
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entityselection-class-function"></a><a href="#using-an-entityselection-class-function" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entitySelection class function</h3>
 <p>The EntitySelection class <code>CitySelection</code> provides an API:</p>
-<pre><code class="hljs">// CitySelection <span class="hljs-class"><span class="hljs-keyword">class</span></span>
-
-<span class="hljs-class"><span class="hljs-keyword">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">EntitySelection</span></span>
+<pre><code class="hljs">// CitySelection <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">EntitySelection</span></span>
 
 exposed <span class="hljs-function"><span class="hljs-keyword">Function</span> <span class="hljs-title">getPopulation</span>(</span>)
     <span class="hljs-number">$0</span>:=This.zips.sum(<span class="hljs-string">"population"</span>)
@@ -246,9 +238,7 @@ exposed <span class="hljs-function"><span class="hljs-keyword">Function</span> <
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entityselection-class-function-and-an-entityset"></a><a href="#using-an-entityselection-class-function-and-an-entityset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entitySelection class function and an entitySet</h3>
 <p>The <code>StudentsSelection</code> class has a <code>getAgeAverage</code> function:</p>
-<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class</span><span class="hljs-keyword">
-
-Class extends</span> EntitySelection
+<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class Class extends EntitySelection</span>
 
 exposed<span class="hljs-keyword"> Function</span> getAgeAverage
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$sum</span>;<span class="hljs-variable">$0</span>)
@@ -269,10 +259,7 @@ exposed<span class="hljs-keyword"> Function</span> getAgeAverage
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entityselection-class-function-and-an-orderby"></a><a href="#using-an-entityselection-class-function-and-an-orderby" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entitySelection class function and an orderBy</h3>
 <p>The <code>StudentsSelection</code> class has a <code>getLastSummary</code> function:</p>
-<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class</span><span class="hljs-keyword">
-
-
-Class extends</span> EntitySelection
+<pre><code class="hljs"><span class="hljs-comment">// StudentsSelection Class Class extends EntitySelection</span>
 
 exposed<span class="hljs-keyword"> Function</span> getLastSummary
 <span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$0</span>)
@@ -290,9 +277,7 @@ exposed<span class="hljs-keyword"> Function</span> getLastSummary
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="using-an-entity-to-be-created-on-the-server"></a><a href="#using-an-entity-to-be-created-on-the-server" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using an entity to be created on the server</h3>
 <p>The Dataclass class <code>Students</code> has the function <code>pushData()</code> receiving an entity containing data from the client. The <code>checkData()</code> method runs some controls. If they are OK, the entity is saved and returned.</p>
-<pre><code class="hljs"><span class="hljs-comment">// Students Class</span><span class="hljs-keyword">
-
-Class extends</span> DataClass
+<pre><code class="hljs"><span class="hljs-comment">// Students Class Class extends DataClass</span>
 
 exposed<span class="hljs-keyword"> Function</span> pushData<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$entity</span>, <span class="hljs-variable">$status</span>, <span class="hljs-variable">$0 </span>: Object
@@ -397,9 +382,7 @@ exposed<span class="hljs-keyword"> Function</span> pushData<span class="hljs-key
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="updating-an-entity-with-a-related-entity"></a><a href="#updating-an-entity-with-a-related-entity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating an entity with a related entity</h3>
 <p>In this example, we associate an existing school to a Students entity. The <code>StudentsEntity</code> class has an API:</p>
-<pre><code class="hljs"><span class="hljs-comment">// StudentsEntity class</span><span class="hljs-keyword">
-
-Class extends</span> Entity
+<pre><code class="hljs"><span class="hljs-comment">// StudentsEntity class Class extends Entity</span>
 
 <span class="hljs-function">exposed Function putToSchool</span>()<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$1</span>, <span class="hljs-variable">$school </span>, <span class="hljs-variable">$0</span>, <span class="hljs-variable">$status </span>: Object
@@ -429,9 +412,7 @@ Class extends</span> Entity
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="receiving-an-entity-selection-as-parameter"></a><a href="#receiving-an-entity-selection-as-parameter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Receiving an entity selection as parameter</h3>
 <p>In the <code>Students</code> Dataclass class, the <code>setFinalExam()</code> function updates a received entity selection ($1). It actually updates the <em>finalExam</em> attribute with the received value ($2). It returns the primary keys of the updated entities.</p>
-<pre><code class="hljs"><span class="hljs-comment">// Students class</span><span class="hljs-keyword">
-
-Class extends</span> DataClass
+<pre><code class="hljs"><span class="hljs-comment">// Students class Class extends DataClass</span>
 
 <span class="hljs-function">exposed Function setFinalExam</span>()<span class="hljs-keyword">
 
@@ -490,7 +471,7 @@ var</span> <span class="hljs-variable">$ageAverage </span>: Integer
 
 <span class="hljs-comment">// $newStudent is a student entity to procees</span>
 <span class="hljs-variable">$newStudent</span>:=...
-<span class="hljs-variable">$students</span>:=<span class="hljs-variable">$remoteDS</span>.Students.<span class="hljs-function">query</span>(<span class="hljs-string">"school.name = :1"</span>;<span class="hljs-string">"Math school"</span>)
+<span class="hljs-variable">$students</span>:=<span class="hljs-variable">$remoteDS</span>. Students.<span class="hljs-function">query</span>(<span class="hljs-string">"school.name = :1"</span>;<span class="hljs-string">"Math school"</span>)
 <span class="hljs-comment">// We add an entity to the $students entity selection on the client</span>
 <span class="hljs-variable">$students</span>.<span class="hljs-function">add</span>(<span class="hljs-variable">$newStudent</span>) 
 
@@ -515,6 +496,6 @@ var</span> <span class="hljs-variable">$ageAverage </span>: Integer
                 apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
-                algoliaOptions: {"facetFilters":["language:pt","version:19 R5 BETA"]}
+                algoliaOptions: {"facetFilters":["language:pt","version:19 R6 BETA"]}
               });
             </script></body></html>

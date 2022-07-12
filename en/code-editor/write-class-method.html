@@ -1,0 +1,554 @@
+<!DOCTYPE html><html lang="en"><head><meta name="docsearch:version" content="19 R6 BETA"/><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Code Editor · 4D Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Code Editor · 4D Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://4d.github.io/docs/index.html"/><meta property="og:description" content="4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more. "/><meta property="og:image" content="https://4d.github.io/docs/img/logohome.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://4d.github.io/docs/img/logohome.png"/><link rel="shortcut icon" href="/docs/img/4d.gif"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/routeros.min.css"/><script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script><script type="text/javascript" src="/docs/alpha/js/comment.js"></script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/docs/js/code-blocks-buttons.js"></script><script src="/docs/js/scrollSpy.js"></script><link rel="stylesheet" href="/docs/css/main.css"/><script src="/docs/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/docs/en"><h2 class="headerTitle">4D Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a style="font-weight:bold" href="https://developer.4d.com/docs" target="_self">v19 R6 BETA</a></li><li class=""><a href="https://developer.4d.com/docs/Rx" target="_self">v19 R5</a></li><li class=""><a href="https://developer.4d.com/docs/19" target="_self">v19</a></li><li class=""><a href="https://developer.4d.com/docs/18" target="_self">v18</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/docs/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/ja/code-editor/write-class-method.html">日本語</a></li><li><a href="/docs/de/code-editor/write-class-method.html">Deutsch</a></li><li><a href="/docs/es/code-editor/write-class-method.html">Español</a></li><li><a href="/docs/fr/code-editor/write-class-method.html">Français</a></li><li><a href="/docs/pt/code-editor/write-class-method.html">Português</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Handling Code</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Project Management<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Project/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/architecture.html">Architecture of a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/documentation.html">Documenting a project</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Project/compiler.html">Compilation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">4D Language Concepts<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/about.html">About the 4D Language</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/quick-tour.html">A Quick Tour</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/operators.html">Operators</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Data Types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/data-types.html">Data types overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/blob.html">BLOB</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/boolean.html">Boolean</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/collection.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/date.html">Date</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/null-undefined.html">Null and Undefined</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/number.html">Number (Real, Longint, Integer)</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/object.html">Object</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/picture.html">Picture</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/pointer.html">Pointer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/string.html">String</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/time.html">Time</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variant.html">Variant</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/variables.html">Variables</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/arrays.html">Arrays</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/methods.html">Methods</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/parameters.html">Parameters</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/shared.html">Shared objects and collections</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/classes.html">Classes</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Control Flow</h4><ul><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/control-flow.html">Control flow overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/branching.html">Branching structures</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/looping.html">Looping structures</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/error-handling.html">Error handling</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/interpreted-compiled.html">Interpreted and Compiled modes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/components.html">Components</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/plug-ins.html">Plug-ins</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Concepts/identifiers.html">Identifiers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORDA<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/ORDA/overview.html">What is ORDA?</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ORDA/dsmapping.html">Data Model Objects</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ORDA/ordaClasses.html">Data Model Classes</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ORDA/entities.html">Working with data</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ORDA/datastores.html">Using a remote datastore</a></li><li class="navListItem"><a class="navItem" href="/docs/en/ORDA/glossary.html">Glossary</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Class API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/API/overview.html">Class API Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/BlobClass.html">Blob</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/ClassClass.html">Class</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/CollectionClass.html">Collection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/CryptoKeyClass.html">CryptoKey</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/DataClassClass.html">DataClass</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/DataClassAttributeClass.html">DataClassAttribute</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/DataStoreClass.html">DataStore</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/EmailObjectClass.html">Email</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/EntityClass.html">Entity</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/EntitySelectionClass.html">EntitySelection</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/FileClass.html">File</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/FolderClass.html">Folder</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/FunctionClass.html">Formula</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/HTTPRequestClass.html">HTTPRequest</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/IMAPTransporterClass.html">IMAPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/MailAttachmentClass.html">MailAttachment</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/POP3TransporterClass.html">POP3Transporter</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/SessionClass.html">Session</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/SignalClass.html">Signal</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/SMTPTransporterClass.html">SMTPTransporter</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/SystemWorkerClass.html">SystemWorker</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/WebServerClass.html">WebServer</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/ZipArchiveClass.html">ZIPArchive</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/ZipFileClass.html">ZIPFile</a></li><li class="navListItem"><a class="navItem" href="/docs/en/API/ZipFolderClass.html">ZIPFolder</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Handling Code<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/code-editor/overview.html">About 4D Code</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/code-editor/write-class-method.html">Code Editor</a></li><li class="navListItem"><a class="navItem" href="/docs/en/code-editor/find-replace.html">Find and replace</a></li><li class="navListItem"><a class="navItem" href="/docs/en/code-editor/creating-using-macros.html">Creating and using macros</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Tags/tags.html">Transformation tags</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Debugging<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Debugging/basics.html">Basics</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Debugging/debugger.html">Debugger</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Debugging/breakpoints.html">Breakpoints and Command Catching</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Debugging/debugging-remote.html">Debugging from remote machines</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Debugging/debugLogFiles.html">Description of log files</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Settings<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/settings/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/general.html">General page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/interface.html">Interface page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/compiler.html">Compiler page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/database.html">Database page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/backup.html">Backup page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/client-server.html">Client-server page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/web.html">Web page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/sql.html">SQL page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/php.html">PHP page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/security.html">Security page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/settings/compatibility.html">Compatibility page</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Preferences<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/Preferences/overview.html">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Preferences/general.html">General Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Preferences/structure.html">Structure Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Preferences/forms.html">Forms Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Preferences/methods.html">Methods Page</a></li><li class="navListItem"><a class="navItem" href="/docs/en/Preferences/shortcuts.html">Shortcuts Page</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/code-editor/write-class-method.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Code Editor</h1></header><article><div><span><p>4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more.</p>
+<p><img src="/docs/assets/en/code-editor/code-editor-overview.png" alt=""></p>
+<p>The Code Editor works much like a text editor. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. You can also use various type-ahead functions to create methods faster.</p>
+<p>You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.</p>
+<p>The 4D Code Editor provides basic syntax error-checking. Additional error-checking is performed when the code executes. For more information on how to handle errors, see <a href="/docs/en/Debugging/basics.html">Debugging</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="toolbar"></a><a href="#toolbar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Toolbar</h2>
+<p>Each Code Editor window has a toolbar that provides instant access to basic functions related to code execution and editing.</p>
+<table>
+<thead>
+<tr><th>Element</th><th>Icon</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Method execution</strong></td><td><img src="/docs/assets/en/code-editor/execute-method.png" alt="execute-method"></td><td>When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> <strong>Run new process</strong>: Creates a process and runs the method in standard mode in this process.<li><strong>Run and debug new process</strong>: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li><strong>Run in Application process</strong>: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li><strong>Run and debug in Application process</strong>: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see <a href="/docs/en/Concepts/methods.html#calling-project-methods">Calling Project Methods</a>.</td></tr>
+<tr><td><strong>Search</strong></td><td><img src="/docs/assets/en/code-editor/search.png" alt="search-icon"></td><td>Allows performing a search in the current window.</td></tr>
+<tr><td><strong>Macros</strong></td><td><img src="/docs/assets/en/code-editor/macros.png" alt="macros-button"></td><td>Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see <a href="/docs/en/code-editor/creating-using-macros.html">Macros</a>.</td></tr>
+<tr><td><strong>Expand all / Collapse all</strong></td><td><img src="/docs/assets/en/code-editor/expand-collapse-all.png" alt="expand-collapse-button"></td><td>These buttons allow expanding or collapsing all the control flow structures of the code.</td></tr>
+<tr><td><strong>Method information</strong></td><td><img src="/docs/assets/en/code-editor/method-information.png" alt="method-information-icon"></td><td>Displays the <a href="/docs/en/Concepts/methods.html#project-method-properties">Method Properties</a> dialog box (project methods only).</td></tr>
+<tr><td><strong>Last clipboard values</strong></td><td><img src="/docs/assets/en/code-editor/last-clipboard-values.png" alt="last-clipboard-values-icon"></td><td>Displays the last values stored in the clipboard.</td></tr>
+<tr><td><strong>Clipboards</strong></td><td><img src="/docs/assets/en/code-editor/clipboards.png" alt="clipboard icons"></td><td>Nine clipboards available in the code editor. You can <a href="/docs/en/code-editor/write-class-method.html#multiple-copy-paste-and-numbering-of-clipboards">use these clipboards</a> by clicking on them directly or by using keyboard shortcuts. You can use a <a href="/docs/en/Preferences/methods.html#options-1">Preferences option</a> to hide them.</td></tr>
+<tr><td><strong>Code navigation</strong></td><td><img src="/docs/assets/en/code-editor/tags.png" alt="code-navigation-icons"></td><td>Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See <a href="/docs/en/code-editor/write-class-method.html#navigation-dropdown">Navigation dropdown</a>.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="editing-area"></a><a href="#editing-area" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editing area</h2>
+<p>This is where you <a href="/docs/en/code-editor/write-class-method.html">write and edit</a> your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.</p>
+<p>You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:</p>
+<table>
+<thead>
+<tr><th>Option</th><th>Description</th><th>Set in...</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>font</strong> and <strong>font size</strong></td><td>Sets the character font and size to be used in the editing area</td><td><strong>Preferences</strong> &gt; <a href="/docs/en/Preferences/methods.html"><strong>Methods</strong></a> or <strong>Method &gt; View</strong> &gt; <strong>Bigger Font</strong> or <strong>Smaller Font</strong></td></tr>
+<tr><td><strong>style and color of syntax elements</strong></td><td>assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).</td><td>Right-click on a language element (variable, keyword, etc.) &gt; <strong>Style</strong> submenu. Or <strong>Preferences</strong> &gt; <a href="/docs/en/Preferences/methods.html"><strong>Methods</strong></a></td></tr>
+<tr><td><strong>spaces</strong></td><td>You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).</td><td><strong>Method &gt; View &gt; White Spaces</strong></td></tr>
+<tr><td><strong>themes</strong></td><td>You can select the Dark or Light theme, or set a custom one</td><td><strong>Preferences</strong> &gt; <a href="/docs/en/Preferences/methods.html"><strong>Methods</strong></a></td></tr>
+<tr><td><strong>width of code indentations</strong></td><td>Set the width of code indentations</td><td><strong>Preferences</strong> &gt; <a href="/docs/en/Preferences/methods.html"><strong>Methods</strong></a></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="lists-area"></a><a href="#lists-area" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lists area</h2>
+<p>The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.</p>
+<p>By default, the Code Editor displays four lists. You can hide or show all lists by clicking on the icon at the botton right of the window. <img src="/docs/assets/en/code-editor/show-hide-list.png" alt=""></p>
+<p>You can enlarge or reduce the relative width of each list area by dragging one of its partitions. It is also possible to adjust the size of the list area in relation to that of the editing area by dragging the dividing line between them.</p>
+<ul>
+<li>Double-clicking on an item in a list causes it to be inserted into the editing area, at the location of the cursor.</li>
+<li>To <strong>modify the contents</strong> of a list, click on the title area of the list concerned: a pop-up menu appears, enabling you to choose the type of item to be displayed.</li>
+</ul>
+<p><img src="/docs/assets/en/code-editor/list-area.png" alt=""></p>
+<ul>
+<li><p>To add or remove a list, click in the title area of one of the lists and choose the corresponding command in the pop-up menu.
+The <strong>Remove this list</strong> command is disabled when you click on the last list. If you want to hide all the lists, you must either click on the <strong>show or hide lists</strong>  button at the bottom right of the window or hide them by default in the <strong>Preferences</strong>.</p></li>
+<li><p>You can hide the lists in all the windows in the following ways:</p>
+<ul>
+<li>Select the <strong>View &gt; Lists</strong> option in the <strong>Method</strong> menu (a check mark indicates whether lists are displayed)</li>
+<li>Uncheck the <strong>Preferences</strong> &gt; <strong>Methods</strong> &gt; <strong>Options</strong> &gt; <strong>Show Lists</strong> option. For the modifications made in the <strong>Preferences</strong> dialog box to be taken into account, any open methods, classes or functions must first be closed then reopened.</li>
+</ul></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="available-lists-of-items"></a><a href="#available-lists-of-items" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available lists of items</h4>
+<p>You can display the following lists of items in the lists area of the Code Editor window:</p>
+<ul>
+<li><strong>All tables and fields</strong>: Database table and field names in the form of a hierarchical list. When you insert a field name into the method by double-clicking on its name, 4D inserts it while respecting the syntax and adds the name of the table or subtable as the case may be.</li>
+<li><strong>Table</strong> (submenu): Field names of the table selected using the submenu.</li>
+<li><strong>Current table</strong>: Field names of the current table (available in triggers, form methods and object methods).</li>
+<li><strong>Project forms</strong>: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.</li>
+<li><strong>Table forms</strong>: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. For example: [Table];&quot;Form&quot;.</li>
+<li><strong>Methods</strong>: Database project method names.</li>
+<li><strong>All folders</strong>: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.</li>
+<li><strong>Folders</strong> (submenu): Contents of the folder selected using the submenu.</li>
+<li><strong>Macros</strong>: Macro names defined for the database (see <a href="#creating-and-using-macros">Creating and using macros</a>).</li>
+<li><strong>Commands</strong>: 4D language commands in alphabetical order.</li>
+<li><strong>Commands by themes</strong>: 4D language commands classified by theme in the form of a hierarchical list.</li>
+<li><strong>Menu bars</strong>: Names and numbers of menu bars <a href="/docs/en/Menus/creating.html">created with the 4D Menu bar editor</a>.</li>
+<li><strong>Constants</strong>: 4D constants and those of any plug-ins, classified by theme in the form of a hierarchical list.</li>
+<li><strong>Lists</strong>: Names of lists.</li>
+<li><strong>All plug-in commands</strong>: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.</li>
+<li><strong>SQL Keywords</strong>: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).</li>
+<li><strong>SQL Functions</strong>: 4D SQL functions.</li>
+</ul>
+<p><strong>Note:</strong> Except for the Macros element, all the lists are in alphabetical order.</p>
+<h3><a class="anchor" aria-hidden="true" id="save-as-template"></a><a href="#save-as-template" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Save as template</h3>
+<p>You can save the lists set in the Code Editor window in the form of a template. Once the template is saved, the parameters set in it will be used for each new Code Editor window that is opened.</p>
+<p>The following parameters are stored in the template:</p>
+<ul>
+<li>Relative size of the editing and list areas</li>
+<li>Number of lists</li>
+<li>Location and contents of each list</li>
+<li>Relative width of each list</li>
+</ul>
+<p>To save a Code Editor window as a template, choose <strong>Method</strong> &gt; <strong>Save As Template</strong>. The template is saved immediately (no dialog box appears). It is stored in the <strong>Preferences</strong> of the 4D application. If a previous template already exists, it is replaced.</p>
+<h2><a class="anchor" aria-hidden="true" id="break-points-area"></a><a href="#break-points-area" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Break points area</h2>
+<p>This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.</p>
+<p>For more information on break points, see the <a href="/docs/en/Debugging/breakpoints.html#breakpoints">Debugging</a> section.</p>
+<p>You can display or hide the line numbers in the break points area for each window of the Code Editor.</p>
+<ul>
+<li>To enable or disable the display of line numbers by default,  choose <strong>Preferences</strong> &gt; <strong>Methods</strong> &gt; <strong>Show line numbers</strong>.</li>
+<li>To modify this display separately for each window of the Code Editor, choose <strong>Method</strong> &gt; <strong>View</strong> &gt; <strong>Line Numbers</strong>.</li>
+</ul>
+<p>Displaying the line numbers makes it easier to find your way around in the window. The <strong>Method</strong> &gt; <strong>Go to Line Number...</strong> command in the also lets you take advantage of this display.</p>
+<h2><a class="anchor" aria-hidden="true" id="status-bar"></a><a href="#status-bar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Status bar</h2>
+<p>The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:</p>
+<p><img src="/docs/assets/en/code-editor/status-bar.png" alt=""></p>
+<ul>
+<li><strong>Ln</strong>: Line number</li>
+<li><strong>Col</strong>: Column number, i.e., the level in the hierarchy of programming structures. The first level is 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.</li>
+<li><strong>Ch</strong>: Location of character in the line.</li>
+<li><img src="/docs/assets/en/code-editor/show-hide-list.png" alt="">: Hide/display lists.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="typing-and-editing-code"></a><a href="#typing-and-editing-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Typing and editing code</h2>
+<p>4D uses standard text editing techniques for typing and editing in the Code Editor.</p>
+<p>The Code Editor uses display conventions (style, color) for the syntax elements. You can <a href="#customizing-the-editing-area">customize these conventions</a>. As you type, when you validate your entry, 4D evaluates the text of the line and applies the appropriate display format. 4D also indents each line to its proper level in relation to the preceding line when you use programming structures (If, End if...).</p>
+<p>You can use the arrow keys to move from line to line quickly. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.</p>
+<p>Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.</p>
+<p>The Code Editor includes numerous <a href="#navigational-keyboard-shortcuts">navigation shortcuts</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="adding-items-by-drag-and-drop"></a><a href="#adding-items-by-drag-and-drop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding items by drag-and-drop</h3>
+<p>When writing methods, you can drag and drop items:</p>
+<ul>
+<li>from the Explorer</li>
+<li>within the same method, class, function</li>
+<li>between methods, classes, and functions</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="from-the-explorer"></a><a href="#from-the-explorer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>From the Explorer</h4>
+<p>From the Explorer, you can drag and drop:</p>
+<ul>
+<li>Table names, field names, form names and project methods from the Home page.</li>
+<li>Table names and field names from the Tables page,</li>
+<li>Table names and form names from the Forms page,</li>
+<li>Project methods and form names from the Methods page,</li>
+<li>Constants from the Constants page,</li>
+<li>4D commands from the Commands page.</li>
+</ul>
+<p>When you drag and drop a component, 4D always uses the correct syntax for the component. For example, if you drag the field name &quot;First Name&quot; from the [People] table, it appears in the Code Editor as &quot;[People]First Name.&quot; Similarly, if you drag the Form name &quot;Input&quot; from the People table, it appears in the Code Editor as &quot;[People];&quot;Input&quot;.&quot;</p>
+<p>When you insert a command by dragging it from the <strong>Commands</strong> page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. You can then use a syntax that better suits your usage.</p>
+<h4><a class="anchor" aria-hidden="true" id="within-a-method-class-function-or-between-two-different-ones"></a><a href="#within-a-method-class-function-or-between-two-different-ones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Within a method, class, function or between two different ones</h4>
+<p>In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected.
+By default, the drag-and-drop mechanism moves the selected text. In order to copy it, hold down the <strong>Ctrl</strong> key (Windows) or the <strong>Option</strong> key (macOS) during the operation.</p>
+<h3><a class="anchor" aria-hidden="true" id="entry-on-several-lines"></a><a href="#entry-on-several-lines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entry on several lines</h3>
+<p>You can write a single statement on several lines by terminating each line of the statement with a backslash <code>\</code> character. 4D will consider all the lines at once. For example, both the following statements are equivalent:</p>
+<p><img src="/docs/assets/en/code-editor/entry-several-lines.png" alt=""></p>
+<h3><a class="anchor" aria-hidden="true" id="changing-case"></a><a href="#changing-case" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changing case</h3>
+<p>You can automatically modify the case of selected characters using the commands in <strong>Methods</strong> &gt; <strong>Case</strong> or the context menu of the editor:</p>
+<ul>
+<li><strong>Uppercase</strong> / <strong>Lowercase</strong>: Switch the selected characters to uppercase or lowercase.</li>
+<li><strong>camelCase</strong> / <strong>CamelCase</strong> : Switch the selected characters to &quot;camel case&quot;. This consists in changing each first letter of a group of attached words to uppercase. This type of notation is often used for variable nomenclatures. hireDate and PurchaseDate are examples of two variants of camel case notation.</li>
+</ul>
+<p>When you apply one of these commands to a text selection, the spaces and &quot;_&quot; characters are removed and the first letter of each word becomes uppercase.</p>
+<h3><a class="anchor" aria-hidden="true" id="swap-expression"></a><a href="#swap-expression" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Swap expression</h3>
+<p>The <strong>Swap Expression</strong> function can be used to reverse the arguments of an expression assigning a value. For instance,</p>
+<p><code>variable1:=variable2</code></p>
+<p>becomes</p>
+<p><code>variable2:=variable1</code></p>
+<p>This function is extremely useful for reversing a set of assignments used to get or set properties, or to correct input errors. To use this function, select the line(s) to be modified, then choose <strong>Method</strong> &gt; <strong>Swap Expression</strong> or use the context menu of the area. Within the selection, only the lines assigning a value will be modified.</p>
+<h3><a class="anchor" aria-hidden="true" id="multiple-copy-paste-and-numbering-of-clipboards"></a><a href="#multiple-copy-paste-and-numbering-of-clipboards" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Multiple copy-paste and numbering of clipboards</h3>
+<p>In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:</p>
+<ul>
+<li><p>The program stores the last 10 &quot;copy&quot; or &quot;cut&quot; actions that were performed in the Code Editor in memory during the current session. Each of the different contents saved in this way can be reused at any time. To do this, use the <strong>Clipboard History</strong> command of the Code Editor context menu or the &quot;Last Clipboard values&quot; button of the toolbar:</p>
+<p><img src="/docs/assets/en/code-editor/last-clipboard-values-2.png" alt=""></p>
+<p>The first few words of the copied or cut items are displayed. Select an item to insert it at the current location of the cursor.</p></li>
+<li><p>Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or using keyboard shortcuts:</p></li>
+</ul>
+<p><img src="/docs/assets/en/code-editor/clipboards-2.png" alt=""></p>
+<table>
+<thead>
+<tr><th>Platform</th><th>Copy selected text to a clipboard</th><th>Paste contents of a clipboard at cursor location</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Windows</strong></td><td>Shift or Alt+click on clipboard icon</td><td>Ctrl+click on clipboard icon</td></tr>
+<tr><td></td><td></td><td>Ctrl+clipboard number</td></tr>
+<tr><td><strong>macOS</strong></td><td>Shift or Alt+click on clipboard icon</td><td>Cmd+click on clipboard icon</td></tr>
+<tr><td></td><td>Cmd+Shift+clipboard number</td><td>Cmd+clipboard number</td></tr>
+</tbody>
+</table>
+<p>You can use a <a href="/docs/en/Preferences/methods.html#options-1">Preferences option</a> to hide numbered clipboards.</p>
+<h3><a class="anchor" aria-hidden="true" id="moving-lines"></a><a href="#moving-lines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moving lines</h3>
+<p>You can move the line where the cursor is directly without selecting it first using the <strong>Move Lines Up</strong> and <strong>Move Lines Down</strong> commands in the <strong>Method</strong> menu. You can also do this using the combination <strong>Alt/Option</strong> + <strong>Up Arrow</strong> or <strong>Down Arrow</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="change-bars"></a><a href="#change-bars" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change bars</h3>
+<p>Colored bars instantly show you where lines of code were modified since the method was opened:</p>
+<p><img src="/docs/assets/en/code-editor/change-bars.png" alt=""></p>
+<p>The change bars change colors to indicate whether or not the modifications were saved:</p>
+<ul>
+<li>yellow: Row was modified and method has not yet been saved.</li>
+<li>green: Row was modified and method has been saved.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="using-the-autocomplete-functions"></a><a href="#using-the-autocomplete-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the autocomplete functions</h2>
+<p>The Code Editor provides autocomplete functions. 4D automatically displays suggestions based on the first few characters typed.</p>
+<p>In the example given below, typing the string &quot;cop&quot; causes the display of a blue triangle indicating that several suggestions are available:</p>
+<p><img src="/docs/assets/en/code-editor/autocomplete-1.png" alt=""></p>
+<p>When the characters you enter correspond to a single possibility, this suggested value appears greyed out (and is inserted if you hit the <strong>Tab</strong> key):
+<img src="/docs/assets/en/code-editor/autocomplete-2.png" alt=""> ---&gt; <img src="/docs/assets/en/code-editor/autocomplete-3.png" alt=""></p>
+<blockquote>
+<p>If you checked the <strong>Insert () and closing } ) ] &quot;</strong> option in the <strong>Methods</strong> page of the <strong>Preferences</strong>, 4D will also automatically add <strong>()</strong> after a 4D command, keyword or project method that requires one or more mandatory arguments (after accepting a suggestion or completion):
+<img src="/docs/assets/en/code-editor/insert-and-closing-1.png" alt=""> -&gt; <img src="/docs/assets/en/code-editor/insert-and-closing-2.png" alt=""></p>
+</blockquote>
+<p>Autocompletion also works with code structures (e.g. If..End if, For each...End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:
+<img src="/docs/assets/en/code-editor/autocomplete-code-structures.png" alt=""></p>
+<p>If there are several suggestions available, 4D displays them in a pop-up list when you hit the <strong>Tab</strong> key:</p>
+<p><img src="/docs/assets/en/code-editor/autocomplete-popup.png" alt=""></p>
+<p>The list is in alphabetical order. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit <strong>Enter</strong>, <strong>Carriage Return</strong> or <strong>Tab</strong> to insert the selected value.</p>
+<p>By default, you can also insert a suggested value by hitting one of the following delimiter <code>( ; : = &lt; [ {</code> keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.</p>
+<p><img src="/docs/assets/en/code-editor/autocomplete-delimiter.png" alt="">  +  <strong>(</strong> key --&gt; <img src="/docs/assets/en/code-editor/autocomplete-delimiter-2.png" alt=""></p>
+<blockquote>
+<p>You can disable the use of delimiters for inserting suggested values in <strong>Preferences</strong> &gt; <strong>Methods</strong> &gt; <strong>Options</strong>.</p>
+</blockquote>
+<p>You can press the <strong>Esc</strong> key to close the pop-up list or you can continue typing while it is open. The values suggested in the pop-up list are updated as additional characters are typed.</p>
+<p>If the characters typed correspond to different types of objects, the list displays them in their current style. The following types of objects can be displayed:</p>
+<ul>
+<li>4D commands</li>
+<li>SQL commands</li>
+<li>User methods</li>
+<li>Table names</li>
+<li>Field names</li>
+<li>Constants</li>
+<li>Local, process or interprocess variable, declared in the method</li>
+<li>Object property names</li>
+<li>Plug-in commands</li>
+<li>4D keywords</li>
+<li>SQL keywords</li>
+<li>Macros (displayed between &lt; &gt;)</li>
+</ul>
+<blockquote>
+<p>For practical reasons, you can disable the automatic display of the list of suggestions for <strong>constants</strong>, <strong>(local or interprocess) variables and object attributes</strong> and/or <strong>tables</strong>. These options are found in <strong>Preferences</strong> &gt; <strong>Methods</strong> &gt; <strong>Options</strong></p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="object-properties"></a><a href="#object-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Object properties</h3>
+<p>4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:</p>
+<ul>
+<li>type a dot &quot;.&quot; after an object or</li>
+<li>use the Tab key after a dereferenced object pointer &quot;-&gt;&quot;.</li>
+</ul>
+<p><img src="/docs/assets/en/code-editor/autocomplete-object-attributes.png" alt=""></p>
+<blockquote>
+<p>The <code>length</code> property is always included for use with collections.</p>
+</blockquote>
+<p>Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.</p>
+<p><img src="/docs/assets/en/code-editor/autocomplete-object-attributes-2.png" alt=""></p>
+<p>The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.</p>
+<p>When the database is restarted, the list is reinitialized.</p>
+<blockquote>
+<p>You can disable the automatic display of object properties in <strong>Preferences</strong> &gt; <strong>Methods</strong> &gt; <strong>suggestions</strong>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="selecting-text"></a><a href="#selecting-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Selecting text</h2>
+<p>The <strong>Select Enclosing Block</strong> function is used to select the &quot;enclosing block&quot; of the code containing the insertion point. The enclosing block can be defined by:</p>
+<ul>
+<li>Quotation marks</li>
+<li>Parentheses</li>
+<li>A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)</li>
+<li>Braces</li>
+</ul>
+<p>If a block of text is already selected, the function selects the enclosing block of the next highest level and so on, until the entire method is selected.</p>
+<p>Pressing <strong>Ctrl+Shift+B</strong> (Windows) or <strong>Command+Shift+B</strong> (macOS) enables you to reverse this operation and deselect the last enclosing block selected.</p>
+<p><strong>Note:</strong> If the insertion point is placed in an <code>If</code> or <code>Else</code> type structure, the enclosing block will be the one containing, respectively, the <code>If</code> or <code>Else</code> statement.</p>
+<p>You can double-click to select individual &quot;words&quot;. When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the <strong>Alt/Option + Double-click</strong> combination.</p>
+<h3><a class="anchor" aria-hidden="true" id="shortcuts"></a><a href="#shortcuts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Shortcuts</h3>
+<p>Standard keyboard shortcuts to navigate the code are available in 4D's Code Editor.</p>
+<p><strong>Note:</strong> Under macOS, use the <strong>Command</strong> key instead of the <strong>Ctrl</strong> key mentioned (Windows).</p>
+<table>
+<thead>
+<tr><th><strong>Shortcut</strong></th><th><strong>Action</strong></th></tr>
+</thead>
+<tbody>
+<tr><td>[Shift]+[right arrow]</td><td>Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left</td></tr>
+<tr><td>[Shift]+[left arrow]</td><td>Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left</td></tr>
+<tr><td>[Shift]+[down arrow]</td><td>Create and enlarge a selection, line by line, from the top to the bottom</td></tr>
+<tr><td>[Shift]+[up arrow]</td><td>Create and enlarge a selection, line by line, from the bottom to the top</td></tr>
+<tr><td>[Ctrl]+[Shift]+[right arrow]</td><td>Create and enlarge the selection, word by word, from the right</td></tr>
+<tr><td>[Ctrl]+[Shift]+[left arrow]</td><td>Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left</td></tr>
+<tr><td>[Ctrl]+[right arrow]</td><td>Move the insertion point, word by word, from left to right</td></tr>
+<tr><td>[Ctrl]+[left arrow]</td><td>Move the insertion point, word by word, from right to left</td></tr>
+<tr><td>[Home]</td><td>Place the insertion point at the beginning of the line</td></tr>
+<tr><td>[End]</td><td>Place the insertion point at the end of the line</td></tr>
+<tr><td>[Ctrl]+[Home]</td><td>Place the insertion point at the beginning of the method</td></tr>
+<tr><td>[Ctrl]+[End]</td><td>Place the insertion point at the end of the method</td></tr>
+<tr><td>[Shift]+[Home]</td><td>Select all the characters in the line that are to the left of the cursor</td></tr>
+<tr><td>[Shift]+[End]</td><td>Select all the characters in the line that are to the right of the cursor</td></tr>
+<tr><td>[PgUp]</td><td>Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)</td></tr>
+<tr><td>[PgDn]</td><td>Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)</td></tr>
+<tr><td>[Ctrl]+[K] on a project method name</td><td>Open the project method in a new window</td></tr>
+<tr><td>[Alt]+double-click on a project method name</td><td>idem</td></tr>
+<tr><td>[Ctrl]+click on a project method name</td><td>idem</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="checking-and-correcting-syntax-errors"></a><a href="#checking-and-correcting-syntax-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Checking and correcting syntax errors</h2>
+<p>4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression <img src="/docs/assets/en/code-editor/incorrect-expression-icon.png" alt="">. When you move the mouse over the symbol, a help tip displays the cause of the error:</p>
+<p><img src="/docs/assets/en/code-editor/incorrect-expression-message.png" alt=""></p>
+<p>When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the <strong>Enter</strong> key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the <strong>Enter</strong> key.</p>
+<p>When the method, class or function is validated, 4D checks for:</p>
+<ul>
+<li>basic syntax errors</li>
+<li>the structure of statements (<code>If</code>, <code>End if</code> and so on)</li>
+<li>matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:</li>
+</ul>
+<p><img src="/docs/assets/en/code-editor/matching-enclosing-characters.png" alt=""></p>
+<blockquote>
+<p>If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in <strong>Preferences</strong> &gt; <strong>Methods</strong> &gt; <strong>Options</strong> &gt; <strong>Matching parentheses</strong>.</p>
+</blockquote>
+<p>The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Execution errors are caught by 4D when the code is executed.</p>
+<p>4D has a built-in debugger (see <a href="/docs/en/Debugging/debugger.html">Debugging</a>) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the <a href="/docs/en/Project/compiler.html">Compilation</a> chapter.</p>
+<h2><a class="anchor" aria-hidden="true" id="using-help-tips-and-status-bar"></a><a href="#using-help-tips-and-status-bar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using help tips and status bar</h2>
+<p>The Code Editor provides various contextual information using help tips. They appear when you mouse over an object and the status bar, at the bottom of a Code Editor window.</p>
+<ul>
+<li><p><strong>Errors</strong>: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see <a href="#checking-and-correcting-syntax-errors">Checking and correcting syntax errors</a>).</p></li>
+<li><p><strong>4D command documentation</strong>: When you set the cursor in a command name or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in <strong>bold</strong>:
+<img src="/docs/assets/en/code-editor/status-bar-bold.png" alt="">
+When you move the mouse over a 4D command, a help tip provides the command syntax along with a brief description of how it works.
+<img src="/docs/assets/en/code-editor/status-bar-description.png" alt=""></p></li>
+<li><p><strong>Variable type and description</strong>: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any.
+<img src="/docs/assets/en/code-editor/variable-type.png" alt=""></p></li>
+<li><p><strong>Project methods</strong>: When you mouse over a project method or class function, a help tip displays:</p>
+<ul>
+<li>either the comments specified in the Explorer.</li>
+<li>or the first few lines of the method or class function if it includes comments (lines beginning with // or /<em>...</em>/ comment block). It is common practice to insert documentation for the method as well as its parameters in the form of comments at the beginning of the method. You can get this information directly in the help tip, just make sure to first remove any comments found in the Explorer.
+Comments at the beginning of a method:
+<img src="/docs/assets/en/code-editor/comments-method.png" alt="">
+Help tip in another method:
+<img src="/docs/assets/en/code-editor/help-tip.png" alt=""></li>
+</ul></li>
+<li><p>You can also create a <strong>dedicated documentation file</strong> named <code>&lt;MethodName&gt;.md</code> in the <code>&lt;package&gt;/documentation</code> folder. See <a href="/docs/en/Project/documentation.html#viewing-documentation-in-the-code-editor">Viewing documentation in the code editor</a></p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="display-the-complete-documentation-of-a-command"></a><a href="#display-the-complete-documentation-of-a-command" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display the complete documentation of a command</h2>
+<p>You can display the HTML documentation of a 4D &quot;classic&quot; language command at any time: to do so, select the complete command name or simply place the cursor in the name and press <strong>F1</strong>. The complete documentation of the command is displayed in a new window of your default browser.</p>
+<p>4D looks for the on-line documentation of the command (on the <em>4D Doc Center</em> site) or searches locally depending on the settings made in the application Preferences (see <a href="/docs/en/Preferences/general.html#documentation-location">Documentation location</a>).</p>
+<h2><a class="anchor" aria-hidden="true" id="commentuncomment"></a><a href="#commentuncomment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comment/Uncomment</h2>
+<p>Comments are inactive lines of code. These lines are not interpreted by the program (4D does not apply any particular style within comments) and are not executed when the method or function is called.</p>
+<p>There are two ways to create comments:</p>
+<h4><a class="anchor" aria-hidden="true" id="comment"></a><a href="#comment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>//comment</code></h4>
+<p>Used to create a single line comment. Inserting // at the beginning of a line will create a single line comment. The length of single line comments is limited to the maximum size of a line (32,000 characters).</p>
+<pre><code class="hljs css language-//This is a comment\">
+ For(vCounter;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)\
+  <span class="hljs-comment">//comment\</span>
+  <span class="hljs-comment">//comment\</span>
+  <span class="hljs-comment">//comment\</span>
+ End <span class="hljs-keyword">for</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="comment-1"></a><a href="#comment-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>/*comment*/</code></h4>
+<p>Used to surround the content to create inline comments or multiline comment blocks.</p>
+<p>Both inline and multiline comment blocks begin with /<em>and end with</em>/.</p>
+<ul>
+<li><p><em>Inline comments</em> -  can be anywhere in the code.The length of inline comments is limited to the maximum size of a line (32,000 characters).
+<img src="/docs/assets/en/code-editor/inline-comment.png" alt=""></p></li>
+<li><p><em>Multiline comment blocks</em> - can be collapsed or expanded. Multiline comment blocks can be nested and each block  is expandable/collapsable. The comments on the first line of an expandable/collapsable block will remain visible when the block is collapsed. The length of multiline comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
+<img src="/docs/assets/en/code-editor/multiline-comment.png" alt=""></p></li>
+</ul>
+<blockquote>
+<p>Multiline comments at the end of a line are not supported.-</p>
+</blockquote>
+<p>The <strong>Comment/Uncomment</strong> command, found in the <strong>Method</strong> menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the <strong>Comment/Uncomment</strong> command:</p>
+<p><img src="/docs/assets/en/code-editor/comment-uncomment-1.png" alt=""> --&gt; <img src="/docs/assets/en/code-editor/comment-uncomment-2.png" alt=""></p>
+<p>When the selection contains only active code, the <strong>Comment</strong> command is applied. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently &quot;uncommented.&quot; When the selection contains only commented lines, the <strong>Uncomment</strong> command is applied.</p>
+<blockquote>
+<p>The <strong>Comment/Uncomment</strong> command only operates with full lines --- it cannot be used to comment only part of a line.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="using-escape-sequences"></a><a href="#using-escape-sequences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using escape sequences</h2>
+<p>The Code Editor allows you to use escape sequences (also called escape characters). An escape sequence is a sequence of characters that can be used to replace a &quot;special&quot; character.</p>
+<p>The sequence consists of a backslash <code>\</code>, followed by a character. For instance, <code>\t</code> is an escape sequence for the <strong>Tab</strong> character. Escape sequences facilitate the entry of special characters: the previous example (<code>\t</code>) replaces the entry &quot;Character(Tab)&quot;.</p>
+<p>In 4D, the following escape sequences can be used:</p>
+<table>
+<thead>
+<tr><th>Escape sequence</th><th>Character replaced</th></tr>
+</thead>
+<tbody>
+<tr><td><code>\n</code></td><td>LF (Line feed)</td></tr>
+<tr><td><code>\t</code></td><td>HT (Tab)</td></tr>
+<tr><td><code>\r</code></td><td>CR (Carriage return)</td></tr>
+<tr><td><code>\\</code></td><td><code>\</code> (Backslash)</td></tr>
+<tr><td><code>\&quot;</code></td><td>&quot; (Quotation marks)</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>It is possible to use either upper or lower case in escape sequences.</p>
+</blockquote>
+<p>In the following example, the <strong>Carriage return</strong> character (escape sequence \r) is inserted in a statement in order to obtain the dialog box shown:</p>
+<p><code>ALERT(&quot;The operation has been completed successfully.\rYou may now disconnect.&quot;)</code></p>
+<p><img src="/docs/assets/en/code-editor/carriage-return.png" alt=""></p>
+<p><strong>Warning:</strong> The <code>\</code> (backslash) character is used as a separator in pathnames under Windows. In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash <code>\</code> with a double backslash <code>\\</code>. For instance, <code>C:\Folder</code> will become <code>C:\\Folder</code>. However, if you write <code>&quot;C:\MyDocuments\New&quot;</code>, 4D will display <code>&quot;C:\\MyDocuments\New&quot;</code>. In this case, the second backslash is interpreted incorrectly as <code>\N</code> (an existing escape sequence). You must therefore enter a double backslash <code>\\</code> when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.</p>
+<h2><a class="anchor" aria-hidden="true" id="making-code-editing-easier"></a><a href="#making-code-editing-easier" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making code editing easier</h2>
+<p>Several functions in the Code Editor make code easier to read and facilitate browsing among the statements.</p>
+<h3><a class="anchor" aria-hidden="true" id="expand--collapse"></a><a href="#expand--collapse" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expand / Collapse</h3>
+<p>4D code located inside loops and conditions can now be collapsed or expanded, in order to facilitate the reading of methods:</p>
+<ul>
+<li><p>Expanded code:
+<img src="/docs/assets/en/code-editor/expanded-code.png" alt=""></p></li>
+<li><p>Collapsed code:
+<img src="/docs/assets/en/code-editor/collapsed-code.png" alt=""></p></li>
+</ul>
+<p>If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.</p>
+<p>A collapsed portion of code can be selected, copied, pasted or deleted. All the lines included therein will be copied, pasted or deleted respectively. When a portion of code is pasted, it is automatically expanded.</p>
+<p>There are several ways to expand and collapse code:</p>
+<ul>
+<li><p>Click on the expand/collapse icons ([+] and [-] under Windows) or on the opening button [...]</p></li>
+<li><p>Use the commands of the <strong>Method &gt; Collapse/Expand</strong> submenu:</p>
+<ul>
+<li><strong>Collapse Selection</strong> / <strong>Expand Selection</strong>: collapses or expands all the code structures found in the text selection.</li>
+<li><strong>Collapse Current Level</strong> / <strong>Expand Current Level</strong>: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the <strong>context menu</strong> of the editor.</li>
+<li><strong>Collapse All</strong> / <strong>Expand All</strong>: collapses or expands all the loops and conditions of a method. These commands are also available in the toolbar of the editor.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="start-of-block-or-end-of-block"></a><a href="#start-of-block-or-end-of-block" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start of Block or End of Block</h3>
+<p>Two commands make it easier to move around within code structures (e.g. <code>If...Else...End if</code>):</p>
+<ul>
+<li><strong>Start Of Block</strong>: places the cursor at the start of the current structure, just before the initial keyword.</li>
+<li><strong>End Of Block</strong>: places the cursor at the end of the current structure, just after the final keyword.</li>
+</ul>
+<p>These commands are found in the <strong>Method</strong> menu as well as the context menu of the editor. You can also use the following shortcuts:</p>
+<ul>
+<li>Windows: <strong>Ctrl + up arrow</strong> or <strong>Ctrl</strong> + <strong>down arrow</strong>‚</li>
+<li>macOS: <strong>Command</strong> + <strong>up arrow</strong> or <strong>Command</strong> +<strong>down arrow</strong>.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="using-bookmarks"></a><a href="#using-bookmarks" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using bookmarks</h3>
+<p>4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.</p>
+<p><img src="https://doc.4d.com/4Dv19R4/picture/443304/pict443304.en.png" alt=""></p>
+<p>A bookmark moves along with its original row if additional rows are inserted in the method. Bookmarks are saved with the methods.</p>
+<p>Bookmarks are managed using the <strong>Bookmarks</strong> submenu of the <strong>Method</strong> menu:</p>
+<ul>
+<li><strong>Toggle</strong>: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. This function is also available using the <strong>Toggle Bookmark</strong> command of the editor's context menu or using the <strong>Ctrl+F3</strong> (Windows) or <strong>Command+F3</strong> (macOS) keyboard shortcut.</li>
+<li><strong>Remove All</strong>: Removes all bookmarks from the foreground window.</li>
+<li><strong>Goto Next</strong> / <strong>Goto Previous</strong>: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts <strong>F3</strong> (go to next) or <strong>Shift+F3</strong> (go to previous).</li>
+</ul>
+<p><strong>Note:</strong> You can use bookmarks as markers for lines that contain an item found by a search. In this case, 4D automatically adds the bookmarks. For more information, refer to <a href="./find-and-replace-in-methods">Find and replace in methods</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="navigation-dropdown"></a><a href="#navigation-dropdown" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navigation dropdown</h2>
+<p>The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:</p>
+<p><img src="/docs/assets/en/code-editor/dropdown-list.png" alt="dropdown-list"></p>
+<p>Some tags are added automatically, and you can complement the dropdown list using <a href="#manual-tagging">markers</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="code-navigation"></a><a href="#code-navigation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code navigation</h3>
+<p>Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press <strong>Enter</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="automatic-tagging"></a><a href="#automatic-tagging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automatic tagging</h3>
+<p>Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.</p>
+<p>When there is no tag in the class/method, the tool displays &quot;No tag&quot;.</p>
+<p>The following items are added automatically:</p>
+<table>
+<thead>
+<tr><th>Icon</th><th>Item</th></tr>
+</thead>
+<tbody>
+<tr><td><img src="/docs/assets/en/code-editor/no-tag.png" alt="no-tag-icon"></td><td>No tag</td></tr>
+<tr><td><img src="/docs/assets/en/code-editor/constructor.png" alt="constructor-icon"></td><td>Class constructor or method declaration</td></tr>
+<tr><td><img src="/docs/assets/en/code-editor/computed-attribute.png" alt="computed-attribute-icon"></td><td>Computed attribute (get, set, orderBy and query)</td></tr>
+<tr><td><img src="/docs/assets/en/code-editor/function.png" alt="function-icon"></td><td>Class function name</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="manual-tagging"></a><a href="#manual-tagging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manual tagging</h3>
+<p>By adding markers in your code, you can add the following tags to the dropdown:</p>
+<table>
+<thead>
+<tr><th>Icon</th><th>Item</th></tr>
+</thead>
+<tbody>
+<tr><td><img src="/docs/assets/en/code-editor/mark-tag.png" alt="mark-tag-icon"></td><td>MARK: tag</td></tr>
+<tr><td><img src="/docs/assets/en/code-editor/todo-tag.png" alt="todo-tag-icon"></td><td>TODO: tag</td></tr>
+<tr><td><img src="/docs/assets/en/code-editor/fixme-tag.png" alt="fixme-icon"></td><td>FIXME: tag</td></tr>
+</tbody>
+</table>
+<p>You declare them by adding comments such as:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// <span class="hljs-doctag">FIXME:</span> Fix following items</span>
+</code></pre>
+<p>Declarations are not case-sensitive; writing <code>fixme:</code> has the same effect.</p>
+<p>Adding a hyphen after the <code>MARK:</code> tag draws a separating line in the code editor and the dropdown menu. So writing this:</p>
+<p><img src="/docs/assets/en/code-editor/mark-hyphen-editor.png" alt="mark-hyphen-image"></p>
+<p>Results in this:</p>
+<p><img src="/docs/assets/en/code-editor/dropdown-organize.png" alt="mark-hyphen-image"></p>
+<p>All markers located inside functions are indented in the dropdown list, except for the <code>MARK:</code> tags located at the end of functions and not followed by instructions. Those will appear at the first level.</p>
+<h3><a class="anchor" aria-hidden="true" id="display-order"></a><a href="#display-order" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display order</h3>
+<p>Tags are displayed in their appearing order inside the method/class.</p>
+<p>To display the tags of a method or class in alphabetical order, do one of the following:</p>
+<ul>
+<li><strong>right-click</strong> the dropdown tool</li>
+<li>hold <strong>Cmd</strong> on macOS or <strong>Alt</strong> on Windows, and click the dropdown tool</li>
+</ul>
+<blockquote>
+<p>Tags inside functions move with their parent items.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/code-editor/overview.html"><span class="arrow-prev">← </span><span>About 4D Code</span></a><a class="docs-next button" href="/docs/en/code-editor/find-replace.html"><span>Find and replace</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#toolbar">Toolbar</a></li><li><a href="#editing-area">Editing area</a></li><li><a href="#lists-area">Lists area</a><ul class="toc-headings"><li><a href="#save-as-template">Save as template</a></li></ul></li><li><a href="#break-points-area">Break points area</a></li><li><a href="#status-bar">Status bar</a></li><li><a href="#typing-and-editing-code">Typing and editing code</a><ul class="toc-headings"><li><a href="#adding-items-by-drag-and-drop">Adding items by drag-and-drop</a></li><li><a href="#entry-on-several-lines">Entry on several lines</a></li><li><a href="#changing-case">Changing case</a></li><li><a href="#swap-expression">Swap expression</a></li><li><a href="#multiple-copy-paste-and-numbering-of-clipboards">Multiple copy-paste and numbering of clipboards</a></li><li><a href="#moving-lines">Moving lines</a></li><li><a href="#change-bars">Change bars</a></li></ul></li><li><a href="#using-the-autocomplete-functions">Using the autocomplete functions</a><ul class="toc-headings"><li><a href="#object-properties">Object properties</a></li></ul></li><li><a href="#selecting-text">Selecting text</a><ul class="toc-headings"><li><a href="#shortcuts">Shortcuts</a></li></ul></li><li><a href="#checking-and-correcting-syntax-errors">Checking and correcting syntax errors</a></li><li><a href="#using-help-tips-and-status-bar">Using help tips and status bar</a></li><li><a href="#display-the-complete-documentation-of-a-command">Display the complete documentation of a command</a></li><li><a href="#commentuncomment">Comment/Uncomment</a></li><li><a href="#using-escape-sequences">Using escape sequences</a></li><li><a href="#making-code-editing-easier">Making code editing easier</a><ul class="toc-headings"><li><a href="#expand--collapse">Expand / Collapse</a></li><li><a href="#start-of-block-or-end-of-block">Start of Block or End of Block</a></li><li><a href="#using-bookmarks">Using bookmarks</a></li></ul></li><li><a href="#navigation-dropdown">Navigation dropdown</a><ul class="toc-headings"><li><a href="#code-navigation">Code navigation</a></li><li><a href="#automatic-tagging">Automatic tagging</a></li><li><a href="#manual-tagging">Manual tagging</a></li><li><a href="#display-order">Display order</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                indexName: '4d',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"facetFilters":["language:en","version:19 R6 BETA"]}
+              });
+            </script></body></html>
