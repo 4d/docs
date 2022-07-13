@@ -84,9 +84,13 @@ module.exports = {
     "navbar": {
       "title": "4D Documentation",
       items: [{
+        type: 'docsVersionDropdown',
+        position: 'right',
+      }, {
         type: 'localeDropdown',
         position: 'right',
-      }],
+      },
+      ],
     },
     "image": "../assets/en/logohome.png",
     "footer": {
