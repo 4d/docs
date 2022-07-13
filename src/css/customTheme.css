@@ -48,6 +48,10 @@
   color: white;
 }
 
+.navbar__link {
+  color: white;
+}
+
 footer {
   margin-top: 100px;
 }
