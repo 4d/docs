@@ -1,6 +1,6 @@
 ---
 id: catalog
-title: "$catalog"
+title: $catalog 
 ---
 
 
@@ -32,7 +32,7 @@ Here is a description of the properties returned for each dataclass in your proj
 |Property|	Type|	Description|
 |---|---|---|
 |name|	String|	Name of the dataclass.|
-|uri|	String|	A URI allowing you to obtain information about the |dataclass and its attributes.|
+|uri|	String|	A URI allowing you to obtain information about the dataclass and its attributes.|
 |dataURI|	String|	A URI that allows you to view the data in the dataclass.|
 
 
@@ -223,13 +223,10 @@ Here are the properties for each exposed attribute that are returned:
 |indexed	|String|	If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.|
 |type|	String|	Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute.|
 |identifying|Boolean	|This property returns True if the attribute is the primary key. Otherwise, this property does not appear.|
-|path	|String	|Name of the relation for a relatedEntity or relateEntities attribute.|
-foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
-inverseName	|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
+|path	|String	|Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.|
+|foreignKey|String	|For a relatedEntity attribute, name of the related attribute.|
+|inverseName|String	|Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
-### Method(s)
-
-Defines the project methods asociated to the dataclass, if any. 
 
 ### Primary Key  
 

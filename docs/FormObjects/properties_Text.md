@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Text
+title: Text 
 ---
 ---
 
@@ -102,9 +102,9 @@ Three font themes are available:
 - **normal**: automatic style, applied by default to any new object created in the Form editor.
 - **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
 
-![](../assets/en/FormObjects/FontThemes.png)
+![](assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 #### JSON Grammar
 
@@ -144,8 +144,6 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 ---
 
 ## Font Size
-
-> This property is only available when no [font theme](#font-theme) is selected.
 
 Allows defining the object's font size in points.
 
@@ -302,7 +300,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 |textDecoration| string| "normal","underline"|
 |unselectable| boolean| Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False.|
 |disabled |boolean |Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.|
-|cell.`\<columnName>`| object| Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object|
+|cell.\<columnName>| object| Allows applying the property to a single column. Pass in \<columnName> the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object|
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
@@ -383,10 +381,10 @@ Modifies the orientation (rotation) of a text area. Text areas can be rotated by
 
 |Orientation value|Result|
 |----|---|
-|0 (default)|![](../assets/en/FormObjects/orientation1.png)|
-|90|![](../assets/en/FormObjects/orientation2.png)|
-|180|![](../assets/en/FormObjects/orientation3.png)|
-|270|![](../assets/en/FormObjects/orientation4.png)|
+|0 (default)|![](assets/en/FormObjects/orientation1.png)|
+|90|![](assets/en/FormObjects/orientation2.png)|
+|180|![](assets/en/FormObjects/orientation3.png)|
+|270|![](assets/en/FormObjects/orientation4.png)|
 
 In addition to [static text areas](text.md), [input](input_overview.md) text objects can be rotated when they are non-[enterable](properties_Entry.md#enterable). When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
 
@@ -449,7 +447,7 @@ When this property is enabled, the area will store the style tags with the text,
 
 For example, here is a text that includes a style modification:
 
-![](../assets/en/FormObjects/tagStyle1.png)
+![](assets/en/FormObjects/tagStyle1.png)
 
 When the property is disabled, the area only stores the modification. The stored contents are therefore:
 

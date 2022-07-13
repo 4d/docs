@@ -1,6 +1,6 @@
 ---
 id: info
-title: "$info"
+title: $info
 ---
 
 Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions	

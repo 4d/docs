@@ -1,6 +1,6 @@
 ---
 id: imageformat
-title: "$imageformat"
+title: $imageformat 
 ---
 
 Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)

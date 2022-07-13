@@ -3,7 +3,6 @@ id: stylesheets
 title: Style sheets
 ---
 
-## Overview
 
 A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
 
@@ -13,7 +12,7 @@ In addition to harmonizing an application's interface, style sheets provide thre
 * Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
 * Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
 
-### Style Sheet Files
+## Style Sheet Files
 
 4D accepts three, specific style sheet files:
 
@@ -23,11 +22,11 @@ In addition to harmonizing an application's interface, style sheets provide thre
 |styleSheets_mac.css|For defining macOS only specific attribute styles|
 |styleSheets_windows.css|For defining Windows only specific attribute styles|
 
-These files are stored in the project's "/SOURCES" folder.
+These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
 
-### Style Sheet Architecture
+## Style Sheet Architecture
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
 
 Every style rule in a style sheet contains two parts:
 
@@ -174,40 +173,81 @@ All objects of the text type with a text attribute whose value starts with "Hell
 text[text|=Hello]
 {
      stroke: yellow;
+
+
 }
 ```
 
 ## Style Sheet Declarations
 
+### Media Queries
+
+Media queries are used to apply color schemes to an application.  
+
+A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+
+Available media features:
+
+* `prefers-color-scheme`
+
+Available media feature expressions:
+
+* **light**<br/>For using a light scheme
+* **dark**<br/>For using a dark scheme
+
+> Color schemes are only supported on macOS.
+
+##### Example
+
+This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+
+```
+@media (prefers-color-scheme: light) {
+ .textScheme {
+   fill: LightGrey;
+   stroke: Black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .textScheme {
+    fill: DarkSlateGray;
+    stroke: LightGrey;
+  }
+}
+```
+
+### Object Attributes
+
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
- - "method"
- - "type"
- - "class"
- - "event"
- - choiceList, excludedList, labels, list, requiredList (list type)
+ - `method`
+ - `type`
+ - `class`
+ - `event`
+ - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+ 
+Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
-Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
-
-### Attribute Mapping
+#### Attribute Mapping
 
 The attributes listed below are able to accept either the 4D name or the CSS name.
 
 |4D|CSS|
 |---|---|
-|borderStyle|border-style|
-|fill|background-color|
-|fontFamily|font-family|
-|fontSize|font-size|
-|fontStyle|font-style|
-|fontWeight|font-weight|
-|stroke|color|
-|textAlign|text-align|
-|textDecoration|text-decoration|
-|verticalAlign|vertical-align|
+|`borderStyle`|`border-style`|
+|`fill`|`background-color`|
+|`fontFamily`|`font-family`|
+|`fontSize`|`font-size`|
+|`fontStyle`|`font-style`|
+|`fontWeight`|`font-weight`|
+|`stroke`|`color`|
+|`textAlign`|`text-align`|
+|`textDecoration`|`text-decoration`|
+|`verticalAlign`|`vertical-align`|
 
->4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
+>4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
 
-### Specific Attribute Values
+#### Specific Attribute Values
 
 * For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 
@@ -218,8 +258,8 @@ icon: url("edit.png"); /* relative path to the form file */
 
 * For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
 
-  * css color name: `fill: red;`
-  * hexa value: `fill: #FF0000;`
+  * CSS color name: `fill: red;`
+  * Hexa value: `fill: #FF0000;`
   * the `rgb()` function: `fill:rgb(255,0,0)`
 
 * If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
@@ -257,9 +297,9 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 3. If it exists, it will then load a specific CSS file defined in the JSON form:
 
  * a file for both platforms:
-
+ 
  ```
- "css": "<path>"
+ "css": "<path>" 
  ```
 
  * or a list of files for both platforms:
@@ -267,7 +307,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
  ```
  "css": [
       "<path1>",
-      "<path2>"
+      "<path2>" 
        ],
  ```
 
@@ -293,8 +333,8 @@ The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create 
 
 1. Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
- ![](../assets/en/FormEditor/stylesheets.png)
-
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
+ ![](assets/en/FormEditor/stylesheets.png)
+ 
+2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
 
 3. The style sheet will open in your default text editor.  

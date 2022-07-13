@@ -3,6 +3,9 @@ id: branching
 title: Branching structures
 ---
 
+A branching structure allows methods to test a condition and take alternative paths, depending on the result.
+
+
 ## If...Else...End if
 
 The formal syntax of the `If...Else...End if` control flow structure is:
@@ -30,9 +33,9 @@ Note that the Boolean expression is always fully evaluated. Consider in particul
  If(MethodA & MethodB)
     ...
  End if
-```
+``` 
 
-he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
+The expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
 
 ```4d
  If(MethodA)
@@ -42,9 +45,9 @@ he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ 
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+The result is similar and _MethodB_ is evaluated only if necessary. 
 
-### Example
+### Example 
 
 ```4d
   // Ask the user to enter a name
@@ -53,7 +56,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("You did not enter a name.")
- End if
+ End if 
 ```
 
 **Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
@@ -72,7 +75,7 @@ or:
  Else
  End if
 ```
-
+ 
 ## Case of...Else...End case
 
 The formal syntax of the `Case of...Else...End case` control flow structure is:
@@ -85,7 +88,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
        .
        .
        .
-
+ 
     :(Boolean_Expression)
        statement(s)
     Else
@@ -103,7 +106,7 @@ Note that the `Else` part is optional; you can write:
        .
        .
        .
-
+ 
     :(Boolean_Expression)
        statement(s)
  End case
@@ -187,7 +190,7 @@ Also, if you want to implement hierarchical testing, you may consider using hier
     :(Boolean_Expression)
     :(Boolean_Expression)
       ...
-
+ 
     :(Boolean_Expression)
        statement(s)
     Else
@@ -202,7 +205,7 @@ or:
     :(Boolean_Expression)
        statement(s)
        ...
-
+        
     :(Boolean_Expression)
        statement(s)
     Else

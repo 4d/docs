@@ -1,6 +1,6 @@
 ---
 id: version
-title: "$version"
+title: $version 
 ---
 
 Image version number	

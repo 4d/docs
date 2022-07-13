@@ -1,6 +1,6 @@
 ---
 id: savedfilter
-title: "$savedfilter"
+title: $savedfilter 
 ---
 
 Saves the filter defined by $filter when creating an entity set (*e.g.*, `$savedfilter="{filter}"`)	

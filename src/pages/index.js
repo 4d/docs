@@ -61,7 +61,7 @@ function Tile({
         <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
         <p>{tile.links}</p>
       </div>
-    </div>
+    </div >
   );
 }
 

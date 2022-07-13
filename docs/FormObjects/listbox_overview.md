@@ -3,19 +3,20 @@ id: listboxOverview
 title: List Box
 ---
 
-## Overview
 
 List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. They include advanced features regarding data entry, column sorting, event management, customized appearance, moving of columns, etc.
 
-![](../assets/en/FormObjects/listbox.png)
+![](assets/en/FormObjects/listbox.png)
 
 A list box contains one or more columns whose contents are automatically synchronized. The number of columns is, in theory, unlimited (it depends on the machine resources).
+
+## Overview
 
 ### Basic user features
 
 During execution, list boxes allow displaying and entering data as lists. To make a cell editable ([if entry is allowed for the column](#managing-entry)), simply click twice on the value that it contains:
 
-![](../assets/en/FormObjects/listbox_edit.png)
+![](assets/en/FormObjects/listbox_edit.png)
 
 Users can enter and display the text on several lines within a list box cell. To add a line break, press **Ctrl+Carriage return** on Windows or **Option+Carriage return** on macOS.
 
@@ -34,7 +35,7 @@ A list box is composed of four distinct parts:
 * column headers, and
 * column footers.
 
-![](../assets/en/FormObjects/listbox_parts.png)
+![](assets/en/FormObjects/listbox_parts.png)
 
 Each part has its own name as well as specific properties. For example, the number of columns or the alternating color of each row is set in the list box object properties, the width of each column is set in the column properties, and the font of the header is set in the header properties.
 
@@ -98,11 +99,11 @@ In the case of a list box based on the current selection of a table, any modific
 
 In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection.
 
-Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Each element of the collection or each entity is available as an object that can be accessed through the [This](../Concepts/classes.md#this) keyword. A column expression can be a property path, a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -187,19 +188,106 @@ Supported properties depend on the list box type.
 
 > List box columns, headers and footers support specific properties.
 
+### Supported Form Events
+
+|Form event|Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)| Comments|
+|---|---|---|
+|On After Edit|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On After Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On After Sort|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>|*Compound formulas cannot be sorted. <br/>(e.g., This.firstName + This.lastName)*|
+|On Alternative Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Arrays list boxes only*|
+|On Before Data Entry|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Before Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Begin Drag Over|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Clicked|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Close Detail|<li>[row](#additional-properties)</li>|*Current Selection & Named Selection list boxes only*|
+|On Collapse|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Hierarchical list box only*|
+|On Column Moved|<li>[columnName](#additional-properties)</li><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>||
+|On Column Resize|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[newSize](#additional-properties)</li><li>[oldSize](#additional-properties)</li>||
+|On Data Change|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Delete Action|<li>[row](#additional-properties)</li>||
+|On Display Detail|<li>[isRowSelected](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Double Clicked|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Drag Over|<li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Drop|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Expand|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Hierarchical list box only*|
+|On Footer Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[footerName](#additional-properties)</li>|*Arrays, Current Selection & Named Selection list boxes only*|
+|On Getting Focus|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Additional properties returned only when editing a cell*|
+|On Header Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>||
+|On Load||
+|On Losing Focus|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Additional properties returned only when editing a cell has been completed*|
+|On Mouse Enter|<li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Mouse Leave|||
+|On Mouse Move|<li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Open Detail|<li>[row](#additional-properties)</li>|*Current Selection & Named Selection list boxes only*|
+|On Row Moved|<li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>|*Arrays list boxes only*|
+|On Selection Change|||
+|On Scroll|<li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>||
+|On Unload|||
+
+#### Additional Properties
+
+Form events on list box or list box column objects may return the following additional properties:
+
+|Property| Type| Description|
+|---|---|---|
+|area|text|List box object area ("header", "footer", "cell")|
+|areaName|text|Name of the area|
+|column|longint|Column number|
+|columnName|text|Name of the column|
+|footerName|text|Name of the footer|
+|headerName|text|Name of the header|
+|horizontalScroll|longint|Positive if scroll is towards the right, negative if towards the left|
+|isRowSelected|boolean|True if row is selected, else False|
+|newPosition|longint|New position of the column or row|
+|newSize|longint|New size (in pixels) of the column or row|
+|oldPosition|longint|Previous position of the column or row|
+|oldSize|longint|Previous size (in pixels) of the column or row|
+|row|longint|Row number|
+|verticalScroll|longint|Positive if scroll is towards the bottom, negative if towards the top|
+
+>If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
+
 ## List box columns
 
 A list box is made of one or more column object(s) which have specific properties. You can select a list box column in the Form editor by clicking on it when the list box object is selected:
 
-![](../assets/en/FormObjects/listbox_column.png)
+![](assets/en/FormObjects/listbox_column.png)
 
 You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
 
->You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). The use of object arrays requires a 4D View Pro licence (see [Using object arrays in columns (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
+>You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object).
 
 ### Column Specific Properties
 
 [Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+
+### Supported Form Events
+
+|Form event|Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)| Comments|
+|---|---|---|
+|On After Edit|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On After Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On After Sort|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>|*Compound formulas cannot be sorted. <br/>(e.g., This.firstName + This.lastName)*|
+|On Alternative Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Arrays list boxes only*|
+|On Before Data Entry|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Before Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Begin Drag Over|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Clicked|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Column Moved|<li>[columnName](#additional-properties)</li><li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>||
+|On Column Resize|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[newSize](#additional-properties)</li><li>[oldSize](#additional-properties)</li>||
+|On Data Change|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Double Clicked|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Drag Over|<li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Drop|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
+|On Footer Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[footerName](#additional-properties)</li>|*Arrays, Current Selection & Named Selection list boxes only*|
+|On Getting Focus|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Additional properties returned only when editing a cell*|
+|On Header Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>||
+|On Load||
+|On Losing Focus|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Additional properties returned only when editing a cell has been completed*|
+|On Row Moved|<li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>|*Arrays list boxes only*|
+|On Scroll|<li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>||
+|On Unload|||
 
 ## List box headers
 
@@ -207,13 +295,13 @@ You can set standard properties (text, background color, etc.) for each column o
 
 When headers are displayed, you can select a header in the Form editor by clicking it when the list box object is selected:
 
-![](../assets/en/FormObjects/listbox_header.png)
+![](assets/en/FormObjects/listbox_header.png)
 
 You can set standard text properties for each column header of the list box; in this case, these properties have priority over those of the column or of the list box itself.
 
 In addition, you have access to the specific properties for headers. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
 
-![](../assets/en/FormObjects/lbHeaderIcon.png)
+![](assets/en/FormObjects/lbHeaderIcon.png)
 
 At runtime, events that occur in a header are generated in the [list box column object method](#object-methods).
 
@@ -231,7 +319,7 @@ List boxes can contain non-enterable "footers" displaying additional information
 
 When footers are displayed, you can click to select one when the list box object is selected in the Form editor:
 
-![](../assets/en/FormObjects/listbox_footers.png)
+![](assets/en/FormObjects/listbox_footers.png)
 
 For each List box column footer, you can set standard text properties: in this case, these properties take priority over those of the column or of the list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
 
@@ -252,13 +340,13 @@ For a list box cell to be enterable, both of the following conditions must be me
 
 Let’s consider the example of a list box containing two arrays, one date and one text. The date array is not enterable but the text array is enterable if the date has not already past.
 
-![](../assets/en/FormObjects/listbox_entry.png)
+![](assets/en/FormObjects/listbox_entry.png)
 
 Here is the method of the *arrText* column:
 
 ```4d
  Case of
-    :(Form event=On Before Data Entry) // a cell gets the focus
+    :(FORM event.code=On Before Data Entry) // a cell gets the focus
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
   // identification of cell
        If(arrDate{$row}<Current date) // if date is earlier than today
@@ -293,7 +381,6 @@ The typical sequence of events generated during data entry or modification is as
 ||All|On Losing Focus
 
 (*) With entity selection list boxes, in the On Data Change event:
-
 * the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
 * the `This` object contains the modified value.
 
@@ -309,7 +396,7 @@ Selections are managed differently depending on whether the list box is based on
   * [Current item](properties_DataSource.md#current-item) is an object that will receive the selected element/entity
   * [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
   * [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
-
+ 
 * **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
 The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns.
 Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box.
@@ -344,7 +431,6 @@ You can then define specific background colors, font colors and/or font styles b
 To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
 
 Keep in mind that expressions are automatically re-evaluated each time the:
-
 * list box selection changes.
 * list box gets or loses the focus.
 * form window containing the list box becomes, or ceases to be, the frontmost window.
@@ -356,7 +442,6 @@ You have to parse the Boolean array [Variable or Expression](properties_Object.m
 You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
 
 Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
-
 * `On Getting Focus` (list box property)
 * `On Losing Focus` (list box property)
 * `On Activate` (form property)
@@ -367,7 +452,7 @@ Note that list box arrays used for defining the appearance of selected rows must
 
 You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
 
-![](../assets/en/FormObjects/listbox_styles7.png)
+![](assets/en/FormObjects/listbox_styles7.png)
 
 For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:
 
@@ -379,7 +464,7 @@ In the object method of the list box, you can write:
 
 ```4d
  Case of
-    :(Form event=On Selection Change)
+    :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
        ARRAY LONGINT(_ListboxBackground;$n) // row background colors
        For($i;1;$n)
@@ -409,7 +494,7 @@ You can write in the *UI_SetColor* method:
  Else
     $color:=lk inherited
  End if
-
+ 
  $0:=$color
 ```
 
@@ -417,28 +502,74 @@ You can write in the *UI_SetColor* method:
 
 ## Managing sorts
 
-By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. All columns are always synchronized automatically.
+A sort in a list box can be standard or custom. When a column of a list box is sorted, all other columns are always synchronized automatically.
 
-You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
+### Standard sort
 
-The developer can set up custom sorts using the `LISTBOX SORT COLUMNS` command and/or combining the `On Header Click` and `On After Sort` form events (see the `FORM Event` command) and relevant 4D commands.
+By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
 
-> The [Sortable](properties_Action.md#sortable) property only affects the standard user sorts; the `LISTBOX SORT COLUMNS` command does not take this property into account.
+You can enable or disable standard user sorts by disabling the [Sortable](properties_Action.md#sortable) property of the list box (enabled by default).
+
+Standard sort support depends on the list box type:
+
+|List box type|Support of standard sort|Comments|
+|---|---|---|
+|Collection of objects|Yes|<li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>|
+|Collection of scalar values|No|Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function|
+|Entity selection|Yes|<li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li>|
+|Current selection|Yes|Only simple expressions are sortable (e.g. `[Table_1]Field_2`)|
+|Named selection|No||
+|Arrays|Yes|Columns bound to picture and pointer arrays are not sortable|
+
+### Custom sort
+
+The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+
+Custom sorts allow you to:
+
+* carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
+* use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+
+#### Example
+
+You want to sort a list box using values of a property stored in a related object attribute. You have the following structure:
+
+![](assets/en/FormObjects/relationLB.png)
+
+You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds.Child.all()`.
+
+You display two columns:
+
+|Child name|Parent's nickname|
+|----|---|
+|`This.name`|`This.parent.extra.nickname`
+
+If you want to sort the list box using the values of the second column, you have to write:
+
+```4d
+If (Form event code=On Header Click)
+ Form.child:=Form.child.orderByFormula("This.parent.extra.nickname"; dk ascending)
+End if
+```
+
+### Column header variable
 
 The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
 
-* If the variable is set to 0, the column is not sorted and the sort arrow is not displayed;  
-![](../assets/en/FormObjects/sorticon0.png)
+* If the variable is set to 0, the column is not sorted and the sort arrow is not displayed.  
+![](assets/en/FormObjects/sorticon0.png)
 
-* If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed;  
-![](../assets/en/FormObjects/sorticon1.png)
+* If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed.
+![](assets/en/FormObjects/sorticon1.png)
 
-* If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.  
-![](../assets/en/FormObjects/sorticon2.png)
+* If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed.
+![](assets/en/FormObjects/sorticon2.png)
 
-You can set the value of the variable (for example, Header2:=2) in order to “force” the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.  
 
-> The `OBJECT SET FORMAT` command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
+You can set the value of the variable (for example, Header2:=2) in order to "force" the sort arrow display. The column sort itself is not modified in this case; it is up to the developer to handle it.
+
+> The [`OBJECT SET FORMAT`](https://doc.4d.com/4dv19/help/command/en/page236.html) command offers specific support for icons in list box headers, which can be useful when you want to work with a customized sort icon.
 
 ## Managing row colors, styles, and display
 
@@ -471,7 +602,7 @@ For each attribute (style, color and background color), an **inheritance** is im
 * for column attributes: attribute values of the list box
 
 This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors:
-![](../assets/en/FormObjects/listbox_styles3.png)
+![](assets/en/FormObjects/listbox_styles3.png)
 
 You perform the following modifications:
 
@@ -480,7 +611,7 @@ You perform the following modifications:
 * two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
 * the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
 
-![](../assets/en/FormObjects/listbox_styles3.png)
+![](assets/en/FormObjects/listbox_styles3.png)
 
 To restore the original appearance of the list box, you can:
 
@@ -547,7 +678,7 @@ Beginning with the third field, each variable depends on the one preceding it. F
 
 The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
 
-![](../assets/en/FormObjects/property_hierarchicalListBox.png)
+![](assets/en/FormObjects/property_hierarchicalListBox.png)
 
 This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped.
 
@@ -557,7 +688,7 @@ This principle is not applied when only one variable is specified in the hierarc
 
 When you select at least one column in addition to the first one in a list box object (of the array type) in the form editor, the **Create hierarchy** command is available in the context menu:
 
-![](../assets/en/FormObjects/listbox_hierarchy1.png)
+![](assets/en/FormObjects/listbox_hierarchy1.png)
 
 This command is a shortcut to define a hierarchy. When it is selected, the following actions are carried out:
 
@@ -567,7 +698,7 @@ This command is a shortcut to define a hierarchy. When it is selected, the follo
 
 Example: given a list box whose first columns contain Country, Region, City and Population. When Country, Region and City are selected, if you choose **Create hierarchy** in the context menu, a three-level hierarchy is created in the first column, columns 2 and 3 are removed and the Population column becomes the second:
 
-![](../assets/en/FormObjects/listbox_hierarchy2.png)
+![](assets/en/FormObjects/listbox_hierarchy2.png)
 
 ##### Cancel hierarchy  
 
@@ -582,11 +713,11 @@ When a form containing a hierarchical list box is opened for the first time, by 
 
 A break row and a hierarchical "node" are automatically added in the list box when values are repeated in the arrays. For example, imagine a list box containing four arrays specifying cities, each city being characterized by its country, its region, its name and its number of inhabitants:
 
-![](../assets/en/FormObjects/hierarch1.png)
+![](assets/en/FormObjects/hierarch1.png)
 
 If this list box is displayed in hierarchical form (the first three arrays being included in the hierarchy), you obtain:
 
-![](../assets/en/FormObjects/hierarch2.png)
+![](assets/en/FormObjects/hierarch2.png)
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
     >    A
@@ -599,7 +730,7 @@ To expand or collapse a hierarchical "node," you can just click on it. If you **
 When values of the date or time type are included in a hierarchical list box, they are displayed in the short system format.
 
 #### Sorts in hierarchical list boxes
-
+  
 In a list box in hierarchical mode, a standard sort (carried out by clicking on the header of a list box column) is always constructed as follows:
 
 * In the first place, all the levels of the hierarchical column (first column) are automatically sorted by ascending order.
@@ -609,11 +740,11 @@ In a list box in hierarchical mode, a standard sort (carried out by clicking on 
 
 Given for example the following list box, in which no specific sort is specified:
 
-![](../assets/en/FormObjects/hierarch3.png)
+![](assets/en/FormObjects/hierarch3.png)
 
 If you click on the "Population" header to sort the populations by ascending (or alternately descending) order, the data appear as follows:
 
-![](../assets/en/FormObjects/hierarch4.png)
+![](assets/en/FormObjects/hierarch4.png)
 
 As for all list boxes, you can [disable the standard sort mechanism](properties_Action.md#sortable) and manage sorts using programming.
 
@@ -623,11 +754,11 @@ A hierarchical list box displays a variable number of rows on screen according t
 
 Let’s look at the following arrays for example:
 
-![](../assets/en/FormObjects/hierarch5.png)
+![](assets/en/FormObjects/hierarch5.png)
 
 If these arrays are represented hierarchically, the row "Quimper" will not be displayed on the second row, but on the fourth, because of the two break rows that are added:
 
-![](../assets/en/FormObjects/hierarch6.png)
+![](assets/en/FormObjects/hierarch6.png)
 
 Regardless of how the data are displayed in the list box (hierarchically or not), if you want to change the row containing "Quimper" to bold, you must use the statement Style{2} = bold. Only the position of the row in the arrays is taken into account.
 
@@ -646,19 +777,19 @@ For example, if you want to select the row containing Rennes, you must pass:
 ```
 
 Non-hierarchical representation:
-![](../assets/en/FormObjects/hierarch7.png)
+![](assets/en/FormObjects/hierarch7.png)
 Hierarchical representation:
-![](../assets/en/FormObjects/hierarch8.png)
+![](assets/en/FormObjects/hierarch8.png)
 
 > If one or more rows are hidden because their parents are collapsed, they are no longer selected. Only the rows that are visible (either directly or by scrolling) can be selected. In other words, rows cannot be both hidden and selected.
 
 As with selections, the `LISTBOX GET CELL POSITION` command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, `LISTBOX GET CELL POSITION` will return the same position: (3;2).
 
 *Non-hierarchical representation:*
-![](../assets/en/FormObjects/hierarch9.png)
+![](assets/en/FormObjects/hierarch9.png)
 
 *Hierarchical representation:*
-![](../assets/en/FormObjects/hierarch10.png)
+![](assets/en/FormObjects/hierarch10.png)
 
 When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. In the above example, if rows 1 to 3 are hidden, the "Brittany" break row will not appear.
 
@@ -666,7 +797,7 @@ When all the rows of a sub-hierarchy are hidden, the break line is automatically
 
 If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. In the following case:
 
-![](../assets/en/FormObjects/hierarch11.png)
+![](assets/en/FormObjects/hierarch11.png)
 
 ... `LISTBOX GET CELL POSITION` returns (2;4). To select a break row by programming, you will need to use the `LISTBOX SELECT BREAK` command.
 
@@ -675,10 +806,10 @@ Break rows are not taken into account in the internal arrays used to manage the 
 Given for example the following list box (the names of the associated arrays are specified in parentheses):
 
 *Non-hierarchical representation:*
-![](../assets/en/FormObjects/hierarch12.png)
+![](assets/en/FormObjects/hierarch12.png)
 
 *Hierarchical representation:*
-![](../assets/en/FormObjects/hierarch13.png)
+![](assets/en/FormObjects/hierarch13.png)
 
 In hierarchical mode, break levels are not taken into account by the style modification arrays named `tStyle` and `tColors`. To modify the color or style of break levels, you must execute the following statements:
 
@@ -691,7 +822,7 @@ In hierarchical mode, break levels are not taken into account by the style modif
 
 Result:
 
-![](../assets/en/FormObjects/hierarch14.png)
+![](assets/en/FormObjects/hierarch14.png)
 
 #### Optimized management of expand/collapse  
 
@@ -702,30 +833,27 @@ A hierarchical list box is built from the contents of its arrays so it can only 
 Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
 
 In this case, you must fill and empty arrays through the code. The principles to be implemented are:
-
 * When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
-![](../assets/en/FormObjects/hierarch15.png)
+![](assets/en/FormObjects/hierarch15.png)
 
 * When a user clicks on an expand button, you can process the `On Expand` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the `SELECTION TO ARRAY` command and you insert as many rows as needed in the list box using the `LISTBOX INSERT ROWS` command.
-![](../assets/en/FormObjects/hierarch16.png)
+![](assets/en/FormObjects/hierarch16.png)
 
 * When a user clicks on a collapse button, you can process the `On Collapse` event. The `LISTBOX GET CELL POSITION` command returns the cell concerned: you remove as many rows as needed from the list box using the `LISTBOX DELETE ROWS` command.
 
-## Object arrays in columns (4D View Pro)  
+## Object arrays in columns  
 
 List box columns can handle object arrays. Since object arrays can contain different kinds of data, this powerful new feature allows you to mix different input types in the rows of a single column, and display various widgets as well. For example, you could insert a text input in the first row, a check box in the second, and a drop-down list in the third. Object arrays also provide access to new kinds of widgets, such as buttons or color pickers.
 
 The following list box was designed using an object array:
 
-![](../assets/en/FormObjects/listbox_column_objectArray.png)
-
->**Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. For more information, please refer to the 4D Web site.
+![](assets/en/FormObjects/listbox_column_objectArray.png)
 
 ### Configuring an object array column  
 
 To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
 
-![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
+![](assets/en/FormObjects/listbox_column_objectArray_config.png)
 
 Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. These types of columns can also be hidden.
 
@@ -745,7 +873,7 @@ ARRAY OBJECT(obColumn;0) //column array
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
-![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
+![](assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
 
 >Display format and entry filters cannot be set for an object column. They automatically depend on the value type.
 
@@ -754,7 +882,7 @@ ARRAY OBJECT(obColumn;0) //column array
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
 * "text": for a text value
-* "real": for a numeric value that can include separators like a `\<space>`, `<.>`, or `<,>`
+* "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
 * "integer": for an integer value
 * "boolean": for a True/False value
 * "color": to define a background color
@@ -797,7 +925,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 | |valueType| text| real |integer| boolean| color| event|
 |---|---|---|---|---|---|---|---|
-|*Attributes* |*Description* | | | | | | |
+|*Attributes* |*Description* | | | | | | |    
 |value| cell value (input or output)|x| x| x| | | |
 |min| minimum value| |x| x| | | |
 |max| maximum value| |x| x| | | |
@@ -805,9 +933,9 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 |requiredList| drop-down list defined in object|x| x|x || | |
 |choiceList| combo box defined in object|x|x|x|  | | |
 |requiredListReference| 4D list ref, depends on "saveAs" value|x|x|x|  | | |
-|requiredListName| 4D list name, depends on "saveAs" value|x|x|x|  | | |
+|requiredListName| 4D list name, depends on "saveAs" value|x|x|x|  | | | 
 |saveAs| "reference" or "value"| x|x|x|  | | |
-|choiceListReference| 4D list ref, display combo box| x| x| x|  | | |
+|choiceListReference| 4D list ref, display combo box| x| x| x|  | | | 
 |choiceListName| 4D list name, display combo box|x|x|x|  | | |
 |unitList| array of X elements|x|x|x|  | | |
 |unitReference| index of selected element|x|x| x |  | | |
@@ -831,13 +959,13 @@ Cell values are stored in the "value" attribute. This attribute is used for inpu
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"boolean")
  OB SET($ob3;"value";True)
-
+ 
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
  APPEND TO ARRAY(obColumn;$ob3)
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
+![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
 
 >Null values are supported and result in an empty cell.
 
@@ -856,7 +984,7 @@ These attributes can be used to control the range of input values. When a cell i
  OB SET($ob3;"max";3000)
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_minMax.png)
+![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_minMax.png)
 
 #### behavior  
 
@@ -869,6 +997,7 @@ The behavior attribute provides variations to the regular representation of valu
 ```4d
  C_OBJECT($ob3)
  OB SET($ob3;"valueType";"integer")
+
  OB SET($ob3;"value";-3)
  C_OBJECT($ob4)
  OB SET($ob4;"valueType";"integer")
@@ -876,7 +1005,7 @@ The behavior attribute provides variations to the regular representation of valu
  OB SET($ob4;"behavior";"threeStates")
 ```
 
-![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_behavior.png)
+![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_behavior.png)
 
 #### requiredList and choiceList  
 
@@ -903,7 +1032,7 @@ Examples:
  OB SET ARRAY($ob;"requiredList";$RequiredList)
 ```
 
-![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
+![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
 
 * You want to accept any integer value, but display a combo box to suggest the most common values:
 
@@ -920,7 +1049,7 @@ Examples:
  OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
-![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
+![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
 
 #### requiredListName and requiredListReference  
 
@@ -935,20 +1064,20 @@ Examples:
 
 * You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
  C_OBJECT($ob)
  OB SET($ob;"valueType";"text")
  OB SET($ob;"saveAs";"value")
  OB SET($ob;"value";"blue")
- OB SET($ob;"requiredListName";"colors")
-```
+ OB SET($ob;"requiredListName";"colors") 
+``` 
 
-![](../assets/en/FormObjects/listbox-col-color-results.png)
-
+![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
+ 
 * You want to display a drop-down list based on a list defined by programming and save it as a reference:
-
+ 
 ```4d
  <>List:=New list
  APPEND TO LIST(<>List;"Paris";1)
@@ -962,7 +1091,7 @@ Examples:
  OB SET($ob;"requiredListReference";<>List)
 ```
 
- ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+	![](assets/en/FormObjects/listbox_column_objectArray_cities.png)
 
 #### choiceListName and choiceListReference  
 
@@ -977,7 +1106,7 @@ Example:
 
 You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colors.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
 ````4d
  C_OBJECT($ob)
@@ -986,7 +1115,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
  OB SET($ob;"choiceListName";"colors")
 ````
 
-![](../assets/en/FormObjects/listbox-col-color-results.png)
+![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
 #### unitsList, unitsListName, unitsListReference and unitReference  
 
@@ -1017,7 +1146,7 @@ OB SET($ob;"unitReference";1) //"lines"
 OB SET ARRAY($ob;"unitsList";$_units)
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_unitList.png)
+![](assets/en/FormObjects/listbox_column_objectArray_unitList.png)
 
 #### alternateButton  
 
@@ -1035,7 +1164,7 @@ OB SET($ob;"alternateButton";True)
 OB SET($ob;"value";$entry)
 ```
 
-![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
+![](assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
 #### color valueType  
 
@@ -1049,7 +1178,7 @@ The "color" valueType allows you to display either a color or a text.
  OB SET($ob4;"value";0x00FF0000)
  ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colorValue.png)
 
 * If the value is a text, then the text is displayed (*e.g.*: "value";"Automatic").
 
@@ -1067,7 +1196,7 @@ OB SET($ob;"valueType";"event")
 OB SET($ob;"label";"Edit...")
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
+![](assets/en/FormObjects/listbox_column_objectArray_eventValueType.png)
 
 ### Event management  
 
