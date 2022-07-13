@@ -347,8 +347,8 @@
 <p>To determine which rows are selected, you have to check whether they are included in the set indicated in the <a href="/docs/18/es/FormObjects/propertiesListBox.html#highlight-set">Highlight Set</a> property of the list box. You can then define the appearance of selected rows using one or more of the relevant <a href="#using-arrays-and-expressions">color or style expression property</a>.</p>
 <p>Keep in mind that expressions are automatically re-evaluated each time the:</p>
 <ul>
-<li>list box selection changes.</li>
-<li>list box gets or loses the focus.</li>
+<li>la selección de list box cambia.</li>
+<li>list box obtiene o pierde el foco.</li>
 <li>form window containing the list box becomes, or ceases to be, the frontmost window.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="list-box-de-tipo-array-1"></a><a href="#list-box-de-tipo-array-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List box de tipo array</h4>
@@ -616,7 +616,7 @@
 <p>To assign an object array to a list box column, you just need to set the object array name in either the Property list (&quot;Variable Name&quot; field), or using the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html">LISTBOX INSERT COLUMN</a> command, like with any array-based column. In the Property list, you can now select Object as a &quot;Expression Type&quot; for the column:</p>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_config.png" alt=""></p>
 <p>Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. Estos tipos de columnas también se pueden ocultar.</p>
-<p>However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:</p>
+<p>However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Cada elemento de array puede definir:</p>
 <p>the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write &quot;Hello World!&quot; in an object column using this simple code:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//column array</span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob</span>) <span class="hljs-comment">//first element</span>
@@ -633,12 +633,12 @@
 <p>Display format and entry filters cannot be set for an object column. Dependen automáticamente del tipo de valor.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="valuetype-y-visualización-de-datos"></a><a href="#valuetype-y-visualización-de-datos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>valueType y visualización de datos</h4>
-<p>When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:</p>
+<p>When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Los valores valueType soportados son:</p>
 <ul>
 <li>&quot;text&quot;: para un valor de texto</li>
 <li>&quot;real&quot;: for a numeric value that can include separators like a &lt;space&gt;, &lt;.&gt;, o &lt;,&gt;</li>
 <li>&quot;integer&quot;: para un valor entero</li>
-<li>&quot;boolean&quot;: for a True/False value</li>
+<li>&quot;boolean&quot;: para un valor True/False</li>
 <li>&quot;color&quot;: para definir un color de fondo</li>
 <li>&quot;event&quot;: para mostrar un botón con una etiqueta.</li>
 </ul>
@@ -651,14 +651,14 @@
 <tr><td>texto</td><td>entrada de texto</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
 <tr><td>real</td><td>entrada de texto controlada (números y separadores)</td><td>drop-down menu (required list) or combo box (choice list)</td></tr>
 <tr><td>integer</td><td>entrada de texto controlada (números únicamente)</td><td>drop-down menu (required list) or combo box (choice list) or three-states check box</td></tr>
-<tr><td>booleano</td><td>casilla de selección</td><td>drop-down menu (required list)</td></tr>
+<tr><td>booleano</td><td>casilla de selección</td><td>menú desplegable (lista requerida)</td></tr>
 <tr><td>color</td><td>color de fondo</td><td>texto</td></tr>
 <tr><td>evento</td><td>botón con etiqueta</td><td></td></tr>
 <tr><td></td><td></td><td>All widgets can have an additional unit toggle button or ellipsis button attached to the cell.</td></tr>
 </tbody>
 </table>
 <p>You set the cell display and options using specific attributes in each object (see below).</p>
-<h4><a class="anchor" aria-hidden="true" id="display-formats-and-entry-filters"></a><a href="#display-formats-and-entry-filters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Display formats and entry filters</h4>
+<h4><a class="anchor" aria-hidden="true" id="formatos-de-visualización-y-filtros-de-entrada"></a><a href="#formatos-de-visualización-y-filtros-de-entrada" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formatos de visualización y filtros de entrada</h4>
 <p>You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. Estos están listados en la siguiente tabla:</p>
 <table>
 <thead>
@@ -687,14 +687,14 @@
 <tr><td>value</td><td>valor de la celda (entrada o salida)</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>min</td><td>valor mínimo</td><td></td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>max</td><td>valor máximo</td><td></td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
-<tr><td>behavior</td><td>&quot;threeStates&quot; value</td><td></td><td></td><td>x</td><td></td><td></td><td></td></tr>
-<tr><td>requiredList</td><td>drop-down list defined in object</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
+<tr><td>behavior</td><td>Valor &quot;tres Estados&quot;</td><td></td><td></td><td>x</td><td></td><td></td><td></td></tr>
+<tr><td>requiredList</td><td>lista desplegable definida en objeto</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>choiceList</td><td>combo box definido en objeto</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>requiredListReference</td><td>4D list ref, depends on &quot;saveAs&quot; value</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>requiredListName</td><td>Nombre de la lista 4D, depende del valor &quot;saveAs&quot;</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>saveAs</td><td>&quot;reference&quot; o &quot;value&quot;</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>choiceListReference</td><td>4D list ref, display combo box</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
-<tr><td>choiceListName</td><td>4D list name, display combo box</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
+<tr><td>choiceListName</td><td>Nombre de la lista 4D, mostrar combo box</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>unitList</td><td>array de X elementos</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>unitReference</td><td>índice del elemento seleccionado</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
 <tr><td>unitsListReference</td><td>Ver lista de unidades 4D</td><td>x</td><td>x</td><td>x</td><td></td><td></td><td></td></tr>
