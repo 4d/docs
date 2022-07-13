@@ -362,8 +362,8 @@ You can then define specific background colors, font colors and/or font styles b
 To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
 
 Keep in mind that expressions are automatically re-evaluated each time the:
-- list box selection changes.
-- list box gets or loses the focus.
+- la selección de list box cambia.
+- list box obtiene o pierde el foco.
 - form window containing the list box becomes, or ceases to be, the frontmost window.
 
 
@@ -744,7 +744,7 @@ To assign an object array to a list box column, you just need to set the object 
 
 Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. Estos tipos de columnas también se pueden ocultar.
 
-However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:
+However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Cada elemento de array puede definir:
 
 the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
 
@@ -765,12 +765,12 @@ ARRAY OBJECT(obColumn;0) //column array
 
 #### valueType y visualización de datos
 
-When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
+When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Los valores valueType soportados son:
 
 *   "text": para un valor de texto
 *   "real": for a numeric value that can include separators like a \<space>, <.>, o <,>
 *   "integer": para un valor entero
-*   "boolean": for a True/False value
+*   "boolean": para un valor True/False
 *   "color": para definir un color de fondo
 *   "event": para mostrar un botón con una etiqueta.
 
@@ -781,14 +781,14 @@ When a list box column is associated with an object array, the way a cell is dis
 | texto     | entrada de texto                                    | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | entrada de texto controlada (números y separadores) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | entrada de texto controlada (números únicamente)    | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| booleano  | casilla de selección                                | drop-down menu (required list)                                                                 |
+| booleano  | casilla de selección                                | menú desplegable (lista requerida)                                                             |
 | color     | color de fondo                                      | texto                                                                                          |
 | evento    | botón con etiqueta                                  |                                                                                                |
 |           |                                                     | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
 You set the cell display and options using specific attributes in each object (see below).
 
-#### Display formats and entry filters
+#### Formatos de visualización y filtros de entrada
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. Estos están listados en la siguiente tabla:
 
@@ -815,14 +815,14 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | value                 | valor de la celda (entrada o salida)              | x     | x    | x       |          |       |        |
 | min                   | valor mínimo                                      |       | x    | x       |          |       |        |
 | max                   | valor máximo                                      |       | x    | x       |          |       |        |
-| behavior              | "threeStates" value                               |       |      | x       |          |       |        |
-| requiredList          | drop-down list defined in object                  | x     | x    | x       |          |       |        |
+| behavior              | Valor "tres Estados"                              |       |      | x       |          |       |        |
+| requiredList          | lista desplegable definida en objeto              | x     | x    | x       |          |       |        |
 | choiceList            | combo box definido en objeto                      | x     | x    | x       |          |       |        |
 | requiredListReference | 4D list ref, depends on "saveAs" value            | x     | x    | x       |          |       |        |
 | requiredListName      | Nombre de la lista 4D, depende del valor "saveAs" | x     | x    | x       |          |       |        |
 | saveAs                | "reference" o "value"                             | x     | x    | x       |          |       |        |
 | choiceListReference   | 4D list ref, display combo box                    | x     | x    | x       |          |       |        |
-| choiceListName        | 4D list name, display combo box                   | x     | x    | x       |          |       |        |
+| choiceListName        | Nombre de la lista 4D, mostrar combo box          | x     | x    | x       |          |       |        |
 | unitList              | array de X elementos                              | x     | x    | x       |          |       |        |
 | unitReference         | índice del elemento seleccionado                  | x     | x    | x       |          |       |        |
 | unitsListReference    | Ver lista de unidades 4D                          | x     | x    | x       |          |       |        |

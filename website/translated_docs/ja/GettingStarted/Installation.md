@@ -45,7 +45,7 @@ title: インストールとアクティベーション
 
 ### 4D Server のアクティベーション
 
-1. 4D Server アプリケーションを起動します。 [アクティベーションモード](#アクティベーションモード) を選択するダイアログボックスが表示されます。
+1. 4D Server アプリケーションを起動します。 アクティベーションモードを選択するダイアログボックスが表示されます。
 
 ![](assets/en/getStart/helpMenu.png)
 
@@ -58,7 +58,7 @@ title: インストールとアクティベーション
 
 ユーザーID (メールアドレスまたは 4Dアカウント) とパスワードを入力します。 既存のユーザーアカウントが無い場合、まず以下のアドレスから作成する必要があります:
 
-[https://account.4d.com/us/login.shtml](https://account.4d.com/us/login.shtml)
+[https://account.4d.com/ja/login.shtml](https://account.4d.com/ja/login.shtml)
 
 ![](assets/en/getStart/activ1.png)
 
