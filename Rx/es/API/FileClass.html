@@ -79,35 +79,36 @@
 </thead>
 <tbody>
 <tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><p>    copia el objeto <code>File</code> en el <em>destinationFolder</em> especificado&gt;</td></tr>
-<tr><td><a href="#create"> <strong>.create()</strong> : Boolean </a><p>     crea un archivo en el disco según las propiedades del objeto <code>File</code></td></tr>
-<tr><td><a href="#createalias"> <strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>     crea un alias (macOS) o un acceso directo (Windows)</td></tr>
+<tr><td><a href="#create"><strong>.create()</strong> : Boolean </a><p>    creates a file on disk according to the properties of the <code>File</code> object</td></tr>
+<tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    creates an alias (macOS) or a shortcut (Windows)</td></tr>
 <tr><td><a href="#creationdate"><strong>.creationDate</strong> : Date</a><p>    la fecha de creación del archivo</td></tr>
 <tr><td><a href="#creationtime"><strong>.creationTime</strong> : Time</a><p>    la hora de creación del archivo</td></tr>
-<tr><td><a href="#delete"> <strong>.delete( )</strong></a><p>     borra el archivo</td></tr>
+<tr><td><a href="#delete"><strong>.delete( )</strong></a><p>    deletes the file</td></tr>
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    true si el archivo existe en el disco</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    la extensión del nombre del archivo (si lo hay)</td></tr>
 <tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    el nombre completo del archivo, incluyendo su extensión (si la hay)</td></tr>
-<tr><td><a href="#getappinfo"> <strong>.getAppInfo</strong>() : Object</a><p>     devuelve el contenido de un archivo de información <strong>.exe</strong>, <strong>.dll</strong> o <strong>.plist</strong> como un objeto</td></tr>
+<tr><td><a href="#getappinfo"><strong>.getAppInfo</strong>() : Object</a><p>    returns the contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file information as an object</td></tr>
 <tr><td><a href="#getContent"><strong>.getContent( )</strong> : 4D.Blob</a><p>devuelve un objeto <code>4D.Blob</code> que contiene todo el contenido de un archivo</td></tr>
 <tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    el icono del archivo</td></tr>
 <tr><td><a href="#gettext"><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</a><p>    devuelve el contenido del archivo como texto</td></tr>
 <tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>    true si el archivo está configurado como &quot;oculto&quot; a nivel de sistema</td></tr>
 <tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    true si el archivo es un alias, un acceso directo o un enlace simbólico</td></tr>
+<tr><td></td></tr>
 <tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    siempre verdadero para un archivo</td></tr>
 <tr><td><a href="#isfolder"><strong>.isFolder</strong> : Boolean</a><p>    siempre false para un archivo</td></tr>
 <tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    true si el archivo existe en el disco y es escribible</td></tr>
 <tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    la fecha de la última modificación del archivo</td></tr>
 <tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    la hora de la última modificación del archivo</td></tr>
-<tr><td><a href="#moveto"> <strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><p>     mueve o renombra el objeto <code>File</code> en la <em>destinationFolder</em></td></tr>
+<tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><p>    moves or renames the <code>File</code> object into the specified <em>destinationFolder</em></td></tr>
 <tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    el nombre del archivo, sin extensión (si la hay)</td></tr>
 <tr><td><a href="#original"><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</a><p>    </td></tr>
 <tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    el objeto carpeta padre del archivo</td></tr>
 <tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    la ruta POSIX del archivo</td></tr>
 <tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    la ruta del archivo expresada con la sintaxis de la plataforma actual</td></tr>
-<tr><td><a href="#rename"> <strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    renombra el archivo con el nombre que se ha pasado en <em>newName</em> y devuelve el objeto <code>File</code> renombrado</td></tr>
-<tr><td><a href="#setappinfo"> <strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    </td></tr>
-<tr><td><a href="#setcontent"> <strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>     reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB<em>content</em></td></tr>
-<tr><td><a href="#settext"> <strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>     escribe <em>text</em> como el nuevo contenido del archivo</td></tr>
+<tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    renames the file with the name you passed in <em>newName</em> and returns the renamed <code>File</code> object</td></tr>
+<tr><td><a href="#setappinfo"><strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    writes the <em>info</em> properties as information contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file</td></tr>
+<tr><td><a href="#setcontent"><strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>    rewrites the entire content of the file using the data stored in the <em>content</em> BLOB</td></tr>
+<tr><td><a href="#settext"><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>    writes <em>text</em> as the new contents of the file</td></tr>
 <tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    el tamaño del archivo expresado en bytes</td></tr>
 </tbody>
 </table>
@@ -164,27 +165,27 @@
 <tr><td>Backup settings file</td><td>1</td><td>Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto</td></tr>
 <tr><td>Backup settings file for data</td><td>17</td><td>archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data</td></tr>
 <tr><td>Build application log file</td><td>14</td><td>Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Build application settings file</td><td>20</td><td>Archivo de configuración por defecto del generador de aplicaciones (&quot;buildApp.4DSettings&quot;). Almacenado en la carpeta Settings del proyecto.</td></tr>
-<tr><td>Compacting log file</td><td>6</td><td>Archivo de historial de la compactación más reciente realizada con el comando Compact data file o el Centro de seguridad y mantenimiento. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Current backup settings file</td><td>18</td><td>archivo backup.4DSettings utilizado actualmente por la aplicación. Puede ser el archivo de configuración de la copia de seguridad (por defecto) o un archivo de configuración de la copia de seguridad personalizado por el usuario definido para el archivo de datos</td></tr>
-<tr><td>Debug log file</td><td>12</td><td>Archivo de registro creado por el comando <code>SET DATABASE PARAMETER(Debug log recording)</code>. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Diagnostic log file</td><td>11</td><td>Archivo de registro creado por el comando <code>SET DATABASE PARAMETER(Diagnostic log recording)</code>. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Directory file</td><td>16</td><td>archivo directory.json, que contiene la descripción de los usuarios y grupos (si los hay) del proyecto. Puede situarse en la carpeta user settings (por defecto, se aplica a todo el proyecto), o en la carpeta data settings (específica para un archivo de datos).</td></tr>
-<tr><td>HTTP debug log file</td><td>9</td><td>Archivo de registro creado por el comando <code>WEB SET OPTION(Web debug log)</code>. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>HTTP log file</td><td>8</td><td>Archivo de registro creado por el comando <code>WEB SET OPTION(Web log recording)</code>. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>IMAP Log file</td><td>23</td><td>Archivo de registro creado por el comando <code>SET DATABASE PARAMETER(IMAP Log)</code>. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>Build application settings file</td><td>20</td><td>Default settings file of the application builder (&quot;buildApp.4DSettings&quot;). Almacenado en la carpeta Settings del proyecto.</td></tr>
+<tr><td>Compacting log file</td><td>6</td><td>Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>Current backup settings file</td><td>18</td><td>backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file</td></tr>
+<tr><td>Debug log file</td><td>12</td><td>Log file created by the <code>SET DATABASE PARAMETER(Debug log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>Diagnostic log file</td><td>11</td><td>Log file created by the <code>SET DATABASE PARAMETER(Diagnostic log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>Directory file</td><td>16</td><td>directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file).</td></tr>
+<tr><td>HTTP debug log file</td><td>9</td><td>Log file created by the <code>WEB SET OPTION(Web debug log)</code> command. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>HTTP log file</td><td>8</td><td>Log file created by the <code>WEB SET OPTION(Web log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>IMAP Log file</td><td>23</td><td>Log file created by the <code>SET DATABASE PARAMETER(IMAP Log)</code> command. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>Last backup file</td><td>2</td><td>Último archivo de copia de seguridad, llamado &lt;applicationName&gt;[bkpNum].4BK, almacenado en una ubicación personalizada.</td></tr>
-<tr><td>Last journal integration log file</td><td>22</td><td>Nombre completo del último archivo de registro de integración del historial (almacenado en la carpeta Logs de la aplicación restaurada), si la hay. Este archivo se crea, en modo de reparación automática, tan pronto como se produce una integración de archivos de historial</td></tr>
-<tr><td>Repair log file</td><td>7</td><td>Archivo de historial de las reparaciones realizadas en la base por el Centro de seguridad y mantenimiento (CSM). Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Request log file</td><td>10</td><td>Archivo de registro de peticiones cliente/servidor estándar (excluyendo las peticiones web) creado por los comandos <code>SET DATABASE PARAMETER(4D Server log recording)</code> o <code>SET DATABASE PARAMETER(Client log recording)</code>. Si se ejecuta en el servidor, se devuelve el archivo de registro del servidor (almacenado en la carpeta Logs del servidor). Si se ejecuta en el cliente, se devuelve el archivo de registro del cliente (almacenado en la carpeta Logs local del cliente).</td></tr>
-<tr><td>SMTP log file</td><td>15</td><td>Archivo de registro creado por el comando <code>SET DATABASE PARAMETER(SMTP Log)</code>. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>User settings file</td><td>3</td><td>archivo settings.4DSettings para todos los archivos de datos, almacenados en la carpeta Preferences junto a la estructura del archivo si está activado.</td></tr>
-<tr><td>User settings file for data</td><td>4</td><td>archivo settings.4DSettings para el archivo de datos actual, almacenado en la carpeta Preferences junto al archivo de datos.</td></tr>
-<tr><td>Verification log file</td><td>5</td><td>Archivos de historial creados por los comandos <code>VERIFY CURRENT DATA FILE</code> y <code>VERIFY DATA FILE</code> o el Centro de seguridad y mantenimiento (CSM). Almacenado en la carpeta Logs.</td></tr>
+<tr><td>Last journal integration log file</td><td>22</td><td>Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred</td></tr>
+<tr><td>Repair log file</td><td>7</td><td>Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Almacenado en la carpeta Logs.</td></tr>
+<tr><td>Request log file</td><td>10</td><td>Standard client/server request log file (excluding Web requests) created by the <code>SET DATABASE PARAMETER(4D Server log recording)</code> or <code>SET DATABASE PARAMETER(Client log recording)</code> commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder).</td></tr>
+<tr><td>SMTP log file</td><td>15</td><td>Log file created by the <code>SET DATABASE PARAMETER(SMTP Log)</code> command. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>User settings file</td><td>3</td><td>settings.4DSettings file for all data files, stored in Preferences folder next to structure file if enabled.</td></tr>
+<tr><td>User settings file for data</td><td>4</td><td>settings.4DSettings file for current data file, stored in Preferences folder next to the data file.</td></tr>
+<tr><td>Verification log file</td><td>5</td><td>Log files created by the <code>VERIFY CURRENT DATA FILE</code> and <code>VERIFY DATA FILE</code> commands or the Maintenance and Security Center (MSC). Almacenado en la carpeta Logs.</td></tr>
 </tbody>
 </table>
-<p>Si el objetivo <em>fileConstant</em> no existe, se devuelve un objeto null. No se produce ningún error.</p>
-<p>Si el comando se llama desde un componente, pase el parámetro opcional * para obtener la ruta de la base local. De lo contrario, si omite el parámetro *, siempre se devuelve un objeto null.</p>
+<p>If the target <em>fileConstant</em> does not exist, a null object is returned. No se produce ningún error.</p>
+<p>If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.</p>
 <h2><a class="anchor" aria-hidden="true" id="4dfilenew"></a><a href="#4dfilenew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.File.new()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -268,15 +269,15 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.create()</code>  crea un archivo en el disco según las propiedades del objeto <code>File</code> .</p>
-<p>Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades <a href="#platformpath">platformPath</a> o <a href="#path">path</a>. Si el archivo ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.</p>
+<p>The <code>.create()</code> function creates a file on disk according to the properties of the <code>File</code> object.</p>
+<p>If necessary, the function creates the folder hierachy as described in the <a href="#platformpath">platformPath</a> or <a href="#path">path</a> properties. If the file already exists on disk, the function does nothing (no error is thrown) and returns false.</p>
 <p><strong>Valor devuelto</strong></p>
 <ul>
 <li><strong>True</strong> si el archivo se crea con éxito;</li>
 <li><strong>False</strong> si ya existe un archivo con el mismo nombre o si ha ocurrido un error.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Creación de un archivo de preferencias en la carpeta de la base:</p>
+<p>Creation of a preferences file in the database folder:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$created </span>: Boolean
  <span class="hljs-variable">$created</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/PACKAGE/SpecialPrefs/"</span>+Current user+<span class="hljs-string">".myPrefs"</span>).<span class="hljs-function">create</span>()
 </code></pre>
@@ -298,15 +299,15 @@
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Carpeta de destino para el alias o el acceso directo</td></tr>
-<tr><td>aliasName</td><td>Texto</td><td>-&gt;</td><td>Nombre del alias o del atajo</td></tr>
+<tr><td>aliasName</td><td>Texto</td><td>-&gt;</td><td>Name of the alias or shortcut</td></tr>
 <tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>Tipo de enlace del alias</td></tr>
 <tr><td>Resultado</td><td>4D.File</td><td>&lt;-</td><td>Referencia del archivo del alias o de atajo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.createAlias()</code>  crea un alias (macOS) o un acceso directo (Windows) para el archivo con el nombre <em>aliasName</em> especificado en la carpeta designada por el objeto <em>destinationFolder</em>.</p>
-<p>Pase el nombre del alias o del acceso directo a crear en el parámetro <em>aliasName</em>.</p>
-<p>Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro <em>aliasType</em>. Las siguientes constantes están disponibles:</p>
+<p>The <code>.createAlias()</code> function creates an alias (macOS) or a shortcut (Windows) to the file with the specified <em>aliasName</em> name in the folder designated by the <em>destinationFolder</em> object.</p>
+<p>Pass the name of the alias or shortcut to create in the <em>aliasName</em> parameter.</p>
+<p>By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the <em>aliasType</em> parameter. Las siguientes constantes están disponibles:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
@@ -316,11 +317,11 @@
 <tr><td><code>fk symbolic link</code></td><td>1</td><td>Enlace simbólico (sólo para macOS)</td></tr>
 </tbody>
 </table>
-<p>En Windows, siempre se crea un acceso directo (archivo.lnk) (el parámetro <em>aliasType</em> es ignorado).</p>
+<p>On Windows, a shortcut (.lnk file) is always created (the <em>aliasType</em> parameter is ignored).</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>Un objeto <code>4D.File</code> con la propiedad <code>isAlias</code> definida en <strong>true</strong>.</p>
+<p>A <code>4D.File</code> object with the <code>isAlias</code> property set to <strong>true</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Quiere crear un alias para un archivo en su carpeta de base:</p>
+<p>You want to create an alias to a file in your database folder:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Archives/ReadMe.txt"</span>)
  <span class="hljs-variable">$aliasFile</span>:=<span class="hljs-variable">$myFile</span>.<span class="hljs-function">createAlias</span>(<span class="hljs-function">File</span>(<span class="hljs-string">"/PACKAGE"</span>);<span class="hljs-string">"ReadMe"</span>)
 </code></pre>
@@ -370,14 +371,14 @@
 | ---------- | ---- |  | ---------------------------- |
 |            |      |  | No requiere ningún parámetro |</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.delete()</code>  borra el archivo.</p>
-<p>Si el archivo está abierto, se genera un error.</p>
-<p>Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).</p>
+<p>The <code>.delete()</code> function deletes the file.</p>
+<p>If the file is currently open, an error is generated.</p>
+<p>If the file does not exist on disk, the function does nothing (no error is generated).</p>
 <blockquote>
 <p><strong>ATENCIÓN</strong>: <code>.delete( )</code> puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. <code>.delete( )</code> debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Desea eliminar un archivo específico en la carpeta de la base de datos:</p>
+<p>You want to delete a specific file in the database folder:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$tempo</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/PACKAGE/SpecialPrefs/"</span>+Current user+<span class="hljs-string">".prefs"</span>)<span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$tempo</span>.exists)
     <span class="hljs-variable">$tempo</span>.<span class="hljs-function">delete</span>()
@@ -447,12 +448,12 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Contenido del archivo de recurso versión .exe/.dll o .plist</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Contents of .exe/.dll version resource or .plist file</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.getAppInfo()</code>  devuelve el contenido de un archivo de información <strong>.exe</strong>, <strong>.dll</strong> o <strong>.plist</strong> como un objeto.</p>
-<p>La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función devuelve un objeto vacío (no se genera ningún error).</p>
+<p>The <code>.getAppInfo()</code> function returns the contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file information as an object.</p>
+<p>The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).</p>
 <blockquote>
 <p>La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.</p>
 </blockquote>
@@ -477,16 +478,16 @@
 </tbody>
 </table>
 <p><strong>Objeto devuelto con un archivo .plist</strong></p>
-<p>El contenido del archivo xml se analiza y las llaves se devuelven como propiedades del objeto, conservando sus tipos (texto, booleano, numérico). <code>.plist dict</code> se devuelve como un objeto JSON y <code>.plist array</code> se devuelve como un array JSON.</p>
+<p>The xml file contents is parsed and keys are returned as properties of the object, preserving their types (text, boolean, number). <code>.plist dict</code> is returned as a JSON object and <code>.plist array</code> is returned as a JSON array.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-5"></a><a href="#ejemplo-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">// mostrar información de copyright del archivo .exe de la aplicación (windows)</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">// display copyright info of application .exe file (windows)</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$exeFile </span>: 4D.File<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$info </span>: Object
 <span class="hljs-variable">$exeFile</span>:=<span class="hljs-function">File</span>(Application file; fk platform path)
 <span class="hljs-variable">$info</span>:=<span class="hljs-variable">$exeFile</span>.<span class="hljs-function">getAppInfo</span>()
 <span class="hljs-function">ALERT</span>(<span class="hljs-variable">$info</span>.LegalCopyright)
 
-  <span class="hljs-comment">// mostrar información de copyright de un info.plist (cualquier plataforma)</span><span class="hljs-keyword">
+  <span class="hljs-comment">// display copyright info of an info.plist (any platform)</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$infoPlistFile </span>: 4D.File<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$info </span>: Object
 <span class="hljs-variable">$infoPlistFile</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/RESOURCES/info.plist"</span>)
@@ -761,9 +762,9 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-22"></a><a href="#descripción-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.moveTo()</code>  mueve o renombra el objeto <code>File</code> en la <em>destinationFolder</em>.</p>
+<p>The <code>.moveTo()</code> function moves or renames the <code>File</code> object into the specified <em>destinationFolder</em>.</p>
 <p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
-<p>Por defecto, el archivo conserva su nombre cuando se mueve. Si desea cambiar renombrar el archivo desplazado, pase el nombre completo en el parámetro <em>newName</em>. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error.</p>
+<p>Por defecto, el archivo conserva su nombre cuando se mueve. If you want to rename the moved file, pass the new full name in the <em>newName</em> parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>El objeto <code>File</code> movido.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-8"></a><a href="#ejemplo-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -873,13 +874,13 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-28"></a><a href="#descripción-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.rename()</code> renombra el archivo con el nombre que se ha pasado en <em>newName</em> y devuelve el objeto <code>File</code> renombrado.</p>
-<p>El parámetro <em>newName</em> debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.</p>
-<p>Tenga en cuenta que la función modifica el nombre completo del archivo, es decir, si no pasa una extensión en <em>newName</em>, el archivo tendrá un nombre sin extensión.</p>
+<p>The <code>.rename()</code> function renames the file with the name you passed in <em>newName</em> and returns the renamed <code>File</code> object.</p>
+<p>The <em>newName</em> parameter must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.</p>
+<p>Note that the function modifies the full name of the file, i.e. if you do not pass an extension in <em>newName</em>, the file will have a name without an extension.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>El objeto <code>File</code> renombrado.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-9"></a><a href="#ejemplo-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Quiere cambiar el nombre de &quot;ReadMe.txt&quot; a &quot;ReadMe_new.txt&quot;:</p>
+<p>You want to rename &quot;ReadMe.txt&quot; in &quot;ReadMe_new.txt&quot;:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$toRename</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"C:\\Documents\\Archives\\ReadMe.txt"</span>;fk platform path)
  <span class="hljs-variable">$newName</span>:=<span class="hljs-variable">$toRename</span>.<span class="hljs-function">rename</span>(<span class="hljs-variable">$toRename</span>.name+<span class="hljs-string">"_new"</span>+<span class="hljs-variable">$toRename</span>.extension)
 </code></pre>
@@ -900,20 +901,20 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>info</td><td>Objeto</td><td>-&gt;</td><td>Propiedades a escribir en el archivo .plist o el recurso versión .exe/.dll</td></tr>
+<tr><td>info</td><td>Objeto</td><td>-&gt;</td><td>Properties to write in .exe/.dll version resource or .plist file</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-29"></a><a href="#descripción-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.setAppInfo()</code>  escribe las propiedades <em>info</em> como contenido informativo de un archivo <strong>.exe</strong>, <strong>.dll</strong> o <strong>.plist</strong>.</p>
-<p>La función debe utilizarse con un archivo .exe, .dll o .plist existente. The function must be used with an existing .exe, .dll or .plist file.</p>
+<p>The <code>.setAppInfo()</code> function writes the <em>info</em> properties as information contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file.</p>
+<p>The function must be used with an existing .exe, .dll or .plist file. The function must be used with an existing .exe, .dll or .plist file.</p>
 <blockquote>
 <p>La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.</p>
 </blockquote>
-<p><strong>Parámetro <em>info</em> con un un archivo .exe o .dll</strong></p>
+<p><strong><em>info</em> parameter object with a .exe or .dll file</strong></p>
 <blockquote>
-<p>Escribir la información de archivos .exe o .dll sólo es posible en Windows.</p>
+<p>Writing a .exe or .dll file information is only possible on Windows.</p>
 </blockquote>
-<p>Cada propiedad válida definida en el parámetro objeto <em>info</em> se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (cualquier otra propiedad será ignorada):</p>
+<p>Each valid property set in the <em>info</em> object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th></tr>
@@ -929,15 +930,15 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <tr><td>OriginalFilename</td><td>Texto</td></tr>
 </tbody>
 </table>
-<p>Si se pasa un texto null o vacío como valor, se escribe una cadena vacía en la propiedad. Si pasa un valor de tipo diferente a texto, se convierte en una cadena.</p>
-<p><strong>Parámetro <em>info</em> con un un archivo .plist</strong></p>
-<p>Cada propiedad válida definida en el parámetro objeto <em>info</em> se escribe en el archivo .plist en forma de llave. Se acepta todo nombre de llave. Los tipos de valores se conservan cuando es posible.</p>
-<p>Si una llave definida en el parámetro <em>info</em> ya está definida en el archivo .plist, su valor se actualiza manteniendo su tipo original. Las demás llaves existentes en el archivo .plist no se modifican.</p>
+<p>If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.</p>
+<p><strong><em>info</em> parameter object with a .plist file</strong></p>
+<p>Each valid property set in the <em>info</em> object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Los tipos de valores se conservan cuando es posible.</p>
+<p>If a key set in the <em>info</em> parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.</p>
 <blockquote>
-<p>Para definir un valor de tipo Fecha, el formato a utilizar es una cadena de timestamp json formada en ISO UTC sin milisegundos (&quot;2003-02-01T01:02:03Z&quot;) como en el editor de plist Xcode.</p>
+<p>To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds (&quot;2003-02-01T01:02:03Z&quot;) like in the Xcode plist editor.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-10"></a><a href="#ejemplo-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// definir el copyright y versión de un archivo .exe (Windows)</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// set copyright and version of a .exe file (Windows)</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$exeFile </span>: 4D.File<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$info </span>: Object
 <span class="hljs-variable">$exeFile</span>:=<span class="hljs-function">File</span>(Application file; fk platform path)
@@ -946,9 +947,9 @@ var</span> <span class="hljs-variable">$info </span>: Object
 <span class="hljs-variable">$info</span>.ProductVersion:=<span class="hljs-string">"1.0.0"</span>
 <span class="hljs-variable">$exeFile</span>.<span class="hljs-function">setAppInfo</span>(<span class="hljs-variable">$info</span>)
 </code></pre>
-<pre><code class="hljs css language-4d">  <span class="hljs-comment">// establecer algunas claves en un archivo info.plist (todas las plataformas)</span><span class="hljs-keyword">
-var</span> <span class="hljs-variable">$infoPlistFile </span>: 4D. ile<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$info </span>: Objeto
+<pre><code class="hljs css language-4d">  <span class="hljs-comment">// set some keys in an info.plist file (all platforms)</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$infoPlistFile </span>: 4D.File<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Object
 <span class="hljs-variable">$infoPlistFile</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/RESOURCES/info.plist"</span>)
 <span class="hljs-variable">$info</span>:=New object
 <span class="hljs-variable">$info</span>.Copyright:=<span class="hljs-string">"Copyright 4D 2021"</span> <span class="hljs-comment">//text</span>
@@ -979,7 +980,7 @@ var</span> <span class="hljs-variable">$info </span>: Objeto
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-30"></a><a href="#descripción-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.setContent( )</code>  reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB<em>content</em>. Para obtener información sobre los BLOB, consulte la sección <a href="Conceptos/dt_blob.md">BLOB</a>.</p>
+<p>The <code>.setContent( )</code> function rewrites the entire content of the file using the data stored in the <em>content</em> BLOB. Para obtener información sobre los BLOB, consulte la sección <a href="Conceptos/dt_blob.md">BLOB</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-11"></a><a href="#ejemplo-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$myFile</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Archives/data.txt"</span>)
  <span class="hljs-variable">$myFile</span>.<span class="hljs-function">setContent</span>([aTable]aBlobField)
@@ -1005,14 +1006,15 @@ var</span> <span class="hljs-variable">$info </span>: Objeto
 <tr><td>texto</td><td>Texto</td><td>-&gt;</td><td>Texto a almacenar en el archivo</td></tr>
 <tr><td>charSetName</td><td>Texto</td><td>-&gt;</td><td>Nombre del juego de caracteres</td></tr>
 <tr><td>charSetNum</td><td>Integer</td><td>-&gt;</td><td>Número del conjunto de caracteres</td></tr>
-<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Modo de tratamiento de los saltos de línea</td><td></td></tr>
+<tr><td>breakMode</td><td>Integer</td><td>-&gt;</td><td>Modo de tratamiento de los saltos de línea</td></tr>
+<tr><td></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-31"></a><a href="#descripción-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.setText()</code>  escribe <em>text</em> como el nuevo contenido del archivo.</p>
-<p>Si el archivo al que se hace referencia en el objeto <code>File</code> no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.</p>
-<p>En <em>text</em>, pase el texto a escribir en el archivo. Puede ser un texto literal (&quot;my text&quot;), o un campo / variable texto 4D.</p>
-<p>Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:</p>
+<p>The <code>.setText()</code> function writes <em>text</em> as the new contents of the file.</p>
+<p>If the file referenced in the <code>File</code> object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.</p>
+<p>In <em>text</em>, pass the text to write to the file. It can be a literal (&quot;my text&quot;), or a 4D text field or variable.</p>
+<p>Optionally, you can designate the character set to be used for writing the contents. Puede pasar:</p>
 <ul>
 <li>en <em>charSetName</em>, una cadena que contiene el nombre del conjunto estándar (por ejemplo &quot;ISO-8859-1&quot; o &quot;UTF-8&quot;),</li>
 <li>o en <em>charSetNum</em>, el ID MIBEnum (número) del nombre del conjunto estándar.</li>
@@ -1021,7 +1023,7 @@ var</span> <span class="hljs-variable">$info </span>: Objeto
 <p>Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando <code>CONVERT FROM TEXT</code>.</p>
 </blockquote>
 <p>Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D la inserta en el archivo a menos que el conjunto de caracteres utilizado contenga el sufijo &quot;-no-bom&quot; (por ejemplo, &quot;UTF-8-no-bom&quot;). Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres &quot;UTF-8&quot; sin BOM.</p>
-<p>En <em>breakMode</em>, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema <strong>Documentos sistema</strong>, están disponibles:</p>
+<p>In <em>breakMode</em>, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. Las siguientes constantes, que se encuentran en el tema <strong>Documentos sistema</strong>, están disponibles:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>

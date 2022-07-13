@@ -78,7 +78,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>vpFormula</td><td>Texto</td><td>-&gt;</td><td>Fórmula 4D View Pro</td></tr>
 <tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Nombre de la fórmula</td></tr>
 <tr><td>options</td><td>Objeto</td><td>-&gt;</td><td>Opciones de la fórmula nombrada</td></tr>
@@ -132,7 +132,7 @@
 </thead>
 <tbody>
 <tr><td>scope</td><td>Número</td><td>Alcance del rango. You can pass the sheet index (counting begins at 0) or use the following constants: <p><li><code>vk current sheet</code></li><li><code>vk workbook</code></li><p><p>El alcance determina si el nombre de un rango es local para una hoja de cálculo determinada (<em>scope</em>=sheet index or <code>vk current sheet</code>), o si es global a todo el libro de trabajo (<em>scope</em>=<code>vk workbook</code>).</td></tr>
-<tr><td>comment</td><td>Texto</td><td>Comment associated to named range</td></tr>
+<tr><td>comment</td><td>Texto</td><td>Comentario asociado al rango nombrado</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -165,7 +165,7 @@
 <p>La celda activa no se modifica.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>You have cells currently selected:</p>
+<p>Actualmente tienes celdas seleccionadas:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/cmd_vpAddSelection1.PNG" alt=""></p>
 <p>The following code will add cells to your selection:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$currentSelection</span>:=<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"myVPArea"</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">2</span>;<span class="hljs-number">3</span>)
@@ -182,7 +182,7 @@
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>index</td><td>Integer</td><td>-&gt;</td><td>Indice de la nueva hoja</td></tr>
 <tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Nombre de la hoja</td></tr>
 </tbody>
@@ -196,7 +196,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 </blockquote>
 <p>In <em>name</em>, you can pass a name for the new sheet. The new name cannot contain the following characters: <code>*, :, [, ], ?,\,/</code></p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>The document currently has 3 sheets:</p>
+<p>El documento tiene actualmente 3 hojas:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/vp-sheet-3.png" alt="vp-document-with-3-sheets"></p>
 <p>To insert a sheet at the third position (index 2) and name it &quot;March&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">VP ADD SHEET</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">2</span>;<span class="hljs-string">"March"</span>)
@@ -247,9 +247,9 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>styleName</td><td>Texto</td><td>-&gt;</td><td>Nombre del estilo</td></tr>
-<tr><td>styleObj</td><td>Objeto</td><td>-&gt;</td><td>Object defining attribute settings</td></tr>
+<tr><td>styleObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto definiendo las propiedades del atributo</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Alcance objetivo (por defecto = hoja actual)</td></tr>
 </tbody>
 </table>
@@ -303,7 +303,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto rango de todas las celdas</td></tr>
 </tbody>
@@ -326,7 +326,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>column</td><td>Entero largo</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>row</td><td>Entero largo</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
@@ -370,7 +370,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>column</td><td>Integer</td><td>-&gt;</td><td>Índice de la columna</td></tr>
 <tr><td>row</td><td>Integer</td><td>-&gt;</td><td>Índice de la línea</td></tr>
 <tr><td>columnCount</td><td>Integer</td><td>-&gt;</td><td>Número de columnas</td></tr>
@@ -402,7 +402,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>column</td><td>Integer</td><td>-&gt;</td><td>Índice de la columna</td></tr>
 <tr><td>columnCount</td><td>Integer</td><td>-&gt;</td><td>Número de columnas</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
@@ -455,7 +455,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tbody>
 <tr><td>rangeObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto rango</td></tr>
 <tr><td>otherRangeObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto rango</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Object containing a combined range</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto que contiene un rango combinado</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -511,7 +511,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-13"></a><a href="#descripción-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>VP Convert to picture</code> command converts the <em>vpObject</em> 4D View Pro object (or the <em>rangeObj</em> range within <em>vpObject</em>) to a SVG picture.</p>
-<p>This command is useful, for example:</p>
+<p>Este comando es útil, por ejemplo:</p>
 <ul>
 <li>to embed a 4D View Pro document in an other document such as a 4D Write Pro document</li>
 <li>to print a 4D View Pro document without having to load it into a 4D View Pro area.</li>
@@ -578,7 +578,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 </thead>
 <tbody>
 <tr><td>copy</td><td>Booleano</td><td><em>True</em> (default) to keep the copied values, formatting and formulas after the command executes. <em>False</em> para eliminarlos.</td></tr>
-<tr><td>copyOptions</td><td>Entero largo</td><td>Specifies what is copied or moved. Valores posibles: <p><table><tr><th>Valor</th><th>Descripción</th></tr><tr><td><code>vk clipboard options all</code> (por defecto)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td><code>vk clipboard options formatting</code></td><td>Copia únicamente los formatos.</td></tr><tr><td><code>vk clipboard options formulas</code></td><td>Copia sólo las fórmulas.</td></tr><tr><td><code>vk clipboard options formulas and formatting</code></td><td>Copia las fórmulas y el formato.</td></tr><tr><td><code>vk clipboard options values</code></td><td>Copia sólo los valores.</td></tr><tr><td><code>vk clipboard options value and formatting</code></td><td>Copies the values and formatting.</td></tr></table></p></td></tr>
+<tr><td>copyOptions</td><td>Entero largo</td><td>Especifica lo que se copia o mueve. Valores posibles: <p><table><tr><th>Valor</th><th>Descripción</th></tr><tr><td><code>vk clipboard options all</code> (por defecto)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td><code>vk clipboard options formatting</code></td><td>Copia únicamente los formatos.</td></tr><tr><td><code>vk clipboard options formulas</code></td><td>Copia sólo las fórmulas.</td></tr><tr><td><code>vk clipboard options formulas and formatting</code></td><td>Copia las fórmulas y el formato.</td></tr><tr><td><code>vk clipboard options values</code></td><td>Copia sólo los valores.</td></tr><tr><td><code>vk clipboard options value and formatting</code></td><td>Copia los valores y el formato.</td></tr></table></p></td></tr>
 </tbody>
 </table>
 <p>The paste options defined in the <a href="#vp-set-workbook-options">workbook options</a> are taken into account.</p>
@@ -613,10 +613,10 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-15"></a><a href="#descripción-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>VP DELETE COLUMNS</code> commandremoves the columns in the <em>rangeObj</em>.</p>
-<p>In <em>rangeObj</em>, pass an object containing a range of columns to remove. If the passed range contains:</p>
+<p>In <em>rangeObj</em>, pass an object containing a range of columns to remove. Si el rango pasado contiene:</p>
 <ul>
 <li>both columns and rows, only the columns are removed.</li>
-<li>only rows, the command does nothing.</li>
+<li>únicamente las líneas, el comando no hace nada.</li>
 </ul>
 <blockquote>
 <p>Columns are deleted from right to left.</p>
@@ -641,13 +641,13 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-16"></a><a href="#descripción-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>VP DELETE ROWS</code> commandremoves the rows  in the <em>rangeObj</em>.</p>
-<p>In <em>rangeObj</em>, pass an object containing a range of rows  to remove. If the passed range contains:</p>
+<p>In <em>rangeObj</em>, pass an object containing a range of rows  to remove. Si el rango pasado contiene:</p>
 <ul>
 <li>both columns and rows, only the rows  are removed.</li>
 <li>sólo columnas, el comando no hace nada.</li>
 </ul>
 <blockquote>
-<p>Rows are deleted from bottom to top.</p>
+<p>Las líneas se eliminan de abajo hacia arriba.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-16"></a><a href="#ejemplo-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To delete rows selected by the user (in the image below rows 1, 2, and 3):</p>
@@ -665,7 +665,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>filePath</td><td>Texto</td><td>-&gt;</td><td>Ruta de acceso del documento</td></tr>
 <tr><td>paramObj</td><td>Objeto</td><td>-&gt;</td><td>Opciones de exportación</td></tr>
 </tbody>
@@ -722,7 +722,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Variable</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>$1</td><td></td><td>texto</td><td>The name of the 4D View Pro object</td></tr>
+<tr><td>$1</td><td></td><td>texto</td><td>El nombre del objeto 4D View Pro</td></tr>
 <tr><td>$2</td><td></td><td>texto</td><td>Ruta de acceso del objeto 4D View Pro exportado</td></tr>
 <tr><td>$3</td><td></td><td>objeto</td><td>A reference to the command's <em>paramObj</em></td></tr>
 <tr><td>$4</td><td></td><td>objeto</td><td>An object returned by the method with a status message</td></tr>
@@ -792,7 +792,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>option</td><td>Objeto</td><td>-&gt;</td><td>Opción de exportación</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto 4D View Pro</td></tr>
 </tbody>
@@ -897,7 +897,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-20"></a><a href="#descripción-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -950,7 +950,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto rango de una sola celda</td></tr>
 </tbody>
@@ -1021,7 +1021,7 @@ size:<span class="hljs-number">16</span>pt
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto rango</td></tr>
-<tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Collection of column properties</td></tr>
+<tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Colección de propiedades de columnas</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-24"></a><a href="#descripción-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1047,7 +1047,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area from object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre del área 4D View Pro en el formulario</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Integer</td><td>&lt;-</td><td>Número total de columnas</td></tr>
 </tbody>
@@ -1070,7 +1070,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>Resultado</td><td>Integer</td><td>&lt;-</td><td>Indice de la hoja actual</td></tr>
 </tbody>
 </table>
@@ -1081,7 +1081,7 @@ size:<span class="hljs-number">16</span>pt
 <p>La indexación comienza en 0.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-22"></a><a href="#ejemplo-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>When the third sheet is selected:</p>
+<p>Cuando se selecciona la tercera hoja:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/vp-sheet-3-select.png" alt="third-sheet"></p>
 <p>El comando devuelve 2:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$index</span>:=<span class="hljs-function">VP Get current sheet</span>(<span class="hljs-string">"ViewProArea"</span>)
@@ -1095,7 +1095,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area from object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre del área 4D View Pro en el formulario</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Integer</td><td>&lt;-</td><td>Número total de columnas</td></tr>
 </tbody>
@@ -1149,7 +1149,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Nombre del rango nombrado</td></tr>
 <tr><td>scope</td><td>Número</td><td>-&gt;</td><td>Alcance objetivo (por defecto=hoja actual)</td></tr>
 <tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Definición de la fórmula o rango con nombre</td></tr>
@@ -1224,7 +1224,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Object containing frozen column and row information</td></tr>
 </tbody>
@@ -1263,7 +1263,7 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>scope</td><td>Número</td><td>-&gt;</td><td>Alcance objetivo (por defecto= hoja actual)</td></tr>
 <tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Nombres existentes en el alcance definido</td></tr>
 </tbody>
@@ -1285,7 +1285,7 @@ size:<span class="hljs-number">16</span>pt
 <tbody>
 <tr><td>result[ ].name</td><td>Texto</td><td>nombre de celda o de rango</td></tr>
 <tr><td>result[ ].formula</td><td>Texto</td><td>formula</td></tr>
-<tr><td>result[ ].comment</td><td>Texto</td><td>Comment associated to the name</td></tr>
+<tr><td>result[ ].comment</td><td>Texto</td><td>Comentario asociado al nombre</td></tr>
 </tbody>
 </table>
 <p>Available properties depend on the type of the named element (named cell, named range, or named formula).</p>
@@ -1302,9 +1302,9 @@ size:<span class="hljs-number">16</span>pt
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Object of printing information</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto que contiene la información de impresión</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-33"></a><a href="#descripción-33" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1394,7 +1394,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area from object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre del área 4D View Pro en el formulario</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Integer</td><td>&lt;-</td><td>Número total de líneas</td></tr>
 </tbody>
@@ -1417,7 +1417,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area from object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre del área 4D View Pro en el formulario</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto rango de celdas</td></tr>
 </tbody>
@@ -1446,7 +1446,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>Resultado</td><td>Integer</td><td>&lt;-</td><td>Número de hojas</td></tr>
 </tbody>
 </table>
@@ -1471,7 +1471,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Nombre de la hoja</td></tr>
 <tr><td>Resultado</td><td>Integer</td><td>&lt;-</td><td>Índice de la hoja</td></tr>
 </tbody>
@@ -1498,7 +1498,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja</td></tr>
 <tr><td>Resultado</td><td>Texto</td><td>&lt;-</td><td>Nombre de la hoja</td></tr>
 </tbody>
@@ -1524,7 +1524,7 @@ var</span> <span class="hljs-variable">$attr </span>: Collection
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area from object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre del área 4D View Pro en el formulario</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto opciones de la hoja</td></tr>
 </tbody>
@@ -1551,7 +1551,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>&lt;-</td><td>Índice de la hoja</td></tr>
 <tr><td>Resultado</td><td>Booleano</td><td>&lt;-</td><td>True si las líneas de impresión son visibles, de lo contrario False</td></tr>
 </tbody>
@@ -1603,7 +1603,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>styleName</td><td>Texto</td><td>-&gt;</td><td>Nombre del estilo</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Alcance objetivo (por defecto = hoja actual)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto hoja de estilo</td></tr>
@@ -1640,9 +1640,9 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Alcance objetivo (por defecto = hoja actual)</td></tr>
-<tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Collection of style sheet objects</td></tr>
+<tr><td>Resultado</td><td>Collection</td><td>&lt;-</td><td>Colección de objetos de hojas de estilo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-44"></a><a href="#descripción-44" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1684,7 +1684,7 @@ borderTop:{color:green,style:<span class="hljs-number">10</span>}
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto rango</td></tr>
-<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Object containing a cell value</td></tr>
+<tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto que contiene un valor de celda</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-45"></a><a href="#descripción-45" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -1767,7 +1767,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Objeto que contiene las opciones del libro de trabajo</td></tr>
 </tbody>
 </table>
@@ -1791,7 +1791,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>filePath</td><td>Texto</td><td>-&gt;</td><td>Ruta de acceso del documento</td></tr>
 <tr><td>paramObj</td><td>Objeto</td><td>-&gt;</td><td>Opciones de importación</td></tr>
 </tbody>
@@ -1859,7 +1859,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>viewPro</td><td>Objeto</td><td>-&gt;</td><td>Objeto 4D View Pro</td></tr>
 </tbody>
 </table>
@@ -1982,7 +1982,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>rangeName</td><td>Texto</td><td>-&gt;</td><td>Nombre del rango existente</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Ubicación del rango (hoja actual si se omite)</td></tr>
 <tr><td>Resultado</td><td>Objeto</td><td>&lt;-</td><td>Rango de nombre</td></tr>
@@ -2013,7 +2013,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-54"></a><a href="#descripción-54" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -2047,7 +2047,7 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>family</td><td>texto</td><td>Define la fuente.</td><td>todo tipo de familia de fuentes estándar o genérica. Ej. &quot;Arial&quot;, &quot;Helvetica&quot;, &quot;serif&quot;, &quot;arial,sans-serif&quot;</td><td>Sí</td></tr>
-<tr><td>size</td><td>texto</td><td>Defines the size of the font.<p><p>The line-height can be added to the font-size: font-size/line-height: Ex: &quot;15pt/20pt&quot;</td><td>un número con una de las siguientes unidades: <li>&quot;em&quot;, &quot;ex&quot;, &quot;%&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;in&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ch&quot;, &quot;rem&quot;, &quot;vh&quot;, &quot;vw&quot;, &quot;vmin&quot;, &quot;vmax&quot;</li><p><p>or one of the following:<li><code>vk font size large</code></li><li><code>vk font size larger</code></li><li><code>vk font size x large</code></li><li><code>vk font size xx large</code></li><li><code>vk font size small</code></li><li><code>vk font size smaller</code></li><li><code>vk font size x small</code></li><li><code>vk font size xx small</code></li></td><td>Sí</td></tr>
+<tr><td>size</td><td>texto</td><td>Define el tamaño de la fuente.<p><p>The line-height can be added to the font-size: font-size/line-height: Ex: &quot;15pt/20pt&quot;</td><td>un número con una de las siguientes unidades: <li>&quot;em&quot;, &quot;ex&quot;, &quot;%&quot;, &quot;px&quot;, &quot;cm&quot;, &quot;mm&quot;, &quot;in&quot;, &quot;pt&quot;, &quot;pc&quot;, &quot;ch&quot;, &quot;rem&quot;, &quot;vh&quot;, &quot;vw&quot;, &quot;vmin&quot;, &quot;vmax&quot;</li><p><p>or one of the following:<li><code>vk font size large</code></li><li><code>vk font size larger</code></li><li><code>vk font size x large</code></li><li><code>vk font size xx large</code></li><li><code>vk font size small</code></li><li><code>vk font size smaller</code></li><li><code>vk font size x small</code></li><li><code>vk font size xx small</code></li></td><td>Sí</td></tr>
 <tr><td>style</td><td>texto</td><td>Estilo de fuente.</td><td><li><code>vk font style italic</code></li><li><code>vk font style oblique</code></li></td><td>No</td></tr>
 <tr><td>variant</td><td>texto</td><td>Especifica el tipo de letra en minúsculas.</td><td><li><code>vk font variant small caps</code></li></td><td>No</td></tr>
 <tr><td>weight</td><td>texto</td><td>Define el grosor de la fuente.</td><td><li><code>vk font weight 100</code></li><li><code>vk font weight 200</code></li><li><code>vk font weight 300</code></li><li><code>vk font weight 400</code></li><li><code>vk font weight 500</code></li><li><code>vk font weight 600</code></li><li><code>vk font weight 700</code></li><li><code>vk font weight 800</code></li><li><code>vk font weight 900</code></li><li><code>vk font weight bold</code></li><li><code>vk font weight bolder</code></li><li><code>vk font weight lighter</code></li></td><td>No</td></tr>
@@ -2104,9 +2104,9 @@ End if</span>
 <tr><td><code>vk clipboard options all</code></td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr>
 <tr><td><code>vk clipboard options formatting</code></td><td>Pega sólo el formato.</td></tr>
 <tr><td><code>vk clipboard options formulas</code></td><td>Pegar sólo las fórmulas.</td></tr>
-<tr><td><code>vk clipboard options formulas and formatting</code></td><td>Pastes formulas and formatting.</td></tr>
+<tr><td><code>vk clipboard options formulas and formatting</code></td><td>Pega fórmulas y formato.</td></tr>
 <tr><td><code>vk clipboard options values</code></td><td>Pega sólo valores.</td></tr>
-<tr><td><code>vk clipboard options value and formatting</code></td><td>Pastes values and formatting.</td></tr>
+<tr><td><code>vk clipboard options value and formatting</code></td><td>Pega valores y formato.</td></tr>
 </tbody>
 </table>
 <p>The paste options defined in the <a href="#vp-set-workbook-options">workbook options</a> are taken into account.</p>
@@ -2122,7 +2122,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 </tbody>
 </table>
@@ -2160,7 +2160,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-58"></a><a href="#descripción-58" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -2182,7 +2182,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Name of the named range or named formula to remove</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Alcance objetivo (por defecto=hoja actual)</td></tr>
 </tbody>
@@ -2213,7 +2213,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>index</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja a eliminar</td></tr>
 </tbody>
 </table>
@@ -2267,7 +2267,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>styleName</td><td>Texto</td><td>-&gt;</td><td>Nombre del estilo a eliminar</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Alcance objetivo (por defecto = hoja actual)</td></tr>
 </tbody>
@@ -2294,7 +2294,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 </tbody>
 </table>
@@ -2321,7 +2321,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-64"></a><a href="#descripción-64" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -2342,7 +2342,7 @@ End if</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>row</td><td>Integer</td><td>-&gt;</td><td>Índice de la línea</td></tr>
 <tr><td>rowCount</td><td>Integer</td><td>-&gt;</td><td>Número de líneas</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
@@ -2411,7 +2411,7 @@ End if</span>
 <tr><td>onEvent</td><td>objet (fórmula)</td><td>A callback method that will be launched when the offscreen area is ready. Puede ser:<p><p><li>una función <code>onEvent</code> de una clase, o</li><li>un objeto <code>Formula</code></li><p><p>By default, the callback method is called on the <a href="/docs/Rx/es/Events/onVpReady.html"><code>On VP Ready</code></a>, <a href="/docs/Rx/es/Events/onLoad.html"><code>On Load</code></a>, <a href="/docs/Rx/es/Events/onUnload.html"><code>On Unload</code></a>, <a href="/docs/Rx/es/Events/onEndUrlLoading.html"><code>On End URL Loading</code></a>, <a href="/docs/Rx/es/Events/onUrlLoadingError.html"><code>On URL Loading Error</code></a>, <a href="/docs/Rx/es/Events/onVpRangeChanged.html"><code>On VP Range Changed</code></a>, or <a href="/docs/Rx/es/Events/onTimer.html"><code>On Timer</code></a> events. <p><p>The callback method can be used to access the <a href="/docs/Rx/es/ViewPro/configuring.html#4d-view-pro-form-object-variable">4D View Pro form object variable</a>.</td></tr>
 <tr><td>autoQuit</td><td>booleano</td><td>True (default value) if the command must stop the formula execution when the <a href="/docs/Rx/es/Events/onEndUrlLoading.html"><code>On End URL Loading</code></a> or <a href="/docs/Rx/es/Events/onUrlLoadingError.html"><code>On URL Loading Error</code></a> events occur.<p><p>If false, you must use the <code>CANCEL</code> or <code>ACCEPT</code> commands in the <em>onEvent</em> callback method.</td></tr>
 <tr><td>timeout</td><td>number</td><td>Maximum time (expressed in seconds) before the area automatically closes if no event is generated. Si se fija en 0, no se aplica ninguna limitación. Valor por defecto: 60</td></tr>
-<tr><td>result</td><td>mixto</td><td>Result of the processing (if any)</td></tr>
+<tr><td>result</td><td>mixto</td><td>Resultado del procesamiento (si hay)</td></tr>
 <tr><td>&lt;customProperty&gt;</td><td>mixto</td><td>Any custom attribute to be available in the <em>onEvent</em> callback method.</td></tr>
 </tbody>
 </table>
@@ -2540,7 +2540,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="descripción-69"></a><a href="#descripción-69" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>VP SET ALLOWED METHODS</code> command designates the project methods that can be called in 4D View Pro formulas. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.</p>
-<p>By default for security reasons, if you do not execute the <code>VP SET ALLOWED METHODS</code> command, no method call is allowed in 4D View Pro areas -- except if 4D's generic <code>SET ALLOWED METHODS</code> command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area. error in the 4D View Pro area.</p>
+<p>By default for security reasons, if you do not execute the <code>VP SET ALLOWED METHODS</code> command, no method call is allowed in 4D View Pro areas -- except if 4D's generic <code>SET ALLOWED METHODS</code> command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area. error en el área 4D View Pro.</p>
 <p>In the <em>methodObj</em> parameter, pass an object in which each property is the name of a function to define in the 4D View Pro areas:</p>
 <table>
 <thead>
@@ -2554,7 +2554,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><td></td><td></td><td>[ ].type</td><td>Número</td><td>Tipo de parámetro. Tipos soportados:<li><code>Is Boolean</code></li><li><code>Is date</code></li><li><code>Is Integer</code></li><li><code>Is object</code></li><li><code>Is real</code></li><li><code>Is text</code></li><li><code>Is time</code></li>If omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see <a href="/docs/Rx/es/ViewPro/formulas.html#parameters">Parameters</a> section). If type is <code>Is object</code>, the object has the same structure as the object returned by <a href="#vp-get-value"><code>VP Get value</code></a>.</td></tr>
 <tr><td></td><td>summary</td><td></td><td>Texto</td><td>Descripción de la función a mostrar en 4D View Pro</td></tr>
 <tr><td></td><td>minParams</td><td></td><td>Número</td><td>Número mínimo de parámetros</td></tr>
-<tr><td></td><td>maxParams</td><td></td><td>Número</td><td>Maximum number of parameters. Passing a number higher than the length of parameters allows declaring &quot;optional&quot; parameters with default type</td></tr>
+<tr><td></td><td>maxParams</td><td></td><td>Número</td><td>Número máximo de parámetros. Passing a number higher than the length of parameters allows declaring &quot;optional&quot; parameters with default type</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-63"></a><a href="#ejemplo-63" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -2627,8 +2627,8 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>color</td><td>texto</td><td>Defines the color of the border. Por defecto = black.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
-<tr><td>style</td><td>Integer</td><td>Defines the style of the border. Por defecto = empty.</td><td><li><code>vk line style dash dot</code></li><li><code>vk line style dash dot dot</code></li><li><code>vk line style dashed</code></li> <li><code>vk line style dotted</code></li><li><code>vk line style double</code></li><li><code>vk line style empty</code></li><li><code>vk line style hair</code></li> <li><code>vk line style medium</code></li><li><code>vk line style medium dash dot</code></li><li><code>vk line style medium dash dot dot</code></li><li><code>vk line style medium dashed</code></li><li><code>vk line style slanted dash dot</code></li><li><code>vk line style thick</code></li><li><code>vk line style thin</code></li></td></tr>
+<tr><td>color</td><td>texto</td><td>Define el color del borde. Por defecto = black.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td>style</td><td>Integer</td><td>Define el estilo del borde. Por defecto = empty.</td><td><li><code>vk line style dash dot</code></li><li><code>vk line style dash dot dot</code></li><li><code>vk line style dashed</code></li> <li><code>vk line style dotted</code></li><li><code>vk line style double</code></li><li><code>vk line style empty</code></li><li><code>vk line style hair</code></li> <li><code>vk line style medium</code></li><li><code>vk line style medium dash dot</code></li><li><code>vk line style medium dash dot dot</code></li><li><code>vk line style medium dashed</code></li><li><code>vk line style slanted dash dot</code></li><li><code>vk line style thick</code></li><li><code>vk line style thin</code></li></td></tr>
 </tbody>
 </table>
 <p>You can define the position of the <em>borderStyleObj</em> (i.e., where the line is applied) with the <em>borderPosObj</em>:</p>
@@ -2756,7 +2756,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>columnCount</td><td>Integer</td><td>-&gt;</td><td>Número de columnas</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 </tbody>
@@ -2783,8 +2783,8 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
-<tr><td>index</td><td>Integer</td><td>&lt;-</td><td>Index of the new current sheet</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
+<tr><td>index</td><td>Integer</td><td>&lt;-</td><td>Índice de la nueva hoja actual</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-75"></a><a href="#descripción-75" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -2810,7 +2810,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>formulaObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto formula</td></tr>
 </tbody>
 </table>
@@ -2828,13 +2828,13 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </thead>
 <tbody>
 <tr><td><code>&lt;customFunction&gt;</code></td><td></td><td></td><td>Objeto</td><td>Definición de la función personalizada. <code>&lt;customFunction&gt;</code> defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)</td></tr>
-<tr><td></td><td>formula</td><td></td><td>Objeto</td><td>4D formula object (mandatory). Ver el comando <code>Formula</code>.</td></tr>
+<tr><td></td><td>formula</td><td></td><td>Objeto</td><td>Objeto fórmula 4D (obligatorio). Ver el comando <code>Formula</code>.</td></tr>
 <tr><td></td><td>parameters</td><td></td><td>Colección de objetos</td><td>Collection of parameters (in the order they are defined in the formula)</td></tr>
 <tr><td></td><td></td><td>[ ].name</td><td>Texto</td><td>Nombre del parámetro a mostrar en 4D View Pro</td></tr>
 <tr><td></td><td></td><td>[ ].type</td><td>Número</td><td>Tipo de parámetro. Tipos soportados:<li><code>Is Boolean</code></li><li><code>Is date</code></li><li><code>Is Integer</code></li><li><code>Is object</code></li><li><code>Is real</code></li><li><code>Is text</code></li><li><code>Is time</code></li>If <em>type</em> is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see <a href="/docs/Rx/es/ViewPro/formulas.html#parameters">Parameters</a> section).<p><p>If <em>type</em> is <code>Is object</code>, the object has the same structure as the object returned by <a href="#vp-get-value">VP Get value</a>.</td></tr>
 <tr><td></td><td>summary</td><td></td><td>Texto</td><td>Descripción de la Fórmula a mostrar en 4D View Pro</td></tr>
 <tr><td></td><td>minParams</td><td></td><td>Número</td><td>Número mínimo de parámetros</td></tr>
-<tr><td></td><td>maxParams</td><td></td><td>Número</td><td>Maximum number of parameters. Passing a number higher than the length of <em>parameters</em> allows declaring &quot;optional&quot; parameters with default type</td></tr>
+<tr><td></td><td>maxParams</td><td></td><td>Número</td><td>Número máximo de parámetros. Passing a number higher than the length of <em>parameters</em> allows declaring &quot;optional&quot; parameters with default type</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -2930,7 +2930,7 @@ End case</span>
 <tr><th>Constante</th><th>Descripción</th><th>Configuración por defecto de US</th></tr>
 </thead>
 <tbody>
-<tr><td><code>vk pattern long date</code></td><td>ISO 8601 format for the full date</td><td>&quot;dddd, dd MMMM yyyy&quot;</td></tr>
+<tr><td><code>vk pattern long date</code></td><td>Formato ISO 8601 para la fecha completa</td><td>&quot;dddd, dd MMMM yyyy&quot;</td></tr>
 <tr><td><code>vk pattern month day</code></td><td>Formato ISO 8601 para el mes y el día</td><td>&quot;MMMM dd&quot;</td></tr>
 <tr><td><code>vk pattern short date</code></td><td>Formato ISO 8601 corto para la fecha</td><td>&quot;MM/dd/yyyy&quot;</td></tr>
 <tr><td><code>vk pattern year month</code></td><td>Formato ISO 8601 para el mes y el año</td><td>&quot;yyyy MMMM&quot;</td></tr>
@@ -2954,7 +2954,7 @@ End case</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>styleObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto style</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (por defecto = hoja actual)</td></tr>
 </tbody>
@@ -3043,7 +3043,7 @@ End case</span>
 <p>In <em>rangeObj</em>, pass a range of the cell (created with <a href="#vp-cell">VP Cell</a>) whose formula you want to specify. If <em>rangeObj</em> includes multiple ranges, only the first range is used.</p>
 <p>The <em>formulasCol</em> is a two-dimensional collection:</p>
 <ul>
-<li>The first-level collection contains subcollections of formulas. Each subcollection defines a row.</li>
+<li>The first-level collection contains subcollections of formulas. Cada subcolección define una línea.</li>
 <li>Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells. &gt;If a 4D method is used, it must be allowed with the <a href="#vp-set-allowed-methods"><code>VP SET ALLOWED METHODS</code></a> command.</li>
 </ul>
 <p>You remove the formulas in <em>rangeObj</em> by replacing them with an empty string (&quot;&quot;).</p>
@@ -3075,7 +3075,7 @@ End case</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>paneObj</td><td>Objeto</td><td>-&gt;</td><td>Object containing frozen column and row information</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 </tbody>
@@ -3222,7 +3222,7 @@ End case</span>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>height</td><td>number</td><td>Row height expressed in pixels</td></tr>
+<tr><td>height</td><td>number</td><td>Altura de la línea expresada en píxeles</td></tr>
 <tr><td>pageBreak</td><td>booleano</td><td>True to insert a page break before the first row of the range, else false</td></tr>
 <tr><td>visible</td><td>booleano</td><td>True si la fila es visible, si no, false</td></tr>
 <tr><td>redimensionable</td><td>booleano</td><td>True si la línea puede redimensionarse, si no, false</td></tr>
@@ -3248,7 +3248,7 @@ End case</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>rowCount</td><td>Integer</td><td>-&gt;</td><td>Número de líneas</td></tr>
 <tr><td>sheet</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja (hoja actual si se omite)</td></tr>
 </tbody>
@@ -3295,7 +3295,7 @@ End case</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>number</td><td>Integer</td><td>-&gt;</td><td>Número de hojas</td></tr>
 </tbody>
 </table>
@@ -3308,7 +3308,7 @@ End case</span>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-80"></a><a href="#ejemplo-80" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>El documento tiene actualmente una hoja:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/vp-sheet-1.png" alt=""></p>
-<p>To set the number of sheets to 3:</p>
+<p>Para definir el número de hojas en 3:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">VP SET SHEET COUNT</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">3</span>)
 </code></pre>
 <p><img src="/docs/Rx/assets/en/ViewPro/vp-sheet-3.png" alt=""></p>
@@ -3321,7 +3321,7 @@ End case</span>
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Nuevo nombre para la hoja</td></tr>
 <tr><td>index</td><td>Integer</td><td>-&gt;</td><td>Index of the sheet to be renamed</td></tr>
 </tbody>
@@ -3339,7 +3339,7 @@ End case</span>
 <p>El comando no hace nada si:</p>
 <ul>
 <li>el nuevo nombre contiene caracteres prohibidos</li>
-<li>the new name's value is blank</li>
+<li>el nuevo valor del nombre está en blanco</li>
 <li>el nuevo nombre ya existe</li>
 <li>el <em>índice</em> pasado no existe</li>
 </ul>
@@ -3446,7 +3446,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>visible</td><td>Booleano</td><td>-&gt;</td><td>Print lines displayed if True (default), hidden if False</td></tr>
 <tr><td>index</td><td>Integer</td><td>-&gt;</td><td>Índice de la hoja</td></tr>
 </tbody>
@@ -3526,7 +3526,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto rango</td></tr>
-<tr><td>valueObj</td><td>Objeto</td><td>-&gt;</td><td>Cell values and format options</td></tr>
+<tr><td>valueObj</td><td>Objeto</td><td>-&gt;</td><td>Valores de la celda y opciones de formato</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-95"></a><a href="#descripción-95" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -3541,7 +3541,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tbody>
 <tr><td>value</td><td>Integer, Real, Boolean, Text, Date, Null</td><td>Value to assign to <em>rangeObj</em> (except- time). Pase null para borrar el contenido de la celda.</td></tr>
 <tr><td>time</td><td>Real</td><td>Time value (in seconds) to assign to <em>rangeObj</em></td></tr>
-<tr><td>format</td><td>Texto</td><td>Pattern for value/time property. For information on patterns and formatting characters, please refer to the <a href="/docs/Rx/es/ViewPro/configuring.html#cell-format">Cell Format</a> paragraph.</td></tr>
+<tr><td>format</td><td>Texto</td><td>Patrón de propiedad valor/tiempo. For information on patterns and formatting characters, please refer to the <a href="/docs/Rx/es/ViewPro/configuring.html#cell-format">Cell Format</a> paragraph.</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-85"></a><a href="#ejemplo-85" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -3597,7 +3597,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 </blockquote>
 <p>The <em>valuesCol</em> parameter is two-dimensional:</p>
 <ul>
-<li><p>The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row.</p></li>
+<li><p>The first-level collection contains subcollections of values. Cada subcolección define una línea. Each subcollection defines a row.</p></li>
 <li><p>Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:</p>
 <table>
 <thead>
@@ -3630,7 +3630,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 <tr><td>optionObj</td><td>Objeto</td><td>-&gt;</td><td>Objeto que contiene las opciones del libro de trabajo a definir</td></tr>
 </tbody>
 </table>
@@ -3652,7 +3652,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><td>allowCopyPasteExcelStyle</td><td>booleano</td><td>Styles from a spreadsheet can be copied and pasted to Excel, and vice-versa.</td></tr>
 <tr><td>allowDynamicArray</td><td>booleano</td><td>Permite arrays dinámicos en hojas de cálculo</td></tr>
 <tr><td>allowExtendPasteRange</td><td>booleano</td><td>Extends the pasted range if the pasted range is not enough for the pasted data</td></tr>
-<tr><td>allowSheetReorder</td><td>booleano</td><td>Sheet reordering is allowed</td></tr>
+<tr><td>allowSheetReorder</td><td>booleano</td><td>Se permite reordenar la hoja</td></tr>
 <tr><td>allowUndo</td><td>booleano</td><td>Deshacer ediciones está permitido.</td></tr>
 <tr><td>allowUserDeselect</td><td>booleano</td><td>Deselecting specific cells from a selection is allowed.</td></tr>
 <tr><td>allowUserDragDrop</td><td>booleano</td><td>Se permite arrastrar y soltar los datos del rango</td></tr>
@@ -3660,31 +3660,31 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><td>allowUserEditFormula</td><td>booleano</td><td>Formulas can be entered in cells</td></tr>
 <tr><td>allowUserResize</td><td>booleano</td><td>Columnas y filas redimensionables</td></tr>
 <tr><td>allowUserZoom</td><td>booleano</td><td>Se permite hacer zoom (ctrl + rueda del ratón)</td></tr>
-<tr><td>autoFitType</td><td>number</td><td>Content is formatted to fit in cells, or cells and headers. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> El contenido se autoajusta a las celdas y encabezados</td></tr></table></td></tr>
+<tr><td>autoFitType</td><td>number</td><td>Content is formatted to fit in cells, or cells and headers. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> El contenido se ajusta automáticamente a las celdas</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> El contenido se autoajusta a las celdas y encabezados</td></tr></table></td></tr>
 <tr><td>backColor</td><td>cadena</td><td>A color string used to represent the background color of the area, such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;. The initial backgroundcolor is hidden when a backgroundImage is set.</td></tr>
-<tr><td>backgroundImage</td><td>string / picture / file</td><td>Background image for the area.</td></tr>
-<tr><td>backgroundImageLayout</td><td>number</td><td>Cómo se muestra la imagen de fondo. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Llena el área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Se muestra con su relación de aspecto original.</td></tr></table></td></tr>
+<tr><td>backgroundImage</td><td>string / picture / file</td><td>Imagen de fondo para el área.</td></tr>
+<tr><td>backgroundImageLayout</td><td>number</td><td>Cómo se muestra la imagen de fondo. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk image layout center </td><td>1</td><td> En el centro del área.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Llena el área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Se muestra con su relación de aspecto original.</td></tr></table></td></tr>
 <tr><td>calcOnDemand</td><td>booleano</td><td>Formulas are calculated only when they are demanded.</td></tr>
 <tr><td>columnResizeMode</td><td>number</td><td>Resize mode for columns. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table></td></tr>
 <tr><td>copyPasteHeaderOptions</td><td>number</td><td>Headers to include when data is copied to or pasted. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table></td></tr>
 <tr><td>customList</td><td>colección</td><td>The list for users to customize drag fill, prioritize matching this list in each fill. Cada elemento de colección es una colección de cadenas. See on <a href="https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b">GrapeCity's website</a>.</td></tr>
 <tr><td>cutCopyIndicatorBorderColor</td><td>cadena</td><td>Border color for the indicator displayed when the user cuts or copies the selection.</td></tr>
 <tr><td>cutCopyIndicatorVisible</td><td>booleano</td><td>Display an indicator when copying or cutting the selected item.</td></tr>
-<tr><td>defaultDragFillType</td><td>number</td><td>The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table></td></tr>
+<tr><td>defaultDragFillType</td><td>number</td><td>The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Llena automáticamente las celdas. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Rellena las celdas sólo con formato.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table></td></tr>
 <tr><td>enableAccessibility</td><td>booleano</td><td>Accessibility support is enabled in the spreadsheet.</td></tr>
 <tr><td>enableFormulaTextbox</td><td>booleano</td><td>The formula text box is enabled.</td></tr>
 <tr><td>grayAreaBackColor</td><td>cadena</td><td>A color string used to represent the background color of the gray area , such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
-<tr><td>highlightInvalidData</td><td>booleano</td><td>Invalid data is highlighted.</td></tr>
-<tr><td>iterativeCalculation</td><td>booleano</td><td>Enables iterative calculation. See on <a href="https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html">Grapecity's website</a>.</td></tr>
+<tr><td>highlightInvalidData</td><td>booleano</td><td>Los datos inválidos son resaltados.</td></tr>
+<tr><td>iterativeCalculation</td><td>booleano</td><td>Activa el cálculo iterativo. See on <a href="https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html">Grapecity's website</a>.</td></tr>
 <tr><td>iterativeCalculationMaximumChange</td><td>numeric</td><td>Maximum amount of change between two calculation values.</td></tr>
 <tr><td>iterativeCalculationMaximumIterations</td><td>numeric</td><td>Número de veces que la fórmula debe recalcular.</td></tr>
 <tr><td>newTabVisible</td><td>booleano</td><td>Display a special tab to let users insert new sheets.</td></tr>
 <tr><td>numbersFitMode</td><td>number</td><td>Changes display mode when date/number data width is longer than column width. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with &quot;###&quot; and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table></td></tr>
 <tr><td>pasteSkipInvisibleRange</td><td>booleano</td><td>Pegar u omitir pegar datos en rangos invisibles: <ul><li>False (por defecto): pegar datos</li><li>True: omitir el pegado en rangos invisibles</li></ul>See <a href="https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html">Grapecity's docs</a> for more information on invisible ranges.</td></tr>
-<tr><td>referenceStyle</td><td>number</td><td>Style for cell and range references in cell formulas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table></td></tr>
+<tr><td>referenceStyle</td><td>number</td><td>Style for cell and range references in cell formulas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar el estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table></td></tr>
 <tr><td>resizeZeroIndicator</td><td>number</td><td>Drawing policy when the row or column is resized to zero. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table></td></tr>
 <tr><td>rowResizeMode</td><td>number</td><td>La forma en que se redimensionan las líneas. Los valores disponibles son los mismos qe columnResizeMode</td></tr>
-<tr><td>scrollbarAppearance</td><td>number</td><td>Apariencia de la barra de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (por defecto)</td><td>0</td><td> Aspecto de la barra de desplazamiento clásica similar a la de Excel.</td></tr></table></td></tr>
+<tr><td>scrollbarAppearance</td><td>number</td><td>Apariencia de la barra de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Apariencia de la barra de desplazamiento móvil.</td></tr><tr><td> vk scrollbar appearance skin (por defecto)</td><td>0</td><td> Aspecto de la barra de desplazamiento clásica similar a la de Excel.</td></tr></table></td></tr>
 <tr><td>scrollbarMaxAlign</td><td>booleano</td><td>The scroll bar aligns with the last row and column of the active sheet.</td></tr>
 <tr><td>scrollbarShowMax</td><td>booleano</td><td>The displayed scroll bars are based on the entire number of columns and rows in the sheet.</td></tr>
 <tr><td>scrollByPixel</td><td>booleano</td><td>Activar desplazamiento de precisión por píxel.</td></tr>
@@ -3702,7 +3702,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><td>tabStripPosition</td><td>number</td><td>Position of the tab strip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table></td></tr>
 <tr><td>tabStripRatio</td><td>number</td><td>Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.</td></tr>
 <tr><td>tabStripVisible</td><td>booleano</td><td>Display the sheet tab strip.</td></tr>
-<tr><td>tabStripWidth</td><td>number</td><td>Width of the tab strip when position is left or right. Default and minimum is 80.</td></tr>
+<tr><td>tabStripWidth</td><td>number</td><td>Width of the tab strip when position is left or right. Por defecto y el mínimo es 80.</td></tr>
 <tr><td>useTouchLayout</td><td>booleano</td><td>Whether to use touch layout to present the Spread component.</td></tr>
 </tbody>
 </table>
@@ -3773,7 +3773,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><th>Parámetros</th><th>Tipo</th><th></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>4D View Pro area form object name</td></tr>
+<tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-99"></a><a href="#descripción-99" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>

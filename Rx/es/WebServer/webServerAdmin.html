@@ -103,27 +103,27 @@
 <p>En cualquier momento, puede vacíar la caché de las páginas y de las imágenes que contiene (si, por ejemplo, ha modificado una página estática y quiere volver a cargarla en la caché).</p>
 <p>Para ello, puede:</p>
 <ul>
-<li>4D: haga clic en el botón <strong>Borrar la caché</strong> de la página Web/Opciones (I) de la caja de diálogo de los Parámetros.</li>
-<li>4D Server: haga clic en el botón <strong>Borrar la caché</strong> de la página HTTP de la ventana <a href="Admin/server-admin.md#http-server-page">Administración de 4D Server</a>.</li>
+<li>4D: click on the <strong>Clear Cache</strong> button in the Web/Options (I) page of the Settings dialog box.</li>
+<li>4D Server: click on the <strong>Clear Cache</strong> button in the HTTP page of the <a href="Admin/server-admin.md#http-server-page">4D Server Administration window</a>.</li>
 </ul>
 <p>La caché se borra inmediatamente.</p>
 <blockquote>
 <p>También puede utilizar la URL <a href="#cacheclear">/4DCACHECLEAR</a>.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="explorador-de-ejecución"></a><a href="#explorador-de-ejecución" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Explorador de ejecución</h2>
-<p>La página <strong>Watch</strong> (sección <strong>Web</strong>) del Explorador de ejecución muestra la información del servidor web, en particular:</p>
+<p>The <strong>Watch</strong> page (<strong>Web</strong> heading) in the Runtime Explorer displays web server information, particularly:</p>
 <ul>
-<li><p><strong>Uso de la caché web</strong>: indica el número de páginas presentes en la caché web así como su porcentaje de uso. Esta información sólo está disponible si el servidor web está activo y si el tamaño de la caché es mayor que 0.</p></li>
-<li><p><strong>Tiempo de actividad del servidor web</strong>: indica la duración del uso (en formato horas:minutos:segundos) del servidor web. Esta información sólo está disponible si el servidor web está activo.</p></li>
-<li><p><strong>Conteo de visitas web</strong>: indica el número total de peticiones HTTP recibidas desde el arranque del servidor web, así como un número instantáneo de peticiones por segundo (medida tomada entre dos actualizaciones del Explorador de ejecución). Esta información sólo está disponible si el servidor web está activo.</p></li>
+<li><p><strong>Web Cache Usage</strong>: indicates the number of pages present in the web cache as well as its use percentage. This information is only available if the web server is active and if the cache size is greater than 0.</p></li>
+<li><p><strong>Web Server Elapsed Time</strong>: indicates the duration of use (in hours:minutes:seconds format) of the Web server. This information is only available if the web server is active.</p></li>
+<li><p><strong>Web Hits Count</strong>: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). This information is only available if the web server is active.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="url-para-la-administración"></a><a href="#url-para-la-administración" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>URL para la administración</h2>
-<p>Las URL de administración del sitio web le permiten controlar el sitio web publicado en su servidor. 4D Web Server acepta cuatro URLs específicas: <em>/4DSTATS</em>, <em>/4DHTMLSTATS</em>, /<em>4DCACHECLEAR</em> y <em>/4DWEBTEST</em>.</p>
+<p>Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: <em>/4DSTATS</em>, <em>/4DHTMLSTATS</em>, /<em>4DCACHECLEAR</em> and <em>/4DWEBTEST</em>.</p>
 <blockquote>
 <p><em>/4DSTATS</em>, <em>/4DHTMLSTATS</em> y <em>/4DCACHECLEAR</em> sólo están disponibles para el diseñador y el administrador de la base de datos. Si el sistema de contraseñas 4D no ha sido activado, estas URLs están disponibles para todos los usuarios. /4DWEBTEST está siempre disponible.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="4dstats"></a><a href="#4dstats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/4DSTATS</h3>
-<p>La URL <strong>/4DSTATS</strong> devuelve varios elementos de información en una tabla HTML (visualizable en un navegador):</p>
+<p>The <strong>/4DSTATS</strong> URL returns several items of information in an HTML table (displayable in a browser):</p>
 <table>
 <thead>
 <tr><th>Elemento</th><th>Descripción</th></tr>
@@ -136,12 +136,12 @@
 <tr><td>Cached Objects</td><td>Número de objetos encontrados en la caché, <strong>incluyendo imágenes</strong></td></tr>
 </tbody>
 </table>
-<p>Esta información puede permitirle comprobar el funcionamiento de su servidor y, eventualmente, adaptar los parámetros correspondientes.</p>
+<p>This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.</p>
 <blockquote>
 <p>El comando <code>WEB GET STATISTICS</code> permite obtener también información sobre cómo se está utilizando la caché de las páginas estáticas.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="4dhtmlstats"></a><a href="#4dhtmlstats" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/4DHTMLSTATS</h3>
-<p>La URL <em>/4DHTMLSTATS</em> devuelve, también como una HTML, la misma información que la URL <em>/4DSTATS</em>. La diferencia es que el campo <strong>Cached Objects</strong> sólo cuenta las páginas HTML (sin contar los archivos de imágenes). Además, esta URL devuelve el campo <strong>Objetos filtrados</strong>.</p>
+<p>The <em>/4DHTMLSTATS</em> URL returns, also as an HTML table, the same information as the <em>/4DSTATS</em> URL. The difference is that the <strong>Cached Objects</strong> field only counts HTML pages (without counting picture files). Moreover, this URL returns the <strong>Filtered Objects</strong> field.</p>
 <table>
 <thead>
 <tr><th>Elemento</th><th>Descripción</th></tr>
@@ -156,9 +156,9 @@
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="4dcacheclear"></a><a href="#4dcacheclear" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/4DCACHECLEAR</h3>
-<p>La URL <em>/4DCACHECLEAR</em> elimina inmediatamente las páginas estáticas y las imágenes de la caché. Por tanto, permite &quot;forzar&quot; la actualización de las páginas que han sido modificadas.</p>
+<p>The <em>/4DCACHECLEAR</em> URL immediately clears the cache of the static pages and images. It allows you to therefore “force” the update of the pages that have been modified.</p>
 <h3><a class="anchor" aria-hidden="true" id="4dwebtest"></a><a href="#4dwebtest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>/4DWEBTEST</h3>
-<p>La URL <em>/4DWEBTEST</em> permite verificar el estado del servidor web. Cuando se llama a esta URL, 4D devuelve un archivo texto con los campos HTTP siguientes llenos:</p>
+<p>The <em>/4DWEBTEST</em> URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:</p>
 <table>
 <thead>
 <tr><th>Campo HTTP</th><th>Descripción</th><th>Ejemplo</th></tr>
@@ -170,15 +170,15 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="logs"></a><a href="#logs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logs</h2>
-<p>4D le permite generar dos historiales de peticiones web:</p>
+<p>4D allows you to generate two logs of web requests:</p>
 <ul>
-<li>un historial de depuración, útil en la fase de desarrollo del servidor web (<em>HTTPDebugLog.txt</em>),</li>
-<li>un historial estandarizado de peticiones web, más bien utilizado con fines estadísticos (<em>logweb.txt</em>).</li>
+<li>a debug log, useful in the web server development phase (<em>HTTPDebugLog.txt</em>),</li>
+<li>a standardized web request log, rather used for statistic purposes (<em>logweb.txt</em>).</li>
 </ul>
-<p>Ambos archivos de historial se crean automáticamente en la carpeta <strong>Logs</strong> del proyecto de aplicación.</p>
+<p>Both log files are automatically created in the <strong>Logs</strong> folder of the application project.</p>
 <h3><a class="anchor" aria-hidden="true" id="httpdebuglogtxt"></a><a href="#httpdebuglogtxt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTPDebugLog.txt</h3>
-<p>El <a href="/docs/Rx/es/WebServer/webServerConfig.html#debug-log">archivo de depuracièon http</a> puede activarse vía el objeto <a href="/docs/Rx/es/WebServer/webServerObject.html"><code>web server</code></a> o el comando <code>WEB FIXER OPTION</code>.</p>
-<p>Este archivo de historial registra cada petición HTTP y cada respuesta en modo bruto (raw). Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.</p>
+<p>The <a href="/docs/Rx/es/WebServer/webServerConfig.html#debug-log">http debug file</a> can be enabled using the <a href="/docs/Rx/es/WebServer/webServerObject.html"><code>web server</code> object</a> or the <code>WEB SET OPTION</code> command.</p>
+<p>Este archivo de historial registra cada petición HTTP y cada respuesta en modo crudo. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.</p>
 <p>Los siguientes campos se registran tanto para la solicitud como para la respuesta:</p>
 <table>
 <thead>
@@ -194,10 +194,10 @@
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="logwebtxt"></a><a href="#logwebtxt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>logweb.txt</h3>
-<p>El <a href="/docs/Rx/es/WebServer/webServerConfig.html#log-recording">archivo de registros de historial web</a> puede activarse vía el objeto <a href="/docs/Rx/es/WebServer/webServerObject.html"><code>web server</code></a>, el comando <code>WEB SET OPTION</code>, o la página <strong>Web/Log (tipo)</strong> de las propiedades. Debe seleccionar el formato de historial.</p>
+<p>The <a href="/docs/Rx/es/WebServer/webServerConfig.html#log-recording">web log recording file</a> can be enabled using the <a href="/docs/Rx/es/WebServer/webServerObject.html"><code>web server</code> object</a>, the <code>WEB SET OPTION</code> command, or the <strong>Web/Log (type)</strong> page of the settings. Debe seleccionar el formato de historial.</p>
 <h4><a class="anchor" aria-hidden="true" id="clfdlf"></a><a href="#clfdlf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CLF/DLF</h4>
-<p>Cada línea del archivo representa una petición, como: <em>host rfc931 user [DD/MMM/YYYY:HH:MM:SS] &quot;request&quot; state length</em> Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (caracter 13, caracter 10).</p>
-<p>El formato DLF (Combined Log Format) es similar al formato CLF (Common Log Format) y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent. Esta es la descripción de los formatos CLF/DLF (no personalizables):</p>
+<p>Each line of the file represents a request, such as: <em>host rfc931 user [DD/MMM/YYYY:HH:MM:SS] &quot;request&quot; state length</em> Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).</p>
+<p>DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Here is the description of CLF/DLF formats (not customizable):</p>
 <table>
 <thead>
 <tr><th>Nombre del campo</th><th>Descripción</th></tr>
@@ -215,39 +215,39 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="elfwlf"></a><a href="#elfwlf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ELF/WLF</h4>
-<p>El formato ELF (Extended Log Format) está muy extendido en el mundo de los navegadores HTTP. Puede utilizarse para construir historiales sofisticados que respondan a necesidades específicas. Por esta razón, el formato ELF se puede personalizar: es posible elegir los campos que se van a registrar, así como su orden de inserción en el archivo.</p>
-<p>El formato WLF (WebStar Log Format) fue desarrollado específicamente para el servidor 4D WebSTAR.</p>
+<p>The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.</p>
+<p>The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.</p>
 <h5><a class="anchor" aria-hidden="true" id="configurar-los-campos"></a><a href="#configurar-los-campos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configurar los campos</h5>
-<p>Al elegir el formato ELF o WLF, el área &quot;Web Log Token Selection&quot; muestra los campos disponibles para el formato elegido. Deberá seleccionar cada campo para incluirlo en el registro. Para ello, marque los campos deseados.</p>
+<p>When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. Para ello, marque los campos deseados.</p>
 <blockquote>
 <p>No puede seleccionar el mismo campo dos veces.</p>
 </blockquote>
-<p>La siguiente tabla enumera los campos disponibles para cada formato (en orden alfabético) y describe su contenido:</p>
+<p>The following table lists the fields available for each format (in alphabetical order) and describes its contents:</p>
 <table>
 <thead>
 <tr><th>Campo</th><th>ELF</th><th>WLF</th><th>Valor</th></tr>
 </thead>
 <tbody>
 <tr><td>BYTES_RECEIVED</td><td></td><td>X</td><td>Número de bytes recibidos por el servidor</td></tr>
-<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>Número de bytes enviados por el servidor al cliente</td></tr>
-<tr><td>C_DNS</td><td>X</td><td>X</td><td>Dirección IP del DNS (ELF: campo idéntico al campo C_IP)</td></tr>
-<tr><td>C_IP</td><td>X</td><td>X</td><td>Dirección IP del cliente (por ejemplo 192.100.100.10)</td></tr>
+<tr><td>BYTES_SENT</td><td>X</td><td>X</td><td>Number of bytes sent by the server to the client</td></tr>
+<tr><td>C_DNS</td><td>X</td><td>X</td><td>IP address of the DNS (ELF: field identical to the C_IP field)</td></tr>
+<tr><td>C_IP</td><td>X</td><td>X</td><td>IP address of the client (for example 192.100.100.10)</td></tr>
 <tr><td>CONNECTION_ID</td><td></td><td>X</td><td>Número de identificación de la conexión</td></tr>
-<tr><td>CS(COOKIE)</td><td>X</td><td>X</td><td>Información sobre las cookies contenidas en la petición HTTP</td></tr>
+<tr><td>CS(COOKIE)</td><td>X</td><td>X</td><td>Information about cookies contained in the HTTP request</td></tr>
 <tr><td>CS(HOST)</td><td>X</td><td>X</td><td>Campo Host de la petición HTTP</td></tr>
 <tr><td>CS(REFERER)</td><td>X</td><td>X</td><td>URL de la página que apunta al documento solicitado</td></tr>
-<tr><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>Información sobre el software y el sistema operativo del cliente</td></tr>
+<tr><td>CS(USER_AGENT)</td><td>X</td><td>X</td><td>Information about the software and operating system of the client</td></tr>
 <tr><td>CS_SIP</td><td>X</td><td>X</td><td>Dirección IP del servidor</td></tr>
 <tr><td>CS_URI</td><td>X</td><td>X</td><td>URI sobre el que se realiza la petición</td></tr>
 <tr><td>CS_URI_QUERY</td><td>X</td><td>X</td><td>Parámetros de consulta de la petición</td></tr>
-<tr><td>CS_URI_STEM</td><td>X</td><td>X</td><td>Parte de la solicitud sin los parámetros de la consulta</td></tr>
-<tr><td>DATE</td><td>X</td><td>X</td><td>DD: día, MMM: abreviación de 3 letras para el mes (Jan, Feb,...), YYYY: año</td></tr>
-<tr><td>METHOD</td><td>X</td><td>X</td><td>Método HTTP utilizado para la solicitud enviada al servidor</td></tr>
+<tr><td>CS_URI_STEM</td><td>X</td><td>X</td><td>Parte de la petición sin los parámetros de consulta</td></tr>
+<tr><td>DATE</td><td>X</td><td>X</td><td>DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year</td></tr>
+<tr><td>METHOD</td><td>X</td><td>X</td><td>HTTP method used for the request sent to the server</td></tr>
 <tr><td>PATH_ARGS</td><td></td><td>X</td><td>Parámetros CGI: cadena situada después del caracter &quot;$&quot;</td></tr>
 <tr><td>STATUS</td><td>X</td><td>X</td><td>Respuesta ofrecida por el servidor</td></tr>
-<tr><td>TIME</td><td>X</td><td>X</td><td>HH: hora, MM: minutos, SS: segundos</td></tr>
+<tr><td>TIME</td><td>X</td><td>X</td><td>HH: hour, MM: minutes, SS: seconds</td></tr>
 <tr><td>TRANSFER_TIME</td><td>X</td><td>X</td><td>Tiempo solicitado por el servidor para generar la respuesta</td></tr>
-<tr><td>USER</td><td>X</td><td>X</td><td>Nombre de usuario si está autenticado; en caso contrario, - (signo menos). Si el nombre de usuario contiene espacios, se sustituyen por _ (subrayado)</td></tr>
+<tr><td>USER</td><td>X</td><td>X</td><td>User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines)</td></tr>
 <tr><td>URL</td><td></td><td>X</td><td>URL solicitado por el cliente</td></tr>
 </tbody>
 </table>
@@ -263,15 +263,15 @@
 <p><img src="/docs/Rx/assets/en/WebServer/backup.png" alt=""></p>
 <p>Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de los archivos haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.</p>
 <ul>
-<li><p><strong>Sin copia de seguridad</strong>: la función de copia de seguridad programada está desactivada.</p></li>
-<li><p><strong>Cada X hora(s)</strong>: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .</p>
+<li><p><strong>No Backup</strong>: The scheduled backup function is deactivated.</p></li>
+<li><p><strong>Every X hour(s)</strong>: This option is used to program backups on an hourly basis. Puede introducir un valor entre 1 y 24 .</p>
 <ul>
-<li><strong>a partir de</strong>: permite definir la hora de activación de la primera copia de seguridad.</li>
+<li><strong>starting at</strong>: Used to set the time at which the first back up will begin.</li>
 </ul></li>
-<li><p><strong>Cada X día(s) a las X</strong>: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.</p></li>
-<li><p><strong>Cada X semana(s), día a las X</strong>: esta opción se utiliza para programar las copias de seguridad con una base semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. Cuando esta opción está marcada, debe indicar el día(s) de la semana y la hora que debe comenzar cada copia de seguridad. Si lo desea, puede seleccionar varios días de la semana. Por ejemplo, puede utilizar esta opción para definir dos copias de seguridad semanales: una el miércoles y una el viernes.</p></li>
-<li><p><strong>Cada X mes(es), el día X a las X</strong>: esta opción se utiliza para programar las copias de seguridad con una base mensual. Introduzca 1 si desea realizar una copia de seguridad mensual. Cuando esta opción está marcada, debe indicar el día de cada mes y la hora a la cual debe comenzar la copia de seguridad.</p></li>
-<li><p><strong>Todos los X MB</strong>: esta opción se utiliza para programar las copias de seguridad en función del tamaño del archivo de registro actual. Una copia de seguridad se activa automáticamente cuando el archivo alcanza el tamaño especificado. Puedes definir un límite de tamaño de 1, 10, 100 o 1000 MB.</p></li>
+<li><p><strong>Every X day(s) at X</strong>: This option is used to program backups on a daily basis. Introduzca 1 si desea realizar una copia de seguridad diaria. When this option is checked, you must indicate the time when the backup must be started.</p></li>
+<li><p><strong>Every X week(s), day at X</strong>: This option is used to program backups on a weekly basis. Introduzca 1 si desea realizar una copia de seguridad semanal. Introduzca 1 si desea realizar una copia de seguridad semanal. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.</p></li>
+<li><p><strong>Every X month(s), Xth day at X</strong>: This option is used to program backups on a monthly basis. Introduzca 1 si desea realizar una copia de seguridad mensual. Introduzca 1 si desea realizar una copia de seguridad mensual.</p></li>
+<li><p><strong>Every X MB</strong>: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Puede definir un límite de tamaño de 1, 10, 100 o 1000 MB.</p></li>
 </ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/es/WebServer/webServerConfig.html"><span class="arrow-prev">← </span><span>Configuración</span></a><a class="docs-next button" href="/docs/Rx/es/WebServer/webServerObject.html"><span>Objeto servidor web</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#iniciar-el-servidor-web-4d">Iniciar el servidor Web 4D</a></li><li><a href="#detener-el-servidor-web-4d">Detener el servidor Web 4D</a></li><li><a href="#probar-el-servidor-web-4d">Probar el servidor Web 4D</a></li><li><a href="#borrar-la-caché">Borrar la caché</a></li><li><a href="#explorador-de-ejecución">Explorador de ejecución</a></li><li><a href="#url-para-la-administración">URL para la administración</a><ul class="toc-headings"><li><a href="#4dstats">/4DSTATS</a></li><li><a href="#4dhtmlstats">/4DHTMLSTATS</a></li><li><a href="#4dcacheclear">/4DCACHECLEAR</a></li><li><a href="#4dwebtest">/4DWEBTEST</a></li></ul></li><li><a href="#logs">Logs</a><ul class="toc-headings"><li><a href="#httpdebuglogtxt">HTTPDebugLog.txt</a></li><li><a href="#logwebtxt">logweb.txt</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

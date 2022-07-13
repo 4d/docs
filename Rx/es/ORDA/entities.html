@@ -87,7 +87,7 @@
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="entidades-y-referencias"></a><a href="#entidades-y-referencias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entidades y referencias</h2>
 <p>Una entidad contiene una referencia a un registro 4D. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.</p>
-<p>If you execute the following code:</p>
+<p>Si ejecuta el siguiente código:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$e1</span>; <span class="hljs-variable">$e2 </span>: cs.EmployeeEntity
  <span class="hljs-variable">$e1</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//access the employee with ID 1</span>
  <span class="hljs-variable">$e2</span>:=<span class="hljs-variable">$e1</span>
@@ -132,10 +132,10 @@
 <p>For more information on the attribute kind, please refer to the <a href="/docs/Rx/es/ORDA/dsmapping.html#storage-and-relation-attributes">Storage and Relation attributes</a> paragraph.</p>
 </blockquote>
 <p>Por ejemplo, para definir un atributo de almacenamiento:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//obtener el atributo de Employee con ID 1</span>
- <span class="hljs-variable">$name</span>:=<span class="hljs-variable">$entity</span>.lastname <span class="hljs-comment">//obtener el nombre del empleado, por ejemplo "Smith"</span>
-<span class="hljs-variable">$entity</span>.lastname:=<span class="hljs-string">"Jones"</span> <span class="hljs-comment">//definir el nombr del empleado</span>
-<span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//guardar los cambios</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//get employee attribute with ID 1</span>
+ <span class="hljs-variable">$name</span>:=<span class="hljs-variable">$entity</span>.lastname <span class="hljs-comment">//get the employee name, e.g. "Smith"</span>
+ <span class="hljs-variable">$entity</span>.lastname:=<span class="hljs-string">"Jones"</span> <span class="hljs-comment">//set the employee name</span>
+ <span class="hljs-variable">$entity</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//save the modifications</span>
 </code></pre>
 <blockquote>
 <p>Database Blob fields (<a href="/docs/Rx/es/Concepts/blob.html">scalar blobs</a> are automatically converted to and from blob object attributes (<a href="/docs/Rx/es/Concepts/blob.html"><code>4D.Blob</code></a>) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.</p>
@@ -219,7 +219,7 @@
 <p>A new entity selection is <strong>shareable</strong> in the following cases:</p>
 <ul>
 <li>the new entity selection results from an ORDA class function applied to a dataClass: <a href="/docs/Rx/es/API/DataClassClass.html#all">dataClass.all()</a>, <a href="/docs/Rx/es/API/DataClassClass.html#fromcollection">dataClass.fromCollection()</a>, <a href="/docs/Rx/es/API/DataClassClass.html#query">dataClass.query()</a>,</li>
-<li>the new entity selection is based upon a relation <a href="/docs/Rx/es/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. &quot;company.employees&quot;) when <em>attributeName</em> is a one-to-many related attribute but the entity does not belong to an entity selection.</li>
+<li>the new entity selection results from one of the various ORDA class functions applied to an existing entity selection (<a href="/docs/Rx/es/API/EntitySelectionClass.html#query">.query()</a>, <a href="/docs/Rx/es/API/EntitySelectionClass.html#slice">.slice()</a>, etc.) .</li>
 <li>the new entity selection is explicitely copied as shareable with <a href="/docs/Rx/es/API/EntitySelectionClass.html#copy">entitySelection.copy()</a> or <code>OB Copy</code> (i.e. with the <code>ck shared</code> option).</li>
 </ul>
 <p>Ejemplo:</p>
@@ -236,7 +236,7 @@
 </code></pre>
 <p>A new entity selection <strong>inherits</strong> from the original entity selection nature in the following cases:</p>
 <ul>
-<li>the new entity selection results from one of the various ORDA class functions applied to an existing entity selection (<a href="/docs/Rx/es/API/EntitySelectionClass.html#query">.query()</a>, <a href="/docs/Rx/es/API/EntitySelectionClass.html#slice">.slice()</a>, etc.) .</li>
+<li>the new entity selection is based upon a relation <a href="/docs/Rx/es/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. .</li>
 <li>la nueva selección de entidades se basa en una relación:
 <ul>
 <li><a href="/docs/Rx/es/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. &quot;company.employees&quot;) when <em>attributeName</em> is a one-to-many related attribute and the entity belongs to an entity selection (same nature as <a href="/docs/Rx/es/API/EntityClass.html#getselection">.getSelection()</a> entity selection),</li>
@@ -265,7 +265,7 @@ var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable"
 <span class="hljs-function">CALL WORKER</span>(<span class="hljs-string">"mailing"</span>; <span class="hljs-string">"sendMails"</span>; <span class="hljs-variable">$paid</span>; <span class="hljs-variable">$unpaid</span>)
 
 </code></pre>
-<p>The <code>sendMails</code> method:</p>
+<p>El método <code>sendMails</code>:</p>
 <pre><code class="hljs css language-4d">
  #<span class="hljs-function">DECLARE </span>(<span class="hljs-variable">$paid </span>: cs.InvoicesSelection; <span class="hljs-variable">$unpaid </span>: cs.InvoicesSelection)<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$invoice </span>: cs.InvoicesEntity<span class="hljs-keyword">
@@ -348,12 +348,12 @@ var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable"
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="bloqueo-pesimista"></a><a href="#bloqueo-pesimista" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bloqueo pesimista</h3>
 <p>You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.</p>
-<p>Esta funcionalidad se basa en dos funciones de la clase <code>Entity</code>:</p>
+<p>This feature is based upon two functions of the <code>Entity</code> class:</p>
 <ul>
 <li><a href="/docs/Rx/es/API/EntityClass.html#lock"><code>entity.lock()</code></a></li>
 <li><a href="/docs/Rx/es/API/EntityClass.html#unlock"><code>entity.unlock()</code></a></li>
 </ul>
-<p>Para más información, consulte las descripciones de estas funciones.</p>
+<p>For more information, please refer to the descriptions for these functions.</p>
 <blockquote>
 <p>Pessimistic locks can also be handled through the <a href="/docs/Rx/es/REST/lock.html">REST API</a>.</p>
 </blockquote>

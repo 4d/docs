@@ -24,12 +24,12 @@
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>city <span class="hljs-comment">// devuelve el nombre de la ciudad</span>
 </code></pre>
 <blockquote>
-<p>In the ORDA world, ds.Company is a <strong>dataclass</strong>. ds.Company.city is an <strong>attribute</strong>.</p>
+<p>In the ORDA world, a record is an <strong>entity</strong> -- an entity is itself an object. A command that is attached to a specific object is called a <strong>member method</strong>.</p>
 </blockquote>
 <blockquote>
-<p>ORDA es sensible a las mayúsculas y minúsculas. <code>ds.company.city</code> will not refer to the ds.Company.city attribute.</p>
+<p>ORDA es sensible a las mayúsculas y minúsculas. <code>ds.company.city</code> will not refer to the ds. Company.city attribute.</p>
 </blockquote>
-<p>You have also noticed the extra <code>hires</code> property in the ds.Company dataclass. It does not correspond to a field. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
+<p>You have also noticed the extra <code>hires</code> property in the ds. Company dataclass. No corresponde a un campo. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
 <p><img src="/docs/Rx/assets/en/ORDA/struc2s.png" alt=""> <em>Name of the relation as defined in the Inspector</em></p>
 <p>It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:</p>
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>hires <span class="hljs-comment">//devuelve la lista de empleados</span>
@@ -38,7 +38,7 @@
 <h2><a class="anchor" aria-hidden="true" id="añadir-datos"></a><a href="#añadir-datos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Añadir datos</h2>
 <p>In ORDA, you can add a record to a dataclass using the <code>new()</code> command.</p>
 <blockquote>
-<p>In the ORDA world, a record is an <strong>entity</strong> -- an entity is itself an object. A command that is attached to a specific object is called a <strong>member method</strong>.</p>
+<p>In the ORDA world, ds. Company is a <strong>dataclass</strong>. A command that is attached to a specific object is called a <strong>member method</strong>.</p>
 </blockquote>
 <pre><code class="hljs css language-code4d"><span class="hljs-symbol">$e</span>ntity:=ds.Company.<span class="hljs-keyword">new</span>() <span class="hljs-comment">//create a new entity reference</span>
 <span class="hljs-comment">//in the Company dataclass  </span>
