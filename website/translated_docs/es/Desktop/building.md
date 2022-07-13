@@ -424,7 +424,7 @@ El escenario básico es:
 2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
     - `DatabaseToEmbedInClientWinFolder`
     - `DatabaseToEmbedInClientMacFolder`
-3. Genere la aplicación cliente-servidor. This will have following effects:
+3. Genere la aplicación cliente-servidor. Esto tendrá los siguientes efectos:
     - the whole folder of the single user application is copied inside the "Database" folder of the merged client
     - the *EnginedServer.4Dlink* file of the "Database" folder is not generated
     - the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
@@ -486,7 +486,7 @@ The page lists the elements loaded by the current 4D application:
 
 *   **Type** column - Indicates the type of item: Plug-in, Component, or Module.
 
-### Adding plug-ins or components
+### Añadiendo plug-ins o componentes
 
 If you want to integrate other plug-ins or components into the executable application, you just need to place them in a **PlugIns** or **Components** folder next to the 4D Volume Desktop application or next to the 4D Server application. The mechanism for copying the contents of the source application folder (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)) can be used to integrate any type of file into the executable application.
 
@@ -687,7 +687,7 @@ El siguiente gráfico ilustra esta funcionalidad:
 When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
 
 
-## Management of client connection(s)
+## Gestión de la conexión(es) de las aplicaciones clientes
 
 The management of connections by client applications covers the mechanisms by which a merged client application connects to the target server, once it is in its production environment.
 
@@ -711,7 +711,7 @@ The whole procedure is described in the following diagram:
 
 
 
-### Storing the last server path
+### Almacenando la última ruta del servidor
 
 The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. Esta carpeta se guarda en la siguiente ubicación:
 
@@ -750,7 +750,7 @@ Here is the scenario for updating a server or merged single-user application:
 
 1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
 2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).
-3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. The former version is renamed.
+3. In the application in production, call the `RESTART 4D` command: this command automatically triggers execution of a utility program named "updater" that exits the current application, replaces it using the "pending" update if one is specified, and restarts the application with the current data file. La versión anterior ha sido renombrada.
 
 > This sequence is compatible with Windows server applications run as a Service.
 

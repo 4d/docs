@@ -75,7 +75,7 @@ The effect varies depending on the target element. Por ejemplo:
 
 The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
 
-## Show documentation
+## Mostrar la documentación
 
 The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. Por ejemplo:
 

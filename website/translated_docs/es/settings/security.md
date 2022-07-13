@@ -7,7 +7,7 @@ This page contains options related to data access and protection for your deskto
 
 **Note**: For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
-## Data Access / Remote Users Access
+## Acceso a datos / Acceso a usuarios remotos
 
 > These settings do not apply to project databases opened in single-user mode.
 

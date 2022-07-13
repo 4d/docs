@@ -99,7 +99,7 @@ Since 4D View Pro is a built-in 4D component, you can access its list of methods
 
 For a detailed list of component methods, see [Method list](method-list.md).
 
-### Addressing a 4D View Pro area
+### Abordando un área 4D View Pro
 
 A 4D View Pro area handles several objects and elements.
 

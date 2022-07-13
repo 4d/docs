@@ -31,7 +31,7 @@ Function onError($request : 4D.HTTPRequest; $event : Object)
 //My onError method, if you want to handle the request asynchronously
 ```
 
-You can now create your request:
+Ahora puede crear su petición:
 
 ```4d
 var $headers : Object
@@ -47,7 +47,7 @@ $request.wait() //If you want to handle the request synchronously
 //Now you can use $request.response to access the result of the request or $request.error to check the error that happened.
 ```
 
-### HTTPRequest Object
+### Objeto HTTPRequest
 
 An HTTPRequest object is a non-sharable object.
 
@@ -78,11 +78,11 @@ HTTPRequest objects provide the following properties and functions:
 **4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parámetros | Tipo           |    | Descripción                      |
-| ---------- | -------------- |:--:| -------------------------------- |
-| url        | Texto          | -> | URL to which to send the request |
-| options    | Objeto         | -> | Request configuration properties |
-| Resultado  | 4D.HTTPRequest | <- | New HTTPRequest object           |
+| Parámetros | Tipo           |    | Descripción                                 |
+| ---------- | -------------- |:--:| ------------------------------------------- |
+| url        | Texto          | -> | URL a la que enviar la solicitud            |
+| options    | Objeto         | -> | Propiedades de configuración de la petición |
+| Resultado  | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest                    |
 <!-- END REF -->
 
 
@@ -92,7 +92,7 @@ The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->cr
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
-In *url*, pass the URL where you want to send the request. The syntax to use is:
+In *url*, pass the URL where you want to send the request. La sintaxis a utilizar es:
 
 ```
 {http://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
@@ -124,26 +124,26 @@ En el parámetro *options*, pase un objeto que pueda contener las siguientes pro
 | dataType             | Texto                                           | Type of the response body attribute. Values: "text", "blob", "object", or "auto". If "auto", the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise) | "auto"       |
 | encoding             | Texto                                           | Used only in case of requests with a `body` (`post` or `put` methods). Encoding of the request body content if it's a text, ignored if content-type is set inside the headers                                                                                     | "UTF-8"      |
 | headers              | Objeto                                          | Encabezados de la petición. Syntax: `headers.key=value` (*value* can be a Collection if the same key must appear multiple times)                                                                                                                                  | Empty object |
-| method               | Texto                                           | "POST", "GET", or other method                                                                                                                                                                                                                                    | "GET"        |
+| method               | Texto                                           | "POST", "GET" u otro método                                                                                                                                                                                                                                       | "GET"        |
 | minTLSVersion        | Texto                                           | Sets the minimum version of TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                               | "`TLSv1_2`"  |
 | onData               | [Function](#FunctionClass.md)                   | Callback when data from the body is received. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                      | indefinido   |
-| onError              | [Function](#FunctionClass.md)                   | Callback when an error occurs. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                                     | indefinido   |
+| onError              | [Function](#FunctionClass.md)                   | Retrollamada cuando ocurre un error. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                               | indefinido   |
 | onHeaders            | [Function](#FunctionClass.md)                   | Callback when the headers are received. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                            | indefinido   |
 | onResponse           | [Function](#FunctionClass.md)                   | Callback when a response is received. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                              | indefinido   |
-| onTerminate          | [Function](#FunctionClass.md)                   | Callback when the request is over. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                                 | indefinido   |
-| protocol             | Texto                                           | "auto" or "HTTP1". "auto" means HTTP1 in the current implementation                                                                                                                                                                                               | "auto"       |
+| onTerminate          | [Function](#FunctionClass.md)                   | Retrollamada cuando la petición haya terminado. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                    | indefinido   |
+| protocol             | Texto                                           | "auto" o "HTTP1". "auto" means HTTP1 in the current implementation                                                                                                                                                                                                | "auto"       |
 | proxyAuthentication  | [authentication object](#authentication-object) | Object handling proxy authentication                                                                                                                                                                                                                              | indefinido   |
 | serverAuthentication | [authentication object](#authentication-object) | Object handling server authentication                                                                                                                                                                                                                             | indefinido   |
 | returnResponseBody   | Booleano                                        | If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined                                                                                                                            | True         |
 | timeout              | Real                                            | Tiempo de espera en segundos. Indefinido = sin tiempo de espera                                                                                                                                                                                                   | Indefinido   |
 
-#### Callback functions
+#### Función callback (retrollamada)
 
 All callback functions receive two object parameters:
 
 | Parámetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
-| $param1    | [`HTTPRequest` object](#httprequest-object) |
+| $param1    | [objeto `HTTPRequest`](#httprequest-object) |
 | $param2    | [`Event` objeto](#event-object)             |
 
 
@@ -175,8 +175,8 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 | Propiedad  | Tipo  | Descripción                                              | Por defecto |
 | ---------- | ----- | -------------------------------------------------------- | ----------- |
-| name       | Texto | Name used for authentication                             | indefinido  |
-| contraseña | Texto | Password used for authentication                         | indefinido  |
+| name       | Texto | Nombre usado para la autenticación                       | indefinido  |
+| contraseña | Texto | Contraseña utilizada para la autenticación               | indefinido  |
 | method     | Texto | Method used for authentication:"basic", "digest", "auto" | "auto"      |
 
 
@@ -224,7 +224,7 @@ Here is the contents of the `.errors` property:
 
 | Propiedad |                       | Tipo       | Descripción                                           |
 | --------- | --------------------- | ---------- | ----------------------------------------------------- |
-| errors    |                       | Collection | 4D error stack in case of error                       |
+| errors    |                       | Collection | Pila de error 4D en caso de error                     |
 |           | [].errCode            | Número     | Código de error 4D                                    |
 |           | [].message            | Texto      | Descripción del error 4D                              |
 |           | [].componentSignature | Texto      | Firma del componente interno que ha devuelto el error |
@@ -254,7 +254,7 @@ The `.headers` property contains <!-- REF #4D.HTTPRequest.headers.Summary -->the
 
 #### Descripción
 
-The `.method` property contains <!-- REF #4D.HTTPRequest.method.Summary -->the `method` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains "GET". 
+The `.method` property contains <!-- REF #4D.HTTPRequest.method.Summary -->the `method` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Si fue omitido, contiene "GET". 
 
 <!-- END REF -->
 
@@ -285,10 +285,10 @@ A `response` object is a non-sharable object. It provides the following properti
 
 | Propiedad   | Tipo    | Descripción                                                                                                                                                             |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Body of the response. The type of the message is defined according to the [`dataType`](#datatype) property. Undefined if the body has not been received yet             |
+| .body       | Variant | Cuerpo de la respuesta. The type of the message is defined according to the [`dataType`](#datatype) property. Undefined if the body has not been received yet           |
 | .headers    | Objeto  | Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet. |
-| .status     | Número  | Status code of the response                                                                                                                                             |
-| .statusText | Texto   | Message explaining the status code                                                                                                                                      |
+| .status     | Número  | Código de estado de la respuesta                                                                                                                                        |
+| .statusText | Texto   | Mensaje explicando el código de estado                                                                                                                                  |
 
 
 
@@ -323,7 +323,7 @@ The `.returnResponseBody` property contains <!-- REF #4D.HTTPRequest.returnRespo
 
 #### Descripción
 
-> This function is thread-safe.
+> Esta función es hilo seguro.
 
 The `.terminate()` function <!-- REF #4D.HTTPRequest.terminate().Summary -->aborta la petición HTTP<!-- END REF -->. It triggers the `onTerminate` event. 
 
@@ -365,7 +365,7 @@ The `.timeout` property contains <!-- REF #4D.HTTPRequest.timeout.Summary -->the
 
 #### Descripción
 
-The `.url` property contains <!-- REF #4D.HTTPRequest.url.Summary -->the URL of the HTTP request<!-- END REF -->. 
+The `.url` property contains <!-- REF #4D.HTTPRequest.url.Summary -->la URL de la petición HTTP<!-- END REF -->. 
 
 <!-- END REF -->
 
@@ -381,13 +381,13 @@ The `.url` property contains <!-- REF #4D.HTTPRequest.url.Summary -->the URL of 
 | Parámetros | Tipo           |    | Descripción                                      |
 | ---------- | -------------- |:--:| ------------------------------------------------ |
 | time       | Real           | -> | Maximum time in seconds to wait for the response |
-| Resultado  | 4D.HTTPRequest | <- | HTTPRequest object                               |
+| Resultado  | 4D.HTTPRequest | <- | Objeto HTTPRequest                               |
 <!-- END REF -->
 
 
 #### Descripción
 
-> This function is thread-safe.
+> Esta función es hilo seguro.
 
 The `4D.HTTPRequest.wait()` function <!-- REF #4D.HTTPRequest.wait().Summary -->waits for the response from the server<!-- END REF -->.
 

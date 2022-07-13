@@ -112,7 +112,6 @@
 			"settings/interface",
 			"settings/compiler",
 			"settings/database",
-			"settings/moving",
 			"settings/backup",
 			"settings/client-server",
 			"settings/web",

@@ -63,7 +63,7 @@ This powerful principle meets most needs related to text transformation. Note, h
 
 To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time: C178`.
 
-### Using the "." as decimal separator
+### Utilizando el "." como separador decimal
 
 4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Los parámetros regionales se ignoran. This feature facilitates code maintenance and compatibility between 4D languages and versions.
 
@@ -161,7 +161,7 @@ End if
 ```
 
 
-Here are the 4DCODE tag features:
+Aquí están las características de la etiqueta 4DCODE:
 
 - The `TRACE` command is supported and activates the 4D debugger, thus allowing you to debug your template code.
 - Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.
@@ -354,7 +354,7 @@ In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar
 > For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
 
-## 4DIF, 4DELSE, 4DELSEIF and 4DENDIF
+## 4DIF, 4DELSE, 4DELSEIF y 4DENDIF
 
 #### Syntax: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
@@ -580,7 +580,7 @@ Por ejemplo, el siguiente código:
 <!--#4DENDLOOP-->
 ```
 
-...produces the following result:
+...produce el siguiente resultado:
 
 ```
 0

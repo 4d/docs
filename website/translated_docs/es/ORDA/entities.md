@@ -32,7 +32,7 @@ $myEntity.save() //save the entity
 
 Una entidad contiene una referencia a un registro 4D. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
 
-If you execute the following code:
+Si ejecuta el siguiente código:
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
@@ -271,7 +271,7 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
 
-The `sendMails` method:
+El método `sendMails`:
 
 ```4d 
 

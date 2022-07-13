@@ -66,7 +66,7 @@ This area indicates the server log files recording duration (when log files are 
 
 Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
 
-### Start/Stop Request and Debug Logs
+### Iniciar/Detener Solicitud y Depurar Registros
 
 The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
 
@@ -78,7 +78,7 @@ When the logs have been activated, the button title changes to **Stop Request an
 
 The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
-### Load logs configuration file
+### Cargar archivo de configuración de logs
 
 This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 

@@ -58,7 +58,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 The Enterable attribute indicates whether users can enter values into the object.
 
-Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Un objeto no editable sólo muestra datos. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+Los objetos son editables por defecto. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Un objeto no editable sólo muestra datos. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
@@ -99,26 +99,26 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Filtro de entrada                      | Descripción                                                                                                                                           |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                                     | Permitir la entrada de toda letra, pero convertir a mayúsculas.                                                                                       |
-| &9                                     | Permitir sólo números.                                                                                                                                |
-| &A                                     | Allow only capital letters.                                                                                                                           |
-| &a                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                       |
-| &@                                     | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                 |
-| ~a##                                   | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                  |
-| !0&9##/##/##                           | Standard date entry format. Display zeros in entry spaces. Permitir cualquier número.                                                                 |
-| !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Display zeros in entry spaces. Permitir cualquier número. Limitado a horas y minutos.                                     |
-| !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Display zeros in entry spaces. Permitir cuatro números, separados por dos puntos.             |
-| !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Display zeros in entry spaces. Permitir dos números antes de cada palabra.                                                |
-| !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Display zeros in entry spaces. Permitir dos números después de cada palabra.                                              |
-| !0&9##-##-##-##                        | Local telephone number format. Display zeros in entry spaces. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                       |
-| !_&9(###)!0###-####                    | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                  |
-| !0&9###-###-###                        | Long distance telephone number. Display zeros in entry spaces. Permitir cualquier número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                         | Número de la Seguridad Social. Display zeros in entry spaces. Permitir cualquier número.                                                              |
-| ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                         |
-| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                  |
-| &"0-9;.;-"                             | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                |
+| Filtro de entrada                      | Descripción                                                                                                                                                             |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                                     | Permitir la entrada de toda letra, pero convertir a mayúsculas.                                                                                                         |
+| &9                                     | Permitir sólo números.                                                                                                                                                  |
+| &A                                     | Permitir sólo letras mayúsculas.                                                                                                                                        |
+| &a                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                                         |
+| &@                                     | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                                   |
+| ~a##                                   | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                                    |
+| !0&9##/##/##                           | Formato de entrada de fechas estándar. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                             |
+| !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Limitado a horas y minutos.                                            |
+| !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Mostrar ceros en los espacios de entrada. Permitir cuatro números, separados por dos puntos.                    |
+| !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números antes de cada palabra.                                                       |
+| !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números después de cada palabra.                                                     |
+| !0&9##-##-##-##                        | Formato de número de teléfono local. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                        |
+| !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Display underscores in first three entry spaces, zeros in remainder.                                                             |
+| !0&9###-###-###                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Three entries, hyphen, three entries, hyphen, four entries. |
+| !0&9###-##-###                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                     |
+| ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                           |
+| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                    |
+| &"0-9;.;-"                             | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                                  |
 
 
 #### Gramática JSON
@@ -180,9 +180,9 @@ By default, the object uses the current keyboard layout.
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                            |
-| --------------- | -------------- | --------------------------------------------------------------------------- |
-| keyboardDialect | texto          | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| Nombre          | Tipos de datos | Valores posibles                                                          |
+| --------------- | -------------- | ------------------------------------------------------------------------- |
+| keyboardDialect | texto          | Language code, for example "ar-ma" or "cs". Ver RFC3066, ISO639 e ISO3166 |
 
 
 #### Objetos soportados
@@ -236,7 +236,7 @@ The placeholder text is displayed again if the contents of the field is erased.
 
 A placeholder can be displayed for the following types of data:
 
-- string (text or alpha)
+- cadena (text o alpha)
 - date and time when the **Blank if null** property is enabled.
 
 You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example: 
@@ -297,15 +297,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                            |
-| --------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | booleano       | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                                                                                                  |
-| shortcutAlt     | booleano       | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutCommand | booleano       | true, false                                                                                                                                                                                                                                                                                 |
-| shortcutControl | booleano       | true, false (macOS: Control)                                                                                                                                                                                                                                                                |
-| shortcutShift   | booleano       | true, false                                                                                                                                                                                                                                                                                 |
-|                 |                |                                                                                                                                                                                                                                                                                             |
-| shortcutKey     | cadena         | <li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
+| Nombre          | Tipos de datos | Valores posibles                                                                                                                                                                                                                                                                                 |
+| --------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| shortcutAccel   | booleano       | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                                                                                                       |
+| shortcutAlt     | booleano       | true, false                                                                                                                                                                                                                                                                                      |
+| shortcutCommand | booleano       | true, false                                                                                                                                                                                                                                                                                      |
+| shortcutControl | booleano       | true, false (macOS: Control)                                                                                                                                                                                                                                                                     |
+| shortcutShift   | booleano       | true, false                                                                                                                                                                                                                                                                                      |
+|                 |                |                                                                                                                                                                                                                                                                                                  |
+| shortcutKey     | cadena         | <li>toda llave de caracter: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]" |
 
 
 #### Objetos soportados

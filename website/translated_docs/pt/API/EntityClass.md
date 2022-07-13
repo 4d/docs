@@ -54,7 +54,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 
 #### Descrição
 
-Any dataclass attribute is available as a property of an entity, which<!-- REF EntityClass.attributeName. Summary -->stores the attribute value for the entity<!-- END REF -->.
+Qualquer atributo dataclass está disponível como propriedade de uma entidade, que <!-- REF EntityClass.attributeName.Summary -->armazena o valor do atributo para a entidade<!-- END REF -->.
 > Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
 The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
@@ -90,21 +90,21 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 
 
 <!-- REF #EntityClass.clone().Syntax -->
-If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.<!-- END REF -->
+**.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
-| Parameter | Type       |    | Descrição                         |
-| --------- | ---------- |:--:| --------------------------------- |
-| Resultado | 4D. Entity | <- | New entity referencing the record |
+| Parameter | Type       |    | Descrição                              |
+| --------- | ---------- |:--:| -------------------------------------- |
+| Resultado | 4D. Entity | <- | Nova entidade referenciando o registro |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.clone()` function<!-- REF #EntityClass.clone(). Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. This function allows you to update entities separately.
+A função `.clone()`<!-- REF #EntityClone().clone().Summary -->cria em memória uma nova entidade referenciando o mesmo registro que a entidade original<!-- END REF -->. Esta função permite que você atualize as entidades separadamente.
 > Keep in mind that any modifications done to entities will be saved in the referenced record only when the [`.save( )`](#save) function is executed.
 
-This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which [`.isNew()`](#isnew) returns **True**).
+Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
 
 
 #### Exemplo
@@ -138,35 +138,35 @@ This function can only be used with entities already saved in the database. It c
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parameter           | Type       |    | Descrição                                      |
-| ------------------- | ---------- |:--:| ---------------------------------------------- |
-| entityToCompare     | 4D. Entity | -> | Entity to be compared with the original entity |
-| attributesToCompare | Coleção    | -> | Name of attributes to be compared              |
-| Resultado           | Coleção    | <- | Differences between the entities               |
+| Parameter           | Type       |    | Descrição                                        |
+| ------------------- | ---------- |:--:| ------------------------------------------------ |
+| entityToCompare     | 4D. Entity | -> | Entidade a ser comparada com a entidade original |
+| attributesToCompare | Coleção    | -> | Nome dos atributos a serem comparados            |
+| Resultado           | Coleção    | <- | Diferenças entre as entidades                    |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.diff()` function<!-- REF #EntityClass.diff(). Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compara o conteúdo de duas entidades e retorna suas diferenças<!-- END REF -->.
 
-In *entityToCompare*, pass the entity to be compared to the original entity.
+No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
-In *attributesToCompare*, you can designate specific attributes to compare. If provided, the comparison is done only on the specified attributes. If not provided, all differences between the entities are returned.
+Em *attributesToCompare*, pode designar atributos específicos para comparar. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.
 
-The differences are returned as a collection of objects whose properties are:
+As diferenças são retornadas como uma coleção de objetos cujas propriedades são:
 
-| Property name | Type                            | Descrição                                   |
-| ------------- | ------------------------------- | ------------------------------------------- |
-| attributeName | String                          | Name of the attribute                       |
-| value         | any - Depends on attribute type | Value of the attribute in the entity        |
-| otherValue    | any - Depends on attribute type | Value of the attribute in *entityToCompare* |
+| Property name | Type                              | Descrição                              |
+| ------------- | --------------------------------- | -------------------------------------- |
+| attributeName | String                            | Nome do atributo                       |
+| value         | any - Depende do tipo de atributo | Valor do atributo na entidade          |
+| otherValue    | any - Depende do tipo de atributo | Valor do atributo em *entityToCompare* |
 
-Only attributes with different values are included in the collection. If no differences are found, `.diff()` returns an empty collection.
+Apenas atributos com valores diferentes estão incluídos na coleção. Se nenhuma diferença for encontrada, `.diff()` retorna uma coleção vazia.
 
-The function applies for properties whose [kind](DataClassAttributeClass.md#kind) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
+A função se aplica para propriedades cujo [tipo](DataClassAttributeClass.md#kind) é **de armazenamento** ou **relacionada a Entidade**. No caso de uma entidade relacionada ter sido atualizada (ou seja, a chave estrangeira), o nome da entidade relacionada e seu nome de chave primária são retornados como propriedades *attributeName* ( value** e *outroValue* estão vazios para o nome da entidade relacionada).
 
-If one of the compared entities is **Null**, an error is raised.
+Se uma das entidades comparadas for **Null**, um erro é gerado.
 
 #### Exemplo 1
 

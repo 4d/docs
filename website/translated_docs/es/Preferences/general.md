@@ -73,7 +73,7 @@ If this option is checked, when the user switches to the Application environment
 
 If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
 
-*   **Database...**
+*   **Base de datos...**
 *   **Base de datos a partir de una definición de estructura...**
 
 ![](assets/en/Preferences/general5.png)

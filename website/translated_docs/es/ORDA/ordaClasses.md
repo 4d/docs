@@ -7,7 +7,7 @@ title: Clases del modelo de datos
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
 
-For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple as calling:
+For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. Sería tan sencillo como llamar:
 
 ```4d
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
@@ -94,7 +94,7 @@ Function getDesc
 ```
 
 
-This function can then be called:
+Esta función puede ser llamada:
 
 ```4d
 $desc:=ds.getDesc() //"Database exposing..."
@@ -647,7 +647,7 @@ A [computed attribute](#computed-attributes-1) can be used in an alias path, but
 > ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
 
 
-### Using alias attributes
+### Uso de los atributos alias
 
 Alias attributes are read-only (except when based upon a scalar attribute of the same dataclass, see the last example below). They can be used instead of their target attribute path in class functions such as:
 

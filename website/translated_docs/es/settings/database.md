@@ -30,7 +30,7 @@ The current location of this folder is displayed in the "Current:" area. You can
 
 ![](assets/en/settings/temporary-file-location.png)
 
-Three location options are provided:
+Se ofrecen tres opciones de ubicación:
 
 -   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. The files are put into a subfolder whose name consists of the database name and a unique identifier.
 -   **Data File Folder** (default option): When this option is selected, the 4D temporary files are created in a folder named "temporary files" located at the same level as the data file of the database.

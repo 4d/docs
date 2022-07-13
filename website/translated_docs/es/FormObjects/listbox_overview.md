@@ -157,7 +157,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Conjunto resaltado](properties_ListBox.md#highlight-set)                                 |                | X                  |                                       |
 | [Alineación horizontal](properties_Text.md#horizontal-alignment)                          | X              | X                  | X                                     |
 | [Color líneas horizontales](properties_Gridlines.md#horizontal-line-color)                | X              | X                  | X                                     |
-| [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding)               | X              | X                  | X                                     |
+| [Relleno horizontal](properties_CoordinatesAndSizing.md#horizontal-padding)               | X              | X                  | X                                     |
 | [Barra de desplazamiento horizontal](properties_Appearance.md#horizontal-scroll-bar)      | X              | X                  | X                                     |
 | [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing)            | X              | X                  | X                                     |
 | [Itálica](properties_Text.md#italic)                                                      | X              | X                  | X                                     |
@@ -191,7 +191,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Variable o expresión](properties_Object.md#variable-or-expression)                       | X              | X                  |                                       |
 | [Alineamiento vertical](properties_Text.md#vertical-alignment)                            | X              | X                  | X                                     |
 | [Color líneas verticales](properties_Gridlines.md#vertical-line-color)                    | X              | X                  | X                                     |
-| [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)                   | X              | X                  | X                                     |
+| [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding)                   | X              | X                  | X                                     |
 | [Barra de desplazamiento vertical](properties_Appearance.md#vertical-scroll-bar)          | X              | X                  | X                                     |
 | [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing)                | X              | X                  | X                                     |
 | [Visibilidad](properties_Display.md#visibility)                                           | X              | X                  | X                                     |
@@ -254,7 +254,7 @@ Los eventos formulario de los objetos list box o columnas de list box pueden dev
 | headerName       | texto        | Nombre del encabezado                                                 |
 | horizontalScroll | entero largo | Positive if scroll is towards the right, negative if towards the left |
 | isRowSelected    | booleano     | True si la línea está seleccionada, de lo contrario False             |
-| newPosition      | entero largo | New position of the column or row                                     |
+| newPosition      | entero largo | Nueva posición de la columna o línea                                  |
 | newSize          | entero largo | Nuevo tamaño (en píxeles) de la columna o línea                       |
 | oldPosition      | entero largo | Posición anterior de la columna o línea                               |
 | oldSize          | entero largo | Tamaño anterior (en píxeles) de la columna o línea                    |
@@ -455,8 +455,8 @@ You can then define specific background colors, font colors and/or font styles b
 To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
 
 Keep in mind that expressions are automatically re-evaluated each time the:
-- list box selection changes.
-- list box gets or loses the focus.
+- la selección de list box cambia.
+- list box obtiene o pierde el foco.
 - form window containing the list box becomes, or ceases to be, the frontmost window.
 
 
@@ -535,7 +535,7 @@ You can enable or disable standard user sorts by disabling the [Sortable](proper
 
 Standard sort support depends on the list box type:
 
-| List box type                  | Support of standard sort | Comentarios                                                                                                  |
+| Tipo de list box               | Support of standard sort | Comentarios                                                                                                  |
 | ------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | Colección de objetos           | Sí                       | <li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
 | Colección de valores escalares | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
@@ -551,14 +551,14 @@ Standard sort support depends on the list box type:
 
 The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
 
-Custom sorts allow you to:
+Los ordenamientos personalizados le permiten:
 
 - carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
 - use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
 
 #### Ejemplo
 
-You want to sort a list box using values of a property stored in a related object attribute. You have the following structure:
+You want to sort a list box using values of a property stored in a related object attribute. Tiene la siguiente estructura:
 
 ![](assets/en/FormObjects/relationLB.png)
 
@@ -578,7 +578,7 @@ If (Form event code=On Header Click)
 End if
 ```
 
-### Column header variable
+### Variable de encabezado de columna
 
 The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
 
@@ -885,7 +885,7 @@ To assign an object array to a list box column, you just need to set the object 
 
 Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. Estos tipos de columnas también se pueden ocultar.
 
-However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:
+However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Cada elemento de array puede definir:
 
 the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
 
@@ -906,12 +906,12 @@ ARRAY OBJECT(obColumn;0) //column array
 
 #### valueType y visualización de datos
 
-When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
+When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Los valores valueType soportados son:
 
 *   "text": para un valor de texto
 *   "real": for a numeric value that can include separators like a \<space>, <.>, o <,>
 *   "integer": para un valor entero
-*   "boolean": for a True/False value
+*   "boolean": para un valor True/False
 *   "color": para definir un color de fondo
 *   "event": para mostrar un botón con una etiqueta.
 
@@ -922,14 +922,14 @@ When a list box column is associated with an object array, the way a cell is dis
 | texto     | entrada de texto                                    | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | entrada de texto controlada (números y separadores) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | entrada de texto controlada (números únicamente)    | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| booleano  | casilla de selección                                | drop-down menu (required list)                                                                 |
+| booleano  | casilla de selección                                | menú desplegable (lista requerida)                                                             |
 | color     | color de fondo                                      | texto                                                                                          |
 | evento    | botón con etiqueta                                  |                                                                                                |
 |           |                                                     | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
 You set the cell display and options using specific attributes in each object (see below).
 
-#### Display formats and entry filters
+#### Formatos de visualización y filtros de entrada
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. Estos están listados en la siguiente tabla:
 
@@ -956,14 +956,14 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 | value                 | valor de la celda (entrada o salida)              | x     | x    | x       |          |       |        |
 | min                   | valor mínimo                                      |       | x    | x       |          |       |        |
 | max                   | valor máximo                                      |       | x    | x       |          |       |        |
-| behavior              | "threeStates" value                               |       |      | x       |          |       |        |
-| requiredList          | drop-down list defined in object                  | x     | x    | x       |          |       |        |
+| behavior              | Valor "tres Estados"                              |       |      | x       |          |       |        |
+| requiredList          | lista desplegable definida en objeto              | x     | x    | x       |          |       |        |
 | choiceList            | combo box definido en objeto                      | x     | x    | x       |          |       |        |
 | requiredListReference | 4D list ref, depends on "saveAs" value            | x     | x    | x       |          |       |        |
 | requiredListName      | Nombre de la lista 4D, depende del valor "saveAs" | x     | x    | x       |          |       |        |
 | saveAs                | "reference" o "value"                             | x     | x    | x       |          |       |        |
 | choiceListReference   | 4D list ref, display combo box                    | x     | x    | x       |          |       |        |
-| choiceListName        | 4D list name, display combo box                   | x     | x    | x       |          |       |        |
+| choiceListName        | Nombre de la lista 4D, mostrar combo box          | x     | x    | x       |          |       |        |
 | unitList              | array de X elementos                              | x     | x    | x       |          |       |        |
 | unitReference         | índice del elemento seleccionado                  | x     | x    | x       |          |       |        |
 | unitsListReference    | Ver lista de unidades 4D                          | x     | x    | x       |          |       |        |

@@ -18,7 +18,7 @@ title: 4D ライセンスの管理
 
 ## 初回のアクティベーション
 
-4D でおこなう場合は、**ヘルプ** メニューから **ライセンスマネージャー...** を選択します。 4D Server でおこなう場合は、4D Server アプリケーションを起動します。 [アクティベーションモード](#アクティベーションモード) を選択するダイアログボックスが表示されます。
+4D でおこなう場合は、**ヘルプ** メニューから **ライセンスマネージャー...** を選択します。 4D Server でおこなう場合は、4D Server アプリケーションを起動します。 アクティベーションモードを選択するダイアログボックスが表示されます。
 
 ![](assets/en/getStart/server1.png)
 
@@ -28,7 +28,7 @@ title: 4D ライセンスの管理
 
 ユーザーID (メールアドレスまたは 4Dアカウント) とパスワードを入力します。 既存のユーザーアカウントが無い場合、まず以下のアドレスから作成する必要があります:
 
-[https://account.4d.com/us/login.shtml](https://account.4d.com/us/login.shtml)
+[https://account.4d.com/ja/login.shtml](https://account.4d.com/ja/login.shtml)
 
 ![](assets/en/getStart/activ1.png)
 

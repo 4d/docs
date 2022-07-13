@@ -7,15 +7,15 @@ To help us make our products always better, we automatically collect data regard
 
 Esta página explica:
 
-- what information is collected
+- qué información se recopila
 - where information is stored and when it is sent to 4D
 
 
-## Collected information
+## Información recopilada
 
 Los datos se recogen durante los siguientes eventos:
 
-- 4D Server startup,
+- Inicio de 4D Server,
 - apertura de base de datos,
 - cierre de base de datos,
 - web server startup.
@@ -25,7 +25,7 @@ Los datos se recogen durante los siguientes eventos:
 | Datos         | Ejemplo                                                                                              | Notas                                                        |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | Nombre, tipo y velocidad del procesador                      |
-| numberOfCores | 4                                                                                                    | Total number of cores                                        |
+| numberOfCores | 4                                                                                                    | Número total de núcleos                                      |
 | memory        | 419430400                                                                                            | Volume of memory storage (in bytes) available on the machine |
 | system        | Microsoft Windows 10 Pro 1809 (17763.253)                                                            | Versión del sistema operativo y número de build              |
 | headless      | false                                                                                                | True if the application is running in headless mode          |
@@ -38,7 +38,7 @@ Los datos se recogen durante los siguientes eventos:
 
 | Datos                   | Ejemplo                                                 | Notas                                                                                 |
 | ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| id                      | hashed string                                           | Unique id associated to the database (*Polynomial Rolling hash of the database name*) |
+| id                      | cadena hashed                                           | Unique id associated to the database (*Polynomial Rolling hash of the database name*) |
 | dataFileSize            | 419430400                                               | Tamaño del archivo de datos en bytes                                                  |
 | indexesSize             | 419430400                                               | Tamaño del índice en bytes                                                            |
 | cacheSize               | 419430400                                               | Tamaño de caché en bytes                                                              |
@@ -47,7 +47,7 @@ Los datos se recogen durante los siguientes eventos:
 | isCompiled              | true                                                    | True si la aplicación está compilada                                                  |
 | isEngined               | true                                                    | True if the application is merged with 4D Volume Desktop                              |
 | isProjectMode           | true                                                    | True si la aplicación es un proyecto                                                  |
-| mobile                  | [{"os":"iOS", "version":"12.465", "simulator":"false"}] | Information on mobile sessions                                                        |
+| mobile                  | [{"os":"iOS", "version":"12.465", "simulator":"false"}] | Información sobre sesiones móviles                                                    |
 
 
 ### Collected per database at closure
@@ -59,13 +59,13 @@ Los datos se recogen durante los siguientes eventos:
 
 ### Collected per database at web server startup
 
-| Datos     | Ejemplo          | Notas       |
-| --------- | ---------------- | ----------- |
-| webServer | {"started":true} | Always true |
+| Datos     | Ejemplo          | Notas        |
+| --------- | ---------------- | ------------ |
+| webServer | {"started":true} | Siempre true |
 
 
 
-## When is it stored and sent?
+## ¿Cuándo se almacena y envia?
 
 Collected data is written in a text file (JSON format) when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv19/help/command/en/page485.html), i.e.:
 

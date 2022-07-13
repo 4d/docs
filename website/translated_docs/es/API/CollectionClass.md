@@ -776,7 +776,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -789,7 +789,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 | ---------- | ----------- |:--:| ---------------------------------------------------------- |
 | startFrom  | Integer     | -> | Índice para iniciar la prueba en                           |
 | formula    | 4D.Function | -> | Objeto formula                                             |
-| methodName | Texto       | -> | Name of a method                                           |
+| methodName | Texto       | -> | Nombre de un método                                        |
 | param      | Mixed       | -> | Parameter(s) to pass to *formula* or *methodName*          |
 | Resultado  | Booleano    | <- | True si todos los elementos han pasado la prueba con éxito |
 
@@ -998,7 +998,7 @@ En caso de incoherencia, se aplican las siguientes reglas:
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -1011,7 +1011,7 @@ En caso de incoherencia, se aplican las siguientes reglas:
 | Parámetros | Tipo        |    | Descripción                                                          |
 | ---------- | ----------- |:--:| -------------------------------------------------------------------- |
 | formula    | 4D.Function | -> | Objeto formula                                                       |
-| methodName | Texto       | -> | Name of a method                                                     |
+| methodName | Texto       | -> | Nombre de un método                                                  |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*                    |
 | Resultado  | Collection  | <- | Nueva colección que contiene elementos filtrados (copia superficial) |
 
@@ -1079,7 +1079,7 @@ Quiere filtrar los elementos según su tipo de valor:
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -1093,7 +1093,7 @@ Quiere filtrar los elementos según su tipo de valor:
 | ---------- | ----------- |:--:| ------------------------------------------------------- |
 | startFrom  | Integer     | -> | Índice para iniciar la búsqueda en                      |
 | formula    | 4D.Function | -> | Objeto formula                                          |
-| methodName | Texto       | -> | Name of a method                                        |
+| methodName | Texto       | -> | Nombre de un método                                     |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*       |
 | Resultado  | any         | <- | Primer valor encontrado, o Undefined si no se encuentra |
 
@@ -1168,7 +1168,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -1183,7 +1183,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 | ---------- | ----------- |:--:| ----------------------------------------------------------- |
 | startFrom  | Integer     | -> | Índice para iniciar la búsqueda en                          |
 | formula    | 4D.Function | -> | Objeto formula                                              |
-| methodName | Texto       | -> | Name of a method                                            |
+| methodName | Texto       | -> | Nombre de un método                                         |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*           |
 | Resultado  | Integer     | <- | Índice del primer valor encontrado, o -1 si no se encuentra |
 
@@ -1551,7 +1551,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -1564,7 +1564,7 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 | Parámetros | Tipo        |    | Descripción                                       |
 | ---------- | ----------- |:--:| ------------------------------------------------- |
 | formula    | 4D.Function | -> | Objeto formula                                    |
-| methodName | Texto       | -> | Name of a method                                  |
+| methodName | Texto       | -> | Nombre de un método                               |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName* |
 | Resultado  | Collection  | <- | Colección de valores transformados                |
 
@@ -1854,7 +1854,7 @@ Ordenar con una ruta de propiedad:
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -1867,7 +1867,7 @@ Ordenar con una ruta de propiedad:
 | Parámetros | Tipo        |    | Descripción                                        |
 | ---------- | ----------- |:--:| -------------------------------------------------- |
 | formula    | 4D.Function | -> | Objeto formula                                     |
-| methodName | Texto       | -> | Name of a method                                   |
+| methodName | Texto       | -> | Nombre de un método                                |
 | extraParam | any         | -> | Parámetro(s) a pasar                               |
 | Resultado  | Collection  | <- | Copia ordenada de la colección (copia superficial) |
 
@@ -2169,7 +2169,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -2182,7 +2182,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 | Parámetros | Tipo                                            |    | Descripción                                                                       |
 | ---------- | ----------------------------------------------- |:--:| --------------------------------------------------------------------------------- |
 | formula    | 4D.Function                                     | -> | Objeto formula                                                                    |
-| methodName | Texto                                           | -> | Name of a method                                                                  |
+| methodName | Texto                                           | -> | Nombre de un método                                                               |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *formula* or *methodName* |
 | param      | expresión                                       | -> | Parámetro(s) a pasar                                                              |
 | Resultado  | Text, Number, Object, Collection, Date, Boolean | <- | Resultado del valor del acumulador                                                |
@@ -2506,7 +2506,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -2520,7 +2520,7 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 | ---------- | ----------- |:--:| ------------------------------------------------------------ |
 | startFrom  | Integer     | -> | Índice para iniciar la prueba en                             |
 | formula    | 4D.Function | -> | Objeto formula                                               |
-| methodName | Texto       | -> | Name of a method                                             |
+| methodName | Texto       | -> | Nombre de un método                                          |
 | param      | Mixed       | -> | Parámetro(s) a pasar                                         |
 | Resultado  | Booleano    | <- | True si al menos un elemento ha superado la prueba con éxito |
 
@@ -2587,7 +2587,7 @@ You want to know if at least one collection value is >0.
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v19 R6  | Support of formula |
+| v19 R6  | Soporte de fórmula |
 | v16 R6  | Añadidos           |
 </details>
 
@@ -2600,7 +2600,7 @@ You want to know if at least one collection value is >0.
 | Parámetros | Tipo        |    | Descripción                 |
 | ---------- | ----------- |:--:| --------------------------- |
 | formula    | 4D.Function | -> | Objeto formula              |
-| methodName | Texto       | -> | Name of a method            |
+| methodName | Texto       | -> | Nombre de un método         |
 | extraParam | any         | -> | Parámetros del método       |
 | Resultado  | Collection  | <- | Colección original ordenada |
 

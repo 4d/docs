@@ -80,7 +80,7 @@ You can pass an object with additional properties for the named range in *option
 | Propiedad | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | scope     | Número | Alcance del rango. You can pass the sheet index (counting begins at 0) or use the following constants: <p><li>`vk current sheet`</li><li>`vk workbook`</li><p><p>El alcance determina si el nombre de un rango es local para una hoja de cálculo determinada (*scope*=sheet index or `vk current sheet`), o si es global a todo el libro de trabajo (*scope*=`vk workbook`). |
-| comment   | Texto  | Comment associated to named range                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| comment   | Texto  | Comentario asociado al rango nombrado                                                                                                                                                                                                                                                                                                                                                                                                                 |
 > * A named range is actually a named formula containing coordinates. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](#vp-add-formula-name) method to create named ranges.
 > * Formulas defining named ranges can be retrieved with the [`VP Get formula by name`](#vp-get-formula-by-name) method.
 
@@ -119,7 +119,7 @@ In *rangeObj*, pass a range object of cells to add to the current selection.
 
 #### Ejemplo
 
-You have cells currently selected:
+Actualmente tienes celdas seleccionadas:
 
 ![](assets/en/ViewPro/cmd_vpAddSelection1.PNG)
 
@@ -167,7 +167,7 @@ In *name*, you can pass a name for the new sheet. The new name cannot contain th
 
 #### Ejemplo
 
-The document currently has 3 sheets:
+El documento tiene actualmente 3 hojas:
 
 ![vp-document-with-3-sheets](assets/en/ViewPro/vp-sheet-3.png)
 
@@ -626,7 +626,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 The `VP Convert to picture` command <!-- REF #_method_.VP Convert to picture.Summary -->converts the *vpObject* 4D View Pro object (or the *rangeObj* range within *vpObject*) to a SVG picture<!-- END REF -->.
 
-This command is useful, for example:
+Este comando es útil, por ejemplo:
 
 * to embed a 4D View Pro document in an other document such as a 4D Write Pro document
 * to print a 4D View Pro document without having to load it into a 4D View Pro area.
@@ -699,7 +699,7 @@ You can pass an optional *options* parameter with the following properties:
 | Propiedad   | Tipo         | Descripción                                                                                                               |
 | ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | copy        | Booleano     | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* para eliminarlos. |
-| copyOptions | Entero largo | Specifies what is copied or moved. Valores posibles: <p><table><tr><th>Valor</th><th>Descripción</th></tr><tr><td>`vk clipboard options all` (por defecto)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia únicamente los formatos.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia sólo las fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia las fórmulas y el formato.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia sólo los valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>                                             |
+| copyOptions | Entero largo | Especifica lo que se copia o mueve. Valores posibles: <p><table><tr><th>Valor</th><th>Descripción</th></tr><tr><td>`vk clipboard options all` (por defecto)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia únicamente los formatos.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia sólo las fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia las fórmulas y el formato.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia sólo los valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia los valores y el formato.</td></tr></table></p>                                            |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -747,7 +747,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | rangeObj   | Objeto | -> | Objeto rango                                       |
-| tableName  | Texto  | -> | Name for the table                                 |
+| tableName  | Texto  | -> | Nombre de la tabla                                 |
 | source     | Texto  | -> | Data context property name to display in the table |
 | options    | Objeto | -> | Opciones adicionales                               |
 
@@ -763,8 +763,8 @@ In *rangeObj*, pass the cell range where the table will be created.
 
 In *tableName*, pass a name for the table. El nombre debe:
 
-* be unique in the sheet
-* include at least 5 characters
+* ser único en la hoja
+* incluir al menos 5 caracteres
 * no incluir espacios o empezar con un número
 
 In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. Esto vincula la tabla al contexto de datos. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
@@ -776,8 +776,8 @@ In *options*, you can pass an object with additional options for the table. Los 
 
 | Propiedad             | Tipo       | Descripción                                                                    | Valor por defecto |
 | --------------------- | ---------- | ------------------------------------------------------------------------------ | ----------------- |
-| showFooter            | Booleano   | Display a footer                                                               | False             |
-| showHeader            | Booleano   | Display a header                                                               | True              |
+| showFooter            | Booleano   | Mostrar un pie de página                                                       | False             |
+| showHeader            | Booleano   | Mostrar un encabezado                                                          | True              |
 | showResizeHandle      | Booleano   | For tables that don't have a *source*. Display the resize handle               | False             |
 | tableColumns          | Collection | Collection of objects used to create the table's columns (see below)           | Indefinido        |
 | useFooterDropDownList | Booleano   | Use a dropdown list in footer cells that calculate the total value of a column | False             |
@@ -806,7 +806,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 
 * If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
 
-  * The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row. The number of values in the first subcollection determines how many columns are created.
+  * The first-level collection contains subcollections of values. Cada subcolección define una línea. Each subcollection defines a row. The number of values in the first subcollection determines how many columns are created.
   * The subcollections' indices are used as column titles.
   * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value).
 
@@ -869,10 +869,10 @@ Aquí está el resultado:
 
 The `VP DELETE COLUMNS` command<!-- REF #_method_.VP DELETE COLUMNS. Summary -->removes the columns in the *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of columns to remove. If the passed range contains:
+In *rangeObj*, pass an object containing a range of columns to remove. Si el rango pasado contiene:
 
 * both columns and rows, only the columns are removed.
-* only rows, the command does nothing.
+* únicamente las líneas, el comando no hace nada.
 > Columns are deleted from right to left.
 
 #### Ejemplo
@@ -908,11 +908,11 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 The `VP DELETE ROWS` command<!-- REF #_method_.VP DELETE ROWS. Summary -->removes the rows  in the *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of rows  to remove. If the passed range contains:
+In *rangeObj*, pass an object containing a range of rows  to remove. Si el rango pasado contiene:
 
 * both columns and rows, only the rows  are removed.
 * sólo columnas, el comando no hace nada.
-> Rows are deleted from bottom to top.
+> Las líneas se eliminan de abajo hacia arriba.
 
 #### Ejemplo
 
@@ -939,11 +939,11 @@ utilice el siguiente código:
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                       |
-| ---------- | ------ | -- | --------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name |
-| filePath   | Texto  | -> | Ruta de acceso del documento      |
-| paramObj   | Objeto | -> | Opciones de exportación           |
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro |
+| filePath   | Texto  | -> | Ruta de acceso del documento                 |
+| paramObj   | Objeto | -> | Opciones de exportación                      |
 
 <!-- END REF -->
 
@@ -1002,7 +1002,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 
 | Variable |               | Tipo     | Descripción                                               |
 | -------- | ------------- | -------- | --------------------------------------------------------- |
-| $1       |               | texto    | The name of the 4D View Pro object                        |
+| $1       |               | texto    | El nombre del objeto 4D View Pro                          |
 | $2       |               | texto    | Ruta de acceso del objeto 4D View Pro exportado           |
 | $3       |               | objeto   | A reference to the command's *paramObj*                   |
 | $4       |               | objeto   | An object returned by the method with a status message    |
@@ -1096,11 +1096,11 @@ Aquí está el resultado:
 
 <!-- REF #_method_.VP Export to object.Params -->
 
-| Parámetros | Tipo   |    | Descripción                       |
-| ---------- | ------ | -- | --------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name |
-| options    | Objeto | -> | Opciones de exportación           |
-| Resultado  | Objeto | <- | Objeto 4D View Pro                |
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro |
+| options    | Objeto | -> | Opciones de exportación                      |
+| Resultado  | Objeto | <- | Objeto 4D View Pro                           |
 
 <!-- END REF -->
 
@@ -1232,9 +1232,9 @@ End if
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
-| Parámetros | Tipo  |    | Descripción                       |
-| ---------- | ----- | -- | --------------------------------- |
-| vpAreaName | Texto | -> | 4D View Pro area form object name |
+| Parámetros | Tipo  |    | Descripción                                  |
+| ---------- | ----- | -- | -------------------------------------------- |
+| vpAreaName | Texto | -> | Nombre de objeto formulario área 4D View Pro |
 
 <!-- END REF -->
 
@@ -1315,11 +1315,11 @@ See example for [`VP Object to font`](#vp-object-to-font).
 
 <!-- REF #_method_.VP Get active cell.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Objeto  | <- | Objeto rango de una sola celda              |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Objeto  | <- | Objeto rango de una sola celda               |
 
 <!-- END REF -->
 
@@ -1467,10 +1467,10 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
-| Parámetros | Tipo       |    | Descripción                     |
-| ---------- | ---------- | -- | ------------------------------- |
-| rangeObj   | Objeto     | -> | Objeto rango                    |
-| Resultado  | Collection | <- | Collection of column properties |
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| rangeObj   | Objeto     | -> | Objeto rango                         |
+| Resultado  | Collection | <- | Colección de propiedades de columnas |
 
 <!-- END REF -->
 
@@ -1509,11 +1509,11 @@ $attr:=VP Get column attributes($range)
 
 <!-- REF #_method_.VP Get column count.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area from object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Integer | <- | Número total de columnas                    |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre del área 4D View Pro en el formulario |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Integer | <- | Número total de columnas                     |
 
 <!-- END REF -->
 
@@ -1546,10 +1546,10 @@ $colCount:=VP Get column count("ViewProarea")
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| Resultado  | Integer | <- | Indice de la hoja actual          |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| Resultado  | Integer | <- | Indice de la hoja actual                     |
 
 <!-- END REF -->
 
@@ -1564,7 +1564,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 #### Ejemplo
 
-When the third sheet is selected:
+Cuando se selecciona la tercera hoja:
 
 ![third-sheet](assets/en/ViewPro/vp-sheet-3-select.png)
 
@@ -1593,7 +1593,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 | Parámetros | Tipo                     |    | Descripción                                         |
 | ---------- | ------------------------ | -- | --------------------------------------------------- |
-| vpAreaName | Objeto                   | -> | 4D View Pro area form object name                   |
+| vpAreaName | Objeto                   | -> | Nombre de objeto formulario área 4D View Pro        |
 | sheet      | Integer                  | -> | Índice de la hoja para obtener el contexto de datos |
 | Resultado  | Object &#124; Collection | <- | Contexto de los datos                               |
 
@@ -1713,12 +1713,12 @@ In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* de
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                 |
-| ---------- | ------ | -- | ------------------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name           |
-| name       | Texto  | -> | Nombre del rango nombrado                   |
-| scope      | Número | -> | Alcance objetivo (por defecto=hoja actual)  |
-| Resultado  | Texto  | <- | Definición de la fórmula o rango con nombre |
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro |
+| name       | Texto  | -> | Nombre del rango nombrado                    |
+| scope      | Número | -> | Alcance objetivo (por defecto=hoja actual)   |
+| Resultado  | Texto  | <- | Definición de la fórmula o rango con nombre  |
 
 <!-- END REF -->
 
@@ -1814,7 +1814,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 | Parámetros | Tipo    |    | Descripción                                         |
 | ---------- | ------- | -- | --------------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name                   |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro        |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)         |
 | Resultado  | Objeto  | <- | Object containing frozen column and row information |
 
@@ -1864,11 +1864,11 @@ El objeto devuelto contiene, por ejemplo:
 
 <!-- REF #_method_.VP Get names.Params -->
 
-| Parámetros | Tipo       |    | Descripción                                 |
-| ---------- | ---------- | -- | ------------------------------------------- |
-| vpAreaName | Texto      | -> | 4D View Pro area form object name           |
-| scope      | Número     | -> | Alcance objetivo (por defecto= hoja actual) |
-| Resultado  | Collection | <- | Nombres existentes en el alcance definido   |
+| Parámetros | Tipo       |    | Descripción                                  |
+| ---------- | ---------- | -- | -------------------------------------------- |
+| vpAreaName | Texto      | -> | Nombre de objeto formulario área 4D View Pro |
+| scope      | Número     | -> | Alcance objetivo (por defecto= hoja actual)  |
+| Resultado  | Collection | <- | Nombres existentes en el alcance definido    |
 
 <!-- END REF -->
 
@@ -1887,11 +1887,11 @@ You can define where to get the names in *scope* using either the sheet index (c
 
 The returned collection contains one object per name. Las propiedades de objetos siguientes pueden ser devueltas:
 
-| Propiedad           | Tipo  | Descripción                    |
-| ------------------- | ----- | ------------------------------ |
-| result\[ ].name    | Texto | nombre de celda o de rango     |
-| result\[ ].formula | Texto | formula                        |
-| result\[ ].comment | Texto | Comment associated to the name |
+| Propiedad           | Tipo  | Descripción                   |
+| ------------------- | ----- | ----------------------------- |
+| result\[ ].name    | Texto | nombre de celda o de rango    |
+| result\[ ].formula | Texto | formula                       |
+| result\[ ].comment | Texto | Comentario asociado al nombre |
 
 Available properties depend on the type of the named element (named cell, named range, or named formula).
 
@@ -1913,11 +1913,11 @@ $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 
 <!-- REF #_method_.VP Get print info.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Objeto  | <- | Object of printing information              |
+| Parámetros | Tipo    |    | Descripción                                     |
+| ---------- | ------- | -- | ----------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro    |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)     |
+| Resultado  | Objeto  | <- | Objeto que contiene la información de impresión |
 
 <!-- END REF -->
 
@@ -2035,11 +2035,11 @@ $attr:=VP Get row attributes($range)
 
 <!-- REF #_method_.VP Get row count.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area from object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Integer | <- | Número total de líneas                      |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre del área 4D View Pro en el formulario |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Integer | <- | Número total de líneas                       |
 
 <!-- END REF -->
 
@@ -2071,11 +2071,11 @@ $rowCount:=VP Get row count("ViewProarea")
 
 <!-- REF #_method_.VP Get selection.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area from object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Objeto  | <- | Objeto rango de celdas                      |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre del área 4D View Pro en el formulario |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Objeto  | <- | Objeto rango de celdas                       |
 
 <!-- END REF -->
 
@@ -2115,10 +2115,10 @@ $currentSelection:=VP Get selection("myVPArea")
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| Resultado  | Integer | <- | Número de hojas                   |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| Resultado  | Integer | <- | Número de hojas                              |
 
 <!-- END REF -->
 
@@ -2157,11 +2157,11 @@ Get the sheet count and set the current sheet to the last sheet:
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| name       | Texto   | -> | Nombre de la hoja                 |
-| Resultado  | Integer | <- | Índice de la hoja                 |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| name       | Texto   | -> | Nombre de la hoja                            |
+| Resultado  | Integer | <- | Índice de la hoja                            |
 
 <!-- END REF -->
 
@@ -2199,11 +2199,11 @@ $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //devuelve 2
 
 <!-- REF #_method_.VP Get sheet name.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| sheet      | Integer | -> | Índice de la hoja                 |
-| Resultado  | Texto   | <- | Nombre de la hoja                 |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| sheet      | Integer | -> | Índice de la hoja                            |
+| Resultado  | Texto   | <- | Nombre de la hoja                            |
 
 <!-- END REF -->
 
@@ -2238,11 +2238,11 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area from object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Objeto  | <- | Objeto opciones de la hoja                  |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre del área 4D View Pro en el formulario |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Objeto  | <- | Objeto opciones de la hoja                   |
 
 <!-- END REF -->
 
@@ -2283,7 +2283,7 @@ End if
 
 | Parámetros | Tipo     |    | Descripción                                                         |
 | ---------- | -------- | -- | ------------------------------------------------------------------- |
-| vpAreaName | Texto    | -> | 4D View Pro area form object name                                   |
+| vpAreaName | Texto    | -> | Nombre de objeto formulario área 4D View Pro                        |
 | sheet      | Integer  | <- | Índice de la hoja                                                   |
 | Resultado  | Booleano | <- | True si las líneas de impresión son visibles, de lo contrario False |
 
@@ -2359,12 +2359,12 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| styleName  | Texto   | -> | Nombre del estilo                           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Objeto  | <- | Objeto hoja de estilo                       |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| styleName  | Texto   | -> | Nombre del estilo                            |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Objeto  | <- | Objeto hoja de estilo                        |
 
 <!-- END REF -->
 
@@ -2414,9 +2414,9 @@ borderTop:{color:green,style:10}
 
 | Parámetros | Tipo       |    | Descripción                                  |
 | ---------- | ---------- | -- | -------------------------------------------- |
-| vpAreaName | Texto      | -> | 4D View Pro area form object name            |
+| vpAreaName | Texto      | -> | Nombre de objeto formulario área 4D View Pro |
 | sheet      | Integer    | -> | Alcance objetivo (por defecto = hoja actual) |
-| Resultado  | Collection | <- | Collection of style sheet objects            |
+| Resultado  | Collection | <- | Colección de objetos de hojas de estilo      |
 
 <!-- END REF -->
 
@@ -2470,10 +2470,10 @@ In this case, the current sheet uses two style objects:
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Parámetros | Tipo   |    | Descripción                    |
-| ---------- | ------ | -- | ------------------------------ |
-| rangeObj   | Objeto | -> | Objeto rango                   |
-| Resultado  | Objeto | <- | Object containing a cell value |
+| Parámetros | Tipo   |    | Descripción                           |
+| ---------- | ------ | -- | ------------------------------------- |
+| rangeObj   | Objeto | -> | Objeto rango                          |
+| Resultado  | Objeto | <- | Objeto que contiene un valor de celda |
 
 <!-- END REF -->
 
@@ -2574,7 +2574,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 <!-- REF #_method_.VP Get workbook options.Params -->
 | Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name                     |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro          |
 | Resultado  | Objeto | <- | Objeto que contiene las opciones del libro de trabajo |
 
 <!-- END REF -->
@@ -2611,11 +2611,11 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                       |
-| ---------- | ------ | -- | --------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name |
-| filePath   | Texto  | -> | Ruta de acceso del documento      |
-| paramObj   | Objeto | -> | Opciones de importación           |
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro |
+| filePath   | Texto  | -> | Ruta de acceso del documento                 |
+| paramObj   | Objeto | -> | Opciones de importación                      |
 
 
 <!-- END REF -->
@@ -2699,10 +2699,10 @@ Here's the result: ![example-import-csv](assets/en/ViewPro/vp-import-document-cs
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                       |
-| ---------- | ------ | -- | --------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name |
-| viewPro    | Objeto | -> | Objeto 4D View Pro                |
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro |
+| viewPro    | Objeto | -> | Objeto 4D View Pro                           |
 
 
 <!-- END REF -->
@@ -2883,7 +2883,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 | Parámetros | Tipo    |    | Descripción                                   |
 | ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name             |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro  |
 | rangeName  | Texto   | -> | Nombre del rango existente                    |
 | sheet      | Integer | -> | Ubicación del rango (hoja actual si se omite) |
 | Resultado  | Objeto  | <- | Rango de nombre                               |
@@ -2926,9 +2926,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 
-| Parámetros | Tipo  |    | Descripción                       |
-| ---------- | ----- | -- | --------------------------------- |
-| vpAreaName | Texto | -> | 4D View Pro area form object name |
+| Parámetros | Tipo  |    | Descripción                                  |
+| ---------- | ----- | -- | -------------------------------------------- |
+| vpAreaName | Texto | -> | Nombre de objeto formulario área 4D View Pro |
 
 
 <!-- END REF -->
@@ -2976,13 +2976,13 @@ The `VP Font to object` utility command<!-- REF #_method_.VP Font to object. Sum
 
 In *fontObj*, pass an object containing the font properties. Se soportan las siguientes propiedades:
 
-| Propiedad | Tipo  | Descripción                                                                                                                                                              | Valores posibles                                                                                                                                                                                                                                                                                                                                                      | Obligatorio |
-| --------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| family    | texto | Define la fuente.                                                                                                                                                        | todo tipo de familia de fuentes estándar o genérica. Ej. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                                            | Sí          |
-| size      | texto | Defines the size of the font.<p><p>The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | un número con una de las siguientes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li><p><p>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li> | Sí          |
-| style     | texto | Estilo de fuente.                                                                                                                                                        | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                                                                  | No          |
-| variant   | texto | Especifica el tipo de letra en minúsculas.                                                                                                                               | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                            | No          |
-| weight    | texto | Define el grosor de la fuente.                                                                                                                                           | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                              | No          |
+| Propiedad | Tipo  | Descripción                                                                                                                                                               | Valores posibles                                                                                                                                                                                                                                                                                                                                                      | Obligatorio |
+| --------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| family    | texto | Define la fuente.                                                                                                                                                         | todo tipo de familia de fuentes estándar o genérica. Ej. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                                            | Sí          |
+| size      | texto | Define el tamaño de la fuente.<p><p>The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | un número con una de las siguientes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li><p><p>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li> | Sí          |
+| style     | texto | Estilo de fuente.                                                                                                                                                         | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                                                                  | No          |
+| variant   | texto | Especifica el tipo de letra en minúsculas.                                                                                                                                | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                            | No          |
+| weight    | texto | Define el grosor de la fuente.                                                                                                                                            | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                              | No          |
 
 This object can be created with the [VP Font to object](#vp-font-to-object) command.
 
@@ -3046,9 +3046,9 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 | `vk clipboard options all`                     | Pastes all data objects, including values, formatting, and formulas. |
 | `vk clipboard options formatting`              | Pega sólo el formato.                                                |
 | `vk clipboard options formulas`                | Pegar sólo las fórmulas.                                             |
-| `vk clipboard options formulas and formatting` | Pastes formulas and formatting.                                      |
+| `vk clipboard options formulas and formatting` | Pega fórmulas y formato.                                             |
 | `vk clipboard options values`                  | Pega sólo valores.                                                   |
-| `vk clipboard options value and formatting`    | Pastes values and formatting.                                        |
+| `vk clipboard options value and formatting`    | Pega valores y formato.                                              |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -3069,10 +3069,10 @@ See example the example from [VP Copy to object](#vp-copy-to-object)
 
 <!-- REF #_method_.VP PRINT.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
 
 
 <!-- END REF -->
@@ -3118,9 +3118,9 @@ El código siguiente:
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Params -->
 
-| Parámetros | Tipo  |    | Descripción                       |
-| ---------- | ----- | -- | --------------------------------- |
-| vpAreaName | Texto | -> | 4D View Pro area form object name |
+| Parámetros | Tipo  |    | Descripción                                  |
+| ---------- | ----- | -- | -------------------------------------------- |
+| vpAreaName | Texto | -> | Nombre de objeto formulario área 4D View Pro |
 
 
 <!-- END REF -->
@@ -3154,7 +3154,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 | Parámetros | Tipo    |    | Descripción                                        |
 | ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name                  |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro       |
 | name       | Texto   | -> | Name of the named range or named formula to remove |
 | scope      | Integer | -> | Alcance objetivo (por defecto=hoja actual)         |
 
@@ -3196,10 +3196,10 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| index      | Integer | -> | Índice de la hoja a eliminar      |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| index      | Integer | -> | Índice de la hoja a eliminar                 |
 
 <!-- END REF -->
 
@@ -3279,11 +3279,11 @@ Resultado:
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| styleName  | Texto   | -> | Nombre del estilo a eliminar                |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| styleName  | Texto   | -> | Nombre del estilo a eliminar                 |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
 
 
 <!-- END REF -->
@@ -3329,8 +3329,8 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 | Parámetros | Tipo    |    | Descripción                                 |
 | ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | View Pro area name                          |
-| tableName  | Texto   | -> | Name of the table to remove                 |
+| vpAreaName | Texto   | -> | Nombre del área View Pro                    |
+| tableName  | Texto   | -> | Nombre de la tabla a eliminar               |
 | options    | Integer | -> | Opciones adicionales                        |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
 
@@ -3346,11 +3346,11 @@ In *tableName*, pass the name of the table to remove.
 
 In *options*, you can specify additional behavior. Los valores posibles son:
 
-| Constante               | Valor | Descripción                         |
-| ----------------------- | ----- | ----------------------------------- |
-| vk table remove all     | 0     | Remove all including style and data |
-| vk table remove style   | 1     | Remove style but keep data          |
-| vk tabla eliminar datos | 2     | Remove data but keep style          |
+| Constante               | Valor | Descripción                                  |
+| ----------------------- | ----- | -------------------------------------------- |
+| vk table remove all     | 0     | Eliminar todos los estilos y datos incluidos |
+| vk table remove style   | 1     | Eliminar estilo pero mantener datos          |
+| vk tabla eliminar datos | 2     | Eliminar datos pero mantener el estilo       |
 
 Los nombres de tablas se definen a nivel de la hoja. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
 
@@ -3373,10 +3373,10 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <!-- REF #_method_.VP RESET SELECTION.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
 
 
 <!-- END REF -->
@@ -3412,9 +3412,9 @@ VP RESET SELECTION("myVPArea")
 
 <!-- REF #_method_.VP RESUME COMPUTING.Params -->
 
-| Parámetros | Tipo  |    | Descripción                       |
-| ---------- | ----- | -- | --------------------------------- |
-| vpAreaName | Texto | -> | 4D View Pro area form object name |
+| Parámetros | Tipo  |    | Descripción                                  |
+| ---------- | ----- | -- | -------------------------------------------- |
+| vpAreaName | Texto | -> | Nombre de objeto formulario área 4D View Pro |
 
 
 <!-- END REF -->
@@ -3444,13 +3444,13 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| row        | Integer | -> | Índice de la línea                          |
-| rowCount   | Integer | -> | Número de líneas                            |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
-| Resultado  | Objeto  | <- | Rango de línea(s)                           |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| row        | Integer | -> | Índice de la línea                           |
+| rowCount   | Integer | -> | Número de líneas                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Resultado  | Objeto  | <- | Rango de línea(s)                            |
 
 
 <!-- END REF -->
@@ -3550,7 +3550,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 | onEvent            | objet (fórmula) | A callback method that will be launched when the offscreen area is ready. Puede ser:<p><p><li>una función `onEvent` de una clase, o</li><li>un objeto `Formula`</li><p><p>By default, the callback method is called on the [`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), or [`On Timer`](Events/onTimer.md) events. <p><p>The callback method can be used to access the [4D View Pro form object variable](configuring.md#4d-view-pro-form-object-variable). |
 | autoQuit           | booleano        | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.<p><p>If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | timeout            | number          | Maximum time (expressed in seconds) before the area automatically closes if no event is generated. Si se fija en 0, no se aplica ninguna limitación. Valor por defecto: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| result             | mixto           | Result of the processing (if any)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| result             | mixto           | Resultado del procesamiento (si hay)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | \<customProperty> | mixto           | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 The following property is automatically added by the command if necessary:
@@ -3711,7 +3711,7 @@ VP SET ACTIVE CELL($activeCell)
 
 The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS. Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
 
-By default for security reasons, if you do not execute the `VP SET ALLOWED METHODS` command, no method call is allowed in 4D View Pro areas -- except if 4D's generic `SET ALLOWED METHODS` command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area. error in the 4D View Pro area.
+By default for security reasons, if you do not execute the `VP SET ALLOWED METHODS` command, no method call is allowed in 4D View Pro areas -- except if 4D's generic `SET ALLOWED METHODS` command was used (see compatibility note). Using an unauthorized method in a formula prints a #NAME? error in the 4D View Pro area. error en el área 4D View Pro.
 
 In the *methodObj* parameter, pass an object in which each property is the name of a function to define in the 4D View Pro areas:
 
@@ -3724,7 +3724,7 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 |                        |            | \[ ].type | Número               | Tipo de parámetro. Tipos soportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If type is `Is object`, the object has the same structure as the object returned by [`VP Get value`](#vp-get-value). |
 |                        | summary    |            | Texto                | Descripción de la función a mostrar en 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                        | minParams  |            | Número               | Número mínimo de parámetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|                        | maxParams  |            | Número               | Maximum number of parameters. Passing a number higher than the length of parameters allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                    |
+|                        | maxParams  |            | Número               | Número máximo de parámetros. Passing a number higher than the length of parameters allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### Ejemplo
 
@@ -3876,10 +3876,10 @@ In *rangeObj*, pass a range of cells where the border style will be applied. If 
 
 The *borderStyleObj* parameter allows you to define the style for the lines of the border. The *borderStyleObj* supports the following properties:
 
-| Propiedad | Tipo    | Descripción                                           | Valores posibles                                                                                                                                                                                                                                                                                                                                                             |
-| --------- | ------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color     | texto   | Defines the color of the border. Por defecto = black. | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                           |
-| style     | Integer | Defines the style of the border. Por defecto = empty. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
+| Propiedad | Tipo    | Descripción                                      | Valores posibles                                                                                                                                                                                                                                                                                                                                                             |
+| --------- | ------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| color     | texto   | Define el color del borde. Por defecto = black.  | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                           |
+| style     | Integer | Define el estilo del borde. Por defecto = empty. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 You can define the position of the *borderStyleObj* (i.e., where the line is applied) with the *borderPosObj*:
 
@@ -4039,11 +4039,11 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
-| Parámetros  | Tipo    |    | Descripción                                 |
-| ----------- | ------- | -- | ------------------------------------------- |
-| vpAreaName  | Texto   | -> | 4D View Pro area form object name           |
-| columnCount | Integer | -> | Número de columnas                          |
-| sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+| Parámetros  | Tipo    |    | Descripción                                  |
+| ----------- | ------- | -- | -------------------------------------------- |
+| vpAreaName  | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| columnCount | Integer | -> | Número de columnas                           |
+| sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
 
 
 <!-- END REF -->
@@ -4083,10 +4083,10 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| sheet      | Integer | <- | Index of the new current sheet    |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| sheet      | Integer | <- | Índice de la nueva hoja actual               |
 
 <!-- END REF -->
 
@@ -4125,10 +4125,10 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
 
-| Parámetros | Tipo   |    | Descripción                       |
-| ---------- | ------ | -- | --------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name |
-| formulaObj | Objeto | -> | Objeto formula                    |
+| Parámetros | Tipo   |    | Descripción                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro |
+| formulaObj | Objeto | -> | Objeto formula                               |
 
 
 <!-- END REF -->
@@ -4148,13 +4148,13 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 | Propiedad                |            |            | Tipo                 | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------ | ---------- | ---------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<customFunction>` |            |            | Objeto               | Definición de la función personalizada. `<customFunction>` defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|                          | formula    |            | Objeto               | 4D formula object (mandatory). Ver el comando `Formula`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                          | formula    |            | Objeto               | Objeto fórmula 4D (obligatorio). Ver el comando `Formula`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |                          | parameters |            | Colección de objetos | Collection of parameters (in the order they are defined in the formula)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |                          |            | \[ ].name | Texto                | Nombre del parámetro a mostrar en 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                          |            | \[ ].type | Número               | Tipo de parámetro. Tipos soportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If *type* is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section).<p><p>If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value). |
 |                          | summary    |            | Texto                | Descripción de la Fórmula a mostrar en 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |                          | minParams  |            | Número               | Número mínimo de parámetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|                          | maxParams  |            | Número               | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                          | maxParams  |            | Número               | Número máximo de parámetros. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 > **ATENCIÓN**
 > 
 > * As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](#vp-set-allowed-methods) command (if any) are ignored in the 4D View Pro area.
@@ -4217,7 +4217,7 @@ End case
 
 | Parámetros | Tipo    |    | Descripción                                      |
 | ---------- | ------- | -- | ------------------------------------------------ |
-| vpAreaName | Objeto  | -> | 4D View Pro area form object name                |
+| vpAreaName | Objeto  | -> | Nombre de objeto formulario área 4D View Pro     |
 | dataObj    | Objeto  | -> | Objeto datos a cargar en el contexto de datos    |
 | dataColl   | Objeto  | -> | Colección datos a cargar en el contexto de datos |
 | options    | Objeto  | -> | Opciones adicionales                             |
@@ -4411,12 +4411,12 @@ The *dateValue* parameter specifies a date value to be assigned to the *rangeObj
 
 The optional *formatPattern* defines a pattern for the *dateValue* parameter. Pass any custom format or you can use one of the following constants:
 
-| Constante               | Descripción                           | Configuración por defecto de US |
-| ----------------------- | ------------------------------------- | ------------------------------- |
-| `vk pattern long date`  | ISO 8601 format for the full date     | "dddd, dd MMMM yyyy"            |
-| `vk pattern month day`  | Formato ISO 8601 para el mes y el día | "MMMM dd"                       |
-| `vk pattern short date` | Formato ISO 8601 corto para la fecha  | "MM/dd/yyyy"                    |
-| `vk pattern year month` | Formato ISO 8601 para el mes y el año | "yyyy MMMM"                     |
+| Constante               | Descripción                             | Configuración por defecto de US |
+| ----------------------- | --------------------------------------- | ------------------------------- |
+| `vk pattern long date`  | Formato ISO 8601 para la fecha completa | "dddd, dd MMMM yyyy"            |
+| `vk pattern month day`  | Formato ISO 8601 para el mes y el día   | "MMMM dd"                       |
+| `vk pattern short date` | Formato ISO 8601 corto para la fecha    | "MM/dd/yyyy"                    |
+| `vk pattern year month` | Formato ISO 8601 para el mes y el año   | "yyyy MMMM"                     |
 
 For information on patterns and formatting characters, please refer to the [Date and time formats](configuring.md#date-and-time-formats) section.
 
@@ -4444,7 +4444,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 
 | Parámetros | Tipo    |    | Descripción                                   |
 | ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name             |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro  |
 | styleObj   | Objeto  | -> | Objeto style                                  |
 | sheet      | Integer | -> | Índice de la hoja (por defecto = hoja actual) |
 
@@ -4593,7 +4593,7 @@ In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose
 
 The *formulasCol* is a two-dimensional collection:
 
-* The first-level collection contains subcollections of formulas. Each subcollection defines a row.
+* The first-level collection contains subcollections of formulas. Cada subcolección define una línea.
 * Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells.
 
 > If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
@@ -4643,7 +4643,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 
 | Parámetros | Tipo    |    | Descripción                                         |
 | ---------- | ------- | -- | --------------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name                   |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro        |
 | paneObj    | Objeto  | -> | Object containing frozen column and row information |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)         |
 
@@ -4833,7 +4833,7 @@ The *propertyObj* parameter lets you specify the attributes to apply to the rows
 
 | Propiedad       | Tipo     | Descripción                                                               |
 | --------------- | -------- | ------------------------------------------------------------------------- |
-| height          | number   | Row height expressed in pixels                                            |
+| height          | number   | Altura de la línea expresada en píxeles                                   |
 | pageBreak       | booleano | True to insert a page break before the first row of the range, else false |
 | visible         | booleano | True si la fila es visible, si no, false                                  |
 | redimensionable | booleano | True si la línea puede redimensionarse, si no, false                      |
@@ -4865,11 +4865,11 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 <!-- REF #_method_.VP SET ROW COUNT.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                 |
-| ---------- | ------- | -- | ------------------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name           |
-| rowCount   | Integer | -> | Número de líneas                            |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| rowCount   | Integer | -> | Número de líneas                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
 
 
 <!-- END REF -->
@@ -4940,10 +4940,10 @@ VP SET SELECTION($currentSelection)
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| number     | Integer | -> | Número de hojas                   |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| number     | Integer | -> | Número de hojas                              |
 
 
 <!-- END REF -->
@@ -4961,7 +4961,7 @@ El documento tiene actualmente una hoja:
 
 ![](assets/en/ViewPro/vp-sheet-1.png)
 
-To set the number of sheets to 3:
+Para definir el número de hojas en 3:
 
 ```4d
 VP SET SHEET COUNT("ViewProArea";3)
@@ -4981,11 +4981,11 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parámetros | Tipo    |    | Descripción                       |
-| ---------- | ------- | -- | --------------------------------- |
-| vpAreaName | Texto   | -> | 4D View Pro area form object name |
-| name       | Texto   | -> | Nuevo nombre para la hoja         |
-| sheet      | Integer | -> | Index of the sheet to be renamed  |
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro |
+| name       | Texto   | -> | Nuevo nombre para la hoja                    |
+| sheet      | Integer | -> | Index of the sheet to be renamed             |
 
 
 <!-- END REF -->
@@ -5009,7 +5009,7 @@ The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 El comando no hace nada si:
 
 * el nuevo nombre contiene caracteres prohibidos
-* the new name's value is blank
+* el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
 * el *índice* pasado no existe
 
@@ -5154,7 +5154,7 @@ Resultado:
 
 | Parámetros | Tipo     |    | Descripción                                              |
 | ---------- | -------- | -- | -------------------------------------------------------- |
-| vpAreaName | Texto    | -> | 4D View Pro area form object name                        |
+| vpAreaName | Texto    | -> | Nombre de objeto formulario área 4D View Pro             |
 | visible    | Booleano | -> | Print lines displayed if True (default), hidden if False |
 | sheet      | Integer  | -> | Índice de la hoja (hoja actual si se omite)              |
 
@@ -5277,10 +5277,10 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Parámetros | Tipo   |    | Descripción                    |
-| ---------- | ------ | -- | ------------------------------ |
-| rangeObj   | Objeto | -> | Objeto rango                   |
-| valueObj   | Objeto | -> | Cell values and format options |
+| Parámetros | Tipo   |    | Descripción                               |
+| ---------- | ------ | -- | ----------------------------------------- |
+| rangeObj   | Objeto | -> | Objeto rango                              |
+| valueObj   | Objeto | -> | Valores de la celda y opciones de formato |
 
 
 <!-- END REF -->
@@ -5295,11 +5295,11 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Puede contener las siguientes propiedades:
 
-| Propiedad | Tipo                                     | Descripción                                                                                                                                                      |
-| --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to *rangeObj* (except- time). Pase null para borrar el contenido de la celda.                                                                    |
-| time      | Real                                     | Time value (in seconds) to assign to *rangeObj*                                                                                                                  |
-| format    | Texto                                    | Pattern for value/time property. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propiedad | Tipo                                     | Descripción                                                                                                                                                       |
+| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to *rangeObj* (except- time). Pase null para borrar el contenido de la celda.                                                                     |
+| time      | Real                                     | Time value (in seconds) to assign to *rangeObj*                                                                                                                   |
+| format    | Texto                                    | Patrón de propiedad valor/tiempo. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
 
 #### Ejemplo
 
@@ -5362,7 +5362,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 
 The *valuesCol* parameter is two-dimensional:
 
-* The first-level collection contains subcollections of values. Each subcollection defines a row. Each subcollection defines a row.
+* The first-level collection contains subcollections of values. Cada subcolección define una línea. Each subcollection defines a row.
 * Each subcollection defines cell values for the row. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. If the value is an object, it can have the following properties:
 
  | Propiedad | Tipo                                     | Descripción                        |
@@ -5398,7 +5398,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 | Parámetros | Tipo   |    | Descripción                                                     |
 | ---------- | ------ | -- | --------------------------------------------------------------- |
-| vpAreaName | Texto  | -> | 4D View Pro area form object name                               |
+| vpAreaName | Texto  | -> | Nombre de objeto formulario área 4D View Pro                    |
 | optionObj  | Objeto | -> | Objeto que contiene las opciones del libro de trabajo a definir |
 
 <!-- END REF -->
@@ -5425,7 +5425,7 @@ The following table lists the available workbook options:
 | allowCopyPasteExcelStyle              | booleano                | Styles from a spreadsheet can be copied and pasted to Excel, and vice-versa.                                                                                                                                                                           |
 | allowDynamicArray                     | booleano                | Permite arrays dinámicos en hojas de cálculo                                                                                                                                                                                                           |
 | allowExtendPasteRange                 | booleano                | Extends the pasted range if the pasted range is not enough for the pasted data                                                                                                                                                                         |
-| allowSheetReorder                     | booleano                | Sheet reordering is allowed                                                                                                                                                                                                                            |
+| allowSheetReorder                     | booleano                | Se permite reordenar la hoja                                                                                                                                                                                                                           |
 | allowUndo                             | booleano                | Deshacer ediciones está permitido.                                                                                                                                                                                                                     |
 | allowUserDeselect                     | booleano                | Deselecting specific cells from a selection is allowed.                                                                                                                                                                                                |
 | allowUserDragDrop                     | booleano                | Se permite arrastrar y soltar los datos del rango                                                                                                                                                                                                      |
@@ -5433,31 +5433,31 @@ The following table lists the available workbook options:
 | allowUserEditFormula                  | booleano                | Formulas can be entered in cells                                                                                                                                                                                                                       |
 | allowUserResize                       | booleano                | Columnas y filas redimensionables                                                                                                                                                                                                                      |
 | allowUserZoom                         | booleano                | Se permite hacer zoom (ctrl + rueda del ratón)                                                                                                                                                                                                         |
-| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> El contenido se autoajusta a las celdas y encabezados</td></tr></table>                                                                                                                                             |
+| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> El contenido se ajusta automáticamente a las celdas</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> El contenido se autoajusta a las celdas y encabezados</td></tr></table>                                                                                                                                             |
 | backColor                             | cadena                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
-| backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |
-| backgroundImageLayout                 | number                  | Cómo se muestra la imagen de fondo. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Llena el área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Se muestra con su relación de aspecto original.</td></tr></table>                                                                                                                                                                     |
+| backgroundImage                       | string / picture / file | Imagen de fondo para el área.                                                                                                                                                                                                                          |
+| backgroundImageLayout                 | number                  | Cómo se muestra la imagen de fondo. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk image layout center </td><td>1</td><td> En el centro del área.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Llena el área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Se muestra con su relación de aspecto original.</td></tr></table>                                                                                                                                                                     |
 | calcOnDemand                          | booleano                | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
 | columnResizeMode                      | number                  | Resize mode for columns. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                |
 | copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                    |
 | customList                            | colección               | The list for users to customize drag fill, prioritize matching this list in each fill. Cada elemento de colección es una colección de cadenas. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).  |
 | cutCopyIndicatorBorderColor           | cadena                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | booleano                | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                        |
-| defaultDragFillType                   | number                  | The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table>                                                                                                                                                                             |
+| defaultDragFillType                   | number                  | The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Llena automáticamente las celdas. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Rellena las celdas sólo con formato.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table>                                                                                                                                                                             |
 | enableAccessibility                   | booleano                | Accessibility support is enabled in the spreadsheet.                                                                                                                                                                                                   |
 | enableFormulaTextbox                  | booleano                | The formula text box is enabled.                                                                                                                                                                                                                       |
 | grayAreaBackColor                     | cadena                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
-| highlightInvalidData                  | booleano                | Invalid data is highlighted.                                                                                                                                                                                                                           |
-| iterativeCalculation                  | booleano                | Enables iterative calculation. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                            |
+| highlightInvalidData                  | booleano                | Los datos inválidos son resaltados.                                                                                                                                                                                                                    |
+| iterativeCalculation                  | booleano                | Activa el cálculo iterativo. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                              |
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
 | iterativeCalculationMaximumIterations | numeric                 | Número de veces que la fórmula debe recalcular.                                                                                                                                                                                                        |
 | newTabVisible                         | booleano                | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                           |
 | pasteSkipInvisibleRange               | booleano                | Pegar u omitir pegar datos en rangos invisibles: <ul><li>False (por defecto): pegar datos</li><li>True: omitir el pegado en rangos invisibles</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
-| referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table>                                                                                                                                                   |
+| referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar el estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table>                                                                                                                                                   |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                               |
 | rowResizeMode                         | number                  | La forma en que se redimensionan las líneas. Los valores disponibles son los mismos qe columnResizeMode                                                                                                                                                |
-| scrollbarAppearance                   | number                  | Apariencia de la barra de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (por defecto)</td><td>0</td><td> Aspecto de la barra de desplazamiento clásica similar a la de Excel.</td></tr></table>                                                                                                                                                               |
+| scrollbarAppearance                   | number                  | Apariencia de la barra de desplazamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Apariencia de la barra de desplazamiento móvil.</td></tr><tr><td> vk scrollbar appearance skin (por defecto)</td><td>0</td><td> Aspecto de la barra de desplazamiento clásica similar a la de Excel.</td></tr></table>                                                                                                                                                               |
 | scrollbarMaxAlign                     | booleano                | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                |
 | scrollbarShowMax                      | booleano                | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                             |
 | scrollByPixel                         | booleano                | Activar desplazamiento de precisión por píxel.                                                                                                                                                                                                         |
@@ -5475,7 +5475,7 @@ The following table lists the available workbook options:
 | tabStripPosition                      | number                  | Position of the tab strip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table>                                                                                                                                                                              |
 | tabStripRatio                         | number                  | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.                                                       |
 | tabStripVisible                       | booleano                | Display the sheet tab strip.                                                                                                                                                                                                                           |
-| tabStripWidth                         | number                  | Width of the tab strip when position is left or right. Default and minimum is 80.                                                                                                                                                                      |
+| tabStripWidth                         | number                  | Width of the tab strip when position is left or right. Por defecto y el mínimo es 80.                                                                                                                                                                  |
 | useTouchLayout                        | booleano                | Whether to use touch layout to present the Spread component.                                                                                                                                                                                           |
 
 #### Ejemplo
@@ -5566,9 +5566,9 @@ Resultado:
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
 
-| Parámetros | Tipo  |    | Descripción                       |
-| ---------- | ----- | -- | --------------------------------- |
-| vpAreaName | Texto | -> | 4D View Pro area form object name |
+| Parámetros | Tipo  |    | Descripción                                  |
+| ---------- | ----- | -- | -------------------------------------------- |
+| vpAreaName | Texto | -> | Nombre de objeto formulario área 4D View Pro |
 
 
 <!-- END REF -->

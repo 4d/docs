@@ -118,7 +118,7 @@ Puede navegar en la Lista de Propiedades utilizando los siguientes atajos:
 
 
 
-## Manipulating Form Objects
+## Manipulación de objetos formulario
 
 ### Añadir objetos
 
@@ -430,7 +430,7 @@ Once a CSS preview mode is selected, objects are automatically displayed with th
 > When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.
 
 
-### CSS support in the Property List
+### Soporte CSS en la Lista de Propiedades
 
 In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
 
@@ -449,7 +449,7 @@ are displayed with a CSS icon in the Property List:
 An attribute value defined in a style sheet can be overridden in the JSON form description (except if the CSS includes the `!important` declaration, see below). In this case, the Property List displays the JSON form value in **bold**. You can reset the value to its style sheet definition with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts.
 > If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List.
 
-#### Property List CSS Icons
+#### Lista de propiedades de iconos CSS
 
 | Icono                                      | Descripción                                                                                                                                                        |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

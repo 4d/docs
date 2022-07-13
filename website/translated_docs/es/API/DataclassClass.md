@@ -685,11 +685,11 @@ El objeto devuelto tiene las siguientes propiedades:
 
 Each entry object in the `entries` collection has the following properties:
 
-| Propiedad | Tipo     | Descripción                       |
-| --------- | -------- | --------------------------------- |
-| data      | Objeto   | Object holding data on the entry. |
-| expired   | Booleano | True if the entry has expired.    |
-| key       | Texto    | Llave primaria de la entidad.     |
+| Propiedad | Tipo     | Descripción                                  |
+| --------- | -------- | -------------------------------------------- |
+| data      | Objeto   | Objeto que contiene los datos de la entrada. |
+| expired   | Booleano | True si la entrada ha expirado.              |
+| key       | Texto    | Llave primaria de la entidad.                |
 
 El objeto `data` de cada entrada contiene las siguientes propiedades:
 | Propiedad              | Tipo         | Descripción                                                                                                                  |
