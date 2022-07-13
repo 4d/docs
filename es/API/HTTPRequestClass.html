@@ -91,7 +91,7 @@ Function</span><span class="hljs-function"> onResponse</span>(<span class="hljs-
 Function</span><span class="hljs-function"> onError</span>(<span class="hljs-variable">$request </span>: 4D.HTTPRequest; <span class="hljs-variable">$event </span>: Object)
 <span class="hljs-comment">//My onError method, if you want to handle the request asynchronously</span>
 </code></pre>
-<p>You can now create your request:</p>
+<p>Ahora puede crear su petición:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$headers </span>: Object
 <span class="hljs-variable">$headers</span>:=<span class="hljs-function">New object</span>()
 <span class="hljs-variable">$headers</span>[<span class="hljs-string">"field1"</span>]:=<span class="hljs-string">"value1"</span><span class="hljs-keyword"> 
@@ -104,7 +104,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <span class="hljs-variable">$request</span>.<span class="hljs-function">wait</span>() <span class="hljs-comment">//If you want to handle the request synchronously</span>
 <span class="hljs-comment">//Now you can use $request.response to access the result of the request or $request.error to check the error that happened.</span>
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="httprequest-object"></a><a href="#httprequest-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTPRequest Object</h3>
+<h3><a class="anchor" aria-hidden="true" id="objeto-httprequest"></a><a href="#objeto-httprequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto HTTPRequest</h3>
 <p>An HTTPRequest object is a non-sharable object.</p>
 <p>HTTPRequest objects provide the following properties and functions:</p>
 <table>
@@ -123,7 +123,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><td><a href="#terminate"><strong>.terminate()</strong></a><p>    aborta la petición HTTP</td></tr>
 <tr><td><a href="#terminated"><strong>terminated</strong> : Boolean</a><p>    True if the request is terminated (after the call to <code>onTerminate</code>), false otherwise</td></tr>
 <tr><td><a href="#timeout"><strong>timeout</strong> : Real</a><p>    the <code>timeout</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
-<tr><td><a href="#url"><strong>url</strong> : Text</a><p>    the URL of the HTTP request</td></tr>
+<tr><td><a href="#url"><strong>url</strong> : Text</a><p>    la URL de la petición HTTP</td></tr>
 <tr><td><a href="#wait"><strong>.wait</strong>( { <em>time</em> : Real } ) : 4D.HTTPRequest</a><p>    waits for the response from the server</td></tr>
 </tbody>
 </table>
@@ -134,15 +134,15 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>url</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>URL to which to send the request</td></tr>
-<tr><td>options</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Request configuration properties</td></tr>
-<tr><td>Resultado</td><td>4D.HTTPRequest</td><td style="text-align:center">&lt;-</td><td>New HTTPRequest object</td></tr>
+<tr><td>url</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>URL a la que enviar la solicitud</td></tr>
+<tr><td>options</td><td>Objeto</td><td style="text-align:center">-&gt;</td><td>Propiedades de configuración de la petición</td></tr>
+<tr><td>Resultado</td><td>4D.HTTPRequest</td><td style="text-align:center">&lt;-</td><td>Nuevo objeto HTTPRequest</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>4D.HTTPRequest.new()</code> function creates and sends a HTTP request to the HTTP server defined in <em>url</em> with the defined <em>options</em>, and returns a <code>4D.HTTPRequest</code> object.</p>
 <p>The returned <code>HTTPRequest</code> object is used to process responses from the HTTP server and call methods.</p>
-<p>In <em>url</em>, pass the URL where you want to send the request. The syntax to use is:</p>
+<p>In <em>url</em>, pass the URL where you want to send the request. La sintaxis a utilizar es:</p>
 <pre><code class="hljs">{http://}[<span class="hljs-string">{user}:[{password}</span>]@]host[<span class="hljs-string">:{port}</span>][<span class="hljs-symbol">/{path}</span>][<span class="hljs-string">?{queryString}</span>]
 {https://}[<span class="hljs-string">{user}:[{password}</span>]@]host[<span class="hljs-string">:{port}</span>][<span class="hljs-symbol">/{path}</span>][<span class="hljs-string">?{queryString}</span>]
 </code></pre>
@@ -169,28 +169,28 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><td>dataType</td><td>Texto</td><td>Type of the response body attribute. Values: &quot;text&quot;, &quot;blob&quot;, &quot;object&quot;, or &quot;auto&quot;. If &quot;auto&quot;, the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise)</td><td>&quot;auto&quot;</td></tr>
 <tr><td>encoding</td><td>Texto</td><td>Used only in case of requests with a <code>body</code> (<code>post</code> or <code>put</code> methods). Encoding of the request body content if it's a text, ignored if content-type is set inside the headers</td><td>&quot;UTF-8&quot;</td></tr>
 <tr><td>headers</td><td>Objeto</td><td>Encabezados de la petición. Syntax: <code>headers.key=value</code> (<em>value</em> can be a Collection if the same key must appear multiple times)</td><td>Empty object</td></tr>
-<tr><td>method</td><td>Texto</td><td>&quot;POST&quot;, &quot;GET&quot;, or other method</td><td>&quot;GET&quot;</td></tr>
+<tr><td>method</td><td>Texto</td><td>&quot;POST&quot;, &quot;GET&quot; u otro método</td><td>&quot;GET&quot;</td></tr>
 <tr><td>minTLSVersion</td><td>Texto</td><td>Sets the minimum version of TLS: &quot;<code>TLSv1_0</code>&quot;, &quot;<code>TLSv1_1</code>&quot;, &quot;<code>TLSv1_2</code>&quot;, &quot;<code>TLSv1_3</code>&quot;</td><td>&quot;<code>TLSv1_2</code>&quot;</td></tr>
 <tr><td>onData</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when data from the body is received. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
-<tr><td>onError</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when an error occurs. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
+<tr><td>onError</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando ocurre un error. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
 <tr><td>onHeaders</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when the headers are received. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
 <tr><td>onResponse</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when a response is received. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
-<tr><td>onTerminate</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when the request is over. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
-<tr><td>protocol</td><td>Texto</td><td>&quot;auto&quot; or &quot;HTTP1&quot;. &quot;auto&quot; means HTTP1 in the current implementation</td><td>&quot;auto&quot;</td></tr>
+<tr><td>onTerminate</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando la petición haya terminado. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
+<tr><td>protocol</td><td>Texto</td><td>&quot;auto&quot; o &quot;HTTP1&quot;. &quot;auto&quot; means HTTP1 in the current implementation</td><td>&quot;auto&quot;</td></tr>
 <tr><td>proxyAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Object handling proxy authentication</td><td>indefinido</td></tr>
 <tr><td>serverAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Object handling server authentication</td><td>indefinido</td></tr>
 <tr><td>returnResponseBody</td><td>Booleano</td><td>If false, the response body is not returned in the <a href="#response"><code>response</code> object</a>. Returns an error if false and <code>onData</code> is undefined</td><td>True</td></tr>
 <tr><td>timeout</td><td>Real</td><td>Tiempo de espera en segundos. Indefinido = sin tiempo de espera</td><td>Indefinido</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="callback-functions"></a><a href="#callback-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Callback functions</h4>
+<h4><a class="anchor" aria-hidden="true" id="función-callback-retrollamada"></a><a href="#función-callback-retrollamada" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Función callback (retrollamada)</h4>
 <p>All callback functions receive two object parameters:</p>
 <table>
 <thead>
 <tr><th>Parámetros</th><th>Tipo</th></tr>
 </thead>
 <tbody>
-<tr><td>$param1</td><td><a href="#httprequest-object"><code>HTTPRequest</code> object</a></td></tr>
+<tr><td>$param1</td><td><a href="#httprequest-object">objeto <code>HTTPRequest</code></a></td></tr>
 <tr><td>$param2</td><td><a href="#event-object"><code>Event</code> objeto</a></td></tr>
 </tbody>
 </table>
@@ -220,8 +220,8 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th><th>Por defecto</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>Texto</td><td>Name used for authentication</td><td>indefinido</td></tr>
-<tr><td>contraseña</td><td>Texto</td><td>Password used for authentication</td><td>indefinido</td></tr>
+<tr><td>name</td><td>Texto</td><td>Nombre usado para la autenticación</td><td>indefinido</td></tr>
+<tr><td>contraseña</td><td>Texto</td><td>Contraseña utilizada para la autenticación</td><td>indefinido</td></tr>
 <tr><td>method</td><td>Texto</td><td>Method used for authentication:&quot;basic&quot;, &quot;digest&quot;, &quot;auto&quot;</td><td>&quot;auto&quot;</td></tr>
 </tbody>
 </table>
@@ -243,7 +243,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>errors</td><td></td><td>Collection</td><td>4D error stack in case of error</td></tr>
+<tr><td>errors</td><td></td><td>Collection</td><td>Pila de error 4D en caso de error</td></tr>
 <tr><td></td><td>[].errCode</td><td>Número</td><td>Código de error 4D</td></tr>
 <tr><td></td><td>[].message</td><td>Texto</td><td>Descripción del error 4D</td></tr>
 <tr><td></td><td>[].componentSignature</td><td>Texto</td><td>Firma del componente interno que ha devuelto el error</td></tr>
@@ -256,7 +256,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <h2><a class="anchor" aria-hidden="true" id="method"></a><a href="#method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.method</h2>
 <p><strong>method</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-5"></a><a href="#descripción-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.method</code> property contains the <code>method</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. If it was omitted, contains &quot;GET&quot;.</p>
+<p>The <code>.method</code> property contains the <code>method</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. Si fue omitido, contiene &quot;GET&quot;.</p>
 <h2><a class="anchor" aria-hidden="true" id="protocol"></a><a href="#protocol" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.protocol</h2>
 <p><strong>protocol</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
@@ -271,10 +271,10 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>.body</td><td>Variant</td><td>Body of the response. The type of the message is defined according to the <a href="#datatype"><code>dataType</code></a> property. Undefined if the body has not been received yet</td></tr>
+<tr><td>.body</td><td>Variant</td><td>Cuerpo de la respuesta. The type of the message is defined according to the <a href="#datatype"><code>dataType</code></a> property. Undefined if the body has not been received yet</td></tr>
 <tr><td>.headers</td><td>Objeto</td><td>Headers of the response. <code>headers.key</code> = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet.</td></tr>
-<tr><td>.status</td><td>Número</td><td>Status code of the response</td></tr>
-<tr><td>.statusText</td><td>Texto</td><td>Message explaining the status code</td></tr>
+<tr><td>.status</td><td>Número</td><td>Código de estado de la respuesta</td></tr>
+<tr><td>.statusText</td><td>Texto</td><td>Mensaje explicando el código de estado</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="returnresponsebody"></a><a href="#returnresponsebody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.returnResponseBody</h2>
@@ -288,7 +288,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 |            |      |  | No requiere ningún parámetro |</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-9"></a><a href="#descripción-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <blockquote>
-<p>This function is thread-safe.</p>
+<p>Esta función es hilo seguro.</p>
 </blockquote>
 <p>The <code>.terminate()</code> function aborta la petición HTTP. It triggers the <code>onTerminate</code> event.</p>
 <h2><a class="anchor" aria-hidden="true" id="terminated"></a><a href="#terminated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.terminated</h2>
@@ -302,7 +302,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <h2><a class="anchor" aria-hidden="true" id="url"></a><a href="#url" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.url</h2>
 <p><strong>url</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-12"></a><a href="#descripción-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.url</code> property contains the URL of the HTTP request.</p>
+<p>The <code>.url</code> property contains la URL de la petición HTTP.</p>
 <h2><a class="anchor" aria-hidden="true" id="wait"></a><a href="#wait" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.wait()</h2>
 <p><strong>.wait</strong>( { <em>time</em> : Real } ) : 4D.HTTPRequest</p>
 <table>
@@ -311,12 +311,12 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </thead>
 <tbody>
 <tr><td>time</td><td>Real</td><td style="text-align:center">-&gt;</td><td>Maximum time in seconds to wait for the response</td></tr>
-<tr><td>Resultado</td><td>4D.HTTPRequest</td><td style="text-align:center">&lt;-</td><td>HTTPRequest object</td></tr>
+<tr><td>Resultado</td><td>4D.HTTPRequest</td><td style="text-align:center">&lt;-</td><td>Objeto HTTPRequest</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-13"></a><a href="#descripción-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <blockquote>
-<p>This function is thread-safe.</p>
+<p>Esta función es hilo seguro.</p>
 </blockquote>
 <p>The <code>4D.HTTPRequest.wait()</code> function waits for the response from the server.</p>
 <p>If a <em>time</em> parameter is passed, the function will wait at most the defined number of seconds.</p>

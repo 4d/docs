@@ -29,7 +29,7 @@
 <blockquote>
 <p>ORDA es sensible a las mayúsculas y minúsculas. <code>ds.company.city</code> will not refer to the ds. Company.city attribute.</p>
 </blockquote>
-<p>You have also noticed the extra <code>hires</code> property in the ds. Company dataclass. It does not correspond to a field. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
+<p>You have also noticed the extra <code>hires</code> property in the ds. Company dataclass. No corresponde a un campo. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
 <p><img src="/docs/assets/en/ORDA/struc2s.png" alt=""> <em>Name of the relation as defined in the Inspector</em></p>
 <p>It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:</p>
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>hires <span class="hljs-comment">//devuelve la lista de empleados</span>

@@ -73,9 +73,9 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : any</a><p>    </td></tr>
-<tr><td><a href="#clone">If <em>attributeName</em> kind is <strong>storage</strong>: <code>.attributeName</code> returns a value of the same type as <em>attributeName</em>.</a><p>    </td></tr>
-<tr><td><a href="#diff"><strong>.diff</strong>( <em>entityToCompare</em> : 4D. Entity { ; <em>attributesToCompare</em> : Collection } ) : Collection</a><p>    </td></tr>
+<tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : any</a><p>    armazena o valor do atributo para a entidade</td></tr>
+<tr><td><a href="#clone"><strong>.clone()</strong> : 4D.Entity</a><p>    </td></tr>
+<tr><td><a href="#diff"><strong>.diff</strong>( <em>entityToCompare</em> : 4D. Entity { ; <em>attributesToCompare</em> : Collection } ) : Collection</a><p>    compara o conteúdo de duas entidades e retorna suas diferenças</td></tr>
 <tr><td><a href="#drop"><strong>.drop</strong>( {<em>mode</em> : Integer} ) : Object</a><p>    </td></tr>
 <tr><td><a href="#first"><strong>.first()</strong>: 4D. Entity</a><p>    </td></tr>
 <tr><td><a href="#fromobject"><strong>.fromObject</strong>( <em>filler</em> : Object )</a><p>    </td></tr>
@@ -111,7 +111,7 @@
 <p></details></p>
 <p><strong><em>.attributeName</em></strong> : any</p>
 <h4><a class="anchor" aria-hidden="true" id="descrição"></a><a href="#descrição" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>Any dataclass attribute is available as a property of an entity, whichstores the attribute value for the entity.</p>
+<p>Qualquer atributo dataclass está disponível como propriedade de uma entidade, que armazena o valor do atributo para a entidade.</p>
 <blockquote>
 <p>Dataclass attributes can also be reached using the alternate syntax with [ ].</p>
 </blockquote>
@@ -139,21 +139,21 @@
 </tbody>
 </table>
 <p></details></p>
-<p>If <em>attributeName</em> kind is <strong>storage</strong>: <code>.attributeName</code> returns a value of the same type as <em>attributeName</em>.</p>
+<p><strong>.clone()</strong> : 4D.Entity</p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>4D. Entity</td><td style="text-align:center">&lt;-</td><td>New entity referencing the record</td></tr>
+<tr><td>Resultado</td><td>4D. Entity</td><td style="text-align:center">&lt;-</td><td>Nova entidade referenciando o registro</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descrição-1"></a><a href="#descrição-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>The <code>.clone()</code> functioncreates in memory a new entity referencing the same record as the original entity. This function allows you to update entities separately.</p>
+<p>A função <code>.clone()</code>cria em memória uma nova entidade referenciando o mesmo registro que a entidade original. Esta função permite que você atualize as entidades separadamente.</p>
 <blockquote>
 <p>Keep in mind that any modifications done to entities will be saved in the referenced record only when the <a href="#save"><code>.save( )</code></a> function is executed.</p>
 </blockquote>
-<p>This function can only be used with entities already saved in the database. It cannot be called on a newly created entity (for which <a href="#isnew"><code>.isNew()</code></a> returns <strong>True</strong>).</p>
+<p>Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual <a href="#isnew"><code>.isNew()</code></a> retorna <strong>Verdadeiro</strong>).</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$emp</span>; <span class="hljs-variable">$empCloned </span>: cs. EmployeeEntity
  <span class="hljs-variable">$emp</span>:=ds. Employee.<span class="hljs-function">get</span>(<span class="hljs-number">672</span>)
@@ -179,29 +179,29 @@
 <tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>entityToCompare</td><td>4D. Entity</td><td style="text-align:center">-&gt;</td><td>Entity to be compared with the original entity</td></tr>
-<tr><td>attributesToCompare</td><td>Coleção</td><td style="text-align:center">-&gt;</td><td>Name of attributes to be compared</td></tr>
-<tr><td>Resultado</td><td>Coleção</td><td style="text-align:center">&lt;-</td><td>Differences between the entities</td></tr>
+<tr><td>entityToCompare</td><td>4D. Entity</td><td style="text-align:center">-&gt;</td><td>Entidade a ser comparada com a entidade original</td></tr>
+<tr><td>attributesToCompare</td><td>Coleção</td><td style="text-align:center">-&gt;</td><td>Nome dos atributos a serem comparados</td></tr>
+<tr><td>Resultado</td><td>Coleção</td><td style="text-align:center">&lt;-</td><td>Diferenças entre as entidades</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descrição-2"></a><a href="#descrição-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>The <code>.diff()</code> functioncompares the contents of two entities and returns their differences.</p>
-<p>In <em>entityToCompare</em>, pass the entity to be compared to the original entity.</p>
-<p>In <em>attributesToCompare</em>, you can designate specific attributes to compare. If provided, the comparison is done only on the specified attributes. If not provided, all differences between the entities are returned.</p>
-<p>The differences are returned as a collection of objects whose properties are:</p>
+<p>A função <code>.diff()</code> compara o conteúdo de duas entidades e retorna suas diferenças.</p>
+<p>No <em>entityToCompare</em>, passe a entidade a ser comparada à entidade original.</p>
+<p>Em <em>attributesToCompare</em>, pode designar atributos específicos para comparar. Se fornecida, a comparação é feita apenas nos atributos especificados. Se não for fornecida, todas as diferenças entre as entidades são devolvidas.</p>
+<p>As diferenças são retornadas como uma coleção de objetos cujas propriedades são:</p>
 <table>
 <thead>
 <tr><th>Property name</th><th>Type</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>attributeName</td><td>String</td><td>Name of the attribute</td></tr>
-<tr><td>value</td><td>any - Depends on attribute type</td><td>Value of the attribute in the entity</td></tr>
-<tr><td>otherValue</td><td>any - Depends on attribute type</td><td>Value of the attribute in <em>entityToCompare</em></td></tr>
+<tr><td>attributeName</td><td>String</td><td>Nome do atributo</td></tr>
+<tr><td>value</td><td>any - Depende do tipo de atributo</td><td>Valor do atributo na entidade</td></tr>
+<tr><td>otherValue</td><td>any - Depende do tipo de atributo</td><td>Valor do atributo em <em>entityToCompare</em></td></tr>
 </tbody>
 </table>
-<p>Only attributes with different values are included in the collection. If no differences are found, <code>.diff()</code> returns an empty collection.</p>
-<p>The function applies for properties whose <a href="/docs/pt/API/DataClassAttributeClass.html#kind">kind</a> is <strong>storage</strong> or <strong>relatedEntity</strong>. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as <em>attributeName</em> properties (<em>value</em> and <em>otherValue</em> are empty for the related entity name).</p>
-<p>If one of the compared entities is <strong>Null</strong>, an error is raised.</p>
+<p>Apenas atributos com valores diferentes estão incluídos na coleção. Se nenhuma diferença for encontrada, <code>.diff()</code> retorna uma coleção vazia.</p>
+<p>A função se aplica para propriedades cujo <a href="/docs/pt/API/DataClassAttributeClass.html#kind">tipo</a> é <strong>de armazenamento</strong> ou <strong>relacionada a Entidade</strong>. No caso de uma entidade relacionada ter sido atualizada (ou seja, a chave estrangeira), o nome da entidade relacionada e seu nome de chave primária são retornados como propriedades <em>attributeName</em> ( value** e <em>outroValue</em> estão vazios para o nome da entidade relacionada).</p>
+<p>Se uma das entidades comparadas for <strong>Null</strong>, um erro é gerado.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1-1"></a><a href="#exemplo-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$diff1</span>; <span class="hljs-variable">$diff2 </span>: Collection
  employee:=ds. Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"ID=1001"</span>).<span class="hljs-function">first</span>()

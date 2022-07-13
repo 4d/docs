@@ -146,7 +146,7 @@
 <tr><td>selectionBorderColor</td><td></td><td>cadena</td><td>El color del borde de la selección para la hoja.</td></tr>
 <tr><td>sheetAreaOffset</td><td></td><td>objeto</td><td>Las opciones de sheetAreaOffset.</td></tr>
 <tr><td></td><td>left</td><td>entero largo</td><td>El desplazamiento a la izquierda de la hoja desde la local.</td></tr>
-<tr><td></td><td>top</td><td>entero largo</td><td>The offset top of sheet from host.</td></tr>
+<tr><td></td><td>top</td><td>entero largo</td><td>El desplazamiento superior de la hoja desde el local.</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -225,10 +225,10 @@
 <tr><td><code>vk pattern long time</code></td><td>&quot;<em>longTimePattern</em>&quot;</td><td>ISO 8601 format for the time in current localization.<p><p>USA default pattern: &quot;HH:mm:ss&quot;</td></tr>
 <tr><td><code>vk pattern month day</code></td><td>&quot;<em>monthDayPattern</em>&quot;</td><td>ISO 8601 format for the month and day in current localization.<p><p>USA default pattern: &quot;MMMM dd&quot;</td></tr>
 <tr><td><code>vk pattern short date</code></td><td>&quot;<em>shortDatePattern</em>&quot;</td><td>Abbreviated ISO 8601 format for the date in current localization.<p><p>USA default pattern: &quot;MM/dd/yyyy&quot;</td></tr>
-<tr><td><code>vk pattern short time</code></td><td>&quot;<em>shortTimePattern</em>&quot;</td><td>Abbreviated ISO 8601 format for the time in current localization.<p><p>USA default pattern: &quot;HH:mm&quot;</td></tr>
+<tr><td><code>vk pattern short time</code></td><td>&quot;<em>shortTimePattern</em>&quot;</td><td>Abbreviated ISO 8601 format for the time in current localization.<p><p>Patrón por defecto USA: &quot;HH:mm&quot;</td></tr>
 <tr><td><code>vk pattern sortable date time</code></td><td>&quot;<em>sortableDateTimePattern</em>&quot;</td><td>ISO 8601 format for the date and time in current localization which can be sorted.<p><p>USA default pattern: &quot;yyyy'-'MM'-'dd'T'HH':'mm':'ss&quot;</td></tr>
 <tr><td><code>vk pattern universal sortable date time</code></td><td>&quot;<em>universalSortableDateTimePattern</em>&quot;</td><td>ISO 8601 format for the date and time in current localization using UTC which can be sorted.<p><p>USA default pattern: &quot;yyyy'-'MM'-'dd HH':'mm':'ss'Z'&quot;</td></tr>
-<tr><td><code>vk pattern year month</code></td><td>&quot;<em>yearMonthPattern</em>&quot;</td><td>ISO 8601 format for the month and year in current localization.<p><p>USA default pattern: &quot;yyyy MMMM&quot;</td></tr>
+<tr><td><code>vk pattern year month</code></td><td>&quot;<em>yearMonthPattern</em>&quot;</td><td>ISO 8601 format for the month and year in current localization.<p><p>Patrón por defecto USA: &quot;yyyy MMMM&quot;</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -282,7 +282,7 @@
 <tr><td>^</td><td>Caret</td><td>#^#</td></tr>
 <tr><td>'</td><td>Apostrofe</td><td>'######</td></tr>
 <tr><td>{ }</td><td>Paréntesis curvos</td><td>{###,###,###}</td></tr>
-<tr><td>&lt; &gt;</td><td>Less-than and greater than signs</td><td>## &gt;##</td></tr>
+<tr><td>&lt; &gt;</td><td>Signos menor que y mayor que</td><td>## &gt;##</td></tr>
 <tr><td>=</td><td>Signo igual</td><td>#+#=##</td></tr>
 <tr><td>/</td><td>Barra inclinada hacia adelante. When used with numbers, displays them as fractions.</td><td>mm/dd/yyyy</td></tr>
 <tr><td>!</td><td>Signo de exclamación</td><td>$###.00!</td></tr>
@@ -355,12 +355,12 @@
 <tr><td>T</td><td>Hora actual</td><td>printInfo.headerLeft:=&quot;Es &amp;T.&quot;</td><td>Es 16:30:36.</td></tr>
 <tr><td>G</td><td>Imagen</td><td>printInfo.headerLeftImage:=smiley<br>printInfo.headerLeft:=&quot;&amp;G&quot;</td><td><img src="/docs/assets/en/ViewPro/apx_vpPrintAttributes1.PNG" alt=""></td></tr>
 <tr><td>S</td><td>Strikethrough</td><td>printInfo.headerLeft:=&quot;&amp;SEsto es texto.&quot;</td><td><del>Esto es texto.</del></td></tr>
-<tr><td>U</td><td>Subrayado</td><td>printInfo.headerLeft:=&quot;&amp;UEsto es texto.&quot;</td><td><ins>This is text.</ins></td></tr>
-<tr><td>B</td><td>Negrita</td><td>printInfo.headerLeft:=&quot;&amp;BEsto es texto.&quot;</td><td><strong>This is text.</strong></td></tr>
-<tr><td>I</td><td>Itálica</td><td>printInfo.headerLeft:=&quot;&amp;IEsto es texto.&quot;</td><td><em>This is text.</em></td></tr>
+<tr><td>U</td><td>Subrayado</td><td>printInfo.headerLeft:=&quot;&amp;UEsto es texto.&quot;</td><td><ins>Esto es texto.</ins></td></tr>
+<tr><td>B</td><td>Negrita</td><td>printInfo.headerLeft:=&quot;&amp;BEsto es texto.&quot;</td><td><strong>Esto es texto.</strong></td></tr>
+<tr><td>I</td><td>Itálica</td><td>printInfo.headerLeft:=&quot;&amp;IEsto es texto.&quot;</td><td><em>Esto es texto.</em></td></tr>
 <tr><td>&quot;</td><td>Prefijo fuente</td><td>printInfo.headerLeft:=&quot;&amp;&quot;Lucida Console&quot;&amp;14This is text.&quot;</td><td><img src="/docs/assets/en/ViewPro/apx_vpPrintAttributes2.PNG" alt=""></td></tr>
 <tr><td>K</td><td>Prefijo de color de texto</td><td>printInfo.headerLeft:=&quot;&amp;KFF0000This is text.&quot;</td><td><span style="color:red">Esto es texto</span>.</td></tr>
-<tr><td>F</td><td>Workbook name</td><td>printInfo.headerLeft:=&quot;&amp;F&quot;</td><td>2019 Monthly Revenue Forecasts</td></tr>
+<tr><td>F</td><td>Nombre del libro</td><td>printInfo.headerLeft:=&quot;&amp;F&quot;</td><td>2019 Monthly Revenue Forecasts</td></tr>
 <tr><td>A</td><td>Nombre de la hoja de cálculo</td><td>printInfo.headerLeft:=&quot;&amp;A&quot;</td><td>June 2019 revenue forecast</td></tr>
 </tbody>
 </table>
@@ -400,10 +400,10 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>blackAndWhite</td><td>booleano</td><td>Printing in black and white only. <p>Valor por defecto: false</p><p><strong>Nota</strong>: los PDFs no se ven afectados por este atributo. Colors in PDFs remain.</p></td></tr>
+<tr><td>blackAndWhite</td><td>booleano</td><td>Printing in black and white only. <p>Valor por defecto: false</p><p><strong>Nota</strong>: los PDFs no se ven afectados por este atributo. Los colores en PDFs permanecen.</p></td></tr>
 <tr><td>centering</td><td>entero largo</td><td>Como se centran los contenidos en la página impresa. Valores disponibles: <code>vk print centering both</code>, <code>vk print centering horizontal</code>, <code>vk print centering none</code> (por defecto), <code>vk print centering vertical</code></td></tr>
 <tr><td>firstPageNumber</td><td>entero largo</td><td>El número de página a imprimir en la primera página.<p>Por defecto = 1</td></tr>
-<tr><td>pageOrder</td><td>entero largo</td><td>The order pages are printed. Valores disponibles: <code>vk print page order auto</code> (por defecto), <code>vk print page order down then over</code>, <code>vk print page order over then down</code>.</td></tr>
+<tr><td>pageOrder</td><td>entero largo</td><td>Las páginas del pedido se imprimen. Valores disponibles: <code>vk print page order auto</code> (por defecto), <code>vk print page order down then over</code>, <code>vk print page order over then down</code>.</td></tr>
 <tr><td>pageRange</td><td>texto</td><td>The range of pages for printing</td></tr>
 <tr><td>qualityFactor</td><td>entero largo</td><td>El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Por defecto = 2</p></td></tr>
 <tr><td>useMax</td><td>booleano</td><td>Sólo se imprimen columnas y líneas con datos.<p>Valor por defecto: true</p></td></tr>
@@ -500,10 +500,10 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>backColor</td><td>texto</td><td>Defines the color of the background.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
-<tr><td>backgroundImage</td><td>picture, text</td><td>Specifies a background image.</td><td>Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Nota para Windows: la extensión del archivo incluirse.</td></tr>
+<tr><td>backColor</td><td>texto</td><td>Define el color del fondo.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td>backgroundImage</td><td>picture, text</td><td>Especifica una imagen de fondo.</td><td>Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Nota para Windows: la extensión del archivo incluirse.</td></tr>
 <tr><td>backgroundImageLayout</td><td>entero largo</td><td>Define el diseño para la imagen de fondo.</td><td><code>vk image layout center</code>, <code>vk image layout none</code>, <code>vk image layout stretch</code>, <code>vk image layout zoom</code></td></tr>
-<tr><td>foreColor</td><td>texto</td><td>Defines the color of the foreground.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td>foreColor</td><td>texto</td><td>Define el color del primer plano.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="bordes"></a><a href="#bordes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bordes</h4>
@@ -513,8 +513,8 @@
 </thead>
 <tbody>
 <tr><td>borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp</td><td></td><td>objeto</td><td>Define la línea de borde correspondiente</td><td></td></tr>
-<tr><td></td><td>color</td><td>texto</td><td>Defines the color of the border. Por defecto = black.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
-<tr><td></td><td>style</td><td>entero largo</td><td>Defines the style of the border. Por defecto = empty. Cannot be null or undefined.</td><td><code>vk line style dash dot</code>, <code>vk line style dash dot dot</code>, <code>vk line style dashed</code>, <code>vk line style dotted</code>, <code>vk line style double</code>, <code>vk line style empty</code>, <code>vk line style hair</code>, <code>vk line style medium</code>, <code>vk line style medium dash dot</code>, <code>vk line style medium dash dot dot</code>,<code>vk line style medium dashed</code>, <code>vk line style slanted dash dot</code>, <code>vk line style thick</code></td></tr>
+<tr><td></td><td>color</td><td>texto</td><td>Define el color del borde. Por defecto = black.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td></td><td>style</td><td>entero largo</td><td>Define el estilo del borde. Por defecto = empty. No puede ser null o indefinido.</td><td><code>vk line style dash dot</code>, <code>vk line style dash dot dot</code>, <code>vk line style dashed</code>, <code>vk line style dotted</code>, <code>vk line style double</code>, <code>vk line style empty</code>, <code>vk line style hair</code>, <code>vk line style medium</code>, <code>vk line style medium dash dot</code>, <code>vk line style medium dash dot dot</code>,<code>vk line style medium dashed</code>, <code>vk line style slanted dash dot</code>, <code>vk line style thick</code></td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="fuentes-y-texto"></a><a href="#fuentes-y-texto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fuentes y texto</h4>
@@ -524,18 +524,18 @@
 </thead>
 <tbody>
 <tr><td>font</td><td></td><td>texto</td><td>Specifies the font characteristics in CSS font shorthand (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;). Example: &quot;14pt Century Gothic&quot;. The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes.</td><td>A CSS font shorthand.<p>4D provides utility commands to handle font characteristics as objects: <a href="/docs/es/ViewPro/method-list.html#vp-font-to-object"><code>VP Font to object</code></a> and <a href="/docs/es/ViewPro/method-list.html#vp-object-to-font"><code>VP Object to font</code></a></td></tr>
-<tr><td>formatter</td><td></td><td>texto</td><td>Pattern for value/time property.</td><td>Number/text/date/time formats, special characters. Ver <a href="#cell-format">Formato de celda</a>.</td></tr>
+<tr><td>formatter</td><td></td><td>texto</td><td>Patrón de propiedad valor/tiempo.</td><td>Number/text/date/time formats, special characters. Ver <a href="#cell-format">Formato de celda</a>.</td></tr>
 <tr><td>isVerticalText</td><td></td><td>booleano</td><td>Especifica la dirección del texto.</td><td>True = texto vertical, False = texto horizontal.</td></tr>
 <tr><td>labelOptions</td><td></td><td>objeto</td><td>Define las opciones de etiqueta de celda (opciones de marca de agua).</td><td></td></tr>
 <tr><td></td><td>alignement</td><td>entero largo</td><td>Especifica la posición de la etiqueta de la celda. Propiedad opcional.</td><td><code>vk label alignment top left</code>, <code>vk label alignment bottom left</code>, <code>vk label alignment top center</code>, <code>vk label alignment bottom center</code>, <code>vk label alignment top right</code>, <code>vk label alignment bottom right</code></td></tr>
 <tr><td></td><td>visibility</td><td>entero largo</td><td>Especifica la visibilidad de la etiqueta de la celda. Propiedad opcional.</td><td><code>vk label visibility auto</code>, <code>vk label visibility hidden</code>, <code>vk label visibility visible</code></td></tr>
-<tr><td></td><td>foreColor</td><td>texto</td><td>Defines the color of the foreground. Propiedad opcional.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
+<tr><td></td><td>foreColor</td><td>texto</td><td>Define el color del primer plano. Propiedad opcional.</td><td>CSS color &quot;#rrggbb&quot; syntax (preferred syntax), CSS color &quot;rgb(r,g,b)&quot; syntax (alternate syntax), CSS color name (alternate syntax)</td></tr>
 <tr><td></td><td>font</td><td>texto</td><td>Specifies the font characteristics with CSS font shorthand (&quot;font-style font-variant font-weight font-size/line-height font-family&quot;). The font-size and font-family values are mandatory.</td><td></td></tr>
 <tr><td>textDecoration</td><td></td><td>entero largo</td><td>Especifica la decoración añadida al texto.</td><td><code>vk text decoration double underline</code>, <code>vk text decoration line through</code>, <code>vk text decoration none</code>, <code>vk text decoration overline</code>, <code>vk text decoration underline</code></td></tr>
 <tr><td>textIndent</td><td></td><td>entero largo</td><td>Define la unidad de indentación del texto. 1 = 8 píxeles</td><td></td></tr>
 <tr><td>textOrientation</td><td></td><td>entero largo</td><td>Define el ángulo de rotación del texto en una celda. Número entre -90 y 90</td><td></td></tr>
 <tr><td>marca de agua</td><td></td><td>texto</td><td>Define el contenido de la marca de agua (etiqueta de la celda)</td><td></td></tr>
-<tr><td>wordWrap</td><td></td><td>booleano</td><td>Specifies if text should be wrapped.</td><td>True = texto ajustado, False = texto no ajustado</td></tr>
+<tr><td>wordWrap</td><td></td><td>booleano</td><td>Especifica si el texto debe ser ajustado.</td><td>True = texto ajustado, False = texto no ajustado</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="disposición"></a><a href="#disposición" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disposición</h4>
@@ -558,7 +558,7 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>name</td><td>texto</td><td>Defines the name of the style</td></tr>
+<tr><td>name</td><td>texto</td><td>Define el nombre del estilo</td></tr>
 <tr><td>parentName</td><td>texto</td><td>Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Sólo está disponible cuando se utiliza una hoja de estilo.</td></tr>
 </tbody>
 </table>
@@ -571,8 +571,8 @@
 </thead>
 <tbody>
 <tr><td>version</td><td>Entero largo</td><td>Versión del componente interno</td></tr>
-<tr><td>dateCreation</td><td>Timestamp</td><td>Creation date</td></tr>
-<tr><td>dateModified</td><td>Timestamp</td><td>Last modification date</td></tr>
+<tr><td>dateCreation</td><td>Timestamp</td><td>Fecha de creación</td></tr>
+<tr><td>dateModified</td><td>Timestamp</td><td>Fecha última modificación</td></tr>
 <tr><td>meta</td><td>Objeto</td><td>Contenido gratuito, reservado para el desarrollador 4D</td></tr>
 <tr><td>spreadJS</td><td>Objeto</td><td>Reservado para el componente 4D View Pro</td></tr>
 </tbody>
