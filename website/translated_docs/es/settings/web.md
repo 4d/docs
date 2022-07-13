@@ -133,7 +133,7 @@ Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web 
 
 
 
-### Web Passwords
+### Contraseñas Web
 
 Define el sistema de autenticación que desea aplicar a su servidor web. Se proponen tres opciones:
 
@@ -146,7 +146,7 @@ Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**
 
 ### Conversión texto
 
-#### Send Extended Characters Directly
+#### Enviar directamente los caracteres extendidos
 
 Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings).
 
@@ -164,7 +164,7 @@ Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#keep-alive-connectio
 
 Activa el servicio Cross-origin resource sharing (CORS). Ver [Activar Cors](../WebServer/webServerConfig.md#activer-cors).
 
-#### Domain names/HTTP methods allowed
+#### Nombres de dominios/métodos HTTP permitidos
 
 Lista de hosts y métodos permitidos para el servicio CORS. Ver [Parámetros CORS](../WebServer/webServerConfig.md#cors-settings).
 
@@ -196,7 +196,7 @@ El menú de formato de registro ofrece las siguientes opciones:
 > La fecha y hora son locales al servidor.
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
--   state: reply given by the server.
+-   estado: respuesta dada por el servidor.
 -   length: size of the data returned (except the HTTP header) or 0.
 
 > **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos. Los valores posibles del estado son los siguientes: 200: OK 204: Sin contenido 302: Redirección 304: No modificado 400: Petición incorrecta 401: Autenticación requerida 404: No encontrada 500: Error interno El formato CLF no puede ser personalizado.

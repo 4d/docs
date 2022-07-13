@@ -99,7 +99,7 @@ Since 4D View Pro is a built-in 4D component, you can access its list of methods
 
 For a detailed list of component methods, see [Method list](method-list.md).
 
-### Addressing a 4D View Pro area
+### Abordando un área 4D View Pro
 
 A 4D View Pro area handles several objects and elements.
 
@@ -142,7 +142,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 | Propiedad |                   | Tipo      | Descripción                                                         | Disponible para                                                |
 | --------- | ----------------- | --------- | ------------------------------------------------------------------- | -------------------------------------------------------------- |
-| area      |                   | texto     | 4D View Pro area form object name                                   | always available                                               |
+| area      |                   | texto     | Nombre de objeto formulario área 4D View Pro                        | always available                                               |
 | ranges    |                   | colección | Colección de rangos                                                 | always available                                               |
 |           | \[ ].name        | texto     | Nombre de rango                                                     | name                                                           |
 |           | \[ ].sheet       | number    | Sheet index (current sheet index by default) (counting begins at 0) | celda, celdas, línea, líneas, columna, columnas, todos, nombre |
@@ -157,7 +157,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 
 
-## Importing and exporting documents
+## Importar y exportar documentos
 
 4D View Pro supports the import and export of several document formats:
 

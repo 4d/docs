@@ -26,7 +26,7 @@ Esta propiedad designa el tipo del [objeto formulario activo o inactivo](formObj
 ---
 ## Nombre del objeto
 
-Each active form object is associated with an object name. Each object name must be unique.
+Each active form object is associated with an object name. Cada nombre de objeto debe ser único.
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
@@ -108,7 +108,7 @@ You can use an [expression](Concepts/quick-tour.md#expressions) as data source f
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
-When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. There are two ways to do this:
+When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. Hay dos maneras de hacer esto:
 
 - You can set the type using the [Expression type](#expression-type) property.
 - You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
@@ -336,9 +336,9 @@ Hay varios tipos de cálculos disponibles. The following table shows which calcu
 
 | Cálculo                 | Num | Texto | Fecha | Hora | Bool | Imágenes | tipos de variables de pie de página |
 | ----------------------- | --- | ----- | ----- | ---- | ---- | -------- | ----------------------------------- |
-| Mínimo                  | X   | X     | X     | X    | X    |          | Same as column type                 |
-| Máximo                  | X   | X     | X     | X    | X    |          | Same as column type                 |
-| Suma                    | X   |       |       | X    | X    |          | Same as column type                 |
+| Mínimo                  | X   | X     | X     | X    | X    |          | Igual que el tipo de columna        |
+| Máximo                  | X   | X     | X     | X    | X    |          | Igual que el tipo de columna        |
+| Suma                    | X   |       |       | X    | X    |          | Igual que el tipo de columna        |
 | Conteo                  | X   | X     | X     | X    | X    | X        | Entero largo                        |
 | Promedio                | X   |       |       | X    |      |          | Real                                |
 | Desviación estándar(*)  | X   |       |       | X    |      |          | Real                                |

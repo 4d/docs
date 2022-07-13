@@ -10,7 +10,7 @@ The Settings configure how the current project functions. These parameters may b
 > 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
 
 
-## Accessing the settings
+## Acceso a los parámetros
 
 Puede acceder a la caja de diálogo Parámetros:
 
@@ -34,7 +34,7 @@ In both cases, the settings can be opened in 'Read-only', but cannot be used unt
 
 
 
-## Customizing parameters
+## Personalización de los parámetros
 
 In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
 
@@ -47,7 +47,7 @@ A parameter still appears in bold even when its value is replaced manually with 
 La mayoría de los parámetros se aplican inmediatamente. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
 
 
-## Resetting the settings
+## Reinicialización de los parámetros
 
 To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
 

@@ -84,31 +84,31 @@ In the *commandLine* parameter, pass the full path of the application's file to 
 **Warning:** This function can only launch executable applications; it cannot execute instructions that are part of the shell (command interpreter). For example, under Windows it is not possible to use this command to execute the `dir` instruction.
 
 
-#### *options* Object
+#### Objeto *options*
 
 En el parámetro *options*, pase un objeto que pueda contener las siguientes propiedades:
 
-| Propiedad        | Tipo     | Por defecto | Descripción                                                                                                                                                                                                                                                                                          |
-| ---------------- | -------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onResponse       | Formula  | indefinido  | Callback for system worker messages. This callback is called once the complete response is received. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                  |
-| onData           | Formula  | indefinido  | Callback for system worker data. This callback is called each time the system worker receives data. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                   |
-| onDataError      | Formula  | indefinido  | Callback for the external process errors (*stderr* of the external process). Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                          |
-| onError          | Formula  | indefinido  | Callback for execution errors, returned by the system worker in case of unusual runtime conditions (system errors). Recibe dos objetos como parámetros (ver abajo)</li>                                                                                                                              |
-| onTerminate      | Formula  | indefinido  | Retrollamada cuando el proceso externo se termina. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                                                    |
-| timeout          | Número   | indefinido  | Time in seconds before the process is killed if it is still alive                                                                                                                                                                                                                                    |
-| dataType         | Texto    | "text"      | Type of the response body content. Valores posibles: "text" (por defecto), "blob".                                                                                                                                                                                                                   |
-| encoding         | Texto    | "UTF-8"     | Sólo si `dataType="text"`. Codificación del contenido del cuerpo de la respuesta. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                       |
-| variables        | Objeto   |             | Sets custom environment variables for the system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Values are converted into strings when possible. The value cannot contain a '='. If not defined, the system worker inherits from the 4D environment. |
-| currentDirectory | Folder   |             | Directorio de trabajo en el que se ejecuta el proceso                                                                                                                                                                                                                                                |
-| hideWindow       | Booleano | true        | (Windows) Hide the application window (if possible) or the Windows console                                                                                                                                                                                                                           |
+| Propiedad        | Tipo     | Por defecto | Descripción                                                                                                                                                                                                                                                                                             |
+| ---------------- | -------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| onResponse       | Formula  | indefinido  | Retrollamada para los mensajes del system worker. This callback is called once the complete response is received. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                        |
+| onData           | Formula  | indefinido  | Retrollamada para los datos del system worker. This callback is called each time the system worker receives data. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                        |
+| onDataError      | Formula  | indefinido  | Callback for the external process errors (*stderr* of the external process). Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                             |
+| onError          | Formula  | indefinido  | Callback for execution errors, returned by the system worker in case of unusual runtime conditions (system errors). Recibe dos objetos como parámetros (ver abajo)</li>                                                                                                                                 |
+| onTerminate      | Formula  | indefinido  | Retrollamada cuando el proceso externo se termina. Recibe dos objetos como parámetros (ver abajo)                                                                                                                                                                                                       |
+| timeout          | Número   | indefinido  | Time in seconds before the process is killed if it is still alive                                                                                                                                                                                                                                       |
+| dataType         | Texto    | "text"      | Type of the response body content. Valores posibles: "text" (por defecto), "blob".                                                                                                                                                                                                                      |
+| encoding         | Texto    | "UTF-8"     | Sólo si `dataType="text"`. Codificación del contenido del cuerpo de la respuesta. For the list of available values, see the [`CONVERT FROM TEXT`](https://doc.4d.com/4dv19R/help/command/en/page1011.html) command description                                                                          |
+| variables        | Objeto   |             | Sets custom environment variables for the system worker. Syntax: `variables.key=value`, where `key` is the variable name and `value` its value. Values are converted into strings when possible. El valor no puede contener un '='. If not defined, the system worker inherits from the 4D environment. |
+| currentDirectory | Folder   |             | Directorio de trabajo en el que se ejecuta el proceso                                                                                                                                                                                                                                                   |
+| hideWindow       | Booleano | true        | (Windows) Hide the application window (if possible) or the Windows console                                                                                                                                                                                                                              |
 
 All callback functions receive two object parameters. Su contenido depende de la retrollamada:
 
-| Parámetros   | Tipo        | *onResponse* | *onData*      | *onDataError* | *onError*    | *onTerminate* |
-| ------------ | ----------- | ------------ | ------------- | ------------- | ------------ | ------------- |
-| $param1      | Objeto      | SystemWorker | SystemWorker  | SystemWorker  | SystemWorker | SystemWorker  |
-| $param2.type | Texto       | "response"   | "data"        | "error"       | "error"      | "termination" |
-| $param2.data | Text o Blob |              | received data | error data    |              |               |
+| Parámetros   | Tipo        | *onResponse* | *onData*        | *onDataError* | *onError*    | *onTerminate* |
+| ------------ | ----------- | ------------ | --------------- | ------------- | ------------ | ------------- |
+| $param1      | Objeto      | SystemWorker | SystemWorker    | SystemWorker  | SystemWorker | SystemWorker  |
+| $param2.type | Texto       | "response"   | "data"          | "error"       | "error"      | "termination" |
+| $param2.data | Text o Blob |              | datos recibidos | error data    |              |               |
 
 Esta es la secuencia de llamadas de retorno:
 
@@ -136,7 +136,7 @@ $options.hideWindow:= False
 $sw:=4D.SystemWorker.new ("C:\\WINDOWS\\notepad.exe C:\\Docs\\new folder\\res.txt";$options)
 ```
 
-2. Run npm install in the console:
+2. Ejecutar npm install en la consola:
 
 ```4d
 var $folder : 4D.Folder
@@ -457,7 +457,7 @@ Esta propiedad es **de sólo lectura**.
 | Parámetros  | Tipo  |    | Descripción                                                       |
 | ----------- | ----- |:--:| ----------------------------------------------------------------- |
 | message     | Texto | -> | Text to write on the input stream (stdin) of the external process |
-| messageBLOB | Blob  | -> | Bytes write on the input stream                                   |
+| messageBLOB | Blob  | -> | Bytes escritos en el flujo de entrada                             |
 <!-- END REF -->
 
 #### Descripción

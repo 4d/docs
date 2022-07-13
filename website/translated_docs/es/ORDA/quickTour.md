@@ -29,11 +29,11 @@ It means for example that, whenever you need to refer to the city field of the [
 ds.Company.city // devuelve el nombre de la ciudad
 ```
 
-> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
+> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
-> ORDA es sensible a las mayúsculas y minúsculas. `ds.company.city` will not refer to the ds.Company.city attribute.
+> ORDA es sensible a las mayúsculas y minúsculas. `ds.company.city` will not refer to the ds. Company.city attribute.
 
-You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
+You have also noticed the extra `hires` property in the ds. Company dataclass. No corresponde a un campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
 ![](assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
 
@@ -49,7 +49,7 @@ Pero no vaya tan rápido. Let's see now how to record data in ORDA dataclasses.
 ## Añadir datos
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+> In the ORDA world, ds. Company is a **dataclass**. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
 $entity:=ds.Company.new() //create a new entity reference

@@ -12,7 +12,7 @@ This area lets you set various options concerning display.
 
 ![](assets/en/settings/interface-page.png)
 
-### Font to use with the MESSAGE command
+### Fuente a utilizar con el comando MESSAGE
 
 Click **Select...** to set the font and size for the characters used by the `MESSAGE` command.
 
@@ -39,7 +39,7 @@ This menu lets you select the color scheme to use at the main application level.
 
 > Esta opción sólo funciona en macOS. En Windows, se utiliza siempre el esquema "Light".
 
-The following schemes are available:
+Los siguientes esquemas están disponibles:
 
 -   **Light**: the application will use the Default Light Theme ![](assets/en/settings/light-appearance.png)
 -   **Dark**: the application will use the Default Dark Theme ![](assets/en/settings/dark-appearance.png)
@@ -47,7 +47,7 @@ The following schemes are available:
 
 > Los temas por defecto pueden ser manejados utilizando CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
 
-The main application scheme will be applied to forms by default. However, it can be overriden:
+The main application scheme will be applied to forms by default. Sin embargo, se puede remplazar:
 
 -   by the [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) command at the working session level;
 -   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.

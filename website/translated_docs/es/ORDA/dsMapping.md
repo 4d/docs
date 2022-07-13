@@ -10,7 +10,7 @@ The ORDA technology is based upon an automatic mapping of an underlying database
 
 When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
-*   Tables are mapped to dataclasses.
+*   Las tablas correspondientes a las dataclasses.
 *   Los campos corresponden a los atributos de almacenamiento.
 *   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
@@ -167,7 +167,7 @@ In addition, the following relation attributes will also be automatically availa
 
 *   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 *   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
 All dataclass attributes are exposed as properties of the dataclass:
 
@@ -246,9 +246,9 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> > > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> > > > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> * > > * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > * selecciones de entidades basadas en datastores remotos.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

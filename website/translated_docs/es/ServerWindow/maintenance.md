@@ -21,6 +21,9 @@ All the records and all the indexes of the database are verified. If you want to
 
 After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
+
+This area indicates the date, time and status of the last  carried out on the database data.
+
 ### Compactar los datos...
 
 Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:
@@ -66,7 +69,7 @@ This area indicates the server log files recording duration (when log files are 
 
 Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
 
-### Start/Stop Request and Debug Logs
+### Iniciar/Detener Solicitud y Depurar Registros
 
 The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
 
@@ -78,7 +81,7 @@ When the logs have been activated, the button title changes to **Stop Request an
 
 The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
 
-### Load logs configuration file
+### Cargar archivo de configuración de logs
 
 This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
 

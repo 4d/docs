@@ -66,7 +66,7 @@ Puede hacer el área Encabezado más pequeña o más grande. You can use the Hea
 
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Se pueden insertar los siguientes objetos activos:
 
-- Buttons, picture buttons,
+- Botones, botones imagen,
 - Combo boxes, drop-down lists,  picture pop-up menus,
 - listas jerárquicas, list boxes
 - Botones de radio, casillas de selección, casillas de selección 3D,

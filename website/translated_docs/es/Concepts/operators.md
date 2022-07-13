@@ -57,7 +57,7 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 - [**Operadores de cadenas**](dt_string.md#string-operators)
 
 
-## Compound assignment operators
+## Operadores de asignación compuestos
 
 4D provides **compound assignment operators** that combine assignment with another operation. One example is the addition assignment operator (`+=`):
 

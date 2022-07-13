@@ -23,7 +23,7 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 | Puede ajustarse con           | Nombre                                                                                            | Comentarios |
 | ----------------------------- | ------------------------------------------------------------------------------------------------- | ----------- |
 | Caja de diálogo de parámetros | [Página de configuración/Utilización de la caché Web 4D](../settings/web.md#use-the-4d-web-cache) |             |
-| Caja de diálogo de parámetros | [Configuration page/Page Cache Size](../settings/web.md#page-cache-size)                          |             |
+| Caja de diálogo de parámetros | [Página de configuración/Tamaño de la caché de las páginas](../settings/web.md#page-cache-size)   |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -648,7 +648,7 @@ Estado de validación de la dirección IP para las cookies de sesión. For secur
 
 
 
-#### Send Extended Characters Directly
+#### Enviar directamente los caracteres extendidos
 
 When this option is checked, the web server sends extended characters “as is” in semi-dynamic pages, without converting them into HTML entities. This option has shown a speed increase on most foreign operating systems (especially the Japanese system).
 

@@ -198,7 +198,7 @@ Debe introducir una lista de valores. In the Form editor, a specific dialog box 
 
 #### Objetos soportados
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[Columna List Box (sólo tipo array)](listbox_overview.md#list-box-columns)
 
 
 

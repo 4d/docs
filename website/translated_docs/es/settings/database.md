@@ -10,7 +10,7 @@ You use this page to configure data storage on disk for the 4D database.
 ### Parámetros generales
 
 
-#### Allow Read Only Data file Use
+#### Autorizar el uso de archivos de datos de sólo lectura
 
 This option allows configuration of the application operation when opening a locked data file at the operating system level. 4D includes a mechanism that automatically prevents the opening of a database when its data file, or one of its segments, is locked. In this case, when this detection option is activated, 4D displays a warning message and does not open the database:
 
@@ -30,7 +30,7 @@ The current location of this folder is displayed in the "Current:" area. You can
 
 ![](assets/en/settings/temporary-file-location.png)
 
-Three location options are provided:
+Se ofrecen tres opciones de ubicación:
 
 -   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. The files are put into a subfolder whose name consists of the database name and a unique identifier.
 -   **Data File Folder** (default option): When this option is selected, the 4D temporary files are created in a folder named "temporary files" located at the same level as the data file of the database.

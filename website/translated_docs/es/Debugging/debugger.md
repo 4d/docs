@@ -137,7 +137,7 @@ $c:=a+b
 
     La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. En este punto, el tema muestra:
 
     | $a | 1          |
     | -- | ---------- |
@@ -414,7 +414,7 @@ This section lists all the shortcuts available in the debugger window.
 
 > The tool bar also has [shortcuts](#tool-bar-buttons).
 
-#### Watch Pane & Custom Watch Pane
+#### Ventana de evaluación & Subventana de evaluación personalizada
 
 * **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
 * **Double-Click** in the Custom Watch Pane to create a new expression

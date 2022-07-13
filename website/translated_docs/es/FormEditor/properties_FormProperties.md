@@ -60,7 +60,7 @@ Each table in a database generally has at least two table forms. One for listing
 
 - Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](assets/en/FormObjects/formOutput.png)
 
-- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](assets/en/FormObjects/formInput.png)
+- Formulario de entrada - utilizado para la entrada de datos. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](assets/en/FormObjects/formInput.png)
 
 
 Los tipos soportados dependen de la categoría de formulario:
@@ -83,7 +83,7 @@ Los tipos soportados dependen de la categoría de formulario:
 
 ---
 
-## Inherited Form Name
+## Nombre del formulario heredado
 
 This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
 

@@ -65,7 +65,7 @@ Para volver a conectar el depurador al servidor:
 
 
 
-## Attaching debugger at startup
+## Adjuntar el depurador al inicio
 
 4D allows you to automatically attach the debugger to a remote 4D client or the server at startup:
 
