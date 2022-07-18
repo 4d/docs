@@ -196,7 +196,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 Given the following table and relation:
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](../assets/en/API/APIdataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
