@@ -29,12 +29,12 @@
 <blockquote>
 <p>ORDA es sensible a las mayúsculas y minúsculas. <code>ds.company.city</code> will not refer to the ds. Company.city attribute.</p>
 </blockquote>
-<p>You have also noticed the extra <code>hires</code> property in the ds. Company dataclass. It does not correspond to a field. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
+<p>You have also noticed the extra <code>hires</code> property in the ds. Company dataclass. No corresponde a un campo. <code>hires</code> is actually the name of the <em>One to many</em> relation between Company and Employee:</p>
 <p><img src="/docs/19/assets/en/ORDA/struc2s.png" alt=""> <em>Name of the relation as defined in the Inspector</em></p>
 <p>It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:</p>
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>hires <span class="hljs-comment">//devuelve la lista de empleados</span>
 </code></pre>
-<p>Pero no vaya tan rápido. Let's see now how to record data in ORDA dataclasses.</p>
+<p>Pero no vaya tan rápido. Veamos ahora cómo registrar datos en las clases de datos ORDA.</p>
 <h2><a class="anchor" aria-hidden="true" id="añadir-datos"></a><a href="#añadir-datos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Añadir datos</h2>
 <p>In ORDA, you can add a record to a dataclass using the <code>new()</code> command.</p>
 <blockquote>
@@ -88,7 +88,7 @@
 <li><p><strong>Startup Method</strong>: Name of an associated method that will be automatically executed when the user opens the database (optional). This method can be used for example to load the user preferences.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="editor-de-grupos"></a><a href="#editor-de-grupos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Editor de grupos</h2>
-<p>The editor for groups is located in the Toolbox of 4D.</p>
+<p>El editor de grupos se encuentra en la caja de herramientas de 4D.</p>
 <h3><a class="anchor" aria-hidden="true" id="configurar-grupos"></a><a href="#configurar-grupos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configurar grupos</h3>
 <p>You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.</p>
 <p>Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.</p>
@@ -144,8 +144,8 @@ Right-click in the list of groups and choose the <strong>Add</strong> or <strong
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19"]}

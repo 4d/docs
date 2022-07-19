@@ -220,10 +220,10 @@ var <span class="hljs-variable">$hello</span> : Text
 Function</span><span class="hljs-function"> getFullname</span>()-&gt;<span class="hljs-variable">$fullname </span>: Text
     <span class="hljs-variable">$fullname</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-function">Uppercase</span>(<span class="hljs-literal">This</span>.lastName)
 </code></pre>
-<p>For a class function, the <code>Current method name</code> command returns: <code>&lt;ClassName&gt;.&lt;FunctionName&gt;</code>, for example &quot;MyClass.myMethod&quot;.</p>
-<p>In the application code, class functions are called as member methods of the object instance and can receive <a href="#class-function-parameters">parameters</a> if any. Se soportan las siguientes sintaxis:</p>
+<p>Para una función clase, el comando <code>Current method name</code> devuelve: <code>&lt;ClassName&gt;.&lt;FunctionName&gt;</code>, por ejemplo &quot;MyClass.myMethod&quot;.</p>
+<p>En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir <a href="#class-function-parameters">parámetros</a> si los hay. Se soportan las siguientes sintaxis:</p>
 <ul>
-<li>utilización del operador <code>()</code>. For example, <code>myObject.methodName(&quot;hello&quot;)</code></li>
+<li>utilización del operador <code>()</code>. Por ejemplo, <code>myObject.methodName(&quot;hello&quot;)</code></li>
 <li>utilización de un método miembro de la clase &quot;4D.Function&quot;:
 <ul>
 <li><a href="/docs/19/es/API/FunctionClass.html#apply"><code>apply()</code></a></li>
@@ -240,14 +240,14 @@ Function</span><span class="hljs-function"> getFullname</span>()-&gt;<span class
 <blockquote>
 <p>Si no se declaró el tipo, el parámetro se definirá como <code>Variant</code>.</p>
 </blockquote>
-<p>You declare the return parameter (optional) by adding an arrow (<code>-&gt;</code>) and the return parameter definition after the input parameter(s) list. Por ejemplo:</p>
+<p>Declare el parámetro de retorno de una función (opcional) añadiendo una flecha (<code>-&gt;</code>) y la definición del parámetro después de la lista de parámetros de entrada. Por ejemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> add</span>(<span class="hljs-variable">$x </span>: Variant; <span class="hljs-variable">$y </span>: Integer)-&gt;<span class="hljs-variable">$result </span>: Integer
 </code></pre>
-<p>You can also declare the return parameter only by adding <code>: type</code>, in which case it will automatically be available through $0. Por ejemplo:</p>
+<p>También puede declarar el parámetro de retorno sólo añadiendo <code>: tipo</code>, en cuyo caso estará disponible automáticamente a través de $0. Por ejemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> add</span>(<span class="hljs-variable">$x </span>: Variant; <span class="hljs-variable">$y </span>: Integer): Integer
     <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$x</span>+<span class="hljs-variable">$y</span>
 </code></pre>
-<p>The <a href="/docs/19/es/Concepts/parameters.html#sequential-parameters">classic 4D syntax</a> for method parameters can be used to declare class function parameters. Ambas sintaxis pueden mezclarse. Por ejemplo:</p>
+<p>La <a href="/docs/19/es/Concepts/parameters.html#sequential-parameters">sintaxis 4D clásica</a> para los parámetros de métodos puede utilizarse para declarar los parámetros de las funciones de clases. Ambas sintaxis pueden mezclarse. Por ejemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Function</span><span class="hljs-function"> add</span>(<span class="hljs-variable">$x </span>: Integer)<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$2</span>; <span class="hljs-variable">$value </span>: Integer<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$0 </span>: Text
@@ -280,9 +280,9 @@ var</span> <span class="hljs-variable">$area </span>: Real
 <span class="hljs-comment">// code</span>
 <span class="hljs-comment">// code</span>
 </code></pre>
-<p>A class constructor function, which can accept <a href="#parameters">parameters</a>, can be used to define a user class.</p>
-<p>In that case, when you call the <a href="/docs/19/es/API/ClassClass.html#new"><code>new()</code></a> function, the class constructor is called with the parameters optionally passed to the <code>new()</code> function.</p>
-<p>For a class constructor function, the <code>Current method name</code> command returns:  <code>&lt;ClassName&gt;:constructor</code>, for example &quot;MyClass:constructor&quot;.</p>
+<p>Una función class constructor, que puede aceptar los <a href="#parameters">parámetros</a>, puede ser utilizada para definir una clase usuario.</p>
+<p>En ese caso, cuando se llama a la función <a href="/docs/19/es/API/ClassClass.html#new"><code>new()</code></a>, el class constructor es llamado con los parámetros opcionalmente pasados a la función <code>new()</code>.</p>
+<p>Para una función class constructor, el comando <code>Current method name</code> devuelve:  <code>&lt;ClassName&gt;:constructor</code>, por ejemplo &quot;MyClass:constructor&quot;.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo:</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Class: MyClass</span>
 <span class="hljs-comment">// Class constructor de MyClass</span>
@@ -300,31 +300,31 @@ var</span> <span class="hljs-variable">$o </span>: cs.MyClass
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Class hijo</span><span class="hljs-keyword">
 Class extends</span> &lt;ParentClass&gt;
 </code></pre>
-<p>The <code>Class extends</code> keyword is used in class declaration to create a user class which is a child of another user class. The child class inherits all functions of the parent class.</p>
+<p>La palabra clave <code>Class extends</code> se utiliza en la declaración de clase para crear una clase usuario que es hijo de otra clase usuario. La clase hijo hereda todas las funciones de la clase padre.</p>
 <p>La extensión de clase debe respetar las siguientes reglas:</p>
 <ul>
-<li>A user class cannot extend a built-in class (except 4D.Object which is extended by default for user classes)</li>
-<li>A user class cannot extend a user class from another project or component.</li>
+<li>Una clase usuario no puede extender una clase integrada (excepto 4D.Object que se extiende por defecto para las clases usuario)</li>
+<li>Una clase usuario no puede extender una clase usuario de otro proyecto o componente.</li>
 <li>Una clase usuario no puede extenderse a sí misma.</li>
-<li>It is not possible to extend classes in a circular way (i.e. &quot;a&quot; extends &quot;b&quot; that extends &quot;a&quot;).</li>
+<li>No es posible extender las clases de una manera circular (es decir, &quot;a&quot; extiende &quot;b&quot; que extiende &quot;a&quot;).</li>
 </ul>
-<p>Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and <code>check syntax</code> will throw an error in this case.</p>
-<p>An extended class can call the constructor of its parent class using the <a href="#super"><code>Super</code></a> command.</p>
+<p>La ruptura de tal regla no es detectada por el editor de código o el intérprete, solo el compilador y <code>comprobar sintaxis</code> arrojará un error en este caso.</p>
+<p>Una clase extendida puede llamar al constructor de su clase padre utilizando el comando <a href="#super"><code>Super</code></a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>This example creates a class called <code>Square</code> from a class called <code>Polygon</code>.</p>
+<p>Este ejemplo crea una clase llamada <code>Square</code> de una clase llamada <code>Polygon</code>.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: Square</span>
 
-<span class="hljs-comment">//path: Classes/Square.4dm </span><span class="hljs-keyword">
+<span class="hljs-comment">//path: Clases/Square. dm </span><span class="hljs-keyword">
 
 Class extends</span> Polygon<span class="hljs-keyword">
 
 Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
 
-    <span class="hljs-comment">// It calls the parent class's constructor with lengths</span>
-    <span class="hljs-comment">// provided for the Polygon's width and height</span>
+    <span class="hljs-comment">// Llama al constructor de la clase padre con las longitudes</span>
+    <span class="hljs-comment">// proporcionados para el ancho y alto del polígono</span>
 <span class="hljs-function">    Super</span>(<span class="hljs-variable">$side</span>;<span class="hljs-variable">$side</span>)
-    <span class="hljs-comment">// In derived classes, Super must be called before you
-    // can use 'This'</span>
+    <span class="hljs-comment">// En las clases derivadas, Super debe ser llamado antes de </span>
+    <span class="hljs-comment">// utilizar 'This'</span>
     <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Square"</span><span class="hljs-keyword">
 
     Function</span><span class="hljs-function"> getArea</span>()
@@ -344,29 +344,29 @@ Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
 <tr><td>Resultado</td><td>objeto</td><td>&lt;-</td><td>Padre del objeto</td></tr>
 </tbody>
 </table>
-<p>The <code>Super</code> keyword allows calls to the <code>superclass</code>, i.e. the parent class.</p>
+<p>La palabra clave <code>Super</code> permite llamadas a la <code>superclass</code>, es decir, a la clase padre.</p>
 <p><code>Super</code> tiene dos propósitos diferentes:</p>
 <ol>
-<li>Inside a <a href="#class-constructor">constructor code</a>, <code>Super</code> is a command that allows to call the constructor of the superclass. When used in a constructor, the <code>Super</code> command appears alone and must be used before the <code>This</code> keyword is used.</li>
+<li>Dentro de un código <a href="#class-constructor">constructor</a>, <code>Super</code> es un comando que permite llamar al constructor de la superclase. Cuando se utiliza en un constructor, el comando <code>Super</code> aparece solo y debe ser usado antes de usar la palabra clave <code>This</code>.</li>
 </ol>
 <ul>
-<li>If all class constructors in the inheritance tree are not properly called, error -10748 is generated. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.</li>
-<li>If the <code>This</code> command is called on an object whose superclasses have not been constructed, error -10743 is generated.</li>
-<li>If <code>Super</code> is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.</li>
+<li>Si todos los class constructors en el árbol de herencia no son llamados correctamente, se genera el error -10748. Es responsabilidad del desarrollador 4D asegurarse de que las llamadas sean válidas.</li>
+<li>Si el comando <code>This</code> es llamado en un objeto cuyas superclases no han sido construidas, se genera el error -10743.</li>
+<li>Si se llama a <code>Super</code> fuera de un contexto de objeto, o en un objeto cuyo constructor de superclase ya ha sido llamado, se genera el error -10746.</li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// inside myClass constructor</span><span class="hljs-keyword">
-var</span> <span class="hljs-variable">$text1</span>; <span class="hljs-variable">$text2 </span>: Text
-<span class="hljs-function">Super</span>(<span class="hljs-variable">$text1</span>) <span class="hljs-comment">//calls superclass constructor with a text param</span>
-<span class="hljs-literal">This</span>.param:=<span class="hljs-variable">$text2 </span><span class="hljs-comment">// use second param</span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// dentro del constructor myClass</span><span class="hljs-keyword">
+var</span> <span class="hljs-variable">$text1</span>; <span class="hljs-variable">$text2 </span>: Texto
+<span class="hljs-function">Super</span>(<span class="hljs-variable">$text1</span>) <span class="hljs-comment">//llamada del constructor de la superclase con un parámetro texto</span>
+Este. aram:=<span class="hljs-variable">$text2 </span><span class="hljs-comment">// usar un segundo parámetro</span>
 </code></pre>
 <ol start="2">
-<li>Inside a <a href="#class-function">class member function</a>, <code>Super</code> designates the prototype of the superclass and allows to call a function of the superclass hierarchy.</li>
+<li>Dentro de una <a href="#class-function">función de clase</a>, <code>Super</code> designa el prototipo de la superclase y permite llamar a una función de la jerarquía de superclases.</li>
 </ol>
-<pre><code class="hljs css language-4d">Super.<span class="hljs-function">doSomething</span>(<span class="hljs-number">42</span>) <span class="hljs-comment">//calls "doSomething" function  </span>
-<span class="hljs-comment">//declared in superclasses</span>
+<pre><code class="hljs css language-4d">Super.<span class="hljs-function">doSomething</span>(<span class="hljs-number">42</span>) <span class="hljs-comment">//llama a la función "doSomething"  </span>
+<span class="hljs-comment">//declarada en superclases</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-1"></a><a href="#ejemplo-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>This example illustrates the use of <code>Super</code> in a class constructor. The command is called to avoid duplicating the constructor parts that are common between <code>Rectangle</code> and <code>Square</code> classes.</p>
+<p>Este ejemplo ilustra el uso de <code>Super</code> en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases <code>Rectangle</code> y <code>Square</code>.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Class: Rectangle</span><span class="hljs-keyword">
 Class constructor</span>(<span class="hljs-variable">$width </span>: Integer; <span class="hljs-variable">$height </span>: Integer)
     <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Rectangle"</span>
@@ -377,7 +377,7 @@ Class constructor</span>(<span class="hljs-variable">$width </span>: Integer; <s
 Function</span><span class="hljs-function"> sayName</span>()
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"Hi, I am a "</span>+<span class="hljs-literal">This</span>.name+<span class="hljs-string">"."</span>)
 
-<span class="hljs-comment">// Function definition</span><span class="hljs-keyword">
+<span class="hljs-comment">// Definición de la función</span><span class="hljs-keyword">
 Function</span><span class="hljs-function"> getArea</span>()<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$0 </span>: Integer
     <span class="hljs-variable">$0</span>:=(<span class="hljs-literal">This</span>.height)*(<span class="hljs-literal">This</span>.width)
@@ -388,26 +388,26 @@ Class extends</span> Rectangle<span class="hljs-keyword">
 
 Class constructor</span> (<span class="hljs-variable">$side </span>: Integer)
 
-    <span class="hljs-comment">// It calls the parent class's constructor with lengths</span>
-    <span class="hljs-comment">// provided for the Rectangle's width and height</span>
+    <span class="hljs-comment">// Llama al class constructor de la clase padre con longitudes</span>
+    <span class="hljs-comment">// proporcionados para el ancho y alto del rectángulo</span>
 <span class="hljs-function">    Super</span>(<span class="hljs-variable">$side</span>;<span class="hljs-variable">$side</span>)
-    <span class="hljs-comment">// In derived classes, Super must be called before you
-    // can use 'This'</span>
-    <span class="hljs-literal">This</span>.name:=<span class="hljs-string">"Square"</span><span class="hljs-keyword">
+    <span class="hljs-comment">// En las clases derivadas, Super debe ser llamado antes de que </span>
+    <span class="hljs-comment">// pueda utilizar 'This'</span>
+    <span class="hljs-literal">This</span>. ame:=<span class="hljs-string">"Square"</span><span class="hljs-keyword">
 
 Function</span><span class="hljs-function"> getArea</span>()
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$0</span>)
     <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.height*<span class="hljs-literal">This</span>.width
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-1"></a><a href="#ejemplo-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>This example illustrates the use of <code>Super</code> in a class member method. You created the <code>Rectangle</code> class with a function:</p>
+<p>Este ejemplo ilustra el uso de <code>Super</code> en un método miembro clase. Ha creado la clase <code>Rectangle</code> con una función:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: Rectangle</span><span class="hljs-keyword">
 
 Function</span><span class="hljs-function"> nbSides</span>()<span class="hljs-keyword">
     var</span> <span class="hljs-variable">$0 </span>: Text
     <span class="hljs-variable">$0</span>:=<span class="hljs-string">"I have 4 sides"</span>
 </code></pre>
-<p>You also created the <code>Square</code> class with a function calling the superclass function:</p>
+<p>También creó la clase <code>Square</code> con una función que llama a la función superclase:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: Square</span><span class="hljs-keyword">
 
 Class extends</span> Rectangle<span class="hljs-keyword">
@@ -417,10 +417,10 @@ Function</span><span class="hljs-function"> description</span>()<span class="hlj
     <span class="hljs-variable">$0</span>:=Super.<span class="hljs-function">nbSides</span>()+<span class="hljs-string">" which are all equal"</span>
 </code></pre>
 <p>Entonces puede escribir en un método proyecto:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$square </span>: Object<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$message </span>: Text
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$square </span>: Objeto<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$message </span>: Texto
 <span class="hljs-variable">$square</span>:=cs.Square.<span class="hljs-function">new</span>()
-<span class="hljs-variable">$message</span>:=<span class="hljs-variable">$square</span>.<span class="hljs-function">description</span>() <span class="hljs-comment">//I have 4 sides which are all equal</span>
+<span class="hljs-variable">$message</span>:=<span class="hljs-variable">$square</span>.<span class="hljs-function">description</span>() <span class="hljs-comment">//tengo 4 lados iguales</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="this"></a><a href="#this" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>This</h3>
 <h4><a class="anchor" aria-hidden="true" id="sintaxis-4"></a><a href="#sintaxis-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxis</h4>
@@ -434,19 +434,19 @@ var</span> <span class="hljs-variable">$message </span>: Text
 <tr><td>Resultado</td><td>objeto</td><td>&lt;-</td><td>Objeto actual</td></tr>
 </tbody>
 </table>
-<p>The <code>This</code> keyword returns a reference to the currently processed object. In 4D, it can be used in <a href="https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html">different contexts</a>.</p>
-<p>In most cases, the value of <code>This</code> is determined by how a function is called. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.</p>
-<p>When a formula is called as a member method of an object, its <code>This</code> is set to the object the method is called on. Por ejemplo:</p>
+<p>La palabra clave <code>This</code> devuelve una referencia al objeto procesado actualmente. En 4D, se puede utilizar en <a href="https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html">contextos diferentes</a>.</p>
+<p>En la mayoría de los casos, el valor de <code>This</code> está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.</p>
+<p>Cuando una fórmula es llamada como un método miembro de un objeto, su <code>This</code> está definido en el objeto en el que se llama el método. Por ejemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"prop"</span>;<span class="hljs-number">42</span>;<span class="hljs-string">"f"</span>;<span class="hljs-function">Formula</span>(<span class="hljs-literal">This</span>.prop))
 <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$o</span>.f() <span class="hljs-comment">//42</span>
 </code></pre>
-<p>When a <a href="#class-constructor">class constructor</a> function is used (with the <a href="/docs/19/es/API/ClassClass.html#new"><code>new()</code></a> function), its <code>This</code> is bound to the new object being constructed.</p>
+<p>Cuando se utiliza una función <a href="#class-constructor">class constructor</a> (con la función <a href="/docs/19/es/API/ClassClass.html#new"><code>new()</code></a>), su <code>This</code> está vinculado al nuevo objeto que se está construyendo.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: ob</span>
 
 Class Constructor  
 
-    <span class="hljs-comment">// Create properties on This as</span>
-    <span class="hljs-comment">// desired by assigning to them</span>
+    <span class="hljs-comment">// Crear las propiedades en This </span>
+    <span class="hljs-comment">// asignándolas</span>
     <span class="hljs-literal">This</span>.a:=<span class="hljs-number">42</span> 
 </code></pre>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// en un método 4D  </span>
@@ -454,9 +454,9 @@ Class Constructor
 <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$o</span>.a <span class="hljs-comment">//42</span>
 </code></pre>
 <blockquote>
-<p>When calling the superclass constructor in a constructor using the <a href="#super">Super</a> keyword, keep in mind that <code>This</code> must not be called before the superclass constructor, otherwise an error is generated. Ver <a href="#example-1">este ejemplo</a>.</p>
+<p>Al llamar a la superclase del constructor en un constructor utilizando la palabra clave <a href="#super">Super</a>, tenga en cuenta que <code>This</code> no debe ser llamado antes del constructor de la superclase, de lo contrario se genera un error. Ver <a href="#example-1">este ejemplo</a>.</p>
 </blockquote>
-<p>In any cases, <code>This</code> refers to the object the method was called on, as if the method were on the object.</p>
+<p>En todos los casos, <code>This</code> se refiere al objeto sobre el que se ha llamado el método, como si el método fuera una función del objeto.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">//Class: ob</span><span class="hljs-keyword">
 
 Function</span> f()
@@ -468,15 +468,15 @@ Function</span> f()
 <span class="hljs-variable">$o</span>.b:=<span class="hljs-number">3</span>
 <span class="hljs-variable">$val</span>:=<span class="hljs-variable">$o</span>.f() <span class="hljs-comment">//8</span>
 </code></pre>
-<p>In this example, the object assigned to the variable $o doesn't have its own <em>f</em> property, it inherits it from its class. Since <em>f</em> is called as a method of $o, its <code>This</code> refers to $o.</p>
+<p>En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad <em>f</em>, la hereda de su clase. Como <em>f</em> es llamado como un método de $o, su <code>This</code> se refiere a $o.</p>
 <h2><a class="anchor" aria-hidden="true" id="comandos-de-clases"></a><a href="#comandos-de-clases" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comandos de clases</h2>
-<p>Several commands of the 4D language allows you to handle class features.</p>
+<p>Varios comandos del lenguaje 4D permiten manejar las funcionalidades de las clases.</p>
 <h3><a class="anchor" aria-hidden="true" id="ob-class"></a><a href="#ob-class" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OB Class</h3>
 <h4><a class="anchor" aria-hidden="true" id="ob-class--object----object--null"></a><a href="#ob-class--object----object--null" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OB Class ( object ) -&gt; Object | Null</h4>
-<p><code>OB Class</code> returns the class of the object passed in parameter.</p>
+<p><code>OB Class</code> devuelve la clase del objeto pasado como parámetro.</p>
 <h3><a class="anchor" aria-hidden="true" id="ob-instance-of"></a><a href="#ob-instance-of" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OB Instance of</h3>
 <h4><a class="anchor" aria-hidden="true" id="ob-instance-of--object--class----boolean"></a><a href="#ob-instance-of--object--class----boolean" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OB Instance of ( object ; class ) -&gt; Boolean</h4>
-<p><code>OB Instance of</code> returns <code>true</code> if <code>object</code> belongs to <code>class</code> or to one of its inherited classes, and <code>false</code> otherwise.</p>
+<p><code>OB Instance of</code> devuelve <code>true</code> si <code>object</code> pertenece a la <code>class</code> o a una de las clases heredadas y <code>false</code> de lo contrario.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/es/Concepts/shared.html"><span class="arrow-prev">← </span><span>Objetos y colecciones compartidos</span></a><a class="docs-next button" href="/docs/19/es/Concepts/control-flow.html"><span>Condiciones y bucles</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#generalidades">Generalidades</a></li><li><a href="#gestión-de-clases">Gestión de clases</a><ul class="toc-headings"><li><a href="#definición-de-una-clase">Definición de una clase</a></li><li><a href="#borrar-una-clase">Borrar una clase</a></li><li><a href="#utilizar-la-interfaz-4d">Utilizar la interfaz 4D</a></li></ul></li><li><a href="#class-stores">Class stores</a><ul class="toc-headings"><li><a href="#cs">cs</a></li><li><a href="#4d">4D</a></li></ul></li><li><a href="#el-objeto-clase">El objeto clase</a><ul class="toc-headings"><li><a href="#herencia">Herencia</a></li></ul></li><li><a href="#palabras-clave-de-clase">Palabras clave de clase</a><ul class="toc-headings"><li><a href="#function">Function</a></li><li><a href="#class-constructor">Class constructor</a></li><li><a href="#class-extends-classname">Class extends &lt;ClassName&gt;</a></li><li><a href="#super">Super</a></li><li><a href="#this">This</a></li></ul></li><li><a href="#comandos-de-clases">Comandos de clases</a><ul class="toc-headings"><li><a href="#ob-class">OB Class</a></li><li><a href="#ob-instance-of">OB Instance of</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
@@ -490,8 +490,8 @@ Function</span> f()
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19"]}

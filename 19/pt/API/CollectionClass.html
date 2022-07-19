@@ -91,9 +91,9 @@
 <tr><td><a href="#clear"> <strong>.clear()</strong> : Collection</a><p>    </td></tr>
 <tr><td><a href="#combine"> <strong>.combine</strong>( <em>col2</em> : Collection {; <em>index</em> : Integer } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#concat"> <strong>.concat</strong>( <em>value</em> : any { <em>;...valueN</em> } ) : Collection</a><p>    </td></tr>
-<tr><td><a href="#copy"> <strong>.copy</strong>() : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithCol</em> : Collection ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithObj</em> : Object ) : Collection</a><p>    </td></tr>
+<tr><td><a href="#copiar"> <strong>.copy</strong>() : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithCol</em> : Collection ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithObj</em> : Object ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#count"> <strong>.count</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
-<tr><td><a href="#countvalues"> <strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
+<tr><td><a href="#countValues"> <strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
 <tr><td><a href="#distinct"> <strong>.distinct</strong>( {<em>option</em> : Integer} ) : Collection<br><strong>.distinct</strong>( <em>propertyPath</em> : Text {; <em>option</em> : Integer } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#equal"> <strong>.equal</strong>( <em>collection2</em> : Collection {; <em>option</em> : Integer } ) : Boolean</a><p>    </td></tr>
 <tr><td><a href="#every"> <strong>.every</strong>( <em>methodName</em> : Text { ;<em>...param</em> : any } ) : Boolean<br><strong>.every</strong>( <em>startFrom</em> : Integer ; <em>methodName</em> : Text { ;<em>...param</em> : any } ) : Boolean</a><p>    </td></tr>
@@ -102,18 +102,18 @@
 <tr><td><a href="#filter"> <strong>.filter</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#find"> <strong>.find</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any<br><strong>.find</strong>( <em>startFrom</em> : Integer ; <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any</a><p>    </td></tr>
 <tr><td><a href="#find"> <strong>.findIndex</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer<br><strong>.findIndex</strong>( <em>startFrom</em> : Integer ; <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer</a><p>    </td></tr>
-<tr><td><a href="#indexof"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
+<tr><td><a href="#indexOf"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
 <tr><td><a href="#indices"> <strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#insert"> <strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#join"> <strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    </td></tr>
-<tr><td><a href="#lastindexof"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
+<tr><td><a href="#lastIndexOf"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
 <tr><td>[ <strong>.length</strong> : Integer</td></tr>
-<tr><td>](#length)<p>    </td></tr>
+<tr><td>](#máx)<p>    </td></tr>
 <tr><td><a href="#map"> <strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#max"> <strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    </td></tr>
 <tr><td><a href="#min"> <strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    </td></tr>
 <tr><td><a href="#orderby"> <strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    </td></tr>
-<tr><td><a href="#orderbymethod"> <strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection </a><p>    </td></tr>
+<tr><td><a href="#orderByMethod"> <strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#pop"> <strong>.pop()</strong> : any </a><p>    </td></tr>
 <tr><td><a href="#push"> <strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    </td></tr>
@@ -2213,11 +2213,11 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <p>The <code>.sum()</code> function returns the sum for all values in the collection instance.</p>
 <p>Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).</p>
 <p>Se a coleção contiver objetos, passe o parâmetro <em>propertyPath</em> para indicar a propriedade objeto para levar em consideração.</p>
-<p><code>.sum()</code> returns 0 if:</p>
+<p><code>.sum()</code> retorna 0 se:</p>
 <ul>
-<li>the collection is empty,</li>
-<li>the collection does not contain numerical elements,</li>
-<li><em>propertyPath</em> is not found in the collection.</li>
+<li>a coleção estiver vazia,</li>
+<li>a coleção não contiver elementos numéricos,</li>
+<li><em>propertyPath</em> não for encontrada na collection.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1-14"></a><a href="#exemplo-1-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
@@ -2248,19 +2248,19 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
 <p><strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</p>
 <table>
 <thead>
-<tr><th>Parameter</th><th>Type</th><th style="text-align:center"></th><th>Descrição</th></tr>
+<tr><th>Parâmetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>value</td><td>Text, Number, Object, Collection, Date</td><td style="text-align:center">-&gt;</td><td>Value(s) to insert at the beginning of the collection</td></tr>
-<tr><td>Resultado</td><td>Real</td><td style="text-align:center">&lt;-</td><td>Collection containing added element(s)</td></tr>
+<tr><td>value</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td>Valor(es) a inserir no início da colecção</td></tr>
+<tr><td>Resultado</td><td>Real</td><td style="text-align:center">&lt;-</td><td>Colecção contendo elemento(s) adicionado(s)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descrição-40"></a><a href="#descrição-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>The <code>.unshift()</code> function inserts the given <em>value</em>(s) at the beginning of the collection and returns the modified collection.</p>
+<p>A função <code>.unshift()</code> insere o valor <em>determinado</em>(s) no início da coleção  e retorna a coleção modificada.</p>
 <blockquote>
-<p>This function modifies the original collection.</p>
+<p>Essa função modifica a coleção original.</p>
 </blockquote>
-<p>If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.</p>
+<p>Se vários valores forem passados, são inseridos todos ao mesmo tempo, o que significa que aparecem na colecção resultante na mesma ordem que na lista de argumentos.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-28"></a><a href="#exemplo-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection
  <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>)
@@ -2282,8 +2282,8 @@ var</span><span class="hljs-variable">$2Integer </span><span class="hljs-comment
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:pt","version:19"]}

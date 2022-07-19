@@ -67,7 +67,7 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/ORDA/ordaClasses.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Clases del modelo de datos</h1></header><article><div><span><p>ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and &quot;publish&quot; it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.</p>
-<p>For example, you could create a <code>getNextWithHigherSalary()</code> function in the <code>EmployeeEntity</code> class to return employees with a salary higher than the selected one. It would be as simple as calling:</p>
+<p>For example, you could create a <code>getNextWithHigherSalary()</code> function in the <code>EmployeeEntity</code> class to return employees with a salary higher than the selected one. Sería tan sencillo como llamar:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$nextHigh</span>:=ds.<span class="hljs-function">Employee</span>(<span class="hljs-number">1</span>).<span class="hljs-function">getNextWithHigherSalary</span>()
 </code></pre>
 <p>Developers can not only use these functions in local datastores, but also in client/server and remote architectures:</p>
@@ -133,7 +133,7 @@ Class extends</span> DataStoreImplementation<span class="hljs-keyword">
 Function</span> getDesc
   <span class="hljs-variable">$0</span>:=<span class="hljs-string">"Database exposing employees and their companies"</span>
 </code></pre>
-<p>This function can then be called:</p>
+<p>Esta función puede ser llamada:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$desc</span>:=ds.<span class="hljs-function">getDesc</span>() <span class="hljs-comment">//"Database exposing..."</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="clase-dataclass"></a><a href="#clase-dataclass" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clase DataClass</h3>
@@ -141,7 +141,7 @@ Function</span> getDesc
 <ul>
 <li><strong>Extends</strong>: 4D.DataClass</li>
 <li><strong>Class name</strong>: cs.<em>DataClassName</em> (where <em>DataClassName</em> is the table name)</li>
-<li><strong>Example name</strong>: cs.Employee</li>
+<li><strong>Ejemplo</strong>: cs.Employee</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4D"><span class="hljs-comment">// cs.Company class</span><span class="hljs-keyword">
@@ -216,7 +216,7 @@ Function</span> withSalaryGreaterThanAverage
 <ul>
 <li><strong>Extends</strong>: 4D.Entity</li>
 <li><strong>Class name</strong>: <em>DataClassName</em>Entity (where <em>DataClassName</em> is the table name)</li>
-<li><strong>Example name</strong>: cs.CityEntity</li>
+<li><strong>Ejemplo</strong>: cs.CityEntity</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// cs.CityEntity class</span><span class="hljs-keyword">
@@ -262,7 +262,7 @@ End if</span>
 <li>Peticiones REST</li>
 </ul>
 <blockquote>
-<p>Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.</p>
+<p>Las peticiones cliente/servidor 4D estándar no se ven afectadas. Data model class functions are always available in this architecture.</p>
 </blockquote>
 <p>A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the &quot;-10729 - Unknown member method&quot; error is returned.</p>
 <p>To allow a data model class function to be called by a remote request, you must explicitly declare it using the <code>exposed</code> keyword. La sintaxis formal es:</p>
@@ -405,8 +405,8 @@ End if</span>
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19"]}
