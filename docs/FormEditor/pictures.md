@@ -17,11 +17,11 @@ The most common picture formats are supported of both platforms: .jpeg, .gif, .p
 
 A specific icon is displayed for pictures saved in a format that is not available on the machine. The extension of the missing format is shown at the bottom of the icon:
 
-![](assets/en/FormEditor/picNoFormat.png)
+![](..assets/en/FormEditor/picNoFormat.png)
 
 The icon is automatically used wherever the picture is meant to be displayed:
 
-![](assets/en/FormEditor/picNoFormat2.png)
+![](..assets/en/FormEditor/picNoFormat2.png)
 
 This icon indicates that the picture cannot be displayed or manipulated locally -- but it can be saved without alteration so that it can be displayed on other machines. This is the case, for example, for PDF pictures on Windows, or for PICT format pictures.
 
@@ -37,8 +37,8 @@ When using high resolution pictures, you can specify the scale factor by adding 
 
 |Display Type| Scale Factor|Example
 |---|---|---|
-|Standard Resolution|1:1 pixel density.| **1x**<br/>![](assets/en/FormEditor/pictureScale1.png) *circle.png*|
-|High Resolution| Pixel density increased by a factor of 2 or 3.|<table><th>2x</th><th>3x</th><tr><td>![](assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table>
+|Standard Resolution|1:1 pixel density.| **1x**<br/>![](..assets/en/FormEditor/pictureScale1.png) *circle.png*|
+|High Resolution| Pixel density increased by a factor of 2 or 3.|<table><th>2x</th><th>3x</th><tr><td>![](..assets/en/FormEditor/pictureScale2.png)*circle@2x.png*</td><td>![](..assets/en/FormEditor/pictureScale3.png)<br/>*circle@3x.png*</td></tr></table>
 
 High resolution pictures with the @nx convention can be used in the following objects:
 
@@ -76,7 +76,7 @@ A dark mode picture is defined in the following way:
 
 At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).  
 
-![](assets/en/FormEditor/darkicon.png)
+![](..assets/en/FormEditor/darkicon.png)
 
 ## Mouse Coordinates in a Picture  
 

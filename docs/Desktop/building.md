@@ -25,11 +25,11 @@ Building a project package can be carried out using:
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
 
-![](assets/en/Project/buildappProj.png)
+![](..assets/en/Project/buildappProj.png)
 
 The Build Application dialog includes several pages that can be accessed using tabs:
 
-![](assets/en/Project/appbuilderProj.png)
+![](..assets/en/Project/appbuilderProj.png)
 
 Building can only be carried out once the project is compiled. If you select this command without having previously compiled the project, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the project must be (re)compiled.
 
@@ -57,7 +57,7 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 ## Application name and destination folder
 
-![](assets/en/Project/buidappstructureProj.png)
+![](..assets/en/Project/buidappstructureProj.png)
 
 Enter the name of the application in **Application Name**.
 
@@ -67,8 +67,8 @@ Specify the folder for the built application in **Destination Folder**. If the s
 
 This tab allows you to build a standard compiled structure file and/or a compiled component:
 
-![](assets/en/Project/appbuilderProj.png)
- 
+![](..assets/en/Project/appbuilderProj.png)
+
 ### Build compiled structure
 
 Builds an application containing only compiled code.
@@ -86,7 +86,7 @@ When you check this option, any folders related to the project are copied into t
 ### Build component
 
 Builds a compiled component from the structure.
- 
+
 A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D project (the host application project), its functionalities are accessible from the host project.
 
 If you have named your application, *MyComponent*, 4D will create a *Components* folder containing *MyComponent.4dbase* folder:
@@ -94,6 +94,7 @@ If you have named your application, *MyComponent*, 4D will create a *Components*
 *\<destination>/Components/MyComponent.4dbase/MyComponent.4DZ*.
 
 The *MyComponent.4dbase* folder contains:
+
 * *MyComponent.4DZ* file
 * A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
@@ -101,13 +102,14 @@ The *MyComponent.4dbase* folder contains:
 
 This tab allows you can build a stand-alone, single-user version of your application:
 
-![](assets/en/Project/standaloneProj.png)
+![](..assets/en/Project/standaloneProj.png)
 
 ### Build stand-alone Application
 
 Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your application project.
 
 The following elements are required for the build:
+
 * 4D Volume Desktop (the 4D database engine),
 * an [appropriate license](#licenses)
 
@@ -154,9 +156,9 @@ If you have specified "MyProject" as the name of the application, you will find 
   * Database folder  - Includes a Resources folder and  MyProject.4DZ file. They make up the compiled structure of the project as well as the project Resources folder.
 **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
   * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the project. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
-  * Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section. 
+  * Licenses folder - An XML file of license numbers integrated into the application. For more information about this, refer to the [Licenses & Certificate](#licenses-and-certificate) section.
   * Additional items added to the 4D Volume Desktop folder, if any (see [Customizing the 4D Volume Desktop folder](#customizing-4d-volume-desktop-folder)).
- 
+
  All these items must be kept in the same folder in order for the executable to operate.
 
 * *macOS*
@@ -188,7 +190,7 @@ Items must be installed:
 
 On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option.
 
-![](assets/en/Project/buildappCSProj.png)
+![](..assets/en/Project/buildappCSProj.png)
 
 ### What is a Client/Server application?  
 
@@ -217,10 +219,10 @@ Check this option to generate the server part of your application during the bui
 #### 4D Server location
 
 Click on the **[...]** button and use the *Browse for folder* dialog box to locate the 4D Server application. In macOS, you must select the 4D Server package directly.
- 
+
 #### Current version
 
-Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)). 
+Used to indicate the current version number for the application generated. You may then accept or reject connections by client applications according to their version number. The interval of compatibility for client and server applications is set using specific [XML keys](#build-application-settings)).
 
 #### Data linking mode
 
@@ -230,7 +232,7 @@ This option lets you choose the linking mode between the merged application and 
 
 * **By application path** - The merged 4D application will parse the application's *lastDataPath.xml* file and try to open the data file with an "executablePath" attribute that matches the application's full path. If such an entry is found, its corresponding data file (defined through its "dataFilePath" attribute) is opened. Otherwise, the last opened data file is opened (default mode).
 
-For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section. 
+For more information about the data linking mode, refer to the [Last data file opened](#last-data-file-opened) section.
 
 ### Build client application
 
@@ -357,14 +359,17 @@ The basic scenario is:
 
 1. In the Build application dialog box, select the "Build compiled structure" option to produce a .4DZ or .4DC for the application to be used in single-user mode.
 2. In the *buildApp.4DSettings* file of the client-server application, use following xml key(s) to indicate the path to the folder containing the compiled single user application:
- * `DatabaseToEmbedInClientWinFolder`
- * `DatabaseToEmbedInClientMacFolder`
+
+* `DatabaseToEmbedInClientWinFolder`
+* `DatabaseToEmbedInClientMacFolder`
+
 3. Build the client-server application. This will have following effects:
- * the whole folder of the single user application is copied inside the "Database" folder of the merged client
- * the *EnginedServer.4Dlink* file of the "Database" folder is not generated
- * the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
- * the `PublishName` key is not copied in the *info.plist* of the merged client
- * if the single-user application does not have a "Default data" folder, the merged client will run with no data.
+
+* the whole folder of the single user application is copied inside the "Database" folder of the merged client
+* the *EnginedServer.4Dlink* file of the "Database" folder is not generated
+* the .4DC, .4DZ, .4DIndy files of the single user application copy are renamed using the name of the merged client
+* the `PublishName` key is not copied in the *info.plist* of the merged client
+* if the single-user application does not have a "Default data" folder, the merged client will run with no data.
 
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
 
@@ -380,11 +385,11 @@ Customizing the client-side cache folder name can be useful when your client app
 
 * Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
 
-![](assets/en/Admin/cachea.png)
+![](..assets/en/Admin/cachea.png)
 
 * Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
 
-![](assets/en/Admin/cacheb.png)
+![](..assets/en/Admin/cacheb.png)
 
 #### Server cache folder
 
@@ -392,11 +397,11 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 * Default configuration (*same server applications share the same cache folder*):
 
-![](assets/en/Admin/cacheServera.png)
+![](..assets/en/Admin/cacheServera.png)
 
 * Using the `ServerStructureFolderName` key (*a dedicated cache folder is used for each server application*):
 
-![](assets/en/Admin/cacheServerb.png)
+![](..assets/en/Admin/cacheServerb.png)
 
 ## Plugins & components page
 
@@ -404,9 +409,9 @@ On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](C
 
 The page lists the elements loaded by the current 4D application:
 
-![](assets/en/Project/buildapppluginsProj.png)
+![](..assets/en/Project/buildapppluginsProj.png)
 
-*  **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
+* **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in or a component, deselect the check box next to it.
 
 * **Plugins and components** column - Displays the name of the plug-in/component.
 
@@ -421,13 +426,13 @@ If there is a conflict between two different versions of the same plug-in (one l
 >The use of plug-ins and/or components in a deployment version requires the necessary license numbers.
 
 ## Licenses & Certificate page
- 
+
 The Licences & Certificate page can be used to:
 
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
 * sign the application by means of a certificate in macOS.
 
-![](assets/en/Admin/buildappCertif.png)
+![](..assets/en/Admin/buildappCertif.png)
 
 ### Licenses
 
@@ -460,21 +465,21 @@ The application builder can sign merged 4D applications under macOS (single-user
 
 * Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs:
 
-![](assets/en/Admin/buildapposxcertProj.png)
+![](..assets/en/Admin/buildapposxcertProj.png)
 
 This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
 * **Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. The certificate name is usually the name of the certificate in the Keychain Access utility (part in red in the following example):
 
-![](assets/en/Project/certificate.png)
+![](..assets/en/Project/certificate.png)
 
 To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 
 >This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
 
 * **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. In the "Certificate Assistant", be sure to select the appropriate options:
-![](assets/en/Admin/Cert1.png)
-![](assets/en/Admin/Cert2.png)
+![](..assets/en/Admin/Cert1.png)
+![](..assets/en/Admin/Cert2.png)
 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
 
@@ -497,7 +502,7 @@ For more information on the notarization concept, please refer to [this page on 
 4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
 
 * **macOs** - When building a double-clickable application, 4D handles the customizing of the icon. In order to do this, you must create an icon file (icns type), prior to building the application file, and place it next to the project folder.
- 
+
  >Apple, Inc. provides a specific tool for building *icns* icon files (for more information, please refer to [Apple documentation](https://developer.apple.com/library/archive/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW2)).
 
  Your icon file must have the same name as the project file and include the *.icns* extension. 4D automatically takes this file into account when building the double-clickable application (the *.icns* file is renamed *ApplicationName.icns* and copied into the Resources folder; the *CFBundleFileIcon* entry of the *info.plist* file is updated).
@@ -559,10 +564,10 @@ This may be unsuitable if you want to duplicate a merged application intended to
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
 *Duplication when data linked by application name:*
-![](assets/en/Project/datalinking1.png)
+![](..assets/en/Project/datalinking1.png)
 
 *Duplication when data linked by application path:*
-![](assets/en/Project/datalinking2.png)
+![](..assets/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. You can either:
 
@@ -585,7 +590,7 @@ To define and use a default data file:
 
 The following graphic illustrates this feature:
 
-![](assets/en/Project/DefaultData.png)
+![](..assets/en/Project/DefaultData.png)
 
 When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
 
@@ -625,9 +630,9 @@ You can choose whether or not to display the standard server selection dialog bo
 
 * **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
 `ServerSelectionAllowed`: **False** or key omitted
-![](assets/en/Project/connect1.png)
+![](..assets/en/Project/connect1.png)
 
 * **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.
 `ServerSelectionAllowed`: **True**
-![](assets/en/Project/connect2.png)
-![](assets/en/Project/connect3.png)
+![](..assets/en/Project/connect2.png)
+![](..assets/en/Project/connect3.png)

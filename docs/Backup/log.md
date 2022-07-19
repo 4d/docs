@@ -20,33 +20,31 @@ As such, each operation performed by a user causes two simultaneous actions: the
 - Adding of records or BLOBs,
 - Modifying of records,
 - Deleting of records,
-- Creating and closing of transactions. 
+- Creating and closing of transactions.
 
-For more information about these actions, refer to the [Activity analysis](MSC/analysis.md) page of the MSC. 
+For more information about these actions, refer to the [Activity analysis](MSC/analysis.md) page of the MSC.
 
 4D manages the log file. It takes into account all operations that affect the data file equally, regardless of any manipulations performed by a user, a 4D method, the SQL engine, plug-ins, or from a Web browser or a mobile applicaton.
 
 The following illustration sums up how the log file works:
 
-![](assets/en/Backup/backup05.png)
-
+![](..assets/en/Backup/backup05.png)
 
 The current log file is automatically saved with the current data file. This mechanism has two distinct advantages:
 
 - Its avoids saturating the disk volume where the log file is stored. Without a backup, the log file would get bigger and bigger with use, and would eventually use all available disk space. For each data file backup, 4D or 4D Server closes the current log file and immediately starts a new, empty file, thereby avoiding the risk of saturation. The old log file is then archived and eventually destroyed depending on the mechanism for managing the backup sets.
 - It keeps log files corresponding to backups in order to be able to parse or repair an application at a later point in time. The integration of a log file can only be done in the application to which it corresponds. It is important, in order to be able to properly integrate a log file into a backup, to have backups and log files archived simultaneously.
 
-
 ## Creating the log file
 
 By default, any application project created with 4D uses a log file (option set in the **General** page of the Preferences). The log file is named *data.journal* and is placed in the Data folder.
 
-You can find out if your application uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Settings. If you deselected this option, or if you use an application without a log file and wish to set up a backup strategy with a log file, you will have to create one. 
+You can find out if your application uses a log file at any time: just check whether the **Use Log** option is selected on the **Backup/Configuration** page of the Settings. If you deselected this option, or if you use an application without a log file and wish to set up a backup strategy with a log file, you will have to create one.
 
 To create a log file:
 
 1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option.
-The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*. 
+The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
 
 2. Keep the default name or rename it, and then select the file location.
 If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
@@ -61,13 +59,11 @@ In order for you to be able to create a log file directly, the data must be in o
 - The data file is blank,
 - You just performed a backup and no changes have yet been made to the data.
 
-In all other cases, when you validate the Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the application. This precaution is indispensable because, in order to restore an application after any incidents, you will need a copy of the application into which the operations recorded in the log file will be integrated. 
+In all other cases, when you validate the Settings dialog box, an alert dialog box will appear to inform you that it is necessary to perform a backup. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the application. This precaution is indispensable because, in order to restore an application after any incidents, you will need a copy of the application into which the operations recorded in the log file will be integrated.
 
-Without having to do anything else, all operations performed on the data are logged in this file and it will be used in the future when the application is opened. 
+Without having to do anything else, all operations performed on the data are logged in this file and it will be used in the future when the application is opened.
 
 You must create another log file if you create a new data file. You must set or create another log file if you open another data file that is not linked to a log file (or if the log file is missing).
-
-
 
 ## Stopping a log file
 
@@ -75,9 +71,9 @@ If you would like to stop logging operations to the current log file, simply des
 
 4D then displays an alert message to remind you that this action prevents you from taking advantage of the security that the log file provides:
 
-![](assets/en/Backup/backup06.png)
+![](..assets/en/Backup/backup06.png)
 
-If you click **Stop**, the current log file is immediately closed (the Settings dialog box does not need to be validated afterwards). 
+If you click **Stop**, the current log file is immediately closed (the Settings dialog box does not need to be validated afterwards).
 
 If you wish to close the current log file because it is too large, you might consider performing a data file backup, which will cause the log file to be backed up as well.
 

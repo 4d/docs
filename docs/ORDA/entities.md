@@ -45,7 +45,7 @@ If you execute the following code:
 
 This is illustrated by the following graphic:
 
-![](assets/en/ORDA/entityRef1.png)
+![](..assets/en/ORDA/entityRef1.png)
 
 Now if you execute:
 
@@ -61,7 +61,7 @@ Now if you execute:
 
 This is illustrated by the following graphic:
 
-![](assets/en/ORDA/entityRef2.png)
+![](..assets/en/ORDA/entityRef2.png)
 
 Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
 
@@ -106,7 +106,7 @@ For example, to set a storage attribute:
 
 Accessing a related attribute depends on the attribute kind. For example, with the following structure:
 
-![](assets/en/ORDA/entityAttributes.png)
+![](..assets/en/ORDA/entityAttributes.png)
 
 You can access data through the related object(s):
 
@@ -117,7 +117,7 @@ You can access data through the related object(s):
 
 Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
 
-![](assets/en/ORDA/entityAttributes2.png)
+![](..assets/en/ORDA/entityAttributes2.png)
 
 Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
 
@@ -135,7 +135,7 @@ In the ORDA architecture, relation attributes directly contain data related to e
 
 Let's look at the following (simplified) structure:
 
-![](assets/en/ORDA/entityAttributes3.png)
+![](..assets/en/ORDA/entityAttributes3.png)
 
 In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
 
@@ -198,14 +198,14 @@ A **shareable** entity selection has the following characteristics:
 * it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
 * it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
 * it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
- 
+
 > Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
- 
+
 An **alterable** entity selection has the following characteristics:
 
 * it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
 * it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
- 
+
 #### How are they defined?
 
 The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
@@ -317,7 +317,7 @@ This code returns in *$localEmails* a collection of email addresses as strings.
 
 In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
 
-![](assets/en/ORDA/entitySelectionRelationAttributes.png)
+![](..assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
  $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
@@ -348,11 +348,11 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 
 The following diagram illustrates optimistic locking:
 
-1. Two processes load the same entity.<br/><br/>![](assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](..assets/en/ORDA/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](assets/en/ORDA/optimisticLock2.png)
+2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](..assets/en/ORDA/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](assets/en/ORDA/optimisticLock3.png)
+3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](..assets/en/ORDA/optimisticLock3.png)
 
 This can also be illustrated by the following code:
 
@@ -393,12 +393,12 @@ Using both classic and ORDA commands to lock records is based upon the following
 
 These principles are shown in the following diagram:
 
-![](assets/en/ORDA/concurrent1.png)
+![](..assets/en/ORDA/concurrent1.png)
 
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
-* Example with a lock set by a classic command:<br/><br/>![](assets/en/ORDA/concurrent2.png)
-* Example with a lock set by an ORDA method:<br/><br/>![](assets/en/ORDA/concurrent3.png)
+* Example with a lock set by a classic command:<br/><br/>![](..assets/en/ORDA/concurrent2.png)
+* Example with a lock set by an ORDA method:<br/><br/>![](..assets/en/ORDA/concurrent3.png)
 
 ## Client/server optimization
 

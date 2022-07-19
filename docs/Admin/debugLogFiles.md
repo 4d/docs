@@ -75,7 +75,7 @@ For each request, the following fields are logged:
 
 Request flow:
 
-![](assets/en/Admin/logRequestFlow.PNG)
+![](..assets/en/Admin/logRequestFlow.PNG)
 
 ## 4DRequestsLog_ProcessInfo.txt  
 
@@ -244,7 +244,7 @@ The log files can be produced in two versions:
   * intended for usual debugging
 
  To start this log:
- 
+
  ```4d
  SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
  SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log 
@@ -252,7 +252,7 @@ The log files can be produced in two versions:
  ```
 
  4D Server: Click on the **Start Request and Debug Logs** button in the [Maintenance Page](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) of the 4D Server administration window.
-   
+
    This log path is returned by the `Get 4D file` command.
 
 * an extended version:

@@ -10,7 +10,7 @@ title: Client/Server Management
 
 - **remote projects** are [.4DProject](Project/architecture.md) files opened by 4D Server and accessed with 4D in remote mode. The server sends a .4dz version of the project ([compressed format](building.md#build-compiled-structure)) to the remote 4D, thus structure files are read-only. This configuration is usually used for application testing.
 
-![](assets/en/getStart/localremote.png)
+![](..assets/en/getStart/localremote.png)
 
 > Connecting to a remote projet from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
 
@@ -36,7 +36,7 @@ The 4D Server connection dialog appears. This dialog has three tabs: **Recent**,
 
 If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
 
-![](assets/en/getStart/serverConnect.png)
+![](..assets/en/getStart/serverConnect.png)
 
 To connect to a server from the list, double-click on its name or select it and click the **OK** button.
 
@@ -44,7 +44,7 @@ To connect to a server from the list, double-click on its name or select it and 
 
 If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
 
-![](assets/en/getStart/serverConnect2.png)
+![](..assets/en/getStart/serverConnect2.png)
 
 - **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
 - **Network address**: The IP address of the machine where the 4D Server was launched. If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
@@ -62,7 +62,7 @@ Once a connection to the server has been established, the remote project will be
 - An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. The project is reloaded:
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
   - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
- 
+
 ### Updating project files on remote machines
 
 When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.

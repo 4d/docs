@@ -25,7 +25,6 @@ This property is **read-only**.
 
 <!-- END REF -->
 
- <!-- REF document.creationTime.Desc -->
 ## .creationTime
 
 <details><summary>History</summary>
@@ -42,8 +41,6 @@ This property is **read-only**.
 The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 This property is **read-only**.
-
-<!-- END REF -->
 
 <!-- REF document.exists.Desc -->
 ## .exists
@@ -431,7 +428,7 @@ $source:=Folder(fk documents folder).file("Pictures/photo.png")
 $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ```
 
- <!-- END REF -->
+<!-- END REF -->
 
 <!-- REF document.getContent().Desc -->
 ## .getContent()

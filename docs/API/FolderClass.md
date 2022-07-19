@@ -104,7 +104,7 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 |fk remote database folder|3|4D database folder created on each 4D remote machine|
 |fk resources folder|6|Associated filesystem: "/RESOURCES"|
 |fk system folder|100||
-|fk user preferences folder|0|4D folder that stores user preference files within the \<userName> directory.|
+|fk user preferences folder|0|4D folder that stores user preference files within the `\<userName>` directory.|
 |fk web root folder|8|Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path|
 
 If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.  

@@ -220,12 +220,13 @@ This CSS defines a color combination for text and text background in the light s
 ### Object Attributes
 
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
- - `method`
- - `type`
- - `class`
- - `event`
- - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
- 
+
+* `method`
+* `type`
+* `class`
+* `event`
+* `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+
 Form object attributes can be declared with their [JSON name](FormObjets/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
 #### Attribute Mapping
@@ -296,13 +297,13 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
 3. If it exists, it will then load a specific CSS file defined in the JSON form:
 
- * a file for both platforms:
- 
+* a file for both platforms:
+
  ```
  "css": "<path>" 
  ```
 
- * or a list of files for both platforms:
+* or a list of files for both platforms:
 
  ```
  "css": [
@@ -311,7 +312,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
        ],
  ```
 
- * or a list of files per platform:
+* or a list of files per platform:
 
  ```
   "css": [
@@ -333,8 +334,8 @@ The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create 
 
 1. Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
- ![](assets/en/FormEditor/stylesheets.png)
- 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+ ![](..assets/en/FormEditor/stylesheets.png)
+
+2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](..assets/en/FormEditor/createButton.png)
 
 3. The style sheet will open in your default text editor.  

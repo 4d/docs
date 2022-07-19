@@ -9,7 +9,7 @@ Authenticating users is necessary when you want to provide specific access right
 
 The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
 
-![](assets/en/WebServer/authentication.png)
+![](..assets/en/WebServer/authentication.png)
 
 > Using a **custom** authentication is recommended.
 
@@ -17,7 +17,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 The operation of the 4D web server's access system is summarized in the following diagram:
 
-![](assets/en/WebServer/serverAccess.png)
+![](..assets/en/WebServer/serverAccess.png)
 
 > Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md).
 
@@ -53,7 +53,7 @@ Entered values are then evaluated:
 - If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
   - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
   - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
- 
+
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
 
 >With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.

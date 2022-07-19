@@ -13,7 +13,7 @@ This page indicates the name, version and location of the application as well as
 The central part of the window indicates the name and location of the project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the current 4D user.
 
 - **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
-![](assets/en/MSC/MSC_popup.png)
+![](..assets/en/MSC/MSC_popup.png)
 If you select a menu item (disk or folder), it is displayed in a new system window.
 The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
 
@@ -26,7 +26,7 @@ The location of the "Licenses" folder can vary depending on the version of your 
 
 This page provides an overview of the tables in your database:
 
-![](assets/en/MSC/MSC_Tables.png)
+![](..assets/en/MSC/MSC_Tables.png)
 
 >Information on this page is available in both standard and maintenance modes.
 
@@ -42,22 +42,19 @@ The page lists all the tables of the database (including invisible tables) as we
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page).
 ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 
-
-
 ## Data
 
 The **Data** page provides information about the available and used storage space in the data file.
-
 
 >This page cannot be accessed in maintenance mode
 
 The information is provided in graph form:
 
-![](assets/en/MSC/MSC_Data.png)
+![](..assets/en/MSC/MSC_Data.png)
 
 >This page does not take into account any data that may be stored outside of the data file (see "External storage").
 
-Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](assets/en/MSC/MSC_infowarn.png)
+Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](..assets/en/MSC/MSC_infowarn.png)
 
 A warning icon is also displayed on the button of the [Compact](compact.md) page:
-![](assets/en/MSC/MSC_compactwarn.png)
+![](..assets/en/MSC/MSC_compactwarn.png)
