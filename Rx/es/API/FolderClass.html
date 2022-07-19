@@ -79,11 +79,11 @@
 </thead>
 <tbody>
 <tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D Folder</a><p>    copia el objeto <code>Folder</code> en el <em>destinationFolder</em> especificado&gt;</td></tr>
-<tr><td><a href="#create"><strong>.create()</strong> : Boolean</a><p>    crea una carpeta en el disco según las propiedades del objeto <code>Folder</code></td></tr>
-<tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    crea un alias (macOS) o un acceso directo (Windows)</td></tr>
+<tr><td><a href="#create"><strong>.create()</strong> : Boolean</a><p>    creates a folder on disk according to the properties of the <code>Folder</code> object</td></tr>
+<tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    creates an alias (macOS) or a shortcut (Windows)</td></tr>
 <tr><td><a href="#creationdate"><strong>.creationDate</strong> : Date</a><p>    la fecha de creación de la carpeta</td></tr>
 <tr><td><a href="#creationtime"><strong>.creationTime</strong> : Time</a><p>    la hora de creación de la carpeta</td></tr>
-<tr><td><a href="#delete"><strong>.delete</strong>( { <em>option</em> : Integer } )</a><p>    borra el archivo</td></tr>
+<tr><td><a href="#delete"><strong>.delete</strong>( { <em>option</em> : Integer } )</a><p>    deletes the folder</td></tr>
 <tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    true si la carpeta existe en el disco</td></tr>
 <tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    devuelve la extensión del nombre de la carpeta (si la hay)</td></tr>
 <tr><td><a href="#file"><strong>.file</strong>( <em>path</em> : Text ) : 4D.File</a><p>    crea un objeto <code>File</code> en el objeto <code>Folder</code> y devuelve su referencia</td></tr>
@@ -104,8 +104,8 @@
 <tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    el objeto carpeta padre de la carpeta</td></tr>
 <tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    la ruta POSIX de la carpeta</td></tr>
 <tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    la ruta de la carpeta expresada con la sintaxis de la plataforma actual</td></tr>
-<tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</a><p>    mueve o renombra el objeto <code>Folder</code> (carpeta fuente) a la <em>carpeta de destino</em></td></tr>
-<tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</a><p>    renombra el archivo con el nombre que se ha pasado en <em>newName</em> y devuelve el objeto <code>Folder</code> renombrado</td></tr>
+<tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.Folder</a><p>    moves or renames the <code>Folder</code> object (source folder) into the specified <em>destinationFolder</em></td></tr>
+<tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.Folder</a><p>    renames the folder with the name you passed in <em>newName</em> and returns the renamed <code>Folder</code> object</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="folder"></a><a href="#folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Folder</h2>
@@ -167,11 +167,11 @@
 <tr><td>fk remote database folder</td><td>3</td><td>Carpeta de la base de datos 4D creada en cada máquina 4D remota</td></tr>
 <tr><td>fk resources folder</td><td>6</td><td>Filesystem asociado: &quot;/RESOURCES&quot;</td></tr>
 <tr><td>fk system folder</td><td>100</td><td></td></tr>
-<tr><td>fk user preferences folder</td><td>0</td><td>Carpeta 4D que almacena los archivos de preferencias del usuario en el \N<userName> directorio.</td></tr>
-<tr><td>fk web root folder</td><td>8</td><td>Carpeta raíz web actual de la base de datos: si está dentro del paquete &quot;/PACKAGE/path&quot;, si no ruta completa</td></tr>
+<tr><td>fk user preferences folder</td><td>0</td><td>4D folder that stores user preference files within the &lt;userName&gt; directory.</td></tr>
+<tr><td>fk web root folder</td><td>8</td><td>Current Web root folder of the database: if within the package &quot;/PACKAGE/path&quot;, otherwise full path</td></tr>
 </tbody>
 </table>
-<p>Si el comando se llama desde un componente, pase el parámetro opcional * para obtener la ruta de la base local. De lo contrario, si omite el parámetro *, siempre se devuelve un objeto null.</p>
+<p>If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.</p>
 <h2><a class="anchor" aria-hidden="true" id="4dfoldernew"></a><a href="#4dfoldernew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.Folder.new()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>
@@ -185,7 +185,7 @@
 <p></details></p>
 <p><strong>4D.Folder.new</strong> ( <em>path</em> : Text { ; <em>pathType</em> : Integer }{ ; <em>*</em> } ) : 4D.Folder<br><strong>4D.Folder.new</strong> ( <em>folderConstant</em> : Integer { ; <em>*</em> } ) : 4D.Folder</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>4D.Folder.new()</code> crea y devuelve un nuevo objeto de tipo <code>4D.Folder</code>. Es idéntico al comando <a href="#folder"><code>Folder</code></a> (acceso directo).</p>
+<p>The <code>4D.Folder.new()</code> function creates and returns a new object of the <code>4D.Folder</code> type. It is identical to the <a href="#folder"><code>Folder</code></a> command (shortcut).</p>
 <blockquote>
 <p>Se recomienda utilizar el comando de acceso directo<a href="#folder"><code>Folder&lt;</code></a> en lugar de <code>4D.Folder.new()</code>.</p>
 </blockquote>
@@ -254,8 +254,8 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.create()</code> crea una carpeta en el disco según las propiedades del objeto <code>Folder</code>.</p>
-<p>Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades <a href="#platformpath">platformPath</a> o <a href="#path">path</a>. Si la carpeta ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.</p>
+<p>The <code>.create()</code> function creates a folder on disk according to the properties of the <code>Folder</code> object.</p>
+<p>If necessary, the function creates the folder hierachy as described in the <a href="#platformpath">platformPath</a> or <a href="#path">path</a> properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.</p>
 <p><strong>Valor devuelto</strong></p>
 <ul>
 <li><strong>True</strong> si la carpeta se crea con éxito;</li>
@@ -267,7 +267,7 @@
 <span class="hljs-variable">$created</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE/SpecialPrefs"</span>).<span class="hljs-function">create</span>()
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2"></a><a href="#ejemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>Creación de la carpeta &quot;/Archives2019/January/&quot; en la carpeta de la base:</p>
+<p>Creation of the &quot;/Archives2019/January/&quot; folder in the database folder:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$newFolder</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE/Archives2019/January"</span>)<span class="hljs-keyword">
 If</span>(<span class="hljs-variable">$newFolder</span>.<span class="hljs-function">create</span>())
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"La"</span>+<span class="hljs-variable">$newFolder</span>.name+<span class="hljs-string">" carpeta fue creada."</span>)<span class="hljs-keyword">
@@ -296,15 +296,15 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>destinationFolder</td><td>4D.Folder</td><td>-&gt;</td><td>Carpeta de destino para el alias o el acceso directo</td></tr>
-<tr><td>aliasName</td><td>Texto</td><td>-&gt;</td><td>Nombre del alias o del atajo</td></tr>
+<tr><td>aliasName</td><td>Texto</td><td>-&gt;</td><td>Name of the alias or shortcut</td></tr>
 <tr><td>aliasType</td><td>Integer</td><td>-&gt;</td><td>Tipo de enlace del alias</td></tr>
 <tr><td>Resultado</td><td>4D.File</td><td>&lt;-</td><td>Referencia de alias o de acceso directo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.createAlias()</code> crea un alias (macOS) o un acceso directo (Windows) para la carpeta con el nombre <em>aliasName</em> especificado en la carpeta designada por el objeto <em>destinationFolder</em>.</p>
-<p>Pase el nombre del alias o del acceso directo a crear en el parámetro <em>aliasName</em>.</p>
-<p>Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro <em>aliasType</em>. Las siguientes constantes están disponibles:</p>
+<p>The <code>.createAlias()</code> function creates an alias (macOS) or a shortcut (Windows) to the folder with the specified <em>aliasName</em> name in the folder designated by the <em>destinationFolder</em> object.</p>
+<p>Pass the name of the alias or shortcut to create in the <em>aliasName</em> parameter.</p>
+<p>By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the <em>aliasType</em> parameter. Las siguientes constantes están disponibles:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
@@ -314,11 +314,11 @@ End if</span>
 <tr><td><code>fk symbolic link</code></td><td>1</td><td>Enlace simbólico (sólo para macOS)</td></tr>
 </tbody>
 </table>
-<p>En Windows, siempre se crea un acceso directo (archivo.lnk) (el parámetro <em>aliasType</em> es ignorado).</p>
+<p>On Windows, a shortcut (.lnk file) is always created (the <em>aliasType</em> parameter is ignored).</p>
 <p><strong>Objeto devuelto</strong></p>
-<p>Un objeto <code>4D.File</code> con la propiedad <code>isAlias</code> definida en <strong>true</strong>.</p>
+<p>A <code>4D.File</code> object with the <code>isAlias</code> property set to <strong>true</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-3"></a><a href="#ejemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Quiere crear un alias para una carpeta de archivos en su carpeta de base:</p>
+<p>You want to create an alias to an archive folder in your database folder:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$myFolder</span>:=<span class="hljs-function">Folder</span>(<span class="hljs-string">"C:\\Documents\\Archives\\2019\\January"</span>;fk platform path)
 <span class="hljs-variable">$aliasFile</span>:=<span class="hljs-variable">$myFolder</span>.<span class="hljs-function">createAlias</span>(<span class="hljs-function">Folder</span>(<span class="hljs-string">"/PACKAGE"</span>);<span class="hljs-string">"Jan2019"</span>)
 </code></pre>
@@ -373,8 +373,8 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.delete()</code> borra el archivo.</p>
-<p>Por defecto, por razones de seguridad, si se omite el parámetro option, <code>.delete( )</code> sólo permite borrar las carpetas vacías. Si desea que el comando pueda eliminar carpetas que no están vacías, debe utilizar el parámetro option con una de las siguientes constantes:</p>
+<p>The <code>.delete()</code> function deletes the folder.</p>
+<p>By default, for security reasons, if you omit the option parameter, <code>.delete( )</code> only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
@@ -384,7 +384,7 @@ End if</span>
 <tr><td><code>Delete with contents</code></td><td>1</td><td>Elimina la carpeta junto con todo lo que contiene</td></tr>
 </tbody>
 </table>
-<p>Cuando <code>Delete only if empty</code> se pasa o si se omite el parámetro option:</p>
+<p>When <code>Delete only if empty</code> is passed or if you omit the option parameter:</p>
 <ul>
 <li>La carpeta sólo se elimina si está vacía; en caso contrario, el comando no hace nada y se genera un error -47.</li>
 <li>Si la carpeta no existe, se genera el error -120.</li>
@@ -748,9 +748,9 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-23"></a><a href="#descripción-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.moveTo( )</code> mueve o renombra el objeto <code>Folder</code> (carpeta fuente) a la <em>carpeta de destino</em>.</p>
+<p>The <code>.moveTo( )</code> function moves or renames the <code>Folder</code> object (source folder) into the specified <em>destinationFolder</em>.</p>
 <p>La <em>destinationFolder</em> debe existir en el disco, de lo contrario se genera un error.</p>
-<p>Por defecto, la carpeta conserva su nombre cuando se mueve. Si desea cambiar renombrar la carpeta desplazada, pase el nombre completo en el parámetro <em>newName</em>. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error.</p>
+<p>Por defecto, la carpeta conserva su nombre cuando se mueve. If you want to rename the moved folder, pass the new full name in the <em>newName</em> parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>El objeto <code>Folder</code> movido.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-7"></a><a href="#ejemplo-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -861,8 +861,8 @@ End if</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción-29"></a><a href="#descripción-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>La función <code>.rename()</code> renombra el archivo con el nombre que se ha pasado en <em>newName</em> y devuelve el objeto <code>Folder</code> renombrado.</p>
-<p>El parámetro <em>newName</em> debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como &quot;:&quot;, &quot;/&quot;, etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.</p>
+<p>The <code>.rename()</code> function renames the folder with the name you passed in <em>newName</em> and returns the renamed <code>Folder</code> object.</p>
+<p>The <em>newName</em> parameter must comply with naming rules (e.g., it must not contain characters such as &quot;:&quot;, &quot;/&quot;, etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.</p>
 <p><strong>Objeto devuelto</strong></p>
 <p>El objeto <code>Folder</code> renombrado.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-8"></a><a href="#ejemplo-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -883,8 +883,8 @@ End if</span>
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

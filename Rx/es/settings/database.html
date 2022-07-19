@@ -137,7 +137,7 @@ Setting limits is particularly useful for databases that are distributed on mach
 <p><img src="/docs/Rx/assets/en/settings/memory-maximum-size.png" alt=""></p></li>
 <li><p><strong>Calculation of adaptive cache not checked</strong>:  this mode, you set the size of the memory cache for the database yourself. 4D then displays an entry area that allows setting the memory cache to use as well as information related to the physical memory (RAM available on the machine), the current cache and cache after restart (taking your changes into account).</p>
 <p>The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. In most cases, the adaptive cache offers better performance.</p></li>
-<li><p><strong>Flush Cache every... Seconds/Minutes</strong>: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D saves the data placed in the cache at regular intervals. You can specify any time interval between 1 second and 500 minutes. By default, 4D saves your data every 20 seconds. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the <a href="https://doc.4d.com/4dv19R/help/command/en/page297.html">FLUSH CACHE</a> command to trigger the flush at any moment.</p>
+<li><p><strong>Flush Cache every... Seconds/Minutes</strong>: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D saves the data placed in the cache at regular intervals. You can specify any time interval between 1 second and 500 minutes. Por defecto, 4D guarda sus datos cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the <a href="https://doc.4d.com/4dv19R/help/command/en/page297.html">FLUSH CACHE</a> command to trigger the flush at any moment.</p>
 <p>When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).</p>
 <p>If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. This slowness means that a huge amount of records is being saved. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.</p>
 <p>By default, 4D displays a small window when the cache is flushed. If you do not want this visual reminder, you can uncheck the <strong>Flushing progress</strong> option on the <a href="/docs/Rx/es/settings/interface.html">Interface page</a>.</p></li>
@@ -155,8 +155,8 @@ Setting limits is particularly useful for databases that are distributed on mach
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

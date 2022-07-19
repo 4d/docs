@@ -74,7 +74,7 @@
 <p>Un combo box se inicializa exactamente igual que una <a href="/docs/Rx/es/FormObjects/dropdownListOverview.html#overview">lista desplegable</a>: utilizando un objeto, un array o una lista de selección.</p>
 <h3><a class="anchor" aria-hidden="true" id="utilizar-un-objeto"></a><a href="#utilizar-un-objeto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilizar un objeto</h3>
 <blockquote>
-<p>Esta funcionalidad sólo está disponible en los proyectos 4D.</p>
+<p>Esta funcionalidad sólo está disponible en proyectos 4D.</p>
 </blockquote>
 <p>Un <a href="/docs/Rx/es/Concepts/object.html">objeto</a> encapsulando una <a href="Concepts/dt_collection">colección</a> puede utilizarse como fuente de datos de un combo box. El objeto debe contener las siguientes propiedades:</p>
 <table>
@@ -82,7 +82,7 @@
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td><code>values</code></td><td>Collection</td><td>Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío</td></tr>
+<tr><td><code>values</code></td><td>Collection</td><td>Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío</td></tr>
 <tr><td><code>currentValue</code></td><td>igual que Collection</td><td>Texto introducido por el usuario</td></tr>
 </tbody>
 </table>
@@ -100,7 +100,7 @@
 <p>When the form is executed, 4D automatically manages the combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the combo box when the form is displayed:</p>
 <p>Please refer to <strong>Using a choice</strong> in the <a href="/docs/Rx/es/FormObjects/dropdownListOverview.html#using-a-choice-list">drop-down list page</a> for more information.</p>
 <h2><a class="anchor" aria-hidden="true" id="opciones"></a><a href="#opciones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Opciones</h2>
-<p>Combo box type objects accept two specific options:</p>
+<p>Los objetos de tipo combo box aceptan dos opciones específicas:</p>
 <ul>
 <li><a href="/docs/Rx/es/FormObjects/propertiesDataSource.html#automatic-insertion">Automatic insertion</a>: enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.</li>
 <li><a href="/docs/Rx/es/FormObjects/propertiesRangeOfValues.html#excluded-list">Exclusión</a> (lista de valores excluidos): permite establecer una lista cuyos valores no pueden introducirse en el combo box. Si se introduce un valor excluido, no se acepta y se muestra un mensaje de error.</li>
@@ -108,7 +108,9 @@
 <blockquote>
 <blockquote>
 <blockquote>
+<blockquote>
 <p>La asociación de una <a href="/docs/Rx/es/FormObjects/propertiesRangeOfValues.html#required-list">lista de valores obligatorios</a> no está disponible para los combo box. In an interface, if an object must propose a finite list of required values, then you must use a <a href="/docs/Rx/es/FormObjects/dropdownListOverview.html#overview">drop-down list</a> object.</p>
+</blockquote>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -127,8 +129,8 @@
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

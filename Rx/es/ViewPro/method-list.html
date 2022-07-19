@@ -142,7 +142,7 @@
 </ul>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1"></a><a href="#ejemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>You want to create a named range for a cell range:</p>
+<p>Quiere crear un rango nombrado para un rango de celdas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$range</span>:=<span class="hljs-function">VP Cell</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">2</span>;<span class="hljs-number">10</span>)
 <span class="hljs-function">VP ADD RANGE NAME</span>(<span class="hljs-variable">$range</span>;<span class="hljs-string">"Total1"</span>)
 </code></pre>
@@ -385,7 +385,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>The <em>column</em> parameter defines the first column of the cell range. Pass the column index (counting begins at 0) in this parameter. If the range is within multiple columns, you should also use the <em>columnCount</em> parameter.</p>
 <p>In the <em>row</em> parameter, you can define the row(s) of the cell range's position. Pass the row index (counting begins at 0) in this parameter. If the range is within multiple rows, you should also use the <em>rowCount</em> parameter.</p>
 <p>The <em>columnCount</em> parameter allows you to define the total number of columns the range is within. <em>columnCount</em> must be greater than 0.</p>
-<p>The <em>rowCount</em> parameter allows you to define the total number of rows the range is within. <em>rowCount</em> must be greater than 0.</p>
+<p>The <em>rowCount</em> parameter allows you to define the total number of rows the range is within. <em>rowCount</em> debe ser mayor que 0.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si se omite o si se pasa <code>vk current sheet</code>, se utiliza la hoja de cálculo actual por defecto.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-8"></a><a href="#ejemplo-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to define a range object for the following cells (on the current sheet):</p>
@@ -439,7 +439,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-10"></a><a href="#ejemplo-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>The following columns are all the same size and don't display some of the text:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/cmd_vpColumnAutoFit1.PNG" alt=""></p>
-<p>Selecting the columns and running this code:</p>
+<p>La selección de las columnas y la ejecución de este código:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> VP COLUMN AUTOFIT</span>(<span class="hljs-function">VP Get selection</span>(<span class="hljs-string">"ViewProarea"</span>))
 </code></pre>
 <p>... resizes the columns to fit the size of the contents:</p>
@@ -536,7 +536,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>Gridline visibility depends on document attribute defined with <a href="#vp-set-print-info">VP SET PRINT INFO</a>.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="resultado"></a><a href="#resultado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resultado</h4>
-<p>The command returns a picture in SVG format.</p>
+<p>El comando devuelve una imagen en formato SVG.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-13"></a><a href="#ejemplo-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>You want to convert a 4D View Pro area in SVG, preview the result, and send it to a picture variable:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$vpAreaObj</span>)
@@ -619,7 +619,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <li>únicamente las líneas, el comando no hace nada.</li>
 </ul>
 <blockquote>
-<p>Columns are deleted from right to left.</p>
+<p>Las columnas se borran de derecha a izquierda.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-15"></a><a href="#ejemplo-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
 <p>To delete columns selected by the user (in the image below columns B, C, and D):</p>
@@ -643,7 +643,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p>The <code>VP DELETE ROWS</code> commandremoves the rows  in the <em>rangeObj</em>.</p>
 <p>In <em>rangeObj</em>, pass an object containing a range of rows  to remove. Si el rango pasado contiene:</p>
 <ul>
-<li>both columns and rows, only the rows  are removed.</li>
+<li>tanto las columnas como las líneas, sólo se eliminan las líneas.</li>
 <li>sólo columnas, el comando no hace nada.</li>
 </ul>
 <blockquote>
@@ -688,7 +688,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>format</td><td>texto</td><td>(optional) When present, designates the exported file format: &quot;.4vp&quot; (default), &quot;.csv&quot;, &quot;.xlsx&quot;, or &quot;.pdf&quot;. You can use the following constants:<li><code>vk 4D View Pro format</code></li><li><code>vk csv format</code></li><li><code>vk MS Excel format</code></li><li><code>vk pdf format</code></li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in <em>filePath</em>, it will be added to the end of <em>filePath</em>. If a format is not specified and no extension is provided in <em>filePath</em>, the default file format is used.</td></tr>
+<tr><td>format</td><td>texto</td><td>(optional) When present, designates the exported file format: &quot;.4vp&quot; (default), &quot;.csv&quot;, &quot;.xlsx&quot;, or &quot;.pdf&quot;. Puede utilizar las siguientes constantes:<li><code>vk 4D View Pro format</code></li><li><code>vk csv format</code></li><li><code>vk MS Excel format</code></li><li><code>vk pdf format</code></li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in <em>filePath</em>, it will be added to the end of <em>filePath</em>. If a format is not specified and no extension is provided in <em>filePath</em>, the default file format is used.</td></tr>
 <tr><td>contraseña</td><td>texto</td><td>Microsoft Excel only (optional) - Password used to protect the MS Excel document</td></tr>
 <tr><td>formula</td><td>objeto</td><td>Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the <a href="https://doc.4d.com/4dv19/help/command/en/page1597.html"><code>Formula</code></a> command (see below for more information).</td></tr>
 <tr><td>valuesOnly</td><td>booleano</td><td>Specifies that only the values from formulas (if any) will be exported.</td></tr>
@@ -712,7 +712,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <p><strong>Notas sobre el formato CSV</strong>:</p>
 <ul>
 <li>When exporting a 4D View Pro document to CSV, some settings may be lost, as only the text and values are saved.</li>
-<li>All the values are saved as double-quoted strings. For more information on delimiter-separated values, see <a href="https://en.wikipedia.org/wiki/Delimiter-separated_values">this article on Wikipedia</a>.</li>
+<li>Todos los valores se guardan como cadenas entre comillas. For more information on delimiter-separated values, see <a href="https://en.wikipedia.org/wiki/Delimiter-separated_values">this article on Wikipedia</a>.</li>
 </ul>
 <p>Once the export operation is finished, <code>VP EXPORT DOCUMENT</code> automatically triggers the execution of the method set in the <em>formula</em> property of the <em>paramObj</em>, if used.</p>
 <h4><a class="anchor" aria-hidden="true" id="pasar-un-método-retrollamada-fórmula"></a><a href="#pasar-un-método-retrollamada-fórmula" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pasar un método retrollamada (fórmula)</h4>
@@ -740,7 +740,7 @@ In <em>vpAreaName</em>, pass the name of the 4D View Pro area.</p>
 <span class="hljs-comment">//MyExport.4VP is saved on your disk</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-1"></a><a href="#ejemplo-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>You want to export the current sheet in PDF:</p>
+<p>Quiere exportar la hoja actual en PDF:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$params</span>: Object
 <span class="hljs-variable">$params</span>:=New object
 <span class="hljs-variable">$params</span>.format:=vk pdf format
@@ -855,7 +855,7 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 <tr><td>all</td><td>Booleano</td><td><li>True - All cells in <em>rangeObj</em> corresponding to <em>searchValue</em> are returned</li><li>False - (default value) Only the first cell in <em>rangeObj</em> corresponding to <em>searchValue</em> is returned</li></td></tr>
 <tr><td>flags</td><td>Integer</td><td><table><tr><td><code>vk find flag exact match</code></td><td>The entire content of the cell must completely match the search value</td></tr><tr><td><code>vk find flag ignore case</code></td><td>Capital and lower-case letters are considered the same. Ej.: &quot;a&quot; es considerada como idéntica a &quot;A&quot;.</td></tr><tr><td><code>vk find flag none</code></td><td>no se consideran los indicadores de búsqueda (por defecto)</td></tr><tr><td><code>vk find flag use wild cards</code></td><td>Wildcard characters (*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>* for zero or multiple characters (for example, searching for &quot;bl*&quot;  can find &quot;bl&quot;, &quot;black&quot;, or &quot;blob&quot;)</li><li>? ? ? ? for a single character (for example, searching for &quot;h?t&quot; can find &quot;hot&quot;, or &quot;hit&quot;</li></td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<p> <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code></p></td></tr>
 <tr><td>order</td><td>Integer</td><td><table><tr><td><code>vk find order by columns</code></td><td>La búsqueda se realiza por columnas. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td><code>vk find order by rows</code></td><td>La búsqueda se realiza por líneas. Each column of a row is searched before the search continues to the next row (default)</td></tr></table></td></tr>
-<tr><td>target</td><td>Integer</td><td><table><tr><td><code>vk find target formula</code></td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td><code>vk find target tag</code></td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td><code>vk find target text</code></td><td>The search is performed in the cell text (default)</td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<p> <code>$search.target:=vk find target formula+vk find target text</code></p></td></tr>
+<tr><td>target</td><td>Integer</td><td><table><tr><td><code>vk find target formula</code></td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td><code>vk find target tag</code></td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td><code>vk find target text</code></td><td>La búsqueda se realiza en el texto de la celda (por defecto)</td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<p> <code>$search.target:=vk find target formula+vk find target text</code></p></td></tr>
 </tbody>
 </table>
 <p>In the optional <em>replaceValue</em> parameter, you can pass text to take the place of any instance of the text in <em>searchValue</em> found in the <em>rangeObj</em>.</p>
@@ -870,7 +870,7 @@ var</span> <span class="hljs-variable">$vpVersion </span>: Number
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Find</span>(<span class="hljs-variable">$range</span>;<span class="hljs-string">"Total"</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-2-3"></a><a href="#ejemplo-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 2</h4>
-<p>To find &quot;Total&quot; and replace it with &quot;Grand Total&quot;:</p>
+<p>Para encontrar &quot;Total&quot; y reemplazarlo por &quot;Grand Total&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$range</span>;<span class="hljs-variable">$condition</span>;<span class="hljs-variable">$result </span>: Object
 
 <span class="hljs-variable">$range</span>:=<span class="hljs-function">VP All</span>(<span class="hljs-string">"ViewProArea"</span>)
@@ -2183,7 +2183,7 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>vpAreaName</td><td>Texto</td><td>-&gt;</td><td>Nombre de objeto formulario área 4D View Pro</td></tr>
-<tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Name of the named range or named formula to remove</td></tr>
+<tr><td>name</td><td>Texto</td><td>-&gt;</td><td>Nombre del rango nombrado o fórmula nombrada a eliminar</td></tr>
 <tr><td>scope</td><td>Integer</td><td>-&gt;</td><td>Alcance objetivo (por defecto=hoja actual)</td></tr>
 </tbody>
 </table>
@@ -2353,7 +2353,7 @@ End if</span>
 <p>The <code>VP Row</code> commandreturns a new range object referencing a specific row or rows.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
 <p>The <em>column</em> parameter defines the first column of the column range. Pass the row index (counting begins at 0) in this parameter. Pass the column index (counting begins at 0)  in this parameter.</p>
-<p>In the <em>row</em> parameter, you can define the row(s) of the cell range's position. <em>rowCount</em> must be greater than 0. Pass the row index (counting begins at 0) in this parameter.</p>
+<p>In the <em>row</em> parameter, you can define the row(s) of the cell range's position. <em>rowCount</em> debe ser mayor que 0. Pass the row index (counting begins at 0) in this parameter.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If not specified, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
 <ul>
 <li><code>vk current sheet</code></li>
@@ -2380,7 +2380,7 @@ End if</span>
 <p>The <code>VP ROW AUTOFIT</code> commandautomatically sizes the row(s) in <em>rangeObj</em> according to their contents.</p>
 <p>In <em>rangeObj</em>, pass a range object containing a range of the rows whose size will be automatically handled.</p>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-61"></a><a href="#ejemplo-61" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>The following rows don't correctly display the text:</p>
+<p>Las siguientes líneas no muestran correctamente el texto:</p>
 <p><img src="/docs/Rx/assets/en/ViewPro/cmd_vpRowAutoFit1.PNG" alt=""></p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> VP ROW AUTOFIT</span>(<span class="hljs-function">VP Row</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">2</span>))
 </code></pre>
@@ -2421,7 +2421,7 @@ End if</span>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>timeoutReached</td><td>booleano</td><td>Added with true value if timeout has been exceeded</td></tr>
+<tr><td>timeoutReached</td><td>booleano</td><td>Añadido con el valor true si se ha excedido el tiempo de espera</td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -2451,7 +2451,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 <span class="hljs-function">            ALERT</span>(<span class="hljs-string">"The G23 cell contains the value: "</span>+<span class="hljs-function">String</span>(<span class="hljs-literal">This</span>.result))<span class="hljs-keyword">
     End case</span>
 </code></pre>
-<p>The <em>OffscreenArea</em> callback method:</p>
+<p>El método de retrollamada <em>OffscreenArea</em>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=cs.OffscreenArea.<span class="hljs-function">new</span>()
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Run offscreen area</span>(<span class="hljs-variable">$o</span>)
 </code></pre>
@@ -2495,7 +2495,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
             CANCEL<span class="hljs-keyword"> 
     End case</span>
 </code></pre>
-<p>The <em>OffscreenArea</em> callback method:</p>
+<p>El método de retrollamada <em>OffscreenArea</em>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>:=cs.OffscreenArea.<span class="hljs-function">new</span>()
 
 <span class="hljs-variable">$result</span>:=<span class="hljs-function">VP Run offscreen area</span>(<span class="hljs-variable">$o</span>)
@@ -2649,7 +2649,7 @@ Function</span><span class="hljs-function"> onEvent</span>()<span class="hljs-ke
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-1-7"></a><a href="#ejemplo-1-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo 1</h4>
-<p>This code produces a border around the entire range:</p>
+<p>Este código produce un borde alrededor de todo el rango:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$border</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"color"</span>;<span class="hljs-string">"red"</span>;<span class="hljs-string">"style"</span>;vk line style thick)
 <span class="hljs-variable">$option</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"outline"</span>;<span class="hljs-literal">True</span>)
 <span class="hljs-function">VP SET BORDER</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-number">1</span>;<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">3</span>);<span class="hljs-variable">$border</span>;<span class="hljs-variable">$option</span>)
@@ -3256,7 +3256,7 @@ End case</span>
 <h4><a class="anchor" aria-hidden="true" id="descripción-87"></a><a href="#descripción-87" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>VP SET ROW COUNT</code> commanddefines the total number of rows in <em>vpAreaName</em>.</p>
 <p>In <em>vpAreaName</em>, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.</p>
-<p>Pass the total number of rows in the <em>rowCount</em> parameter. <em>rowCount</em> must be greater than 0.</p>
+<p>Pass the total number of rows in the <em>rowCount</em> parameter. <em>rowCount</em> debe ser mayor que 0.</p>
 <p>In the optional <em>sheet</em> parameter, you can designate a specific spreadsheet where the <em>rowCount</em> will be applied (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:</p>
 <ul>
 <li><code>vk current sheet</code></li>
@@ -3344,7 +3344,7 @@ End case</span>
 <li>el <em>índice</em> pasado no existe</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-81"></a><a href="#ejemplo-81" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>Set the third sheet's name to &quot;Total first quarter&quot;:</p>
+<p>Establezca el nombre de la tercera hoja como &quot;Total first quarter&quot;:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">VP SET SHEET NAME</span>(<span class="hljs-string">"ViewProArea"</span>;<span class="hljs-string">"Total first quarter"</span>;<span class="hljs-number">2</span>)
 </code></pre>
 <p><img src="/docs/Rx/assets/en/ViewPro/vp-sheet-index-name.png" alt=""></p>
@@ -3666,20 +3666,20 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <tr><td>backgroundImageLayout</td><td>number</td><td>Cómo se muestra la imagen de fondo. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk image layout center </td><td>1</td><td> En el centro del área.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Llena el área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Se muestra con su relación de aspecto original.</td></tr></table></td></tr>
 <tr><td>calcOnDemand</td><td>booleano</td><td>Formulas are calculated only when they are demanded.</td></tr>
 <tr><td>columnResizeMode</td><td>number</td><td>Resize mode for columns. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table></td></tr>
-<tr><td>copyPasteHeaderOptions</td><td>number</td><td>Headers to include when data is copied to or pasted. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table></td></tr>
+<tr><td>copyPasteHeaderOptions</td><td>number</td><td>Encabezados para incluir cuando se copian o pegan datos. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>   Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table></td></tr>
 <tr><td>customList</td><td>colección</td><td>The list for users to customize drag fill, prioritize matching this list in each fill. Cada elemento de colección es una colección de cadenas. See on <a href="https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b">GrapeCity's website</a>.</td></tr>
 <tr><td>cutCopyIndicatorBorderColor</td><td>cadena</td><td>Border color for the indicator displayed when the user cuts or copies the selection.</td></tr>
 <tr><td>cutCopyIndicatorVisible</td><td>booleano</td><td>Display an indicator when copying or cutting the selected item.</td></tr>
 <tr><td>defaultDragFillType</td><td>number</td><td>The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Llena automáticamente las celdas. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Rellena las celdas sólo con formato.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table></td></tr>
-<tr><td>enableAccessibility</td><td>booleano</td><td>Accessibility support is enabled in the spreadsheet.</td></tr>
+<tr><td>enableAccessibility</td><td>booleano</td><td>El soporte de accesibilidad está activado en la hoja de cálculo.</td></tr>
 <tr><td>enableFormulaTextbox</td><td>booleano</td><td>The formula text box is enabled.</td></tr>
 <tr><td>grayAreaBackColor</td><td>cadena</td><td>A color string used to represent the background color of the gray area , such as &quot;red&quot;, &quot;#FFFF00&quot;, &quot;rgb(255,0,0)&quot;, &quot;Accent 5&quot;, and so on.</td></tr>
 <tr><td>highlightInvalidData</td><td>booleano</td><td>Los datos inválidos son resaltados.</td></tr>
 <tr><td>iterativeCalculation</td><td>booleano</td><td>Activa el cálculo iterativo. See on <a href="https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html">Grapecity's website</a>.</td></tr>
 <tr><td>iterativeCalculationMaximumChange</td><td>numeric</td><td>Maximum amount of change between two calculation values.</td></tr>
 <tr><td>iterativeCalculationMaximumIterations</td><td>numeric</td><td>Número de veces que la fórmula debe recalcular.</td></tr>
-<tr><td>newTabVisible</td><td>booleano</td><td>Display a special tab to let users insert new sheets.</td></tr>
-<tr><td>numbersFitMode</td><td>number</td><td>Changes display mode when date/number data width is longer than column width. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with &quot;###&quot; and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table></td></tr>
+<tr><td>newTabVisible</td><td>booleano</td><td>Mostrar una pestaña especial para permitir a los usuarios insertar nuevas hojas.</td></tr>
+<tr><td>numbersFitMode</td><td>number</td><td>Changes display mode when date/number data width is longer than column width. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with &quot;###&quot; and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. Si la siguiente celda está vacía, se desborda el contenido.</td></tr></table></td></tr>
 <tr><td>pasteSkipInvisibleRange</td><td>booleano</td><td>Pegar u omitir pegar datos en rangos invisibles: <ul><li>False (por defecto): pegar datos</li><li>True: omitir el pegado en rangos invisibles</li></ul>See <a href="https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html">Grapecity's docs</a> for more information on invisible ranges.</td></tr>
 <tr><td>referenceStyle</td><td>number</td><td>Style for cell and range references in cell formulas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar el estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table></td></tr>
 <tr><td>resizeZeroIndicator</td><td>number</td><td>Drawing policy when the row or column is resized to zero. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table></td></tr>
@@ -3816,8 +3816,8 @@ End if</span>
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

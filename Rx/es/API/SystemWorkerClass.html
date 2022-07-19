@@ -149,7 +149,7 @@ var</span> <span class="hljs-variable">$myMacWorker </span>: 4D.SystemWorker
 <tr><td>timeout</td><td>Número</td><td>indefinido</td><td>Time in seconds before the process is killed if it is still alive</td></tr>
 <tr><td>dataType</td><td>Texto</td><td>&quot;text&quot;</td><td>Type of the response body content. Valores posibles: &quot;text&quot; (por defecto), &quot;blob&quot;.</td></tr>
 <tr><td>encoding</td><td>Texto</td><td>&quot;UTF-8&quot;</td><td>Sólo si <code>dataType=&quot;text&quot;</code>. Codificación del contenido del cuerpo de la respuesta. For the list of available values, see the <a href="https://doc.4d.com/4dv19R/help/command/en/page1011.html"><code>CONVERT FROM TEXT</code></a> command description</td></tr>
-<tr><td>variables</td><td>Objeto</td><td></td><td>Sets custom environment variables for the system worker. Syntax: <code>variables.key=value</code>, where <code>key</code> is the variable name and <code>value</code> its value. Values are converted into strings when possible. El valor no puede contener un '='. If not defined, the system worker inherits from the 4D environment.</td></tr>
+<tr><td>variables</td><td>Objeto</td><td></td><td>Sets custom environment variables for the system worker. Syntax: <code>variables.key=value</code>, where <code>key</code> is the variable name and <code>value</code> its value. Los valores se convierten en cadenas de caracters cuando es posible. El valor no puede contener un '='. If not defined, the system worker inherits from the 4D environment.</td></tr>
 <tr><td>currentDirectory</td><td>Folder</td><td></td><td>Directorio de trabajo en el que se ejecuta el proceso</td></tr>
 <tr><td>hideWindow</td><td>Booleano</td><td>true</td><td>(Windows) Hide the application window (if possible) or the Windows console</td></tr>
 </tbody>
@@ -470,8 +470,8 @@ var</span> <span class="hljs-variable">$worker </span>: 4D.SystemWorker
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

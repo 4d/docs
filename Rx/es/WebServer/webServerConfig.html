@@ -216,7 +216,7 @@
 <tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#default-home-page">Página Configuración/Página de bienvenida por defecto</a></td><td></td></tr>
 </tbody>
 </table>
-<p>Designate a default home page for the web server. Esta página puede ser estática o [semi-dynamic].</p>
+<p>Designa una página de inicio por defecto para el servidor web. Esta página puede ser estática o [semi-dynamic].</p>
 <p>By default, when the web server is launched for the first time, 4D creates a home page named &quot;index.html&quot; and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:</p>
 <p><img src="/docs/Rx/assets/en/WebServer/defaultHomePage.png" alt=""></p>
 <p>You can designate another default home page by entering its pathname.</p>
@@ -226,7 +226,7 @@
 <li>La ruta no debe comenzar ni terminar con una barra.</li>
 </ul>
 <p>For example, if you want the default home page to be &quot;MyHome.htm&quot;, and it is located in the &quot;Web&quot; folder (itself located in the default HTML root folder), use &quot;Web/MyHome.htm&quot;.</p>
-<p>If you do not specify any default home page, the <code>On Web Connection</code> database method is called. It is up to you to process the request procedurally.</p>
+<p>If you do not specify any default home page, the <code>On Web Connection</code> database method is called. Le corresponde a usted gestionar la petición procesalmente.</p>
 <h2><a class="anchor" aria-hidden="true" id="activar-cors"></a><a href="#activar-cors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Activar CORS</h2>
 <table>
 <thead>
@@ -469,11 +469,11 @@
 <tbody>
 <tr><td>objeto webServer</td><td><a href="/docs/Rx/es/API/WebServerClass.html#maxconcurrentprocesses"><code>maxConcurrentProcesses</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web max concurrent processes</code></td><td></td></tr>
-<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#maximum-concurrent-web-processes">Options (I) page/Maximum Concurrent Web Processes</a></td><td></td></tr>
+<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#maximum-concurrent-web-processes">Página Opciones (I)/Máximo de Procesos Web simultáneos</a></td><td></td></tr>
 </tbody>
 </table>
 <p>Strictly high limit of concurrent web processes that can be simultaneously open on the server when <strong>no sessions</strong> or <strong>legacy sessions</strong> are used (<strong>scalable sessions</strong> support an <a href="/docs/Rx/es/WebServer/sessions.html">unlimited number</a> of preemptive processes). This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status <code>503 - Service Unavailable</code> to all new requests.</p>
-<p>Por defecto, el valor es 100. You can set the number anywhere between 10 and 32000.</p>
+<p>Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.</p>
 <h2><a class="anchor" aria-hidden="true" id="tamaño-máximo-de-la-petición"></a><a href="#tamaño-máximo-de-la-petición" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tamaño máximo de la petición</h2>
 <table>
 <thead>
@@ -556,7 +556,7 @@
 <tr><th>Puede ajustarse con</th><th>Nombre</th><th>Comentarios</th></tr>
 </thead>
 <tbody>
-<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#reuse-temporary-contexts">Options (I) page/Maximum Concurrent Web Processes</a></td><td></td></tr>
+<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#reuse-temporary-contexts">Página Opciones (I)/Máximo de Procesos Web simultáneos</a></td><td></td></tr>
 </tbody>
 </table>
 <blockquote>
@@ -570,7 +570,7 @@
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="robotstxt"></a><a href="#robotstxt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Robots.txt</h2>
 <p>Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.</p>
-<p>To do so, put the ROBOTS. TXT file at the server's root. This file must be structured in the following manner:</p>
+<p>To do so, put the ROBOTS. TXT file at the server's root. Este archivo debe estar estructurado de la siguiente manera:</p>
 <pre><code class="hljs css language-4d">   User-Agent: &lt;name&gt;
    Disallow: &lt;URL&gt; o &lt;beginning of the URL&gt;
 </code></pre>
@@ -694,7 +694,7 @@
 <tr><th>Puede ajustarse con</th><th>Nombre</th><th>Comentarios</th></tr>
 </thead>
 <tbody>
-<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#use-preemptive-processes">Options (I) page/Maximum Concurrent Web Processes</a></td><td></td></tr>
+<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#use-preemptive-processes">Página Opciones (I)/Máximo de Procesos Web simultáneos</a></td><td></td></tr>
 </tbody>
 </table>
 <p>This option enables the preemptive mode for your application's web server code when <strong>No sessions</strong> option is selected (the preemptive mode is always enabled with <strong>scalable sessions</strong>). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of <a href="/docs/Rx/es/WebServer/preemptiveWeb.html#thread-safety-of-4d-web-code">web-related code</a> and return errors in case of incompatibility.</p>
@@ -732,8 +732,8 @@
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

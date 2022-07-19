@@ -176,7 +176,7 @@ Form.myDrop.index <span class="hljs-comment">//3</span>
 <h4><a class="anchor" aria-hidden="true" id="valor-del-elemento-seleccionado-o-referencia-del-elemento-seleccionado"></a><a href="#valor-del-elemento-seleccionado-o-referencia-del-elemento-seleccionado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Valor del elemento seleccionado o Referencia del elemento seleccionado</h4>
 <p>When you have associated a drop-down list with a choice list and with a field or a variable, you can set the <a href="/docs/Rx/es/FormObjects/propertiesDataSource.html#data-type"><strong>Data Type</strong></a> property to <strong>Selected item value</strong> or <strong>Selected item reference</strong>. Esta opción permite optimizar el tamaño de los datos guardados.</p>
 <h3><a class="anchor" aria-hidden="true" id="uso-de-una-lista-de-selección-jerárquica"></a><a href="#uso-de-una-lista-de-selección-jerárquica" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Uso de una lista de selección jerárquica</h3>
-<p>A hierarchical drop-down list has a sublist associated with each item in the list. Here is an example of a hierarchical drop-down list:</p>
+<p>A hierarchical drop-down list has a sublist associated with each item in the list. Este es un ejemplo de lista desplegable jerárquica:</p>
 <p><img src="/docs/Rx/assets/en/FormObjects/popupDropdown_hierar.png" alt=""></p>
 <blockquote>
 <p>In forms, hierarchical drop-down lists are limited to two levels.</p>
@@ -184,7 +184,7 @@ Form.myDrop.index <span class="hljs-comment">//3</span>
 <p>You can assign the hierarchical choice list to the drop-down list object using the <a href="/docs/Rx/es/FormObjects/propertiesDataSource.html#choice-list">Choice List</a> field of the Property List.</p>
 <p>You manage hierarchical drop-down lists using the <strong>Hierarchical Lists</strong> commands of the 4D Language. All commands that support the <code>(*; &quot;name&quot;)</code> syntax can be used with hierarchical  drop-down lists, e.g. <a href="https://doc.4d.com/4dv19/help/command/en/page633.html"><code>List item parent</code></a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="utilizar-una-acción-estándar"></a><a href="#utilizar-una-acción-estándar" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilizar una acción estándar</h3>
-<p>You can build automatically a drop-down list using a <a href="/docs/Rx/es/FormObjects/propertiesAction.html#standard-action">standard action</a>. This feature is supported in the following contexts:</p>
+<p>You can build automatically a drop-down list using a <a href="/docs/Rx/es/FormObjects/propertiesAction.html#standard-action">standard action</a>. Esta funcionalidad es soportada en los siguientes contextos:</p>
 <ul>
 <li><p>Uso de la acción estándar <code>gotoPage</code>. In this case, 4D will automatically display the <a href="/docs/Rx/es/FormEditor/forms.html#form-pages">page of the form</a> that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).</p></li>
 <li><p>Use of a standard action that displays a sublist of items, for example <code>backgroundColor</code>. This feature requires that:</p>
@@ -211,8 +211,8 @@ Form.myDrop.index <span class="hljs-comment">//3</span>
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R5"]}

@@ -128,9 +128,9 @@
 <p>デー タソースがカレントセレクションである場合、データベースに対しておこなわれた変更はリストボックスに自動で反映され、またリストボックスへの変更も自動で データベースに適用されます。 つまりカレントセレクションは常に両方で同じです。</p>
 <h3><a class="anchor" aria-hidden="true" id="コレクションまたはエンティティセレクションリストボックス"></a><a href="#コレクションまたはエンティティセレクションリストボックス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>コレクションまたはエンティティセレクションリストボックス</h3>
 <p>このタイプのリストボックスでは、各カラムに式が割り当てられている必要があります。 各行の中身はコレクション要素ごと、あるいはエンティティセレクションのエンティティごとに評価されます。</p>
-<p>コレクションの各要素、またはエンティティセレクションの各エンティティは、<a href="/docs/Rx/ja/Concepts/classes.html#this">This</a> キーワードを用いてオブジェクトとして取得します。 カラムの式にはプロパティパス、プロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、<code>This</code> を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。例: <code>This.&lt;propertyPath&gt;</code> (あるいはスカラー値のコレクションの場合は <code>This.value</code>)。 カラムをプログラムで変更するには、<code>LISTBOX SET COLUMN FORMULA</code> および <code>LISTBOX INSERT COLUMN FORMULA</code> コマンドを使用します。</p>
+<p>コレクションの各要素、またはエンティティセレクションの各エンティティは、<a href="/docs/Rx/ja/Concepts/classes.html#this">This</a> キーワードを用いてオブジェクトとして取得します。 カラムの式にはプロパティパス、プロジェクトメソッド、変数、あるいはフォーミュラが指定可能で、<code>This</code> を通して得た各エンティティあるいはコレクション要素オブジェクトが利用できます。 例: <code>This.&lt;propertyPath&gt;</code> (あるいはスカラー値のコレクションの場合は <code>This.value</code>)。 カラムをプログラムで変更するには、<code>LISTBOX SET COLUMN FORMULA</code> および <code>LISTBOX INSERT COLUMN FORMULA</code> コマンドを使用します。</p>
 <p>データソースがエンティティセレクションの場合、リストボックス側に対しておこなった変更は自動的にデータベースに保存されます。 その一方で、データベース側に対しておこなった変更は、該当エンティティがリロードされてはじめてリストボックス側に反映されます。</p>
-<p>データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 その一方で、コレクションに対して、たとえば <a href="/docs/Rx/ja/API/CollectionClass.html">Collection クラス</a> の様々な関数を使用して変更をおこなった場合、コレクション変数を自らに再代入することで明示的に 4D に通知する必要があり、それによってリストボックスのコンテンツは更新されます。 たとえば:</p>
+<p>データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 データソースがコレクションの場合、リストボックス内の値に変更をおこなった場合、その変更はコレクションにも反映されます。 たとえば:</p>
 <pre><code class="hljs css language-4d">myCol:=myCol.<span class="hljs-function">push</span>(<span class="hljs-string">"new value"</span>) <span class="hljs-comment">// リストボックスに new value を表示</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="プロパティ一覧"></a><a href="#プロパティ一覧" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>プロパティ一覧</h3>
@@ -543,7 +543,7 @@ End if</span>
 </blockquote>
 <p>変数の値を設定して (たとえば Header2:=2)、ソートを表す矢印の表示を強制することができます。 しかし、列のソート順は変更されません、これを処理するのは開発者の役割です。</p>
 <blockquote>
-<p><a href="https://doc.4d.com/4dv19/help/command/ja/page236.html"><code>OBJECT SET FORMAT</code></a> コマンドは、カスタマイズされた並べ替えアイコンをサポートする機能をリストボックスヘッダー用に提供しています。</p>
+<p><a href="#配列リストボックス">配列タイプ</a> のリストボックスのみを階層にできます。</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="スタイルとカラー、表示の管理"></a><a href="#スタイルとカラー、表示の管理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>スタイルとカラー、表示の管理</h2>
 <p>リストボックスの背景色、フォントカラー、そしてフォントスタイルを設定するためにはいくつかの方法があります:</p>
@@ -967,7 +967,7 @@ End if</span>
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"value"</span>;<span class="hljs-string">"blue"</span>)
 <span class="hljs-function"> OB SET</span>(<span class="hljs-variable">$ob</span>;<span class="hljs-string">"choiceListName"</span>;<span class="hljs-string">"colors"</span>)
 </code></pre>
-<p><img src="../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png" alt=""></p>
+<p><img src="/docs/Rx/assets/en/FormObjects/listbox_column_objectArray_colorsResult.png" alt=""></p>
 <h4><a class="anchor" aria-hidden="true" id="unitslist、unitslistname、-unitslistreference-と-unitreference"></a><a href="#unitslist、unitslistname、-unitslistreference-と-unitreference" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>unitsList、unitsListName、 unitsListReference と unitReference</h4>
 <p>特定の値を使用することで、セルの値に関連した単位を追加することができます (<em>例</em>: &quot;10 cm&quot;, &quot;20 pixels&quot; 等)。 単位リストを定義するためには、以下の属性のどれか一つを使用します:</p>
 <ul>
@@ -1052,8 +1052,8 @@ End if</span>
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:ja","version:19 R5"]}
