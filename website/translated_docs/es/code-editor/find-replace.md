@@ -40,7 +40,7 @@ The **Find Same Next** and **Find Same Previous** commands are used to find char
 
 ### Bookmark All
 
-The **Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results.
+The **Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. Esto facilita la localización de todos los resultados de la búsqueda.
 
 For more information about bookmarks, refer to [Using bookmarks](./write-class-method.md#using-bookmarks).
 
@@ -66,7 +66,7 @@ The **Goto Definition** command opens the definition of an element referenced in
 
 **Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
 
-The effect varies depending on the target element. Por ejemplo:
+El efecto varía en función del elemento objetivo. Por ejemplo:
 
 - Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
 - Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
@@ -77,7 +77,7 @@ The **Reveal in Explorer...** command opens an Explorer window with the target e
 
 ## Mostrar la documentación
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. Por ejemplo:
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. El efecto varía en función del elemento objetivo. Por ejemplo:
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
 - Selecting a 4D command or a 4D class name and choosing **Show documentation...** displays the online documentation
@@ -92,7 +92,7 @@ The current item is either the one selected or the one where the cursor is locat
 
 ![find-dialog](assets/en/code-editor/search-references.png)
 
-This command displays its results in a new window.
+Este comando muestra sus resultados en una nueva ventana.
 
 ## Search Callers
 
@@ -100,7 +100,7 @@ The **Search Callers** command in the **Method** menu is only enabled for pr
 
 Selecting the **Find...** command displays the following dialog box:
 
-This command displays its results in a new window.
+Este comando muestra sus resultados en una nueva ventana.
 
 ## Goto Line
 

@@ -43,7 +43,7 @@ It means that, whenever you need to access the list of employees working for a c
 ds.Company.hires //devuelve la lista de empleados
 ```
 
-Pero no vaya tan rápido. Let's see now how to record data in ORDA dataclasses.
+Pero no vaya tan rápido. Veamos ahora cómo registrar datos en las clases de datos ORDA.
 
 
 ## Añadir datos

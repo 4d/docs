@@ -23,7 +23,7 @@ La lista de las principales actualizaciones de esta documentación. For general 
 
 - [Client/Server optimization](../ORDA/remoteDatastores.md#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/remoteDatastores.md#preconfiguring-contexts) and [ORDA Cache](../ORDA/remoteDatastores.md#orda-cache) for more information.
 
-    > These functions are intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use them.
+    > These functions are intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarlos.
 
 - [DataClass class](../API/DataClassClass.md): The new [.getCount()](../API/DataClassClass.md#getcount) function returns the number of entities in a dataclass.
 

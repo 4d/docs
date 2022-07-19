@@ -67,7 +67,7 @@ Puede hacer el área Encabezado más pequeña o más grande. You can use the Hea
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Se pueden insertar los siguientes objetos activos:
 
 - Botones, botones imagen,
-- Combo boxes, drop-down lists,  picture pop-up menus,
+- Combo boxes, listas desplegables, menús emergentes de imágenes,
 - listas jerárquicas, list boxes
 - Botones de radio, casillas de selección, casillas de selección 3D,
 - Progress indicators, rulers, steppers, spinners.
@@ -108,7 +108,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 | B2       | Nivel de ruptura 2 | Segundo campo ordenado          |
 | B3       | Nivel de ruptura 3 | Tercer campo ordenado           |
 
-Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+Las áreas adicionales del encabezado están asociadas a las interrupciones. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
 | Etiqueta | Descripción              | Prints after groups created by: |
 | -------- | ------------------------ | ------------------------------- |

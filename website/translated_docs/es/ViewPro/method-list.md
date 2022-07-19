@@ -86,7 +86,7 @@ You can pass an object with additional properties for the named range in *option
 
 #### Ejemplo
 
-You want to create a named range for a cell range:
+Quiere crear un rango nombrado para un rango de celdas:
 
 ```4d
 $range:=VP Cell("ViewProArea";2;10)
@@ -429,7 +429,7 @@ In the *row* parameter, you can define the row(s) of the cell range's position. 
 
 The *columnCount* parameter allows you to define the total number of columns the range is within. *columnCount* must be greater than 0.
 
-The *rowCount* parameter allows you to define the total number of rows the range is within. *rowCount* must be greater than 0.
+The *rowCount* parameter allows you to define the total number of rows the range is within. *rowCount* debe ser mayor que 0.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si se omite o si se pasa `vk current sheet`, se utiliza la hoja de cálculo actual por defecto.
 
@@ -650,7 +650,7 @@ Document contents are converted with respect to their viewing attributes, includ
 
 #### Resultado
 
-The command returns a picture in SVG format.
+El comando devuelve una imagen en formato SVG.
 
 #### Ejemplo
 
@@ -744,73 +744,73 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                        |
-| ---------- | ------ | -- | -------------------------------------------------- |
-| rangeObj   | Objeto | -> | Objeto rango                                       |
-| tableName  | Texto  | -> | Nombre de la tabla                                 |
-| source     | Texto  | -> | Data context property name to display in the table |
-| options    | Objeto | -> | Opciones adicionales                               |
+| Parámetros | Tipo   |    | Descripción                                                        |
+| ---------- | ------ | -- | ------------------------------------------------------------------ |
+| rangeObj   | Objeto | -> | Objeto rango                                                       |
+| tableName  | Texto  | -> | Nombre de la tabla                                                 |
+| source     | Texto  | -> | Nombre de la propiedad del contexto de datos a mostrar en la tabla |
+| options    | Objeto | -> | Opciones adicionales                                               |
 
 <!-- END REF -->
 
 #### Descripción
 
-The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
+El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary --> crea una tabla en el rango especificado<!-- END REF -->. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados. Una tabla normalmente contiene datos relacionados en líneas y columnas y aprovecha un [contexto de datos](#vp-set-data-context).
 
 ![](assets/en/ViewPro/vp-create-table.png)
 
-In *rangeObj*, pass the cell range where the table will be created.
+En *rangeObj*, pase el rango de celdas donde se creará la tabla.
 
-In *tableName*, pass a name for the table. El nombre debe:
+En *tableName*, pase un nombre para la tabla. El nombre debe:
 
 * ser único en la hoja
 * incluir al menos 5 caracteres
 * no incluir espacios o empezar con un número
 
-In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. Esto vincula la tabla al contexto de datos. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
+En *source<*, puede pasar un nombre de propiedad de un [contexto de datos](#vp-set-data-context) para mostrar sus datos en la tabla. Esto vincula la tabla al contexto de datos. Cuando se actualiza el contexto de los datos, los datos mostrados en la tabla se actualizan en consecuencia. La propiedad *source* debe contener una colección de objetos y cada elemento representa una línea.
 
-  * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
-  * If the specified *source* cannot be fully displayed in the document, no table is created.
+  * Si no especifica una *source*, el comando crea una tabla vacía con el tamaño definido en *rangeObj*.
+  * Si la *source* especificada no se puede mostrar completamente en el documento, no se crea ninguna tabla.
 
-In *options*, you can pass an object with additional options for the table. Los valores posibles son:
+En *options*, puede pasar un objeto con opciones adicionales para la tabla. Los valores posibles son:
 
-| Propiedad             | Tipo       | Descripción                                                                    | Valor por defecto |
-| --------------------- | ---------- | ------------------------------------------------------------------------------ | ----------------- |
-| showFooter            | Booleano   | Mostrar un pie de página                                                       | False             |
-| showHeader            | Booleano   | Mostrar un encabezado                                                          | True              |
-| showResizeHandle      | Booleano   | For tables that don't have a *source*. Display the resize handle               | False             |
-| tableColumns          | Collection | Collection of objects used to create the table's columns (see below)           | Indefinido        |
-| useFooterDropDownList | Booleano   | Use a dropdown list in footer cells that calculate the total value of a column | False             |
+| Propiedad             | Tipo       | Descripción                                                                                              | Valor por defecto |
+| --------------------- | ---------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
+| showFooter            | Booleano   | Mostrar un pie de página                                                                                 | False             |
+| showHeader            | Booleano   | Mostrar un encabezado                                                                                    | True              |
+| showResizeHandle      | Booleano   | Para las tablas que no tienen una *source*. Mostrar la marca de redimensionamiento                       | False             |
+| tableColumns          | Collection | Colección de objetos utilizados para crear las columnas de la tabla (ver más abajo)                      | Indefinido        |
+| useFooterDropDownList | Booleano   | Utiliza una lista desplegable en las celdas del pie de página que calculan el valor total de una columna | False             |
 
-The *tableColumns* collection determines the structure of the table's columns. Each object in the collection has the following values:
+La colección *tableColumns* determina la estructura de las columnas de la tabla. Cada objeto de la colección tiene los siguientes valores:
 
-  | Propiedad | Tipo  | Descripción                                      | Obligatorio |
-  | --------- | ----- | ------------------------------------------------ | ----------- |
-  | dataField | Texto | table column's property name in the data context | No          |
-  | formatter | Texto | table column's formatter                         | No          |
-  | name      | Texto | table column's name                              | Sí          |
+  | Propiedad | Tipo  | Descripción                                                              | Obligatorio |
+  | --------- | ----- | ------------------------------------------------------------------------ | ----------- |
+  | dataField | Texto | nombre de la propiedad de la columna de la tabla en el contexto de datos | No          |
+  | formatter | Texto | formateador de la columna de la tabla                                    | No          |
+  | name      | Texto | nombre de la columna de la tabla                                         | Sí          |
 
-The length of the *tableColumns* collection must be equal to the range column count:
+La longitud de la colección *tableColumns* debe ser igual al número de columnas del rango:
 
-  * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
-  * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
+  * Cuando el conteo de columnas en *rangeObj* excede el número de columnas en *tableColumns*, la tabla se llena con columnas vacías adicionales.
+  * Cuando la cuenta de columnas en *rangeObj* es inferior al número de *tableColumns*, la tabla muestra un número de columnas que coinciden con el recuento de columnas del rango.
 
-If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. De lo contrario, se utilizará la primera celda del rango. When generating columns automatically, the following rules apply:
+Si pasa una *source* pero no la opción *tableColumn*, el comando genera las columnas automáticamente. En este caso, *rangeObj* debe ser un rango de celdas. De lo contrario, se utilizará la primera celda del rango. Cuando se generan columnas automáticamente, se aplican las siguientes reglas:
 
-* If the data passed to the command is a collection of objects, the property names are used as column titles. Por ejemplo:
+* Si los datos pasados al comando son una colección de objetos, los nombres de las propiedades se utilizan como títulos de las columnas. Por ejemplo:
 
 ```4d
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
 ```
-Here the titles of the columns would be `LastName` and `FirstName`.
+Aquí los títulos de las columnas serían `LastName` y `FirstName`.
 
-* If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
+* Si los datos pasados al comando son una colección de valores escalares, deben contener una colección de subcolecciones:
 
-  * The first-level collection contains subcollections of values. Cada subcolección define una línea. Each subcollection defines a row. The number of values in the first subcollection determines how many columns are created.
-  * The subcollections' indices are used as column titles.
-  * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value).
+  * The first-level collection contains subcollections of values. Cada subcolección define una línea. Each subcollection defines a row. El número de valores de la primera subcolección determina cuántas columnas se crean.
+  * Los índices de las subcolecciones se utilizan como títulos de las columnas.
+  * Each subcollection defines cell values for the row. Los valores pueden ser `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` o `Picture`. Un valor `Time` debe ser un objeto a que contenga un atributo de tiempo, como se describe en [VP SET VALUE](#vp-set-value).
 
-> This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
+> Esto sólo funciona cuando se generan columnas automáticamente. No puede utilizar una colección de datos escalares con la opción *tableColumns*.
 
 
 #### Ejemplo
@@ -818,7 +818,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 Para crear una tabla utilizando un contexto de datos:
 
 ```4d
-// Set a data context
+// Define un contexto de datos
 var $data : Object
 
 $data:=New object()
@@ -829,7 +829,7 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// Define the columns for the table
+// Define las columnas de la tabla
 var $options : Object
 
 $options:=New object
@@ -838,7 +838,7 @@ $options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstN
 $options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
 $options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
 
-// Create a table from the "people" collection
+// Crea una tabla de la colección "people"
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -873,7 +873,7 @@ In *rangeObj*, pass an object containing a range of columns to remove. Si el ran
 
 * both columns and rows, only the columns are removed.
 * únicamente las líneas, el comando no hace nada.
-> Columns are deleted from right to left.
+> Las columnas se borran de derecha a izquierda.
 
 #### Ejemplo
 
@@ -910,7 +910,7 @@ The `VP DELETE ROWS` command<!-- REF #_method_.VP DELETE ROWS. Summary -->remove
 
 In *rangeObj*, pass an object containing a range of rows  to remove. Si el rango pasado contiene:
 
-* both columns and rows, only the rows  are removed.
+* tanto las columnas como las líneas, sólo se eliminan las líneas.
 * sólo columnas, el comando no hace nada.
 > Las líneas se eliminan de abajo hacia arriba.
 
@@ -966,18 +966,18 @@ If the extension is not included, but the format is specified in *paramObj*, the
 
 The optional *paramObj* parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
 
-| Propiedad            | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format               | texto    | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
-| contraseña           | texto    | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| formula              | objeto   | Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).                                                                                                                                                       |
-| valuesOnly           | booleano | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| includeFormatInfo    | booleano | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                 |
-| includeBindingSource | Booleano | 4DVP únicamente. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False en caso contrario. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                               |
-| sheet                | number   | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| pdfOptions           | objeto   | PDF únicamente (opcional) - Opciones para la exportación en pdf <p><table><tr><th>Propiedad</th><th>Tipo</yh><th>Descripción</th></tr><tr><td>creator</td><td>texto</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>texto</td><td>título del documento.</td></tr><tr><td>author</td><td>texto</td><td>nombre de la persona que creó ese documento.</td></tr><tr><td>keywords</td><td>texto</td><td>palabras clave asociadas al documento.</td></tr><tr><td>subject</td><td>texto</td><td>asunto del documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| csvOptions           | objeto   | CSV únicamente (opcional) - Opciones para la exportación en csv <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>range</td><td>objeto</td><td>Objeto rango de celdas</td></tr><tr><td>rowDelimiter</td><td>texto</td><td>Delimitador de línea. Por defecto: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>texto</td><td>Delimitador de columna. Por defecto: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| \<customProperty>   | any      | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Propiedad            | Tipo     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| format               | texto    | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". Puede utilizar las siguientes constantes:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
+| contraseña           | texto    | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| formula              | objeto   | Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).                                                                                                                                                            |
+| valuesOnly           | booleano | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| includeFormatInfo    | booleano | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                      |
+| includeBindingSource | Booleano | 4DVP únicamente. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False en caso contrario. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                    |
+| sheet                | number   | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| pdfOptions           | objeto   | PDF únicamente (opcional) - Opciones para la exportación en pdf <p><table><tr><th>Propiedad</th><th>Tipo</yh><th>Descripción</th></tr><tr><td>creator</td><td>texto</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>texto</td><td>título del documento.</td></tr><tr><td>author</td><td>texto</td><td>nombre de la persona que creó ese documento.</td></tr><tr><td>keywords</td><td>texto</td><td>palabras clave asociadas al documento.</td></tr><tr><td>subject</td><td>texto</td><td>asunto del documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| csvOptions           | objeto   | CSV únicamente (opcional) - Opciones para la exportación en csv <p><table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>range</td><td>objeto</td><td>Objeto rango de celdas</td></tr><tr><td>rowDelimiter</td><td>texto</td><td>Delimitador de línea. Por defecto: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>texto</td><td>Delimitador de columna. Por defecto: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| \<customProperty>   | any      | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 **Notes about Excel format**:
 
@@ -992,7 +992,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 **Notas sobre el formato CSV**:
 
 * When exporting a 4D View Pro document to CSV, some settings may be lost, as only the text and values are saved.
-* All the values are saved as double-quoted strings. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+* Todos los valores se guardan como cadenas entre comillas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
 
@@ -1024,7 +1024,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 
 #### Ejemplo 2
 
-You want to export the current sheet in PDF:
+Quiere exportar la hoja actual en PDF:
 
 ```4d
 var $params: Object
@@ -1180,7 +1180,7 @@ You can pass the optional *searchCondition* parameter to specify how the search 
 | all         | Booleano | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                 |
 | flags       | Integer  | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ej.: "a" es considerada como idéntica a "A".</td></tr><tr><td>`vk find flag none`</td><td>no se consideran los indicadores de búsqueda (por defecto)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? ? ? ? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<p> <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code></p>                                                                                     |
 | order       | Integer  | <table><tr><td>`vk find order by columns`</td><td>La búsqueda se realiza por columnas. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>La búsqueda se realiza por líneas. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                           |
-| target      | Integer  | <table><tr><td>`vk find target formula`</td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td>`vk find target tag`</td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<p> <code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                     |
+| target      | Integer  | <table><tr><td>`vk find target formula`</td><td>La búsqueda se realiza en la fórmula de la celda</td></tr><tr><td>`vk find target tag`</td><td>La búsqueda se realiza en la etiqueta de la celda</td></tr><tr><td>`vk find target text`</td><td>La búsqueda se realiza en el texto de la celda (por defecto)</td></tr></table><p>Estos marcadores se pueden combinar. Por ejemplo:<p> <code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                     |
 
 In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
 
@@ -1202,7 +1202,7 @@ $result:=VP Find($range;"Total")
 
 #### Ejemplo 2
 
-To find "Total" and replace it with "Grand Total":
+Para encontrar "Total" y reemplazarlo por "Grand Total":
 
 ```4d
 var $range;$condition;$result : Object
@@ -1610,7 +1610,7 @@ The function returns an object or a collection depending on the type of data con
 
 #### Ejemplo
 
-To get the data context bound to the following cells:
+Para obtener el contexto de datos asociado a las siguientes celdas:
 
 ![](assets/en/ViewPro/vp-set-data-context-bind.png)
 
@@ -3152,11 +3152,11 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                        |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro       |
-| name       | Texto   | -> | Name of the named range or named formula to remove |
-| scope      | Integer | -> | Alcance objetivo (por defecto=hoja actual)         |
+| Parámetros | Tipo    |    | Descripción                                             |
+| ---------- | ------- | -- | ------------------------------------------------------- |
+| vpAreaName | Texto   | -> | Nombre de objeto formulario área 4D View Pro            |
+| name       | Texto   | -> | Nombre del rango nombrado o fórmula nombrada a eliminar |
+| scope      | Integer | -> | Alcance objetivo (por defecto=hoja actual)              |
 
 
 <!-- END REF -->
@@ -3463,7 +3463,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *column* parameter defines the first column of the column range. Pass the row index (counting begins at 0) in this parameter. Pass the column index (counting begins at 0)  in this parameter.
 
-In the *row* parameter, you can define the row(s) of the cell range's position. *rowCount* must be greater than 0. Pass the row index (counting begins at 0) in this parameter.
+In the *row* parameter, you can define the row(s) of the cell range's position. *rowCount* debe ser mayor que 0. Pass the row index (counting begins at 0) in this parameter.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If not specified, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 
@@ -3507,7 +3507,7 @@ In *rangeObj*, pass a range object containing a range of the rows whose size wil
 
 #### Ejemplo
 
-The following rows don't correctly display the text:
+Las siguientes líneas no muestran correctamente el texto:
 
 ![](assets/en/ViewPro/cmd_vpRowAutoFit1.PNG)
 
@@ -3555,9 +3555,9 @@ In *parameters* object, pass any of the following optional properties. These pro
 
 The following property is automatically added by the command if necessary:
 
-| Propiedad      | Tipo     | Descripción                                        |
-| -------------- | -------- | -------------------------------------------------- |
-| timeoutReached | booleano | Added with true value if timeout has been exceeded |
+| Propiedad      | Tipo     | Descripción                                                     |
+| -------------- | -------- | --------------------------------------------------------------- |
+| timeoutReached | booleano | Añadido con el valor true si se ha excedido el tiempo de espera |
 
 > The offscreen area is only available during the execution of the `VP Run offscreen area` command. It will automatically be destroyed once execution has ended.
 
@@ -3589,7 +3589,7 @@ Function onEvent()
  End case
 ```
 
-The *OffscreenArea* callback method:
+El método de retrollamada *OffscreenArea*:
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -3641,7 +3641,7 @@ Function onEvent()
  End case
 ```
 
-The *OffscreenArea* callback method:
+El método de retrollamada *OffscreenArea*:
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -3793,7 +3793,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 
 In *dataContextAttribute*, pass the name of the attribute to bind to *cellRange*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
-> Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
+> Los atributos de tipo colección no están soportados. When you pass the name of a collection attribute, the command does nothing.
 
 #### Ejemplo
 
@@ -3897,7 +3897,7 @@ You can define the position of the *borderStyleObj* (i.e., where the line is app
 
 #### Ejemplo 1
 
-This code produces a border around the entire range:
+Este código produce un borde alrededor de todo el rango:
 
 ```4d
 $border:=New object("color";"red";"style";vk line style thick)
@@ -4236,10 +4236,10 @@ In *dataObj* or *dataColl*, pass an object or a collection containing the data t
 
 To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
 
-| Propiedad | Tipo                                     | Descripción                                   |
-| --------- | ---------------------------------------- | --------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Valor a poner en el contexto                  |
-| time      | Real                                     | Time value (in seconds) to put in the context |
+| Propiedad | Tipo                                     | Descripción                                             |
+| --------- | ---------------------------------------- | ------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valor a poner en el contexto                            |
+| time      | Real                                     | Valor de tiempo (en segundos) para poner en el contexto |
 
 In *options*, you can pass an object that specifies additional options. Possible properties are:
 
@@ -4880,7 +4880,7 @@ The `VP SET ROW COUNT` command<!-- REF #_method_.VP SET ROW COUNT. Summary -->de
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-Pass the total number of rows in the *rowCount* parameter. *rowCount* must be greater than 0.
+Pass the total number of rows in the *rowCount* parameter. *rowCount* debe ser mayor que 0.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the *rowCount* will be applied (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 
@@ -5015,7 +5015,7 @@ El comando no hace nada si:
 
 #### Ejemplo
 
-Set the third sheet's name to "Total first quarter":
+Establezca el nombre de la tercera hoja como "Total first quarter":
 
 ```4d
 VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
@@ -5439,20 +5439,20 @@ The following table lists the available workbook options:
 | backgroundImageLayout                 | number                  | Cómo se muestra la imagen de fondo. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk image layout center </td><td>1</td><td> En el centro del área.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Llena el área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Se muestra con su relación de aspecto original.</td></tr></table>                                                                                                                                                                     |
 | calcOnDemand                          | booleano                | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
 | columnResizeMode                      | number                  | Resize mode for columns. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                |
-| copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                    |
+| copyPasteHeaderOptions                | number                  | Encabezados para incluir cuando se copian o pegan datos. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                |
 | customList                            | colección               | The list for users to customize drag fill, prioritize matching this list in each fill. Cada elemento de colección es una colección de cadenas. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).  |
 | cutCopyIndicatorBorderColor           | cadena                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | booleano                | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                        |
 | defaultDragFillType                   | number                  | The default drag fill type. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Llena automáticamente las celdas. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Borra los valores de las celdas.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Rellena las celdas sólo con formato.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Llena las celdas con valores y no con formato. </td></tr></table>                                                                                                                                                                             |
-| enableAccessibility                   | booleano                | Accessibility support is enabled in the spreadsheet.                                                                                                                                                                                                   |
+| enableAccessibility                   | booleano                | El soporte de accesibilidad está activado en la hoja de cálculo.                                                                                                                                                                                       |
 | enableFormulaTextbox                  | booleano                | The formula text box is enabled.                                                                                                                                                                                                                       |
 | grayAreaBackColor                     | cadena                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
 | highlightInvalidData                  | booleano                | Los datos inválidos son resaltados.                                                                                                                                                                                                                    |
 | iterativeCalculation                  | booleano                | Activa el cálculo iterativo. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                              |
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
 | iterativeCalculationMaximumIterations | numeric                 | Número de veces que la fórmula debe recalcular.                                                                                                                                                                                                        |
-| newTabVisible                         | booleano                | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
-| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                           |
+| newTabVisible                         | booleano                | Mostrar una pestaña especial para permitir a los usuarios insertar nuevas hojas.                                                                                                                                                                       |
+| numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. Si la siguiente celda está vacía, se desborda el contenido.</td></tr></table>                                                                                                                           |
 | pasteSkipInvisibleRange               | booleano                | Pegar u omitir pegar datos en rangos invisibles: <ul><li>False (por defecto): pegar datos</li><li>True: omitir el pegado en rangos invisibles</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar el estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar el estilo R1C1</td></tr></table>                                                                                                                                                   |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                               |

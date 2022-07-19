@@ -23,7 +23,7 @@ When writing a formula, you can use different shortcuts:
 
 - escriba la primera letra de una función a ingresar. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
 
-![](assets/en/ViewPro/formula2.PNG)
+![](assets/en/ViewPro/formula2.png)
 
 You can also create named formulas that can be called via their name. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
 
@@ -271,7 +271,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
 
-![](assets/en/ViewPro/params.PNG)
+![](assets/en/ViewPro/params.png)
 
 
 ## Compatibilidad

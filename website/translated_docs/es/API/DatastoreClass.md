@@ -825,7 +825,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 | dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                |
 | attributes      | Texto        | -> | Lista de atributos separados por comas                                    |
 | attributesColl  | Collection   | -> | Colección de nombres de atributos (text)                                  |
-| contextType     | Texto        | -> | If provided, value must be "main" or "currentItem"                        |
+| contextType     | Texto        | -> | Si se suministra, el valor debe ser "main" o "currentItem"                |
 | pageLength      | Integer      | -> | Page length of the entity selection linked to the context (default is 80) |
 <!-- END REF -->
 

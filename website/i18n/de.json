@@ -987,8 +987,8 @@
       }
     },
     "links": {
-      "v19 R4 BETA": "v19 R4 BETA",
-      "v19 R3": "v19 R3",
+      "v19 R6 BETA": "v19 R6 BETA",
+      "v19 R5": "v19 R5",
       "v19": "v19",
       "v18": "v18"
     },
@@ -1044,7 +1044,7 @@
     "REST Server|no description given": "REST Server",
     "Maintenance and Security Center|no description given": "Maintenance and Security Center",
     "Backup and Restore|no description given": "Backup and Restore",
-    "License Management|no description given": "License Management",
+    "Licenses & Data Collection|no description given": "Licenses & Data Collection",
     "Build Application|no description given": "Build Application",
     "Web Administration|no description given": "Web Administration",
     "4D Server Administration Window|no description given": "4D Server Administration Window",
@@ -1067,7 +1067,7 @@
     "Settings|no description given": "Settings",
     "Transformation Tags|no description given": "Transformation Tags",
     "User Settings|no description given": "User Settings",
-    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
+    "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html|no description given": "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html",
     "Getting started|no description given": "Getting started",
     "Core Development|no description given": "Core Development",
     "Administration|no description given": "Administration",

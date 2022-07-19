@@ -33,13 +33,13 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 This is where you [write and edit](write-class-method.md) your code. The editor automatically indents code text and colors the different syntax elements for clear code structure.
 
-You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
+Puede personalizar la visualización del área de edición. Any customization is automatically passed on to all the windows of the code editor:
 
 | Option                                          | Descripción                                                                                                                                                                                                 | Set in...                                                                                                                                      |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | **font** and **font size**                      | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                          |
 | **estilo y color de los elementos de sintaxis** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **espacios**                                    | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                               |
+| **espacios**                                    | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espacios en blanco**                                                                                                          |
 | **temas**                                       | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                     |
 | **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                   | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                     |
 
@@ -72,7 +72,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
 - **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. Por ejemplo: [Table];"Form".
 - **Methods**: Database project method names.
-- **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
+- **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. Se gestionan desde la página de inicio del Explorador.
 - **Folders** (submenu): Contents of the folder selected using the submenu.
 - **Macros**: Macro names defined for the database (see [Creating and using macros](#creating-and-using-macros)).
 - **Commands**: 4D language commands in alphabetical order.
@@ -90,7 +90,7 @@ You can display the following lists of items in the lists area of the Code Edito
 
 You can save the lists set in the Code Editor window in the form of a template. Once the template is saved, the parameters set in it will be used for each new Code Editor window that is opened.
 
-The following parameters are stored in the template:
+Los siguientes parámetros se almacenan en la plantilla:
 
 - Tamaño relativo de las áreas de edición y de la lista
 - Number of lists
@@ -294,7 +294,7 @@ When the database is restarted, the list is reinitialized.
 
 ## Seleccionando texto
 
-The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point. The enclosing block can be defined by:
+The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point. El bloque adjunto puede ser definido por:
 
 * Comillas
 * Parentheses
@@ -504,7 +504,7 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 * **Remove All**: Removes all bookmarks from the foreground window.
 * **Goto Next** / **Goto Previous**: Enables browsing among bookmarks in the window. Selecting one of these commands places the cursor on the first character of the line associated with the bookmark concerned. You can also use the keyboard shortcuts **F3** (go to next) or **Shift+F3** (go to previous).
 
-**Note:** You can use bookmarks as markers for lines that contain an item found by a search. In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](./find-and-replace-in-methods).
+**Note:** You can use bookmarks as markers for lines that contain an item found by a search. En este caso, 4D añade automáticamente los marcadores. For more information, refer to [Find and replace in methods](./find-and-replace-in-methods).
 
 ## Despliegue de navegación
 

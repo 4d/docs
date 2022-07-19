@@ -1131,7 +1131,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
  OB SET($ob;"choiceListName";"colors")
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
 
 #### unitsList、unitsListName、 unitsListReference と unitReference

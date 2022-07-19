@@ -50,7 +50,7 @@ If the published project is not displayed in the **Available** list, select **Cu
 
 
 - **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
+- **Network address**: The IP address of the machine where the 4D Server was launched. <p>If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`. <p>By default, the publishing port of a 4D Server is 19813. Este número puede modificarse en los parámetros del proyecto.
 
 > The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option).
 

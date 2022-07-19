@@ -246,7 +246,7 @@ A propriedade `.kind` <!-- REF DataClassAttributeClass.kind. Summary -->devolve 
 
 Dada a seguinte tabela e relação:
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text

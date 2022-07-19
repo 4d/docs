@@ -50,7 +50,7 @@ Please refer to **Using a choice** in the [drop-down list page](dropdownList_Ove
 
 ## Opciones
 
-Combo box type objects accept two specific options:
+Los objetos de tipo combo box aceptan dos opciones específicas:
 
 - [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.
 - [Exclusión](properties_RangeOfValues.md#excluded-list) (lista de valores excluidos): permite establecer una lista cuyos valores no pueden introducirse en el combo box. Si se introduce un valor excluido, no se acepta y se muestra un mensaje de error.

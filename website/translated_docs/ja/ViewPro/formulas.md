@@ -23,7 +23,7 @@ title: 式と関数
 
 - 入力したい関数の頭文字を入力します。 すると、利用可能な関数と参照の一覧がポップアップメニューに表示され、必要な要素を選択することができます:
 
-![](assets/en/ViewPro/formula2.PNG)
+![](assets/en/ViewPro/formula2.png)
 
 また、命名フォーミュラを作成すると、その名前で呼び出すことが可能です。 この場合、[VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) コマンドを使用して命名フォーミュラを入力します。
 
@@ -271,7 +271,7 @@ $o.BIRTH_INFORMATION.summary:="渡された情報に基づきフォーマット�
 VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
 
-![](assets/en/ViewPro/params.PNG)
+![](assets/en/ViewPro/params.png)
 
 
 ## 互換性

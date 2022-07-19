@@ -53,7 +53,7 @@ This property is available when the [Save Geometry](FormEditor/properties_FormPr
 
 This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
 
-Here is the list of objects whose value can be saved:
+Esta es la lista de objetos cuyo valor se puede guardar:
 
 | Objeto                                        | Valor guardado                                                                           |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -298,7 +298,7 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Título
 
-Permite insertar una etiqueta en un objeto. The font and the style of this label can be specified.
+Permite insertar una etiqueta en un objeto. Se puede especificar la fuente y el estilo de esta etiqueta.
 
 You can force a carriage return in the label by using the \ character (backslash).
 

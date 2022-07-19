@@ -498,7 +498,7 @@ In return, you must make sure in this case to systematically initialize the vari
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
 
-To do so, put the ROBOTS. TXT file at the server's root. This file must be structured in the following manner:
+To do so, put the ROBOTS. TXT file at the server's root. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>

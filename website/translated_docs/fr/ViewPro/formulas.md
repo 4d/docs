@@ -23,7 +23,7 @@ Lorsque vous écrivez une formule, vous pouvez utiliser différents raccourcis :
 
 - tapez la première lettre d'une fonction à saisir. Un menu contextuel listant les fonctions et références disponibles apparaît, pour vous permettre de sélectionner les éléments souhaités :
 
-![](assets/en/ViewPro/formula2.PNG)
+![](assets/en/ViewPro/formula2.png)
 
 Vous pouvez également créer des formules nommées qui peuvent être appelées via leur nom. Pour ce faire, saisissez ces formules à l'aide de la commande [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
 
@@ -271,7 +271,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
 
-![](assets/en/ViewPro/params.PNG)
+![](assets/en/ViewPro/params.png)
 
 
 ## Compatibilité

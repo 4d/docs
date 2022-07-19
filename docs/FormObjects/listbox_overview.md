@@ -1169,7 +1169,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
  OB SET($ob;"choiceListName";"colors")
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
 
 #### unitsList, unitsListName, unitsListReference and unitReference  

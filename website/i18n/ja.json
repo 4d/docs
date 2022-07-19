@@ -987,8 +987,8 @@
       }
     },
     "links": {
-      "v19 R4 BETA": "v19 R4 BETA",
-      "v19 R3": "v19 R3",
+      "v19 R6 BETA": "v19 R6 BETA",
+      "v19 R5": "v19 R5",
       "v19": "v19",
       "v18": "v18"
     },
@@ -1044,7 +1044,7 @@
     "REST Server|no description given": "REST サーバー",
     "Maintenance and Security Center|no description given": "メンテナンス＆セキュリティセンター",
     "Backup and Restore|no description given": "バックアップと復元",
-    "License Management|no description given": "ライセンス管理",
+    "Licenses & Data Collection|no description given": "ライセンス＆データ収集",
     "Build Application|no description given": "アプリケーションビルド",
     "Web Administration|no description given": "Web 管理",
     "4D Server Administration Window|no description given": "4D Server 管理ウィンドウ",
@@ -1067,7 +1067,7 @@
     "Settings|no description given": "設定",
     "Transformation Tags|no description given": "変換タグ",
     "User Settings|no description given": "ユーザー設定",
-    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.ja.html",
+    "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html|no description given": "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.ja.html",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "管理",

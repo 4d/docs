@@ -24,7 +24,7 @@ A **myTheme** theme is automatically added if you already customized Code Editor
 
 ### Creación de temas personalizados
 
-You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+Puede crear temas totalmente personalizables. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
 
 ### Archivos de temas personalizados
 
@@ -87,7 +87,7 @@ Esta página configura las opciones de visualización del Editor de Código.
 
 
 
-#### 4D Programming Language (Use regional system settings)
+#### Lenguaje de programación 4D (Utilice los parámetros regionales del sistema)
 
 Allows you to disable/enable the "international" code settings for the local 4D application.
 - **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
@@ -97,7 +97,7 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 #### Indentación
 
-Changes the indentation value for the 4D code in the Code Editor. The width must be specified in points (10 by default).
+Changes the indentation value for the 4D code in the Code Editor. El ancho debe especificarse en puntos (10 por defecto).
 
 4D code is automatically indented in order to reveal its structure:
 
@@ -168,7 +168,7 @@ Allows to highlight all occurrences of the same variable or field in an open met
 
 ![](assets/en/Preferences/optionsVariables.png)
 
-- **No**(default): No highlight
+- **No**(por defecto): no resaltado
 - **On cursor**: All occurrences are highlighted when the text is clicked
 - **On selection**: All occurrences are highlighted when the text is selected
 

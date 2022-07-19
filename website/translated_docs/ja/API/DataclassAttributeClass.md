@@ -263,7 +263,7 @@ title: DataClassAttribute
 
 以下のテーブルとリレーションを前提とします:
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
@@ -271,6 +271,7 @@ title: DataClassAttribute
  $attKind:=ds.Employee.manager.kind //$attKind="relatedEntity"
  $attKind:=ds.Employee.directReports.kind //$attKind="relatedEntities"
 ```
+
 
 
 <!-- END REF -->

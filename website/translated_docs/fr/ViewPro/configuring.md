@@ -17,7 +17,7 @@ Les propriétés de la zone 4D View Pro peuvent être configurées à l'aide de 
 
 Vous pouvez sélectionner l'interface à utiliser avec vos zones de formulaire 4D View Pro dans la **Liste de propriétés**, dans **Apparence** :
 
-![](assets/en/ViewPro/vpUserInterface.PNG)
+![](assets/en/ViewPro/vpUserInterface.png)
 
 > Vous pouvez également utiliser les propriétés JSON [`userInterface`](FormObjects/properties_Appearance.md#user-interface) et [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar) (uniquement avec l'interface "toolbar").
 
@@ -26,7 +26,7 @@ Les interfaces permettent d'effectuer des modifications de base et de manipuler 
 
 #### Ruban
 
-![](assets/en/ViewPro/vpRibbon.PNG)
+![](assets/en/ViewPro/vpRibbon.png)
 
 #### Barre d’outils
 
@@ -34,7 +34,7 @@ Lorsque l'interface Barre d'outils est activée, l'option [**Afficher barre de f
 
 Lorsque la barre de formule est visible :
 
-![](assets/en/ViewPro/vpToolbar.PNG)
+![](assets/en/ViewPro/vpToolbar.png)
 
 #### Features
 

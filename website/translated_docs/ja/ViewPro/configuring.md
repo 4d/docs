@@ -17,7 +17,7 @@ title: 4D View Pro エリアの設定
 
 4D View Pro のフォームエリアで使用するインターフェースは、**プロパティリスト** の **アピアランス** から選択できます:
 
-![](assets/en/ViewPro/vpUserInterface.PNG)
+![](assets/en/ViewPro/vpUserInterface.png)
 
 > また、[`userInterface`](FormObjects/properties_Appearance.md#ユーザーインターフェース) および [`withFormulaBar`](FormObjects/properties_Appearance.md#フォーミュラバーを表示) ("ツールバー" インターフェースのみ) の JSONプロパティを使用することもできます。
 
@@ -26,7 +26,7 @@ title: 4D View Pro エリアの設定
 
 #### リボン
 
-![](assets/en/ViewPro/vpRibbon.PNG)
+![](assets/en/ViewPro/vpRibbon.png)
 
 #### ツールバー
 
@@ -34,7 +34,7 @@ title: 4D View Pro エリアの設定
 
 フォーミュラバーが表示された状態:
 
-![](assets/en/ViewPro/vpToolbar.PNG)
+![](assets/en/ViewPro/vpToolbar.png)
 
 #### 機能
 

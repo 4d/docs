@@ -161,7 +161,7 @@ Este tema se compone de los siguientes subtemas:
 | Subtema      | Descripción                                                  | ¿Se pueden modificar los valores? |
 | ------------ | ------------------------------------------------------------ | --------------------------------- |
 | Interproceso | List of interprocess variables being used at this point      | Sí                                |
-| Proceso      | List of process variables used by the current process        | Sí                                |
+| Proceso      | Lista de variables proceso utilizadas por el proceso actual  | Sí                                |
 | Local        | List of local variables used by the method being traced      | Sí                                |
 | Parámetros   | Lista de parámetros recibidos por el método                  | Sí                                |
 | Self         | Pointer to the current object, when tracing an Object Method | No                                |
@@ -186,15 +186,15 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 #### Constantes
 
-Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
+Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. Las expresiones de este tema no pueden ser modificadas.
 
 #### Semáforos
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.
 
 #### Procesos
 
-This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
+This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). Las expresiones de este tema no pueden ser modificadas.
 
 #### Tablas y campos
 
@@ -204,11 +204,11 @@ For each Field item, the Value column displays the value of the field for the cu
 
 #### Conjuntos
 
-This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
+This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.
 
 #### Selecciones temporales
 
-This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
+This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.
 
 #### Information
 
@@ -397,7 +397,7 @@ The contextual menu of the Source Code Pane provides access to several functions
 * **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
 * **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
 * **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
-* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
+* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cualquier cambio realizado modifica el punto de interrupción de forma permanente.
 
 ### Buscar siguiente/anterior
 

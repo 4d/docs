@@ -2211,7 +2211,7 @@ La retrollamada recibe los siguientes parámetros:
 *   en *$2: param*
 *   en *$N...*: *paramN...*
 
-The callback sets the following parameter(s):
+La retrollamada define los siguientes parámetros:
 
 *   *$1.accumulator*: valor que va a ser modificado por la función y que es inicializado por *initValue*.
 *   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.

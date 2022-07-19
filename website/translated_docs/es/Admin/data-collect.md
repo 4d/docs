@@ -8,7 +8,7 @@ To help us make our products always better, we automatically collect data regard
 Esta página explica:
 
 - qué información se recopila
-- where information is stored and when it is sent to 4D
+- dónde se almacena la información y cuándo se envía a 4D
 
 
 ## Información recopilada
@@ -22,16 +22,16 @@ Los datos se recogen durante los siguientes eventos:
 
 ### Collected at 4D Server startup
 
-| Datos         | Ejemplo                                                                                              | Notas                                                        |
-| ------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | Nombre, tipo y velocidad del procesador                      |
-| numberOfCores | 4                                                                                                    | Número total de núcleos                                      |
-| memory        | 419430400                                                                                            | Volume of memory storage (in bytes) available on the machine |
-| system        | Microsoft Windows 10 Pro 1809 (17763.253)                                                            | Versión del sistema operativo y número de build              |
-| headless      | false                                                                                                | True if the application is running in headless mode          |
-| version       | 1960                                                                                                 | Número de versión de la aplicación 4D                        |
-| buildNumber   | 123456                                                                                               | Build number of the 4D application                           |
-| license       | {"name":"4D Developer Professional 19R6","products":[{"id":808464433,"name":"4D","allowedCount":1}]} | Commercial name and description of product licenses          |
+| Datos         | Ejemplo                                                                                              | Notas                                                            |
+| ------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | Nombre, tipo y velocidad del procesador                          |
+| numberOfCores | 4                                                                                                    | Número total de núcleos                                          |
+| memory        | 419430400                                                                                            | Volume of memory storage (in bytes) available on the machine     |
+| system        | Microsoft Windows 10 Pro 1809 (17763.253)                                                            | Versión del sistema operativo y número de build                  |
+| headless      | false                                                                                                | True si la aplicación se ejecuta en modo sin interfaz            |
+| version       | 1960                                                                                                 | Número de versión de la aplicación 4D                            |
+| buildNumber   | 123456                                                                                               | Build number of the 4D application                               |
+| license       | {"name":"4D Developer Professional 19R6","products":[{"id":808464433,"name":"4D","allowedCount":1}]} | Nombre comercial y descripción de las licencias de los productos |
 
 
 ### Collected per database at opening
@@ -72,7 +72,7 @@ Collected data is written in a text file (JSON format) when 4D Server quits. The
 - on Windows: `Users\[userName]\AppData\Roaming\4D Server`
 - on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
-Once a week, the file is automatically sent over the network to 4D. The file is then deleted from the active 4D folder.
+Once a week, the file is automatically sent over the network to 4D. A continuación, el archivo se elimina de la carpeta activa de 4D.
 
 ![](assets/en/Admin/data-collect.png)
 

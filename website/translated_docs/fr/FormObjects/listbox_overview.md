@@ -1131,7 +1131,7 @@ Vous voulez afficher une combo box basée sur une énumération nommée "colors"
  OB SET($ob;"choiceListName";"colors")
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
 
 #### unitsList, unitsListName, unitsListReference et unitReference
