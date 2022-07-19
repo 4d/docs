@@ -17,13 +17,13 @@ Un combo box se inicializa exactamente igual que una [lista desplegable](dropdow
 
 ### Utilizar un objeto
 
-> Esta funcionalidad sólo está disponible en los proyectos 4D.
+> Esta funcionalidad sólo está disponible en proyectos 4D.
 
 Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_collection) puede utilizarse como fuente de datos de un combo box. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo                 | Descripción                                                                                                                                                                                                                                                              |
 | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>cadenas</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío |
+| `values`       | Collection           | Obligatorio - Colección de valores escalares. Todos los valores deben ser del mismo tipo. Tipos soportados:<li>strings</li><li>numbers</li><li>fechas</li><li>horas</li>Si está vacío o no está definido, el combo box está vacío |
 | `currentValue` | igual que Collection | Texto introducido por el usuario                                                                                                                                                                                                                                         |
 
 Si el objeto contiene otras propiedades, se ignoran.
@@ -50,11 +50,11 @@ Please refer to **Using a choice** in the [drop-down list page](dropdownList_Ove
 
 ## Opciones
 
-Combo box type objects accept two specific options:
+Los objetos de tipo combo box aceptan dos opciones específicas:
 
 - [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.
 - [Exclusión](properties_RangeOfValues.md#excluded-list) (lista de valores excluidos): permite establecer una lista cuyos valores no pueden introducirse en el combo box. Si se introduce un valor excluido, no se acepta y se muestra un mensaje de error.
-> > > La asociación de una [lista de valores obligatorios](properties_RangeOfValues.md#required-list) no está disponible para los combo box. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md#overview) object.
+> > > > La asociación de una [lista de valores obligatorios](properties_RangeOfValues.md#required-list) no está disponible para los combo box. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md#overview) object.
 
 ## Propiedades soportadas
 [Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  

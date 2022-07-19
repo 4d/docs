@@ -53,7 +53,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 ### Centrado / Truncado (no centrado)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
 El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D crops equally from each edge and from the top and bottom.
 

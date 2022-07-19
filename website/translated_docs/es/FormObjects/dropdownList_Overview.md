@@ -146,7 +146,7 @@ When you have associated a drop-down list with a choice list and with a field or
 
 ### Uso de una lista de selección jerárquica
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Here is an example of a hierarchical drop-down list:
+A hierarchical drop-down list has a sublist associated with each item in the list. Este es un ejemplo de lista desplegable jerárquica:
 
 ![](assets/en/FormObjects/popupDropdown_hierar.png)
 
@@ -159,7 +159,7 @@ You manage hierarchical drop-down lists using the **Hierarchical Lists** command
 
 ### Utilizar una acción estándar
 
-You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). This feature is supported in the following contexts:
+You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
 
 - Uso de la acción estándar `gotoPage`. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
 

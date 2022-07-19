@@ -23,7 +23,7 @@ title: 式と関数
 
 - 入力したい関数の頭文字を入力します。 すると、利用可能な関数と参照の一覧がポップアップメニューに表示され、必要な要素を選択することができます:
 
-![](assets/en/ViewPro/formula2.PNG)
+![](assets/en/ViewPro/formula2.png)
 
 また、命名フォーミュラを作成すると、その名前で呼び出すことが可能です。 この場合、[VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) コマンドを使用して命名フォーミュラを入力します。
 
@@ -42,13 +42,13 @@ title: 式と関数
 
 4D View Pro は 5つのデータ型をサポートします。 それぞれのデータ型について、特定の定数と演算子がサポートされています。
 
-| データ型                          | 値                                                  | 演算子                                                                                                                          |
-| ----------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [数値](Concepts/dt_number.md)   | 1.2<br>1.2 E3<br>1.2E-3<br>10.3x | + (加法)<br>- (減法)<br>* (乗法)<br>/ (除法)<br>^ (べき乗、数値を自身に対してかける回数)<br>% (パーセント -- 演算子の前の数値を100で割る) |
-| [日付](Concepts/dt_date.md)     | 10/24/2017                                         | + (日付 + 日数 -> 日付)<br>+ (日付 + 時間 -> 日付 + その日の時間)<br>- (日付 - 日数 -> 日付)<br>- (日付 - 日付 -> 2つの日付間の日数)           |
-| [時間](Concepts/dt_time.md)     | 10:12:10                                           | 経過時間演算子:<p>+ (加法)<br>- (減法)<br>* (経過時間 * 数値 -> 経過時間)<br>/ (経過時間 / 数値 -> 経過時間)     |
-| [文字列](Concepts/dt_string.md)  | 'Sophie' または "Sophie"                              | & (連結)                                                                                                                       |
-| [ブール](Concepts/dt_boolean.md) | TRUE または FALSE                                     | -                                                                                                                            |
+| データ型                            | 値                                                  | 演算子                                                                                                                          |
+| ------------------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| [数値](Concepts/dt_number.md)     | 1.2<br>1.2 E3<br>1.2E-3<br>10.3x | + (加法)<br>- (減法)<br>* (乗法)<br>/ (除法)<br>^ (べき乗、数値を自身に対してかける回数)<br>% (パーセント -- 演算子の前の数値を100で割る) |
+| [日付](Concepts/dt_date.md)       | 10/24/2017                                         | + (日付 + 日数 -> 日付)<br>+ (日付 + 時間 -> 日付 + その日の時間)<br>- (日付 - 日数 -> 日付)<br>- (日付 - 日付 -> 2つの日付間の日数)           |
+| [時間](Concepts/dt_time.md)       | 10:12:10                                           | 経過時間演算子:<p>+ (加法)<br>- (減法)<br>* (経過時間 * 数値 -> 経過時間)<br>/ (経過時間 / 数値 -> 経過時間)     |
+| [String](Concepts/dt_string.md) | 'Sophie' または "Sophie"                              | & (連結)                                                                                                                       |
+| [ブール](Concepts/dt_boolean.md)   | TRUE または FALSE                                     | -                                                                                                                            |
 
 
 ### 比較演算子
@@ -271,7 +271,7 @@ $o.BIRTH_INFORMATION.summary:="渡された情報に基づきフォーマット�
 VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
 
-![](assets/en/ViewPro/params.PNG)
+![](assets/en/ViewPro/params.png)
 
 
 ## 互換性
@@ -363,5 +363,5 @@ TABLENAME_FIELDNAME()
 *   **許可されている**: [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されていること。
 *   **実行可能**: メソッドがホストデータベースに属している、あるいはロードされたコンポーネントに属しており当該メソッドの "コンポーネントとホストデータベース間で共有" オプションが有効化されていること ([プロジェクトメソッドの共有](../Concepts/components.md#プロジェクトメソッドの共有) 参照)。
 *   既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
-> [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) および [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
+> 既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。 > [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) および [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
 

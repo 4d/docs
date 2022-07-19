@@ -70,7 +70,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### Sintaxis: `<!--#4DBASE folderPath-->`
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
@@ -132,7 +132,7 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ## 4DCODE
 
-#### Syntax: `<!--#4DCODE codeLines-->`
+#### Sintaxis: `<!--#4DCODE codeLines-->`
 
 The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
 
@@ -315,8 +315,8 @@ The properties of the object are processed according to their creation order. Du
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
-#### Alternative syntax: `$4DEVAL(expression)`
+#### Sintaxis: `<!--#4DEVAL expression-->`
+#### Sintaxis alternativa: `$4DEVAL(expression)`
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
@@ -336,8 +336,8 @@ In case of an error during interpretation, the text inserted will be in the form
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
-#### Alternative syntax: `$4DHTML(expression)`
+#### Sintaxis: `<!--#4DHTML expression-->`
+#### Sintaxis alternativa: `$4DHTML(expression)`
 
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
@@ -499,7 +499,7 @@ El código siguiente:
 
 Esta sintaxis hace un bucle para cada elemento del array. The array current item is increased when each code portion is repeated.
 
-> This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
+> Esta sintaxis no se puede utilizar con arrays de dos dimensiones. In this case, it is better to combine a method with nested loops.
 
 The following code example:
 
@@ -548,7 +548,7 @@ The following code example:
  End if
 ```
 
-The `my_method` method can be as follows:
+El método `my_method` puede ser el siguiente:
 
 ```4d
  C_LONGINT($1)
@@ -649,8 +649,8 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 
 ## 4DTEXT
 
-#### Syntax: `<!--#4DTEXT expression-->`
-#### Alternative syntax: `$4DTEXT(expression)`
+#### Sintaxis: `<!--#4DTEXT expression-->`
+#### Sintaxis alternativa: `$4DTEXT(expression)`
 
 
 The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. Por ejemplo, si se escribe (en una página HTML):

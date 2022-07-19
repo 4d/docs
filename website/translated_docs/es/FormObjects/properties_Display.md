@@ -20,7 +20,7 @@ El formato alfa sería:
 
     ##-####-#
 
-When the user enters "RB17621," the field displays:
+Cuando el usuario introduce "RB17621," el campo muestra:
 
     RB-1762-1
 
@@ -30,7 +30,7 @@ If the user enters more characters than the format allows, 4D displays the last 
 
     (#######)
 
-and the user enters "proportion", the field displays:
+y el usuario introduce "proporción", el campo muestra:
 
     (portion)
 
@@ -277,7 +277,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ### Truncado (centrado y no centrado)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
 The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
 
@@ -343,7 +343,7 @@ The table below shows the Time field display formats and gives examples:
 | ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
 | System time short            | - (por defecto) | Formato de hora estándar definido en el sistema                                                                                                  | 04:30:25                       |
 | System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                     |
-| System time long             | systemLong      | macOS only: Long time format defined in the system. <br>Windows: this format is the same as the System time short format                   | 4:30:25 AM HNEC                |
+| System time long             | systemLong      | macOS únicamente: formato de tiempo largo definido en el sistema. <br>Windows: this format is the same as the System time short format     | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
@@ -365,7 +365,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 - a text in an [input object](input_overview.md)
 - a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
 
-... you can select the text to display for each value:
+... puede seleccionar el texto que se mostrará para cada valor:
 - **Text when True** - the text to be displayed when the value is "true"
 - **Text when False** - the text to be displayed when the value is "false"
 
@@ -390,7 +390,7 @@ Used to associate a display format with the column data. The formats provided de
 
 Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
 
-Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+Las columnas booleanas también pueden mostrarse como menús emergentes. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
 #### Gramática JSON
 
@@ -467,7 +467,7 @@ In this case as well, the [Title](#title) property is also available so that the
 ---
 ## Título
 
-This property is available for a list box column if:
+Esta propiedad está disponible para una columna de list box si:
 - the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
 - the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
 
@@ -587,7 +587,7 @@ When this option is selected, text automatically wraps to the next line whenever
 #### Unchecked for list box/No for input
 `Gramática JSON: "none"`
 
-When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
+When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. En las áreas de tipo de texto, se soportan los retornos de carro:
 
 ![](assets/en/FormObjects/wordwrap3.png)
 

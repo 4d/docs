@@ -8,7 +8,7 @@ title: Puntos de ruptura y captura de comandos
 
 Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
 
-You set breakpoints on any line of code where you want the execution to be paused. You can associate a condition to the break point.
+You set breakpoints on any line of code where you want the execution to be paused. Puede asociar una condición al punto de ruptura.
 
 Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process.
 
@@ -112,7 +112,7 @@ Para eliminar un punto de interrupción en el comando:
 1. Seleccione un comando en la lista.
 2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
 
-### Setting a Condition for catching a command
+### Definir una condición para un punto de interrupción en un comando
 
 1. Haga clic en la entrada en la columna derecha
 2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.

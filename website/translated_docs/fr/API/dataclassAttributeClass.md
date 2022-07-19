@@ -263,7 +263,7 @@ La propriété `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->retourne
 
 Considérons les tables et relations suivantes :
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
@@ -271,6 +271,7 @@ Considérons les tables et relations suivantes :
  $attKind:=ds.Employee.manager.kind //$attKind="relatedEntity"
  $attKind:=ds.Employee.directReports.kind //$attKind="relatedEntities"
 ```
+
 
 
 <!-- END REF -->
@@ -404,7 +405,7 @@ Par exemple, les champs calculés sans fonction [`set`](ORDA/ordaClasses.md#func
 
 
 #### Description
-> Cette propriété n'est disponible qu'avec les attributs de la propriété "relatedEntity" ou "relatedEntities" [`.kind`](#kind).
+> Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.unique) pour obtenir une valeur valide (false) même si `.unique` n'est pas retourné.
 
 La propriété `.relatedDataClass` <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->retourne le nom de la dataclass liée à l'attribut<!-- END REF -->.
 

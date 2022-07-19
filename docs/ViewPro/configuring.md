@@ -17,7 +17,7 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:  
 
-![](assets/en/ViewPro/vpUserInterface.PNG)
+![](assets/en/ViewPro/vpUserInterface.png)
 
 > You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.  
 
@@ -26,7 +26,7 @@ Interfaces allow for basic modifications and data manipulation. User-defined mod
 
 #### Ribbon
 
-![](assets/en/ViewPro/vpRibbon.PNG)
+![](assets/en/ViewPro/vpRibbon.png)
 
 #### Toolbar
 
@@ -34,7 +34,7 @@ Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/p
 
 With visible formula bar:
 
-![](assets/en/ViewPro/vpToolbar.PNG)
+![](assets/en/ViewPro/vpToolbar.png)
 
 #### Features
 

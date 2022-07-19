@@ -50,7 +50,7 @@ Las hojas de cálculo se componen de líneas y columnas. A cada línea se le aso
 
 *   To select a column, click on the corresponding letter (or set of letters).
 
-*   To select a row, click on the corresponding number.
+*   Para seleccionar una línea, haga clic en el número correspondiente.
 
 *   To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
 

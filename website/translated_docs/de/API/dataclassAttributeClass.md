@@ -263,7 +263,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 Given the following table and relation:
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
@@ -271,6 +271,7 @@ Given the following table and relation:
  $attKind:=ds.Employee.manager.kind //$attKind="relatedEntity"
  $attKind:=ds.Employee.directReports.kind //$attKind="relatedEntities"
 ```
+
 
 
 <!-- END REF -->

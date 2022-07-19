@@ -23,7 +23,7 @@ Lorsque vous écrivez une formule, vous pouvez utiliser différents raccourcis :
 
 - tapez la première lettre d'une fonction à saisir. Un menu contextuel listant les fonctions et références disponibles apparaît, pour vous permettre de sélectionner les éléments souhaités :
 
-![](assets/en/ViewPro/formula2.PNG)
+![](assets/en/ViewPro/formula2.png)
 
 Vous pouvez également créer des formules nommées qui peuvent être appelées via leur nom. Pour ce faire, saisissez ces formules à l'aide de la commande [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name).
 
@@ -271,7 +271,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
 
-![](assets/en/ViewPro/params.PNG)
+![](assets/en/ViewPro/params.png)
 
 
 ## Compatibilité
@@ -363,5 +363,5 @@ Pour être appelée dans une formule 4D View Pro, une méthode projet doit être
 *   **Autorisée :** elle a été déclarée explicitement avec la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods).
 *   **Exécutable :** elle appartient au projet hôte ou à un composant chargé dont l'option "Partagé par les composants et le projet hôte" est activée (voir [Partage des méthodes projet](../Concepts/components.md#sharing-of-project-methods)).
 *   **Pas de conflit** avec une fonction de tableur 4D View Pro existante : si vous appelez une méthode projet portant le même nom qu'une fonction intégrée 4D View Pro, la fonction est appelée.
-> > > > > Si ni la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) ni la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro reposent sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms des méthodes projet doivent être conformes à la grammaire d'identification JavaScript (voir la [norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global de la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.
+> > > > > > Si ni la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) ni la méthode [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) n'ont été exécutées pendant la session, les fonctions personnalisées de 4D View Pro reposent sur les méthodes autorisées définies par la commande générique `SET ALLOWED METHODS` de 4D. Dans ce cas, les noms des méthodes projet doivent être conformes à la grammaire d'identification JavaScript (voir la [norme ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). L'option de filtrage global de la boîte de dialogue Paramètres (voir *Accès aux données*) est ignorée dans tous les cas.
 

@@ -83,7 +83,7 @@ Each process is identified by an icon as well as a type. The color and form of t
 
 ## Botones de administración
 
-The page also has five control buttons that act on the selected process(es). Note that only user processes can be acted upon.
+The page also has five control buttons that act on the selected process(es). Tenga en cuenta que sólo se puede actuar sobre los procesos usuario.
 
 ![](assets/en/Admin/server-process-actions.png)
 

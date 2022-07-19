@@ -6,8 +6,8 @@ title: DataClassAttribute
 Dataclass attributes are available as properties of their respective classes. Por exemplo:
 
 ```4d
- nameAttribute:=ds.Company.name //reference to class attribute
- revenuesAttribute:=ds.Company["revenues"] //alternate way
+ nameAttribute:=ds. Company.name //reference to class attribute
+ revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
 This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [**Entities**](EntityClass.md).
@@ -59,7 +59,7 @@ A propriedade `.fieldNumber` <!-- REF DataClassAttributeClass.fieldNumber. This 
 *   "Auto UUID", for UUID (alpha type) fields.
 
 This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.autoFilled) to get a valid value (false) even if `.autoFilled` is not returned.
+> For generic programming, you can use **Bool**(dataClassAttribute.mandatory) to get a valid value (false) even if `.mandatory` is not returned.
 
 <!-- END REF -->
 
@@ -246,13 +246,13 @@ A propriedade `.kind` <!-- REF DataClassAttributeClass.kind. Summary -->devolve 
 
 Dada a seguinte tabela e relação:
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
- $attKind:=ds.Employee.lastname.kind //$attKind="storage"
- $attKind:=ds.Employee.manager.kind //$attKind="relatedEntity"
- $attKind:=ds.Employee.directReports.kind //$attKind="relatedEntities"
+ $attKind:=ds. Employee.lastname.kind //$attKind="storage"
+ $attKind:=ds. Employee.manager.kind //$attKind="relatedEntity"
+ $attKind:=ds. Employee.directReports.kind //$attKind="relatedEntities"
 ```
 
 
@@ -277,7 +277,7 @@ Dada a seguinte tabela e relação:
 A propriedade `.mandatory` <!-- REF DataClassAttributeClass.mandatory. Summary -->contém True se reusar a entrada de valores Null para o atributo<!-- END REF -->.
 
 Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.mandatory) to get a valid value (false) even if `.mandatory` is not returned.
+> **.size** : Integer
 > **Warning**: This property corresponds to the "Reject NULL value input" field property at the 4D database level. It is unrelated to the existing "Mandatory" property which is a data entry control option for a table.
 
 <!-- END REF -->
@@ -304,7 +304,7 @@ A propriedade `.name` <!-- REF DataClassAttributeClass.name. Summary -->retorna 
 
 ```4d
  var $attName : Text
- $attName:=ds.Employee.lastname.name //$attName="lastname"
+ $attName:=ds. Employee.lastname.name //$attName="lastname"
 ```
 
 

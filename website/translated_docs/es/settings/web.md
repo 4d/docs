@@ -92,7 +92,7 @@ When this option is selected, the web server does not provide any specific suppo
 In this mode, you can configure additional web server setttings:
 
 -   [Procesos Web simultáneos maximos](#maximum-concurrent-web-processes)
--   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
+-   [Reutilización de los contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
 -   [Utilizar los procesos apropiativos](#use-preemptive-web-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
@@ -107,7 +107,7 @@ When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-tempora
 
 Not available with [scalable sessions](../WebServer/sessions.md).
 
-Strictly high limit of concurrent web processes. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Límite estrictamente superior de procesos web simultáneos. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 
 #### Reutilización de los contextos temporales
@@ -221,7 +221,7 @@ The following table lists the fields available for each format (in alphabetical 
 | Campo          | ELF | WLF | Valor                                                                      |
 | -------------- | --- | --- | -------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Número de bytes recibidos por el servidor                                  |
-| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
+| BYTES_SENT     | X   | X   | Número de bytes enviados por el servidor al cliente                        |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
 | CONNECTION_ID  |     | X   | Número de identificación de la conexión                                    |

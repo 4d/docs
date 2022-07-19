@@ -56,7 +56,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 - **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 - **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> > > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > > > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 
 ### Managing list boxes
@@ -109,7 +109,7 @@ Each element of the collection or each entity is available as an object that can
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various functions of the [Collection class](../API/CollectionClass.md), you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. Beispiel:
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. When the data source is a collection, any modifications made in the list box values are reflected in the collection. Beispiel:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -752,7 +752,7 @@ If this list box is displayed in hierarchical form (the first three arrays being
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
 
-    > &gt; > A B A C
+    > &gt; > &gt; A B A C
 
 To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
@@ -1121,7 +1121,7 @@ You want to display a combo box based on a "colors" list defined in the Tool box
  OB SET($ob;"choiceListName";"colors")
 ````
 
-![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
+![](assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
 
 
 #### unitsList, unitsListName, unitsListReference and unitReference

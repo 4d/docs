@@ -63,7 +63,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 
 4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
 
-The following optimization mechanisms are implemented:
+Se aplican los siguientes mecanismos de optimización:
 
 *   When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
 
@@ -106,7 +106,7 @@ A same optimization context property can be passed to unlimited number of entity
 
 
 
-**Example with `dataClass.query( )` method:**
+**Ejemplo con el método `dataClass.query( )`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object

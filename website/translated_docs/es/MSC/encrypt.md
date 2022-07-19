@@ -82,7 +82,7 @@ El archivo de datos se descifra completamente y se muestra un mensaje de confirm
 
 Puede guardar la llave de encriptación cada vez que se proporcione una nueva frase secreta:
 
-- when the application is encrypted for the first time,
+- cuando la aplicación es cifrada por primera vez
 - when the application is re-encrypted with a new passphrase.
 
 Las llaves de encriptación sucesivas pueden ser almacenadas en el mismo dispositivo.

@@ -4,12 +4,12 @@ title: Gestión de usuarios y grupos 4D
 ---
 
 
-En las aplicaciones multiusuarios, 4D ofrece a los usuarios ciertos privilegios de acceso estándar y ciertas prerrogativas. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
+In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Una vez iniciado un sistema de usuarios y grupos, estos privilegios estándar toman efecto.
 
 
 ## Usuarios y grupos en los proyectos
 
-En las aplicaciones proyecto (archivos .4DProject o .4dz), los usuarios y grupos 4D pueden configurarse tanto en entornos monopuesto como en multiusuarios. Sin embargo, **el control de acceso** sólo es efectivo con 4D Server. La siguiente tabla enumera las principales funcionalidades de los usuarios y grupos y su disponibilidad:
+In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. La siguiente tabla enumera las principales funcionalidades de los usuarios y grupos y su disponibilidad:
 
 |                                                                          | 4D (monopuesto)                       | 4D Server |
 | ------------------------------------------------------------------------ | ------------------------------------- | --------- |
@@ -18,7 +18,7 @@ En las aplicaciones proyecto (archivos .4DProject o .4dz), los usuarios y grupos
 | Identificación del usuario                                               | no (todos los usuarios son Diseñador) | sí        |
 | Control de acceso una vez que se ha asignado una contraseña al Diseñador | no (todos los accesos son Diseñador)  | sí        |
 
-> Para obtener información sobre la identificación de usuarios y el control de acceso en los despliegues monopuesto, consulte [este párrafo](overview.md#access-control-in-single-user-applications).
+> For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
 
 ## Diseñador y administrador
 
@@ -37,7 +37,7 @@ El administrador puede:
 
 El administrador no puede:
 - modificar el usuario Diseñador
-- por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. El Administrador debe formar parte de uno o más grupos para tener privilegios de acceso en la aplicación. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
+- por defecto, el acceso a las partes protegidas de la aplicación. En particular, el administrador no puede acceder al modo Diseño si está restringido. En particular, el administrador no puede acceder al modo Diseño si está restringido. El administrador se coloca en todos los grupos nuevos, pero puede eliminar el nombre del administrador de cualquier grupo.
 
 Tanto el Diseñador como el Administrador están disponibles por defecto en todas las aplicaciones. En la [caja de diálogo de gestión de usuarios](#users-and-groups-editor), los iconos del Diseñador y del Administrador se muestran en rojo y verde respectivamente:
 
@@ -56,7 +56,7 @@ El editor de usuarios se encuentran en la caja de herramientas de 4D.
 
 ![](assets/en/Users/editor.png)
 
-> El editor de usuarios y grupos se puede mostrar en tiempo de ejecución utilizando el comando [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html). Toda la configuración de usuarios y grupos también puede editarse durante la ejecución de la aplicación utilizando los comandos del lenguaje 4D del tema `Usuarios y Grupos`.
+> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html) command. The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.
 
 ### Añadir y modificar usuarios
 
@@ -74,28 +74,28 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 4D añade un nuevo usuario a la lista, llamado por defecto "Nuevo usuarioX".
 
-3. Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la aplicación. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
+3. Introduzca el nombre de usuario. Introduzca el nombre de usuario. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
-4. Para introducir una contraseña del usuario, haga clic en el botón **Editar...** en el área de propiedades del usuario e introduzca la contraseña dos veces en la caja de diálogo. Puede utilizar hasta 15 caracteres alfanuméricos para una contraseña. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
+4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
 
-> Los usuarios pueden cambiar su contraseña en cualquier momento según las opciones de la página "Seguridad" de las propiedades de la estructura, o utilizando el comando `CHANGE PASSWORD`.
+> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
 
-5. Defina el grupo o los grupos a los que pertenece el usuario mediante la tabla "Miembro de los grupos". Puede añadir o eliminar el usuario seleccionado a un grupo marcando la opción correspondiente en la columna Miembro.
+5. Set the group(s) to which the user belongs using the "Member of Groups" table. You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
 
-La pertenencia de los usuarios a los distintos grupos también puede definirse por grupos en la página [Grupos](#configuring-access-groups).
+The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
 
 ### Eliminar un usuario
 
 
-Para eliminar un usuario, selecciónelo y haga clic en el botón de eliminación o utilice el comando **Suprimir** del menú contextual. ![](assets/en/Users/MinussNew.png)
+To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](assets/en/Users/MinussNew.png)
 
-Los nombres de usuario borrados ya no aparecen en el editor de usuarios. Tenga en cuenta que los ID de los usuarios eliminados se reasignan cuando se crean nuevas cuentas de usuario.
+Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
 
 ### Propiedades de los usuarios
 
-- El campo **Tipo de usuario**: el campo Tipo de usuario contiene "Diseñador", "Administrador" o (para todos los demás usuarios) "Usuario".
+- **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
 
-- **Método de inicio**: nombre de un método asociado que se ejecutará automáticamente cuando el usuario abra la aplicación (opcional). Este método puede utilizarse, por ejemplo, para cargar las preferencias usuario.
+- **Método de inicio**: nombre de un método asociado que se ejecutará automáticamente cuando el usuario abra la aplicación (opcional). This method can be used for example to load the user preferences.
 
 
 ## Editor de grupos
@@ -104,62 +104,62 @@ El editor de grupos se encuentra en la caja de herramientas de 4D.
 
 ### Configurar grupos
 
-El editor de grupos sirve para definir los elementos que contiene cada grupo (usuarios y/o otros grupos) y para distribuir los accesos a los plug-ins.
+You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
 
-Tenga en cuenta que una vez que se ha creado un grupo, no se puede eliminar. Si desea desactivar un grupo, sólo tiene que eliminar los usuarios que contiene.
+Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
 
 Para crear un grupo:
 
-1. Seleccione **Caja de herramientas > Grupos** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D luego haga clic en el botón **Grupos**. 4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
 
-2. Haga clic en el botón ![](assets/en/Users/PlussNew.png)ubicado debajo de la lista de grupos.  
-   O  
-   Haga clic derecho en la lista de grupos y elija el comando **Añadir** o **Duplicar** en el menú contextual.
+2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
+   OR  
+   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
-> El comando Duplicar se puede utilizar para crear varios grupos que tengan las mismas características rápidamente.
+> The Duplicate command can be used to create several groups having the same characteristics quickly.
 
-4D añade un nuevo grupo a la lista, llamado por defecto "Nuevo grupoX".
+4D adds a new group to the list, named "New groupX" by default.
 
-3. Introduzca el nombre del nuevo grupo. El nombre del grupo puede tener hasta 15 caracteres. Puede renombrar un grupo en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
+3. Introduzca el nombre del nuevo grupo. El nombre del grupo puede tener hasta 15 caracteres. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 
 ### Colocar los usuarios o los grupos en grupos
 
 
-Puede colocar cualquier usuario o grupo en un grupo, y también puede colocar el propio grupo en varios otros grupos. No es obligatorio colocar a un usuario en un grupo.
+You can place any user or group into a group, and you can also place the group itself into several other groups. No es obligatorio colocar a un usuario en un grupo.
 
-Para incluir a un usuario o grupo en un grupo, basta con marcar la opción "Miembro" para cada usuario o grupo en el área de atribución de los miembros:
+To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
 
 ![](assets/en/Users/groups.png)
 
-Si se marca el nombre de un usuario, éste se añade al grupo. Si marca el nombre de un grupo, todos los usuarios del grupo se añaden al nuevo grupo. El usuario o grupo afiliado tendrá entonces los mismos privilegios de acceso que los asignados al nuevo grupo.
+If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group. The affiliated user or group will then have the same access privileges as those assigned to the new group.
 
-La colocación de grupos dentro de otros grupos permite crear una jerarquía de usuarios. Los usuarios de un grupo colocados en otro grupo tendrán los privilegios de acceso de ambos grupos. Ver "[Un esquema de jerarquía de acceso](#an-access-hierarchy-scheme)" abajo.
+Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
 
-Para eliminar un usuario o grupo de otro grupo, basta con deseleccionar la opción correspondiente en el área de asignación de miembros.
+To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
 
 ### Asignar un grupo a un plug-in o a un servidor
 
-Puede asignar privilegios de grupo a cualquier plug-in instalado en el proyecto. Esto incluye todos los plug-ins de 4D y los de terceros.
+You can assign a group privileges to any plug-ins installed in the project. This includes all the 4D plug-ins and any third-party plug-ins.
 
-Distribuir los accesos a los plug-ins le permite controlar el uso de las licencias que posee para estos plug-ins. Todo usuario que no pertenezca al grupo de acceso de un plug-in no puede cargar este plug-in.
+Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
 
-> Las licencias utilizadas permanecen vinculadas a las cuentas de usuario 4D del grupo durante toda la sesión 4D.
+> Used licenses remain attached to 4D user accounts in the group for the whole 4D session.
 
-El área "Plug-in" de la página Grupos de la caja de herramientas lista todos los plug-ins cargados por la aplicación 4D. Para dar acceso a un grupo a un complemento, basta con marcar la opción correspondiente.
+The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option.
 
 ![](assets/en/Users/plugins.png)
 
-Las líneas **4D Client Web Server** y **4D Client SOAP Server** permiten controlar la posibilidad de publicación Web y SOAP (Web Services) de cada 4D en modo remoto. Estas licencias son consideradas por 4D Server como licencias plug-in. Por lo tanto, al igual que en el caso de los plug-ins, puede restringir el derecho de uso de estas licencias a un grupo específico de usuarios.
+The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
 
 
 ### Un esquema de acceso jerárquico
 
-La mejor manera de garantizar la seguridad de su aplicación y ofrecer a los usuarios diferentes niveles de acceso es utilizar un esquema de jerarquía de acceso. Los usuarios pueden ser asignados a los grupos apropiados y los grupos pueden ser anidados para crear una jerarquía de derechos de acceso. Esta sección describe varios enfoques de este esquema.
+The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
 
-En este ejemplo, un usuario es asignado a uno de los tres grupos en función de su nivel de responsabilidad. Los usuarios asignados al grupo Contabilidad son responsables de la entrada de datos. Los usuarios asignados al grupo Finanzas son responsables de mantener los datos, incluyendo la actualización de los registros y la eliminación de los registros obsoletos. Los usuarios asignados al grupo de Gestión General se encargan de analizar los datos, incluyendo la realización de búsquedas y la impresión de informes analíticos.
+In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 
-A continuación, los grupos se anidan para que los privilegios se distribuyan correctamente entre los usuarios de cada grupo.
+The groups are then nested so that privileges are correctly distributed to the users of each group.
 
 - The General Management group contains only “high-level” users. ![](assets/en/Users/schema1.png)
 
@@ -167,14 +167,14 @@ A continuación, los grupos se anidan para que los privilegios se distribuyan co
 
 - The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](assets/en/Users/schema3.png)
 
-Puede decidir qué privilegios de acceso asignar a cada grupo en función del nivel de responsabilidad de los usuarios que contiene.
+You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
 
-Este sistema jerárquico permite recordar fácilmente a qué grupo debe asignarse un nuevo usuario. Sólo tiene que asignar cada usuario a un grupo y utilizar la jerarquía de grupos para determinar los accesos.
+Such a hierarchical system makes it easy to remember to which group a new user should be assigned. You only have to assign each user to one group and use the hierarchy of groups to determine access.
 
 
 ## Asignación de acceso a grupos
 
-Los grupos tienen asignados privilegios de acceso para partes o funcionalidades específicas de la aplicación:
+Groups are assigned access privileges to specific parts or features of the application:
 
 - Acceso al entorno Diseño y al Explorador de ejecución,
 - Servidor HTTP,
@@ -185,16 +185,16 @@ Estos accesos se definen en la caja de diálogo Parámetros. El siguiente ejempl
 
 ![](assets/en/Users/Access1.png)
 
-También se utilizan grupos para [distribuir las licencias disponibles](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribución se define en el editor Grupos.
+You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). Esta distribución se define en el editor Grupos.
 
 ## Archivo directory.json
 
 Los usuarios, grupos, así como sus derechos de acceso se almacenan en un archivo específico del proyecto llamado **directory.json**.
 
-Este archivo puede ser almacenado en las siguientes ubicaciones, dependiendo de sus necesidades:
+This file can be stored at the following locations, depending on your needs:
 
-- Si desea utilizar el mismo directorio para todos los archivos de datos (o si utiliza un único archivo de datos), almacene el archivo **directory.json** en la carpeta de configuración del usuario, es decir, en la carpeta "Settings" en el [mismo nivel que la carpeta "Project"](Project/architecture.md#project-folder) (ubicación predeterminada).
-- Si desea utilizar un archivo directorio específico para archivar datos, almacene el archivo **directory.json** en la carpeta["Settings" de la carpeta "Data"](Project/architecture.md#settings). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. Esta configuración personalizada/local de los usuarios y de los grupos no se verá afectada por una actualización de la aplicación.
+- If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location).
+- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). Si un archivo **directory.json** está presente en esta ubicación, tiene prioridad sobre el archivo en la carpeta Settings usuario. This custom/local Users and Groups configuration will left untouched by an application upgrade.
 
-> Para permitir cambios seguros de contraseñas y pertenencias a grupos en un entorno desplegado, puede incluir su archivo **directory.json** en la aplicación del servidor durante la creación, utilizando la opción [correspondiente a la aplicación de creación](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> If no password is assigned to the "Designer" user, the **directory.json** is not created.
 

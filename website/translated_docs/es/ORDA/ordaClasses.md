@@ -108,7 +108,7 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
 - **Extends**: 4D.DataClass
 - **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
-- **Example name**: cs.Employee
+- **Ejemplo**: cs.Employee
 
 
 
@@ -221,7 +221,7 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
 - **Extends**: 4D.Entity
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
-- **Example name**: cs.CityEntity
+- **Ejemplo**: cs.CityEntity
 
 #### Atributos calculados
 
@@ -772,7 +772,7 @@ Las peticiones remotas incluyen:
 - Requests sent by remote 4D applications connected through `Open datastore`
 - Peticiones REST
 
-> Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.
+> Las peticiones cliente/servidor 4D estándar no se ven afectadas. Data model class functions are always available in this architecture.
 
 A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
 

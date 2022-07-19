@@ -57,10 +57,10 @@ The returned "__STATUS" object has the following properties:
 | lockKindText |                | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
 | lockInfo     |                | object   | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
 |              |                |          | ***Available only for a 4D process lock:***                                                                                                                 |
-|              | task_id        | number   | Process ID                                                                                                                                                  |
+|              | task_id        | number   | ID do processo                                                                                                                                              |
 |              | user_name      | texto    | Nome de usuário de sessão na máquina                                                                                                                        |
-|              | user4d_alias   | texto    | Name or alias of the 4D user                                                                                                                                |
-|              | user4d_id      | number   | User id in the 4D database directory                                                                                                                        |
+|              | user4d_alias   | texto    | Nome ou apelido do usuário 4D                                                                                                                               |
+|              | user4d_id      | number   | Id do usuário no diretório do banco de dados 4D                                                                                                             |
 |              | host_name      | texto    | Nome da máquina                                                                                                                                             |
 |              | task_name      | texto    | Nome de processo                                                                                                                                            |
 |              | client_version | texto    | Version of the client                                                                                                                                       |
@@ -73,12 +73,12 @@ The returned "__STATUS" object has the following properties:
 
 The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
 
-| status | statusText                      | Comentário                                                                                                      |
-| ------ | ------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| 2      | "Stamp has changed"             | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista). |
-| 3      | "Already locked"                | The entity is locked by a pessimistic lock.                                                                     |
-| 4      | "Other error"                   | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.                     |
-| 5      | "Entity does not exist anymore" | A entidade não existe mais nos dados.                                                                           |
+| status | statusText                      | Comentário                                                                                                         |
+| ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| 2      | "Stamp has changed"             | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).    |
+| 3      | "Already locked"                | A entidade está fechada por uma fechadura pessimista.                                                              |
+| 4      | "Other error"                   | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc. |
+| 5      | "Entity does not exist anymore" | A entidade não existe mais nos dados.                                                                              |
 
 
 
