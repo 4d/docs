@@ -280,7 +280,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 ## Selección de nombres
 `List boxes de tipo selección nombrada`
 
-Especifica la selección con nombre que se utilizará. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > Las selecciones con nombre son listas ordenadas de registros. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

@@ -123,9 +123,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                                      |
-| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| entryFilter | cadena         | <li>Código de filtro de entrada o <li>Entry filter name (filter names start with &#124; ) |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                                                |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | cadena         | <li>Código de filtro de entrada o <li>Nombre del filtro de entrada (los nombres de los filtros empiezan por &#124;) |
 
 
 #### Objetos soportados
@@ -178,9 +178,9 @@ By default, the object uses the current keyboard layout.
 
 #### Gramática JSON
 
-| Nombre          | Tipos de datos | Valores posibles                                                          |
-| --------------- | -------------- | ------------------------------------------------------------------------- |
-| keyboardDialect | texto          | Language code, for example "ar-ma" or "cs". Ver RFC3066, ISO639 e ISO3166 |
+| Nombre          | Tipos de datos | Valores posibles                                                               |
+| --------------- | -------------- | ------------------------------------------------------------------------------ |
+| keyboardDialect | texto          | Código del lenguaje, por ejemplo "ar-ma" o "cs". Ver RFC3066, ISO639 e ISO3166 |
 
 
 #### Objetos soportados

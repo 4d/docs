@@ -55,7 +55,7 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 - **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
 - **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
 - **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> > > > > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > > > > It is not possible to combine different list box types in the same list box object. La fuente de datos se define cuando se crea el list box. It is then no longer possible to modify it by programming.
 
 
 ### Gestión de list boxes
@@ -252,7 +252,7 @@ Cuando se muestran los pies, puede hacer clic para seleccionar un pie de list bo
 
 ![](assets/en/FormObjects/listbox_footers.png)
 
-Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
+Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. También puede acceder a propiedades específicas para los pies de página. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
 
 At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods).
 
@@ -390,7 +390,7 @@ For an array type list box, you need to update the [Row Background Color Array](
     "rowFillSource": "_ListboxBackground",
 ```
 
-In the object method of the list box, you can write:
+En el método objeto del list box, puede escribir:
 
 ```4d
  Case of
@@ -567,7 +567,7 @@ This property specifies that the list box must be displayed in hierarchical form
 
 Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
 
-The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. A maximum of ten hierarchical levels can be specified. If you remove a value, the whole hierarchy moves up a level.
+The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. If you remove a value, the whole hierarchy moves up a level.
 
 The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:
 
@@ -831,7 +831,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 #### value
 
-Los valores de las celdas se almacenan en el atributo "valor". This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
+Los valores de las celdas se almacenan en el atributo "valor". Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
  ARRAY OBJECT(obColumn;0) //array columna 
@@ -897,7 +897,7 @@ Los valores de las celdas se almacenan en el atributo "valor". This attribute is
 ````
 
 ![](assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
-> Null values are supported and result in an empty cell.
+> Los valores null se soportan y dan como resultado una celda vacía.
 
 #### min y max
 
@@ -1150,7 +1150,7 @@ Several events can be handled while using an object list box array:
     *   en un área de entrada de texto
     *   en una lista desplegable
     *   en un área combo box
-    *   in a unit button (switch from value x to value x+1)
+    *   en un botón de unidad (cambiar del valor x al valor x+1)
     *   en una casilla de selección (cambia entre marcado/desmarcado)
 *   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. Este evento es gestionado por el programador.
 *   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Este evento es gestionado por el programador.
