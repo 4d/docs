@@ -59,7 +59,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 To delete an existing class, you can:
 
 - on your disk, remove the .4dm class file from the "Classes" folder,
-- in the 4D Explorer, select the class and click ![](..assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
+- in the 4D Explorer, select the class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
 ### Using 4D interface
 
@@ -77,9 +77,9 @@ In the **Methods** page of the Explorer, classes are grouped in the **Classes** 
 
 To create a new class, you can:
 
-- select the **Classes** category and click on the ![](..assets/en/Users/PlussNew.png) button.
+- select the **Classes** category and click on the ![](../assets/en/Users/PlussNew.png) button.
 - select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group.
-![](..assets/en/Concepts/newClass.png)
+![](../assets/en/Concepts/newClass.png)
 - select **New > Class...** from the contexual menu of the Explorer's Home page.
 
 #### Class code support
@@ -202,7 +202,7 @@ In the application code, class functions are called as member methods of the obj
 - use of a "4D.Function" class member method:
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
- 
+
 > **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
 >
 > - the compiler does not generate any error (which is different compared to regular methods),
@@ -355,7 +355,7 @@ Super {( param{;...;paramN} )} {-> Object}
 
 |Parameter|Type||Description|  
 |---|---|---|---|
-|param|mixed|->|Parameter(s) to pass to the parent constructor 
+|param|mixed|->|Parameter(s) to pass to the parent constructor
 |Result|object|<-|Object's parent|
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
@@ -367,7 +367,7 @@ The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
 - If all class constructors in the inheritance tree are not properly called, error -10748 is generated. It's 4D developer to make sure calls are valid.
 - If the `This` command is called on an object whose superclasses have not been constructed, error -10743 is generated.
 - If `Super` is called out of an object scope, or on an object whose superclass constructor has already been called, error -10746 is generated.
- 
+
 ```4d
 // inside myClass constructor
 var $text1; $text2 : Text
@@ -464,7 +464,7 @@ This -> Object
 ```
 
 |Parameter|Type||Description|  
-|---|---|---|---| 
+|---|---|---|---|
 |Result|object|<-|Current object|
 
 The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).

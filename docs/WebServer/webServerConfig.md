@@ -142,7 +142,7 @@ Designate a default home page for the web server. This page can be static or [se
 
 By default, when the web server is launched for the first time, 4D creates a home page named "index.html" and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:
 
-![](..assets/en/WebServer/defaultHomePage.png)
+![](../assets/en/WebServer/defaultHomePage.png)
 
 You can designate another default home page by entering its pathname.
 

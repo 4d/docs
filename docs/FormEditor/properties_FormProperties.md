@@ -58,11 +58,11 @@ The form type, *i.e.* its destination, defines the features that will be availab
 Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
 
 * Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record.
-![](..assets/en/FormObjects/formOutput.png) 
+![](../assets/en/FormObjects/formOutput.png)
 
 * Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record).
-![](..assets/en/FormObjects/formInput.png)
- 
+![](../assets/en/FormObjects/formInput.png)
+
 Supported types depend on the form category:
 
 |Form Type|JSON grammar|Description|Supported with|

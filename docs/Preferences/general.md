@@ -14,7 +14,9 @@ This option allows you to configure the default 4D display at startup, when the 
 * **Do nothing**: Only the application window appears, empty.
 * **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
 * **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
+
  >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+
 * **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
 * **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
 
@@ -35,15 +37,15 @@ You can benefit from this feature in the following environments (with 4D 64-bit 
 
 All windows from these editors can be put in tab form:
 
-![](..assets/en/Preferences/general2.png)
+![](../assets/en/Preferences/general2.png)
 
 A set of commands in the **Window** menu allows managing the tabs:
 
-![](..assets/en/Preferences/general3.png)
+![](../assets/en/Preferences/general3.png)
 
 In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
 
-![](..assets/en/Preferences/general4.png)
+![](../assets/en/Preferences/general4.png)
 
 Three options are available:
 
@@ -62,7 +64,7 @@ If you check this option, two items are added in the **File > New** menu and the
 * **Database...**
 * **Database from Structure Definition...**
 
-![](..assets/en/Preferences/general5.png)
+![](../assets/en/Preferences/general5.png)
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
 

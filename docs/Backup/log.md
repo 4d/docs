@@ -28,7 +28,7 @@ For more information about these actions, refer to the [Activity analysis](MSC/a
 
 The following illustration sums up how the log file works:
 
-![](..assets/en/Backup/backup05.png)
+![](../assets/en/Backup/backup05.png)
 
 The current log file is automatically saved with the current data file. This mechanism has two distinct advantages:
 
@@ -71,7 +71,7 @@ If you would like to stop logging operations to the current log file, simply des
 
 4D then displays an alert message to remind you that this action prevents you from taking advantage of the security that the log file provides:
 
-![](..assets/en/Backup/backup06.png)
+![](../assets/en/Backup/backup06.png)
 
 If you click **Stop**, the current log file is immediately closed (the Settings dialog box does not need to be validated afterwards).
 

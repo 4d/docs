@@ -15,7 +15,7 @@ A backup can be started in three ways:
 
 1. Select the **Backup...** command in the 4D **File** menu.
 The backup window appears:
-![](..assets/en/Backup/backup01.png)
+![](../assets/en/Backup/backup01.png)
 You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
 
 - You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
@@ -38,7 +38,7 @@ When the `BACKUP` 4D language command is executed from any method, the backup st
 
 Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
 
-![](..assets/en/Backup/backupProgress.png)
+![](../assets/en/Backup/backupProgress.png)
 
 This thermometer is also displayed on the [Backup page of the MSC](MSC/backup.md) if you have used this dialog box.
 

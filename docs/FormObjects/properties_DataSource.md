@@ -17,7 +17,7 @@ This property is supported by:
 
 For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
 
-![](..assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
+![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
 > If the choice list was created from a list defined in Design mode, the original list is not modified.
 
@@ -175,7 +175,7 @@ List of values that will be used as default values for the list box column (arra
 
 You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
-![](..assets/en/FormObjects/defaultValues.png)
+![](../assets/en/FormObjects/defaultValues.png)
 
 > You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
 

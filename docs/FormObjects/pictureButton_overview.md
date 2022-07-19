@@ -21,7 +21,7 @@ For example, a table of thumbnails that has one row of four columns, each thumbn
 * As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).
 Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:
 
-![](..assets/en/FormObjects/button_pictureButton.png)
+![](../assets/en/FormObjects/button_pictureButton.png)
 
 Clicking the object changes the picture.
 
@@ -31,7 +31,7 @@ You can implement a picture button in the following manner:
 
 1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
   
-   ![](..assets/en/FormObjects/pictureButton_grid.png)  
+   ![](../assets/en/FormObjects/pictureButton_grid.png)  
 
 You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
 
@@ -48,6 +48,7 @@ In addition to the standard positioning and appearance settings, you can set som
 * By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. In other words, it does not cycle back to the first picture in the series.
 
 The following other modes are available:
+
 * [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)

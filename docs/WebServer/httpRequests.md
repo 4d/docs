@@ -272,7 +272,7 @@ return false
 
 When 4D sends the page to a Web Browser, it looks like this:
 
-![](..assets/en/WebServer/spiders.png)
+![](../assets/en/WebServer/spiders.png)
 
 The main features of this page are:
 
@@ -333,7 +333,7 @@ The 4D web server provides several low-level web commands allowing you to develo
 
 These commands are summarized in the following graphic:
 
-![](..assets/en/WebServer/httpCommands.png)
+![](../assets/en/WebServer/httpCommands.png)
 
 The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
 

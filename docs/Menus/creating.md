@@ -30,7 +30,7 @@ You can modify this menu bar as desired or create additional ones.
 
 ### Using the Menu editor
 
-1. Select the item you want to create and click the add ![](..assets/en/Menus/PlussNew.png) button below the menu bar area.
+1. Select the item you want to create and click the add ![](../assets/en/Menus/PlussNew.png) button below the menu bar area.
 OR
 Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list.
 If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
@@ -59,7 +59,7 @@ To add a menu item:
 If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
 2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list).
 OR
-Click on the add ![](..assets/en/Menus/PlussNew.png) button located below the central list.
+Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list.
 4D adds a new item with the default name “Item X” where X is the number of items already created.
 3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name.
 OR
@@ -77,7 +77,7 @@ You can delete a menu bar, a menu or a menu item in the Menu editor at any time.
 
 To delete a menu bar, menu or menu item:
 
-- Select the item to be deleted and click on the delete ![](..assets/en/Menus/MinussNew.png) button located beneath the list.
+- Select the item to be deleted and click on the delete ![](../assets/en/Menus/MinussNew.png) button located beneath the list.
 - or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
 
 > It is not possible to delete Menu Bar #1.
@@ -101,10 +101,10 @@ At runtime, if an attached menu is modified by programming, every other instance
 A menu can be attached to a menu bar or to another menu.
 
 - To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar:
-![](..assets/en/Menus/attach.png)
+![](../assets/en/Menus/attach.png)
 You can also select a menu bar then click on the options button found below the list.
 - To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-![](..assets/en/Menus/attach2.png)
+![](../assets/en/Menus/attach2.png)
 You can also select a menu item then click on the options button found below the list.
 The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
 

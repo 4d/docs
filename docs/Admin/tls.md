@@ -17,7 +17,7 @@ At the network level, the security protocol is inserted between the TCP/IP layer
 
 Network configuration using TSL:
 
-![](..assets/en/WebServer/tls1.png)
+![](../assets/en/WebServer/tls1.png)
 
 The TLS protocol is designed to authenticate the sender and receiver and to guarantee the confidentiality and integrity of the exchanged information:
 
@@ -41,7 +41,7 @@ A server working in secured mode means that you need a digital certificate from 
 
 >Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
 
-![](..assets/en/WebServer/tls2.png)
+![](../assets/en/WebServer/tls2.png)
 
 The certification authority is chosen according to several criteria. If the certification authority is well known, the certificate will be authorized by many browsers, however the price to pay will be expensive.
 

@@ -100,11 +100,11 @@ Describes dotted line type as a sequence of black and white points.
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
-![](..assets/en/FormObjects/property_hideExtraBlankRows1.png)
+![](../assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
 You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
 
-![](..assets/en/FormObjects/property_hideExtraBlankRows2.png)
+![](../assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
 #### JSON Grammar
 
@@ -174,7 +174,7 @@ For example, given a list box where the rows have an alternating gray/light gray
  <>_BgndColors{$i}:=-255 // default value
 ```
 
-![](..assets/en/FormObjects/listbox_styles1.png)
+![](../assets/en/FormObjects/listbox_styles1.png)
 
 Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example <>_BgndColor_1, <>_BgndColor_2 and <>_BgndColor_3. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
@@ -185,7 +185,7 @@ Next you want to color the cells with negative values in dark orange. To do this
  <>_BgndColorsCol_1{16}:=0x00FF8000
 ```
 
-![](..assets/en/FormObjects/listbox_styles2.png)
+![](../assets/en/FormObjects/listbox_styles2.png)
 
 You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX SET ROW COLOR` commands. They have the advantage of letting you skip having to predefine style/color arrays for the columns: instead they are created dynamically by the commands.
 

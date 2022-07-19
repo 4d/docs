@@ -71,7 +71,7 @@ On the other hand, by default these project methods will not be visible, and the
 
 Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
-![](..assets/en/Concepts/pict516563.en.png)
+![](../assets/en/Concepts/pict516563.en.png)
 
 Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. For example:
 

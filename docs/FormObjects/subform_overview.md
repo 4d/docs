@@ -42,7 +42,7 @@ The page subform uses the input form indicated by the [Detail Form](properties_S
 
 The [variable](properties_Object.md#variable-or-expression) bound to a page subform lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
 
-![](..assets/en/FormObjects/subforms1.png)
+![](../assets/en/FormObjects/subforms1.png)
 
 Both objects (time variable and subform container) *have the same variable name*. In this case, when you open the parent form, 4D synchronizes both values automatically. If the variable value is set at several locations, 4D uses the value that was loaded last. It applies the following loading order:
 1-Object methods of subform
@@ -58,7 +58,7 @@ Case 1: The value of the parent form variable is modified and this modification 
 
 In this case, you must use the On Bound Variable Change form event. This event must be selected in the subform properties; it is generated in the form method of the subform.
 
-![](..assets/en/FormObjects/subforms2.png)
+![](../assets/en/FormObjects/subforms2.png)
 
 The `On Bound Variable Change` form event is generated:
 
@@ -75,7 +75,7 @@ In this case, from the subform, you must assign the object value to the variable
 
 Assigning the value to the variable generates the `On Data Change` form event in the object method of the parent subform container, which lets you perform any type of action. The event must be selected in the properties of the subform container.
 
-![](..assets/en/FormObjects/subforms3.png)
+![](../assets/en/FormObjects/subforms3.png)
 
 > If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
 
@@ -87,7 +87,7 @@ The object can be created automatically or be the parent container variable, if 
 
 For example, in your subform, field labels are stored in the bound object so that you can display different languages:
 
-![](..assets/en/FormObjects/subforms4.png)
+![](../assets/en/FormObjects/subforms4.png)
 
 You can modify the labels from the subform by assigning values to the *InvoiceAddress* object:
 
@@ -104,7 +104,7 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
  InvoiceAddress.Label:=$lang
 ```
 
-![](..assets/en/FormObjects/subforms5.png)
+![](../assets/en/FormObjects/subforms5.png)
 
 ### Advanced inter-form programming  
 
@@ -142,7 +142,7 @@ The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects reques
 
 This mechanism is illustrated in the following diagram:
 
-![](..assets/en/FormObjects/subforms6.png)
+![](../assets/en/FormObjects/subforms6.png)
 
 For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
 

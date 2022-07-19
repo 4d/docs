@@ -95,4 +95,4 @@ Both the Runtime Explorer and the 4D Server administration window display a spec
 
 |Process type|Icon|
 |---|---|
-|Preemptive web method| ![](..assets/en/WebServer/processIcon.png)|
+|Preemptive web method| ![](../assets/en/WebServer/processIcon.png)|

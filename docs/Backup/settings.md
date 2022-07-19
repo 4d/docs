@@ -19,7 +19,7 @@ If this application was not launched at the theoretical moment of the backup, th
 
 The scheduler backup settings are defined on the **Backup/Scheduler** page of the Structure Settings:
 
-![](..assets/en/Backup/backup02.png)
+![](../assets/en/Backup/backup02.png)
 
 The options found on this tab let you set and configure scheduled automatic backups of the application. You can choose a standard quick configuration or you can completely customize it. Various options appear depending on the choice made in the **Automatic Backup** menu:
 
@@ -33,14 +33,14 @@ The options found on this tab let you set and configure scheduled automatic back
   - **Every X day(s) at x**: Allows programming backups on a daily basis. For example, enter 1 if you want to perform a daily backup. When this option is checked, you must enter the time when the backup should start.
   - **Every X week(s) day at x**: Allows programming backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must enter the day(s) of the week and the time when the backup should start. You can select several days of the week, if desired. For example, you can use this option to set two weekly backups: one on Wednesday and one on Friday.
   - **Every X month(s), Xth Day at x**: Allows programming backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup should start.
- 
+
 > Switches back and forth from Standard time to Daylight saving time could temporarily affect the automatic scheduler and trigger the next backup with a one-hour time shift. This happens only once and subsequent backups are run at the expected scheduled time.
 
 ## Configuration
 
 The Backup/Configuration page of the Structure Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each application opened by 4D or 4D Server.
 
-![](..assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup03.png)
 
 > **4D Server:** These parameters can only be set from the 4D Server machine.
 
@@ -78,7 +78,7 @@ By default, any project created with 4D uses a log file (option **Use Log File**
 
 Modifying backup and restore options is optional. Their default values correspond to a standard use of the function.
 
-![](..assets/en/Backup/backup04.png)
+![](../assets/en/Backup/backup04.png)
 
 ### General settings
 

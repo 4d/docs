@@ -56,8 +56,8 @@ Horizontal concatenation
  rectangle+circle //Place the circle to the right of the rectangle
 ```
 
-![](..assets/en/Concepts/concatHor.en.png)
-![](..assets/en/Concepts/concatHor2.en.png)
+![](../assets/en/Concepts/concatHor.en.png)
+![](../assets/en/Concepts/concatHor2.en.png)
 
 Vertical concatenation
 
@@ -66,8 +66,8 @@ Vertical concatenation
  rectangle/circle //Place the circle under the rectangle
 ```
 
-![](..assets/en/Concepts/concatVer.en.png)
-![](..assets/en/Concepts/concatVer2.en.png)
+![](../assets/en/Concepts/concatVer.en.png)
+![](../assets/en/Concepts/concatVer2.en.png)
 
 Exclusive superimposition
 
@@ -75,7 +75,7 @@ Exclusive superimposition
 Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
 ```
 
-![](..assets/en/Concepts/superimpoExc.fr.png)
+![](../assets/en/Concepts/superimpoExc.fr.png)
 
 Inclusive superimposition
 
@@ -83,7 +83,7 @@ Inclusive superimposition
 Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
 ```
 
-![](..assets/en/Concepts/superimpoInc.fr.png)
+![](../assets/en/Concepts/superimpoInc.fr.png)
 
 Horizontal move
 
@@ -92,7 +92,7 @@ rectangle+50 //Move the rectangle 50 pixels to the right
 rectangle-50 //Move the rectangle 50 pixels to the left
 ```
 
-![](..assets/en/Concepts/hormove.en.png)
+![](../assets/en/Concepts/hormove.en.png)
 
 Vertical move
 
@@ -101,7 +101,7 @@ rectangle/50 //Move the rectangle down by 50 pixels
 rectangle/-20 //Move the rectangle up by 20 pixels
 ```
 
-![](..assets/en/Concepts/vertmove.en.png)![](..assets/en/Concepts/vertmove2.en.png)
+![](../assets/en/Concepts/vertmove.en.png)![](../assets/en/Concepts/vertmove2.en.png)
 
 Resize
 
@@ -110,7 +110,7 @@ rectangle*1.5 //The rectangle becomes 50% bigger
 rectangle*0.5 //The rectangle becomes 50% smaller
 ```
 
-![](..assets/en/Concepts/resize.en.png)![](..assets/en/Concepts/resisze2.en.png)
+![](../assets/en/Concepts/resize.en.png)![](../assets/en/Concepts/resisze2.en.png)
 
 Horizontal scaling
 
@@ -119,7 +119,7 @@ circle*+3 //The circle becomes 3 times wider
 circle*+0.25 //The circle's width becomes a quarter of what it was
 ```
 
-![](..assets/en/Concepts/Horscaling.en.png)![](..assets/en/Concepts/Horscaling2.en.png)
+![](../assets/en/Concepts/Horscaling.en.png)![](../assets/en/Concepts/Horscaling2.en.png)
 
 Vertical scaling
 
@@ -128,4 +128,4 @@ circle*|2 //The circle becomes twice as tall
 circle*|0.25 //The circle's height becomes a quarter of what it was
 ```
 
-![](..assets/en/Concepts/vertscaling.en.png)![](..assets/en/Concepts/veticalscaling2.en.png)
+![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)

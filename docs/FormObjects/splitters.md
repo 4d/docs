@@ -9,7 +9,7 @@ A splitter divides a form into two areas, allowing the user to enlarge and reduc
 
 Splitter are used for example in output forms so that columns can be resized:
 
-![](..assets/en/FormObjects/split1.png)
+![](../assets/en/FormObjects/split1.png)
 
 Some of the splitter’s general characteristics:
 

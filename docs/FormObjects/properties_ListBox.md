@@ -112,11 +112,11 @@ These properties interact as follows:
 
 * If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.
 
-![](..assets/en/FormObjects/property_lockedStaticColumns1.png)
+![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 
 * If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
 
-![](..assets/en/FormObjects/property_lockedStaticColumns2.png)
+![](../assets/en/FormObjects/property_lockedStaticColumns2.png)
 
 * You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
@@ -190,7 +190,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
  aLControlArr{10}:=lk row is not selectable
 ```
 
-![](..assets/en/FormObjects/listbox_styles5.png)
+![](../assets/en/FormObjects/listbox_styles5.png)
 
 You can define several interface properties at once:
 
@@ -198,7 +198,7 @@ You can define several interface properties at once:
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
 ```
 
-![](..assets/en/FormObjects/listbox_styles6.png)
+![](../assets/en/FormObjects/listbox_styles6.png)
 
 Note that setting properties for an element overrides any other values for this element (if not reset). For example:
 
@@ -224,6 +224,7 @@ Note that setting properties for an element overrides any other values for this 
 ## Selection Mode
 
 Designates the option for allowing users to select rows:
+
 * **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 * **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
 The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.

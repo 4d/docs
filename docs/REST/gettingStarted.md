@@ -19,17 +19,18 @@ To keep the example simple, we’re going to use 4D and a browser that are runni
 1. Launch your 4D or 4D Server application and create a new project. You can name it "Emp4D", for example.
 
 2. In the Structure editor, create an [Employees] table and add the following fields to it:
- - Lastname (Alpha)
- - Firstname (Alpha)
- - Salary (Longint)
 
-![](..assets/en/REST/getstarted1.png)
+- Lastname (Alpha)
+- Firstname (Alpha)
+- Salary (Longint)
+
+![](../assets/en/REST/getstarted1.png)
 
 > The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
 
 3. Create forms, then create a few employees:
 
-![](..assets/en/REST/getstarted2.png)
+![](../assets/en/REST/getstarted2.png)
 
 4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
 

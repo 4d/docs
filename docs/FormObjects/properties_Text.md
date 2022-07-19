@@ -102,7 +102,7 @@ Three font themes are available:
 - **normal**: automatic style, applied by default to any new object created in the Form editor.
 - **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
 
-![](..assets/en/FormObjects/FontThemes.png)
+![](../assets/en/FormObjects/FontThemes.png)
 
 > Font themes manage the font as well as its size and color. You can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
@@ -381,10 +381,10 @@ Modifies the orientation (rotation) of a text area. Text areas can be rotated by
 
 |Orientation value|Result|
 |----|---|
-|0 (default)|![](..assets/en/FormObjects/orientation1.png)|
-|90|![](..assets/en/FormObjects/orientation2.png)|
-|180|![](..assets/en/FormObjects/orientation3.png)|
-|270|![](..assets/en/FormObjects/orientation4.png)|
+|0 (default)|![](../assets/en/FormObjects/orientation1.png)|
+|90|![](../assets/en/FormObjects/orientation2.png)|
+|180|![](../assets/en/FormObjects/orientation3.png)|
+|270|![](../assets/en/FormObjects/orientation4.png)|
 
 In addition to [static text areas](text.md), [input](input_overview.md) text objects can be rotated when they are non-[enterable](properties_Entry.md#enterable). When a rotation property is applied to an input object, the enterable property is removed (if any). This object is then excluded from the entry order.
 
@@ -447,7 +447,7 @@ When this property is enabled, the area will store the style tags with the text,
 
 For example, here is a text that includes a style modification:
 
-![](..assets/en/FormObjects/tagStyle1.png)
+![](../assets/en/FormObjects/tagStyle1.png)
 
 When the property is disabled, the area only stores the modification. The stored contents are therefore:
 

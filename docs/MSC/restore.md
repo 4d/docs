@@ -6,7 +6,7 @@ sidebar_label: Restore Page
 
 You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
 
-![](..assets/en/MSC/MSC_restore.png)
+![](../assets/en/MSC/MSC_restore.png)
 
 > 4D automatic recovery systems restore applications and include data log file when necessary.
 
@@ -47,7 +47,7 @@ The following sequence illustrates the principles of a multi-key backup/restore 
 |Backup database|0001.4BL and 0002.4BK||
 |Add data (record # 3)|||
 |Encrypt data file with key1|0003.4BK file (encrypted with key1)|Encryption saves original files (including journal) in folder "Replaced files (Encrypting) YYY-DD-MM HH-MM-SS". When opening the encrypted data file, a new journal is created and a backup is made to activate this journal|
-|Add data (record #4)||| 
+|Add data (record #4)|||
 |Backup database|0003.4BL and 0004.4BK files (encrypted with key1)|We can restore 0003.4BK and integrate 0003.4BL|
 |Add data (record # 5)|||
 |Backup database|0004.4BL and 0005.4BK files (encrypted with key1)|We can restore 0003.4BK and integrate 0003.4BL + 0004.4BL. We can restore 0004.4BK and integrate 0004.4BL|

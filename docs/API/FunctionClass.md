@@ -268,11 +268,11 @@ The following code will create a dialog accepting a formula in text format:
  End if
 ```
 
-![](..assets/en/API/formulaDialog.png)
+![](../assets/en/API/formulaDialog.png)
 
 ...and execute the formula:
 
-![](..assets/en/API/formulaAlert.png)
+![](../assets/en/API/formulaAlert.png)
 
 <!-- REF FunctionClass.apply().Desc -->
 ## .apply()

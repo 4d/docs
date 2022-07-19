@@ -9,7 +9,7 @@ This page contains parameters defining the Method editor interface and it defaul
 
 This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
 
-![](..assets/en/Preferences/themes.png)
+![](../assets/en/Preferences/themes.png)
 
 ### Theme list
 
@@ -55,7 +55,7 @@ You can set different font styles and colors (font color or background color) fo
 
 These options configure the various colors used in the Method editor and debugger interfaces.
 
-![](..assets/en/Preferences/categories.png)
+![](../assets/en/Preferences/categories.png)
 
 | |Description|
 |---|---|
@@ -75,7 +75,7 @@ These options configure the various colors used in the Method editor and debugge
 
 This page configures Method editor display options.
 
-![](..assets/en/Preferences/options.png)
+![](../assets/en/Preferences/options.png)
 
 ### Options  
 
@@ -94,7 +94,7 @@ Changes the indentation value for the 4D code in the Method editor. The width mu
 
 4D code is automatically indented in order to reveal its structure:
 
-![](..assets/en/Preferences/optionsIndent.png)
+![](../assets/en/Preferences/optionsIndent.png)
 
 Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.
 
@@ -110,7 +110,7 @@ Lets you choose whether or not to show the lists of objects (Commands, Tables an
 
 When checked, the whole code belonging to a logical block (If/End if for example) is highlighted when the mouse is placed over the expanded node:
 
-![](..assets/en/Preferences/optionsLogicalBlocks.png)
+![](../assets/en/Preferences/optionsLogicalBlocks.png)
 
 The highlight color can be set in the [Theme](#theme-definition) page.
 
@@ -118,13 +118,13 @@ The highlight color can be set in the [Theme](#theme-definition) page.
 
 Allows to hide vertical block lines permanently. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
 
-![](..assets/en/Preferences/optionsBlockLines.png)
+![](../assets/en/Preferences/optionsBlockLines.png)
 
 #### Hide collapse/expand icons
 
 Allows you to hide all expand/collapse icons by default when displaying code. When the option is checked, node icons (as well as local block lines, see above), are displayed temporarily when the mouse is placed over a node:
 
-![](..assets/en/Preferences/optionsHideIcons.png)
+![](../assets/en/Preferences/optionsHideIcons.png)
 
 #### Insert () and closing } ) ] "
 
@@ -134,8 +134,8 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 * **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
 
-![](..assets/en/Preferences/optionsClosing.png)  
-![](..assets/en/Preferences/optionsClosing2.png)
+![](../assets/en/Preferences/optionsClosing.png)  
+![](../assets/en/Preferences/optionsClosing2.png)
 
 #### Matching \[]\(){}
 
@@ -144,7 +144,7 @@ The following options are available:
 
 * **None**: No signaling
 * **Rectangle** (default): Braces surrounded by a black line  
- ![](..assets/en/Preferences/optionsRectangle.png)
+ ![](../assets/en/Preferences/optionsRectangle.png)
 * **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
 * **Bold**: Braces displayed in bold.
 
@@ -152,7 +152,7 @@ The following options are available:
 
 Allows to highlight all occurrences of the same variable or field in an open method window.
 
-![](..assets/en/Preferences/optionsVariables.png)
+![](../assets/en/Preferences/optionsVariables.png)
 
 * **No**(default): No highlight
 * **On cursor**: All occurrences are highlighted when the text is clicked
@@ -164,7 +164,7 @@ The highlight color can be set in the [Theme](#theme-definition) page.
 
 Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
 
-![](..assets/en/Preferences/optionsLine.png)
+![](../assets/en/Preferences/optionsLine.png)
 
 If you deselect this option, only the yellow arrow is shown.
 
@@ -174,5 +174,5 @@ This area lets you configure autocomplete mechanisms in the Method editor to ada
 
 | |Description|
 |---|---|
-|Automatic opening of window for|Triggers the automatic display of the suggestion window for: <ul><li>Constants</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:![](..assets/en/Preferences/suggestionsAutoOpen.png) You can disable this functioning for certain elements of the language by deselecting their corresponding option.|
+|Automatic opening of window for|Triggers the automatic display of the suggestion window for: <ul><li>Constants</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:![](../assets/en/Preferences/suggestionsAutoOpen.png) You can disable this functioning for certain elements of the language by deselecting their corresponding option.|
 |Validation of a suggestion for| Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>|

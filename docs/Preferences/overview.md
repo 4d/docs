@@ -13,7 +13,7 @@ User preferences specify various settings affecting your working environment, e.
 
 You can access the Preferences dialog box from the **Edit > Preferences...** menu (Windows) or the **4D** Application menu (macOS):
 
-![](..assets/en/Preferences/overviewAccess.png)
+![](../assets/en/Preferences/overviewAccess.png)
 
 This menu option is available even when there is no open project.
 
@@ -30,7 +30,7 @@ Settings made in the Preferences dialog box are saved in an XML format preferenc
 
 In settings dialog boxes, parameters whose values have been modified appear in bold:
 
-![](..assets/en/Preferences/overviewUser.png)
+![](../assets/en/Preferences/overviewUser.png)
 
 Preferences indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted database.
 
@@ -38,6 +38,6 @@ A parameter still appears in bold even when its value is replaced manually with 
 
 To reset the parameters to their default values and remove the bold style indicating that they have been customized, click on the **Reset to factory settings** button:
 
-![](..assets/en/Preferences/overviewSettings.png)
+![](../assets/en/Preferences/overviewSettings.png)
 
 This button resets all the parameters of the current page. It becomes active when at least one parameter has been modified on the current page.
