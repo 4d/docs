@@ -196,7 +196,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 Given the following table and relation:
 
-![](../assets/en/API/APIdataclassAttribute3.png)
+![](../assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
@@ -279,7 +279,7 @@ The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataCla
 
 Given the following tables and relations:
 
-![](assets/en/API/dataclassAttribute4.png)
+![](../assets/en/API/dataclassAttribute4.png)
 
 ```4d
  var $relClass1; $relClassN : Text
