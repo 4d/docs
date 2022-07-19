@@ -75,7 +75,7 @@
 <p>4D loads the macros from a folder named <strong>Macros v2</strong>. Macros must be in the form of one or more XML files that are placed in this folder.</p>
 <p>La carpeta &quot;Macros v2&quot; puede ser ubicada:</p>
 <ul>
-<li>En la carpeta 4D activa de la máquina. Macros are then shared for all the databases. <strong>Note:</strong> The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the <a href="https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html">Get 4D folder</a> command in the 4D <em>Language Reference</em> manual.</li>
+<li>En la carpeta 4D activa de la máquina. Las macros son compartidas para todas las bases. <strong>Note:</strong> The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the <a href="https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html">Get 4D folder</a> command in the 4D <em>Language Reference</em> manual.</li>
 <li>Junto al archivo de estructura de la base. Las macros sólo se cargan para esta estructura.</li>
 <li>For components: in the <strong>Components</strong> folder of the database. Macros are then only loaded if the component is installed.</li>
 </ul>
@@ -88,7 +88,7 @@
 <p>In local mode, the macros file can be open while using 4D. The list of available macros is updated on each event activating 4D. For instance, it is possible to bring the text editor to the foreground, modify the macro file, then return to the method: the new macro is then available in the Code Editor.</p>
 <p>No se muestran macros vacías o erróneas.</p>
 <h3><a class="anchor" aria-hidden="true" id="comprobación-de-la-sintaxis-de-las-macros-personalizadas"></a><a href="#comprobación-de-la-sintaxis-de-las-macros-personalizadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Comprobación de la sintaxis de las macros personalizadas</h3>
-<p>The macro-command files of 4D must be in conformity with the XML standard. This means more particularly that XML declaration <code>&lt;?xml version=&quot;1.0&quot; ...?&gt;</code> and document declaration <code>&lt;!DOCTYPE macros SYSTEM &quot;http://www.4d.com/dtd/2007/macros.dtd&quot;&gt;</code> statements are mandatory at the beginning of a macro file in order for it to be loaded. The different types of XML encoding are supported. However, it is recommended to use encoding that is Mac/PC (UTF-8) compatible. 4D provides a DTD that can be used to validate the macro files. This file is found in the following location:</p>
+<p>The macro-command files of 4D must be in conformity with the XML standard. This means more particularly that XML declaration <code>&lt;?xml version=&quot;1.0&quot; ...?&gt;</code> and document declaration <code>&lt;!DOCTYPE macros SYSTEM &quot;http://www.4d.com/dtd/2007/macros.dtd&quot;&gt;</code> statements are mandatory at the beginning of a macro file in order for it to be loaded. Se soportan los diferentes tipos de codificación XML. However, it is recommended to use encoding that is Mac/PC (UTF-8) compatible. 4D provides a DTD that can be used to validate the macro files. Este archivo se encuentra en la siguiente ubicación:</p>
 <ul>
 <li>Windows: \Resources\DTD\macros.dtd</li>
 <li>Mac OS: :Contents:Resources:DTD:macros.dtd</li>
@@ -97,7 +97,7 @@
 <h2><a class="anchor" aria-hidden="true" id="syntax-of-4d-macros"></a><a href="#syntax-of-4d-macros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Syntax of 4D macros</h2>
 <p>4D macros are built using customized XML tags called &quot;elements.&quot;</p>
 <p>Some tags indicate the start and end of the definition (double tags of the type <code>&lt;tag&gt; &lt;/tag&gt;</code>), others are replaced by insertion context values (<code>&lt;tag/&gt;</code>).</p>
-<p>In conformity with XML specifications, some element tags can include attributes. Unless otherwise indicated, these attributes are optional and a default value is used when they are omitted. The syntax of elements with attributes is as follows:</p>
+<p>In conformity with XML specifications, some element tags can include attributes. Unless otherwise indicated, these attributes are optional and a default value is used when they are omitted. La sintaxis de los elementos con atributos es la siguiente:</p>
 <ul>
 <li>Double tags: <code>&lt;tag attribute=&quot;value&quot;&gt; &lt;/macro&gt;</code></li>
 <li>Single tags: <code>&lt;tag attribute=&quot;value&quot;/&gt;</code></li>
@@ -110,7 +110,7 @@
 <tr><th><strong>Etiquetas de elementos</strong></th><th><strong>Descripción</strong></th></tr>
 </thead>
 <tbody>
-<tr><td><code>&lt;macros&gt; &lt;/macros&gt;</code></td><td>Start and end of macro file (mandatory tag).</td></tr>
+<tr><td><code>&lt;macros&gt; &lt;/macros&gt;</code></td><td>Inicio y fin del archivo macro (etiqueta obligatoria).</td></tr>
 <tr><td><code>&lt;macro&gt; &lt;/macro&gt;</code></td><td>Start and end of the definition of a macro and its attributes.</td></tr>
 <tr><td></td><td><em>Atributos</em>:</td></tr>
 <tr><td></td><td>- name: Name**of macro as it appears in menus and Code Editor lists (mandatory attribute).</td></tr>
@@ -126,15 +126,15 @@
 <tr><td><code>&lt;method&gt; &lt;/method&gt;</code></td><td>Start and end of the name of the project method and its (optional) parameter. El método se ejecuta cuando se llama a la macro. You can pass a parameter in the form (&quot;param1;param2;...&quot;). This parameter will be received in the method using the variables $1, $2, etc. For additional information about this tag, refer to the &quot;About the <code>&lt;method&gt;</code> Tag&quot; section below.</td></tr>
 <tr><td><code>&lt;caret/&gt;</code></td><td>Location of the insertion point in the code after the macro has been inserted.</td></tr>
 <tr><td><code>&lt;user_4D/&gt;</code></td><td>Etiqueta reemplazada por el nombre del usuario 4D actual.</td></tr>
-<tr><td><code>&lt;user_os/&gt;</code></td><td>Tag replaced by the current system user name.</td></tr>
+<tr><td><code>&lt;user_os/&gt;</code></td><td>Etiqueta reemplazada por el nombre de usuario actual del sistema.</td></tr>
 <tr><td><code>&lt;method_name/&gt;</code></td><td>Etiqueta reemplazada por el nombre del método proyecto actual.</td></tr>
 <tr><td><code>&lt;method_path/&gt;</code></td><td>Tag replaced by full pathname of the current project method.</td></tr>
 <tr><td><code>&lt;date/&gt;</code></td><td>Etiqueta reemplazada por la fecha actual.</td></tr>
 <tr><td></td><td><em>Atributo</em>:</td></tr>
-<tr><td></td><td>- format: 4D format used to display the date. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 8).</td></tr>
+<tr><td></td><td>- format: formato 4D utilizado para mostrar la fecha. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 8).</td></tr>
 <tr><td><code>&lt;time/&gt;</code></td><td>Tag replaced by the current time.</td></tr>
 <tr><td></td><td><em>Atributo</em>:</td></tr>
-<tr><td></td><td>- format: 4D format used to display the time. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 6).</td></tr>
+<tr><td></td><td>- format: formato 4D utilizado para mostrar la hora. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 6).</td></tr>
 <tr><td><code>&lt;clipboard/&gt;</code></td><td>Etiqueta reemplazada por el contenido del portapapeles.</td></tr>
 <tr><td></td><td><em>Atributo</em>:</td></tr>
 <tr><td></td><td>- index: Clipboard to be pasted. Valores = número del portapapeles (0 a 9).</td></tr>
@@ -191,7 +191,7 @@
 <p><code>&lt;macro name=&quot;MyMacro&quot; version=&quot;2&quot;&gt;</code><br/> <code>--- Text of the macro ---</code><br/> <code>&lt;/macro&gt;</code></p>
 <p>If you do not pass this attribute, the previous mode is kept.</p>
 <h3><a class="anchor" aria-hidden="true" id="incompatibilidades-relacionadas-con-el-estándar-xml"></a><a href="#incompatibilidades-relacionadas-con-el-estándar-xml" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Incompatibilidades relacionadas con el estándar XML</h3>
-<p>Strict syntax rules must be observed in order for macros files to respect the XML standard. This may lead to incompatibilities with the code of macros created with previous versions and prevent the loading of XML files. The following are the main sources of malfunctioning:</p>
+<p>Strict syntax rules must be observed in order for macros files to respect the XML standard. This may lead to incompatibilities with the code of macros created with previous versions and prevent the loading of XML files. Las siguientes son las principales fuentes de mal funcionamiento:</p>
 <ul>
 <li>Comments of the &quot;// my comment&quot; type, allowed inside <code>&lt;macro&gt;</code> elements in previous versions of 4D, are not compatible with the XML syntax. The lines of comments must respect the standard <code>&quot;&lt;!-- my comment --&gt;&quot;</code> form.</li>
 <li>The <code>&lt;&gt;</code> symbols used more particularly for interprocess object names must be encoded. For example, the <em>&lt;&gt;params</em> variable must be written <code>&amp;lt;&gt;params</code>.</li>
@@ -210,8 +210,8 @@
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R6 BETA"]}

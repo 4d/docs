@@ -72,24 +72,24 @@
 <tr><th>Versión</th><th>Modificaciones</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Class added</td></tr>
+<tr><td>v19 R6</td><td>Clase añadida</td></tr>
 </tbody>
 </table>
 <p></details></p>
-<p>The <code>HTTPRequest</code> class allows you to handle <a href="#httprequest-object"><code>HTTPRequest objects</code></a> that can be used to configure and send requests to an HTTP server, as well as to process the HTTP server responses.</p>
-<p>The <code>HTTPRequest</code> class is available from the <code>4D</code> class store. You create and send HTTP requests using the <a href="#4dhttprequestnew">4D.HTTPRequest.new()</a> function, that returns a <a href="#httprequest-object"><code>HTTPRequest object</code></a>.</p>
+<p>La clase <code>HTTPRequest</code> permite manejar objetos <a href="#httprequest-object"><code>HTTPRequest</code></a> que pueden ser utilizados para configurar y enviar peticiones a un servidor HTTP, así como para procesar las respuestas del servidor HTTP.</p>
+<p>La clase <code>HTTPRequest</code> está disponible en el almacén de clases <code>4D</code>. Para crear y enviar peticiones HTTP se utiliza la función <a href="#4dhttprequestnew">4D.HTTPRequest.new()</a>, que devuelve un objeto <a href="#httprequest-object"><code>HTTPRequest</code></a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h3>
-<p>Create a <code>MyHttpRequestOptions</code> class for the request options:</p>
+<p>Crear una clase <code>MyHttpRequestOptions</code> para las opciones de la petición:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">Class constructor</span>(<span class="hljs-variable">$method </span>: Text; <span class="hljs-variable">$headers </span>: Object; <span class="hljs-variable">$body </span>: Text)
 <span class="hljs-literal">This</span>.method:=<span class="hljs-variable">$method</span>
 <span class="hljs-literal">This</span>.headers:=<span class="hljs-variable">$headers</span>
 <span class="hljs-literal">This</span>.body:=<span class="hljs-variable">$body</span><span class="hljs-keyword">
 
 Function</span><span class="hljs-function"> onResponse</span>(<span class="hljs-variable">$request </span>: 4D.HTTPRequest; <span class="hljs-variable">$event </span>: Object)
-<span class="hljs-comment">//My onResponse method, if you want to handle the request asynchronously</span><span class="hljs-keyword">
+<span class="hljs-comment">// Mi método onResponse, si quiere manejar la petición de forma asíncrona</span><span class="hljs-keyword">
 
 Function</span><span class="hljs-function"> onError</span>(<span class="hljs-variable">$request </span>: 4D.HTTPRequest; <span class="hljs-variable">$event </span>: Object)
-<span class="hljs-comment">//My onError method, if you want to handle the request asynchronously</span>
+<span class="hljs-comment">// Mi método onError, si quiere manejar la petición de forma asíncrona</span>
 </code></pre>
 <p>Ahora puede crear su petición:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$headers </span>: Object
@@ -101,30 +101,30 @@ myHttpRequestOptions := cs.MyHttpRequestOptions.<span class="hljs-function">new<
 
 var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <span class="hljs-variable">$request</span>:=4D.HTTPRequest.<span class="hljs-function">new</span>(<span class="hljs-string">"www.google.com"</span>; myHttpRequestOptions)
-<span class="hljs-variable">$request</span>.<span class="hljs-function">wait</span>() <span class="hljs-comment">//If you want to handle the request synchronously</span>
-<span class="hljs-comment">//Now you can use $request.response to access the result of the request or $request.error to check the error that happened.</span>
+<span class="hljs-variable">$request</span>.<span class="hljs-function">wait</span>() <span class="hljs-comment">// Si desea gestionar la solicitud de forma sincrónica</span>
+<span class="hljs-comment">// Ahora puede utilizar $request.response para acceder al resultado de la petición o $request.error para comprobar el error que se ha producido.</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="objeto-httprequest"></a><a href="#objeto-httprequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objeto HTTPRequest</h3>
-<p>An HTTPRequest object is a non-sharable object.</p>
-<p>HTTPRequest objects provide the following properties and functions:</p>
+<p>Un objeto HTTPRequest es un objeto no compartible.</p>
+<p>Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:</p>
 <table>
 <thead>
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#dataType"><strong>dataType</strong> : Text</a><p>    the <code>dataType</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;auto&quot; if it was omitted</td></tr>
-<tr><td><a href="#encoding"><strong>encoding</strong> : Text</a><p>    the <code>encoding</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;UTF-8&quot; if it was omitted</td></tr>
-<tr><td><a href="#errors"><strong>errors</strong> : Collection</a><p>    the collection of all the errors if at least one error has been triggered</td></tr>
-<tr><td><a href="#headers"><strong>headers</strong> : Object</a><p>    the <code>headers</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
-<tr><td><a href="#method"><strong>method</strong> : Text</a><p>    the <code>method</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
-<tr><td><a href="#protocol"><strong>protocol</strong> : Text</a><p>    the <code>protocol</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
-<tr><td><a href="#response"><strong>response</strong> : Object</a><p>    the response to the request if it has received at least the status code, undefined otherwise</td></tr>
+<tr><td><a href="#dataType"><strong>dataType</strong>: Text</a><p>    the <code>dataType</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;auto&quot; if it was omitted</td></tr>
+<tr><td><a href="#encoding"><strong>encoding</strong>: Text</a><p>    the <code>encoding</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;UTF-8&quot; if it was omitted</td></tr>
+<tr><td><a href="#errors"><strong>errors</strong>: Collection</a><p>    the collection of all the errors if at least one error has been triggered</td></tr>
+<tr><td><a href="#headers"><strong>headers</strong>: Object</a><p>    the <code>headers</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
+<tr><td><a href="#method"><strong>method</strong>: Text</a><p>    the <code>method</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
+<tr><td><a href="#protocol"><strong>protocol</strong>: Text</a><p>    the <code>protocol</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
+<tr><td><a href="#response"><strong>response</strong>: Object</a><p>    the response to the request if it has received at least the status code, undefined otherwise</td></tr>
 <tr><td><a href="#returnResponseBody"><strong>returnResponseBody</strong> : Boolean</a><p>    the <code>returnResponseBody</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
 <tr><td><a href="#terminate"><strong>.terminate()</strong></a><p>    aborta la petición HTTP</td></tr>
-<tr><td><a href="#terminated"><strong>terminated</strong> : Boolean</a><p>    True if the request is terminated (after the call to <code>onTerminate</code>), false otherwise</td></tr>
-<tr><td><a href="#timeout"><strong>timeout</strong> : Real</a><p>    the <code>timeout</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
-<tr><td><a href="#url"><strong>url</strong> : Text</a><p>    la URL de la petición HTTP</td></tr>
-<tr><td><a href="#wait"><strong>.wait</strong>( { <em>time</em> : Real } ) : 4D.HTTPRequest</a><p>    waits for the response from the server</td></tr>
+<tr><td><a href="#terminated"><strong>terminated</strong>: Boolean</a><p>    True if the request is terminated (after the call to <code>onTerminate</code>), false otherwise</td></tr>
+<tr><td><a href="#timeout"><strong>timeout</strong>: Real</a><p>    the <code>timeout</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a></td></tr>
+<tr><td><a href="#url"><strong>url</strong>: Text</a><p>    la URL de la petición HTTP</td></tr>
+<tr><td><a href="#wait"><strong>.wait</strong>( { <em>time</em> : Real } ) : 4D.HTTPRequest</a><p>    espera la respuesta del servidor</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="4dhttprequestnew"></a><a href="#4dhttprequestnew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.HTTPRequest.new()</h2>
@@ -140,14 +140,14 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descripción"></a><a href="#descripción" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>4D.HTTPRequest.new()</code> function creates and sends a HTTP request to the HTTP server defined in <em>url</em> with the defined <em>options</em>, and returns a <code>4D.HTTPRequest</code> object.</p>
+<p>La función <code>4D.HTTPRequest.new()</code> creates and sends a HTTP request to the HTTP server defined in <em>url</em> with the defined <em>options</em>, and returns a <code>4D.HTTPRequest</code> object.</p>
 <p>The returned <code>HTTPRequest</code> object is used to process responses from the HTTP server and call methods.</p>
 <p>In <em>url</em>, pass the URL where you want to send the request. La sintaxis a utilizar es:</p>
 <pre><code class="hljs">{http://}[<span class="hljs-string">{user}:[{password}</span>]@]host[<span class="hljs-string">:{port}</span>][<span class="hljs-symbol">/{path}</span>][<span class="hljs-string">?{queryString}</span>]
 {https://}[<span class="hljs-string">{user}:[{password}</span>]@]host[<span class="hljs-string">:{port}</span>][<span class="hljs-symbol">/{path}</span>][<span class="hljs-string">?{queryString}</span>]
 </code></pre>
 <p>If you omit the protocol part (<code>http://</code> or <code>https://</code>), a https request is sent.</p>
-<p>For example, you can pass the following strings:</p>
+<p>Por ejemplo, puede pasar las siguientes cadenas:</p>
 <pre><code class="hljs"><span class="hljs-symbol">    http:</span><span class="hljs-comment">//www.myserver.com</span>
     www.myserver.com/path
 <span class="hljs-symbol">    http:</span><span class="hljs-comment">//www.myserver.com/path?name="jones"</span>
@@ -164,27 +164,27 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th><th>Por defecto</th></tr>
 </thead>
 <tbody>
-<tr><td>body</td><td>Variant</td><td>Body of the request (required in case of <code>post</code> or <code>put</code> requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers</td><td>indefinido</td></tr>
+<tr><td>body</td><td>Variant</td><td>Body of the request (required in case of <code>post</code> or <code>put</code> requests). Puede ser un texto, un blob, o un objeto. The content-type is determined from the type of this property unless it is set inside the headers</td><td>indefinido</td></tr>
 <tr><td>certificatesFolder</td><td><a href="#FolderClass.md">Folder</a></td><td>Sets the active client certificates folder</td><td>indefinido</td></tr>
-<tr><td>dataType</td><td>Texto</td><td>Type of the response body attribute. Values: &quot;text&quot;, &quot;blob&quot;, &quot;object&quot;, or &quot;auto&quot;. If &quot;auto&quot;, the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise)</td><td>&quot;auto&quot;</td></tr>
+<tr><td>dataType</td><td>Texto</td><td>Tipo de atributo del cuerpo de la respuesta. Valores: &quot;text&quot;, &quot;blob&quot;, &quot;object&quot;, o &quot;auto&quot;. If &quot;auto&quot;, the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise)</td><td>&quot;auto&quot;</td></tr>
 <tr><td>encoding</td><td>Texto</td><td>Used only in case of requests with a <code>body</code> (<code>post</code> or <code>put</code> methods). Encoding of the request body content if it's a text, ignored if content-type is set inside the headers</td><td>&quot;UTF-8&quot;</td></tr>
 <tr><td>headers</td><td>Objeto</td><td>Encabezados de la petición. Syntax: <code>headers.key=value</code> (<em>value</em> can be a Collection if the same key must appear multiple times)</td><td>Empty object</td></tr>
 <tr><td>method</td><td>Texto</td><td>&quot;POST&quot;, &quot;GET&quot; u otro método</td><td>&quot;GET&quot;</td></tr>
 <tr><td>minTLSVersion</td><td>Texto</td><td>Sets the minimum version of TLS: &quot;<code>TLSv1_0</code>&quot;, &quot;<code>TLSv1_1</code>&quot;, &quot;<code>TLSv1_2</code>&quot;, &quot;<code>TLSv1_3</code>&quot;</td><td>&quot;<code>TLSv1_2</code>&quot;</td></tr>
-<tr><td>onData</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when data from the body is received. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
+<tr><td>onData</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando se reciben los datos del cuerpo. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
 <tr><td>onError</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando ocurre un error. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
-<tr><td>onHeaders</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when the headers are received. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
-<tr><td>onResponse</td><td><a href="#FunctionClass.md">Function</a></td><td>Callback when a response is received. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
+<tr><td>onHeaders</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando se reciben los encabezados. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
+<tr><td>onResponse</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando se recibe una respuesta. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
 <tr><td>onTerminate</td><td><a href="#FunctionClass.md">Function</a></td><td>Retrollamada cuando la petición haya terminado. Recibe dos objetos como parámetros (ver abajo)</td><td>indefinido</td></tr>
-<tr><td>protocol</td><td>Texto</td><td>&quot;auto&quot; o &quot;HTTP1&quot;. &quot;auto&quot; means HTTP1 in the current implementation</td><td>&quot;auto&quot;</td></tr>
-<tr><td>proxyAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Object handling proxy authentication</td><td>indefinido</td></tr>
-<tr><td>serverAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Object handling server authentication</td><td>indefinido</td></tr>
+<tr><td>protocol</td><td>Texto</td><td>&quot;auto&quot; o &quot;HTTP1&quot;. &quot;auto&quot; significa HTTP1 en la implementación actual</td><td>&quot;auto&quot;</td></tr>
+<tr><td>proxyAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Autenticación del proxy de gestión de objetos</td><td>indefinido</td></tr>
+<tr><td>serverAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Autenticación del servidor de gestión de objetos</td><td>indefinido</td></tr>
 <tr><td>returnResponseBody</td><td>Booleano</td><td>If false, the response body is not returned in the <a href="#response"><code>response</code> object</a>. Returns an error if false and <code>onData</code> is undefined</td><td>True</td></tr>
 <tr><td>timeout</td><td>Real</td><td>Tiempo de espera en segundos. Indefinido = sin tiempo de espera</td><td>Indefinido</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="función-callback-retrollamada"></a><a href="#función-callback-retrollamada" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Función callback (retrollamada)</h4>
-<p>All callback functions receive two object parameters:</p>
+<p>Todas las funciones de retrollamada reciben dos parámetros objeto:</p>
 <table>
 <thead>
 <tr><th>Parámetros</th><th>Tipo</th></tr>
@@ -196,11 +196,11 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </table>
 <p>Esta es la secuencia de llamadas de retorno:</p>
 <ol>
-<li><code>onHeaders</code> is always called once</li>
+<li><code>onHeaders</code> se llama siempre una vez</li>
 <li><code>onData</code> is called zero or several times (not called if the request does not have a body)</li>
 <li>If no error occured, <code>onResponse</code> is always called once</li>
 <li>If an error occurs, <code>onError</code> is executed once (and terminates the request)</li>
-<li><code>onTerminate</code> is always executed once</li>
+<li><code>onTerminate</code> se ejecuta siempre una vez</li>
 </ol>
 <h4><a class="anchor" aria-hidden="true" id="event-object"></a><a href="#event-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>event object</h4>
 <p>An <code>event</code> object is returned when a <a href="#callback-functions">callback function</a> is called. Contiene las siguientes propiedades:</p>
@@ -214,7 +214,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="authentication-object"></a><a href="#authentication-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>authentication object</h4>
-<p>An authentication object handles the <code>options.serverAuthentication</code> or <code>options.proxyAuthentication</code> property. It can contain the following properties:</p>
+<p>An authentication object handles the <code>options.serverAuthentication</code> or <code>options.proxyAuthentication</code> property. Puede contener las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th><th>Por defecto</th></tr>
@@ -226,17 +226,17 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="datatype"></a><a href="#datatype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.dataType</h2>
-<p><strong>dataType</strong> : Text</p>
+<p><strong>dataType</strong>: Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-1"></a><a href="#descripción-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.dataType</code> property contains the <code>dataType</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;auto&quot; if it was omitted.</p>
+<p>La propiedad <code>.dataType</code> contiene the <code>dataType</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;auto&quot; if it was omitted.</p>
 <h2><a class="anchor" aria-hidden="true" id="encoding"></a><a href="#encoding" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.encoding</h2>
-<p><strong>encoding</strong> : Text</p>
+<p><strong>encoding</strong>: Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-2"></a><a href="#descripción-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.encoding</code> property contains the <code>encoding</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;UTF-8&quot; if it was omitted.</p>
+<p>La propiedad <code>.encoding</code> contiene the <code>encoding</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>, &quot;UTF-8&quot; if it was omitted.</p>
 <h2><a class="anchor" aria-hidden="true" id="errors"></a><a href="#errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.errors</h2>
-<p><strong>errors</strong> : Collection</p>
+<p><strong>errors</strong>: Collection</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-3"></a><a href="#descripción-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.errors</code> property contains the collection of all the errors if at least one error has been triggered.</p>
+<p>La propiedad <code>.errors</code> contiene the collection of all the errors if at least one error has been triggered.</p>
 <p>Here is the contents of the <code>.errors</code> property:</p>
 <table>
 <thead>
@@ -250,28 +250,28 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="headers"></a><a href="#headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.headers</h2>
-<p><strong>headers</strong> : Object</p>
+<p><strong>headers</strong>: Object</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.headers</code> property contains the <code>headers</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. If it was omitted, contains an empty object.</p>
+<p>La propiedad <code>.headers</code> contiene the <code>headers</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. Si se omite, contiene un objeto vacío.</p>
 <h2><a class="anchor" aria-hidden="true" id="method"></a><a href="#method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.method</h2>
-<p><strong>method</strong> : Text</p>
+<p><strong>method</strong>: Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-5"></a><a href="#descripción-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.method</code> property contains the <code>method</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. Si fue omitido, contiene &quot;GET&quot;.</p>
+<p>La propiedad <code>.errors</code> contiene the <code>method</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. Si fue omitido, contiene &quot;GET&quot;.</p>
 <h2><a class="anchor" aria-hidden="true" id="protocol"></a><a href="#protocol" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.protocol</h2>
-<p><strong>protocol</strong> : Text</p>
+<p><strong>protocol</strong>: Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-6"></a><a href="#descripción-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.protocol</code> property contains the <code>protocol</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. If it was omitted or if &quot;auto&quot; was used, contains the version of the protocol used.</p>
+<p>La propiedad <code>.protocol</code> contiene the <code>protocol</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. If it was omitted or if &quot;auto&quot; was used, contains the version of the protocol used.</p>
 <h2><a class="anchor" aria-hidden="true" id="response"></a><a href="#response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.response</h2>
-<p><strong>response</strong> : Object</p>
+<p><strong>response</strong>: Object</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-7"></a><a href="#descripción-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.response</code> property contains the response to the request if it has received at least the status code, undefined otherwise.</p>
-<p>A <code>response</code> object is a non-sharable object. It provides the following properties:</p>
+<p>La propiedad <code>.response</code> contiene the response to the request if it has received at least the status code, undefined otherwise.</p>
+<p>A <code>response</code> object is a non-sharable object. Ofrece las siguientes propiedades:</p>
 <table>
 <thead>
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>.body</td><td>Variant</td><td>Cuerpo de la respuesta. The type of the message is defined according to the <a href="#datatype"><code>dataType</code></a> property. Undefined if the body has not been received yet</td></tr>
+<tr><td>.body</td><td>Variant</td><td>Cuerpo de la respuesta. The type of the message is defined according to the <a href="#datatype"><code>dataType</code></a> property. Indefinido si el cuerpo no se ha recibido todavía</td></tr>
 <tr><td>.headers</td><td>Objeto</td><td>Headers of the response. <code>headers.key</code> = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet.</td></tr>
 <tr><td>.status</td><td>Número</td><td>Código de estado de la respuesta</td></tr>
 <tr><td>.statusText</td><td>Texto</td><td>Mensaje explicando el código de estado</td></tr>
@@ -290,19 +290,19 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <blockquote>
 <p>Esta función es hilo seguro.</p>
 </blockquote>
-<p>The <code>.terminate()</code> function aborta la petición HTTP. It triggers the <code>onTerminate</code> event.</p>
+<p>La función <code>.terminate()</code> aborta la petición HTTP. Activa el evento <code>onTerminate</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="terminated"></a><a href="#terminated" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.terminated</h2>
-<p><strong>terminated</strong> : Boolean</p>
+<p><strong>terminated</strong>: Boolean</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-10"></a><a href="#descripción-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.terminated</code> property contains True if the request is terminated (after the call to <code>onTerminate</code>), false otherwise.</p>
+<p>La propiedad <code>.terminated</code> contiene True if the request is terminated (after the call to <code>onTerminate</code>), false otherwise.</p>
 <h2><a class="anchor" aria-hidden="true" id="timeout"></a><a href="#timeout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.timeout</h2>
-<p><strong>timeout</strong> : Real</p>
+<p><strong>timeout</strong>: Real</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-11"></a><a href="#descripción-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.timeout</code> property contains the <code>timeout</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. If it was omitted, contains Undefined.</p>
+<p>La propiedad <code>.timeout</code> contiene the <code>timeout</code> passed in the <a href="#options-parameter"><code>options</code></a> object when calling <a href="#4dhttprequestnew">new()</a>. Si se omite, contiene Undefined.</p>
 <h2><a class="anchor" aria-hidden="true" id="url"></a><a href="#url" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.url</h2>
-<p><strong>url</strong> : Text</p>
+<p><strong>url</strong>: Text</p>
 <h4><a class="anchor" aria-hidden="true" id="descripción-12"></a><a href="#descripción-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
-<p>The <code>.url</code> property contains la URL de la petición HTTP.</p>
+<p>La propiedad <code>.url</code> contiene la URL de la petición HTTP.</p>
 <h2><a class="anchor" aria-hidden="true" id="wait"></a><a href="#wait" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.wait()</h2>
 <p><strong>.wait</strong>( { <em>time</em> : Real } ) : 4D.HTTPRequest</p>
 <table>
@@ -310,7 +310,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><th>Parámetros</th><th>Tipo</th><th style="text-align:center"></th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>time</td><td>Real</td><td style="text-align:center">-&gt;</td><td>Maximum time in seconds to wait for the response</td></tr>
+<tr><td>time</td><td>Real</td><td style="text-align:center">-&gt;</td><td>Tiempo máximo en segundos para esperar la respuesta</td></tr>
 <tr><td>Resultado</td><td>4D.HTTPRequest</td><td style="text-align:center">&lt;-</td><td>Objeto HTTPRequest</td></tr>
 </tbody>
 </table>
@@ -318,7 +318,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <blockquote>
 <p>Esta función es hilo seguro.</p>
 </blockquote>
-<p>The <code>4D.HTTPRequest.wait()</code> function waits for the response from the server.</p>
+<p>La función <code>4D.HTTPRequest.wait()</code> espera la respuesta del servidor.</p>
 <p>If a <em>time</em> parameter is passed, the function will wait at most the defined number of seconds.</p>
 <p>If the response from the server has already arrived, the function returns immediately.</p>
 <style> h2 { background: #d9ebff;}</style>
@@ -335,8 +335,8 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R6 BETA"]}

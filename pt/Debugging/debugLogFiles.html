@@ -172,7 +172,7 @@
 <tr><td>systemid</td><td>ID de sistema</td></tr>
 <tr><td>server_process_id</td><td>ID de processo no servidor</td></tr>
 <tr><td>remote_process_id</td><td>Id de processo no cliente</td></tr>
-<tr><td>process_name</td><td>Process name</td></tr>
+<tr><td>process_name</td><td>Nome de processo</td></tr>
 <tr><td>cID</td><td>Identificador de conexão 4D</td></tr>
 <tr><td>uID</td><td>Identificador de Cliente 4D</td></tr>
 <tr><td>IP Client</td><td>IPv4/IPv6アドレス</td></tr>
@@ -238,7 +238,7 @@
 <tbody>
 <tr><td>1</td><td>sequence_number</td><td>Unique and sequential operation number in the logging session</td></tr>
 <tr><td>2</td><td>time</td><td>Data e hora em formato ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)</td></tr>
-<tr><td>3</td><td>ProcessID</td><td>Process ID</td></tr>
+<tr><td>3</td><td>ProcessID</td><td>ID do processo</td></tr>
 <tr><td>4</td><td>unique_processID</td><td>ID de processo</td></tr>
 <tr><td>5</td><td>stack_level</td><td>Nível de stack</td></tr>
 <tr><td>6</td><td>operation_type</td><td>Tipo operação histórico. Esse valor pode ser um valor absoluto:<p><ol><li>Comando</li><li>Método (método de projeto, método de banco de dados, etc)</li><li>Mensagem (enviada só pelo comando <a href="https://doc.4d.com/4dv19/help/command/en/page667.html">LOG EVENT</a>)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Tarefa</li><li>Método membro (método anexado à coleção ou a um objeto)</li></ol></p>Quando fechar um nível de stack, as colunas <code>operation_type</code>, <code>operation</code> e <code>operation_parameters</code> tem o mesmo valor que o nível de stack registrado na coluna <code>stack_opening_sequence_number</code> column. Por exemplo:<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>A primeira e segunda linha abrem o nível de stack, a terceira e quarta linha fecham o nível de stack. Valores nas colunas 6, 7 e 8 são repetidos na linha do nível de stack ao fechar. A coluna 10 contém os números de sequência de abertura do nível de stack, ou seja, 122 para a terceira linha e 121 para a quarta.</td></tr>
@@ -573,8 +573,8 @@ ds.<span class="hljs-function">startRequestLog</span>(<span class="hljs-function
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:pt","version:19 R6 BETA"]}

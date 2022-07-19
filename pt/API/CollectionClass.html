@@ -91,9 +91,9 @@
 <tr><td><a href="#clear"> <strong>.clear()</strong> : Collection</a><p>    </td></tr>
 <tr><td><a href="#combine"> <strong>.combine</strong>( <em>col2</em> : Collection {; <em>index</em> : Integer } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#concat"> <strong>.concat</strong>( <em>value</em> : any { <em>;...valueN</em> } ) : Collection</a><p>    </td></tr>
-<tr><td><a href="#copy"> <strong>.copy</strong>() : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithCol</em> : Collection ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithObj</em> : Object ) : Collection</a><p>    </td></tr>
+<tr><td><a href="#copiar"> <strong>.copy</strong>() : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithCol</em> : Collection ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithObj</em> : Object ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#count"> <strong>.count</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
-<tr><td><a href="#countvalues"> <strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
+<tr><td><a href="#countValues"> <strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
 <tr><td><a href="#distinct"> <strong>.distinct</strong>( {<em>option</em> : Integer} ) : Collection<br><strong>.distinct</strong>( <em>propertyPath</em> : Text {; <em>option</em> : Integer } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#equal"> <strong>.equal</strong>( <em>collection2</em> : Collection {; <em>option</em> : Integer } ) : Boolean</a><p>    </td></tr>
 <tr><td><a href="#every"> As fórmulas não tem compatibilidade com a função <code>collection.query()</code>, nem com o parâmetro <em>queryString</em> nem como parâmetro do objeto <em>fórmula</em>.</a><p>    </td></tr>
@@ -102,18 +102,18 @@
 <tr><td><a href="#filter"> <strong>.filter</strong>( <em>formula</em> : 4D. Function { ; <em>...param</em> : any } ) : Collection<br><strong>.filter</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#find"> <strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D. Function { ; <em>...param</em> : any } ) : any<br><strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any</a><p>    </td></tr>
 <tr><td><a href="#find"> <strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D. Function { ; <em>...param</em> : any } ) : Integer<br><strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer</a><p>    </td></tr>
-<tr><td><a href="#indexof"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
+<tr><td><a href="#indexOf"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
 <tr><td><a href="#indices"> <strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#insert"> <strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#join"> <strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    </td></tr>
-<tr><td><a href="#lastindexof"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
+<tr><td><a href="#lastIndexOf"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    </td></tr>
 <tr><td>[ <strong>.length</strong> : Integer</td></tr>
-<tr><td>](#length)<p>    </td></tr>
+<tr><td>](#máx)<p>    </td></tr>
 <tr><td><a href="#map"> <strong>.map</strong>( <em>formula</em> : 4D. Function { ; <em>...param</em> : any } ) : Collection<br><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#max"> <strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    </td></tr>
 <tr><td><a href="#min"> <strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    </td></tr>
 <tr><td><a href="#orderby"> <strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    </td></tr>
-<tr><td><a href="#orderbymethod"> <strong>.orderByMethod</strong>( <em>formula</em> : 4D. Function { ; ...<em>extraParam</em> : expression } ) : Collection<br><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    </td></tr>
+<tr><td><a href="#orderByMethod"> <strong>.orderByMethod</strong>( <em>formula</em> : 4D. Function { ; ...<em>extraParam</em> : expression } ) : Collection<br><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#pop"> <strong>.pop()</strong> : any </a><p>    </td></tr>
 <tr><td><a href="#push"> <strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>    </td></tr>
 <tr><td><a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    </td></tr>
@@ -2273,8 +2273,8 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:pt","version:19 R6 BETA"]}

@@ -94,7 +94,7 @@
 <p>You can import and export a method or a class code in the form of a file. These commands are found in the <strong>Method</strong> menu of the Code editor.</p>
 <ul>
 <li>When you select the <strong>Export Method...</strong> command, a standard file saving dialog box appears, allowing you to choose the name, location and format of the export file (see below). As with printing, exporting does not take the collapsed state of code structures into account and the entire code is exported.</li>
-<li>When you select the <strong>Import Method...</strong> command, a standard file opening dialog box appears, allowing you to designate the file to be imported. Importing replaces the selected text in the method. To replace an existing method by an imported method, select the entire contents of the method before carrying out the import.</li>
+<li>When you select the <strong>Import Method...</strong> command, a standard file opening dialog box appears, allowing you to designate the file to be imported. La importación sustituye el texto seleccionado en el método. To replace an existing method by an imported method, select the entire contents of the method before carrying out the import.</li>
 </ul>
 <p>The import/export function is multi-platform: a method exported under Mac OS can be imported under Windows and vice versa; 4D handles the conversion of characters when necessary.</p>
 <p>4D puede exportar e importar métodos en dos formatos:</p>
@@ -149,7 +149,7 @@
 <ul>
 <li>**Indifferent **(default): By checking this option, you declare that you do not want to handle the preemptive property for the method. The &quot;preemptive&quot; property of the method is set to &quot;indifferent&quot;.</li>
 </ul>
-<p>When this option is checked, the 4D compiler will evaluate the preemptive capability of the method and will tag it internally as &quot;thread-safe&quot; or &quot;thread-unsafe&quot;. No error related to preemptive execution is returned. If the method is evaluated as thread-safe, at runtime it will not prevent preemptive thread execution when called in a preemptive context. Conversely, if the method is evaluated &quot;thread-unsafe&quot;, at runtime it will prevent any preemptive thread execution when called.\</p>
+<p>When this option is checked, the 4D compiler will evaluate the preemptive capability of the method and will tag it internally as &quot;thread-safe&quot; or &quot;thread-unsafe&quot;. No se devuelve ningún error relacionado con la ejecución apropiativa. If the method is evaluated as thread-safe, at runtime it will not prevent preemptive thread execution when called in a preemptive context. Conversely, if the method is evaluated &quot;thread-unsafe&quot;, at runtime it will prevent any preemptive thread execution when called.\</p>
 <p>Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the <a href="https://doc.4d.com/4Dv19R5/4D/19-R5/New-process.301-5830903.en.html">New process</a> command). If tagged &quot;thread-safe&quot; internally, it is only taken into account when called from other methods inside a call chain.</p>
 <p><strong><em>Particular case</em>:</strong> If the method has also the <strong>Shared by components and host database</strong> property (see <a href="https://doc.4d.com/4Dv19R5/4D/19-R5/Project-method-properties.300-5851552.en.html">Project method properties</a>), setting the <strong>Indifferent</strong> option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to <strong>Can be run in preemptive processes</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="disponible-a-través-de"></a><a href="#disponible-a-través-de" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disponible a través de</h4>
@@ -211,8 +211,8 @@
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:19 R6 BETA"]}
