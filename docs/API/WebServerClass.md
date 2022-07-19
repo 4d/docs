@@ -448,7 +448,7 @@ The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- E
 
 <!-- REF #WebServerClass.keepSession.Summary -->True if legacy sessions are enabled in the web server, False otherwise<!-- END REF -->.
 
-##### See also
+#### See also
 
 [.scalableSession](#scalablesession)
 
