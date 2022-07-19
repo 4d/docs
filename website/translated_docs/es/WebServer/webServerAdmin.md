@@ -129,7 +129,7 @@ The */4DWEBTEST* URL is designed to check the web server status. When this URL i
 
 ## Logs
 
-4D allows you to generate two logs of web requests:
+4D le permite generar dos historiales de peticiones web:
 
 - a debug log, useful in the web server development phase (*HTTPDebugLog.txt*),
 - a standardized web request log, rather used for statistic purposes (*logweb.txt*).
@@ -156,7 +156,7 @@ Los siguientes campos se registran tanto para la solicitud como para la respuest
 
 ### logweb.txt
 
-The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. You need to select the log format.
+The [web log recording file](webServerConfig.md#log-recording) can be enabled using the [`web server` object](webServerObject.md), the `WEB SET OPTION` command, or the **Web/Log (type)** page of the settings. Debe seleccionar el formato de historial.
 
 #### CLF/DLF
 
@@ -192,7 +192,7 @@ The following table lists the fields available for each format (in alphabetical 
 | Campo          | ELF | WLF | Valor                                                                                                                       |
 | -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Número de bytes recibidos por el servidor                                                                                   |
-| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                                                                            |
+| BYTES_SENT     | X   | X   | Número de bytes enviados por el servidor al cliente                                                                         |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                              |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
 | CONNECTION_ID  |     | X   | Número de identificación de la conexión                                                                                     |

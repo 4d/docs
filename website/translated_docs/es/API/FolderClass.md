@@ -105,7 +105,7 @@ En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utiliz
 | fk licenses folder         | 1     | Carpeta que contiene los archivos de licencia 4D de la máquina                                      |
 | fk logs folder             | 7     | Filesystem asociado: "/LOGS"                                                                        |
 | fk mobileApps folder       | 10    |                                                                                                     |
-| fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
+| fk remote database folder  | 3     | Carpeta de la base de datos 4D creada en cada máquina 4D remota                                     |
 | fk resources folder        | 6     | Filesystem asociado: "/RESOURCES"                                                                   |
 | fk system folder           | 100   |                                                                                                     |
 | fk user preferences folder | 0     | 4D folder that stores user preference files within the \<userName> directory.                      |
@@ -405,7 +405,7 @@ The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or ren
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
+Por defecto, la carpeta conserva su nombre cuando se mueve. If you want to rename the moved folder, pass the new full name in the *newName* parameter. El nuevo nombre debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error.
 
 **Objeto devuelto**
 

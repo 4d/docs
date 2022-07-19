@@ -13,7 +13,7 @@ This page allows selecting, creating, or configuring Method editor themes. A the
 
 ### Lista de temas
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
+In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D ofrece dos temas por defecto:
 
 *   **Tema Light por defecto**
 *   **Tema oscuro por defecto**
@@ -24,7 +24,7 @@ A **myTheme** theme is automatically added if you already customized method edit
 
 ### Creación de temas personalizados
 
-You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+Puede crear temas totalmente personalizables. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
 
 ### Archivos de temas personalizados
 
@@ -78,7 +78,7 @@ These options configure the various colors used in the Method editor and debugge
 ## Opciones
 
 
-This page configures Method editor display options.
+Esta página configura las opciones de visualización del editor de métodos.
 
 ![](assets/en/Preferences/options.png)
 
@@ -87,7 +87,7 @@ This page configures Method editor display options.
 
 
 
-#### 4D Programming Language (Use regional system settings)
+#### Lenguaje de programación 4D (Utilice los parámetros regionales del sistema)
 
 Allows you to disable/enable the "international" code settings for the local 4D application.
 - **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
@@ -97,7 +97,7 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 #### Indentación
 
-Changes the indentation value for the 4D code in the Method editor. The width must be specified in points (10 by default).
+Changes the indentation value for the 4D code in the Method editor. El ancho debe especificarse en puntos (10 por defecto).
 
 4D code is automatically indented in order to reveal its structure:
 
@@ -160,13 +160,13 @@ Allows to highlight all occurrences of the same variable or field in an open met
 
 ![](assets/en/Preferences/optionsVariables.png)
 
-- **No**(default): No highlight
+- **No**(por defecto): no resaltado
 - **On cursor**: All occurrences are highlighted when the text is clicked
 - **On selection**: All occurrences are highlighted when the text is selected
 
 The highlight color can be set in the [Theme](#theme-definition) page.
 
-#### Debug (Highlight the line running)
+#### Depurar (Resaltar la línea en ejecución)
 
 Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
 

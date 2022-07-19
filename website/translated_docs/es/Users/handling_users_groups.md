@@ -85,7 +85,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 ## Editor de grupos
 
-The editor for groups is located in the Toolbox of 4D.
+El editor de grupos se encuentra en la caja de herramientas de 4D.
 
 ### Configurar grupos
 

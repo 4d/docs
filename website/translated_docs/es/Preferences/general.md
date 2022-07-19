@@ -31,7 +31,7 @@ You can benefit from this feature in the following environments (with 4D 64-bit 
 *   Ventana del editor de métodos
 *   Ventana del editor de formularios
 
-All windows from these editors can be put in tab form:
+Todas las ventanas de estos editores se pueden poner en forma de pestaña:
 
 ![](assets/en/Preferences/general2.png)
 
@@ -49,7 +49,7 @@ Hay tres opciones disponibles:
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
 *   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
-### Exit Design when going to Application Environment
+### Salir del modo Diseño al ir al modo Aplicación
 
 If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
 
@@ -58,7 +58,7 @@ If this option is checked, when the user switches to the Application environment
 
 If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
 
-*   **Database...**
+*   **Base de datos...**
 *   **Base de datos a partir de una definición de estructura...**
 
 ![](assets/en/Preferences/general5.png)

@@ -14,14 +14,14 @@ En macOS, las listas desplegables también se denominan a veces "menú emergente
 
 You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
-| Tipo                                   | Funcionalidades                                  | Tipo de expresión | Tipos de datos                       | Definición JSON                                                                                                                                               |
-| -------------------------------------- | ------------------------------------------------ | ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objeto                                 | Built upon a collection                          | Objeto            | Numeric, Text, Date o Time           | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
-| Array                                  | Basado en un array                               | Array             | Numeric, Text, Date o Time           | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
-| Lista de selección guardada como valor | Built upon a choice list (standard)              | Lista             | Valor del elemento seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Choice list saved as reference         | Built upon a choice list. Item position is saved | Lista             | Referencia del elemento seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Lista de selección jerárquica          | Can display hierarchical contents                | Lista             | List reference                       | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Acción estándar                        | Automatically built by the action                | *any*             | *toda referencia de lista excepto*   | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Tipo                                   | Funcionalidades                                                | Tipo de expresión | Tipos de datos                       | Definición JSON                                                                                                                                               |
+| -------------------------------------- | -------------------------------------------------------------- | ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objeto                                 | Built upon a collection                                        | Objeto            | Numeric, Text, Date o Time           | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
+| Array                                  | Basado en un array                                             | Array             | Numeric, Text, Date o Time           | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
+| Lista de selección guardada como valor | Built upon a choice list (standard)                            | Lista             | Valor del elemento seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Choice list saved as reference         | Built upon a choice list. La posición del elemento es guardada | Lista             | Referencia del elemento seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Lista de selección jerárquica          | Puede mostrar contenido jerárquico                             | Lista             | List reference                       | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Acción estándar                        | Creado automáticamente por la acción                           | *any*             | *toda referencia de lista excepto*   | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 
 
@@ -146,7 +146,7 @@ When you have associated a drop-down list with a choice list and with a field or
 
 ### Uso de una lista de selección jerárquica
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Here is an example of a hierarchical drop-down list:
+A hierarchical drop-down list has a sublist associated with each item in the list. Este es un ejemplo de lista desplegable jerárquica:
 
 ![](assets/en/FormObjects/popupDropdown_hierar.png)
 
@@ -159,7 +159,7 @@ You manage hierarchical drop-down lists using the **Hierarchical Lists** command
 
 ### Utilizar una acción estándar
 
-You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). This feature is supported in the following contexts:
+You can build automatically a drop-down list using a [standard action](properties_Action.md#standard-action). Esta funcionalidad es soportada en los siguientes contextos:
 
 - Uso de la acción estándar `gotoPage`. In this case, 4D will automatically display the [page of the form](FormEditor/forms.md#form-pages) that corresponds to the number of the item that is selected. For example, if the user selects the 3rd item, 4D will display the third page of the current form (if it exists). At runtime, by default the drop-down list displays the page numbers (1, 2...).
 

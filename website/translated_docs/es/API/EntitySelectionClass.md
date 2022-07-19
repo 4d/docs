@@ -81,8 +81,8 @@ En el parámetro opcional *settings*, puede pasar un objeto que contenga la sigu
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
 $employees:=Create entity selection([Employee])
-// The $employees entity selection now contains a set of reference
-// on all entities related to the Employee dataclass
+// La entity selection $employees ahora contiene un conjunto de referencias
+// en todas las entidades relacionadas con la clase de datos Employee
 ```
 
 #### Ver también
@@ -769,33 +769,33 @@ Dada la siguiente tabla y relación:
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames is a collection of Strings
+  //$firstnames es una colección de cadenas
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  //$addresses is a collection of entities related to dataclass Address
-  //Null values for address are extracted
+  //$addresses es una colección de entidades relacionadas con la dataclass Address
+  //Se extraen los valores null de Address
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type
-  //"to" property content is entity type (Address dataclass)
+  //$mailing es una colección de objetos con las propiedades "who" y "to"
+  //El contenido de la propiedad "who" es de tipo Cadena
+  //El contenido de la propiedad "to" es de tipo entity (dataclass Address)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type
-  //"city" property content is String type
+  //$mailing es una colección de objetos con las propiedades "who" y "city"
+  //El contenido de la propiedad "who" es de tipo Cadena
+  //El contenido de la propiedad "city" es de tipo Cadena
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers is a collection of objects with properties "where" and "who"
-  //"where" property content is String
-  //"who" property content is an entity selection (Teachers dataclass)
+  //$teachers es una colección de objetos con las propiedades "where" y "who"
+  //El contenido de la propiedad "where" es de tipo Cadena
+  //El contenido de la propiedad "who" es una entity selection (dataclass Teachers)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers is a collection of entity selections
+  //$teachers es una colección de entity selections
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -1241,9 +1241,9 @@ Si la entity selection inicial y el parámetro no están relacionados con la mis
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@")
-  // The $employees entity selection contains the entity with primary key 710 and other entities
-  // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
+ $employees:=ds.Employee.query("lastName = :1";"H@") 
+  // la entity selection $employees contiene la entidad con llave primaria 710 y otras entidades
+  // por ejemplo. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
  $employee:=ds.Employee.get(710) // Devuelve "Sherlock Holmes"
 

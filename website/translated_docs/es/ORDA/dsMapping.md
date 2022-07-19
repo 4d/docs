@@ -10,7 +10,7 @@ La tecnología ORDA se basa en un mapeo automático de una estructura 4D subyace
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
-*   Tables are mapped to dataclasses.
+*   Las tablas correspondientes a las dataclasses.
 *   Los campos corresponden a los atributos de almacenamiento.
 *   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
@@ -60,9 +60,9 @@ However, the updated ORDA model layer is not automatically available in the foll
 
 ### Datastore
 
-The datastore is the interface object to a database. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
+El datastore es el objeto de interfaz de una base de datos. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
 
-- The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
+- The model contains and describes all the dataclasses that make up the datastore. Es independiente de la propia base de datos subyacente.
 - Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
 
 When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
@@ -161,7 +161,7 @@ For example, consider the following partial database structure and the relation 
 All storage attributes will be automatically available:
 
 *   in the Project dataclass: "ID", "name", and "companyID"
-*   in the Company dataclass: "ID", "name", and "discount"
+*   en la dataclasss Company: "ID", "name" y "discount"
 
 In addition, the following relation attributes will also be automatically available:
 
@@ -184,7 +184,7 @@ The purpose of the entity is to manage data (create, update, delete). When an en
 The entity object itself cannot be copied as an object:
 
 ```4d
- $myentity:=OB Copy(ds.Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds.Employee.get(1)) //devuelve null
 ```
 
 Sin embargo, las propiedades de la entidad son enumerables:

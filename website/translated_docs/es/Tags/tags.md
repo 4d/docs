@@ -63,14 +63,14 @@ This powerful principle meets most needs related to text transformation. Note, h
 
 To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the `Current time` command, enter `Current time: C178`.
 
-### Using the "." as decimal separator
+### Utilizando el "." como separador decimal
 
 4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Los parámetros regionales se ignoran. This feature facilitates code maintenance and compatibility between 4D languages and versions.
 
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### Sintaxis: `<!--#4DBASE folderPath-->`
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
@@ -132,7 +132,7 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ## 4DCODE
 
-#### Syntax: `<!--#4DCODE codeLines-->`
+#### Sintaxis: `<!--#4DCODE codeLines-->`
 
 The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
 
@@ -161,7 +161,7 @@ End if
 ```
 
 
-Here are the 4DCODE tag features:
+Aquí están las características de la etiqueta 4DCODE:
 
 - The `TRACE` command is supported and activates the 4D debugger, thus allowing you to debug your template code.
 - Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.
@@ -314,8 +314,8 @@ The properties of the object are processed according to their creation order. Du
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
-#### Alternative syntax: `$4DEVAL(expression)`
+#### Sintaxis: `<!--#4DEVAL expression-->`
+#### Sintaxis alternativa: `$4DEVAL(expression)`
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
@@ -335,8 +335,8 @@ In case of an error during interpretation, the text inserted will be in the form
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
-#### Alternative syntax: `$4DHTML(expression)`
+#### Sintaxis: `<!--#4DHTML expression-->`
+#### Sintaxis alternativa: `$4DHTML(expression)`
 
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
@@ -353,7 +353,7 @@ In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar
 > For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](#prevention-of-malicious-code-insertion).
 
 
-## 4DIF, 4DELSE, 4DELSEIF and 4DENDIF
+## 4DIF, 4DELSE, 4DELSEIF y 4DENDIF
 
 #### Syntax: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
@@ -498,7 +498,7 @@ El código siguiente:
 
 Esta sintaxis hace un bucle para cada elemento del array. The array current item is increased when each code portion is repeated.
 
-> This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
+> Esta sintaxis no se puede utilizar con arrays de dos dimensiones. In this case, it is better to combine a method with nested loops.
 
 The following code example:
 
@@ -547,7 +547,7 @@ The following code example:
  End if
 ```
 
-The `my_method` method can be as follows:
+El método `my_method` puede ser el siguiente:
 
 ```4d
  C_LONGINT($1)
@@ -579,7 +579,7 @@ Por ejemplo, el siguiente código:
 <!--#4DENDLOOP-->
 ```
 
-...produces the following result:
+...produce el siguiente resultado:
 
 ```
 0
@@ -648,8 +648,8 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 
 ## 4DTEXT
 
-#### Syntax: `<!--#4DTEXT expression-->`
-#### Alternative syntax: `$4DTEXT(expression)`
+#### Sintaxis: `<!--#4DTEXT expression-->`
+#### Sintaxis alternativa: `$4DTEXT(expression)`
 
 
 The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. Por ejemplo, si se escribe (en una página HTML):

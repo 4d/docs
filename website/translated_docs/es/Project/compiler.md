@@ -186,7 +186,7 @@ You can rename each of these methods in the corresponding areas, but they will a
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. It is divided into several parts:
+If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 
@@ -219,7 +219,7 @@ Esta lista está dividida en tres columnas:
 
 A complete list of your database and project methods is given at the end of the file with:
 
-- their type (procedure or function returning a value)
+- su tipo (procedimiento o función que devuelve un valor)
 - the data types of their parameters and the returned result
 - el número de llamadas
 - la propiedad Thread Safe o Thread Unsafe.
@@ -256,7 +256,7 @@ Un archivo de error puede contener tres tipos de mensajes:
     - The data type of a process variable could not be determined.
     - Dos tipos diferentes de objetos tienen el mismo nombre. General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. En la ventana del compilador, las advertencias aparecen en itálica. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
 
 

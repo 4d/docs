@@ -33,7 +33,7 @@ ds.Company.city // devuelve el nombre de la ciudad
 
 > ORDA es sensible a las mayúsculas y minúsculas. `ds.company.city` will not refer to the ds. Company.city attribute.
 
-You have also noticed the extra `hires` property in the ds. Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
+You have also noticed the extra `hires` property in the ds. Company dataclass. No corresponde a un campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
 ![](assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
 
@@ -43,7 +43,7 @@ It means that, whenever you need to access the list of employees working for a c
 ds.Company.hires //devuelve la lista de empleados
 ```
 
-Pero no vaya tan rápido. Let's see now how to record data in ORDA dataclasses.
+Pero no vaya tan rápido. Veamos ahora cómo registrar datos en las clases de datos ORDA.
 
 
 ## Añadir datos
@@ -123,7 +123,7 @@ Deleted user names no longer appear in the Users editor. Note that the IDs for d
 
 ## Editor de grupos
 
-The editor for groups is located in the Toolbox of 4D.
+El editor de grupos se encuentra en la caja de herramientas de 4D.
 
 ### Configurar grupos
 

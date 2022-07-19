@@ -20,10 +20,10 @@ Hay diferentes maneras de configurar los parámetros del servidor web 4D, en fun
 
 ## Caché
 
-| Puede ajustarse con           | Nombre                                                 | Comentarios |
-| ----------------------------- | ------------------------------------------------------ | ----------- |
-| Caja de diálogo de parámetros | Página de configuración/Utilización de la caché Web 4D |             |
-| Caja de diálogo de parámetros | Configuration page/Page Cache Size                     |             |
+| Puede ajustarse con           | Nombre                                                    | Comentarios |
+| ----------------------------- | --------------------------------------------------------- | ----------- |
+| Caja de diálogo de parámetros | Página de configuración/Utilización de la caché Web 4D    |             |
+| Caja de diálogo de parámetros | Página de configuración/Tamaño de la caché de las páginas |             |
 
 Activa y configura la caché de las páginas web.
 
@@ -145,7 +145,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | `WEB SET HOME PAGE`           |                                                            | Puede ser diferente para cada proceso web |
 | Caja de diálogo de parámetros | Página Configuración/Página de bienvenida por defecto      |                                           |
 
-Designate a default home page for the web server. Esta página puede ser estática o [semi-dynamic].
+Designa una página de inicio por defecto para el servidor web. Esta página puede ser estática o [semi-dynamic].
 
 By default, when the web server is launched for the first time, 4D creates a home page named "index.html" and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:
 
@@ -159,7 +159,7 @@ You can designate another default home page by entering its pathname.
 
 For example, if you want the default home page to be "MyHome.htm", and it is located in the "Web" folder (itself located in the default HTML root folder), use "Web/MyHome.htm".
 
-If you do not specify any default home page, the `On Web Connection` database method is called. It is up to you to process the request procedurally.
+If you do not specify any default home page, the `On Web Connection` database method is called. Le corresponde a usted gestionar la petición procesalmente.
 
 ## Activar CORS
 
@@ -399,11 +399,11 @@ This setting allows you to select the format of this file. Valores disponibles:
 | ----------------------------- | ------------------------------------------------------------------------ | ----------- |
 | objeto webServer              | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |             |
 | `WEB SET OPTION`              | `Web max concurrent processes`                                           |             |
-| Caja de diálogo de parámetros | Options (I) page/Maximum Concurrent Web Processes                        |             |
+| Caja de diálogo de parámetros | Página Opciones (I)/Máximo de Procesos Web simultáneos                   |             |
 
 Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
-Por defecto, el valor es 100. You can set the number anywhere between 10 and 32000.
+Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 
 
 ## Tamaño máximo de la petición
@@ -483,7 +483,7 @@ True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forwa
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
 
-To do so, put the ROBOTS. TXT file at the server's root. This file must be structured in the following manner:
+To do so, put the ROBOTS. TXT file at the server's root. Este archivo debe estar estructurado de la siguiente manera:
 
 ```4d
    User-Agent: <name>
@@ -596,9 +596,9 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 ## Utilizar los procesos apropiativos
 
-| Puede ajustarse con           | Nombre                                            | Comentarios |
-| ----------------------------- | ------------------------------------------------- | ----------- |
-| Caja de diálogo de parámetros | Options (I) page/Maximum Concurrent Web Processes |             |
+| Puede ajustarse con           | Nombre                                                 | Comentarios |
+| ----------------------------- | ------------------------------------------------------ | ----------- |
+| Caja de diálogo de parámetros | Página Opciones (I)/Máximo de Procesos Web simultáneos |             |
 
 This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
@@ -632,7 +632,7 @@ In return, you must make sure in this case to systematically initialize the vari
 
 
 
-#### Send Extended Characters Directly
+#### Enviar directamente los caracteres extendidos
 
 When this option is checked, the web server sends extended characters “as is” in semi-dynamic pages, without converting them into HTML entities. This option has shown a speed increase on most foreign operating systems (especially the Japanese system).
 

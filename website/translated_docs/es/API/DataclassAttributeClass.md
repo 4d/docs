@@ -226,7 +226,7 @@ La propiedad `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->devuelve l
 
 Dada la siguiente tabla y relación:
 
-![](/assets/en/API/dataclassAttribute3.png)
+![](assets/en/API/dataclassAttribute3.png)
 
 ```4d
  var $attKind : Text
@@ -234,6 +234,7 @@ Dada la siguiente tabla y relación:
  $attKind:=ds.Employee.manager.kind //$attKind="relatedEntity"
  $attKind:=ds.Employee.directReports.kind //$attKind="relatedEntities"
 ```
+
 
 
 <!-- END REF -->

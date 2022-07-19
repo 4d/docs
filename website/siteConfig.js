@@ -61,8 +61,10 @@ const siteConfig = {
   users,
 
   algolia: {
-    apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
-    indexName: '4d',
+    //apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+    apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
+	appId: 'OJ04C0M3CU',
+	indexName: '4d',
     algoliaOptions: {
       facetFilters: ['language:LANGUAGE', 'version:VERSION'],
     }, // Optional, if provided by Algolia
