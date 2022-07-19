@@ -105,7 +105,7 @@
 <blockquote>
 <blockquote>
 <blockquote>
-<p>It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.</p>
+<p>It is not possible to combine different list box types in the same list box object. La fuente de datos se define cuando se crea el list box. It is then no longer possible to modify it by programming.</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -252,7 +252,7 @@
 <p>Los List box pueden contener &quot;pies de página&quot; no editables, que muestren información adicional. En el caso de los datos mostrados en forma de tabla, los pies de página suelen utilizarse para mostrar cálculos como los totales o los promedios.</p>
 <p>Cuando se muestran los pies, puede hacer clic para seleccionar un pie de list box en el editor de formularios haciendo clic en el objeto:</p>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_footers.png" alt=""></p>
-<p>Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. You can also access specific properties for footers. In particular, you can insert a <a href="/docs/18/es/FormObjects/propertiesObject.html#variable-calculation">custom or automatic calculation</a>.</p>
+<p>Para cada pie de columna de list box, puede definir propiedades de texto estándar: en este caso, estas propiedades tienen prioridad sobre las de la columna o del list box. También puede acceder a propiedades específicas para los pies de página. In particular, you can insert a <a href="/docs/18/es/FormObjects/propertiesObject.html#variable-calculation">custom or automatic calculation</a>.</p>
 <p>At runtime, events that occur in a footer are generated in the <a href="#object-methods">list box column object method</a>.</p>
 <p>When the <code>OBJECT SET VISIBLE</code> command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. For example, <code>OBJECT SET VISIBLE(*;&quot;footer3&quot;;False)</code> will hide all footers in the list box object to which <em>footer3</em> belongs and not simply this footer.</p>
 <h3><a class="anchor" aria-hidden="true" id="propiedades-específicas-de-los-pies"></a><a href="#propiedades-específicas-de-los-pies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propiedades específicas de los pies</h3>
@@ -367,7 +367,7 @@
 <p>For an array type list box, you need to update the <a href="/docs/18/es/FormObjects/propertiesBackgroundAndBorder.html#row-background-color-array">Row Background Color Array</a> by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:</p>
 <pre><code class="hljs">    <span class="hljs-string">"rowFillSource"</span>: <span class="hljs-string">"_ListboxBackground"</span>,
 </code></pre>
-<p>In the object method of the list box, you can write:</p>
+<p>En el método objeto del list box, puede escribir:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(Form event=On Selection Change)
        <span class="hljs-variable">$n</span>:=<span class="hljs-function">Size of array</span>(LB_Arrays)
@@ -504,7 +504,7 @@
 <h4><a class="anchor" aria-hidden="true" id="propiedades-del-list-box-jerárquico"></a><a href="#propiedades-del-list-box-jerárquico" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propiedades del List Box jerárquico</h4>
 <p>This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered <a href="/docs/18/es/FormObjects/propertiesObject.html#hierarchical-list-box">when the <em>dataSource</em> property value is an array</a>, i.e. a collection.</p>
 <p>Additional options (<strong>Variable 1...10</strong>) are available when the <em>Hierarchical List Box</em> option is selected, corresponding to each <em>dataSource</em> array to use as break column. Each time a value is entered in a field, a new row is added. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.</p>
-<p>The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). This first variable is always visible and enterable. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. A maximum of ten hierarchical levels can be specified. If you remove a value, the whole hierarchy moves up a level.</p>
+<p>The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. If you remove a value, the whole hierarchy moves up a level.</p>
 <p>The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:</p>
 <p><img src="/docs/18/assets/en/FormObjects/property_hierarchicalListBox.png" alt=""></p>
 <p>This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped.</p>
@@ -703,7 +703,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="value"></a><a href="#value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>value</h4>
-<p>Los valores de las celdas se almacenan en el atributo &quot;valor&quot;. This attribute is used for input as well as output. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).</p>
+<p>Los valores de las celdas se almacenan en el atributo &quot;valor&quot;. Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> ARRAY OBJECT</span>(obColumn;<span class="hljs-number">0</span>) <span class="hljs-comment">//array columna </span>
 <span class="hljs-function"> C_OBJECT</span>(<span class="hljs-variable">$ob1</span>)
  <span class="hljs-variable">$entry</span>:=<span class="hljs-string">"Hello world!"</span>
@@ -767,7 +767,7 @@
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png" alt=""></p>
 <blockquote>
-<p>Null values are supported and result in an empty cell.</p>
+<p>Los valores null se soportan y dan como resultado una celda vacía.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="min-y-max"></a><a href="#min-y-max" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>min y max</h4>
 <p>Cuando el &quot;valueType&quot; es &quot;real&quot; o &quot;integer&quot;, el objeto también acepta atributos min y max con valores apropiados (los valores deben ser del mismo tipo que el valueType).</p>
@@ -974,7 +974,7 @@
 <li>en un área de entrada de texto</li>
 <li>en una lista desplegable</li>
 <li>en un área combo box</li>
-<li>in a unit button (switch from value x to value x+1)</li>
+<li>en un botón de unidad (cambiar del valor x al valor x+1)</li>
 <li>en una casilla de selección (cambia entre marcado/desmarcado)</li>
 </ul></li>
 <li><strong>On Clicked</strong>: When the user clicks on a button installed using the &quot;event&quot; <em>valueType</em> attribute, an <code>On Clicked</code> event will be generated. Este evento es gestionado por el programador.</li>
@@ -993,8 +993,8 @@
                 });
               </script><script>
               var search = docsearch({
-                
-                apiKey: '2f94e2c8270ac2b1db0c23691592fb10',
+                appId: 'OJ04C0M3CU',
+                apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
                 indexName: '4d',
                 inputSelector: '#search_input_react',
                 algoliaOptions: {"facetFilters":["language:es","version:18"]}
