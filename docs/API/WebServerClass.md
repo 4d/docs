@@ -446,7 +446,7 @@ The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- E
 <!-- REF #WebServerClass.keepSession.Syntax -->
 **.keepSession** : Boolean<!-- END REF -->
 
-<!-- REF #WebServerClass.keepSession.Summary -->True if legacy sessions are enabled in the web server, False otherwise<!-- END REF -->.
+The <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
 
 #### See also
 
@@ -587,7 +587,7 @@ The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folde
 <!-- REF #WebServerClass.scalableSession.Syntax -->
 **.scalableSession** : Boolean<!-- END REF -->
 
-<!-- REF #WebServerClass.scalableSession.Summary -->True if scalable sessions are used in the web server, and False otherwise<!-- END REF -->.
+The <!-- REF #WebServerClass.scalableSession.Summary -->True if scalable sessions are used in the web server, and False otherwise<!-- END REF -->.
 
 ##### See also
 
@@ -742,12 +742,10 @@ The function returns an object describing the Web server launch status. This obj
 **.stop()** <!-- END REF -->
 
 <!-- REF #WebServerClass.stop().Params -->
-
 |Parameter|Type||Description|
 |---|---|----|---|
 ||||Does not require any parameters|
-
- <!-- END REF -->
+<!-- END REF -->
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
