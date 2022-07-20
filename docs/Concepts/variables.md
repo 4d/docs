@@ -214,7 +214,7 @@ Interprocess variables are available throughout the project and are shared acros
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.  
 
-The name of an interprocess variable always begins with the symbols (<>) — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
 
