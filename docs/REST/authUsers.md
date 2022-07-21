@@ -23,7 +23,7 @@ In this example, the user enters their email and password in an html page that r
 
 The HTML login page:
 
-![alt-text](assets/en/REST/login.png)
+![alt-text](../assets/en/REST/login.png)
 
 ```html
 <html><body bgcolor="#ffffff">

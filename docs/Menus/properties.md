@@ -12,7 +12,7 @@ The **Title** property contains the label of a menu or menu item as it will be d
 In the Menu editor, you can directly enter the label as "hard coded". Or, you can enter a reference for a variable or an XLIFF element, which will facilitate the maintenance and translation of applications. You can use the following types of references:
 
 - An XLIFF resource reference of the type :xliff:MyLabel. For more information about XLIFF references, refer to *XLIFF Architecture* section in *4D Design Reference*.
-- An interprocess variable name followed by a number, for example: :<>vlang,3. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the <>vlang variable corresponds to the *id* attribute of the *group* element. The second value (3 in this example) designates the *id* attribute of the *trans-unit* element.
+- An interprocess variable name followed by a number, for example: `:<>vlang,3`. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the `<>vlang` variable corresponds to the *id* attribute of the *group* element. The second value (3 in this example) designates the *id* attribute of the *trans-unit* element.
 
 Using the 4D language, you set the title property through the *itemText* parameter of the `APPEND MENU ITEM`, `INSERT MENU ITEM`, and `SET MENU ITEM` commands.
 

@@ -15,7 +15,7 @@ To start using the REST features, you need to start and configure the 4D REST se
 
 For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the "Web/REST resource" page of the structure settings in order for REST requests to be processed.
 
-![alt-text](assets/en/REST/Settings.png)
+![alt-text](../assets/en/REST/Settings.png)
 
 > REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
 
@@ -38,7 +38,7 @@ You can configuring REST accesses with one of the following means:
 
 The **Read/Write** menu in the "Web/REST resource" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
 
-By default, the menu displays **\<Anyone>**, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+By default, the menu displays `\<Anyone>`, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
 
 > In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Structure Settings.
 
@@ -73,7 +73,7 @@ To remove the REST exposure for a table:
 1. Display the Table Inspector in the Structure editor and select the table you want to modify.
 
 2. Uncheck the **Expose as REST resource** option:
- ![alt-text](assets/en/REST/table.png)
+ ![alt-text](../assets/en/REST/table.png)
 Do this for each table whose exposure needs to be modified.
 
 ### Exposing fields
@@ -87,7 +87,7 @@ To remove the REST exposure for a field:
 1. Display the Field Inspector in the Structure editor and select the field you want to modify.
 
 2. Uncheck the **Expose as REST resource** for the field.
- ![alt-text](assets/en/REST/field.png)
+ ![alt-text](../assets/en/REST/field.png)
 Repeat this for each field whose exposure needs to be modified.
 
 > In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.

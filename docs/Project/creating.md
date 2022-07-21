@@ -73,7 +73,7 @@ You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application
 - double-click or drag and drop the `.4DLink` file onto the 4D application
 - go to **File** > **Open Recent Projects** and select a project
 
-![open-recent-projects](assets/en/Project/4Dlinkfiles.png)
+![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
 
 A .4DLink file of "remote project" type can be copied and used on several machines.
 

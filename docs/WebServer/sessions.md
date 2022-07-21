@@ -19,7 +19,7 @@ Web server user sessions allow to:
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
 - Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting):
-![alt-text](assets/en/WebServer/settingsSession.png)
+![alt-text](../assets/en/WebServer/settingsSession.png)
 
 This option is selected by default in new projects. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
@@ -48,7 +48,7 @@ When [sessions are enabled](#enabling-sessions), automatic mechanisms are implem
 
 The current `Session` object can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
 
-![alt-text](assets/en/WebServer/schemaSession.png)
+![alt-text](../assets/en/WebServer/schemaSession.png)
 
 > Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
@@ -103,7 +103,7 @@ End if
 
 In a CRM application, each salesperson manages their own client portfolio. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
 
-![alt-text](assets/en/WebServer/exampleSession.png)
+![alt-text](../assets/en/WebServer/exampleSession.png)
 
 We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
 
@@ -130,7 +130,7 @@ http://localhost:8044/authenticate.shtml
 </html>
 ```
 
-![alt-text](assets/en/WebServer/authenticate.png)
+![alt-text](../assets/en/WebServer/authenticate.png)
 
 3. The authenticate project method looks for the *userID* person and validates the password against the hashed value already stored in the *SalesPersons* table:
 
