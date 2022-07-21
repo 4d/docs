@@ -88,7 +88,7 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dataSource|string, or string array|<li>4D variable, field name, or any expression. <li>Empty string for [dynamic variables](#dynamic-variables). <li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]|
+|dataSource|string, or string array|<li>4D variable, field name, or any expression. </li><li>Empty string for [dynamic variables](#dynamic-variables). </li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li>|
 
 ### Expressions
 

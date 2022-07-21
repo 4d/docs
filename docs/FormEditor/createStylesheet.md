@@ -184,7 +184,7 @@ text[text|=Hello]
 
 Media queries are used to apply color schemes to an application.  
 
-A media query is composed of a media feature and a value (e.g., \<media feature>:\<value> ).
+A media query is composed of a media feature and a value (e.g., `\<media feature>:\<value>` ).
 
 Available media features:
 

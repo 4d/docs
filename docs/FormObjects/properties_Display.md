@@ -381,7 +381,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|controlType|string|<li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup"|
+|controlType|string|<li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li>|
 
 #### Objects Supported
 

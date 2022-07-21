@@ -886,7 +886,7 @@ ARRAY OBJECT(obColumn;0) //column array
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
 * "text": for a text value
-* "real": for a numeric value that can include separators like a \<space>, <.>, or <,>
+* "real": for a numeric value that can include separators like a `\<space>`, <.>, or <,>
 * "integer": for an integer value
 * "boolean": for a True/False value
 * "color": to define a background color
