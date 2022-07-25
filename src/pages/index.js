@@ -93,7 +93,7 @@ function Updates() {
   return (
     <div className="container text--right">
       <div className="doc-updates">
-        <Link to={useBaseUrl('/updates')}>
+        <Link to="/updates">
           <em><Translate>Documentation updates</Translate></em>
         </Link></div>
     </div>
