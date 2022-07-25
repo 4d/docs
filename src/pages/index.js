@@ -89,12 +89,24 @@ function TilesContainer() {
   );
 }
 
+function Updates() {
+  return (
+    <div className="container text--right">
+      <div className="doc-updates">
+        <Link to={useBaseUrl('/updates')}>
+          <em><Translate>Documentation updates</Translate></em>
+        </Link></div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <Layout>
       <main>
         <HeroBanner />
         <TilesContainer />
+        <Updates />
       </main>
     </Layout>
   );
