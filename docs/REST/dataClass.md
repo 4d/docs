@@ -22,7 +22,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`) 
+Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
 
 ### Description
 

@@ -81,7 +81,6 @@ function TilesContainer() {
           <Tile
             tile={tile}
             key={idx}
-            className={clsx('col--4', idx === 0 && 'col--offset-2')}
           />
         ))}
       </div>

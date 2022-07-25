@@ -1,224 +1,99 @@
 module.exports =
 {
-	docsSidebar: {
-		"Getting Started": [
-			"GettingStarted/installation"
-		],
-		"Project Management": [
-			"Project/overview",
-			"Project/creating",
-			"Project/architecture",
-			"Project/documentation",
-			"Project/compiler"
-		],
-		"4D Language Concepts": [
-			"Concepts/about",
-			"Concepts/quick-tour",
-			{
-				"type": "category",
-				"label": "Data Types",
-				"items": [
-					"Concepts/data-types",
-					"Concepts/blob",
-					"Concepts/boolean",
-					"Concepts/collection",
-					"Concepts/date",
-					"Concepts/null-undefined",
-					"Concepts/number",
-					"Concepts/object",
-					"Concepts/picture",
-					"Concepts/pointer",
-					"Concepts/string",
-					"Concepts/time",
-					"Concepts/variant"
-				]
-			},
-			"Concepts/variables",
-			"Concepts/arrays",
-			"Concepts/methods",
-			"Concepts/parameters",
-			"Concepts/shared",
-			"Concepts/classes",
-			{
-				"type": "category",
-				"label": "Control Flow",
-				"items": [
-					"Concepts/control-flow",
-					"Concepts/branching",
-					"Concepts/looping"
-				]
-			},
-			"Tags/tags",
-			"Concepts/error-handling",
-			"Concepts/interpreted-compiled",
-			"Concepts/components",
-			"Concepts/plug-ins",
-			"Concepts/identifiers"
-		],
-		"ORDA": [
-			"ORDA/overview",
-			"ORDA/dsmapping",
-			"ORDA/ordaClasses",
-			"ORDA/entities",
-			"ORDA/datastores",
-			"ORDA/glossary"
-		],
-		"Class API Reference": [
-			"API/overview",
-			"API/ClassClass",
-			"API/CollectionClass",
-			"API/CryptoKeyClass",
-			"API/DataClassClass",
-			"API/DataClassAttributeClass",
-			"API/DataStoreClass",
-			"API/EmailObjectClass",
-			"API/EntityClass",
-			"API/EntitySelectionClass",
-			"API/FileClass",
-			"API/FolderClass",
-			"API/FunctionClass",
-			"API/IMAPTransporterClass",
-			"API/MailAttachmentClass",
-			"API/POP3TransporterClass",
-			"API/SessionClass",
-			"API/SignalClass",
-			"API/SMTPTransporterClass",
-			"API/WebServerClass",
-			"API/ZipArchiveClass",
-			"API/ZipFileClass",
-			"API/ZipFolderClass"
-		],
-		"Preferences": [
-			"Preferences/overview",
-			"Preferences/general",
-			"Preferences/structure",
-			"Preferences/forms",
-			"Preferences/methods",
-			"Preferences/shortcuts"
-		],
-		"Administration": [
-			"Admin/webAdmin",
-			"Admin/dataExplorer",
-			"Admin/licenses",
-			"Admin/tls",
-			"Admin/cli",
-			"Admin/debugLogFiles"
-		],
-		"Access Rights": [
-			"Users/overview",
-			"Users/editing"
-		],
-		"MSC": [
-			"MSC/overview",
-			"MSC/information",
-			"MSC/analysis",
-			"MSC/verify",
-			"MSC/backup",
-			"MSC/compact",
-			"MSC/rollback",
-			"MSC/restore",
-			"MSC/repair",
-			"MSC/encrypt"
-		],
-		"Backup and Restore": [
-			"Backup/overview",
-			"Backup/backup",
-			"Backup/settings",
-			"Backup/log",
-			"Backup/restore"
-		],
-		"Web Server": [
-			"WebServer/webServer",
+	"docs": {
+		"Getting Started": ["GettingStarted/installation"],
+		"Project Management": ["Project/overview", "Project/creating", "Project/architecture", "Project/documentation", "Project/compiler"],
+		"4D Language Concepts":
+			["Concepts/about", "Concepts/quick-tour",
+				{
+					"type": "category",
+					"label": "Data Types",
+					"items": [
+						"Concepts/data-types", "Concepts/blob", "Concepts/boolean", "Concepts/collection", "Concepts/date", "Concepts/null-undefined",
+						"Concepts/number", "Concepts/object", "Concepts/picture", "Concepts/pointer", "Concepts/string", "Concepts/time", "Concepts/variant"
+					]
+				},
+				"Concepts/variables", "Concepts/arrays", "Concepts/methods", "Concepts/parameters", "Concepts/shared", "Concepts/classes",
+				{
+					"type": "category",
+					"label": "Control Flow",
+					"items": [
+						"Concepts/control-flow", "Concepts/branching", "Concepts/looping"
+					]
+				},
+				"Tags/tags", "Concepts/error-handling", "Concepts/interpreted-compiled", "Concepts/components", "Concepts/plug-ins", "Concepts/identifiers"
+			],
+
+		"ORDA": ["ORDA/overview", "ORDA/dsmapping", "ORDA/ordaClasses", "ORDA/entities", "ORDA/datastores", "ORDA/glossary"],
+		"Class API Reference":
+			[
+				"API/overview",
+				"API/ClassClass",
+				"API/CollectionClass",
+				"API/CryptoKeyClass",
+				"API/DataClassClass",
+				"API/DataClassAttributeClass",
+				"API/DataStoreClass",
+				"API/EmailObjectClass",
+				"API/EntityClass",
+				"API/EntitySelectionClass",
+				"API/FileClass",
+				"API/FolderClass",
+				"API/FunctionClass",
+				"API/IMAPTransporterClass",
+				"API/MailAttachmentClass",
+				"API/POP3TransporterClass",
+				"API/SessionClass",
+				"API/SignalClass",
+				"API/SMTPTransporterClass",
+				"API/WebServerClass",
+				"API/ZipArchiveClass",
+				"API/ZipFileClass",
+				"API/ZipFolderClass"
+			],
+		"Preferences": ["Preferences/overview", "Preferences/general", "Preferences/structure", "Preferences/forms", "Preferences/methods", "Preferences/shortcuts"],
+		"Administration": ["Admin/webAdmin", "Admin/dataExplorer", "Admin/licenses", "Admin/tls", "Admin/cli", "Admin/debugLogFiles"],
+		"Access Rights": ["Users/overview", "Users/editing"],
+		"MSC": ["MSC/overview", "MSC/information", "MSC/analysis", "MSC/verify", "MSC/backup", "MSC/compact", "MSC/rollback", "MSC/restore", "MSC/repair", "MSC/encrypt"],
+		"Backup and Restore": ["Backup/overview", "Backup/backup", "Backup/settings", "Backup/log", "Backup/restore"],
+		"Web Server": ["WebServer/webServer",
 			"WebServer/webServerConfig",
 			"WebServer/webServerAdmin",
-			"WebServer/webServerObject"
-		],
-		"Web Development": [
-			"WebServer/gettingStarted",
+			"WebServer/webServerObject"],
+		"Web Development": ["WebServer/gettingStarted",
 			"WebServer/templates",
 			"WebServer/httpRequests",
 			"WebServer/allowProject",
 			"WebServer/errorPages",
 			"WebServer/authentication",
 			"WebServer/sessions",
-			"WebServer/preemptiveWeb"
+			"WebServer/preemptiveWeb"],
+		"REST Server": [{
+			"type": "category",
+			"label": "Guides",
+			"items": [
+				"REST/gettingStarted", "REST/configuration", "REST/authUsers", "REST/genInfo", "REST/manData", "REST/classFunctions", "REST/REST_requests"
+			]
+		},
+		{
+			"type": "category",
+			"label": "API (general)",
+			"items": [
+				"REST/catalog", "REST/directory", "REST/info", "REST/upload"
+			]
+		},
+		{
+			"type": "category",
+			"label": "API (dataClass)",
+			"items": [
+				"REST/dataClass", "REST/asArray", "REST/atomic_$atonce", "REST/attributes", "REST/binary", "REST/compute", "REST/distinct", "REST/entityset", "REST/expand", "REST/filter", "REST/imageformat", "REST/lock", "REST/method", "REST/orderby", "REST/querypath", "REST/queryplan", "REST/savedfilter", "REST/savedorderby", "REST/skip", "REST/timeout", "REST/top_$limit", "REST/version"
+			]
+		}
 		],
-		"REST Server": [
-			{
-				"type": "category",
-				"label": "Guides",
-				"items": [
-					"REST/gettingStarted",
-					"REST/configuration",
-					"REST/authUsers",
-					"REST/genInfo",
-					"REST/manData",
-					"REST/classFunctions",
-					"REST/REST_requests"
-				]
-			},
-			{
-				"type": "category",
-				"label": "API (general)",
-				"items": [
-					"REST/catalog",
-					"REST/directory",
-					"REST/info",
-					"REST/upload"
-				]
-			},
-			{
-				"type": "category",
-				"label": "API (dataClass)",
-				"items": [
-					"REST/dataClass",
-					"REST/asArray",
-					"REST/atomic_$atonce",
-					"REST/attributes",
-					"REST/binary",
-					"REST/compute",
-					"REST/distinct",
-					"REST/entityset",
-					"REST/expand",
-					"REST/filter",
-					"REST/imageformat",
-					"REST/lock",
-					"REST/method",
-					"REST/orderby",
-					"REST/querypath",
-					"REST/queryplan",
-					"REST/savedfilter",
-					"REST/savedorderby",
-					"REST/skip",
-					"REST/timeout",
-					"REST/top_$limit",
-					"REST/version"
-				]
-			}
-		],
-		"Client/Server": [
-			"Desktop/clientServer"
-		],
-		"Forms": [
-			"FormEditor/forms",
-			"FormEditor/formEditor",
-			"FormEditor/macros",
-			"FormEditor/objectLibrary",
-			"FormEditor/stylesheets",
-			"FormEditor/pictures"
-		],
-		"Form Properties": [
-			"FormEditor/jsonReference",
-			"FormEditor/action",
-			"FormEditor/propertiesForm",
-			"FormEditor/formSize",
-			"FormEditor/markers",
-			"FormEditor/menu",
-			"FormEditor/print",
-			"FormEditor/windowSize"
-		],
-		"Form Objects": [
-			"FormObjects/formObjectsOverview",
+		"Client/Server": ["Desktop/clientServer"],
+		"Forms": ["FormEditor/forms", "FormEditor/formEditor", "FormEditor/macros", "FormEditor/objectLibrary", "FormEditor/stylesheets", "FormEditor/pictures"],
+		"Form Properties": ["FormEditor/jsonReference", "FormEditor/action", "FormEditor/propertiesForm", "FormEditor/formSize", "FormEditor/markers", "FormEditor/menu", "FormEditor/print", "FormEditor/windowSize"],
+		"Form Objects": ["FormObjects/formObjectsOverview",
 			"FormObjects/buttonOverview",
 			"FormObjects/buttonGridOverview",
 			"FormObjects/checkboxOverview",
@@ -244,10 +119,8 @@ module.exports =
 			"FormObjects/text",
 			"FormObjects/webAreaOverview",
 			"FormObjects/viewProAreaOverview",
-			"FormObjects/writeProAreaOverview"
-		],
-		"Form Object Properties": [
-			"FormObjects/propertiesReference",
+			"FormObjects/writeProAreaOverview"],
+		"Form Object Properties": ["FormObjects/propertiesReference",
 			"FormObjects/propertiesAction",
 			"FormObjects/propertiesAnimation",
 			"FormObjects/propertiesAppearance",
@@ -273,10 +146,8 @@ module.exports =
 			"FormObjects/propertiesSubform",
 			"FormObjects/propertiesText",
 			"FormObjects/propertiesTextAndPicture",
-			"FormObjects/propertiesWebArea"
-		],
-		"Form Events": [
-			"Events/overview",
+			"FormObjects/propertiesWebArea"],
+		"Form Events": ["Events/overview",
 			"Events/onActivate",
 			"Events/onAfterEdit",
 			"Events/onAfterKeystroke",
@@ -336,17 +207,12 @@ module.exports =
 			"Events/onValidate",
 			"Events/onVpRangeChanged",
 			"Events/onVpReady",
-			"Events/onWindowOpeningDenied"
-		],
-		"Menus": [
-			"Menus/overview",
-			"Menus/creating",
-			"Menus/properties",
-			"Menus/bars",
-			"Menus/sdi"
-		],
-		"Build application": [
-			"Desktop/building"
-		]
+			"Events/onWindowOpeningDenied"],
+		"Menus": ["Menus/overview", "Menus/creating", "Menus/properties", "Menus/bars", "Menus/sdi"],
+		"Build application": ["Desktop/building"]
+
+
+
 	}
+
 }

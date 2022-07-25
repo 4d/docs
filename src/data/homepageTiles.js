@@ -16,7 +16,24 @@ const Sections = [
     links: (
       <div className="homepageLinks">
         <Link to="/docs/GettingStarted/installation" >
-          <Translate>Installation and Activation</Translate>
+          <Translate>Installation</Translate>
+        </Link>
+      </div>
+    ),
+  }, {
+    title: translate({
+      message: 'Core Development',
+      id: 'homepage.sections.core-development.title',
+    }),
+    image: {
+      src: '/img/illu_CoreDevelopment.png',
+      width: 1108,
+      height: 731.18,
+    },
+    links: (
+      <div className="homepageLinks">
+        <Link to="/docs/Project/overview" >
+          <Translate>Project Management</Translate>
         </Link>
         <Link to="/docs/Concepts/about">
           <Translate>Language Concepts</Translate>
@@ -24,35 +41,56 @@ const Sections = [
         <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
           <Translate>Language Reference (4D Doc Center)</Translate>
         </Link>
-        <Link to="/docs/Project/overview" >
-          <Translate>Project Databases</Translate>
+        <Link to="/docs/ORDA/overview" >
+          <Translate>Object Relational Data Access (ORDA)</Translate>
+        </Link>
+        <Link to="/docs/API/overview" >
+          <Translate>Class API Reference</Translate>
+        </Link>
+        <Link to="/docs/Preferences/overview" >
+          <Translate>Preferences</Translate>
         </Link>
       </div>
     ),
   },
   {
     title: translate({
-      message: 'Desktop Applications',
-      id: 'homepage.sections.desktop-applications.title',
+      message: 'Administration',
+      id: 'homepage.administration.title',
     }),
     image: {
-      src: '/img/illu_DesktopApplication.png',
-      width: 1108,
-      height: 731.18,
+      src: '/img/illu_Administration.png',
+      width: 1137.97,
+      height: 736.21,
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/FormEditor/objectLibrary" >
-          <Translate>Form Editor</Translate>
+        <Link to="docs/Admin/webAdmin">
+          <Translate>Web Administration</Translate>
         </Link>
-        <Link to="/docs/FormObjects/formObjectsOverview" >
-          <Translate>Form Objects</Translate>
+        <Link to="docs/Admin/dataExplorer">
+          <Translate>Web Data Explorer</Translate>
         </Link>
-        <Link to="/docs/FormObjects/propertiesReference" >
-          <Translate>Form Object Properties</Translate>
+        <Link to="docs/Admin/licenses">
+          <Translate>License Management</Translate>
         </Link>
-        <Link to="/docs/Menus/overview" >
-          <Translate>Menus</Translate>
+        <Link to="docs/Admin/tls">
+          <Translate>TLS Protocol (HTTPS)</Translate>
+        </Link>
+        <Link to="docs/Admin/cli">
+          <Translate>Command Line Interface</Translate>
+        </Link>
+        <Link to="docs/Admin/debugLogFiles">
+          <Translate>Description of log files</Translate>
+        </Link>
+        <Link to="docs/Users/overview">
+          <Translate>Access Rights</Translate>
+        </Link>
+        <Link to="docs/MSC/overview">
+          <Translate>Maintenance and Security Center</Translate>
+        </Link>
+        <Link to="docs/Backup/overview">
+          <Translate>Backup and Restore</Translate>
         </Link>
       </div>
     ),
@@ -69,11 +107,53 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">
+        <Link to="/docs/WebServer/webServer">
           <Translate>Web Server</Translate>
+        </Link>
+        <Link to="/docs/WebServer/gettingStarted">
+          <Translate>Web Development</Translate>
         </Link>
         <Link to="/docs/REST/gettingStarted">
           <Translate>REST Server</Translate>
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: translate({
+      message: 'Desktop Applications',
+      id: 'homepage.sections.desktop-applications.title',
+    }),
+    image: {
+      src: '/img/illu_DesktopApplication.png',
+      width: 1108,
+      height: 731.18,
+    },
+    links: (
+      <div className="homepageLinks">
+        <Link to="/docs/Desktop/clientServer" >
+          <Translate>Client/Server</Translate>
+        </Link>
+        <Link to="/docs/FormEditor/forms" >
+          <Translate>Forms</Translate>
+        </Link>
+        <Link to="/docs/FormEditor/jsonReference" >
+          <Translate>Form Properties</Translate>
+        </Link>
+        <Link to="/docs/FormObjects/formObjectsOverview" >
+          <Translate>Form Objects</Translate>
+        </Link>
+        <Link to="/docs/FormObjects/propertiesReference" >
+          <Translate>Form Object Properties</Translate>
+        </Link>
+        <Link to="/docs/Events/overview" >
+          <Translate>Form Events</Translate>
+        </Link>
+        <Link to="/docs/Menus/overview" >
+          <Translate>Menus</Translate>
+        </Link>
+        <Link to="/docs/Desktop/building" >
+          <Translate>Menus</Translate>
         </Link>
       </div>
     ),
@@ -92,30 +172,6 @@ const Sections = [
       <div className="homepageLinks">
         <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
           <Translate>4D for iOS</Translate>
-        </Link>
-      </div>
-    ),
-  },
-  {
-    title: translate({
-      message: 'Administration',
-      id: 'homepage.administration.title',
-    }),
-    image: {
-      src: '/img/illu_Administration.png',
-      width: 1137.97,
-      height: 736.21,
-    },
-    links: (
-      <div className="homepageLinks">
-        <Link to="docs/MSC/overview">
-          <Translate>Maintenance and Security Center</Translate>
-        </Link>
-        <Link to="docs/Backup/overview">
-          <Translate>Backup and Restore</Translate>
-        </Link>
-        <Link to="docs/Users/overview">
-          <Translate>Users and Groups</Translate>
         </Link>
       </div>
     ),
