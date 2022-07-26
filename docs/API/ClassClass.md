@@ -21,7 +21,6 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
-
 </details>
 
 <!-- REF #ClassClass.name.Syntax -->
