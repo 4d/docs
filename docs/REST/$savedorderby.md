@@ -1,6 +1,6 @@
 ---
 id: savedorderby
-title: "$savedorderby"
+title: $savedorderby 
 ---
 
 Saves the order by defined by `$orderby` when creating an entity set (*e.g.*, `$savedorderby="{orderby}"`)	

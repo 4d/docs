@@ -3,12 +3,14 @@ id: time
 title: Time
 ---
 
-- A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
-- Times are in 24-hour format.
-- A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
+A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.  
+Times are in 24-hour format.
 
+A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
+
+**Note:** In the *4D Language Reference* manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.  
+    
 ## Time literals  
 
 A time literal constant is enclosed by question marks (?...?).
@@ -26,8 +28,8 @@ Here are some examples of time literals:
 A null time is specified by ?00:00:00?
 
 **Tip:** The Method Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
-
-## Time operators
+    
+## Time operators 
 
 |Operation	|Syntax	|Returns	|Expression	|Value|
 |---|---|---|---|---|
@@ -53,7 +55,7 @@ A null time is specified by ?00:00:00?
 |Less than or equal to	|Time <= Time	|Boolean	|?01:02:03? <=?01:02:03?|	True|
 			||||?01:02:04? <=?01:02:03?	|False|
 
-### Example 1
+### Example 1 
 
 To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
 
@@ -79,8 +81,9 @@ The second line could be written in a simpler way:
 The Modulo operator can be used, more specifically, to add times that take the 24-hour format into account:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 p.m.
+$t1:=?23:00:00? // It is 23:00 hours
   // We want to add 2 and a half hours
 $t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 a.m. the next morning
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 hour the next morning
 ```
+

@@ -32,10 +32,10 @@ You will find in this page a comprehensive list of all object properties sorted 
 
 |Property|Description|Possible Values|
 |---|---|---|
-|**a**|||
+|<a name="a">**a**</a>|||
 |[action](properties_Action.md#standard-action)|Typical activity to be performed. |The name of a valid standard action. |
 |[allowFontColorPicker](properties_Text.md#allow-font-color-picker)|Allows displaying system font picker or color picker to edit object attributes|true, false (default)|
-|[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"|
+|[alternateFill](properties_BackgroundAndBorder.md#alternate-background-color)|Allows setting a different background color for odd-numbered rows/columns in a list box.|Any CSS value; "transparent"; "automatic"; "automaticAlternate"|
 |[automaticInsertion](properties_DataSource.md#automatic-insertion)|Enables automatically adding a value to a list when a user enters a value that is not in the object's associated choice list.|true, false<a name="b"></a>|
 |**b**|||
 |[booleanFormat](properties_Display.md#text-when-false-text-when-true)|Specifies only two possible values.|true, false|
@@ -59,7 +59,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[customProperties](properties_Plugins.md#advanced-properties)|Advanced properties (if any) |JSON string or base64 encoded string<a name="d"></a>|
 |**d**|||
 |[dataSource](properties_Object.md#variable-or-expression) (objects)<br/>[dataSource](properties_Subform.md#source) (subforms)<br/>[dataSource](properties_Object.md#data-source) (array list box) <br/> [dataSource](properties_Object.md#collection-or-entity-selection) (Collection or entity selection list box)<br/> [dataSource](properties_DataSource.md#expression) (list box column) <br/> [dataSource](properties_Hierarchy.md#hierarchical-list-box) (hierarchical list box)|Specifies the source of the data.|A 4D variable, field name, or an arbitrary complex language expression.|
-|[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br/> [dataSourceTypeHint](properties_DataSource.md#data-type) (list box column)|Indicates the variable type.|"integer", "number", "boolean", "picture", "text", date", "time", "arrayText", "collection", "object", "undefined"|
+|[dataSourceTypeHint](properties_Object.md#expression-type) (objects) <br/> [dataSourceTypeHint](properties_DataSource.md#data-type-expression-type) (list box column, drop-down list)|Indicates the variable type.|"integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"|
 |[dateFormat](properties_Display.md#date-format)|Controls the way dates appear when displayed or printed. Must only be selected among the 4D built-in formats.|"systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values)|
 |[defaultButton](properties_Appearance.md#default-button)|Modifies a button's appearance in order to indicate the recommended choice to the user.|true, false|
 |[defaultValue](properties_RangeOfValues.md#default-value)|Defines a value or a stamp to be entered by default in an input object|String or "#D", "#H", "#N"|
@@ -74,8 +74,8 @@ You will find in this page a comprehensive list of all object properties sorted 
 |**e**|||
 |[enterable](properties_Entry.md#enterable)|Indicates whether users can enter values into the object.|true, false|
 |[enterableInList](properties_Subform.md#enterable-in-list)|Indicates whether users can modify record data directly in the list subform.|true, false|
-|[entryFiler](properties_Entry.md#entry-filter)|Associates an entry filter with the object or column cells. This property is not accessible if the Enterable property is not enabled.|Text to narrow entries|
-|[events](https://doc.4d.com/4Dv18/4D/18/Form-Events.302-4504424.en.html)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
+|[entryFilter](properties_Entry.md#entry-filter)|Associates an entry filter with the object or column cells. This property is not accessible if the Enterable property is not enabled.|Text to narrow entries |
+|[events](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |[excludedList](properties_RangeOfValues.md#excluded-list)|Allows setting a list whose values cannot be entered in the column.|A list of values to be excluded.<a name="f"></a>|
 |**f**|||
 |[fill](properties_BackgroundAndBorder.md#background-color-fill-color)|Defines the background color of an object. |Any CSS value, "transparent", "automatic"|
@@ -106,7 +106,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[keyboardDialect](properties_Entry.md#keyboardDialect)|To associate a specific keyboard layout to an input.|A keyboard code string, e.g. "ar-ma"<a name="l"></a>|
 |**l**|||
 |[labels](properties_DataSource.md#choice-list-static-list)|A list of values to be used as tab control labels|ex: "a", "b, "c", ...|  
-|[labelsPlacement](properties_Scale.md#label-location) (objects)<br/>[labelsPlacement](properties_Appearance.md#tab-control-direction) (splitter / tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
+|[labelsPlacement](properties_Scale.md#label-location) (objects)<br/>[labelsPlacement](properties_Appearance.md#tab-control-direction) (tab control)| Specifies the location of an object's displayed text.|"none", "top", "bottom", "left", "right"|
 |[layoutMode](properties_Appearance.md#view-mode) |Mode for displaying the 4D Write Pro document in the form area.|"page", "draft", "embedded"|
 |[left](properties_CoordinatesAndSizing.md#left)|Positions an object on the left.|minimum: 0|
 |list, see [choiceList](properties_DataSource.md#choice-list)|A list of choices associated with a hierarchical list|A list of choices|
@@ -128,7 +128,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[name](properties_Object.md#object-name)|The name of the form object. (Optional for the form)|Any name which does not belong to an already existing object|
 |[numberFormat](properties_Display.md#number-format) |Controls the way the alphanumeric fields and variables appear when displayed or printed.|Numbers (including a decimal point or minus sign if necessary)<a name="p"></a>|
 |**p**|||
-|[picture](properties_Picture.md#pathname)|The pathname of the picture for picture buttons, picture pop-up menus, or static pictures|Relative or filesystem path in POSIX syntax.|
+|[picture](properties_Picture.md#pathname)|The pathname of the picture for picture buttons, picture pop-up menus, or static pictures|Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable.|
 |[pictureFormat](properties_Display.md#picture-format) (input, list box column or footer)<br/>[pictureFormat](properties_Picture.md#display) (static picture)|Controls how pictures appear when displayed or printed.|"truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft" (excluding static pictures), "proportionalCenter"(excluding static pictures)|
 |[placeholder](properties_Entry.md#placeholder) |Grays out text when the data source value is empty.|Text to be grayed out.|
 |[pluginAreaKind](properties_Object.md#plug-in-kind)|Describes the type of plug-in. |The type of plug-in. |
@@ -152,6 +152,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[rowStrokeSource](properties_Text.md#row-font-color-array) (array list box)<br/>[rowStrokeSource](properties_Text.md#font-color-expression) (selection or collection/entity selection list box)|An array or expression for managing row colors.|Name of array or expression.|
 |[rowStyleSource](properties_Text.md#row-style-array) (array list box) <br/> [rowStyleSource](properties_Text.md#style-expression) (selection or collection/entity selection list box)|An array or expression for managing row styles.|Name of array or expression.<a name="s"></a>|
 |**s**|||
+|[saveAs](properties_DataSource.md#save-as) (list box column)<br/>[saveAs](properties_DataSource.md#data-type-list) (drop-down list)|The type of contents to save in the field or variable associated to the form object|"value", "reference"|
 |[scrollbarHorizontal](properties_Appearance.md#horizontal-scroll-bar) | A tool allowing the user to move the viewing area to the left or right.|"visible", "hidden", "automatic"|
 |[scrollbarVertical](properties_Appearance.md#vertical-scroll-bar) | A tool allowing the user to move the viewing area up or down.|"visible", "hidden", "automatic"|
 |[selectedItemsSource](properties_DataSource.md#selected-items)|Collection of the selected items in a list box.|Collection expression |
@@ -182,7 +183,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[staticColumnCount](properties_ListBox.md#number-of-static-columns) | Number of columns that cannot be moved during execution.|minimum: 0|
 |[step](properties_Scale.md#step)| Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.|minimum: 1|
 |[storeDefaultStyle](properties_Text.md#store-with-default-style-tags)|Store the style tags with the text, even if no modification has been made|true, false|
-|[stroke](properties_Text.md#font-color) (text)<br/> [stroke](properties_BackgroundAndBorder.md#line-color) (lines)<br/>[stroke](properties_BackgroundAndBorder.md#transparent) (list box)|Specifies the color of the font or line used in the object. |Any CSS value, "transparent", "automatic"|
+|[stroke](properties_Text.md#font-color) (text)<br/> [stroke](properties_BackgroundAndBorder.md#line-color) (lines)<br/>[stroke](properties_Text.md#font-color) (list box)|Specifies the color of the font or line used in the object. |Any CSS value, "transparent", "automatic"|
 |[strokeDashArray](properties_BackgroundAndBorder.md#dotted-line-type)|Describes dotted line type as a sequence of black and white points|Number array or string|
 |[strokeWidth](properties_BackgroundAndBorder.md#line-width) |Designates the thickness of a line.|An integer or 0 for smallest width on a printed form|
 |[style](properties_TextAndPicture.md#multi-style)|Allows setting the general appearance of the button. See Button Style for more information.|"regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom"|

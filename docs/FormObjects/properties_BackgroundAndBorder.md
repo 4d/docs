@@ -12,7 +12,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|alternateFill|string|any css value; "transparent"; "automatic"|
+|alternateFill|string|any css value; "transparent"; "automatic"; "automaticAlternate"|
 
 #### Objects Supported
 

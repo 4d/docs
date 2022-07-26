@@ -2,7 +2,6 @@
 id: spinner
 title: Spinner
 ---
-## Overview
 
 The spinner is a circular indicator that displays a continuous animation, like the [Barber shop](progressIndicator.md#barber-shop).
 

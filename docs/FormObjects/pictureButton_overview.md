@@ -2,7 +2,6 @@
 id: pictureButtonOverview
 title: Picture Button
 ---
-## Overview
 
 A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
 
@@ -10,7 +9,7 @@ Picture buttons can be used in two ways:
 
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.
 For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
-
+  
   |Property|JSON name|Value|  
   |---|---|---|  
   |Rows|rowCount|1|  
@@ -31,7 +30,7 @@ Clicking the object changes the picture.
 You can implement a picture button in the following manner:
 
 1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
-
+  
    ![](../assets/en/FormObjects/pictureButton_grid.png)  
 
 You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
@@ -49,6 +48,7 @@ In addition to the standard positioning and appearance settings, you can set som
 * By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. In other words, it does not cycle back to the first picture in the series.
 
 The following other modes are available:
+
 * [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)

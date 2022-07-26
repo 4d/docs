@@ -61,7 +61,7 @@ function Tile({
         <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
         <p>{tile.links}</p>
       </div>
-    </div>
+    </div >
   );
 }
 
@@ -81,12 +81,22 @@ function TilesContainer() {
           <Tile
             tile={tile}
             key={idx}
-            className={clsx('col--4', idx === 0 && 'col--offset-2')}
           />
         ))}
       </div>
     </div>
   );
+}
+
+function Updates() {
+  return (
+    <div className="container text--right">
+      <div className="doc-updates">
+        <Link to="/updates">
+          <em><Translate>Documentation updates</Translate></em>
+        </Link></div>
+    </div>
+  )
 }
 
 export default function Home() {
@@ -95,6 +105,7 @@ export default function Home() {
       <main>
         <HeroBanner />
         <TilesContainer />
+        <Updates />
       </main>
     </Layout>
   );

@@ -1,6 +1,6 @@
 ---
 id: entityset
-title: "$entityset"
+title: $entityset
 ---
 
 After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
@@ -32,11 +32,11 @@ After you create an entity set, the entity set ID is returned along with the dat
 
 ## $entityset/{entitySetID}?$operator...&$otherCollection
 
-Create another entity set based on previously created entity sets 
+Create another entity set based on previously created entity sets
 
 |Parameter|Type|Description |
 |---|---|---|
-|$operator |String |One of the logical operators to test with the other entity set| 
+|$operator |String |One of the logical operators to test with the other entity set|
 |$otherCollection |  String | Entity set ID |
 
 ### Description

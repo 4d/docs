@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entry
+title: Entry 
 ---
 ---
 
@@ -65,7 +65,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### Objects Supported
 
-[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+[4D Write Pro areas](writeProArea_overview.md) - [Check Box](checkbox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
 ---
 
@@ -117,11 +117,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|entryFilter|string |Entry filter code or Entry filter name (filter names start with &#124; )|
+|entryFilter|string |<li>Entry filter code or </li><li>Entry filter name (filter names start with &#124; )</li>|
 
 #### Objects Supported
 
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -278,7 +278,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 |shortcutControl |boolean |true, false (macOS Control)|
 |shortcutShift |boolean |true, false|  
 ||||
-|shortcutKey |string |<ul><li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li></ul>|
+|shortcutKey |string |<li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li>|
 
 #### Objects Supported
 

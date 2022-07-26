@@ -1,6 +1,6 @@
 ---
 id: top_$limit
-title: "$top/$limit"
+title: $top/$limit
 ---
 
 Limits the number of entities to return (e.g., `$top=50`)	

@@ -1,6 +1,6 @@
 ---
 id: compute
-title: "$compute"
+title: $compute 
 ---
 
 Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)

@@ -52,6 +52,11 @@
   color: white;
 }
 
+.doc-updates {
+  padding: 50px 20px;
+  display: inline-block;
+}
+
 footer {
   margin-top: 100px;
 }

@@ -38,7 +38,7 @@ The specified form is displayed:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|detailForm |string |<ul><li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li></ul> |
+|detailForm |string |<li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li>|
 
 #### Objects Supported
 
@@ -203,9 +203,9 @@ You can define several interface properties at once:
 Note that setting properties for an element overrides any other values for this element (if not reset). For example:
 
 ```4d
- aLControlArr{6}:=lk row is disabled + lk row is not selectable
+ aLControlArr{6}:=lk row is disabled + lk row is not selectable 
  //sets row 6 as disabled AND not selectable
- aLControlArr{6}:=lk row is disabled
+ aLControlArr{6}:=lk row is disabled 
  //sets row 6 as disabled but selectable again
 ```
 
