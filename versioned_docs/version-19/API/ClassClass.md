@@ -100,6 +100,7 @@ $person:=cs.Person.new("John";"Doe";40)
 ## .superclass
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|

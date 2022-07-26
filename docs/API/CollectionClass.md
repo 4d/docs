@@ -140,9 +140,11 @@ You create a new collection and then add a new element:
 ## `New shared collection`
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #_command_.New shared collection.Syntax -->
@@ -201,9 +203,11 @@ You can pass any number of values of the following supported types:
 ## .average()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.average().Syntax -->
@@ -255,9 +259,11 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 ## .clear()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.clear().Syntax -->
@@ -290,9 +296,11 @@ $vSize:=$col.length //$vSize=0
 ## .combine()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.combine().Syntax -->
@@ -335,9 +343,11 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 ## .concat()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.concat().Syntax -->
@@ -375,10 +385,12 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 ## .copy()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|New *ck shared* option. New *groupWith* parameters|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.copy().Syntax -->
@@ -493,9 +505,11 @@ This example illustrates the use of the `ck resolve pointers` option:
 ## .count()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.count().Syntax -->
@@ -535,9 +549,11 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 ## .countValues()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.countValues().Syntax -->
@@ -607,9 +623,11 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ## .distinct()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.distinct().Syntax -->
@@ -655,9 +673,11 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 ## .equal()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.equal().Syntax -->
@@ -708,9 +728,11 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 ## .every()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.every().Syntax -->
@@ -798,9 +820,11 @@ End if
 ## .extract()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.extract().Syntax -->
@@ -864,9 +888,11 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 ## .fill()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.fill().Syntax -->
@@ -914,9 +940,11 @@ In case of inconsistency, the following rules apply:
 ## .filter()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.filter().Syntax -->
@@ -1002,9 +1030,11 @@ The code for ***TypeLookUp*** is:
 ## .find()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.find().Syntax -->
@@ -1095,9 +1125,11 @@ The code for ***FindCity*** is:
 ## .findIndex()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.findIndex().Syntax -->
@@ -1169,9 +1201,11 @@ The code for ***FindCity*** method is:
 ## .indexOf()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.indexOf().Syntax -->
@@ -1224,9 +1258,11 @@ Optionally, you can pass the index of collection from which to start the search 
 ## .indices()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.indices().Syntax -->
@@ -1275,9 +1311,11 @@ For a detailed description of the *queryString* and *value* parameters, please r
 ## .insert()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.insert().Syntax -->
@@ -1323,9 +1361,11 @@ Any type of element accepted by a collection can be inserted, even another colle
 ## .join()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.join().Syntax -->
@@ -1363,9 +1403,11 @@ By default, null or empty elements of the collection are returned in the resulti
 ## .lastIndexOf()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.lastIndexOf().Syntax -->
@@ -1419,9 +1461,11 @@ Optionally, you can pass the index of collection from which to start a reverse s
 ## .length
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R5|Added|
+
 </details>
 
 <!-- REF #collection.length.Syntax -->
@@ -1449,9 +1493,11 @@ The `.length` property is initialized when the collection is created. Adding or 
 ## .map()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.map().Syntax -->
@@ -1507,9 +1553,11 @@ Here is the ***Percentage*** method:
 ## .max()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.max().Syntax -->
@@ -1553,6 +1601,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 ## .min()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
@@ -1600,9 +1649,11 @@ If the collection is empty, `.min()` returns *Undefined*.
 ## .orderBy()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.orderBy().Syntax -->
@@ -1732,9 +1783,11 @@ Ordering with a property path:
 ## .orderByMethod()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.orderByMethod().Syntax -->
@@ -1833,9 +1886,11 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 ## .pop()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.pop().Syntax -->
@@ -1875,9 +1930,11 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 ## .push()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.push().Syntax -->
@@ -1924,10 +1981,12 @@ You want to sort the resutling collection:
 ## .query()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Support of querySettings|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.query().Syntax -->
@@ -2024,9 +2083,11 @@ More examples of queries can be found in the `dataClass.query()` page.
 ## .reduce()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.reduce().Syntax -->
@@ -2107,9 +2168,11 @@ With the following ***Flatten*** method:
 ## .remove()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.remove().Syntax -->
@@ -2158,9 +2221,11 @@ If you try to remove an element from an empty collection, the method does nothin
 ## .resize()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.resize().Syntax -->
@@ -2209,9 +2274,11 @@ By default, new elements are filled will **null** values. You can specify the va
 ## .reverse()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.reverse().Syntax -->
@@ -2243,9 +2310,11 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 ## .shift()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.shift().Syntax -->
@@ -2282,9 +2351,11 @@ If the collection is empty, this method does nothing.
 ## .slice()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.slice().Syntax -->
@@ -2328,9 +2399,11 @@ The returned collection contains the element specified by *startFrom* and all su
 ## .some()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.some().Syntax -->
@@ -2399,9 +2472,11 @@ With the following *NumberGreaterThan0* method:
 ## .sort()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.sort().Syntax -->
@@ -2483,9 +2558,11 @@ If the collection contains elements of different types, they are first grouped b
 ## .sum()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.sum().Syntax -->
@@ -2539,9 +2616,11 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 ## .unshift()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.unshift().Syntax -->

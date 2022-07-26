@@ -103,10 +103,12 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 ## Formula
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Renamed (New formula -> Formula)|
 |v17 R3|Added|
+
 </details>
 
 <!-- REF #_command_.Formula.Syntax -->
@@ -230,10 +232,12 @@ Calling a formula using object notation:
 ## Formula from string
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Renamed New formula from string -> Formula from string|
 |v17 R3|Added|
+
 </details>
 
 <!-- REF #_command_.Formula from string.Syntax -->
@@ -278,9 +282,11 @@ The following code will create a dialog accepting a formula in text format:
 ## .apply()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R3|Added|
+
 </details>
 
 <!-- REF #FunctionClass.apply().Syntax -->
@@ -334,9 +340,11 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 ## .call()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R3|Added|
+
 </details>
 
 <!-- REF #FunctionClass.call().Syntax -->
@@ -382,9 +390,11 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 ## .source
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
+
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->

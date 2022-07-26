@@ -38,9 +38,11 @@ End if
 ## ZIP Create archive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -171,9 +173,11 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 ## ZIP Read archive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->

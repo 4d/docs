@@ -232,6 +232,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 ## .platformPath
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added
