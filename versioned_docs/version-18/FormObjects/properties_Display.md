@@ -503,7 +503,7 @@ You can handle the Visibility property for most form objects. This property is m
 
 #### Automatic visibility in list forms
 
-In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
+In the context of list forms, the Visibility property supports two specific values:
 
 * **If record selected** (JSON name: "selectedRows")
 * **If record not selected** (JSON name: "unselectedRows")
