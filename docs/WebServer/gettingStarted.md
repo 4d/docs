@@ -5,6 +5,7 @@ title: Getting Started
 
 This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
 
+
 ## Hello World Example
 
 Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
@@ -13,16 +14,16 @@ Let's start by making the web server send "Hello World" to the browser. The most
 
 To start the 4D web server:
 
-1. Launch your 4D application and create a new, empty 4D project.
+1. Launch your 4D application and create a new, empty 4D project. 
 2. In the **Run** menu, select **Start Web Server**.
 
-That's all! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
+That's all! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page. 
 
 ### Displaying the default home page
 
 The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
 
-1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu. 
 
 The default home page is displayed:
 
@@ -36,14 +37,14 @@ The default home page is displayed:
 
 ```4d
 Case of 
- : ($1="/hello")
-  WEB SEND TEXT("Hello World!")
- Else 
-  // Error 404 for example
+	: ($1="/hello")
+		WEB SEND TEXT("Hello World!")
+	Else 
+		// Error 404 for example
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
+The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser. 
 
 3. In your browser, enter the following URL:
 
@@ -55,9 +56,10 @@ The web server handles the request and returns:
 
 ![](../assets/en/WebServer/hello.png)
 
+
 ## Getting data from the database
 
-Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
+Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data. 
 
 Create a basic database with, for example, a single table containing some records:
 
@@ -94,9 +96,10 @@ http://localhost/friends.shtml
 
 ### REST request
 
-If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md). 
 
-1. We will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
+
+1. We will use the REST server to access data: go the **Settings** dialog box, select **Web** > **Web Features**, and check the **Expose as REST server** option.
 
 ![](../assets/en/WebServer/hello5.png)
 
@@ -110,18 +113,18 @@ The web server returns the results in JSON:
 
 ```json
 {
- "__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
- "dataClasses": [
-  {
-   "name": "Friends",
-   "uri": "/rest/$catalog/Friends",
-   "dataURI": "/rest/Friends"
-  }
- ]
+	"__UNIQID": "3F1B6ACFFE12B64493629AD76011922D",
+	"dataClasses": [
+		{
+			"name": "Friends",
+			"uri": "/rest/$catalog/Friends",
+			"dataURI": "/rest/Friends"
+		}
+	]
 }
 ```
 
-You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
+You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore. 
 
 You can also get any data.
 
@@ -135,50 +138,53 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 
 ```json
 {
- "__DATACLASS": "Friends",
- "__entityModel": "Friends",
- "__GlobalStamp": 0,
- "__COUNT": 4,
- "__FIRST": 0,
- "__ENTITIES": [
-  {
-   "__KEY": "1",
-   "__TIMESTAMP": "2020-10-27T14:29:01.914Z",
-   "__STAMP": 1,
-   "ID": 1,
-   "lastName": "Smith",
-   "firstName": "John"
-  },
-  {
-   "__KEY": "2",
-   "__TIMESTAMP": "2020-10-27T14:29:16.035Z",
-   "__STAMP": 1,
-   "ID": 2,
-   "lastName": "Brown",
-   "firstName": "Danny"
-  },
-  {
-   "__KEY": "3",
-   "__TIMESTAMP": "2020-10-27T14:29:43.945Z",
-   "__STAMP": 1,
-   "ID": 3,
-   "lastName": "Purple",
-   "firstName": "Mark"
-  },
-  {
-   "__KEY": "4",
-   "__TIMESTAMP": "2020-10-27T14:34:58.457Z",
-   "__STAMP": 1,
-   "ID": 4,
-   "lastName": "Dupont",
-   "firstName": "Jenny"
-  }
- ],
- "__SENT": 4
+	"__DATACLASS": "Friends",
+	"__entityModel": "Friends",
+	"__GlobalStamp": 0,
+	"__COUNT": 4,
+	"__FIRST": 0,
+	"__ENTITIES": [
+		{
+			"__KEY": "1",
+			"__TIMESTAMP": "2020-10-27T14:29:01.914Z",
+			"__STAMP": 1,
+			"ID": 1,
+			"lastName": "Smith",
+			"firstName": "John"
+		},
+		{
+			"__KEY": "2",
+			"__TIMESTAMP": "2020-10-27T14:29:16.035Z",
+			"__STAMP": 1,
+			"ID": 2,
+			"lastName": "Brown",
+			"firstName": "Danny"
+		},
+		{
+			"__KEY": "3",
+			"__TIMESTAMP": "2020-10-27T14:29:43.945Z",
+			"__STAMP": 1,
+			"ID": 3,
+			"lastName": "Purple",
+			"firstName": "Mark"
+		},
+		{
+			"__KEY": "4",
+			"__TIMESTAMP": "2020-10-27T14:34:58.457Z",
+			"__STAMP": 1,
+			"ID": 4,
+			"lastName": "Dupont",
+			"firstName": "Jenny"
+		}
+	],
+	"__SENT": 4
 }
-```
+``` 
 
 This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
+
+
+
 
 ## Login and session
 
@@ -209,9 +215,11 @@ $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
+
+
 ### Authenticating users
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https). 
 
 1. Open the Explorer and create a project method named "login".
 
@@ -237,13 +245,13 @@ $password:=$avalues{$indexPassword}
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
 If ($user#Null) //a user was found
-  //check the password
+		//check the password
     If (Verify password hash($password; $user.password))
-      //password ok, fill the session
+    		//password ok, fill the session
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-         //You can use the user session to store any information
+        	//You can use the user session to store any information
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
@@ -257,13 +265,14 @@ End if
 
 ![](../assets/en/WebServer/hello0.png)
 
+
 4. In your browser, enter the following URL:
 
 ```
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
+> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST. 
 
 Then you will be logged for the session:
 
@@ -273,4 +282,5 @@ Wrong credentials would be rejected:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page.
+Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page. 
+

@@ -5,15 +5,16 @@ title: Template pages
 
 4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
 
-When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
+When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing. 
 
 For example, if you write in an HTML page:
 
 ```html
-Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
 The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
+
 
 ## Tags for templates
 
@@ -59,6 +60,7 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 </HTML>
 ```
 
+
 ## Tag parsing
 
 For optimization reasons, the parsing of the HTML source code is not carried out by the 4D Web server when HTML pages are called using simple URLs that are suffixed with “.HTML” or “.HTM”.
@@ -70,7 +72,7 @@ You can also carry out parsing outside of the Web context when you use the `PROC
 Internally, the parser works with UTF-16 strings, but the data to parse may have been encoded differently. When tags contain text (for example `4DHTML`), 4D converts the data when necessary depending on its origin and the information available (charset). Below are the cases where 4D parses the tags contained in the HTML pages, as well as any conversions carried out:
 
 |Action / Command|Content analysis of the sent pages|Support of $ syntax(*)|Character set used for parsing tags|
-|----|----|----|---|  
+|----|----|----|---|		
 |Pages called via URLs|X, except for pages with “.htm” or “.html” extensions|X, except for pages with “.htm” or “.html” extensions|Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server|
 |`WEB SEND FILE`|X|-|Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server|
 |`WEB SEND TEXT`|X|-|No conversion necessary|
@@ -83,6 +85,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 ## Accessing 4D methods via the Web
 
 Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
+
 
 ## Prevention of malicious code insertion  
 

@@ -42,9 +42,12 @@ The page lists all the tables of the database (including invisible tables) as we
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page).
 ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
 
+
+
 ## Data
 
 The **Data** page provides information about the available and used storage space in the data file.
+
 
 >This page cannot be accessed in maintenance mode
 

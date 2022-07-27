@@ -27,7 +27,7 @@ Here are some examples of time literals:
 
 A null time is specified by ?00:00:00?
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
+**Tip:** The Code Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
     
 ## Time operators 
 
