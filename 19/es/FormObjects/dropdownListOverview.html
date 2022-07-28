@@ -101,10 +101,10 @@
 </tbody>
 </table>
 <p>Si el objeto contiene otras propiedades, se ignoran.</p>
-<p>To initialize the object associated to the drop-down list, you can:</p>
+<p>Para inicializar el objeto asociado a la lista desplegable, puede:</p>
 <ul>
-<li><p>Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando &quot;&lt;Static List&gt;&quot; en el tema <a href="/docs/19/es/FormObjects/propertiesDataSource.html">Fuente de datos</a> de la lista de propiedades. The default values are loaded into an object automatically.</p></li>
-<li><p>Execute code that creates the object and its properties. For example, if &quot;myList&quot; is the <a href="/docs/19/es/FormObjects/propertiesObject.html#variable-or-expression">variable</a> associated to the drop-down list, you can write in the <a href="/docs/19/es/Events/onLoad.html">On Load</a> form event:</p></li>
+<li><p>Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando &quot;&lt;Static List&gt;&quot; en el tema <a href="/docs/19/es/FormObjects/propertiesDataSource.html">Fuente de datos</a> de la lista de propiedades. Los valores por defecto se cargan en un objeto automáticamente.</p></li>
+<li><p>Ejecutar código que crea el objeto y sus propiedades. For example, if &quot;myList&quot; is the <a href="/docs/19/es/FormObjects/propertiesObject.html#variable-or-expression">variable</a> associated to the drop-down list, you can write in the <a href="/docs/19/es/Events/onLoad.html">On Load</a> form event:</p></li>
 </ul>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// Form.myDrop is the datasource of the form object</span>
 
@@ -113,7 +113,7 @@ Form.myDrop.values:=<span class="hljs-function">New collection</span>(<span clas
 Form.myDrop.index:=<span class="hljs-number">-1</span>  <span class="hljs-comment">//currentValue is a placeholder</span>
 Form.myDrop.currentValue:=<span class="hljs-string">"Select a fruit"</span> 
 </code></pre>
-<p>The drop-down list is displayed with the placeholder string:</p>
+<p>La lista desplegable se muestra con la cadena del marcador de posición:</p>
 <p><img src="/docs/19/assets/en/FormObjects/fruits2.png" alt=""></p>
 <p>After the user selects a value:</p>
 <p><img src="/docs/19/assets/en/FormObjects/fruits3.png" alt=""></p>
@@ -179,7 +179,7 @@ Form.myDrop.index <span class="hljs-comment">//3</span>
 <p>A hierarchical drop-down list has a sublist associated with each item in the list. Este es un ejemplo de lista desplegable jerárquica:</p>
 <p><img src="/docs/19/assets/en/FormObjects/popupDropdown_hierar.png" alt=""></p>
 <blockquote>
-<p>In forms, hierarchical drop-down lists are limited to two levels.</p>
+<p>En los formularios, las listas desplegables jerárquicas están limitadas a dos niveles.</p>
 </blockquote>
 <p>You can assign the hierarchical choice list to the drop-down list object using the <a href="/docs/19/es/FormObjects/propertiesDataSource.html#choice-list">Choice List</a> field of the Property List.</p>
 <p>You manage hierarchical drop-down lists using the <strong>Hierarchical Lists</strong> commands of the 4D Language. All commands that support the <code>(*; &quot;name&quot;)</code> syntax can be used with hierarchical  drop-down lists, e.g. <a href="https://doc.4d.com/4dv19/help/command/en/page633.html"><code>List item parent</code></a>.</p>

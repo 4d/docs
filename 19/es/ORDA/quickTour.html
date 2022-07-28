@@ -13,12 +13,12 @@
       </script></span><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/ORDA/quickTour.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Un recorrido rápido en ORDA</h1></header><article><div><span><p>Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.</p>
 <h2><a class="anchor" aria-hidden="true" id="explorar-el-datastore"></a><a href="#explorar-el-datastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Explorar el datastore</h2>
 <p>The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the <a href="/docs/19/es/ORDA/overview.html#orda-prerequisites">ORDA prerequisites</a>.</p>
-<p>This example will use the following simple 4D database structure:</p>
+<p>Este ejemplo utilizará la siguiente estructura de base de datos 4D simple:</p>
 <p><img src="/docs/19/assets/en/ORDA/struc.png" alt=""></p>
 <p>To know what is exposed as the datastore, create a new project method, write the following line:</p>
 <pre><code class="hljs css language-code4d"><span class="hljs-attribute">TRACE</span>
 </code></pre>
-<p>Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter <code>ds</code>. Devuelve el objeto del datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the <code>ds</code> object:</p>
+<p>Ejecute el método -- simplemente llama la ventana del depurador. In the Expression area, double-click to insert an expression and enter <code>ds</code>. Devuelve el objeto del datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the <code>ds</code> object:</p>
 <p><img src="/docs/19/assets/en/ORDA/debug1.png" alt=""></p>
 <p>It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:</p>
 <pre><code class="hljs css language-code4d">ds.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Company</span>.</span></span>city <span class="hljs-comment">// devuelve el nombre de la ciudad</span>
@@ -70,7 +70,7 @@
 <p>4D añade un nuevo usuario a la lista, llamado por defecto &quot;Nuevo usuarioX&quot;.</p>
 <ol start="3">
 <li><p>Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la base. Puede renombrar un usuario en cualquier momento utilizando el comando <strong>Renombrar</strong> del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.</p></li>
-<li><p>To enter a password for the user, click the <strong>Edit...</strong> button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. El editor de contraseñas es sensible a las mayúsculas y minúsculas.</p></li>
+<li><p>To enter a password for the user, click the <strong>Edit...</strong> button in the user properties area and enter the password twice in the dialog box. Puede utilizar hasta 15 caracteres alfanuméricos para una contraseña. El editor de contraseñas es sensible a las mayúsculas y minúsculas.</p></li>
 </ol>
 <blockquote>
 <p>Users can change their password at any time according to the options in the &quot;Security&quot; page of the database settings, or using the <code>CHANGE PASSWORD</code> command.</p>
@@ -81,7 +81,7 @@
 <p>The membership of users to different groups can also be set by group on the <a href="#configuring-access-groups">Groups page</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="eliminar-un-usuario"></a><a href="#eliminar-un-usuario" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Eliminar un usuario</h3>
 <p>To delete a user, select it then click the deletion button or use the <strong>Delete</strong> command of the context menu. <img src="/docs/19/assets/en/Users/MinussNew.png" alt=""></p>
-<p>Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.</p>
+<p>Los nombres de usuario borrados ya no aparecen en el editor de usuarios. Note that the IDs for deleted users are reassigned when new user accounts are created.</p>
 <h3><a class="anchor" aria-hidden="true" id="propiedades-de-los-usuarios"></a><a href="#propiedades-de-los-usuarios" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propiedades de los usuarios</h3>
 <ul>
 <li><p><strong>User Kind</strong>: The User Kind field contains &quot;Designer&quot;, &quot;Administrator&quot;, or (for all other users) &quot;User&quot;.</p></li>
@@ -94,7 +94,7 @@
 <p>Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.</p>
 <p>Para crear un grupo:</p>
 <ol>
-<li><p>Select <strong>Tool Box &gt; Groups</strong> in the <strong>Design</strong> menu or click  on the <strong>Tool Box</strong> button of the 4D toolbar then on the <strong>Groups</strong> button. 4D muestra la ventana del editor de grupos. The list of groups displays all the groups of the database.</p></li>
+<li><p>Select <strong>Tool Box &gt; Groups</strong> in the <strong>Design</strong> menu or click  on the <strong>Tool Box</strong> button of the 4D toolbar then on the <strong>Groups</strong> button. 4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos de la base.</p></li>
 <li><p>Click on the <img src="/docs/19/assets/en/Users/PlussNew.png" alt=""> button located below the list of groups.<br>
 OR<br>
 Right-click in the list of groups and choose the <strong>Add</strong> or <strong>Duplicate</strong> command in the context menu.</p></li>
@@ -102,7 +102,7 @@ Right-click in the list of groups and choose the <strong>Add</strong> or <strong
 <blockquote>
 <p>The Duplicate command can be used to create several groups having the same characteristics quickly.</p>
 </blockquote>
-<p>4D adds a new group to the list, named &quot;New groupX&quot; by default.</p>
+<p>4D añade un nuevo grupo a la lista, llamado por defecto &quot;Nuevo grupoX&quot;.</p>
 <ol start="3">
 <li>Introduzca el nombre del nuevo grupo. El nombre del grupo puede tener hasta 15 caracteres. You can rename a group at any time using the <strong>Rename</strong> command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.</li>
 </ol>
@@ -114,14 +114,14 @@ Right-click in the list of groups and choose the <strong>Add</strong> or <strong
 <p>Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See &quot;<a href="#an-access-hierarchy-scheme">An access hierarchy scheme</a>&quot; below.</p>
 <p>To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.</p>
 <h3><a class="anchor" aria-hidden="true" id="asignar-un-grupo-a-un-plug-in-o-a-un-servidor"></a><a href="#asignar-un-grupo-a-un-plug-in-o-a-un-servidor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asignar un grupo a un plug-in o a un servidor</h3>
-<p>You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins.</p>
+<p>You can assign a group privileges to any plug-ins installed in the database. Esto incluye todos los plug-ins de 4D y los de terceros.</p>
 <p>Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.</p>
 <p>You can also restrict the use of the 4D Client Web server and SOAP server via the plug-in access area.</p>
 <p>The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option.</p>
 <p><img src="/docs/19/assets/en/Users/plugins.png" alt=""></p>
-<p>The <strong>4D Client Web Server</strong> and <strong>4D Client SOAP Server</strong> items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.</p>
+<p>The <strong>4D Client Web Server</strong> and <strong>4D Client SOAP Server</strong> items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. Estas licencias son consideradas por 4D Server como licencias de plug-in. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.</p>
 <h3><a class="anchor" aria-hidden="true" id="un-esquema-de-acceso-jerárquico"></a><a href="#un-esquema-de-acceso-jerárquico" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Un esquema de acceso jerárquico</h3>
-<p>The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.</p>
+<p>The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. Esta sección describe varios enfoques de este esquema.</p>
 <p>In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.</p>
 <p>The groups are then nested so that privileges are correctly distributed to the users of each group.</p>
 <ul>

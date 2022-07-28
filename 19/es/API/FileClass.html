@@ -307,7 +307,7 @@
 <h4><a class="anchor" aria-hidden="true" id="descripción-4"></a><a href="#descripción-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descripción</h4>
 <p>The <code>.createAlias()</code> function creates an alias (macOS) or a shortcut (Windows) to the file with the specified <em>aliasName</em> name in the folder designated by the <em>destinationFolder</em> object.</p>
 <p>Pass the name of the alias or shortcut to create in the <em>aliasName</em> parameter.</p>
-<p>By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the <em>aliasType</em> parameter. Las siguientes constantes están disponibles:</p>
+<p>Por defecto en macOS, la función crea un alias estándar. You can also create a symbolic link by using the <em>aliasType</em> parameter. Las siguientes constantes están disponibles:</p>
 <table>
 <thead>
 <tr><th>Constante</th><th>Valor</th><th>Comentario</th></tr>
@@ -378,7 +378,7 @@
 <p><strong>ATENCIÓN</strong>: <code>.delete( )</code> puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. <code>.delete( )</code> debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-4"></a><a href="#ejemplo-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
-<p>You want to delete a specific file in the database folder:</p>
+<p>Desea eliminar un archivo específico en la carpeta de la base de datos:</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$tempo</span>:=<span class="hljs-function">File</span>(<span class="hljs-string">"/PACKAGE/SpecialPrefs/"</span>+Current user+<span class="hljs-string">".prefs"</span>)<span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$tempo</span>.exists)
     <span class="hljs-variable">$tempo</span>.<span class="hljs-function">delete</span>()
@@ -930,9 +930,9 @@ var</span> <span class="hljs-variable">$info </span>: Object
 </tbody>
 </table>
 <p>If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.</p>
-<p><strong><em>info</em> parameter object with a .plist file</strong></p>
+<p><strong>Parámetro <em>info</em> con un un archivo .plist</strong></p>
 <p>Each valid property set in the <em>info</em> object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Los tipos de valores se conservan cuando es posible.</p>
-<p>If a key set in the <em>info</em> parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.</p>
+<p>If a key set in the <em>info</em> parameter is already defined in the .plist file, its value is updated while keeping its original type. Las demás llaves existentes en el archivo .plist no se modifican.</p>
 <blockquote>
 <p>To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds (&quot;2003-02-01T01:02:03Z&quot;) like in the Xcode plist editor.</p>
 </blockquote>

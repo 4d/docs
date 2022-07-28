@@ -69,7 +69,7 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/19/docs/Tags/tags.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Etiquetas de transformación</h1></header><article><div><span><p>4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a &quot;template&quot;. These tags are interpreted when the source text is executed and generate an output text.</p>
 <p>This principle is used in particular by the 4D Web server to build <a href="/docs/19/es/WebServer/templates.html">web template pages</a>.</p>
 <p>These tags are generally to be inserted as HTML type comments (<code>&lt;!--#Tag Contents--&gt;</code>) but an <a href="#alternative-syntax-for-4dtext-4dhtml-4deval">xml-compliant alternative syntax</a> is available for some of them.</p>
-<p>Es posible mezclar varios tipos de etiquetas. For example, the following HTML structure is entirely feasible:</p>
+<p>Es posible mezclar varios tipos de etiquetas. Por ejemplo, la siguiente estructura HTML es totalmente factible:</p>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">HTML</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">BODY</span>&gt;</span>
 <span class="hljs-comment">&lt;!--#4DSCRIPT/PRE_PROCESS--&gt;</span>   (Method call)
@@ -111,7 +111,7 @@
 <h4><a class="anchor" aria-hidden="true" id="sintaxis---4dbase-folderpath--"></a><a href="#sintaxis---4dbase-folderpath--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxis: <code>&lt;!--#4DBASE folderPath--&gt;</code></h4>
 <p>The <code>&lt;!--#4DBASE --&gt;</code> tag designates the working directory to be used by the <code>&lt;!--#4DINCLUDE--&gt;</code> tag.</p>
 <p>When it is called in a Web page, the <code>&lt;!--#4DBASE --&gt;</code> tag modifies all subsequent <code>&lt;!--#4DINCLUDE--&gt;</code> calls on this page, until the next <code>&lt;!--#4DBASE --&gt;, if any. If the</code><!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.</p>
-<p>The <em>folderPath</em> parameter must contain a pathname relative to the current page and it must end with a slash (/). The designated folder must be located inside the Web folder.</p>
+<p>The <em>folderPath</em> parameter must contain a pathname relative to the current page and it must end with a slash (/). La carpeta designada debe estar ubicada dentro de la carpeta Web.</p>
 <p>Pass the &quot;WEBFOLDER&quot; keyword to restore the default path (relative to the page).</p>
 <p>The following code, which must specify a relative path for each call:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DINCLUDE subpage.html--&gt;</span> 
@@ -179,7 +179,7 @@ End if
 <li>The <code>TRACE</code> command is supported and activates the 4D debugger, thus allowing you to debug your template code.</li>
 <li>Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.</li>
 <li>The text in between <code>&lt;!--#4DCODE</code> and <code>--&gt;</code> is split into lines accepting any line-ending convention (cr, lf, or crlf).</li>
-<li>The text is tokenized within the context of the database that called <code>PROCESS 4D TAGS</code>. This is important for recognition of project methods for example. The <a href="/docs/19/es/WebServer/allowProject.html">Available through tags and 4D URLs (4DACTION ...)</a> method property is not taken into account.</li>
+<li>The text is tokenized within the context of the database that called <code>PROCESS 4D TAGS</code>. Esto es importante para el reconocimiento de los métodos de proyecto, por ejemplo. The <a href="/docs/19/es/WebServer/allowProject.html">Available through tags and 4D URLs (4DACTION ...)</a> method property is not taken into account.</li>
 <li>Even if the text always uses English-US, it is recommended to use the token syntax (:Cxxx) for command and constant names to protect against potential problems due to commands or constants being renamed from one version of 4D to another.</li>
 </ul>
 <blockquote>
@@ -206,7 +206,7 @@ End if
 <li>If the collection contains elements with a Null value, an error is generated if the <em>item</em> variable type does not support Null values (such as longint variables).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo-con-una-colección-de-valores-escalares"></a><a href="#ejemplo-con-una-colección-de-valores-escalares" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo con una colección de valores escalares</h4>
-<p><em>getNames</em> returns a collection of strings. The method has been declared as &quot;<a href="/docs/19/es/WebServer/allowProject.html">available through 4D tags and URLs</a>&quot;.</p>
+<p><em>getNames</em> devuelve una colección de cadenas. The method has been declared as &quot;<a href="/docs/19/es/WebServer/allowProject.html">available through 4D tags and URLs</a>&quot;.</p>
 <pre><code class="hljs css language-html">    <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"table"</span>&gt;</span>    
 
         <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
@@ -323,7 +323,7 @@ customers:=ds.Customers.<span class="hljs-function">all</span>()
 <p>The <em>expression</em> parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.</p>
 <p>In case of an interpretation error, the text &quot;<code>&lt;!--#4DIF expression--&gt;</code>: A Boolean expression was expected&quot; is inserted instead of the contents located between <code>&lt;!--#4DIF --&gt;</code> and <code>&lt;!--#4DENDIF--&gt;</code>. Likewise, if there are not as many <code>&lt;!--#4DENDIF--&gt;</code> as <code>&lt;!--#4DIF --&gt;</code>, the text &quot;<code>&lt;!--#4DIF expression--&gt;</code>: 4DENDIF expected&quot; is inserted instead of the contents located between <code>&lt;!--#4DIF --&gt;</code> and <code>&lt;!--#4DENDIF--&gt;</code>.</p>
 <p>In case of an interpretation error, the text &quot;<code>&lt;!--#4DIF expression--&gt;</code>: A Boolean expression was expected&quot; is inserted instead of the contents located between <code>&lt;!--#4DIF --&gt;</code> and <code>&lt;!--#4DENDIF--&gt;</code>. The <code>&lt;!--#4DIF expression--&gt;</code> ... <code>&lt;!--#4DENDIF--&gt;</code> blocks can be nested in several levels. Like in 4D, each <code>&lt;!--#4DIF expression--&gt;</code> must match a <code>&lt;!--#4DENDIF--&gt;</code>.</p>
-<p>Using the <code>&lt;!--#4DELSEIF--&gt;</code> tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as <code>True</code> is executed. If no conditions are true, no statement is executed (if there is no final <code>&lt;!--#4DELSE--&gt;</code>). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.</p>
+<p>Using the <code>&lt;!--#4DELSEIF--&gt;</code> tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as <code>True</code> is executed. If no conditions are true, no statement is executed (if there is no final <code>&lt;!--#4DELSE--&gt;</code>). Puede utilizar una etiqueta <!--#4DELSE--> después del último <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.</p>
 <p>Los dos códigos siguientes son equivalentes.</p>
 <p>Código utilizando sólo 4DELSE:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DIF Condition1--&gt;</span>
@@ -376,14 +376,14 @@ No name has been found.
 <h2><a class="anchor" aria-hidden="true" id="4dinclude"></a><a href="#4dinclude" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4DINCLUDE</h2>
 <h4><a class="anchor" aria-hidden="true" id="sintaxis---4dinclude-path--"></a><a href="#sintaxis---4dinclude-path--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxis: <code>&lt;!--#4DINCLUDE path--&gt;</code></h4>
 <p>This tag is mainly designed to include an HTML page (indicated by the <em>path</em> parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> tags, is included (the tags themselves are not included). This lets you avoid conflicts related to meta tags present in the headers.</p>
-<p>However, if the HTML page specified does not contain <code>&lt;body&gt;``&lt;/body&gt;</code> tags, the entire page is included. It is up to you to verify the consistency of the meta tags.</p>
+<p>However, if the HTML page specified does not contain <code>&lt;body&gt;``&lt;/body&gt;</code> tags, the entire page is included. Depende de usted verificar la consistencia de las meta-etiquetas.</p>
 <p>The <code>&lt;!--#4DINCLUDE --&gt;</code> comment is very useful for tests (<code>&lt;!--#4DIF--&gt;</code>) or loops (<code>&lt;!--#4DLOOP--&gt;</code>). It is very convenient to include banners according to a criteria or randomly. When including, regardless of the file name extension, 4D analyzes the called page and then inserts the contents (modified or not) in the page originating the <code>4DINCLUDE</code> call.</p>
 <p>An included page with the <code>&lt;!--#4DINCLUDE --&gt;</code> comment is loaded in the Web server cache the same way as pages called via a URL or sent with the <code>WEB SEND FILE</code> command.</p>
 <p>In <em>path</em>, put the path leading to the document to include. Warning: In the case of a <code>4DINCLUDE</code> call, the path is relative to the document being analyzed, that is, the &quot;parent&quot; document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the <code>4DINCLUDE</code> tag with the <code>PROCESS 4D TAGS</code> command, the default folder is the project folder.</p>
 <blockquote>
 <p>You can modify the default folder used by the <code>4DINCLUDE</code> tag in the current page, using the <code>&lt;!--#4DBASE --&gt;</code> tag (see below).</p>
 </blockquote>
-<p>The number of <code>&lt;!--#4DINCLUDE path--&gt;</code> within a page is unlimited. However, the <code>&lt;!--#4DINCLUDE path--&gt;</code> calls can be made only at one level. This means that, for example, you cannot insert <code>&lt;!--#4DINCLUDE mydoc3.html--&gt;</code> in the <em>mydoc2.html</em> body page, which is called by <code>&lt;!--#4DINCLUDE mydoc2--&gt;</code> inserted in <em>mydoc1.html</em>. Furthermore, 4D verifies that inclusions are not recursive.</p>
+<p>The number of <code>&lt;!--#4DINCLUDE path--&gt;</code> within a page is unlimited. However, the <code>&lt;!--#4DINCLUDE path--&gt;</code> calls can be made only at one level. This means that, for example, you cannot insert <code>&lt;!--#4DINCLUDE mydoc3.html--&gt;</code> in the <em>mydoc2.html</em> body page, which is called by <code>&lt;!--#4DINCLUDE mydoc2--&gt;</code> inserted in <em>mydoc1.html</em>. Además, 4D verifica que las inclusiones no son recursivas.</p>
 <p>In case of error, the inserted text is &quot;<code>&lt;!--#4DINCLUDE path--&gt;</code> :The document cannot be opened&quot;.</p>
 <p>Ejemplos:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DINCLUDE subpage.html--&gt;</span>
@@ -405,7 +405,7 @@ No name has been found.
 <span class="hljs-comment">&lt;!--#4DTEXT [People]Name--&gt;</span> <span class="hljs-comment">&lt;!--#4DTEXT [People]Surname--&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span>
 <span class="hljs-comment">&lt;!--#4DENDLOOP--&gt;</span>
 </code></pre>
-<p>... could be expressed in 4D language in the following way:</p>
+<p>... podría expresarse en lenguaje 4D de la siguiente manera:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function"> FIRST RECORD</span>([People])<span class="hljs-keyword">
  While</span>(<span class="hljs-function">Not</span>(<span class="hljs-function">End selec tion</span>([People])))
     ...
@@ -415,14 +415,14 @@ No name has been found.
 <h3><a class="anchor" aria-hidden="true" id="--4dloop-array--"></a><a href="#--4dloop-array--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;!--#4DLOOP array--&gt;</code></h3>
 <p>Esta sintaxis hace un bucle para cada elemento del array. The array current item is increased when each code portion is repeated.</p>
 <blockquote>
-<p>Esta sintaxis no se puede utilizar con arrays de dos dimensiones. In this case, it is better to combine a method with nested loops.</p>
+<p>Esta sintaxis no se puede utilizar con arrays de dos dimensiones. En este caso, es mejor combinar un método con bucles anidados.</p>
 </blockquote>
 <p>The following code example:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DLOOP arr_names--&gt;</span>
 <span class="hljs-comment">&lt;!--#4DTEXT arr_names{arr_names}--&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span>
 <span class="hljs-comment">&lt;!--#4DENDLOOP--&gt;</span>
 </code></pre>
-<p>... could be expressed in 4D language in the following way:</p>
+<p>... podría expresarse en lenguaje 4D de la siguiente manera:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$Elem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(arr_names))
     arr_names:=<span class="hljs-variable">$Elem</span>
     ...<span class="hljs-keyword">
@@ -430,14 +430,14 @@ No name has been found.
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="--4dloop-method--"></a><a href="#--4dloop-method--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;!--#4DLOOP method--&gt;</code></h3>
 <p>This syntax makes a loop as long as the method returns <code>True</code>. El método toma un tipo de parámetro Long Integer. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns <code>True</code>.</p>
-<p>For security reasons, within a Web process, the <code>On Web Authentication</code> database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.</p>
+<p>For security reasons, within a Web process, the <code>On Web Authentication</code> database method can be called once just before the initialization stage (method execution with 0 as parameter). Si la autenticación es correcta, se procederá a la etapa de inicialización.</p>
 <p><code>C_BOOLEAN($0)</code> y <code>C_LONGINT($1)</code> DEBE declararse dentro del método a efectos de compilación.</p>
 <p>The following code example:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DLOOP my_method--&gt;</span>
 <span class="hljs-comment">&lt;!--#4DTEXT var--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span> 
 <span class="hljs-comment">&lt;!--#4DENDLOOP--&gt;</span>
 </code></pre>
-<p>... could be expressed in 4D language in the following way:</p>
+<p>... podría expresarse en lenguaje 4D de la siguiente manera:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(AuthenticationWebOK)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">my_method</span>(<span class="hljs-number">0</span>))
        <span class="hljs-variable">$counter</span>:=<span class="hljs-number">1</span><span class="hljs-keyword">
@@ -527,7 +527,7 @@ No name has been found.
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">P</span>&gt;</span>Welcome to <span class="hljs-comment">&lt;!--#4DTEXT vtSiteName--&gt;</span>!<span class="hljs-tag">&lt;/<span class="hljs-name">P</span>&gt;</span>
 </code></pre>
 <p>Just like the <code>4DTEXT</code> tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. This value is inserted as simple text, special HTML characters such as &quot;&gt;&quot; are automatically escaped.</p>
-<p>También puede insertar expresiones 4D. You can for example directly insert the contents of a field (<code>&lt;!--#4DTEXT [tableName]fieldName--&gt;</code>), an array element (<code>&lt;!--#4DTEXT tabarr{1}--&gt;</code>) or a method returning a value (<code>&lt;!--#4DTEXT mymethod--&gt;</code>). The expression conversion follows the same rules as the variable ones. Moreover, the expression must comply with 4D syntax rules.</p>
+<p>También puede insertar expresiones 4D. You can for example directly insert the contents of a field (<code>&lt;!--#4DTEXT [tableName]fieldName--&gt;</code>), an array element (<code>&lt;!--#4DTEXT tabarr{1}--&gt;</code>) or a method returning a value (<code>&lt;!--#4DTEXT mymethod--&gt;</code>). The expression conversion follows the same rules as the variable ones. Además, la expresión debe cumplir con las reglas de sintaxis 4D.</p>
 <blockquote>
 <p>For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the <a href="#prevention-of-malicious-code-insertion">insertion of malicious code</a>.</p>
 </blockquote>
