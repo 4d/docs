@@ -5,8 +5,7 @@ title: Debugger
 
 The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
-![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
-
+![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 ## Calling the Debugger
 
@@ -14,10 +13,10 @@ There are multiple ways to get the Debugger to display:
 
 * Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
 * Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
-* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor 
+* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
 * Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
-![open-debugger](assets/en/Debugging/openDebugger.png)
+![open-debugger](../assets/en/Debugging/openDebugger.png)
 
 * Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
 * Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
@@ -27,13 +26,12 @@ When called, the debugger window provides the name of the method or class functi
 * *Clients_BuildLogo* is the method being traced
 * The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
 
-
-Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process. 
+Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process.
 
 The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
 
-- on the remote 4D for code running locally
-- on the server machine for code running on the server (for example, a method with the **execute on server** option). 
+* on the remote 4D for code running locally
+* on the server machine for code running on the server (for example, a method with the **execute on server** option).
 
 > If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
 
@@ -41,9 +39,9 @@ The Debugger window is usually displayed on the machine where the code is execut
 
 The debugger's tool bar includes several buttons, associated with default shortcuts:
 
-![execution-control-toolbar-buttons](assets/en/Debugging/executionToolbarButtons.png)
+![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box. 
+> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
 
 #### No Trace
 
@@ -53,28 +51,28 @@ Tracing stops and normal method execution resumes.
 
 #### Step Over
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line. 
+Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
 
 The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
 
 In remote debugging, if the method executes on the server, the parent method is called after the last line of the child method executes. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
-#### Step Into 
+#### Step Into
 
 When a line that calls another method (subroutine or function) is executed, click this button to display the the other method and step through it.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window. 
+The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
 #### Abort
 
-Stops method execution, and returns to the state before the method started executing: 
-* When tracing a form or object method executing in response to an event: Stops and returns to the form. 
+Stops method execution, and returns to the state before the method started executing:
+
+* When tracing a form or object method executing in response to an event: Stops and returns to the form.
 * When tracing a method executing from within the Application environment: Stops and returns to the environment.
 
 #### Abort and Edit
-
 
 Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 
@@ -91,30 +89,31 @@ If you use this button to modify a method, the modifications are only effective 
 #### Save Settings  
 
 Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
-* the size and position of the window 
+
+* the size and position of the window
 * the position of the division lines and the contents of the area that evaluates the expressions
 
 These parameters are stored in the project.
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines]()).
+This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote.md)).
 
 ## Watch Pane
 
 The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Here is an example:
 
-![watch-pane](assets/en/Debugging/watchPane.png)
+![watch-pane](../assets/en/Debugging/watchPane.png)
 
 > This pane is not available in remote debugging mode.
 
 The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
 
-The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object. 
+The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
 ### Expression list
 
-#### Line Objects 
+#### Line Objects
 
 This theme lets you keep track of the values of the objects or expressions:
 
@@ -170,17 +169,17 @@ Arrays, like other variables, appear in the Interprocess, Process, and Local sub
 
 To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
 
-![show-types-menu-item](assets/en/Debugging/showTypes.png)
+![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
-Here's the result: 
+Here's the result:
 
-![dynamic-variable-names](assets/en/Debugging/dynamicVariableNames.png)
+![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
 #### Current Form Values
 
 This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
 
-![current-form-value](assets/en/Debugging/current-form-values.png)
+![current-form-value](../assets/en/Debugging/current-form-values.png)
 
 Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
 
@@ -198,11 +197,11 @@ This theme lists the processes started since the beginning of the working sessio
 
 #### Tables and Fields  
 
-This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**. 
+This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
 For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). You can modify the field values but not the the tables' information.
 
-#### Sets 
+#### Sets
 
 This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
 
@@ -226,11 +225,11 @@ This theme displays information regarding the main Web server of the application
 
 The expressions contained within this theme cannot be modified.
 
-### Contextual Menu 
+### Contextual Menu
 
 Additional options are available from the contextual menu of the Watch pane.
 
-![context-menu](assets/en/Debugging/contextual-menu.png)
+![context-menu](../assets/en/Debugging/contextual-menu.png)
 
 * **Collapse All**: Collapses all levels of the hierarchical list.
 * **Expand All**: Expand all levels of the hierarchical list.
@@ -245,44 +244,44 @@ Additional options are available from the contextual menu of the Watch pane.
 
 A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
 
-![call-chain-pane](assets/en/Debugging/call-chain-example.png)
+![call-chain-pane](../assets/en/Debugging/call-chain-example.png)
 
-Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on. 
+Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
 
 In the image above:
 
 * `thirdMethod` has not received any parameter
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
-    * $1 is a pointer to the `[Employee]` table
-    * $2 is a pointer to the `ID` field in the  `[Employee]` table
-    * $3 is an alphanumeric parameter whose value is "Z"
+  * $1 is a pointer to the `[Employee]` table
+  * $2 is a pointer to the `ID` field in the  `[Employee]` table
+  * $3 is an alphanumeric parameter whose value is "Z"
 
-You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane). 
+You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
-Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Values appear on the right side of the pane. Clicking on any value on the right side allows you to change the value of any parameter or function result. 
+Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Values appear on the right side of the pane. Clicking on any value on the right side allows you to change the value of any parameter or function result.
 
 To display the parameter type, check the **Show types** option in the contextual menu:
 
-![call-chain-show-types](assets/en/Debugging/callChainShowTypes.png)
+![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
 
 After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
 
 You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
 
-## Custom Watch Pane 
+## Custom Watch Pane
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated: 
+The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
-* field 
-* variable 
-* pointer 
-* calculation 
+* field
+* variable
+* pointer
+* calculation
 * 4D command
-* method 
+* method
 * and anything else that returns a value
 
-![custom-Watch-pane](assets/en/Debugging/custom-watch-pane.png)
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
 You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
@@ -293,7 +292,7 @@ There are several ways to add expressions to the list:
 * Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
 * Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
- 
+
 You can enter any formula that returns a result.
 
 To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
@@ -306,18 +305,20 @@ To delete an expression, click on it to select it, then press **Backspace** or *
 
 The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
 
-![custom-watch-pane-context-menu](assets/en/Debugging/custom-watch-pane-context-menu.png)
+![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
 **New Expression**: This inserts a new expression and displays the 4D Formula Editor.
 
-![custom-Watch-pane-context-menu](assets/en/Debugging/custom-watch-pane-formula-editor.png)
+![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
 For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
 
 * **Insert Command**: Shortcut for inserting a 4D command as a new expression.
 * **Delete All**: Removes all expressions from the Custom Watch Pane.
 * **Standard Expressions**: Copies the Watch Pane's list of expressions.
+
 > This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+
 * **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
 * **Show Types**: Displays the type of each item in the list (when appropriate).
 * **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
@@ -327,22 +328,22 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 
 ## Source Code Pane
 
-The Source Code Pane shows the source code of the method or function currently being traced. 
+The Source Code Pane shows the source code of the method or function currently being traced.
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
 
 ### Tool tip
 
-Hover your pointer over any expression to display a tool tip that indicates: 
+Hover your pointer over any expression to display a tool tip that indicates:
 
 * the declared type of the expression
 * the current value of the expression
 
-![source-code-pane](assets/en/Debugging/sourceCodePane.png)
+![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
 
 This also works with selections:
 
-![source-code-pane-tip](assets/en/Debugging/sourcePaneTip.png)
+![source-code-pane-tip](../assets/en/Debugging/sourcePaneTip.png)
 
 ### Adding expressions to the Custom Watch Pane
 
@@ -352,7 +353,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 2. Do one of the following:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
-    * Right-click the selected text **>** **Copy to Expression Pane** 
+    * Right-click the selected text **>** **Copy to Expression Pane**
 
 ### Program Counter
 
@@ -378,7 +379,7 @@ For example:
   // ...
 ```
 
-Say the program counter is set to the line `If (This condition)`. 
+Say the program counter is set to the line `If (This condition)`.
 When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line.
 To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
 
@@ -386,7 +387,7 @@ To examine the results of the `DO_SOMETHING` line, you can move the program coun
 
 The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
 
-![source-code-pane-context-window](assets/en/Debugging/sourceCodePaneContext.png)
+![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 * **Goto Definition**: Goes to where the selected object is defined. This command is available for:
   * *Project methods:* displays method contents in a new window of the Code Editor
@@ -407,7 +408,7 @@ The contextual menu of the Source Code Pane provides access to several functions
 Specific shortcuts allow you to find strings identical to the one selected:
 
 * To search for the next identical strings, press **Ctrl+E** (Windows) or **Cmd+E** (macOS)
-* To search for the previous identical strings, press **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS) 
+* To search for the previous identical strings, press **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS)
 
 The search is carried out only if you select at least one character in the Source code pane.
 
@@ -434,8 +435,8 @@ This section lists all the shortcuts available in the debugger window.
 
 #### All Panes
 
-- **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
-- **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
-- When no item is selected in any pane, press **Enter** to step over.
-- When an item value is selected, use the arrows keys to navigate through the list.
-- When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.
+* **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
+* **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
+* When no item is selected in any pane, press **Enter** to step over.
+* When an item value is selected, use the arrows keys to navigate through the list.
+* When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.

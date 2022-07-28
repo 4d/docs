@@ -178,7 +178,7 @@ In *name*, you can pass a name for the new sheet. The new name cannot contain th
 
 The document currently has 3 sheets:
 
-![vp-document-with-3-sheets](assets/en/ViewPro/vp-sheet-3.png)
+![vp-document-with-3-sheets](../assets/en/ViewPro/vp-sheet-3.png)
 
 To insert a sheet at the third position (index 2) and name it "March":
 
@@ -186,7 +186,7 @@ To insert a sheet at the third position (index 2) and name it "March":
 VP ADD SHEET("ViewProArea";2;"March")
 ```
 
-![vp-add-sheet](assets/en/ViewPro/vp-add-sheet.png)
+![vp-add-sheet](../assets/en/ViewPro/vp-add-sheet.png)
 
 #### See also
 
@@ -217,7 +217,7 @@ In *rangeObj*, pass a range object of cells. The cells in the range are joined t
 
 To span the First quarter and Second quarter cells across the two cells beside them, and the South area cell across the two rows below it:
 
-![initial-document](assets/en/ViewPro/vp-add-span.png)
+![initial-document](../assets/en/ViewPro/vp-add-span.png)
 
 ```4d
  // First quarter range
@@ -232,7 +232,7 @@ To span the First quarter and Second quarter cells across the two cells beside t
  VP ADD SPAN(VP Combine ranges($q1;$q2;$south))
 ```
 
-![vp-add-span-result](assets/en/ViewPro/vp-add-span-2.png)
+![vp-add-span-result](../assets/en/ViewPro/vp-add-span-2.png)
 
 #### See also
 
@@ -382,7 +382,7 @@ In the optional *sheet* parameter, you can indicate the index of the sheet where
 
 You want to define a range object for the cell shown below (on the current spreadsheet):
 
-![vp-cell](assets/en/ViewPro/cmd_vpCell.png)
+![vp-cell](../assets/en/ViewPro/cmd_vpCell.png)
 
 The code would be:
 
@@ -718,8 +718,6 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### See also
 
-
-
 [VP PASTE FROM OBJECT](#vp-paste-from-object)<br/>[VP MOVE CELLS](#vp-move-cells)<br/>[VP Get workbook options](#vp-get-workbook-options)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ### VP CREATE TABLE
@@ -757,10 +755,10 @@ In *tableName*, pass a name for the table. The name must:
 * include at least 5 characters
 * not include spaces or start with a number
 
-In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row. 
+In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
 
-  * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*. 
-  * If the specified *source* cannot be fully displayed in the document, no table is created.
+* If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
+* If the specified *source* cannot be fully displayed in the document, no table is created.
 
 In *options*, you can pass an object with additional options for the table. Possible values are:
 
@@ -782,8 +780,8 @@ The *tableColumns* collection determines the structure of the table's columns. E
   
 The length of the *tableColumns* collection must be equal to the range column count:
 
-  * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
-  * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
+* When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
+* When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
 
 If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
 
@@ -792,16 +790,16 @@ If you pass a *source* but no *tableColumn* option, the command generates column
 ```4d
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
 ```
+
 Here the titles of the columns would be `LastName` and `FirstName`.
 
 * If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
 
   * The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row. The number of values in the first subcollection determines how many columns are created.
   * The subcollections' indices are used as column titles.
-  * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value). 
+  * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value).
 
 > This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
-
 
 #### Example
 
@@ -1055,7 +1053,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 
 You want to export the current sheet to a `.txt` file with pipe-separated values:
 
-![example-export-csv](assets/en/ViewPro/vp-export-document-csv.png)
+![example-export-csv](../assets/en/ViewPro/vp-export-document-csv.png)
 
 ```4d
 var $params : Object
@@ -1068,10 +1066,9 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 Here's the result:
 
-![example-export-csv](assets/en/ViewPro/vp-export-document-csv-result.png)
+![example-export-csv](../assets/en/ViewPro/vp-export-document-csv-result.png)
 
 #### See also
-
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
 
@@ -1532,7 +1529,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 When the third sheet is selected:
 
-![third-sheet](assets/en/ViewPro/vp-sheet-3-select.png)
+![third-sheet](../assets/en/ViewPro/vp-sheet-3-select.png)
 
 The command returns 2:
 
@@ -2602,7 +2599,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 
 You want to import a `.txt` file that uses a comma (",") as delimiter:
 
-![example-import-csv](assets/en/ViewPro/vp-import-document-csv.png)
+![example-import-csv](../assets/en/ViewPro/vp-import-document-csv.png)
 
 ```4d
 $params:=New object
@@ -2611,7 +2608,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 ```
 
 Here's the result:
-![example-import-csv](assets/en/ViewPro/vp-import-document-csv-result.png)
+![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### See also
 
@@ -3488,7 +3485,6 @@ $result:=VP Run offscreen area($o)
 
 You want to load a large document offscreen, wait for all calculations to complete evaluating, and export it as a PDF:
 
-
 ```4d
 //cs.OffscreenArea class declaration
 Class constructor($pdfPath : Text)
@@ -3926,7 +3922,6 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 
 The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->defines the total number of columns in *vpAreaName*<!-- END REF -->.
 
-
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
 Pass the total number of columns in the *columnCount* parameter. *columnCount* must be greater than 0.
@@ -3976,7 +3971,7 @@ In *sheet*, pass the index of the sheet to be set as current sheet. If the index
 
 The document's current sheet is the first sheet:
 
-![first-sheet-selected](assets/en/ViewPro/vp-sheet-3-select.png)
+![first-sheet-selected](../assets/en/ViewPro/vp-sheet-3-select.png)
 
 Set the current sheet to the third sheet:
 
@@ -4397,7 +4392,7 @@ The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assign
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
 
-The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*. 
+The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
 > If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
 > If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
@@ -5024,11 +5019,11 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 ```
 
-![set-show-print-lines](assets/en/ViewPro/vp-set-show-print-lines.png)
+![set-show-print-lines](../assets/en/ViewPro/vp-set-show-print-lines.png)
 
 With a page break:
 
-![set-show-print-lines-with-page-break](assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
+![set-show-print-lines-with-page-break](../assets/en/ViewPro/vp-set-show-print-lines-page-break.png)
 
 #### See also
 
@@ -5435,5 +5430,3 @@ End if
 #### See also
 
 [VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
-
-

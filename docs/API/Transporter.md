@@ -71,7 +71,7 @@ Possible values are:
 
 ---
 
- <!-- REF transporter.authenticationModePOP3.Desc -->
+<!-- REF transporter.authenticationModePOP3.Desc -->
 ## .authenticationMode
 
 <details><summary>History</summary>
