@@ -104,7 +104,6 @@
 <span class="hljs-function">    QUERY</span>([People];[People]LastName=<span class="hljs-variable">$Find</span>)<span class="hljs-keyword">
  Else</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"Não introduciu um nome."</span>)<span class="hljs-keyword">
- End if</span><span class="hljs-keyword">
  End if</span> 
 </code></pre>
 <p><strong>Dica:</strong> A ramificação pode ser realizada sem que as instruções sejam executadas em um caso ou no outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:</p>
@@ -167,14 +166,30 @@
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Three."</span>) <span class="hljs-comment">//Se for 3, exibe um alerta</span><span class="hljs-keyword">
     Else</span> <span class="hljs-comment">//Se não for 1, 2, ou 3, exibe um alerta</span>
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"It was not one, two, or three."</span>)<span class="hljs-keyword">
+ End case</span> <span class="hljs-comment">//Se for 1, mostrar um alerta</span>
+    :(vResult=<span class="hljs-number">2</span>) <span class="hljs-comment">//Testar se o número é 2</span>
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Two."</span>) <span class="hljs-comment">//Se for 2, exibe um alerta</span>
+    :(vResult=<span class="hljs-number">3</span>) <span class="hljs-comment">//Testa se o número é 3</span>
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Three."</span>) <span class="hljs-comment">//Se for 3, exibe um alerta</span><span class="hljs-keyword">
+    Else</span> <span class="hljs-comment">//Se não for 1, 2, ou 3, exibe um alerta</span>
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"It was not one, two, or three."</span>)<span class="hljs-keyword">
  End case</span>
 </code></pre>
 <p>Por comparação, aqui está a versão <code>If... Else... End if</code> do mesmo método:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(vResult=<span class="hljs-number">1</span>) <span class="hljs-comment">//Teste se o número é 1</span>
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"One."</span>)<span class="hljs-keyword"> If</span>(vResult=<span class="hljs-number">1</span>) <span class="hljs-comment">//Teste se o número é 1</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"One."</span>) <span class="hljs-comment">//If it is 1, display an alert</span><span class="hljs-keyword">
  Else</span><span class="hljs-keyword">
     If</span>(vResult=<span class="hljs-number">2</span>) <span class="hljs-comment">//Teste se o número é  2</span>
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Two."</span>) <span class="hljs-comment">//Se for 2, exibe um alerta</span><span class="hljs-keyword">
+    Else</span><span class="hljs-keyword">
+       If</span>(vResult=<span class="hljs-number">3</span>) <span class="hljs-comment">//Teste se o número é 3</span>
+<span class="hljs-function">          ALERT</span>(<span class="hljs-string">"Three."</span>) <span class="hljs-comment">//Se for 3, exibe um alerta</span><span class="hljs-keyword">
+       Else</span> <span class="hljs-comment">//Se não for 1, 2, ou 3,  exibe um alerta</span>
+<span class="hljs-function">          ALERT</span>(<span class="hljs-string">"It was not one, two, or three."</span>)<span class="hljs-keyword">
+       End if</span><span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+ End if</span> <span class="hljs-comment">//Se for 2, exibe um alerta</span><span class="hljs-keyword">
     Else</span><span class="hljs-keyword">
        If</span>(vResult=<span class="hljs-number">3</span>) <span class="hljs-comment">//Teste se o número é 3</span>
 <span class="hljs-function">          ALERT</span>(<span class="hljs-string">"Three."</span>) <span class="hljs-comment">//Se for 3, exibe um alerta</span><span class="hljs-keyword">
@@ -213,7 +228,7 @@
  End if</span>
 </code></pre>
 <p>Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.</p>
-<p><strong>Dica:</strong> a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:</p>
+<p><strong>Dica:</strong> a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> Case of</span>
     :(Boolean_Expression)
     :(Boolean_Expression)

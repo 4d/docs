@@ -78,38 +78,38 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#copyto"><strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><p>    copies the <code>File</code> object into the specified <em>destinationFolder</em></td></tr>
+<tr><td><a href="#copyto"> <strong>.copyTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } { ; <em>overwrite</em> : Integer } ) : 4D.File</a><p>    copies the <code>File</code> object into the specified <em>destinationFolder</em></td></tr>
 <tr><td><a href="#create"><strong>.create()</strong> : Boolean </a><p>    creates a file on disk according to the properties of the <code>File</code> object</td></tr>
 <tr><td><a href="#createalias"><strong>.createAlias</strong>( <em>destinationFolder</em> : 4D.Folder ; <em>aliasName</em> : Text { ; <em>aliasType</em> : Integer } ) : 4D.File</a><p>    creates an alias (macOS) or a shortcut (Windows)</td></tr>
-<tr><td><a href="#creationdate"><strong>.creationDate</strong> : Date</a><p>    the creation date of the file</td></tr>
-<tr><td><a href="#creationtime"><strong>.creationTime</strong> : Time</a><p>    the creation  time of the file</td></tr>
+<tr><td><a href="#creationdate"> <strong>.creationDate</strong> : Date</a><p>    the creation date of the file</td></tr>
+<tr><td><a href="#creationtime"> <strong>.creationTime</strong> : Time</a><p>    the creation  time of the file</td></tr>
 <tr><td><a href="#delete"><strong>.delete( )</strong></a><p>    deletes the file</td></tr>
-<tr><td><a href="#exists"><strong>.exists</strong> : Boolean</a><p>    true if the file exists on disk</td></tr>
-<tr><td><a href="#extension"><strong>.extension</strong> : Text</a><p>    the extension of the file name (if any)</td></tr>
-<tr><td><a href="#fullname"><strong>.fullName</strong> : Text</a><p>    the full name of the file, including its extension (if any)</td></tr>
+<tr><td><a href="#exists"> <strong>.exists</strong> : Boolean</a><p>    true if the file exists on disk</td></tr>
+<tr><td><a href="#extension"> <strong>.extension</strong> : Text</a><p>    the extension of the file name (if any)</td></tr>
+<tr><td><a href="#fullname"> <strong>.fullName</strong> : Text</a><p>    the full name of the file, including its extension (if any)</td></tr>
 <tr><td><a href="#getappinfo"><strong>.getAppInfo</strong>() : Object</a><p>    returns the contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file information as an object</td></tr>
-<tr><td><a href="#getcontent"><strong>.getContent( )</strong> : 4D.Blob</a><p>returns a <code>4D.Blob</code> object containing the entire content of a file</td></tr>
-<tr><td><a href="#geticon"><strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    the icon of the file</td></tr>
-<tr><td><a href="#gettext"><strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</a><p>    returns the contents of the file as text</td></tr>
-<tr><td><a href="#hidden"><strong>.hidden</strong> : Boolean</a><p>    true if the file is set as &quot;hidden&quot; at the system level</td></tr>
-<tr><td><a href="#isalias"><strong>.isAlias</strong> : Boolean</a><p>    true if the file is an alias, a shortcut, or a symbolic link</td></tr>
+<tr><td><a href="#getcontent"> <strong>.getContent( )</strong> : 4D.Blob</a><p>returns a <code>4D.Blob</code> object containing the entire content of a file</td></tr>
+<tr><td><a href="#geticon"> <strong>.getIcon</strong>( { <em>size</em> : Integer } ) : Picture</a><p>    the icon of the file</td></tr>
+<tr><td><a href="#gettext"> <strong>.getText</strong>( { <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } ) : Text<br><strong>.getText</strong>( { <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) : Text</a><p>    returns the contents of the file as text</td></tr>
+<tr><td><a href="#hidden"> <strong>.hidden</strong> : Boolean</a><p>    true if the file is set as &quot;hidden&quot; at the system level</td></tr>
+<tr><td><a href="#isalias"> <strong>.isAlias</strong> : Boolean</a><p>    true if the file is an alias, a shortcut, or a symbolic link</td></tr>
 <tr><td></td></tr>
-<tr><td><a href="#isfile"><strong>.isFile</strong> : Boolean</a><p>    always true for a file</td></tr>
-<tr><td><a href="#isfolder"><strong>.isFolder</strong> : Boolean</a><p>    always false for a file</td></tr>
-<tr><td><a href="#iswritable"><strong>.isWritable</strong> : Boolean</a><p>    true if the file exists on disk and is writable</td></tr>
-<tr><td><a href="#modificationdate"><strong>.modificationDate</strong> : Date</a><p>    the date of the file's last modification</td></tr>
-<tr><td><a href="#modificationtime"><strong>.modificationTime</strong> : Time</a><p>    the time of the file's last modification</td></tr>
+<tr><td><a href="#isfile"> <strong>.isFile</strong> : Boolean</a><p>    always true for a file</td></tr>
+<tr><td><a href="#isfolder"> <strong>.isFolder</strong> : Boolean</a><p>    always false for a file</td></tr>
+<tr><td><a href="#iswritable"> <strong>.isWritable</strong> : Boolean</a><p>    true if the file exists on disk and is writable</td></tr>
+<tr><td><a href="#modificationdate"> <strong>.modificationDate</strong> : Date</a><p>    the date of the file's last modification</td></tr>
+<tr><td><a href="#modificationtime"> <strong>.modificationTime</strong> : Time</a><p>    the time of the file's last modification</td></tr>
 <tr><td><a href="#moveto"><strong>.moveTo</strong>( <em>destinationFolder</em> : 4D.Folder { ; <em>newName</em> : Text } ) : 4D.File</a><p>    moves or renames the <code>File</code> object into the specified <em>destinationFolder</em></td></tr>
-<tr><td><a href="#name"><strong>.name</strong> : Text</a><p>    the name of the file without extension (if any)</td></tr>
-<tr><td><a href="#original"><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</a><p>    the target element for an alias, a shortcut, or a symbolic link file</td></tr>
-<tr><td><a href="#parent"><strong>.parent</strong> : 4D.Folder</a><p>    the parent folder object of the file</td></tr>
-<tr><td><a href="#path"><strong>.path</strong> : Text</a><p>    the POSIX path of the file</td></tr>
-<tr><td><a href="#platformpath"><strong>.platformPath</strong> : Text</a><p>    the path of the file expressed with the current platform syntax</td></tr>
+<tr><td><a href="#name"> <strong>.name</strong> : Text</a><p>    the name of the file without extension (if any)</td></tr>
+<tr><td><a href="#original"> <strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</a><p>    the target element for an alias, a shortcut, or a symbolic link file</td></tr>
+<tr><td><a href="#parent"> <strong>.parent</strong> : 4D.Folder</a><p>    the parent folder object of the file</td></tr>
+<tr><td><a href="#path"> <strong>.path</strong> : Text</a><p>    the POSIX path of the file</td></tr>
+<tr><td><a href="#platformpath"> <strong>.platformPath</strong> : Text</a><p>    the path of the file expressed with the current platform syntax</td></tr>
 <tr><td><a href="#rename"><strong>.rename</strong>( <em>newName</em> : Text ) : 4D.File</a><p>    renames the file with the name you passed in <em>newName</em> and returns the renamed <code>File</code> object</td></tr>
 <tr><td><a href="#setappinfo"><strong>.setAppInfo</strong>( <em>info</em> : Object )</a><p>    writes the <em>info</em> properties as information contents of a <strong>.exe</strong>, <strong>.dll</strong> or <strong>.plist</strong> file</td></tr>
 <tr><td><a href="#setcontent"><strong>.setContent</strong> ( <em>content</em> : Blob ) </a><p>    rewrites the entire content of the file using the data stored in the <em>content</em> BLOB</td></tr>
 <tr><td><a href="#settext"><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetName</em> : Text { ; <em>breakMode</em> : Integer } } )<br><strong>.setText</strong> ( <em>text</em> : Text {; <em>charSetNum</em> : Integer { ; <em>breakMode</em> : Integer } } ) </a><p>    writes <em>text</em> as the new contents of the file</td></tr>
-<tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    the size of the file expressed in bytes</td></tr>
+<tr><td><a href="#size"> <strong>.size</strong> : Real</a><p>    the size of the file expressed in bytes</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="file"></a><a href="#file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File</h2>
@@ -414,7 +414,7 @@
 <p></details></p>
 <p><strong>.extension</strong> : Text</p>
 <h4><a class="anchor" aria-hidden="true" id="beschreibung-9"></a><a href="#beschreibung-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Beschreibung</h4>
-<p>The <code>.extension</code> property returns the extension of the file name (if any). An extension always starts with &quot;.&quot;. The property returns an empty string if the file name does not have an extension.</p>
+<p>The <code>.extension</code> property returns the extension of the file name (if any). An extension always starts with &quot;.&quot;. The <code>.extension</code> property returns the extension of the file name (if any).</p>
 <p>This property is <strong>read-only</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="fullname"></a><a href="#fullname" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.fullName</h2>
 <p><details><summary>History</summary></p>

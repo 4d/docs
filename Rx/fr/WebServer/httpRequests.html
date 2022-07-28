@@ -286,6 +286,46 @@ alert(<span class="hljs-string">"Enter your name, then try again."</span>)
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Welcome<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">language</span>=<span class="hljs-string">"JavaScript"</span>&gt;</span><span class="actionscript">&lt;!--
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">GetBrowserInformation</span><span class="hljs-params">(formObj)</span></span>{
+formObj.vtNav_appName.value = navigator.appName
+formObj.vtNav_appVersion.value = navigator.appVersion
+formObj.vtNav_appCodeName.value = navigator.appCodeName
+formObj.vtNav_userAgent.value = navigator.userAgent
+<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LogOn</span><span class="hljs-params">(formObj)</span></span>{
+<span class="hljs-keyword">if</span>(formObj.vtUserName.value!=<span class="hljs-string">""</span>){
+<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+} <span class="hljs-keyword">else</span> {
+alert(<span class="hljs-string">"Enter your name, then try again."</span>)
+<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+}
+}
+<span class="hljs-comment">//--&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"/4DACTION/WWW_STD_FORM_POST"</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span>
+ <span class="hljs-attr">name</span>=<span class="hljs-string">"frmWelcome"</span>
+ <span class="hljs-attr">onsubmit</span>=<span class="hljs-string">"return GetBrowserInformation(frmWelcome)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Welcome to Spiders United<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Please enter your name:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vtUserName"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"30"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vsbLogOn"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Log On"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"return LogOn(frmWelcome)"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vsbRegister"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Register"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vsbInformation"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Information"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vtNav_appName"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vtNav_appVersion"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span>&gt;</span> 
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vtNav_appCodeName"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"vtNav_userAgent"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 return false
 }
 }

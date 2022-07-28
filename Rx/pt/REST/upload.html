@@ -110,23 +110,16 @@
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$params </span>: Text<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$response </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$result </span>: Integer<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$blob </span>: Blob
-
-
-<span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$headerNames</span>; <span class="hljs-number">1</span>)
+var</span> <span class="hljs-variable">$blob </span>:<span class="hljs-function"> Blob ARRAY TEXT</span>(<span class="hljs-variable">$headerNames</span>; <span class="hljs-number">1</span>)
 <span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$headerValues</span>; <span class="hljs-number">1</span>)
 
 <span class="hljs-variable">$url</span>:=<span class="hljs-string">"localhost:80/rest/$upload?$binary=true"</span> <span class="hljs-comment">//prepare the REST request</span>
 
 <span class="hljs-variable">$headerNames{1}</span>:=<span class="hljs-string">"Content-Type"</span>
-<span class="hljs-variable">$headerValues{1}</span>:=<span class="hljs-string">"application/octet-stream"</span>
-
-<span class="hljs-function">DOCUMENT TO BLOB</span>(<span class="hljs-string">"c:\\invoices\\inv003.pdf"</span>; <span class="hljs-variable">$blob</span>) <span class="hljs-comment">//Load the binary </span>
+<span class="hljs-variable">$headerValues{1}</span>:=<span class="hljs-string">"application/octet-stream"</span><span class="hljs-function"> DOCUMENT TO BLOB</span>(<span class="hljs-string">"c:\\invoices\\inv003.pdf"</span>; <span class="hljs-variable">$blob</span>) <span class="hljs-comment">//Load the binary </span>
 
  <span class="hljs-comment">//Execute the first POST request to upload the file</span>
-<span class="hljs-variable">$result</span>:=<span class="hljs-function">HTTP Request</span>(HTTP POST method; <span class="hljs-variable">$url</span>; <span class="hljs-variable">$blob</span>; <span class="hljs-variable">$response</span>; <span class="hljs-variable">$headerNames</span>; <span class="hljs-variable">$headerValues</span>)<span class="hljs-keyword">
-
-If</span> (<span class="hljs-variable">$result</span>=<span class="hljs-number">200</span>)<span class="hljs-keyword"> 
+<span class="hljs-variable">$result</span>:=<span class="hljs-function">HTTP Request</span>(HTTP POST method; <span class="hljs-variable">$url</span>; <span class="hljs-variable">$blob</span>; <span class="hljs-variable">$response</span>; <span class="hljs-variable">$headerNames</span>; <span class="hljs-variable">$headerValues</span>)<span class="hljs-keyword"> If</span> (<span class="hljs-variable">$result</span>=<span class="hljs-number">200</span>)<span class="hljs-keyword"> 
     var</span> <span class="hljs-variable">$data </span>: Object
     <span class="hljs-variable">$data</span>:=New object
     <span class="hljs-variable">$data</span>.__KEY:=<span class="hljs-string">"3"</span>

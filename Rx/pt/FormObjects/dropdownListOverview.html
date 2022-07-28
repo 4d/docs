@@ -106,20 +106,15 @@
 <li><p>Digite uma lista de valores padrão nas propriedades objeto ao selecionar &quot;&lt;Static List&gt;&quot; in the <a href="/docs/Rx/pt/FormObjects/propertiesDataSource.html">Data Source</a> theme of the Property List. The default values are loaded into an object automatically.</p></li>
 <li><p>Execute code that creates the object and its properties. For example, if &quot;myList&quot; is the <a href="/docs/Rx/pt/FormObjects/propertiesObject.html#variable-or-expression">variable</a> associated to the drop-down list, you can write in the <a href="/docs/Rx/pt/Events/onLoad.html">On Load</a> form event:</p></li>
 </ul>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// Form.myDrop is the datasource of the form object</span>
-
-Form.myDrop:=New object
-Form.myDrop.values:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"apples"</span>; <span class="hljs-string">"nuts"</span>; <span class="hljs-string">"pears"</span>; <span class="hljs-string">"oranges"</span>; <span class="hljs-string">"carrots"</span>)
-Form.myDrop.index:=<span class="hljs-number">-1</span>  <span class="hljs-comment">//currentValue is a placeholder</span>
-Form.myDrop.currentValue:=<span class="hljs-string">"Select a fruit"</span> 
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Form.myDrop is the datasource of the form object Form.myDrop:=New object Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")</span>
+Form.myDrop.index:=<span class="hljs-number">-1</span>  <span class="hljs-comment">//currentValue is a placeholder Form.myDrop.currentValue:="Select a fruit" </span>
 </code></pre>
 <p>The drop-down list is displayed with the placeholder string:</p>
 <p><img src="/docs/Rx/assets/en/FormObjects/fruits2.png" alt=""></p>
 <p>After the user selects a value:</p>
 <p><img src="/docs/Rx/assets/en/FormObjects/fruits3.png" alt=""></p>
 <pre><code class="hljs css language-4d">Form.myDrop.values <span class="hljs-comment">// ["apples","nuts","pears","oranges","carrots"]</span>
-Form.myDrop.currentValue <span class="hljs-comment">//"oranges"</span>
-Form.myDrop.index <span class="hljs-comment">//3</span>
+Form.myDrop.currentValue <span class="hljs-comment">//"oranges" Form.myDrop.index //3</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="usar-um-array"></a><a href="#usar-um-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usar um array</h3>
 <p>Um <a href="/docs/Rx/pt/Concepts/arrays.html">array</a> é uma lista de valores na memória que são referenciados pelo nome do array. A drop-down list can display an array as a list of values when you click on it.</p>

@@ -93,7 +93,7 @@
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Hello World!"</span>)<span class="hljs-keyword">
     Else</span> 
         <span class="hljs-comment">// Error 404 for example</span><span class="hljs-keyword">
-End case</span> 
+    End case</span> 
 </code></pre>
 <p>The <a href="/docs/Rx/pt/WebServer/httpRequests.html#on-web-connection"><code>On Web Connection</code></a> database method is called for incoming requests and receives the target URL in the <code>$1</code> parameter. This very simple code only sends the text to the browser.</p>
 <ol start="3">
@@ -219,9 +219,9 @@ End case</span>
 <ol start="2">
 <li>Write and execute the following code to create a user:</li>
 </ol>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$webUser </span>: cs.WebUsersEntity
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$webUser </span>: cs. WebUsersEntity
 
-<span class="hljs-variable">$webUser</span>:=ds.WebUsers.<span class="hljs-function">new</span>()
+<span class="hljs-variable">$webUser</span>:=ds. WebUsers.<span class="hljs-function">new</span>()
 <span class="hljs-variable">$webUser</span>.firstName:=<span class="hljs-string">"John"</span>
 <span class="hljs-variable">$webUser</span>.lastName:=<span class="hljs-string">"Doe"</span>
 <span class="hljs-comment">// the password would be entered by the user</span>
@@ -239,12 +239,10 @@ End case</span>
 </ol>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$indexUserId</span>; <span class="hljs-variable">$indexPassword </span>: Integer<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$userId</span>; <span class="hljs-variable">$password </span>: Text<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$user</span>; <span class="hljs-variable">$info </span>: Object
-<span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-number">0</span>)
+var</span> <span class="hljs-variable">$user</span>; <span class="hljs-variable">$info </span>:<span class="hljs-function"> Object ARRAY TEXT</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-number">0</span>)
 <span class="hljs-function">ARRAY TEXT</span>(<span class="hljs-variable">$avalues</span>; <span class="hljs-number">0</span>)
 
-<span class="hljs-comment">// get values sent in the header of the request</span>
-<span class="hljs-function">WEB GET VARIABLES</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-variable">$avalues</span>)
+<span class="hljs-comment">// get values sent in the header of the request WEB GET VARIABLES($anames; $avalues)</span>
 
 <span class="hljs-comment">// look for header login fields</span>
 <span class="hljs-variable">$indexUserId</span>:=<span class="hljs-function">Find in array</span>(<span class="hljs-variable">$anames</span>; <span class="hljs-string">"userId"</span>)
@@ -253,9 +251,7 @@ var</span> <span class="hljs-variable">$user</span>; <span class="hljs-variable"
 <span class="hljs-variable">$password</span>:=<span class="hljs-variable">$avalues{</span><span class="hljs-variable">$indexPassword}</span>
 
 <span class="hljs-comment">//look for a user with the entered name in the users table</span>
-<span class="hljs-variable">$user</span>:=ds.WebUsers.<span class="hljs-function">query</span>(<span class="hljs-string">"userId = :1"</span>; <span class="hljs-variable">$userId</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword">
-
-If</span> (<span class="hljs-variable">$user</span>#<span class="hljs-literal">Null</span>) <span class="hljs-comment">//a user was found</span>
+<span class="hljs-variable">$user</span>:=ds. WebUsers.<span class="hljs-function">query</span>(<span class="hljs-string">"userId = :1"</span>; <span class="hljs-variable">$userId</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword"> If</span> (<span class="hljs-variable">$user</span>#<span class="hljs-literal">Null</span>) <span class="hljs-comment">//a user was found</span>
         <span class="hljs-comment">//check the password</span><span class="hljs-keyword">
     If</span> (<span class="hljs-function">Verify password hash</span>(<span class="hljs-variable">$password</span>; <span class="hljs-variable">$user</span>.password))
             <span class="hljs-comment">//password ok, fill the session</span>
@@ -266,9 +262,10 @@ If</span> (<span class="hljs-variable">$user</span>#<span class="hljs-literal">N
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Welcome "</span>+Session.userName)<span class="hljs-keyword">
     Else</span> 
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">
-    End if</span><span class="hljs-keyword"> 
-Else</span> 
+    End if</span><span class="hljs-keyword">
+    Else</span> 
 <span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">
+End if</span><span class="hljs-keyword">
 End if</span> 
 </code></pre>
 <ol start="3">

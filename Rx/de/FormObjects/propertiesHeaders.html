@@ -95,12 +95,14 @@
 <blockquote>
 <blockquote>
 <blockquote>
+<blockquote>
 <p>This property can also be set dynamically using the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html">LISTBOX SET HEADERS HEIGHT</a> command.</p>
 </blockquote>
 </blockquote>
 </blockquote>
+</blockquote>
 <p>Conversion of units: When you switch from one unit to the other, 4D converts them automatically and displays the result in the Property List. For example, if the font used is &quot;Lucida grande 24&quot;, a height of &quot;1 line&quot; is converted to &quot;30 pixels&quot; and a height of &quot;60 pixels&quot; is converted to &quot;2 lines&quot;.</p>
-<p>Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. This is illustrated in the following sequences: This is illustrated in the following sequences: This is illustrated in the following sequences:</p>
+<p>Note that converting back and forth may lead to an end result that is different from the starting value due to the automatic calculations made by 4D. This is illustrated in the following sequences: This is illustrated in the following sequences: This is illustrated in the following sequences: This is illustrated in the following sequences:</p>
 <p><em>(font Arial 18)</em>: 52 pixels -&gt; 2 lines -&gt; 40 pixels <em>(font Arial 12)</em>: 3 pixels -&gt; 0.4 line rounded up to 1 line -&gt; 19 pixels</p>
 <h4><a class="anchor" aria-hidden="true" id="json-example"></a><a href="#json-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Example:</h4>
 <pre><code class="hljs">    <span class="hljs-string">"List Box"</span>: {
@@ -108,6 +110,7 @@
         <span class="hljs-string">"showHeaders"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-string">"headerHeight"</span>: <span class="hljs-string">"22px"</span>,  
         <span class="hljs-string">...</span>
+        }
         }
         }
         }

@@ -354,12 +354,15 @@ customers:=ds.Customers.<span class="hljs-function">all</span>()
 <p>This example of code inserted in a static HTML page displays a different label according the <code>vname#&quot;&quot;</code> expression result:</p>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">BODY</span>&gt;</span>
 ...
+<span class="hljs-tag">&lt;<span class="hljs-name">BODY</span>&gt;</span>
+...
 <span class="hljs-comment">&lt;!--#4DIF (vname#"")--&gt;</span>
 Names starting with <span class="hljs-comment">&lt;!--#4DTEXT vname--&gt;</span>.
 <span class="hljs-comment">&lt;!--#4DELSE--&gt;</span>
 No name has been found.
 <span class="hljs-comment">&lt;!--#4DENDIF--&gt;</span>
 ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">BODY</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">BODY</span>&gt;</span>
 </code></pre>
 <p>This example inserts different pages depending on which user is connected:</p>
@@ -411,6 +414,8 @@ No name has been found.
     ...
 <span class="hljs-function">    NEXT RECORD</span>([People])<span class="hljs-keyword">
  End while</span>
+<span class="hljs-function">    NEXT RECORD</span>([People])<span class="hljs-keyword">
+ End while</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="--4dloop-array--"></a><a href="#--4dloop-array--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;!--#4DLOOP array--&gt;</code></h3>
 <p>This syntax makes a loop for each array item. The array current item is increased when each code portion is repeated.</p>
@@ -426,6 +431,7 @@ No name has been found.
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> For</span>(<span class="hljs-variable">$Elem</span>;<span class="hljs-number">1</span>;<span class="hljs-function">Size of array</span>(arr_names))
     arr_names:=<span class="hljs-variable">$Elem</span>
     ...<span class="hljs-keyword">
+ End for</span><span class="hljs-keyword">
  End for</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="--4dloop-method--"></a><a href="#--4dloop-method--" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;!--#4DLOOP method--&gt;</code></h3>
@@ -438,13 +444,17 @@ No name has been found.
 <span class="hljs-comment">&lt;!--#4DENDLOOP--&gt;</span>
 </code></pre>
 <p>... could be expressed in 4D language in the following way:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(AuthenticationWebOK)<span class="hljs-keyword">
-    If</span>(<span class="hljs-function">my_method</span>(<span class="hljs-number">0</span>))
-       <span class="hljs-variable">$counter</span>:=<span class="hljs-number">1</span><span class="hljs-keyword">
-       While</span>(<span class="hljs-function">my_method</span>(<span class="hljs-variable">$counter</span>))
-          ...
-          <span class="hljs-variable">$counter</span>:=<span class="hljs-variable">$counter</span>+<span class="hljs-number">1</span><span class="hljs-keyword">
-       End while</span><span class="hljs-keyword">
+<pre><code class="hljs css language-4d"><span class="hljs-function"> C_LONGINT</span>(<span class="hljs-variable">$1</span>)
+<span class="hljs-function"> C_BOOLEAN</span>(<span class="hljs-variable">$0</span>)<span class="hljs-keyword">
+ If</span>(<span class="hljs-variable">$1</span>=<span class="hljs-number">0</span>) <span class="hljs-comment">`Initialisation</span>
+    <span class="hljs-variable">$0</span>:=<span class="hljs-literal">True</span><span class="hljs-keyword">
+ Else</span><span class="hljs-keyword">
+    If</span>(<span class="hljs-variable">$1</span>&lt;<span class="hljs-number">50</span>)
+       ...<span class="hljs-keyword">
+       var</span>:=...
+          <span class="hljs-variable">$0</span>:=<span class="hljs-literal">True</span><span class="hljs-keyword">
+    Else</span>
+       <span class="hljs-variable">$0</span>:=<span class="hljs-literal">False</span> <span class="hljs-comment">`Stops the loop</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>

@@ -149,7 +149,7 @@
 <tbody>
 <tr><td>objeto webServer</td><td><a href="/docs/Rx/es/API/WebServerClass.html#corssettings"><code>CORSSettings</code></a></td><td>Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)</td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web CORS settings</code></td><td>Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)</td></tr>
-<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#domain-names-HTTP-methods-allowed">Options (II) page/Domain names and HTTP methods allowed</a></td><td>Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s)</td></tr>
+<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#domain-names-HTTP-methods-allowed">Página Options (II)/Nombres de dominio y Métodos HTTP autorizados</a></td><td>Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s)</td></tr>
 </tbody>
 </table>
 <p>Lista de hosts y métodos permitidos para el servicio CORS.</p>
@@ -201,7 +201,7 @@
 <tr><td>0</td><td>wdl disable</td><td>Los debug logs Web HTTP son desactivados</td></tr>
 <tr><td>1</td><td>wdl enable without body</td><td>Web HTTP debug log is enabled without body parts (body size is provided in this case)</td></tr>
 <tr><td>3</td><td>wdl enable with response body</td><td>Web HTTP debug log is enabled with body part in response only</td></tr>
-<tr><td>5</td><td>wdl enable with request body</td><td>Web HTTP debug log is enabled with body part in request only</td></tr>
+<tr><td>5</td><td>wdl enable with request body</td><td>Los debug logs Web HTTP son activados con la partes del cuerpo en la petición únicamente</td></tr>
 <tr><td>7</td><td>wdl enable with all body parts</td><td>Web HTTP debug log is enabled with body parts in response and request</td></tr>
 </tbody>
 </table>
@@ -311,7 +311,7 @@
 </tbody>
 </table>
 <p>Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.</p>
-<p>Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).</p>
+<p>Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. Por defecto, el nivel de compresión es 1 (compresión más rápida).</p>
 <h2><a class="anchor" aria-hidden="true" id="umbral-de-compresión-http"></a><a href="#umbral-de-compresión-http" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Umbral de compresión HTTP</h2>
 <table>
 <thead>
@@ -323,7 +323,7 @@
 </tbody>
 </table>
 <p>In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.</p>
-<p>Pasa el tamaño expresado en bytes como valor. By default, the compression threshold is set to 1024 bytes.</p>
+<p>Pasa el tamaño expresado en bytes como valor. Por defecto, el límite de compresión está fijado en 1024 bytes.</p>
 <h2><a class="anchor" aria-hidden="true" id="puerto-http"></a><a href="#puerto-http" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Puerto HTTP</h2>
 <table>
 <thead>
@@ -366,7 +366,7 @@
 </table>
 <p>|<code>WEB SET OPTION</code>|<code>Web HTTPS port ID</code>||</p>
 <p>|Settings dialog box|<a href="/docs/Rx/es/settings/web.html#https-port">Configuration page/HTTPS Port</a>||</p>
-<p>Listening IP port number for HTTPS connections via TLS. Por defecto, el valor es 443 (valor estándar). See also <a href="#http-port">HTTP Port</a> for information on port numbers.</p>
+<p>Número de puerto IP de escucha para las conexiones HTTPS vía TLS. Por defecto, el valor es 443 (valor estándar). See also <a href="#http-port">HTTP Port</a> for information on port numbers.</p>
 <h2><a class="anchor" aria-hidden="true" id="tiempo-de-espera-del-proceso-inactivo"></a><a href="#tiempo-de-espera-del-proceso-inactivo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tiempo de espera del proceso inactivo</h2>
 <table>
 <thead>
@@ -379,7 +379,7 @@
 </tbody>
 </table>
 <p>Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the <code>On Web Close Process</code> database method is called, then the session context is destroyed.</p>
-<p>Default: 480 minutes (pass 0 to restore the default value)</p>
+<p>Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)</p>
 <h2><a class="anchor" aria-hidden="true" id="tiempo-de-espera-de-las-sesiones-inactivas"></a><a href="#tiempo-de-espera-de-las-sesiones-inactivas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tiempo de espera de las sesiones inactivas</h2>
 <table>
 <thead>
@@ -391,7 +391,7 @@
 </tbody>
 </table>
 <p>Life duration (in minutes) of inactive sessions (duration set in cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.</p>
-<p>Default: 480 minutes (pass 0 to restore the default value)</p>
+<p>Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)</p>
 <h2><a class="anchor" aria-hidden="true" id="dirección-ip-de-escucha"></a><a href="#dirección-ip-de-escucha" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dirección IP de escucha</h2>
 <table>
 <thead>
@@ -404,7 +404,7 @@
 </tbody>
 </table>
 <p>IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).</p>
-<p>By default, no specific address is defined (<strong>Any</strong> value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers.</p>
+<p>By default, no specific address is defined (<strong>Any</strong> value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. Por ejemplo, es el caso frecuente de la mayoría de los proveedores de hosting.</p>
 <p>Valores posibles: cadena de direcciones IP. Both IPv6 string formats (e.g. &quot;2001:0db8:0000:0000:0000:ff00:0042:8329&quot;) and IPv4 string formats (e.g. &quot;123.45.67.89&quot;) are supported.</p>
 <h4><a class="anchor" aria-hidden="true" id="acerca-de-la-compatibilidad-con-ipv6"></a><a href="#acerca-de-la-compatibilidad-con-ipv6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Acerca de la compatibilidad con IPv6</h4>
 <ul>
@@ -444,8 +444,8 @@
 <tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#log-format">Página log (tipo)</a></td><td>Menú popup</td></tr>
 </tbody>
 </table>
-<p>Starts or stops the recording of requests received by the 4D web server in the <em>logweb.txt</em> file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the <em>logweb.txt</em> file is automatically placed in the Logs folder.</p>
-<p>This setting allows you to select the format of this file. Valores disponibles:</p>
+<p>Starts or stops the recording of requests received by the 4D web server in the <em>logweb.txt</em> file and sets its format. Por defecto, las peticiones no se registran (0/Sin archivo de registro). When enabled, the <em>logweb.txt</em> file is automatically placed in the Logs folder.</p>
+<p>Este parámetro permite seleccionar el formato de este archivo. Valores disponibles:</p>
 <table>
 <thead>
 <tr><th>Valor</th><th>Nombre del formato</th><th>Descripción</th></tr>
@@ -484,7 +484,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web maximum requests size</code></td><td></td></tr>
 </tbody>
 </table>
-<p>Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.</p>
+<p>Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.</p>
 <p>Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes.</p>
 <p>Valores posibles: 500 000 a 2 147 483 648.</p>
 <h2><a class="anchor" aria-hidden="true" id="número-máximo-de-sesiones"></a><a href="#número-máximo-de-sesiones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Número máximo de sesiones</h2>
@@ -566,7 +566,7 @@
 <p>When the <strong>Reuse Temporary Contexts</strong> option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.</p>
 <p>In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.</p>
 <blockquote>
-<p>This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.</p>
+<p>Esta opción sólo tiene efecto con un servidor web 4D en modo remoto. With a 4D in local mode, all web processes (other than session processes) are killed after their use.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="robotstxt"></a><a href="#robotstxt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Robots.txt</h2>
 <p>Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.</p>
@@ -590,7 +590,7 @@
 <pre><code class="hljs css language-code4d">   <span class="hljs-attribute">User-Agent</span>: *
    <span class="hljs-attribute">Disallow</span>: /
 </code></pre>
-<p>In this case, robots are not allowed to access the entire site.</p>
+<p>En este caso, los robots no pueden acceder a todo el sitio.</p>
 <h2><a class="anchor" aria-hidden="true" id="root-folder"></a><a href="#root-folder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Root Folder</h2>
 <table>
 <thead>
@@ -628,7 +628,7 @@
 <tbody>
 <tr><td>objeto webServer</td><td><a href="/docs/Rx/es/API/WebServerClass.html#scalablesession"><code>scalableSession</code></a></td><td></td></tr>
 <tr><td><code>WEB SET OPTION</code></td><td><code>Sesión escalable web</code></td><td></td></tr>
-<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#scalable-sessions-multi-process-sessions">Options (I) page/Scalable sessions (multi-process sessions)</a></td><td></td></tr>
+<tr><td>Caja de diálogo de parámetros</td><td><a href="/docs/Rx/es/settings/web.html#scalable-sessions-multi-process-sessions">Página Opciones (I)/Sesiones escalables (sesiones multiproceso)</a></td><td></td></tr>
 </tbody>
 </table>
 <p>Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the <a href="/docs/Rx/es/WebServer/sessions.html">User sessions</a> page.</p>
@@ -642,7 +642,7 @@
 <tr><td><code>WEB SET OPTION</code></td><td><code>Web session cookie domain</code></td><td></td></tr>
 </tbody>
 </table>
-<p>Campo &quot;path&quot; de la cookie de sesión. Useful for controlling the scope of the session cookies. Si define, por ejemplo, el valor &quot;/*.4d.fr&quot; para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio &quot;.4d.fr&quot;, lo que excluye a los servidores que alojan datos estáticos externos.</p>
+<p>Campo &quot;path&quot; de la cookie de sesión. Utilizado para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor &quot;/*.4d.fr&quot; para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio &quot;.4d.fr&quot;, lo que excluye a los servidores que alojan datos estáticos externos.</p>
 <h2><a class="anchor" aria-hidden="true" id="nombre-de-la-cookie-de-sesión"></a><a href="#nombre-de-la-cookie-de-sesión" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nombre de la cookie de sesión</h2>
 <table>
 <thead>
@@ -713,7 +713,7 @@
 <p>El servidor web 4D puede utilizar conexiones persistentes. The keep-alive option allows you to maintain a single open TCP connection for the set of exchanges between the web browser and the server to save system resources and to optimize transfers.</p>
 <p>The <strong>Use Keep-Alive Connections</strong> option enables or disables keep-alive TCP connections for the web server. Esta opción está activada por defecto. In most cases, it is advisable to keep this option check since it accelerates the exchanges. If the web browser does not support connection keep alive, the 4D Web Server automatically switches to HTTP/1.0.</p>
 <p>The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.</p>
-<p>In some cases, other optimized internal functions may be invoked. Keep-alive connections are useful mainly for static pages.</p>
+<p>En algunos casos, se pueden invocar otras funciones internas optimizadas. Keep-alive connections are useful mainly for static pages.</p>
 <p>Two options allow you to set how the keep-alive connections work:</p>
 <ul>
 <li><p><strong>Número de peticiones por conexión</strong>: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión permite evitar la inundación del servidor debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p> El valor por defecto (100) puede ser aumentado o disminuido en función de los recursos de la máquina que aloja el servidor 4D web.</p></li>

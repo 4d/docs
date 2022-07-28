@@ -125,7 +125,7 @@
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"> <strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    <strong>True</strong> se 4D tiver a permissão de estabelecer uma conexão não criptografada</td><td>False</td></tr>
-<tr><td>.<strong>accessTokenOAuth2</strong>: Text<br/>.<strong>accessTokenOAuth2</strong>: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in <em><a href="#smtp-transporter-object">SMTP transporter</a></em> object.</td><td>nenhum</td></tr>
+<tr><td>.<strong>accessTokenOAuth2</strong>: Text<br/>.<strong>accessTokenOAuth2</strong>: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Text string or token object representing OAuth2 authorization credentials.</td><td>nenhum</td></tr>
 <tr><td><a href="#authenticationmode"> <strong>.authenticationMode</strong> : Text</a><p>    o modo de autenticação usado para abrir a sessão no servidor de correio</td><td>the most secure authentication mode supported by the server is used</td></tr>
 <tr><td><a href="#bodycharset"> <strong>.bodyCharset</strong> : Text</a><p>      o conjunto de caracteres e a codificação utilizados para a parte do corpo do correio eletrônico</td><td><code>mail mode UTF8</code> (US-ASCII_UTF8_QP)</td></tr>
 <tr><td><a href="#connectiontimeout"> <strong>.connectionTimeOut</strong> : Integer</a><p>    </td><td>30</td></tr>
@@ -133,7 +133,7 @@
 <tr><td><a href="#host"> <strong>.host</strong> : Text</a><p>    </td><td><em>obrigatório</em></td></tr>
 <tr><td><a href="#keepalive"><strong>.keepAlive</strong> : Boolean</a><p>    </td><td>True</td></tr>
 <tr><td><a href="#logfile"> <strong>.logFile</strong> : Text</a><p>    </td><td>nenhum</td></tr>
-<tr><td><strong>password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#smtp-transporter-object">SMTP transporter</a></em> object.</td><td>nenhum</td></tr>
+<tr><td><strong>password</strong> : Text<p>User password for authentication on the server. Text string or token object representing OAuth2 authorization credentials.</td><td>nenhum</td></tr>
 <tr><td><a href="#port"> <strong>.port</strong> : Integer</a><p>    </td><td>587</td></tr>
 <tr><td><a href="#sendtimeout"> <strong>.sendTimeOut</strong> : Integer</a><p>    </td><td>100</td></tr>
 <tr><td><a href="#user"> <strong>.user</strong> : Text</a><p>    </td><td>nenhum</td></tr>
@@ -327,6 +327,9 @@
  <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">checkConnection</span>()<span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$status</span>.success=<span class="hljs-literal">True</span>)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"SMTP connection check successful!"</span>)<span class="hljs-keyword">
+ Else</span>
+<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"Error # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$status</span>.status)+<span class="hljs-string">", "</span>+<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
  Else</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"Error # "</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$status</span>.status)+<span class="hljs-string">", "</span>+<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
  End if</span>

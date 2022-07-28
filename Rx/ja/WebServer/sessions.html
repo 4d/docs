@@ -82,14 +82,14 @@
 <ul>
 <li>ストラクチャー設定の Web / オプション (I) ページの <strong>スケーラブルセッション</strong> を使用する (永続的な設定): <img src="/docs/Rx/assets/en/WebServer/settingsSession.png" alt="alt-text"></li>
 </ul>
-<p>このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、<strong>セッションなし</strong> オプションを選択して無効にすることもできます。この場合、Webセッション機能は無効になります (<code>Session</code> オブジェクトは使用できません)。</p>
+<p>このオプションは、新規プロジェクトではデフォルトで選択されています。 これは、<strong>セッションなし</strong> オプションを選択して無効にすることもできます。 この場合、Webセッション機能は無効になります (<code>Session</code> オブジェクトは使用できません)。</p>
 <ul>
 <li>Webサーバーオブジェクトの <a href="/docs/Rx/ja/API/WebServerClass.html#scalablesession"><code>.scalableSession</code></a> プロパティを使用する (<a href="/docs/Rx/ja/API/WebServerClass.html#start"><code>.start()</code></a> 関数に <em>settings</em> 引数として渡します）。 この場合、ストラクチャー設定ダイアログボックスで定義されたオプションよりも、Webサーバーオブジェクトの設定が優先されます (ディスクには保存されません)。</li>
 </ul>
 <blockquote>
 <p>メインの Webサーバーのセッションモードは、<code>WEB SET OPTION</code> コマンドを使って設定することもできます。</p>
 </blockquote>
-<p>いずれの場合も、設定はマシンに対しローカルなものです。つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。</p>
+<p>いずれの場合も、設定はマシンに対しローカルなものです。 つまり、4D Server の Webサーバーと、リモートの 4Dマシンの Webサーバーで異なる設定が可能です。</p>
 <blockquote>
 <p><strong>互換性について</strong>: 4D v18 R6 以前の 4Dバージョンで作成されたプロジェクトでは、<strong>旧式セッション</strong> オプションが使用できます (詳細については、<a href="https://doc.4d.com">doc.4d.com</a> の Webサイトを参照ください)。</p>
 </blockquote>
@@ -124,7 +124,7 @@
 <li>Webサーバーが停止したとき。</li>
 <li>セッションcookie がタイムアウトしたとき。</li>
 </ul>
-<p>非アクティブな cookie の有効期限は、デフォルトでは 60分です。つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。</p>
+<p>非アクティブな cookie の有効期限は、デフォルトでは 60分です。 つまり、Webサーバーは、非アクティブなセッションを 60分後に自動的に閉じます。</p>
 <p>このタイムアウトは、<code>Session</code> オブジェクトの <a href="/docs/Rx/ja/API/SessionClass.html#idletimeout"><code>.idleTimeout</code></a> プロパティで設定できます (タイムアウトは 60分未満にはできません)。</p>
 <p>スケーラブルWebセッションが閉じられた後に <a href="/docs/Rx/ja/API/SessionClass.html#session"><code>Session</code></a> コマンドが呼び出されると:</p>
 <ul>

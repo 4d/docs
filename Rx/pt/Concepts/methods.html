@@ -112,12 +112,12 @@
   <span class="hljs-comment">// Modify the customer's record</span>
 <span class="hljs-function"> MODIFY RECORD</span>([Customers])
 </code></pre>
-<p>If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your project where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.</p>
+<p>If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.</p>
 <p>If the previously described code was a method called <code>MODIFY_CUSTOMER</code>, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:</p>
 <pre><code class="hljs css language-4d"> MODIFY_CUSTOMER
 <span class="hljs-function"> PRINT SELECTION</span>([Customers])
 </code></pre>
-<p>This capability simplifies your methods dramatically. In the example, you do not need to know how the <code>MODIFY_CUSTOMER</code> method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.</p>
+<p>This capability simplifies your methods dramatically. This capability simplifies your methods dramatically. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.</p>
 <p>If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.</p>
 <p>Using subroutines, you make your code modular. This simply means dividing your code into modules (subroutines), each of which performs a logical task. Consider the following code from a checking account project:</p>
 <pre><code class="hljs css language-4d"> FIND_CLEARED_CHECKS <span class="hljs-comment">//Find the cleared checks</span>
@@ -129,8 +129,7 @@
 <p>You can encapsulate your project methods in <strong>formula</strong> objects and call them from your objects.</p>
 <p>The <code>Formula</code> or <code>Formula from string</code> commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.</p>
 <p>To execute a method stored in an object property, use the <strong>( )</strong> operator after the property name. Por exemplo:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//myAlert</span>
-<span class="hljs-function">ALERT</span>(<span class="hljs-string">"Hello world!"</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//myAlert ALERT("Hello world!")</span>
 </code></pre>
 <p>Then <code>myAlert</code> can be encapsulated in any object and called:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">C_OBJECT</span>(<span class="hljs-variable">$o</span>)
@@ -141,8 +140,7 @@
 <pre><code class="hljs css language-4d"><span class="hljs-variable">$o</span>[<span class="hljs-string">"custom_Alert"</span>]() <span class="hljs-comment">//exibe "Hello world!"</span>
 </code></pre>
 <p>You can also <a href="/docs/Rx/pt/Concepts/parameters.html">pass parameters</a> to your formula when you call it by using $1, $2… just like with 4D project methods:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName method</span>
-<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>;<span class="hljs-variable">$1</span>;<span class="hljs-variable">$2</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName method C_TEXT($0;$1;$2)</span>
 <span class="hljs-variable">$0</span>:=<span class="hljs-variable">$1</span>+<span class="hljs-string">" "</span>+<span class="hljs-variable">$2</span>
 </code></pre>
 <p>You can encapsulate <code>fullName</code> in an object:</p>
@@ -153,8 +151,7 @@
 <span class="hljs-comment">// equivalent to $result:=fullName("param1";"param2")</span>
 </code></pre>
 <p>Combined with the <code>This</code>function, such object methods allow writing powerful generic code. Por exemplo:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName2 method</span>
-<span class="hljs-function">C_TEXT</span>(<span class="hljs-variable">$0</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//fullName2 method C_TEXT($0)</span>
 <span class="hljs-variable">$0</span>:=<span class="hljs-literal">This</span>.firstName+<span class="hljs-string">" "</span>+<span class="hljs-literal">This</span>.lastName
 </code></pre>
 <p>Then the method acts like a new, calculated attribute that can be added to other attributes:</p>
@@ -219,6 +216,8 @@
 <span class="hljs-function">    QUERY</span>([Friends and Relatives];[Friends and Relatives]Name=<span class="hljs-variable">$vsName</span>)<span class="hljs-keyword">
     If</span>(<span class="hljs-function">Records in selection</span>([Friends and Relatives])&gt;<span class="hljs-number">0</span>)
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"A friend of mine, "</span>+<span class="hljs-function">Genealogy of</span>(<span class="hljs-variable">$vsName</span>)+<span class="hljs-string">", does this for a living!"</span>)<span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>

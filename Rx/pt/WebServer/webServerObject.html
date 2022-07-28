@@ -74,7 +74,7 @@
 <li>one web server for the component #2.</li>
 </ul>
 <p>Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.</p>
-<p>Each 4D web server, including the main application's web server, is exposed as a specific <strong>object</strong> of the <code>4D.WebServer</code> class. Once instantiated, a web server object can be handled from the current application or from any component using a <a href="/docs/Rx/pt/API/WebServerClass.html">large number of properties and functions</a>.</p>
+<p>Each 4D web server, including the main application's web server, is exposed as a specific <strong>object</strong> of the <code>4D. WebServer</code> class. Once instantiated, a web server object can be handled from the current application or from any component using a <a href="/docs/Rx/pt/API/WebServerClass.html">large number of properties and functions</a>.</p>
 <blockquote>
 <p>The legacy <a href="https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html">WEB commands</a> of the 4D language are supported but cannot select the web server to which they apply (see below).</p>
 </blockquote>
@@ -91,8 +91,8 @@
 <span class="hljs-comment">//$nbSrv value is 1</span>
 </code></pre>
 <p>To instantiate a web server object, call the <a href="/docs/Rx/pt/API/WebServerClass.html#web-server"><code>WEB Server</code></a> command:</p>
-<pre><code class="hljs css language-4d">    <span class="hljs-comment">//create an object variable of the 4D.WebServer class</span><span class="hljs-keyword">
-var</span> webServer : 4D.WebServer 
+<pre><code class="hljs css language-4d">    <span class="hljs-comment">//create an object variable of the 4D. WebServer class</span><span class="hljs-keyword">
+var</span> webServer : 4D. WebServer 
     <span class="hljs-comment">//call the web server from the current context</span>
 webServer:=WEB Server  
 
@@ -105,7 +105,7 @@ webServer:=<span class="hljs-function">WEB Server</span>(Web server database)
 <li>the server that received the request (whatever the server),</li>
 </ul>
 <p>you can also use:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> webServer : 4D.WebServer 
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> webServer : 4D. WebServer 
     <span class="hljs-comment">//call the host web server from a component  </span>
 webServer:=<span class="hljs-function">WEB Server</span>(Web server host database)  
     <span class="hljs-comment">//call the target web server</span>

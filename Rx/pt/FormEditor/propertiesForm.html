@@ -74,7 +74,7 @@
 <p>This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:</p>
 <ul>
 <li>dark - light text on a dark background</li>
-<li>light - dark text on a light background</li>
+<li>light - dark text on a light background &gt; A defined color scheme can not be overridden by a CSS.</li>
 </ul>
 <blockquote>
 <p>A defined color scheme can not be overridden by a CSS.</p>
@@ -188,7 +188,9 @@
 <li>the position, size and visibility of each form object (including the size and visibility of list box columns).</li>
 </ul>
 <blockquote>
+<blockquote>
 <p>This option does not take into account objects generated using the <code>OBJECT DUPLICATE</code> command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.</p>
+</blockquote>
 </blockquote>
 <p>When this option is selected, the <a href="/docs/Rx/pt/FormObjects/propertiesObject.html#save-value">Save Value</a> option is available for certain objects.</p>
 <h4><a class="anchor" aria-hidden="true" id="json-grammar-7"></a><a href="#json-grammar-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON Grammar</h4>
@@ -209,9 +211,8 @@
 <ul>
 <li>A standard XLIFF reference stored in the Resources folder.</li>
 <li>A table or field label: The syntax to apply is &lt;?[TableNum]FieldNum&gt; or</li>
+<li>A variable or a field: The syntax to apply is &lt;VariableName&gt; or &lt;[TableName]FieldName&gt;. The current value of the field or variable will be displayed in the window title.</li>
 </ul>
-  <?[TableName]FieldName>.
-*   A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
 <blockquote>
 <p>The number of characters for a window title is limited to 31.</p>
 </blockquote>

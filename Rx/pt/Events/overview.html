@@ -68,10 +68,8 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/Rx/docs/Events/overview.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Visão Geral</h1></header><article><div><span><p>Form events are events that can lead to the execution of the form method and/or form object method(s). Form events allow you to control the flow of your application and to write code that is executed only when a specific event occurs.</p>
 <p>In your code, you control the events using the <code>FORM Event</code> command, that returns the triggered event. Por exemplo:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">//code of a button</span><span class="hljs-keyword">
-If</span>(FORM Event.code=On Clicked) 
-<span class="hljs-comment">// do something when the button is clicked</span><span class="hljs-keyword">
-End if</span>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">//code of a button If(FORM Event.code=On Clicked) </span>
+<span class="hljs-comment">// do something when the button is clicked End if</span>
 </code></pre>
 <blockquote>
 <p>Every form and every active object on the form can listen to a predefined set of events, but only the events that you enabled at the form level and/or at every object level will actually occur.</p>
@@ -87,7 +85,6 @@ End if</span>
 <tr><td>objectName</td><td>text</td><td>Name of the object triggering the event - Not included if the event is triggered by the form</td><td></td><td>code</td><td>longint</td><td>Numeric value of the form event. Also returned by the</td></tr>
 </tbody>
 </table>
-<p><code>Form event code</code> command| |description|text|Name of the form event (e.g. &quot;On After Edit&quot;)|</p>
 <p>Additional properties are returned when the event occurs on specific objects. Em particular:</p>
 <ul>
 <li><a href="/docs/Rx/pt/FormObjects/listboxOverview.html#supported-form-events">list boxes</a> and <a href="/docs/Rx/pt/FormObjects/listboxOverview.html#supported-form-events-1">list box columns</a> return <a href="/docs/Rx/pt/FormObjects/listboxOverview.html#additional-properties">additional properties</a> such as <code>columnName</code> or <code>isRowSelected</code>.</li>

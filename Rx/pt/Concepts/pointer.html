@@ -222,7 +222,7 @@
 <li>$PointerOne:=-&gt;$MyVar --&gt; $PointerOne now contains a pointer to $MyVar.</li>
 <li>$PointerTwo:=-&gt;$PointerOne --&gt; $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.</li>
 <li>($PointerTwo-&gt;)-&gt;:=&quot;Goodbye&quot; --&gt; $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. So in this case, $MyVar is assigned &quot;Goodbye&quot;.</li>
-<li>ALERT (($PointerTwo-&gt;)-&gt;) --&gt; Same thing: $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. So in this case, the alert box displays the contents of $MyVar.</li>
+<li>ALERT (($PointerTwo-&gt;)-&gt;) --&gt; Same thing: $PointerTwo-&gt; references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar. Therefore ($PointerTwo-&gt;)-&gt; references the contents of $MyVar.</li>
 </ul>
 <p>The following line puts &quot;Hello&quot; into $MyVar:</p>
 <pre><code class="hljs css language-4d">(<span class="hljs-variable">$PointerTwo</span>-&gt;)-&gt;:=<span class="hljs-string">"Hello"</span>

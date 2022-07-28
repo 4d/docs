@@ -114,7 +114,7 @@
 <blockquote>
 <p>La carpeta actual del usuario se alcanza utilizando el comando &quot;~ &quot; en macOS y el comando &quot;%HOMEPATH%&quot; en Windows.</p>
 </blockquote>
-<p>Lance la aplicación:</p>
+<p>Estos ejemplos suponen que su aplicación 4D está almacenada en el escritorio y que la base de datos a abrir se encuentra en la carpeta &quot;Documentos&quot;.</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -125,10 +125,10 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe
 </code></pre>
-<p>Lanzar la aplicación con un archivo paquete en macOS:</p>
+<p>Lance la aplicación:</p>
 <pre><code class="hljs css language-bash">yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 </code></pre>
-<p>Lanzar la aplicación con un archivo proyecto:</p>
+<p>Lanzar la aplicación con un archivo paquete en macOS:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -139,7 +139,7 @@
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myProj\Project\myProj.4DProject
 </code></pre>
-<p>Lanzar la aplicación con un archivo proyecto y un archivo de datos:</p>
+<p>Lanzar la aplicación con un archivo proyecto:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -152,7 +152,7 @@
 o:
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 </code></pre>
-<p>Lanzar la aplicación con un archivo .4DLink:</p>
+<p>Lanzar la aplicación con un archivo proyecto y un archivo de datos:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -167,7 +167,7 @@ o:
 </code></pre>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D Server.exe<span class="hljs-string">" MyDatabase.4DLink
 </span></code></pre>
-<p>Lanzar la aplicación en modo compilado y crear un archivo de datos si no está disponible:</p>
+<p>Lanzar la aplicación con un archivo .4DLink:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -178,7 +178,7 @@ o:
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data <span class="hljs-literal">true</span>
 </code></pre>
-<p>Lanzar la aplicación con un archivo proyecto y un archivo de datos y pasar una cadena como parámetro usuario:</p>
+<p>Lanzar la aplicación en modo compilado y crear un archivo de datos si no está disponible:</p>
 <ul>
 <li>macOS:</li>
 </ul>
@@ -189,7 +189,7 @@ o:
 </ul>
 <pre><code class="hljs css language-bash">%HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param <span class="hljs-string">"Hello world"</span>
 </code></pre>
-<p>Lanzar la aplicación sin interfaz (modo headless):</p>
+<p>Lanzar la aplicación con un archivo proyecto y un archivo de datos y pasar una cadena como parámetro usuario:</p>
 <ul>
 <li>macOS:</li>
 </ul>

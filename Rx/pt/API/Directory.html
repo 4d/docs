@@ -219,7 +219,7 @@
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.original</strong> : 4D.Folder</p>
+<p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="descrição-14"></a><a href="#descrição-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
 <p>A propriedade <code>.original</code> devolve o mesmo objeto Pasta que a Pasta.</p>
 <p>Essa propriedade é<strong>apenas leitura</strong>.</p>
@@ -237,10 +237,11 @@
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.parent</strong> : 4D.Folder</p>
+<p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="descrição-15"></a><a href="#descrição-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>A propriedade <code>.hidden</code> devolve &lt;!-- REF #directory.hidden. If the path represents a system path (e.g., &quot;/DATA/&quot;), the system path is returned.</p></p>
-<p>If the folder does not have a parent (root), the null value is returned.</p>
+<p>A propriedade <code>.hidden</code> devolve &lt;!-- REF #directory.hidden. A função <code>.folder()</code></p>
+<!-- REF #directory.folder().</p>
+<p>Se a pasta não existir no disco, se devolve um icone vazio como padrão.</p>
 <p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <p>---## .path</p>
 <p><details><summary>Histórico</summary></p>
@@ -312,7 +313,7 @@
 <p>O objeto <code>Folder</code> copiado.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo"></a><a href="#exemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>Se quiser copiar uma <em>pasta</em> Imágens da pasta de documentos do usuário a pasta da Database:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$userImages</span>; <span class="hljs-variable">$copiedImages </span>: 4D.Folder
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$userImages</span>; <span class="hljs-variable">$copiedImages </span>: 4D. Folder
 <span class="hljs-variable">$userImages</span>:=<span class="hljs-function">Folder</span>(fk documents folder+<span class="hljs-string">"/Pictures/"</span>)
 <span class="hljs-variable">$copiedImages</span>:=<span class="hljs-variable">$userImages</span>.<span class="hljs-function">copyTo</span>(<span class="hljs-function">Folder</span>(fk database folder);fk overwrite)
 </code></pre>
@@ -334,7 +335,7 @@
 </thead>
 <tbody>
 <tr><td>path</td><td>Texto</td><td>-&gt;</td><td>Rota POSIX relativa</td></tr>
-<tr><td>Resultado</td><td>4D.File</td><td>&lt;-</td><td>Objeto <code>File</code> (null se a rota não for válida)</td></tr>
+<tr><td>Resultado</td><td>4D. File</td><td>&lt;-</td><td>Objeto <code>File</code> (null se a rota não for válida)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descrição-19"></a><a href="#descrição-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
@@ -343,7 +344,7 @@
 <p><strong>Returned value</strong></p>
 <p>Um objeto <code>File</code> ou null se <em>path</em> não for válido.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myPDF </span>: 4D.File
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myPDF </span>: 4D. File
 <span class="hljs-variable">$myPDF</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">file</span>(<span class="hljs-string">"Pictures/info.pdf"</span>)
 </code></pre>
 <p>---## .files()</p>
@@ -391,6 +392,7 @@
  <span class="hljs-variable">$noInvisible</span>:=<span class="hljs-function">Folder</span>(fk database folder).<span class="hljs-function">files</span>(fk ignore invisible)<span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$all</span>.length#<span class="hljs-variable">$noInvisible</span>.length)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"Database folder contains hidden files."</span>)<span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-2"></a><a href="#exemplo-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo 2</h4>
@@ -425,7 +427,7 @@
 <p><strong>Returned value</strong></p>
 <p>Um objeto <code>Folder</code> ou null se <em>path</em> não for válido.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-3"></a><a href="#exemplo-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$mypicts </span>: 4D.Folder
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$mypicts </span>: 4D. Folder
  <span class="hljs-variable">$mypicts</span>:=<span class="hljs-function">Folder</span>(fk documents folder).<span class="hljs-function">folder</span>(<span class="hljs-string">"Pictures"</span>)
 </code></pre>
 <p>---## .folders()</p>

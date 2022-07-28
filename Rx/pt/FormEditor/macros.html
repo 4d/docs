@@ -203,8 +203,7 @@
 }
 </code></pre>
 <p>You can write:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-comment">// Class "AlignOnTarget"</span><span class="hljs-keyword">
-Class constructor</span>(<span class="hljs-variable">$macro </span>: Object)
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// Class "AlignOnTarget" Class constructor($macro : Object)</span>
     <span class="hljs-literal">This</span>.myParameter:=<span class="hljs-variable">$macro</span>.myParam <span class="hljs-comment">//esquerda</span>
     ...
 </code></pre>
@@ -296,6 +295,10 @@ Class constructor</span>(<span class="hljs-variable">$macro </span>: Object)
 
     Else</span> 
 <span class="hljs-function">        ALERT</span>(<span class="hljs-string">"Please select a form object."</span>)<span class="hljs-keyword">
+    End if</span> 
+
+    <span class="hljs-comment">// Notify to 4D the modification</span>
+    <span class="hljs-variable">$result</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"currentPage"</span>; <span class="hljs-variable">$editor</span>.editor.currentPage)<span class="hljs-keyword">
     End if</span> 
 
     <span class="hljs-comment">// Notify to 4D the modification</span>

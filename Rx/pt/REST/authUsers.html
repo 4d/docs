@@ -80,11 +80,8 @@
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">bgcolor</span>=<span class="hljs-string">"#ffffff"</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"demo"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">FORM</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"myForm"</span>&gt;</span>
-Email: <span class="hljs-tag">&lt;<span class="hljs-name">INPUT</span> <span class="hljs-attr">TYPE</span>=<span class="hljs-string">TEXT</span> <span class="hljs-attr">NAME</span>=<span class="hljs-string">userId</span> <span class="hljs-attr">VALUE</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span>
-Password: <span class="hljs-tag">&lt;<span class="hljs-name">INPUT</span> <span class="hljs-attr">TYPE</span>=<span class="hljs-string">TEXT</span> <span class="hljs-attr">NAME</span>=<span class="hljs-string">password</span> <span class="hljs-attr">VALUE</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"onClick()"</span>&gt;</span>
-Login
+    <span class="hljs-tag">&lt;<span class="hljs-name">FORM</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"myForm"</span>&gt;</span> Email: <span class="hljs-tag">&lt;<span class="hljs-name">INPUT</span> <span class="hljs-attr">TYPE</span>=<span class="hljs-string">TEXT</span> <span class="hljs-attr">NAME</span>=<span class="hljs-string">userId</span> <span class="hljs-attr">VALUE</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span> Password: <span class="hljs-tag">&lt;<span class="hljs-name">INPUT</span> <span class="hljs-attr">TYPE</span>=<span class="hljs-string">TEXT</span> <span class="hljs-attr">NAME</span>=<span class="hljs-string">password</span> <span class="hljs-attr">VALUE</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">"onClick()"</span>&gt;</span> Login
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"authenticationFailed"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"visibility:hidden;"</span>&gt;</span>Authentication failed<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">FORM</span>&gt;</span>
@@ -122,38 +119,31 @@ sendData({<span class="hljs-attr">userId</span>:<span class="hljs-built_in">docu
 <pre><code class="hljs css language-4d">    <span class="hljs-comment">//On REST Authentication</span>
 
 #<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$userId </span>: Text; <span class="hljs-variable">$password </span>: Text) -&gt; <span class="hljs-variable">$Accepted </span>: Boolean<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$sales </span>: cs.SalesPersonsEntity
+var</span> <span class="hljs-variable">$sales </span>: cs. SalesPersonsEntity
 
 <span class="hljs-variable">$Accepted</span>:=<span class="hljs-literal">False</span>
 
-    <span class="hljs-comment">//A '/rest' URL has been called with headers username-4D and password-4D</span><span class="hljs-keyword">
-If</span> (<span class="hljs-variable">$userId</span>#<span class="hljs-string">""</span>)
-    <span class="hljs-variable">$sales</span>:=ds.SalesPersons.<span class="hljs-function">query</span>(<span class="hljs-string">"email = :1"</span>; <span class="hljs-variable">$userId</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword">
+    <span class="hljs-comment">//A '/rest' URL has been called with headers username-4D and password-4D If ($userId#"")</span>
+    <span class="hljs-variable">$sales</span>:=ds. SalesPersons.<span class="hljs-function">query</span>(<span class="hljs-string">"email = :1"</span>; <span class="hljs-variable">$userId</span>).<span class="hljs-function">first</span>()<span class="hljs-keyword">
     If</span> (<span class="hljs-variable">$sales</span>#<span class="hljs-literal">Null</span>)<span class="hljs-keyword">
         If</span> (<span class="hljs-function">Verify password hash</span>(<span class="hljs-variable">$password</span>; <span class="hljs-variable">$sales</span>.password))
 <span class="hljs-function">            fillSession</span>(<span class="hljs-variable">$sales</span>)
             <span class="hljs-variable">$Accepted</span>:=<span class="hljs-literal">True</span><span class="hljs-keyword">
         End if</span><span class="hljs-keyword"> 
-    End if</span><span class="hljs-keyword"> 
-End if</span> 
+    End if</span><span class="hljs-keyword"> End if</span> 
 </code></pre>
 <blockquote>
 <p>As soon as it has been called and returned <code>True</code>, the <code>On REST Authentication</code> database method is no longer called in the session.</p>
 </blockquote>
 <p>The <code>fillSession</code> project method initializes the user session, for example:</p>
-<pre><code class="hljs css language-4d">#<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$sales </span>: cs.SalesPersonsEntity)<span class="hljs-keyword">
+<pre><code class="hljs css language-4d">#<span class="hljs-function">DECLARE</span>(<span class="hljs-variable">$sales </span>: cs. SalesPersonsEntity)<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$info </span>: Object
 
 <span class="hljs-variable">$info</span>:=<span class="hljs-function">New object</span>()
-<span class="hljs-variable">$info</span>.userName:=<span class="hljs-variable">$sales</span>.firstname+<span class="hljs-string">" "</span>+<span class="hljs-variable">$sales</span>.lastname
-
-Session.<span class="hljs-function">setPrivileges</span>(<span class="hljs-variable">$info</span>)<span class="hljs-keyword">
-
-Use</span> (Session.storage)<span class="hljs-keyword">
+<span class="hljs-variable">$info</span>.userName:=<span class="hljs-variable">$sales</span>.firstname+<span class="hljs-string">" "</span>+<span class="hljs-variable">$sales</span>.lastname Session.<span class="hljs-function">setPrivileges</span>(<span class="hljs-variable">$info</span>)<span class="hljs-keyword"> Use</span> (Session.storage)<span class="hljs-keyword">
     If</span> (Session.storage.myTop3=<span class="hljs-literal">Null</span>)
         Session.storage.myTop3:=<span class="hljs-variable">$sales</span>.customers.<span class="hljs-function">orderBy</span>(<span class="hljs-string">"totalPurchase desc"</span>).<span class="hljs-function">slice</span>(<span class="hljs-number">0</span>; <span class="hljs-number">3</span>)<span class="hljs-keyword">
-    End if</span><span class="hljs-keyword"> 
-End use</span>
+    End if</span><span class="hljs-keyword"> End use</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/pt/REST/configuration.html"><span class="arrow-prev">← </span><span>Server Configuration</span></a><a class="docs-next button" href="/docs/Rx/pt/REST/genInfo.html"><span>Obter informação do servidor</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authenticating-users">Authenticating users</a></li><li><a href="#opening-sessions">Opening sessions</a></li><li><a href="#exemplo">Exemplo</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

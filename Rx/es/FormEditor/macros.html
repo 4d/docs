@@ -236,7 +236,7 @@ Class constructor</span>(<span class="hljs-variable">$macro </span>: Object)
 <tr><td>$editor.editor.currentPage</td><td>Objeto</td><td>The current page, containing all the form objects and the entry order of the page</td></tr>
 <tr><td>$editor.editor.currentSelection</td><td>Collection</td><td>Colección de nombres de objetos seleccionados</td></tr>
 <tr><td>$editor.editor.formProperties</td><td>Objeto</td><td>Properties of the current form</td></tr>
-<tr><td>$editor.editor.target</td><td>cadena</td><td>Name of the object under the mouse when clicked on a macro</td></tr>
+<tr><td>$editor.editor.target</td><td>cadena</td><td>Nombre del objeto bajo el ratón cuando se hace clic en una macro</td></tr>
 </tbody>
 </table>
 <p>Here are the properties that you can pass in the <code>$result</code> object if you want the macro processor to execute a modification. Todas las propiedades son opcionales:</p>
@@ -245,7 +245,7 @@ Class constructor</span>(<span class="hljs-variable">$macro </span>: Object)
 <tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td>currentPage</td><td>Objeto</td><td>currentPage including objects modified by the macro, if any</td></tr>
+<tr><td>currentPage</td><td>Objeto</td><td>currentPage incluyendo los objetos modificados por la macro, si los hay</td></tr>
 <tr><td>currentSelection</td><td>Collection</td><td>currentSelection si es modificada por la macro</td></tr>
 <tr><td>formProperties</td><td>Objeto</td><td>formProperties si es modificado por la macro</td></tr>
 <tr><td>editor.groups</td><td>Objeto</td><td>información de grupo, si los grupos son modificados por la macro</td></tr>
@@ -296,6 +296,10 @@ Class constructor</span>(<span class="hljs-variable">$macro </span>: Object)
 
     Else</span> 
 <span class="hljs-function">        ALERT</span>(<span class="hljs-string">"Please select a form object."</span>)<span class="hljs-keyword">
+    End if</span> 
+
+    <span class="hljs-comment">// Notificar la modificación a 4D</span>
+    <span class="hljs-variable">$result</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"currentPage"</span>; <span class="hljs-variable">$editor</span>.editor.currentPage)<span class="hljs-keyword">
     End if</span> 
 
     <span class="hljs-comment">// Notificar la modificación a 4D</span>

@@ -93,6 +93,9 @@
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Hello World!"</span>)<span class="hljs-keyword">
     Else</span> 
         <span class="hljs-comment">// Error 404 por ejemplo</span><span class="hljs-keyword">
+End case</span><span class="hljs-keyword">
+    Else</span> 
+        <span class="hljs-comment">// Error 404 por ejemplo</span><span class="hljs-keyword">
 End case</span> 
 </code></pre>
 <p>El método base <a href="/docs/Rx/es/WebServer/httpRequests.html#on-web-connection"><code>On Web Connection</code></a> se llama para las peticiones entrantes y recibe la URL destino en el parámetro <code>$1</code>. Este código tan sencillo sólo envía el texto al navegador.</p>
@@ -266,6 +269,10 @@ If</span> (<span class="hljs-variable">$user</span>#<span class="hljs-literal">N
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Welcome "</span>+Session.userName)<span class="hljs-keyword">
     Else</span> 
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">
+    End if</span><span class="hljs-keyword"> 
+Else</span> 
+<span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">
+End if</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword"> 
 Else</span> 
 <span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">

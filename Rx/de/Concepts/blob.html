@@ -88,7 +88,7 @@
 <tr><td>Maximum size</td><td style="text-align:center">2GB</td><td style="text-align:center">Memory</td></tr>
 </tbody>
 </table>
-<p>*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (<code>4D.Blob</code>) is more efficient, as they are passed by reference.</p>
+<p>Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods. You can pass blobs and blob objects (<code>4D.Blob</code>) to methods.</p>
 <blockquote>
 <p>By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.</p>
 </blockquote>
@@ -125,7 +125,7 @@ var</span> <span class="hljs-variable">$myBlobObject</span>: 4D.Blob
 <li><a href="https://doc.4d.com/4dv19/help/command/en/page777.html">WEB SERVICE SET PARAMETER</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="passing-blobs-and-blob-objects-to-methods"></a><a href="#passing-blobs-and-blob-objects-to-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passing blobs and blob objects to methods</h3>
-<p>You can pass blobs and blob objects (<code>4D.Blob</code>) to methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.</p>
+<p>When working with methods, using blob objects (<code>4D.Blob</code>) is more efficient, as they are passed by reference. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.</p>
 <h3><a class="anchor" aria-hidden="true" id="passing-a-scalar-blob-by-reference-using-a-pointer"></a><a href="#passing-a-scalar-blob-by-reference-using-a-pointer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Passing a scalar blob by reference using a pointer</h3>
 <p>To pass a scalar blob to your own methods without duplicating it in memory, define a pointer to the variable that stores it and pass the pointer as a parameter.</p>
 <p><strong>Beispiele:</strong></p>

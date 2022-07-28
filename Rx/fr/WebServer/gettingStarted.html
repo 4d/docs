@@ -96,6 +96,9 @@
 End case</span><span class="hljs-keyword">
     Else</span> 
         <span class="hljs-comment">// Erreur 404 par exemple</span><span class="hljs-keyword">
+End case</span><span class="hljs-keyword">
+    Else</span> 
+        <span class="hljs-comment">// Erreur 404 par exemple</span><span class="hljs-keyword">
 End case</span> 
 </code></pre>
 <p>The <a href="/docs/Rx/fr/WebServer/httpRequests.html#on-web-connection"><code>On Web Connection</code></a> database method is called for incoming requests and receives the target URL in the <code>$1</code> parameter. This very simple code only sends the text to the browser.</p>
@@ -269,6 +272,10 @@ If</span> (<span class="hljs-variable">$user</span>#<span class="hljs-literal">N
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Welcome "</span>+Session.userName)<span class="hljs-keyword">
     Else</span> 
 <span class="hljs-function">        WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">
+    End if</span><span class="hljs-keyword"> 
+Else</span> 
+<span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">
+End if</span><span class="hljs-keyword">
     End if</span><span class="hljs-keyword"> 
 Else</span> 
 <span class="hljs-function">    WEB SEND TEXT</span>(<span class="hljs-string">"Wrong user name or password."</span>)<span class="hljs-keyword">

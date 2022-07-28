@@ -213,7 +213,9 @@ ds.webUser.<span class="hljs-function">save</span>()
 <p><strong>WARNING</strong><br>If no value is set to $0 or if $0 is not defined in the <code>On Web Authentication</code> database method, the connection is considered as accepted and the <code>On Web Connection</code> database method is executed.</p>
 <ul>
 <li><ul>
+<li><ul>
 <li>Do not call any interface elements in the <code>On Web Authentication</code> database method (<code>ALERT</code>, <code>DIALOG</code>, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.</li>
+</ul></li>
 </ul></li>
 </ul>
 </blockquote>

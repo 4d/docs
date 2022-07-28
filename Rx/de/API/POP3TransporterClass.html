@@ -121,12 +121,12 @@
 </thead>
 <tbody>
 <tr><td><a href="#acceptunsecureconnection"><strong>.acceptUnsecureConnection</strong> : Boolean</a><p>    <strong>True</strong> if 4D is allowed to establish an unencrypted connection</td><td>Falsch</td></tr>
-<tr><td>.<strong>accessTokenOAuth2</strong>: Text<br/>.<strong>accessTokenOAuth2</strong>: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in <em><a href="#smtptransporterobject">SMTP transporter</a></em> object.</td><td>none</td></tr>
+<tr><td>.<strong>accessTokenOAuth2</strong>: Text<br/>.<strong>accessTokenOAuth2</strong>: Object<p>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 <code>authenticationMode</code>. If <code>accessTokenOAuth2</code> is used but <code>authenticationMode</code> is omitted, the OAuth 2 protocol is used (if allowed by the server). Text string or token object representing OAuth2 authorization credentials.</td><td>none</td></tr>
 <tr><td><a href="#authenticationmode"><strong>.authenticationMode</strong> : Text</a><p>    the authentication mode used to open the session on the mail server</td><td>the most secure authentication mode supported by the server is used</td></tr>
 <tr><td><a href="#connectiontimeout"><strong>.connectionTimeOut</strong> : Integer</a><p>    the maximum wait time (in seconds) allowed to establish a connection to the server</td><td>30</td></tr>
 <tr><td><a href="#host"><strong>.host</strong> : Text</a><p>    the name or the IP address of the host server</td><td><em>mandatory</em></td></tr>
 <tr><td><a href="#logfile"><strong>.logFile</strong> : Text</a><p>    the path of the extended log file defined (if any) for the mail connection</td><td>none</td></tr>
-<tr><td><strong>.password</strong> : Text<p>User password for authentication on the server. Not returned in <em><a href="#smtptransporterobject">SMTP transporter</a></em> object.</td><td>none</td></tr>
+<tr><td><strong>.password</strong> : Text<p>User password for authentication on the server. Text string or token object representing OAuth2 authorization credentials.</td><td>none</td></tr>
 <tr><td><a href="#port"><strong>.port</strong> : Integer</a><p>     the port number used for mail transactions</td><td>995</td></tr>
 <tr><td><a href="#user"><strong>.user</strong> : Text</a><p>     the user name used for authentication on the mail server</td><td>none</td></tr>
 </tbody>
@@ -282,6 +282,10 @@
     <span class="hljs-variable">$status</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">checkConnection</span>()<span class="hljs-keyword">
     If</span>(<span class="hljs-variable">$status</span>.success)
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"POP3 connection check successful!"</span>)<span class="hljs-keyword">
+    Else</span>
+<span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Error: "</span>+<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
+    End if</span><span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
     Else</span>
 <span class="hljs-function">       ALERT</span>(<span class="hljs-string">"Error: "</span>+<span class="hljs-variable">$status</span>.statusText)<span class="hljs-keyword">
     End if</span><span class="hljs-keyword">
@@ -492,6 +496,7 @@
  <span class="hljs-variable">$mailInfo</span>:=<span class="hljs-variable">$transporter</span>.<span class="hljs-function">getMailInfo</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//get the first mail</span><span class="hljs-keyword">
  If</span>(<span class="hljs-variable">$mailInfo </span>#<span class="hljs-literal">Null</span>)
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"First mail size is:"</span>+<span class="hljs-function">String</span>(<span class="hljs-variable">$mailInfo</span>.size)+<span class="hljs-string">" bytes."</span>)<span class="hljs-keyword">
+ End if</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getmailinfolist"></a><a href="#getmailinfolist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getMailInfoList()</h2>

@@ -89,7 +89,7 @@
 <h2><a class="anchor" aria-hidden="true" id="4d-webサーバーの停止"></a><a href="#4d-webサーバーの停止" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D Webサーバーの停止</h2>
 <p>4D Webサーバーは複数の方法で停止できます:</p>
 <ul>
-<li><p>4D の <strong>実行 ＞ Webサーバー停止</strong> メニューを使用するか、 4D Server にて HTTPサーバーページの <strong>HTTPサーバー停止</strong> ボタンを使用する (いずれも、サーバー開始前は <strong>…開始</strong> と表示されています)。</p></li>
+<li><p>4D の <strong>実行 ＞ Webサーバー停止</strong> メニューを使用するか、 4D Server にて HTTPサーバーページの <strong>HTTPサーバー停止</strong> ボタンを使用する (いずれも、サーバー開始前は <strong>… 開始</strong> と表示されています)。</p></li>
 <li><p><a href="/docs/Rx/ja/API/WebServerClass.html#stop"><code>webServer.stop()</code></a> 関数または <code>WEB STOP SERVER</code> コマンドを呼び出してプログラムで停止。</p></li>
 </ul>
 <p>コンポーネントの Webサーバーは、コンポーネントの WebServer オブジェクトに対して <code>webServer.stop()</code> 関数を呼び出すことで停止できます。</p>
@@ -204,7 +204,7 @@
 </thead>
 <tbody>
 <tr><td>host</td><td>クライアントの IPアドレス (例: 192.100.100.10)</td></tr>
-<tr><td>rfc931</td><td>4Dによって作成されない情報。常に - (マイナス記号) です。</td></tr>
+<tr><td>rfc931</td><td>4Dによって作成されない情報。 常に - (マイナス記号) です。</td></tr>
 <tr><td>user</td><td>認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザー名にスペースが含まれると、_ (下線) に置き換わります。</td></tr>
 <tr><td>DD/MMM/YYYY:HH:MM:SS</td><td>DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年、HH: 時間、MM: 分、SS: 秒。 日付と時間はサーバーのローカルタイム。</td></tr>
 <tr><td>request</td><td>クライアントによって送られたリクエスト (例: GET /index.htm HTTP/1.0) 。</td></tr>
@@ -255,8 +255,8 @@
 <p>日付と時間は GMTで表されます。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="周期的なバックアップ"></a><a href="#周期的なバックアップ" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>周期的なバックアップ</h4>
-<p><em>logweb.txt</em> ファイルはかなり膨大になることがあるため、自動のアーカイブメカニズムを構築することが可能です。 バックアップはある周期 (時間、日、週、月単位) または、ファイルのサイズに基づいて起動します。設定の期限 (またはファイルサイズ) に近づくと、4D は自動的にカレントのログファイルを閉じてアーカイブします。そして新たにファイルを作成します。</p>
-<p>Web のログファイル用のバックアップが起動すると、ログファイルは &quot;Logweb Archives&quot; という名前のフォルダーにアーカイブされます。このフォルダーは、<em>logweb.txt</em> ファイルと同じ階層に作成されます。</p>
+<p><em>logweb.txt</em> ファイルはかなり膨大になることがあるため、自動のアーカイブメカニズムを構築することが可能です。 バックアップはある周期 (時間、日、週、月単位) または、ファイルのサイズに基づいて起動します。 設定の期限 (またはファイルサイズ) に近づくと、4D は自動的にカレントのログファイルを閉じてアーカイブします。 そして新たにファイルを作成します。</p>
+<p>Web のログファイル用のバックアップが起動すると、ログファイルは &quot;Logweb Archives&quot; という名前のフォルダーにアーカイブされます。 このフォルダーは、<em>logweb.txt</em> ファイルと同じ階層に作成されます。</p>
 <p>アーカイブされたファイルは、以下の例に基づいて名称変更されます: &quot;DYYYY_MM_DD_Thh_mm_ss.txt&quot;。 たとえば、ファイルがアーカイブされた時間が September 4, 2020 at 3:50 p.m. and 7 seconds である場合、&quot;D2020_09_04_T15_50_07.txt&quot; になります。</p>
 <h4><a class="anchor" aria-hidden="true" id="バックアップパラメーター"></a><a href="#バックアップパラメーター" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>バックアップパラメーター</h4>
 <p>logweb.txt の自動バックアップパラメーターは、ストラクチャー設定の <strong>Web/ログ (バックアップ)</strong> ページで設定します:</p>

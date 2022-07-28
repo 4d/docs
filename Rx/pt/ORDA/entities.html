@@ -76,8 +76,8 @@
 <p>Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the <code>entity.save( )</code> method.</p>
 <p>Entity attributes are directly available as properties of the entity object. For more information, please refer to <a href="#using-entity-attributes">Using entity attributes</a>.</p>
 <p>For example, we want to create a new entity in the &quot;Employee&quot; dataclass in the current datastore with &quot;John&quot; and &quot;Dupont&quot; assigned to the firstname and name attributes:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myEntity </span>: cs.EmployeeEntity
-<span class="hljs-variable">$myEntity</span>:=ds.Employee.<span class="hljs-function">new</span>() <span class="hljs-comment">//Create a new object of the entity type</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$myEntity </span>: cs. EmployeeEntity
+<span class="hljs-variable">$myEntity</span>:=ds. Employee.<span class="hljs-function">new</span>() <span class="hljs-comment">//Create a new object of the entity type</span>
 <span class="hljs-variable">$myEntity</span>.name:=<span class="hljs-string">"Dupont"</span> <span class="hljs-comment">//assign 'Dupont' to the 'name' attribute</span>
 <span class="hljs-variable">$myEntity</span>.firstname:=<span class="hljs-string">"John"</span> <span class="hljs-comment">//assign 'John' to the 'firstname' attribute</span>
 <span class="hljs-variable">$myEntity</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//save the entity</span>
@@ -88,8 +88,8 @@
 <h2><a class="anchor" aria-hidden="true" id="entities-and-references"></a><a href="#entities-and-references" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entities and references</h2>
 <p>An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.</p>
 <p>If you execute the following code:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$e1</span>; <span class="hljs-variable">$e2 </span>: cs.EmployeeEntity
- <span class="hljs-variable">$e1</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//access the employee with ID 1</span>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$e1</span>; <span class="hljs-variable">$e2 </span>: cs. EmployeeEntity
+ <span class="hljs-variable">$e1</span>:=ds. Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//access the employee with ID 1</span>
  <span class="hljs-variable">$e2</span>:=<span class="hljs-variable">$e1</span>
  <span class="hljs-variable">$e1</span>.name:=<span class="hljs-string">"Hammer"</span>
   <span class="hljs-comment">//both variables $e1 and $e2 share the reference to the same entity</span>
@@ -98,9 +98,9 @@
 <p>This is illustrated by the following graphic:</p>
 <p><img src="/docs/Rx/assets/en/ORDA/entityRef1.png" alt=""></p>
 <p>Now if you execute:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$e1</span>; <span class="hljs-variable">$e2 </span>: cs.EmployeeEntity
- <span class="hljs-variable">$e1</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>)
- <span class="hljs-variable">$e2</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>)
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$e1</span>; <span class="hljs-variable">$e2 </span>: cs. EmployeeEntity
+ <span class="hljs-variable">$e1</span>:=ds. Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>)
+ <span class="hljs-variable">$e2</span>:=ds. Employee.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>)
  <span class="hljs-variable">$e1</span>.name:=<span class="hljs-string">"Hammer"</span>
   <span class="hljs-comment">//variable $e1 contains a reference to an entity</span>
   <span class="hljs-comment">//variable $e2 contains another reference to another entity</span>
@@ -143,13 +143,13 @@
 <p>Accessing a related attribute depends on the attribute kind. For example, with the following structure:</p>
 <p><img src="/docs/Rx/assets/en/ORDA/entityAttributes.png" alt=""></p>
 <p>You can access data through the related object(s):</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds.Project.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>().theClient <span class="hljs-comment">//get the Company entity associated to the project</span>
- <span class="hljs-variable">$EntitySel</span>:=ds.Company.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>().companyProjects <span class="hljs-comment">//get the selection of projects for the company</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$entity</span>:=ds. Project.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>().theClient <span class="hljs-comment">//get the Company entity associated to the project</span>
+ <span class="hljs-variable">$EntitySel</span>:=ds. Company.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>().companyProjects <span class="hljs-comment">//get the selection of projects for the company</span>
 </code></pre>
 <p>Note that both <em>theClient</em> and <em>companyProjects</em> in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:</p>
 <p><img src="/docs/Rx/assets/en/ORDA/entityAttributes2.png" alt=""></p>
 <p>Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myEmp</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">50</span>)
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myEmp</span>:=ds. Employee.<span class="hljs-function">get</span>(<span class="hljs-number">50</span>)
  <span class="hljs-variable">$manLev2</span>:=<span class="hljs-variable">$myEmp</span>.manager.manager.lastname
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="assigning-values-to-relation-attributes"></a><a href="#assigning-values-to-relation-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assigning values to relation attributes</h2>
@@ -165,13 +165,13 @@
 <p>In ORDA, the Automatic or Manual property of relations has no effect.</p>
 </blockquote>
 <p>To assign a value directly to the &quot;employer&quot; attribute, you must pass an existing entity from the &quot;Company&quot; dataclass. Por exemplo:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$emp</span>:=ds.Employee.<span class="hljs-function">new</span>() <span class="hljs-comment">// create an employee</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$emp</span>:=ds. Employee.<span class="hljs-function">new</span>() <span class="hljs-comment">// create an employee</span>
  <span class="hljs-variable">$emp</span>.lastname:=<span class="hljs-string">"Smith"</span> <span class="hljs-comment">// assign a value to an attribute</span>
- <span class="hljs-variable">$emp</span>.employer:=ds.Company.<span class="hljs-function">query</span>(<span class="hljs-string">"name =:1"</span>;<span class="hljs-string">"4D"</span>)[<span class="hljs-number">0</span>]  <span class="hljs-comment">//assign a company entity</span>
+ <span class="hljs-variable">$emp</span>.employer:=ds. Company.<span class="hljs-function">query</span>(<span class="hljs-string">"name =:1"</span>;<span class="hljs-string">"4D"</span>)[<span class="hljs-number">0</span>]  <span class="hljs-comment">//assign a company entity</span>
  <span class="hljs-variable">$emp</span>.<span class="hljs-function">save</span>()
 </code></pre>
 <p>4D provides an additional facility for entering a relation attribute for an N entity related to a &quot;1&quot; entity: you pass the primary key of the &quot;1&quot; entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. Por exemplo:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$emp</span>:=ds.Employee.<span class="hljs-function">new</span>()
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$emp</span>:=ds. Employee.<span class="hljs-function">new</span>()
  <span class="hljs-variable">$emp</span>.lastname:=<span class="hljs-string">"Wesson"</span>
  <span class="hljs-variable">$emp</span>.employer:=<span class="hljs-number">2</span> <span class="hljs-comment">// assign a primary key to the relation attribute</span>
   <span class="hljs-comment">//4D looks for the company whose primary key (in this case, its ID) is 2</span>
@@ -181,9 +181,9 @@
 <p>This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an &quot;ID&quot; column, which references a primary key that you can then assign directly to a relation attribute.</p>
 <p>This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this &quot;1&quot; entity is created.</p>
 <p>You can assign or modify the value of a &quot;1&quot; related entity attribute from the &quot;N&quot; dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:</p>
-<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$emp</span>:=ds<span class="hljs-selector-class">.Employee</span>.get(<span class="hljs-number">2</span>) <span class="hljs-comment">// load the Employee entity with primary key 2</span>
- <span class="hljs-variable">$emp</span><span class="hljs-selector-class">.employer</span><span class="hljs-selector-class">.name</span>:=<span class="hljs-string">"4D, Inc."</span> <span class="hljs-comment">//modify the name attribute of the related Company</span>
- <span class="hljs-variable">$emp</span><span class="hljs-selector-class">.employer</span>.save() <span class="hljs-comment">//save the related attribute</span>
+<pre><code class="hljs css language-code4d"> <span class="hljs-variable">$emp</span>:=<span class="hljs-keyword">ds</span>. Employee.<span class="hljs-built_in">get</span>(2) <span class="hljs-comment">// load the Employee entity with primary key 2</span>
+ <span class="hljs-variable">$emp</span>.employer.name:=<span class="hljs-string">"4D, Inc."</span> <span class="hljs-comment">//modify the name attribute of the related Company</span>
+ <span class="hljs-variable">$emp</span>.employer.<span class="hljs-keyword">save</span>() <span class="hljs-comment">//save the related attribute</span>
   <span class="hljs-comment">//the related entity is updated</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="creating-an-entity-selection"></a><a href="#creating-an-entity-selection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating an entity selection</h2>
@@ -219,11 +219,11 @@
 <p>A new entity selection is <strong>shareable</strong> in the following cases:</p>
 <ul>
 <li>the new entity selection results from an ORDA class function applied to a dataClass: <a href="/docs/Rx/pt/API/DataClassClass.html#all">dataClass.all()</a>, <a href="/docs/Rx/pt/API/DataClassClass.html#fromcollection">dataClass.fromCollection()</a>, <a href="/docs/Rx/pt/API/DataClassClass.html#query">dataClass.query()</a>,</li>
-<li>the new entity selection is based upon a relation <a href="/docs/Rx/pt/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. &quot;company.employees&quot;) when <em>attributeName</em> is a one-to-many related attribute but the entity does not belong to an entity selection.</li>
+<li>the new entity selection results from one of the various ORDA class functions applied to an existing entity selection (<a href="/docs/Rx/pt/API/EntitySelectionClass.html#query">.query()</a>, <a href="/docs/Rx/pt/API/EntitySelectionClass.html#slice">.slice()</a>, etc.) .</li>
 <li>the new entity selection is explicitely copied as shareable with <a href="/docs/Rx/pt/API/EntitySelectionClass.html#copy">entitySelection.copy()</a> or <code>OB Copy</code> (i.e. with the <code>ck shared</code> option).</li>
 </ul>
 <p>Exemplo:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$myComp</span>:=ds.Company.<span class="hljs-function">get</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">//$myComp does not belong to an entity selection</span>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$myComp</span>:=ds. Company.<span class="hljs-function">get</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">//$myComp does not belong to an entity selection</span>
 <span class="hljs-variable">$employees</span>:=<span class="hljs-variable">$myComp</span>.employees <span class="hljs-comment">//$employees is shareable</span>
 </code></pre>
 <p>A new entity selection is <strong>alterable</strong> in the following cases:</p>
@@ -232,11 +232,11 @@
 <li>the new entity selection is explicitely copied as alterable with <a href="/docs/Rx/pt/API/EntitySelectionClass.html#copy">entitySelection.copy()</a> or <code>OB Copy</code> (i.e. without the <code>ck shared</code> option).</li>
 </ul>
 <p>Exemplo:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$toModify</span>:=ds.Company.<span class="hljs-function">all</span>().<span class="hljs-function">copy</span>() <span class="hljs-comment">//$toModify is alterable</span>
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$toModify</span>:=ds. Company.<span class="hljs-function">all</span>().<span class="hljs-function">copy</span>() <span class="hljs-comment">//$toModify is alterable</span>
 </code></pre>
 <p>A new entity selection <strong>inherits</strong> from the original entity selection nature in the following cases:</p>
 <ul>
-<li>the new entity selection results from one of the various ORDA class functions applied to an existing entity selection (<a href="/docs/Rx/pt/API/EntitySelectionClass.html#query">.query()</a>, <a href="/docs/Rx/pt/API/EntitySelectionClass.html#slice">.slice()</a>, etc.) .</li>
+<li>the new entity selection is based upon a relation <a href="/docs/Rx/pt/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. .</li>
 <li>the new entity selection is based upon a relation:
 <ul>
 <li><a href="/docs/Rx/pt/API/EntityClass.html#attributename">entity.<em>attributeName</em></a> (e.g. &quot;company.employees&quot;) when <em>attributeName</em> is a one-to-many related attribute and the entity belongs to an entity selection (same nature as <a href="/docs/Rx/pt/API/EntityClass.html#getselection">.getSelection()</a> entity selection),</li>
@@ -245,24 +245,23 @@
 </ul></li>
 </ul>
 <p>Exemplos:</p>
-<pre><code class="hljs css language-4d"><span class="hljs-variable">$highSal</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &gt;= :1"</span>; <span class="hljs-number">1000000</span>)   
+<pre><code class="hljs css language-4d"><span class="hljs-variable">$highSal</span>:=ds. Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &gt;= :1"</span>; <span class="hljs-number">1000000</span>)   
     <span class="hljs-comment">//$highSal is shareable because of the query on dataClass</span>
 <span class="hljs-variable">$comp</span>:=<span class="hljs-variable">$highSal</span>.employer <span class="hljs-comment">//$comp is shareable because $highSal is shareable</span>
 
-<span class="hljs-variable">$lowSal</span>:=ds.Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &lt;= :1"</span>; <span class="hljs-number">10000</span>).<span class="hljs-function">copy</span>() 
+<span class="hljs-variable">$lowSal</span>:=ds. Employee.<span class="hljs-function">query</span>(<span class="hljs-string">"salary &lt;= :1"</span>; <span class="hljs-number">10000</span>).<span class="hljs-function">copy</span>() 
     <span class="hljs-comment">//$lowSal is alterable because of the copy()</span>
 <span class="hljs-variable">$comp2</span>:=<span class="hljs-variable">$lowSal</span>.employer <span class="hljs-comment">//$comp2 is alterable because $lowSal is alterable</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="sharing-an-entity-selection-between-processes-example"></a><a href="#sharing-an-entity-selection-between-processes-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sharing an entity selection between processes (example)</h4>
 <p>You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">
-var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable">$unpaid </span>: cs.InvoicesSelection
+var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable">$unpaid </span>: cs. InvoicesSelection
 <span class="hljs-comment">//We get entity selections for paid and unpaid invoices</span>
-<span class="hljs-variable">$paid</span>:=ds.Invoices.<span class="hljs-function">query</span>(<span class="hljs-string">"status=:1"</span>; <span class="hljs-string">"Paid"</span>)
-<span class="hljs-variable">$unpaid</span>:=ds.Invoices.<span class="hljs-function">query</span>(<span class="hljs-string">"status=:1"</span>; <span class="hljs-string">"Unpaid"</span>)
+<span class="hljs-variable">$paid</span>:=ds. Invoices.<span class="hljs-function">query</span>(<span class="hljs-string">"status=:1"</span>; <span class="hljs-string">"Paid"</span>)
+<span class="hljs-variable">$unpaid</span>:=ds. Invoices.<span class="hljs-function">query</span>(<span class="hljs-string">"status=:1"</span>; <span class="hljs-string">"Unpaid"</span>)
 
-<span class="hljs-comment">//We pass entity selection references as parameters to the worker</span>
-<span class="hljs-function">CALL WORKER</span>(<span class="hljs-string">"mailing"</span>; <span class="hljs-string">"sendMails"</span>; <span class="hljs-variable">$paid</span>; <span class="hljs-variable">$unpaid</span>)
+<span class="hljs-comment">//We pass entity selection references as parameters to the worker CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)</span>
 
 </code></pre>
 <p>The <code>sendMails</code> method:</p>
@@ -297,14 +296,14 @@ var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable"
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="entity-selections-and-storage-attributes"></a><a href="#entity-selections-and-storage-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity selections and Storage attributes</h3>
 <p>All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Por exemplo:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$locals</span>:=ds.Person.<span class="hljs-function">query</span>(<span class="hljs-string">"city = :1"</span>;<span class="hljs-string">"San Jose"</span>) <span class="hljs-comment">//entity selection of people</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$locals</span>:=ds. Person.<span class="hljs-function">query</span>(<span class="hljs-string">"city = :1"</span>;<span class="hljs-string">"San Jose"</span>) <span class="hljs-comment">//entity selection of people</span>
  <span class="hljs-variable">$localEmails</span>:=<span class="hljs-variable">$locals</span>.emailAddress <span class="hljs-comment">//collection of email addresses (strings)</span>
 </code></pre>
 <p>This code returns in <em>$localEmails</em> a collection of email addresses as strings.</p>
 <h3><a class="anchor" aria-hidden="true" id="entity-selections-and-relation-attributes"></a><a href="#entity-selections-and-relation-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entity selections and Relation attributes</h3>
 <p>In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:</p>
 <p><img src="/docs/Rx/assets/en/ORDA/entitySelectionRelationAttributes.png" alt=""></p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myParts</span>:=ds.Part.<span class="hljs-function">query</span>(<span class="hljs-string">"ID &lt; 100"</span>) <span class="hljs-comment">//Return parts with ID less than 100</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$myParts</span>:=ds. Part.<span class="hljs-function">query</span>(<span class="hljs-string">"ID &lt; 100"</span>) <span class="hljs-comment">//Return parts with ID less than 100</span>
  <span class="hljs-variable">$myInvoices</span>:=<span class="hljs-variable">$myParts</span>.invoiceItems.invoice
   <span class="hljs-comment">//All invoices with at least one line item related to a part in $myParts</span>
 </code></pre>
@@ -334,8 +333,8 @@ var</span> <span class="hljs-variable">$paid</span>; <span class="hljs-variable"
 <li><p>The second process also modifies the loaded entity and validates its changes. The <code>entity.save( )</code> method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br><img src="/docs/Rx/assets/en/ORDA/optimisticLock3.png" alt=""></p></li>
 </ol>
 <p>This can also be illustrated by the following code:</p>
-<pre><code class="hljs css language-4d"> <span class="hljs-variable">$person1</span>:=ds.Person.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//Reference to entity</span>
- <span class="hljs-variable">$person2</span>:=ds.Person.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//Other reference to same entity</span>
+<pre><code class="hljs css language-4d"> <span class="hljs-variable">$person1</span>:=ds. Person.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//Reference to entity</span>
+ <span class="hljs-variable">$person2</span>:=ds. Person.<span class="hljs-function">get</span>(<span class="hljs-number">1</span>) <span class="hljs-comment">//Other reference to same entity</span>
  <span class="hljs-variable">$person1</span>.name:=<span class="hljs-string">"Bill"</span>
  <span class="hljs-variable">$result</span>:=<span class="hljs-variable">$person1</span>.<span class="hljs-function">save</span>() <span class="hljs-comment">//$result.success=true, change saved</span>
  <span class="hljs-variable">$person2</span>.name:=<span class="hljs-string">"William"</span>

@@ -226,7 +226,7 @@
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.original</strong> : 4D.File<br><strong>.original</strong> : 4D.Folder</p>
+<p><strong>.original</strong> : 4D. File<br><strong>.original</strong> : 4D. Folder</p>
 <h4><a class="anchor" aria-hidden="true" id="descrição-14"></a><a href="#descrição-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
 <p>A propriedade <code>.original</code> retorna o elemento de destino para um alias, um atalho, ou um arquivo de link simbólico. The target element can be:</p>
 <ul>
@@ -246,9 +246,9 @@
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.parent</strong> : 4D.Folder</p>
+<p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <h4><a class="anchor" aria-hidden="true" id="descrição-15"></a><a href="#descrição-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>A propriedade <code>.parent</code> retorna o objeto da pasta pai do arquivo. If the path represents a system path (e.g., &quot;/DATA/&quot;), the system path is returned.</p>
+<p>A propriedade <code>.parent</code> retorna o objeto da pasta pai do arquivo. A função <code>.folder()</code>&lt;!-- REF #directory.folder().</p></p>
 <p>Essa propriedade é<strong>apenas leitura</strong>.</p>
 <h2><a class="anchor" aria-hidden="true" id="path"></a><a href="#path" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.path</h2>
 <p><details><summary>Histórico</summary></p>
@@ -315,7 +315,7 @@
 <tr><td>destinationFolder</td><td>4D. Folder</td><td style="text-align:center">-&gt;</td><td>Pasta de destino</td></tr>
 <tr><td>newName</td><td>Texto</td><td style="text-align:center">-&gt;</td><td>Nome para a copia</td></tr>
 <tr><td>overwrite</td><td>Integer</td><td style="text-align:center">-&gt;</td><td><code>fk overwrite</code> para substituir os elementos existentes</td></tr>
-<tr><td>Resultado</td><td>4D.File</td><td style="text-align:center">&lt;-</td><td>Arquivo copiado</td></tr>
+<tr><td>Resultado</td><td>4D. File</td><td style="text-align:center">&lt;-</td><td>Arquivo copiado</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descrição-19"></a><a href="#descrição-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
@@ -346,24 +346,24 @@
 <tr><th>Versão</th><th>Mudanças</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R2</td><td>Returns 4D.Blob</td></tr>
+<tr><td>v19 R2</td><td>Returns 4D. Blob</td></tr>
 <tr><td>v17 R5</td><td>Adicionado</td></tr>
 </tbody>
 </table>
 <p></details></p>
-<p><strong>.getContent( )</strong> : 4D.Blob</p>
+<p><strong>.getContent( )</strong> : 4D. Blob</p>
 <table>
 <thead>
 <tr><th>Parameter</th><th>Type</th><th></th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>Resultado</td><td>4D.Blob</td><td>&lt;-</td><td>Conteúdo do arquivo</td></tr>
+<tr><td>Resultado</td><td>4D. Blob</td><td>&lt;-</td><td>Conteúdo do arquivo</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="descrição-20"></a><a href="#descrição-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição</h4>
-<p>The <code>.getContent()</code> function  returns a <code>4D.Blob</code> object containing the entire content of a file. Para informações sobre BLOBs, consultar a secção <a href="/docs/Rx/pt/Concepts/blob.html">BLOB</a> .</p>
+<p>The <code>.getContent()</code> functionreturns a <code>4D. Blob</code> object containing the entire content of a file. Para informações sobre BLOBs, consultar a secção <a href="/docs/Rx/pt/Concepts/blob.html">BLOB</a> .</p>
 <p><strong>Returned value</strong></p>
-<p>A <code>4D.Blob</code> object.</p>
+<p>A <code>4D. Blob</code> object.</p>
 <h4><a class="anchor" aria-hidden="true" id="exemplo-1"></a><a href="#exemplo-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplo</h4>
 <p>Para salvar o conteúdo de um documento em um campo <code>BLOB</code>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$vPath </span>: Text
